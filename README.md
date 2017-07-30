@@ -52,7 +52,7 @@ References
 If you use any of these resources, please cite the following: 
 
 ```
-@InProceedings{richardson-kuhn:2017:Long,
+@inproceedings{richardson-kuhn:2017:Long,
   author    = {Richardson, Kyle  and  Kuhn, Jonas},
   title     = {Learning {S}emantic {C}orrespondences in {T}echnical {D}ocumentation},
   booktitle = {Proceedings of the ACL},
