@@ -51,6 +51,7 @@ References
 
 If you use any of these resources, please cite the following: 
 
+```
 @InProceedings{richardson-kuhn:2017:Long,
   author    = {Richardson, Kyle  and  Kuhn, Jonas},
   title     = {Learning {S}emantic {C}orrespondences in {T}echnical {D}ocumentation},
@@ -74,9 +75,11 @@ originally come from:
   booktitle={Proceedings of LREC},
   year={2014}
   }
+  ```
 
 Contact
 -----------------------------
 
 kyle@ims.uni-stuttgart.de
+
 [website](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/kyle/)
