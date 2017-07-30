@@ -29,7 +29,7 @@ name ``name``:
 | rank\_list\_tree.txt | Syntax information about reps |
 | descriptions.txt | Output symbols with associated words |
 | extra\_pairs.txt | The extra data described above |
-| pseudo\_lex.txt | Output symbols mapped to themselves. |
+| pseudolex.txt | Output symbols mapped to themselves. |
 
 ``Warning:`` The data is relatively noisy. These particular files are directly from our model, other users
 of the data might decide to make different decision about how the code

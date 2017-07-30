@@ -1,0 +1,1822 @@
+ArrayAccess	abstract	boolean	offsetExists	$konum=mixed
+ArrayAccess	abstract	mixed	offsetGet	$konum=mixed
+ArrayAccess	abstract	void	offsetSet	$konum=mixed $değer=mixed
+ArrayAccess	abstract	void	offsetUnset	$konum=mixed
+DateInterval	public	DateInterval	createFromDateString	$zaman=string
+DateInterval	public	string	format	$biçem=string
+DOMAttr	private	string	__construct	$isim=string $değer=string
+DOMAttr	private	bool	isId
+DOMCharacterData	private	void	appendData	$veri=string
+DOMCharacterData	private	void	deleteData	$başlangıç=int $uzunluk=int
+DOMCharacterData	private	void	insertData	$başlangıç=int $veri=string
+DOMCharacterData	private	void	replaceData	$başlangıç=int $uzunluk=int $veri=string
+DOMCharacterData	private	string	substringData	$başlangıç=int $uzunluk=int
+DOMDocument	private	string	__construct	$sürüm=string $kodlama=string
+DOMDocument	private	DOMAttr	createAttribute	$isim=string
+DOMDocument	private	DOMAttr	createAttributeNS	$uri=string $önekliAd=string
+DOMDocument	private	DOMCDATASection	createCDATASection	$veri=string
+DOMDocument	private	DOMComment	createComment	$veri=string
+DOMDocument	private	DOMDocumentFragment	createDocumentFragment
+DOMDocument	private	DOMElement	createElement	$isim=string $değer=string
+DOMDocument	private	DOMElement	createElementNS	$uri=string $önekliAd=string $değer=string
+DOMDocument	private	DOMEntityReference	createEntityReference	$isim=string
+DOMDocument	private	DOMProcessingInstruction	createProcessingInstruction	$hedef=string $veri=string
+DOMDocument	private	DOMText	createTextNode	$içerik=string
+DOMDocument	private	DOMElement	getElementById	$id=string
+DOMDocument	private	DOMNodeList	getElementsByTagName	$isim=string
+DOMDocument	private	DOMNodeList	getElementsByTagNameNS	$uri=string $isim=string
+DOMDocument	private	DOMNode	importNode	$düğüm=DOMNode $içiçe=bool
+DOMDocument	private	mixed	load	$dosya=string $seçenekler=int
+DOMDocument	private	bool	loadHTML	$dizge=string
+DOMDocument	private	bool	loadHTMLFile	$dosya=string
+DOMDocument	private	mixed	loadXML	$dizge=string $seçenekler=int
+DOMDocument	private	void	normalizeDocument
+DOMDocument	private	bool	registerNodeClass	$temelSınıf=string $türetilenSınıf=string
+DOMDocument	private	bool	relaxNGValidate	$dosya=string
+DOMDocument	private	bool	relaxNGValidateSource	$rng=string
+DOMDocument	private	int	save	$dosya=string $seçenekler=int
+DOMDocument	private	string	saveHTML
+DOMDocument	private	int	saveHTMLFile	$dosya=string
+DOMDocument	private	string	saveXML	$düğüm=DOMNode $seçenekler=int
+DOMDocument	private	bool	schemaValidate	$dosya=string
+DOMDocument	private	bool	schemaValidateSource	$şema=string
+DOMDocument	private	bool	validate
+DOMDocument	private	int	xinclude	$seçenekler=int
+DOMElement	private	string	getAttribute	$isim=string
+DOMElement	private	DOMAttr	getAttributeNode	$isim=string
+DOMElement	private	DOMAttr	getAttributeNodeNS	$uri=string $isim=string
+DOMElement	private	string	getAttributeNS	$uri=string $isim=string
+DOMElement	private	DOMNodeList	getElementsByTagName	$isim=string
+DOMElement	private	DOMNodeList	getElementsByTagNameNS	$uri=string $önekli_isim=string
+DOMElement	private	bool	hasAttribute	$isim=string
+DOMElement	private	bool	hasAttributeNS	$uri=string $önekli_isim=string
+DOMElement	private	bool	removeAttribute	$isim=string
+DOMElement	private	bool	removeAttributeNode	$öznitelik=DOMAttr
+DOMElement	private	bool	removeAttributeNS	$uri=string $isim=string
+DOMElement	private	DOMAttr	setAttribute	$isim=string $değer=string
+DOMElement	private	DOMAttr	setAttributeNode	$öznitelik=DOMAttr
+DOMElement	private	DOMAttr	setAttributeNodeNS	$öznitelik=DOMAttr
+DOMElement	private	void	setAttributeNS	$uri=string $önekli_isim=string $değer=string
+DOMElement	private	void	setIdAttribute	$isim=string $id_olarak=bool
+DOMElement	private	void	setIdAttributeNode	$öznitelik=DOMAttr $id_olarak=bool
+DOMElement	private	void	setIdAttributeNS	$uri=string $isim=string $id_olarak=bool
+DOMImplementation	private	DOMDocument	createDocument	$uri=string $önekliAd=string $belgeTürü=DOMDocumentType
+DOMImplementation	private	DOMDocumentType	createDocumentType	$belgeAdı=string $publicId=string $systemId=string
+DOMImplementation	private	bool	hasFeature	$özellik=string $sürüm=string
+DOMNamedNodeMap	private	DOMNode	getNamedItem	$isim=string
+DOMNamedNodeMap	private	DOMNode	getNamedItemNS	$uri=string $önekli_isim=string
+DOMNamedNodeMap	private	DOMNode	item	$indis=int
+DOMNode	private	DOMNode	appendChild	$yeni=DOMNode
+DOMNode	private	DOMNode	cloneNode	$torunlar_dahil=bool
+DOMNode	private	bool	hasAttributes
+DOMNode	private	bool	hasChildNodes
+DOMNode	private	DOMNode	insertBefore	$yeni=DOMNode $mevcut=DOMNode
+DOMNode	private	bool	isDefaultNamespace	$uri=string
+DOMNode	private	bool	isSameNode	$düğüm=DOMNode
+DOMNode	private	bool	isSupported	$özellik=string $sürüm=string
+DOMNode	private	string	lookupNamespaceURI	$önek=string
+DOMNode	private	string	lookupPrefix	$uri=string
+DOMNode	private	void	normalize
+DOMNode	private	DOMNode	removeChild	$eski=DOMNode
+DOMNode	private	DOMNode	replaceChild	$yeni=DOMNode $eski=DOMNode
+DOMNodelist	private	DOMNode	item	$indis=int
+DOMText	private	bool	isWhitespaceInElementContent
+DOMText	private	DOMText	splitText	$konum=int
+DOMXPath	private	mixed	evaluate	$ifade=string $bağlamsal_düğüm=DOMNode
+DOMXPath	private	DOMNodeList	query	$ifade=string $bağlamsal_düğüm=DOMNode
+DOMXPath	private	bool	registerNamespace	$önek=string $uri=string
+ErrorException	final	int	getSeverity
+Exception	final	void	__clone
+Exception	final	int	getCode
+Exception	final	string	getFile
+Exception	final	int	getLine
+Exception	final	string	getMessage
+Exception	final	Exception	getPrevious
+Exception	final	array	getTrace
+Exception	final	string	getTraceAsString
+Exception	public	string	__toString
+function	private	string	addcslashes	$dizge=string $karakterler=string
+function	private	string	addslashes	$dizge=string
+function	private	bool	apache_child_terminate
+function	private	array	apache_get_modules
+function	private	string	apache_get_version
+function	private	string	apache_getenv	$değişken=string $tepe_seviye=bool
+function	private	object	apache_lookup_uri	$dosya_adı=string
+function	private	string	apache_note	$not_adı=string $not_değeri=string
+function	private	array	apache_request_headers
+function	private	bool	apache_reset_timeout
+function	private	array	apache_response_headers
+function	private	bool	apache_setenv	$değişken=string $değer=string $tepe_seviye=bool
+function	private	bool	apc_add	$anahtar=string $değişken=mixed $yaşam_süresi=int
+function	private	array	apc_cache_info	$önbellek_türü=string $sınırlı=bool
+function	private	bool	apc_clear_cache	$önbellek_türü=string
+function	private	bool	apc_compile_file	$dosyaadi=string
+function	private	bool	apc_define_constants	$anahtar=string $sabitler=array $buyukluk_duyarli=bool
+function	private	bool	apc_delete	$anahtar=string
+function	private	mixed	apc_fetch	$anahtar=string $durum=bool
+function	private	bool	apc_load_constants	$anahtar=string $buyukluk_duyarli=bool
+function	private	array	apc_sma_info	$sınırlı=bool
+function	private	bool	apc_store	$anahtar=string $degisken=mixed $yasam_suresi=int
+function	private	bool	apd_breakpoint	$hata_ayıklama_seviyesi=int
+function	private	array	apd_callstack
+function	private	void	apd_clunk	$uyarı=string $delimiter=string
+function	private	bool	apd_continue	$hata_ayıklama_seviyesi=int
+function	private	void	apd_croak	$hata_iletisi=string $ayraç=string
+function	private	void	apd_dump_function_table
+function	private	array	apd_dump_persistent_resources
+function	private	array	apd_dump_regular_resources
+function	private	bool	apd_echo	$çıktı=string
+function	private	array	apd_get_active_symbols
+function	private	string	apd_set_pprof_trace	$döküm_dizini=string $önek=string
+function	private	bool	apd_set_session_trace_socket	$tcp_sunucusu=string $soket_türü=int $port=int $hata_ayıklama_seviyesi=int
+function	private	void	apd_set_session_trace	$hata_ayıklama_seviyesi=int $döküm_dizini=string
+function	private	void	apd_set_session	$hata_ayıklama_seviyesi=int
+function	private	array	array_change_key_case	$dizi=array $büyüklük=int
+function	private	array	array_chunk	$dizi=array $boyut=int $anahtarları_koru=bool
+function	private	array	array_combine	$anahtarlar=array $değerler=array
+function	private	array	array_count_values	$dizi=array
+function	private	array	array_diff_assoc	$dizi1=array $dizi2=array $...=array
+function	private	array	array_diff_key	$dizi1=array $dizi2=array $...=array
+function	private	array	array_diff_uassoc	$dizi1=array $dizi2=array $...=array $anh_karş_işlevi=callable
+function	private	array	array_diff_ukey	$dizi1=array $dizi2=array $...=array $anh_karş_işlevi=callable
+function	private	array	array_diff	$dizi1=array $dizi2=array $...=array
+function	private	array	array_fill_keys	$anahtarlar=array $dolgu=mixed
+function	private	array	array_fill	$başlangıç=int $miktar=int $dolgu=mixed
+function	private	array	array_filter	$dizi=array $işlev=callable $seçenek=int
+function	private	array	array_flip	$dizi=array
+function	private	array	array_intersect_key	$dizi1=array $dizi2=array $...=array
+function	private	array	array_intersect_uassoc	$dizi1=array $dizi2=array $...=array $anh_karş_işlevi=callable
+function	private	array	array_intersect_ukey	$dizi1=array $dizi2=array $...=array $anh_karş_işlevi=callable
+function	private	array	array_intersect	$dizi1=array $dizi2=array $...=array
+function	private	bool	array_key_exists	$anahtar=mixed $dizi=array
+function	private	array	array_keys	$dizi=array $arama_değeri=mixed $aynısı=bool
+function	private	array	array_map	$işlev=callable $dizi1=array $...=array
+function	private	array	array_merge_recursive	$dizi1=array $...=array
+function	private	array	array_merge	$dizi1=array $...=array
+function	private	bool	array_multisort	$dizi=array $arg=mixed $arg=mixed $...=mixed
+function	private	array	array_pad	$girdi=array $yeni_boyut=int $dolgu=mixed
+function	private	mixed	array_pop	$dizi=array
+function	private	number	array_product	$dizi=array
+function	private	int	array_push	$dizi=array $değişken=mixed $...=mixed
+function	private	mixed	array_rand	$girdi=array $istek_sayısı=int
+function	private	mixed	array_reduce	$girdi=array $işlev=callback $ilk_değer=int
+function	private	array	array_replace_recursive	$disi=array $dizi1=array $dizi2=array $...=array
+function	private	array	array_replace	$dizi=array $dizi1=array $dizi2=array $...=array
+function	private	array	array_reverse	$dizi=array $anahtarları_koru=bool
+function	private	mixed	array_search	$iğne=mixed $samanlık=array $türüne_bak=bool
+function	private	mixed	array_shift	$deste=array
+function	private	array	array_slice	$girdi=array $başlangıç=int $uzunluk=int $indisleri_koru=bool
+function	private	array	array_splice	$girdi=array $başlangıç=int $uzunluk=int $yenisi=mixed
+function	private	number	array_sum	$dizi=array
+function	private	array	array_udiff_assoc	$dizi1=array $dizi2=array $...=array $veri_karş_işlevi=callback
+function	private	array	array_udiff_uassoc	$dizi1=array $dizi2=array $...=array $veri_karş_işlevi=callback $anh_karş_işlevi=callback
+function	private	array	array_udiff	$dizi1=array $dizi2=array $...=array $veri_karş_işlevi=callback
+function	private	array	array_uintersect_assoc	$dizi1=array $dizi2=array $...=array $veri_karş_işlevi=callback
+function	private	array	array_uintersect_uassoc	$dizi1=array $dizi2=array $...=array $veri_karş_işlevi=callback $anh_karş_işlevi=callback
+function	private	array	array_uintersect	$dizi1=array $dizi2=array $...=array $işlev=callback
+function	private	array	array_unique	$dizi=array $seçenekler=int
+function	private	int	array_unshift	$dizi=array $dğş=mixed $...=mixed
+function	private	array	array_values	$dizi=array
+function	private	bool	array_walk_recursive	$dizi=array $işlev=callback $veri=mixed
+function	private	array	array	$...=mixed
+function	private	bool	arsort	$dizi=array $seçenekler=int
+function	private	bool	asort	$dizi=array $seçenekler=int
+function	private	mixed	assert_options	$seçenek=int $değer=mixed
+function	private	string	base64_decode	$veri=string $titiz=bool
+function	private	string	base64_encode	$veri=string
+function	private	string	basename	$yol=string $uzantı=string
+function	private	bool	bbcode_add_element	$bbcode_havuzu=resource $etiket_adi=string $etiket_kurallari=array
+function	private	bool	bbcode_add_smiley	$bbcode_havuzu=resource $kaynak=string $hedef=string
+function	private	resource	bbcode_create	$bbcode_baslangic_etiketleri=array
+function	private	bool	bbcode_destroy	$bbcode_havuzu=resource
+function	private	string	bbcode_parse	$bbcode_havuzu=resource $cozumlenecek_dizge=string
+function	private	bool	bbcode_set_arg_parser	$bbcode_havuzu=resource $bbcode_degistirge_havuzu=resource
+function	private	bool	bbcode_set_flags	$bbcode_havuzu=resource $secenekler=int $durum=int
+function	private	string	bcadd	$sol_terim=string $sag_terim=string $olcek=int
+function	private	int	bccomp	$sol_terim=string $sag_terim=string $olcek=int
+function	private	string	bcdiv	$sol_terim=string $sag_terim=string $olcek=int
+function	private	string	bcmod	$sol_terim=string $modul=string
+function	private	string	bcmul	$sol_terim=string $sag_terim=string $olcek=int
+function	private	bool	bcompiler_load_exe	$dosyaadi=string
+function	private	bool	bcompiler_load	$dosyaadi=string
+function	private	bool	bcompiler_parse_class	$sinif=string $gericagirim=string
+function	private	bool	bcompiler_read	$dosyatanitici=resource
+function	private	bool	bcompiler_write_class	$dosyatanitici=resource $sinifadi=string $genisletme=string
+function	private	bool	bcompiler_write_constant	$dosyatanitici=resource $sabitadi=string
+function	private	bool	bcompiler_write_exe_footer	$dosyatanitici=resource $baslangickonum=int
+function	private	bool	bcompiler_write_file	$dosyatanitici=resource $dosyaadi=string
+function	private	bool	bcompiler_write_footer	$dosyatanitici=resource
+function	private	bool	bcompiler_write_function	$dosyatanitici=resource $islevAdi=string
+function	private	bool	bcompiler_write_functions_from_file	$dosyatanitici=resource $dosyaAdi=string
+function	private	bool	bcompiler_write_header	$dosyatanitici=resource $surum=string
+function	private	string	bcpow	$sol_terim=string $sag_terim=string $olcek=int
+function	private	string	bcpowmod	$sol_terim=string $sag_terim=string $modul=string $olcek=int
+function	private	bool	bcscale	$olcek=int
+function	private	string	bcsqrt	$terim=string $olcek=int
+function	private	string	bcsub	$sol_terim=string $sag_terim=string $olcek=int
+function	private	string	bin2hex	$dizge=string
+function	private	string	bind_textdomain_codeset	$uygulama_adı=string $karküm=string
+function	private	string	bindtextdomain	$uygulama_adı=string $dizin=string
+function	private	int	bzclose	$bz=resource
+function	private	mixed	bzcompress	$kaynak=string $blokboyu=int $katsayı=int
+function	private	mixed	bzdecompress	$kaynak=string $ufak=int
+function	private	int	bzerrno	$bz=resource
+function	private	array	bzerror	$bz=resource
+function	private	string	bzerrstr	$bz=resource
+function	private	int	bzflush	$bz=resource
+function	private	resource	bzopen	$dosyaadı=string $kip=string
+function	private	string	bzread	$bz=resource $uzunluk=int
+function	private	int	bzwrite	$bz=resource $veri=string $uzunluk=int
+function	private	int	cal_days_in_month	$takvim=int $ay=int $yil=int
+function	private	array	cal_from_jd	$jg=int $takvim=int
+function	private	array	cal_info	$takvim=int
+function	private	int	cal_to_jd	$takvim=int $ay=int $gun=int $yil=int
+function	private	mixed	call_user_func_array	$işlev=callback $değiştirge_dizisi=array
+function	private	mixed	call_user_func	$işlev=callback $değiştirge=mixed $...=mixed
+function	private	bool	chdir	$dizin=string
+function	private	bool	checkdate	$ay=int $gün=int $yıl=int
+function	private	bool	checkdnsrr	$konak=string $tür=string
+function	private	bool	chgrp	$dosyaismi=string $grup=mixed
+function	private	bool	chmod	$dosyaismi=string $kip=int
+function	private	bool	chown	$dosyaismi=string $kullanıcı=mixed
+function	private	string	chr	$ascii=int
+function	private	bool	chroot	$dizin=string
+function	private	bool	class_exists	$sınıf=string $özdevinimli_yükle=bool
+function	private	void	clearstatcache	$gerçek_yol_belleğini_temizle=bool $dosyaismi=string
+function	private	void	closedir	$dizin_tanıtıcısı=resource
+function	private	bool	closelog
+function	private	string	com_create_guid
+function	private	bool	com_event_sink	$comNesne=variant $aliciNesne=object $aliciArayuz=mixed
+function	private	variant	com_get_active_object	$progid=string $kodSayfasi=int
+function	private	bool	com_load_typelib	$turKutuphaneAdi=string $buyuklukDuyarsiz=bool
+function	private	bool	com_message_pump	$zaman_asimi=int
+function	private	bool	com_print_typeinfo	$comNesne=object $arayuz=string $baglama=bool
+function	private	array	compact	$değişken=mixed $...=mixed
+function	private	int	connection_aborted
+function	private	int	connection_status
+function	private	string	convert_cyr_string	$dizge=string $kaynak=string $hedef=string
+function	private	string	convert_uudecode	$veri=string
+function	private	string	convert_uuencode	$veri=string
+function	private	bool	copy	$kaynak=string $hedef=string $bağlam=resource
+function	private	mixed	count_chars	$dizge=string $kip=int
+function	private	int	count	$girdi=mixed $kip=int
+function	private	bool	crack_check	$sözlük=resource $parola=string
+function	private	bool	crack_closedict	$sözlük=resource
+function	private	string	crack_getlastmessage
+function	private	resource	crack_opendict	$sözlük=string
+function	private	int	crc32	$dizge=string
+function	private	string	create_function	$değiştirgeler=string $kod=string
+function	private	string	crypt	$dizge=string $tuz=string
+function	private	bool	ctype_alnum	$metin=string
+function	private	bool	ctype_alpha	$metin=string
+function	private	bool	ctype_cntrl	$metin=string
+function	private	bool	ctype_digit	$metin=string
+function	private	bool	ctype_graph	$metin=string
+function	private	bool	ctype_lower	$metin=string
+function	private	bool	ctype_print	$metin=string
+function	private	bool	ctype_punct	$metin=string
+function	private	bool	ctype_space	$metin=string
+function	private	bool	ctype_upper	$metin=string
+function	private	bool	ctype_xdigit	$metin=string
+function	private	void	curl_close	$ct=resource
+function	private	resource	curl_copy_handle	$ct=resource
+function	private	int	curl_errno	$ct=resource
+function	private	string	curl_error	$ct=resource
+function	private	mixed	curl_exec	$ct=resource
+function	private	mixed	curl_getinfo	$ct=resource $seçenek=int
+function	private	resource	curl_init	$url=string
+function	private	int	curl_multi_add_handle	$cct=resource $ct=resource
+function	private	void	curl_multi_close	$cct=resource
+function	private	int	curl_multi_exec	$cct=resource $hala_çalışıyor=int
+function	private	string	curl_multi_getcontent	$ct=resource
+function	private	array	curl_multi_info_read	$cct=resource $iletiler=int
+function	private	resource	curl_multi_init
+function	private	int	curl_multi_remove_handle	$cct=resource $ct=resource
+function	private	int	curl_multi_select	$cct=resource $zamanaşımı=float
+function	private	bool	curl_setopt_array	$ct=resource $seçenekler=array
+function	private	bool	curl_setopt	$ct=resource $seçenek=int $değer=mixed
+function	private	array	curl_version	$dönem=int
+function	private	mixed	current	$dizi=array
+function	private	string	date_default_timezone_get
+function	private	bool	date_default_timezone_set	$zamandilimi_belirteci=string
+function	private	mixed	date_sunrise	$zamandamgası=int $biçim=int $enlem=float $boylam=float $başucu=float $gmt_farkı=float
+function	private	mixed	date_sunset	$zamandamgası=int $biçim=int $enlem=float $boylam=float $başucu=float $gmt_farkı=float
+function	private	string	date	$biçim=string $zaman_damgası=int
+function	private	string	dcgettext	$uygulama_adı=string $ileti=string $yerel=int
+function	private	string	dcngettext	$uygulama_adı=string $msgid1=string $msgid2=string $n=int $yerel=int
+function	private	array	debug_backtrace	$nesne_sağla=bool
+function	private	void	debug_zval_dump	$değişken=mixed
+function	private	void	define_syslog_variables
+function	private	bool	define	$isim=string $değer=mixed $harf_büyüklüğüne_duyarsız=bool
+function	private	bool	defined	$isim=string
+function	private	void	delete
+function	private	string	dgettext	$uygulama_adı=string $ileti=string
+function	private	void	dio_close	$dt=resource
+function	private	mixed	dio_fcntl	$dt=resource $komut=int $değiştirgeler=mixed
+function	private	resource	dio_open	$dosyaismi=string $seçenekler=int $kip=int
+function	private	string	dio_read	$dt=resource $uzunluk=int
+function	private	int	dio_seek	$dt=resource $nereye=int $nereden=int
+function	private	array	dio_stat	$dt=resource
+function	private	bool	dio_tcsetattr	$dt=resource $seçenekler=array
+function	private	bool	dio_truncate	$dt=resource $uzunluk=int
+function	private	int	dio_write	$dt=resource $veri=string $uzunluk=int
+function	private	string	dirname	$yol=string
+function	private	float	disk_free_space	$dizin=string
+function	private	float	disk_total_space	$dizin=string
+function	private	int	dl	$kütüphane=string
+function	private	string	dngettext	$uygulama_adı=string $msgid1=string $msgid2=string $n=int
+function	private	array	dns_get_record	$konakadı=string $tür=int $yetkili_enesler=array $ek_kayıtlar=array
+function	private	DOMElement	dom_import_simplexml	$düğüm=SimpleXMLElement
+function	private	array	each	$dizi=array
+function	private	int	easter_date	$yil=int
+function	private	int	easter_days	$yil=int $yontem=int
+function	private	bool	empty	$değişken=mixed
+function	private	mixed	end	$dizi=array
+function	private	string	eregi_replace	$şablon=string $yenisi=string $dizge=string
+function	private	int	eregi	$şablon=string $dizge=string $gruplar=array
+function	private	array	error_get_last
+function	private	bool	error_log	$ileti=string $günlük_türü=int $hedef=string $ek_başlıklar=string
+function	private	int	error_reporting	$seviye=int
+function	private	string	escapeshellarg	$değiştirge=string
+function	private	string	escapeshellcmd	$komut=string
+function	private	string	exec	$komut=string $çıktı=array $dönüş_değeri=int
+function	private	int	exif_imagetype	$dosya=string
+function	private	array	exif_read_data	$dosya=string $bölümler=string $diziler=bool $küçük_örnek=bool
+function	private	string	exif_thumbnail	$dosya=string $genişlik=int $yükseklik=int $resim_türü=int
+function	private	void	exit	$durum=string
+function	private	array	explode	$ayraç=string $dizge=string $sınır=int
+function	private	bool	extension_loaded	$eklenti=string
+function	private	int	extract	$dizi=array $çıkarım_türü=int $önek=string
+function	private	bool	fclose	$dt=resource
+function	private	bool	feof	$dt=resource
+function	private	bool	fflush	$dt=resource
+function	private	string	fgetc	$dt=resource
+function	private	array	fgetcsv	$dt=resource $uzunluk=int $ayraç=string $sınırlayıcı=string $öncelem=string
+function	private	string	fgets	$dt=resource $uzunluk=int
+function	private	string	fgetss	$dt=resource $uzunluk=int $etiketler=string
+function	private	bool	file_exists	$dosyaismi=string
+function	private	string	file_get_contents	$dosyaismi=string $seçenekler=int $bağlam=resource $başlangıç=int $uzunluk=int
+function	private	int	file_put_contents	$dosyaismi=string $veri=mixed $seçenekler=int $bağlam=resource
+function	private	array	file	$dosyaismi=string $seçenekler=int $bağlam=resource
+function	private	int	filectime	$dosyaismi=string
+function	private	int	filegroup	$dosyaismi=string
+function	private	int	fileinode	$dosyaismi=string
+function	private	int	filemtime	$dosyaismi=string
+function	private	int	fileowner	$dosyaismi=string
+function	private	int	fileperms	$dosyaismi=string
+function	private	int	filesize	$dosyaismi=string
+function	private	string	filetype	$dosyaismi=string
+function	private	bool	flock	$dt=resource $işlem=int $engellensin=int
+function	private	bool	fnmatch	$kalıp=string $dizge=string $seçenekler=int
+function	private	resource	fopen	$dosyaismi=string $kip=string $include_path_kullan=bool $bağlam=resource
+function	private	int	fpassthru	$dt=resource
+function	private	int	fprintf	$dt=resource $biçem=string $değiştirgeler=mixed $...=mixed
+function	private	int	fputcsv	$dt=resource $alanlar=array $ayraç=string $sınırlayıcı=string
+function	private	string	fread	$dt=resource $uzunluk=int
+function	private	int	frenchtojd	$ay=int $gun=int $yil=int
+function	private	mixed	fscanf	$dt=resource $biçem=string $...=mixed
+function	private	int	fseek	$dt=resource $nereye=int $nereden=int
+function	private	resource	fsockopen	$konakadı=string $port=int $hatanum=int $hata_iletisi=string $zaman_aşımı=float
+function	private	array	fstat	$dt=resource
+function	private	int	ftell	$dt=resource
+function	private	bool	ftp_alloc	$ftp_akımı=resource $dosyaboyu=int $sonuç=string
+function	private	bool	ftp_cdup	$ftp_akımı=resource
+function	private	bool	ftp_chdir	$ftp_akımı=resource $dizin=string
+function	private	int	ftp_chmod	$ftp_akımı=resource $kip=int $dosya=string
+function	private	bool	ftp_close	$ftp_akımı=resource
+function	private	resource	ftp_connect	$adres=string $port=int $zamanaşımı=int
+function	private	bool	ftp_delete	$ftp_akımı=resource $dosya=string
+function	private	bool	ftp_exec	$ftp_akımı=resource $komut=string
+function	private	bool	ftp_fget	$ftp_akımı=resource $dt=resource $uzak_dosya=string $kip=int $devam_yeri=int
+function	private	bool	ftp_fput	$ftp_akımı=resource $uzak_dosa=string $dt=resource $mode=int $başlama_yeri=int
+function	private	mixed	ftp_get_option	$ftp_akımı=resource $seçenek=int
+function	private	bool	ftp_login	$ftp_akımı=resource $kullanıcı=string $parola=string
+function	private	int	ftp_mdtm	$ftp_akımı=resource $uzak_dosya=string
+function	private	string	ftp_mkdir	$ftp_akımı=resource $dizin=string
+function	private	int	ftp_nb_continue	$ftp_akımı=resource
+function	private	int	ftp_nb_fget	$ftp_akımı=resource $dt=resource $uzak_dosya=string $kip=int $devam_yeri=int
+function	private	int	ftp_nb_fput	$ftp_akımı=resource $uzak_dosya=string $dt=resource $kip=int $başlama_yeri=int
+function	private	int	ftp_nb_get	$ftp_akımı=resource $yerel_dosya=string $uzak_dosya=string $kip=int $devam_yeri=int
+function	private	int	ftp_nb_put	$ftp_akımı=resource $uzak_dosya=string $yerel_dosya=string $kip=int $başlama_yeri=int
+function	private	bool	ftp_pasv	$ftp_akımı=resource $edilgen=bool
+function	private	bool	ftp_put	$ftp_akımı=resource $uzak_dosya=string $yerel_dosya=string $kip=int $başlama_yeri=int
+function	private	array	ftp_raw	$ftp_akımı=resource $komut=string
+function	private	array	ftp_rawlist	$ftp_akımı=resource $dizin=string $ardışık=bool
+function	private	bool	ftp_rename	$ftp_akımı=resource $eskisi=string $yenisi=string
+function	private	bool	ftp_set_option	$ftp_akımı=resource $seçenek=int $değer=mixed
+function	private	bool	ftp_site	$ftp_stream=resource $komut=string
+function	private	int	ftp_size	$ftp_akımı=resource $uzak_dosya=string
+function	private	resource	ftp_ssl_connect	$adres=string $port=int $zamanaşımı=int
+function	private	string	ftp_systype	$ftp_akımı=resource
+function	private	bool	ftruncate	$dt=resource $boyut=int
+function	private	mixed	func_get_arg	$dğş_num=int
+function	private	array	func_get_args
+function	private	int	func_num_args
+function	private	bool	function_exists	$işlev_ismi=string
+function	private	array	gd_info
+function	private	mixed	get_browser	$tarayıcı=string $dizi_döndür=bool
+function	private	string	get_called_class
+function	private	string	get_cfg_var	$yönerge=string
+function	private	array	get_class_methods	$sınıf=mixed
+function	private	array	get_class_vars	$sınıf=string
+function	private	string	get_class	$nesne=object
+function	private	array	get_declared_classes
+function	private	array	get_declared_interfaces
+function	private	array	get_defined_constants	$sınıfla=bool
+function	private	array	get_defined_functions
+function	private	array	get_defined_vars
+function	private	array	get_extension_funcs	$modül_ismi=string
+function	private	array	get_headers	$url=string $biçemle=int
+function	private	array	get_html_translation_table	$tablo=int $öncelem_türü=int
+function	private	array	get_included_files
+function	private	array	get_loaded_extensions	$zend_eklentileri=bool
+function	private	int	get_magic_quotes_gpc
+function	private	array	get_meta_tags	$dosya=string $include_path_kullan=bool
+function	private	array	get_object_vars	$nesne=object
+function	private	string	get_parent_class	$nesne=mixed
+function	private	string	get_resource_type	$tanıtıcı=resource
+function	private	array	getallheaders
+function	private	string	getcwd
+function	private	array	getdate	$zaman_damgası=int
+function	private	string	getenv	$değişken=string
+function	private	string	gethostbyaddr	$ip_adresi=string
+function	private	string	gethostbyname	$konakadı=string
+function	private	array	gethostbynamel	$konakadı=string
+function	private	string	gethostname
+function	private	array	getimagesize	$dosyaismi=string $ekbilgi=array
+function	private	int	getlastmod
+function	private	bool	getmxrr	$konakadı=string $emiksler=array $önem=array
+function	private	int	getmyinode
+function	private	int	getmypid
+function	private	array	getopt	$kısa_seçenekler=string $uzun_seçenekler=array
+function	private	int	getprotobyname	$ad=string
+function	private	string	getprotobynumber	$numara=int
+function	private	array	getrusage	$kim=int
+function	private	int	getservbyname	$hizmet=string $protokol=string
+function	private	string	getservbyport	$port=int $protokol=string
+function	private	string	gettext	$ileti=string
+function	private	mixed	gettimeofday	$sayı_döndür=bool
+function	private	string	gettype	$var=mixed
+function	private	array	glob	$kalıp=string $seçenekler=int
+function	private	string	gmdate	$biçem=string $zaman_damgası=int
+function	private	int	gmmktime	$saat=int $dakika=int $saniye=int $ay=int $gün=int $yıl=int $ysu_var=int
+function	private	string	gmstrftime	$biçem=string $zaman_damgası=int
+function	private	string	grapheme_extract	$samanlık=string $boyut=int $birim=int $başlangıç=int $sonraki=int
+function	private	int	grapheme_stripos	$samanlık=string $iğne=string $başlangıç=int
+function	private	string	grapheme_stristr	$samanlık=string $iğne=string $ilk_parça=bool
+function	private	int	grapheme_strlen	$dizge=string
+function	private	int	grapheme_strripos	$samanlık=string $iğne=string $konum=int
+function	private	string	grapheme_strstr	$samanlık=string $iğne=string $ilk_parça=bool
+function	private	int	grapheme_substr	$dizge=string $başlangıç=int $uzunluk=int
+function	private	int	gregoriantojd	$ay=int $gun=int $yil=int
+function	private	bool	gzclose	$dt=resource
+function	private	string	gzcompress	$veri=string $seviye=int $kodlama=int
+function	private	string	gzdecode	$veri=string $uzunluk=int
+function	private	string	gzdeflate	$veri=string $seviye=int $kodlama=int
+function	private	string	gzencode	$veri=string $seviye=int $kodlama_kipi=int
+function	private	int	gzeof	$dt=resource
+function	private	array	gzfile	$dosyaismi=string $include_path_kullan=int
+function	private	string	gzgetc	$dt=resource
+function	private	string	gzgets	$dt=resource $uzunluk=int
+function	private	string	gzgetss	$dt=resource $uzunluk=int $izinli_etiketler=string
+function	private	string	gzinflate	$veri=string $uzunluk=int
+function	private	resource	gzopen	$dosyaismi=string $kip=string $include_path_kullan=int
+function	private	int	gzpassthru	$dt=resource
+function	private	string	gzread	$dt=resource $uzunluk=int
+function	private	bool	gzrewind	$dt=resource
+function	private	int	gzseek	$dt=resource $konum=int $nereye=int
+function	private	int	gztell	$dt=resource
+function	private	string	gzuncompress	$veri=string $uzunluk=int
+function	private	int	gzwrite	$dt=resource $dizge=string $uzunluk=int
+function	private	void	__halt_compiler
+function	private	array	hash_algos
+function	private	resource	hash_copy	$bağlam=resource
+function	private	string	hash_file	$algo=string $dosya=string $ham_çıktı=bool
+function	private	string	hash_final	$bağlam=resource $ham_çıktı=bool
+function	private	string	hash_hmac_file	$algo=string $dosya=string $anahtar=string $ham_çıktı=bool
+function	private	string	hash_hmac	$algo=string $veri=string $anahtar=string $ham_çıktı=bool
+function	private	resource	hash_init	$algo=string $seçenekler=int $anahtar=string
+function	private	bool	hash_update_file	$bağlam=resource $dosya=string $akım=resource
+function	private	int	hash_update_stream	$bağlam=resource $dt=resource $uzunluk=int
+function	private	bool	hash_update	$bağlam=resource $veri=string
+function	private	string	hash	$algo=string $veri=string $ham_çıktı=bool
+function	private	void	header	$dizge=string $değiştir=bool $http_yanıt_kodu=int
+function	private	array	headers_list
+function	private	bool	headers_sent	$dosya=string $satır=int
+function	private	string	hebrev	$ibranice_metin=string $satırdaki_azami_krk_sayısı=int
+function	private	string	hebrevc	$ibranice_metin=string $satırdaki_azami_krk_sayısı=int
+function	private	mixed	highlight_file	$dosya=string $döndür=bool
+function	private	string	html_entity_decode	$dizge=string $öncelem_türü=int $karküm=string
+function	private	string	htmlentities	$dizge=string $öncelem_türü=int $karküm=string $çifte_kodlama=bool
+function	private	string	htmlspecialchars_decode	$dizge=string $öncelem_türü=int
+function	private	string	htmlspecialchars	$dizge=string $öncelem_türü=int $karküm=string $çifte_kodlama=bool
+function	private	string	http_build_query	$form_verisi=array $sayısal_önek=string $ayraç=string
+function	private	mixed	iconv_get_encoding	$tür=string
+function	private	array	iconv_mime_decode_headers	$kodlanmış_başlıklar=string $kip=int $karküm=string
+function	private	string	iconv_mime_decode	$kodlanmış_başlık=string $kip=int $karküm=string
+function	private	string	iconv_mime_encode	$alan_adı=string $alan_değeri=string $tercihler=array
+function	private	bool	iconv_set_encoding	$türü=string $karküm=string
+function	private	int	iconv_strlen	$dizge=string $karküm=string
+function	private	int	iconv_strpos	$samanlık=string $iğne=string $başlangıç=int $karküm=string
+function	private	int	iconv_strrpos	$samanlık=string $iğne=string $karküm=string
+function	private	string	iconv_substr	$dizge=string $başlangıç=int $uzunluk=int $karküm=string
+function	private	string	iconv	$kodlamadan=string $kodlamaya=string $dizge=string
+function	private	int	idate	$biçem=string $zaman_damgası=int
+function	private	string	idn_to_ascii	$alan=string $seçenekler=int
+function	private	string	idn_to_utf8	$alan=string $seçenekler=int
+function	private	int	ignore_user_abort	$değer=string
+function	private	string	image_type_to_extension	$resimtürü=int $noktalı=bool
+function	private	string	image_type_to_mime_type	$resimtürü=int
+function	private	bool	image2wbmp	$resim=resource $dosyaismi=string $eşik=int
+function	private	bool	imagealphablending	$resim=resource $etkin=bool
+function	private	bool	imageantialias	$resim=resource $etkin=bool
+function	private	bool	imagearc	$resim=resource $mx=int $my=int $genişlik=int $yükseklik=int $baş=int $son=int $renk=int
+function	private	bool	imagechar	$resim=resource $yazıtipi=int $x=int $y=int $karakter=string $renk=int
+function	private	bool	imagecharup	$image=resource $font=int $x=int $y=int $c=string $color=int
+function	private	int	imagecolorallocate	$resim=resource $kırmızı=int $yeşil=int $mavi=int
+function	private	int	imagecolorallocatealpha	$resim=resource $kırmızı=int $yeşil=int $mavi=int $alfa=int
+function	private	int	imagecolorat	$resim=resource $x=int $y=int
+function	private	int	imagecolorclosest	$resim=resource $kırmızı=int $yeşil=int $mavi=int
+function	private	int	imagecolorclosestalpha	$resim=resource $kırmızı=int $yeşil=int $mavi=int $alfa=int
+function	private	int	imagecolorclosesthwb	$resim=resource $kırmızı=int $yeşil=int $mavi=int
+function	private	bool	imagecolordeallocate	$resim=resource $renk=int
+function	private	int	imagecolorexact	$resim=resource $kırmızı=int $yeşil=int $mavi=int
+function	private	int	imagecolorexactalpha	$resim=resource $kırmızı=int $yeşil=int $mavi=int $alfa=int
+function	private	bool	imagecolormatch	$resim1=resource $resim2=resource
+function	private	int	imagecolorresolve	$resim=resource $kırmızı=int $yeşil=int $mavi=int
+function	private	int	imagecolorresolvealpha	$resim=resource $kırmızı=int $yeşil=int $mavi=int $alfa=int
+function	private	void	imagecolorset	$resim=resource $indis=int $kırmızı=int $yeşil=int $mavi=int
+function	private	array	imagecolorsforindex	$resim=resource $indis=int
+function	private	int	imagecolorstotal	$resim=resource
+function	private	int	imagecolortransparent	$resim=resource $renk=int
+function	private	bool	imageconvolution	$resim=resource $matris=array $katsayı=float $konum=float
+function	private	bool	imagecopy	$hedef=resource $kaynak=resource $hdf_x=int $hdf_y=int $kyn_x=int $kyn_y=int $kyn_gnş=int $kyn_yks=int
+function	private	resource	imagecreate	$genişlik=int $yükseklik=int
+function	private	resource	imagecreatefromgd	$dosyaismi=string
+function	private	resource	imagecreatefromgd2	$dosyaismi=string
+function	private	resource	imagecreatefromgd2part	$dosyaismi=string $X=int $Y=int $genişlik=int $yükseklik=int
+function	private	resource	imagecreatefromgif	$dosyaismi=string
+function	private	resource	imagecreatefromjpeg	$dosyaismi=string
+function	private	resource	imagecreatefrompng	$dosyaismi=string
+function	private	resource	imagecreatefromstring	$veri=string
+function	private	resource	imagecreatefromwbmp	$dosyaismi=string
+function	private	resource	imagecreatefromxbm	$dosyaismi=string
+function	private	resource	imagecreatefromxpm	$dosyaismi=string
+function	private	resource	imagecreatetruecolor	$genişlik=int $yükseklik=int
+function	private	bool	imagedashedline	$resim=resource $x1=int $y1=int $x2=int $y2=int $renk=int
+function	private	bool	imagedestroy	$resim=resource
+function	private	bool	imageellipse	$resim=resource $mx=int $my=int $genişlik=int $yükseklik=int $renk=int
+function	private	bool	imagefill	$resim=resource $x=int $y=int $renk=int
+function	private	bool	imagefilledellipse	$resim=resource $mx=int $my=int $genişlik=int $yükseklik=int $renk=int
+function	private	bool	imagefilledpolygon	$resim=resource $noktalar=array $nokta_sayısı=int $renk=int
+function	private	bool	imagefilledrectangle	$resim=resource $x1=int $y1=int $x2=int $y2=int $renk=int
+function	private	bool	imagefilltoborder	$resim=resource $x=int $y=int $kenar=int $dolgu=int
+function	private	bool	imagefilter	$resim=resource $süzgeç=int $d1=int $d2=int $d3=int $d4=int
+function	private	int	imagefontheight	$yazıtipi=int
+function	private	int	imagefontwidth	$yazıtipi=int
+function	private	array	imageftbbox	$boyut=float $açı=float $yazıtipi=string $metin=string $ekbilgi=array
+function	private	bool	imagegammacorrect	$resim=resource $girdigamma=float $çıktıgamma=float
+function	private	bool	imagegd	$resim=resource $dosyaismi=string
+function	private	bool	imagegd2	$resim=resource $dosyaismi=string $parça_boyutu=int $tür=int
+function	private	bool	imagegif	$resim=resource $dosyaismi=string
+function	private	resource	imagegrabscreen
+function	private	resource	imagegrabwindow	$pencere=int $istemci_alanı=int
+function	private	int	imageinterlace	$resim=resource $geçişim=int
+function	private	bool	imageistruecolor	$resim=resource
+function	private	bool	imagejpeg	$resim=resource $dosyaismi=string $kalite=int
+function	private	bool	imagelayereffect	$image=resource $etki=int
+function	private	bool	imageline	$resim=resource $x1=int $y1=int $x2=int $y2=int $renk=int
+function	private	int	imageloadfont	$dosya=string
+function	private	void	imagepalettecopy	$hedef=resource $kaynak=resource
+function	private	bool	imagepng	$resim=resource $dosyaismi=string $kalite=int $süzgeçler=int
+function	private	bool	imagepolygon	$resim=resource $noktalar=array $nokta_sayısı=int $renk=int
+function	private	array	imagepsbbox	$metin=string $yazıtipi=resource $boyut=int
+function	private	bool	imagepsencodefont	$yazıtipi=resource $kodlama_dosyası=string
+function	private	bool	imagepsextendfont	$yazıtipi=resource $katsayı=float
+function	private	bool	imagepsfreefont	$font_index=resource
+function	private	resource	imagepsloadfont	$dosyaismi=string
+function	private	bool	imagepsslantfont	$yazıtipi=resource $eğim=float
+function	private	bool	imagerectangle	$resim=resource $x1=int $y1=int $x2=int $y2=int $renk=int
+function	private	resource	imagerotate	$resim=resource $açı=float $artalan=int $şeffaflığı_yoksay=int
+function	private	bool	imagesavealpha	$resim=resource $alfa_kaydet=bool
+function	private	bool	imagesetbrush	$resim=resource $fırça=resource
+function	private	bool	imagesetpixel	$resim=resource $x=int $y=int $renk=int
+function	private	bool	imagesetstyle	$resim=resource $tarz=array
+function	private	bool	imagesetthickness	$resim=resource $kalınlık=int
+function	private	bool	imagesettile	$image=resource $karo=resource
+function	private	bool	imagestring	$resim=resource $yazıtipi=int $x=int $y=int $dizge=string $renk=int
+function	private	bool	imagestringup	$resim=resource $yazıtipi=int $x=int $y=int $dizge=string $renk=int
+function	private	int	imagesx	$resim=resource
+function	private	int	imagesy	$resim=resource
+function	private	bool	imagetruecolortopalette	$resim=resource $titrek=bool $renk_sayısı=int
+function	private	array	imagettfbbox	$boyut=float $açı=float $yazıtipi=string $metin=string
+function	private	array	imagettftext	$resim=resource $boyut=float $açı=float $x=int $y=int $renk=int $yazıtipi=string $metin=string
+function	private	int	imagetypes
+function	private	bool	imagewbmp	$resim=resource $dosyaismi=string $artalan=int
+function	private	bool	imagexbm	$resim=resource $dosyaismi=string $artalan=int
+Imagick	private	bool	adaptiveBlurImage	$yarıçap=float $sapma=float $kanal=int
+Imagick	private	bool	adaptiveResizeImage	$genişlik=int $yükseklik=int $sığdır=bool
+Imagick	private	bool	adaptiveSharpenImage	$yarıçap=float $sapma=float $kanal=int
+Imagick	private	bool	adaptiveThresholdImage	$genişlik=int $yükseklik=int $başlangıç=int
+Imagick	private	bool	animateImages	$x_sunucusu=string
+Imagick	private	Imagick	appendImages	$yığıt=bool
+Imagick	private	bool	chopImage	$genişlik=int $yükseklik=int $x=int $y=int
+Imagick	private	bool	clutImage	$renk_tablosu=Imagick $kanal=float
+Imagick	private	bool	commentImage	$açıklama=string
+Imagick	private	Imagick	compareImageLayers	$yöntem=int
+Imagick	private	bool	contrastStretchImage	$siyah_nokta=float $beyaz_nokta=float $kanal=int
+Imagick	private	bool	decipherImage	$parola=string
+Imagick	private	bool	distortImage	$yöntem=int $değiştirgeler=array $sığdır=bool
+Imagick	private	bool	encipherImage	$parola=string
+Imagick	private	bool	extentImage	$genişlik=int $yükseklik=int $x=int $y=int
+Imagick	private	int	getCompression
+Imagick	private	int	getCompressionQuality
+Imagick	private	string	getFont
+Imagick	private	int	getImageChannelDepth	$kanal=int
+Imagick	private	Imagick	getImageClipMask
+Imagick	private	int	getImageCompression
+Imagick	private	int	getImageInterpolateMethod
+Imagick	private	int	getImageLength
+Imagick	private	int	getImageMatte
+Imagick	private	int	getImageOrientation
+Imagick	private	array	getImageProfiles	$şablon=string $sadece_isimler=bool
+Imagick	private	array	getImageProperties	$şablon=string $sadece_isimler=bool
+Imagick	private	string	getImageProperty	$isim=string
+Imagick	private	int	getIteratorIndex
+Imagick	private	string	getPointSize
+Imagick	private	int	getSizeOffset
+Imagick	private	bool	linearStretchImage	$siyah_nokta=float $beyaz_nokta=float
+Imagick	private	bool	liquidRescaleImage	$genişlik=int $yükseklik=int $delta_x=float $diklik=float
+Imagick	private	bool	mergeImageLayers	$katman_yöntemi=int
+Imagick	private	bool	opaquePaintImage	$hedef=mixed $renk=mixed $benzerlik=float $ters=bool $kanal=int
+Imagick	private	bool	optimizeImageLayers
+Imagick	private	bool	orderedPosterizeImage	$eşik_eşlemi=string $kanal=int
+Imagick	private	bool	paintFloodfillImage	$dolgu=mixed $benzerlik=float $çerçeve_rengi=mixed $x=int $y=int $kanal=int
+Imagick	private	bool	pingImageBlob	$resim=string
+Imagick	private	bool	pingImageFile	$dt=resource $dosya=string
+Imagick	private	bool	polaroidImage	$nesne=ImagickDraw $açı=float
+Imagick	private	bool	randomThresholdImage	$düşük=float $yüksek=float $kanal=int
+Imagick	private	bool	resetImagePage	$sayfa=string
+Imagick	private	bool	setFont	$yazıtipi=string
+Imagick	private	bool	setImageAlphaChannel	$kip=int
+Imagick	private	bool	setImageClipMask	$kırpıcı_resim=Imagick
+Imagick	private	bool	setImageCompression	$sıkıştırma=int
+Imagick	private	bool	setImageCompressionQuality	$seviye=int
+Imagick	private	bool	setImageInterpolateMethod	$yöntem=int
+Imagick	private	bool	setImageMatte	$matlık=bool
+Imagick	private	bool	setImageOpacity	$matlık=float
+Imagick	private	bool	setImageOrientation	$baskı_yönü=int
+Imagick	private	bool	setImageProperty	$isim=string $değer=string
+Imagick	private	bool	setPointSize	$punto=float
+Imagick	private	bool	shadeImage	$gri=bool $başucu=float $yükseliş=float
+Imagick	private	bool	sketchImage	$yarıçap=float $sapma=float $açı=float
+Imagick	private	Imagick	transformImage	$budama=string $geometri=string
+Imagick	private	bool	transparentPaintImage	$hedef=mixed $şeffaflık=float $benzerlik=float $ters=bool
+Imagick	private	bool	transposeImage
+Imagick	private	bool	transverseImage
+Imagick	private	bool	trimImage	$benzerlik=float
+Imagick	private	bool	uniqueImageColors
+Imagick	private	bool	vignetteImage	$siyahNokta=float $beyazNokta=float $x=int $y=int
+Imagick	private	bool	waveImage	$genlik=float $dalga_boyu=float
+Imagick	private	bool	writeImageFile	$dt=resource
+Imagick	private	bool	writeImagesFile	$dt=resource
+function	private	array	imap_alerts
+function	private	string	imap_base64	$dizge=string
+function	private	string	imap_body	$imap_akımı=resource $iletinum=int $seçenekler=int
+function	private	object	imap_bodystruct	$imap_akımı=resource $iletinum=int $bölüm=string
+function	private	object	imap_check	$imap_akımı=resource
+function	private	bool	imap_clearflag_full	$imap_akımı=resource $aralık=string $imler=string $seçenekler=int
+function	private	bool	imap_close	$imap_akımı=resource $seçenek=int
+function	private	bool	imap_createmailbox	$imap_akımı=resource $pk=string
+function	private	bool	imap_delete	$imap_akımı=resource $iletinum=int $seçenekler=int
+function	private	array	imap_errors
+function	private	bool	imap_expunge	$imap_akımı=resource
+function	private	array	imap_fetch_overview	$imap_akımı=resource $aralık=string $seçenekler=int
+function	private	string	imap_fetchbody	$imap_akımı=resource $iletinum=int $bölüm=string $seçenekler=int
+function	private	string	imap_fetchheader	$imap_akımı=resource $iletinum=int $seçenekler=int
+function	private	object	imap_fetchstructure	$imap_akımı=resource $iletinum=int $seçenekler=int
+function	private	string	imap_gc	$imap_akımı=resource $önbellek_türü=int
+function	private	array	imap_get_quota	$imap_akımı=resource $kullanıcı=string
+function	private	array	imap_get_quotaroot	$imap_akımı=resource $pk=string
+function	private	array	imap_getacl	$imap_akımı=resource $pk=string
+function	private	array	imap_getmailboxes	$imap_akımı=resource $hedef=string $kalıp=string
+function	private	array	imap_getsubscribed	$imap_akımı=resource $hedef=string $kalıp=string
+function	private	object	imap_headerinfo	$imap_akımı=resource $iletinum=int $uzunluk=int $konu_uzunluğu=int $öntanımlı_konak=string
+function	private	array	imap_headers	$imap_akımı=resource
+function	private	string	imap_last_error
+function	private	array	imap_listscan	$imap_akımı=resource $hedef=string $kalıp=string $içerik=string
+function	private	array	imap_lsub	$imap_akımı=resource $hedef=string $kalıp=string
+function	private	string	imap_mail_compose	$zarf=array $gövde=array
+function	private	bool	imap_mail_copy	$imap_akımı=resource $iletiler=string $pk=string $seçenekler=int
+function	private	bool	imap_mail_move	$imap_akımı=resource $iletiler=string $pk=string $seçenekler=int
+function	private	bool	imap_mail	$kime=string $konu=string $ileti=string $ek_başlıklar=string $cc=string $bcc=string $dönüş_yolu=string
+function	private	array	imap_mime_header_decode	$dizge=string
+function	private	int	imap_msgno	$imap_akımı=resource $uid=int
+function	private	int	imap_num_msg	$imap_akımı=resource
+function	private	int	imap_num_recent	$imap_akımı=resource
+function	private	resource	imap_open	$pk=string $kullanıcı=string $parola=string $seçenekler=int $dnm_sayısı=int
+function	private	bool	imap_ping	$imap_akımı=resource
+function	private	string	imap_qprint	$dizge=string
+function	private	bool	imap_renamemailbox	$imap_akımı=resource $eskisi=string $yenisi=string
+function	private	bool	imap_reopen	$imap_akımı=resource $pk=string $seçenekler=int $dnm_sayısı=int
+function	private	array	imap_rfc822_parse_adrlist	$adres=string $konak_adı=string
+function	private	object	imap_rfc822_parse_headers	$başlıklar=string $konakadı=string
+function	private	string	imap_rfc822_write_address	$posta_kutusu=string $alan_adı=string $adı_soyadı=string
+function	private	bool	imap_savebody	$imap_akımı=resource $dosya=mixed $iletinum=int $parçanum=string $seçenekler=int
+function	private	array	imap_search	$imap_akımı=resource $kural=string $seçenekler=int $karküm=string
+function	private	bool	imap_set_quota	$imap_akımı=resource $posta_kutusu=string $kota_sınırı=int
+function	private	bool	imap_setacl	$imap_akımı=resource $posta_kutusu=string $kullanıcı=string $izinler=string
+function	private	bool	imap_setflag_full	$imap_akımı=resource $aralık=string $im=string $seçenekler=int
+function	private	array	imap_sort	$imap_akımı=resource $kural=int $tersine=int $seçenekler=int $arama_kuralı=string $karküm=string
+function	private	object	imap_status	$imap_akımı=resource $posta_kutusu=string $seçenekler=int
+function	private	bool	imap_subscribe	$imap_akımı=resource $posta_kutusu=string
+function	private	array	imap_thread	$imap_akımı=resource $seçenekler=int
+function	private	mixed	imap_timeout	$türü=int $süre=int
+function	private	int	imap_uid	$imap_akımı=resource $iletinum=int
+function	private	bool	imap_undelete	$imap_akımı=resource $iletinum=int $seçenekler=int
+function	private	bool	imap_unsubscribe	$imap_akımı=resource $posta_kutusu=string
+function	private	string	imap_utf7_decode	$metin=string
+function	private	string	imap_utf7_encode	$veri=string
+function	private	string	imap_utf8	$mimeli_metin=string
+function	private	string	implode	$yapıştırıcı=string $parçalar=array
+function	private	bool	import_request_variables	$türler=string $önek=string
+function	private	bool	in_array	$iğne=mixed $samanlık=array $strict=bool
+function	private	string	inet_pton	$ip_adresi=string
+function	private	array	ini_get_all	$eklenti=string $ayrıntılı=bool
+function	private	string	ini_get	$yönerge=string
+function	private	void	ini_restore	$yönerge=string
+function	private	string	ini_set	$yönerge=string $değer=string
+function	private	bool	interface_exists	$arayüz=string $özdevinimli_yükle=bool
+function	private	string	intl_error_name	$error_code=int
+function	private	int	intl_get_error_code
+function	private	string	intl_get_error_message
+function	private	int	intval	$değişken=mixed $taban=int
+function	private	int	ip2long	$ip_adresi=string
+function	private	mixed	iptcembed	$iptcverisi=string $jpeg_dosya_ismi=string $kuyruk=int
+function	private	array	iptcparse	$iptcbloğu=string
+function	private	bool	is_a	$nesne=object $sınıf=string
+function	private	bool	is_array	$değişken=mixed
+function	private	bool	is_bool	$değişken=mixed
+function	private	bool	is_callable	$işlev=callback $sözdizimsel=bool $isim=string
+function	private	bool	is_dir	$dosyaismi=string
+function	private	bool	is_executable	$dosyaismi=string
+function	private	bool	is_file	$dosyaismi=string
+function	private	bool	is_float	$değişken=mixed
+function	private	bool	is_int	$değişken=mixed
+function	private	bool	is_link	$filename=string
+function	private	bool	is_null	$değişken=mixed
+function	private	bool	is_numeric	$değişken=mixed
+function	private	bool	is_object	$değişken=mixed
+function	private	bool	is_readable	$dosyaismi=string
+function	private	bool	is_resource	$değişken=mixed
+function	private	bool	is_scalar	$değişken=mixed
+function	private	bool	is_string	$değişken=mixed
+function	private	bool	is_subclass_of	$nesne=mixed $sınıf=string
+function	private	bool	is_uploaded_file	$dosyaismi=string
+function	private	bool	is_writable	$dosyaismi=string
+function	private	bool	isset	$değişken=mixed $değişken=mixed $...
+function	private	mixed	jddayofweek	$julyengunu=int $yontem=int
+function	private	string	jdmonthname	$julyengunu=int $takvim=int
+function	private	string	jdtofrench	$julyengunu=int
+function	private	string	jdtogregorian	$julyengunu=int
+function	private	string	jdtojewish	$julyengunu=int $ibrani=bool $bicim=int
+function	private	string	jdtojulian	$julyengunu=int
+function	private	int	jdtounix	$julyengunu=int
+function	private	int	jewishtojd	$ay=int $gun=int $yil=int
+function	private	bool	jpeg2wbmp	$jpegdosya=string $wbmpdosya=string $hdf_yüks=int $hdf_genş=int $eşik=int
+function	private	mixed	json_decode	$json=string $assoc=bool $depth=int
+function	private	string	json_encode	$deger=mixed $secenekler=int
+function	private	int	json_last_error
+function	private	int	juliantojd	$ay=int $gun=int $yil=int
+function	private	mixed	key	$dizi=array
+function	private	bool	krsort	$dizi=array $seçenekler=int
+function	private	bool	ksort	$dizi=array $seçenekler=int
+function	private	string	lcfirst	$dizge=string
+function	private	bool	lchgrp	$dosyaismi=string $grup=mixed
+function	private	bool	lchown	$dosyaismi=string $kullanıcı=mixed
+function	private	int	levenshtein	$d1=string $d2=string
+function	private	array	libxml_get_errors
+function	private	LibXMLError	libxml_get_last_error
+function	private	void	libxml_set_streams_context	$akım_bağlamı=resource
+function	private	bool	libxml_use_internal_errors	$hatalar_etkin=bool
+function	private	bool	link	$bağ=string $hedef=string
+function	private	int	linkinfo	$yol=string
+function	private	array	list	$değişken=mixed $...=mixed
+function	private	array	localeconv
+function	private	array	localtime	$zamandamgası=int $ilişkisel_mi=bool
+function	private	string	long2ip	$özel_adres=string
+function	private	array	lstat	$dosyaismi=string
+function	private	string	ltrim	$dizge=string $karakterler=string
+function	private	string	lzf_compress	$veri=string
+function	private	string	lzf_decompress	$veri=string
+function	private	int	lzf_optimized_for
+function	private	bool	mb_check_encoding	$dizge=string $kodlama=string
+function	private	string	mb_convert_case	$dizge=string $kip=int $kodlama=string
+function	private	string	mb_convert_encoding	$dizge=string $kodlamaya=string $kodlamadan=mixed
+function	private	string	mb_convert_kana	$dizge=string $seçenek=string $kodlama=string
+function	private	string	mb_convert_variables	$kodlamaya=string $kodlamadan=mixed $değişkenler=mixed $...=mixed
+function	private	string	mb_decode_mimeheader	$dizge=string
+function	private	string	mb_decode_numericentity	$dizge=string $bölge=array $kodlama=string
+function	private	string	mb_detect_encoding	$dizge=string $kodlama_listesi=mixed $kesin=bool
+function	private	mixed	mb_detect_order	$kodlama_listesi=mixed
+function	private	string	mb_encode_mimeheader	$dizge=string $karküm=string $aktarım_kodlaması=string $satırsonu=string $girinti=int
+function	private	string	mb_encode_numericentity	$dizge=string $bölge=array $kodlama=string
+function	private	bool	mb_ereg_match	$şablon=string $dizge=string $seçenek=string
+function	private	bool	mb_ereg_search_init	$dizge=string $şablon=string $seçenek=string
+function	private	array	mb_ereg_search_pos	$şablon=string $seçenek=string
+function	private	array	mb_ereg_search_regs	$şablon=string $seçenek=string
+function	private	bool	mb_ereg_search	$şablon=string $seçenek=string
+function	private	mixed	mb_http_output	$kodlama=string
+function	private	mixed	mb_internal_encoding	$kodlama=string
+function	private	mixed	mb_language	$dil=string
+function	private	array	mb_list_encodings
+function	private	string	mb_output_handler	$içerik=string $durum=int
+function	private	bool	mb_parse_str	$kodlu_dizge=string $sonuç=array
+function	private	string	mb_preferred_mime_name	$kodlama=string
+function	private	mixed	mb_regex_encoding	$kodlama=string
+function	private	bool	mb_send_mail	$kime=string $konu=string $ileti=string $ek_başlıklar=string $ek_değiştirge=string
+function	private	string	mb_strcut	$dizge=string $başlangıç=int $uzunluk=int $kodlama=string
+function	private	string	mb_strimwidth	$dizge=string $başlangıç=int $genişlik=int $kırpıcı=string $kodlama=string
+function	private	int	mb_stripos	$samanlık=string $iğne=string $konum=int $kodlama=string
+function	private	string	mb_stristr	$samanlık=string $iğne=string $ilk_parça=bool $kodlama=string
+function	private	int	mb_strlen	$dizge=string $kodlama=string
+function	private	int	mb_strpos	$samanlık=string $iğne=string $konum=int $kodlama=string
+function	private	string	mb_strrchr	$samanlık=string $iğne=string $ilk_parça=bool $kodlama=string
+function	private	string	mb_strrichr	$samanlık=string $iğne=string $ilk_parça=bool $kodlama=string
+function	private	int	mb_strripos	$samanlık=string $iğne=string $konum=int $kodlama=string
+function	private	int	mb_strrpos	$samanlık=string $iğne=string $konum=int $kodlama=string
+function	private	string	mb_strstr	$samanlık=string $iğne=string $ilk_parça=bool $kodlama=string
+function	private	string	mb_strtolower	$dizge=string $kodlama=string
+function	private	string	mb_strtoupper	$dizge=string $kodlama=string
+function	private	int	mb_strwidth	$dizge=string $kodlama=string
+function	private	mixed	mb_substitute_character	$ikamekrk=mixed
+function	private	int	mb_substr_count	$samanlık=string $iğne=string $kodlama=string
+function	private	string	mb_substr	$dizge=string $başlangıç=int $uzunluk=int $kodlama=string
+function	private	string	mcrypt_cbc	$şifre=int $tuz=string $veri=string $kip=int $iv=string
+function	private	string	mcrypt_cfb	$şifre=int $tuz=string $veri=string $kip=int $iv=string
+function	private	string	mcrypt_create_iv	$boy=int $kaynak=int
+function	private	string	mcrypt_decrypt	$şifre=string $anahtar=string $veri=string $kip=string $iv=string
+function	private	string	mcrypt_ecb	$şifre=int $tuz=string $veri=string $kip=int
+function	private	string	mcrypt_enc_get_algorithms_name	$şt=resource
+function	private	int	mcrypt_enc_get_block_size	$şt=resource
+function	private	int	mcrypt_enc_get_iv_size	$şt=resource
+function	private	int	mcrypt_enc_get_key_size	$şt=resource
+function	private	string	mcrypt_enc_get_modes_name	$şt=resource
+function	private	array	mcrypt_enc_get_supported_key_sizes	$şt=resource
+function	private	bool	mcrypt_enc_is_block_algorithm_mode	$şt=resource
+function	private	bool	mcrypt_enc_is_block_algorithm	$şt=resource
+function	private	bool	mcrypt_enc_is_block_mode	$şt=resource
+function	private	int	mcrypt_enc_self_test	$şt=resource
+function	private	string	mcrypt_encrypt	$şifre=string $anahtar=string $veri=string $kip=string $iv=string
+function	private	bool	mcrypt_generic_deinit	$şt=resource
+function	private	bool	mcrypt_generic_end	$şt=resource
+function	private	int	mcrypt_generic_init	$şt=resource $anahtar=string $iv=string
+function	private	string	mcrypt_generic	$şt=resource $veri=string
+function	private	int	mcrypt_get_block_size	$şifre=int
+function	private	string	mcrypt_get_cipher_name	$şifre=int
+function	private	int	mcrypt_get_iv_size	$şifre=string $kip=string
+function	private	int	mcrypt_get_key_size	$şifre=int
+function	private	array	mcrypt_list_algorithms	$lib_dir=string
+function	private	array	mcrypt_list_modes	$lib_dir=string
+function	private	bool	mcrypt_module_close	$şt=resource
+function	private	int	mcrypt_module_get_algo_block_size	$algoritma=string $lib_dir=string
+function	private	int	mcrypt_module_get_algo_key_size	$algoritma=string $lib_dir=string
+function	private	array	mcrypt_module_get_supported_key_sizes	$algoritma=string $lib_dir=string
+function	private	bool	mcrypt_module_is_block_algorithm_mode	$kip=string $lib_dir=string
+function	private	bool	mcrypt_module_is_block_algorithm	$algoritma=string $lib_dir=string
+function	private	bool	mcrypt_module_is_block_mode	$kip=string $lib_dir=string
+function	private	resource	mcrypt_module_open	$algoritma=string $algoritma_dizini=string $kip=string $kip_dizini=string
+function	private	bool	mcrypt_module_self_test	$algoritma=string $lib_dir=string
+function	private	string	mcrypt_ofb	$şifre=int $tuz=string $veri=string $kip=int $iv=string
+function	private	string	md5_file	$dosya=string $ham_çıktı=bool
+function	private	string	md5	$dizge=string $ham_çıktı=bool
+function	private	string	mdecrypt_generic	$şt=resource $veri=string
+function	private	int	memory_get_peak_usage	$gerçek_kullanım=bool
+function	private	int	memory_get_usage	$gerçek_kullanım=bool
+function	private	string	metaphone	$dizge=string $sesler=int
+function	private	bool	method_exists	$sınıf=mixed $yöntem=string
+function	private	int	mhash_count
+function	private	int	mhash_get_block_size	$algoritma=int
+function	private	string	mhash_get_hash_name	$algoritma=int
+function	private	string	mhash_keygen_s2k	$özet=int $parola=string $tuz=string $uzunluk=int
+function	private	string	mhash	$algoritma=int $veri=string $anahtar=string
+function	private	mixed	microtime	$gerçek_sayı=bool
+function	private	bool	mkdir	$yol=string $kip=int $ardışık=bool $bağlam=resource
+function	private	int	mktime	$saat=int $dakika=int $saniye=int $ay=int $gün=int $yıl=int $ysu_var=int
+function	private	string	money_format	$biçem=string $sayı=float
+function	private	bool	move_uploaded_file	$dosyaismi=string $hedef=string
+function	private	int	mysql_affected_rows	$bağlantı_belirteci=resource
+function	private	string	mysql_client_encoding	$bağlantı_belirteci=resource
+function	private	bool	mysql_close	$bağlantı_belirteci=resource
+function	private	resource	mysql_connect	$sunucu=string $kullanıcı_adı=string $parola=string $yeni_bağlantı=bool $istemci_seçenekleri=int
+function	private	bool	mysql_create_db	$veritabanı_adı=string $bağlantı_belirteci=resource
+function	private	string	mysql_db_name	$sonuç=resource $satır=int $alan=mixed
+function	private	resource	mysql_db_query	$veritabanı=string $sorgu=string $bağlantı_belirteci=resource
+function	private	array	mysql_fetch_lengths	$sonuç=resource
+function	private	int	mysql_field_len	$result=resource $alan_konumu=int
+function	private	bool	mysql_field_seek	$sonuç=resource $alan_konumu=int
+function	private	string	mysql_field_table	$sonuç=resource $alan_konumu=int
+function	private	bool	mysql_free_result	$sonuç=resource
+function	private	string	mysql_get_client_info
+function	private	string	mysql_get_host_info	$bağlantı_belirteci=resource
+function	private	int	mysql_get_proto_info	$bağlantı_belirteci=resource
+function	private	string	mysql_get_server_info	$bağlantı_belirteci=resource
+function	private	string	mysql_info	$bağlantı_belirteci=resource
+function	private	resource	mysql_list_dbs	$bağlantı_belirteci=resource
+function	private	resource	mysql_list_fields	$veritabanı_adı=string $tablo_adı=string $bağlantı_belirteci=resource
+function	private	resource	mysql_list_processes	$bağlantı_belirteci=resource
+function	private	resource	mysql_list_tables	$veritabanı=string $bağlantı_belirteci=resource
+function	private	int	mysql_num_fields	$sonuç=resource
+function	private	int	mysql_num_rows	$sonuç=resource
+function	private	bool	mysql_ping	$bağlantı_belirteci=resource
+function	private	bool	mysql_select_db	$veritabanı_adı=string $bağlantı_belirteci=resource
+function	private	string	mysql_stat	$bağlantı_belirteci=resource
+function	private	string	mysql_tablename	$sonuç=resource $i=int
+function	private	int	mysql_thread_id	$bağlantı_belirteci=resource
+function	private	resource	mysql_unbuffered_query	$sorgu=string $bağlantı_belirteci=resource
+function	private	bool	natcasesort	$dizi=array
+function	private	bool	natsort	$array=array
+function	private	mixed	next	$dizi=array
+function	private	string	ngettext	$msgid1=string $msgid2=string $n=int
+function	private	string	nl_langinfo	$eleman=int
+function	private	string	nl2br	$string=string $xhtml=bool
+function	private	string	number_format	$sayı=float $ondalık_hane=int
+function	private	void	ob_clean
+function	private	bool	ob_end_clean
+function	private	bool	ob_end_flush
+function	private	void	ob_flush
+function	private	string	ob_get_clean
+function	private	string	ob_get_contents
+function	private	string	ob_get_flush
+function	private	int	ob_get_length
+function	private	int	ob_get_level
+function	private	array	ob_get_status	$tam_durum=bool
+function	private	string	ob_gzhandler	$tampon=string $kip=int
+function	private	string	ob_iconv_handler	$içerik=string $durum=int
+function	private	void	ob_implicit_flush	$seçenek=int
+function	private	array	ob_list_handlers
+function	private	bool	ob_start	$çıktı_geriçağırıcı=callable $parça_boyu=int $seçenekler=int
+function	private	string	ob_tidyhandler	$tampon=string $kip=int
+function	private	mixed	odbc_autocommit	$bağlantı_kimliği=resource $AçKapa=bool
+function	private	bool	odbc_binmode	$sonuç_kimliği=resource $kip=int
+function	private	void	odbc_close_all
+function	private	void	odbc_close	$bağlantı_kimliği=resource
+function	private	resource	odbc_columnprivileges	$bağlantı_kimliği=resource $niteleyici=string $sahibi=string $tablo_ismi=string $sütun_ismi=string
+function	private	resource	odbc_columns	$bağlantı_kimliği=resource $niteleyici=string $şema=string $tablo_ismi=string $sütun_ismi=string
+function	private	bool	odbc_commit	$bağlantı_kimliği=resource
+function	private	string	odbc_cursor	$sonuç_kimliği=resource
+function	private	array	odbc_data_source	$bağlantı_kimliği=resource $alım_türü=int
+function	private	resource	odbc_exec	$bağlantı_kimliği=resource $sorgu_dizgesi=string $seçenekler=int
+function	private	bool	odbc_execute	$sonuç_kimliği=resource $değiştirgeler=array
+function	private	array	odbc_fetch_array	$sonuç=resource $satırnum=int
+function	private	int	odbc_fetch_into	$sonuç_kimliği=resource $sonuç_dizisi=array $satırnum=int
+function	private	object	odbc_fetch_object	$sonuç_kimliği=resource $satırnum=int
+function	private	bool	odbc_fetch_row	$sonuç_kimliği=resource $satırnum=int
+function	private	int	odbc_field_len	$sonuç_kimliği=resource $alannum=int
+function	private	string	odbc_alan_adı	$sonuç_kimliği=resource $alannum=int
+function	private	int	odbc_field_num	$sonuç_kimliği=resource $alan_adı=string
+function	private	int	odbc_field_scale	$sonuç_kimliği=resource $alannum=int
+function	private	string	odbc_field_type	$sonuç_kimliği=resource $alannum=int
+function	private	resource	odbc_foreignkeys	$bağlantı_kimliği=resource $ba_niteleyici=string $ba_sahibi=string $ba_tablo=string $ya_niteleyici=string $ya_sahibi=string $ya_tablo=string
+function	private	bool	odbc_free_result	$sonuç_kimliği=resource
+function	private	resource	odbc_gettypeinfo	$bağlantı_kimliği=resource $veri_türü=int
+function	private	bool	odbc_longreadlen	$sonuç_kimliği=resource $uzunluk=int
+function	private	bool	odbc_next_result	$sonuç_kimliği=resource
+function	private	int	odbc_num_fields	$sonuç_kimliği=resource
+function	private	int	odbc_num_rows	$sonuç_kimliği=resource
+function	private	resource	odbc_pconnect	$dsn=string $kullanıcı=string $parola=string $imleç_türü=int
+function	private	resource	odbc_prepare	$bağlantı_kimliği=resource $sorgu_dizgesi=string
+function	private	resource	odbc_primarykeys	$bağlantı_kimliği=resource $niteleyici=string $sahibi=string $tablo=string
+function	private	resource	odbc_procedurecolumns	$bağlantı_kimliği=resource
+function	private	resource	odbc_procedures	$bağlantı_kimliği=resource
+function	private	int	odbc_result_all	$sonuç_kimliği=resource $biçem=string
+function	private	mixed	odbc_result	$sonuç_kimliği=resource $alan=mixed
+function	private	bool	odbc_rollback	$bağlantı_kimliği=resource
+function	private	bool	odbc_setoption	$kimlik=resource $işlev=int $seçenek=int $değer=int
+function	private	resource	odbc_specialcolumns	$bağlantı_kimliği=resource $türü=int $niteleyici=string $sahibi=string $tablo=string $kapsam=int $boş=int
+function	private	resource	odbc_statistics	$bağlantı_kimliği=resource $niteleyici=string $sahibi=string $tablo_ismi=string $eşsiz=int $doğruluk=int
+function	private	resource	odbc_tableprivileges	$bağlantı_kimliği=resource $niteleyici=string $sahibi=string $isim=string
+function	private	resource	odbc_tables	$bağlantı_kimliği=resource $niteleyici=string $sahibi=string $isim=string $tablo_türü=string
+function	private	resource	opendir	$dizin=string $bağlam=resource
+function	private	bool	openlog	$kimlik=string $seçenek=int $oluşum=int
+function	private	bool	openssl_csr_export_to_file	$csr=resource $dosya=string $metinsiz=bool
+function	private	bool	openssl_csr_export	$csr=resource $çıktı=string $metinsiz=bool
+function	private	mixed	openssl_csr_new	$dn=array $gizanh=resource $ayarlar=array $ek_seçenekler=array
+function	private	resource	openssl_csr_sign	$csr=mixed $CA_sert=mixed $gizanh=mixed $gün=int $ayarlar=array $sıranum=int
+function	private	string	openssl_decrypt	$veri=string $yöntem=string $parola=string $ham_girdi=string
+function	private	string	openssl_digest	$veri=string $yöntem=string $ham_çıktı=bool
+function	private	string	openssl_encrypt	$veri=string $yöntem=string $parola=string $ham_çıktı=bool
+function	private	string	openssl_error_string
+function	private	void	openssl_free_key	$ankim=resource
+function	private	array	openssl_get_cipher_methods	$rumuzlar=bool
+function	private	array	openssl_get_md_methods	$rumuzlar=bool
+function	private	bool	openssl_open	$mühürlü_veri=string $veri=string $zarf_anahtarı=string $gizankim=mixed
+function	private	bool	openssl_pkcs12_export_to_file	$x509=mixed $dosya=string $gizli_anh=mixed $parola=string $değiştirgeler=array
+function	private	bool	openssl_pkcs12_export	$x509=mixed $çıktı=string $gizli_anahtar=mixed $parola=string $değiştirgeler=array
+function	private	bool	openssl_pkcs12_read	$pkcs12=string $sertifikalar=array $parola=string
+function	private	bool	openssl_pkcs7_decrypt	$girdi_dosyası=string $çıktı_dosyası=string $alıcı_sertifikaları=mixed $alıcı_anahtarı=mixed
+function	private	bool	openssl_pkcs7_encrypt	$girdi_dosyası=string $çıktı_dosyası=string $alıcı_sertifikaları=mixed $başlıklar=array $seçenekler=int $şifre=int
+function	private	bool	openssl_pkcs7_sign	$girdi_dosyası=string $çıktı_dosyası=string $imza_sertifikası=mixed $gizli_anahtar=mixed $başlıklar=array $seçenekler=int $ek_sertifikalar=string
+function	private	mixed	openssl_pkcs7_verify	$dosya=string $seçenekler=int $sertifikalar=string $CA_bilgisi=array $ek_sertifikalar=string $çıktı_dosyası=string
+function	private	bool	openssl_pkey_export_to_file	$anahtar=mixed $dosya=string $parolası=string $ayarlar=array
+function	private	bool	openssl_pkey_export	$anahtar=mixed $çıktı=string $parolası=string $ayarlar=array
+function	private	void	openssl_pkey_free	$anahtar=resource
+function	private	array	openssl_pkey_get_details	$anahtar=resource
+function	private	resource	openssl_pkey_get_private	$anahtar=mixed $parolası=string
+function	private	resource	openssl_pkey_get_public	$sertifika=mixed
+function	private	resource	openssl_pkey_new	$ayarlar=array
+function	private	bool	openssl_private_decrypt	$şifreli_veri=string $veri=string $anahtar=mixed $dolgu=int
+function	private	bool	openssl_private_encrypt	$veri=string $şifreli_veri=string $anahtar=mixed $dolgu=int
+function	private	bool	openssl_public_decrypt	$şifreli_veri=string $veri=string $anahtar=mixed $dolgu=int
+function	private	bool	openssl_public_encrypt	$veri=string $şifreli_veri=string $anahtar=mixed $dolgu=int
+function	private	bool	openssl_random_pseudo_bytes	$uzunluk=string $güçlü=string
+function	private	int	openssl_seal	$veri=string $mühürlü_veri=string $zarf_mühürleri=array $genankim_dizisi=array
+function	private	bool	openssl_sign	$veri=string $imza=string $gizankim=mixed $algoritma=int
+function	private	int	openssl_verify	$veri=string $imza=string $genankim=mixed $algoritma=int
+function	private	bool	openssl_x509_check_private_key	$x509sert=mixed $anahtar=mixed
+function	private	int	openssl_x509_checkpurpose	$x509sert=mixed $amaç=int $CA_bilgisi=array $güvencesiz_dosya=string
+function	private	bool	openssl_x509_export_to_file	$x509sert=mixed $dosya=string $metinsiz=bool
+function	private	bool	openssl_x509_export	$x509sert=mixed $çıktı=string $metinsiz=bool
+function	private	void	openssl_x509_free	$x509sert=resource
+function	private	array	openssl_x509_parse	$x509sert=mixed $kısa_adlar=bool
+function	private	resource	openssl_x509_read	$x509srtfk_verisi=mixed
+function	private	int	ord	$dizge=string
+function	private	bool	output_add_rewrite_var	$isim=string $değer=string
+function	private	bool	output_reset_rewrite_vars
+function	private	bool	override_function	$işlev_ismi=string $işlev_değiştirgeleri=string $işlev_kodu=string
+function	private	string	pack	$biçem=string $değiştirgeler=mixed $...=mixed
+function	private	array	parse_ini_file	$dosyaismi=string $bölümleri_işle=bool $tarama_kipi=int
+function	private	array	parse_ini_string	$ini=string $bölümleri_işle=bool $tarama_kipi=int
+function	private	void	parse_str	$dizge=string $dizi=array
+function	private	mixed	parse_url	$url=string $bileşen=int
+function	private	void	passthru	$komut=string $dönüş_değeri=int
+function	private	mixed	pathinfo	$yol=string $seçenekler=int
+function	private	int	pclose	$dt=resource
+function	private	int	pcntl_alarm	$saniye=int
+function	private	void	pcntl_exec	$yol=string $değiştirgeler=array $ortam=array
+function	private	int	pcntl_fork
+function	private	int	pcntl_getpriority	$pid=int $süreç_türü=int
+function	private	bool	pcntl_setpriority	$öncelik=int $pid=int $süreç_türü=int
+function	private	bool	pcntl_signal_dispatch
+function	private	bool	pcntl_signal	$sinyal=int $eylemci=callback $yeniden_syscalls=bool
+function	private	bool	pcntl_sigprocmask	$nasıl=int $sinyaller=array $eskiler=array
+function	private	int	pcntl_sigtimedwait	$sinyaller=array $bilgi=array $saniye=int $nanosaniye=int
+function	private	int	pcntl_sigwaitinfo	$sinyaller=array $bilgi=array
+function	private	int	pcntl_wait	$durum=int $seçenekler=int
+function	private	int	pcntl_waitpid	$pid=int $durum=int $seçenekler=int
+function	private	int	pcntl_wexitstatus	$durum=int
+function	private	bool	pcntl_wifexited	$durum=int
+function	private	bool	pcntl_wifsignaled	$status=int
+function	private	bool	pcntl_wifstopped	$durum=int
+function	private	int	pcntl_wstopsig	$status=int
+function	private	int	pcntl_wtermsig	$durum=int
+function	private	bool	PDF_setmiterlimit	$pdfdoc=resource $miter=float
+function	private	resource	pfsockopen	$konakadı=string $port=int $hatanum=int $hata_iletisi=string $zaman_aşımı=float
+function	private	bool	php_check_syntax	$betik=string $hata_iletisi=string
+function	private	string	php_ini_loaded_file
+function	private	string	php_ini_scanned_files
+function	private	string	php_logo_guid
+function	private	string	php_strip_whitespace	$dosya=string
+function	private	string	php_uname	$kip=string
+function	private	bool	phpcredits	$seçenek=int
+function	private	bool	phpinfo	$ne=int
+function	private	string	phpversion	$eklenti=string
+function	private	bool	png2wbmp	$pngdosya=string $wbmpdosya=string $hdf_yüks=int $hdf_genş=int $eşik=int
+function	private	resource	popen	$komut=string $kip=string
+function	private	bool	posix_access	$dosya=string $kip=int
+function	private	string	posix_ctermid
+function	private	int	posix_get_last_error
+function	private	string	posix_getcwd
+function	private	int	posix_getegid
+function	private	int	posix_geteuid
+function	private	int	posix_getgid
+function	private	array	posix_getgrgid	$gid=int
+function	private	array	posix_getgrnam	$isim=string
+function	private	array	posix_getgroups
+function	private	string	posix_getlogin
+function	private	int	posix_getpgid	$pid=int
+function	private	int	posix_getpgrp
+function	private	int	posix_getpid
+function	private	int	posix_getppid
+function	private	array	posix_getpwnam	$isim=string
+function	private	array	posix_getpwuid	$uid=int
+function	private	array	posix_getrlimit
+function	private	int	posix_getsid	$pid=int
+function	private	int	posix_getuid
+function	private	bool	posix_initgroups	$isim=string $ana_gid=int
+function	private	bool	posix_isatty	$dt=int
+function	private	bool	posix_kill	$pid=int $sinyal=int
+function	private	bool	posix_mkfifo	$dosya=string $kip=int
+function	private	bool	posix_mknod	$yol=string $kip=int $büyük=int $küçük=int
+function	private	bool	posix_setegid	$gid=int
+function	private	bool	posix_seteuid	$uid=int
+function	private	bool	posix_setgid	$gid=int
+function	private	bool	posix_setpgid	$pid=int $pgid=int
+function	private	int	posix_setsid
+function	private	bool	posix_setuid	$uid=int
+function	private	string	posix_strerror	$hatanum=int
+function	private	array	posix_times
+function	private	string	posix_ttyname	$dt=int
+function	private	array	posix_uname
+function	private	mixed	preg_filter	$şablon=mixed $yenisi=mixed $konu=mixed $sınır=int $sayı=int
+function	private	array	preg_grep	$şablon=string $girdi=array $seçenekler=int
+function	private	int	preg_last_error
+function	private	int	preg_match_all	$şablon=string $konu=string $eşleşmeler=array $seçenekler=int $başlangıç=int
+function	private	int	preg_match	$şablon=string $konu=string $eşleşenler=array $seçenekler=int $başlangıç=int
+function	private	string	preg_quote	$dizge=string $im=string
+function	private	mixed	preg_replace_callback	$şablon=mixed $geriçağırım=callback $konu=mixed $sınır=int $sayı=int
+function	private	mixed	preg_replace	$şablon=mixed $yenisi=mixed $konu=mixed $sınır=int $sayı=int
+function	private	array	preg_split	$şablon=string $konu=string $sınır=int $seçenekler=int
+function	private	mixed	prev	$dizi=array
+function	private	mixed	print_r	$ifade=mixed $döndür=bool
+function	private	int	print	$dizge=string
+function	private	int	proc_close	$süreç=resource
+function	private	array	proc_get_status	$süreç=resource
+function	private	bool	proc_nice	$fark=int
+function	private	resource	proc_open	$komut=string $tanıtıcılar=array $borular=array $dizin=string $ortam=array $seçenekler=array
+function	private	bool	proc_terminate	$süreç=resource $sinyal=int
+function	private	bool	property_exists	$sınıf=mixed $özellik=string
+function	private	bool	putenv	$atama_dizgesi=string
+function	private	string	quoted_printable_decode	$dizge=string
+function	private	string	quoted_printable_encode	$dizge=string
+function	private	string	quotemeta	$dizge=string
+function	private	array	range	$düşük=mixed $yüksek=mixed $adım=number
+function	private	string	rawurldecode	$dizge=string
+function	private	string	rawurlencode	$dizge=string
+function	private	string	readdir	$dizin_tanıtıcısı=resource
+function	private	int	readfile	$dosyaismi=string $include_path_kullan=bool $bağlan=resource
+function	private	int	readgzfile	$dosyaismi=string $include_path_kullan=int
+function	private	string	readlink	$yol=string
+function	private	string	realpath	$yol=string
+function	private	bool	recode_file	$istek=string $girdi=resource $çıktı=resource
+function	private	string	recode_string	$istek=string $dizge=string
+function	private	void	register_shutdown_function	$işlev=callback $değiştirge=mixed $...=mixed
+function	private	bool	rename_function	$özgün_isim=string $yeni_isim=string
+function	private	bool	rename	$eski_isim=string $yeni_isim=string $bağlam=resource
+function	private	mixed	reset	$dizi=array
+function	private	bool	restore_error_handler
+function	private	bool	restore_exception_handler
+function	private	bool	rewind	$dt=resource
+function	private	void	rewinddir	$dizin_tanıtıcısı=resource
+function	private	bool	rmdir	$dizinismi=string $bağlam=resource
+function	private	bool	rsort	$dizi=array $seçenekler=int
+function	private	string	rtrim	$dizge=string $karakterler=string
+function	private	array	scandir	$dizin=string $sıralama_türü=int $bağlam=resource
+function	private	string	serialize	$değer=mixed
+function	private	int	session_cache_expire	$yeni_önbellek_ömrü=string
+function	private	string	session_cache_limiter	$sınırlayıcı=string
+function	private	bool	session_decode	$veri=string
+function	private	string	session_encode
+function	private	array	session_get_cookie_params
+function	private	string	session_id	$id=string
+function	private	bool	session_is_registered	$isim=string
+function	private	string	session_module_name	$modül=string
+function	private	string	session_name	$isim=string
+function	private	bool	session_regenerate_id	$eski_oturumu_sil=bool
+function	private	bool	session_register	$isim=mixed $...=mixed
+function	private	string	session_save_path	$yol=string
+function	private	void	session_set_cookie_params	$lifetime=int $path=string $domain=string $secure=bool $httponly=bool
+function	private	bool	session_set_save_handler	$aç=callback $kapa=callback $oku=callback $yaz=callback $yoket=callback $çöpçü=callback
+function	private	bool	session_start
+function	private	bool	session_unregister	$isim=string
+function	private	void	session_unset
+function	private	void	session_write_close
+function	private	mixed	set_error_handler	$hata_eylemci=callback $hata_türü=int
+function	private	callback	set_exception_handler	$istisna_eylemcisi=callback
+function	private	string	set_include_path	$yeni_değer=string
+function	private	bool	set_magic_quotes_runtime	$yeni_değer=bool
+function	private	void	set_time_limit	$saniye=int
+function	private	bool	setcookie	$isim=string $değer=string $zaman_aşımı=int $yol=string $alan=string $güvenli=bool $sadece_http=bool
+function	private	bool	setrawcookie	$isim=string $değer=string $zaman_aşımı=int $yol=string $alan=string $güvenli=bool $sadece_http=bool
+function	private	bool	settype	$değişken=mixed $tür=string
+function	private	string	shell_exec	$komut=string
+function	private	bool	shuffle	$dizi=array
+function	private	int	similar_text	$d1=string $d2=string $oran=float
+function	private	SimpleXMLElement	simplexml_import_dom	$düğüm=DOMNode $sınıfAdı=string
+function	private	object	simplexml_load_file	$dosya=string $sınıfAdı=string $seçenekler=int $isimalanı=string $önek_var=bool
+function	private	object	simplexml_load_string	$veri=string $sınıfAdı=string $seçenekler=int $isimalanı=string $önek_var=bool
+function	private	void	snmp_set_oid_numeric_print	$oid_format=int
+function	private	resource	socket_accept	$soket=resource
+function	private	bool	socket_bind	$soket=resource $adres=string $port=int
+function	private	void	socket_clear_error	$soket=resource
+function	private	void	socket_close	$socket=resource
+function	private	bool	socket_connect	$soket=resource $adres=string $port=int
+function	private	resource	socket_create_listen	$port=int $kuyruk=int
+function	private	bool	socket_create_pair	$aile=int $tür=int $protokol=int $dt=array
+function	private	resource	socket_create	$aile=int $tür=int $protokol=int
+function	private	mixed	socket_get_option	$soket=resource $seviye=int $seçenek=int
+function	private	bool	socket_getpeername	$soket=resource $adres=string $port=int
+function	private	int	socket_last_error	$soket=resource
+function	private	bool	socket_listen	$soket=resource $kuyruk=int
+function	private	string	socket_read	$soket=resource $uzunluk=int $tür=int
+function	private	int	socket_recv	$soket=resource $tampon=string $uzunluk=int $seçenekler=int
+function	private	int	socket_recvfrom	$soket=resource $tmmpon=string $uzunluk=int $seçenekler=int $isim=string $port=int
+function	private	int	socket_select	$oku=array $yaz=array $diğer=array $tv_sec=int $tv_usec=int
+function	private	int	socket_send	$soket=resource $tampon=string $uzunluk=int $seçenekler=int
+function	private	int	socket_sendto	$soket=resource $tampon=string $uzunluk=int $seçenekler=int $adres=string $port=int
+function	private	bool	socket_set_block	$soket=resource
+function	private	bool	socket_set_nonblock	$soket=resource
+function	private	bool	socket_set_option	$soket=resource $seviye=int $seçenek=int $değer=mixed
+function	private	bool	socket_shutdown	$scket=resource $kip=int
+function	private	string	socket_strerror	$hatanum=int
+function	private	bool	sort	$dizi=array $seçenekler=int
+function	private	string	soundex	$dizge=string
+function	private	array	split	$şablon=string $dizge=string $sınır=int
+function	private	array	spliti	$şablon=string $dizge=string $sınır=int
+function	private	string	sprintf	$biçem=string $değiştirgeler=mixed $...=mixed
+function	private	string	sql_regcase	$dizge=string
+function	private	void	sqlite_close	$db=resource
+function	private	string	sqlite_error_string	$hata_kodu=int
+function	private	string	sqlite_escape_string	$öğe=string
+function	private	SQLiteDatabase	sqlite_factory	$dosya=string $kip=int $hata_iletisi=string
+function	private	bool	sqlite_has_more	$sonuç=resource
+function	private	string	sqlite_libencoding
+function	private	string	sqlite_libversion
+function	private	string	sqlite_udf_decode_binary	$veri=string
+function	private	string	sqlite_udf_encode_binary	$veri=string
+function	private	mixed	sscanf	$dizge=string $biçem=string $...=mixed
+function	private	mixed	ssh2_auth_none	$oturum=resource $kullanıcı=string
+function	private	bool	ssh2_auth_password	$oturum=resource $kullanıcı=string $parola=string
+function	private	bool	ssh2_auth_pubkey_file	$oturum=resource $kullanıcı=string $genel_anh_dosyası=string $gizli_anh_dosyası=string $anh_parolası=string
+function	private	resource	ssh2_connect	$konak=string $port=int $yöntemler=array $geriçağırımlar=array
+function	private	resource	ssh2_exec	$oturum=resource $komut=string $pty=string $ortam=array $genişlik=int $yükseklik=int $enboy_türü=int
+function	private	resource	ssh2_fetch_stream	$kanal=resource $dt=int
+function	private	string	ssh2_fingerprint	$oturum=resource $seçenekler=int
+function	private	array	ssh2_methods_negotiated	$oturum=resource
+function	private	resource	ssh2_publickey_init	$oturum=resource
+function	private	array	ssh2_publickey_list	$özkaynak=resource
+function	private	bool	ssh2_scp_recv	$oturum=resource $uzak_dosya=string $yerel_dosya=string
+function	private	bool	ssh2_scp_send	$oturum=resource $yerel_dosya=string $uzak_dosya=string $kip=int
+function	private	array	ssh2_sftp_lstat	$sftp=resource $bağ=string
+function	private	bool	ssh2_sftp_mkdir	$sftp=resource $dizin=string $kip=int $ardışık=bool
+function	private	string	ssh2_sftp_readlink	$sftp=resource $bağ=string
+function	private	string	ssh2_sftp_realpath	$sftp=resource $yol=string
+function	private	bool	ssh2_sftp_rename	$sftp=resource $eskisi=string $yenisi=string
+function	private	array	ssh2_sftp_stat	$sftp=resource $dosya=string
+function	private	bool	ssh2_sftp_symlink	$sftp=resource $hedef=string $bağ=string
+function	private	bool	ssh2_sftp_unlink	$sftp=resource $dosya=string
+function	private	resource	ssh2_sftp	$oturum=resource
+function	private	resource	ssh2_shell	$oturum=resource $uçbirim_türü=string $ortam=array $genişlik=int $yükseklik=int $enboy_türü=int
+function	private	resource	ssh2_tunnel	$oturum=resource $konak=string $port=int
+function	private	array	stat	$dosyaismi=string
+function	private	array	str_getcsv	$girdi=string $ayraç=string $sarmalayıcı=string $öncelem=string
+function	private	mixed	str_ireplace	$eski=mixed $yeni=mixed $konu=mixed $sayı=int
+function	private	string	str_pad	$girdi=string $dolgulu_uzunluk=int $dolgu_dizgesi=string $dolgu_türü=int
+function	private	string	str_repeat	$girdi=string $çarpan=int
+function	private	mixed	str_replace	$eski=mixed $yeni=mixed $konu=mixed $sayı=int
+function	private	string	str_rot13	$dizge=string
+function	private	array	str_split	$dizge=string $parça_uzunluğu=int
+function	private	mixed	str_word_count	$dizge=string $biçem=int $karakterler=string
+function	private	int	strcasecmp	$d1=string $d2=string
+function	private	int	strcoll	$d1=string $d2=string
+function	private	int	strcspn	$dizge=string $maske=string $başlangıç=int $uzunluk=int
+function	private	resource	stream_context_create	$seçenekler=array $değiştirgeler=array
+function	private	array	stream_context_get_params	$akım_veya_bağlam=resource
+function	private	bool	stream_context_set_params	$akım_veya_bağlam=resource $değiştirgeler=array
+function	private	int	stream_copy_to_stream	$kaynak=resource $hedef=resource $uzunluk=int $başlangıç=int
+function	private	resource	stream_filter_append	$akım=resource $süzgeç=string $oku_yaz=int $değiştirgeler=mixed
+function	private	resource	stream_filter_prepend	$akım=resource $süzgeç=string $oku_yaz=int $değiştirgeler=mixed
+function	private	bool	stream_filter_register	$süzgeç=string $sınıf=string
+function	private	bool	stream_filter_remove	$süzgeç=resource
+function	private	string	stream_get_contents	$akım=resource $uzunluk=int $konum=int
+function	private	string	stream_get_line	$akım=resource $uzunluk=int $ayraç=string
+function	private	array	stream_get_meta_data	$akım=resource
+function	private	array	stream_get_wrappers
+function	private	bool	stream_is_local	$akım_veya_url=mixed
+function	private	void	stream_notification_callback	$bildirim_kodu=int $önem=int $ileti=string $ileti_kodu=int $bayt_sayısı=int $azami_bayt_sayısı=int
+function	private	int	stream_select	$oku=array $yaz=array $dış=array $saniye=int $mikrosaniye=int
+function	private	bool	stream_set_blocking	$akım=resource $kip=int
+function	private	bool	stream_set_timeout	$akım=resource $saniye=int $mikrosaniye=int
+function	private	int	stream_set_write_buffer	$akım=resource $tampon=int
+function	private	resource	stream_socket_accept	$sunucu_soketi=resource $süre=float $hedef=string
+function	private	resource	stream_socket_client	$uzak_soket=string $hatanum=int $ileti=string $süre=float $seçenekler=int $bağlam=resource
+function	private	string	stream_socket_get_name	$soket=resource $uzak=bool
+function	private	array	stream_socket_pair	$alan=int $tür=int $protokol=int
+function	private	string	stream_socket_recvfrom	$soket=resource $uzunluk=int $seçenekler=int $adres=string
+function	private	int	stream_socket_sendto	$soket=resource $veri=string $seçenekler=int $adres=string
+function	private	resource	stream_socket_server	$yerel_soket=string $hatanum=int $ileti=string $seçenekler=int $bağlam=resource
+function	private	bool	stream_socket_shutdown	$akım=resource $nasıl=int
+function	private	bool	stream_supports_lock	$akım=resource
+function	private	bool	stream_wrapper_register	$protokol=string $sınıf=string $seçenekler=int
+function	private	bool	stream_wrapper_restore	$protokol=string
+function	private	bool	stream_wrapper_unregister	$protokol=string
+function	private	string	strip_tags	$dizge=string $ayıklanmayacaklar=string
+function	private	string	stripcslashes	$dizge=string
+function	private	int	stripos	$samanlık=string $iğne=mixed $başlangıç=int
+function	private	string	stripslashes	$str=string
+function	private	string	stristr	$samanlık=string $iğne=mixed $iğne_öncesi=bool
+function	private	int	strlen	$dizge=string
+function	private	int	strnatcasecmp	$d1=string $d2=string
+function	private	int	strnatcmp	$d1=string $d2=string
+function	private	int	strncasecmp	$d1=string $d2=string $uzunluk=int
+function	private	int	strncmp	$d1=string $d2=string $uzunluk=int
+function	private	string	strpbrk	$dizge=string $karakterler=string
+function	private	int	strpos	$samanlık=string $iğne=mixed $başlangıç=int
+function	private	array	strptime	$tarih=string $biçim=string
+function	private	string	strrchr	$samanlık=string $iğne=mixed
+function	private	string	strrev	$dizge=string
+function	private	int	strripos	$samanlık=string $iğne=string $başlangıç=int
+function	private	int	strrpos	$samanlık=string $iğne=string $başlangıç=int
+function	private	int	strspn	$dizge=string $maske=string $başlangıç=int $uzunluk=int
+function	private	string	strstr	$samanlık=string $iğne=mixed $iğne_öncesi=bool
+function	private	string	strtok	$dizge=string $ayraçlar=string
+function	private	string	strtolower	$dizge=string
+function	private	string	strtoupper	$dizge=string
+function	private	string	strtr	$dizge=string $eski=string $yeni=string
+function	private	int	substr_compare	$ana_dizge=string $dizge=string $başlangıç=int $uzunluk=int $büyüklük_duyarsız=bool
+function	private	int	substr_count	$samanlık=string $iğne=string $başlangıç=int $uzunluk=int
+function	private	mixed	substr_replace	$dizge=mixed $yenisi=string $başlangıç=int $uzunluk=int
+function	private	string	substr	$dizge=string $başlangıç=int $uzunluk=integer
+function	private	bool	symlink	$hedef=string $bağ=string
+function	private	string	sys_get_temp_dir
+function	private	bool	syslog	$öncelik=int $ileti=string
+function	private	string	system	$komut=string $dönüş_değeri=int
+function	private	bool	tcpwrap_check	$süreç_adı=string $adres=string $kullanıcı=string $dns_yok=bool
+function	private	string	tempnam	$dizin=string $önek=string
+function	private	string	textdomain	$uygulama_adı=string
+function	private	int	tidy_access_count	$nesne=tidy
+function	private	int	tidy_config_count	$object=tidy
+function	private	int	tidy_error_count	$nesne=tidy
+function	private	string	tidy_get_output	$object=tidy
+function	private	void	tidy_load_config	$dosya=string $kodlama=string
+function	private	bool	tidy_reset_config
+function	private	bool	tidy_save_config	$dosya=string
+function	private	bool	tidy_set_encoding	$encoding=string
+function	private	bool	tidy_setopt	$seçenek=string $değer=mixed
+function	private	int	tidy_warning_count	$nesne=tidy
+function	private	mixed	time_nanosleep	$süre=int $nanosüre=int
+function	private	bool	time_sleep_until	$zaman_damgası=float
+function	private	int	time
+function	private	resource	tmpfile
+function	private	array	token_get_all	$kaynak=string
+function	private	string	token_name	$dizgecik=int
+function	private	bool	touch	$dosyaismi=string $zaman=int $ezamanı=int
+function	private	bool	trigger_error	$ileti=string $tür=int
+function	private	string	trim	$dizge=string $karakterler=string
+function	private	bool	uasort	$dizi=array $karş_işlevi=callback
+function	private	string	ucfirst	$dizge=string
+function	private	string	ucwords	$dizge=string
+function	private	bool	uksort	$dizi=array $karş_işlevi=callback
+function	private	int	umask	$maske=int
+function	private	string	uniqid	$önek=string $döküntü_üret=bool
+function	private	int	unixtojd	$zamandamgasi=int
+function	private	bool	unlink	$dosyaismi=string $bağlam=resource
+function	private	array	unpack	$biçem=string $veri=string
+function	private	void	unset	$değişken=mixed $değişken=mixed $...=mixed
+function	private	string	urldecode	$dizge=string
+function	private	string	urlencode	$dizge=string
+function	private	void	usleep	$süre=int
+function	private	bool	usort	$array=array $karş_işlevi=callback
+function	private	string	utf8_decode	$veri=string
+function	private	string	utf8_encode	$veri=string
+function	private	mixed	variant_abs	$val=mixed
+function	private	mixed	variant_add	$sol=mixed $sag=mixed
+function	private	mixed	variant_and	$sol=mixed $sag=mixed
+function	private	variant	variant_cast	$varyant=variant $tur=int
+function	private	mixed	variant_cat	$sol=mixed $sag=mixed
+function	private	int	variant_cmp	$sol=mixed $sag=mixed $yerel=int $secenekler=int
+function	private	variant	variant_date_from_timestamp	$zamandamgasi=int
+function	private	int	variant_date_to_timestamp	$varyant=variant
+function	private	mixed	variant_div	$sol=mixed $sag=mixed
+function	private	mixed	variant_eqv	$sol=mixed $sag=mixed
+function	private	mixed	variant_fix	$varyant=mixed
+function	private	int	variant_get_type	$varyant=variant
+function	private	mixed	variant_idiv	$sol=mixed $sag=mixed
+function	private	mixed	variant_imp	$sol=mixed $sag=mixed
+function	private	mixed	variant_int	$varyant=mixed
+function	private	mixed	variant_mod	$sol=mixed $sag=mixed
+function	private	mixed	variant_mul	$sol=mixed $sag=mixed
+function	private	mixed	variant_neg	$varyant=mixed
+function	private	mixed	variant_not	$varyant=mixed
+function	private	mixed	variant_or	$sol=mixed $sag=mixed
+function	private	mixed	variant_pow	$sol=mixed $sag=mixed
+function	private	mixed	variant_round	$varyant=mixed $ondalik=int
+function	private	void	variant_set_type	$varyant=variant $tur=int
+function	private	void	variant_set	$varyant=variant $deger=mixed
+function	private	mixed	variant_sub	$sol=mixed $sag=mixed
+function	private	mixed	variant_xor	$sol=mixed $sag=mixed
+function	private	mixed	version_compare	$sürüm1=string $sürüm2=string $işleç=string
+function	private	int	vfprintf	$dt=resource $biçem=string $değiştirgeler=array
+function	private	bool	virtual	$dosya_adı=string
+function	private	int	vprintf	$biçem=string $değiştirgeler=array
+function	private	string	vsprintf	$biçem=string $değiştirgeler=array
+function	private	bool	wddx_add_vars	$pt=resource $değişken=mixed $...=mixed
+function	private	string	wddx_packet_end	$pt=resource
+function	private	resource	wddx_packet_start	$azıklama=string
+function	private	string	wddx_serialize_value	$değer=mixed $açıkama=string
+function	private	string	wddx_serialize_vars	$değişken=mixed $...=mixed
+function	private	mixed	win32_create_service	$ayrıntılar=array $makine=string
+function	private	int	win32_delete_service	$hizmet=string $makine=string
+function	private	int	win32_get_last_control_message
+function	private	array	win32_ps_list_procs
+function	private	array	win32_ps_stat_mem
+function	private	array	win32_ps_stat_proc	$pid=int
+function	private	mixed	win32_query_service_status	$hizmet=string $makine=string
+function	private	bool	win32_set_service_status	$durum=int
+function	private	mixed	win32_start_service_ctrl_dispatcher	$isim=string
+function	private	int	win32_start_service	$hizmet=string $makine=string
+function	private	int	win32_stop_service	$hizmet=string $makine=string
+function	private	string	wordwrap	$dizge=string $genişlik=int $satırsonu=string $kes=bool
+function	private	string	xattr_get	$dosya=string $isim=string $seçenekler=int
+function	private	array	xattr_list	$dosya=string $seçenekler=int
+function	private	bool	xattr_remove	$dosya=string $isim=string $seçenekler=int
+function	private	bool	xattr_set	$dosya=string $isim=string $değer=string $seçenekler=int
+function	private	bool	xattr_supported	$dosya=string $seçenekler=int
+function	private	int	xdiff_file_bdiff_size	$dosya=string
+function	private	bool	xdiff_file_bdiff	$eski_dosya=string $yeni_dosya=string $hedef=string
+function	private	bool	xdiff_file_bpatch	$dosya=string $yama=string $hedef=string
+function	private	bool	xdiff_file_diff_binary	$eski_dosya=string $yeni_dosya=string $hedef=string
+function	private	bool	xdiff_file_diff	$eski_dosya=string $yeni_dosya=string $hedef=string $bağlam=int $küçült=bool
+function	private	mixed	xdiff_file_merge3	$eski_dosya=string $yeni_dosya1=string $yeni_dosya2=string $hedef=string
+function	private	bool	xdiff_file_patch_binary	$dosya=string $yama=string $hedef=string
+function	private	mixed	xdiff_file_patch	$dosya=string $yama=string $hedef=string $seçenekler=int
+function	private	bool	xdiff_file_rabdiff	$eski_dosya=string $yeni_dosya=string $hedef=string
+function	private	int	xdiff_string_bdiff_size	$yama=string
+function	private	string	xdiff_string_diff	$eski_veri=string $yeni_veri=string $bağlam=int $küçült=bool
+function	private	mixed	xdiff_string_merge3	$eski_veri=string $yeni_veri1=string $yeni_veri2=string $hatalar=string
+function	private	string	xdiff_string_patch	$dizge=string $yama=string $seçenekler=int $hata=string
+function	private	string	xdiff_string_bdiff	$eski_veri=string $yeni_veri=string
+function	private	string	xml_error_string	$hatanum=int
+function	private	int	xml_get_current_byte_index	$çözümleyici=resource
+function	private	int	xml_get_current_column_number	$parser=resource
+function	private	int	xml_get_current_line_number	$parser=resource
+function	private	int	xml_get_error_code	$çözümleyici=resource
+function	private	int	xml_parse_into_struct	$çözümleyici=resource $veri=string $değerler=array $indis=array
+function	private	int	xml_parse	$çözümleyici=resource $veri=string $son=bool
+function	private	resource	xml_parser_create_ns	$kodlama=string $ayraç=string
+function	private	resource	xml_parser_create	$kodlama=string
+function	private	bool	xml_parser_free	$çözümleyici=resource
+function	private	mixed	xml_parser_get_option	$çözümleyici=resource $seçenek=int
+function	private	bool	xml_parser_set_option	$çözümleyici=resource $seçenek=int $değer=mixed
+function	private	bool	xml_set_character_data_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_default_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_element_handler	$çözümleyici=resource $açılış_etiketi_eylemcisi=callback $kapanış_etiketi_eylemcisi=callback
+function	private	bool	xml_set_end_namespace_decl_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_external_entity_ref_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_notation_decl_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_object	$çözümleyici=resource $nesne=object
+function	private	bool	xml_set_processing_instruction_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xml_set_start_namespace_decl_handler	$çözümleyici=resource $eylemcisini=callback
+function	private	bool	xml_set_unparsed_entity_decl_handler	$çözümleyici=resource $eylemci=callback
+function	private	bool	xmlrpc_set_type	$değer=string $tür=string
+function	private	bool	endAttribute
+function	private	bool	endCData
+function	private	bool	endComment
+function	private	bool	endDocument
+function	private	bool	endDTDAttlist
+function	private	bool	endDTDElement
+function	private	bool	endDTDEntity
+function	private	bool	endDTD
+function	private	bool	endElement
+function	private	bool	endPI
+function	private	mixed	flush	$boş=bool
+function	private	bool	fullEndElement
+function	private	bool	openMemory
+function	private	bool	openURI	$uri=string
+function	private	string	outputMemory	$boşalt=bool
+function	private	bool	setIndentString	$girintiDizgesi=string
+function	private	bool	setIndent	$girinti=bool
+function	private	bool	startAttributeNS	$önek=string $isim=string $uri=string
+function	private	bool	startAttribute	$isim=string
+function	private	bool	startCData
+function	private	bool	startComment
+function	private	bool	startDTDAttlist	$isim=string
+function	private	bool	startDTDElement	$isim=string
+function	private	bool	startDTDEntity	$isim=string $değiş_var=bool
+function	private	bool	startDTD	$kök_eleman=string $publicId=string $systemId=string
+function	private	bool	startElementNS	$önek=string $isim=string $uri=string
+function	private	bool	startElement	$isim=string
+function	private	bool	startPI	$hedef=string
+function	private	bool	writeAttributeNS	$önek=string $isim=string $uri=string $değer=string
+function	private	bool	writeAttribute	$isim=string $değer=string
+function	private	bool	writeCData	$içerik=string
+function	private	bool	writeComment	$içerik=string
+function	private	bool	writeDTDAttlist	$isim=string $içerik=string
+function	private	bool	writeDTDElement	$isim=string $içerik=string
+function	private	bool	writeDTDEntity	$isim=string $içerik=string $pe=bool $pubid=string $sysid=string $ndataid=string
+function	private	bool	writeElementNS	$önek=string $eleman=string $uri=string $içerik=string
+function	private	bool	writeElement	$eleman=string $içerik=string
+function	private	bool	writePI	$hedef=string $içerik=string
+function	private	string	yaz_addinfo	$id=resource
+function	private	void	yaz_ccl_conf	$id=resource $ayarlar=array
+function	private	bool	yaz_ccl_parse	$id=resource $sorgu=string $sonuç=array
+function	private	bool	yaz_close	$id=resource
+function	private	mixed	yaz_connect	$zurl=string $seçenekler=mixed
+function	private	bool	yaz_database	$id=resource $veritabanları=string
+function	private	bool	yaz_element	$id=resource $eleman_kümesi=string
+function	private	int	yaz_errno	$id=resource
+function	private	string	yaz_error	$id=resource
+function	private	array	yaz_es_result	$id=resource
+function	private	void	yaz_es	$id=resource $tür=string $değiştirgeler=array
+function	private	string	yaz_get_option	$id=resource $isim=string
+function	private	int	yaz_hits	$id=resource $sonuçlar=array
+function	private	void	yaz_itemorder	$id=resource $değiştirgeler=array
+function	private	bool	yaz_present	$id=resource
+function	private	void	yaz_range	$id=resource $başlangıç=int $sayı=int
+function	private	string	yaz_record	$id=resource $konum=int $tür=string
+function	private	array	yaz_scan_result	$id=resource $sonuç=array
+function	private	void	yaz_scan	$id=resource $tür=string $başlangıç=string $seçenekler=array
+function	private	void	yaz_schema	$id=resource $şema=string
+function	private	bool	yaz_search	$id=resource $tür=string $sorgu=string
+function	private	void	yaz_set_option	$id=resource $isim=string $değer=string
+function	private	void	yaz_sort	$id=resource $kural=string
+function	private	void	yaz_syntax	$id=resource $sözdizimi=string
+function	private	mixed	yaz_wait	$seçenekler=array
+function	private	string	zend_logo_guid
+function	private	int	zend_thread_id
+function	private	string	zend_version
+function	private	void	zip_close	$zip=resource
+function	private	bool	zip_entry_close	$zip_girdisi=resource
+function	private	int	zip_entry_compressedsize	$zip_girdisi=resource
+function	private	string	zip_entry_compressionmethod	$zip_girdisi=resource
+function	private	int	zip_entry_filesize	$zip_girdisi=resource
+function	private	string	zip_entry_name	$zip_girdisi=resource
+function	private	bool	zip_entry_open	$zip=resource $zip_girdisi=resource $kip=string
+function	private	string	zip_entry_read	$zip_girdisi=resource $uzunluk=int
+function	private	mixed	zip_open	$dosya_adı=string
+function	private	mixed	zip_read	$zip=resource
+ZipArchive	private	bool	addEmptyDir	$dizin=string
+ZipArchive	private	bool	addFile	$dosya=string $yerel_isim=string
+ZipArchive	private	bool	addFromString	$isim=string $içerik=string
+ZipArchive	private	bool	close
+ZipArchive	private	bool	deleteIndex	$indis=int
+ZipArchive	private	bool	deleteName	$isim=string
+ZipArchive	private	bool	extractTo	$hedef=string $girdiler=mixed
+ZipArchive	private	string	getArchiveComment
+ZipArchive	private	string	getCommentIndex	$indis=int $seçenekler=int
+ZipArchive	private	string	getCommentName	$isim=string $seçenekler=int
+ZipArchive	private	mixed	getFromIndex	$indis=int $seçenekler=int
+ZipArchive	private	mixed	getFromName	$isim=string $seçenekler=int
+ZipArchive	private	string	getNameIndex	$indis=int
+ZipArchive	private	string	GetStatusString
+ZipArchive	private	resource	getStream	$name=string
+ZipArchive	private	mixed	locateName	$isim=string $seçenekler=int
+ZipArchive	private	mixed	open	$dosya=string $seçenekler=int
+ZipArchive	private	bool	renameIndex	$indis=int $yeni_isim=string
+ZipArchive	private	bool	renameName	$isim=string $yenisi=string
+ZipArchive	private	mixed	setArchiveComment	$açıklama=string
+ZipArchive	private	mixed	setCommentIndex	$indis=int $açıklama=string
+ZipArchive	private	mixed	setCommentName	$isim=string $açıklama=string
+ZipArchive	private	mixed	statIndex	$indis=int $seçenekler=int
+ZipArchive	private	mixed	statName	$isim=name $seçenekler=int
+ZipArchive	private	mixed	unchangeAll
+ZipArchive	private	mixed	unchangeArchive
+ZipArchive	private	mixed	unchangeIndex	$indis=int
+ZipArchive	private	mixed	unchangeName	$isim=string
+function	private	string	zlib_get_coding_type
+Imagick	private	float	getImageChannelDistortions	$reference=Imagick $metric=int $channel=int
+Iterator	abstract	mixed	current
+Iterator	abstract	scalar	key
+Iterator	abstract	void	rewind
+Iterator	abstract	boolean	valid
+IteratorAggregate	abstract	Traversable	getIterator
+PDO	private	bool	beginTransaction
+PDO	private	bool	commit
+PDO	private	array	errorInfo
+PDO	private	int	exec	$deyim=string
+PDO	private	mixed	getAttribute	$öznitelik=int
+PDO	private	array	getAvailableDrivers
+PDO	private	string	lastInsertId	$isim=string
+PDO	private	PDOStatement	prepare	$deyim=string $seçenekler=array
+PDO	private	PDOStatement	query	$deyim=string
+PDO	private	string	quote	$dizge=string $değiştirge_türü=int
+PDO	private	bool	rollBack
+PDO	private	bool	setAttribute	$öznitelik=int $değer=mixed
+PDOStatement	private	bool	bindColumn	$sütun=mixed $değişken=mixed $veri_türü=int $uzunluk=int $seçenekler=mixed
+PDOStatement	private	bool	bindParam	$değiştirge=mixed $değişken=mixed $veri_türü=int $uzunluk=int $seçenekler=mixed
+PDOStatement	private	bool	bindValue	$değiştirge=mixed $değer=mixed $veri_türü=int
+PDOStatement	private	bool	closeCursor
+PDOStatement	private	int	columnCount
+PDOStatement	private	bool	debugDumpParams
+PDOStatement	private	bool	execute	$girdiler=array
+PDOStatement	private	mixed	fetch	$alım_tarzı=int $göst_yönü=int $göst_başlangıcı=int
+PDOStatement	private	string	fetchColumn	$sütunnum=int
+PDOStatement	private	mixed	fetchObject	$sınıfadı=string $değiştirgeler=array
+PDOStatement	private	mixed	getAttribute	$öznitelik=int
+PDOStatement	private	bool	nextRowset
+PDOStatement	private	int	rowCount
+PDOStatement	private	bool	setAttribute	$öznitelik=int $değer=mixed
+Reflection	public	void	export	$yansıtıcı=Reflector $ihracet=string
+Reflection	public	array	getModifierNames	$değiştiriciler=int
+ReflectionClass	private	string	__construct	$değiştirge=string
+ReflectionClass	public	string	export	$değiştirge=mixed $ihracet=bool
+ReflectionClass	public	mixed	getConstant	$isim=string
+ReflectionClass	public	array	getConstants
+ReflectionClass	public	object	getConstructor
+ReflectionClass	public	array	getDefaultProperties
+ReflectionClass	public	string	getDocComment
+ReflectionClass	public	int	getEndLine
+ReflectionClass	public	ReflectionExtension	getExtension
+ReflectionClass	public	string	getExtensionName
+ReflectionClass	public	string	getFileName
+ReflectionClass	public	array	getInterfaceNames
+ReflectionClass	public	array	getInterfaces
+ReflectionClass	public	object	getMethod	$isim=string
+ReflectionClass	public	array	getMethods	$süzgeç=string
+ReflectionClass	public	string	getName
+ReflectionClass	public	string	getNamespaceName
+ReflectionClass	public	object	getParentClass
+ReflectionClass	public	array	getProperties	$süzgeç=int
+ReflectionClass	public	ReflectionProperty	getProperty	$isim=string
+ReflectionClass	public	string	getShortName
+ReflectionClass	public	int	getStartLine
+ReflectionClass	public	array	getStaticProperties
+ReflectionClass	public	mixed	getStaticPropertyValue	$isim=string $öntanımlı=string
+ReflectionClass	public	bool	hasConstant	$isim=string
+ReflectionClass	public	bool	hasMethod	$isim=string
+ReflectionClass	public	bool	hasProperty	$isim=string
+ReflectionClass	public	bool	implementsInterface	$arayüz=string
+ReflectionClass	public	bool	inNamespace
+ReflectionClass	public	bool	isAbstract
+ReflectionClass	public	bool	isFinal
+ReflectionClass	public	bool	isInstance	$nesne=string
+ReflectionClass	public	bool	isInstantiable
+ReflectionClass	public	bool	isInterface
+ReflectionClass	public	bool	isInternal
+ReflectionClass	public	bool	isIterateable
+ReflectionClass	public	bool	isSubclassOf	$sınıf=string
+ReflectionClass	public	bool	isUserDefined
+ReflectionClass	public	object	newInstance	$değiştirgeler=mixed $...=mixed
+ReflectionClass	public	object	newInstanceArgs	$değiştirgeler=array
+ReflectionClass	public	void	setStaticPropertyValue	$isim=string $değer=string
+ReflectionClass	public	string	__toString
+ReflectionExtension	final	void	__clone
+ReflectionExtension	private	string	__construct	$isim=string
+ReflectionExtension	public	string	export	$isim=string $ihracet=string
+ReflectionExtension	public	array	getClasses
+ReflectionExtension	public	array	getClassNames
+ReflectionExtension	public	array	getConstants
+ReflectionExtension	public	array	getDependencies
+ReflectionExtension	public	array	getFunctions
+ReflectionExtension	public	array	getINIEntries
+ReflectionExtension	public	string	getName
+ReflectionExtension	public	string	getVersion
+ReflectionExtension	public	string	info
+ReflectionExtension	public	string	__toString
+ReflectionFunction	private	string	__construct	$isim=string
+ReflectionFunction	public	string	export	$isim=string $ihracet=string
+ReflectionFunction	public	mixed	invoke	$değiştirgeler=string
+ReflectionFunction	public	mixed	invokeArgs	$değiştirgeler=array
+ReflectionFunction	public	bool	isDisabled
+ReflectionFunction	public	string	__toString
+ReflectionFunctionAbstract	final	void	__clone
+ReflectionFunctionAbstract	public	string	getDocComment
+ReflectionFunctionAbstract	public	int	getEndLine
+ReflectionFunctionAbstract	public	ReflectionExtension	getExtension
+ReflectionFunctionAbstract	public	string	getExtensionName
+ReflectionFunctionAbstract	public	string	getFileName
+ReflectionFunctionAbstract	public	string	getName
+ReflectionFunctionAbstract	public	string	getNamespaceName
+ReflectionFunctionAbstract	public	int	getNumberOfParameters
+ReflectionFunctionAbstract	public	int	getNumberOfRequiredParameters
+ReflectionFunctionAbstract	public	array	getParameters
+ReflectionFunctionAbstract	public	string	getShortName
+ReflectionFunctionAbstract	public	int	getStartLine
+ReflectionFunctionAbstract	public	array	getStaticVariables
+ReflectionFunctionAbstract	public	bool	inNamespace
+ReflectionFunctionAbstract	public	bool	isClosure
+ReflectionFunctionAbstract	public	bool	isDeprecated
+ReflectionFunctionAbstract	public	bool	isInternal
+ReflectionFunctionAbstract	public	bool	isUserDefined
+ReflectionFunctionAbstract	public	bool	returnsReference
+ReflectionFunctionAbstract	abstract	void	__toString
+ReflectionMethod	private	string	__construct	$sınıf_veya_yöntem=string $isim=string
+ReflectionMethod	public	string	export	$sınıf=string $isim=string $return=bool
+ReflectionMethod	public	ReflectionClass	getDeclaringClass
+ReflectionMethod	public	int	getModifiers
+ReflectionMethod	public	void	getPrototype
+ReflectionMethod	public	mixed	invoke	$nesne=object $değiştirgeler=string
+ReflectionMethod	public	mixed	invokeArgs	$nesne=string $değiştirgeler=array
+ReflectionMethod	public	bool	isAbstract
+ReflectionMethod	public	bool	isConstructor
+ReflectionMethod	public	bool	isDestructor
+ReflectionMethod	public	bool	isFinal
+ReflectionMethod	public	bool	isPrivate
+ReflectionMethod	public	bool	isProtected
+ReflectionMethod	public	bool	isPublic
+ReflectionMethod	public	bool	isStatic
+ReflectionMethod	public	string	__toString
+ReflectionObject	private	object	__construct	$değiştirge=object
+ReflectionObject	public	string	export	$değiştirge=string $ihracet=bool
+ReflectionParameter	public	bool	allowsNull
+ReflectionParameter	private	string	__construct	$işlev=string $değiştirge=string
+ReflectionParameter	public	string	export	$işlev=string $değiştirge=string $ihracet=bool
+ReflectionParameter	public	ReflectionClass	getClass
+ReflectionParameter	public	ReflectionClass	getDeclaringClass
+ReflectionParameter	public	ReflectionFunction	getDeclaringFunction
+ReflectionParameter	public	mixed	getDefaultValue
+ReflectionParameter	public	string	getName
+ReflectionParameter	public	int	getPosition
+ReflectionParameter	public	bool	isArray
+ReflectionParameter	public	bool	isDefaultValueAvailable
+ReflectionParameter	public	bool	isOptional
+ReflectionParameter	public	bool	isPassedByReference
+ReflectionParameter	public	string	__toString
+ReflectionProperty	final	void	__clone
+ReflectionProperty	public	string	export	$sınıf=mixed $isim=string $ihracet=bool
+ReflectionProperty	public	ReflectionClass	getDeclaringClass
+ReflectionProperty	public	string	getDocComment
+ReflectionProperty	public	int	getModifiers
+ReflectionProperty	public	string	getName
+ReflectionProperty	public	mixed	getValue	$özellik=string
+ReflectionProperty	public	bool	isDefault
+ReflectionProperty	public	bool	isPrivate
+ReflectionProperty	public	bool	isProtected
+ReflectionProperty	public	bool	isPublic
+ReflectionProperty	public	bool	isStatic
+ReflectionProperty	public	void	setAccessible	$erişilebilir=bool
+ReflectionProperty	public	void	setValue	$nesne=object $değer=mixed
+ReflectionProperty	public	string	__toString
+Reflector	abstract	string	export
+Reflector	abstract	string	__toString
+Serializable	abstract	string	serialize
+Serializable	abstract	mixed	unserialize	$dizgeleşmiş=string
+SoapClient	public	mixed	SoapClient	$wsdl=mixed $options=array
+SoapFault	private	string	__construct	$faultcode=string $faultstring=string $faultactor=string $detail=string $faultname=string $headerfault=string
+SoapHeader	private	string	__construct	$namespace=string $name=string $data=mixed $mustunderstand=bool $actor=string
+SoapParam	private	mixed	__construct	$data=mixed $name=string
+SoapServer	public	mixed	__construct	$wsdl=mixed $options=array
+SoapVar	private	string	__construct	$data=string $encoding=string $type_name=string $type_namespace=string $node_name=string $node_namespace=string
+SQLite3	public	int	changes
+SQLite3	public	bool	close
+SQLite3	private	string	__construct	$dosya=string $seçenekler=int $anahtar=string
+SQLite3	public	bool	createAggregate	$isim=string $sekme_işlevi=mixed $son_işlev=mixed $değ_sayısı=int
+SQLite3	public	bool	createFunction	$isim=string $işlev=mixed $değ_sayısı=int
+SQLite3	public	string	escapeString	$veri=string
+SQLite3	public	bool	exec	$sorgu=string
+SQLite3	public	int	lastErrorCode
+SQLite3	public	string	lastErrorMsg
+SQLite3	public	int	lastInsertRowID
+SQLite3	public	bool	loadExtension	$kütüphane=string
+SQLite3	public	bool	open	$dosya=string $seçenekler=int $anahtar=string
+SQLite3	public	SQLite3Stmt	prepare	$sorgu=string
+SQLite3	public	SQLite3Result	query	$sorgu=string
+SQLite3	public	mixed	querySingle	$sorgu=string $tüm_satır=bool
+SQLite3	public	array	version
+SQLite3Result	public	string	columnName	$sütunnum=int
+SQLite3Result	public	int	columnType	$sütunnum=int
+SQLite3Result	public	array	fetchArray	$kip=int
+SQLite3Result	public	bool	finalize
+SQLite3Result	public	int	numColumns
+SQLite3Result	public	bool	reset
+SQLite3Stmt	public	bool	bindParam	$değişken=string $değiştirge=mixed $tür=int
+SQLite3Stmt	public	bool	bindValue	$değişken=string $değer=mixed $tür=int
+SQLite3Stmt	public	bool	clear
+SQLite3Stmt	public	bool	close
+SQLite3Stmt	public	SQLite3Result	execute
+SQLite3Stmt	public	int	paramCount
+SQLite3Stmt	public	bool	reset
+streamWrapper	private	-	__construct
+streamWrapper	public	bool	dir_closedir
+streamWrapper	public	bool	dir_opendir	$url=string $seçenekler=int
+streamWrapper	public	string	dir_readdir
+streamWrapper	public	bool	dir_rewinddir
+streamWrapper	public	bool	mkdir	$url=string $kip=int $seçenekler=int
+streamWrapper	public	bool	rename	$eskisi=string $yenisi=string
+streamWrapper	public	bool	rmdir	$url=string $seçenekler=int
+streamWrapper	public	resource	stream_cast	$cast_as=int
+streamWrapper	public	void	stream_close
+streamWrapper	public	bool	stream_eof
+streamWrapper	public	bool	stream_flush
+streamWrapper	public	bool	stream_lock	$işlem=mode
+streamWrapper	public	bool	stream_open	$url=string $kip=string $seçenekler=int $açık_yol=string
+streamWrapper	public	string	stream_read	$sayı=int
+streamWrapper	public	bool	stream_seek	$başlangıç=int $nereden=int
+streamWrapper	public	bool	stream_set_option	$seçenek=int $arg1=int $arg2=int
+streamWrapper	public	array	stream_stat
+streamWrapper	public	int	stream_tell
+streamWrapper	public	int	stream_write	$veri=string
+streamWrapper	public	bool	unlink	$dosya=string
+tidy	private	tidy	__construct	$dosya=string $ayarlar=mixed $kodlama=string $include_path_kullan=bool
+tidyNode	private	tidyNode	getParent
+tidyNode	private	bool	hasChildren
+tidyNode	private	bool	hasSiblings
+tidyNode	private	bool	isAsp
+tidyNode	private	bool	isComment
+tidyNode	private	bool	isHtml
+tidyNode	private	bool	isJste
+tidyNode	private	bool	isPhp
+tidyNode	private	bool	isText
+XMLReader	private	bool	close
+XMLReader	private	DOMNode	expand
+XMLReader	private	string	getAttribute	$isim=string
+XMLReader	private	string	getAttributeNo	$index=int
+XMLReader	private	string	getAttributeNs	$isim=string $isimalanı=string
+XMLReader	private	bool	getParserProperty	$özellik=int
+XMLReader	private	bool	isValid
+XMLReader	private	bool	lookupNamespace	$önek=string
+XMLReader	private	bool	moveToAttribute	$isim=string
+XMLReader	private	bool	moveToElement
+XMLReader	private	bool	moveToFirstAttribute
+XMLReader	private	bool	moveToNextAttribute
+XMLReader	private	bool	next	$isim=string
+XMLReader	private	bool	open	$URI=string $kodlama=string $seçenekler=int
+XMLReader	private	bool	read
+XMLReader	private	string	readInnerXML
+XMLReader	private	string	readOuterXML
+XMLReader	private	string	readString
+XMLReader	private	bool	setParserProperty	$seçenek=int $etkin=bool
+XMLReader	private	bool	setRelaxNGSchema	$dosya=string
+XMLReader	private	bool	setRelaxNGSchemaSource	$kaynak=string
+XMLReader	private	bool	setSchema	$dosya=string
+XMLReader	private	bool	xml	$kaynak=string $kodlama=string $seçenekler=int

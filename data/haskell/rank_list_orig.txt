@@ -1,0 +1,1633 @@
+Unsafe.Coerce.unsafeCoerce a b
+Data.Tuple.fst $tuple_2$ a b a
+Data.Tuple.snd $tuple_2$ a b b
+Data.Tuple.curry $f_2$ $tuple_2$ a b c a b c
+Data.Tuple.uncurry $f_3$ a b c $f_2$ $tuple_2$ a b c
+Data.Tuple.swap $tuple_2$ a b $tuple_2$ b a
+Data.Maybe.Nothing  Maybe a
+Data.Maybe.maybe b $f_2$ a b Maybe a b
+Data.Maybe.isJust Maybe a Bool
+Data.Maybe.isNothing Maybe a Bool
+Data.Maybe.fromJust Maybe a a
+Data.Maybe.fromMaybe a Maybe a a
+Data.Maybe.listToMaybe $list$ a Maybe a
+Data.Maybe.maybeToList Maybe a $list$ a
+Data.Maybe.catMaybes $list$ Maybe a $list$ a
+Data.Maybe.mapMaybe $f_2$ a Maybe b $list$ a $list$ b
+Text.Show.showsPrec Int Show ShowS
+Text.Show.show Show String
+Text.Show.showList $list$ Show ShowS
+Text.Show.shows Show ShowS
+Text.Show.showChar Char ShowS
+Text.Show.showString String ShowS
+Text.Show.showParen Bool ShowS ShowS
+Text.Show.showListWith $f_2$ a ShowS $list$ a ShowS
+Data.Eq.(==) Eq Eq Bool
+Data.Functor.fmap $f_2$ a b Functor a Functor b
+Data.Functor.(<$) a Functor b Functor a
+Data.Functor.($>) Functor a b Functor b
+Data.Functor.(<$>) $f_2$ a b Functor a Functor b
+Data.Functor.void Functor a Functor
+Data.Function.id a a
+Data.Function.const a b a
+Data.Function.(DOT) $f_2$ b c $f_2$ a b a c
+Data.Function.flip $f_3$ a b c b a c
+Data.Function.($) $f_2$ a b a b
+Data.Function.(&) a $f_2$ a b b
+Data.Function.fix $f_2$ a a a
+Data.Function.on $f_3$ b b c $f_2$ a b a a c
+Data.Bool.False  Bool
+Data.Bool.(&&) Bool Bool Bool
+Data.Bool.(||) Bool Bool Bool
+Data.Bool.not Bool Bool
+Data.Bool.otherwise  Bool
+Data.Bool.bool a a Bool a
+GHC.Char.chr Int Char
+Data.Bits.(.&.) Bits Bits Bits
+Data.Bits.(.|.) Bits Bits Bits
+Data.Bits.xor Bits Bits Bits
+Data.Bits.complement Bits Bits
+Data.Bits.shift Bits Int Bits
+Data.Bits.rotate Bits Int Bits
+Data.Bits.zeroBits  Bits
+Data.Bits.bit Int Bits
+Data.Bits.setBit Bits Int Bits
+Data.Bits.clearBit Bits Int Bits
+Data.Bits.complementBit Bits Int Bits
+Data.Bits.testBit Bits Int Bool
+Data.Bits.bitSizeMaybe Bits Maybe Int
+Data.Bits.isSigned Bits Bool
+Data.Bits.shiftL Bits Int Bits
+Data.Bits.unsafeShiftL Bits Int Bits
+Data.Bits.shiftR Bits Int Bits
+Data.Bits.unsafeShiftR Bits Int Bits
+Data.Bits.rotateL Bits Int Bits
+Data.Bits.rotateR Bits Int Bits
+Data.Bits.popCount Bits Int
+Data.Bits.finiteBitSize FiniteBits Int
+Data.Bits.countLeadingZeros FiniteBits Int
+Data.Bits.countTrailingZeros FiniteBits Int
+Data.Bits.bitDefault Int Bits/Num
+Data.Bits.testBitDefault Bits/Num Int Bool
+Data.Bits.popCountDefault Bits/Num Int
+Data.Bits.toIntegralSized Integral/Bits Maybe Integral/Bits
+Data.Coerce.coerce Coercible Coercible
+Text.ParserCombinators.ReadP.get  ReadP Char
+Text.ParserCombinators.ReadP.look  ReadP String
+Text.ParserCombinators.ReadP.(+++) ReadP a ReadP a ReadP a
+Text.ParserCombinators.ReadP.(<++) ReadP a ReadP a ReadP a
+Text.ParserCombinators.ReadP.gather ReadP a ReadP $tuple_2$ String a
+Text.ParserCombinators.ReadP.pfail  ReadP a
+Text.ParserCombinators.ReadP.eof  ReadP
+Text.ParserCombinators.ReadP.satisfy $f_2$ Char Bool ReadP Char
+Text.ParserCombinators.ReadP.char Char ReadP Char
+Text.ParserCombinators.ReadP.string String ReadP String
+Text.ParserCombinators.ReadP.munch $f_2$ Char Bool ReadP String
+Text.ParserCombinators.ReadP.munch1 $f_2$ Char Bool ReadP String
+Text.ParserCombinators.ReadP.skipSpaces  ReadP
+Text.ParserCombinators.ReadP.choice $list$ ReadP a ReadP a
+Text.ParserCombinators.ReadP.count Int ReadP a ReadP $list$ a
+Text.ParserCombinators.ReadP.between ReadP open ReadP close ReadP a ReadP a
+Text.ParserCombinators.ReadP.option a ReadP a ReadP a
+Text.ParserCombinators.ReadP.optional ReadP a ReadP
+Text.ParserCombinators.ReadP.many ReadP a ReadP $list$ a
+Text.ParserCombinators.ReadP.many1 ReadP a ReadP $list$ a
+Text.ParserCombinators.ReadP.skipMany ReadP a ReadP
+Text.ParserCombinators.ReadP.skipMany1 ReadP a ReadP
+Text.ParserCombinators.ReadP.sepBy ReadP a ReadP sep ReadP $list$ a
+Text.ParserCombinators.ReadP.sepBy1 ReadP a ReadP sep ReadP $list$ a
+Text.ParserCombinators.ReadP.endBy ReadP a ReadP sep ReadP $list$ a
+Text.ParserCombinators.ReadP.endBy1 ReadP a ReadP sep ReadP $list$ a
+Text.ParserCombinators.ReadP.chainr ReadP a ReadP $f_3$ a a a a ReadP a
+Text.ParserCombinators.ReadP.chainl ReadP a ReadP $f_3$ a a a a ReadP a
+Text.ParserCombinators.ReadP.chainl1 ReadP a ReadP $f_3$ a a a ReadP a
+Text.ParserCombinators.ReadP.chainr1 ReadP a ReadP $f_3$ a a a ReadP a
+Text.ParserCombinators.ReadP.manyTill ReadP a ReadP end ReadP $list$ a
+Text.ParserCombinators.ReadP.readP_to_S ReadP a ReadS a
+Text.ParserCombinators.ReadP.readS_to_P ReadS a ReadP a
+Text.ParserCombinators.ReadPrec.minPrec  Prec
+Text.ParserCombinators.ReadPrec.lift ReadP a ReadPrec a
+Text.ParserCombinators.ReadPrec.prec Prec ReadPrec a ReadPrec a
+Text.ParserCombinators.ReadPrec.step ReadPrec a ReadPrec a
+Text.ParserCombinators.ReadPrec.reset ReadPrec a ReadPrec a
+Text.ParserCombinators.ReadPrec.get  ReadPrec Char
+Text.ParserCombinators.ReadPrec.look  ReadPrec String
+Text.ParserCombinators.ReadPrec.(+++) ReadPrec a ReadPrec a ReadPrec a
+Text.ParserCombinators.ReadPrec.(<++) ReadPrec a ReadPrec a ReadPrec a
+Text.ParserCombinators.ReadPrec.pfail  ReadPrec a
+Text.ParserCombinators.ReadPrec.choice $list$ ReadPrec a ReadPrec a
+Text.Read.Lex.Char Char Lexeme
+Text.Read.Lex.String String Lexeme
+Text.Read.Lex.Punc String Lexeme
+Text.Read.Lex.Ident String Lexeme
+Text.Read.Lex.Symbol String Lexeme
+Text.Read.Lex.hsLex  ReadP String
+Data.Word.byteSwap16 Word16 Word16
+Data.Word.byteSwap32 Word32 Word32
+Data.Word.byteSwap64 Word64 Word64
+Data.Ord.compare Ord Ord Ordering
+Data.Ord.Down a Down a
+Data.Ord.comparing $f_2$ b Ord b b Ordering
+Data.Type.Coercion.Coercion  Coercion a b
+Data.Type.Coercion.coerceWith Coercion a b a b
+Data.Type.Coercion.sym Coercion a b Coercion b a
+Data.Type.Coercion.trans Coercion a b Coercion b c Coercion a c
+Data.Type.Coercion.testCoercion TestCoercion a TestCoercion b Maybe Coercion a b
+Control.Category.id  Category a a
+Control.Category.(DOT) Category b c Category a b Category a c
+Control.Category.(<<<) Category b c Category a b Category a c
+Control.Category.(>>>) Category a b Category b c Category a c
+Data.Char.isControl Char Bool
+Data.Char.isSpace Char Bool
+Data.Char.isLower Char Bool
+Data.Char.isUpper Char Bool
+Data.Char.isAlpha Char Bool
+Data.Char.isAlphaNum Char Bool
+Data.Char.isPrint Char Bool
+Data.Char.isDigit Char Bool
+Data.Char.isOctDigit Char Bool
+Data.Char.isHexDigit Char Bool
+Data.Char.isLetter Char Bool
+Data.Char.isMark Char Bool
+Data.Char.isNumber Char Bool
+Data.Char.isPunctuation Char Bool
+Data.Char.isSymbol Char Bool
+Data.Char.isSeparator Char Bool
+Data.Char.isAscii Char Bool
+Data.Char.isLatin1 Char Bool
+Data.Char.isAsciiUpper Char Bool
+Data.Char.isAsciiLower Char Bool
+Data.Char.UppercaseLetter  GeneralCategory
+Data.Char.LowercaseLetter  GeneralCategory
+Data.Char.TitlecaseLetter  GeneralCategory
+Data.Char.ModifierLetter  GeneralCategory
+Data.Char.OtherLetter  GeneralCategory
+Data.Char.NonSpacingMark  GeneralCategory
+Data.Char.SpacingCombiningMark  GeneralCategory
+Data.Char.EnclosingMark  GeneralCategory
+Data.Char.DecimalNumber  GeneralCategory
+Data.Char.LetterNumber  GeneralCategory
+Data.Char.OtherNumber  GeneralCategory
+Data.Char.ConnectorPunctuation  GeneralCategory
+Data.Char.DashPunctuation  GeneralCategory
+Data.Char.OpenPunctuation  GeneralCategory
+Data.Char.ClosePunctuation  GeneralCategory
+Data.Char.InitialQuote  GeneralCategory
+Data.Char.FinalQuote  GeneralCategory
+Data.Char.OtherPunctuation  GeneralCategory
+Data.Char.MathSymbol  GeneralCategory
+Data.Char.CurrencySymbol  GeneralCategory
+Data.Char.ModifierSymbol  GeneralCategory
+Data.Char.OtherSymbol  GeneralCategory
+Data.Char.Space  GeneralCategory
+Data.Char.LineSeparator  GeneralCategory
+Data.Char.ParagraphSeparator  GeneralCategory
+Data.Char.Control  GeneralCategory
+Data.Char.Format  GeneralCategory
+Data.Char.Surrogate  GeneralCategory
+Data.Char.PrivateUse  GeneralCategory
+Data.Char.NotAssigned  GeneralCategory
+Data.Char.generalCategory Char GeneralCategory
+Data.Char.toUpper Char Char
+Data.Char.toLower Char Char
+Data.Char.toTitle Char Char
+Data.Char.digitToInt Char Int
+Data.Char.intToDigit Int Char
+Data.Char.ord Char Int
+Data.Char.chr Int Char
+Data.Char.showLitChar Char ShowS
+Data.Char.lexLitChar  ReadS String
+Data.Char.readLitChar  ReadS Char
+GHC.OldList.null $list$ a Bool
+GHC.OldList.length $list$ a Int
+GHC.OldList.foldl $f_3$ b a b b $list$ a b
+GHC.OldList.foldl' $f_3$ b a b b $list$ a b
+GHC.OldList.foldl1 $f_3$ a a a $list$ a a
+GHC.OldList.foldr $f_3$ a b b b $list$ a b
+GHC.OldList.foldr1 $f_3$ a a a $list$ a a
+GHC.OldList.concat $list$ $list$ a $list$ a
+GHC.OldList.concatMap $f_2$ a $list$ b $list$ a $list$ b
+GHC.OldList.and $list$ Bool Bool
+GHC.OldList.or $list$ Bool Bool
+GHC.OldList.any $f_2$ a Bool $list$ a Bool
+GHC.OldList.all $f_2$ a Bool $list$ a Bool
+GHC.OldList.sum $list$ Num Num
+GHC.OldList.product $list$ Num Num
+GHC.OldList.maximum $list$ Ord Ord
+GHC.OldList.minimum $list$ Ord Ord
+GHC.OldList.mapAccumL $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
+GHC.OldList.mapAccumR $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
+GHC.OldList.elem Eq $list$ Eq Bool
+GHC.OldList.find $f_2$ a Bool $list$ a Maybe a
+GHC.OldList.maximumBy $f_3$ a a Ordering $list$ a a
+GHC.OldList.minimumBy $f_3$ a a Ordering $list$ a a
+Data.Proxy.Proxy  Proxy t
+Data.Proxy.asProxyTypeOf a Proxy a a
+Data.Proxy.KProxy  KProxy
+Numeric.showSigned $f_2$ Real ShowS Int Real ShowS
+Numeric.showIntAtBase Integral/Show $f_2$ Int Char Integral/Show ShowS
+Numeric.showInt Integral ShowS
+Numeric.showHex Integral/Show ShowS
+Numeric.showOct Integral/Show ShowS
+Numeric.showEFloat Maybe Int RealFloat ShowS
+Numeric.showFFloat Maybe Int RealFloat ShowS
+Numeric.showGFloat Maybe Int RealFloat ShowS
+Numeric.showFFloatAlt Maybe Int RealFloat ShowS
+Numeric.showGFloatAlt Maybe Int RealFloat ShowS
+Numeric.showFloat RealFloat ShowS
+Numeric.floatToDigits Integer RealFloat $tuple_2$ $list$ Int Int
+Numeric.readSigned ReadS Real ReadS Real
+Numeric.readInt Num $f_2$ Char Bool $f_2$ Char Int ReadS Num
+Numeric.readDec  ReadS Eq/Num
+Numeric.readOct  ReadS Eq/Num
+Numeric.readHex  ReadS Eq/Num
+Numeric.readFloat  ReadS RealFrac
+Numeric.lexDigits  ReadS String
+Numeric.fromRat Rational RealFloat
+Data.Typeable.Internal.Proxy  Proxy t
+Data.Typeable.Internal.typeRep proxy Typeable TypeRep
+Data.Typeable.Internal.mkTyCon3 String String String TyCon
+Data.Typeable.Internal.mkTyConApp TyCon $list$ TypeRep TypeRep
+Data.Typeable.Internal.mkPolyTyConApp TyCon $list$ KindRep $list$ TypeRep TypeRep
+Data.Typeable.Internal.mkAppTy TypeRep TypeRep TypeRep
+Data.Typeable.Internal.typeRepTyCon TypeRep TyCon
+Data.Typeable.Internal.typeRep# Proxy# Typeable TypeRep
+Data.Typeable.Internal.mkFunTy TypeRep TypeRep TypeRep
+Data.Typeable.Internal.splitTyConApp TypeRep $tuple_2$ TyCon $list$ TypeRep
+Data.Typeable.Internal.splitPolyTyConApp TypeRep $tuple_3$ TyCon $list$ KindRep $list$ TypeRep
+Data.Typeable.Internal.funResultTy TypeRep TypeRep Maybe TypeRep
+Data.Typeable.Internal.typeRepArgs TypeRep $list$ TypeRep
+Data.Typeable.Internal.typeRepFingerprint TypeRep Fingerprint
+Data.Typeable.Internal.rnfTypeRep  TypeRep
+Data.Typeable.Internal.tyConString TyCon String
+Data.Typeable.Internal.rnfTyCon  TyCon
+Data.Typeable.Internal.typeRepKinds TypeRep $list$ KindRep
+Data.Typeable.Internal.typeLitTypeRep String TypeRep
+Foreign.StablePtr.newStablePtr a IO StablePtr a
+Foreign.StablePtr.deRefStablePtr StablePtr a IO a
+Foreign.StablePtr.freeStablePtr StablePtr a IO
+Foreign.StablePtr.castStablePtrToPtr StablePtr a Ptr
+Foreign.StablePtr.castPtrToStablePtr Ptr StablePtr a
+Data.Typeable.typeRep proxy Typeable TypeRep
+Data.Typeable.cast Typeable Maybe Typeable
+Data.Typeable.gcast c Typeable Maybe c Typeable
+Data.Typeable.gcast1 c Typeable a Maybe c Typeable a
+Data.Typeable.gcast2 c Typeable a b Maybe c Typeable a b
+Data.Typeable.Proxy  Proxy t
+Data.Typeable.typeRepFingerprint TypeRep Fingerprint
+Data.Typeable.rnfTypeRep  TypeRep
+Data.Typeable.tyConString TyCon String
+Data.Typeable.rnfTyCon  TyCon
+Data.Typeable.mkTyCon3 String String String TyCon
+Data.Typeable.mkTyConApp TyCon $list$ TypeRep TypeRep
+Data.Typeable.mkAppTy TypeRep TypeRep TypeRep
+Data.Typeable.mkFunTy TypeRep TypeRep TypeRep
+Data.Typeable.splitTyConApp TypeRep $tuple_2$ TyCon $list$ TypeRep
+Data.Typeable.funResultTy TypeRep TypeRep Maybe TypeRep
+Data.Typeable.typeRepTyCon TypeRep TyCon
+Data.Typeable.typeRepArgs TypeRep $list$ TypeRep
+Data.Either.Left a Either a b
+Data.Either.either $f_2$ a c $f_2$ b c Either a b c
+Data.Either.lefts $list$ Either a b $list$ a
+Data.Either.rights $list$ Either a b $list$ b
+Data.Either.isLeft Either a b Bool
+Data.Either.isRight Either a b Bool
+Data.Either.partitionEithers $list$ Either a b $tuple_2$ $list$ a $list$ b
+GHC.Generics.U1  U1 p
+GHC.Generics.Par1 p Par1 p
+GHC.Generics.Rec1 f p Rec1 f p
+GHC.Generics.K1 c K1 i c p
+GHC.Generics.M1 f p M1 i c f p
+GHC.Generics.L1 f p :+: f g p
+GHC.Generics.(:*:) f p g p :*: f g p
+GHC.Generics.Comp1 f g p :.: f g p
+GHC.Generics.Prefix  Fixity
+GHC.Generics.LeftAssociative  Associativity
+GHC.Generics.NoArity  Arity
+GHC.Generics.prec Fixity Int
+GHC.Generics.from Generic Rep Generic x
+GHC.Generics.to Rep Generic x Generic
+GHC.Generics.from1 Generic1 a Rep1 Generic1 a
+GHC.Generics.to1 Rep1 Generic1 a Generic1 a
+Data.Monoid.mempty  Monoid
+Data.Monoid.mappend Monoid Monoid Monoid
+Data.Monoid.mconcat $list$ Monoid Monoid
+Data.Monoid.(<>) Monoid Monoid Monoid
+Data.Monoid.Dual a Dual a
+Data.Monoid.Endo $f_2$ a a Endo a
+Data.Monoid.All Bool All
+Data.Monoid.Any Bool Any
+Data.Monoid.Sum a Sum a
+Data.Monoid.Product a Product a
+Data.Monoid.First Maybe a First a
+Data.Monoid.Last Maybe a Last a
+Data.Monoid.Alt f a Alt f a
+Data.Foldable.fold Foldable Monoid Monoid
+Data.Foldable.foldMap $f_2$ a Monoid Foldable a Monoid
+Data.Foldable.foldr $f_3$ a b b b Foldable a b
+Data.Foldable.foldr' $f_3$ a b b b Foldable a b
+Data.Foldable.foldl $f_3$ b a b b Foldable a b
+Data.Foldable.foldl' $f_3$ b a b b Foldable a b
+Data.Foldable.foldr1 $f_3$ a a a Foldable a a
+Data.Foldable.foldl1 $f_3$ a a a Foldable a a
+Data.Foldable.toList Foldable a $list$ a
+Data.Foldable.null Foldable a Bool
+Data.Foldable.length Foldable a Int
+Data.Foldable.elem Eq Foldable Eq Bool
+Data.Foldable.maximum Foldable Ord Ord
+Data.Foldable.minimum Foldable Ord Ord
+Data.Foldable.sum Foldable Num Num
+Data.Foldable.product Foldable Num Num
+Data.Foldable.foldrM $f_3$ a b Monad b b Foldable a Monad b
+Data.Foldable.foldlM $f_3$ b a Monad b b Foldable a Monad b
+Data.Foldable.traverse_ $f_2$ a Applicative b Foldable a Applicative
+Data.Foldable.for_ Foldable a $f_2$ a Applicative b Applicative
+Data.Foldable.sequenceA_ Foldable Applicative a Applicative
+Data.Foldable.asum Foldable Alternative a Alternative a
+Data.Foldable.mapM_ $f_2$ a Monad b Foldable a Monad
+Data.Foldable.forM_ Foldable a $f_2$ a Monad b Monad
+Data.Foldable.sequence_ Foldable Monad a Monad
+Data.Foldable.msum Foldable MonadPlus a MonadPlus a
+Data.Foldable.concat Foldable $list$ a $list$ a
+Data.Foldable.concatMap $f_2$ a $list$ b Foldable a $list$ b
+Data.Foldable.and Foldable Bool Bool
+Data.Foldable.or Foldable Bool Bool
+Data.Foldable.any $f_2$ a Bool Foldable a Bool
+Data.Foldable.all $f_2$ a Bool Foldable a Bool
+Data.Foldable.maximumBy $f_3$ a a Ordering Foldable a a
+Data.Foldable.minimumBy $f_3$ a a Ordering Foldable a a
+Data.Foldable.notElem Eq Foldable Eq Bool
+Data.Foldable.find $f_2$ a Bool Foldable a Maybe a
+Text.Read.readsPrec Int ReadS Read
+Text.Read.readList  ReadS $list$ Read
+Text.Read.readPrec  ReadPrec Read
+Text.Read.readListPrec  ReadPrec $list$ Read
+Text.Read.reads  ReadS Read
+Text.Read.read String Read
+Text.Read.readParen Bool ReadS a ReadS a
+Text.Read.lex  ReadS String
+Text.Read.Char Char Lexeme
+Text.Read.String String Lexeme
+Text.Read.Punc String Lexeme
+Text.Read.Ident String Lexeme
+Text.Read.Symbol String Lexeme
+Text.Read.lexP  ReadPrec Lexeme
+Text.Read.parens ReadPrec a ReadPrec a
+Text.Read.readListDefault  ReadS $list$ Read
+Text.Read.readListPrecDefault  ReadPrec $list$ Read
+Text.Read.readEither String Either String Read
+Text.Read.readMaybe String Maybe Read
+Data.IORef.newIORef a IO IORef a
+Data.IORef.readIORef IORef a IO a
+Data.IORef.writeIORef IORef a a IO
+Data.IORef.modifyIORef IORef a $f_2$ a a IO
+Data.IORef.modifyIORef' IORef a $f_2$ a a IO
+Data.IORef.atomicModifyIORef IORef a $f_2$ a $tuple_2$ a b IO b
+Data.IORef.atomicModifyIORef' IORef a $f_2$ a $tuple_2$ a b IO b
+Data.IORef.atomicWriteIORef IORef a a IO
+Data.IORef.mkWeakIORef IORef a IO IO Weak IORef a
+Foreign.Marshal.Unsafe.unsafeLocalState IO a a
+Data.Dynamic.toDyn Typeable Dynamic
+Data.Dynamic.fromDyn Dynamic Typeable Typeable
+Data.Dynamic.fromDynamic Dynamic Maybe Typeable
+Foreign.Storable.sizeOf Storable Int
+Foreign.Storable.alignment Storable Int
+Foreign.Storable.peekElemOff Ptr Storable Int IO Storable
+Foreign.Storable.pokeElemOff Ptr Storable Int Storable IO
+Foreign.Storable.peekByteOff Ptr b Int IO Storable
+Foreign.Storable.pokeByteOff Ptr b Int Storable IO
+Foreign.Storable.peek Ptr Storable IO Storable
+Foreign.Storable.poke Ptr Storable Storable IO
+Foreign.C.Types.CChar Int8 CChar
+Foreign.C.Types.CSChar Int8 CSChar
+Foreign.C.Types.CUChar Word8 CUChar
+Foreign.C.Types.CShort Int16 CShort
+Foreign.C.Types.CUShort Word16 CUShort
+Foreign.C.Types.CInt Int32 CInt
+Foreign.C.Types.CUInt Word32 CUInt
+Foreign.C.Types.CLong Int64 CLong
+Foreign.C.Types.CULong Word64 CULong
+Foreign.C.Types.CPtrdiff Int64 CPtrdiff
+Foreign.C.Types.CSize Word64 CSize
+Foreign.C.Types.CWchar Int32 CWchar
+Foreign.C.Types.CSigAtomic Int32 CSigAtomic
+Foreign.C.Types.CLLong Int64 CLLong
+Foreign.C.Types.CULLong Word64 CULLong
+Foreign.C.Types.CClock Int64 CClock
+Foreign.C.Types.CTime Int64 CTime
+Foreign.C.Types.CUSeconds Word32 CUSeconds
+Foreign.C.Types.CSUSeconds Int64 CSUSeconds
+Foreign.C.Types.CFloat Float CFloat
+Foreign.C.Types.CDouble Double CDouble
+Foreign.Concurrent.newForeignPtr Ptr a IO IO ForeignPtr a
+Foreign.Concurrent.addForeignPtrFinalizer ForeignPtr a IO IO
+Foreign.Ptr.nullPtr  Ptr a
+Foreign.Ptr.castPtr Ptr a Ptr b
+Foreign.Ptr.plusPtr Ptr a Int Ptr b
+Foreign.Ptr.alignPtr Ptr a Int Ptr a
+Foreign.Ptr.minusPtr Ptr a Ptr b Int
+Foreign.Ptr.nullFunPtr  FunPtr a
+Foreign.Ptr.castFunPtr FunPtr a FunPtr b
+Foreign.Ptr.castFunPtrToPtr FunPtr a Ptr b
+Foreign.Ptr.castPtrToFunPtr Ptr a FunPtr b
+Foreign.Ptr.freeHaskellFunPtr FunPtr a IO
+Foreign.Ptr.ptrToIntPtr Ptr a IntPtr
+Foreign.Ptr.intPtrToPtr IntPtr Ptr a
+Foreign.Ptr.ptrToWordPtr Ptr a WordPtr
+Foreign.Ptr.wordPtrToPtr WordPtr Ptr a
+Foreign.ForeignPtr.newForeignPtr FinalizerPtr a Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.newForeignPtr_ Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.addForeignPtrFinalizer FinalizerPtr a ForeignPtr a IO
+Foreign.ForeignPtr.newForeignPtrEnv FinalizerEnvPtr env a Ptr env Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.addForeignPtrFinalizerEnv FinalizerEnvPtr env a Ptr env ForeignPtr a IO
+Foreign.ForeignPtr.withForeignPtr ForeignPtr a $f_2$ Ptr a IO b IO b
+Foreign.ForeignPtr.finalizeForeignPtr ForeignPtr a IO
+Foreign.ForeignPtr.touchForeignPtr ForeignPtr a IO
+Foreign.ForeignPtr.castForeignPtr ForeignPtr a ForeignPtr b
+Foreign.ForeignPtr.mallocForeignPtr  IO ForeignPtr Storable
+Foreign.ForeignPtr.mallocForeignPtrBytes Int IO ForeignPtr a
+Foreign.ForeignPtr.mallocForeignPtrArray Int IO ForeignPtr Storable
+Foreign.ForeignPtr.mallocForeignPtrArray0 Int IO ForeignPtr Storable
+Foreign.ForeignPtr.Safe.newForeignPtr FinalizerPtr a Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.Safe.newForeignPtr_ Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.Safe.addForeignPtrFinalizer FinalizerPtr a ForeignPtr a IO
+Foreign.ForeignPtr.Safe.newForeignPtrEnv FinalizerEnvPtr env a Ptr env Ptr a IO ForeignPtr a
+Foreign.ForeignPtr.Safe.addForeignPtrFinalizerEnv FinalizerEnvPtr env a Ptr env ForeignPtr a IO
+Foreign.ForeignPtr.Safe.withForeignPtr ForeignPtr a $f_2$ Ptr a IO b IO b
+Foreign.ForeignPtr.Safe.finalizeForeignPtr ForeignPtr a IO
+Foreign.ForeignPtr.Safe.touchForeignPtr ForeignPtr a IO
+Foreign.ForeignPtr.Safe.castForeignPtr ForeignPtr a ForeignPtr b
+Foreign.ForeignPtr.Safe.mallocForeignPtr  IO ForeignPtr Storable
+Foreign.ForeignPtr.Safe.mallocForeignPtrBytes Int IO ForeignPtr a
+Foreign.ForeignPtr.Safe.mallocForeignPtrArray Int IO ForeignPtr Storable
+Foreign.ForeignPtr.Safe.mallocForeignPtrArray0 Int IO ForeignPtr Storable
+Foreign.ForeignPtr.Unsafe.unsafeForeignPtrToPtr ForeignPtr a Ptr a
+GHC.IO.Buffer.Buffer ! RawBuffer e BufferState !Int !Int !Int Buffer e
+GHC.IO.Buffer.slideContents Buffer Word8 IO Buffer Word8
+GHC.IO.Encoding.Types.BufferCodec CodeBuffer from to $f_2$ Buffer from IO $tuple_2$ Buffer from Buffer to Buffer to IO IO state $f_2$ state IO BufferCodec from to state
+GHC.IO.Encoding.Types.[encode] BufferCodec from to state CodeBuffer from to
+GHC.IO.Encoding.Types.[recover] BufferCodec from to state Buffer from Buffer to IO $tuple_2$ Buffer from Buffer to
+GHC.IO.Encoding.Types.[close] BufferCodec from to state IO
+GHC.IO.Encoding.Types.[getState] BufferCodec from to state IO state
+GHC.IO.Encoding.Types.TextEncoding String IO TextDecoder dstate IO TextEncoder estate TextEncoding
+GHC.IO.Encoding.Types.[textEncodingName] TextEncoding String
+GHC.IO.Encoding.Types.[mkTextDecoder] TextEncoding IO TextDecoder dstate
+GHC.IO.Encoding.Types.[mkTextEncoder] TextEncoding IO TextEncoder estate
+GHC.IO.Encoding.Types.InputUnderflow  CodingProgress
+GHC.IO.Encoding.Types.OutputUnderflow  CodingProgress
+GHC.IO.Encoding.Types.InvalidSequence  CodingProgress
+GHC.IO.Device.read RawIO Ptr Word8 Int IO Int
+GHC.IO.Device.readNonBlocking RawIO Ptr Word8 Int IO Maybe Int
+GHC.IO.Device.write RawIO Ptr Word8 Int IO
+GHC.IO.Device.writeNonBlocking RawIO Ptr Word8 Int IO Int
+GHC.IO.Device.ready IODevice Bool Int IO Bool
+GHC.IO.Device.close IODevice IO
+GHC.IO.Device.isTerminal IODevice IO Bool
+GHC.IO.Device.isSeekable IODevice IO Bool
+GHC.IO.Device.seek IODevice SeekMode Integer IO
+GHC.IO.Device.tell IODevice IO Integer
+GHC.IO.Device.getSize IODevice IO Integer
+GHC.IO.Device.setSize IODevice Integer IO
+GHC.IO.Device.setEcho IODevice Bool IO
+GHC.IO.Device.getEcho IODevice IO Bool
+GHC.IO.Device.setRaw IODevice Bool IO
+GHC.IO.Device.devType IODevice IO IODeviceType
+GHC.IO.Device.dup IODevice IO IODevice
+GHC.IO.Device.dup2 IODevice IODevice IO IODevice
+GHC.IO.Device.Directory  IODeviceType
+GHC.IO.Device.Stream  IODeviceType
+GHC.IO.Device.RegularFile  IODeviceType
+GHC.IO.Device.RawDevice  IODeviceType
+GHC.IO.Device.AbsoluteSeek  SeekMode
+GHC.IO.Device.RelativeSeek  SeekMode
+GHC.IO.Device.SeekFromEnd  SeekMode
+GHC.IO.BufferedIO.newBuffer BufferedIO BufferState IO Buffer Word8
+GHC.IO.BufferedIO.fillReadBuffer BufferedIO Buffer Word8 IO $tuple_2$ Int Buffer Word8
+GHC.IO.BufferedIO.fillReadBuffer0 BufferedIO Buffer Word8 IO $tuple_2$ Maybe Int Buffer Word8
+GHC.IO.BufferedIO.emptyWriteBuffer BufferedIO Buffer Word8 IO Buffer Word8
+GHC.IO.BufferedIO.flushWriteBuffer BufferedIO Buffer Word8 IO Buffer Word8
+GHC.IO.BufferedIO.flushWriteBuffer0 BufferedIO Buffer Word8 IO $tuple_2$ Int Buffer Word8
+Foreign.Marshal.Alloc.alloca $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Alloc.allocaBytes Int $f_2$ Ptr a IO b IO b
+Foreign.Marshal.Alloc.malloc  IO Ptr Storable
+Foreign.Marshal.Alloc.mallocBytes Int IO Ptr a
+Foreign.Marshal.Alloc.calloc  IO Ptr Storable
+Foreign.Marshal.Alloc.callocBytes Int IO Ptr a
+Foreign.Marshal.Alloc.realloc Ptr a IO Ptr Storable
+Foreign.Marshal.Alloc.reallocBytes Ptr a Int IO Ptr a
+Foreign.Marshal.Alloc.free Ptr a IO
+Foreign.Marshal.Alloc.finalizerFree  FinalizerPtr a
+Foreign.Marshal.Utils.with Storable $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Utils.new Storable IO Ptr Storable
+Foreign.Marshal.Utils.fromBool Bool Num
+Foreign.Marshal.Utils.toBool Eq/Num Bool
+Foreign.Marshal.Utils.maybePeek $f_2$ Ptr a IO b Ptr a IO Maybe b
+Foreign.Marshal.Utils.withMany $f_2$ a res $f_2$ b res $list$ a $f_2$ $list$ b res res
+Foreign.Marshal.Utils.copyBytes Ptr a Ptr a Int IO
+Foreign.Marshal.Utils.moveBytes Ptr a Ptr a Int IO
+Foreign.Marshal.Utils.fillBytes Ptr a Word8 Int IO
+Foreign.Marshal.Array.mallocArray Int IO Ptr Storable
+Foreign.Marshal.Array.mallocArray0 Int IO Ptr Storable
+Foreign.Marshal.Array.allocaArray Int $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Array.allocaArray0 Int $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Array.reallocArray Ptr Storable Int IO Ptr Storable
+Foreign.Marshal.Array.reallocArray0 Ptr Storable Int IO Ptr Storable
+Foreign.Marshal.Array.callocArray Int IO Ptr Storable
+Foreign.Marshal.Array.callocArray0 Int IO Ptr Storable
+Foreign.Marshal.Array.peekArray Int Ptr Storable IO $list$ Storable
+Foreign.Marshal.Array.peekArray0 Storable/Eq Ptr Storable/Eq IO $list$ Storable/Eq
+Foreign.Marshal.Array.pokeArray Ptr Storable $list$ Storable IO
+Foreign.Marshal.Array.pokeArray0 Storable Ptr Storable $list$ Storable IO
+Foreign.Marshal.Array.newArray $list$ Storable IO Ptr Storable
+Foreign.Marshal.Array.newArray0 Storable $list$ Storable IO Ptr Storable
+Foreign.Marshal.Array.withArray $list$ Storable $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Array.withArray0 Storable $list$ Storable $f_2$ Ptr Storable IO b IO b
+Foreign.Marshal.Array.withArrayLen $list$ Storable $f_3$ Int Ptr Storable IO b IO b
+Foreign.Marshal.Array.withArrayLen0 Storable $list$ Storable $f_3$ Int Ptr Storable IO b IO b
+Foreign.Marshal.Array.copyArray Ptr Storable Ptr Storable Int IO
+Foreign.Marshal.Array.moveArray Ptr Storable Ptr Storable Int IO
+Foreign.Marshal.Array.lengthArray0 Storable/Eq Ptr Storable/Eq IO Int
+Foreign.Marshal.Array.advancePtr Ptr Storable Int Ptr Storable
+GHC.Foreign.peekCString TextEncoding CString IO String
+GHC.Foreign.peekCStringLen TextEncoding CStringLen IO String
+GHC.Foreign.newCString TextEncoding String IO CString
+GHC.Foreign.newCStringLen TextEncoding String IO CStringLen
+GHC.Foreign.withCString TextEncoding String $f_2$ CString IO a IO a
+GHC.Foreign.withCStringLen TextEncoding String $f_2$ CStringLen IO a IO a
+GHC.Foreign.charIsRepresentable TextEncoding Char IO Bool
+Foreign.C.String.peekCString CString IO String
+Foreign.C.String.peekCStringLen CStringLen IO String
+Foreign.C.String.newCString String IO CString
+Foreign.C.String.newCStringLen String IO CStringLen
+Foreign.C.String.withCString String $f_2$ CString IO a IO a
+Foreign.C.String.withCStringLen String $f_2$ CStringLen IO a IO a
+Foreign.C.String.castCharToCChar Char CChar
+Foreign.C.String.castCCharToChar CChar Char
+Foreign.C.String.castCharToCUChar Char CUChar
+Foreign.C.String.castCUCharToChar CUChar Char
+Foreign.C.String.castCharToCSChar Char CSChar
+Foreign.C.String.castCSCharToChar CSChar Char
+Foreign.C.String.peekCAString CString IO String
+Foreign.C.String.peekCAStringLen CStringLen IO String
+Foreign.C.String.newCAString String IO CString
+Foreign.C.String.newCAStringLen String IO CStringLen
+Foreign.C.String.withCAString String $f_2$ CString IO a IO a
+Foreign.C.String.withCAStringLen String $f_2$ CStringLen IO a IO a
+Foreign.C.String.peekCWString CWString IO String
+Foreign.C.String.peekCWStringLen CWStringLen IO String
+Foreign.C.String.newCWString String IO CWString
+Foreign.C.String.newCWStringLen String IO CWStringLen
+Foreign.C.String.withCWString String $f_2$ CWString IO a IO a
+Foreign.C.String.withCWStringLen String $f_2$ CWStringLen IO a IO a
+Foreign.Marshal.Error.throwIf $f_2$ a Bool $f_2$ a String IO a IO a
+Foreign.Marshal.Error.throwIf_ $f_2$ a Bool $f_2$ a String IO a IO
+Foreign.Marshal.Error.throwIfNeg $f_2$ Ord/Num String IO Ord/Num IO Ord/Num
+Foreign.Marshal.Error.throwIfNeg_ $f_2$ Ord/Num String IO Ord/Num IO
+Foreign.Marshal.Error.throwIfNull String IO Ptr a IO Ptr a
+Foreign.Marshal.Error.void IO a IO
+Foreign.Marshal.Pool.newPool  IO Pool
+Foreign.Marshal.Pool.freePool Pool IO
+Foreign.Marshal.Pool.withPool $f_2$ Pool IO b IO b
+Foreign.Marshal.Pool.pooledMalloc Pool IO Ptr Storable
+Foreign.Marshal.Pool.pooledMallocBytes Pool Int IO Ptr a
+Foreign.Marshal.Pool.pooledRealloc Pool Ptr Storable IO Ptr Storable
+Foreign.Marshal.Pool.pooledReallocBytes Pool Ptr a Int IO Ptr a
+Foreign.Marshal.Pool.pooledMallocArray Pool Int IO Ptr Storable
+Foreign.Marshal.Pool.pooledMallocArray0 Pool Int IO Ptr Storable
+Foreign.Marshal.Pool.pooledReallocArray Pool Ptr Storable Int IO Ptr Storable
+Foreign.Marshal.Pool.pooledReallocArray0 Pool Ptr Storable Int IO Ptr Storable
+Foreign.Marshal.Pool.pooledNew Pool Storable IO Ptr Storable
+Foreign.Marshal.Pool.pooledNewArray Pool $list$ Storable IO Ptr Storable
+Foreign.Marshal.Pool.pooledNewArray0 Pool Storable $list$ Storable IO Ptr Storable
+Foreign.C.Error.Errno CInt Errno
+Foreign.C.Error.isValidErrno Errno Bool
+Foreign.C.Error.getErrno  IO Errno
+Foreign.C.Error.resetErrno  IO
+Foreign.C.Error.errnoToIOError String Errno Maybe Handle Maybe String IOError
+Foreign.C.Error.throwErrno String IO a
+Foreign.C.Error.throwErrnoIf $f_2$ a Bool String IO a IO a
+Foreign.C.Error.throwErrnoIf_ $f_2$ a Bool String IO a IO
+Foreign.C.Error.throwErrnoIfRetry $f_2$ a Bool String IO a IO a
+Foreign.C.Error.throwErrnoIfRetry_ $f_2$ a Bool String IO a IO
+Foreign.C.Error.throwErrnoIfMinus1 String IO Eq/Num IO Eq/Num
+Foreign.C.Error.throwErrnoIfMinus1_ String IO Eq/Num IO
+Foreign.C.Error.throwErrnoIfMinus1Retry String IO Eq/Num IO Eq/Num
+Foreign.C.Error.throwErrnoIfMinus1Retry_ String IO Eq/Num IO
+Foreign.C.Error.throwErrnoIfNull String IO Ptr a IO Ptr a
+Foreign.C.Error.throwErrnoIfNullRetry String IO Ptr a IO Ptr a
+Foreign.C.Error.throwErrnoIfRetryMayBlock $f_2$ a Bool String IO a IO b IO a
+Foreign.C.Error.throwErrnoIfRetryMayBlock_ $f_2$ a Bool String IO a IO b IO
+Foreign.C.Error.throwErrnoIfMinus1RetryMayBlock String IO Eq/Num IO b IO Eq/Num
+Foreign.C.Error.throwErrnoIfMinus1RetryMayBlock_ String IO Eq/Num IO b IO
+Foreign.C.Error.throwErrnoIfNullRetryMayBlock String IO Ptr a IO b IO Ptr a
+Foreign.C.Error.throwErrnoPath String FilePath IO a
+Foreign.C.Error.throwErrnoPathIf $f_2$ a Bool String FilePath IO a IO a
+Foreign.C.Error.throwErrnoPathIf_ $f_2$ a Bool String FilePath IO a IO
+Foreign.C.Error.throwErrnoPathIfNull String FilePath IO Ptr a IO Ptr a
+Foreign.C.Error.throwErrnoPathIfMinus1 String FilePath IO Eq/Num IO Eq/Num
+Foreign.C.Error.throwErrnoPathIfMinus1_ String FilePath IO Eq/Num IO
+System.Posix.Types.CDev Word64 CDev
+GHC.IO.Encoding.Failure.ErrorOnCodingFailure  CodingFailureMode
+GHC.IO.Encoding.Failure.IgnoreCodingFailure  CodingFailureMode
+GHC.IO.Encoding.Failure.TransliterateCodingFailure  CodingFailureMode
+GHC.IO.Encoding.Failure.RoundtripFailure  CodingFailureMode
+GHC.IO.Encoding.Failure.isSurrogate Char Bool
+GHC.IO.Encoding.UTF8.utf8  TextEncoding
+GHC.Conc.Sync.ThreadId ThreadId# ThreadId
+GHC.Conc.Sync.forkIO IO IO ThreadId
+GHC.Conc.Sync.forkOn Int IO IO ThreadId
+GHC.Conc.Sync.numCapabilities  Int
+GHC.Conc.Sync.getNumCapabilities  IO Int
+GHC.Conc.Sync.setNumCapabilities Int IO
+GHC.Conc.Sync.getNumProcessors  IO Int
+GHC.Conc.Sync.numSparks  IO Int
+GHC.Conc.Sync.myThreadId  IO ThreadId
+GHC.Conc.Sync.killThread ThreadId IO
+GHC.Conc.Sync.throwTo ThreadId Exception IO
+GHC.Conc.Sync.runSparks  IO
+GHC.Conc.Sync.yield  IO
+GHC.Conc.Sync.labelThread ThreadId String IO
+GHC.Conc.Sync.mkWeakThreadId ThreadId IO Weak ThreadId
+GHC.Conc.Sync.ThreadRunning  ThreadStatus
+GHC.Conc.Sync.ThreadFinished  ThreadStatus
+GHC.Conc.Sync.ThreadBlocked BlockReason ThreadStatus
+GHC.Conc.Sync.ThreadDied  ThreadStatus
+GHC.Conc.Sync.BlockedOnMVar  BlockReason
+GHC.Conc.Sync.BlockedOnBlackHole  BlockReason
+GHC.Conc.Sync.BlockedOnException  BlockReason
+GHC.Conc.Sync.BlockedOnSTM  BlockReason
+GHC.Conc.Sync.BlockedOnForeignCall  BlockReason
+GHC.Conc.Sync.BlockedOnOther  BlockReason
+GHC.Conc.Sync.threadCapability ThreadId IO $tuple_2$ Int Bool
+GHC.Conc.Sync.setAllocationCounter Int64 IO
+GHC.Conc.Sync.getAllocationCounter  IO Int64
+GHC.Conc.Sync.enableAllocationLimit  IO
+GHC.Conc.Sync.disableAllocationLimit  IO
+GHC.Conc.Sync.STM $f_2$ State# RealWorld $tuple_2$ # State# RealWorld a # STM a
+GHC.Conc.Sync.atomically STM a IO a
+GHC.Conc.Sync.retry  STM a
+GHC.Conc.Sync.orElse STM a STM a STM a
+GHC.Conc.Sync.throwSTM Exception STM a
+GHC.Conc.Sync.catchSTM STM a $f_2$ Exception STM a STM a
+GHC.Conc.Sync.alwaysSucceeds STM a STM
+GHC.Conc.Sync.always STM Bool STM
+GHC.Conc.Sync.TVar TVar# RealWorld a TVar a
+GHC.Conc.Sync.newTVar a STM TVar a
+GHC.Conc.Sync.newTVarIO a IO TVar a
+GHC.Conc.Sync.readTVar TVar a STM a
+GHC.Conc.Sync.readTVarIO TVar a IO a
+GHC.Conc.Sync.writeTVar TVar a a STM
+GHC.Conc.Sync.unsafeIOToSTM IO a STM a
+Control.Exception.Base.SomeException e SomeException
+Control.Exception.Base.toException Exception SomeException
+Control.Exception.Base.displayException Exception String
+Control.Exception.Base.Overflow  ArithException
+Control.Exception.Base.IndexOutOfBounds String ArrayException
+Control.Exception.Base.UndefinedElement String ArrayException
+Control.Exception.Base.AssertionFailed String AssertionFailed
+Control.Exception.Base.SomeAsyncException e SomeAsyncException
+Control.Exception.Base.StackOverflow  AsyncException
+Control.Exception.Base.HeapOverflow  AsyncException
+Control.Exception.Base.ThreadKilled  AsyncException
+Control.Exception.Base.UserInterrupt  AsyncException
+Control.Exception.Base.NonTermination  NonTermination
+Control.Exception.Base.NestedAtomically  NestedAtomically
+Control.Exception.Base.BlockedIndefinitelyOnMVar  BlockedIndefinitelyOnMVar
+Control.Exception.Base.BlockedIndefinitelyOnSTM  BlockedIndefinitelyOnSTM
+Control.Exception.Base.AllocationLimitExceeded  AllocationLimitExceeded
+Control.Exception.Base.Deadlock  Deadlock
+Control.Exception.Base.NoMethodError String NoMethodError
+Control.Exception.Base.PatternMatchFail String PatternMatchFail
+Control.Exception.Base.RecConError String RecConError
+Control.Exception.Base.RecSelError String RecSelError
+Control.Exception.Base.RecUpdError String RecUpdError
+Control.Exception.Base.ErrorCall String ErrorCall
+Control.Exception.Base.throwIO Exception IO a
+Control.Exception.Base.throw Exception a
+Control.Exception.Base.ioError IOError IO a
+Control.Exception.Base.throwTo ThreadId Exception IO
+Control.Exception.Base.catch IO a $f_2$ Exception IO a IO a
+Control.Exception.Base.catchJust $f_2$ Exception Maybe b IO a $f_2$ b IO a IO a
+Control.Exception.Base.handle $f_2$ Exception IO a IO a IO a
+Control.Exception.Base.handleJust $f_2$ Exception Maybe b $f_2$ b IO a IO a IO a
+Control.Exception.Base.try IO a IO Either Exception a
+Control.Exception.Base.tryJust $f_2$ Exception Maybe b IO a IO Either b a
+Control.Exception.Base.onException IO a IO b IO a
+Control.Exception.Base.evaluate a IO a
+Control.Exception.Base.mapException $f_2$ Exception Exception a a
+Control.Exception.Base.mask_ IO a IO a
+Control.Exception.Base.uninterruptibleMask_ IO a IO a
+Control.Exception.Base.Unmasked  MaskingState
+Control.Exception.Base.MaskedInterruptible  MaskingState
+Control.Exception.Base.MaskedUninterruptible  MaskingState
+Control.Exception.Base.getMaskingState  IO MaskingState
+Control.Exception.Base.assert Bool a a
+Control.Exception.Base.bracket IO a $f_2$ a IO b $f_2$ a IO c IO c
+Control.Exception.Base.bracket_ IO a IO b IO c IO c
+Control.Exception.Base.bracketOnError IO a $f_2$ a IO b $f_2$ a IO c IO c
+Control.Exception.Base.finally IO a IO b IO a
+Control.Concurrent.MVar.newEmptyMVar  IO MVar a
+Control.Concurrent.MVar.newMVar a IO MVar a
+Control.Concurrent.MVar.takeMVar MVar a IO a
+Control.Concurrent.MVar.putMVar MVar a a IO
+Control.Concurrent.MVar.readMVar MVar a IO a
+Control.Concurrent.MVar.swapMVar MVar a a IO a
+Control.Concurrent.MVar.tryTakeMVar MVar a IO Maybe a
+Control.Concurrent.MVar.tryPutMVar MVar a a IO Bool
+Control.Concurrent.MVar.isEmptyMVar MVar a IO Bool
+Control.Concurrent.MVar.withMVar MVar a $f_2$ a IO b IO b
+Control.Concurrent.MVar.withMVarMasked MVar a $f_2$ a IO b IO b
+Control.Concurrent.MVar.modifyMVar_ MVar a $f_2$ a IO a IO
+Control.Concurrent.MVar.modifyMVar MVar a $f_2$ a IO $tuple_2$ a b IO b
+Control.Concurrent.MVar.modifyMVarMasked_ MVar a $f_2$ a IO a IO
+Control.Concurrent.MVar.modifyMVarMasked MVar a $f_2$ a IO $tuple_2$ a b IO b
+Control.Concurrent.MVar.tryReadMVar MVar a IO Maybe a
+Control.Concurrent.MVar.mkWeakMVar MVar a IO IO Weak MVar a
+Control.Concurrent.MVar.addMVarFinalizer MVar a IO IO
+Control.Exception.SomeException e SomeException
+Control.Exception.toException Exception SomeException
+Control.Exception.displayException Exception String
+Control.Exception.Overflow  ArithException
+Control.Exception.IndexOutOfBounds String ArrayException
+Control.Exception.UndefinedElement String ArrayException
+Control.Exception.AssertionFailed String AssertionFailed
+Control.Exception.SomeAsyncException e SomeAsyncException
+Control.Exception.StackOverflow  AsyncException
+Control.Exception.HeapOverflow  AsyncException
+Control.Exception.ThreadKilled  AsyncException
+Control.Exception.UserInterrupt  AsyncException
+Control.Exception.NonTermination  NonTermination
+Control.Exception.NestedAtomically  NestedAtomically
+Control.Exception.BlockedIndefinitelyOnMVar  BlockedIndefinitelyOnMVar
+Control.Exception.BlockedIndefinitelyOnSTM  BlockedIndefinitelyOnSTM
+Control.Exception.AllocationLimitExceeded  AllocationLimitExceeded
+Control.Exception.Deadlock  Deadlock
+Control.Exception.NoMethodError String NoMethodError
+Control.Exception.PatternMatchFail String PatternMatchFail
+Control.Exception.RecConError String RecConError
+Control.Exception.RecSelError String RecSelError
+Control.Exception.RecUpdError String RecUpdError
+Control.Exception.ErrorCall String ErrorCall
+Control.Exception.throw Exception a
+Control.Exception.throwIO Exception IO a
+Control.Exception.ioError IOError IO a
+Control.Exception.throwTo ThreadId Exception IO
+Control.Exception.catch IO a $f_2$ Exception IO a IO a
+Control.Exception.catches IO a $list$ Handler a IO a
+Control.Exception.Handler $f_2$ e IO a Handler a
+Control.Exception.catchJust $f_2$ Exception Maybe b IO a $f_2$ b IO a IO a
+Control.Exception.handle $f_2$ Exception IO a IO a IO a
+Control.Exception.handleJust $f_2$ Exception Maybe b $f_2$ b IO a IO a IO a
+Control.Exception.try IO a IO Either Exception a
+Control.Exception.tryJust $f_2$ Exception Maybe b IO a IO Either b a
+Control.Exception.evaluate a IO a
+Control.Exception.mapException $f_2$ Exception Exception a a
+Control.Exception.mask_ IO a IO a
+Control.Exception.uninterruptibleMask_ IO a IO a
+Control.Exception.Unmasked  MaskingState
+Control.Exception.MaskedInterruptible  MaskingState
+Control.Exception.MaskedUninterruptible  MaskingState
+Control.Exception.getMaskingState  IO MaskingState
+Control.Exception.allowInterrupt  IO
+Control.Exception.assert Bool a a
+Control.Exception.bracket IO a $f_2$ a IO b $f_2$ a IO c IO c
+Control.Exception.bracket_ IO a IO b IO c IO c
+Control.Exception.bracketOnError IO a $f_2$ a IO b $f_2$ a IO c IO c
+Control.Exception.finally IO a IO b IO a
+Control.Exception.onException IO a IO b IO a
+System.IO.Unsafe.unsafePerformIO IO a a
+System.IO.Unsafe.unsafeDupablePerformIO IO a a
+System.IO.Unsafe.unsafeInterleaveIO IO a IO a
+System.IO.Unsafe.unsafeFixIO $f_2$ a IO a IO a
+GHC.IO.Encoding.Latin1.latin1  TextEncoding
+GHC.IO.Encoding.UTF16.utf16  TextEncoding
+GHC.IO.Encoding.UTF32.utf32  TextEncoding
+GHC.IO.Encoding.BufferCodec CodeBuffer from to $f_2$ Buffer from IO $tuple_2$ Buffer from Buffer to Buffer to IO IO state $f_2$ state IO BufferCodec from to state
+GHC.IO.Encoding.[encode] BufferCodec from to state CodeBuffer from to
+GHC.IO.Encoding.[recover] BufferCodec from to state Buffer from Buffer to IO $tuple_2$ Buffer from Buffer to
+GHC.IO.Encoding.[close] BufferCodec from to state IO
+GHC.IO.Encoding.[getState] BufferCodec from to state IO state
+GHC.IO.Encoding.TextEncoding String IO TextDecoder dstate IO TextEncoder estate TextEncoding
+GHC.IO.Encoding.[textEncodingName] TextEncoding String
+GHC.IO.Encoding.[mkTextDecoder] TextEncoding IO TextDecoder dstate
+GHC.IO.Encoding.[mkTextEncoder] TextEncoding IO TextEncoder estate
+GHC.IO.Encoding.InputUnderflow  CodingProgress
+GHC.IO.Encoding.OutputUnderflow  CodingProgress
+GHC.IO.Encoding.InvalidSequence  CodingProgress
+GHC.IO.Encoding.latin1  TextEncoding
+GHC.IO.Encoding.utf8  TextEncoding
+GHC.IO.Encoding.utf8_bom  TextEncoding
+GHC.IO.Encoding.utf16  TextEncoding
+GHC.IO.Encoding.utf16le  TextEncoding
+GHC.IO.Encoding.utf16be  TextEncoding
+GHC.IO.Encoding.utf32  TextEncoding
+GHC.IO.Encoding.utf32le  TextEncoding
+GHC.IO.Encoding.utf32be  TextEncoding
+GHC.IO.Encoding.getLocaleEncoding  IO TextEncoding
+GHC.IO.Encoding.getFileSystemEncoding  IO TextEncoding
+GHC.IO.Encoding.getForeignEncoding  IO TextEncoding
+GHC.IO.Encoding.char8  TextEncoding
+GHC.IO.Encoding.mkTextEncoding String IO TextEncoding
+System.IO.Error.userError String IOError
+System.IO.Error.mkIOError IOErrorType String Maybe Handle Maybe FilePath IOError
+System.IO.Error.annotateIOError IOError String Maybe Handle Maybe FilePath IOError
+System.IO.Error.isAlreadyExistsError IOError Bool
+System.IO.Error.isDoesNotExistError IOError Bool
+System.IO.Error.isAlreadyInUseError IOError Bool
+System.IO.Error.isFullError IOError Bool
+System.IO.Error.isEOFError IOError Bool
+System.IO.Error.isIllegalOperation IOError Bool
+System.IO.Error.isPermissionError IOError Bool
+System.IO.Error.isUserError IOError Bool
+System.IO.Error.alreadyExistsErrorType  IOErrorType
+System.IO.Error.doesNotExistErrorType  IOErrorType
+System.IO.Error.alreadyInUseErrorType  IOErrorType
+System.IO.Error.fullErrorType  IOErrorType
+System.IO.Error.eofErrorType  IOErrorType
+System.IO.Error.illegalOperationErrorType  IOErrorType
+System.IO.Error.permissionErrorType  IOErrorType
+System.IO.Error.userErrorType  IOErrorType
+System.IO.Error.isAlreadyExistsErrorType IOErrorType Bool
+System.IO.Error.isDoesNotExistErrorType IOErrorType Bool
+System.IO.Error.isAlreadyInUseErrorType IOErrorType Bool
+System.IO.Error.isFullErrorType IOErrorType Bool
+System.IO.Error.isEOFErrorType IOErrorType Bool
+System.IO.Error.isIllegalOperationErrorType IOErrorType Bool
+System.IO.Error.isPermissionErrorType IOErrorType Bool
+System.IO.Error.isUserErrorType IOErrorType Bool
+System.IO.Error.ioError IOError IO a
+System.IO.Error.catchIOError IO a $f_2$ IOError IO a IO a
+System.IO.Error.tryIOError IO a IO Either IOError a
+System.IO.Error.modifyIOError $f_2$ IOError IOError IO a IO a
+GHC.Conc.IO.ensureIOManagerIsRunning  IO
+GHC.Conc.IO.threadDelay Int IO
+GHC.Conc.IO.registerDelay Int IO TVar Bool
+GHC.Conc.IO.threadWaitRead Fd IO
+GHC.Conc.IO.threadWaitWrite Fd IO
+GHC.Conc.IO.threadWaitReadSTM Fd IO $tuple_2$ STM IO
+GHC.Conc.IO.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
+GHC.Conc.IO.closeFdWith $f_2$ Fd IO Fd IO
+GHC.Conc.ThreadId ThreadId# ThreadId
+GHC.Conc.forkIO IO IO ThreadId
+GHC.Conc.forkOn Int IO IO ThreadId
+GHC.Conc.numCapabilities  Int
+GHC.Conc.getNumCapabilities  IO Int
+GHC.Conc.setNumCapabilities Int IO
+GHC.Conc.getNumProcessors  IO Int
+GHC.Conc.numSparks  IO Int
+GHC.Conc.myThreadId  IO ThreadId
+GHC.Conc.killThread ThreadId IO
+GHC.Conc.throwTo ThreadId Exception IO
+GHC.Conc.runSparks  IO
+GHC.Conc.yield  IO
+GHC.Conc.labelThread ThreadId String IO
+GHC.Conc.mkWeakThreadId ThreadId IO Weak ThreadId
+GHC.Conc.ThreadRunning  ThreadStatus
+GHC.Conc.ThreadFinished  ThreadStatus
+GHC.Conc.ThreadBlocked BlockReason ThreadStatus
+GHC.Conc.ThreadDied  ThreadStatus
+GHC.Conc.BlockedOnMVar  BlockReason
+GHC.Conc.BlockedOnBlackHole  BlockReason
+GHC.Conc.BlockedOnException  BlockReason
+GHC.Conc.BlockedOnSTM  BlockReason
+GHC.Conc.BlockedOnForeignCall  BlockReason
+GHC.Conc.BlockedOnOther  BlockReason
+GHC.Conc.threadCapability ThreadId IO $tuple_2$ Int Bool
+GHC.Conc.threadDelay Int IO
+GHC.Conc.registerDelay Int IO TVar Bool
+GHC.Conc.threadWaitRead Fd IO
+GHC.Conc.threadWaitWrite Fd IO
+GHC.Conc.threadWaitReadSTM Fd IO $tuple_2$ STM IO
+GHC.Conc.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
+GHC.Conc.closeFdWith $f_2$ Fd IO Fd IO
+GHC.Conc.setAllocationCounter Int64 IO
+GHC.Conc.getAllocationCounter  IO Int64
+GHC.Conc.enableAllocationLimit  IO
+GHC.Conc.disableAllocationLimit  IO
+GHC.Conc.STM $f_2$ State# RealWorld $tuple_2$ # State# RealWorld a # STM a
+GHC.Conc.atomically STM a IO a
+GHC.Conc.retry  STM a
+GHC.Conc.orElse STM a STM a STM a
+GHC.Conc.throwSTM Exception STM a
+GHC.Conc.catchSTM STM a $f_2$ Exception STM a STM a
+GHC.Conc.alwaysSucceeds STM a STM
+GHC.Conc.always STM Bool STM
+GHC.Conc.TVar TVar# RealWorld a TVar a
+GHC.Conc.newTVar a STM TVar a
+GHC.Conc.newTVarIO a IO TVar a
+GHC.Conc.readTVar TVar a STM a
+GHC.Conc.readTVarIO TVar a IO a
+GHC.Conc.writeTVar TVar a a STM
+GHC.Conc.unsafeIOToSTM IO a STM a
+GHC.IO.Handle.NoBuffering  BufferMode
+GHC.IO.Handle.LineBuffering  BufferMode
+GHC.IO.Handle.BlockBuffering Maybe Int BufferMode
+GHC.IO.Handle.mkFileHandle IODevice/BufferedIO/Typeable FilePath IOMode Maybe TextEncoding NewlineMode IO Handle
+GHC.IO.Handle.mkDuplexHandle IODevice/BufferedIO/Typeable FilePath Maybe TextEncoding NewlineMode IO Handle
+GHC.IO.Handle.hFileSize Handle IO Integer
+GHC.IO.Handle.hSetFileSize Handle Integer IO
+GHC.IO.Handle.hIsEOF Handle IO Bool
+GHC.IO.Handle.hLookAhead Handle IO Char
+GHC.IO.Handle.hSetBuffering Handle BufferMode IO
+GHC.IO.Handle.hSetBinaryMode Handle Bool IO
+GHC.IO.Handle.hSetEncoding Handle TextEncoding IO
+GHC.IO.Handle.hGetEncoding Handle IO Maybe TextEncoding
+GHC.IO.Handle.hFlush Handle IO
+GHC.IO.Handle.hFlushAll Handle IO
+GHC.IO.Handle.hDuplicate Handle IO Handle
+GHC.IO.Handle.hDuplicateTo Handle Handle IO
+GHC.IO.Handle.hClose Handle IO
+GHC.IO.Handle.hGetPosn Handle IO HandlePosn
+GHC.IO.Handle.hSetPosn HandlePosn IO
+GHC.IO.Handle.AbsoluteSeek  SeekMode
+GHC.IO.Handle.RelativeSeek  SeekMode
+GHC.IO.Handle.SeekFromEnd  SeekMode
+GHC.IO.Handle.hSeek Handle SeekMode Integer IO
+GHC.IO.Handle.hTell Handle IO Integer
+GHC.IO.Handle.hGetBuffering Handle IO BufferMode
+GHC.IO.Handle.hSetEcho Handle Bool IO
+GHC.IO.Handle.hGetEcho Handle IO Bool
+GHC.IO.Handle.hIsTerminalDevice Handle IO Bool
+GHC.IO.Handle.hSetNewlineMode Handle NewlineMode IO
+GHC.IO.Handle.NewlineMode Newline Newline NewlineMode
+GHC.IO.Handle.[inputNL] NewlineMode Newline
+GHC.IO.Handle.[outputNL] NewlineMode Newline
+GHC.IO.Handle.nativeNewline  Newline
+GHC.IO.Handle.noNewlineTranslation  NewlineMode
+GHC.IO.Handle.universalNewlineMode  NewlineMode
+GHC.IO.Handle.nativeNewlineMode  NewlineMode
+GHC.IO.Handle.hShow Handle IO String
+GHC.IO.Handle.hWaitForInput Handle Int IO Bool
+GHC.IO.Handle.hGetChar Handle IO Char
+GHC.IO.Handle.hGetLine Handle IO String
+GHC.IO.Handle.hGetContents Handle IO String
+GHC.IO.Handle.hPutChar Handle Char IO
+GHC.IO.Handle.hPutStr Handle String IO
+GHC.IO.Handle.hGetBuf Handle Ptr a Int IO Int
+GHC.IO.Handle.hGetBufNonBlocking Handle Ptr a Int IO Int
+GHC.IO.Handle.hPutBuf Handle Ptr a Int IO
+GHC.IO.Handle.FD.stdin  Handle
+GHC.IO.Handle.FD.stdout  Handle
+GHC.IO.Handle.FD.stderr  Handle
+GHC.IO.Handle.FD.openFile FilePath IOMode IO Handle
+GHC.IO.Handle.FD.openBinaryFile FilePath IOMode IO Handle
+GHC.IO.Handle.FD.openFileBlocking FilePath IOMode IO Handle
+GHC.IO.Handle.FD.fdToHandle FD IO Handle
+GHC.IO.Handle.FD.fdToHandle' CInt Maybe IODeviceType Bool FilePath IOMode Bool IO Handle
+GHC.IO.Handle.FD.isEOF  IO Bool
+System.IO.fixIO $f_2$ a IO a IO a
+System.IO.stdin  Handle
+System.IO.stdout  Handle
+System.IO.stderr  Handle
+System.IO.withFile FilePath IOMode $f_2$ Handle IO r IO r
+System.IO.openFile FilePath IOMode IO Handle
+System.IO.ReadMode  IOMode
+System.IO.hClose Handle IO
+System.IO.readFile FilePath IO String
+System.IO.writeFile FilePath String IO
+System.IO.appendFile FilePath String IO
+System.IO.hFileSize Handle IO Integer
+System.IO.hSetFileSize Handle Integer IO
+System.IO.hIsEOF Handle IO Bool
+System.IO.isEOF  IO Bool
+System.IO.NoBuffering  BufferMode
+System.IO.LineBuffering  BufferMode
+System.IO.BlockBuffering Maybe Int BufferMode
+System.IO.hSetBuffering Handle BufferMode IO
+System.IO.hGetBuffering Handle IO BufferMode
+System.IO.hFlush Handle IO
+System.IO.hGetPosn Handle IO HandlePosn
+System.IO.hSetPosn HandlePosn IO
+System.IO.hSeek Handle SeekMode Integer IO
+System.IO.AbsoluteSeek  SeekMode
+System.IO.RelativeSeek  SeekMode
+System.IO.SeekFromEnd  SeekMode
+System.IO.hTell Handle IO Integer
+System.IO.hIsTerminalDevice Handle IO Bool
+System.IO.hSetEcho Handle Bool IO
+System.IO.hGetEcho Handle IO Bool
+System.IO.hShow Handle IO String
+System.IO.hWaitForInput Handle Int IO Bool
+System.IO.hReady Handle IO Bool
+System.IO.hGetChar Handle IO Char
+System.IO.hGetLine Handle IO String
+System.IO.hLookAhead Handle IO Char
+System.IO.hGetContents Handle IO String
+System.IO.hPutChar Handle Char IO
+System.IO.hPutStr Handle String IO
+System.IO.hPutStrLn Handle String IO
+System.IO.hPrint Handle Show IO
+System.IO.interact $f_2$ String String IO
+System.IO.putChar Char IO
+System.IO.putStr String IO
+System.IO.putStrLn String IO
+System.IO.print Show IO
+System.IO.getChar  IO Char
+System.IO.getLine  IO String
+System.IO.getContents  IO String
+System.IO.readIO String IO Read
+System.IO.readLn  IO Read
+System.IO.withBinaryFile FilePath IOMode $f_2$ Handle IO r IO r
+System.IO.openBinaryFile FilePath IOMode IO Handle
+System.IO.hSetBinaryMode Handle Bool IO
+System.IO.hPutBuf Handle Ptr a Int IO
+System.IO.hGetBuf Handle Ptr a Int IO Int
+System.IO.hGetBufSome Handle Ptr a Int IO Int
+System.IO.hGetBufNonBlocking Handle Ptr a Int IO Int
+System.IO.openTempFile FilePath String IO $tuple_2$ FilePath Handle
+System.IO.openBinaryTempFile FilePath String IO $tuple_2$ FilePath Handle
+System.IO.openTempFileWithDefaultPermissions FilePath String IO $tuple_2$ FilePath Handle
+System.IO.openBinaryTempFileWithDefaultPermissions FilePath String IO $tuple_2$ FilePath Handle
+System.IO.hSetEncoding Handle TextEncoding IO
+System.IO.hGetEncoding Handle IO Maybe TextEncoding
+System.IO.latin1  TextEncoding
+System.IO.utf8  TextEncoding
+System.IO.utf8_bom  TextEncoding
+System.IO.utf16  TextEncoding
+System.IO.utf16le  TextEncoding
+System.IO.utf16be  TextEncoding
+System.IO.utf32  TextEncoding
+System.IO.utf32le  TextEncoding
+System.IO.utf32be  TextEncoding
+System.IO.localeEncoding  TextEncoding
+System.IO.char8  TextEncoding
+System.IO.mkTextEncoding String IO TextEncoding
+System.IO.hSetNewlineMode Handle NewlineMode IO
+System.IO.nativeNewline  Newline
+System.IO.NewlineMode Newline Newline NewlineMode
+System.IO.[inputNL] NewlineMode Newline
+System.IO.[outputNL] NewlineMode Newline
+System.IO.noNewlineTranslation  NewlineMode
+System.IO.universalNewlineMode  NewlineMode
+System.IO.nativeNewlineMode  NewlineMode
+Control.Monad.Fix.mfix $f_2$ a MonadFix a MonadFix a
+Control.Monad.Fix.fix $f_2$ a a a
+Control.Arrow.arr $f_2$ b c Arrow b c
+Control.Arrow.first Arrow b c Arrow $tuple_3$ b d c d
+Control.Arrow.second Arrow b c Arrow $tuple_3$ d b d c
+Control.Arrow.(***) Arrow b c Arrow b' c' Arrow $tuple_3$ b b' c c'
+Control.Arrow.(&&&) Arrow b c Arrow b c' Arrow b $tuple_2$ c c'
+Control.Arrow.Kleisli $f_2$ a m b Kleisli m a b
+Control.Arrow.returnA  Arrow b b
+Control.Arrow.(^>>) $f_2$ b c Arrow c d Arrow b d
+Control.Arrow.(>>^) Arrow b c $f_2$ c d Arrow b d
+Control.Arrow.(>>>) Category a b Category b c Category a c
+Control.Arrow.(<<<) Category b c Category a b Category a c
+Control.Arrow.(<<^) Arrow c d $f_2$ b c Arrow b d
+Control.Arrow.(^<<) $f_2$ c d Arrow b c Arrow b d
+Control.Arrow.(<+>) ArrowPlus b c ArrowPlus b c ArrowPlus b c
+Control.Arrow.left ArrowChoice b c ArrowChoice Either b d Either c d
+Control.Arrow.right ArrowChoice b c ArrowChoice Either d b Either d c
+Control.Arrow.(+++) ArrowChoice b c ArrowChoice b' c' ArrowChoice Either b b' Either c c'
+Control.Arrow.(|||) ArrowChoice b d ArrowChoice c d ArrowChoice Either b c d
+Control.Arrow.ArrowMonad a b ArrowMonad a b
+Control.Arrow.leftApp ArrowApply b c ArrowApply Either b d Either c d
+Control.Arrow.loop ArrowLoop $tuple_2$ b d $tuple_2$ c d ArrowLoop b c
+Control.Applicative.pure a Applicative a
+Control.Applicative.(<*>) Applicative $f_2$ a b Applicative a Applicative b
+Control.Applicative.(*>) Applicative a Applicative b Applicative b
+Control.Applicative.(<*) Applicative a Applicative b Applicative a
+Control.Applicative.empty  Alternative a
+Control.Applicative.(<|>) Alternative a Alternative a Alternative a
+Control.Applicative.some Alternative a Alternative $list$ a
+Control.Applicative.many Alternative a Alternative $list$ a
+Control.Applicative.ZipList $list$ a ZipList a
+Control.Applicative.(<$>) $f_2$ a b Functor a Functor b
+Control.Applicative.(<$) a Functor b Functor a
+Control.Applicative.(<**>) Applicative a Applicative $f_2$ a b Applicative b
+Control.Applicative.liftA $f_2$ a b Applicative a Applicative b
+Control.Applicative.liftA2 $f_3$ a b c Applicative a Applicative b Applicative c
+Control.Applicative.liftA3 $f_4$ a b c d Applicative a Applicative b Applicative c Applicative d
+Control.Applicative.optional Alternative a Alternative Maybe a
+Data.Traversable.traverse $f_2$ a Applicative b Traversable a Applicative Traversable b
+Data.Traversable.sequenceA Traversable Applicative a Applicative Traversable a
+Data.Traversable.mapM $f_2$ a Monad b Traversable a Monad Traversable b
+Data.Traversable.sequence Traversable Monad a Monad Traversable a
+Data.Traversable.for Traversable a $f_2$ a Applicative b Applicative Traversable b
+Data.Traversable.forM Traversable a $f_2$ a Monad b Monad Traversable b
+Data.Traversable.mapAccumL $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
+Data.Traversable.mapAccumR $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
+Data.Traversable.fmapDefault $f_2$ a b Traversable a Traversable b
+Data.Traversable.foldMapDefault $f_2$ a Monoid Traversable a Monoid
+Control.Monad.fmap $f_2$ a b Functor a Functor b
+Control.Monad.(>>=) Monad a $f_2$ a Monad b Monad b
+Control.Monad.(>>) Monad a Monad b Monad b
+Control.Monad.return a Monad a
+Control.Monad.fail String Monad a
+Control.Monad.mzero  MonadPlus a
+Control.Monad.mplus MonadPlus a MonadPlus a MonadPlus a
+Control.Monad.mapM $f_2$ a Monad b Traversable a Monad Traversable b
+Control.Monad.mapM_ $f_2$ a Monad b Foldable a Monad
+Control.Monad.forM Traversable a $f_2$ a Monad b Monad Traversable b
+Control.Monad.forM_ Foldable a $f_2$ a Monad b Monad
+Control.Monad.sequence Traversable Monad a Monad Traversable a
+Control.Monad.sequence_ Foldable Monad a Monad
+Control.Monad.(=<<) $f_2$ a Monad b Monad a Monad b
+Control.Monad.(>=>) $f_2$ a Monad b $f_2$ b Monad c $f_2$ a Monad c
+Control.Monad.(<=<) $f_2$ b Monad c $f_2$ a Monad b $f_2$ a Monad c
+Control.Monad.forever Monad a Monad b
+Control.Monad.void Functor a Functor
+Control.Monad.join Monad Monad a Monad a
+Control.Monad.msum Foldable MonadPlus a MonadPlus a
+Control.Monad.mfilter $f_2$ a Bool MonadPlus a MonadPlus a
+Control.Monad.filterM $f_2$ a Monad Bool $list$ a Monad $list$ a
+Control.Monad.mapAndUnzipM $f_2$ a Monad $tuple_2$ b c $list$ a Monad $tuple_2$ $list$ b $list$ c
+Control.Monad.zipWithM $f_3$ a b Monad c $list$ a $list$ b Monad $list$ c
+Control.Monad.zipWithM_ $f_3$ a b Monad c $list$ a $list$ b Monad
+Control.Monad.foldM $f_3$ b a Monad b b Foldable a Monad b
+Control.Monad.foldM_ $f_3$ b a Monad b b Foldable a Monad
+Control.Monad.replicateM Int Monad a Monad $list$ a
+Control.Monad.replicateM_ Int Monad a Monad
+Control.Monad.guard Bool Alternative
+Control.Monad.when Bool Applicative Applicative
+Control.Monad.unless Bool Applicative Applicative
+Control.Monad.liftM $f_2$ a1 r Monad a1 Monad r
+Control.Monad.liftM2 $f_3$ a1 a2 r Monad a1 Monad a2 Monad r
+Control.Monad.liftM3 $f_4$ a1 a2 a3 r Monad a1 Monad a2 Monad a3 Monad r
+Control.Monad.liftM4 $f_5$ a1 a2 a3 a4 r Monad a1 Monad a2 Monad a3 Monad a4 Monad r
+Control.Monad.liftM5 $f_6$ a1 a2 a3 a4 a5 r Monad a1 Monad a2 Monad a3 Monad a4 Monad a5 Monad r
+Control.Monad.ap Monad $f_2$ a b Monad a Monad b
+Control.Monad.(<$!>) $f_2$ a b Monad a Monad b
+GHC.Stats.[bytesAllocated] GCStats !Int64
+GHC.Stats.[numGcs] GCStats !Int64
+GHC.Stats.[maxBytesUsed] GCStats !Int64
+GHC.Stats.[numByteUsageSamples] GCStats !Int64
+GHC.Stats.[bytesCopied] GCStats !Int64
+GHC.Stats.[currentBytesUsed] GCStats !Int64
+GHC.Stats.[currentBytesSlop] GCStats !Int64
+GHC.Stats.[maxBytesSlop] GCStats !Int64
+GHC.Stats.[peakMegabytesAllocated] GCStats !Int64
+GHC.Stats.[mutatorWallSeconds] GCStats !Double
+GHC.Stats.[gcCpuSeconds] GCStats !Double
+GHC.Stats.[gcWallSeconds] GCStats !Double
+GHC.Stats.[cpuSeconds] GCStats !Double
+GHC.Stats.[wallSeconds] GCStats !Double
+GHC.Stats.[parMaxBytesCopied] GCStats !Int64
+GHC.Stats.getGCStats  IO GCStats
+GHC.Stats.getGCStatsEnabled  IO Bool
+Data.List.(++) $list$ a $list$ a $list$ a
+Data.List.head $list$ a a
+Data.List.last $list$ a a
+Data.List.tail $list$ a $list$ a
+Data.List.init $list$ a $list$ a
+Data.List.uncons $list$ a Maybe $tuple_2$ a $list$ a
+Data.List.null Foldable a Bool
+Data.List.length Foldable a Int
+Data.List.map $f_2$ a b $list$ a $list$ b
+Data.List.reverse $list$ a $list$ a
+Data.List.intersperse a $list$ a $list$ a
+Data.List.intercalate $list$ a $list$ $list$ a $list$ a
+Data.List.transpose $list$ $list$ a $list$ $list$ a
+Data.List.subsequences $list$ a $list$ $list$ a
+Data.List.permutations $list$ a $list$ $list$ a
+Data.List.foldl $f_3$ b a b b Foldable a b
+Data.List.foldl' $f_3$ b a b b Foldable a b
+Data.List.foldl1 $f_3$ a a a Foldable a a
+Data.List.foldl1' $f_3$ a a a $list$ a a
+Data.List.foldr $f_3$ a b b b Foldable a b
+Data.List.foldr1 $f_3$ a a a Foldable a a
+Data.List.concat Foldable $list$ a $list$ a
+Data.List.concatMap $f_2$ a $list$ b Foldable a $list$ b
+Data.List.and Foldable Bool Bool
+Data.List.or Foldable Bool Bool
+Data.List.any $f_2$ a Bool Foldable a Bool
+Data.List.all $f_2$ a Bool Foldable a Bool
+Data.List.sum Foldable Num Num
+Data.List.product Foldable Num Num
+Data.List.maximum Foldable Ord Ord
+Data.List.minimum Foldable Ord Ord
+Data.List.scanl $f_3$ b a b b $list$ a $list$ b
+Data.List.scanl' $f_3$ b a b b $list$ a $list$ b
+Data.List.scanl1 $f_3$ a a a $list$ a $list$ a
+Data.List.scanr $f_3$ a b b b $list$ a $list$ b
+Data.List.scanr1 $f_3$ a a a $list$ a $list$ a
+Data.List.mapAccumL $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
+Data.List.mapAccumR $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
+Data.List.iterate $f_2$ a a a $list$ a
+Data.List.repeat a $list$ a
+Data.List.replicate Int a $list$ a
+Data.List.cycle $list$ a $list$ a
+Data.List.unfoldr $f_2$ b Maybe $tuple_2$ a b b $list$ a
+Data.List.take Int $list$ a $list$ a
+Data.List.drop Int $list$ a $list$ a
+Data.List.splitAt Int $list$ a $tuple_2$ $list$ a $list$ a
+Data.List.takeWhile $f_2$ a Bool $list$ a $list$ a
+Data.List.dropWhile $f_2$ a Bool $list$ a $list$ a
+Data.List.dropWhileEnd $f_2$ a Bool $list$ a $list$ a
+Data.List.span $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
+Data.List.break $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
+Data.List.stripPrefix $list$ Eq $list$ Eq Maybe $list$ Eq
+Data.List.group $list$ Eq $list$ $list$ Eq
+Data.List.inits $list$ a $list$ $list$ a
+Data.List.tails $list$ a $list$ $list$ a
+Data.List.isPrefixOf $list$ Eq $list$ Eq Bool
+Data.List.isSuffixOf $list$ Eq $list$ Eq Bool
+Data.List.isInfixOf $list$ Eq $list$ Eq Bool
+Data.List.isSubsequenceOf $list$ Eq $list$ Eq Bool
+Data.List.elem Eq Foldable Eq Bool
+Data.List.notElem Eq Foldable Eq Bool
+Data.List.lookup Eq $list$ $tuple_2$ Eq b Maybe b
+Data.List.find $f_2$ a Bool Foldable a Maybe a
+Data.List.filter $f_2$ a Bool $list$ a $list$ a
+Data.List.partition $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
+Data.List.(!!) $list$ a Int a
+Data.List.elemIndex Eq $list$ Eq Maybe Int
+Data.List.elemIndices Eq $list$ Eq $list$ Int
+Data.List.findIndex $f_2$ a Bool $list$ a Maybe Int
+Data.List.findIndices $f_2$ a Bool $list$ a $list$ Int
+Data.List.zip $list$ a $list$ b $list$ $tuple_2$ a b
+Data.List.zip3 $list$ a $list$ b $list$ c $list$ $tuple_3$ a b c
+Data.List.zip4 $list$ a $list$ b $list$ c $list$ d $list$ $tuple_4$ a b c d
+Data.List.zip5 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ $tuple_5$ a b c d e
+Data.List.zip6 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ $tuple_6$ a b c d e f
+Data.List.zip7 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ $tuple_7$ a b c d e f g
+Data.List.zipWith $f_3$ a b c $list$ a $list$ b $list$ c
+Data.List.zipWith3 $f_4$ a b c d $list$ a $list$ b $list$ c $list$ d
+Data.List.zipWith4 $f_5$ a b c d e $list$ a $list$ b $list$ c $list$ d $list$ e
+Data.List.zipWith5 $f_6$ a b c d e f $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
+Data.List.zipWith6 $f_7$ a b c d e f g $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
+Data.List.zipWith7 $f_8$ a b c d e f g h $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ h
+Data.List.unzip $list$ $tuple_2$ a b $tuple_2$ $list$ a $list$ b
+Data.List.unzip3 $list$ $tuple_3$ a b c $tuple_3$ $list$ a $list$ b $list$ c
+Data.List.unzip4 $list$ $tuple_4$ a b c d $tuple_4$ $list$ a $list$ b $list$ c $list$ d
+Data.List.unzip5 $list$ $tuple_5$ a b c d e $tuple_5$ $list$ a $list$ b $list$ c $list$ d $list$ e
+Data.List.unzip6 $list$ $tuple_6$ a b c d e f $tuple_6$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
+Data.List.unzip7 $list$ $tuple_7$ a b c d e f g $tuple_7$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
+Data.List.lines String $list$ String
+Data.List.words String $list$ String
+Data.List.unlines $list$ String String
+Data.List.unwords $list$ String String
+Data.List.nub $list$ Eq $list$ Eq
+Data.List.delete Eq $list$ Eq $list$ Eq
+Data.List.(\\) $list$ Eq $list$ Eq $list$ Eq
+Data.List.union $list$ Eq $list$ Eq $list$ Eq
+Data.List.intersect $list$ Eq $list$ Eq $list$ Eq
+Data.List.sort $list$ Ord $list$ Ord
+Data.List.sortOn $f_2$ a Ord $list$ a $list$ a
+Data.List.insert Ord $list$ Ord $list$ Ord
+Data.List.nubBy $f_3$ a a Bool $list$ a $list$ a
+Data.List.deleteBy $f_3$ a a Bool a $list$ a $list$ a
+Data.List.deleteFirstsBy $f_3$ a a Bool $list$ a $list$ a $list$ a
+Data.List.unionBy $f_3$ a a Bool $list$ a $list$ a $list$ a
+Data.List.intersectBy $f_3$ a a Bool $list$ a $list$ a $list$ a
+Data.List.groupBy $f_3$ a a Bool $list$ a $list$ $list$ a
+Data.List.sortBy $f_3$ a a Ordering $list$ a $list$ a
+Data.List.insertBy $f_3$ a a Ordering a $list$ a $list$ a
+Data.List.maximumBy $f_3$ a a Ordering Foldable a a
+Data.List.minimumBy $f_3$ a a Ordering Foldable a a
+Data.List.genericLength $list$ a Num
+Data.List.genericTake Integral $list$ a $list$ a
+Data.List.genericDrop Integral $list$ a $list$ a
+Data.List.genericSplitAt Integral $list$ a $tuple_2$ $list$ a $list$ a
+Data.List.genericIndex $list$ a Integral a
+Data.List.genericReplicate Integral a $list$ a
+Data.String.fromString String IsString
+Data.String.lines String $list$ String
+Data.String.words String $list$ String
+Data.String.unlines $list$ String String
+Data.String.unwords $list$ String String
+Data.Version.Version $list$ Int $list$ String Version
+Data.Version.[versionBranch] Version $list$ Int
+Data.Version.[versionTags] Version $list$ String
+Data.Version.showVersion Version String
+Data.Version.parseVersion  ReadP Version
+Data.Version.makeVersion $list$ Int Version
+Data.Data.toConstr Data Constr
+Data.Data.mkDataType String $list$ Constr DataType
+Data.Data.mkIntType String DataType
+Data.Data.mkFloatType String DataType
+Data.Data.mkCharType String DataType
+Data.Data.mkNoRepType String DataType
+Data.Data.AlgRep $list$ Constr DataRep
+Data.Data.repConstr DataType ConstrRep Constr
+Data.Data.isAlgType DataType Bool
+Data.Data.indexConstr DataType ConIndex Constr
+Data.Data.maxConstrIndex DataType ConIndex
+Data.Data.isNorepType DataType Bool
+Data.Data.Prefix  Fixity
+Data.Data.mkConstr DataType String $list$ String Fixity Constr
+Data.Data.mkCharConstr DataType Char Constr
+Data.Data.constrType Constr DataType
+Data.Data.AlgConstr ConIndex ConstrRep
+Data.Data.constrRep Constr ConstrRep
+Data.Data.constrFields Constr $list$ String
+Data.Data.constrFixity Constr Fixity
+Data.Data.constrIndex Constr ConIndex
+Data.Data.showConstr Constr String
+Data.Data.readConstr DataType String Maybe Constr
+Data.Data.tyconUQname String String
+Data.Data.tyconModule String String
+Data.Data.fromConstr Constr Data
+GHC.Natural.NatS# GmpLimb# Natural
+GHC.Natural.isValidNatural Natural Bool
+GHC.Natural.wordToNatural Word Natural
+GHC.Natural.naturalToWordMaybe Natural Maybe Word
+GHC.Natural.minusNaturalMaybe Natural Natural Maybe Natural
+GHC.Natural.powModNatural Natural Natural Natural Natural
+GHC.RTS.Flags.RTSFlags GCFlags ConcFlags MiscFlags DebugFlags CCFlags ProfFlags TraceFlags TickyFlags RTSFlags
+GHC.RTS.Flags.[compact] GCFlags Bool
+GHC.RTS.Flags.[sweep] GCFlags Bool
+GHC.RTS.Flags.[heapBase] GCFlags Word
+GHC.RTS.Flags.[linkerMemBase] MiscFlags Word
+GHC.RTS.Flags.[linker] DebugFlags Bool
+GHC.RTS.Flags.[squeeze] DebugFlags Bool
+GHC.RTS.Flags.[hpc] DebugFlags Bool
+GHC.RTS.Flags.[heapProfileInterval] ProfFlags Time
+GHC.RTS.Flags.[heapProfileIntervalTicks] ProfFlags Word
+GHC.RTS.Flags.[timestamp] TraceFlags Bool
+GHC.RTS.Flags.[traceScheduler] TraceFlags Bool
+GHC.RTS.Flags.[traceGc] TraceFlags Bool
+GHC.RTS.Flags.[sparksSampled] TraceFlags Bool
+GHC.RTS.Flags.[sparksFull] TraceFlags Bool
+GHC.RTS.Flags.[user] TraceFlags Bool
+GHC.Fingerprint.getFileHash FilePath IO Fingerprint
+GHC.Event.getSystemEventManager  IO Maybe EventManager
+GHC.Event.new  IO EventManager
+GHC.Event.evtRead  Event
+GHC.Event.evtWrite  Event
+GHC.Event.OneShot  Lifetime
+GHC.Event.MultiShot  Lifetime
+GHC.Event.registerFd EventManager IOCallback Fd Event Lifetime IO FdKey
+GHC.Event.unregisterFd EventManager FdKey IO
+GHC.Event.unregisterFd_ EventManager FdKey IO Bool
+GHC.Event.closeFd EventManager $f_2$ Fd IO Fd IO
+GHC.Event.registerTimeout TimerManager Int TimeoutCallback IO TimeoutKey
+GHC.Event.updateTimeout TimerManager TimeoutKey Int IO
+GHC.Event.unregisterTimeout TimerManager TimeoutKey IO
+GHC.TypeLits.someNatVal Integer Maybe SomeNat
+GHC.TypeLits.someSymbolVal String SomeSymbol
+GHC.IP.ip  IP
+Prelude.False  Bool
+Prelude.succ Enum Enum
+Prelude.pred Enum Enum
+Prelude.toEnum Int Enum
+Prelude.fromEnum Enum Int
+Prelude.enumFrom Enum $list$ Enum
+Prelude.enumFromTo Enum Enum $list$ Enum
+Prelude.minBound  Bounded
+Prelude.(+) Num Num Num
+Prelude.negate Num Num
+Prelude.abs Num Num
+Prelude.signum Num Num
+Prelude.fromInteger Integer Num
+Prelude.toRational Real Rational
+Prelude.quot Integral Integral Integral
+Prelude.rem Integral Integral Integral
+Prelude.div Integral Integral Integral
+Prelude.mod Integral Integral Integral
+Prelude.quotRem Integral Integral $tuple_2$ Integral Integral
+Prelude.divMod Integral Integral $tuple_2$ Integral Integral
+Prelude.toInteger Integral Integer
+Prelude.(/) Fractional Fractional Fractional
+Prelude.recip Fractional Fractional
+Prelude.fromRational Rational Fractional
+Prelude.pi  Floating
+Prelude.properFraction RealFrac $tuple_2$ Integral RealFrac
+Prelude.truncate RealFrac Integral
+Prelude.round RealFrac Integral
+Prelude.ceiling RealFrac Integral
+Prelude.floor RealFrac Integral
+Prelude.floatRadix RealFloat Integer
+Prelude.floatDigits RealFloat Int
+Prelude.floatRange RealFloat $tuple_2$ Int Int
+Prelude.decodeFloat RealFloat $tuple_2$ Integer Int
+Prelude.encodeFloat Integer Int RealFloat
+Prelude.exponent RealFloat Int
+Prelude.significand RealFloat RealFloat
+Prelude.scaleFloat Int RealFloat RealFloat
+Prelude.isNaN RealFloat Bool
+Prelude.isInfinite RealFloat Bool
+Prelude.isDenormalized RealFloat Bool
+Prelude.isNegativeZero RealFloat Bool
+Prelude.isIEEE RealFloat Bool
+Prelude.atan2 RealFloat RealFloat RealFloat
+Prelude.subtract Num Num Num
+Prelude.gcd Integral Integral Integral
+Prelude.lcm Integral Integral Integral
+Prelude.(^) Num Integral Num
+Prelude.(^^) Fractional Integral Fractional
+Prelude.fromIntegral Integral Num
+Prelude.realToFrac Real Fractional
+Prelude.until $f_2$ a Bool $f_2$ a a a a
+Prelude.asTypeOf a a a
+Prelude.error $list$ Char a
+Prelude.undefined  a
+Prelude.seq a b b
+Prelude.($!) $f_2$ a b a b
+GHC.SrcLoc.srcLocPackage SrcLoc String
+GHC.Stack.currentCallStack  IO $list$ String
+GHC.Stack.whoCreated a IO $list$ String
+GHC.Stack.errorWithStackTrace String a
+GHC.Stack.getCallStack CallStack $list$ $tuple_2$ String SrcLoc
+Debug.Trace.trace String a a
+Debug.Trace.traceId String String
+Debug.Trace.traceShow Show b b
+Debug.Trace.traceShowId Show Show
+Debug.Trace.traceStack String a a
+Debug.Trace.traceIO String IO
+Debug.Trace.traceM String Monad
+Debug.Trace.traceShowM Show Monad
+Debug.Trace.putTraceMsg String IO
+Debug.Trace.traceEvent String a a
+Debug.Trace.traceEventIO String IO
+Debug.Trace.traceMarker String a a
+Debug.Trace.traceMarkerIO String IO
+GHC.Exts.I# Int# Int
+GHC.Exts.W# Word# Word
+GHC.Exts.F# Float# Float
+GHC.Exts.D# Double# Double
+GHC.Exts.C# Char# Char
+GHC.Exts.Ptr Addr# Ptr a
+GHC.Exts.FunPtr Addr# FunPtr a
+GHC.Exts.shiftL# Word# Int# Word#
+GHC.Exts.shiftRL# Word# Int# Word#
+GHC.Exts.iShiftL# Int# Int# Int#
+GHC.Exts.iShiftRA# Int# Int# Int#
+GHC.Exts.iShiftRL# Int# Int# Int#
+GHC.Exts.isTrue# Int# Bool
+GHC.Exts.fromString String IsString
+GHC.Exts.lazy a a
+GHC.Exts.inline a a
+GHC.Exts.coerce Coercible Coercible
+GHC.Exts.Down a Down a
+GHC.Exts.groupWith $f_2$ a Ord $list$ a $list$ $list$ a
+GHC.Exts.sortWith $f_2$ a Ord $list$ a $list$ a
+GHC.Exts.the $list$ Eq Eq
+GHC.Exts.traceEvent String IO
+GHC.Exts.currentCallStack  IO $list$ String
+GHC.Exts.fromList $list$ Item IsList IsList
+GHC.Exts.fromListN Int $list$ Item IsList IsList
+GHC.Exts.toList IsList $list$ Item IsList
+Control.Monad.Zip.mzip MonadZip a MonadZip b MonadZip $tuple_2$ a b
+GHC.StaticPtr.deRefStaticPtr StaticPtr a a
+GHC.StaticPtr.staticKey StaticPtr a StaticKey
+GHC.StaticPtr.unsafeLookupStaticPtr StaticKey IO Maybe StaticPtr a
+GHC.StaticPtr.StaticPtrInfo String String String $tuple_2$ Int Int StaticPtrInfo
+GHC.StaticPtr.[spInfoPackageKey] StaticPtrInfo String
+GHC.StaticPtr.[spInfoModuleName] StaticPtrInfo String
+GHC.StaticPtr.[spInfoName] StaticPtrInfo String
+GHC.StaticPtr.[spInfoSrcLoc] StaticPtrInfo $tuple_2$ Int Int
+GHC.StaticPtr.staticPtrInfo StaticPtr a StaticPtrInfo
+GHC.StaticPtr.staticPtrKeys  IO $list$ StaticKey
+Control.Concurrent.Chan.newChan  IO Chan a
+Control.Concurrent.Chan.writeChan Chan a a IO
+Control.Concurrent.Chan.readChan Chan a IO a
+Control.Concurrent.Chan.dupChan Chan a IO Chan a
+Control.Concurrent.Chan.unGetChan Chan a a IO
+Control.Concurrent.Chan.isEmptyChan Chan a IO Bool
+Control.Concurrent.Chan.getChanContents Chan a IO $list$ a
+Control.Concurrent.Chan.writeList2Chan Chan a $list$ a IO
+Control.Concurrent.QSem.newQSem Int IO QSem
+Control.Concurrent.QSem.waitQSem QSem IO
+Control.Concurrent.QSem.signalQSem QSem IO
+Control.Concurrent.QSemN.newQSemN Int IO QSemN
+Control.Concurrent.QSemN.waitQSemN QSemN Int IO
+Control.Concurrent.QSemN.signalQSemN QSemN Int IO
+Control.Concurrent.myThreadId  IO ThreadId
+Control.Concurrent.forkIO IO IO ThreadId
+Control.Concurrent.forkFinally IO a $f_2$ Either SomeException a IO IO ThreadId
+Control.Concurrent.killThread ThreadId IO
+Control.Concurrent.throwTo ThreadId Exception IO
+Control.Concurrent.forkOn Int IO IO ThreadId
+Control.Concurrent.getNumCapabilities  IO Int
+Control.Concurrent.setNumCapabilities Int IO
+Control.Concurrent.threadCapability ThreadId IO $tuple_2$ Int Bool
+Control.Concurrent.yield  IO
+Control.Concurrent.threadDelay Int IO
+Control.Concurrent.threadWaitRead Fd IO
+Control.Concurrent.threadWaitWrite Fd IO
+Control.Concurrent.threadWaitReadSTM Fd IO $tuple_2$ STM IO
+Control.Concurrent.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
+Control.Concurrent.rtsSupportsBoundThreads  Bool
+Control.Concurrent.forkOS IO IO ThreadId
+Control.Concurrent.isCurrentThreadBound  IO Bool
+Control.Concurrent.runInBoundThread IO a IO a
+Control.Concurrent.runInUnboundThread IO a IO a
+Control.Concurrent.mkWeakThreadId ThreadId IO Weak ThreadId
+Control.Monad.Instances.fmap $f_2$ a b Functor a Functor b
+Control.Monad.Instances.(<$) a Functor b Functor a
+Control.Monad.Instances.(>>=) Monad a $f_2$ a Monad b Monad b
+Control.Monad.Instances.(>>) Monad a Monad b Monad b
+Control.Monad.Instances.return a Monad a
+Control.Monad.Instances.fail String Monad a
+Control.Monad.ST.fixST $f_2$ a ST s a ST s a
+Control.Monad.ST.stToIO ST RealWorld a IO a
+Control.Monad.ST.Safe.fixST $f_2$ a ST s a ST s a
+Control.Monad.ST.Safe.stToIO ST RealWorld a IO a
+Control.Monad.ST.Unsafe.unsafeInterleaveST ST s a ST s a
+Control.Monad.ST.Lazy.fixST $f_2$ a ST s a ST s a
+Control.Monad.ST.Lazy.strictToLazyST ST s a ST s a
+Control.Monad.ST.Lazy.lazyToStrictST ST s a ST s a
+Control.Monad.ST.Lazy.stToIO ST RealWorld a IO a
+Control.Monad.ST.Lazy.Safe.fixST $f_2$ a ST s a ST s a
+Control.Monad.ST.Lazy.Safe.strictToLazyST ST s a ST s a
+Control.Monad.ST.Lazy.Safe.lazyToStrictST ST s a ST s a
+Control.Monad.ST.Lazy.Safe.stToIO ST RealWorld a IO a
+Control.Monad.ST.Lazy.Unsafe.unsafeInterleaveST ST s a ST s a
+Data.Bifunctor.bimap $f_2$ a b $f_2$ c d Bifunctor a c Bifunctor b d
+Data.Bifunctor.first $f_2$ a b Bifunctor a c Bifunctor b c
+Data.Bifunctor.second $f_2$ b c Bifunctor a b Bifunctor a c
+Data.Complex.(:+) !a !a Complex a
+Data.Complex.realPart Complex a a
+Data.Complex.imagPart Complex a a
+Data.Complex.mkPolar Floating Floating Complex Floating
+Data.Complex.cis Floating Complex Floating
+Data.Complex.polar Complex RealFloat $tuple_2$ RealFloat RealFloat
+Data.Complex.magnitude Complex RealFloat RealFloat
+Data.Complex.phase Complex RealFloat RealFloat
+Data.Complex.conjugate Complex Num Complex Num
+Data.Fixed.div' Real Real Integral
+Data.Fixed.mod' Real Real Real
+Data.Fixed.divMod' Real Real $tuple_2$ Integral Real
+Data.Fixed.showFixed Bool Fixed HasResolution String
+Data.Functor.Identity.Identity a Identity a
+Data.Ix.range $tuple_2$ Ix Ix $list$ Ix
+Data.Ix.index $tuple_2$ Ix Ix Ix Int
+Data.Ix.inRange $tuple_2$ Ix Ix Ix Bool
+Data.Ix.rangeSize $tuple_2$ Ix Ix Int
+Data.Ratio.(%) Integral Integral Ratio Integral
+Data.Ratio.numerator Ratio Integral Integral
+Data.Ratio.denominator Ratio Integral Integral
+Data.Ratio.approxRational RealFrac RealFrac Rational
+Data.STRef.newSTRef a ST s STRef s a
+Data.STRef.readSTRef STRef s a ST s a
+Data.STRef.writeSTRef STRef s a a ST s
+Data.STRef.modifySTRef STRef s a $f_2$ a a ST s
+Data.STRef.modifySTRef' STRef s a $f_2$ a a ST s
+Data.STRef.Lazy.newSTRef a ST s STRef s a
+Data.Unique.newUnique  IO Unique
+Data.Unique.hashUnique Unique Int
+Data.Void.absurd Void a
+Data.Void.vacuous Functor Void Functor a
+System.CPUTime.getCPUTime  IO Integer
+System.CPUTime.cpuTimePrecision  Integer
+System.Console.GetOpt.getOpt ArgOrder a $list$ OptDescr a $list$ String $tuple_3$ $list$ a $list$ String $list$ String
+System.Console.GetOpt.getOpt' ArgOrder a $list$ OptDescr a $list$ String $tuple_4$ $list$ a $list$ String $list$ String $list$ String
+System.Console.GetOpt.usageInfo String $list$ OptDescr a String
+System.Console.GetOpt.RequireOrder  ArgOrder a
+System.Console.GetOpt.Permute  ArgOrder a
+System.Console.GetOpt.ReturnInOrder $f_2$ String a ArgOrder a
+System.Console.GetOpt.Option $list$ Char $list$ String ArgDescr a String OptDescr a
+System.Console.GetOpt.NoArg a ArgDescr a
+System.Console.GetOpt.ReqArg $f_2$ String a String ArgDescr a
+System.Console.GetOpt.OptArg $f_2$ Maybe String a String ArgDescr a
+System.Environment.getArgs  IO $list$ String
+System.Environment.getProgName  IO String
+System.Environment.getExecutablePath  IO FilePath
+System.Environment.getEnv String IO String
+System.Environment.lookupEnv String IO Maybe String
+System.Environment.setEnv String String IO
+System.Environment.unsetEnv String IO
+System.Environment.withArgs $list$ String IO a IO a
+System.Environment.withProgName String IO a IO a
+System.Environment.getEnvironment  IO $list$ $tuple_2$ String String
+System.Exit.ExitSuccess  ExitCode
+System.Exit.ExitFailure Int ExitCode
+System.Exit.exitWith ExitCode IO a
+System.Exit.exitFailure  IO a
+System.Exit.exitSuccess  IO a
+System.Exit.die String IO a
+System.Info.os  String
+System.Info.arch  String
+System.Info.compilerName  String
+System.Info.compilerVersion  Version
+System.Mem.performGC  IO
+System.Mem.performMajorGC  IO
+System.Mem.performMinorGC  IO
+System.Mem.StableName.makeStableName a IO StableName a
+System.Mem.StableName.hashStableName StableName a Int
+System.Mem.StableName.eqStableName StableName a StableName b Bool
+System.Mem.Weak.mkWeak k v Maybe IO IO Weak v
+System.Mem.Weak.deRefWeak Weak v IO Maybe v
+System.Mem.Weak.finalize Weak v IO
+System.Mem.Weak.mkWeakPtr k Maybe IO IO Weak k
+System.Mem.Weak.addFinalizer key IO IO
+System.Mem.Weak.mkWeakPair k v Maybe IO IO $tuple_2$ Weak k v
+System.Timeout.timeout Int IO a IO Maybe a
+Text.Printf.printf String PrintfType
+Text.Printf.hPrintf Handle String HPrintfType
+Text.Printf.FieldFormat Maybe Int Maybe Int Maybe FormatAdjustment Maybe FormatSign Bool String Char FieldFormat
+Text.Printf.[fmtWidth] FieldFormat Maybe Int
+Text.Printf.[fmtPrecision] FieldFormat Maybe Int
+Text.Printf.[fmtAdjust] FieldFormat Maybe FormatAdjustment
+Text.Printf.[fmtSign] FieldFormat Maybe FormatSign
+Text.Printf.[fmtAlternate] FieldFormat Bool
+Text.Printf.[fmtModifiers] FieldFormat String
+Text.Printf.[fmtChar] FieldFormat Char
+Text.Printf.LeftAdjust  FormatAdjustment
+Text.Printf.SignPlus  FormatSign
+Text.Printf.vFmt Char FieldFormat FieldFormat
+Text.Printf.FormatParse String Char String FormatParse
+Text.Printf.[fpModifiers] FormatParse String
+Text.Printf.[fpChar] FormatParse Char
+Text.Printf.[fpRest] FormatParse String
+Text.Printf.formatString $list$ IsChar FieldFormatter
+Text.Printf.formatChar Char FieldFormatter
+Text.Printf.formatInt Integral/Bounded FieldFormatter
+Text.Printf.formatInteger Integer FieldFormatter
+Text.Printf.formatRealFloat RealFloat FieldFormatter
+Text.Printf.errorBadFormat Char a
+Text.Printf.errorShortFormat  a
+Text.Printf.errorMissingArgument  a
+Text.Printf.errorBadArgument  a
+Text.Printf.perror String a

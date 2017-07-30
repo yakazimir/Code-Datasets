@@ -1,0 +1,39 @@
+
+## 0 is the namespace, 1 is the return value 2 is the function rep
+
+rep -> namespace rest
+rest -> return function
+function -> function_name arg_pair
+
+namespace -> 0
+#namespace -> 0 namespace
+namespace -> namespace namespace
+
+return -> 1
+function_name -> 2
+function_name -> function_name function_name
+
+## recursive rule for join argument types 
+
+arg_pair -> arg_pair arg_pair
+
+arg_pair -> 3 4
+arg_pair -> 5 6
+arg_pair -> 7 8
+arg_pair -> 8 9
+arg_pair -> 9 10
+
+# arg_pair -> arg3 arg4
+# arg_pair -> arg5 arg6
+# arg_pair -> arg7 arg8
+# arg_pair -> arg8 arg9
+# arg_pair -> arg9 arg10
+
+# arg3     -> 3
+# arg4     -> 4
+# arg5     -> 5
+# arg6     -> 6
+# arg7     -> 7
+# arg8     -> 8
+# arg9     -> 9
+# arg10     -> 10

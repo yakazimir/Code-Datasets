@@ -1,0 +1,1734 @@
+core * x y
+core *' x y
+core + x y
+core +' x y
+core - x y
+core -' x y
+core -&gt; x forms
+core -&gt;&gt; x forms
+core -&gt;ArrayChunk am arr off end
+core -&gt;Eduction xform coll
+core -&gt;Vec am cnt shift root tail _meta
+core -&gt;VecNode edit arr
+core -&gt;VecSeq am vec anode i offset
+core .. x form
+core / x y
+core &lt; x y
+core &lt;= x y
+core == x y
+core &gt; x y
+core &gt;= x y
+core Throwable &gt;map o
+core accessor s key
+core aclone array
+core add classpath url
+core add watch reference key fn
+core agent state options
+core agent error a
+core aget array idx idxs
+core alength array
+core alias alias namespace sym
+core all ns
+core alter ref fun args
+core alter meta ! iref f args
+core alter var root v f args
+core amap a idx ret expr
+core ancestors h tag
+core and x next
+core apply f a b c d args
+core areduce a idx ret init expr
+core array map keyvals
+core as &gt; expr name forms
+core aset array idx idx2
+core aset boolean array idx idx2
+core aset byte array idx idx2
+core aset char array idx idx2
+core aset double array idx idx2
+core aset float array idx idx2
+core aset int array idx idx2
+core aset long array idx idx2
+core aset short array idx idx2
+core assert x message
+core assoc ! coll key val kvs
+core assoc in m k ks v
+core associative ? coll
+core atom x options
+core await agents
+core await for timeout ms agents
+core bases c
+core bean x
+core bigdec x
+core bigint x
+core biginteger x
+core binding bindings body
+core bit and x y
+core bit and not x y
+core bit clear x n
+core bit flip x n
+core bit not x
+core bit or x y
+core bit set x n
+core bit shift left x n
+core bit shift right x n
+core bit test x n
+core bit xor x y
+core boolean x
+core boolean array size init val or seq
+core booleans xs
+core bound fn fntail
+core bound fn* f
+core bound ? vars
+core butlast coll
+core byte x
+core byte array size init val or seq
+core bytes xs
+core case e clauses
+core cast c x
+core cat rf
+core char x
+core char array size init val or seq
+core char ? x
+core chars xs
+core class x
+core class ? x
+core clojure version
+core coll ? x
+core comment body
+core commute ref fun args
+core comp f g fs
+core comparator pred
+core compare and set ! atom oldval newval
+core compile lib
+core complement f
+core completing f cf
+core concat x y zs
+core cond clauses
+core cond &gt; expr clauses
+core cond &gt;&gt; expr clauses
+core condp pred expr clauses
+core conj ! coll x
+core cons x seq
+core constantly x
+core construct proxy c ctor args
+core contains ? coll key
+core count coll
+core counted ? coll
+core create ns sym
+core create struct keys
+core cycle coll
+core dec x
+core dec' x
+core decimal ? n
+core declare names
+core dedupe coll
+core def symbol doc string ? init ?
+core definterface name sigs
+core defmacro name doc string ? attr map ? params* body + attr map ?
+core defmethod multifn dispatch val fn tail
+core defmulti name docstring ? attr map ? dispatch fn options
+core defn name decls
+core defonce name expr
+core defprotocol name opts+sigs
+core delay body
+core delay ? x
+core deliver promise val
+core denominator r
+core deref ref timeout ms timeout val
+core derive h tag parent
+core descendants h tag
+core dissoc ! map key ks
+core distinct coll
+core distinct ? x y
+core do exprs*
+core doall n coll
+core dorun n coll
+core doseq seq exprs body
+core dosync exprs
+core dotimes bindings body
+core doto x forms
+core double x
+core double array size init val or seq
+core doubles xs
+core drop n coll
+core drop last n s
+core drop while pred coll
+core eduction xform* coll
+core empty coll
+core empty ? coll
+core ensure ref
+core ensure reduced x
+core enumeration seq e
+core error handler a
+core error mode a
+core eval form
+core even ? n
+core every pred p1 p2 p3 ps
+core every ? pred coll
+core ex data ex
+core ex info msg map cause
+core extend atype proto+mmaps
+core extend protocol p specs
+core extend type t specs
+core extenders protocol
+core extends ? protocol atype
+core false ? x
+core file seq dir
+core filter pred coll
+core filterv pred coll
+core find map key
+core find keyword ns name
+core find ns sym
+core find var sym
+core first coll
+core flatten x
+core float x
+core float array size init val or seq
+core float ? n
+core floats xs
+core flush
+core fn name ? params* exprs* +
+core fn ? x
+core fnil f x y z
+core for seq exprs body expr
+core force x
+core format fmt args
+core frequencies coll
+core future body
+core future call f
+core future cancel f
+core future cancelled ? f
+core future done ? f
+core future ? x
+core gen class options
+core gen interface options
+core gensym prefix string
+core get map key not found
+core get in m ks not found
+core get method multifn dispatch val
+core get proxy class bases
+core get thread bindings
+core get validator iref
+core group by f coll
+core hash x
+core hash map keyvals
+core hash ordered coll coll
+core hash set keys
+core hash unordered coll coll
+core identical ? x y
+core identity x
+core if test then else ?
+core if let bindings then else oldform
+core if not test then else
+core if some bindings then else oldform
+core ifn ? x
+core import import symbols or lists
+core in ns name
+core inc x
+core inc' x
+core init proxy proxy mappings
+core instance ? c x
+core int x
+core int array size init val or seq
+core integer ? n
+core interleave c1 c2 colls
+core intern ns name val
+core interpose sep coll
+core into to xform from
+core into array type aseq
+core ints xs
+core io ! body
+core isa ? h child parent
+core iterate f x
+core iterator seq iter
+core juxt f g h fs
+core keep f coll
+core keep indexed f coll
+core key e
+core keys map
+core keyword ns name
+core keyword ? x
+core last coll
+core lazy cat colls
+core lazy seq body
+core let bindings* exprs*
+core letfn fnspecs* exprs*
+core line seq rdr
+core list items
+core list* a b c d
+core list ? x
+core load paths
+core load file name
+core load reader rdr
+core load string s
+core loaded libs
+core locking x body
+core long x
+core long array size init val or seq
+core longs xs
+core loop bindings* exprs*
+core macroexpand form
+core macroexpand 1 form
+core make array type dim dims
+core make hierarchy
+core map f c1 c2 c3 colls
+core map entry ? x
+core map indexed f coll
+core map ? x
+core mapcat f colls
+core mapv f c1 c2 c3 colls
+core max x y
+core max key k x y
+core memfn name args
+core memoize f
+core merge maps
+core merge with f maps
+core meta obj
+core methods multifn
+core min x y
+core min key k x y
+core mix collection hash hash basis count
+core mod num div
+core monitor enter x
+core monitor exit x
+core name x
+core namespace x
+core namespace munge ns
+core neg ? x
+core new Classname args*
+core newline
+core next coll
+core nil ? x
+core not x
+core not any ? pred coll
+core not empty coll
+core not every ? pred coll
+core ns name docstring ? attr map ? references*
+core ns aliases ns
+core ns imports ns
+core ns interns ns
+core ns map ns
+core ns name ns
+core ns publics ns
+core ns refers ns
+core ns resolve ns env sym
+core ns unalias ns sym
+core ns unmap ns sym
+core nth coll index not found
+core nthnext coll n
+core nthrest coll n
+core num x
+core number ? x
+core numerator r
+core object array size or seq
+core odd ? n
+core or x next
+core parents h tag
+core partial f arg1 arg2 arg3
+core partition n step pad coll
+core partition all n step coll
+core partition by f coll
+core pcalls fns
+core peek coll
+core persistent ! coll
+core pmap f coll colls
+core pop coll
+core pop ! coll
+core pop thread bindings
+core pos ? x
+core pr x
+core pr str xs
+core prefer method multifn dispatch val x dispatch val y
+core prefers multifn
+core print
+core print str xs
+core printf fmt args
+core println str xs
+core prn str xs
+core promise
+core proxy class and interfaces args fs
+core proxy mappings proxy
+core proxy super meth args
+core push thread bindings bindings
+core pvalues exprs
+core quot num div
+core quote form
+core rand n
+core rand int n
+core rand nth coll
+core random sample prob coll
+core range start end step
+core ratio ? n
+core rational ? n
+core rationalize num
+core re find re s
+core re groups m
+core re matcher re s
+core re matches re s
+core re pattern s
+core re seq re s
+core read opts stream
+core read line
+core read string opts s
+core reader conditional form splicing ?
+core reader conditional ? value
+core realized ? x
+core record ? x
+core recur exprs*
+core reduce f val coll
+core reduce kv f init coll
+core reduced x
+core reduced ? x
+core reductions f init coll
+core ref x options
+core ref history count ref
+core ref max history ref n
+core ref min history ref n
+core ref set ref val
+core refer ns sym filters
+core reify opts+specs
+core release pending sends
+core rem num div
+core remove pred coll
+core remove all methods multifn
+core remove method multifn dispatch val
+core remove ns sym
+core remove watch reference key
+core repeat n x
+core repeatedly n f
+core replace smap coll
+core require args
+core reset ! atom newval
+core reset meta ! iref metadata map
+core resolve env sym
+core rest coll
+core restart agent a new state options
+core resultset seq rs
+core reverse coll
+core reversible ? coll
+core rseq rev
+core rsubseq sc start test start key end test end key
+core run ! proc coll
+core satisfies ? protocol x
+core select keys map keyseq
+core send a f args
+core send off a f args
+core send via executor a f args
+core seq coll
+core seq ? x
+core seque n or q s
+core sequence xform coll colls
+core sequential ? coll
+core set coll
+core set ! . Classname symbol staticFieldName symbol expr
+core set agent send executor ! executor
+core set agent send off executor ! executor
+core set error handler ! a handler fn
+core set error mode ! a mode keyword
+core set validator ! iref validator fn
+core set ? x
+core short x
+core short array size init val or seq
+core shorts xs
+core shuffle coll
+core shutdown agents
+core slurp f opts
+core some pred coll
+core some &gt; expr forms
+core some &gt;&gt; expr forms
+core some fn p1 p2 p3 ps
+core some ? x
+core sort comp coll
+core sort by keyfn comp coll
+core sorted map keyvals
+core sorted map by comparator keyvals
+core sorted set keys
+core sorted set by comparator keys
+core sorted ? coll
+core special symbol ? s
+core spit f content options
+core split at n coll
+core split with pred coll
+core str x ys
+core string ? x
+core struct s vals
+core struct map s inits
+core subs s start end
+core subseq sc start test start key end test end key
+core subvec v start end
+core supers class
+core swap ! atom f x y args
+core symbol ns name
+core symbol ? x
+core sync flags ignored for now body
+core tagged literal tag form
+core tagged literal ? value
+core take n coll
+core take last n coll
+core take nth n coll
+core take while pred coll
+core test v
+core the ns x
+core thread bound ? vars
+core throw expr
+core time expr
+core to array coll
+core to array 2d coll
+core trampoline f args
+core transduce xform f init coll
+core transient coll
+core tree seq branch ? children root
+core true ? x
+core try expr* catch clause* finally clause ?
+core type x
+core unchecked add x y
+core unchecked add int x y
+core unchecked byte x
+core unchecked char x
+core unchecked dec x
+core unchecked dec int x
+core unchecked divide int x y
+core unchecked double x
+core unchecked float x
+core unchecked inc x
+core unchecked inc int x
+core unchecked int x
+core unchecked long x
+core unchecked multiply x y
+core unchecked multiply int x y
+core unchecked negate x
+core unchecked negate int x
+core unchecked remainder int x y
+core unchecked short x
+core unchecked subtract x y
+core unchecked subtract int x y
+core underive h tag parent
+core unreduced x
+core unsigned bit shift right x n
+core update m k f x y z
+core update in m k ks f args
+core update proxy proxy mappings
+core use args
+core val e
+core vals map
+core var symbol
+core var get x
+core var set x val
+core var ? v
+core vary meta obj f args
+core vec coll
+core vector a b c d e f args
+core vector of t elements
+core vector ? x
+core volatile ! val
+core volatile ? x
+core vreset ! vol newval
+core vswap ! vol f args
+core when test body
+core when first bindings body
+core when let bindings body
+core when not test body
+core when some bindings body
+core while test body
+core with bindings binding map body
+core with bindings* binding map f args
+core with in str s body
+core with local vars name vals vec body
+core with meta obj m
+core with open bindings body
+core with out str body
+core with precision precision exprs
+core with redefs bindings body
+core with redefs fn binding map func
+core xml seq root
+core zero ? x
+core zipmap keys vals
+data diff a b
+edn read opts stream
+edn read string opts s
+inspector inspect x
+inspector inspect table data
+inspector inspect tree data
+instant validated new instance
+java browse browse url url
+java io as relative path x
+java io copy input output opts
+java io delete file f silently
+java io file parent child
+java io input stream x opts
+java io make parents f
+java io output stream x opts
+java io reader x opts
+java io resource n loader
+java io writer x opts
+java javadoc add local javadoc path
+java javadoc add remote javadoc package prefix url
+java javadoc javadoc class or object
+java shell sh args
+java shell with sh dir dir forms
+java shell with sh env env forms
+main demunge fn name
+main load script path
+main repl options
+main repl caught e
+main repl exception throwable
+main repl prompt
+main repl read request prompt request exit
+main root cause t
+main skip if eol s
+main skip whitespace s
+main stack element str el
+main with bindings body
+main with read known body
+pprint cl format writer format in args
+pprint code dispatch object
+pprint formatter format in
+pprint formatter out format in
+pprint fresh line
+pprint get pretty writer writer
+pprint pp
+pprint pprint object writer
+pprint pprint indent relative to n
+pprint pprint logical block options* body
+pprint pprint newline kind
+pprint pprint tab kind colnum colinc
+pprint print length loop bindings body
+pprint print table rows
+pprint set pprint dispatch function
+pprint simple dispatch object
+pprint with pprint dispatch function body
+pprint write object kw args
+pprint write out object
+reflect -&gt;AsmReflector class resolver
+reflect -&gt;Constructor name declaring class parameter types exception types flags
+reflect -&gt;Field name type declaring class flags
+reflect -&gt;JavaReflector classloader
+reflect -&gt;Method name return type declaring class parameter types exception types flags
+reflect map &gt;Constructor m#
+reflect map &gt;Field m#
+reflect map &gt;Method m#
+repl apropos str or pattern
+repl demunge fn name
+repl dir nsname
+repl dir fn ns
+repl doc name
+repl find doc re string or pattern
+repl pst e depth
+repl root cause t
+repl set break handler ! f
+repl source n
+repl source fn x
+repl stack element str el
+repl thread stopper thread
+set difference s1 s2 sets
+set index xrel ks
+set intersection s1 s2 sets
+set join xrel yrel km
+set map invert m
+set project xrel ks
+set rename xrel kmap
+set rename keys map kmap
+set select pred xset
+set subset ? set1 set2
+set superset ? set1 set2
+set union s1 s2 sets
+stacktrace e
+stacktrace print cause trace tr n
+stacktrace print stack trace tr n
+stacktrace print throwable tr
+stacktrace print trace element e
+stacktrace root cause tr
+string blank ? s
+string capitalize s
+string ends with ? s substr
+string escape s cmap
+string includes ? s substr
+string index of s value from index
+string join separator coll
+string last index of s value from index
+string lower case s
+string re quote replacement replacement
+string replace s match replacement
+string replace first s match replacement
+string reverse s
+string split s re limit
+string split lines s
+string starts with ? s substr
+string trim s
+string trim newline s
+string triml s
+string trimr s
+string upper case s
+template apply template argv expr values
+template do template argv expr values
+test are argv expr args
+test assert any msg form
+test assert predicate msg form
+test compose fixtures f1 f2
+test deftest name body
+test do report m
+test file position n
+test function ? x
+test get possibly unbound var v
+test inc report counter name
+test is form msg
+test join fixtures fixtures
+test run all tests re
+test run tests namespaces
+test successful ? summary
+test test all vars ns
+test test ns ns
+test test var v
+test test vars vars
+test testing string body
+test testing contexts str
+test testing vars str m
+test try expr msg form
+test with test definition body
+test with test out body
+walk keywordize keys m
+walk macroexpand all form
+walk postwalk f form
+walk postwalk demo form
+walk postwalk replace smap form
+walk prewalk f form
+walk prewalk demo form
+walk prewalk replace smap form
+walk stringify keys m
+walk walk inner outer form
+xml parse s startparse
+zip append child loc item
+zip branch ? loc
+zip children loc
+zip down loc
+zip edit loc f args
+zip end ? loc
+zip insert child loc item
+zip insert left loc item
+zip insert right loc item
+zip left loc
+zip leftmost loc
+zip lefts loc
+zip make node loc node children
+zip next loc
+zip node loc
+zip path loc
+zip prev loc
+zip remove loc
+zip replace loc node
+zip right loc
+zip rightmost loc
+zip rights loc
+zip root loc
+zip seq zip root
+zip up loc
+zip vector zip root
+zip xml zip root
+zip zipper branch ? children make node root
+algo generic arithmetic * x y
+algo generic arithmetic + x y
+algo generic arithmetic - x y
+algo generic arithmetic -&gt;one-type
+algo generic arithmetic -&gt;zero-type
+algo generic arithmetic / x y
+algo generic arithmetic defmethod* ns name args
+algo generic arithmetic map &gt;one type m#
+algo generic arithmetic map &gt;zero type m#
+algo generic arithmetic qsym ns sym
+algo generic collection assoc coll key val pairs
+algo generic collection conj coll xs
+algo generic collection dissoc coll keys
+algo generic collection empty coll
+algo generic collection get coll key not found
+algo generic collection into to from
+algo generic collection seq s
+algo generic functor fmap f s
+algo generic math-functions abs x math context
+algo generic math-functions acos x
+algo generic math-functions approx= x y eps
+algo generic math-functions asin x
+algo generic math-functions atan x
+algo generic math-functions atan2 x y
+algo generic math-functions ceil x
+algo generic math-functions conjugate x
+algo generic math-functions cos x
+algo generic math-functions exp x
+algo generic math-functions floor x
+algo generic math-functions log x
+algo generic math-functions pow x y
+algo generic math-functions rint x
+algo generic math-functions sgn x
+algo generic math-functions sin x
+algo generic math-functions sqr x
+algo generic math-functions sqrt x
+algo generic math-functions tan x
+algo graph add loops g
+algo graph component graph g sccs
+algo graph dependency list g
+algo graph fixed point data fun max equal
+algo graph get neighbors g n
+algo graph lazy walk g ns v
+algo graph post ordered nodes g
+algo graph recursive component ? g ns
+algo graph remove loops g
+algo graph reverse graph g
+algo graph scc g
+algo graph self recursive sets g
+algo graph stratification list g1 g2
+algo graph transitive closure g
+algo generic comparison &lt; x y
+algo generic comparison &lt;= x y
+algo generic comparison = x y
+algo generic comparison &gt; x y
+algo generic comparison &gt;= x y
+algo generic comparison max x y
+algo generic comparison min x y
+algo generic comparison neg ? x
+algo generic comparison not= args
+algo generic comparison pos ? x
+algo generic comparison zero ? x
+algo monads ask
+algo monads asks f
+algo monads call cc f
+algo monads cond statement expr mexpr continuation
+algo monads defmonad name operations
+algo monads defmonadfn name docstring ? attr map ? args expr ...
+algo monads fetch state
+algo monads fetch val key
+algo monads local f g
+algo monads m lift n f
+algo monads m when test m expr
+algo monads m when not test m expr
+algo monads maybe t m nothing which m plus
+algo monads monad operations
+algo monads monad transformer base which m plus operations
+algo monads run cont c
+algo monads sequence t m which m plus
+algo monads set state s
+algo monads set val key val
+algo monads state m until p f x
+algo monads state t m
+algo monads update state f
+algo monads update val key f
+algo monads with monad monad exprs
+algo monads with state field key statement
+algo monads writer m empty accumulator
+core async &lt; ! port
+core async &lt;! ! port
+core async &gt; ! port val
+core async &gt;! ! port val
+core async admix mix ch
+core async alt ! clauses
+core async alt! ! clauses
+core async buffer n
+core async chan buf or n xform ex handler
+core async close ! chan
+core async do alts fret ports opts
+core async dropping buffer n
+core async go body
+core async go loop bindings body
+core async into coll ch
+core async map f chs buf or n
+core async merge chs buf or n
+core async mix out
+core async mult ch
+core async offer ! port val
+core async onto chan ch coll close ?
+core async pipe from to close ?
+core async pipeline n to xf from close ? ex handler
+core async pipeline async n to af from close ?
+core async pipeline blocking n to xf from close ? ex handler
+core async poll ! port
+core async promise chan xform ex handler
+core async pub ch topic fn buf fn
+core async put ! port val fn1 on caller ?
+core async reduce f init ch
+core async sliding buffer n
+core async solo mode mix mode
+core async split p ch t buf or n f buf or n
+core async sub p topic ch close ?
+core async take n ch buf or n
+core async take ! port fn1 on caller ?
+core async tap mult ch close ?
+core async thread body
+core async thread call f
+core async timeout msecs
+core async to chan coll
+core async toggle mix state map
+core async unblocking buffer ? buff
+core async unmix mix ch
+core async unmix all mix
+core async unsub p topic ch
+core async unsub all p topic
+core async untap mult ch
+core async untap all mult
+core cache -&gt;BasicCache cache
+core cache -&gt;FIFOCache cache q limit
+core cache -&gt;FnCache cache f
+core cache -&gt;LIRSCache cache lruS lruQ tick limitS limitQ
+core cache -&gt;LRUCache cache lru tick limit
+core cache -&gt;LUCache cache lu limit
+core cache -&gt;SoftCache cache rcache rq
+core cache -&gt;TTLCache cache ttl ttl ms
+core cache basic cache factory base
+core cache soft cache factory base
+core cache through wrap fn value fn cache item
+core contracts provide kontracts
+core contracts with constraints f c
+core incubator dissoc in m k ks :as keys
+core incubator new by name class name args
+core incubator seqable ? x
+core logic -&gt;AnswerCache ansl anss _meta
+core logic -&gt;Choice a f
+core logic -&gt;ConstraintStore km cm cid running
+core logic -&gt;LCons a d cache meta
+core logic -&gt;LVar id unique name oname hash meta
+core logic -&gt;PMap
+core logic -&gt;Pair lhs rhs
+core logic -&gt;SubstValue v doms eset
+core logic -&gt;Substitutions s vs ts cs cq cqs oc _meta
+core logic -&gt;SuspendedStream cache ansv* f
+core logic == u v
+core logic all goals
+core logic and* goals
+core logic appendo x y z
+core logic conde clauses
+core logic conjo coll args
+core logic conso a d l
+core logic copy term u v
+core logic defna rest
+core logic defne rest
+core logic defnu rest
+core logic distincto l
+core logic emptyo a
+core logic everyg g coll
+core logic fail a
+core logic featurec x fs
+core logic firsto l a
+core logic fix constraints a
+core logic fna rest
+core logic fnc args body
+core logic fne rest
+core logic fnu rest
+core logic fresh lvars goals
+core logic is u v op
+core logic lcons a d
+core logic llist f s rest
+core logic log s
+core logic lvaro v
+core logic map &gt;PMap m#
+core logic map &gt;SubstValue m#
+core logic map &gt;SuspendedStream m#
+core logic master argv cache
+core logic matcha xs cs
+core logic matche xs cs
+core logic matchu xs cs
+core logic member1o x l
+core logic membero x l
+core logic nafc c args
+core logic nilo a
+core logic nonlvaro v
+core logic or* goals
+core logic partial map m
+core logic permuteo xl yl
+core logic pred v f
+core logic project vars goals
+core logic rembero x l o
+core logic resto l d
+core logic run n bindings goals
+core logic run* bindings goals
+core logic run db n db bindings goals
+core logic run db* db bindings goals
+core logic run nc n bindings goals
+core logic run nc* goals
+core logic succeed a
+core logic tabled args grest
+core logic trace lvars title lvars
+core logic trace s
+core logic waiting stream check w success cont failure cont
+core match -&gt;AppPattern p form _meta
+core match -&gt;BindNode bindings node
+core match -&gt;FailNode
+core match -&gt;GuardPattern p gs _meta
+core match -&gt;LeafNode value bindings
+core match -&gt;LiteralPattern l _meta
+core match -&gt;MapKeyPattern p
+core match -&gt;MapPattern m _meta
+core match -&gt;OrPattern ps _meta
+core match -&gt;PatternMatrix rows ocrs
+core match -&gt;PatternRow ps action bindings
+core match -&gt;PredicatePattern p gs _meta
+core match -&gt;RestPattern p
+core match -&gt;SeqPattern s _meta
+core match -&gt;SwitchNode occurrence cases default
+core match -&gt;VectorPattern v t size offset rest ? _meta
+core match -&gt;WildcardPattern sym named _meta
+core match emit matrix vars clauses default
+core match empty rows case
+core match first column chosen case matrix col ocrs
+core match first row empty case rows ocr
+core match first row wildcards case rows ocrs
+core match group keywords pattern
+core match map &gt;BindNode m#
+core match map &gt;FailNode m#
+core match map &gt;LeafNode m#
+core match map &gt;MapKeyPattern m#
+core match map &gt;PatternMatrix m#
+core match map &gt;RestPattern m#
+core match map &gt;SwitchNode m#
+core match match vars clauses
+core match other column chosen case matrix col
+core match process vars vars
+core match to pattern row pat action
+core match wildcards and duplicates patterns
+core memoize -&gt;PluggableMemoization f cache
+core memoize -&gt;RetryingDelay fun available ? value
+core memoize build memoizer cache factory f args
+core memoize fifo f base key threshold
+core memoize lru f base key threshold
+core memoize lu f base key threshold
+core memoize memo f seed
+core memoize memo clear ! f args
+core memoize memo swap ! f base
+core memoize memoized ? f
+core memoize snapshot memoized fn
+core memoize ttl f base key threshold
+core rrb-vector catvec v1 v2 v3 v4 vn
+core rrb-vector subvec v start end
+core rrb-vector vec coll
+core rrb-vector vector x1 x2 x3 x4 xn
+core rrb-vector vector of t x1 x2 x3 x4 xn
+core typed ASeq t
+core typed AVec t
+core typed Agent1 t
+core typed Agent2 t t
+core typed All binder type
+core typed Assoc type type pairs*
+core typed Atom1 t
+core typed Atom2 t
+core typed BlockingDeref t
+core typed Coll t
+core typed CountRange Integer Integer
+core typed Delay t
+core typed Deref t
+core typed Difference type type type*
+core typed Dissoc type type*
+core typed EmptySeqable t
+core typed ExactCount Integer
+core typed Future t
+core typed Get type type type
+core typed HSeq fixed* drest ... bound :filter sets FS* :objects obj*
+core typed HSequential fixed* drest ... bound :filter sets FS* :objects obj*
+core typed quote fixed* type ... bound
+core typed I type*
+core typed IFn ArityVec+
+core typed List t
+core typed Map t t
+core typed Nilable t
+core typed NilableNonEmptyASeq t
+core typed NilableNonEmptySeq t
+core typed NonEmptyASeq t
+core typed NonEmptyAVec t
+core typed NonEmptyColl t
+core typed NonEmptyLazySeq t
+core typed NonEmptySeq t
+core typed NonEmptySeqable t
+core typed NonEmptyVec t
+core typed Option t
+core typed Pred type
+core typed Promise t
+core typed Rec binder type
+core typed Ref1 t
+core typed Ref2 w r
+core typed Reversible t
+core typed Seq t
+core typed Seqable t
+core typed SequentialSeq t
+core typed SequentialSeqable t
+core typed Set t
+core typed SortedSet t
+core typed Stack t
+core typed TFn binder type
+core typed U type*
+core typed quote Constant
+core typed Var1 t
+core typed Var2 w r
+core typed Vec t
+core typed ann varsym typesyn
+core typed ann datatype binder dname field : type* opts*
+core typed ann form form ty
+core typed ann interface varsym methods
+core typed ann many t vs
+core typed ann protocol varsym methods
+core typed ann record binder dname field : type* opts*
+core typed atom args
+core typed cast t x opt
+core typed cf form expected
+core typed check form* form expected type provided ?
+core typed check form info form opt
+core typed check ns ns or syms opt
+core typed declare alias kind sym ty
+core typed declare datatypes syms
+core typed declare names syms
+core typed declare protocols syms
+core typed def name docstring ? : type ? expr
+core typed defalias sym t
+core typed defn kw args ? name docstring ? attr map ? param : type * : type exprs*
+core typed defprotocol body
+core typed doseq seq exprs body
+core typed dotimes bindings body
+core typed envs
+core typed fn name ? param : type* param : type * ? ? : type ? exprs*
+core typed for seq exprs maybe ann body expr
+core typed inst inst of types
+core typed inst ctor inst of types
+core typed install features
+core typed into array&gt; into array syn javat cljt coll
+core typed let binding : type ? init* exprs*
+core typed letfn&gt; fn spec or annotation* expr*
+core typed load if needed
+core typed loop binding : type ? init* exprs*
+core typed method type mname
+core typed nilable param msym mmap
+core typed non nil return msym arities
+core typed override constructor ctorsym typesyn
+core typed override method methodsym typesyn
+core typed pfn&gt; forms
+core typed pred t
+core typed print env debug str
+core typed print filterset debug string frm
+core typed ref args
+core typed reset caches
+core typed statistics nsyms
+core typed tc ignore body
+core typed typed deps args
+core typed untyped var varsym typesyn
+core typed var coverage nsyms or nsym
+core typed var&gt; sym
+core typed warn on unannotated vars
+core typed when let fail b body
+core unify extract lvars lv fn form
+core unify flatten bindings variable ? binds
+core unify make occurs subst fn variable fn
+core unify make occurs unifier fn variable fn
+core unify make occurs unify fn variable fn
+core unify make subst fn variable fn
+core unify make unifier fn variable fn
+core unify make unify fn variable fn
+core unify subst expression bindings
+core unify unifier expression1 expression2
+core unify unify expression1 expression2
+data avl merge m1 m2 m3
+data avl merge with f m1 m2 m3
+data avl nearest coll test x
+data avl rank of coll x
+data avl sorted map keyvals
+data avl sorted map by comparator keyvals
+data avl sorted set keys
+data avl sorted set by comparator keys
+data avl split key k coll
+data avl subrange coll start test start end test end
+data avl union s1 s2 s3
+data avl unsafe join coll1 coll2 coll3
+data codec base64 dec length in length pad length
+data codec base64 decode input offset length
+data codec base64 decode ! input offset length output
+data codec base64 decoding transfer input stream output stream opts
+data codec base64 enc length n
+data codec base64 encode input offset length
+data codec base64 encode ! input offset length output
+data codec base64 encoding transfer input stream output stream opts
+data codec base64 pad length input offset length
+data csv read csv input options
+data csv write csv writer data options
+data finger-tree -&gt;CountedDoubleList tree mdata
+data finger-tree -&gt;CountedSortedSet cmpr tree mdata
+data finger-tree -&gt;DeepTree meter obj pre mid suf mval
+data finger-tree -&gt;DelayedTree tree ref mval
+data finger-tree -&gt;Digit1 a meter obj measure ref
+data finger-tree -&gt;Digit2 a b meter obj measure ref
+data finger-tree -&gt;Digit3 a b c meter obj measure ref
+data finger-tree -&gt;Digit4 a b c d meter obj measure ref
+data finger-tree -&gt;DoubleList tree mdata
+data finger-tree -&gt;EmptyTree meter obj
+data finger-tree -&gt;Len-Right-Meter len right
+data finger-tree -&gt;SingleTree meter obj x
+data finger-tree map &gt;Len Right Meter m#
+data fressian associative lookup o
+data fressian begin closed list writer
+data fressian end list writer
+data fressian field caching writer cache pred
+data fressian inheritance lookup lookup
+data fressian read readable options
+data fressian read object rdr
+data fressian tag obj
+data fressian tagged object ? o
+data fressian tagged value obj
+data fressian write obj options
+data fressian write object writer obj
+data generators anything
+data generators boolean
+data generators boolean array f sizer
+data generators byte
+data generators byte array f sizer
+data generators char
+data generators char array f sizer
+data generators collection
+data generators date base
+data generators default sizer
+data generators double
+data generators double array f sizer
+data generators float
+data generators float array f sizer
+data generators geometric p
+data generators hash map fk fv sizer
+data generators int
+data generators int array f sizer
+data generators keyword sizer
+data generators list f sizer
+data generators long array f sizer
+data generators one of specs
+data generators printable ascii char
+data generators rand nth coll
+data generators ratio num gen denom gen
+data generators reps sizer f
+data generators reservoir sample ct coll
+data generators scalar
+data generators set f sizer
+data generators short
+data generators short array f sizer
+data generators shuffle coll
+data generators string f sizer
+data generators symbol sizer
+data generators tuple generators
+data generators uniform lo hi
+data generators uuid
+data generators vec f sizer
+data generators weighted m
+data json json str x options
+data json pprint x options
+data json pprint json x options
+data json print json x options
+data json read reader options
+data json read json input keywordize ? eof error ? eof value
+data json read str string options
+data json write x writer options
+data json write json x out escape unicode ?
+data json write str x options
+data priority-map -&gt;PersistentPriorityMap priority &gt;set of items item &gt;priority _meta keyfn
+data priority-map priority map keyvals
+data priority-map priority map by comparator keyvals
+data priority-map priority map keyfn keyfn keyvals
+data priority-map priority map keyfn by keyfn comparator keyvals
+data zip ancestors loc
+data zip children loc
+data zip children auto loc
+data zip descendants loc
+data zip left locs loc
+data zip leftmost ? loc
+data zip right locs loc
+data zip rightmost ? loc
+java classpath classpath
+java classpath classpath directories
+java classpath classpath jarfiles
+java classpath filenames in jar jar file
+java classpath get urls loader
+java classpath jar file ? f
+java classpath loader classpath loader
+java classpath system classpath
+java jdbc as sql name f x
+java jdbc create table ddl table specs
+java jdbc db connection db
+java jdbc db do commands db spec transaction ? sql command sql commands
+java jdbc db do prepared db spec transaction ? sql param groups
+java jdbc db do prepared return keys db transaction ? sql param group
+java jdbc db find connection db
+java jdbc db is rollback only db
+java jdbc db query with resultset db spec options map sql string params func
+java jdbc db set rollback only ! db
+java jdbc db transaction binding body
+java jdbc db unset rollback only ! db
+java jdbc execute ! db spec sql param groups :multi ? true :transaction ? true
+java jdbc insert ! db spec table row map :transaction ? true :entities identity
+java jdbc metadata query meta query opt args
+java jdbc print sql exception exception
+java jdbc print sql exception chain exception
+java jdbc print update counts exception
+java jdbc query db spec option map sql string params
+java jdbc quoted q x
+java jdbc with db connection binding body
+java jdbc with db metadata binding body
+java jdbc with db transaction binding body
+java jmx -&gt;Bean state ref
+java jmx attribute names n
+java jmx create bean state ref
+java jmx invoke n op args
+java jmx invoke signature n op signature args
+java jmx mbean n
+java jmx mbean names n
+java jmx operation names n
+java jmx readable ? n attr
+java jmx register mbean mbean mbean name
+java jmx unregister mbean mbean name
+java jmx with connection opts body
+java jmx write ! n attr value
+math combinatorics assert with message x message
+math combinatorics cartesian product seqs
+math combinatorics combinations items t
+math combinatorics count combinations items t
+math combinatorics count permutations l
+math combinatorics count subsets items
+math combinatorics drop permutations items n
+math combinatorics nth combination items t n
+math combinatorics nth permutation items n
+math combinatorics partitions items args
+math combinatorics permutation index items
+math combinatorics permutations items
+math combinatorics selections items n
+math combinatorics subsets items
+math numeric-tower abs n
+math numeric-tower expt base pow
+math numeric-tower gcd a b
+math numeric-tower lcm a b
+test generative defspec name fn to test args validator body
+tools logging debug throwable message
+tools logging debugf throwable fmt fmt args
+tools logging enabled ? level logger ns
+tools logging error throwable message
+tools logging errorf throwable fmt fmt args
+tools logging fatal throwable message
+tools logging fatalf throwable fmt fmt args
+tools logging info throwable message
+tools logging infof throwable fmt fmt args
+tools logging log logger factory logger ns level throwable message
+tools logging log* logger level throwable message
+tools logging log capture ! logger ns out level err level
+tools logging log stream level logger ns
+tools logging log uncapture !
+tools logging logf level throwable fmt fmt args
+tools logging logp level throwable message
+tools logging spy level expr
+tools logging spyf level fmt expr
+tools logging trace throwable message
+tools logging tracef throwable fmt fmt args
+tools logging warn throwable message
+tools logging warnf throwable fmt fmt args
+tools logging with logs logger ns out level err level body
+tools analyzer -&gt;Const literal ? val meta type op form env children
+tools analyzer -&gt;Local assignable ? name op form env
+tools analyzer -&gt;Map keys vals op form env children
+tools analyzer -&gt;MaybeClass class op form env
+tools analyzer -&gt;MaybeHostForm class field op form env
+tools analyzer -&gt;Set items op form env children
+tools analyzer -&gt;TransientConst literal ? val meta type op form env children extmap
+tools analyzer -&gt;TransientLocal assignable ? name op form env extmap
+tools analyzer -&gt;TransientMap keys vals op form env children extmap
+tools analyzer -&gt;TransientMaybeClass class op form env extmap
+tools analyzer -&gt;TransientMaybeHostForm class field op form env extmap
+tools analyzer -&gt;TransientSet items op form env children extmap
+tools analyzer -&gt;TransientVar assignable ? var meta op form env extmap
+tools analyzer -&gt;TransientVector items op form env children extmap
+tools analyzer -&gt;TransientWithMeta meta expr op form env children extmap
+tools analyzer -&gt;Var assignable ? var meta op form env
+tools analyzer -&gt;Vector items op form env children
+tools analyzer -&gt;WithMeta meta expr op form env children
+tools analyzer analyze form env
+tools analyzer analyze in env env
+tools analyzer create var sym env
+tools analyzer empty env
+tools analyzer macroexpand form env
+tools analyzer macroexpand 1 form env
+tools analyzer map &gt;Const m#
+tools analyzer map &gt;Local m#
+tools analyzer map &gt;Map m#
+tools analyzer map &gt;MaybeClass m#
+tools analyzer map &gt;MaybeHostForm m#
+tools analyzer map &gt;Set m#
+tools analyzer map &gt;Var m#
+tools analyzer map &gt;Vector m#
+tools analyzer map &gt;WithMeta m#
+tools analyzer parse op args env
+tools analyzer var ? obj
+tools analyzer jvm -&gt;ExceptionThrown e
+tools analyzer jvm analyze form env opts
+tools analyzer jvm analyze+eval form env opts
+tools analyzer jvm analyze ns ns env opts
+tools analyzer jvm empty env
+tools analyzer jvm macroexpand 1 form env
+tools analyzer jvm macroexpand all form env opts
+tools analyzer jvm parse form env
+tools analyzer jvm run passes ast
+tools cli get default options option specs
+tools cli parse opts args option specs options
+tools cli summarize specs
+tools emitter jvm eval form
+tools emitter jvm load res
+tools macro defsymbolmacro symbol expansion
+tools macro deftemplate name params forms
+tools macro macrolet fn bindings exprs
+tools macro mexpand form
+tools macro mexpand 1 form
+tools macro mexpand all form
+tools macro name with attributes name macro args
+tools macro symbol macrolet symbol bindings exprs
+tools macro with symbol macros exprs
+tools namespace clojure source file ? file
+tools namespace clojure sources in jar jar file
+tools namespace comment ? form
+tools namespace find clojure sources in dir dir
+tools namespace find namespaces in dir dir
+tools namespace find namespaces in jarfile jarfile
+tools namespace find namespaces on classpath
+tools namespace find ns decls in dir dir
+tools namespace find ns decls in jarfile jarfile
+tools namespace find ns decls on classpath
+tools namespace ns decl ? form
+tools namespace read file ns decl file
+tools namespace read ns decl rdr
+tools namespace read ns decl from jarfile entry jarfile entry name
+tools nrepl client transport response timeout
+tools nrepl code body
+tools nrepl code* expressions
+tools nrepl combine responses responses
+tools nrepl response seq transport timeout
+tools nrepl response values responses
+tools reader map func coll
+tools reader read reader eof error ? eof value
+tools reader read string opts s
+tools reader resolve symbol s
+tools reader syntax quote form
+tools trace deftrace name definition
+tools trace dotrace fnames exprs
+tools trace trace name value
+tools trace trace forms body
+tools trace trace ns n
+tools trace trace vars vs
+tools trace traceable ? v
+tools trace traced ? v
+tools trace untrace ns n
+tools trace untrace vars vs
+tools analyzer passes js annotate-tag annotate tag ast
+tools analyzer passes js collect-keywords collect keywords ast
+tools analyzer passes js emit-form emit form ast opts
+tools analyzer passes js emit-form emit hygienic form ast
+tools analyzer passes js validate validate ast
+tools analyzer passes jvm constant-lifter constant lift ast
+tools analyzer passes jvm emit-form emit form ast opts
+tools analyzer passes jvm emit-form emit hygienic form ast
+tools analyzer passes jvm fix-case-test fix case test ast
+tools analyzer passes jvm validate-loop-locals validate loop locals analyze
+gloss bit map args
+gloss bit seq bit lengths
+gloss byte count b
+gloss compile frame framecompile frame frame pre encoder post decoder
+gloss defcodec name frame coders
+gloss delimited block delimiters strip delimiters ?
+gloss delimited frame delimiters frame
+gloss enum primitive type map or seq
+gloss finite block prefix or len
+gloss finite frame prefix or len frame
+gloss header frame header >body body >header
+gloss ordered map key value pairs
+gloss prefix primitiveprefix signature to count from count
+gloss repeated frame
+gloss sizeof this
+gloss string charset
+io contiguous buf seq
+io decode frame bytesdecode frame bytes no remainder ?
+io decode all frame bytes
+io decode stream src frame
+io decode stream headers src frames
+io encode frame val
+io encode all frame vals
+io encode to buffer frame buf vals
+io encode to stream frame output stream vals
+io lazy decode all frame bytes
+io to buf seq x
+io to byte buffer x
+medley abs x
+medley assoc some m k vassoc some m k v kvs
+medley boolean ? x
+medley deref reset ! atom newval
+medley deref swap ! atom f args
+medley dissoc in m ks
+medley distinct by fdistinct by f coll
+medley drop upto preddrop upto pred coll
+medley ex cause ex
+medley ex message ex
+medley filter keys pred coll
+medley filter kv pred coll
+medley filter vals pred coll
+medley find first pred coll
+medley greatest xs
+medley indexed coll
+medley interleave all colls
+medley least xs
+medley map entry k v
+medley map keys f coll
+medley map kv f coll
+medley map vals f coll
+medley mapply f args
+medley queue)(queue coll
+medley queue ? x
+medley random uuid
+medley remove keys pred coll
+medley remove kv pred coll
+medley remove vals pred coll
+medley take upto predtake upto pred coll
+medley uuid s
+medley uuid ? x
+compression bunzip2 source target
+compression gunzip source target
+compression make zip stream filename content pairs
+compression untar source target
+compression unxz source target
+compression unzip source target dir
+compression zip filename filename content pairs
+fs absolute path
+fs absolute ? path
+fs base name path trim ext
+fs chdir path
+fs child of ? p c
+fs chmod mode path
+fs copy from to
+fs copy+ src dest
+fs copy dir from to
+fs create f
+fs delete path
+fs delete dir root
+fs directory ? path
+fs exec body
+fs executable ? path
+fs exists ? path
+fs expand home path
+fs extension path
+fs file path paths
+fs file ? path
+fs find files path pattern
+fs find files* path pred
+fs glob root pattern
+fs hidden ? path
+fs home user
+fs iterate dir path
+fs link path target
+fs link ? path
+fs list dir path
+fs mkdir path
+fs mkdirs path
+fs mod time path
+fs name path
+fs normalized path
+fs ns path n
+fs parent path
+fs parents f
+fs path ns path
+fs read sym link path
+fs readable ? path
+fs rename old path new path
+fs size path
+fs split path
+fs split ext path
+fs sym link path target
+fs temp dir prefix suffix tries
+fs temp file prefix suffix tries
+fs temp name prefix suffix
+fs tmpdir
+fs touch path time
+fs walk func path
+fs with cwd cwd body
+fs with mutable cwd body
+fs writeable ? path
+plumbing -unless-update body
+plumbing < body
+plumbing ?> arg do it ? rest
+plumbing ?>> do it ? args
+plumbing aconcat s
+plumbing as >> name forms and expr
+plumbing assoc when m kvs
+plumbing conj when coll x xs
+plumbing cons when x s
+plumbing count when pred xs
+plumbing dissoc in m k ks
+plumbing distinct by f xs
+plumbing distinct id xs
+plumbing fnk args
+plumbing for map m sym seq exprs key expr val expr
+plumbing get and set ! a new val
+plumbing grouped map key fn map fn coll
+plumbing if letk bindings then else
+plumbing indexed s
+plumbing keywordize map x
+plumbing lazy get m k d
+plumbing letk bindings body
+plumbing map from keys f ks
+plumbing map from vals f vs
+plumbing map keys f m
+plumbing map vals f m
+plumbing mapply f arg args
+plumbing memoized fn name args body
+plumbing positions f s
+plumbing safe get m k
+plumbing safe get in m ks
+plumbing singleton xs
+plumbing sum xs
+plumbing swap pair ! a f args
+plumbing unchunk s
+plumbing update m k f x1 x2 xs
+plumbing update in when m key seq f args
+plumbing when letk bindings body
+fnk impl efficient call forms fnk arg form map
+fnk impl fnk form env name ? bind body
+fnk impl letk arg bind sym and body form env map sym binding key path body form
+fnk impl letk input schema and body form env binding form key path body form
+fnk impl name sym x
+fnk impl positional arg bind sym and body env binding body form
+fnk impl positional arg bind syms and body env bind body form
+fnk impl positional fn fnk arg ks
+fnk impl positional fnk form fn name external input schema ordered ks >opt arg sym map body
+fnk impl positional info fnk
+fnk impl qualified sym x
+fnk pfnk fn >fnk f input schema output schema :as io
+fnk pfnk io schemata this
+fnk schema assert distinct things
+fnk schema assert iae form format args
+fnk schema guess expr output schema expr
+fnk schema non map diff s1 s2
+fnk schema safe get m k key path
+fnk schema schema diff input schema output schema
+graph-async asyncify f
+graph ->graph graph nodes
+graph check comp partial ! g instance fn
+graph comp partial fn f other
+graph compile g
+graph eager compile g
+graph graph nodes
+graph interpreted eager compile g
+graph lazy compile g
+graph positional eager compile g arg ks
+graph profiled profile key g
+graph restricted call f in m
+graph run g input
+graph simple flat compile g check input ? make map assoc f
+graph simple hierarchical compile g check input ? make map assoc f
+graph working array map args
+graph positional def graph record g record type name
+graph positional eval bound form bindings
+graph positional graph form g arg keywords
+graph positional graph let bindings g g value syms
+graph positional positional flat compile g
+map collate flat counts
+map deep collate nested counts
+map flatten m
+map get ! m k default expr
+map inc key ! m k d
+map inc key in ! m ks d
+map keep leaves f m
+map keep leaves and path f ks m
+map keyword map syms
+map map leaves f m
+map map leaves and path f ks m
+map merge disjoint m1 m2 maps
+map merge with key f maps
+map safe select keys m ks
+map topological sort child map include leaves ?
+map unflatten s
+map update key ! m k f args
+clj-time abuts ? i a i b
+clj-time ago period
+clj-time date midnight year month day
+clj-time date time year month day hour minute second millis
+clj-time after ? this that
+clj-time before ? this that
+clj-time day this
+clj-time day of week this
+clj-time hour this
+clj-time milli this
+clj-time minus this period
+clj-time minute this
+clj-time month this
+clj-time plus this period
+clj-time sec this
+clj-time second this
+clj-time year this
+clj-time days n
+clj-time days ? val
+clj-time default time zone
+clj-time earliest dts
+clj-time end in
+clj-time epoch
+clj-time extend in by
+clj-time from now period
+clj-time from time zone dt tz
+clj-time hours n
+clj-time hours ? val
+clj-time in days in
+clj-time in hours in
+clj-time in millis in
+clj-time in minutes in
+clj-time in months in
+clj-time in msecs in
+clj-time in seconds in
+clj-time in secs in
+clj-time in weeks in
+clj-time in years in
+clj-time interval dt a dt b
+clj-time latest dts
+clj-time local date year month day
+clj-time local date time year month day hour minute second millis
+clj-time millis n
+clj-time minus dt p ps
+clj-time minutes n
+clj-time minutes ? val
+clj-time months n
+clj-time months ? val
+clj-time now
+clj-time overlaps ? start a end a start b end b
+clj-time plus dt p ps
+clj-time seconds n
+clj-time seconds ? val
+clj-time start in
+clj-time time zone for id id
+clj-time time zone for offset hours minutes
+clj-time to time zone dt tz
+clj-time today
+clj-time today at midnight tz
+clj-time weeks n
+clj-time weeks ? val
+clj-time within ? start end test
+clj-time year month year month
+clj-time years n
+clj-time years ? val
+clj-time yesterday
+coerce from date date
+coerce from long millis
+coerce from sql date sql date
+coerce from sql time sql time
+coerce from string s
+coerce to date time obj
+coerce to date obj
+coerce to epoch obj
+coerce to local date obj
+coerce to local date time obj
+coerce to long obj
+coerce to sql date obj
+coerce to sql time obj
+coerce to string obj
+coerce to timestamp obj
+format formatter dtz fmts
+format formatter local fmt
+format instant >map instant
+format parse s
+format parse local s
+format parse local date s
+format show formatters dt
+format unparse fmt dt
+format unparse local fmt dt
+format unparse local date fmt ld
+format with chronology f c
+format with locale f l
+format with pivot year f pivot year
+format with zone f dtz
+local format local time obj format key
+local to local date time obj
+local local now
+predicates same date ? this date time that date time
+periodic periodic seq start period like

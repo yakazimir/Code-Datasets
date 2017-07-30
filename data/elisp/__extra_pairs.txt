@@ -1,0 +1,1318 @@
+1 3.7.2 electric future map	the value of this variable is a full keymap used by electric command future mode
+35 4 abbrev start location	the value of this variable is a buffer position an integer or a marker for expand-abbrev to use as the start of the next abbrev to be expanded
+35 4 abbrev start location buffer	the value of this variable is the buffer for which abbrev-start-location has been set
+35 4 last abbrev	this is the abbrev-symbol of the most recent abbrev expanded
+35 4 last abbrev location	this is the location of the most recent abbrev expanded
+35 4 last abbrev text	this is the exact expansion text of the most recent abbrev expanded after case conversion if any
+35 4 abbrev expand function	the value of this variable is a function that expand-abbrev will call with no arguments to do the expansion
+35 3 abbrevs changed	this variable is set non-nil by defining or altering any abbrevs except system abbrevs
+35 1 abbrev table name list	this is a list of symbols whose values are abbrev tables
+23 2 doc directory	this variable holds the name of the directory which should contain the file "doc" that contains documentation strings for built-in and preloaded functions and variables
+37 21.3 buffer display table	this variable is automatically buffer-local in all buffers its value specifies the buffer’s display table
+37 21.3 standard display table	the value of this variable is the standard display table which is used when emacs is displaying a buffer in a window with neither a window display table nor a buffer display table defined
+20 6 disable point adjustment	if this variable is non-nil when a command returns to the command loop then the command loop does not check for those text properties and does not move point out of sequences that have them
+20 6 global disable point adjustment	if you set this variable to a non-nil value the feature of moving point out of these sequences is completely turned off
+36 4 process connection type	this variable controls the type of device used to communicate with asynchronous subprocesses
+37 12.7 fontification functions	this variable holds a list of functions that are called by emacs redisplay as needed just before doing redisplay
+31 14 auto fill function	the value of this buffer-local variable should be a function of no arguments to be called after self-inserting a character from the table auto-fill-chars
+31 14 normal auto fill function	this variable specifies the function to use for auto-fill-function if and when auto fill is turned on
+31 14 auto fill chars	a char table of characters which invoke auto-fill-function when self-inserted—space and newline in most language environments
+22 2.2 interpreter mode alist	this variable specifies major modes to use for scripts that specify a command interpreter in a ‘#!’ line
+22 2.2 magic mode alist	this variable’s value is an alist with elements of the form (regexp
+22 2.2 magic fallback mode alist	this works like magic-mode-alist except that it is handled only if auto-mode-alist does not specify a mode for this file
+22 2.2 auto mode alist	this variable contains an association list of file name patterns regular expressions and corresponding major mode commands
+25 2 buffer auto save file name	this buffer-local variable is the name of the file used for auto-saving the current buffer
+25 2 auto save hook	this normal hook is run whenever an auto-save is about to happen
+25 2 buffer saved size	the value of this buffer-local variable is the length of the current buffer when it was last read in saved or auto-saved
+25 2 auto save list file name	this variable if non-nil specifies a file for recording the names of all the auto-save files
+15 5 generate autoload cookie	the value of this variable should be a string whose syntax is a lisp comment
+15 5 generated autoload file	the value of this variable names an emacs lisp file where the autoload calls should go
+19 6.1 completion ignore case	if the value of this variable is non-nil case is not considered significant in completion
+19 6.1 completion regexp list	this is a list of regular expressions
+38 16 noninteractive	this variable is non-nil when emacs is running in batch mode
+37 22 ring bell function	if this is non-nil it specifies how emacs should “ring the bell”
+37 24 bidi display reordering	if the value of this buffer-local variable is non-nil the default emacs performs bidirectional reordering for display
+37 24 bidi paragraph direction	if the value of this buffer-local variable is the symbol right-to-left or left-to-right all paragraphs in the buffer are assumed to have that specified direction
+37 20 blink paren function	the value of this variable should be a function of no arguments to be called whenever a character with close parenthesis syntax is inserted
+31 2 filter buffer substring function	the value of this variable is a function that filter-buffer-substring will call to do the actual work
+31 2 filter buffer substring functions	this obsolete variable is a wrapper hook whose members should be functions that accept four arguments fun start end and delete
+31 2 buffer substring filters	the value of this obsolete variable should be a list of functions that accept a single string argument and return another string
+26 4 buffer file name	this buffer-local variable contains the name of the file being visited in the current buffer or nil if it is not visiting a file
+26 4 buffer file truename	this buffer-local variable holds the abbreviated truename of the file visited in the current buffer or nil if no file is visited
+26 4 buffer file number	this buffer-local variable holds the file number and directory device number of the file visited in the current buffer or nil if no file or a nonexistent file is visited
+26 4 list buffers directory	this buffer-local variable specifies a string to display in a buffer listing where the visited file name would go for buffers that don’t have a visited file name
+26 8 buffer list update hook	this is a normal hook run whenever the buffer list changes
+27 10 buffer display count	this buffer-local variable records the number of times a buffer has been displayed in a window
+27 10 buffer display time	this buffer-local variable records the time at which a buffer was last displayed in a window
+4 9 ascii case table	the case table for the ascii character set
+31 28 before change functions	this variable holds a list of functions to call before any buffer modification
+31 28 after change functions	this variable holds a list of functions to call after any buffer modification
+31 28 first change hook	this variable is a normal hook that is run whenever a buffer is changed that was previously in the unmodified state
+31 28 inhibit modification hooks	if this variable is non-nil all of the change hooks are disabled none of them run
+32 6 unicode category table	the value of this variable is a char-table see char-tables that specifies for each character its unicode general_category property as a symbol
+32 6 char script table	the value of this variable is a char-table that specifies for each character a symbol whose name is the script to which the character belongs according to the unicode standard classification of the unicode code space into script-specific blocks
+32 6 char width table	the value of this variable is a char-table that specifies the width of each character in columns that it will occupy on the screen
+32 6 printable chars	the value of this variable is a char-table that specifies for each character whether it is printable or not
+32 7 charset list	the value is a list of all defined character set names
+27 12 display buffer overriding action	the value of this variable should be a display action which is treated with the highest priority by display-buffer
+20 15 command history	this variable’s value is a list of recent complex commands each represented as a form to evaluate
+20 5 last command	this variable records the name of the previous command executed by the command loop the one before the current command
+20 5 real last command	this variable is set up by emacs just like last-command but never altered by lisp programs
+20 5 last repeatable command	this variable stores the most recently executed command that was not part of an input event
+20 5 this command	this variable records the name of the command now being executed by the editor command loop
+20 5 this original command	this has the same value as this-command except when command remapping occurs see remapping commands
+20 5 last nonmenu event	this variable holds the last input event read as part of a key sequence not counting events resulting from mouse menus
+20 5 last command event	this variable is set to the last input event that was read by the command loop as part of a command
+20 5 last event frame	this variable records which frame the last input event was directed to
+20 1 pre command hook	this normal hook is run by the editor command loop before it executes each command
+20 1 post command hook	this normal hook is run by the editor command loop after it executes each command including commands terminated prematurely by quitting or by errors
+38 1.4 command line processed	the value of this variable is t once the command line has been processed
+38 1.4 command switch alist	this variable is an alist of user-defined command-line options and associated handler functions
+38 1.4 command line args	the value of this variable is the list of command-line arguments passed to emacs
+38 1.4 command line args left	the value of this variable is the list of command-line arguments that have not yet been processed
+38 1.4 command line functions	this variable’s value is a list of functions for handling an unrecognized command-line argument
+31 5 overwrite mode	this variable controls whether overwrite mode is in effect
+14 1 customize package emacs version alist	this alist provides a mapping for the versions of emacs that are associated with versions of a package listed in the :package-version keyword
+19 6.3 minibuffer completion table	the value of this variable is the completion table used for completion in the minibuffer
+19 6.3 minibuffer completion predicate	this variable’s value is the predicate that completing-read passes to try-completion
+19 6.3 minibuffer completion confirm	this variable determines whether emacs asks for confirmation before exiting the minibuffer completing-read binds this variable and the function minibuffer-complete-and-exit checks the value before exiting
+19 6.3 minibuffer confirm exit commands	this variable holds a list of commands that cause emacs to ask for confirmation before exiting the minibuffer if the require-match argument to completing-read is confirm-after-completion
+19 6.3 minibuffer local completion map	completing-read uses this value as the local keymap when an exact match of one of the completions is not required
+19 6.3 minibuffer local must match map	completing-read uses this value as the local keymap when an exact match of one of the completions is required
+19 6.3 minibuffer local filename completion map	this is a sparse keymap that simply unbinds spc because filenames can contain spaces
+19 6.8 completion at point functions	the value of this abnormal hook should be a list of functions which are used to compute a completion table for completing the text at point
+19 6.6 completion styles alist	this variable stores a list of available completion styles
+19 6.6 completion extra properties	this variable is used to specify extra properties of the current completion command
+24 9 insert directory program	this variable’s value is the program to run to generate a directory listing for the function insert-directory
+34 6.5 multibyte syntax as symbol	if this variable is non-nil scan-sexps treats all non-ascii characters as symbol constituents regardless of what the syntax table says about them
+21 9 global map	this variable contains the default global keymap that maps emacs keyboard input to commands
+21 9 minor mode map alist	this variable is an alist describing keymaps that may or may not be active according to the values of certain variables
+21 9 minor mode overriding map alist	this variable allows major modes to override the key bindings for particular minor modes
+21 9 overriding local map	if non-nil this variable holds a keymap to use instead of the buffer’s local keymap any text property or overlay keymaps and any minor mode keymaps
+21 9 overriding terminal local map	if non-nil this variable holds a keymap to use instead of overriding-local-map the buffer’s local keymap text property or overlay keymaps and all the minor mode keymaps
+21 9 overriding local map menu flag	if this variable is non-nil the value of overriding-local-map or overriding-terminal-local-map can affect the display of the menu bar
+21 9 special event map	this variable holds a keymap for special events
+21 9 emulation mode map alists	this variable holds a list of keymap alists to use for emulation modes
+11 10.2 change major mode hook	the function kill-all-local-variables runs this normal hook before it does anything else
+28 1 before make frame hook	a normal hook run by make-frame before it creates the frame
+28 1 after make frame functions	an abnormal hook run by make-frame after it creates the frame
+28 1 frame inherited parameters	this variable specifies the list of frame parameters that a newly created frame inherits from the currently selected frame
+4 3 split string default separators	the default value of separators for split-string
+8 3 obarray	this variable is the standard obarray for use by intern and read
+28 3.3.7 cursor type	this buffer-local variable controls how the cursor looks in a selected window showing the buffer
+14 6 custom known themes	the value of this variable is a list of themes loaded into emacs
+32 10.5 process coding system alist	this variable is an alist specifying which coding systems to use for a subprocess depending on which program is running in the subprocess
+32 10.5 network coding system alist	this variable is an alist that specifies the coding system to use for network streams
+32 10.5 default process coding system	this variable specifies the coding systems to use for subprocess and network stream input and output when nothing else specifies what to do
+37 17.8 image load path	this variable’s value is a list of locations in which to search for image files
+37 5.4 delayed warnings list	the value of this variable is a list of warnings to be displayed after the current command has finished
+37 5.4 delayed warnings hook	this is a normal hook which is run by the emacs command loop after post-command-hook in order to to process and display delayed warnings
+22 8 desktop save buffer	if this buffer-local variable is non-nil the buffer will have its state saved in the desktop file at desktop save
+22 8 desktop buffer mode handlers	alist with elements (major-mode
+11 12 dir locals class alist	this alist holds the class symbols and the associated variable settings
+11 12 dir locals directory cache	this alist holds directory names their assigned class names and modification times of the associated directory local variables file if there is one
+11 12 enable dir local variables	if nil directory-local variables are ignored
+20 14 disabled command function	the value of this variable should be a function
+37 16.5 left margin width	this variable specifies the width of the left margin in character cell (a
+37 16.5 right margin width	this variable specifies the width of the right margin in character cell units
+38 20 dynamic library alist	this is an alist of dynamic libraries and external library files implementing them
+16 4 byte compile dynamic	if this is non-nil the byte compiler generates compiled files that are set up for dynamic function loading
+37 4.4 cursor in echo area	this variable controls where the cursor appears when a message is displayed in the echo area
+37 4.4 echo area clear hook	this normal hook is run whenever the echo area is cleared—either by message nil or for any other reason
+37 4.4 message truncate lines	normally displaying a long message resizes the echo area to display the entire message
+32 10.2 buffer file coding system	this buffer-local variable records the coding system used for saving the buffer and for writing part of the buffer with write-region
+32 10.2 save buffer coding system	this variable specifies the coding system for saving the buffer by overriding buffer-file-coding-system
+32 10.2 last coding system used	i/o operations for files and subprocesses set this variable to the coding system name that was used
+32 10.2 file name coding system	the variable file-name-coding-system specifies the coding system to use for encoding file names
+17 1.1 debug on signal	normally errors caught by condition-case never invoke the debugger
+17 1.1 debug on message	if you set debug-on-message to a regular expression emacs will enter the debugger if it displays a matching message in the echo area
+9 5 values	the value of this variable is a list of the values returned by all the expressions that were read evaluated and printed from buffers including the minibuffer by the standard emacs commands which do this
+20 8.6 unread command events	this variable holds a list of events waiting to be read as command input
+20 8.6 last input event	this variable records the last terminal input event read whether as part of a command or explicitly by a lisp program
+20 8.3 extra keyboard modifiers	this variable lets lisp programs “press” the modifier keys on the keyboard
+20 8.3 keyboard translate table	this terminal-local variable is the translate table for keyboard characters
+31 19.1 char property alias alist	this variable holds an alist which maps property names to a list of alternative property names
+31 19.1 default text properties	this variable holds a property list giving default values for text properties
+37 12.5 face remapping alist	the value of this variable is an alist whose elements have the form (face
+11 11 inhibit local variables regexps	this is a list of regular expressions
+11 11 file local variables alist	this buffer-local variable holds the alist of file-local variable settings
+11 11 before hack local variables hook	emacs calls this hook immediately before applying file-local variables stored in file-local-variables-alist
+11 11 hack local variables hook	emacs calls this hook immediately after it finishes applying file-local variables stored in file-local-variables-alist
+11 11 ignored local variables	this variable holds a list of variables that should not be given local values by files
+24 8.4 default directory	the value of this buffer-local variable is the default directory for the current buffer
+31 11 fill paragraph function	this variable provides a way to override the filling of paragraphs
+31 11 fill forward paragraph function	this variable provides a way to override how the filling functions such as fill-region and fill-paragraph move forward to the next paragraph
+31 11 use hard newlines	if this variable is non-nil the filling functions do not delete newlines that have the hard text property
+22 6.1 font lock defaults	this variable is set by major modes to specify how to fontify text in that mode
+22 6.9.1 font lock multiline	if the font-lock-multiline variable is set to t font lock will try to add the font-lock-multiline property automatically on multiline constructs
+37 12.9 face font rescale alist	this variable specifies scaling for certain faces
+37 2 pre redisplay function	a function run just before redisplay
+24 12.3 write region annotate functions	a list of functions for write-region to call
+24 12.3 write region post annotation function	the value of this variable if non-nil should be a function
+24 12.3 after insert file functions	each function in this list is called by insert-file-contents with one argument the number of characters inserted and with point at the beginning of the inserted text
+24 12.2 format alist	this list contains one format definition for each defined file format
+24 12.2 buffer file format	this variable states the format of the visited file
+24 12.2 buffer auto save file format	this variable specifies the format to use for auto-saving
+28 5 frame title format	this variable specifies how to compute a name for a frame when you have not explicitly specified one
+28 5 icon title format	this variable specifies how to compute the name for an iconified frame when you have not explicitly specified the frame title
+28 5 multiple frames	this variable is set automatically by emacs
+37 13.3 fringe cursor alist	this variable specifies the mapping from logical cursor type to the actual fringe bitmaps displayed in the right fringe
+37 13.2 fringe indicator alist	this buffer-local variable specifies the mapping from logical fringe indicators to the actual bitmaps displayed in the window fringes
+37 13.1 fringes outside margins	the fringes normally appear between the display margins and the window text
+37 13.1 left fringe width	this variable if non-nil specifies the width of the left fringe in pixels
+37 13.1 right fringe width	this variable if non-nil specifies the width of the right fringe in pixels
+E 3 post gc hook	this is a normal hook that is run at the end of garbage collection
+E 3 memory full	this variable is t if emacs is nearly out of memory for lisp objects and nil otherwise
+E 3 gcs done	this variable contains the total number of garbage collections done so far in this emacs session
+E 3 gc elapsed	this variable contains the total number of seconds of elapsed time during garbage collection so far in this emacs session as a floating-point number
+37 21.5 glyphless char display	the value of this variable is a char-table which defines glyphless characters and how they are displayed
+37 21.4 glyph table	the value of this variable if non-nil is the current glyph table
+22 4.7 header line format	this variable local in every buffer specifies how to display the header line for windows displaying the buffer
+23 5 help map	the value of this variable is a local keymap for characters following the help key c-h
+23 5 help form	if this variable is non-nil its value is a form to evaluate whenever the character help-char is read
+23 5 prefix help command	this variable holds a function to print help for a prefix key
+23 5 data directory	this variable holds the name of the directory in which emacs finds certain documentation and text files that come with emacs
+15 10 after load functions	this abnormal hook is run after loading a file
+15 1 load in progress	this variable is non-nil if emacs is in the process of loading a file and it is nil otherwise
+15 1 load file name	when emacs is in the process of loading a file this variable’s value is the name of that file as emacs found it during the search described earlier in this section
+15 1 load read function	this variable specifies an alternate expression-reading function for load and eval-region to use instead of read
+37 17.11 image cache eviction delay	this variable specifies the number of seconds an image can remain in the cache without being displayed
+37 17.1 image types	this variable contains a list of type symbols for image formats which are potentially supported in the current configuration
+37 17.6 image format suffixes	this variable is an alist mapping image types to file name extensions
+22 5 imenu generic expression	this variable if non-nil is a list that specifies regular expressions for finding definitions for imenu
+22 5 imenu case fold search	this variable controls whether matching against the regular expressions in the value of imenu-generic-expression is case-sensitive t the default means matching should ignore case
+22 5 imenu syntax alist	this variable is an alist of syntax table modifiers to use while processing imenu-generic-expression to override the syntax table of the current buffer
+22 5 imenu prev index position function	if this variable is non-nil its value should be a function that finds the next “definition” to put in the buffer index scanning backward in the buffer from point
+22 5 imenu extract index name function	if this variable is non-nil its value should be a function to return the name for a definition assuming point is in that definition as the imenu-prev-index-position-function function would leave it
+22 5 imenu create index function	this variable specifies the function to use for creating a buffer index
+38 1.2 before init hook	this normal hook is run once just before loading all the init files (site-start
+38 1.2 after init hook	this normal hook is run once just after loading all the init files (site-start
+38 1.2 emacs startup hook	this normal hook is run once just after handling the command line arguments
+38 1.2 window setup hook	this normal hook is very similar to emacs-startup-hook
+38 1.2 user init file	this variable holds the absolute file name of the user’s init file
+38 1.2 user emacs directory	this variable holds the name of the
+28 9 focus in hook	this is a normal hook run when an emacs frame gains input focus
+28 9 focus out hook	this is a normal hook run when an emacs frame loses input focus
+18 3 standard input	this variable holds the default input stream—the stream that read uses when the stream argument is nil
+18 3 read circle	if non-nil this variable enables the reading of circular and shared structures
+32 11 current input method	this variable holds the name of the input method now active in the current buffer
+32 11 input method alist	this variable defines all the supported input methods
+3 1 most positive fixnum	the value of this variable is the largest integer that emacs lisp can handle
+3 1 most negative fixnum	the value of this variable is the smallest integer that emacs lisp can handle
+17 1.8 debugger	the value of this variable is the function to call to invoke the debugger
+17 1.8 debug on next call	if this variable is non-nil it says to call the debugger before the next eval apply or funcall
+17 1.8 command debug status	this variable records the debugging status of the current interactive command
+31 8.6 kill ring	this variable holds the list of killed text sequences most recently killed first
+31 8.6 kill ring yank pointer	this variable’s value indicates which element of the kill ring is at the “front” of the ring for yanking
+37 6 buffer invisibility spec	this variable specifies which kinds of invisible properties actually make a character invisible
+20 8.4 input method function	if this is non-nil its value specifies the current input method function
+20 8.1 num input keys	this variable’s value is the number of key sequences processed so far in this emacs session
+20 16 executing kbd macro	this variable contains the string or vector that defines the keyboard macro that is currently executing
+20 16 defining kbd macro	this variable is non-nil if and only if a keyboard macro is being defined
+20 16 last kbd macro	this variable is the definition of the most recently defined keyboard macro
+20 16 kbd macro termination hook	this normal hook is run when a keyboard macro terminates regardless of what caused it to terminate reaching the macro end or an error which ended the macro prematurely
+21 17.3 menu prompt more char	this variable specifies the character to use to ask to see the next line of a menu
+26 10 kill buffer query functions	before confirming unsaved changes kill-buffer calls the functions in the list kill-buffer-query-functions in order of appearance with no arguments
+26 10 kill buffer hook	this is a normal hook run by kill-buffer after asking all the questions it is going to ask just before actually killing the buffer
+26 10 buffer save without query	this variable if non-nil in a particular buffer tells save-buffers-kill-emacs and save-some-buffers to save this buffer (if it’s modified) without asking the user
+38 2.1 kill emacs hook	this normal hook is run by kill-emacs before it kills emacs
+38 2.1 kill emacs query functions	when save-buffers-kill-terminal is killing emacs it calls the functions in this hook after asking the standard questions and before calling kill-emacs
+31 19.7 buffer access fontify functions	this variable holds a list of functions for computing text properties
+31 19.7 buffer access fontified property	if this variable’s value is non-nil it is a symbol which is used as a text property name
+15 3 load path	the value of this variable is a list of directories to search when loading files with load
+32 10.3 inhibit null byte detection	if this variable has a non-nil value null bytes are ignored when detecting the encoding of a region or a string
+32 10.3 inhibit iso escape detection	if this variable has a non-nil value iso-2022 escape sequences are ignored when detecting the encoding of a region or a string
+29 2.6 beginning of defun function	if non-nil this variable holds a function for finding the beginning of a defun
+29 2.6 end of defun function	if non-nil this variable holds a function for finding the end of a defun
+15 2 load suffixes	this is a list of suffixes indicating compiled or source emacs lisp files
+15 2 load file rep suffixes	this is a list of suffixes that indicate representations of the same file
+32 12 locale coding system	this variable specifies the coding system to use for decoding system error messages and—on x window system only—keyboard input for encoding the format argument to format-time-string and for decoding the return value of format-time-string
+32 12 system messages locale	this variable specifies the locale to use for generating system error messages
+32 12 system time locale	this variable specifies the locale to use for formatting time values
+31 8.5 interprogram paste function	this variable provides a way of transferring killed text from other programs when you are using a window system
+31 8.5 interprogram cut function	this variable provides a way of communicating killed text to other programs when you are using a window system
+24 11 inhibit file name handlers	this variable holds a list of handlers whose use is presently inhibited for a certain operation
+24 11 inhibit file name operation	the operation for which certain handlers are presently inhibited
+25 1.1 buffer backed up	this buffer-local variable says whether this buffer’s file has been backed up on account of this buffer
+25 1.1 backup enable predicate	this variable’s value is a function to be called on certain occasions to decide whether a file should have backup files
+25 1.1 backup inhibited	if this variable is non-nil backups are inhibited
+3 9 float e	the mathematical constant e (2
+3 9 float pi	the mathematical constant pi (3
+E 4 cons cells consed	the total number of cons cells that have been allocated so far in this emacs session
+E 4 floats consed	the total number of floats that have been allocated so far in this emacs session
+E 4 vector cells consed	the total number of vector cells that have been allocated so far in this emacs session
+E 4 symbols consed	the total number of symbols that have been allocated so far in this emacs session
+E 4 string chars consed	the total number of string characters that have been allocated so far in this session
+E 4 misc objects consed	the total number of miscellaneous objects that have been allocated so far in this session
+E 4 intervals consed	the total number of intervals that have been allocated so far in this emacs session
+E 4 strings consed	the total number of strings that have been allocated so far in this emacs session
+21 17.5 menu bar final items	normally the menu bar shows global items followed by items defined by the local maps
+21 17.5 menu bar update hook	this normal hook is run by redisplay to update the menu bar contents before redisplaying the menu bar
+19 6.2 completing read function	the value of this variable must be a function which is called by completing-read to actually do its work
+19 4 history add new input	if the value of this variable is nil standard functions that read from the minibuffer don’t add new elements to the history list
+19 4 minibuffer history	the default history list for minibuffer history input
+19 4 query replace history	a history list for arguments to query-replace and similar arguments to other commands
+19 4 file name history	a history list for file-name arguments
+19 4 buffer name history	a history list for buffer-name arguments
+19 4 regexp history	a history list for regular expression arguments
+19 4 extended command history	a history list for arguments that are names of extended commands
+19 4 shell command history	a history list for arguments that are shell commands
+19 4 read expression history	a history list for arguments that are lisp expressions to evaluate
+19 4 face name history	a history list for arguments that are faces
+19 14 minibuffer setup hook	this is a normal hook that is run whenever the minibuffer is entered
+19 14 minibuffer exit hook	this is a normal hook that is run whenever the minibuffer is exited
+19 14 minibuffer help form	the current value of this variable is used to rebind help-form locally inside the minibuffer see help functions
+19 14 minibuffer scroll window	if the value of this variable is non-nil it should be a window object
+28 8 default minibuffer frame	this variable specifies the frame to use for the minibuffer window by default
+22 3 minor mode list	the value of this variable is a list of all minor mode commands
+22 2.6 change major mode after body hook	this is a normal hook run by run-mode-hooks
+22 2.6 after change major mode hook	this is a normal hook run by run-mode-hooks
+22 4.4 mode line mule info	this variable holds the value of the mode line construct that displays information about the language environment buffer coding system and current input method
+22 4.4 mode line modified	this variable holds the value of the mode line construct that displays whether the current buffer is modified
+22 4.4 mode line frame identification	this variable identifies the current frame
+22 4.4 mode line buffer identification	this variable identifies the buffer being displayed in the window
+22 4.4 vc mode	the variable vc-mode buffer-local in each buffer records whether the buffer’s visited file is maintained with version control and if so which kind
+22 4.4 mode line remote	this variable is used to show whether default-directory for the current buffer is remote
+22 4.4 mode line client	this variable is used to identify emacsclient frames
+22 4.4 mode name	this buffer-local variable holds the “pretty” name of the current buffer’s major mode
+22 4.4 mode line process	this buffer-local variable contains the mode line information on process status in modes used for communicating with subprocesses
+22 4.4 minor mode alist	this variable holds an association list whose elements specify how the mode line should indicate that a minor mode is active
+22 4.4 global mode string	this variable holds a mode line construct that by default appears in the mode line just after the which-func-mode minor mode if set else after mode-line-modes
+31 17.2 indent line function	this variable’s value is the function to be used by indent-for-tab-command and various other indentation commands to indent the current line
+28 14 mouse position function	if non-nil the value of this variable is a function for mouse-position to call
+28 2 delete terminal functions	an abnormal hook run by delete-terminal
+15 7 features	the value of this variable is a list of symbols that are the features loaded in the current emacs session
+22 6.4 font lock mark block function	if this variable is non-nil it should be a function that is called with no arguments to choose an enclosing range of text for refontification for the command m-o m-o font-lock-fontify-block
+22 6.4 font lock extra managed props	this variable specifies additional properties other than font-lock-face that are being managed by font lock mode
+22 6.4 font lock fontify buffer function	function to use for fontifying the buffer
+22 6.4 font lock unfontify buffer function	function to use for unfontifying the buffer
+22 6.4 font lock fontify region function	function to use for fontifying a region
+22 6.4 font lock unfontify region function	function to use for unfontifying a region
+36 9 process adaptive read buffering	on some systems when emacs reads the output from a subprocess the output data is read in very small blocks potentially resulting in very poor performance
+18 6 standard output	the value of this variable is the default output stream—the stream that print functions use when the stream argument is nil
+18 6 print quoted	if this is non-nil that means to print quoted forms using abbreviated reader syntax e
+18 6 print escape newlines	if this variable is non-nil then newline characters in strings are printed as ‘\n’ and formfeeds are printed as ‘\f’
+18 6 print escape nonascii	if this variable is non-nil then unibyte non-ascii characters in strings are unconditionally printed as backslash sequences by the print functions prin1 and print that print with quoting
+18 6 print escape multibyte	if this variable is non-nil then multibyte non-ascii characters in strings are unconditionally printed as backslash sequences by the print functions prin1 and print that print with quoting
+18 6 print length	the value of this variable is the maximum number of elements to print in any list vector or bool-vector
+18 6 print level	the value of this variable is the maximum depth of nesting of parentheses and brackets when printed
+18 6 print circle	if non-nil this variable enables detection of circular and shared structure in printing
+18 6 print gensym	if non-nil this variable enables detection of uninterned symbols see creating symbols in printing
+18 6 print continuous numbering	if non-nil that means number continuously across print calls
+18 6 print number table	this variable holds a vector used internally by printing to implement the print-circle feature
+18 6 float output format	this variable specifies how to print floating-point numbers
+37 13.6 overlay arrow string	this variable holds the string to display to call attention to a particular line or nil if the arrow feature is not in use
+37 13.6 overlay arrow position	this variable holds a marker that indicates where to display the overlay arrow
+37 13.6 overlay arrow variable list	this variable’s value is a list of variables each of which specifies the position of an overlay arrow
+28 17 x pointer shape	this variable specifies the pointer shape to use ordinarily in the emacs frame for the text pointer style
+28 17 x sensitive text pointer shape	this variable specifies the pointer shape to use when the mouse is over mouse-sensitive text
+34 6.2 syntax begin function	if this is non-nil it should be a function that moves to an earlier buffer position where the parser state is equivalent to nil—in other words a position outside of any comment string or parenthesis
+20 12 current prefix arg	this variable holds the raw prefix argument for the current command
+20 12 prefix arg	the value of this variable is the raw prefix argument for the next editing command
+20 12 last prefix arg	the raw prefix argument value used by the previous command
+10 5.3.2 command error function	this variable if non-nil specifies a function to use to handle errors that return control to the emacs command loop
+E 2 pure bytes used	the value of this variable is the number of bytes of pure storage allocated so far
+E 2 purify flag	this variable determines whether defun should make a copy of the function definition in pure storage
+20 11 quit flag	if this variable is non-nil then emacs quits immediately unless inhibit-quit is non-nil
+20 11 inhibit quit	this variable determines whether emacs should quit when quit-flag is set to a value other than nil
+26 7 buffer read only	this buffer-local variable specifies whether the buffer is read-only
+26 7 inhibit read only	if this variable is non-nil then read-only buffers and depending on the actual value some or all read-only characters may be modified
+19 6.5 read file name function	if non-nil this should be a function that accepts the same arguments as read-file-name
+19 6.5 minibuffer local shell command map	this keymap is used by read-shell-command for completing command and file names that are part of a shell command
+20 8.2 num nonmacro input events	this variable holds the total number of input events received so far from the terminal—not counting those generated by keyboard macros
+33 4 search spaces regexp	if this variable is non-nil it should be a regular expression that says how to search for whitespace
+31 17.3 indent region function	the value of this variable is a function that can be used by indent-region as a short cut
+22 6.9.2 font lock extend after change region function	this buffer-local variable is either nil or a function for font lock mode to call to determine the region to scan and fontify
+31 21 register alist	this variable is an alist of elements of the form (name
+28 22 x resource class	this variable specifies the application name that x-get-resource should look up
+28 22 x resource name	this variable specifies the instance name that x-get-resource should look up
+28 22 inhibit x resources	if this variable is non-nil emacs does not look up x resources and x resources do not have any effect when creating new frames
+25 3 revert buffer in progress p	revert-buffer binds this variable to a non-nil value while it is working
+25 3 revert buffer function	the value of this variable is the function to use to revert this buffer
+25 3 revert buffer insert file contents function	the value of this variable specifies the function to use to insert the updated contents when reverting this buffer
+25 3 before revert hook	this normal hook is run by the default revert-buffer-function before inserting the modified contents
+25 3 after revert hook	this normal hook is run by the default revert-buffer-function after inserting the modified contents
+25 3 buffer stale function	the value of this variable specifies a function to call to check whether a buffer needs reverting
+24 2 write file functions	the value of this variable is a list of functions to be called before writing out a buffer to its visited file
+24 2 write contents functions	this works just like write-file-functions but it is intended for hooks that pertain to the buffer’s contents not to the particular visited file or its location
+37 14 scroll bar width	this variable always local in all buffers specifies the width of the buffer’s scroll bars measured in pixels
+33 7 query replace map	this variable holds a special keymap that defines the valid user responses for perform-replace and the commands that use it as well as y-or-n-p and map-y-or-n-p
+33 7 multi query replace map	this variable holds a keymap that extends query-replace-map by providing additional keybindings that are useful in multi-buffer replacements
+33 7 replace search function	this variable specifies a function that perform-replace calls to search for the next string to replace
+33 7 replace re search function	this variable specifies a function that perform-replace calls to search for the next regexp to replace
+22 6.2 font lock keywords	the value of this variable is a list of the keywords to highlight
+22 6.2 font lock keywords case fold search	non-nil means that regular expression matching for the sake of font-lock-keywords should be case-insensitive
+37 7 selective display	this buffer-local variable enables selective display
+38 17 emacs save session functions	emacs supports saving state via a hook called emacs-save-session-functions
+37 17.9 max image size	this variable is used to define the maximum size of image that emacs will load
+38 14 play sound functions	a list of functions to be called before playing a sound
+31 19.4 inhibit point motion hooks	when this variable is non-nil point-left and point-entered hooks are not run and the intangible property has no effect
+31 19.4 show help function	if this variable is non-nil it specifies a function called to display help strings
+32 10.6 coding system for read	if this variable is non-nil it specifies the coding system to use for reading a file or for input from a synchronous subprocess
+32 10.6 coding system for write	this works much like coding-system-for-read except that it applies to output rather than input
+35 5 global abbrev table	this is the abbrev table for mode-independent abbrevs
+35 5 local abbrev table	the value of this buffer-local variable is the mode-specific abbreviation table of the current buffer
+35 5 abbrev minor mode table alist	the value of this variable is a list of elements of the form (mode
+35 5 fundamental mode abbrev table	this is the local abbrev table used in fundamental mode in other words it is the local abbrev table in all buffers in fundamental mode
+35 5 text mode abbrev table	this is the local abbrev table used in text mode
+35 5 lisp mode abbrev table	this is the local abbrev table used in lisp mode
+31 19.6 text property default nonsticky	this variable holds an alist which defines the default rear-stickiness of various text properties
+36 1 exec directory	the value of this variable is a string the name of a directory that contains programs that come with gnu emacs and are intended for emacs to invoke
+38 2.2 suspend hook	this variable is a normal hook that emacs runs before suspending
+38 2.2 suspend resume hook	this variable is a normal hook that emacs runs on resuming after a suspension
+36 3 process file side effects	this variable indicates whether a call of process-file changes remote files
+22 6.8 font lock keywords only	if the value of this variable is non-nil font lock does not do syntactic fontification only search-based fontification based on font-lock-keywords
+22 6.8 font lock syntax table	this variable holds the syntax table to use for fontification of comments and strings
+22 6.8 font lock beginning of syntax function	if this variable is non-nil it should be a function to move point back to a position that is syntactically at “top level” and outside of strings or comments
+22 6.8 font lock syntactic face function	if this variable is non-nil it should be a function to determine which face to use for a given syntactic element a string or a comment
+34 4 parse sexp lookup properties	if this is non-nil the syntax scanning functions like forward-sexp pay attention to syntax text properties
+34 4 syntax propertize function	this variable if non-nil should store a function for applying syntax-table properties to a specified stretch of text
+34 4 syntax propertize extend region functions	this abnormal hook is run by the syntax parsing code prior to calling syntax-propertize-function
+38 3 system configuration	this variable holds the standard gnu configuration name for the hardware/software configuration of your system as a string
+38 3 system type	the value of this variable is a symbol indicating the type of operating system emacs is running on
+38 3 process environment	this variable is a list of strings each describing one environment variable
+38 3 initial environment	this variable holds the list of environment variables emacs inherited from its parent process when emacs started
+38 3 path separator	this variable holds a string that says which character separates directories in a search path as found in an environment variable
+38 3 invocation name	this variable holds the program name under which emacs was invoked
+38 3 invocation directory	this variable holds the directory from which the emacs executable was invoked or nil if that directory cannot be determined
+38 3 installation directory	if non-nil this is a directory within which to look for the lib-src and etc subdirectories
+38 3 tty erase char	this variable holds the erase character that was selected in the system’s terminal driver before emacs was started
+22 2.7 tabulated list format	this buffer-local variable specifies the format of the tabulated list data
+22 2.7 tabulated list entries	this buffer-local variable specifies the entries displayed in the tabulated list buffer
+22 2.7 tabulated list revert hook	this normal hook is run prior to reverting a tabulated list buffer
+22 2.7 tabulated list printer	the value of this variable is the function called to insert an entry at point including its terminating newline
+22 2.7 tabulated list sort key	the value of this variable specifies the current sort key for the tabulated list buffer
+37 8 temp buffer setup hook	this normal hook is run by with-output-to-temp-buffer before evaluating body
+37 8 temp buffer show hook	this normal hook is run by with-output-to-temp-buffer after displaying the temporary buffer
+38 1.3 term file prefix	if the value of this variable is non-nil emacs loads a terminal-specific initialization file as follows (load (concat term-file-prefix (getenv "term"))) you may set the term-file-prefix variable to nil in your init file if you do not wish to load the terminal-initialization file
+38 1.3 tty setup hook	this variable is a normal hook that emacs runs after initializing a new text terminal
+19 2 read regexp defaults function	the function read-regexp may use the value of this variable to determine its list of default regular expressions
+19 2 minibuffer allow text properties	if this variable is nil then read-from-minibuffer and read-string strip all text properties from the minibuffer input before returning it
+19 2 minibuffer local map	this is the default local keymap for reading from the minibuffer
+19 2 minibuffer local ns map	this built-in variable is the keymap used as the minibuffer local keymap in the function read-no-blanks-input
+32 1 enable multibyte characters	this variable specifies the current buffer’s text representation
+27 20 other window scroll buffer	if this variable is non-nil it tells scroll-other-window which buffer’s window to scroll
+30 7 deactivate mark	if an editor command sets this variable non-nil then the editor command loop deactivates the mark after the command returns if transient mark mode is enabled
+30 7 mark active	the mark is active when this variable is non-nil
+30 7 activate mark hook	these normal hooks are run respectively when the mark becomes active and when it becomes inactive
+30 7 mark ring	the value of this buffer-local variable is the list of saved former marks of the current buffer most recent first
+21 17.6 tool bar map	by default the global map binds [tool-bar] as follows (global-set-key [tool-bar] `(menu-item ,(purecopy "tool bar") ignore :filter tool-bar-make-keymap)) the function tool-bar-make-keymap in turn derives the actual tool bar map dynamically from the value of the variable tool-bar-map
+21 17.6 auto resize tool bars	if this variable is non-nil the tool bar automatically resizes to show all defined tool bar items—but not larger than a quarter of the frame’s height
+21 17.6 auto raise tool bar buttons	if this variable is non-nil tool bar items display in raised form when the mouse moves over them
+21 17.6 tool bar button margin	this variable specifies an extra margin to add around tool bar items
+21 17.6 tool bar button relief	this variable specifies the shadow width for tool bar items
+21 17.6 tool bar border	this variable specifies the height of the border drawn below the tool bar area
+21 14 input decode map	this variable holds a keymap that describes the character sequences sent by function keys on an ordinary character terminal
+21 14 local function key map	this variable holds a keymap similar to input-decode-map except that it describes key sequences which should be translated to alternative interpretations that are usually preferred
+21 14 key translation map	this variable is another keymap used just like input-decode-map to translate input events into other events
+32 9 standard translation table for decode	this is the default translation table for decoding
+32 9 standard translation table for encode	this is the default translation table for encoding
+32 9 translation table for input	self-inserting characters are translated through this translation table before they are inserted
+37 3 wrap prefix	if this buffer-local variable is non-nil it defines a wrap prefix which emacs displays at the start of every continuation line
+37 3 line prefix	if this buffer-local variable is non-nil it defines a line prefix which emacs displays at the start of every non-continuation line
+31 9 buffer undo list	this buffer-local variable’s value is the undo list of the current buffer
+31 9 undo in progress	this variable is normally nil but the undo commands bind it to t
+15 9 unload feature special hooks	this variable holds a list of hooks to be scanned before unloading a library to remove functions defined in the library
+38 4 init file user	this variable says which user’s init files should be used by emacs—or nil if none
+11 9.4 lexical binding	if this buffer-local variable is non-nil emacs lisp files and buffers are evaluated using lexical binding instead of dynamic binding
+11 14 byte boolean vars	this variable holds a list of all variables of type defvar_bool
+1 4 emacs build time	the value of this variable indicates the time at which emacs was built
+1 4 emacs version	the value of this variable is the version of emacs being run
+1 4 emacs major version	the major version number of emacs as an integer
+1 4 emacs minor version	the minor version number of emacs as an integer
+27 21 auto window vscroll	if this variable is non-nil the line-move scroll-up and scroll-down functions will automatically modify the vertical scroll position to scroll through display rows that are taller than the height of the window for example in the presence of large images
+24 1.1 find file not found functions	the value of this variable is a list of functions to be called when find-file or find-file-noselect is passed a nonexistent file name
+24 1.1 find file literally	this buffer-local variable if set to a non-nil value makes save-buffer behave as if the buffer were visiting its file literally i
+37 5.2 warning levels	this list defines the meaning and severity order of the warning severity levels
+37 5.2 warning prefix function	if non-nil the value is a function to generate prefix text for warnings
+37 5.2 warning series	programs can bind this variable to t to say that the next warning should begin a series
+37 5.2 warning fill prefix	when this variable is non-nil it specifies a fill prefix to use for filling each warning’s text
+37 5.2 warning type format	this variable specifies the format for displaying the warning type in the warning message
+15 8 load history	the value of this variable is an alist that associates the names of loaded library files with the names of the functions and variables they defined as well as the features they provided or required
+27 26 window scroll functions	this variable holds a list of functions that emacs should call before redisplaying a window with scrolling
+27 26 window size change functions	this variable holds a list of functions to be called if the size of any window changes for any reason
+27 26 window configuration change hook	a normal hook that is run every time you change the window configuration of an existing frame
+27 25 window persistent parameters	this variable is an alist specifying which parameters get saved by current-window-configuration and window-state-get and subsequently restored by set-window-configuration and window-state-put
+27 25 ignore window parameters	if this variable is non-nil some standard functions do not process window parameters
+27 18 window point insertion type	this variable specifies the marker insertion type see marker insertion types of window-point
+27 3 window size fixed	if this buffer-local variable is non-nil the size of any window displaying the buffer cannot normally be changed
+37 23 window system	this terminal-local variable tells lisp programs what window system emacs is using for displaying the frame
+37 23 initial window system	this variable holds the value of window-system used for the first frame created by emacs during startup
+29 2.2 inhibit field text motion	if this variable is non-nil certain motion functions including forward-word forward-sentence and forward-paragraph ignore field boundaries
+38 15 system key alist	this variable’s value should be an alist with one element for each system-specific keysym
+38 15 x alt keysym	the name of the keysym that should stand for the alt modifier respectively for meta hyper and super
+31 8.4 yank undo function	if this variable is non-nil the function yank-pop uses its value instead of delete-region to delete the text inserted by the previous yank or yank-pop command
+22 8.4	%-constructs in the mode line
+1 8.4	a sample function description
+1 8.4	a sample variable description
+35 8.4	looking up and expanding abbreviations
+35 8.4	saving abbrevs in files
+35 8.4	abbrev properties
+35 8.4	abbrev table properties
+35 8.4	abbrev tables
+35	abbrevs and abbrev expansion
+37 8.4	abstract display example
+37 8.4	abstract display functions
+37 8.4	abstract display
+36 8.4	accepting output from processes
+23 8.4	access to documentation strings
+20 8.4	accessing mouse events
+20 8.4	accessing scroll bar events
+11 8.4	accessing variable values
+1 8.4	acknowledgments
+37 8.4	active display table
+21 8.4	active keymaps
+31 8.4	adaptive fill mode
+11 8.4	defining new setf forms
+20 8.4	adjusting point after commands
+12 8.4	ways to compose advices
+12 8.4	advising emacs lisp functions
+12 8.4	advising named functions
+21 8.4	alias menu items
+12 8.4	anonymous functions
+A 8.4	old lisp features in emacs 23
+14 8.4	applying customizations
+13 8.4	evaluating macro arguments repeatedly
+12 8.4	other features of argument lists
+3 8.4	arithmetic operations
+6 8.4	functions that operate on arrays
+2 8.4	array type
+6 8.4	arrays
+2 8.4	association list type
+5 8.4	association lists
+36 8.4	creating an asynchronous process
+31 8.4	atomic change groups
+37 8.4	face attribute functions
+37 8.4	automatic face assignment
+31 8.4	auto filling
+22 8.4	how emacs chooses a major mode
+22 8.4	automatic indentation of code
+25 8.4	auto-saving
+2 8.4	autoload type
+15 8.4	autoload
+9 8.4	autoloading
+9 8.4	backquote
+17 8.4	backtracking in specifications
+25 8.4	backup files
+25 8.4	naming backup files
+25	backups and auto-saving
+31 8.4	base 64 encoding
+2 8.4	basic char syntax
+19 8.4	basic completion functions
+37 8.4	basic faces
+22 8.4	basic major modes
+28 8.4	basic parameters
+27 8.4	basic concepts of emacs windows
+38 8.4	batch mode
+37 8.4	beeping
+37 8.4	bidirectional display
+36 8.4	examples of byte unpacking and packing
+36 8.4	functions to unpack and pack bytes
+36 8.4	describing data layout
+3 8.4	bitwise operations on integers
+37 8.4	blinking parentheses
+2 8.4	bool-vector type
+6 8.4	bool-vectors
+2 8.4	drawing lists as box diagrams
+17 8.4	edebug breakpoints
+17 8.4	breaks
+26 8.4	buffer basics
+31 8.4	examining buffer contents
+29 8.4	motion to an end of the buffer
+26 8.4	buffer file name
+26 8.4	the buffer gap
+E 8.4	buffer internals
+26 8.4	the buffer list
+26 8.4	buffer modification
+26 8.4	buffer names
+28 8.4	buffer parameters
+1 8.4	buffer text notation
+2 8.4	buffer type
+11 8.4	buffer-local variables
+27 8.4	buffers and windows
+26	buffers
+E 8.4	building emacs
+5 8.4	building cons cells and lists
+37 8.4	button buffer commands
+37 8.4	button properties
+37 8.4	button types
+20 8.4	button-down events
+37 8.4	buttons
+16	byte compilation
+36 8.4	packing and unpacking byte arrays
+16 8.4	byte-code function objects
+2 8.4	byte-code function type
+E 8.4	c dialect
+E 8.4	c integer types
+12 8.4	calling functions
+31 8.4	case changes
+4 8.4	case conversion in lisp
+4 8.4	the case table
+10 8.4	explicit nonlocal exits catch and throw
+34 8.4	categories
+1 8.4	caveats
+31 8.4	change hooks
+24 8.4	changing file names and attributes
+21 8.4	changing key bindings
+31 8.4	changing text properties
+33 8.4	character classes
+2 8.4	char-table type
+6 8.4	char-tables
+32 8.4	character codes
+37 8.4	character display
+29 8.4	motion by characters
+32 8.4	character properties
+32 8.4	character sets
+2 8.4	character type
+17 8.4	checking whether to stop
+31 8.4	checksum/hash
+27 8.4	additional options for displaying buffers
+27 8.4	choosing a window for display
+2 8.4	read syntax for circular objects
+20 8.4	classifying events
+9 8.4	classification of list forms
+10 8.4	cleaning up from nonlocal exits
+20 8.4	click events
+31 8.4	defining clickable text
+12 8.4	closures
+D 8.4	emacs lisp coding conventions
+32 8.4	basic concepts of coding systems
+32 8.4	coding systems
+28 8.4	color names
+31 8.4	counting columns
+10 8.4	constructs for combining conditions
+20 8.4	command history
+20 8.4	information from the command loop
+20	command loop
+20 8.4	command loop overview
+38 8.4	command-line arguments
+31 8.4	user-level insertion commands
+D 8.4	tips on writing comments
+2 8.4	comments
+14 8.4	common item keywords
+31 8.4	comparing text
+3 8.4	comparison of numbers
+16 8.4	byte-compilation functions
+D 8.4	tips for making compiled code fast
+16 8.4	compiler errors
+13 8.4	macros and byte compilation
+19 8.4	minibuffer commands that do completion
+19 8.4	completion in ordinary buffers
+19 8.4	completion variables
+19 8.4	completion
+14 8.4	composite types
+10 8.4	conditionals
+2 8.4	cons cell and list types
+5 8.4	lists and cons cells
+11 8.4	variables that never change
+24 8.4	contents of directories
+34 8.4	parameters to control parsing
+10	control structures
+21 8.4	controlling the active keymaps
+1 8.4	conventions
+32 8.4	converting text representations
+27 8.4	coordinates and windows
+12 8.4	primitives to manipulate advices
+17 8.4	coverage testing
+24 8.4	creating copying and deleting directories
+11 8.4	creating and deleting buffer-local bindings
+26 8.4	creating buffers
+28 8.4	creating frames
+7 8.4	creating hash tables
+21 8.4	creating keymaps
+30 8.4	functions that create markers
+4 8.4	creating strings
+8 8.4	creating and interning symbols
+2 8.4	control-character syntax
+26 8.4	the current buffer
+28 8.4	cursor parameters
+14 8.4	custom themes
+14 8.4	customization types
+14	customization settings
+37 8.4	customizing fringe bitmaps
+22 8.4	customizing search-based fontification
+27 8.4	cyclic ordering of windows
+36 8.4	datagrams
+17 8.4	debugger commands
+17 8.4	the lisp debugger
+17	debugging lisp programs
+12 8.4	the declare form
+12 8.4	telling the compiler that a function is defined
+36 8.4	decoding process output
+31 8.4	dealing with compressed data
+27 8.4	dedicated windows
+32 8.4	default coding systems
+11 8.4	the default value of a buffer-local variable
+35 8.4	defining abbrevs
+20 8.4	defining commands
+37 8.4	defining faces
+12 8.4	defining functions
+7 8.4	defining hash comparisons
+37 8.4	defining images
+13 8.4	defining macros
+21 8.4	defining menus
+22 8.4	defining minor modes
+14 8.4	defining new types
+11 8.4	defining global variables
+8 8.4	defining symbols
+37 8.4	delayed warnings
+28 8.4	deleting frames
+36 8.4	deleting processes
+27 8.4	deleting windows
+31 8.4	deleting text
+22 8.4	defining derived modes
+23 8.4	describing characters for help messages
+38 8.4	desktop notifications
+22 8.4	desktop save mode
+28 8.4	dialog boxes
+11 8.4	directory local variables
+24 8.4	directory names
+20 8.4	disabling commands
+32 8.4	disabling multibyte characters
+16 8.4	disassembled byte-code
+27 8.4	action functions for display-buffer
+28 8.4	display feature testing
+37 8.4	displaying in the margins
+37 8.4	the display property
+37 8.4	display tables
+37	emacs display
+37 8.4	displaying faces
+37 8.4	displaying messages in the echo area
+20 8.4	distinguish interactive calls
+16 8.4	documentation strings and compilation
+23 8.4	documentation basics
+D 8.4	tips for documentation strings
+23	documentation
+2 8.4	dotted pair notation
+28 8.4	drag and drop
+20 8.4	drag events
+11 8.4	proper use of dynamic binding
+11 8.4	dynamic binding
+38 8.4	dynamically loaded libraries
+16 8.4	dynamic loading of individual functions
+21 8.4	easy menu
+37 8.4	echo area customization
+17 8.4	edebug and macros
+17 8.4	edebug display update
+17 8.4	evaluation
+17 8.4	edebug execution modes
+17 8.4	miscellaneous edebug commands
+17 8.4	edebug options
+17 8.4	edebug recursive edit
+17 8.4	edebug views
+17 8.4	edebug
+2 8.4	editing types
+22 8.4	emulating mode line formatting
+32 8.4	encoding and i/o
+33 8.4	accessing the entire match data
+2 8.4	equality predicates
+17 8.4	entering the debugger on an error
+1 8.4	error messages
+10 8.4	error symbols and condition names
+10 8.4	errors
+16 8.4	evaluation during compilation
+13 8.4	evaluating macro arguments in expansion
+17 8.4	evaluation list buffer
+9 8.4	eval
+1 8.4	evaluation notation
+9	evaluation
+20 8.4	event examples
+20 8.4	miscellaneous event input features
+20 8.4	modifying and translating input events
+31 8.4	examining text properties
+22 8.4	major mode examples
+10 8.4	examples of catch and throw
+17 8.4	excess close parentheses
+17 8.4	excess open parentheses
+29 8.4	excursions
+13 8.4	expansion of a macro call
+17 8.4	explicit entry to the debugger
+32 8.4	explicit encoding and decoding
+24 8.4	extended file attributes
+21 8.4	extended menu items
+37 8.4	face attributes
+37 8.4	functions for working with faces
+37 8.4	face remapping
+22 8.4	faces for font lock
+37 8.4	faces
+31 8.4	defining and using fields
+24 8.4	file attributes
+11 8.4	file local variables
+24 8.4	file locks
+24 8.4	file name completion
+24 8.4	file name components
+24 8.4	functions that expand filenames
+24 8.4	file names
+38 8.4	notifications on file changes
+24	files
+31 8.4	filling
+36 8.4	process filter functions
+28 8.4	finding all frames
+37 8.4	searching for overlays
+3 8.4	floating-point basics
+2 8.4	floating-point type
+20 8.4	focus events
+28 8.4	font and color parameters
+22 8.4	font lock basics
+22 8.4	font lock mode
+22 8.4	font lock multiline
+37 8.4	looking up fonts
+37 8.4	font selection
+2 8.4	font type
+37 8.4	fontsets
+37 8.4	forcing redisplay
+24 8.4	overview
+24 8.4	piecemeal specification
+24 8.4	round-trip specification
+24 8.4	file format conversion
+1 8.4	format of descriptions
+21 8.4	format of keymaps
+31 8.4	formatted text properties
+4 8.4	formatting strings
+9 8.4	kinds of forms
+2 8.4	frame configuration type
+28 8.4	frame configurations
+28 8.4	frame parameters
+28 8.4	frame titles
+2 8.4	frame type
+28	frames
+37 8.4	fringe bitmaps
+37 8.4	fringe cursors
+37 8.4	fringe indicators
+37 8.4	fringe size and position
+37 8.4	fringes
+12 8.4	accessing function cell contents
+17 8.4	entering the debugger on a function call
+12 8.4	documentation strings of functions
+9 8.4	evaluation of function forms
+9 8.4	symbol function indirection
+20 8.4	function keys
+12 8.4	naming a function
+12 8.4	determining whether a function is safe to call
+2 8.4	function type
+21 8.4	functions for key lookup
+12	functions
+E 8.4	garbage collection
+2 8.4	general escape syntax
+11 8.4	generalized variables
+20 8.4	select among command alternatives
+22 8.4	generic modes
+28 8.4	geometry
+38 8.4	getting out of emacs
+17 8.4	global break condition
+11 8.4	global variables
+37 8.4	glyphless character display
+37 8.4	glyphs
+-1	generic
+-1	generic
+-1	generic
+14 8.4	defining customization groups
+10 8.4	writing code to handle errors
+7 8.4	hash table access
+2 8.4	hash table type
+7	hash tables
+22 8.4	window header lines
+23 8.4	help functions
+19 8.4	high-level completion functions
+15 8.4	hooks for loading
+22 8.4	hooks
+27 8.4	horizontal scrolling
+15 8.4	how programs do loading
+38 8.4	idle timers
+37 8.4	image cache
+37 8.4	image descriptors
+37 8.4	image formats
+37 8.4	imagemagick images
+37 8.4	images
+22 8.4	imenu
+31 8.4	adjustable “tab stops”
+31 8.4	indentation
+13 8.4	indenting macros
+-1	generic
+26 8.4	indirect buffers
+17 8.4	debugging infinite loops
+24 8.4	information about files
+30 8.4	information from markers
+21 8.4	inheritance and keymaps
+38 8.4	the init file
+19 8.4	initial input
+28 8.4	initial frame parameters
+12 8.4	inline functions
+20 8.4	input events
+28 8.4	input focus
+18 8.4	input functions
+32 8.4	input methods
+38 8.4	input modes
+18 8.4	input streams
+36 8.4	sending input to processes
+31 8.4	inserting text
+17 8.4	instrumenting macro calls
+17 8.4	instrumenting for edebug
+3 8.4	integer basics
+2 8.4	integer type
+20 8.4	interactive call
+20 8.4	code characters for interactive
+20 8.4	examples of using interactive
+17 8.4	internals of the debugger
+31 8.4	internals of the kill ring
+9 8.4	introduction to evaluation
+11 8.4	introduction to buffer-local variables
+19 8.4	introduction to minibuffers
+1	introduction
+37 8.4	invisible text
+17 8.4	invoking the debugger
+20 8.4	invoking the input method
+10 8.4	iteration
+17 8.4	jumping
+21 8.4	commands for binding keys
+D 8.4	key binding conventions
+21 8.4	key lookup
+20 8.4	key sequence input
+21 8.4	key sequences
+20 8.4	keyboard events
+20 8.4	keyboard macros
+21 8.4	menus and the keyboard
+21 8.4	keymap basics
+2 8.4	keymap type
+22 8.4	keymaps and minor modes
+21	keymaps
+23 8.4	substituting key bindings in documentation
+31 8.4	functions for killing
+31 8.4	kill ring concepts
+26 8.4	killing buffers
+38 8.4	killing emacs
+24 8.4	distinguishing kinds of files
+12 8.4	components of a lambda expression
+12 8.4	lambda expressions
+28 8.4	layout parameters
+31 8.4	lazy computation of text properties
+22 8.4	levels of font lock
+11 8.4	lexical binding
+D 8.4	conventional headers for emacs libraries
+15 8.4	library search
+37 8.4	line height
+32 8.4	coding systems in lisp
+2	lisp data types
+1 8.4	lisp history
+5 8.4	accessing elements of lists
+29 8.4	moving over balanced expressions
+5 8.4	modifying list variables
+5 8.4	predicates on lists
+5	lists
+15 8.4	load suffixes
+15 8.4	loading non-ascii characters
+15	loading
+11 8.4	local variables
+32 8.4	locales
+24 8.4	locating files in standard places
+37 8.4	logging messages in *messages*
+37 8.4	low-level font representation
+31 8.4	low-level kill ring
+36 8.4	low-level network access
+34 8.4	low-level parsing
+9 8.4	lisp macro evaluation
+2 8.4	macro type
+13	macros
+24 8.4	making certain file names “magic”
+31 8.4	maintaining undo lists
+22 8.4	major mode conventions
+22 8.4	major modes
+25 8.4	making backup files
+37 8.4	making buttons
+28 8.4	window management parameters
+37 8.4	managing overlays
+37 8.4	manipulating buttons
+12 8.4	mapping functions
+31 8.4	margins for filling
+30 8.4	marker insertion types
+2 8.4	marker type
+30	markers
+33 8.4	the match data
+3 8.4	standard mathematical functions
+E 8.4	memory usage
+21 8.4	the menu bar
+21 8.4	menu example
+21 8.4	menu keymaps
+21 8.4	menu separators
+2 8.4	meta-character syntax
+19 8.4	minibuffer commands
+19 8.4	completion and the minibuffer
+19 8.4	minibuffer contents
+19 8.4	minibuffer history
+19 8.4	minibuffer miscellany
+19 8.4	minibuffer windows
+28 8.4	minibuffers and frames
+19	minibuffers
+22 8.4	conventions for writing minor modes
+22 8.4	minor modes
+20 8.4	miscellaneous system events
+36 8.4	misc network facilities
+22 8.4	getting help about a major mode
+22 8.4	mode hooks
+22 8.4	mode line basics
+22 8.4	the data structure of the mode line
+22 8.4	mode line format
+22 8.4	the top level of mode line control
+22 8.4	variables used in the mode line
+31 8.4	indentation controlled by major mode
+22	major and minor modes
+26 8.4	buffer modification time
+5 8.4	modifying existing list structure
+21 8.4	modifying menus
+4 8.4	modifying strings
+34 8.4	motion and syntax
+31 8.4	indentation-based motion commands
+20 8.4	motion events
+34 8.4	motion commands based on parsing
+29 8.4	motion
+20 8.4	mouse events
+21 8.4	menus and the mouse
+28 8.4	mouse position
+28 8.4	mouse tracking
+30 8.4	moving marker positions
+39 8.4	multi-file packages
+37 8.4	multi-frame images
+22 8.4	multiline font lock constructs
+19 8.4	asking multiple y-or-n questions
+28 8.4	multiple terminals
+15 8.4	features
+29 8.4	narrowing
+31 8.4	examining text near point
+36 8.4	testing availability of network features
+36 8.4	network options
+36 8.4	make-network-process
+36 8.4	network servers
+36 8.4	network connections
+1 8.4	nil and t
+32	non-ascii characters
+2 8.4	non-ascii characters in strings
+10 8.4	nonlocal exits
+2 8.4	nonprinting characters in strings
+31 8.4	why text properties are not intervals
+25 8.4	making and deleting numbered backup files
+3	numbers
+3 8.4	numeric conversions
+19 8.4	reading lisp objects with the minibuffer
+E 8.4	object internals
+12 8.4	declaring functions obsolete
+22 8.4	operator precedence grammars
+2 8.4	other character modifier bits
+37 8.4	other display specifications
+22 8.4	other font lock variables
+7 8.4	other hash table functions
+37 8.4	other image types
+36 8.4	receiving output from processes
+18 8.4	output functions
+18 8.4	output streams
+18 8.4	variables affecting output
+37 8.4	the overlay arrow
+37 8.4	overlay properties
+2 8.4	overlay type
+37 8.4	overlays
+30 8.4	overview of markers
+39 8.4	creating and maintaining package archives
+39 8.4	packaging basics
+39	preparing lisp code for distribution
+28 8.4	access to frame parameters
+34 8.4	parser state
+34 8.4	parsing expressions
+31 8.4	parsing html and xml
+10 8.4	pattern matching case statement
+37 8.4	pixel specification for spaces
+5 8.4	property lists outside symbols
+5 8.4	property lists and association lists
+29 8.4	point
+28 8.4	pointer shape
+28 8.4	pop-up menus
+12 8.4	adapting code using the old defadvice
+28 8.4	position parameters
+34 8.4	finding the parse state for a position
+29	positions
+33 8.4	posix regular expression searching
+37 8.4	postscript images
+22 8.4	precalculated fontification
+4 8.4	predicates for strings
+30 8.4	predicates on markers
+3 8.4	type predicates for numbers
+20 8.4	prefix command arguments
+21 8.4	prefix keys
+2 8.4	primitive function type
+31 8.4	indentation primitives
+2 8.4	printed representation and read syntax
+17 8.4	printing in edebug
+1 8.4	printing notation
+13 8.4	common problems using macros
+36 8.4	process buffers
+36 8.4	process information
+E 8.4	process internals
+2 8.4	process type
+36	processes
+10 8.4	how emacs processes errors
+38 8.4	processor run time
+17 8.4	profiling
+19 8.4	programmed completion
+D 8.4	emacs programming tips
+2 8.4	programming types
+37 8.4	reporting operation progress
+22 8.4	properties in the mode line
+5 8.4	property lists
+31 8.4	text property search functions
+E 8.4	pure storage
+36 8.4	querying before exit
+27 8.4	quitting windows
+20 8.4	quitting
+20 8.4	quoted character input
+9 8.4	quoting
+28 8.4	raising and lowering frames
+3 8.4	random numbers
+18	reading and printing lisp objects
+26 8.4	read-only buffers
+19 8.4	reading a password
+19 8.4	reading file names
+24 8.4	reading from files
+20 8.4	reading input
+20 8.4	reading one event
+5 8.4	functions that rearrange lists
+27 8.4	recombining windows
+38 8.4	recording input
+20 8.4	recursive editing
+19 8.4	recursive minibuffers
+37 8.4	refreshing the screen
+33 8.4	backslash constructs in regular expressions
+33 8.4	complex regexp example
+33 8.4	regular expression functions
+33 8.4	regular expression searching
+33 8.4	special characters in regular expressions
+31 8.4	indenting an entire region
+22 8.4	region to fontify after a buffer change
+31 8.4	registers
+33 8.4	regular expressions
+12 8.4	other topics related to functions
+24 8.4	absolute and relative file names
+31 8.4	indentation relative to previous lines
+21 8.4	remapping commands
+25 8.4	backup by renaming or by copying?
+20 8.4	repeat events
+13 8.4	how many times is the macro expanded?
+15 8.4	repeated loading
+33 8.4	replacing the text that matched
+37 8.4	display specs that replace the text
+27 8.4	resizing windows
+28 8.4	x resources
+25 8.4	reverting
+6 8.4	managing a fixed-size ring of objects
+3 8.4	rounding operations
+22 8.4	running hooks
+24 8.4	saving buffers
+33 8.4	saving and restoring the match data
+32 8.4	scanning for character sets
+21 8.4	scanning keymaps
+29 8.4	motion by screen lines
+37 8.4	scroll bars
+33 8.4	search and replace
+22 8.4	search-based fontification
+33 8.4	searching and case
+33	searching and matching
+21 8.4	searching the active keymaps
+32 8.4	selecting a representation
+27 8.4	selecting windows
+37 8.4	selective display
+9 8.4	self-evaluating forms
+36 8.4	sentinels detecting process status changes
+6 8.4	sequences
+2 8.4	sequence types
+6	sequences arrays and vectors
+10 8.4	sequencing
+36 8.4	communicating with serial ports
+38 8.4	session management
+5 8.4	altering list elements with setcar
+5 8.4	altering the cdr of a list
+5 8.4	using lists as sets
+11 8.4	the setf macro
+22 8.4	setting hooks
+11 8.4	setting variable values
+36 8.4	shell arguments
+37 8.4	showing images
+10 8.4	how to signal an error
+36 8.4	sending signals to processes
+12 8.4	a simple lambda expression example
+13 8.4	a simple example of a macro
+33 8.4	simple match data access
+21 8.4	simple menu items
+39 8.4	simple packages
+14 8.4	simple types
+28 8.4	frame size and position
+37 8.4	size of displayed text
+28 8.4	size parameters
+29 8.4	skipping characters
+22 8.4	customizing indentation
+22 8.4	defining the grammar of a language
+22 8.4	sample indentation rules
+22 8.4	helper functions for indentation rules
+22 8.4	specifying indentation rules
+22 8.4	defining tokens
+22 8.4	smie setup and features
+22 8.4	living with a weak parser
+22 8.4	simple minded indentation engine
+1 8.4	some terms
+31 8.4	sorting text
+38 8.4	sound output
+17 8.4	source breakpoints
+20 8.4	special events
+9 8.4	special forms
+31 8.4	properties with special meanings
+17 8.4	specification examples
+17 8.4	specification list
+37 8.4	specified spaces
+32 8.4	specifying a coding system for one operation
+16 8.4	performance of byte-compiled code
+14 8.4	splicing into lists
+27 8.4	splitting windows
+35 8.4	standard abbrev tables
+-1	generic
+24 8.4	standard file names
+-1	generic
+-1	generic
+8 8.4	standard symbol properties
+33 8.4	standard regular expressions used in editing
+38 8.4	starting up emacs
+38 8.4	summary sequence of actions at startup
+31 8.4	stickiness of text properties
+2 8.4	stream type
+18 8.4	introduction to reading and printing
+4 8.4	string and character basics
+4 8.4	conversion of characters and strings
+33 8.4	searching for strings
+2 8.4	string type
+4	strings and characters
+20 8.4	putting keyboard events in strings
+36 8.4	functions that create subprocesses
+24 8.4	subroutines of visiting
+31 8.4	substituting for a character code
+13 8.4	local variables in macro expansions
+38 8.4	suspending emacs
+26 8.4	swapping text between two buffers
+27 8.4	switching to a buffer in a window
+8 8.4	symbol components
+9 8.4	symbol forms
+8 8.4	accessing symbol properties
+8 8.4	symbol properties
+2 8.4	symbol type
+8	symbols
+36 8.4	creating a synchronous process
+22 8.4	syntactic font lock
+34 8.4	syntax table concepts
+34 8.4	table of syntax classes
+34 8.4	syntax descriptors
+17 8.4	debugging invalid lisp syntax
+34 8.4	syntax flags
+2 8.4	syntax for strings
+33 8.4	syntax of regular expressions
+34 8.4	syntax properties
+34 8.4	syntax table functions
+34 8.4	syntax table internals
+34	syntax tables
+38 8.4	operating system environment
+38	operating system interface
+36 8.4	accessing other processes
+22 8.4	tabulated list mode
+37 8.4	temporary displays
+32 8.4	terminal i/o encoding
+38 8.4	terminal input
+38 8.4	terminal output
+28 8.4	terminal parameters
+2 8.4	terminal type
+38 8.4	terminal-specific initialization
+17 8.4	test coverage
+24 8.4	testing accessibility
+4 8.4	comparison of characters and strings
+19 8.4	reading text strings with the minibuffer
+29 8.4	motion by text lines
+31 8.4	text properties
+2 8.4	text properties in strings
+32 8.4	text representations
+28 8.4	text terminal colors
+31	text
+27 8.4	textual scrolling
+37 8.4	the echo area
+31 8.4	the kill ring
+30 8.4	the mark
+17 8.4	the outside context
+30 8.4	the region
+38 8.4	time calculations
+38 8.4	time conversion
+38 8.4	time of day
+38 8.4	parsing and formatting times
+38 8.4	timers for delayed execution
+11 8.4	tips for defining variables robustly
+-1	generic
+21 8.4	tool bars
+17 8.4	trace buffer
+36 8.4	transaction queues
+21 8.4	keymaps for translating sequences of events
+32 8.4	translation of characters
+31 8.4	transposition of text
+17 8.4	trapping errors
+24 8.4	truenames
+37 8.4	truncation
+14 8.4	type keywords
+2 8.4	type predicates
+31 8.4	undo
+24 8.4	generating unique file names
+15 8.4	unloading
+38 8.4	user identification
+32 8.4	user-chosen coding systems
+31 8.4	user-level deletion commands
+17 8.4	using the debugger
+17 8.4	using edebug
+20 8.4	using interactive
+11 8.4	using lexical binding
+37 8.4	usual display conventions
+11 8.4	variable aliases
+14 8.4	defining customization variables
+11 8.4	scoping rules for variable bindings
+11 8.4	variables with restricted values
+11	variables
+6 8.4	functions for vectors
+2 8.4	vector type
+6 8.4	vectors
+1 8.4	version information
+27 8.4	vertical fractional scrolling
+28 8.4	visibility of frames
+24 8.4	visiting files
+24 8.4	functions for visiting files
+11 8.4	when a variable is “void”
+20 8.4	waiting for elapsed time or input
+37 8.4	warning basics
+37 8.4	warning options
+D 8.4	tips for avoiding compiler warnings
+37 8.4	warning variables
+37 8.4	reporting warnings
+12 8.4	what is a function?
+15 8.4	which file defined a certain symbol
+2 8.4	window configuration type
+27 8.4	window configurations
+37 8.4	window dividers
+28 8.4	window frame parameters
+27 8.4	window history
+27 8.4	hooks for window scrolling and changes
+E 8.4	window internals
+27 8.4	window parameters
+27 8.4	windows and point
+27 8.4	window sizes
+27 8.4	the window start and end positions
+28 8.4	window system selections
+37 8.4	window systems
+2 8.4	window type
+27 8.4	windows and frames
+27	windows
+29 8.4	motion by words
+E 8.4	writing emacs primitives
+24 8.4	writing to files
+13 8.4	wrong time
+38 8.4	operating on x11 keysyms
+37 8.4	xbm images
+37 8.4	xpm images
+31 8.4	functions for yanking
+31 8.4	yanking
+19 8.4	yes-or-no queries
