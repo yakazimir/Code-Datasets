@@ -86,6 +86,9 @@ originally come from:
 Contact
 -----------------------------
 
+If you have any questions, or find errors, please write the address
+below: 
+
 kyle@ims.uni-stuttgart.de
 
 [website](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/kyle/)
