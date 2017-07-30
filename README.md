@@ -31,7 +31,7 @@ name ``name``:
 | extra\_pairs.txt | The extra data described above |
 | pseudo\_lex.txt | Output symbols mapped to themselves. |
 
-Warning: The data is relatively noisy. These particular files are directly from our model, other users
+``Warning:`` The data is relatively noisy. These particular files are directly from our model, other users
 of the data might decide to make different decision about how the code
 is representated. If you need more information, please write the
 email address below. 
@@ -43,6 +43,7 @@ We have also used these resources, and other soon-to-be published resources, for
 code retrieval and question answering. See information below:
 
 [online demo](http://zubr.ims.uni-stuttgart.de/)
+
 [related paper (to appear at EMNLP)](https://arxiv.org/abs/1706.00468)
 
 References
