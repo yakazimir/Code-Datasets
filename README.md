@@ -28,7 +28,7 @@ name ``name``:
 | rank\_list\_class.txt | Abstract class sequences for output |
 | rank\_list\_tree.txt | Syntax information about reps |
 | descriptions.txt | Output symbols with associated words |
-| extra\_pairs.txt | The extra data described above |
+| extra\_pairs.txt | The extra data used above, taken from API |
 | pseudolex.txt | Output symbols mapped to themselves. |
 
 ``Warning:`` The data is relatively noisy. These particular files are directly from our model, other users
