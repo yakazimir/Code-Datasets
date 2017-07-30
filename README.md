@@ -57,6 +57,7 @@ If you use any of these resources, please cite the following:
   title     = {Learning {S}emantic {C}orrespondences in {T}echnical {D}ocumentation},
   booktitle = {Proceedings of the ACL},
   year      = {2017},
+  url={http://aclweb.org/anthology/P/P17/P17-1148.pdf},
  }
 
 You might also consider citing the following, which is where the Unix and Java portion of the data
@@ -66,7 +67,7 @@ originally come from:
   title={UnixMan {C}orpus: A {R}esource for {L}anguage {L}earning in the {U}nix {D}omain.},
   author={Richardson, Kyle and Kuhn, Jonas},
   booktitle={Proceedings of LREC},
-  year={2014}
+  year={2014},
 }
 
 @inproceedings{deng2014semantic,
