@@ -36,7 +36,7 @@ of the data might decide to make different decision about how the code
 is representated. If you need more information, please write the
 email address below. 
 
-Code retrieval and Question Answering 
+Code retrieval and Question Answering, Text Generation
 --------------------------
 
 We have also used these resources, and other soon-to-be published resources, for studying source
@@ -45,6 +45,11 @@ code retrieval and question answering. See information below:
 [online demo](http://zubr.ims.uni-stuttgart.de/)
 
 [related paper (to appear at EMNLP)](https://arxiv.org/abs/1706.00468)
+
+We are also working on organizing a shared task on data-to-text
+generation using these resource, more information can be found here:
+[generation paper](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/kyle/proposal.pdf)
+
 
 References
 ---------------------------
