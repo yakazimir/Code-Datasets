@@ -72,7 +72,7 @@ originally come from:
 
 @inproceedings{deng2014semantic,
   title={Semantic approaches to software component retrieval with English queries.},
-  author={Deng, Huijing and Chrupa\L{}a, Grzegorz},
+  author={Deng, Huijing and Chrupa\l{}a, Grzegorz},
   booktitle={Proceedings of LREC},
   year={2014}
   }
