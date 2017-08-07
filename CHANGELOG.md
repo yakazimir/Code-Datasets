@@ -1,5 +1,5 @@
 # Changelog
-Please keep track of any changes to the data or to this repository so that such changes can be taken into account for using the data for reproducing experiments and comparing to published results. 
+Please keep track of any changes to the data or to this repository so that such changes can be taken into account when using the data for reproducing experiments and/or comparing to published results. 
 
 
 ##  2017-29-7
