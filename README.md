@@ -48,7 +48,7 @@ code retrieval and question answering. See information below:
 
 We are also working on organizing a shared task on data-to-text
 generation using these resource, more information can be found here:
-[generation paper](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/kyle/proposal.pdf)
+[generation paper](https://arxiv.org/abs/1708.00098)
 
 
 References
@@ -73,13 +73,15 @@ originally come from:
   author={Richardson, Kyle and Kuhn, Jonas},
   booktitle={Proceedings of LREC},
   year={2014},
+  utl={http://www.lrec-conf.org/proceedings/lrec2014/pdf/823_Paper.pdf},
 }
 
 @inproceedings{deng2014semantic,
   title={Semantic approaches to software component retrieval with English queries.},
   author={Deng, Huijing and Chrupa\l{}a, Grzegorz},
   booktitle={Proceedings of LREC},
-  year={2014}
+  year={2014},
+  url={http://www.lrec-conf.org/proceedings/lrec2014/pdf/106_Paper.pdf},
   }
   ```
 
