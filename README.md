@@ -47,7 +47,7 @@ code retrieval and question answering. See information below:
 [related paper (to appear at EMNLP)](https://arxiv.org/abs/1706.00468)
 
 We are also working on organizing a shared task on data-to-text
-generation using these resource, more information can be found here:
+generation using these resources, more information can be found here:
 [generation paper](https://arxiv.org/abs/1708.00098)
 
 
