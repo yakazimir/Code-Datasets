@@ -32,6 +32,9 @@ name ``name``:
 | descriptions.txt | Output symbols with associated words |
 | extra\_pairs.txt | The extra data used above, taken from API |
 | pseudolex.txt | Output symbols mapped to themselves. |
+| grammar.txt   | A set of grammar rules for hiero decoding|
+| hiero\_rules.txt| Hierarchical phrase rules extracted from training |
+| phrase\_table.txt| Phrase rules extracted from training |
 
 ``Warning:`` The data is relatively noisy. These particular files are directly from our model, other users
 of the data might decide to make different decision about how the code
