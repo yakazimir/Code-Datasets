@@ -41,7 +41,7 @@ email address below.
 Code retrieval and Question Answering, Text Generation
 --------------------------
 
-We have also used these resources, and other soon-to-be published resources, for studying source
+We have also used these resources  for studying source
 code retrieval and question answering. See information below:
 
 [online demo](http://zubr.ims.uni-stuttgart.de/)
