@@ -8,3 +8,7 @@ Please keep track of any changes to the data or to this repository so that such 
 - data/ directory with all datasets from Richardson and Kuhn 2017 ACL. 
 - .gitignore : mostly contains blocks to remove some of the experiment files from the local computer. 
 
+## 2017-6-8
+## Added
+-- other_data/py27 : All of the data for the EMNLP data paper.
+-- updated the .gitignore to ignore some other auxiliary files in py27 dataset
