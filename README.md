@@ -65,10 +65,17 @@ If you use any of these resources, please cite the following:
   year      = {2017},
   url={http://aclweb.org/anthology/P/P17/P17-1148.pdf},
   }
+
+@inproceedings{richardson-kuhn:2017:Demo,
+  author    = {Richardson, Kyle  and  Kuhn, Jonas},
+  title     = {Function {A}ssistant: {A} {T}ool for {NL} {Q}uerying of {API}s},
+  booktitle = {Proceedings of the EMNLP},
+  year      = {2017},
+  }
 ```
 
 You might also consider citing the following, which is where the Unix and Java portion of the data
-originally come from:
+originally come from (respctively):
 
  ```
 @inproceedings{richardson2014unixman,
