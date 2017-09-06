@@ -1,0 +1,912 @@
+core		collapse_stmts	stmts	returns a flat list containing every statement in the tree stmts
+core	Script	__init__		loads the script by parsing all of the given files and then walking the various asts to initialize this script object
+core	Script	scan_script_files		scan the directories for script files
+core	Script	load_string	filename filedata linenumber	loads ren'py script from a string
+core	Script	finish_load	stmts initcode check_names filename	given stmts, a list of ast nodes comprising the root block finishes loading it
+core	Script	write_rpyc_header	f	writes an empty version 2 rpyc header to the open binary file f
+core	Script	write_rpyc_data	f slot data	writes data into slot of a rpyc file the data should be a binary
+core	Script	write_rpyc_md5	f digest	writes the md5 to the end of a rpyc file
+core	Script	read_rpyc_data	f slot	reads the binary data from slot in a rpyc v1 or v2 file returns
+core	Script	static_transforms	stmts	this performs transformations on the script that can be performed statically
+core	Script	init_bytecode		init/loads the bytecode cache
+core	Script	update_bytecode		compiles the pycode objects in self all_pycode updating the
+core	Script	lookup	label	looks up the given label in the game if the label is not found
+core	Script	has_label	label	returns true if the label exists or false otherwise
+core	Script	analyze		analyzes all statements that need analysis
+core		interact	type roll_forward	:doc ui :args (roll_forward=none mouse='default')
+core		child_or_fixed		causes the current widget to be given child-fixed semantics this
+core		at	transform	:doc ui specifies a transform that is applied to the next displayable to
+core		detached		:doc ui do not add the next displayable to any later or container
+core		layer	name	:doc ui adds displayables to the layer named name
+core		close	d	:doc ui :args ()
+core		combine_style	style_prefix style_suffix	combines a style prefix and style suffix to create a style name then returns the style object corresoinding to that name
+core		prefixed_style	style_suffix	combines the default style prefix with a style suffix
+core		_implicit_add	d	a faster version of add to use when we know d is a displayable and isn't transformed
+core		screen_id	id_ d	:doc ui assigns the displayable d the screen widget id id_, as if it had
+core	Formatter	parse	s	parses s according to ren'py string formatting rules returns a list
+core		substitute	s scope force translate	performs translation and formatting on s, as necessary
+core		displayable	d scope	:doc udd_utility :name renpy
+core		dynamic_image	d scope prefix	substitutes a scope into d, then returns a displayable
+core		split_properties	properties	:doc other splits up properties into multiple dictionaries one per prefix
+core		get_path	fn	returns the path to fn relative to the gamedir if any of the directories
+core		index_archives		loads in the indexes for the archive files also updates the lower_map
+core		cleardirfiles		clears the lists above when the game has changed
+core		scandirfiles		scans directories archives and apks and fills out game_files and common_files
+core		listdirfiles	common	returns a list of directory file tuples known to the system if
+core		load_core	name	returns an open python file object of the given type
+core		get_prefixes		returns a list of prefixes to search for files
+core		loadable_core	name	returns true if the name is loadable with load false if it is not
+core		transfn	name	tries to translate the name to a file that exists in one of the searched directories
+core		get_hash	name	returns the time the file m was last modified or 0 if it doesn't exist or is archived
+core		auto_mtime	fn	gets the mtime of fn or none if the file does not exist
+core		add_auto	fn force	adds fn as a file we watch for changes if it's mtime changes or the file
+core		auto_thread_function		this thread sets need_autoreload when necessary
+core		auto_init		starts the autoreload thread
+core		auto_quit		terminates the autoreload thread
+core		AlphaBlend	control old new alpha	:doc disp_effects this transition uses a control displayable (almost always some sort of
+core		At	d	:doc disp_at given a displayable d, applies each of the transforms in args
+core		const	name	:doc const declares a variable in the store to be constant
+core		not_const	name	:doc const declares a name in the store to be not constant
+core		pure	fn	:doc const declares a function as pure
+core	DeltaSet	__init__	base copy	represents a set that stores its contents as differences from a base set
+core	Analysis	imagemap		returns not_const if we're in a non-constant imagemap
+core	Analysis	exit_loop		call this to indicate the current loop is being exited by the continue or break statements
+core	Analysis	at_fixed_point		returns true if we've reached a fixed point where the analysis has not changed since the last time we called this function
+core	Analysis	mark_constant	name	marks name as a potential local constant
+core	Analysis	mark_not_constant	name	marks name as definitely not-constant
+core	Analysis	is_constant	node	returns true if node is constant for the purpose of screen language
+core	Analysis	is_constant_expr	expr	compiles expr into an ast node then returns the result of self
+core	Analysis	python	code	performs analysis on a block of python code
+core	Analysis	parameters	parameters	analyzes the parameters to the screen
+core	CompilerCache	ast_eval_literal	expr	compiles an expression into an ast
+core	CompilerCache	ast_exec	code	compiles a block into an ast
+core		run	restart	this is called during a single run of the script restarting the script
+core		image_exists_imprecise	name	returns true if the image is a plausible image that can be used in a show statement
+core		image_exists_precise	name	returns true if an image exists with the same tag and attributes as name
+core		image_exists	name expression tag precise	checks a scene or show statement for image existence
+core		check_filename_encodings		checks files to ensure that they are displayable in unicode
+core		common	n	returns true if the node is in the common directory
+core		lint		the master lint function that's responsible for staging all of the other checks
+core		renpy_pure	fn	marks renpy fn as a pure function
+core		public_api		:undocumented this does nothing except to make warnings about unused imports go away
+core		roll_forward_info		:doc rollback when in rollback returns the data that was supplied to :func renpy
+core		roll_forward_core	value	:undocumented to cause a roll_forward to occur return the value of this function
+core		in_rollback		:doc rollback returns true if the game has been rolled back
+core		can_rollback		:doc rollback returns true if we can rollback
+core		in_fixed_rollback		:doc blockrollback returns true if rollback is currently occurring and the current
+core		checkpoint	data keep_rollback	:doc rollback :args (data=none)
+core		block_rollback		:doc blockrollback prevents the game from rolling back to before the current
+core		suspend_rollback	flag	:doc rollback :args flag
+core		fix_rollback		:doc blockrollback prevents the user from changing decisions made before the current
+core		retain_after_load		:doc retain_after_load causes data modified between the current statement and the statement
+core		count_displayables_in_layer	layer	returns how many displayables are in the supplied layer
+core		image	name d	:doc se_images defines an image
+core		copy_images	old new	:doc image_func copies images beginning with one prefix to images beginning with
+core		default_layer	layer tag expression	:undocumented if layer is not none returns it
+core		can_show	name layer tag	:doc image_func determines if name can be used to show an image
+core		showing	name layer	:doc image_func returns true if an image with the same tag as name is showing on
+core		predict_show	name layer what tag	:undocumented predicts a scene or show statement
+core		show	name at_list layer what	:doc se_images :args (name at_list=[ ], layer='master', what=none zorder=0 tag=none behind=[ ])
+core		hide	name layer	:doc se_images hides an image from a layer
+core		scene	layer	:doc se_images removes all displayables from layer
+core		input	prompt default allow exclude	:doc input calling this function pops up a window asking the player to enter some
+core		menu	items set_expr	:undocumented displays a menu and returns to the user the value of the selected
+core		choice_for_skipping		:doc other tells ren'py that a choice is coming up soon
+core		predict_menu		:undocumented predicts widgets that are used by the menu
+core		display_menu	items window_style interact with_none	:doc se_menu :args (items interact=true screen="choice")
+core		predict_say	who what	:undocumented this is called to predict the results of a say command
+core		scry_say	who scry	:undocumented called when scry is called on a say statement
+core		say	who what interact	:doc se_say the equivalent of the say statement
+core		imagemap	ground selected hotspots unselected	:undocumented use screens already
+core		pause	delay music with_none hard	:doc other causes ren'py to pause
+core		movie_cutscene	filename delay loops stop_music	:doc movie_cutscene this displays an mpeg-1 cutscene for the specified number of
+core		with_statement	trans always paired clear	:doc se_with :name renpy
+core		rollback	force checkpoints defer greedy	:doc rollback rolls the state of the game back to the last checkpoint
+core		toggle_fullscreen		:undocumented toggles the fullscreen mode
+core		toggle_music		:undocumented does nothing
+core		has_label	name	:doc label returns true if name is a valid label the program or false otherwise
+core		get_all_labels		:doc label returns the set of all labels defined in the program including labels
+core		take_screenshot	scale background	:doc loadsave causes a screenshot to be taken
+core		full_restart	transition label target	:doc other causes ren'py to restart returning the user to the main menu
+core		utter_restart		:undocumented used in the implementation of shift+r
+core		reload_script		:doc other causes ren'py to save the game reload the script and then load the
+core		quit	relaunch status	:doc other this causes ren'py to exit entirely
+core		jump	label	:doc se_jump causes the current statement to end and control to jump to the given
+core		jump_out_of_context	label	:doc label causes control to leave the current context and then to be
+core		call	label	:doc se_call causes the current ren'py statement to terminate and a jump to a
+core		return_statement		:doc se_call causes ren'py to return from the current ren'py-level call
+core		screenshot	filename	:doc other saves a screenshot in filename
+core		version	tuple	:doc renpy_version if tuple is false returns a string containing "ren'py ", followed by
+core		transition	trans layer always force	:doc other :args (trans layer=none always=false)
+core		get_transition	layer	:doc other gets the transition for layer, or the entire scene if
+core		clear_game_runtime		:doc other resets the game runtime counter
+core		get_game_runtime		:doc other returns the game runtime counter
+core		loadable	filename	:doc file returns true if the given filename is loadable meaning that it
+core		exists	filename	:doc file_rare returns true if the given filename can be found in the
+core		restart_interaction		:doc other restarts the current interaction
+core		context		:doc context returns an object that is unique to the current context
+core		context_nesting_level		:doc context returns the nesting level of the current context
+core		music_start	filename loops fadeout fadein	deprecated music start function retained for compatibility use
+core		music_stop	fadeout	deprecated music start function retained for compatibility use
+core		get_filename_line		:doc debug returns a pair giving the filename and line number of the current
+core		log	msg	:doc debug if :var config
+core		force_full_redraw		:doc other forces the screen to be redrawn in full
+core		dynamic		:doc other this can be given one or more variable names as arguments
+core		context_dynamic		:doc other this can be given one or more variable names as arguments
+core		seen_label	label	:doc label returns true if the named label has executed at least once on the current user's
+core		seen_audio	filename	:doc audio returns true if the given filename has been played at least once on the current
+core		seen_image	name	:doc image_func returns true if the named image has been seen at least once on the user's
+core		file	fn	:doc file returns a read-only file-like object that accesses the file named fn
+core		image_size	im	:doc file_rare given an image manipulator loads it and returns a (width,
+core		get_at_list	name layer	:doc se_images returns the list of transforms being applied to the image with tag name
+core		show_layer_at	at_list layer	:doc se_images the python equivalent of the show layer layer at at_list
+core		free_memory		:doc other attempts to free some memory
+core		quit_event		:doc other triggers a quit event as if the player clicked the quit button in the
+core		iconify		:doc other iconifies the game
+core		timeout	seconds	:doc udd_utility causes an event to be generated before seconds seconds have elapsed
+core		end_interaction	value	:doc udd_utility if value is not none immediately ends the current interaction causing
+core		scry		:doc other returns the scry object for the current statement
+core		load_module	name	:doc other this loads the ren'py module named name
+core		load_string	s filename	:doc other loads s as ren'py script that can be called
+core		pop_call		:doc other :name renpy
+core		call_stack_depth		:doc other returns the depth of the call stack of the current context - the number
+core		game_menu	screen	:undocumented probably not what we want in the presence of screens
+core		shown_window		:doc other call this to indicate that the window has been shown
+core		get_placement	d	:doc image_func this gets the placement of displayable d
+core		get_image_bounds	tag width height layer	:doc image_func if an image with tag exists on layer, returns the bounding box of
+core		cache_pin		:undocumented cache pin is deprecated
+core		cache_unpin		:undocumented cache pin is deprecated
+core		start_predict		:doc image_func this function takes one or more displayables as arguments
+core		stop_predict		:doc image_func this function takes one or more displayables as arguments
+core		start_predict_screen	_screen_name	:doc screens causes ren'py to start predicting the screen named _screen_name
+core		stop_predict_screen	name	:doc screens causes ren'py to stop predicting the screen named name will be shown
+core		call_screen	_screen_name	:doc screens the programmatic equivalent of the call screen statement
+core		list_files	common	:doc file lists the files in the game directory and archive files
+core		get_renderer_info		:doc other returns a dictionary giving information about the renderer ren'py is
+core		display_reset		:undocumented used internally
+core		mode	mode	:doc modes causes ren'py to enter the named mode or stay in that mode if it's
+core		get_mode		:doc modes returns the current mode or none if it is not defined
+core		notify	message	:doc other causes ren'py to display the message using the notify screen
+core		variant	name	:doc screens returns true if a name is a screen variant that can be chosen
+core		vibrate	duration	:doc other causes the device to vibrate for duration seconds
+core		get_say_attributes		:doc other gets the attributes associated with the current say statement or
+core		get_side_image	prefix_tag image_tag not_showing layer	:doc other this attempts to find an image to show as the side image
+core		get_physical_size		:doc other returns the size of the physical window
+core		set_physical_size	size	:doc other attempts to set the size of the physical window to size
+core		reset_physical_size		:doc other attempts to set the size of the physical window to the specified values
+core		fsencode	s	:doc file_rare :name renpy
+core		fsdecode	s	:doc file_rare :name renpy
+core		get_image_load_log	age	:doc other a generator that yields a log of image loading activity
+core		end_replay		:doc replay if we're in a replay ends the replay immediately
+core		save_persistent		:doc persistent saves the persistent data to disk
+core		is_seen	ever	:doc other returns true if the current line has been seen by the player
+core		get_mouse_pos		:doc other returns an x y tuple giving the location of the mouse pointer or the
+core		set_mouse_pos	x y duration	:doc other jump the mouse pointer to the location given by arguments x and y
+core		set_autoreload	autoreload	:doc other sets the autoreload flag which determines if the game will be
+core		get_autoreload		:doc other gets the autoreload flag
+core		count_dialogue_blocks		:doc other returns the number of dialogue blocks in the game's original language
+core		count_seen_dialogue_blocks		:doc other returns the number of dialogue blocks the user has seen in any play-through
+core		count_newly_seen_dialogue_blocks		:doc other returns the number of dialogue blocks the user has seen for the first time
+core		substitute	s scope translate	:doc other applies translation and new-style formatting to the string s
+core		munge	name filename	:doc other munges name, which must begin with __
+core		get_return_stack		:doc label returns a list giving the current return stack
+core		set_return_stack	stack	:doc label sets the current return stack
+core		invoke_in_thread	fn	:doc other invokes the function fn in a background thread passing it the
+core		cancel_gesture		:doc gesture cancels the current gesture preventing the gesture from being recognized
+core		execute_default_statement	start	:undocumented executes the default statement
+core		write_log	s	:undocumented writes to log
+core		predicting		:doc screens returns true if ren'py is currently predicting the screen
+core		get_line_log		:undocumented returns the list of lines that have been shown since the last time
+core		clear_line_log		:undocumented clears the line log
+core		add_layer	layer above below menu_clear	:doc other adds a new layer to the screen
+core		maximum_framerate	t	:doc other forces ren'py to draw the screen at the maximum framerate for t seconds
+core		is_start_interact		:doc other returns true if restart_interaction has not been called during the current
+core		play	filename channel	:doc audio plays a sound effect
+core		get_editable_input_value		:undocumented returns the current input value and a flag that is true if it is editable
+core		set_editable_input_value	input_value editable	:undocumented sets the currently active input value and if it should be marked as
+core		get_refresh_rate	precision	:doc other returns the refresh rate of the current screen as a floating-point
+core		get_identifier_checkpoints	identifier	:doc rollback given a rollback_identifier from a historyentry object returns the number
+core		get_adjustment	bar_value	:doc other given bar_value, a :class barvalue, returns the :func ui
+core		get_skipping		:doc other returns true if the ren'py is skipping "fast" if ren'py is fast skipping
+core	Color	normalize		:doc color method returns a normalized version of this color where all components fall
+core	Color	interpolate	other fraction	:doc color method interpolates between this color and other in the rgb color
+core	Color	interpolate_hsv	other fraction	:doc color method interpolates between this color and other in the hsv color
+core	Color	interpolate_hls	other fraction	:doc color method interpolates between this color and other in the hls color
+core	Color	tint	fraction	:doc color method creates a tint of this color by mixing it with white
+core	Color	shade	fraction	:doc color method creates a shade of this color by mixing it with black
+core	Color	opacity	opacity	:doc color method multiplies the alpha channel of this color by opacity, and returns
+core	Color	rotate_hue	rotation	:doc color method rotates this color's hue by rotation, and returns the new color
+core	Color	replace_hue	hue	:doc color method replaces this color's hue with hue, which should be between 0
+core	Color	multiply_hls_saturation	saturation	:doc color method multiplies this color's saturation by saturation, and returns
+core	Color	multiply_hsv_saturation	saturation	:doc color method multiplies this color's saturation by saturation, and returns
+core	Color	multiply_value	value	:doc color method multiples this color's value by value and returns the result as a
+core	Color	replace_hls_saturation	saturation	:doc color method replaces this color's saturation with saturation, and returns
+core	Color	replace_hsv_saturation	saturation	:doc color method replace this color's saturation with saturation, and returns
+core	Color	replace_value	value	:doc color method replaces this color's value with value and returns the result as a
+core	Color	replace_lightness	lightness	:doc color method replaces this color's lightness with lightness, and returns
+core	Color	replace_opacity	opacity	:doc color method replaces this color's alpha channel with opacity, and
+core		warp		given a filename and line number this attempts to warp the user to that filename and line number
+core	Parser	add	i	adds a clause to this parser
+core	Parser	parse_eval	expr lineno	parses an expression for eval and then strips off the module and expr instances and adjusts the line number
+core	Parser	parse_exec	code lineno	parses an expression for exec then strips off the module and adjusts the line number
+core	Parser	parse	l name	this is expected to parse a function statement and to return a list of python ast statements
+core	ScreenLangScreen	define	location	defines a screen
+core		parse_screen	l	parses the screen statement
+core		not_infinite_loop	delay	:doc other resets the infinite loop detection timer to delay seconds
+core	Context	__init__	rollback context clear	clear true if we should clear out the context_clear_layers
+core	Context	make_dynamic	names context	makes the variable names listed in names dynamic by backing up their current value if not already dynamic in the current call
+core	Context	pop_dynamic		pops one level of the dynamic stack called when the return
+core	Context	pop_all_dynamic		pops all levels of the dynamic stack called when we jump
+core	Context	goto_label	node_name	sets the name of the node that will be run when this context next executes
+core	Context	check_stacks		check and fix stack corruption
+core	Context	report_coverage	node	execs a python pass statement on the line of code corresponding to node
+core	Context	run	node	executes as many nodes as possible in the current context if the
+core	Context	mark_seen		marks the current statement as one that has been seen by the user
+core	Context	call	label return_site	calls the named label
+core	Context	pop_call		blindly pops the top call record from the stack
+core	Context	lookup_return	pop	returns the node to return to or none if there is no such node
+core	Context	rollback_copy		makes a copy of this object suitable for rolling back to
+core	Context	predict_call	label return_site	this is called by the prediction code to indicate that a call to label will occur
+core	Context	predict_return		this predicts that a return will occur
+core	Context	predict		performs image prediction calling the given callback with each images that we predict to be loaded in the rough order that
+core	Context	seen_current	ever	returns a true value if we have finshed the current statement at least once before
+core	Context	do_deferred_rollback		called to cause deferred rollback to occur
+core		run_context	top	runs the current context until it can't be run anymore while handling the restartcontext and restarttopcontext exceptions
+core		correct_type	v b ty	corrects the type of v to match ty b is used to inform the match
+core		interpolate	t a b type	linearly interpolate the arguments
+core		compile_all		called after the init phase is finished and transforms are compiled to compile all transforms
+core	ATLTransformBase	get_block		returns the compiled block to use
+core	ATLTransformBase	take_execution_state	t	updates self to begin executing from the same point as t this
+core	ATLTransformBase	compile		compiles the atl code into a block as necessary updates the
+core	RawStatement	mark_constant		sets self constant to true if all expressions used in this statement
+core		_	s	:undocumented documented directly in the rst
+core	FileLocation	filename	slotname	given a slot name returns a filename
+core	FileLocation	scan		scan for files that are added or removed
+core	FileLocation	save	slotname record	saves the save record in slotname
+core	FileLocation	list		returns a list of all slots with savefiles in them in arbitrary order
+core	FileLocation	mtime	slotname	for a slot returns the time the object was saved in that slot
+core	FileLocation	json	slotname	returns the json data for slotname
+core	FileLocation	screenshot	slotname	returns a displayable that show the screenshot for this slot
+core	FileLocation	load	slotname	returns the log component of the file found in slotname, so it can be loaded
+core	FileLocation	unlink	slotname	deletes the file in slotname
+core	FileLocation	rename	old new	if old exists renames it to new
+core	FileLocation	copy	old new	copies old to new, if old exists
+core	FileLocation	load_persistent		returns a list of mtime persistent tuples loaded from the persistent file
+core	FileLocation	save_persistent	data	saves data as the persistent data data is a binary string giving
+core	MultiLocation	newest	slotname	returns the location containing the slotname with the newest mtime
+core	MultiLocation	add	location	adds a new location
+core		context	index	return the current execution context or the context at the given index if one is specified
+core		invoke_in_new_context	callable	:doc label this function creates a new context and invokes the given python
+core		call_in_new_context	label	:doc label this creates a new context and then starts executing ren'py script
+core		call_replay	label scope	:doc replay calls a label as a memory
+core	StoreDict	reset		called to reset this to its initial conditions
+core	StoreDict	begin		called to mark the start of a rollback period
+core	StoreDict	get_changes		for every key that has changed since begin() was called returns a dictionary mapping the key to its value when begin was called or
+core		create_store	name	creates the store with name
+core		make_clean_stores		copy the clean stores
+core		clean_stores		revert the store to the clean copy
+core		clean_store	name	reverts the named store to its clean copy
+core		reached	obj reachable wait	@param obj the object that was reached
+core		reached_vars	store reachable wait	marks everything reachable from the variables in the store or from the context info objects as reachable
+core		set_filename	filename offset tree	set the filename attribute to filename on every node in tree
+core		unicode_sub	m	if the string s contains a unicode character make it into a unicode string
+core		py_compile	source mode filename lineno	compiles the given source code using the supplied codegenerator
+core	RevertableList	_clean		gets a clean copy of this object before any mutation occurs
+core	RevertableList	_compress	clean	takes a clean copy of this object compresses it and returns compressed information that can be passed to rollback
+core	RevertableList	_rollback	compressed	rolls this object back using the information created by _compress
+core	DetRandom	pushback	l	pushes the random numbers in l onto the stack so they will be generated in the order given
+core	DetRandom	reset		resets the rng removing all of the pushbacked numbers
+core	DetRandom	Random	seed	returns a new rng object separate from the main one
+core	Rollback	purge_unreachable	reachable wait	adds objects that are reachable from the store of this rollback to the set of reachable objects and purges
+core	Rollback	rollback		reverts the state of the game to what it was at the start of the previous checkpoint
+core	Rollback	rollback_control		this rolls back only the control information while leaving the data information intact
+core	RollbackLog	begin		called before a node begins executing to indicate that the state needs to be saved for rollbacking
+core	RollbackLog	complete		called after a node is finished executing before a save begins or right before a rollback is attempted
+core	RollbackLog	get_roots		return a map giving the current roots of the store this is a
+core	RollbackLog	purge_unreachable	roots wait	this is called to purge objects that are unreachable from the roots from the object rollback lists inside the rollback entries
+core	RollbackLog	forward_info		returns the current forward info if any
+core	RollbackLog	checkpoint	data keep_rollback hard	called to indicate that this is a checkpoint which means that the user may want to rollback to just before this
+core	RollbackLog	suspend_checkpointing	flag	called to temporarily suspend checkpointing so any rollback
+core	RollbackLog	block		called to indicate that the user should not be able to rollback through this checkpoint
+core	RollbackLog	retain_after_load		called to return data from this statement until the next checkpoint when the game is loaded
+core	RollbackLog	can_rollback		returns true if we can rollback
+core	RollbackLog	rollback	checkpoints force label greedy	this rolls the system back to the first valid rollback point after having rolled back past the specified number of checkpoints
+core	RollbackLog	freeze	wait	this is called to freeze the store and the log in preparation for serialization
+core	RollbackLog	discard_freeze		called to indicate that we will not be restoring from the frozen state
+core	RollbackLog	unfreeze	roots label	used to unfreeze the game state after a load of this log object
+core		raise_at_location	e loc	raises e which must be an exception object at location loc
+core		register	name parse lint execute	:doc statement_register :name renpy
+core	ArgumentParser	__init__	second_pass description require_command	creates an argument parser
+core		run		the default command that when called leads to normal game startup
+core		compile		this command forces the game script to be recompiled
+core		quit		this command is used to quit without doing anything
+core		rmpersistent		this command is used to delete the persistent data
+core		register_command	name function	registers a command that can be invoked when ren'py is run on the command line
+core		bootstrap		called during bootstrap to perform an initial parse of the arguments ignoring unknown arguments
+core		pre_init		called before init to set up argument parsing
+core		post_init		called after init but before the game starts this parses a command
+core		takes_no_arguments	description	used to report that a command takes no arguments
+core		write_utf8_traceback_list	out l	given the traceback list l writes it to out as utf-8
+core		traceback_list	tb	given tb, returns a list of (filename line_number function line_text) tuples
+core		filter_traceback_list	tl	returns the subset of tl that originates in creator-written files as opposed to those portions that come from ren'py itself
+core		open_error_file	fn mode	opens an error/log/file returns the open file and the filename that
+core		report_exception	e editor	reports an exception by writing it to standard error and traceback
+core		get_line_text	filename linenumber	gets the text of the line with filename and linenumber, or the none if the line does not exist
+core		adjust_line_locations	filename linenumber char_offset line_offset	adjusts the locations in the line data structure
+core		insert_line_before	code filename linenumber	adds code immediately before filename and linenumber those must
+core		remove_line	filename linenumber	removes linenumber from filename the line must exist and correspond
+core		get_full_text	filename linenumber	returns the full text of linenumber from filename, including any comment or delimiter characters that exist
+core		nodes_on_line	filename linenumber	returns a list of nodes that are found on the given line
+core		first_and_last_nodes	nodes	finds the first and last nodes in nodes, a list of nodes this assumes
+core		adjust_ast_linenumbers	filename linenumber offset	this adjusts the line numbers in the the ast
+core		add_to_ast_before	code filename linenumber	adds code, which must be a textual line of ren'py code to the ast immediately before statement, which should be an ast node
+core		remove_from_ast	filename linenumber	removes from the ast all statements that happen to be at filename and linenumber, then adjusts the line numbers appropriately
+core		curry	fn	takes a callable and returns something that when called returns something that when called again calls the function
+core		partial	function	stores the arguments and keyword arguments of function and returns something that when called calls the function with
+core	Editor	begin	new_window	begins an editor transaction
+core	Editor	end		ends an editor transaction
+core	Editor	open	filename line	ensures path is open in the editor this may be called multiple
+core		init		creates the editor object based on the contents of the renpy_edit_py file
+core		launch_editor	filenames line transient	causes the editor to be launched
+core		walk_memory	roots seen	walks over memory trying to account it to the objects in roots each
+core		profile_memory_common	packages	profiles object surface and texture memory used in the renpy and store packages
+core		profile_memory	fraction minimum	:doc memory profiles object surface and texture memory use by ren'py and the
+core		diff_memory	update	:doc memory profiles objects surface and texture memory use by ren'py and the game
+core		profile_rollback		:doc memory profiles memory used by the rollback system
+core		find_parents	cls	finds the parents of every object of type cls
+core		save_dump	roots log	dumps information about the save to save_dump txt we dump the size
+core		safe_rename	old new	safely rename old to new
+core	SaveRecord	write_file	filename	this writes a standard-format savefile to filename
+core		save	slotname extra_info mutate_flag	:doc loadsave :args (filename extra_info='')
+core		force_autosave	take_screenshot	:doc other forces a background autosave to occur
+core		list_saved_games	regexp fast	:doc loadsave lists the save games
+core		list_slots	regexp	:doc loadsave returns a list of non-empty save slots
+core		newest_slot	regexp	:doc loadsave returns the name of the newest save slot (the save slot with the most
+core		slot_mtime	slotname	:doc loadsave returns the modification time for slot, or none if the slot is empty
+core		slot_json	slotname	:doc loadsave returns the json information for slotname, or none if the slot is
+core		slot_screenshot	slotname	:doc loadsave returns a display that can be used as the screenshot for slotname,
+core		can_load	filename test	:doc loadsave returns true if filename exists as a save slot and false otherwise
+core		load	filename	:doc loadsave loads the game state from the save slot filename
+core		unlink_save	filename	:doc loadsave deletes the save slot with the given name
+core		rename_save	old new	:doc loadsave renames a save from old to new
+core		copy_save	old new	:doc loadsave copies the save at old to new
+core		cycle_saves	name count	:doc loadsave rotates the first count saves beginning with name
+core		clear_slot	slotname	clears a single slot in the cache
+core		clear_cache		clears the entire cache
+core	Persistent	_clear	progress	resets the persistent data
+core	Persistent	_update		updates the persistent data to be the latest version of the persistent data
+core		safe_deepcopy	o	a "safe" version of deepcopy if an object doesn't implement __eq__
+core		find_changes		this finds changes in the persistent object when it finds a change it
+core		load	filename	loads persistence data from filename returns none if the data
+core		init		loads the persistent data from disk
+core		register_persistent	field func	:doc persistent registers a function that is used to merge values of a persistent field
+core		merge	other	merges other which must be a persistent object into the current persistent object
+core		check_update		checks to see if we need to run update if we do runs update and
+core		update	force_save	loads the persistent data from persistent files that are newer than persistent_mtime and merges it into the persistent object
+core		save		saves the persistent data to disk
+core		dump	error	causes a json dump file to be written if the user has requested it
+core		report_missing	target filename position	reports that the call statement ending at position in filename is missing a from clause
+core		generate_label	target	generate a reasonable and unique new label for a call to target
+core		process_file	fn	adds missing from clauses to fn
+core		get_windows_version		when called on windows returns the windows version
+core	Backup	backup_module	mod	makes a backup of mod, which must be a python module
+core	Backup	restore		restores the modules to a state similar to the state of the modules when the backup was created
+core		update_path	package	update the __path__ of package to import binary modules from a libexec directory
+core		post_import		this is called after import or reload to do further initialization of various modules
+core		reload_all		resets all modules to the state they were in right after import_all returned
+core		setup_modulefinder	modulefinder	informs modulefinder about the location of modules in nonstandard places
+core		import_cython		never called but necessary to ensure that modulefinder will properly grab the various cython modules
+core	LogFile	__init__	name append developer flush	name the name of the logfile without the
+core	LogFile	write	s	formats s with args and writes it to the logfile
+core	LogFile	exception		writes the exception to the logfile
+core		statement_name	name	reports the name of this statement to systems like window auto
+core		next_node	n	indicates the next node that should be executed when a statement
+core	ParameterInfo	apply	args kwargs ignore_errors	applies args and kwargs to these parameters returns
+core	ArgumentInfo	evaluate	scope	evaluates the arguments returning a list of arguments and a dictionary of keyword arguments
+core		chain_block	block next	this is called to chain together all of the nodes in a block node
+core	Node	__init__	loc	initializes this node object
+core	Node	diff_info		returns a tuple of diff info about ourself this is used to
+core	Node	get_children	f	calls f with this node and its children
+core	Node	get_init		returns a node that should be run at init time (that is before the normal start of the script
+core	Node	chain	next	this is called with the node node that should be followed after executing this node and all nodes that this node
+core	Node	replace_next	old new	replaces instances of the old node with new when it is the next node
+core	Node	execute		causes this node to execute and any action it entails to be performed
+core	Node	early_execute		called when the module is loaded
+core	Node	predict		this is called to predictively load images from this node it
+core	Node	scry		called to return an object with some general user-definable information about the future
+core	Node	restructure	callback	called to restructure the ast
+core	Node	get_code	dialogue_filter	returns the canonical form of the code corresponding to this statement
+core	Node	analyze		called on all code after the init phase to analyze it
+core		say_menu_with	expression callback	this handles the with clause of a say or menu statement
+core		eval_who	who fast	evaluates the who parameter to a say statement
+core	Label	__init__	loc name block parameters	constructs a new label node
+core	Python	__init__	loc python_code hide store	@param code a pycode object
+core	EarlyPython	__init__	loc python_code hide store	@param code a pycode object
+core	Image	__init__	loc name expr atl	@param name the name of the image being defined
+core		predict_imspec	imspec scene atl	call this to use the given callback to predict the image named in imspec
+core	Show	__init__	loc imspec atl	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a layer
+core	Scene	__init__	loc imgspec layer atl	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a layer or
+core	Hide	__init__	loc imgspec	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a list of
+core	With	__init__	loc expr paired	@param expr an expression giving a transition or none
+core	If	__init__	loc entries	@param entries a list of condition block tuples
+core		get_namespace	store	returns the namespace object for store, and a flag that is true if the namespace is special and false if it is a normal store
+core	Screen	__init__	loc screen	@param name the name of the image being defined
+core	TranslatePython	__init__	loc language python_code	@param code a pycode object
+core	Style	__init__	loc name	name the name of the style to define
+core		unicode_filename	fn	converts the supplied filename to unicode
+core		elide_filename	fn	returns a version of fn that is either relative to the base directory or relative to the ren'py directory
+core		list_logical_lines	filename filedata linenumber	reads filename, and divides it into logical lines
+core		group_logical_lines	lines	this takes as input the list of logical line triples output from list_logical_lines and breaks the lines into blocks
+core	Lexer	advance		advances this lexer to the next line in the block the lexer
+core	Lexer	match_regexp	regexp	tries to match the given regexp at the current location on the current line
+core	Lexer	skip_whitespace		advances the current position beyond any contiguous whitespace
+core	Lexer	match	regexp	matches something at the current position skipping past whitespace
+core	Lexer	keyword	word	matches a keyword at the current position a keyword is a word
+core	Lexer	error	msg	convenience function for reporting a parse error at the current location
+core	Lexer	eol		returns true if after skipping whitespace the current position is at the end of the end of the current line or
+core	Lexer	expect_eol		if we are not at the end of the line raise an error
+core	Lexer	expect_noblock	stmt	called to indicate this statement does not expect a block
+core	Lexer	expect_block	stmt	called to indicate that the statement requires that a non-empty block is present
+core	Lexer	subblock_lexer	init	returns a new lexer object equiped to parse the block associated with this line
+core	Lexer	string		lexes a string and returns the string to the user or none if no string could be found
+core	Lexer	integer		tries to parse an integer returns a string containing the
+core	Lexer	float		tries to parse a number float returns a string containing the
+core	Lexer	hash		matches the characters in an md5 hash and then some
+core	Lexer	word		parses a name which may be a keyword or not
+core	Lexer	name		this tries to parse a name returns the name or none
+core	Lexer	set_global_label	label	set current global_label which is used for label_name calculations
+core	Lexer	label_name	declare	try to parse label name returns name in form of "global local" if local
+core	Lexer	label_name_declare		same as label_name but set declare to true
+core	Lexer	image_name_component		matches a word that is a component of an image name (these are
+core	Lexer	python_string		this tries to match a python string at the current location
+core	Lexer	dotted_name		this tries to match a dotted name which is one or more names separated by dots
+core	Lexer	delimited_python	delim	this matches python code up to but not including the non-whitespace delimiter characters
+core	Lexer	python_expression		returns a python expression which is arbitrary python code extending to a colon
+core	Lexer	parenthesised_python		tries to match a parenthesised python expression if it can
+core	Lexer	simple_expression	comma	tries to parse a simple_expression returns the text if it can or
+core	Lexer	comma_expression		one or more simple expressions separated by commas including an optional trailing comma
+core	Lexer	checkpoint		returns an opaque representation of the lexer state this can be
+core	Lexer	revert	state	reverts the lexer to the given state state must have been returned
+core	Lexer	get_location		returns a filename line number tuple representing the current physical location of the start of the current logical line
+core	Lexer	require	thing name	tries to parse thing and reports an error if it cannot be done
+core	Lexer	rest		skips whitespace then returns the rest of the current line and advances the current position to the end of
+core	Lexer	python_block		returns the subblock of this code and subblocks of that subblock as indented python code
+core		parse_image_name	l string nodash	this parses an image name and returns it as a tuple it requires
+core		parse_simple_expression_list	l	this parses a comma-separated list of simple_expressions and returns a list of strings
+core		parse_image_specifier	l	this parses an image specifier
+core		parse_with	l node	tries to parse the with clause associated with this statement if
+core		parse_arguments	l	parse a list of arguments if one is present
+core		statement	keywords	a function decorator used to declare a statement keywords is a string
+core		parse_statement	l	this parses a ren'py statement l is expected to be a ren'py lexer
+core		parse_block	l	this parses a block of ren'py statements it returns a list of the
+core		parse	fn filedata linenumber	parses a ren'py script contained within the file fn
+core		predict_show_display_say	who what who_args what_args	this is the default function used by character to predict images that will be used by show_display_say
+core		compute_widget_properties	who_args what_args window_args variant	computes and returns the widget properties
+core		show_display_say	who what who_args what_args	this is called by default by renpy display_say to add the
+core	ADVCharacter	resolve_say_attributes	predict wanted remove	deals with image attributes associated with the current say statement
+core	ADVCharacter	add_history	kind who what	this is intended to be called by subclasses of advcharacter to add history entries to _history_list
+core	ADVCharacter	pop_history		this is intended to be called by do_extend to remove entries from _history_list
+core		Character	name kind	:doc character :args (name kind=adv **args)
+styledata		expand_anchor	v	turns an anchor into a number
+sl2		sl2viewport	context	this converts the output of renpy ui viewport into something that
+sl2		sl2vpgrid	context	this converts the output of renpy ui viewport into something that
+sl2	Parser	add	i	adds a clause to this parser
+sl2	Parser	parse	loc l parent	this is expected to parse a function statement and to return a list of python ast statements
+sl2	Parser	parse_contents	l target layout_mode can_has	parses the remainder of the current line of l, and all of its subblock looking for keywords and children
+sl2		register_sl_displayable		:doc custom_sl class :args (name displayable style nchildren=0 scope=false replaces=false default_keywords={})
+sl2	DisplayableParser	__init__	name displayable style nchildren	scope if true the scope is passed into the displayable functionas a keyword
+sl2	IfParser	__init__	name node_type parent_contents	node_type the type of node to create
+sl2	ForParser	name_or_tuple_pattern	l	matches either a name or a tuple pattern if a single name is being
+sl2		parse_screen	l loc	parses the screen statement
+sl2		compile_expr	node	wraps the node in a python ast and compiles it
+sl2	SLNode	instantiate	transclude	instantiates a new instance of this class copying the global attributes of this class onto the new instance
+sl2	SLNode	copy	transclude	makes a copy of this node
+sl2	SLNode	analyze	analysis	performs static analysis on python code used in this statement
+sl2	SLNode	prepare	analysis	this should be called before the execute code is called and again after init-level code (like the code in a
+sl2	SLNode	execute	context	execute this node updating context as appropriate
+sl2	SLNode	keywords	context	execute this node updating context keywords as appropriate
+sl2	SLNode	copy_on_change	cache	flags the displayables that are created by this node and its children as copy-on-change
+sl2	SLNode	debug_line		writes information about the line we're on to the debug log
+sl2	SLNode	used_screens	callback	calls callback with the name of each screen this node and its children use
+sl2	SLNode	has_transclude		returns true if this node is a transclude or has a transclude as a child
+sl2	SLDisplayable	__init__	loc displayable scope child_or_fixed	displayable a function that when called with the positional and keyword
+sl2	SLDisplayable	wrap_in_showif	d context cache	wraps d in a showif displayable
+sl2	SLIf	__init__	loc	an ast node that represents an if statement
+sl2	SLShowIf	__init__	loc	an ast node that represents an if statement
+sl2	SLScreen	define	location	defines a screen
+audio	AndroidVideoChannel	get_context		returns the musiccontext corresponding to this channel taken from the context object
+audio	AndroidVideoChannel	start		starts playing the first video in the queue
+audio	AndroidVideoChannel	dequeue	even_tight	clears the queued music except for a first item that has not been started
+audio	AndroidVideoChannel	interact		called mostly once per interaction
+audio	AndroidVideoChannel	fadeout	secs	causes the playing music to be faded out for the given number of seconds
+audio		play	filenames channel loop fadeout	:doc audio this stops the music currently playing on the numbered channel dequeues
+audio		queue	filenames channel loop clear_queue	:doc audio this queues the given filenames on the specified channel
+audio		playable	filename channel	return true if the given filename is playable on the channel this
+audio		stop	channel fadeout	:doc audio this stops the music that is currently playing and dequeues all
+audio		set_music	channel flag default	determines if channel will loop by default
+audio		is_music	channel	returns true if "channel" will loop by default
+audio		get_delay	time channel	returns the number of seconds left until the given time in the music
+audio		get_pos	channel	:doc audio returns the current position of the audio or video file on channel, in
+audio		get_duration	channel	:doc audio returns the duration of the audio or video file on channel
+audio		get_playing	channel	:doc audio if the given channel is playing returns the playing file name
+audio		is_playing	channel	:doc audio returns true if the channel is currently playing a sound false if
+audio		set_volume	volume delay channel	:doc audio sets the volume of this channel as a fraction of the volume of the
+audio		set_pan	pan delay channel	:doc audio sets the pan of this channel
+audio		set_queue_empty_callback	callback channel	:doc audio this sets a callback that is called when the queue is empty
+audio		set_pause	value channel	:doc audio sets the pause flag for channel to value
+audio		get_pause	channel	:doc audio returns the pause flag for channel
+audio		set_mixer	channel mixer default	this sets the name of the mixer associated with a given channel
+audio		get_all_mixers		this gets all mixers in use
+audio		channel_defined	channel	returns true if the channel exists or false otherwise
+audio	IOSVideoChannel	get_context		returns the musiccontext corresponding to this channel taken from the context object
+audio	IOSVideoChannel	start		starts playing the first video in the queue
+audio	IOSVideoChannel	dequeue	even_tight	clears the queued music except for a first item that has not been started
+audio	IOSVideoChannel	interact		called mostly once per interaction
+audio	IOSVideoChannel	fadeout	secs	causes the playing music to be faded out for the given number of seconds
+audio		get_serial		gets a globally unique serial number for each music change
+audio		load	fn	returns a file-like object for the given filename
+audio	MusicContext	copy		returns a shallow copy of this context
+audio	Channel	get_number		returns the number of this channel allocating a number if that proves necessary
+audio	Channel	get_context		returns the musiccontext corresponding to this channel taken from the context object
+audio	Channel	split_filename	filename looped	splits a filename into a filename start time and end time
+audio	Channel	periodic		this is the periodic call that causes this channel to load new stuff into its queues if necessary
+audio	Channel	dequeue	even_tight	clears the queued music
+audio	Channel	interact		called mostly once per interaction
+audio	Channel	fadeout	secs	causes the playing music to be faded out for the given number of seconds
+audio		register_channel	name mixer loop stop_on_mute	:doc audio this registers a new audio channel named name
+audio		periodic		the periodic sound callback this is called at around 20hz and is
+audio		interact		called at least once per interaction
+audio		rollback		on rollback we want to stop all the channels with non-empty sounds
+audio		pause_all		pause all playback channels
+audio		unpause_all		unpause all playback channels
+translation	DialogueFile	__init__	filename output tdf strings	filename the file we're extracting dialogue from
+translation	DialogueFile	write_dialogue		writes the dialogue to the file
+translation	DialogueFile	get_strings		finds the strings in the file
+translation		dialogue_command		the dialogue command this updates dialogue txt a file giving all the dialogue
+translation		scan_strings	filename	scans filename, a file containing ren'py script for translatable strings
+translation		shorten_filename	filename	shortens a file name returns the shortened filename and a flag that says
+translation		write_strings	language filter min_priority max_priority	writes strings to the file
+translation		translate_list_files		returns a list of files that exist and should be scanned for translations
+translation		count_missing	language min_priority max_priority common_only	prints a count of missing translations for language
+translation		translate_command		the translate command when called from the command line this generates
+translation		extract_strings		the extract strings command
+translation	ScriptTranslator	count_translates		return the number of dialogue blocks in the game
+translation	ScriptTranslator	take_translates	nodes	takes the translates out of the flattened list of statements and stores them into the dicts above
+translation	ScriptTranslator	chain_translates		chains nodes in non-default translates together
+translation		encode_say_string	s	encodes a string in the format used by ren'py say statements
+translation	Restructurer	create_translate	block	creates an ast translate that wraps block the block may only contain
+translation	Restructurer	callback	children	this should be called with a list of statements it restructures the statements
+translation		translate_string	s language	translates interface string s to language if languages is default
+translation		load_rpt	fn	loads the rpt file fn
+translation		load_all_rpts		loads all rpt files
+translation		init_translation		called before the game starts
+translation		change_language	language	:doc translation_functions changes the current language to language, which can be a string or
+translation		check_language		checks to see if the language has changed if it has jump to the start
+translation		known_languages		:doc translation_functions returns the set of known languages
+translation		merge_strings		the merge strings command
+translation		scan_strings	filename	scans filename, a file containing ren'py script for translatable strings
+translation		scan	min_priority max_priority common_only	scans all files for translatable strings and comments returns a list
+display		set_rgba_masks		this rebuilds the sample surfaces to ones that use the given masks
+display		copy_surface	surf alpha	creates a copy of the surface
+display		edgescroll_proportional	n	an edgescroll function that causes the move speed to be proportional from the edge distance
+display	Viewport	update_offsets	cw ch st	this is called by render once we know the width (cw) and height (ch) of all the children
+display		cartesian_to_polar	x y xaround yaround	converts cartesian coordinates to polar coordinates
+display		polar_to_cartesian	angle radius xaround yaround	converts polart coordinates to cartesian coordinates
+display		first_not_none		returns the first argument that is not none
+display	Transform	take_state	t	takes the transformation state from object t into this object
+display	Transform	take_execution_state	t	takes the execution state from object t into this object this is
+display	Transform	copy		makes a copy of this transform
+display	Transform	update_state		this updates the state to that at self st self at
+display	Transform	update		this should be called when a transform property field is updated outside of the callback method to ensure that the change takes effect
+display		real_smoothscale	src size dest	this scales src up or down to size this uses both the pixellate
+display	Cache	init		updates the cache object to make use of settings that might be provided by the game-maker
+display	Cache	cleanout		cleans out the cache if it's gotten too large returns true
+display	Cache	preload_texture	im	preloads im into the cache and loads the corresponding texture into the gpu
+display	Cache	start_prediction		called at the start of prediction to ensure the thread runs at least once to clean out the cache
+display		free_memory		frees some memory
+display	ImageBase	load		this function is called by the image cache code to cause this image to be loaded
+display	ImageBase	predict_files		returns a list of files that will be accessed when this image operation is performed
+display	Image	__init__	filename	@param filename the filename that the image will be loaded from
+display	Rotozoom	__init__	im angle zoom	@param im the image to be rotozoomed
+display		ramp	start end	returns a 256 character linear ramp where the first character has the value start and the last character has the value end
+display	matrix	identity		:doc im_matrixcolor :name im
+display	matrix	saturation	level desat	:doc im_matrixcolor :name im
+display	matrix	desaturate		:doc im_matrixcolor :name im
+display	matrix	tint	r g b	:doc im_matrixcolor :name im
+display	matrix	invert		:doc im_matrixcolor :name im
+display	matrix	brightness	b	:doc im_matrixcolor :name im
+display	matrix	opacity	o	:doc im_matrixcolor :name im
+display	matrix	contrast	c	:doc im_matrixcolor :name im
+display	matrix	hue	h	:doc im_matrixcolor :name im
+display	matrix	colorize	black_color white_color	:doc im_matrixcolor :name im
+display		Grayscale	im desat	:doc im_im :args (im **properties)
+display		Sepia	im tint desat	:doc im_im :args (im **properties)
+display		Color	im color	this recolors the supplied image mapping colors such that black is black and white is the supplied color
+display		Alpha	image alpha	returns an alpha-mapped version of the image alpha is the maximum
+display		image	arg loose	:doc im_image :name image
+display		load_image	im	:doc udd_utility loads the image manipulator im using the image cache and returns a texture
+display		load_surface	im	:doc udd_utility loads the image manipulator im using the image cache and returns a pygame surface
+display	Sprite	set_child	d	:doc sprites method changes the displayable associated with this sprite to d
+display	Sprite	destroy		:doc sprites method destroys this sprite preventing it from being displayed and
+display	SpriteManager	__init__	update event predict ignore_time	update if not none a function that is called each time a sprite
+display	SpriteManager	create	d	:doc sprites method creates a new sprite for the displayable d, and adds it to this
+display	SpriteManager	redraw	delay	:doc sprites method causes this spritemanager to be redrawn in delay seconds
+display	Particles	__init__	factory	@param factory a factory object
+display		SnowBlossom	d count border xspeed	:doc sprites_extra the snowblossom effect moves multiple instances of a sprite up
+display		scale	num base	if num is a float multiplies it by base and returns that otherwise
+display	Container	add	d	adds a child to this container
+display	Container	remove	d	removes the first instance of child from this container may
+display	Container	update		this should be called if a child is added to this displayable outside of the render function
+display		LiveComposite	size	:doc disp_imagelike this creates a new displayable of size, by compositing other
+display	Position	__init__	child style	@param child the child that is being laid out
+display	Grid	__init__	cols rows padding transpose	@param cols the number of columns in this widget
+display		ConditionSwitch		:doc disp_dynamic this is a displayable that changes what it is showing based on
+display		ShowingSwitch		:doc disp_dynamic this is a displayable that changes what it is showing based on the
+display		LiveCrop	rect child	:doc disp_imagelike this created a displayable by cropping child to rect, where
+display		displayable	d	called to predict that the displayable d will be shown
+display		screen	_screen_name	called to predict that the named screen is about to be shown with the given arguments
+display		prediction_coroutine	root_widget	the image prediction co-routine this predicts the images that can
+display		default_tts_function	s	default function which speaks messages using an os-specific method
+display		tts	s	speaks the queued messages using the specified function
+display		speak	s translate force	this is called by the system to queue the speaking of message s
+display		displayable	d	causes the tts system to read the text of the displayable d
+display		displayable_by_tag	layer tag	get the displayable on the given layer with the given tag
+display		place	width height sw sh	performs the ren'py placement algorithm
+display	DisplayableArguments	copy		returns a copy of this object with the various fields set to the values they were given in kwargs
+display	Displayable	_copy	args	makes a shallow copy of the displayable if args is provided
+display	Displayable	_duplicate	args	makes a duplicate copy of the following kids of displayables * displayables that can accept arguments
+display	Displayable	_in_current_store		returns a version of this displayable that will not change as it is rendered
+display	Displayable	_unique		this is called when a displayable is "born" unique which occurs when there is only a single reference to it
+display	Displayable	parameterize	name parameters	obsolete alias for _duplicate
+display	Displayable	_equals	o	this is a utility method that can be called by a displayable's __eq__ method to compare displayables for type and displayable
+display	Displayable	focus	default	called to indicate that this widget has the focus
+display	Displayable	unfocus	default	called to indicate that this widget has become unfocused
+display	Displayable	set_style_prefix	prefix root	called to set the style prefix of this widget and its child widgets if any
+display	Displayable	render	width height st at	called to display this displayable this is called with width
+display	Displayable	event	ev x y st	called to report than an event has occured ev is the raw
+display	Displayable	get_placement		returns a style object containing placement information for this displayable
+display	Displayable	visit_all	callback	calls the callback on this displayable and then on all children of this displayable
+display	Displayable	visit		called to ask the displayable to return a list of its children including children taken from styles
+display	Displayable	per_interact		called once per widget per interaction
+display	Displayable	predict_one		called to ask this displayable to call the callback with all the images it may want to load
+display	Displayable	predict_one_action		called to ask this displayable to cause image prediction to occur for images that may be loaded by its actions
+display	Displayable	place	dest x y width	this places a render which must be of this displayable within a bounding area
+display	Displayable	set_transform_event	event	sets the transform event of this displayable to event
+display	Displayable	_hide	st at kind	returns none if this displayable is ready to be hidden or a replacement displayable if it doesn't want to be hidden
+display	Displayable	_show		called when the displayable is added to a scene list
+display	Displayable	_target		if this displayable is part of a chain of one or more references returns the ultimate target of those references
+display	Displayable	_change_transform_child	child	if this is a transform makes a copy of the transform and sets the child of the innermost transform to this
+display	Displayable	_clear		clears out the children of this displayable if any
+display	Displayable	_tts		returns the self-voicing text of this displayable and all of its children that cannot take focus
+display	Displayable	_tts_all		returns the self-voicing text of this displayable and all of its children that cannot take focus
+display	SceneLists	replace_transient		replaces the contents of the transient display list with a copy of the master display list
+display	SceneLists	transient_is_empty		this returns true if all transient layers are empty this is
+display	SceneLists	transform_state	old_thing new_thing	if the old thing is a transform then move the state of that transform to the new thing
+display	SceneLists	find_index	layer tag zorder behind	this finds the spot in the named layer where we should insert the displayable
+display	SceneLists	add	layer thing key zorder	adds something to this scene list some of these names are quite a bit
+display	SceneLists	hide_or_replace	layer index prefix	hides or replaces the scene list entry at the given index
+display	SceneLists	get_all_displayables		gets all displayables reachable from this scene list
+display	SceneLists	remove_above	layer thing	removes everything on the layer that is closer to the user than thing which may be either a tag or a displayable
+display	SceneLists	remove	layer thing	thing is either a key or a displayable this iterates through the
+display	SceneLists	clear	layer hide	clears the named layer making it empty
+display	SceneLists	set_times	time	this finds entries with a time of none and replaces that time with the given time
+display	SceneLists	showing	layer name	returns true if something with the prefix of the given name is found in the scene list
+display	SceneLists	make_layer	layer properties	creates a fixed with the given layer name and scene_list
+display	SceneLists	remove_hide_replaced	layer tag	removes things that are hiding or replaced that have the given tag
+display	SceneLists	remove_hidden		goes through all of the layers and removes things that are hidden and are no longer being kept alive by their hide
+display	SceneLists	remove_all_hidden		removes everything hidden even if it's not time yet used when making a rollback copy
+display	SceneLists	get_displayable_by_tag	layer tag	returns the displayable on the layer with the given tag or none if no such displayable exists
+display	SceneLists	get_displayable_by_name	layer name	returns the displayable on the layer with the given name or none if no such displayable exists
+display	SceneLists	get_image_bounds	layer tag width height	implements renpy get_image_bounds()
+display		scene_lists	index	returns either the current scenelists object or the one for the context at the given index
+display	MouseMove	perform		performs the mouse move returns true if this should be called
+display		get_safe_mode		returns true if we should go into safe mode
+display	Interface	start		starts the interface by opening a window and setting the mode
+display	Interface	post_init		this is called after display init but before the window is created
+display	Interface	set_icon		this is called to set up the window icon
+display	Interface	get_draw_constructors		figures out the list of draw constructors to try
+display	Interface	kill_textures_and_surfaces		kill all textures and surfaces that are loaded
+display	Interface	set_mode	physical_size	this sets the video mode it also picks the draw object
+display	Interface	take_screenshot	scale background	this takes a screenshot of the current screen and stores it so that it can gotten using get_screenshot()
+display	Interface	check_background_screenshot		handles requests for a background screenshot
+display	Interface	get_screenshot		gets the current screenshot as a string returns none if there isn't
+display	Interface	lose_screenshot		this deallocates the saved screenshot
+display	Interface	save_screenshot	filename	saves a full-size screenshot in the given filename
+display	Interface	with_none	overlay	implements the with none command which sets the scene we will be transitioning from
+display	Interface	set_transition	transition layer force	sets the transition that will be performed as part of the next interaction
+display	Interface	event_peek		this peeks the next event it returns none if no event exists
+display	Interface	event_poll		called to busy-wait for an event while we're waiting to redraw a frame
+display	Interface	event_wait		this is in its own function so that we can track in the profiler how much time is spent in interact
+display	Interface	compute_scene	scene_lists	this converts scene lists into a dictionary mapping layer name to a fixed containing that layer
+display	Interface	quit_event		this is called to handle the user invoking a quit
+display	Interface	set_mouse_pos	x y duration	sets the mouse position duration can be a number of seconds or
+display	Interface	drawn_since	seconds_ago	returns true if the screen has been drawn in the last seconds_ago, and false otherwise
+display	Interface	check_suspend	ev	handles the sdl2 suspend process
+display	Interface	iconified		called when we become an icon
+display	Interface	restored		called when we are restored from being an icon
+display	Interface	enter_context		called when we enter a new context
+display	Interface	post_time_event		posts a time_event object to the queue
+display	Interface	after_longpress		called after a longpress to ignore the mouse button release
+display	Interface	text_event_in_queue		returns true if the next event in the queue is a text editing event
+display	Interface	update_text_rect		updates the text input state and text rectangle
+display	Interface	maximum_framerate	t	forces ren'py to draw the screen at the maximum framerate for t seconds
+display	Interface	interact	clear suppress_window trans_pause	this handles an interaction restarting it if necessary all of the
+display	Interface	interact_core	show_mouse trans_pause suppress_overlay suppress_underlay	this handles one cycle of displaying an image to the user and then responding to user input
+display	Interface	finish_pending		called before a quit or restart to finish any pending work that might block other threads
+display		OldMoveTransition	delay old_widget new_widget factory	returns a transition that attempts to find images that have changed position and moves them from the old position to the new transition taking
+display		MoveTransition	delay old_widget new_widget enter	:doc transition function :args (delay enter=none leave=none old=false layers=['master'], time_warp=none enter_time_warp=none leave_time_warp=none)
+display		dispatch_gesture	gesture	this is called with a gesture to dispatch it as an event
+display		init		initialize gamepad support
+display		make_event	name	creates an eventname event with name, and returns it
+display		exists		returns true if a controller exists and false otherwise
+display		quit	index	quits the controller at index
+display		start	index	starts the controller at index
+display		event	ev	processes an event and returns the same event a new event or none if the event has been processed and should be ignored
+display	Motion	__init__	function period child new_widget	@param child the child displayable
+display		Pan	startpos endpos time child	this is used to pan over a child displayable which is almost always an image
+display		Move	startpos endpos time child	this is used to pan over a child displayable relative to the containing area
+display		zoom_render	crend x y w	this creates a render that zooms its child
+display	ZoomCommon	__init__	time child end_identity after_child	@param time the amount of time it will take to interpolate from the start to the end rectange
+display		run_event_thread		disposes of events while the window is running
+display		start	basedir gamedir	called to display the presplash when necessary
+display		end		called just before we initialize the display to hide the presplash
+display		sleep		sleep to the end of config minimum_presplash_time
+display		init_display		the minimum amount of code required to init the display
+display		error_dump		handles dumps in the case where an error occurs
+display		report_exception	short full traceback_fn	reports an exception to the user returns true if the exception should
+display		report_parse_errors	errors error_fn	reports an exception to the user returns true if the exception should
+display	Clipper	compute	full_redraw	this returns a clipping rectangle and a list of update rectangles that cover the changes between the old and new frames
+display		surface	w h alpha	creates a surface that shares a pixel format with the screen the created
+display		draw_special	what dest x y	this handles the special drawing operations such as dissolve and image dissolve
+display		draw	dest clip what xo	this is the simple draw routine which only works when alpha is 1 0
+display		do_draw_screen	screen_render full_redraw swdraw	draws the render produced by render_screen to the screen
+display	SWDraw	show_mouse	pos info	actually shows the mouse
+display	SWDraw	hide_mouse		actually hides the mouse
+display	SWDraw	draw_mouse	show_mouse	this draws the mouse to the screen if necessary it uses the
+display	SWDraw	update_mouse		draws the mouse and then updates the screen
+display	SWDraw	screenshot	surftree fullscreen_video	returns a pygame surface containing a screenshot
+display	SWDraw	should_redraw	needs_redraw first_pass	uses the framerate to determine if we can and should redraw
+display	SWDraw	draw_screen	surftree fullscreen_video	draws the screen
+display	SWDraw	mutated_surface	surf	called to indicate that the given surface has changed
+display	SWDraw	load_texture	surf transient	creates a texture from the surface in the software implementation
+display	SWDraw	solid_texture	w h color	creates a texture filled to the edges with color
+display	SWDraw	free_memory		frees up memory
+display	SWDraw	deinit		called when we're restarted
+display	SWDraw	quit		shuts down the drawing system
+display	SWDraw	event_peek_sleep		wait a little bit so the cpu doesn't speed up
+display	SWDraw	get_physical_size		return the physical width and height of the screen
+display		convert_and_call	function src dst	this calls the function with the source and destination surface
+display		pixellate	src dst avgwidth avgheight	this pixellates the source surface first every pixel in the
+display		scale	s size	scales down the supplied pygame surface by the given x and y factors
+display		byte_offset	src	given the surface src returns a 4-tuple giving the byte offsets for the red green blue and alpha components of the pixels in
+display		linmap	src dst rmap gmap	this maps the colors between two surfaces the various map
+display		map	src dst rmap gmap	this maps the colors between two surfaces the various map
+display		twomap	src dst white black	given colors for white and black linearly maps things appropriately taking the alpha channel from white
+display		alpha_munge	src dst amap	this samples the red channel from src maps it through amap and place it into the alpha channel of amap
+display		movie_stop	clear only_fullscreen	stops the currently playing movie
+display		movie_start	filename size loops	this starts a movie playing
+display		early_interact		called early in the interact process to clear out the fullscreen flag
+display		interact		this is called each time the screen is drawn and should return true if the movie should display fulscreen
+display		update_playing		calls play/stop on movie displayables
+display		frequent		called to update the video playback returns true if a video refresh is
+display	State	__init__	name image	@param name a string giving the name of this state
+display	Edge	__init__	old delay new trans	@param old the name a string of the state that this transition is from
+display	SMAnimation	__init__	initial	@param initial the name a string of the initial state we start in
+display	SMAnimation	pick_edge	state	this randomly picks an edge out of the given state if one exists
+display	SMAnimation	update_cache		places the correct displayable into the edge cache based on what is contained in the given edge
+display	SMAnimation	__call__	child new_widget old_widget	used when this smanimation is used as a smmotion this creates
+display	TransitionAnimation	__init__		this takes arguments such that the 1st 4th 7th
+display	Blink	__init__	image on off rise	this takes as an argument an image or widget and blinks that image by varying its alpha
+display		Filmstrip	image framesize gridsize delay	this creates an animation from a single image this image
+display		Fade	out_time hold_time in_time old_widget	:doc transition function :args (out_time hold_time in_time color="#000")
+display		ComposeTransition	trans before after new_widget	:doc transition function :args trans before after
+display		SubTransition	rect trans old_widget new_widget	applies a transition to a subset of the screen not documented
+display		default_drag_group		gets the default drag group if it doesn't exist yet creates it
+display	Drag	snap	x y delay	:doc drag_drop method changes the position of the drag
+display	Drag	set_child	d	:doc drag_drop method changes the child of this drag to d
+display	Drag	top		:doc drag_drop method raises this displayable to the top of its drag_group
+display	DragGroup	add	child	:doc drag_drop method adds child, which must be a drag to this draggroup
+display	DragGroup	remove	child	:doc drag_drop method removes child from this draggroup
+display	DragGroup	raise_children	l	raises the children in l to the top of this drag_group using the order given in l for those children
+display	DragGroup	get_best_drop	joined	returns the droppable that the members of joined overlap the most
+display	DragGroup	get_children		returns a list of drags that are the children of this draggroup
+display	DragGroup	get_child_by_name	name	:doc drag_drop method returns the first child of this draggroup that has a drag_name
+display		rect_overlap_area	r1 r2	returns the number of pixels by which rectangles r1 and r2 overlap
+display		focus_coordinates		:doc other this attempts to find the coordinates of the currently-focused
+display		before_interact	roots	called before each interaction to choose the focused and grabbed displayables
+display		clear_focus		clears the focus when the window loses mouse focus
+display		mouse_handler	ev x y default	handle mouse events to see if they change the focus
+display	ScreenProfile	__init__	name predict show update	requests screen profiling for the screen named name, which must be a string
+display		get_profile	name	returns the profile object for the screen with name, or a default profile object if none exists
+display		cache_get	screen args kwargs	returns the cache to use when screen is accessed with args and kwargs
+display		get_screen_variant	name candidates	get a variant screen object for name
+display		get_all_screen_variants	name	gets all variants of the screen with name
+display		sort_screens		produces a list of sl2 screens in topologically sorted order
+display		sorted_variants		produces a list of screen variants in topological order
+display		analyze_screens		analyzes all screens
+display		prepare_screens		prepares all screens for use
+display		define_screen		:doc screens :args (name function modal="false", zorder="0", tag=none variant=none)
+display		get_screen_layer	name	returns the layer that the screen with name is part of
+display		get_screen	name layer	:doc screens returns the screendisplayable with the given name on layer
+display		has_screen	name	returns true if a screen with the given name exists
+display		show_screen	_screen_name	:doc screens the programmatic equivalent of the show screen statement
+display		predict_screen	_screen_name	predicts the displayables that make up the given screen
+display		hide_screen	tag layer	:doc screens the programmatic equivalent of the hide screen statement
+display		get_widget	screen id layer	:doc screens from the screen on layer, returns the widget with
+display		get_widget_properties	id screen layer	:doc screens returns the properties for the widget with id in the screen
+display		before_restart		this is called before ren'py restarts to put the screens into restart mode which prevents crashes due to variables being used that are no
+display		show_overlay_screens	suppress_overlay	called from interact to show or hide the overlay screens
+display		get_available_image_tags		:doc image_func returns a list of image tags that have been defined
+display		get_available_image_attributes	tag attributes	:undocumented returns a list of tuples with each tuple representing a possible
+display		get_tag_method	tag method	this looks for an image named tag, then tries to grab the given method from it
+display		check_image_attributes	tag attributes	:doc image_func checks to see if there is a unique image with the given tag and
+display		get_ordered_image_attributes	tag attributes sort	:doc image_func returns a list of image tags ordered in a way that makes sense to
+display		register_image	name d	registers the existence of an image with name, and that the image used displayable d
+display		image_exists	name exact	:doc image_func :name renpy
+display	ImageReference	__init__	name	@param name a tuple of strings the name of the image or else
+display	ShownImageInfo	__init__	old	creates a new object if old is given copies the default state
+display	ShownImageInfo	get_attributes	layer tag	get the attributes associated the image with tag on the given layer
+display	ShownImageInfo	showing	layer name exact	returns true if name is the prefix of an image that is showing on layer or false otherwise
+display	ShownImageInfo	get_showing_tags	layer	returns the set of tags being shown on layer
+display	ShownImageInfo	predict_scene	layer	predicts the scene statement being called on layer
+display	ShownImageInfo	predict_show	layer name show	predicts name being shown on layer
+display	ShownImageInfo	apply_attributes	layer tag name wanted	given a layer tag and an image name with attributes returns the canonical name of an image if one exists
+display		compile_event	key keydown	compiles a keymap entry into a python expression
+display		clear_keymap_cache		:doc other clears the keymap cache
+display		queue_event	name up	:doc other queues an event with the given name
+display		map_event	ev keysym	:doc udd_utility returns true if the pygame event ev matches keysym
+display		map_keyup	ev name	returns true if the event matches the named keycode being released
+display		skipping	ev	this handles setting skipping in response to the press of one of the control keys
+display		predict_action	var	predicts some of the actions that may be caused by a variable
+display		run	action	:doc run :name renpy
+display		run_unhovered	var	calls the unhovered method on the variable if it exists
+display		is_selected	action	:doc run returns true if action indicates it is selected or false otherwise
+display		is_sensitive	action	:doc run returns true if action indicates it is sensitive or false otherwise
+display	Adjustment	__init__	range value step page	the following parameters correspond to fields or properties on the adjustment object
+display	Adjustment	update		updates things that depend on this adjustment without firing the changed handler
+display	OnEvent	__init__	event action	event a string giving the event name
+display		null_emulator	ev x y	this is used when emulation is not desired
+display		touch_emulator	ev x y	this emulates an android touch-screen device like a tablet or smartphone
+display		tv_emulator	ev x y	this emulates a tv-based device like the ouya
+display		init_emulator		sets up the emulator
+display	ImageMapCache	image_file_hash		returns a hash of the contents of the image files as an integer
+text		register_sfont	name size bold italics	:doc image_fonts this registers an sfont with the given details
+text		register_mudgefont	name size bold italics	:doc image_fonts this registers a mudgefont with the given details
+text		register_bmfont	name size bold italics	:doc image_fonts this registers a bmfont with the given details
+text		free_memory		clears the font cache
+text	FontGroup	add	font start end	:doc font_group associates a range of characters with a font
+text	FontGroup	segment	s	segments s into fonts generates font string tuples
+text		outline_blits	blits outline	given a list of blits adjusts it for the given outline size that means
+text	TextSegment	__init__	source	creates a new segment of text if source is given this starts off
+text	TextSegment	take_style	style layout	takes the style of this text segment from the named style object
+text	TextSegment	glyphs	s layout	return the list of glyphs corresponding to unicode string s
+text	TextSegment	draw	glyphs di xo yo	draws the glyphs to surf
+text	TextSegment	assign_times	gt glyphs	assigns times to the glyphs gt is the starting time of the first
+text	TextSegment	subsegment	s	this is called to break the current text segment up into multiple text segments
+text	TextSegment	bounds	glyphs bounds layout	given an x y w h bounding box returns the union of the given bounding box and the bounding box the glyphs will actually be drawn
+text	SpaceSegment	__init__	ts width height	ts the text segment that this spacesegment follows
+text	DisplayableSegment	__init__	ts d renders	ts the text segment that this spacesegment follows
+text	Layout	__init__	text width height renders	text the text object this layout is associated with
+text	Layout	segment	tokens style renders text_displayable	breaks the text up into segments this creates a list of paragraphs
+text	Layout	rtl_paragraph	p	given a paragraph a list of segment text tuples handles rtl and ligaturization
+text	Layout	figure_outlines	style	return a list containing the outlines including an outline representing the drop shadow if we have one also including
+text	Layout	blits_typewriter	st	given a st and an outline returns a list of blit objects that can be used to blit those objects
+text	Layout	redraw_typewriter	st	return the time of the first glyph that should be shown after st
+text		layout_cache_clear		clears the old and new layout caches
+text		layout_cache_tick		called once per interaction to merge the old and new layout caches
+text	Text	_scope	scope update	called to update the scope when necessary
+text	Text	update		this needs to be called after text has been updated but before any layout objects are created
+text	Text	kill_layout		kills the layout of this text used when the text or style
+text	Text	get_layout		gets the layout of this text if one exists
+text	Text	get_virtual_layout		gets the layout of this text if one exists
+text	Text	focus	default	called when a hyperlink gains focus
+text	Text	unfocus	default	called when a hyperlink loses focus or isn't focused to begin with
+text	Text	call_slow_done	st	called when slow is finished
+text	Text	event	ev x y st	space enter or click ends slow if it's enabled
+text	Text	size	width height st at	attempts to figure out the size of the text the parameters are
+text	Text	get_time		returns the amount of time in seconds it will take to display this text
+text	Text	tokenize	text	convert the text into a list of tokens
+text	Text	apply_custom_tags	tokens	apply new-style custom text tags
+text	Text	get_displayables	tokens	goes through the list of tokens returns the set of displayables that
+text		check_text_tags	s	:doc lint checks the text tags in s for correctness
+text		textwrap	s width asian	wraps the unicode string s, and returns a list of strings

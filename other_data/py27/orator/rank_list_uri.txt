@@ -1,0 +1,817 @@
+<tt style='background-color:#E8E8E8;'> core.BaseDatabaseManager <a href=' /database_manager.py#L14'>__init__</a>(config,factory)</tt>	:param config the connections configuration.
+<tt style='background-color:#E8E8E8;'> core.BaseDatabaseManager <a href=' /database_manager.py#L29'>connection</a>(name)</tt>	Get a database connection instance.
+<tt style='background-color:#E8E8E8;'> core.BaseDatabaseManager <a href=' /database_manager.py#L51'>_parse_connection_name</a>(name)</tt>	Parse the connection into a tuple of the name and read / write type.
+<tt style='background-color:#E8E8E8;'> core.BaseDatabaseManager <a href=' /database_manager.py#L69'>purge</a>(name)</tt>	Disconnect from the given database and remove from local cache.
+<tt style='background-color:#E8E8E8;'> orm.FactoryBuilder <a href=' /orm/factory_builder.py#L8'>__init__</a>(klass,name,definitions,faker)</tt>	:param klass the class.
+<tt style='background-color:#E8E8E8;'> orm.FactoryBuilder <a href=' /orm/factory_builder.py#L29'>times</a>(amount)</tt>	Set the amount of models to create / make.
+<tt style='background-color:#E8E8E8;'> orm.FactoryBuilder <a href=' /orm/factory_builder.py#L42'>create</a>()</tt>	Create a collection of models and persist them to the database.
+<tt style='background-color:#E8E8E8;'> orm.FactoryBuilder <a href=' /orm/factory_builder.py#L67'>make</a>()</tt>	Create a collection of models.
+<tt style='background-color:#E8E8E8;'> orm.FactoryBuilder <a href=' /orm/factory_builder.py#L86'>_make_instance</a>()</tt>	Make an instance of the model with the given attributes.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L12'>__init__</a>(faker,resolver)</tt>	:param faker a faker generator instance :type faker faker.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L25'>construct</a>(cls,faker,path_to_factories)</tt>	Create a new factory container.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L47'>define_as</a>(klass,name)</tt>	Define a class with the given short name.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L59'>define</a>(klass,name)</tt>	Define a class with a given set of attributes.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L80'>register</a>(klass,callback,name)</tt>	Register a class with a function.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L98'>register_as</a>(klass,name,callback)</tt>	Register a class with a function.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L113'>create</a>(klass)</tt>	Create an instance of the given model and persist it to the database.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L127'>create_as</a>(klass,name)</tt>	Create an instance of the given model and type and persist it to the database.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L144'>make</a>(klass)</tt>	Create an instance of the given model.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L158'>make_as</a>(klass,name)</tt>	Create an instance of the given model and type.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L175'>raw_of</a>(klass,name)</tt>	Get the raw attribute dict for a given named model.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L192'>raw</a>(klass,_name)</tt>	Get the raw attribute dict for a given named model.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L213'>of</a>(klass,name)</tt>	Create a builder for the given model.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L227'>build</a>(klass,name,amount)</tt>	Makes a factory builder with a specified amount.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L251'>_resolve</a>(cls,path,factory_file)</tt>	Resolve a migration instance from a file.
+<tt style='background-color:#E8E8E8;'> orm.Factory <a href=' /orm/factory.py#L290'>__call__</a>(klass,name,amount)</tt>	Makes a factory builder with a specified amount.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L36'>with_global_scope</a>(identifier,scope)</tt>	Register a new global scope.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L52'>without_global_scope</a>(scope)</tt>	Remove a registered global scope.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L76'>without_global_scopes</a>()</tt>	Remove all registered global scopes.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L86'>find</a>(id,columns)</tt>	Find a model by its primary key.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L109'>find_many</a>(id,columns)</tt>	Find a model by its primary key.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L132'>find_or_fail</a>(id,columns)</tt>	Find a model by its primary key or raise an exception.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L157'>first</a>(columns)</tt>	Execute the query and get the first result.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L172'>first_or_fail</a>(columns)</tt>	Execute the query and get the first result or raise an exception.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L189'>get</a>(columns)</tt>	Execute the query as a "select" statement.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L210'>pluck</a>(column)</tt>	Pluck a single column from the database.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L225'>chunk</a>(count)</tt>	Chunk the results of the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L249'>lists</a>(column,key)</tt>	Get a list with the values of a given column.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L278'>paginate</a>(per_page,current_page,columns)</tt>	Paginate the given query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L304'>simple_paginate</a>(per_page,current_page,columns)</tt>	Paginate the given query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L329'>update</a>(_values)</tt>	Update a record in the database.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L344'>increment</a>(column,amount,extras)</tt>	Increment a column's value by a given amount.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L367'>decrement</a>(column,amount,extras)</tt>	Decrement a column's value by a given amount.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L390'>_add_updated_at_column</a>(values)</tt>	Add the "updated_at" column to a dictionary of values.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L409'>delete</a>()</tt>	Delete a record from the database.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L418'>force_delete</a>()</tt>	Run the default delete function on the builder.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L424'>on_delete</a>(callback)</tt>	Register a replacement for the default delete function.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L433'>get_models</a>(columns)</tt>	Get the hydrated models without eager loading.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L451'>eager_load_relations</a>(models)</tt>	Eager load the relationship of the models.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L467'>_load_relation</a>(models,name,constraints)</tt>	Eagerly load the relationship on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L488'>get_relation</a>(relation)</tt>	Get the relation instance for the given relation name.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L506'>_nested_relations</a>(relation)</tt>	Get the deeply nested relations for a given top-level relation.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L520'>_is_nested</a>(name,relation)</tt>	Determine if the relationship is nested.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L533'>where</a>(column,operator,value,boolean)</tt>	Add a where clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L559'>or_where</a>(column,operator,value)</tt>	Add an "or where" clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L577'>where_exists</a>(query,boolean,negate)</tt>	Add an exists clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L597'>or_where_exists</a>(query,negate)</tt>	Add an or exists clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L610'>where_not_exists</a>(query,boolean)</tt>	Add a where not exists clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L623'>or_where_not_exists</a>(query)</tt>	Add a or where not exists clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L634'>has</a>(relation,operator,count,boolean)</tt>	Add a relationship count condition to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L669'>_has_nested</a>(relations,operator,count,boolean)</tt>	Add nested relationship count conditions to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L700'>doesnt_have</a>(relation,boolean,extra)</tt>	Add a relationship count to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L717'>where_has</a>(relation,extra,operator,count)</tt>	Add a relationship count condition to the query with where clauses.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L737'>where_doesnt_have</a>(relation,extra)</tt>	Add a relationship count condition to the query with where clauses.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L751'>or_has</a>(relation,operator,count)</tt>	Add a relationship count condition to the query with an "or".
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L768'>or_where_has</a>(relation,extra,operator,count)</tt>	Add a relationship count condition to the query with where clauses and an "or".
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L788'>_add_has_where</a>(has_query,relation,operator,count)</tt>	Add the "has" condition where clause to the query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L816'>_merge_model_defined_relation_wheres_to_has_query</a>(has_query,relation)</tt>	Merge the "wheres" from a relation query to a has query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L834'>_get_has_relation_query</a>(relation)</tt>	Get the "has" relation base query.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L847'>with_</a>()</tt>	Set the relationships that should be eager loaded.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L863'>_parse_with_relations</a>(relations)</tt>	Parse a list of relations into individuals.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L888'>_parse_nested_with</a>(name,results)</tt>	Parse the nested relationship in a relation.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L910'>_call_scope</a>(scope)</tt>	Call the given model scope.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L931'>apply_scopes</a>()</tt>	Get the underlying query builder instance with applied global scopes.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L964'>_apply_scope</a>(scope,builder)</tt>	Apply a single scope on the given builder instance.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L979'>_should_nest_wheres_for_scope</a>(query,original_where_count)</tt>	Determine if the scope added after the given offset should be nested.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L990'>_nest_wheres_for_scope</a>(query,where_counts)</tt>	Nest where conditions of the builder and each global scope.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1018'>_slice_where_conditions</a>(wheres,offset,length)</tt>	Create a where list with sliced where conditions.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1037'>get_query</a>()</tt>	Get the underlying query instance.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1045'>to_base</a>()</tt>	Get a base query builder instance.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1053'>set_query</a>(query)</tt>	Set the underlying query instance.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1062'>get_eager_loads</a>()</tt>	Get the relationships being eager loaded.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1070'>set_eager_loads</a>(eager_load)</tt>	Sets the relationships to eager load.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1082'>get_model</a>()</tt>	Get the model instance of the model being queried :rtype orator.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1090'>set_model</a>(model)</tt>	Set a model instance for the model being queried.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1106'>macro</a>(name,callback)</tt>	Extend the builder with the given callback.
+<tt style='background-color:#E8E8E8;'> orm.Builder <a href=' /orm/builder.py#L1118'>get_macro</a>(name)</tt>	Get the given macro by name.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L118'>__init__</a>(_attributes)</tt>	:param attributes the instance attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L138'>_boot_if_not_booted</a>()</tt>	Check if the model needs to be booted and if so do it.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L153'>_boot</a>(cls)</tt>	The booting method of the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L175'>_boot_mixins</a>(cls)</tt>	Boot the mixins.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L188'>add_global_scope</a>(cls,scope,implementation)</tt>	Register a new global scope on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L211'>has_global_scope</a>(cls,scope)</tt>	Determine if a model has a global scope.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L221'>get_global_scope</a>(cls,scope)</tt>	Get a global scope registered with the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L233'>get_global_scopes</a>()</tt>	Get the global scopes for this class instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L241'>observe</a>(cls,observer)</tt>	Register an observer with the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L252'>fill</a>(_attributes)</tt>	Fill the model with attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L279'>force_fill</a>(_attributes)</tt>	Fill the model with attributes force mass assignment.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L300'>_fillable_from_dict</a>(attributes)</tt>	Get the fillable attributes from a given dictionary.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L314'>new_instance</a>(attributes,exists)</tt>	Create a new instance for the given model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L337'>new_from_builder</a>(attributes,connection)</tt>	Create a new model instance that is existing.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L361'>hydrate</a>(cls,items,connection)</tt>	Create a collection of models from plain lists.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L376'>hydrate_raw</a>(cls,query,bindings,connection)</tt>	Create a collection of models from a raw query.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L397'>create</a>(cls,_attributes)</tt>	Save a new model an return the instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L417'>force_create</a>(cls)</tt>	Save a new model an return the instance allow mass assignment.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L436'>first_or_create</a>(cls)</tt>	Get the first record matching the attributes or create it.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L454'>first_or_new</a>(cls)</tt>	Get the first record matching the attributes or instantiate it.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L472'>update_or_create</a>(cls,attributes,values)</tt>	Create or update a record matching the attributes and fill it with values.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1805'>query</a>(cls)</tt>	Begin querying the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L505'>on</a>(cls,connection)</tt>	Begin querying the model on a given connection.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L522'>on_write_connection</a>(cls)</tt>	Begin querying the model on the write connection.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L534'>all</a>(cls,columns)</tt>	Get all og the models from the database.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L549'>find</a>(cls,id,columns)</tt>	Find a model by its primary key.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L573'>find_or_new</a>(cls,id,columns)</tt>	Find a model by its primary key or return new instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L594'>fresh</a>(with_)</tt>	Reload a fresh instance from the database.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L612'>load</a>()</tt>	Eager load relations on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L628'>with_</a>(cls)</tt>	Begin querying a model with eager loading.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L643'>has_one</a>(related,foreign_key,local_key,relation)</tt>	Define a one to one relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L695'>morph_one</a>(related,name,type_column,id_column)</tt>	Define a polymorphic one to one relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L749'>belongs_to</a>(related,foreign_key,other_key,relation)</tt>	Define an inverse one to one or many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L797'>morph_to</a>(name,type_column,id_column,_wrapped)</tt>	Define a polymorphic inverse one-to-one or many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L850'>get_actual_class_for_morph</a>(slug)</tt>	Retrieve the class from a slug.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L862'>has_many</a>(related,foreign_key,local_key,relation)</tt>	Define a one to many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L913'>has_many_through</a>(related,through,first_key,second_key)</tt>	Define a has-many-through relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L966'>morph_many</a>(related,name,type_column,id_column)</tt>	Define a polymorphic one to many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1020'>belongs_to_many</a>(related,table,foreign_key,other_key)</tt>	Define a many-to-many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1074'>morph_to_many</a>(related,name,table,foreign_key)</tt>	Define a polymorphic many-to-many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1136'>morphed_by_many</a>(related,name,table,foreign_key)</tt>	Define a polymorphic many-to-many relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1168'>_get_related</a>(related,as_instance)</tt>	Get the related class.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1199'>joining_table</a>(related)</tt>	Get the joining table name for a many-to-many relation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1216'>destroy</a>(cls)</tt>	Destroy the models for the given ids.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1244'>delete</a>()</tt>	Delete the model from the database.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1269'>force_delete</a>()</tt>	Force a hard delete on a soft deleted model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1275'>_perform_delete_on_model</a>()</tt>	Perform the actual delete query on this model instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1284'>saving</a>(cls,callback)</tt>	Register a saving model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1293'>saved</a>(cls,callback)</tt>	Register a saved model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1302'>updating</a>(cls,callback)</tt>	Register a updating model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1311'>updated</a>(cls,callback)</tt>	Register a updated model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1320'>creating</a>(cls,callback)</tt>	Register a creating model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1329'>created</a>(cls,callback)</tt>	Register a created model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1338'>deleting</a>(cls,callback)</tt>	Register a deleting model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1347'>deleted</a>(cls,callback)</tt>	Register a deleted model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1356'>flush_event_listeners</a>(cls)</tt>	Remove all of the event listeners for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1367'>_register_model_event</a>(cls,event,callback)</tt>	Register a model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1381'>get_observable_events</a>(cls)</tt>	Get the observable event names.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1396'>_increment</a>(column,amount)</tt>	Increment a column's value.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1411'>_decrement</a>(column,amount)</tt>	Decrement a column's value.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1426'>_increment_or_decrement</a>(column,amount,method)</tt>	Runthe increment or decrement method on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1453'>_increment_or_decrement_attribute_value</a>(column,amount,method)</tt>	Increment the underlying attribute value and sync with original.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1472'>update</a>(_attributes)</tt>	Update the model in the database.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1490'>push</a>()</tt>	Save the model and all of its relationship.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1512'>save</a>(options)</tt>	Save the model to the database.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1534'>_finish_save</a>(options)</tt>	Finish processing on a successful save operation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1545'>_perform_update</a>(query,options)</tt>	Perform a model update operation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1576'>_perform_insert</a>(query,options)</tt>	Perform a model update operation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1608'>_insert_and_set_id</a>(query,attributes)</tt>	Insert the given attributes and set the id on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1624'>touch_owners</a>()</tt>	Touch the owning relations of the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1636'>touches</a>(relation)</tt>	Determine if a model touches a given relation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1647'>_fire_model_event</a>(event)</tt>	Fire the given event for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1663'>_set_keys_for_save_query</a>(query)</tt>	Set the keys for a save update query.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1677'>_get_key_for_save_query</a>()</tt>	Get the primary key value for a save query.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1686'>touch</a>()</tt>	Update the model's timestamps.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1699'>_update_timestamps</a>()</tt>	Update the model's timestamps.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1711'>_should_set_timestamp</a>(timestamp)</tt>	Determine if a timestamp should be set.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1725'>set_created_at</a>(value)</tt>	Set the value of the "created at" attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1734'>set_updated_at</a>(value)</tt>	Set the value of the "updated at" attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1743'>get_created_at_column</a>()</tt>	Get the name of the "created at" column.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1751'>get_updated_at_column</a>()</tt>	Get the name of the "updated at" column.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1759'>fresh_timestamp</a>()</tt>	Get a fresh timestamp for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1767'>new_query</a>()</tt>	Get a new query builder for the model's table.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1781'>new_query_without_scope</a>(scope)</tt>	Get a new query builder for the model's table without a given scope.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1792'>new_query_without_scopes</a>()</tt>	Get a new query builder without any scopes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1809'>new_orm_builder</a>(query)</tt>	Create a new orm query builder for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1821'>_new_base_query_builder</a>()</tt>	Get a new query builder instance for the connection.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1832'>new_collection</a>(models)</tt>	Create a new collection instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1847'>new_pivot</a>(parent,attributes,table,exists)</tt>	Create a new pivot model instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1869'>get_table</a>()</tt>	Get the table associated with the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1878'>set_table</a>(table)</tt>	Set the table associated with the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1893'>get_key</a>()</tt>	Get the value of the model's primary key.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1899'>get_key_name</a>()</tt>	Get the primary key for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1908'>set_key_name</a>(name)</tt>	Set the primary key for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1917'>get_qualified_key_name</a>()</tt>	Get the table qualified key name.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1925'>uses_timestamps</a>()</tt>	Determine if the model uses timestamps.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1933'>get_morphs</a>(name,type,id)</tt>	Get the polymorphic relationship columns.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1945'>get_morph_name</a>(cls)</tt>	Get the name for polymorphic relations.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1955'>get_per_page</a>()</tt>	Get the number of models to return per page.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1963'>get_foreign_key</a>()</tt>	Get the default foreign key name for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1971'>get_hidden</a>()</tt>	Get the hidden attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1977'>set_hidden</a>(hidden)</tt>	Set the hidden attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1988'>add_hidden</a>()</tt>	Add hidden attributes to the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L1997'>get_visible</a>()</tt>	Get the visible attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2003'>set_visible</a>(visible)</tt>	Set the visible attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2014'>add_visible</a>()</tt>	Add visible attributes to the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2023'>get_fillable</a>()</tt>	Get the fillable attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2031'>fillable</a>(fillable)</tt>	Set the fillable attributes for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2045'>get_guarded</a>()</tt>	Get the guarded attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2051'>guard</a>(guarded)</tt>	Set the guarded attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2065'>unguard</a>(cls)</tt>	Disable the mass assigment restrictions.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2072'>reguard</a>(cls)</tt>	Enable the mass assignment restrictions.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2080'>is_fillable</a>(key)</tt>	Determine if the given attribute can be mass assigned.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2101'>is_guarded</a>(key)</tt>	Determine if the given attribute is guarded.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2113'>totally_guarded</a>()</tt>	Determine if the model is totally guarded.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2121'>_remove_table_from_key</a>(key)</tt>	Remove the table name from a given key.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2141'>to_json</a>()</tt>	Convert the model instance to json.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2153'>serialize</a>()</tt>	Convert the model instance to a dictionary.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2166'>to_dict</a>()</tt>	Convert the model instance to a dictionary.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2176'>attributes_to_dict</a>()</tt>	Convert the model's attributes to a dictionary.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2214'>_get_dictable_attributes</a>()</tt>	Get an attribute dictionary of all dictable attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2222'>_get_dictable_appends</a>()</tt>	Get all the appendable values that are dictable.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2233'>relations_to_dict</a>()</tt>	Get the model's relationships in dictionary form.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2258'>_get_dictable_relations</a>()</tt>	Get an attribute dict of all dictable relations.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2264'>_get_dictable_items</a>(values)</tt>	Get an attribute dictionary of all dictable values.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2278'>get_attribute</a>(key,original)</tt>	Get an attribute from the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2300'>get_raw_attribute</a>(key)</tt>	Get the raw underlying attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2309'>_get_attribute_value</a>(key)</tt>	Get a plain attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2329'>_get_relationship_from_method</a>(method,relations)</tt>	Get a relationship value from a method.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2347'>has_get_mutator</a>(key)</tt>	Determine if a get mutator exists for an attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2358'>_mutate_attribute_for_dict</a>(key)</tt>	Get the value of an attribute using its mutator for dict conversion.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2375'>_has_cast</a>(key)</tt>	Determine whether an attribute should be casted to a native type.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2386'>_has_set_mutator</a>(key)</tt>	Determine whether an attribute has a set mutator.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2401'>_is_json_castable</a>(key)</tt>	Determine whether a value is json castable.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2417'>_get_cast_type</a>(key)</tt>	Get the type of the cast for a model attribute.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2428'>_cast_attribute</a>(key,value)</tt>	Cast an attribute to a native python type.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2457'>get_dates</a>()</tt>	Get the attributes that should be converted to dates.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2467'>from_datetime</a>(value)</tt>	Convert datetime to a storable string.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2488'>as_datetime</a>(value)</tt>	Return a timestamp as a datetime.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2505'>get_date_format</a>()</tt>	Get the format to use for timestamps and dates.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2513'>_format_date</a>(date)</tt>	Format a date or timestamp.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2538'>set_attribute</a>(key,value)</tt>	Set a given attribute on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2553'>replicate</a>(except_)</tt>	Clone the model into a new non-existing instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2577'>get_attributes</a>()</tt>	Get all of the current attributes on the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2585'>set_raw_attributes</a>(attributes,sync)</tt>	Set the dictionary of model attributes no checking is done.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2600'>set_raw_attribute</a>(key,value,sync)</tt>	Set an attribute no checking is done.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2618'>get_original</a>(key,default)</tt>	Get the original values.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2635'>sync_original</a>()</tt>	Sync the original attributes with the current.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2645'>sync_original_attribute</a>(attribute)</tt>	Sync a single original attribute with its current value.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2658'>is_dirty</a>()</tt>	Determine if the model or given attributes have been modified.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2678'>get_dirty</a>()</tt>	Get the attribute that have been change since last sync.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2701'>set_appends</a>(appends)</tt>	Sets the appendable attributes.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2712'>get_relations</a>()</tt>	Get all the loaded relations for the instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2720'>get_relation</a>(relation)</tt>	Get a specific relation.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2731'>set_relation</a>(relation,value)</tt>	Set the specific relation in the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2753'>get_connection</a>()</tt>	Get the database connection for the model :rtype orator.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2761'>get_connection_name</a>()</tt>	Get the database connection name for the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2769'>set_connection</a>(name)</tt>	Set the connection associated with the model.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2783'>resolve_connection</a>(cls,connection)</tt>	Resolve a connection instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2795'>get_connection_resolver</a>(cls)</tt>	Get the connection resolver instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2802'>set_connection_resolver</a>(cls,resolver)</tt>	Set the connection resolver instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2809'>unset_connection_resolver</a>(cls)</tt>	Unset the connection resolver instance.
+<tt style='background-color:#E8E8E8;'> orm.Model <a href=' /orm/model.py#L2816'>_get_mutated_attributes</a>()</tt>	Get the mutated attributes.
+<tt style='background-color:#E8E8E8;'> orm.Collection <a href=' /orm/collection.py#L8'>load</a>()</tt>	Load a set of relationships onto the collection.
+<tt style='background-color:#E8E8E8;'> orm.Collection <a href=' /orm/collection.py#L19'>lists</a>(value,key)</tt>	Get a list with the values of a given key.
+<tt style='background-color:#E8E8E8;'> orm.Collection <a href=' /orm/collection.py#L29'>model_keys</a>()</tt>	Get the list of primary keys.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L10'>apply</a>(builder,model)</tt>	Apply the scope to a given query builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L24'>extend</a>(builder)</tt>	Extend the query builder with the needed functions.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L36'>_on_delete</a>(builder)</tt>	The delete replacement function.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L49'>_get_deleted_at_column</a>(builder)</tt>	Get the "deleted at" column for the builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L63'>_add_force_delete</a>(builder)</tt>	Add the force delete extension to the builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L72'>_force_delete</a>(builder)</tt>	The forece delete extension.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L81'>_add_restore</a>(builder)</tt>	Add the restore extension to the builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L90'>_restore</a>(builder)</tt>	The restore extension.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L103'>_add_with_trashed</a>(builder)</tt>	Add the with-trashed extension to the builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L112'>_with_trashed</a>(builder)</tt>	The with-trashed extension.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L123'>_add_only_trashed</a>(builder)</tt>	Add the only-trashed extension to the builder.
+<tt style='background-color:#E8E8E8;'> orm.scopes.SoftDeletingScope <a href=' /orm/scopes/soft_deleting.py#L132'>_only_trashed</a>(builder)</tt>	The only-trashed extension.
+<tt style='background-color:#E8E8E8;'> orm.scopes.Scope <a href=' /orm/scopes/scope.py#L6'>apply</a>(builder,model)</tt>	Apply the scope to a given query builder.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L10'>boot_soft_deletes</a>(cls,klass)</tt>	Boot the soft deleting mixin for a model.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L17'>force_delete</a>()</tt>	Force a hard delete on a soft deleted model.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L27'>_perform_delete_on_model</a>()</tt>	Perform the actual delete query on this model instance.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L33'>_do_perform_delete_on_model</a>()</tt>	Perform the actual delete query on this model instance.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L42'>_run_soft_delete</a>()</tt>	Perform the actual delete query on this model instance.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L55'>restore</a>()</tt>	Restore a soft-deleted model instance.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L72'>trashed</a>()</tt>	Determine if the model instance has been soft-deleted.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L80'>with_trashed</a>(cls)</tt>	Get a new query builder that includes soft deletes.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L89'>only_trashed</a>(cls)</tt>	Get a new query builder that only includes soft deletes :type cls orator.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L104'>restoring</a>(cls,callback)</tt>	Register a restoring model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L113'>restored</a>(cls,callback)</tt>	Register a restored model event with the dispatcher.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L122'>get_deleted_at_column</a>()</tt>	Get the name of the "deleted at" column.
+<tt style='background-color:#E8E8E8;'> orm.mixins.SoftDeletes <a href=' /orm/mixins/soft_deletes.py#L130'>get_qualified_deleted_at_column</a>()</tt>	Get the fully qualified "deleted at" column.
+<tt style='background-color:#E8E8E8;'> orm.relations.Result <a href=' /orm/relations/result.py#L13'>__init__</a>(result,relation,parent)</tt>	:param query a builder instance :type query orm.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L10'>__init__</a>(parent,attributes,table,exists)</tt>	:param parent the parent model.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L41'>_set_keys_for_save_query</a>(query)</tt>	Set the keys for a save update query.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L55'>delete</a>()</tt>	Delete the pivot model record from the database.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L63'>_get_delete_query</a>()</tt>	Get the query builder for a delete operation on the pivot.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L75'>has_timestamps_attributes</a>()</tt>	Determine if the pivot has timestamps attributes.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L89'>set_pivot_keys</a>(foreign_key,other_key)</tt>	Set the key names for the pivot model instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L104'>set_table</a>(table)</tt>	Set the table associated with the model.
+<tt style='background-color:#E8E8E8;'> orm.relations.Pivot <a href=' /orm/relations/pivot.py#L113'>get_table</a>()</tt>	Get the table associated with the model.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphPivot <a href=' /orm/relations/morph_pivot.py#L11'>_set_keys_for_save_query</a>(query)</tt>	Set the keys for a save update query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphPivot <a href=' /orm/relations/morph_pivot.py#L25'>delete</a>()</tt>	Delete the pivot model record from the database.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOne <a href=' /orm/relations/morph_one.py#L9'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOne <a href=' /orm/relations/morph_one.py#L15'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOne <a href=' /orm/relations/morph_one.py#L27'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L10'>__init__</a>(query,parent,foreign_key,other_key)</tt>	:param query a builder instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L33'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L42'>add_constraints</a>()</tt>	Set the base constraints on the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L57'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L72'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L82'>_get_eager_model_keys</a>(models)</tt>	Gather the keys from a list of related models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L103'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L115'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L144'>associate</a>(model)</tt>	Associate the model instance to the given parent.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L156'>dissociate</a>()</tt>	Dissociate previously associated model from the given parent.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsTo <a href=' /orm/relations/belongs_to.py#L166'>update</a>(_attributes)</tt>	Update the parent model on the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L13'>__init__</a>(query,parent)</tt>	:param query a builder instance :type query orm.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L28'>add_constraints</a>()</tt>	Set the base constraints on the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L36'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L44'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L53'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L63'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L69'>get_eager</a>()</tt>	Get the relationship for eager loading.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L77'>touch</a>()</tt>	Touch all of the related models for the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L85'>raw_update</a>(attributes)</tt>	Run a raw update against the base query.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L98'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L113'>no_constraints</a>(cls,with_subclasses)</tt>	Runs a callback with constraints disabled on the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L135'>get_keys</a>(models,key)</tt>	Get all the primary keys for an array of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L167'>created_at</a>()</tt>	Get the name of the "created at" column.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L175'>updated_at</a>()</tt>	Get the name of the "updated at" column.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L183'>get_related_updated_at</a>()</tt>	Get the name of the related model's "updated at" column.
+<tt style='background-color:#E8E8E8;'> orm.relations.Relation <a href=' /orm/relations/relation.py#L191'>wrap</a>(value)</tt>	Wrap the given value with the parent's query grammar.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOne <a href=' /orm/relations/has_one.py#L9'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOne <a href=' /orm/relations/has_one.py#L15'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOne <a href=' /orm/relations/has_one.py#L27'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L10'>__init__</a>(query,parent,foreign_key,local_key)</tt>	:type query orator orm builder.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L28'>add_constraints</a>()</tt>	Set the base constraints of the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L35'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L43'>match_one</a>(models,results,relation)</tt>	Match the eargerly loaded resuls to their single parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L60'>match_many</a>(models,results,relation)</tt>	Match the eargerly loaded resuls to their single parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L77'>_match_one_or_many</a>(models,results,relation,type_)</tt>	Match the eargerly loaded resuls to their single parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L112'>_get_relation_value</a>(dictionary,key,type)</tt>	Get the value of the relationship by one or many type.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L127'>_build_dictionary</a>(results)</tt>	Build model dictionary keyed by the relation's foreign key.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L149'>save</a>(model)</tt>	Attach a model instance to the parent models.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L165'>save_many</a>(models)</tt>	Attach a list of models to the parent instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L176'>find_or_new</a>(id,columns)</tt>	Find a model by its primary key or return new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L199'>first_or_new</a>(_attributes)</tt>	Get the first related model record matching the attributes or instantiate it.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L219'>first_or_create</a>(_attributes)</tt>	Get the first related record matching the attributes or create it.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L238'>update_or_create</a>(attributes,values)</tt>	Create or update a related record matching the attributes and fill it with values.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L258'>create</a>(_attributes)</tt>	Create a new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L278'>create_many</a>(records)</tt>	Create a list of new instances of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasOneOrMany <a href=' /orm/relations/has_one_or_many.py#L294'>update</a>(_attributes)</tt>	Perform an update on all the related models.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphMany <a href=' /orm/relations/morph_many.py#L9'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphMany <a href=' /orm/relations/morph_many.py#L15'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphMany <a href=' /orm/relations/morph_many.py#L27'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L10'>__init__</a>(query,far_parent,parent,first_key)</tt>	:param query a builder instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L30'>add_constraints</a>()</tt>	Set the base constraints on the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L43'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L62'>_set_join</a>(query)</tt>	Set the join clause for the query.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L73'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L83'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L95'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L117'>_build_dictionary</a>(results)</tt>	Build model dictionary keyed by the relation's foreign key.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L139'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L145'>get</a>(columns)</tt>	Execute the query as a "select" statement.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasManyThrough <a href=' /orm/relations/has_many_through.py#L165'>_get_select_columns</a>(columns)</tt>	Set the select clause for the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L8'>__init__</a>(query,parent,name,table)</tt>	:param query a builder instance :type query elquent.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L41'>_set_where</a>()</tt>	Set the where clause for the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L52'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L65'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L75'>_create_attach_record</a>(id,timed)</tt>	Create a new pivot attachement record.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L85'>_new_pivot_query</a>()</tt>	Create a new query builder for the pivot table.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphToMany <a href=' /orm/relations/morph_to_many.py#L95'>new_pivot</a>(attributes,exists)</tt>	Create a new pivot model instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L8'>__init__</a>(query,parent,morph_type,foreign_key)</tt>	:type query orator orm builder.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L29'>add_constraints</a>()</tt>	Set the base constraints of the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L38'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L51'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L61'>save</a>(model)</tt>	Attach a model instance to the parent models.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L74'>find_or_new</a>(id,columns)</tt>	Find a model by its primary key or return new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L97'>first_or_new</a>(_attributes)</tt>	Get the first related model record matching the attributes or instantiate it.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L117'>first_or_create</a>(_attributes)</tt>	Get the first related record matching the attributes or create it.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L136'>update_or_create</a>(attributes,values)</tt>	Create or update a related record matching the attributes and fill it with values.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L156'>create</a>(_attributes)</tt>	Create a new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphOneOrMany <a href=' /orm/relations/morph_one_or_many.py#L176'>_set_foreign_attributes_for_create</a>(model)</tt>	Set the foreign id and type for creation a related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasMany <a href=' /orm/relations/has_many.py#L9'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasMany <a href=' /orm/relations/has_many.py#L15'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.HasMany <a href=' /orm/relations/has_many.py#L27'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L11'>__init__</a>(query,parent,foreign_key,other_key)</tt>	:type query orator orm builder.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L41'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L50'>_build_dictionary</a>(models)</tt>	Build a dictionary with the models.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L69'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L79'>associate</a>(model)</tt>	Associate the model instance to the given parent.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L92'>get_eager</a>()</tt>	Get the relationship for eager loading.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L103'>_match_to_morph_parents</a>(type,results)</tt>	Match the results for a given type to their parent.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L124'>_get_results_by_type</a>(type)</tt>	Get all the relation results for a type.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L143'>_gather_keys_by_type</a>(type)</tt>	Gather all of the foreign keys for a given type.
+<tt style='background-color:#E8E8E8;'> orm.relations.MorphTo <a href=' /orm/relations/morph_to.py#L160'>_create_model_by_type</a>(type)</tt>	Create a new model instance by type.
+<tt style='background-color:#E8E8E8;'> orm.relations.Wrapper <a href=' /orm/relations/wrapper.py#L23'>__init__</a>(relation)</tt>	:param relation the underlying relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L24'>__init__</a>(query,parent,table,foreign_key)</tt>	:param query a builder instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L54'>get_results</a>()</tt>	Get the results of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L60'>where_pivot</a>(column,operator,value,boolean)</tt>	Set a where clause for a pivot table column.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L83'>or_where_pivot</a>(column,operator,value)</tt>	Set an or where clause for a pivot table column.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L101'>first</a>(columns)</tt>	Execute the query and get the first result.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L116'>first_or_fail</a>(columns)</tt>	Execute the query and get the first result or raise an exception.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L130'>get</a>(columns)</tt>	Execute the query as a "select" statement.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L155'>_hydrate_pivot_relation</a>(models)</tt>	Hydrate the pivot table relationship on the models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L166'>_clean_pivot_attributes</a>(model)</tt>	Get the pivot attributes from a model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L186'>add_constraints</a>()</tt>	Set the base constraints on the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L197'>get_relation_count_query</a>(query,parent)</tt>	Add the constraints for a relationship count query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L213'>get_relation_count_query_for_self_join</a>(query,parent)</tt>	Add the constraints for a relationship count query on the same table.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L233'>get_relation_count_hash</a>()</tt>	Get a relationship join table hash.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L241'>_get_select_columns</a>(columns)</tt>	Set the select clause for the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L255'>_get_aliased_pivot_columns</a>()</tt>	Get the pivot columns for the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L272'>_has_pivot_column</a>(column)</tt>	Determine whether the given column is defined as a pivot column.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L283'>_set_join</a>(query)</tt>	Set the join clause for the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L304'>_set_where</a>()</tt>	Set the where clause for the relation query.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L317'>add_eager_constraints</a>(models)</tt>	Set the constraints for an eager load of the relation.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L325'>init_relation</a>(models,relation)</tt>	Initialize the relation on a set of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L337'>match</a>(models,results,relation)</tt>	Match the eagerly loaded results to their parents.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L359'>_build_dictionary</a>(results)</tt>	Build model dictionary keyed by the relation's foreign key.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L381'>touch</a>()</tt>	Touch all of the related models of the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L394'>get_related_ids</a>()</tt>	Get all of the ids for the related models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L406'>save</a>(model,joining,touch)</tt>	Save a new model and attach it to the parent model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L425'>save_many</a>(models,joinings)</tt>	Save a list of new models and attach them to the parent model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L444'>find_or_new</a>(id,columns)</tt>	Find a model by its primary key or return new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L462'>first_or_new</a>(_attributes)</tt>	Get the first related model record matching the attributes or instantiate it.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L480'>first_or_create</a>(_attributes,_joining,_touch)</tt>	Get the first related model record matching the attributes or create it.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L498'>update_or_create</a>(attributes,values,joining,touch)</tt>	Create or update a related record matching the attributes and fill it with values.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L524'>create</a>(_attributes,_joining,_touch)</tt>	Create a new instance of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L544'>create_many</a>(records,joinings)</tt>	Create a list of new instances of the related model.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L560'>sync</a>(ids,detaching)</tt>	Sync the intermediate tables with a list of ids or collection of models.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L591'>_format_sync_list</a>(records)</tt>	Format the sync list so that it is keyed by id.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L608'>_attach_new</a>(records,current,touch)</tt>	Attach all of the ids that aren't in the current dict.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L627'>update_existing_pivot</a>(id,attributes,touch)</tt>	Update an existing pivot record on the table.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L641'>attach</a>(id,attributes,touch)</tt>	Attach a model to the parent.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L658'>_create_attach_records</a>(ids,attributes)</tt>	Create a list of records to insert into the pivot table.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L672'>_attacher</a>(key,value,attributes,timed)</tt>	Create a full attachment record payload.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L685'>_get_attach_id</a>(key,value,attributes)</tt>	Get the attach record id and extra attributes.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L697'>_create_attach_record</a>(id,timed)</tt>	Create a new pivot attachement record.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L712'>_set_timestamps_on_attach</a>(record,exists)</tt>	Set the creation an update timestamps on an attach record.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L726'>detach</a>(ids,touch)</tt>	Detach models from the relationship.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L751'>touch_if_touching</a>()</tt>	Touch if the parent model is being touched.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L761'>_touching_parent</a>()</tt>	Determine if we should touch the parent on sync.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L770'>_new_pivot_query</a>()</tt>	Create a new query builder for the pivot table.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L783'>new_pivot_statement</a>()</tt>	Get a new plain query builder for the pivot table.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L789'>new_pivot_statement_for_id</a>(id)</tt>	Get a new pivot statement for a given "other" id.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L795'>new_pivot</a>(attributes,exists)</tt>	Create a new pivot model instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L803'>new_existing_pivot</a>(attributes)</tt>	Create a new existing pivot model instance.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L809'>with_pivot</a>()</tt>	Set the columns on the pivot table to retrieve.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L819'>with_timestamps</a>(created_at,updated_at)</tt>	Specify that the pivot table has creation and update columns.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L831'>get_related_fresh_update</a>()</tt>	Get the related model's update at column at.
+<tt style='background-color:#E8E8E8;'> orm.relations.BelongsToMany <a href=' /orm/relations/belongs_to_many.py#L837'>get_has_compare_key</a>()</tt>	Get the key for comparing against the parent key in "has" query.
+<tt style='background-color:#E8E8E8;'> connectors.Connector <a href=' /connectors/connector.py#L67'>_detect_database_platform</a>()</tt>	Detects and sets the database platform.
+<tt style='background-color:#E8E8E8;'> connectors.Connector <a href=' /connectors/connector.py#L82'>_get_database_platform_version</a>()</tt>	Returns the version of the related platform if applicable.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L15'>diff_table</a>(table1,table2)</tt>	Returns the difference between the tables table1 and table2.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L116'>detect_column_renamings</a>(table_differences)</tt>	Try to find columns that only changed their names.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L143'>detect_index_renamings</a>(table_differences)</tt>	Try to find indexes that only changed their name rename operations maybe cheaper than add/drop.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L180'>diff_foreign_key</a>(key1,key2)</tt>	:type key1 foreignkeyconstraint.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L211'>diff_column</a>(column1,column2)</tt>	Returns the difference between column1 and column2 :type column1 orator.
+<tt style='background-color:#E8E8E8;'> dbal.Comparator <a href=' /dbal/comparator.py#L256'>diff_index</a>(index1,index2)</tt>	Finds the difference between the indexes index1 and index2.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L48'>_add_column</a>(column)</tt>	Adds a new column.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L63'>get_quoted_columns</a>(platform)</tt>	Returns the quoted representation of the column names the constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L87'>is_simple_index</a>()</tt>	Is the index neither unique nor primary key?.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L101'>has_column_at_position</a>(column_name,pos)</tt>	:type column_name str.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L113'>spans_columns</a>(column_names)</tt>	Checks if this index exactly spans the given column names in the correct order.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L132'>is_fullfilled_by</a>(other)</tt>	Checks if the other index already fulfills all the indexing and constraint needs of the current one.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L170'>same_partial_index</a>(other)</tt>	Return whether the two indexes have the same partial index.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L188'>overrules</a>(other)</tt>	Detects if the other index is a non-unique non primary index that can be overwritten by this one.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L209'>get_flags</a>()</tt>	Returns platform specific flags for indexes.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L217'>add_flag</a>(flag)</tt>	Adds flag for an index that translates to platform specific handling.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L231'>has_flag</a>(flag)</tt>	Does this index have a specific flag?.
+<tt style='background-color:#E8E8E8;'> dbal.Index <a href=' /dbal/index.py#L241'>remove_flag</a>(flag)</tt>	Removes a flag.
+<tt style='background-color:#E8E8E8;'> dbal.AbstractAsset <a href=' /dbal/abstract_asset.py#L16'>_set_name</a>(name)</tt>	Sets the name of this asset.
+<tt style='background-color:#E8E8E8;'> dbal.AbstractAsset <a href=' /dbal/abstract_asset.py#L79'>_generate_identifier_name</a>(columns,prefix,max_size)</tt>	Generates an identifier from a list of column names obeying a certain string length.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L47'>set_primary_key</a>(columns,index_name)</tt>	Set the primary key.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L72'>drop_primary_key</a>()</tt>	Drop the primary key from this table.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L79'>drop_index</a>(name)</tt>	Drops an index from this table.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L100'>rename_index</a>(old_name,new_name)</tt>	Renames an index.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L138'>columns_are_indexed</a>(columns)</tt>	Checks if an index begins in the order of the given columns.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L152'>_create_index</a>(columns,name,is_unique,is_primary)</tt>	Creates an index instance.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L188'>add_column</a>(name,type_name,options)</tt>	Adds a new column.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L209'>change_column</a>(name,options)</tt>	Changes column details.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L226'>drop_column</a>(name)</tt>	Drops a column from the table.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L240'>add_foreign_key_constraint</a>(foreign_table,local_columns,foreign_columns,options)</tt>	Adds a foreign key constraint.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L270'>add_named_foreign_key_constraint</a>(name,foreign_table,local_columns,foreign_columns)</tt>	Adds a foreign key constraint with a given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L319'>_add_index</a>(index)</tt>	Adds an index to the table.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L354'>_add_foreign_key_constraint</a>(constraint)</tt>	Adds a foreign key constraint.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L396'>has_foreign_key</a>(name)</tt>	Returns whether this table has a foreign key constraint with the given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L409'>get_foreign_key</a>(name)</tt>	Returns the foreign key constraint with the given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L425'>remove_foreign_key</a>(name)</tt>	Removes the foreign key constraint with the given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L468'>get_primary_key</a>()</tt>	Returns the primary key.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L479'>get_primary_key_columns</a>()</tt>	Returns the primary key columns.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L490'>has_primary_key</a>()</tt>	Returns whether this table has a primary key.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L501'>has_index</a>(name)</tt>	Returns whether this table has an index with the given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L514'>get_index</a>(name)</tt>	Returns the index with the given name.
+<tt style='background-color:#E8E8E8;'> dbal.Table <a href=' /dbal/table.py#L571'>_normalize_identifier</a>(identifier)</tt>	Normalizes a given identifier.
+<tt style='background-color:#E8E8E8;'> dbal.SchemaManager <a href=' /dbal/schema_manager.py#L11'>__init__</a>(connection,platform)</tt>	:param connection the connection to use :type connection orator.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L57'>get_local_table_name</a>()</tt>	Returns the name of the referencing table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L66'>set_local_table</a>(table)</tt>	Sets the table instance of the referencing table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L82'>get_local_columns</a>()</tt>	Returns the names of the referencing table columns the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L91'>get_quoted_local_columns</a>(platform)</tt>	Returns the quoted representation of the referencing table column names the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L112'>get_unquoted_local_columns</a>()</tt>	Returns unquoted representation of local table column names for comparison with other fk.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L124'>get_quoted_columns</a>(platform)</tt>	Returns the quoted representation of the referencing table column names the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L140'>get_foreign_table_name</a>()</tt>	Returns the name of the referenced table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L149'>get_unqualified_foreign_table_name</a>()</tt>	Returns the non-schema qualified foreign table name.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L159'>get_quoted_foreign_table_name</a>(platform)</tt>	Returns the quoted representation of the referenced table name the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L175'>get_foreign_columns</a>()</tt>	Returns the names of the referenced table columns the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L184'>get_quoted_foreign_columns</a>(platform)</tt>	Returns the quoted representation of the referenced table column names the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L205'>get_unquoted_foreign_columns</a>()</tt>	Returns unquoted representation of foreign table column names for comparison with other fk.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L223'>on_update</a>()</tt>	Returns the referential action for update operations on the referenced table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L232'>on_delete</a>()</tt>	Returns the referential action for delete operations on the referenced table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L241'>_on_event</a>(event)</tt>	Returns the referential action for a given database operation on the referenced table the foreign key constraint is associated with.
+<tt style='background-color:#E8E8E8;'> dbal.ForeignKeyConstraint <a href=' /dbal/foreign_key_constraint.py#L259'>intersects_index_columns</a>(index)</tt>	Checks whether this foreign key constraint intersects the given index columns.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.MySQLPlatform <a href=' /dbal/platforms/mysql_platform.py#L97'>get_alter_table_sql</a>(diff)</tt>	Get the alter table sql statement.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L62'>get_check_declaration_sql</a>(definition)</tt>	Obtains dbms specific sql code portion needed to set a check constraint declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L86'>get_unique_constraint_declaration_sql</a>(name,index)</tt>	Obtains dbms specific sql code portion needed to set a unique constraint declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L111'>get_index_declaration_sql</a>(name,index)</tt>	Obtains dbms specific sql code portion needed to set an index declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L137'>get_foreign_key_declaration_sql</a>(foreign_key)</tt>	Obtain dbms specific sql code portion needed to set the foreign key constraint of a field declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L152'>get_advanced_foreign_key_options_sql</a>(foreign_key)</tt>	Returns the foreign key query section dealing with non-standard options as match initially deferred on update.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L171'>get_foreign_key_referential_action_sql</a>(action)</tt>	Returns the given referential action in uppercase if valid otherwise throws an exception.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L186'>get_foreign_key_base_declaration_sql</a>(foreign_key)</tt>	Obtains dbms specific sql code portion needed to set the foreign key constraint of a field declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L232'>get_column_declaration_list_sql</a>(fields)</tt>	Gets declaration of a number of fields in bulk.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L375'>get_index_field_declaration_list_sql</a>(fields)</tt>	Obtains dbms specific sql code portion needed to set an index declaration to be used in statements like create table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L392'>get_create_index_sql</a>(index,table)</tt>	Returns the sql to create an index on a table on this platform.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L422'>get_partial_index_sql</a>(index)</tt>	Adds condition for partial index.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L436'>get_create_index_sql_flags</a>(index)</tt>	Adds additional flags for index generation.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L450'>get_create_primary_key_sql</a>(index,table)</tt>	Returns the sql to create an unnamed primary key constraint.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L466'>get_create_foreign_key_sql</a>(foreign_key,table)</tt>	Returns the sql to create a new foreign key.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L479'>get_drop_table_sql</a>(table)</tt>	Returns the sql snippet to drop an existing table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L493'>get_drop_index_sql</a>(index,table)</tt>	Returns the sql to drop an index from a table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L510'>get_create_table_sql</a>(table,create_flags)</tt>	Returns the sql statement s to create a table with the specified name columns and constraints.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L569'>_get_create_table_sql</a>(table_name,columns,options)</tt>	Returns the sql used to create a table.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L616'>quote_identifier</a>(string)</tt>	Quotes a string so that it can be safely used as a table or column name even if it is a reserved word of the platform.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.Platform <a href=' /dbal/platforms/platform.py#L635'>quote_single_identifier</a>(string)</tt>	Quotes a single identifier no dot chain separation.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L66'>get_pre_alter_table_index_foreign_key_sql</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L84'>get_post_alter_table_index_foreign_key_sql</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L179'>get_alter_table_sql</a>(diff)</tt>	Get the alter table sql statement.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L329'>_get_indexes_in_altered_table</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L380'>_get_column_names_in_altered_table</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L412'>_get_foreign_keys_in_altered_table</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.SQLitePlatform <a href=' /dbal/platforms/sqlite_platform.py#L459'>_get_primary_index_in_altered_table</a>(diff)</tt>	:param diff the table diff :type diff orator.
+<tt style='background-color:#E8E8E8;'> dbal.platforms.PostgresPlatform <a href=' /dbal/platforms/postgres_platform.py#L156'>get_alter_table_sql</a>(diff)</tt>	Get the alter table sql statement.
+<tt style='background-color:#E8E8E8;'> seeds.Seeder <a href=' /seeds/seeder.py#L19'>run</a>()</tt>	Run the database seeds.
+<tt style='background-color:#E8E8E8;'> seeds.Seeder <a href=' /seeds/seeder.py#L25'>call</a>(klass)</tt>	Seed the given connection from the given class.
+<tt style='background-color:#E8E8E8;'> seeds.Seeder <a href=' /seeds/seeder.py#L37'>_resolve</a>(klass)</tt>	Resolve an instance of the given seeder klass.
+<tt style='background-color:#E8E8E8;'> seeds.Seeder <a href=' /seeds/seeder.py#L59'>set_command</a>(command)</tt>	Set the console command instance.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L70'>select</a>()</tt>	Set the columns to be selected.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L87'>select_raw</a>(expression,bindings)</tt>	Add a new raw select expression to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L107'>select_sub</a>(query,as_)</tt>	Add a subselect expression to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L131'>add_select</a>()</tt>	Add a new select column to query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L148'>distinct</a>()</tt>	Force the query to return only distinct result.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L159'>from_</a>(table)</tt>	Set the query target table.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L173'>join</a>(table,one,operator,two)</tt>	Add a join clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L213'>join_where</a>(table,one,operator,two)</tt>	Add a "join where" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L237'>left_join</a>(table,one,operator,two)</tt>	Add a left join to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L261'>left_join_where</a>(table,one,operator,two)</tt>	Add a "left join where" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L282'>right_join</a>(table,one,operator,two)</tt>	Add a right join to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L306'>right_join_where</a>(table,one,operator,two)</tt>	Add a "right join where" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L327'>where</a>(column,operator,value,boolean)</tt>	Add a where clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L452'>for_nested_where</a>()</tt>	Create a new query instance for nested where condition.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L491'>where_exists</a>(query,boolean,negate)</tt>	Add an exists clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L519'>or_where_exists</a>(query,negate)</tt>	Add an or exists clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L532'>where_not_exists</a>(query,boolean)</tt>	Add a where not exists clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L545'>or_where_not_exists</a>(query)</tt>	Add a or where not exists clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L588'>_where_in_sub</a>(column,query,boolean,negate)</tt>	Add a where in with a sub select to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L694'>group_by</a>()</tt>	Add a "group by" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L709'>having</a>(column,operator,value,boolean)</tt>	Add a "having" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L743'>or_having</a>(column,operator,value)</tt>	Add a "having" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L761'>having_raw</a>(sql,bindings,boolean)</tt>	Add a raw having clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L789'>or_having_raw</a>(sql,bindings)</tt>	Add a raw having clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L804'>order_by</a>(column,direction)</tt>	Add a "order by" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L834'>latest</a>(column)</tt>	Add an "order by" clause for a timestamp to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L847'>oldest</a>(column)</tt>	Add an "order by" clause for a timestamp to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L860'>order_by_raw</a>(sql,bindings)</tt>	Add a raw "order by" clause to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L917'>union</a>(query,all)</tt>	Add a union statement to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L937'>union_all</a>(query)</tt>	Add a union all statement to the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L949'>lock</a>(value)</tt>	Lock the selected rows in the table.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L963'>lock_for_update</a>()</tt>	Lock the selected rows in the table for updating.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L972'>shared_lock</a>()</tt>	Share lock the selected rows in the table.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L981'>to_sql</a>()</tt>	Get the sql representation of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L990'>find</a>(id,columns)</tt>	Execute a query for a single record by id.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1008'>pluck</a>(column)</tt>	Pluck a single column's value from the first results of a query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1025'>first</a>(limit,columns)</tt>	Execute the query and get the first results.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1043'>get</a>(columns)</tt>	Execute the query as a "select" statement.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1067'>_run_select</a>()</tt>	Run the query as a "select" statement against the connection.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1080'>paginate</a>(per_page,current_page,columns)</tt>	Paginate the given query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1107'>simple_paginate</a>(per_page,current_page,columns)</tt>	Paginate the given query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1153'>chunk</a>(count)</tt>	Chunk the results of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1171'>lists</a>(column,key)</tt>	Get a list with the values of a given column.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1195'>_get_list_select</a>(column,key)</tt>	Get the columns that should be used in a list.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1224'>implode</a>(column,glue)</tt>	Concatenate values of a given column as a string.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1239'>exists</a>()</tt>	Determine if any rows exist for the current query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1254'>count</a>()</tt>	Retrieve the "count" result of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1272'>min</a>(column)</tt>	Retrieve the "min" result of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1284'>max</a>(column)</tt>	Retrieve the "max" result of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1299'>sum</a>(column)</tt>	Retrieve the "sum" result of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1311'>avg</a>(column)</tt>	Retrieve the "avg" result of the query.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1324'>aggregate</a>(func)</tt>	Execute an aggregate function against the database.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1356'>insert</a>(_values)</tt>	Insert a new record into the database.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1394'>insert_get_id</a>(values,sequence)</tt>	Insert a new record and get the value of the primary key.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1415'>update</a>(_values)</tt>	Update a record in the database.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1436'>increment</a>(column,amount,extras)</tt>	Increment a column's value by a given amount.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1464'>decrement</a>(column,amount,extras)</tt>	Decrement a column's value by a given amount.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1492'>delete</a>(id)</tt>	Delete a record from the database.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1509'>truncate</a>()</tt>	Run a truncate statement on the table.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1518'>new_query</a>()</tt>	Get a new instance of the query builder.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1527'>merge_wheres</a>(wheres,bindings)</tt>	Merge a list of where clauses and bindings.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1542'>_clean_bindings</a>(bindings)</tt>	Remove all of the expressions from bindings.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1554'>raw</a>(value)</tt>	Create a raw database expression.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1607'>merge</a>(query)</tt>	Merge current query with another.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1642'>get_connection</a>()</tt>	Get the query connection :return the current connection instance.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1651'>get_processor</a>()</tt>	Get the builder processor.
+<tt style='background-color:#E8E8E8;'> query.QueryBuilder <a href=' /query/builder.py#L1660'>get_grammar</a>()</tt>	Get the builder query grammar.
+<tt style='background-color:#E8E8E8;'> query.processors.MySQLQueryProcessor <a href=' /query/processors/mysql_processor.py#L8'>process_insert_get_id</a>(query,sql,values,sequence)</tt>	Process an "insert get id" query.
+<tt style='background-color:#E8E8E8;'> query.processors.MySQLQueryProcessor <a href=' /query/processors/mysql_processor.py#L53'>process_column_listing</a>(results)</tt>	Process the results of a column listing query.
+<tt style='background-color:#E8E8E8;'> query.processors.PostgresQueryProcessor <a href=' /query/processors/postgres_processor.py#L8'>process_insert_get_id</a>(query,sql,values,sequence)</tt>	Process an "insert get id" query.
+<tt style='background-color:#E8E8E8;'> query.processors.PostgresQueryProcessor <a href=' /query/processors/postgres_processor.py#L39'>process_column_listing</a>(results)</tt>	Process the results of a column listing query.
+<tt style='background-color:#E8E8E8;'> query.processors.SQLiteQueryProcessor <a href=' /query/processors/sqlite_processor.py#L8'>process_column_listing</a>(results)</tt>	Process the results of a column listing query.
+<tt style='background-color:#E8E8E8;'> query.processors.QueryProcessor <a href=' /query/processors/processor.py#L6'>process_select</a>(query,results)</tt>	Process the results of a "select" query.
+<tt style='background-color:#E8E8E8;'> query.processors.QueryProcessor <a href=' /query/processors/processor.py#L21'>process_insert_get_id</a>(query,sql,values,sequence)</tt>	Process an "insert get id" query.
+<tt style='background-color:#E8E8E8;'> query.processors.QueryProcessor <a href=' /query/processors/processor.py#L52'>process_column_listing</a>(results)</tt>	Process the results of a column listing query.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L17'>_compile_lock</a>(query,value)</tt>	Compile the lock into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L38'>compile_update</a>(query,values)</tt>	Compile an update statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L61'>_compile_update_columns</a>(values)</tt>	Compile the columns for the update statement.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L78'>_compile_update_from</a>(query)</tt>	Compile the "from" clause for an update with a join.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L101'>_compile_update_wheres</a>(query)</tt>	Compile the additional where clauses for updates with joins.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L123'>_compile_update_join_wheres</a>(query)</tt>	Compile the "join" clauses for an update.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L141'>compile_insert_get_id</a>(query,values,sequence)</tt>	Compile an insert and get id statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.PostgresQueryGrammar <a href=' /query/grammars/postgres_grammar.py#L163'>compile_truncate</a>(query)</tt>	Compile a truncate table statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.QueryGrammar <a href=' /query/grammars/grammar.py#L312'>compile_insert</a>(query,values)</tt>	Compile an insert sql statement.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L25'>compile_select</a>(query)</tt>	Compile a select query into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L42'>_compile_union</a>(union)</tt>	Compile a single union statement.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L59'>_compile_lock</a>(query,value)</tt>	Compile the lock into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L80'>compile_update</a>(query,values)</tt>	Compile an update statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L103'>compile_delete</a>(query)</tt>	Compile a delete statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.MySQLQueryGrammar <a href=' /query/grammars/mysql_grammar.py#L137'>_wrap_value</a>(value)</tt>	Wrap a single string in keyword identifers.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L14'>compile_insert</a>(query,values)</tt>	Compile insert statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L51'>compile_truncate</a>(query)</tt>	Compile a truncate statement into sql.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L69'>_where_day</a>(query,where)</tt>	Compile a "where day" clause.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L84'>_where_month</a>(query,where)</tt>	Compile a "where month" clause.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L99'>_where_year</a>(query,where)</tt>	Compile a "where year" clause.
+<tt style='background-color:#E8E8E8;'> query.grammars.SQLiteQueryGrammar <a href=' /query/grammars/sqlite_grammar.py#L114'>_date_based_where</a>(type,query,where)</tt>	Compiled a date where based clause.
+<tt style='background-color:#E8E8E8;'> schema.Schema <a href=' /schema/schema.py#L6'>__init__</a>(manager)</tt>	:param manager the database manager :type manager orator.
+<tt style='background-color:#E8E8E8;'> schema.Schema <a href=' /schema/schema.py#L13'>connection</a>(connection)</tt>	Get a schema builder instance for a connection.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L9'>__init__</a>(connection)</tt>	:param connection the schema connection :type connection orator.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L17'>has_table</a>(table)</tt>	Determine if the given table exists.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L32'>has_column</a>(table,column)</tt>	Determine if the given table has a given column.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L47'>get_column_listing</a>(table)</tt>	Get the column listing for a given table.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L62'>table</a>(table)</tt>	Modify a table on the schema.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L81'>create</a>(table)</tt>	Create a new table on the schema.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L104'>drop</a>(table)</tt>	Drop a table from the schema.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L117'>drop_if_exists</a>(table)</tt>	Drop a table from the schema.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L130'>rename</a>(from_,to)</tt>	Rename a table on the schema.
+<tt style='background-color:#E8E8E8;'> schema.SchemaBuilder <a href=' /schema/builder.py#L140'>_build</a>(blueprint)</tt>	Execute the blueprint to build / modify the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L8'>__init__</a>(table)</tt>	:param table the table to operate on.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L20'>build</a>(connection,grammar)</tt>	Execute the blueprint against the database.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L33'>to_sql</a>(connection,grammar)</tt>	Get the raw sql statements for the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L62'>_add_implied_commands</a>()</tt>	Add the commands that are implied by the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L74'>_add_fluent_indexes</a>()</tt>	Add the index commands fluently specified on columns.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L91'>_creating</a>()</tt>	Determine if the blueprint has a create command.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L103'>create</a>()</tt>	Indicates that the table needs to be created.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L111'>drop</a>()</tt>	Indicates that the table needs to be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L121'>drop_if_exists</a>()</tt>	Indicates that the table should be dropped if it exists.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L129'>drop_column</a>()</tt>	Indicates that the given columns should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L142'>rename_column</a>(from_,to)</tt>	Indicates that the given columns should be renamed.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L155'>drop_primary</a>(index)</tt>	Indicate that the given primary key should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L166'>drop_unique</a>(index)</tt>	Indicate that the given unique key should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L177'>drop_index</a>(index)</tt>	Indicate that the given index should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L188'>drop_foreign</a>(index)</tt>	Indicate that the given foreign key should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L199'>drop_timestamps</a>()</tt>	Indicate that the timestamp columns should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L207'>drop_soft_deletes</a>()</tt>	Indicate that the soft delete column should be dropped.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L215'>rename</a>(to)</tt>	Rename the table to a given name.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L226'>primary</a>(columns,name)</tt>	Specify the primary key s for the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L240'>unique</a>(columns,name)</tt>	Specify a unique index on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L254'>index</a>(columns,name)</tt>	Specify an index on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L268'>foreign</a>(columns,name)</tt>	Specify an foreign key on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L282'>increments</a>(column)</tt>	Create a new auto-incrementing integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L293'>big_increments</a>(column)</tt>	Create a new auto-incrementing big integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L304'>char</a>(column,length)</tt>	Create a new char column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L315'>string</a>(column,length)</tt>	Create a new string column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L326'>text</a>(column)</tt>	Create a new text column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L337'>medium_text</a>(column)</tt>	Create a new medium text column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L348'>long_text</a>(column)</tt>	Create a new long text column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L359'>integer</a>(column,auto_increment,unsigned)</tt>	Create a new integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L376'>big_integer</a>(column,auto_increment,unsigned)</tt>	Create a new big integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L393'>medium_integer</a>(column,auto_increment,unsigned)</tt>	Create a new medium integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L410'>tiny_integer</a>(column,auto_increment,unsigned)</tt>	Create a new tiny integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L427'>small_integer</a>(column,auto_increment,unsigned)</tt>	Create a new small integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L444'>unsigned_integer</a>(column,auto_increment)</tt>	Create a new unisgned integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L457'>unsigned_big_integer</a>(column,auto_increment)</tt>	Create a new unsigned big integer column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L470'>float</a>(column,total,places)</tt>	Create a new float column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L485'>double</a>(column,total,places)</tt>	Create a new double column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L500'>decimal</a>(column,total,places)</tt>	Create a new decimal column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L515'>boolean</a>(column)</tt>	Create a new decimal column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L526'>enum</a>(column,allowed)</tt>	Create a new enum column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L539'>json</a>(column)</tt>	Create a new json column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L550'>date</a>(column)</tt>	Create a new date column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L561'>datetime</a>(column)</tt>	Create a new datetime column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L572'>time</a>(column)</tt>	Create a new time column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L583'>timestamp</a>(column)</tt>	Create a new timestamp column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L594'>nullable_timestamps</a>()</tt>	Create nullable creation and update timestamps to the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L603'>timestamps</a>(use_current)</tt>	Create creation and update timestamps to the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L616'>soft_deletes</a>()</tt>	Add a "deleted at" timestamp to the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L624'>binary</a>(column)</tt>	Create a new binary column on the table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L635'>morphs</a>(name,index_name)</tt>	Add the proper columns for a polymorphic table.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L647'>_drop_index_command</a>(command,type,index)</tt>	Create a new drop index command on the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L671'>_index_command</a>(type,columns,index)</tt>	Add a new index command to the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L702'>_add_column</a>(type,name)</tt>	Add a new column to the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L727'>_remove_column</a>(name)</tt>	Removes a column from the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L740'>_add_command</a>(name)</tt>	Add a new command to the blueprint.
+<tt style='background-color:#E8E8E8;'> schema.Blueprint <a href=' /schema/blueprint.py#L757'>_create_command</a>(name)</tt>	Create a new command.
+<tt style='background-color:#E8E8E8;'> schema.MySQLSchemaBuilder <a href=' /schema/mysql_builder.py#L8'>has_table</a>(table)</tt>	Determine if the given table exists.
+<tt style='background-color:#E8E8E8;'> schema.MySQLSchemaBuilder <a href=' /schema/mysql_builder.py#L23'>get_column_listing</a>(table)</tt>	Get the column listing for a given table.
+<tt style='background-color:#E8E8E8;'> schema.grammars.PostgresSchemaGrammar <a href=' /schema/grammars/postgres_grammar.py#L18'>compile_rename_column</a>(blueprint,command,connection)</tt>	Compile a rename column command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.PostgresSchemaGrammar <a href=' /schema/grammars/postgres_grammar.py#L40'>compile_table_exists</a>()</tt>	Compile the query to determine if a table exists.
+<tt style='background-color:#E8E8E8;'> schema.grammars.PostgresSchemaGrammar <a href=' /schema/grammars/postgres_grammar.py#L51'>compile_column_exists</a>(table)</tt>	Compile the query to determine the list of columns.
+<tt style='background-color:#E8E8E8;'> schema.grammars.PostgresSchemaGrammar <a href=' /schema/grammars/postgres_grammar.py#L59'>compile_create</a>(blueprint,command,_)</tt>	Compile a create table command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.PostgresSchemaGrammar <a href=' /schema/grammars/postgres_grammar.py#L218'>_get_dbal_column_type</a>(type_)</tt>	Get the dbal column type.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L19'>compile_rename_column</a>(blueprint,command,connection)</tt>	Compile a rename column command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L44'>_get_renamed_diff</a>(blueprint,command,column,schema)</tt>	Get a new column instance with the new column name.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L66'>_set_renamed_columns</a>(table_diff,command,column)</tt>	Set the renamed columns on the table diff.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L78'>compile_foreign</a>(blueprint,command,_)</tt>	Compile a foreign key command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L112'>_get_columns</a>(blueprint)</tt>	Get the blueprint's columns definitions.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L130'>_add_modifiers</a>(sql,blueprint,column)</tt>	Add the column modifiers to the deifinition.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L142'>_get_command_by_name</a>(blueprint,name)</tt>	Get the primary key command it it exists.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L151'>_get_commands_by_name</a>(blueprint,name)</tt>	Get all of the commands with a given name.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L157'>_get_type</a>(column)</tt>	Get the sql for the column data type.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L168'>prefix_list</a>(prefix,values)</tt>	Add a prefix to a list of values.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L186'>_get_default_value</a>(value)</tt>	Format a value so that it can be used in "default" clauses.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L207'>compile_change</a>(blueprint,command,connection)</tt>	Compile a change column command into a series of sql statement.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L236'>_get_changed_diff</a>(blueprint,schema)</tt>	Get the table diffrence for the given changes.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L252'>_get_table_with_column_changes</a>(blueprint,table)</tt>	Get a copy of the given table after making the column changes.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L279'>_get_column_for_change</a>(table,fluent)</tt>	Get the column instance for a column change.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L291'>_get_column_change_options</a>(fluent)</tt>	Get the column change options.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L306'>_get_dbal_column_type</a>(type_)</tt>	Get the dbal column type.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SchemaGrammar <a href=' /schema/grammars/grammar.py#L347'>platform</a>()</tt>	Returns the dbal database platform.
+<tt style='background-color:#E8E8E8;'> schema.grammars.MySQLSchemaGrammar <a href=' /schema/grammars/mysql_grammar.py#L21'>compile_table_exists</a>()</tt>	Compile the query to determine if a table exists.
+<tt style='background-color:#E8E8E8;'> schema.grammars.MySQLSchemaGrammar <a href=' /schema/grammars/mysql_grammar.py#L32'>compile_column_exists</a>()</tt>	Compile the query to determine the list of columns.
+<tt style='background-color:#E8E8E8;'> schema.grammars.MySQLSchemaGrammar <a href=' /schema/grammars/mysql_grammar.py#L41'>compile_create</a>(blueprint,command,connection)</tt>	Compile a create table command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.MySQLSchemaGrammar <a href=' /schema/grammars/mysql_grammar.py#L56'>_compile_create_encoding</a>(sql,connection,blueprint)</tt>	Append the character set specifications to a command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.MySQLSchemaGrammar <a href=' /schema/grammars/mysql_grammar.py#L271'>_get_column_change_options</a>(fluent)</tt>	Get the column change options.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L15'>compile_rename_column</a>(blueprint,command,connection)</tt>	Compile a rename column command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L45'>compile_change</a>(blueprint,command,connection)</tt>	Compile a change column command into a series of sql statement.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L75'>compile_table_exists</a>()</tt>	Compile the query to determine if a table exists.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L83'>compile_column_exists</a>(table)</tt>	Compile the query to determine the list of columns.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L89'>compile_create</a>(blueprint,command,_)</tt>	Compile a create table command.
+<tt style='background-color:#E8E8E8;'> schema.grammars.SQLiteSchemaGrammar <a href=' /schema/grammars/sqlite_grammar.py#L284'>_get_dbal_column_type</a>(type_)</tt>	Get the dbal column type.
+<tt style='background-color:#E8E8E8;'> utils.Qmarker <a href=' /utils/qmarker.py#L10'>qmark</a>(cls,query)</tt>	Convert a "qmark" query into "format" style.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/__init__.py#L67'>deprecated</a>(func)</tt>	This is a decorator which can be used to mark functions as deprecated.
+<tt style='background-color:#E8E8E8;'> utils.URL <a href=' /utils/url.py#L114'>get_dialect</a>()</tt>	Return the sqlalchemy database dialect class corresponding to this url's driver name.
+<tt style='background-color:#E8E8E8;'> utils.URL <a href=' /utils/url.py#L134'>translate_connect_args</a>(names)</tt>	Translate url attributes into a dictionary of connection arguments.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/url.py#L162'>make_url</a>(name_or_url)</tt>	Given a string or unicode instance produce a new url instance.
+<tt style='background-color:#E8E8E8;'> pagination.LengthAwarePaginator <a href=' /pagination/length_aware_paginator.py#L45'>_set_current_page</a>(current_page,last_page)</tt>	Get the current page for the request.
+<tt style='background-color:#E8E8E8;'> pagination.LengthAwarePaginator <a href=' /pagination/length_aware_paginator.py#L71'>has_more_pages</a>()</tt>	Determine if there are more items in the data source.
+<tt style='background-color:#E8E8E8;'> pagination.LengthAwarePaginator <a href=' /pagination/length_aware_paginator.py#L79'>to_dict</a>()</tt>	Alias for serialize.
+<tt style='background-color:#E8E8E8;'> pagination.LengthAwarePaginator <a href=' /pagination/length_aware_paginator.py#L88'>serialize</a>()</tt>	Convert the object into something json serializable.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L8'>_is_valid_page_number</a>(page)</tt>	Determine if the given value is a valid page number.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L19'>items</a>()</tt>	Get the slice of items being paginated.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L28'>first_item</a>()</tt>	Get the number of the first item in the slice.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L37'>last_item</a>()</tt>	Get the number of the last item in the slice.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L46'>has_pages</a>()</tt>	Determine if there are enough items to split into multiple pages.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L54'>is_empty</a>()</tt>	Determine if the list of items is empty or not.
+<tt style='background-color:#E8E8E8;'> pagination.BasePaginator <a href=' /pagination/base.py#L62'>count</a>()</tt>	Get the number of items for the current page.
+<tt style='background-color:#E8E8E8;'> pagination.Paginator <a href=' /pagination/paginator.py#L39'>_set_current_page</a>(current_page)</tt>	Get the current page for the request.
+<tt style='background-color:#E8E8E8;'> pagination.Paginator <a href=' /pagination/paginator.py#L56'>_check_for_more_pages</a>()</tt>	Check for more pages the last item will be sliced off.
+<tt style='background-color:#E8E8E8;'> pagination.Paginator <a href=' /pagination/paginator.py#L64'>has_more_pages</a>()</tt>	Determine if there are more items in the data source.
+<tt style='background-color:#E8E8E8;'> pagination.Paginator <a href=' /pagination/paginator.py#L72'>to_dict</a>()</tt>	Alias for serialize.
+<tt style='background-color:#E8E8E8;'> pagination.Paginator <a href=' /pagination/paginator.py#L81'>serialize</a>()</tt>	Convert the object into something json serializable.
+<tt style='background-color:#E8E8E8;'> commands.Command <a href=' /commands/command.py#L30'>execute</a>(i,o)</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.Command <a href=' /commands/command.py#L72'>_check_config</a>()</tt>	Check presence of default config files.
+<tt style='background-color:#E8E8E8;'> commands.Command <a href=' /commands/command.py#L89'>_handle_config</a>(config_file)</tt>	Check and handle a config file.
+<tt style='background-color:#E8E8E8;'> commands.Command <a href=' /commands/command.py#L104'>_get_config</a>(path)</tt>	Get the config.
+<tt style='background-color:#E8E8E8;'> commands.seeds.SeedersMakeCommand <a href=' /commands/seeds/make_command.py#L22'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.seeds.SeedersMakeCommand <a href=' /commands/seeds/make_command.py#L58'>_get_path</a>(name)</tt>	Get the destination class path.
+<tt style='background-color:#E8E8E8;'> commands.seeds.SeedCommand <a href=' /commands/seeds/seed_command.py#L24'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.seeds.SeedCommand <a href=' /commands/seeds/seed_command.py#L63'>_get_path</a>(name)</tt>	Get the destination class path.
+<tt style='background-color:#E8E8E8;'> commands.models.ModelMakeCommand <a href=' /commands/models/make_command.py#L56'>_get_stub</a>()</tt>	Get the model stub template.
+<tt style='background-color:#E8E8E8;'> commands.models.ModelMakeCommand <a href=' /commands/models/make_command.py#L64'>_populate_stub</a>(name,stub)</tt>	Populate the placeholders in the migration stub.
+<tt style='background-color:#E8E8E8;'> commands.migrations.MigrateMakeCommand <a href=' /commands/migrations/make_command.py#L21'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.migrations.MigrateMakeCommand <a href=' /commands/migrations/make_command.py#L46'>_write_migration</a>(creator,name,table,create)</tt>	Write the migration file to disk.
+<tt style='background-color:#E8E8E8;'> commands.migrations.RollbackCommand <a href=' /commands/migrations/rollback_command.py#L18'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.migrations.ResetCommand <a href=' /commands/migrations/reset_command.py#L18'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.migrations.RefreshCommand <a href=' /commands/migrations/refresh_command.py#L20'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.migrations.InstallCommand <a href=' /commands/migrations/install_command.py#L15'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> commands.migrations.StatusCommand <a href=' /commands/migrations/status_command.py#L16'>handle</a>()</tt>	Executes the command.
+<tt style='background-color:#E8E8E8;'> migrations.MigrationCreator <a href=' /migrations/migration_creator.py#L22'>create</a>(name,path,table,create)</tt>	Create a new migration at the given path.
+<tt style='background-color:#E8E8E8;'> migrations.MigrationCreator <a href=' /migrations/migration_creator.py#L53'>_get_stub</a>(table,create)</tt>	Get the migration stub template.
+<tt style='background-color:#E8E8E8;'> migrations.MigrationCreator <a href=' /migrations/migration_creator.py#L75'>_populate_stub</a>(name,stub,table)</tt>	Populate the placeholders in the migration stub.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L26'>__init__</a>(repository,resolver)</tt>	:type repository databasemigrationrepository :type resolver orator.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L36'>run</a>(path,pretend)</tt>	Run the outstanding migrations for a given path.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L55'>run_migration_list</a>(path,migrations,pretend)</tt>	Run a list of migrations.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L73'>_run_up</a>(path,migration_file,batch,pretend)</tt>	Run "up" a migration instance.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L98'>rollback</a>(path,pretend)</tt>	Rollback the last migration operation.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L124'>reset</a>(path,pretend)</tt>	Rolls all of the currently applied migrations back.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L150'>_run_down</a>(path,migration,pretend)</tt>	Run "down" a migration instance.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L171'>_get_migration_files</a>(path)</tt>	Get all of the migration files in a given path.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L190'>_pretend_to_run</a>(migration,method)</tt>	Pretend to run the migration.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L224'>_get_queries</a>(migration,method)</tt>	Get all of the queries that would be run for a migration.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L244'>_resolve</a>(path,migration_file)</tt>	Resolve a migration instance from a file.
+<tt style='background-color:#E8E8E8;'> migrations.Migrator <a href=' /migrations/migrator.py#L274'>_note</a>(message)</tt>	Add a note to the migrator.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L8'>__init__</a>(resolver,table)</tt>	:type resolver orator database_manager databasemanager.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L17'>get_ran</a>()</tt>	Get the ran migrations.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L25'>get_last</a>()</tt>	Get the last migration batch.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L35'>log</a>(file,batch)</tt>	Log that a migration was run.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L49'>delete</a>(migration)</tt>	Remove a migration from the log.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L57'>get_next_batch_number</a>()</tt>	Get the next migration batch number.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L65'>get_last_batch_number</a>()</tt>	Get the last migration batch number.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L73'>create_repository</a>()</tt>	Create the migration repository data store.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L86'>repository_exists</a>()</tt>	Determine if the repository exists.
+<tt style='background-color:#E8E8E8;'> migrations.DatabaseMigrationRepository <a href=' /migrations/database_migration_repository.py#L96'>table</a>()</tt>	Get a query builder for the migration table.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L6'>table</a>(table)</tt>	Begin a fluent query against a database table.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L18'>query</a>()</tt>	Begin a fluent query.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L27'>raw</a>(value)</tt>	Get a new raw query expression.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L39'>select_one</a>(query,bindings)</tt>	Run a select statement and return a single result.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L52'>select</a>(query,bindings)</tt>	Run a select statement against the database.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L65'>insert</a>(query,bindings)</tt>	Run an insert statement against the database.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L78'>update</a>(query,bindings)</tt>	Run an update statement against the database.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L91'>delete</a>(query,bindings)</tt>	Run a delete statement against the database.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L104'>statement</a>(query,bindings)</tt>	Run an sql statement and return the boolean result.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L118'>affecting_statement</a>(query,bindings)</tt>	Run an sql statement and return the number of affected rows.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L132'>unprepared</a>(query)</tt>	Run a raw unprepared query against the dbapi connection.
+<tt style='background-color:#E8E8E8;'> connections.ConnectionInterface <a href=' /connections/connection_interface.py#L144'>prepare_bindings</a>(bindings)</tt>	Prepare the query bindings for execution.
+<tt style='background-color:#E8E8E8;'> connections. <a href=' /connections/connection.py#L21'>run</a>(wrapped)</tt>	Special decorator encapsulating query method.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L49'>__init__</a>(connection,database,table_prefix,config)</tt>	:param connection a dbapi connection instance.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L133'>get_schema_builder</a>()</tt>	Retturn the underlying schema builder.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L144'>table</a>(table)</tt>	Begin a fluent query against a database table.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L158'>query</a>()</tt>	Begin a fluent query.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L467'>get_post_processor</a>()</tt>	Get the query post processor used by the connection.
+<tt style='background-color:#E8E8E8;'> connections.Connection <a href=' /connections/connection.py#L476'>set_post_processor</a>(processor)</tt>	Set the query post processor used by the connection.
+<tt style='background-color:#E8E8E8;'> connections.MySQLConnection <a href=' /connections/mysql_connection.py#L22'>get_schema_builder</a>()</tt>	Return the underlying schema builder.

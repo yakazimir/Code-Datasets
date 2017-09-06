@@ -1,0 +1,531 @@
+perform linker	basic l{linker} subclass that calls the perform method on each l{op} in the l{functiongraph} in the order given by l{linker
+vm	a vm object's __call__ method evaluates a theano program
+bound variable	this variable is bound to a value accessible via the value field
+strip pickler	subclass of pickler that strips unnecessary attributes from theano objects
+gpu reshape	reshape for gpu variables
+chi2sf	compute (1 - chi2_cdf x ie chi2 pvalue (chi2 'survival function')
+op key optimizer	writeme
+module cache	interface to the cache of dynamically compiled modules on disk
+gpu inc subtensor	implement incsubtensor on the gpu
+op	convenience class to bundle pureop and clinkerop
+symbolic output	represents a symbolic output for use with function or functionmaker
+kerns	2d tensor containing kernels which are applied at every pixel
+nd grid	create a dense n-dimensional 'meshgrid' with equally spaced points
+abstract conv grad inputs	gradient wrt inputs for abstractconv
+typed list type	parameters ----------
+gpu from host	transfer data to gpu
+gpu corr mm grad weights	gradient wrt filters for gpucorrmm
+corr3d mm grad weights	gradient wrt filters for corr3dmm
+multinomial	return a sparse matrix having random values from a multinomial density having number of experiment n and probability of succes
+abstract batch norm train	abstract op for batch normalization
+query	parameters ----------
+bad view map	exception some perform() or c_code() created a memory alias that wasn't in the view_map
+compiler	meta compiler that offer some generic function
+prod	multiplies all the values of a tensor along the specified axis es
+step	determines number of pixels between adjacent receptive fields
+ws	must be always true
+as tensor error	raised when as_tensor_variable isn't able to create a tensorvariable
+gpu array type	the type that represents an array on a gpu
+doc	what does this variable specify?
+inplace elemwise optimizer	we parametrise it to make it work for elemwise and gpuelemwise op
+apply	an :term apply instance is a node in an expression graph which represents the application of an op to some input variable nodes producing some
+any	applies bitwise or to all the values of a tensor along the specified axis es
+bad optimization	exception some variable and its substitute take different runtime values
+ordered updates	dict-like mapping from sharedvariable keys to their new values
+eigh grad	gradient of an eigensystem of a hermitian matrix
+arg sort op	this class is a wrapper for numpy argsort function
+gpu careduce cpy	careduce that reuse the python code from gpuarray
+gpu advanced inc subtensor1 dev20	implement advancedincsubtensor1 on the gpu but use function only avail on compute capability 2
+merge feature	keeps track of variables in fgraph that cannot be merged together
+eigvalsh grad	gradient of generalized eigenvalues of a hermitian positive definite eigensystem
+function graph	a functiongraph represents a subgraph bound by a set of input variables and a set of output variables ie a subgraph that specifies a theano function
+gpu dnn pool desc	this op builds a pooling descriptor for use in the other pooling operations
+null type	a type that allows no values
+func	the function to call
+fct	a compiled theano function a variable an apply or
+abstract conv3d grad weights	gradient wrt filters for abstractconv3d
+already there	raised by a feature's on_attach callback method if the functiongraph attempting to attach the feature already has a functionally identical
+sinh	sinh x = (exp x - exp -x / 2
+mpirecv	an operation to asynchronously receive an array to a remote host using mpi
+print_clients	if true this will print for apply node that
+method not defined	to be raised by functions defined as part of an interface
+in	represents a symbolic input for use with function or functionmaker
+cdata type	represents opaque c data to be passed around the intent is to
+searchsorted op	wrapper of numpy searchsorted
+crossentropy softmax1hot with bias dx	gradient wrt x of the crossentropysoftmaxargmax1hotwithbias op
+variable	serves as a base class of variables for the purpose of unification
+gpu max and argmax	gpu version of maxandargmax
+crossentropy softmax argmax1hot with bias	a special compound l{op} for the output of neural-net classifiers
+scan save mem	graph optimizer that reduces scan memory consumption
+tensor solve	theano utilization of numpy linalg tensorsolve
+cgpu kernel base	class to combine gpukernelbase and cop
+nkern	number of kernels/filters to apply
+upper_bound	the upper bound of the gradient value
+inv	multiplicative inverse also called reciprocal
+local linker	useful base class for l{linker}s which keep all nodes in the graph and run a thunk associated with each node
+persistent ndarray load	load numpy arrays that were persisted to a zip file when pickling
+op from graph	this creates an op from inputs and outputs lists of variables
+un shape optimizer	optimizer remove shapefeature as an fgraph feature
+specify shape	l{op} that puts into the graph the user-provided shape
+from function local optimizer	writeme
+scalar sigmoid	this is just speed opt not for stability
+dot modulo	efficient and numerically stable implementation of a dot product followed by a modulo operation
+graph to gpudb	retrieves the list local optimizers based on the optimizer flag's value from equilibriumoptimizer by calling the method query
+inconsistency error	this exception should be thrown by listeners to functiongraph when the graph's state is invalid
+aliased memory error	memory is aliased that should not be
+x	a theano expression whose gradient should be undefined
+cond merge	graph optimizer that merges different cond ops
+destroy handler	the destroyhandler class detects when a graph is impossible to evaluate because of aliasing and destructive operations
+fourier	warning for officially supported ffts use theano tensor fft which
+kernel	this class groups together all the attributes of a gpu kernel
+disconnected_inputs	defines the behaviour if some of the variables
+batched	whether to treat the first axis of a and b as a batch
+container	this class joins a variable with its computed value
+canonizer	simplification tool the variable is a local_optimizer it is best used
+random streams	module component with similar interface to numpy random
+softmax with bias	an l{op} for the output of neural-net multiclass classifiers
+node	a node in a theano graph
+sparse block gemv	this op computes the dot product of specified pieces of vectors and matrices returning pieces of vectors :
+xlog x	compute x * log x with special case 0 log 0 = 0
+i1	modified bessel function of the first kind of order 1
+base corr mm	base class for corrmm, corrmm_gradweights and corrmm_gradinputs
+push out scan output	this is an optimization that can push operations performed at the end of the inner graph of scan to outside of scan
+kshp	tuple containing actual dimensions of kernel not symbolic
+gpu corr3d mm grad weights	gradient wrt filters for gpucorr3dmm
+debug mode	evaluation mode that detects internal theano errors
+filename	the filename being considered used in diff generation only
+in_c_key	if true then whenever this config option changes the
+type	convenience wrapper combining puretype and clinkertype
+missing input error	a symbolic input needed to compute the outputs is missing
+validator	check if variables can be expressed without using variables in invalid
+consider_constant	a list of expressions not to backpropagate
+change flags	use this as a decorator or context manager to change the value of theano config variables
+done	a dict where we store the ids of printed node
+conv transp3d	"transpose" of conv3d (conv3d implements multiplication by an implicitly defined matrix w
+op remove	removes all applications of an op by transferring each of its outputs to the corresponding input
+gpu average pool grad	implement the grad of average pooling on the gpu
+constant	a :term constant is a variable with a value field that cannot be changed at runtime
+det	matrix determinant input should be a square matrix
+extract diag	return specified diagonals
+img_shape	shape of input images
+argmax	calculate the argmax over a given axis or over all axes
+monitor mode	monitormode is a debug mode to easily step through function execution
+corr3d mm	cpu correlation implementation using matrix multiplication
+comparison op sd	used as a superclass for all comparisons between sparse and dense matrix
+x	the variable we want its gradient inputs clipped
+scan args	parses the inputs and outputs of scan in an easy to manipulate format
+unary out lookup	get a output_types_preference object by passing a dictionary unary_out_lookup({int8 int32 float32 complex128})
+eps	stepsize used in the finite difference method (default
+scan merge	graph optimizer that merges different scan ops
+history	keep an history of changes to an functiongraph
+corr mm	cpu correlation implementation using matrix multiplication
+ordered set	set the remembers the order elements were added
+maxpoolshp	tuple containing shape of area to max pool over
+persistent ndarray id	persist ndarrays in an object by saving them to a zip file
+assert	implements assertion in a computational graph
+ext function	a c function to put into a dynamicmodule
+careduce dtype	reduces a scalar operation along the specified axis es
+unused input error	a symbolic input passed to function is not needed
+local meta optimizer	base class for meta-optimizers that try a set of localoptimizers to replace a node and choose the one that executes the fastest
+module six moves urllib response	lazy loading of moved objects in six moves urllib_response
+solve	solve a system of linear equations
+rel_tol	relative tolerance used as threshold for gradient
+gpu gemv	gemv on the gpu
+log	log base e
+pattern sub	@todo update replaces all occurrences of the input pattern by the output pattern
+scan_graphs	if true it will plot the inner graph of each scan op
+numeric grad	compute the numeric derivative of a scalar-valued function at a particular point
+gpu dnn softmax	op for the cudnn softmax
+supervisor	listener for functiongraph events which makes sure that no operation overwrites the contents of protected variables
+mpisend wait	an operation to wait on a previously sent array using mpi
+pool	sum or average over different patches
+iv	modified bessel function of the first kind of order v real
+fgraph	the current fgraph. this function uses the inputs and outputs attributes
+add sd ccode	add a sparse and a dense matrix
+n_tests	number of times to run the test
+invalid value error	exception some op an output value that is inconsistent with the type of that output
+tanh	tanh x = sinh x / cosh x = (exp(2*x) - 1) / (exp(2*x) + 1)
+loop	unconditional start-to-finish program execution in python
+topo db	generate a global optimizer of type topooptimizer
+eig	compute the eigenvalues and right eigenvectors of a square array
+gpu dnn conv desc	this op builds a convolution descriptor for use in the other convolution operations
+module six moves urllib request	lazy loading of moved objects in six moves urllib_request
+persistent_id	the callable that persists certain objects in the
+symbolic input	represents a symbolic input for use with function or functionmaker
+cenum type	**inherit from**: - :class enumlist
+not scalar constant error	raised by get_scalar_constant_value if called on something that is not a scalar constant
+gpu cum op	parameters ----------
+convolution indices	build indices for a sparse csc matrix that could implement a convolve b
+cop	class to allow an op to have an external c implementation
+eigh	return the eigenvalues and eigenvectors of a hermitian or symmetric matrix
+tensor inv	class wrapper for tensorinv() function theano utilization of numpy
+tensor constant	subclass to add the tensor operators to the basic constant class
+loop gc	unconditional start-to-finish program execution in python
+dual linker	runs the fgraph in parallel using performlinker and clinker
+x	a theano expression whose gradient should be truncated
+colorCodes	dictionary with names of ops as keys and colors as
+all	applies logical and to all the values of a tensor along the specified axis es
+replacer	function that takes a variable and returns its
+abstract conv2d	abstract op for the forward convolution
+frozendict	an immutable wrapper around dictionaries that implements the complete :py class collections mapping
+inc diagonal subtensor	the gradient of diagonalsubtensor
+mpirecv wait	an operation to wait on a previously received array using mpi
+flatten	flatten a tensor
+vm linker	class that satisfies the linker interface by acting as a vm factory
+images	tensor containing images on which to apply convolution
+out_type	dtype of output if complex (i.e. 'complex32' or
+images2neibs	reshapes the input as a 2d tensor where each row is an pooling example
+real	extract the real coordinate of a complex number
+gpu gemm	gemm on the gpu
+obj	the object to pickle
+load from disk	an operation to load an array from disk
+erfcx	implements the scaled complementary error function exp(x**2)*erfc x in a numerically stable way for large x
+print_storage	if true this will print the storage map
+multinomial from uniform	converts samples from a uniform into sample from a multinomial
+abstract conv3d	abstract op for the forward convolution
+scalar softsign	softsign activation function
+obj	symbolic thing to print
+module six moves urllib parse	lazy loading of moved objects in six moves urllib_parse
+j1	bessel function of the first kind of order 1
+nonzero	return the indices of the elements that are non-zero
+base abstract conv	base class for abstractconv parameters
+gpu softmax with bias	implement softmaxwithbias on the gpu
+gpu join	join for gpu
+f	the file handle to the zip file to load the object from
+advanced inc subtensor1	increments a subtensor using advanced slicing list of index
+if else	op that provides conditional graph evaluation if used with the cvm/vm linkers
+shape error	raised when the shape cannot be computed
+free variable	this variable can take any value
+double op	double each element of a tensor
+op wise clinker	uses clinker on the individual ops that comprise an fgraph and loops over them in python
+key data	used to store the key information in the cache
+output guard	this op is used only internally by theano
+graph to gpulocal opt group	this is the equivalent of localoptgroup for graphtogpu
+diagonal subtensor	return a form a nd diagonal subtensor
+gpu dot22	dot22 on the gpu
+variable in list	this special kind of variable is matched against a list and unifies an inner variable to an orvariable of the values in the list
+numpy autocaster	this class is used to cast python ints and floats to numpy arrays
+local opt group	takes a list of localoptimizer and applies them to the node
+batched dot	computes the batched dot product of two variables
+psi	derivative of log gamma function
+mpisend	an operation to asynchronously send an array to a remote host using mpi
+gpu eye	eye for gpu
+gpu max pool rop	implements the r-operator for the downsample operation
+gpu corr3d mm	gpu correlation implementation using matrix multiplication
+alloc	create a tensor from an initial value and a desired shape
+cthunk	a thunk with a c implementation
+local optimizer	a class for node-based optimizations
+push out seq scan	a global optimizer for pushing out the variables inside the scan that depend only on constants and sequences
+clinker op	interface definition for op subclasses compiled by clinker
+persistent shared variable id	uses shared variable names when persisting to zip file
+gpu dim shuffle	dimshuffle on the gpu
+scan inplace optimizer	graph optimizer for scan makes it run inplace
+support code error	we do not support certain things such as the c++ complex struct
+variable equivalence tracker	a functiongraph feature that keeps tabs on an functiongraph and tries to detect problems
+flatten	flatten the last 2 dimensions of the output. by default
+gpu dnn pool	parameters ----------
+enum type	main subclasses - :class enumlist
+function maker	functionmaker is the class to create function instances
+gpu dnn conv	the forward convolution
+output_storage	none or existing output storage see below
+ger	blas defines general rank-1 update ger as a <- a + alpha x y' for matrix a scalar alpha vectors x and y
+mul sdcsr	multiplication of sparse matrix by a broadcasted dense vector element wise
+variable	a :term variable is a node in an expression graph that represents a variable
+jv	bessel function of the first kind of order v real
+abstract conv3d grad inputs	gradient wrt inputs for abstractconv3d
+conv grad3d	gradient of conv3d with respect to w
+alloc diag	an op that copies a vector to the diagonal of an empty matrix it does the
+width	if self.subsample[1] != 1 a variable giving the width
+max and argmax	calculate the max and argmax over a given axis or over all axes
+ids	how do we print the identifier of the variable
+mul sdcsc	multiplication of sparse matrix by a broadcasted dense vector element wise
+tile	construct an array by repeating the input x according to reps pattern
+dot	computes the dot product of two variables for two matrices this is
+dot22	compute a matrix-matrix product
+split	partition a tensorvariable along some axis
+gemm	in-place version of matrix-matrix multiplication with accumulation
+preserve variable attributes	this preserve some variables attributes and tag during optimization
+abstract conv2d grad inputs	gradient wrt inputs for abstractconv2d
+print current function graph	this optimizer is for debugging
+log1p	log 1+x
+direction	"forward" to correlate bottom with weights and store
+qrfull	full qr decomposition
+topo optimizer	topooptimizer has one local optimizer it tries to apply to each node in topological order or reverse
+elemwise	generalizes a scalar op to tensors
+gemv	expression is beta * y + alpha * a x
+make vector	concatenate a number of scalars together into a vector
+extract diag	return the diagonal of a matrix
+gpu pool	implement the max and average pooling on the gpu
+pure op	an :term op is a type of operation
+raise	op whose perform() raises an exception
+gpu dnn pool grad	the pooling gradient
+iters	the number of calls to gemm to do
+gpu array constant	a constant representing a value on a certain gpu
+print_type	whether to print the type of printed objects
+j0	bessel function of the first kind of order 0
+svd	parameters ----------
+gpu alloc empty	allocate uninitialized memory on the gpu
+log10	log base 10
+rebroadcast	change the input's broadcastable fields in some predetermined way
+binomial	return a sparse matrix having random values from a binomial density having number of experiment n and probability of succes
+dot	a function that accepts two symbolic variables and computes
+abs_tol	absolute tolerance used as threshold for gradient
+bottom	variable name of the input images in the forward pass
+tensor variable	subclass to add the tensor operators to the basic variable class
+module six moves urllib error	lazy loading of moved objects in six moves urllib_error
+module six moves urllib robotparser	lazy loading of moved objects in six moves urllib_robotparser
+weights	variable name of the filters in the forward pass
+matrix pinv	computes the pseudo-inverse of a matrix :math a
+gpu crossentropy softmax argmax1hot with bias	implement crossentropysoftmaxargmax1hotwithbias on the gpu
+navigator optimizer	abstract class
+rng	random number generator used to sample u we test gradient
+gemm16	gemm for float16 using the nervena kernels
+null type grad error	raised when grad encounters a nulltype
+base gpu corr3d mm	base class for gpucorr3dmm, gpucorr3dmm_gradweights and gpucorr3dmm_gradinputs
+shape i	l{op} to return the shape of a matrix
+sparse type	fundamental way to create a sparse node
+gpu careduce cuda	gpucareducecuda is a reduction along some dimensions by a scalar op
+until	class used to encode the different things the inner function of scan can or needs to return
+no_debug_ref	don't use debugmode for the numerical
+gemm optimizer	graph optimizer for inserting gemm operations
+structured dot csr	structured dot csr is like dot except that only the gradient wrt non-zero elements of the sparse matrix
+input to gpu optimizer	transfer the input to the gpu to start the rolling wave
+gpu dnn conv grad w	the convolution gradient with respect to the weights
+gpu advanced subtensor	advancedsubtensor on the gpu
+composite	composite is an op that takes a graph of scalar operations and produces c code for the whole graph
+height	if self.subsample[0] != 1 a variable giving the height
+protocol error	raised when functiongraph calls destroyhandler callbacks in an invalid way for example pruning or changing a node that has
+clinker object	standard elements of an op or type used with the clinker
+bad destroy map	exception some perform() or c_code() modified an input that wasn't in the destroy_map
+proxy db	wrap an existing proxy
+function graph event	a record of an event in the life of an functiongraph
+mrg random streams	module component with similar interface to numpy random
+gpu array shared variable	a variable representing a shared value on a certain gpu
+equilibrium optimizer	apply optimizations until equilibrium point
+file	print to this file ('str' means to return a string)
+gpu ger	ger on the gpu
+depth	print graph to this depth -1 for unlimited
+code	a string containing a file's worth of python code
+singleton type	convenient base class for a type subclass with no attributes
+gpu split	split for gpu
+integer division error	raised if someone tries to divide integers with '/' instead of '//'
+name	the full name for this configuration variable
+py dot formatter	create pydot graph object from theano function
+shape feature	graph optimizer for removing all calls to shape()
+equilibrium db	a set of potential optimizations which should be applied in an arbitrary order until equilibrium is reached
+six meta path importer	a meta path importer to import six moves and its submodules
+gpu dnn batch norm inference	base op for cudnn batch normalization
+clinker	creates c code for an fgraph compiles it and returns callables through make_thunk and make_function that make use of the compiled
+alloc diag	allocates a square matrix with the given vector as its diagonal
+missing gxx	this error is raised when we try to generate c code but g++ is not available
+careduce	careduce = commutative associative reduce reduces a scalar operation along the specified axis es
+x	the variable we want its gradient inputs scale
+root	used for recursive calls -- do not provide an argument for
+name	the name of the file inside of the zipped archive that func
+eps	the stepsize for the finite differencing. none means
+permute row elements	permute the elements of each row inner-most dim of a tensor
+scan	parameters ----------
+conv op	this op serves a dual purpose it can implement a vanilla 2d convolution as taught in any signal processing class or implement the
+moved items	lazy loading of moved objects
+compact	if true will remove intermediate var that don't have name
+metadict	writeme
+gpu corr mm grad inputs	gradient wrt inputs for gpucorrmm
+dim shuffle	allows to reorder the dimensions of a tensor or insert or remove broadcastable dimensions
+gemm related	base class for gemm and dot22
+stack	finish-to-start evalution order of thunks
+pt	an ndarray a list of ndarrays or tuple of ndarrays
+hint	provide arbitrary information to the optimizer
+mode	'full', 'valid' see csm.evaluate function for details
+none type t	inherit from generic to have c code working
+persistent_load	the persistent loading function to use for
+alloc empty	implement alloc on the cpu but without initializing memory
+gpu dnn softmax grad	op for the cudnn softmaxgrad
+multiplier	scale of the gradient
+additional_inputs	an iterable of graph inputs not used in any
+sampling dot csr	operand optimized for calculating the dot product dot(x, y t) = z
+sumdims	dimensions over which to sum for the tensordot operation
+verbose	if true will print some theano flags and env variables
+gpu dnn softmax base	op for the cudnn softmax
+gpu subtensor	subtensor on the gpu
+ker_shape	shape of kernel to apply smaller than image
+mode	'valid' generates output only when kernel and
+structured dot csc	structured dot csc is like dot except that only the gradient wrt non-zero elements of the sparse matrix a are calculated and propagated
+gpu erfinv	inverse error function for gpu
+params type	this class can create a struct of theano types like tensortype gpuarraytype etc
+ultra fast scalar sigmoid	this is just speed opt not for stability
+pure type	interface specification for variable type instances
+order	an iterable over apply instances in program running order
+hints feature	functiongraph feature to track matrix properties
+i0	modified bessel function of the first kind of order 0
+abstract batch norm inference	abstract op for batch normalization
+push out dot1	graph optimizer for scan makes it run inplace
+shape optimizer	optimizer that serves to add shapefeature as an fgraph feature
+gpu cusolver solve	cusolver gpu solver op
+depth	if self.subsample[1] != 1 a variable giving the depth
+gpu crossentropy softmax1hot with bias dx	implement crossentropysoftmax1hotwithbiasdx on the gpu
+shape	l{op} to return the shape of a matrix
+abstract conv grad weights	gradient wrt filters for abstractconv
+erfinv	implements the inverse error function
+fun	a python function that takes theano variables as inputs
+stop_on_name	when true if a node in the graph has a name
+empty constant error	raised by get_scalar_const_value if called on something that is a zero dimensional constant
+advanced subtensor1	implement x[ilist] where ilist is a vector of integers
+rnnblock	an object that allow us to use cudnn v5 rnn implementation
+gpu kernel base	base class for operations that need to compile kernels
+unique	wraps numpy unique this op is not implemented on the gpu
+params	internal convenient class to wrap many python objects into one this class is not safe as the hash method does not check if values are effectively hashable
+cholesky	return a triangular matrix square root of positive semi-definite x
+scalar	internal class should not be used by clients
+eigvalsh	generalized eigenvalues of a hermitian positive definite eigensystem
+corr mm grad weights	gradient wrt filters for corrmm
+matrix inverse	computes the inverse of a matrix :math a
+or variable	this variable could be any value from a finite list of values accessible via the options field
+tag generator	class for giving abbreviated tags like to objects
+bad thunk output	exception calling the same op twice gives inconsistent outputs
+inc subtensor	increment a subtensor
+abstract conv2d grad weights	gradient wrt filters for abstractconv2d
+wrap linker	this class makes it easier to run several l{locallinker}s in parallel and offers some control over how each thunk is run
+gpu dnn conv grad i	the convolution gradient with respect to the inputs
+add destroy handler	this optimizer performs two important functions 1) it has a 'requirement' of the destroyhandler
+host from gpu	transfer data to cpu
+fusion optimizer	graph optimizer for fusion of elemwise operations
+random function	op that draws random numbers from a numpy random randomstate object
+gpu cholesky	cusolver gpu cholesky op
+replacement didnt removed error	this exception should be thrown by replace_all_validate_remove when an optimization wanted to remove a variable or a node from
+view op	returns an inplace view of the input used internally by theano
+configparam	an object for getting and setting this configuration
+complex error	raised if complex numbers are used in an unsupported operation
+graph to gpu	transfer the graph as a whole to gpu instead of transfering node by node
+linker	special debugging linker
+merge optimizer	merges parts of the graph that are identical and redundant
+gpu sparse block gemv	gpu version of sparseblockgemv check sparseblockgemv's docstring for more
+code block	represents a computation unit composed of declare behavior and cleanup
+graphs	an iterable of graphs in which to replace variables
+abstract conv	abstract op for the forward convolution
+cond_highlight	highlights a lazy if by sorrounding each of the 3
+tensor constant signature	a signature object for comparing tensorconstant instances
+param	deprecated use in instead
+round half away from zero	implement the same rounding algo as c round() fct
+add feature optimizer	this optimizer adds a provided feature to the function graph
+outfile	the output file where to put the graph
+zip_file	the zip file that func should write its data to
+subtensor	return a subtensor view
+disconnected type	a type indicating that a variable is a result of taking the gradient of c with respect to x
+gpu context type	minimal type used for passing contexts to nodes
+gpuachoice from uniform	the output is transposed compared to multinomialworeplacementfromuniform
+sequence db	a sequence of potential optimizations
+gpu sparse block outer	gpu version of sparseblockouter see sparseblockouter's docstring for more
+cached constant error	an exception thrown when we put in a functiongraph a constant that is cached
+crossentropy categorical1hot	compute the cross entropy between a coding distribution and a true distribution of the form [0 0
+gpu dnn batch norm	base op for cudnn batch normalization
+optimizer	an l{optimizer} can be applied to an l{functiongraph} to transform it
+feature	base class for functiongraph extensions
+cast_to_output_type	if the output is float32 and
+tensor type	symbolic type representing a numpy ndarray value
+protocol	the pickling protocol to use. unlike python's built-in
+base corr3d mm	base class for corr3dmm, corr3dmm_gradweights and corr3dmm_gradinputs
+gpu advanced subtensor1	advancedsubrensor1 on the gpu
+sym py ccode	an operator that wraps sympy's c code generation
+sum	sums all the values of a tensor along the specified axis es
+x	a theano expression whose gradient should not be
+advanced inc subtensor	increments a subtensor using advanced indexing
+sparse block outer	this computes the outer product of two sets of pieces of vectors updating a full matrix with the results :
+softmax grad	gradient wrt x of the softmax op
+gpu softmax	implement softmax on the gpu
+csm	indexing to speficied what part of the data parameter should be used to construct the sparse matrix
+gpu contiguous	return a c contiguous version of the input
+unification	this class represents a possible unification of a group of variables with each other or with tangible values
+gpu corr3d mm grad inputs	gradient wrt inputs for gpucorr3dmm
+gpu images2neibs	images2neibs for the gpu
+gpu magma matrix inverse	computes the inverse of a matrix :math a using magma library
+imgshp	tuple containing image dimensions
+frozen ordered dict	a frozendict subclass that maintains key order
+seq optimizer	takes a list of l{optimizer} instances and applies them sequentially
+reshape	perform a reshape operation of the input x to the new shape shp
+gpu max pool grad	implement the grad of max pooling on the gpu
+profile stats	object to store runtime and memory profiling information for all of theano's operations compilation optimization execution
+lower_bound	the lower bound of the gradient value
+gpu corr mm	gpu correlation implementation using matrix multiplication
+enum list	**inherit from**: - :class enumtype
+conv3d	3d convolution of multiple filters on a minibatch
+softmax	softmax activation function :math \varphi(\mathbf{x})_j =
+scalar softplus	this helps numerical stability
+log2	log base 2
+autocast float as	temporarily adjust autocasting behavior
+random state type	a type wrapper for numpy random randomstate
+fixed logical comparison	comparison to a fixed value
+disconnected input error	raised when grad is asked to compute the gradient with respect to a disconnected input and
+pt	the list of numpy.ndarrays to use as input values
+dot22scalar	compute a matrix-matrix product
+clinker type	interface specification for types that can be arguments to a clinkerop
+preserve names	this preserve some variables names during optimization
+corr3d mm grad inputs	gradient wrt inputs for corr3dmm
+gpu to gpu	transfer data between gpus
+xlog y0	compute x * log y with special case 0 log 0 = 0
+sub	dictionary of substitutions useable to help generating the
+gpu elemwise	elemwise on the gpu
+hints optimizer	optimizer that serves to add hintsfeature as an fgraph feature
+typed list variable	subclass to add the typed list operators to the basic variable class
+from function optimizer	writeme
+mode	the mode represents a way to optimize and then link a computation graph
+top	variable name of the output images / feature maps in the
+return_image	if true it will create the image and return it
+corr mm grad inputs	gradient wrt inputs for corrmm
+generic	represents a generic python object
+debug mode error	generic exception raised to indicate an internal theano problem
+file_handler	the file handle to save the object to
+join	concatenate multiple tensorvariables along some axis
+max pool rop	implements the r-operator for the downsample operation
+log softmax	logsoftmax activation function :math \varphi(\mathbf{x})_j =
+op sub	replaces the application of a certain op by the application of another op that takes the same inputs as what they are replacing
+shared variable	variable that is defaults to being shared between functions that it appears in
+gpu array variable	a variable representing a computation on a certain gpu
+module six moves urllib	create a six moves urllib namespace that resembles the python 3 namespace
+local group db	generate a local optimizer of type localoptgroup instead of a global optimizer
+format	the file format of the output
+linker	writeme
+stochastic order	exception repeated optimizations of the same graph do not give identical results
+function	type of the functions returned by theano function or
+gradient error	this error is raised when a gradient is calculated but incorrect
+default	takes an input x and a default value
+round half to even	this function implement the same rounding than numpy round half to even
+advanced subtensor	return a subtensor copy using advanced indexing
+arange	create an array containing evenly spaced values within a given interval
+typed list constant	subclass to add the typed list operators to the basic variable class
+cpu contiguous	check to see if the input is c-contiguous if it is do nothing else return a contiguous array
+fft	fast fourier transform
+dnn base	creates a handle for cudnn and pulls in the cudnn libraries and headers
+comparison op ss	used as a superclass for all comparisons between two sparses matrices
+images	2d tensor containing images on which to apply convolution
+choice from uniform	converts samples from a uniform into sample without replacement from a multinomial
+base gpu corr mm	base class for gpucorrmm, gpucorrmm_gradweights and gpucorrmm_gradinputs
+nan guard mode	a theano compilation mode that makes the compiled function automatically detect nans and infs and detect an error if they occur
+advanced indexing error	raised when subtensor is asked to perform advanced indexing
+gpu downsample factor max grad grad	implement the grad of downsample with max on the gpu
+var_with_name_simple	if true and a variable have a name
+from function op	build a basic theano op around a function
+push out non seq scan	a global optimizer for pushing out the variables inside the scan that depend only on non-sequences
+qrincomplete	incomplete qr decomposition
+used_ids	the id to use for some object but maybe we only
+gpu advanced inc subtensor1	implement advancedincsubtensor1 on the gpu
+cosh	cosh x = (exp x + exp -x / 2
+gpu erfcinv	inverse complementary error function for gpu
+with_ids	print the toposort index of the node in the node name
+sort op	this class is a wrapper for numpy sort function
+high_contrast	if true the color that describes the respective
+expm grad	gradient of the matrix exponential of a square array
+usmm csc dense	performs the expression is alpha * x y + z
+structured add svcsr	structured addition of a sparse matrix and a dense vector
+print	this identity-like op print as a side effect
+gpu magma svd	computes the svd of a matrix :math a using magma library
+maker	special debugging functionmaker
+gpu alloc	allocate initialized memory on the gpu
+input_storage	none or existing input storage see below
+open mpop	all op using openmp code should inherit from this op
+mul svcsr	multiplication of sparse matrix by a broadcasted dense vector element wise
+poisson	return a sparse having random values from a poisson density with mean from the input
+not variable	this variable can take any value but a finite amount of forbidden values accessible via the not_options field
+f	a differentiable function such that f(*pt) is a scalar
+expm	compute the matrix exponential of a square array
+unlocker	class wrapper around release mechanism so that the lock is automatically released when the program exits even when crashing or being interrupted
+gamma ln	log gamma function

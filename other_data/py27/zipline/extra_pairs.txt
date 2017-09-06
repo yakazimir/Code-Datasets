@@ -1,0 +1,350 @@
+with equity daily bar data	ziplinetestcase mixin providing cls make_equity_daily_bar_data
+numerical expression	term binding to a numexpr expression
+transaction with wrong direction	raised if a transact call returns a transaction with a direction that does not match the order
+tmp bar reader	a helper for tmp_bcolz_equity_minute_bar_reader and tmp_bcolz_equity_daily_bar_reader
+aroon	aroon technical indicator
+end	retrieve prices until end date
+blaze estimates loader	an abstract pipeline loader for the estimates datasets that loads data from a blaze expression
+sequential pool	a dummy pool object that iterates sequentially in a single thread
+per dollar	calculates a commission for a transaction based on a per dollar cost
+set benchmark outside initialize	raised if set_benchmark is called outside initialize()
+reindex bar reader	a base class for readers which reindexes results filling in the additional indices with empty data
+with bcolz future minute bar reader	ziplinetestcase mixin providing cls bcolz_minute_bar_path
+data frame loader	a pipelineloader that reads its input from dataframes
+max drawdown	max drawdown
+exponential weighted moving average	exponentially weighted moving average **default inputs ** none
+apply async result	an object that boxes results for calls to :meth ~zipline
+bad callable	the given callable is not structured in the expected way
+expiring cache	a cache of multiple cachedobjects which returns the wrapped the value or raises and deletes the cachedobject if the value has expired
+empty positions algorithm	an algorithm that ensures that 'phantom' positions do not appear in portfolio
+unsupported pipeline output	raised when a 1d term is added as a column to a pipeline
+not half day	a rule that only triggers when it is not a half day
+market impact base	base class for slippage models which compute a simulated price impact according to a history lookback
+too many arguments	the callback cannot be called by passing the expected number of arguments
+not callable	the provided 'callable' is not actually a callable
+unsupported data type	raised by customfactors with unsupported dtypes
+iceexchange calendar	exchange calendar for ice us
+exponential weighted factor	base class for factors implementing exponential-weighted operations
+all	a filter requiring that assets produce true for window_length consecutive days
+no such pipeline	raised when a user tries to access a non-existent pipeline by name
+bound column descr	intermediate class that sits on dataset objects and returns memoized boundcolumn objects when requested
+sub period divider	a marker for subdividing the period at the latest intraperiod capital change
+no engine registered	raised if a user tries to call pipeline_output in an algorithm that hasn't set up a pipeline engine
+minute bar update reader	abstract base class for minute update readers
+custom classifier	base class for user-defined classifiers
+with seeded random pipeline engine	ziplinetestcase mixin providing class-level fixtures for running pipelines against deterministically-generated random data
+pipeline date error	raised when only one date is passed to the pipeline
+no restrictions	a no-op restrictions that contains no restrictions
+time	a click parameter that parses the value into timetime time objects
+risk metrics cumulative	:usage instantiate riskmetricscumulative once
+unknown bundle	raised if no bundle with the given name was registered
+expr data	a pair of expressions and data resources the expressions will be
+restricted dtype mixin	validation mixin enforcing that a term has a specific dtype
+sid assignment error	raised when an assetfinder tries to build an asset that does not have a sid and that assetfinder is not permitted to assign sids
+static sids	a filter that computes true for a specific set of predetermined sids
+pipeline output during initialize	raised when a user tries to call pipeline_output during initialize
+adjusted	adjust open/high/low/close for splits and dividends
+business days until next event	abstract class for business days since a next event
+with trading calendars	ziplinetestcase mixin providing cls trading_calendar
+stateful rule	a stateful rule has state
+any	a filter requiring that assets produce true for at least one day in the last window_length days
+null filter	a filter indicating whether input values are missing from an input
+with bcolz equity daily bar reader	ziplinetestcase mixin providing cls bcolz_daily_bar_path
+num expr filter	a filter computed from a numexpr expression
+cancel policy	abstract cancellation policy interface
+trading algorithm	a class that represents a trading strategy and parameters to execute the strategy
+input dates	1-dimensional term providing date labels for other term inputs
+daily history aggregator	converts minute pricing data into a daily summary to be used for the last slot in a call to history with a frequency of 1d
+moving average convergence divergence signal	moving average convergence/divergence macd signal line https //en
+tmp assets db	create a temporary assets sqlite database
+window length too long	raised when a trailing window is instantiated with a lookback greater than the length of the underlying array
+missing value mismatch	error raised on attempt to perform operations between labelarrays with mismatched missing_values
+bad clean	exception indicating that an invalid argument set was passed to clean
+exception algorithm	throw an exception from the method name specified in the constructor
+indexes	financial indexes to load
+invalid term params	raised if a user attempts to construct a term using parameterizedtermmixin without specifying a params list in the class body
+term inputs not specified	raised if a user attempts to construct a term without specifying inputs and that term does not have class-level default inputs
+set commission post init	raised if a users script calls set_commission magic after the initialize method has returned
+schedule function without calendar	raised when schedule_function is called but there is not a calendar to be used in the construction of an event rule
+trading calendar dispatcher	a class for dispatching and caching trading calendars
+adjusted	adjust the price for splits and dividends
+bad binary operator	called when a bad binary operation is encountered
+tmp bcolz equity daily bar reader	a temporary bcolzdailybarreader object
+with bcolz equity minute bar reader	ziplinetestcase mixin providing cls bcolz_minute_bar_path
+pricing data associable	abc for types that can be associated with pricing data
+security list restrictions	restrictions based on a security list
+dummy mapping	dummy object used to provide a mapping interface for singular values
+adjusted array	an array that can be iterated with a variable-length window and which can provide different views on data from different perspectives
+invalid field	a field that raises an exception indicating that the field was invalid
+argument	an argument to a function
+with data portal	ziplinetestcase mixin providing self data_portal as an instance level
+with equity minute bar data	ziplinetestcase mixin providing cls equity_minute_bar_days
+invalid order algorithm	an algorithm that tries to make various invalid order calls verifying that appropriate exceptions are raised
+order in before trading start	raised when an algorithm calls an order method in before_trading_start
+asset convertible	abc for types that are convertible to integer-representations of assets
+column	an abstract column of data not yet associated with a dataset
+term outputs empty	raised if a user attempts to construct a term with an empty outputs list
+after open	a rule that triggers for some offset after the market opens
+tmp asset finder	create a temporary asset finder using an in memory sqlite db
+nth trading day of month	a rule that triggers on the nth trading day of the month
+precomputed loader	synthetic pipelineloader that uses a pre-computed array for each column
+rolling spearman of returns	calculates the spearman rank correlation coefficient of the returns of the given asset with the returns of all other assets
+finaldescriptor	a final wrapper around a descriptor
+non window safe input	raised when a pipeline api term that is not deemed window safe is specified as an input to another windowed term
+eodcancel	this policy cancels open orders at the end of the day for now
+unsupported datetime format	raised when an unsupported datetime is passed to an api method
+with future minute bar data	ziplinetestcase mixin providing cls future_minute_bar_days
+rate of change percentage	rate of change percentage roc measures the percentage change in price from one period to the next
+eye loader	a precomputedloader that emits arrays containing 1s on the diagonal and 0s elsewhere
+account control	abstract base class representing a fail-safe control on the behavior of any algorithm
+array predicate	a filter applying a function from (ndarray *args) -> ndarray[bool]
+equities not found	raised when a call to retrieve_equities fails to find an asset
+volume roll finder	the calendarrollfinder calculates contract rolls based on when volume activity transfers from one contract to another
+rank	a factor representing the row-wise rank data of another factor
+specific equity trades	yields all events in event_list that match the given sid_filter
+linear weighted moving average	weighted average value of an arbitrary column
+category mismatch	error raised on attempt to perform operations between labelarrays with mismatched category arrays
+run algo error	signal an error that should have a different message if invoked from the cli
+non sliceable term	raised when attempting to index into a non-sliceable term e g instances
+no value for sid	raised when a get_supplementary_field() call contains a sid that does not have a value for the specified mapping type
+with trading sessions	ziplinetestcase mixin providing cls trading_days cls all_trading_sessions
+with instance tmp dir	ziplinetestcase mixing providing self tmpdir as an instance-level fixture
+talibalgorithm	an algorithm that applies a ta-lib transform the transform object can be
+dataframe cache	a disk-backed cache for dataframes
+unsupported slippage model	raised if a user script calls the set_slippage magic
+with sim params	ziplinetestcase mixin providing cls sim_params as a class level fixture
+test order style forwarding algorithm	test algorithm for verifying that executionstyles are properly forwarded by order api helper methods
+lazyval	decorator that marks that an attribute of an instance should not be computed until needed and that the value should be memoized
+stocks	stock closing prices to load
+not enough arguments	the callback does not accept enough arguments
+commission model	abstract commission model interface
+weak args	works with _weakargsdict to provide a weak cache for function args
+returns	calculates the percent change in close price over the given window_length
+order during initialize	raised if order is called during initialize()
+bcolz minute bar reader	reader for data written by bcolzminutebarwriter parameters
+bcolz daily bar writer	class capable of writing daily ohlcv data to disk in a format that can be read efficiently by bcolzdailyohlcvreader
+classifier	a pipeline expression computing a categorical output
+annualized volatility	volatility the degree of variation of a series over time as measured by
+equity commission model	base class for commission models which only support equities
+window length not specified	raised if a user attempts to construct a term without specifying window length and that term does not have a class-level default window length
+multiple symbols found	raised when a symbol() call contains a symbol that changed over time and is thus not resolvable without additional information
+sqlite adjustment reader	loads adjustments based on corporate actions from a sqlite database
+asset dbwriter	class used to write data to an assets db
+not dtype	raised when a pipeline term is constructed with a dtype that isn't a numpy dtype object
+trading control violation	raised if an order would violate a constraint set by a tradingcontrol
+asset dispatch bar reader	parameters ----------
+test algorithm	this algorithm will send a specified number of orders to allow unit tests to verify the orders sent/received transactions created and positions
+trading control	abstract base class representing a fail-safe control on the behavior of any algorithm
+max order size	tradingcontrol representing a limit on the magnitude of any single order placed with the given asset
+history loader	loader for sliding history windows with support for adjustments
+slice	term for extracting a single column of a another term's output
+stop order	execution style representing an order to be placed once the market price reaches a specified stop price
+not null filter	a filter indicating whether input values are **not** missing from an input
+data portal	interface to all of the data that a zipline simulation needs
+percentile filter	a filter representing assets falling between percentile bounds of a factor
+latest	a classifier producing the latest value of an input
+lseexchange calendar	exchange calendar for the london stock exchange open time 8 00 am gmt
+incompatible history frequency	raised when a frequency is given to history which is not supported
+data set meta	metaclass for datasets supplies name and dataset information to column attributes
+nullctx	null context manager useful for conditionally adding a contextmanager in
+mutable index rolling panel	a version of rollingpanel that exists for backwards compatibility with batch_transform
+roll finder	abstract base class for calculating when futures contracts are the active contract
+before close	a rule that triggers for some offset time before the market closes
+usequity pricing loader	pipelineloader for us equity pricing data delegates loading of baselines and adjustments
+average dollar volume	average daily dollar volume **default inputs ** [usequitypricing
+market order	class encapsulating an order to be placed at the current market price
+multiple values found for field	raised when a lookup_by_supplementary_mapping() call contains a value that changed over time for the specified field and is
+pipeline	a pipeline object represents a collection of named expressions to be compiled and executed by a pipelineengine
+classlazyval	decorator that marks that an attribute of a class should not be computed until needed and that the value should be memoized
+testing slippage	slippage model that fills a constant number of shares per tick for testing purposes
+asset date bounds	tradingcontrol representing a prohibition against ordering an asset before its start_date or after its end_date
+sqlite adjustment writer	writer for data to be read by sqliteadjustmentreader parameters
+bad order parameters	raised if any impossible parameters (nan negative limit/stop) are passed to an order call
+term graph	an abstract representation of pipeline term dependencies
+weighted average value	helper for vwap-like computations
+timedelta	a click parameter that parses values into pd timedelta objects
+unsupported cancel policy	raised if a user script calls set_cancel_policy with an object that isn't a cancelpolicy
+positive window length mixin	validation mixin enforcing that a term gets a positive windowlength
+calendar name collision	raised when the static calendar registry already has a calendar with a given name
+restrictions	abstract restricted list interface representing a set of assets that an algorithm is restricted from trading
+with trading environment	ziplinetestcase mixin providing cls env as a class-level fixture
+unsupported order parameters	raised if a set of mutually exclusive parameters are passed to an order call
+aliased mixin	mixin for aliased terms
+asset id	customfactor that returns the assetid of each asset
+execution plan	graph represention of pipeline term dependencies that includes metadata about extra rows required to perform computations
+term	base class for terms in a pipeline api compute graph
+simple moving average	average value of an arbitrary column
+account control violation	raised if the account violates a constraint set by a accountcontrol
+with bcolz equity daily bar reader from csvs	ziplinetestcase mixin that provides cls
+bad percentile bounds	raised by api functions accepting percentile bounds when the passed bounds are invalid
+never	a rule that never triggers
+bollinger bands	bollinger bands technical indicator
+invalid output name	raised if a term's output names conflict with any of its attributes
+transaction with no volume	raised if a transact call returns a transaction with zero volume
+schedule function invalid calendar	raised when schedule_function is called with an invalid calendar argument
+cannot order delisted asset	raised if an order is for a delisted asset
+reindex minute bar reader	see reindexbarreader
+num expr factor	factor computed from a numexpr expression
+volatility volume share	model slippage for futures contracts according to the following formula new_price = price + (price * mi / 10000),
+history in initialize	raised when an algorithm calls history() in initialize
+sliding window	wrapper around an adjustedarraywindow which supports monotonically increasing by datetime requests for a sized window of data
+nop context	a nop context manager
+set portfolio algorithm	an algorithm that tries to set the portfolio directly
+ichimoku kinko hyo	compute the various metrics for the ichimoku kinko hyo ichimoku cloud
+cyclic calendar alias	raised when calendar aliases form a cycle
+bcolz daily bar reader	reader for raw pricing data written by bcolzdailyohlcvwriter
+true range	true range a technical indicator originally developed by j
+asset exists	pseudo-filter describing whether or not an asset existed on a given day
+rolling spearman	a factor that computes spearman rank correlation coefficients between the columns of a given factor and either the columns of another
+per future trade	calculates a commission for a transaction based on a per trade cost
+never cancel	orders are never automatically canceled
+fast stochastic oscillator	fast stochastic oscillator indicator [%k momentum indicator] https //wiki
+rolling panel	preallocation strategies for rolling window over expanding data set
+nyseexchange calendar	exchange calendar for nyse open time 9 31 am us/eastern
+stateless rule	a stateless rule has no observable side effects
+latest mixin	mixin for behavior shared by custom{factor filter classifier}
+rsi	relative strength index **default inputs**: [usequitypricing
+vwap	volume weighted average price **default inputs ** [usequitypricing
+value not found for field	raised when a lookup_by_supplementary_mapping() call contains a value does not exist for the specified mapping type
+calendar roll finder	the calendarrollfinder calculates contract rolls based purely on the contract's auto close date
+wrong data for transform	raised whenever a rolling transform is called on an event that does not have the necessary properties
+transaction with no amount	raised if a transact call returns a transaction with zero amount
+with tmp dir	ziplinetestcase mixing providing cls tmpdir as a class-level fixture
+bcolz minute bar metadata	parameters ----------
+event	an event is a pairing of an eventrule and a callable that will be invoked with the current algorithm context data and datetime only when the rule
+unknown rank method	raised during construction of a rank factor when supplied a bad rank method
+with responses	ziplinetestcase mixin that provides self responses as an instance
+event manager	manages a list of event objects
+incompatible terms	raised when trying to compute correlations/regressions between two 2d factors with different masks
+no source error	raised when no source is given to the pipeline
+performance tracker	tracks the performance of the algorithm
+warning context	re-usable contextmanager for contextually managing warnings
+downsampled mixin	mixin for behavior shared by downsampled{factor filter classifier} a downsampled term is a wrapper around the "real" term that performs actual
+start	retrieve prices from start date on
+future slippage model	base class for slippage models which only support futures
+blaze events loader	an abstract pipeline loader for the events datasets that loads data from a blaze expression
+rolling pearson	a factor that computes pearson correlation coefficients between the columns of a given factor and either the columns of another factor/boundcolumn or a
+events loader	base class for pipelineloaders that supports loading the next and previous value of an event field
+attach pipeline after initialize	raised when a user tries to call add_pipeline outside of initialize
+bmfexchange calendar	exchange calendar for bm&f bovespa
+filter	pipeline expression computing a boolean output
+asset dbversion error	raised by an assetdbwriter or assetfinder if the version number in the versions table does not match the asset_db_version in asset_writer
+account	the account object tracks information about the trading account the
+incompatible slippage model	raised if a user tries to set a futures slippage model for equities or vice versa
+seeded random loader	a precomputedloader that emits arrays randomly-generated with a given seed
+heavy buy algorithm	this algorithm will send a specified number of orders to allow unit tests to verify the orders sent/received transactions created and positions
+recarray field	a single field from a multi-output factor
+loadable term	a term that should be loaded from an external resource by a pipelineloader
+symbol not found	raised when a symbol() call contains a non-existant symbol
+panel bar reader	reader for data passed as panel
+union restrictions	a union of a number of sub restrictions
+asset finder	an assetfinder is an interface to a database of asset metadata written by an assetdbwriter
+bound column	a column of data that's been concretely bound to a particular dataset
+always	a rule that always triggers
+root symbol not found	raised when a lookup_future_chain() call contains a non-existant symbol
+custom filter	base class for user-defined filters
+custom factor	base class for user-defined factors
+future contracts not found	raised when a call to retrieve_futures_contracts fails to find an asset
+bcolz minute bar writer	class capable of writing minute ohlcv data to disk into bcolz format
+exploding object	object that will raise an exception on any attribute access
+session bar reader	reader for ohclv pricing data at a session frequency
+null adjustment reader	a sqliteadjustmentreader that stores no adjustments and uses in-memory sqlite
+everything	a trivial classifier that classifies everything the same
+reindex session bar reader	see reindexbarreader
+exploding pipeline engine	a pipelineengine that doesn't do anything
+tmp bcolz equity minute bar reader	a temporary bcolzminutebarreader object
+limit order	execution style representing an order to be executed at a price equal to or better than a specified limit price
+quantopian usfutures calendar	synthetic calendar for trading us futures
+static assets	a filter that computes true for a specific set of predetermined assets
+quantiles	a classifier computing quantiles over an input
+working file	a context manager for managing a temporary file that will be moved to a non-temporary location if no exceptions are raised in the context
+at least n	a filter requiring that assets produce true for at least n days in the last window_length days
+split adjusted estimates loader	estimates loader that loads data that needs to be split-adjusted
+multiple values found for sid	raised when a get_supplementary_field() call contains a value that changed over time for the specified field and is thus not resolvable
+classproperty	class property
+timestamp	a click parameter that parses the value into pandas timestamp objects
+ndays before last trading day of month	a rule that triggers n days before the last trading day of the month
+grouped row transform	a factor that transforms an input factor by applying a row-wise shape-preserving transformation on classifier-defined groups of that
+noop algorithm	dolce fa niente
+composed rule	a rule that composes the results of two rules with some composing function
+tmp trading env	create a temporary trading environment
+unsupported dtype	raised when a pipeline term is constructed with a dtype that's not supported
+future commission model	base class for commission models which only support futures
+with default date bounds	ziplinetestcase mixin which makes it possible to synchronize date bounds across fixtures
+ambitious stop limit algorithm	algorithm that tries to buy with extremely low stops/limits and tries to sell with extremely high versions of same
+simple pipeline engine	pipelineengine class that computes each term independently
+transaction volume exceeds order	raised if a transact call returns a transaction with a volume greater than the corresponding order
+volume share slippage	model slippage as a function of the volume of contracts traded
+no data on date	raised when a spot price cannot be found for the sid and date
+wildcard	an object that compares equal to any other object
+invalid calendar name	raised when a calendar with an invalid name is requested
+no further data error	raised by calendar operations that would ask for dates beyond the extent of our known data
+no meta data warning	warning used to signal that no deltas or checkpoints could be found and none were provided
+mismatched arguments	the argument lists are of the same lengths but not in the correct order
+rolling pearson of returns	calculates the pearson product-moment correlation coefficient of the returns of the given asset with the returns of all other assets
+max leverage	accountcontrol representing a limit on the maximum leverage allowed by the algorithm
+ndays before last trading day of week	a rule that triggers n days before the last trading day of the week
+long only	tradingcontrol representing a prohibition against holding short positions
+single input mixin	validation mixin enforcing that a term gets a length-1 inputs list
+label array	an ndarray subclass for working with arrays of strings
+final meta	a metaclass template for classes the want to prevent subclassess from overriding a some methods or attributes
+single asset	a filter that computes to true only for the given asset
+set asset date bounds algorithm	algorithm that tries to order 1 share of sid 999 on every bar and has an assetdatebounds() trading control in place
+sids not found	raised when a retrieve_asset() or retrieve_all() call contains a non-existent sid
+continuous future adjustment reader	calculates adjustments for continuous futures based on the close and open of the contracts on the either side of each roll
+expired	marks that a :class cachedobject has expired
+factor	pipeline api expression producing a numerical or date-valued output
+latest	filter producing the most recently-known value of inputs[0] on each day
+with asset finder	ziplinetestcase mixin providing cls asset_finder as a class-level fixture
+stop limit order	execution style representing a limit order to be placed with a specified limit price once the market reaches a specified stop price
+per equity trade	calculates a commission for a transaction based on a per trade cost
+historical restrictions	historical restrictions stored in memory with effective dates for each asset
+custom term mixin	mixin for user-defined rolling-window terms
+execution style	abstract base class representing a modification to a standard order
+cfeexchange calendar	exchange calendar for the cboe futures exchange cfe
+fixed slippage	model slippage as a fixed spread
+dtype not specified	raised if a user attempts to construct a term without specifying dtype and that term does not have class-level default dtype
+tmp dir	new style class that wrapper for tempdirectory in python 2
+slippage model	abstract interface for defining a slippage model
+date	a click parameter that parses the value into datetime date objects
+cached object	a simple struct for maintaining a cached object with an expiration date
+finalvalue	a wrapper for a non-descriptor attribute
+usequity pricing	dataset representing daily trading prices and volumes
+exponential weighted moving std dev	exponentially weighted moving standard deviation **default inputs ** none
+zipline api	context manager for making an algorithm instance available to zipline api functions within a scoped block
+static restrictions	static restrictions stored in memory that are constant regardless of dt for each asset
+earnings estimates loader	an abstract pipeline loader for estimates data that can load data a variable number of quarters forwards/backwards from calendar dates
+trading calendar	an tradingcalendar represents the timing information of a single market exchange
+cmeexchange calendar	exchange calendar for cme
+standard outputs	validation mixin enforcing that a term cannot produce non-standard outputs
+h5minute bar update writer	writer for files containing minute bar updates for consumption by a writer for a minutebarreader format
+blaze loader	a pipelineloader for datasets constructed with from_blaze
+computable term	a term that should be computed from a tuple of inputs
+per contract	calculates a commission for a transaction based on a per contract cost with an optional minimum cost per trade
+latest	factor producing the most recently-known value of inputs[0] on each day
+with logger	ziplinetestcase mixin providing cls log_handler as an instance-level
+fetcher data portal	mock dataportal that returns fake data for history and non-fetcher spot value
+final	an attribute that cannot be overridden
+rolling linear regression	a factor that performs an ordinary least-squares regression predicting the columns of a given factor from either the columns of another
+business days since previous event	abstract class for business days since a previous event
+incompatible commission model	raised if a user tries to set a futures commission model for equities or vice versa
+max order count	tradingcontrol representing a limit on the number of orders that can be placed in a given trading day
+window length not positive	raised when a trailing window would be instantiated with a length less than 1
+per share	calculates a commission for a transaction based on a per share cost with an optional minimum cost per trade
+h5minute bar update reader	reader for minute bar updates stored in hdf5 files
+consume asset meta data error	raised when assetfinder consume() is called on an invalid object
+map asset identifier index error	raised when assetmetadata map_identifier_index_to_sids() is called on an
+pipeline loader	abc for classes that can load data for use with zipline pipeline apis
+callback manager	create a context manager from a pre-execution callback and a post-execution callback
+nth trading day of week	a rule that triggers on the nth trading day of the week
+record batch blotter	blotter that tracks how its batch_order method was called
+working dir	a context manager for managing a temporary directory that will be moved to a non-temporary location if no exceptions are raised in the context
+restricted list order	tradingcontrol representing a restricted list of assets that cannot be ordered by the algorithm
+trading environment	the financial simulations in zipline depend on information about the benchmark index and the risk free rates of return
+rolling linear regression of returns	perform an ordinary least-squares regression predicting the returns of all other assets on the given asset
+equity slippage model	base class for slippage models which only support equities
+max position size	tradingcontrol representing a limit on the maximum position size that can be held by an algo for a given asset
+zipline test case	shared extensions to core unittest testcase
+unsupported commission model	raised if a user script calls the set_commission magic
+tsxexchange calendar	exchange calendar for the toronto stock exchange open time 9 30 am est
+with adjustment reader	ziplinetestcase mixin providing cls adjustment_reader as a class level

@@ -1,0 +1,1292 @@
+core	PrettyHelpFormatter	_format_option_strings	option mvarfmt optsep	return a comma-separated list of option strings and metavars
+core	PrettyHelpFormatter	format_usage	usage	ensure there is only one newline between usage and the first heading if there is no description
+core	CustomOptionParser	insert_option_group	idx	insert an optiongroup at a given position
+core	CustomOptionParser	option_list_all		get a list of all options including those in option groups
+core	ConfigOptionParser	_update_defaults	defaults	updates the given defaults with values from the config files and the environ
+core	ConfigOptionParser	get_default_values		overriding to make updating the defaults after instantiation of the option parser possible _update_defaults() does the dirty work
+core	PackageFinder	__init__	find_links index_urls allow_all_prereleases trusted_hosts	create a packagefinder
+core	PackageFinder	_sort_locations	locations expand_dir	sort locations into "files" archives and "urls", and return
+core	PackageFinder	_candidate_sort_key	candidate	function used to generate link sort key for link tuples
+core	PackageFinder	_get_index_urls_locations	project_name	returns the locations found via self index_urls
+core	PackageFinder	find_all_candidates	project_name	find all available installationcandidate for project_name this checks index_urls find_links and dependency_links
+core	PackageFinder	find_requirement	req upgrade	try to find a link matching req
+core	PackageFinder	_get_pages	locations project_name	yields (page page_url) from the given locations skipping locations that have errors
+core	PackageFinder	_sort_links	links	returns elements of links in order non-egg links first egg links
+core	PackageFinder	_link_package_versions	link search	return an installationcandidate or none
+core		egg_info_matches	egg_info search_name link _egg_info_re	pull the version part out of a string
+core	HTMLPage	_get_content_type	url session	get the content-type of the given url using a head request
+core	HTMLPage	links		yields all links in the page
+core	HTMLPage	clean_link	url	makes sure a link is fully encoded that is if a ' ' shows up in
+core	Link	__init__	url comes_from requires_python	object representing a parsed link from https //pypi python org/simple/*
+core	Link	is_artifact		determines if this points to an actual artifact e g a tarball or if
+core		user_agent		return a string representing the user agent
+core		get_file_content	url comes_from session	gets the content of a file it may be a filename file url or http url
+core		is_url	name	returns true if the name looks like a url
+core		url_to_path	url	convert a file url to a path
+core		path_to_url	path	convert a path to a file url the path will be made absolute and have
+core		is_archive_file	name	return true if name is a considered as an archive file
+core		is_dir_url	link	return whether a file // link points to a directory
+core		unpack_file_url	link location download_dir hashes	unpack link into location
+core		_copy_dist_from_dir	link_path location	copy distribution files in link_path to location
+core		_download_http_url	link session temp_dir hashes	download link url into temp_dir using provided session
+core		_check_download_dir	link download_dir hashes	check download_dir for previously downloaded file with correct hash
+core		make_option_group	group parser	return an optiongroup object
+core		check_install_build_global	options check_options	disable wheels if per-setup py call options are set
+core		_get_format_control	values option	get a format_control object
+core		_merge_hash	option opt_str value parser	given a value spelled "algo digest", append the digest to a list pointed to in a dict by the algo name
+core		get_abbr_impl		return abbreviated implementation name
+core		get_impl_ver		return implementation version
+core		get_impl_version_info		return sys version_info-like tuple for use in decrementing the minor
+core		get_impl_tag		returns the tag for this specific implementation
+core		get_flag	var fallback expected warn	use a fallback method for determining soabi flags if the needed config var is unset or unavailable
+core		get_abi_tag		return the abi tag based on soabi if available or emulate soabi cpython 2 pypy
+core		get_platform		return our platform name 'win32', 'linux_x86_64'
+core		get_darwin_arches	major minor machine	return a list of supported arches including group arches for the given major minor and machine architecture of an macos machine
+core		get_supported	versions noarch platform impl	return a list of supported tags for each version specified in versions
+core		write_delete_marker_file	directory	write the pip delete marker file into this directory
+core		running_under_virtualenv		return true if we're running inside a virtualenv false otherwise
+core		virtualenv_no_global		return true if in a venv and no system site packages
+core		distutils_scheme	dist_name user home root	return a distutils install scheme
+core	HashError	body		return a summary of me for display under the heading
+core	HashError	_requirement_name		return a description of the requirement that triggered me
+core	HashMissing	__init__	gotten_hash	:param gotten_hash the hash of the possibly malicious archive we
+core	HashMismatch	__init__	allowed gots	:param allowed a dict of algorithm names pointing to lists of allowed
+core	HashMismatch	_hash_comparison		return a comparison of actual and expected hash values
+core	RequirementCommand	populate_requirement_set	requirement_set args options finder	marshal cmd line args into a requirement set
+core	RequirementCommand	_build_package_finder	options session platform python_versions	create a package finder appropriate to this requirement command
+core		autocomplete		command and option completion for the main option parser and options and its subcommands and options
+core		get_path_uid	path	return path's uid
+core		expanduser	path	expand ~ and ~user constructions
+core		samefile	file1 file2	provide an alternative for os path samefile on windows/python2
+core	Configuration	items		returns key-value pairs like dict values() representing the loaded
+core	Configuration	_load_config_files	section	loads configuration from configuration files
+core	Configuration	_load_environment_vars		loads configuration from environment variables
+core	Configuration	_normalize_keys	items	return a config dictionary with normalized keys regardless of
+core	Configuration	_get_environ_vars		returns a generator with all environmental vars with prefix pip_
+core	Configuration	_get_config_files		returns configuration files in a defined order
+core	WheelCache	__init__	cache_dir format_control	create a wheel cache
+core		_cache_for_link	cache_dir link	return a directory to store cached wheels in for link
+core		rehash	path algo blocksize	return hash length for path using hashlib new algo
+core		fix_script	path	replace #!python with #!/path/to/python return true if file was changed
+core		root_is_purelib	name wheeldir	return true if the extracted wheel in wheeldir should go into purelib
+core		move_wheel_files	name req wheeldir user	install a wheel
+core		wheel_version	source_dir	return the wheel-version of an extracted wheel if possible
+core		check_compatibility	version name	raises errors or warns if called with an incompatible wheel-version
+core	Wheel	__init__	filename	:raises invalidwheelfilename when the filename is invalid for a wheel
+core	Wheel	support_index_min	tags	return the lowest index that one of the wheel's file_tag combinations achieves in the supported_tags list e
+core	Wheel	supported	tags	is this wheel supported on this system?
+core	WheelBuilder	_build_one	req output_dir python_tag	build one wheel
+req	InstallRequirement	from_line	cls name comes_from isolated	creates an installrequirement from a name which might be a requirement directory containing 'setup
+req	InstallRequirement	populate_link	finder upgrade require_hashes	ensure that if a link can be found for this that it is found
+req	InstallRequirement	is_pinned		return whether i am pinned to an exact version
+req	InstallRequirement	_correct_build_location		move self _temp_build_dir to self _ideal_build_dir/self req name
+req	InstallRequirement	uninstall	auto_confirm	uninstall the distribution currently satisfying this requirement
+req	InstallRequirement	ensure_has_source_dir	parent_dir	ensure that a source_dir is set
+req	InstallRequirement	remove_temporary_source		remove the source files from this requirement if they are marked
+req	InstallRequirement	check_if_exists		find an installed distribution that satisfies or conflicts with this requirement and set self
+req	InstallRequirement	get_dist		return a pkg_resources distribution built from self egg_info_path
+req	InstallRequirement	has_hash_options		return whether any known-good hashes are specified as options
+req	InstallRequirement	hashes	trust_internet	return a hash-comparer that considers my option- and url-based hashes to be known-good
+req		_strip_postfix	req	strip req postfix -dev 0 2 etc
+req		parse_editable	editable_req	parses an editable requirement into - a requirement name
+req		deduce_helpful_msg	req	returns helpful msg in case requirements file does not exist or cannot be parsed
+req		parse_requirements	filename finder comes_from options	parse a requirements file and yield installrequirement instances
+req		preprocess	content options	split filter and join lines and return a line iterator
+req		process_line	line filename line_number finder	process a single requirements line this can result in creating/yielding requirements or updating the finder
+req		break_args_options	line	break up the line into an args and options string we only want to shlex
+req		build_parser		return a parser for parsing requirement lines
+req		join_lines	lines_enum	joins a line ending in '' with the previous line except when following comments
+req		ignore_comments	lines_enum	strips comments and filter empty lines
+req		skip_regex	lines_enum options	skip lines that match '--skip-requirements-regex' pattern
+req		_script_names	dist script_name is_gui	create the fully qualified name of the files created by {console gui}_scripts for the given dist
+req		uninstallation_paths	dist	yield all the uninstallation paths for dist based on record-without- pyc
+req	UninstallPathSet	_permitted	path	return true if the given path is one we are permitted to remove/modify false otherwise
+req	UninstallPathSet	compact	paths	compact a path set to contain the minimal number of paths necessary to contain all paths in the set
+req	UninstallPathSet	remove	auto_confirm	remove paths in self paths with confirmation (unless
+req	UninstallPathSet	rollback		rollback the changes previously made by remove()
+req	UninstallPathSet	commit		remove temporary save dir rollback will no longer be possible
+req	DistAbstraction	dist	finder	return a setuptools dist object
+req	DistAbstraction	prep_for_dist		ensure that we can get a dist for this requirement
+req		make_abstract_dist	req_to_install	factory to make an abstract dist object
+req	RequirementSet	__init__	build_dir src_dir download_dir upgrade	create a requirementset
+req	RequirementSet	add_requirement	install_req parent_req_name extras_requested	add install_req as a requirement to install
+req	RequirementSet	prepare_files	finder	prepare process create temp directories download and/or unpack files
+req	RequirementSet	_check_skip_installed	req_to_install finder	check if req_to_install should be skipped
+req	RequirementSet	_prepare_file	finder req_to_install require_hashes ignore_dependencies	prepare a single requirements file
+req	RequirementSet	cleanup_files		clean up files remove builds
+req	RequirementSet	_to_install		create the installation order
+req	RequirementSet	install	install_options global_options	install everything in this set (after having downloaded and unpacked
+vcs	Mercurial	export	location	export the hg repository at the url to the destination location
+vcs	Mercurial	check_version	dest rev_options	always assume the versions don't match
+vcs	Subversion	get_info	location	returns url revision where both are strings
+vcs	Subversion	export	location	export the svn repository at the url to the destination location
+vcs	Subversion	get_revision	location	return the maximum revision for all files under a given location
+vcs	Subversion	check_version	dest rev_options	always assume the versions don't match
+vcs	Git	export	location	export the git repository at the url to the destination location
+vcs	Git	check_rev_options	rev dest rev_options	check the revision options before checkout to compensate that tags and branches may need origin/ as a prefix
+vcs	Git	check_version	dest rev_options	compare the current sha to the ref ref may be a branch or tag name
+vcs	Git	get_url	location	return url of the first remote encountered
+vcs	Git	get_full_refs	location	yields tuples of commit ref for branches and tags
+vcs	Git	is_ref_commit	ref	a ref is a commit sha if it is not anything else
+vcs	Git	get_short_refs	location	return map of named refs branches or tags to commit hashes
+vcs	Git	_get_subdirectory	location	return the relative path of setup py to the git repo root
+vcs	Git	get_url_rev		prefixes stub urls like 'user@hostname user/repo git' with 'ssh //'
+vcs	VcsSupport	get_backend_name	location	return the name of the version control backend if found at given location e
+vcs	VersionControl	_is_local_repository	repo	posix absolute paths start with os path sep
+vcs	VersionControl	export	location	export the repository at the url to the destination location i
+vcs	VersionControl	get_url_rev		returns the correct repository url and revision by parsing the given
+vcs	VersionControl	get_info	location	returns url revision where both are strings
+vcs	VersionControl	normalize_url	url	normalize a url for comparison by unquoting it and removing any trailing slash
+vcs	VersionControl	compare_urls	url1 url2	compare two repo urls for identity ignoring incidental differences
+vcs	VersionControl	obtain	dest	called when installing or updating an editable package takes the source path of the checkout
+vcs	VersionControl	switch	dest url rev_options	switch the repo at dest to point to url
+vcs	VersionControl	update	dest rev_options	update an already-existing repo to the given rev_options
+vcs	VersionControl	check_version	dest rev_options	return true if the version is identical to what exists and doesn't need to be updated
+vcs	VersionControl	check_destination	dest url rev_options rev_display	prepare a location to receive a checkout/clone
+vcs	VersionControl	unpack	location	clean up current location and download the url repository
+vcs	VersionControl	get_src_requirement	dist location	return a string representing the requirement needed to
+vcs	VersionControl	get_url	location	return the url used at location
+vcs	VersionControl	get_revision	location	return the current revision of the files at location
+vcs	VersionControl	run_command	cmd show_stdout cwd on_returncode	run a vcs subcommand
+vcs	VersionControl	controls_location	cls location	check if a location is controlled by the vcs
+vcs	Bazaar	export	location	export the bazaar repository at the url to the destination location
+vcs	Bazaar	check_version	dest rev_options	always assume the versions don't match
+_vendor		ip_address	address	take an ip string/int and return an object of the correct type
+_vendor		ip_network	address strict	take an ip string/int and return an object of the correct type
+_vendor		ip_interface	address	take an ip string/int and return an object of the correct type
+_vendor		v4_int_to_packed	address	represent an address as 4 packed bytes in network big-endian order
+_vendor		v6_int_to_packed	address	represent an address as 16 packed bytes in network big-endian order
+_vendor		_split_optional_netmask	address	helper to split the netmask and raise addressvalueerror if needed
+_vendor		_find_address_range	addresses	find a sequence of sorted deduplicated ipv#address
+_vendor		_count_righthand_zero_bits	number bits	count the number of zero bits on the right hand side
+_vendor		summarize_address_range	first last	summarize a network range given the first and last ip addresses
+_vendor		_collapse_addresses_internal	addresses	loops through the addresses collapsing concurrent netblocks
+_vendor		collapse_addresses	addresses	collapse a list of ip objects
+_vendor		get_mixed_type_key	obj	return a key suitable for sorting between networks and addresses
+_vendor	_IPAddressBase	exploded		return the longhand version of the ip address as a string
+_vendor	_IPAddressBase	compressed		return the shorthand version of the ip address as a string
+_vendor	_IPAddressBase	reverse_pointer		the name of the reverse dns pointer for the ip address e g :
+_vendor	_IPAddressBase	_ip_int_from_prefix	cls prefixlen	turn the prefix length into a bitwise netmask args
+_vendor	_IPAddressBase	_prefix_from_ip_int	cls ip_int	return prefix length from the bitwise netmask
+_vendor	_IPAddressBase	_prefix_from_prefix_string	cls prefixlen_str	return prefix length from a numeric string args
+_vendor	_IPAddressBase	_prefix_from_ip_string	cls ip_str	turn a netmask/hostmask string into a prefix length args
+_vendor	_BaseNetwork	hosts		generate iterator over usable hosts in a network
+_vendor	_BaseNetwork	overlaps	other	tell if self is partly contained in other
+_vendor	_BaseNetwork	num_addresses		number of hosts in the current subnet
+_vendor	_BaseNetwork	address_exclude	other	remove an address from a larger block
+_vendor	_BaseNetwork	compare_networks	other	compare two ip objects
+_vendor	_BaseNetwork	_get_networks_key		network-only key function
+_vendor	_BaseNetwork	subnets	prefixlen_diff new_prefix	the subnets which join to make the current subnet
+_vendor	_BaseNetwork	supernet	prefixlen_diff new_prefix	the supernet containing the current network
+_vendor	_BaseNetwork	is_multicast		test if the address is reserved for multicast use
+_vendor	_BaseNetwork	is_reserved		test if the address is otherwise ietf reserved
+_vendor	_BaseNetwork	is_link_local		test if the address is reserved for link-local
+_vendor	_BaseNetwork	is_private		test if this address is allocated for private networks
+_vendor	_BaseNetwork	is_global		test if this address is allocated for public networks
+_vendor	_BaseNetwork	is_unspecified		test if the address is unspecified
+_vendor	_BaseNetwork	is_loopback		test if the address is a loopback address
+_vendor	_BaseV4	_make_netmask	cls arg	make a (netmask prefix_len) tuple from the given argument
+_vendor	_BaseV4	_ip_int_from_string	cls ip_str	turn the given ip string into an integer for comparison
+_vendor	_BaseV4	_parse_octet	cls octet_str	convert a decimal octet into an integer
+_vendor	_BaseV4	_string_from_ip_int	cls ip_int	turns a 32-bit integer into dotted decimal notation
+_vendor	_BaseV4	_is_hostmask	ip_str	test if the ip string is a hostmask rather than a netmask
+_vendor	_BaseV4	_reverse_pointer		return the reverse dns pointer name for the ipv4 address
+_vendor	IPv4Address	__init__	address	args address a string or integer representing the ip
+_vendor	IPv4Address	packed		the binary representation of this address
+_vendor	IPv4Address	is_reserved		test if the address is otherwise ietf reserved
+_vendor	IPv4Address	is_private		test if this address is allocated for private networks
+_vendor	IPv4Address	is_multicast		test if the address is reserved for multicast use
+_vendor	IPv4Address	is_unspecified		test if the address is unspecified
+_vendor	IPv4Address	is_loopback		test if the address is a loopback address
+_vendor	IPv4Address	is_link_local		test if the address is reserved for link-local
+_vendor	IPv4Network	__init__	address strict	instantiate a new ipv4 network object
+_vendor	IPv4Network	is_global		test if this address is allocated for public networks
+_vendor	_BaseV6	_make_netmask	cls arg	make a (netmask prefix_len) tuple from the given argument
+_vendor	_BaseV6	_ip_int_from_string	cls ip_str	turn an ipv6 ip_str into an integer
+_vendor	_BaseV6	_parse_hextet	cls hextet_str	convert an ipv6 hextet string into an integer
+_vendor	_BaseV6	_compress_hextets	cls hextets	compresses a list of hextets
+_vendor	_BaseV6	_string_from_ip_int	cls ip_int	turns a 128-bit integer into hexadecimal notation
+_vendor	_BaseV6	_explode_shorthand_ip_string		expand a shortened ipv6 address
+_vendor	_BaseV6	_reverse_pointer		return the reverse dns pointer name for the ipv6 address
+_vendor	IPv6Address	__init__	address	instantiate a new ipv6 address object
+_vendor	IPv6Address	packed		the binary representation of this address
+_vendor	IPv6Address	is_multicast		test if the address is reserved for multicast use
+_vendor	IPv6Address	is_reserved		test if the address is otherwise ietf reserved
+_vendor	IPv6Address	is_link_local		test if the address is reserved for link-local
+_vendor	IPv6Address	is_site_local		test if the address is reserved for site-local
+_vendor	IPv6Address	is_private		test if this address is allocated for private networks
+_vendor	IPv6Address	is_global		test if this address is allocated for public networks
+_vendor	IPv6Address	is_unspecified		test if the address is unspecified
+_vendor	IPv6Address	is_loopback		test if the address is a loopback address
+_vendor	IPv6Address	ipv4_mapped		return the ipv4 mapped address
+_vendor	IPv6Address	teredo		tuple of embedded teredo ips
+_vendor	IPv6Address	sixtofour		return the ipv4 6to4 embedded address
+_vendor	IPv6Network	__init__	address strict	instantiate a new ipv6 network object
+_vendor	IPv6Network	hosts		generate iterator over usable hosts in a network
+_vendor	IPv6Network	is_site_local		test if the address is reserved for site-local
+_vendor		user_data_dir	appname appauthor version roaming	return full path to the user-specific data dir for this application
+_vendor		site_data_dir	appname appauthor version multipath	return full path to the user-shared data dir for this application
+_vendor		user_config_dir	appname appauthor version roaming	return full path to the user-specific config dir for this application
+_vendor		site_config_dir	appname appauthor version multipath	return full path to the user-shared data dir for this application
+_vendor		user_cache_dir	appname appauthor version opinion	return full path to the user-specific cache dir for this application
+_vendor		user_state_dir	appname appauthor version roaming	return full path to the user-specific state dir for this application
+_vendor		user_log_dir	appname appauthor version opinion	return full path to the user-specific log dir for this application
+_vendor		_get_win_folder_from_registry	csidl_name	this is a fallback technique at best i'm not sure if using the
+_vendor		_xml_escape	data	escape &, <, >, ", ', etc in a string of data
+_vendor	ParseBaseException	_from_exception	cls pe	internal factory method to simplify creating one type of parseexception
+_vendor	ParseBaseException	__getattr__	aname	supported attributes by name are
+_vendor	ParseBaseException	markInputline	markerString	extracts the exception line from the input string and marks the location of the exception with a special symbol
+_vendor	ParseResults	haskeys		since keys() returns an iterator this method is helpful in bypassing code that looks for the existence of any defined results names
+_vendor	ParseResults	pop		removes and returns item at specified index (default=c{last})
+_vendor	ParseResults	get	key defaultValue	returns named result matching the given key or if there is no such name then returns the given c{defaultvalue} or c{none} if no
+_vendor	ParseResults	insert	index insStr	inserts new element at location index in the list of parsed tokens
+_vendor	ParseResults	append	item	add single element to end of parseresults list of elements
+_vendor	ParseResults	extend	itemseq	add sequence of elements to end of parseresults list of elements
+_vendor	ParseResults	clear		clear all elements and results names
+_vendor	ParseResults	asList		returns the parse results as a nested list of matching tokens all converted to strings
+_vendor	ParseResults	asDict		returns the named parse results as a nested dictionary
+_vendor	ParseResults	copy		returns a new copy of a c{parseresults} object
+_vendor	ParseResults	asXML	doctag namedItemsOnly indent formatted	deprecated returns the parse results as xml tags are created for tokens and lists that have defined results names
+_vendor	ParseResults	getName		returns the results name for this token expression useful when several
+_vendor	ParseResults	dump	indent depth full	diagnostic method for listing out the contents of a c{parseresults}
+_vendor	ParseResults	pprint		pretty-printer for parsed results as a list using the c{pprint} module
+_vendor		col	loc strg	returns current column within a string counting newlines as line separators
+_vendor		lineno	loc strg	returns current line number within a string counting newlines as line separators
+_vendor		line	loc strg	returns the line of text containing loc within a string counting newlines as line separators
+_vendor		nullDebugAction		'do-nothing' debug action to suppress debugging output during parsing
+_vendor	ParserElement	setDefaultWhitespaceChars	chars	overrides the default whitespace chars example :
+_vendor	ParserElement	inlineLiteralsUsing	cls	set class to be used for inclusion of string literals into a parser
+_vendor	ParserElement	copy		make a copy of this c{parserelement} useful for defining different parse actions
+_vendor	ParserElement	setName	name	define name for this expression makes debugging and exception messages clearer
+_vendor	ParserElement	setResultsName	name listAllMatches	define name for referencing matching tokens as a nested attribute of the returned parse results
+_vendor	ParserElement	setBreak	breakFlag	method to invoke the python pdb debugger when this element is about to be parsed
+_vendor	ParserElement	setParseAction		define one or more actions to perform when successfully matching parse element definition
+_vendor	ParserElement	addParseAction		add one or more parse actions to expression's list of parse actions see l{i{setparseaction}<setparseaction>}
+_vendor	ParserElement	addCondition		add a boolean predicate function to expression's list of parse actions see
+_vendor	ParserElement	setFailAction	fn	define action to perform if parsing fails at this expression
+_vendor	ParserElement	enablePackrat	cache_size_limit	enables "packrat" parsing which adds memoizing to the parsing logic
+_vendor	ParserElement	parseString	instring parseAll	execute the parse expression with the given string
+_vendor	ParserElement	scanString	instring maxMatches overlap	scan the input string for expression matches each match will return the
+_vendor	ParserElement	transformString	instring	extension to c{l{scanstring}}, to modify matching text with modified tokens that may be returned from a parse action
+_vendor	ParserElement	searchString	instring maxMatches	another extension to c{l{scanstring}}, simplifying the access to the tokens found to match the given parse expression
+_vendor	ParserElement	split	instring maxsplit includeSeparators	generator method to split a string using the given expression as a separator
+_vendor	ParserElement	__add__	other	implementation of + operator - returns c{l{and}} adding strings to a parserelement
+_vendor	ParserElement	__radd__	other	implementation of + operator when left operand is not a c{l{parserelement}}
+_vendor	ParserElement	__sub__	other	implementation of - operator returns c{l{and}} with error stop
+_vendor	ParserElement	__rsub__	other	implementation of - operator when left operand is not a c{l{parserelement}}
+_vendor	ParserElement	__mul__	other	implementation of * operator allows use of c{expr * 3} in place of c{expr + expr + expr}
+_vendor	ParserElement	__or__	other	implementation of | operator - returns c{l{matchfirst}}
+_vendor	ParserElement	__ror__	other	implementation of | operator when left operand is not a c{l{parserelement}}
+_vendor	ParserElement	__xor__	other	implementation of ^ operator - returns c{l{or}}
+_vendor	ParserElement	__rxor__	other	implementation of ^ operator when left operand is not a c{l{parserelement}}
+_vendor	ParserElement	__and__	other	implementation of & operator - returns c{l{each}}
+_vendor	ParserElement	__rand__	other	implementation of & operator when left operand is not a c{l{parserelement}}
+_vendor	ParserElement	__invert__		implementation of ~ operator - returns c{l{notany}}
+_vendor	ParserElement	__call__	name	shortcut for c{l{setresultsname}}, with c{listallmatches=false}
+_vendor	ParserElement	suppress		suppresses the output of this c{parserelement}; useful to keep punctuation from cluttering up returned output
+_vendor	ParserElement	leaveWhitespace		disables the skipping of whitespace before matching the characters in the c{parserelement}'s defined pattern
+_vendor	ParserElement	setWhitespaceChars	chars	overrides the default whitespace chars
+_vendor	ParserElement	parseWithTabs		overrides default behavior to expand c{<tab>}s to spaces before parsing the input string
+_vendor	ParserElement	ignore	other	define expression to be ignored (e g comments) while doing pattern
+_vendor	ParserElement	setDebugActions	startAction successAction exceptionAction	enable display of debugging messages while doing pattern matching
+_vendor	ParserElement	setDebug	flag	enable display of debugging messages while doing pattern matching
+_vendor	ParserElement	validate	validateTrace	check defined expressions for valid structure check for infinite recursive definitions
+_vendor	ParserElement	parseFile	file_or_filename parseAll	execute the parse expression on the given file or filename
+_vendor	ParserElement	matches	testString parseAll	method for quick testing of a parser against a test string good for simple
+_vendor	ParserElement	runTests	tests parseAll comment fullDump	execute the parse expression on a series of test strings showing each test the parsed results or where the parse failed
+_vendor	Keyword	setDefaultKeywordChars	chars	overrides the default keyword chars
+_vendor	Regex	__init__	pattern flags	the parameters c{pattern} and c{flags} are passed to the c{re compile()} function as-is see the python c{re} module for an explanation of the acceptable patterns and flags
+_vendor	ParseExpression	leaveWhitespace		extends c{leavewhitespace} defined in base class and also invokes c{leavewhitespace} on all contained expressions
+_vendor		traceParseAction	f	decorator for debugging parse actions
+_vendor		delimitedList	expr delim combine	helper to define a delimited list of expressions - the delimiter defaults to ','
+_vendor		countedArray	expr intExpr	helper to define a counted list of expressions
+_vendor		matchPreviousLiteral	expr	helper to define an expression that is indirectly defined from the tokens matched in a previous expression that is it looks
+_vendor		matchPreviousExpr	expr	helper to define an expression that is indirectly defined from the tokens matched in a previous expression that is it looks
+_vendor		oneOf	strs caseless useRegex	helper to quickly define a set of alternative literals and makes sure to do longest-first testing when there is a conflict regardless of the input order
+_vendor		dictOf	key value	helper to easily and clearly define a dictionary by specifying the respective patterns for the key and value
+_vendor		originalTextFor	expr asString	helper to return the original untokenized text for a given expression useful to
+_vendor		ungroup	expr	helper to undo pyparsing's default grouping of and expressions even if all but one are non-empty
+_vendor		locatedExpr	expr	helper to decorate a returned token with its starting and ending locations in the input string
+_vendor		srange	s	helper to easily define string ranges for use in word construction borrows
+_vendor		matchOnlyAtCol	n	helper method for defining parse actions that require matching at a specific column in the input text
+_vendor		replaceWith	replStr	helper method for common parse actions that simply return a literal value especially
+_vendor		removeQuotes	s l t	helper parse action for removing quotation marks from parsed quoted strings
+_vendor		tokenMap	func	helper to define a parse action by mapping a function to all elements of a parseresults list if any additional
+_vendor		_makeTags	tagStr xml	internal helper to construct opening and closing tag expressions given a tag name
+_vendor		makeHTMLTags	tagStr	helper to construct opening and closing tag expressions for html given a tag name matches
+_vendor		makeXMLTags	tagStr	helper to construct opening and closing tag expressions for xml given a tag name matches
+_vendor		withAttribute		helper to create a validating parse action to be used with start tags created with c{l{makexmltags}} or c{l{makehtmltags}}
+_vendor		withClass	classname namespace	simplified version of c{l{withattribute}} when matching on a div class - made difficult because c{class} is a reserved word in python
+_vendor		infixNotation	baseExpr opList lpar rpar	helper method for constructing grammars of expressions made up of operators working in a precedence hierarchy
+_vendor		nestedExpr	opener closer content ignoreExpr	helper method for defining nested lists enclosed in opening and closing delimiters ("(" and ")" are the default)
+_vendor		indentedBlock	blockStatementExpr indentStack indent	helper method for defining space-delimited indentation blocks such as those used to define block statements in python source code
+_vendor		replaceHTMLEntity	t	helper parser action to replace common html entities with their special characters
+_vendor	pyparsing_common	convertToDate	fmt	helper to create a parse action for converting parsed date string to python datetime date
+_vendor	pyparsing_common	convertToDatetime	fmt	helper to create a parse action for converting parsed datetime string to python datetime datetime
+_vendor	pyparsing_common	stripHTMLTags	s l tokens	parse action to remove html tags from web page html source example :
+_vendor		linux_distribution	full_distribution_name	return information about the current linux distribution as a tuple (id_name version codename) with items as follows
+_vendor		id		return the distro id of the current linux distribution as a machine-readable string
+_vendor		name	pretty	return the name of the current linux distribution as a human-readable string
+_vendor		version	pretty best	return the version of the current linux distribution as a human-readable string
+_vendor		version_parts	best	return the version of the current linux distribution as a tuple (major minor build_number) with items as follows
+_vendor		major_version	best	return the major version of the current linux distribution as a string if provided
+_vendor		minor_version	best	return the minor version of the current linux distribution as a string if provided
+_vendor		build_number	best	return the build number of the current linux distribution as a string if provided
+_vendor		like		return a space-separated list of distro ids of distributions that are closely related to the current linux distribution in regards to packaging
+_vendor		codename		return the codename for the release of the current linux distribution as a string
+_vendor		info	pretty best	return certain machine-readable information items about the current linux distribution in a dictionary as shown in the following example
+_vendor		os_release_info		return a dictionary containing key-value pairs for the information items from the os-release file data source of the current linux distribution
+_vendor		lsb_release_info		return a dictionary containing key-value pairs for the information items from the lsb_release command data source of the current linux distribution
+_vendor		distro_release_info		return a dictionary containing key-value pairs for the information items from the distro release file data source of the current linux distribution
+_vendor		os_release_attr	attribute	return a single named information item from the os-release file data source of the current linux distribution
+_vendor		lsb_release_attr	attribute	return a single named information item from the lsb_release command output data source of the current linux distribution
+_vendor		distro_release_attr	attribute	return a single named information item from the distro release file data source of the current linux distribution
+_vendor	LinuxDistribution	__init__	include_lsb os_release_file distro_release_file	the initialization method of this class gathers information from the available data sources and stores that in private instance attributes
+_vendor	LinuxDistribution	__repr__		return repr of all info
+_vendor	LinuxDistribution	linux_distribution	full_distribution_name	return information about the linux distribution that is compatible with python's :func platform
+_vendor	LinuxDistribution	id		return the distro id of the linux distribution as a string
+_vendor	LinuxDistribution	name	pretty	return the name of the linux distribution as a string
+_vendor	LinuxDistribution	version	pretty best	return the version of the linux distribution as a string
+_vendor	LinuxDistribution	version_parts	best	return the version of the linux distribution as a tuple of version numbers
+_vendor	LinuxDistribution	major_version	best	return the major version number of the current distribution
+_vendor	LinuxDistribution	minor_version	best	return the minor version number of the linux distribution
+_vendor	LinuxDistribution	build_number	best	return the build number of the linux distribution
+_vendor	LinuxDistribution	like		return the ids of distributions that are like the linux distribution
+_vendor	LinuxDistribution	codename		return the codename of the linux distribution
+_vendor	LinuxDistribution	info	pretty best	return certain machine-readable information about the linux distribution
+_vendor	LinuxDistribution	os_release_info		return a dictionary containing key-value pairs for the information items from the os-release file data source of the linux distribution
+_vendor	LinuxDistribution	lsb_release_info		return a dictionary containing key-value pairs for the information items from the lsb_release command data source of the linux
+_vendor	LinuxDistribution	distro_release_info		return a dictionary containing key-value pairs for the information items from the distro release file data source of the linux
+_vendor	LinuxDistribution	os_release_attr	attribute	return a single named information item from the os-release file data source of the linux distribution
+_vendor	LinuxDistribution	lsb_release_attr	attribute	return a single named information item from the lsb_release command output data source of the linux distribution
+_vendor	LinuxDistribution	distro_release_attr	attribute	return a single named information item from the distro release file data source of the linux distribution
+_vendor	LinuxDistribution	_get_os_release_info		get the information items from the specified os-release file
+_vendor	LinuxDistribution	_parse_os_release_content	lines	parse the lines of an os-release file
+_vendor	LinuxDistribution	_get_lsb_release_info		get the information items from the lsb_release command output
+_vendor	LinuxDistribution	_parse_lsb_release_content	lines	parse the output of the lsb_release command
+_vendor	LinuxDistribution	_get_distro_release_info		get the information items from the specified distro release file
+_vendor	LinuxDistribution	_parse_distro_release_file	filepath	parse a distro release file
+_vendor	LinuxDistribution	_parse_distro_release_content	line	parse a line from a distro release file
+_vendor		retry		decorator function that instantiates the retrying object
+_vendor	Retrying	stop_after_attempt	previous_attempt_number delay_since_first_attempt_ms	stop after the previous attempt >= stop_max_attempt_number
+_vendor	Retrying	stop_after_delay	previous_attempt_number delay_since_first_attempt_ms	stop after the time from the first attempt >= stop_max_delay
+_vendor	Retrying	no_sleep	previous_attempt_number delay_since_first_attempt_ms	don't sleep at all before retrying
+_vendor	Retrying	fixed_sleep	previous_attempt_number delay_since_first_attempt_ms	sleep a fixed amount of time between each retry
+_vendor	Retrying	random_sleep	previous_attempt_number delay_since_first_attempt_ms	sleep a random amount of time between wait_random_min and wait_random_max
+_vendor	Retrying	incrementing_sleep	previous_attempt_number delay_since_first_attempt_ms	sleep an incremental amount of time after each attempt starting at
+_vendor	Attempt	get	wrap_exception	return the return value of this attempt instance or raise an exception
+_vendor		_add_doc	func doc	add documentation to a function
+_vendor		_import_module	name	import module returning the module after the last dot
+_vendor	_SixMetaPathImporter	is_package	fullname	return true if the named module is a package
+_vendor		add_move	move	add an item to six moves
+_vendor		remove_move	name	remove item from six moves
+_vendor		with_metaclass	meta	create a base class with a metaclass
+_vendor		add_metaclass	metaclass	class decorator for creating a class with a metaclass
+_vendor		python_2_unicode_compatible	klass	a decorator that defines __unicode__ and __str__ methods under python 2
+_vendor.distlib	ResourceCache	is_stale	resource path	is the cache stale for the given resource?
+_vendor.distlib	ResourceCache	get	resource	get a resource into the cache
+_vendor.distlib	Resource	as_stream		get the resource as a stream
+_vendor.distlib		finder	package	return a resource finder for a package
+_vendor.distlib		finder_for_path	path	return a resource finder for a path which should represent a container
+_vendor.distlib	_Cache	__init__		initialise an instance there is normally one for each distributionpath
+_vendor.distlib	_Cache	clear		clear the cache setting it to its initial state
+_vendor.distlib	_Cache	add	dist	add a distribution to the cache
+_vendor.distlib	DistributionPath	__init__	path include_egg	create an instance from a path optionally including legacy (distutils/ setuptools/distribute) distributions
+_vendor.distlib	DistributionPath	clear_cache		clears the internal cache
+_vendor.distlib	DistributionPath	_yield_distributions		yield dist-info and/or egg -info distributions
+_vendor.distlib	DistributionPath	_generate_cache		scan the path for distributions and populate the cache with those that are found
+_vendor.distlib	DistributionPath	distinfo_dirname	cls name version	the *name* and *version* parameters are converted into their filename-escaped form i
+_vendor.distlib	DistributionPath	get_distributions		provides an iterator that looks for distributions and returns :class installeddistribution or
+_vendor.distlib	DistributionPath	get_distribution	name	looks for a named distribution on the path
+_vendor.distlib	DistributionPath	provides_distribution	name version	iterates over all distributions to find which distributions provide *name*
+_vendor.distlib	DistributionPath	get_file_path	name relative_path	return the path to a resource file
+_vendor.distlib	DistributionPath	get_exported_entries	category name	return all of the exported entries in a particular category
+_vendor.distlib	Distribution	__init__	metadata	initialise an instance
+_vendor.distlib	Distribution	source_url		the source archive download url for this distribution
+_vendor.distlib	Distribution	name_and_version		a utility property which displays the name and version in parentheses
+_vendor.distlib	Distribution	provides		a set of distribution names and versions provided by this distribution
+_vendor.distlib	Distribution	matches_requirement	req	say if this instance matches fulfills a requirement
+_vendor.distlib	Distribution	__repr__		return a textual representation of this instance
+_vendor.distlib	Distribution	__eq__	other	see if this distribution is the same as another
+_vendor.distlib	Distribution	__hash__		compute hash in a way which matches the equality test
+_vendor.distlib	BaseInstalledDistribution	__init__	metadata path env	initialise an instance
+_vendor.distlib	BaseInstalledDistribution	get_hash	data hasher	get the hash of some data using a particular hash algorithm if specified
+_vendor.distlib	InstalledDistribution	_get_records		get the list of installed files for the distribution :return a list of tuples of path hash and size
+_vendor.distlib	InstalledDistribution	exports		return the information exported by this distribution
+_vendor.distlib	InstalledDistribution	read_exports		read exports data from a file in ini format
+_vendor.distlib	InstalledDistribution	write_exports	exports	write a dictionary of exports to a file in ini format
+_vendor.distlib	InstalledDistribution	get_resource_path	relative_path	note this api may change in the future
+_vendor.distlib	InstalledDistribution	list_installed_files		iterates over the record entries and returns a tuple path hash size for each line
+_vendor.distlib	InstalledDistribution	write_installed_files	paths prefix dry_run	writes the record file using the paths iterable passed in any
+_vendor.distlib	InstalledDistribution	check_installed_files		checks that the hashes and sizes of the files in record are matched by the files themselves
+_vendor.distlib	InstalledDistribution	shared_locations		a dictionary of shared locations whose keys are in the set 'prefix', 'purelib', 'platlib', 'scripts', 'headers', 'data' and 'namespace'
+_vendor.distlib	InstalledDistribution	write_shared_locations	paths dry_run	write shared location information to the shared file in dist-info
+_vendor.distlib	InstalledDistribution	get_distinfo_file	path	returns a path located under the dist-info directory returns a
+_vendor.distlib	InstalledDistribution	list_distinfo_files		iterates over the record entries and returns paths for each line if the path is pointing to a file located in the
+_vendor.distlib	EggInfoDistribution	check_installed_files		checks that the hashes and sizes of the files in record are matched by the files themselves
+_vendor.distlib	EggInfoDistribution	list_installed_files		iterates over the installed-files txt entries and returns a tuple
+_vendor.distlib	EggInfoDistribution	list_distinfo_files	absolute	iterates over the installed-files txt entries and returns paths for
+_vendor.distlib	DependencyGraph	add_distribution	distribution	add the *distribution* to the graph
+_vendor.distlib	DependencyGraph	add_edge	x y label	add an edge from distribution *x* to distribution *y* with the given *label*
+_vendor.distlib	DependencyGraph	add_missing	distribution requirement	add a missing *requirement* for the given *distribution*
+_vendor.distlib	DependencyGraph	repr_node	dist level	prints only a subgraph
+_vendor.distlib	DependencyGraph	to_dot	f skip_disconnected	writes a dot output for the graph to the provided file *f*
+_vendor.distlib	DependencyGraph	topological_sort		perform a topological sort of the graph
+_vendor.distlib	DependencyGraph	__repr__		representation of the graph
+_vendor.distlib		make_graph	dists scheme	makes a dependency graph from the given distributions
+_vendor.distlib		get_dependent_dists	dists dist	recursively generate a list of distributions from *dists* that are dependent on *dist*
+_vendor.distlib		get_required_dists	dists dist	recursively generate a list of distributions from *dists* that are required by *dist*
+_vendor.distlib		make_dist	name version	a convenience method for making a dist given just a name and version
+_vendor.distlib	PackageIndex	__init__	url	initialise an instance
+_vendor.distlib	PackageIndex	_get_pypirc_command		get the distutils command for interacting with pypi configurations
+_vendor.distlib	PackageIndex	read_configuration		read the pypi access configuration as supported by distutils getting pypi to do the actual work
+_vendor.distlib	PackageIndex	save_configuration		save the pypi access configuration you must have set username and
+_vendor.distlib	PackageIndex	check_credentials		check that username and password have been set and raise an exception if not
+_vendor.distlib	PackageIndex	register	metadata	register a distribution on pypi using the provided metadata
+_vendor.distlib	PackageIndex	_reader	name stream outbuf	thread runner for reading lines of from a subprocess into a buffer
+_vendor.distlib	PackageIndex	get_sign_command	filename signer sign_password keystore	return a suitable command for signing a file
+_vendor.distlib	PackageIndex	run_command	cmd input_data	run a command in a child process passing it any input data specified
+_vendor.distlib	PackageIndex	sign_file	filename signer sign_password keystore	sign a file
+_vendor.distlib	PackageIndex	upload_file	metadata filename signer sign_password	upload a release file to the index
+_vendor.distlib	PackageIndex	upload_documentation	metadata doc_dir	upload documentation to the index
+_vendor.distlib	PackageIndex	get_verify_command	signature_filename data_filename keystore	return a suitable command for verifying a file
+_vendor.distlib	PackageIndex	verify_signature	signature_filename data_filename keystore	verify a signature for a file
+_vendor.distlib	PackageIndex	download_file	url destfile digest reporthook	this is a convenience method for downloading a file from an url
+_vendor.distlib	PackageIndex	send_request	req	send a standard library :class request to pypi and return its response
+_vendor.distlib	PackageIndex	encode_request	fields files	encode fields and files for posting to an http server
+_vendor.distlib		get_resources_dests	resources_root rules	find destinations for resources files
+_vendor.distlib		convert_path	pathname	return 'pathname' as a name that will work on the native filesystem
+_vendor.distlib	FileOperator	newer	source target	tell if the target is newer than the source
+_vendor.distlib	FileOperator	copy_file	infile outfile check	copy a file respecting dry-run and force flags
+_vendor.distlib	FileOperator	commit		commit recorded changes turn off recording return changes
+_vendor.distlib		get_cache_base	suffix	return the default base location for distlib caches if the directory does
+_vendor.distlib		path_to_cache_dir	path	convert an absolute path to a directory name for use in a cache
+_vendor.distlib		split_filename	filename project_name	extract name version python version from a filename no extension
+_vendor.distlib		parse_name_and_version	p	a utility method used to get name and version from a string
+_vendor.distlib	Cache	__init__	base	initialise an instance
+_vendor.distlib	Cache	prefix_to_dir	prefix	converts a resource prefix to a directory name in the cache
+_vendor.distlib	Cache	clear		clear the cache
+_vendor.distlib	EventMixin	add	event subscriber append	add a subscriber for an event
+_vendor.distlib	EventMixin	remove	event subscriber	remove a subscriber for an event
+_vendor.distlib	EventMixin	get_subscribers	event	return an iterator for the subscribers for an event
+_vendor.distlib	EventMixin	publish	event	publish a event and return a list of values returned by its subscribers
+_vendor.distlib		zip_dir	directory	zip a directory tree into a bytesio object
+_vendor.distlib		iglob	path_glob	extended globbing function that supports ** and {opt1 opt2 opt3}
+_vendor.distlib	Configurator	inc_convert	value	default converter for the inc // protocol
+_vendor.distlib	SubprocessMixin	reader	stream context	read lines from a subprocess' output stream and either pass to a progress callable if specified or write progress information to sys
+_vendor.distlib		normalize_name	name	normalize a python package name a la pep 503
+_vendor.distlib	ScriptMaker	make	specification options	make a script
+_vendor.distlib	ScriptMaker	make_multiple	specifications options	take a list of specifications and make scripts from them
+_vendor.distlib	Manifest	__init__	base	initialise an instance
+_vendor.distlib	Manifest	findall		find all files under the base and set allfiles to the absolute pathnames of files found
+_vendor.distlib	Manifest	add	item	add a file to the manifest
+_vendor.distlib	Manifest	add_many	items	add a list of files to the manifest
+_vendor.distlib	Manifest	sorted	wantdirs	return sorted files in directory order
+_vendor.distlib	Manifest	clear		clear all collected files
+_vendor.distlib	Manifest	process_directive	directive	process a directive which either adds some files from allfiles to files, or removes some files from files
+_vendor.distlib	Manifest	_parse_directive	directive	validate a directive
+_vendor.distlib	Manifest	_include_pattern	pattern anchor prefix is_regex	select strings presumably filenames from 'self files' that
+_vendor.distlib	Manifest	_exclude_pattern	pattern anchor prefix is_regex	remove strings presumably filenames from 'files' that match 'pattern'
+_vendor.distlib	Manifest	_translate_pattern	pattern anchor prefix is_regex	translate a shell-like wildcard pattern to a compiled regular expression
+_vendor.distlib	Manifest	_glob_to_re	pattern	translate a shell-like glob pattern to a regular expression
+_vendor.distlib		_best_version	fields	detect the best version depending on the fields used
+_vendor.distlib		_get_name_and_version	name version for_filename	return the distribution name with version
+_vendor.distlib	LegacyMetadata	get_fullname	filesafe	return the distribution name with version
+_vendor.distlib	LegacyMetadata	is_field	name	return true if name is a valid metadata key
+_vendor.distlib	LegacyMetadata	read	filepath	read the metadata values from a file path
+_vendor.distlib	LegacyMetadata	read_file	fileob	read the metadata values from a file object
+_vendor.distlib	LegacyMetadata	write	filepath skip_unknown	write the metadata fields to filepath
+_vendor.distlib	LegacyMetadata	write_file	fileobject skip_unknown	write the pkg-info format data to a file object
+_vendor.distlib	LegacyMetadata	update	other	set metadata values from the given iterable other and kwargs
+_vendor.distlib	LegacyMetadata	set	name value	control then set a metadata field
+_vendor.distlib	LegacyMetadata	get	name default	get a metadata field
+_vendor.distlib	LegacyMetadata	check	strict	check if the metadata is compliant if strict is true then raise if
+_vendor.distlib	LegacyMetadata	todict	skip_missing	return fields as a dict
+_vendor.distlib	Metadata	get_requirements	reqts extras env	base method to get dependencies given a set of extras to satisfy and an optional environment context
+_vendor.distlib	Matcher	match	version	check if the provided version matches the constraints
+_vendor.distlib		_suggest_semantic_version	s	try to suggest a semantic form for a version for which _suggest_normalized_version couldn't come up with anything
+_vendor.distlib		_suggest_normalized_version	s	suggest a normalized version close to the given version string
+_vendor.distlib	VersionScheme	is_valid_constraint_list	s	used for processing some metadata fields
+_vendor.distlib	Evaluator	__init__	context	initialise an instance
+_vendor.distlib	Evaluator	get_fragment	offset	get the part of the source which is causing a problem
+_vendor.distlib	Evaluator	get_handler	node_type	get a handler for the specified ast node type
+_vendor.distlib	Evaluator	evaluate	node filename	evaluate a source string or node using filename when displaying errors
+_vendor.distlib		interpret	marker execution_context	interpret a marker and return a result depending on environment
+_vendor.distlib	Wheel	__init__	filename sign verify	initialise an instance using a valid filename
+_vendor.distlib	Wheel	filename		build and return a filename from the various components
+_vendor.distlib	Wheel	build	paths tags wheel_version	build a wheel from files in specified paths and use any specified tags when determining the name of the wheel
+_vendor.distlib	Wheel	install	paths maker	install a wheel to the specified paths if kwarg warner is
+_vendor.distlib	Wheel	is_compatible		determine if a wheel is compatible with the running system
+_vendor.distlib	Wheel	is_mountable		determine if a wheel is asserted as mountable by its metadata
+_vendor.distlib	Wheel	update	modifier dest_dir	update the contents of a wheel in a generic way the modifier should
+_vendor.distlib		compatible_tags		return pyver abi arch tuples compatible with this python
+_vendor.distlib		get_all_distribution_names	url	return all distribution names known by an index
+_vendor.distlib	Locator	__init__	scheme	initialise an instance
+_vendor.distlib	Locator	get_errors		return any errors which have occurred
+_vendor.distlib	Locator	clear_errors		clear any errors which may have been logged
+_vendor.distlib	Locator	_get_project	name	for a given project get a dictionary mapping available versions to distribution instances
+_vendor.distlib	Locator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	Locator	get_project	name	for a given project get a dictionary mapping available versions to distribution instances
+_vendor.distlib	Locator	score_url	url	give an url a score which can be used to choose preferred urls for a given project release
+_vendor.distlib	Locator	prefer_url	url1 url2	choose one of two urls where both are candidates for distribution archives for the same version of a distribution (for example
+_vendor.distlib	Locator	split_filename	filename project_name	attempt to split a filename in project name version and python version
+_vendor.distlib	Locator	convert_url_to_download_info	url project_name	see if a url is a candidate for a download url for a project the url has typically been scraped from an html page
+_vendor.distlib	Locator	_get_digest	info	get a digest from a dictionary by looking at keys of the form 'algo_digest'
+_vendor.distlib	Locator	_update_version_data	result info	update a result dictionary (the final result from _get_project) with a dictionary for a specific version which typically holds information
+_vendor.distlib	Locator	locate	requirement prereleases	find the most recent distribution which matches the given requirement
+_vendor.distlib	PyPIRPCLocator	__init__	url	initialise an instance
+_vendor.distlib	PyPIRPCLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	PyPIJSONLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	Page	__init__	data url	initialise an instance with the unicode page contents and the url they came from
+_vendor.distlib	Page	links		return the urls of all the links on a page together with information about their "rel" attribute for determining which ones to treat as
+_vendor.distlib	SimpleScrapingLocator	__init__	url timeout num_workers	initialise an instance
+_vendor.distlib	SimpleScrapingLocator	_prepare_threads		threads are created only when get_project is called and terminate before it returns
+_vendor.distlib	SimpleScrapingLocator	_wait_threads		tell all the threads to terminate by sending a sentinel value and wait for them to do so
+_vendor.distlib	SimpleScrapingLocator	_is_platform_dependent	url	does an url refer to a platform-specific download?
+_vendor.distlib	SimpleScrapingLocator	_process_download	url	see if an url is a suitable download for a project
+_vendor.distlib	SimpleScrapingLocator	_should_queue	link referrer rel	determine whether a link url from a referring page and with a particular "rel" attribute should be queued for scraping
+_vendor.distlib	SimpleScrapingLocator	_fetch		get a url to fetch from the work queue get the html page examine its links for download candidates and candidates for further scraping
+_vendor.distlib	SimpleScrapingLocator	get_page	url	get the html for an url possibly from an in-memory cache
+_vendor.distlib	SimpleScrapingLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	DirectoryLocator	__init__	path	initialise an instance
+_vendor.distlib	DirectoryLocator	should_include	filename parent	should a filename be considered as a candidate for a distribution archive? as well as the filename the directory which contains it
+_vendor.distlib	DirectoryLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	JSONLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	DistPathLocator	__init__	distpath	initialise an instance
+_vendor.distlib	AggregatingLocator	__init__		initialise an instance
+_vendor.distlib	AggregatingLocator	get_distribution_names		return all the distribution names known to this locator
+_vendor.distlib	DependencyFinder	__init__	locator	initialise an instance using the specified locator to locate distributions
+_vendor.distlib	DependencyFinder	add_distribution	dist	add a distribution to the finder this will update internal information
+_vendor.distlib	DependencyFinder	remove_distribution	dist	remove a distribution from the finder this will update internal
+_vendor.distlib	DependencyFinder	get_matcher	reqt	get a version matcher for a requirement
+_vendor.distlib	DependencyFinder	find_providers	reqt	find the distributions which can fulfill a requirement
+_vendor.distlib	DependencyFinder	try_to_replace	provider other problems	attempt to replace one provider with another this is typically used
+_vendor.distlib	DependencyFinder	find	requirement meta_extras prereleases	find a distribution and all distributions it depends on
+_vendor.distlib._backport		copyfileobj	fsrc fdst length	copy data from file-like object fsrc to file-like object fdst
+_vendor.distlib._backport		copyfile	src dst	copy data from src to dst
+_vendor.distlib._backport		copymode	src dst	copy mode bits from src to dst
+_vendor.distlib._backport		copystat	src dst	copy all stat info mode bits atime mtime flags from src to dst
+_vendor.distlib._backport		copy	src dst	copy data and mode bits ("cp src dst")
+_vendor.distlib._backport		copy2	src dst	copy data and all stat info ("cp -p src dst")
+_vendor.distlib._backport		ignore_patterns		function that can be used as copytree() ignore parameter
+_vendor.distlib._backport		copytree	src dst symlinks ignore	recursively copy a directory tree
+_vendor.distlib._backport		rmtree	path ignore_errors onerror	recursively delete a directory tree
+_vendor.distlib._backport		move	src dst	recursively move a file or directory to another location this is
+_vendor.distlib._backport		_get_gid	name	returns a gid given a group name
+_vendor.distlib._backport		_get_uid	name	returns an uid given a user name
+_vendor.distlib._backport		_make_tarball	base_name base_dir compress verbose	create a possibly compressed tar file from all the files under 'base_dir'
+_vendor.distlib._backport		_make_zipfile	base_name base_dir verbose dry_run	create a zip file from all the files under 'base_dir'
+_vendor.distlib._backport		get_archive_formats		returns a list of supported formats for archiving and unarchiving
+_vendor.distlib._backport		register_archive_format	name function extra_args description	registers an archive format
+_vendor.distlib._backport		make_archive	base_name format root_dir base_dir	create an archive file eg zip or tar
+_vendor.distlib._backport		get_unpack_formats		returns a list of supported formats for unpacking
+_vendor.distlib._backport		_check_unpack_options	extensions function extra_args	checks what gets registered as an unpacker
+_vendor.distlib._backport		register_unpack_format	name extensions function extra_args	registers an unpack format
+_vendor.distlib._backport		unregister_unpack_format	name	removes the pack format from the registry
+_vendor.distlib._backport		_ensure_directory	path	ensure that the parent directory of path exists
+_vendor.distlib._backport		_unpack_zipfile	filename extract_dir	unpack zip filename to extract_dir
+_vendor.distlib._backport		_unpack_tarfile	filename extract_dir	unpack tar/tar gz/tar bz2 filename to extract_dir
+_vendor.distlib._backport		unpack_archive	filename extract_dir format	unpack an archive
+_vendor.distlib._backport		stn	s length encoding errors	convert a string to a null-terminated bytes object
+_vendor.distlib._backport		nts	s encoding errors	convert a null-terminated bytes object to a string
+_vendor.distlib._backport		nti	s	convert a number field to a python number
+_vendor.distlib._backport		itn	n digits format	convert a python number to a number field
+_vendor.distlib._backport		calc_chksums	buf	calculate the checksum for a member's header by summing up all characters except for the chksum field which is treated as if
+_vendor.distlib._backport		copyfileobj	src dst length	copy length bytes from fileobj src to fileobj dst
+_vendor.distlib._backport		filemode	mode	convert a file's mode to a string of the form -rwxrwxrwx
+_vendor.distlib._backport	_Stream	__init__	name mode comptype fileobj	construct a _stream object
+_vendor.distlib._backport	_Stream	_init_write_gz		initialize for writing with gzip compression
+_vendor.distlib._backport	_Stream	write	s	write string s to the stream
+_vendor.distlib._backport	_Stream	__write	s	write string s to the stream if a whole new block is ready to be written
+_vendor.distlib._backport	_Stream	close		close the _stream object no operation should be
+_vendor.distlib._backport	_Stream	_init_read_gz		initialize for reading a gzip compressed fileobj
+_vendor.distlib._backport	_Stream	tell		return the stream's file pointer position
+_vendor.distlib._backport	_Stream	seek	pos	set the stream's file pointer to pos negative seeking
+_vendor.distlib._backport	_Stream	read	size	return the next size number of bytes from the stream
+_vendor.distlib._backport	_Stream	_read	size	return size bytes from the stream
+_vendor.distlib._backport	_Stream	__read	size	return size bytes from stream if internal buffer is empty
+_vendor.distlib._backport	_FileInFile	tell		return the current file position
+_vendor.distlib._backport	_FileInFile	seek	position	seek to a position in the file
+_vendor.distlib._backport	_FileInFile	read	size	read data from the file
+_vendor.distlib._backport	ExFileObject	read	size	read at most size bytes from the file if size is not
+_vendor.distlib._backport	ExFileObject	readline	size	read one entire line from the file if size is present
+_vendor.distlib._backport	ExFileObject	readlines		return a list with all remaining lines
+_vendor.distlib._backport	ExFileObject	tell		return the current file position
+_vendor.distlib._backport	ExFileObject	seek	pos whence	seek to a position in the file
+_vendor.distlib._backport	ExFileObject	close		close the file object
+_vendor.distlib._backport	ExFileObject	__iter__		get an iterator over the file's lines
+_vendor.distlib._backport	TarInfo	__init__	name	construct a tarinfo object name is the optional name
+_vendor.distlib._backport	TarInfo	get_info		return the tarinfo's attributes as a dictionary
+_vendor.distlib._backport	TarInfo	tobuf	format encoding errors	return a tar header as a string of 512 byte blocks
+_vendor.distlib._backport	TarInfo	create_ustar_header	info encoding errors	return the object as a ustar header block
+_vendor.distlib._backport	TarInfo	create_gnu_header	info encoding errors	return the object as a gnu header block sequence
+_vendor.distlib._backport	TarInfo	create_pax_header	info encoding	return the object as a ustar header block if it cannot be
+_vendor.distlib._backport	TarInfo	create_pax_global_header	cls pax_headers	return the object as a pax global header block sequence
+_vendor.distlib._backport	TarInfo	_posix_split_name	name	split a name longer than 100 chars into a prefix and a name part
+_vendor.distlib._backport	TarInfo	_create_header	info format encoding errors	return a header block info is a dictionary with file
+_vendor.distlib._backport	TarInfo	_create_payload	payload	return the string payload filled with zero bytes up to the next 512 byte border
+_vendor.distlib._backport	TarInfo	_create_gnu_long_header	cls name type encoding	return a gnutype_longname or gnutype_longlink sequence for name
+_vendor.distlib._backport	TarInfo	_create_pax_generic_header	cls pax_headers type encoding	return a posix 1-2008 extended or global header sequence
+_vendor.distlib._backport	TarInfo	frombuf	cls buf encoding errors	construct a tarinfo object from a 512 byte bytes object
+_vendor.distlib._backport	TarInfo	fromtarfile	cls tarfile	return the next tarinfo object from tarfile object tarfile
+_vendor.distlib._backport	TarInfo	_proc_member	tarfile	choose the right processing method depending on the type and call it
+_vendor.distlib._backport	TarInfo	_proc_builtin	tarfile	process a builtin type or an unknown type which will be treated as a regular file
+_vendor.distlib._backport	TarInfo	_proc_gnulong	tarfile	process the blocks that hold a gnu longname or longlink member
+_vendor.distlib._backport	TarInfo	_proc_sparse	tarfile	process a gnu sparse header plus extra headers
+_vendor.distlib._backport	TarInfo	_proc_pax	tarfile	process an extended or global header as described in posix
+_vendor.distlib._backport	TarInfo	_proc_gnusparse_00	next pax_headers buf	process a gnu tar extended sparse header version 0 0
+_vendor.distlib._backport	TarInfo	_proc_gnusparse_01	next pax_headers	process a gnu tar extended sparse header version 0 1
+_vendor.distlib._backport	TarInfo	_proc_gnusparse_10	next pax_headers tarfile	process a gnu tar extended sparse header version 1 0
+_vendor.distlib._backport	TarInfo	_apply_pax_info	pax_headers encoding errors	replace fields with supplemental information from a previous pax extended or global header
+_vendor.distlib._backport	TarInfo	_decode_pax_field	value encoding fallback_encoding fallback_errors	decode a single field from a pax record
+_vendor.distlib._backport	TarInfo	_block	count	round up a byte count by blocksize and return it e
+_vendor.distlib._backport	TarFile	__init__	name mode fileobj format	open an uncompressed tar archive name' mode' is either 'r' to
+_vendor.distlib._backport	TarFile	open	cls name mode fileobj	open a tar archive for reading writing or appending return
+_vendor.distlib._backport	TarFile	taropen	cls name mode fileobj	open uncompressed tar archive name for reading or writing
+_vendor.distlib._backport	TarFile	gzopen	cls name mode fileobj	open gzip compressed tar archive name for reading or writing
+_vendor.distlib._backport	TarFile	bz2open	cls name mode fileobj	open bzip2 compressed tar archive name for reading or writing
+_vendor.distlib._backport	TarFile	close		close the tarfile in write-mode two finishing zero blocks are
+_vendor.distlib._backport	TarFile	getmember	name	return a tarinfo object for member name' if name' can not be
+_vendor.distlib._backport	TarFile	getmembers		return the members of the archive as a list of tarinfo objects the
+_vendor.distlib._backport	TarFile	getnames		return the members of the archive as a list of their names it has
+_vendor.distlib._backport	TarFile	gettarinfo	name arcname fileobj	create a tarinfo object for either the file name' or the file object fileobj' (using os
+_vendor.distlib._backport	TarFile	list	verbose	print a table of contents to sys stdout if verbose' is false only
+_vendor.distlib._backport	TarFile	add	name arcname recursive exclude	add the file name' to the archive name' may be any type of file
+_vendor.distlib._backport	TarFile	addfile	tarinfo fileobj	add the tarinfo object tarinfo' to the archive if fileobj' is
+_vendor.distlib._backport	TarFile	extractall	path members	extract all members from the archive to the current working directory and set owner modification time and permissions on
+_vendor.distlib._backport	TarFile	extract	member path set_attrs	extract a member from the archive to the current working directory using its full name
+_vendor.distlib._backport	TarFile	extractfile	member	extract a member from the archive as a file object member' may be
+_vendor.distlib._backport	TarFile	_extract_member	tarinfo targetpath set_attrs	extract the tarinfo object tarinfo to a physical file called targetpath
+_vendor.distlib._backport	TarFile	makedir	tarinfo targetpath	make a directory called targetpath
+_vendor.distlib._backport	TarFile	makefile	tarinfo targetpath	make a file called targetpath
+_vendor.distlib._backport	TarFile	makeunknown	tarinfo targetpath	make a file from a tarinfo object with an unknown type at targetpath
+_vendor.distlib._backport	TarFile	makefifo	tarinfo targetpath	make a fifo called targetpath
+_vendor.distlib._backport	TarFile	makedev	tarinfo targetpath	make a character or block device called targetpath
+_vendor.distlib._backport	TarFile	makelink	tarinfo targetpath	make a symbolic link called targetpath if it cannot be created
+_vendor.distlib._backport	TarFile	chown	tarinfo targetpath	set owner of targetpath according to tarinfo
+_vendor.distlib._backport	TarFile	chmod	tarinfo targetpath	set file permissions of targetpath according to tarinfo
+_vendor.distlib._backport	TarFile	utime	tarinfo targetpath	set modification time of targetpath according to tarinfo
+_vendor.distlib._backport	TarFile	next		return the next member of the archive as a tarinfo object when tarfile is opened for reading
+_vendor.distlib._backport	TarFile	_getmember	name tarinfo normalize	find an archive member by name from bottom to top
+_vendor.distlib._backport	TarFile	_load		read through the entire archive file and look for readable members
+_vendor.distlib._backport	TarFile	_check	mode	check if tarfile is still open and if the operation's mode corresponds to tarfile's mode
+_vendor.distlib._backport	TarFile	_find_link_target	tarinfo	find the target member of a symlink or hardlink member in the archive
+_vendor.distlib._backport	TarFile	__iter__		provide an iterator object
+_vendor.distlib._backport	TarFile	_dbg	level msg	write debugging output to sys stderr
+_vendor.distlib._backport	TarIter	__init__	tarfile	construct a tariter object
+_vendor.distlib._backport	TarIter	__iter__		return iterator object
+_vendor.distlib._backport	TarIter	__next__		return the next item using tarfile's next() method
+_vendor.distlib._backport		is_tarfile	name	return true if name points to a tar archive that we are able to handle else return false
+_vendor.distlib._backport		_subst_vars	path local_vars	in the string path, replace tokens like {some thing} with the
+_vendor.distlib._backport		_parse_makefile	filename vars	parse a makefile-style file
+_vendor.distlib._backport		get_makefile_filename		return the path of the makefile
+_vendor.distlib._backport		_init_posix	vars	initialize the module as appropriate for posix systems
+_vendor.distlib._backport		_init_non_posix	vars	initialize the module as appropriate for nt
+_vendor.distlib._backport		parse_config_h	fp vars	parse a config h-style file
+_vendor.distlib._backport		get_config_h_filename		return the path of pyconfig h
+_vendor.distlib._backport		get_scheme_names		return a tuple containing the schemes names
+_vendor.distlib._backport		get_path_names		return a tuple containing the paths names
+_vendor.distlib._backport		get_paths	scheme vars expand	return a mapping containing an install scheme
+_vendor.distlib._backport		get_path	name scheme vars expand	return a path corresponding to the scheme
+_vendor.distlib._backport		get_config_vars		with no arguments return a dictionary of all configuration variables relevant for the current platform
+_vendor.distlib._backport		get_config_var	name	return the value of a single variable using the dictionary returned by 'get_config_vars()'
+_vendor.distlib._backport		get_platform		return a string that identifies the current platform
+_vendor.distlib._backport		_main		display all information sysconfig detains
+_vendor.lockfile	MkdirLockFile	__init__	path threaded timeout	>>> lock = mkdirlockfile('somefile')
+_vendor.lockfile	SQLiteLockFile	__init__	path threaded timeout	>>> lock = sqlitelockfile('somefile')
+_vendor.lockfile	PIDLockFile	read_pid		get the pid from the lock file
+_vendor.lockfile	PIDLockFile	is_locked		test if the lock is currently held
+_vendor.lockfile	PIDLockFile	i_am_locking		test if the lock is held by the current process
+_vendor.lockfile	PIDLockFile	acquire	timeout	acquire the lock
+_vendor.lockfile	PIDLockFile	release		release the lock
+_vendor.lockfile	PIDLockFile	break_lock		break an existing lock
+_vendor.lockfile		read_pid_from_pidfile	pidfile_path	read the pid recorded in the named pid file
+_vendor.lockfile		write_pid_to_pidfile	pidfile_path	write the pid in the named pid file
+_vendor.lockfile		remove_existing_pidfile	pidfile_path	remove the named pid file if it exists
+_vendor.lockfile	_SharedBase	acquire	timeout	acquire the lock
+_vendor.lockfile	_SharedBase	release		release the lock
+_vendor.lockfile	_SharedBase	__enter__		context manager support
+_vendor.lockfile	_SharedBase	__exit__		context manager support
+_vendor.lockfile	LockBase	__init__	path threaded timeout	>>> lock = lockbase('somefile')
+_vendor.lockfile	LockBase	is_locked		tell whether or not the file is locked
+_vendor.lockfile	LockBase	i_am_locking		return true if this object is locking the file
+_vendor.lockfile	LockBase	break_lock		remove a lock useful if a locking thread failed to unlock
+_vendor.lockfile		LinkFileLock		factory function provided for backwards compatibility
+_vendor.lockfile		MkdirFileLock		factory function provided for backwards compatibility
+_vendor.lockfile		SQLiteFileLock		factory function provided for backwards compatibility
+_vendor.lockfile		locked	path timeout	decorator which enables locks for decorated function
+_vendor.packaging		with_metaclass	meta	create a base class with a metaclass
+_vendor.packaging	BaseSpecifier	__str__		returns the str representation of this specifier like object this
+_vendor.packaging	BaseSpecifier	__hash__		returns a hash value for this specifier like object
+_vendor.packaging	BaseSpecifier	__eq__	other	returns a boolean representing whether or not the two specifier like objects are equal
+_vendor.packaging	BaseSpecifier	__ne__	other	returns a boolean representing whether or not the two specifier like objects are not equal
+_vendor.packaging	BaseSpecifier	prereleases		returns whether or not pre-releases as a whole are allowed by this specifier
+_vendor.packaging	BaseSpecifier	prereleases	value	sets whether or not pre-releases as a whole are allowed by this specifier
+_vendor.packaging	BaseSpecifier	contains	item prereleases	determines if the given item is contained within this specifier
+_vendor.packaging	BaseSpecifier	filter	iterable prereleases	takes an iterable of items and filters them so that only items which are contained within this specifier are allowed in it
+_vendor.packaging		parse	version	parse the given version string and return either a :class version object or a :class legacyversion object depending on if the given version is
+_vendor.packaging		_parse_local_version	local	takes a string like abc 1 twelve and turns it into ("abc", 1 "twelve")
+_vendor.packaging	Marker	evaluate	environment	evaluate a marker
+_vendor.msgpack		unpack	stream	unpack an object from stream
+_vendor.msgpack		unpackb	packed	unpack an object from packed
+_vendor.msgpack	Unpacker	_fb_sloppy_consume		gets rid of some of the used parts of the buffer
+_vendor.msgpack	Unpacker	_fb_consume		gets rid of the used parts of the buffer
+_vendor.msgpack		pack	o stream	pack object o and write it to stream see :class packer for options
+_vendor.msgpack		packb	o	pack object o and return packed bytes see :class packer for options
+_vendor.webencodings		ascii_lower	string	transform only ascii letters to lower case a-z is mapped to a-z
+_vendor.webencodings		lookup	label	look for an encoding by its label
+_vendor.webencodings		_get_encoding	encoding_or_label	accept either an encoding object or label
+_vendor.webencodings		decode	input fallback_encoding errors	decode a single string
+_vendor.webencodings		_detect_bom	input	return (bom_encoding input), with any bom removed from the input
+_vendor.webencodings		encode	input encoding errors	encode a single string
+_vendor.webencodings		_iter_decode_generator	input decoder	return a generator that first yields the :obj encoding, then yields output chukns as unicode strings
+_vendor.webencodings	IncrementalDecoder	decode	input final	decode one chunk of the input
+_vendor.colorama	AnsiToWin32	should_wrap		true if this class is actually needed if false then the output
+_vendor.colorama	AnsiToWin32	write_and_convert	text	write the given text to our wrapped stream stripping any ansi sequences from the text and optionally converting them into win32
+_vendor.pkg_resources		get_supported_platform		return this platform's maximum compatible version
+_vendor.pkg_resources	VersionConflict	with_context	required_by	if required_by is non-empty return a version of self that is a contextualversionconflict
+_vendor.pkg_resources		register_loader_type	loader_type provider_factory	register provider_factory to make providers for loader_type loader_type is the type or class of a pep 302 module
+_vendor.pkg_resources		get_provider	moduleOrReq	return an iresourceprovider for the named module or requirement
+_vendor.pkg_resources		get_build_platform		return this platform's string for platform-specific distributions xxx currently this is the same as distutils
+_vendor.pkg_resources		compatible_platforms	provided required	can code for the provided platform run on the required platform? returns true if either platform is none, or the platforms are equal
+_vendor.pkg_resources		run_script	dist_spec script_name	locate distribution dist_spec and run its script_name script
+_vendor.pkg_resources		get_distribution	dist	return a current distribution object for a requirement or string
+_vendor.pkg_resources		load_entry_point	dist group name	return name entry point of group for dist or raise importerror
+_vendor.pkg_resources		get_entry_map	dist group	return the entry point map for group, or the full entry map
+_vendor.pkg_resources		get_entry_info	dist group name	return the entrypoint object for group+name, or none
+_vendor.pkg_resources	IMetadataProvider	has_metadata	name	does the package's distribution contain the named metadata?
+_vendor.pkg_resources	IMetadataProvider	get_metadata	name	the named metadata resource as a string
+_vendor.pkg_resources	IMetadataProvider	get_metadata_lines	name	yield named metadata resource as list of non-blank non-comment lines leading and trailing whitespace is stripped from each line and lines
+_vendor.pkg_resources	IMetadataProvider	metadata_isdir	name	is the named metadata a directory? (like os path isdir())
+_vendor.pkg_resources	IMetadataProvider	metadata_listdir	name	list of metadata names in the directory (like os listdir())
+_vendor.pkg_resources	IMetadataProvider	run_script	script_name namespace	execute the named script in the supplied namespace dictionary
+_vendor.pkg_resources	IResourceProvider	get_resource_filename	manager resource_name	return a true filesystem path for resource_name
+_vendor.pkg_resources	IResourceProvider	get_resource_stream	manager resource_name	return a readable file-like object for resource_name
+_vendor.pkg_resources	IResourceProvider	get_resource_string	manager resource_name	return a string containing the contents of resource_name
+_vendor.pkg_resources	IResourceProvider	has_resource	resource_name	does the package contain the named resource?
+_vendor.pkg_resources	IResourceProvider	resource_isdir	resource_name	is the named resource a directory? (like os path isdir())
+_vendor.pkg_resources	IResourceProvider	resource_listdir	resource_name	list of resource names in the directory (like os listdir())
+_vendor.pkg_resources	WorkingSet	__init__	entries	create working set from list of path entries (default=sys path)
+_vendor.pkg_resources	WorkingSet	_build_master	cls	prepare the master working set
+_vendor.pkg_resources	WorkingSet	_build_from_requirements	cls req_spec	build a working set from a requirement spec rewrites sys path
+_vendor.pkg_resources	WorkingSet	add_entry	entry	add a path item to entries, finding any distributions on it
+_vendor.pkg_resources	WorkingSet	__contains__	dist	true if dist is the active distribution for its project
+_vendor.pkg_resources	WorkingSet	find	req	find a distribution matching requirement req if there is an active distribution for the requested project this
+_vendor.pkg_resources	WorkingSet	iter_entry_points	group name	yield entry point objects from group matching name if name is none yields all entry points in group from all
+_vendor.pkg_resources	WorkingSet	run_script	requires script_name	locate distribution for requires and run script_name script
+_vendor.pkg_resources	WorkingSet	__iter__		yield distributions for non-duplicate projects in the working set the yield order is the order in which the items' path entries were
+_vendor.pkg_resources	WorkingSet	add	dist entry insert replace	add dist to working set associated with entry if entry is unspecified it defaults to the
+_vendor.pkg_resources	WorkingSet	resolve	requirements env installer replace_conflicting	list all distributions needed to recursively meet requirements requirements must be a sequence of requirement objects
+_vendor.pkg_resources	WorkingSet	find_plugins	plugin_env full_env installer fallback	find all activatable distributions in plugin_env example usage :
+_vendor.pkg_resources	WorkingSet	require		ensure that distributions matching requirements are activated requirements must be a string or a possibly-nested sequence
+_vendor.pkg_resources	WorkingSet	subscribe	callback existing	invoke callback for all distributions if existing=true default
+_vendor.pkg_resources	_ReqExtras	markers_pass	req extras	evaluate markers for req against each extra that demanded it
+_vendor.pkg_resources	Environment	__init__	search_path platform python	snapshot distributions available on a search path any distributions found on search_path are added to the environment
+_vendor.pkg_resources	Environment	can_add	dist	is distribution dist acceptable for this environment? the distribution must match the platform and python version
+_vendor.pkg_resources	Environment	remove	dist	remove dist from the environment
+_vendor.pkg_resources	Environment	scan	search_path	scan search_path for distributions usable in this environment any distributions found are added to the environment
+_vendor.pkg_resources	Environment	__getitem__	project_name	return a newest-to-oldest list of distributions for project_name uses case-insensitive project_name comparison assuming all the
+_vendor.pkg_resources	Environment	add	dist	add dist if we can_add() it and it has not already been added
+_vendor.pkg_resources	Environment	best_match	req working_set installer	find distribution best matching req and usable on working_set this calls the find req method of the working_set to see if a
+_vendor.pkg_resources	Environment	obtain	requirement installer	obtain a distribution matching requirement e g via download
+_vendor.pkg_resources	Environment	__iter__		yield the unique project names of the available distributions
+_vendor.pkg_resources	Environment	__iadd__	other	in-place addition of a distribution or environment
+_vendor.pkg_resources	Environment	__add__	other	add an environment or distribution to an environment
+_vendor.pkg_resources	ResourceManager	resource_exists	package_or_requirement resource_name	does the named resource exist?
+_vendor.pkg_resources	ResourceManager	resource_isdir	package_or_requirement resource_name	is the named resource an existing directory?
+_vendor.pkg_resources	ResourceManager	resource_filename	package_or_requirement resource_name	return a true filesystem path for specified resource
+_vendor.pkg_resources	ResourceManager	resource_stream	package_or_requirement resource_name	return a readable file-like object for specified resource
+_vendor.pkg_resources	ResourceManager	resource_string	package_or_requirement resource_name	return specified resource as a string
+_vendor.pkg_resources	ResourceManager	resource_listdir	package_or_requirement resource_name	list the contents of the named resource directory
+_vendor.pkg_resources	ResourceManager	extraction_error		give an error message for problems extracting file s
+_vendor.pkg_resources	ResourceManager	get_cache_path	archive_name names	return absolute location in cache for archive_name and names the parent directory of the resulting path will be created if it does
+_vendor.pkg_resources	ResourceManager	_warn_unsafe_extraction_path	path	if the default extraction path is overridden and set to an insecure location such as /tmp it opens up an opportunity for an attacker to
+_vendor.pkg_resources	ResourceManager	postprocess	tempname filename	perform any platform-specific postprocessing of tempname this is where mac header rewrites should be done other platforms don't
+_vendor.pkg_resources	ResourceManager	set_extraction_path	path	set the base path where resources will be extracted to if needed
+_vendor.pkg_resources	ResourceManager	cleanup_resources	force	delete all extracted resource files and directories returning a list of the file and directory names that could not be successfully removed
+_vendor.pkg_resources		get_default_cache		return the python_egg_cache environment variable or a platform-relevant user cache dir for an app
+_vendor.pkg_resources		safe_name	name	convert an arbitrary string to a standard distribution name any runs of non-alphanumeric/
+_vendor.pkg_resources		safe_version	version	convert an arbitrary string to a standard version string
+_vendor.pkg_resources		safe_extra	extra	convert an arbitrary string to a standard 'extra' name any runs of non-alphanumeric characters are replaced with a single '_',
+_vendor.pkg_resources		to_filename	name	convert a project or version name to its filename-escaped form any '-' characters are currently replaced with '_'
+_vendor.pkg_resources		invalid_marker	text	validate text as a pep 508 environment marker return an exception if invalid or false otherwise
+_vendor.pkg_resources		evaluate_marker	text extra	evaluate a pep 508 environment marker
+_vendor.pkg_resources	ZipManifests	build	cls path	build a dictionary similar to the zipimport directory caches except instead of tuples store zipinfo objects
+_vendor.pkg_resources	MemoizedZipManifests	load	path	load a manifest at path or return a suitable manifest already loaded
+_vendor.pkg_resources	ContextualZipFile	__new__	cls	construct a zipfile or contextualzipfile as appropriate
+_vendor.pkg_resources	ZipProvider	_is_current	file_path zip_path	return true if the file_path is current for this zip_path
+_vendor.pkg_resources	EggMetadata	__init__	importer	create a metadata provider from a zipimporter
+_vendor.pkg_resources		register_finder	importer_type distribution_finder	register distribution_finder to find distributions in sys path items
+_vendor.pkg_resources		find_distributions	path_item only	yield distributions accessible via path_item
+_vendor.pkg_resources		find_eggs_in_zip	importer path_item only	find eggs in zip files possibly multiple nested eggs
+_vendor.pkg_resources		_by_version_descending	names	given a list of filenames return them in descending order by version number
+_vendor.pkg_resources		find_on_path	importer path_item only	yield distributions accessible on a sys path directory
+_vendor.pkg_resources		register_namespace_handler	importer_type namespace_handler	register namespace_handler to declare namespace packages importer_type is the type or class of a pep 302 "importer" (sys
+_vendor.pkg_resources		_handle_ns	packageName path_item	ensure that named package includes a subpath of path_item if needed
+_vendor.pkg_resources		_rebuild_mod_path	orig_path package_name module	rebuild module __path__ ensuring that all entries are ordered
+_vendor.pkg_resources		declare_namespace	packageName	declare that package 'packagename' is a namespace package
+_vendor.pkg_resources		fixup_namespace_packages	path_item parent	ensure that previously-declared namespace packages include path_item
+_vendor.pkg_resources		file_ns_handler	importer path_item packageName module	compute an ns-package subpath for a filesystem or zipfile importer
+_vendor.pkg_resources		normalize_path	filename	normalize a file/dir name for comparison purposes
+_vendor.pkg_resources		_is_unpacked_egg	path	determine if given path appears to be an unpacked egg
+_vendor.pkg_resources		yield_lines	strs	yield non-empty/non-comment lines of a string or sequence
+_vendor.pkg_resources	EntryPoint	load	require	require packages for this entrypoint then resolve it
+_vendor.pkg_resources	EntryPoint	resolve		resolve the entry point from its module and attrs
+_vendor.pkg_resources	EntryPoint	parse	cls src dist	parse a single entry point from string src entry point syntax follows the form :
+_vendor.pkg_resources	EntryPoint	parse_group	cls group lines dist	parse an entry point group
+_vendor.pkg_resources	EntryPoint	parse_map	cls data dist	parse a map of entry point groups
+_vendor.pkg_resources		_version_from_file	lines	given an iterable of lines from a metadata file return the value of the version field if present or none otherwise
+_vendor.pkg_resources	Distribution	requires	extras	list of requirements needed for this distro if extras are used
+_vendor.pkg_resources	Distribution	activate	path replace	ensure distribution is importable on path (default=sys path)
+_vendor.pkg_resources	Distribution	egg_name		return what this distribution's standard egg filename should be
+_vendor.pkg_resources	Distribution	__getattr__	attr	delegate all unrecognized public attributes to metadata provider
+_vendor.pkg_resources	Distribution	as_requirement		return a requirement that matches this distribution exactly
+_vendor.pkg_resources	Distribution	load_entry_point	group name	return the name entry point of group or raise importerror
+_vendor.pkg_resources	Distribution	get_entry_map	group	return the entry point map for group, or the full entry map
+_vendor.pkg_resources	Distribution	get_entry_info	group name	return the entrypoint object for group+name, or none
+_vendor.pkg_resources	Distribution	insert_on	path loc replace	ensure self location is on path
+_vendor.pkg_resources	Distribution	clone		copy this distribution substituting in any changed keyword args
+_vendor.pkg_resources	EggInfoDistribution	_reload_version		packages installed by distutils e g numpy or scipy
+_vendor.pkg_resources	DistInfoDistribution	_parsed_pkg_info		parse and cache metadata
+_vendor.pkg_resources	DistInfoDistribution	_compute_dependencies		recompute this distribution's dependencies
+_vendor.pkg_resources		parse_requirements	strs	yield requirement objects for each specification in strs strs must be a string or a possibly-nested iterable thereof
+_vendor.pkg_resources	Requirement	__init__	requirement_string	do not call this undocumented method use requirement parse()!
+_vendor.pkg_resources		_get_mro	cls	get an mro for a type or classic class
+_vendor.pkg_resources		_find_adapter	registry ob	return an adapter factory for ob from registry
+_vendor.pkg_resources		ensure_directory	path	ensure that the parent directory of path exists
+_vendor.pkg_resources		_bypass_ensure_directory	path	sandbox-bypassing version of ensure_directory()
+_vendor.pkg_resources		split_sections	s	split a string or iterable thereof into section content pairs each section is a stripped version of the section header ("[section]")
+_vendor.pkg_resources		_initialize	g	set up global resource manager deliberately not state-saved
+_vendor.pkg_resources		_initialize_master_working_set		prepare the master working set and make the require() api available
+_vendor.cachecontrol		parse_uri	uri	parses a uri using the regex given in appendix b of rfc 3986
+_vendor.cachecontrol	CacheController	_urlnorm	cls uri	normalize the url to create a safe key for the cache
+_vendor.cachecontrol	CacheController	parse_cache_control	headers	parse the cache control headers returning a dictionary with values for the different directives
+_vendor.cachecontrol	CacheController	cached_request	request	return a cached response if it exists in the cache otherwise return false
+_vendor.cachecontrol	CacheController	cache_response	request response body status_codes	algorithm for caching requests
+_vendor.cachecontrol	CacheController	update_cached_response	request response	on a 304 we will get a new set of headers that we want to update our cached value with assuming we have one
+_vendor.cachecontrol	BaseHeuristic	warning	response	return a valid 1xx warning header value describing the cache adjustments
+_vendor.cachecontrol	BaseHeuristic	update_headers	response	update the response headers with any new headers
+_vendor.cachecontrol	Serializer	prepare_response	request cached	verify our vary headers match and construct a real urllib3 httpresponse object
+_vendor.cachecontrol	CacheControlAdapter	send	request cacheable_methods	send a request use the request information to see if it
+_vendor.cachecontrol	CacheControlAdapter	build_response	request response from_cache cacheable_methods	build a response by making a request or using the cache
+_vendor.cachecontrol.caches		url_to_file_path	url filecache	return the file cache path based on the url
+_vendor.cachecontrol.caches		total_seconds	td	python 2 6 compatability
+_vendor.cachecontrol.caches	RedisCache	clear		helper for clearing all the keys in a database use with
+_vendor.requests	CaseInsensitiveDict	lower_items		like iteritems(), but with all lowercase keys
+_vendor.requests	MockRequest	add_header	key val	cookielib has no legitimate use for this method add it back if you find one
+_vendor.requests	MockResponse	__init__	headers	make a mockresponse for cookielib to read
+_vendor.requests		extract_cookies_to_jar	jar request response	extract the cookies from the response into a cookiejar
+_vendor.requests		get_cookie_header	jar request	produce an appropriate cookie header string to be sent with request, or none
+_vendor.requests		remove_cookie_by_name	cookiejar name domain path	unsets a cookie by name by default over all domains and paths
+_vendor.requests	RequestsCookieJar	get	name default domain path	dict-like get() that also supports optional domain and path args in order to resolve naming collisions from using one cookie jar over
+_vendor.requests	RequestsCookieJar	set	name value	dict-like set() that also supports optional domain and path args in order to resolve naming collisions from using one cookie jar over
+_vendor.requests	RequestsCookieJar	iterkeys		dict-like iterkeys() that returns an iterator of names of cookies from the jar
+_vendor.requests	RequestsCookieJar	keys		dict-like keys() that returns a list of names of cookies from the jar
+_vendor.requests	RequestsCookieJar	itervalues		dict-like itervalues() that returns an iterator of values of cookies from the jar
+_vendor.requests	RequestsCookieJar	values		dict-like values() that returns a list of values of cookies from the jar
+_vendor.requests	RequestsCookieJar	iteritems		dict-like iteritems() that returns an iterator of name-value tuples from the jar
+_vendor.requests	RequestsCookieJar	items		dict-like items() that returns a list of name-value tuples from the jar
+_vendor.requests	RequestsCookieJar	list_domains		utility method to list all the domains in the jar
+_vendor.requests	RequestsCookieJar	list_paths		utility method to list all the paths in the jar
+_vendor.requests	RequestsCookieJar	multiple_domains		returns true if there are multiple domains in the jar
+_vendor.requests	RequestsCookieJar	get_dict	domain path	takes as an argument an optional domain and path and returns a plain old python dict of name-value pairs of cookies that meet the
+_vendor.requests	RequestsCookieJar	__getitem__	name	dict-like __getitem__() for compatibility with client code throws
+_vendor.requests	RequestsCookieJar	__setitem__	name value	dict-like __setitem__ for compatibility with client code throws
+_vendor.requests	RequestsCookieJar	__delitem__	name	deletes a cookie given a name wraps cookielib cookiejar's
+_vendor.requests	RequestsCookieJar	update	other	updates this jar with cookies from another cookiejar or dict-like
+_vendor.requests	RequestsCookieJar	_find	name domain path	requests uses this method internally to get cookie values
+_vendor.requests	RequestsCookieJar	_find_no_duplicates	name domain path	both __get_item__ and get call this function it's never used elsewhere in requests
+_vendor.requests	RequestsCookieJar	__getstate__		unlike a normal cookiejar this class is pickleable
+_vendor.requests	RequestsCookieJar	__setstate__	state	unlike a normal cookiejar this class is pickleable
+_vendor.requests	RequestsCookieJar	copy		return a copy of this requestscookiejar
+_vendor.requests		create_cookie	name value	make a cookie from underspecified parameters
+_vendor.requests		morsel_to_cookie	morsel	convert a morsel object into a cookie containing the one k/v pair
+_vendor.requests		cookiejar_from_dict	cookie_dict cookiejar overwrite	returns a cookiejar from a key/value dictionary
+_vendor.requests		merge_cookies	cookiejar cookies	add cookies to cookiejar and returns a merged cookiejar
+_vendor.requests		request	method url	constructs and sends a :class request <request>
+_vendor.requests		get	url params	sends a get request
+_vendor.requests		options	url	sends a options request
+_vendor.requests		head	url	sends a head request
+_vendor.requests		post	url data json	sends a post request
+_vendor.requests		put	url data	sends a put request
+_vendor.requests		patch	url data	sends a patch request
+_vendor.requests		delete	url	sends a delete request
+_vendor.requests		merge_setting	request_setting session_setting dict_class	determines appropriate setting for a given request taking into account the explicit setting on that request and the setting in the session
+_vendor.requests		merge_hooks	request_hooks session_hooks dict_class	properly merges both requests and session hooks
+_vendor.requests	SessionRedirectMixin	resolve_redirects	resp req stream timeout	receives a response returns a generator of responses
+_vendor.requests	SessionRedirectMixin	rebuild_auth	prepared_request response	when being redirected we may want to strip authentication from the request to avoid leaking credentials
+_vendor.requests	SessionRedirectMixin	rebuild_proxies	prepared_request proxies	this method re-evaluates the proxy configuration by considering the environment variables
+_vendor.requests	SessionRedirectMixin	rebuild_method	prepared_request response	when being redirected we may want to change the method of the request based on certain specs or browser behavior
+_vendor.requests	Session	prepare_request	request	constructs a :class preparedrequest <preparedrequest> for transmission and returns it
+_vendor.requests	Session	request	method url params data	constructs a :class request <request>, prepares it and sends it
+_vendor.requests	Session	get	url	sends a get request returns :class response object
+_vendor.requests	Session	options	url	sends a options request returns :class response object
+_vendor.requests	Session	head	url	sends a head request returns :class response object
+_vendor.requests	Session	post	url data json	sends a post request returns :class response object
+_vendor.requests	Session	put	url data	sends a put request returns :class response object
+_vendor.requests	Session	patch	url data	sends a patch request returns :class response object
+_vendor.requests	Session	delete	url	sends a delete request returns :class response object
+_vendor.requests	Session	send	request	send a given preparedrequest
+_vendor.requests	Session	merge_environment_settings	url proxies stream verify	check the environment and merge it with some settings
+_vendor.requests	Session	get_adapter	url	returns the appropriate connection adapter for the given url
+_vendor.requests	Session	close		closes all adapters and as such the session
+_vendor.requests	Session	mount	prefix adapter	registers a connection adapter to a prefix
+_vendor.requests		session		returns a :class session for context-management
+_vendor.requests	BaseAdapter	send	request stream timeout verify	sends preparedrequest object returns response object
+_vendor.requests	BaseAdapter	close		cleans up adapter specific items
+_vendor.requests	HTTPAdapter	init_poolmanager	connections maxsize block	initializes a urllib3 poolmanager
+_vendor.requests	HTTPAdapter	proxy_manager_for	proxy	return urllib3 proxymanager for the given proxy
+_vendor.requests	HTTPAdapter	cert_verify	conn url verify cert	verify a ssl certificate this method should not be called from user
+_vendor.requests	HTTPAdapter	build_response	req resp	builds a :class response <requests response> object from a urllib3
+_vendor.requests	HTTPAdapter	get_connection	url proxies	returns a urllib3 connection for the given url this should not be
+_vendor.requests	HTTPAdapter	close		disposes of any internal state
+_vendor.requests	HTTPAdapter	request_url	request proxies	obtain the url to use when making the final request
+_vendor.requests	HTTPAdapter	add_headers	request	add any headers needed by the connection as of v2 0 this does
+_vendor.requests	HTTPAdapter	proxy_headers	proxy	returns a dictionary of the headers to add to any request sent through a proxy
+_vendor.requests	HTTPAdapter	send	request stream timeout verify	sends preparedrequest object returns response object
+_vendor.requests		dispatch_hook	key hooks hook_data	dispatches a hook dictionary on a given piece of data
+_vendor.requests	RequestException	__init__		initialize requestexception with request and response objects
+_vendor.requests		to_native_string	string encoding	given a string object regardless of type returns a representation of that string in the native string type encoding and decoding where
+_vendor.requests		unicode_is_ascii	u_string	determine if unicode string only contains ascii characters
+_vendor.requests		dict_to_sequence	d	returns an internal sequence dictionary update
+_vendor.requests		get_netrc_auth	url raise_errors	returns the requests tuple auth for a given url from netrc
+_vendor.requests		guess_filename	obj	tries to guess the filename of the given object
+_vendor.requests		from_key_val_list	value	take an object and test to see if it can be represented as a dictionary
+_vendor.requests		to_key_val_list	value	take an object and test to see if it can be represented as a dictionary
+_vendor.requests		parse_list_header	value	parse lists as described by rfc 2068 section 2
+_vendor.requests		parse_dict_header	value	parse lists of key value pairs as described by rfc 2068 section 2 and convert them into a python dict
+_vendor.requests		unquote_header_value	value is_filename	unquotes a header value (reversal of :func quote_header_value)
+_vendor.requests		dict_from_cookiejar	cj	returns a key/value dictionary from a cookiejar
+_vendor.requests		add_dict_to_cookiejar	cj cookie_dict	returns a cookiejar from a key/value dictionary
+_vendor.requests		get_encodings_from_content	content	returns encodings from given content string
+_vendor.requests		get_encoding_from_headers	headers	returns encodings from given http header dict
+_vendor.requests		stream_decode_response_unicode	iterator r	stream decodes a iterator
+_vendor.requests		iter_slices	string slice_length	iterate over slices of a string
+_vendor.requests		get_unicode_from_response	r	returns the requested content back in unicode
+_vendor.requests		unquote_unreserved	uri	un-escape any percent-escape sequences in a uri that are unreserved characters
+_vendor.requests		requote_uri	uri	re-quote the given uri
+_vendor.requests		address_in_network	ip net	this function allows you to check if on ip belongs to a network subnet example returns true if ip = 192
+_vendor.requests		dotted_netmask	mask	converts mask from /xx format to xxx xxx xxx xxx
+_vendor.requests		is_valid_cidr	string_network	very simple check of the cidr format in no_proxy variable
+_vendor.requests		should_bypass_proxies	url	returns whether we should bypass proxies or not
+_vendor.requests		get_environ_proxies	url	return a dict of environment proxies
+_vendor.requests		select_proxy	url proxies	select a proxy for the url if applicable
+_vendor.requests		default_user_agent	name	return a string representing the default user agent
+_vendor.requests		default_headers		:rtype requests structures caseinsensitivedict
+_vendor.requests		parse_header_links	value	return a dict of parsed link headers proxies
+_vendor.requests		prepend_scheme_if_needed	url new_scheme	given a url that may or may not have a scheme prepend the given scheme
+_vendor.requests		get_auth_from_url	url	given a url with authentication components extract them into a tuple of username password
+_vendor.requests		check_header_validity	header	verifies that header value is a string which doesn't contain leading whitespace or return characters
+_vendor.requests		urldefragauth	url	given a url remove the fragment and the authentication part
+_vendor.requests		rewind_body	prepared_request	move file pointer back to its recorded starting position so it can be read again on redirect
+_vendor.requests		_basic_auth_str	username password	returns a basic auth string
+_vendor.requests	HTTPDigestAuth	handle_redirect	r	reset num_401_calls counter on redirects
+_vendor.requests	HTTPDigestAuth	handle_401	r	takes the given response and tries digest-auth if needed
+_vendor.requests	RequestEncodingMixin	path_url		build the path url to use
+_vendor.requests	RequestEncodingMixin	_encode_params	data	encode parameters in a piece of data
+_vendor.requests	RequestEncodingMixin	_encode_files	files data	build the body for a multipart/form-data request
+_vendor.requests	RequestHooksMixin	register_hook	event hook	properly register a hook
+_vendor.requests	RequestHooksMixin	deregister_hook	event hook	deregister a previously registered hook
+_vendor.requests	Request	prepare		constructs a :class preparedrequest <preparedrequest> for transmission and returns it
+_vendor.requests	PreparedRequest	prepare	method url headers files	prepares the entire request with the given parameters
+_vendor.requests	PreparedRequest	prepare_method	method	prepares the given http method
+_vendor.requests	PreparedRequest	prepare_url	url params	prepares the given http url
+_vendor.requests	PreparedRequest	prepare_headers	headers	prepares the given http headers
+_vendor.requests	PreparedRequest	prepare_body	data files json	prepares the given http body data
+_vendor.requests	PreparedRequest	prepare_content_length	body	prepare content-length header based on request method and body
+_vendor.requests	PreparedRequest	prepare_auth	auth url	prepares the given http auth data
+_vendor.requests	PreparedRequest	prepare_cookies	cookies	prepares the given http cookie data
+_vendor.requests	PreparedRequest	prepare_hooks	hooks	prepares the given hooks
+_vendor.requests	Response	__bool__		returns true if :attr status_code is 'ok'
+_vendor.requests	Response	__nonzero__		returns true if :attr status_code is 'ok'
+_vendor.requests	Response	__iter__		allows you to use a response as an iterator
+_vendor.requests	Response	is_redirect		true if this response is a well-formed http redirect that could have been processed automatically (by :meth session
+_vendor.requests	Response	is_permanent_redirect		true if this response one of the permanent versions of redirect
+_vendor.requests	Response	apparent_encoding		the apparent encoding provided by the chardet library
+_vendor.requests	Response	iter_content	chunk_size decode_unicode	iterates over the response data when stream=true is set on the
+_vendor.requests	Response	iter_lines	chunk_size decode_unicode delimiter	iterates over the response data one line at a time when
+_vendor.requests	Response	content		content of the response in bytes
+_vendor.requests	Response	text		content of the response in unicode
+_vendor.requests	Response	json		returns the json-encoded content of a response if any
+_vendor.requests	Response	links		returns the parsed header links of the response if any
+_vendor.requests	Response	raise_for_status		raises stored :class httperror, if one occurred
+_vendor.requests	Response	close		releases the connection back to the pool once this method has been
+_vendor.requests.packages.idna		intranges_from_list	list_	represent a list of integers as a sequence of ranges ((start_0 end_0), (start_1 end_1),
+_vendor.requests.packages.idna		intranges_contain	int_ ranges	determine if int_ falls into one of the ranges in ranges
+_vendor.requests.packages.idna		uts46_remap	domain std3_rules transitional	re-map the characters in the string according to uts46 processing
+_vendor.requests.packages.chardet		description_of	lines name	return a string describing the probable encoding of a file or list of strings
+_vendor.requests.packages.chardet		main	argv	handles command line arguments and gets things started
+_vendor.requests.packages.chardet	CharDistributionAnalysis	reset		reset analyser clear any state
+_vendor.requests.packages.chardet	CharDistributionAnalysis	feed	aBuf aCharLen	feed a character with known length
+_vendor.requests.packages.chardet	CharDistributionAnalysis	get_confidence		return confidence based on existing data
+_vendor.requests.packages.urllib3		choose_boundary		our embarrassingly-simple replacement for mimetools choose_boundary
+_vendor.requests.packages.urllib3		iter_field_objects	fields	iterate over fields
+_vendor.requests.packages.urllib3		iter_fields	fields	deprecated : 1 6
+_vendor.requests.packages.urllib3		encode_multipart_formdata	fields boundary	encode a dictionary of fields using the multipart/form-data mime format
+_vendor.requests.packages.urllib3	HTTPConnection	_new_conn		establish a socket connection and set nodelay settings on it
+_vendor.requests.packages.urllib3	HTTPConnection	request_chunked	method url body headers	alternative to the common request method which sends the
+_vendor.requests.packages.urllib3	VerifiedHTTPSConnection	set_cert	key_file cert_file cert_reqs ca_certs	this method should only be called once before the connection is used
+_vendor.requests.packages.urllib3	RequestMethods	request	method url fields headers	make a request using :meth urlopen with the appropriate encoding of fields based on the method used
+_vendor.requests.packages.urllib3	RequestMethods	request_encode_url	method url fields headers	make a request using :meth urlopen with the fields encoded in the url
+_vendor.requests.packages.urllib3	RequestMethods	request_encode_body	method url fields headers	make a request using :meth urlopen with the fields encoded in the body
+_vendor.requests.packages.urllib3	HTTPHeaderDict	pop	key default	d pop(k[,d]) -> v remove specified key and return the corresponding value
+_vendor.requests.packages.urllib3	HTTPHeaderDict	add	key val	adds a name value pair doesn't overwrite the value if it already exists
+_vendor.requests.packages.urllib3	HTTPHeaderDict	extend		generic import function for any type of header-like object
+_vendor.requests.packages.urllib3	HTTPHeaderDict	getlist	key	returns a list of all the values for the named field returns an
+_vendor.requests.packages.urllib3	HTTPHeaderDict	iteritems		iterate over all header lines including duplicate ones
+_vendor.requests.packages.urllib3	HTTPHeaderDict	itermerged		iterate over all headers merging duplicate ones together
+_vendor.requests.packages.urllib3	HTTPHeaderDict	from_httplib	cls message	read headers from a python 2 httplib message object
+_vendor.requests.packages.urllib3	ConnectionPool	close		close all pooled connections and disable the pool
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_new_conn		return a fresh :class httpconnection
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_get_conn	timeout	get a connection will return a pooled connection if one is available
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_put_conn	conn	put a connection back into the pool
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_validate_conn	conn	called right before a request is made after the socket is created
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_get_timeout	timeout	helper that always returns a :class urllib3 util timeout
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_raise_timeout	err url timeout_value	is the error actually a timeout? will raise a readtimeout or pass
+_vendor.requests.packages.urllib3	HTTPConnectionPool	_make_request	conn method url timeout	perform a request on a given urllib connection object taken from our pool
+_vendor.requests.packages.urllib3	HTTPConnectionPool	close		close all pooled connections and disable the pool
+_vendor.requests.packages.urllib3	HTTPConnectionPool	is_same_host	url	check if the given url is a member of the same host as this connection pool
+_vendor.requests.packages.urllib3	HTTPConnectionPool	urlopen	method url body headers	get a connection from the pool and perform an http request this is the
+_vendor.requests.packages.urllib3	HTTPSConnectionPool	_prepare_conn	conn	prepare the connection for :meth urllib3 util ssl_wrap_socket
+_vendor.requests.packages.urllib3	HTTPSConnectionPool	_prepare_proxy	conn	establish tunnel connection early because otherwise httplib would improperly set host header to proxy's ip port
+_vendor.requests.packages.urllib3	HTTPSConnectionPool	_new_conn		return a fresh :class httplib httpsconnection
+_vendor.requests.packages.urllib3	HTTPSConnectionPool	_validate_conn	conn	called right before a request is made after the socket is created
+_vendor.requests.packages.urllib3		connection_from_url	url	given a url return an :class connectionpool instance of its host
+_vendor.requests.packages.urllib3		_ipv6_host	host	process ipv6 address literals
+_vendor.requests.packages.urllib3		add_stderr_logger	level	helper for quickly adding a streamhandler to the logger useful for
+_vendor.requests.packages.urllib3		disable_warnings	category	helper for quickly disabling all urllib3 warnings
+_vendor.requests.packages.urllib3		_default_key_normalizer	key_class request_context	create a pool key of type key_class for a request
+_vendor.requests.packages.urllib3	PoolManager	_new_pool	scheme host port	create a new :class connectionpool based on host port and scheme
+_vendor.requests.packages.urllib3	PoolManager	clear		empty our store of pools and direct them all to close
+_vendor.requests.packages.urllib3	PoolManager	connection_from_host	host port scheme	get a :class connectionpool based on the host port and scheme
+_vendor.requests.packages.urllib3	PoolManager	connection_from_context	request_context	get a :class connectionpool based on the request context
+_vendor.requests.packages.urllib3	PoolManager	connection_from_pool_key	pool_key	get a :class connectionpool based on the provided pool key
+_vendor.requests.packages.urllib3	PoolManager	connection_from_url	url	similar to :func urllib3 connectionpool connection_from_url but
+_vendor.requests.packages.urllib3	PoolManager	urlopen	method url redirect	same as :meth urllib3 connectionpool httpconnectionpool urlopen
+_vendor.requests.packages.urllib3	ProxyManager	_set_proxy_headers	url headers	sets headers needed by proxies specifically the accept and host headers
+_vendor.requests.packages.urllib3	ProxyManager	urlopen	method url redirect	same as http s connectionpool urlopen url must be absolute
+_vendor.requests.packages.urllib3		guess_content_type	filename default	guess the "content-type" of a file
+_vendor.requests.packages.urllib3		format_header_param	name value	helper function to format and quote a single header parameter
+_vendor.requests.packages.urllib3	RequestField	from_tuples	cls fieldname value	a :class ~urllib3 fields requestfield factory from old-style tuple parameters
+_vendor.requests.packages.urllib3	RequestField	_render_part	name value	overridable helper function to format a single header parameter
+_vendor.requests.packages.urllib3	RequestField	_render_parts	header_parts	helper function to format and quote a single header
+_vendor.requests.packages.urllib3	RequestField	render_headers		renders the headers for this request field
+_vendor.requests.packages.urllib3	RequestField	make_multipart	content_disposition content_type content_location	makes this request field into a multipart request field
+_vendor.requests.packages.urllib3	HTTPResponse	get_redirect_location		should we redirect and where to?
+_vendor.requests.packages.urllib3	HTTPResponse	tell		obtain the number of bytes pulled over the wire so far may differ from
+_vendor.requests.packages.urllib3	HTTPResponse	_init_length	request_method	set initial length value for response content if available
+_vendor.requests.packages.urllib3	HTTPResponse	_init_decoder		set-up the _decoder attribute if necessary
+_vendor.requests.packages.urllib3	HTTPResponse	_decode	data decode_content flush_decoder	decode the data passed in and potentially flush the decoder
+_vendor.requests.packages.urllib3	HTTPResponse	_flush_decoder		flushes the decoder should only be called if the decoder is actually
+_vendor.requests.packages.urllib3	HTTPResponse	_error_catcher		catch low-level python exceptions instead re-raising urllib3 variants so that low-level exceptions are not leaked in the
+_vendor.requests.packages.urllib3	HTTPResponse	read	amt decode_content cache_content	similar to :meth httplib httpresponse read, but with two additional
+_vendor.requests.packages.urllib3	HTTPResponse	stream	amt decode_content	a generator wrapper for the read() method a call will block until
+_vendor.requests.packages.urllib3	HTTPResponse	from_httplib	ResponseCls r	given an :class httplib httpresponse instance r, return a
+_vendor.requests.packages.urllib3	HTTPResponse	supports_chunked_reads		checks if the underlying file-like object looks like a httplib
+_vendor.requests.packages.urllib3	HTTPResponse	read_chunked	amt decode_content	similar to :meth httpresponse read, but with an additional
+_vendor.requests.packages.urllib3.packages	OrderedDict	__init__		initialize an ordered dictionary signature is the same as for
+_vendor.requests.packages.urllib3.packages	OrderedDict	__setitem__	key value dict_setitem	od __setitem__ i y <==> od[i]=y
+_vendor.requests.packages.urllib3.packages	OrderedDict	__delitem__	key dict_delitem	od __delitem__ y <==> del od[y]
+_vendor.requests.packages.urllib3.packages	OrderedDict	__iter__		od __iter__() <==> iter od
+_vendor.requests.packages.urllib3.packages	OrderedDict	__reversed__		od __reversed__() <==> reversed od
+_vendor.requests.packages.urllib3.packages	OrderedDict	clear		od clear() -> none remove all items from od
+_vendor.requests.packages.urllib3.packages	OrderedDict	popitem	last	od popitem() -> k v return and remove a key value pair
+_vendor.requests.packages.urllib3.packages	OrderedDict	keys		od keys() -> list of keys in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	values		od values() -> list of values in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	items		od items() -> list of key value pairs in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	iterkeys		od iterkeys() -> an iterator over the keys in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	itervalues		od itervalues -> an iterator over the values in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	iteritems		od iteritems -> an iterator over the key value items in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	update		od update(e **f) -> none update od from dict/iterable e and f
+_vendor.requests.packages.urllib3.packages	OrderedDict	pop	key default	od pop(k[,d]) -> v remove specified key and return the corresponding value
+_vendor.requests.packages.urllib3.packages	OrderedDict	setdefault	key default	od setdefault(k[,d]) -> od get k d also set od[k]=d if k not in od
+_vendor.requests.packages.urllib3.packages	OrderedDict	__repr__	_repr_running	od __repr__() <==> repr od
+_vendor.requests.packages.urllib3.packages	OrderedDict	__reduce__		return state information for pickling
+_vendor.requests.packages.urllib3.packages	OrderedDict	copy		od copy() -> a shallow copy of od
+_vendor.requests.packages.urllib3.packages	OrderedDict	fromkeys	cls iterable value	od fromkeys(s[, v]) -> new ordered dictionary with keys from s
+_vendor.requests.packages.urllib3.packages	OrderedDict	__eq__	other	od __eq__ y <==> od==y comparison to another od is order-sensitive
+_vendor.requests.packages.urllib3.packages	OrderedDict	viewkeys		od viewkeys() -> a set-like object providing a view on od's keys
+_vendor.requests.packages.urllib3.packages	OrderedDict	viewvalues		od viewvalues() -> an object providing a view on od's values
+_vendor.requests.packages.urllib3.packages	OrderedDict	viewitems		od viewitems() -> a set-like object providing a view on od's items
+_vendor.requests.packages.urllib3.packages		_add_doc	func doc	add documentation to a function
+_vendor.requests.packages.urllib3.packages		_import_module	name	import module returning the module after the last dot
+_vendor.requests.packages.urllib3.packages	_SixMetaPathImporter	is_package	fullname	return true if the named module is a package
+_vendor.requests.packages.urllib3.packages		add_move	move	add an item to six moves
+_vendor.requests.packages.urllib3.packages		remove_move	name	remove item from six moves
+_vendor.requests.packages.urllib3.packages		with_metaclass	meta	create a base class with a metaclass
+_vendor.requests.packages.urllib3.packages		add_metaclass	metaclass	class decorator for creating a class with a metaclass
+_vendor.requests.packages.urllib3.packages		python_2_unicode_compatible	klass	a decorator that defines __unicode__ and __str__ methods under python 2
+_vendor.requests.packages.urllib3.packages.backports		backport_makefile	mode buffering encoding errors	backport of socket makefile from python 3 5
+_vendor.requests.packages.urllib3.packages.ssl_match_hostname		_dnsname_match	dn hostname max_wildcards	matching according to rfc 6125 section 6 4 3
+_vendor.requests.packages.urllib3.packages.ssl_match_hostname		_ipaddress_match	ipname host_ip	exact matching of ip addresses
+_vendor.requests.packages.urllib3.packages.ssl_match_hostname		match_hostname	cert hostname	verify that *cert* (in decoded format as returned by sslsocket
+_vendor.requests.packages.urllib3.util		_fileobj_to_fd	fileobj	return a file descriptor from a file object if
+_vendor.requests.packages.urllib3.util		_syscall_wrapper	func recalc_timeout	wrapper function for syscalls that could fail due to eintr
+_vendor.requests.packages.urllib3.util	BaseSelector	_fileobj_lookup	fileobj	return a file descriptor from a file object
+_vendor.requests.packages.urllib3.util	BaseSelector	register	fileobj events data	register a file object for a set of events to monitor
+_vendor.requests.packages.urllib3.util	BaseSelector	unregister	fileobj	unregister a file object from being monitored
+_vendor.requests.packages.urllib3.util	BaseSelector	modify	fileobj events data	change a registered file object monitored events and data
+_vendor.requests.packages.urllib3.util	BaseSelector	select	timeout	perform the actual selection until some monitored file objects are ready or the timeout expires
+_vendor.requests.packages.urllib3.util	BaseSelector	close		close the selector this must be called to ensure that all
+_vendor.requests.packages.urllib3.util	BaseSelector	get_key	fileobj	return the key associated with a registered file object
+_vendor.requests.packages.urllib3.util	BaseSelector	get_map		return a mapping of file objects to selector keys
+_vendor.requests.packages.urllib3.util	BaseSelector	_key_from_fd	fd	return the key associated to a given file descriptor return none if it is not found
+_vendor.requests.packages.urllib3.util		is_connection_dropped	conn	returns true if the connection is dropped and should be closed
+_vendor.requests.packages.urllib3.util		create_connection	address timeout source_address socket_options	connect to *address* and return the socket object
+_vendor.requests.packages.urllib3.util		allowed_gai_family		this function is designed to work in the context of getaddrinfo where family=socket
+_vendor.requests.packages.urllib3.util		_has_ipv6	host	returns true if the system can bind an ipv6 address
+_vendor.requests.packages.urllib3.util		_wait_for_io_events	socks events timeout	waits for io events to be available from a list of sockets or optionally a single socket if passed in
+_vendor.requests.packages.urllib3.util		wait_for_read	socks timeout	waits for reading to be available from a list of sockets or optionally a single socket if passed in
+_vendor.requests.packages.urllib3.util		wait_for_write	socks timeout	waits for writing to be available from a list of sockets or optionally a single socket if passed in
+_vendor.requests.packages.urllib3.util	Retry	from_int	cls retries redirect default	backwards-compatibility for the old retries format
+_vendor.requests.packages.urllib3.util	Retry	get_backoff_time		formula for computing the current backoff
+_vendor.requests.packages.urllib3.util	Retry	get_retry_after	response	get the value of retry-after in seconds
+_vendor.requests.packages.urllib3.util	Retry	sleep	response	sleep between retry attempts
+_vendor.requests.packages.urllib3.util	Retry	_is_connection_error	err	errors when we're fairly sure that the server did not receive the request so it should be safe to retry
+_vendor.requests.packages.urllib3.util	Retry	_is_read_error	err	errors that occur after the request has been started so we should assume that the server began processing it
+_vendor.requests.packages.urllib3.util	Retry	_is_method_retryable	method	checks if a given http method should be retried upon depending if it is included on the method whitelist
+_vendor.requests.packages.urllib3.util	Retry	is_retry	method status_code has_retry_after	is this method/status code retryable? (based on whitelists and control
+_vendor.requests.packages.urllib3.util	Retry	is_exhausted		are we out of retries?
+_vendor.requests.packages.urllib3.util	Retry	increment	method url response error	return a new retry object with incremented retry counters
+_vendor.requests.packages.urllib3.util		make_headers	keep_alive accept_encoding user_agent basic_auth	shortcuts for generating request headers
+_vendor.requests.packages.urllib3.util		set_file_position	body pos	if a position is provided move file to that point
+_vendor.requests.packages.urllib3.util		rewind_body	body body_pos	attempt to rewind body to a certain position
+_vendor.requests.packages.urllib3.util	Timeout	_validate_timeout	cls value name	check that a timeout attribute is valid
+_vendor.requests.packages.urllib3.util	Timeout	from_float	cls timeout	create a new timeout from a legacy timeout value
+_vendor.requests.packages.urllib3.util	Timeout	clone		create a copy of the timeout object timeout properties are stored per-pool but each request needs a fresh
+_vendor.requests.packages.urllib3.util	Timeout	start_connect		start the timeout clock used during a connect() attempt :raises urllib3
+_vendor.requests.packages.urllib3.util	Timeout	get_connect_duration		gets the time elapsed since the call to :meth start_connect
+_vendor.requests.packages.urllib3.util	Timeout	connect_timeout		get the value to use when setting a connection timeout
+_vendor.requests.packages.urllib3.util	Timeout	read_timeout		get the value for the read timeout
+_vendor.requests.packages.urllib3.util	Url	hostname		for backwards-compatibility with urlparse we're nice like that
+_vendor.requests.packages.urllib3.util	Url	request_uri		absolute path including the query string
+_vendor.requests.packages.urllib3.util	Url	netloc		network location including host and port
+_vendor.requests.packages.urllib3.util	Url	url		convert self into a url this function should more or less round-trip with :func
+_vendor.requests.packages.urllib3.util		split_first	s delims	given a string and an iterable of delimiters split on the first found delimiter
+_vendor.requests.packages.urllib3.util		parse_url	url	given a url return a parsed :class url namedtuple best-effort is
+_vendor.requests.packages.urllib3.util		get_host	url	deprecated use :func parse_url instead
+_vendor.requests.packages.urllib3.util		_const_compare_digest_backport	a b	compare two digests of equal length in constant time
+_vendor.requests.packages.urllib3.util		assert_fingerprint	cert fingerprint	checks if given fingerprint matches the supplied certificate
+_vendor.requests.packages.urllib3.util		resolve_cert_reqs	candidate	resolves the argument to a numeric constant which can be passed to the wrap_socket function/method from the ssl module
+_vendor.requests.packages.urllib3.util		create_urllib3_context	ssl_version cert_reqs options ciphers	all arguments have the same meaning as ssl_wrap_socket
+_vendor.requests.packages.urllib3.util		ssl_wrap_socket	sock keyfile certfile cert_reqs	all arguments except for server_hostname ssl_context and ca_cert_dir have the same meaning as they do when using :func ssl
+_vendor.requests.packages.urllib3.util		is_fp_closed	obj	checks whether a given file-like object is closed
+_vendor.requests.packages.urllib3.util		assert_header_parsing	headers	asserts whether all headers have been successfully parsed
+_vendor.requests.packages.urllib3.util		is_response_to_head	response	checks whether the request of a response has been a head-request
+_vendor.requests.packages.urllib3.contrib		inject_into_urllib3		monkey-patch urllib3 with pyopenssl-backed ssl-support
+_vendor.requests.packages.urllib3.contrib		extract_from_urllib3		undo monkey-patching by :func inject_into_urllib3
+_vendor.requests.packages.urllib3.contrib		_validate_dependencies_met		verifies that pyopenssl's package-level dependencies have been met
+_vendor.requests.packages.urllib3.contrib		_dnsname_to_stdlib	name	converts a dnsname subjectalternativename field to the form used by the standard library on the given python version
+_vendor.requests.packages.urllib3.contrib		get_subj_alt_name	peer_cert	given an pyopenssl certificate provides all the subject alternative names
+_vendor.requests.packages.urllib3.contrib	SOCKSConnection	_new_conn		establish a new connection via the socks proxy
+_vendor.requests.packages.urllib3.contrib	NTLMConnectionPool	__init__	user pw authurl	authurl is a random url on the server that is protected by ntlm
+_vendor.html5lib	HTMLTokenizer	__iter__		this is where the magic happens
+_vendor.html5lib	HTMLTokenizer	consumeNumberEntity	isHex	this function returns either u+fffd or the character based on the decimal or hexadecimal representation
+_vendor.html5lib	HTMLTokenizer	processEntityInAttribute	allowedChar	this method replaces the need for "entityinattributevaluestate"
+_vendor.html5lib	HTMLTokenizer	emitCurrentToken		this method is a generic handler for emitting the tags it also sets
+_vendor.html5lib	HTMLUnicodeInputStream	__init__	source	initialises the htmlinputstream
+_vendor.html5lib	HTMLUnicodeInputStream	openStream	source	produces a file object from source
+_vendor.html5lib	HTMLUnicodeInputStream	position		returns line col of the current position in the stream
+_vendor.html5lib	HTMLUnicodeInputStream	char		read one character from the stream or queue if available return
+_vendor.html5lib	HTMLUnicodeInputStream	charsUntil	characters opposite	returns a string of characters from the stream up to but not including any character in 'characters' or eof
+_vendor.html5lib	HTMLBinaryInputStream	__init__	source override_encoding transport_encoding same_origin_parent_encoding	initialises the htmlinputstream
+_vendor.html5lib	HTMLBinaryInputStream	openStream	source	produces a file object from source
+_vendor.html5lib	HTMLBinaryInputStream	detectBOM		attempts to detect at bom at the start of the stream if
+_vendor.html5lib	HTMLBinaryInputStream	detectEncodingMeta		report the encoding declared by the meta element
+_vendor.html5lib	EncodingBytes	skip	chars	skip past a list of characters
+_vendor.html5lib	EncodingBytes	matchBytes	bytes	look for a sequence of bytes at the start of a string if the bytes
+_vendor.html5lib	EncodingBytes	jumpTo	bytes	look for the next sequence of bytes matching a given sequence if
+_vendor.html5lib	EncodingParser	__init__	data	string - the data to work on for encoding detection
+_vendor.html5lib	EncodingParser	handleComment		skip over comments
+_vendor.html5lib	EncodingParser	getAttribute		return a name value pair for the next attribute in the stream
+_vendor.html5lib		lookupEncoding	encoding	return the python codec name corresponding to an encoding or none if the string doesn't correspond to a valid encoding
+_vendor.html5lib		parse	doc treebuilder namespaceHTMLElements	parse a string or file-like object into a tree
+_vendor.html5lib	HTMLParser	__init__	tree strict namespaceHTMLElements debug	strict - raise an exception when a parse error is encountered tree - a treebuilder class controlling the type of tree that will be
+_vendor.html5lib	HTMLParser	documentEncoding		the name of the character encoding that was used to decode the input stream
+_vendor.html5lib	HTMLParser	parse	stream	parse a html document into a well-formed tree stream - a filelike object or string containing the html to be parsed
+_vendor.html5lib	HTMLParser	parseFragment	stream	parse a html fragment into a well-formed tree fragment container - name of the element we're setting the innerhtml property
+_vendor.html5lib	HTMLParser	normalizeToken	token	html5 specific normalizations to the token stream
+_vendor.html5lib	HTMLParser	parseRCDataRawtext	token contentType	generic rcdata/rawtext parsing algorithm
+_vendor.html5lib.treewalkers		getTreeWalker	treeType implementation	get a treewalker class for various types of tree with built-in support args
+_vendor.html5lib.treewalkers		pprint	walker	pretty printer for tree walkers
+_vendor.html5lib.treebuilders	Node	__init__	name	node representing an item in the tree
+_vendor.html5lib.treebuilders	Node	appendChild	node	insert node as a child of the current node
+_vendor.html5lib.treebuilders	Node	insertText	data insertBefore	insert data as text in the current node positioned before the start of node insertbefore or to the end of the node's text
+_vendor.html5lib.treebuilders	Node	insertBefore	node refNode	insert node as a child of the current node before refnode in the list of child nodes
+_vendor.html5lib.treebuilders	Node	removeChild	node	remove node from the children of the current node
+_vendor.html5lib.treebuilders	Node	reparentChildren	newParent	move all the children of the current node to newparent
+_vendor.html5lib.treebuilders	Node	cloneNode		return a shallow copy of the current node i e a node with the same
+_vendor.html5lib.treebuilders	Node	hasContent		return true if the node has children or text false otherwise
+_vendor.html5lib.treebuilders	TreeBuilder	elementInActiveFormattingElements	name	check if an element exists between the end of the active formatting elements and the last marker
+_vendor.html5lib.treebuilders	TreeBuilder	createElement	token	create an element but don't insert it anywhere
+_vendor.html5lib.treebuilders	TreeBuilder	_setInsertFromTable	value	switch the function used to insert an element from the
+_vendor.html5lib.treebuilders	TreeBuilder	insertElementTable	token	create an element and insert it into the tree
+_vendor.html5lib.treebuilders	TreeBuilder	insertText	data parent	insert text data
+_vendor.html5lib.treebuilders	TreeBuilder	getTableMisnestedNodePosition		get the foster parent element and sibling to insert before
+_vendor.html5lib.treebuilders	TreeBuilder	getDocument		return the final tree
+_vendor.html5lib.treebuilders	TreeBuilder	getFragment		return the final fragment
+_vendor.html5lib.treebuilders	TreeBuilder	testSerializer	node	serialize the subtree of node in the format required by unit tests
+_vendor.html5lib.treebuilders		tostring	element	serialize an element and its child nodes to a string
+_vendor.html5lib.treebuilders	TreeBuilder	insertRoot	token	create the document root
+_vendor.html5lib.treebuilders		getTreeBuilder	treeType implementation	get a treebuilder class for various types of tree with built-in support treetype - the name of the tree type required case-insensitive
+_vendor.html5lib.treeadapters		to_sax	walker handler	call sax-like content handler based on treewalker walker
+utils	InterruptibleMixin	__init__		save the original sigint handler for later
+utils	InterruptibleMixin	finish		restore the original sigint handler after finishing
+utils	InterruptibleMixin	handle_sigint	signum frame	call self finish() before delegating to the original sigint handler
+utils		pip_version_check	session options	check for an update for pip
+utils	Hashes	__init__	hashes	:param hashes a dict of algorithm names pointing to lists of allowed
+utils	Hashes	check_against_chunks	chunks	check good hashes against ones built from iterable of chunks of data
+utils	Hashes	check_against_file	file	check good hashes against a file-like object raise hashmismatch if none match
+utils	Hashes	__nonzero__		return whether i know any known-good hashes
+utils	MissingHashes	__init__		don't offer the hashes kwarg
+utils		auto_decode	data	check a bytes string for a bom to correctly detect the encoding fallback to locale
+utils		user_cache_dir	appname	return full path to the user-specific cache dir for this application
+utils		user_data_dir	appname roaming	return full path to the user-specific data dir for this application
+utils		user_config_dir	appname roaming	return full path to the user-specific config dir for this application
+utils		site_config_dirs	appname	return a list of potential user-shared config dirs for this application
+utils		_get_win_folder_from_registry	csidl_name	this is a fallback technique at best i'm not sure if using the
+utils		_win_path_to_bytes	path	encode windows paths to bytes only used on python 2
+utils		indent_log	num	a context manager which will cause the log output to be indented for any log messages emitted inside it
+utils	IndentingFormatter	format	record	calls the standard formatter but will indent all of the log messages by our current indentation level
+utils		glibc_version_string		returns glibc version string or none if not using glibc
+utils		ensure_dir	path	os path makedirs without eexist
+utils		rmtree_errorhandler	func path exc_info	on windows the files in svn are read-only so when rmtree() tries to
+utils		display_path	path	gives the display value for a given path making it relative to cwd if possible
+utils		backup_dir	dir ext	figure out the name of a directory to back up the given dir to (adding
+utils		ask	message options	ask the message interactively with the given possible responses
+utils		is_installable_dir	path	return true if path is a directory containing a setup py file
+utils		is_svn_page	html	returns true if the page appears to be the index page of an svn repository
+utils		read_chunks	file size	yield pieces of data from a file-like object until eof
+utils		has_leading_dir	paths	returns true if all the paths have the same leading path name (i
+utils		normalize_path	path resolve_symlinks	convert a path to its canonical case-normalized absolute version
+utils		splitext	path	like os path splitext but take off tar too
+utils		renames	old new	like os renames(), but handles renaming across devices
+utils		is_local	path	return true if path is within sys prefix if we're running in a virtualenv
+utils		dist_is_local	dist	return true if given distribution object is installed locally (i
+utils		dist_in_usersite	dist	return true if given distribution is installed in user site
+utils		dist_in_site_packages	dist	return true if given distribution is installed in sysconfig
+utils		dist_is_editable	dist	is distribution an editable install?
+utils		get_installed_distributions	local_only skip include_editables editables_only	return a list of installed distribution objects
+utils		egg_link_path	dist	return the path for the egg-link file if it exists otherwise none
+utils		dist_location	dist	get the site-packages location of this distribution generally
+utils		get_terminal_size		returns a tuple x y representing the width x and the height x in characters of the terminal window
+utils		current_umask		get the current umask which involves having to set it temporarily
+utils		unzip_file	filename location flatten	unzip the file (with path filename) to the destination location all
+utils		untar_file	filename location	untar the file (with path filename) to the destination location
+utils		read_text_file	filename	return the contents of *filename*
+utils		captured_output	stream_name	return a context manager used by captured_stdout/stdin/stderr that temporarily replaces the sys stream *stream_name* with a stringio
+utils		captured_stdout		capture the output of sys stdout
+utils		get_installed_version	dist_name lookup_dirs	get the installed version of dist_name avoiding pkg_resources cache
+utils		consume	iterator	consume an iterable at c speed
+utils		check_requires_python	requires_python	check if the python version in use match the requires_python specifier
+commands	CompletionCommand	run	options args	prints the completion code of the given shell
+commands		_hash_of_file	path algorithm	return the hash digest of a file
+commands		search_packages_info	query	gather details from installed distributions print distribution name
+commands		print_results	distributions list_files verbose	print the informations from installed distributions found
+commands	ListCommand	_build_package_finder	options index_urls session	create a package finder appropriate to this list command
+commands		format_for_columns	pkgs options	convert the package data into something usable by output_package_listing_columns
+commands		get_summaries	ordered	yields sorted command name command summary tuples
+commands		get_similar_commands	name	command name auto-correct
+commands		transform_hits	hits	the list from pypi is really a list of versions we want a list of
+operations		get_missing_reqs	dist installed_dists	return all of the requirements of dist that aren't present in installed_dists
+operations		get_incompatible_reqs	dist installed_dists	return all of the requirements of dist that are present in installed_dists, but have incompatible versions

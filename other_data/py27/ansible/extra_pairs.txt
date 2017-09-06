@@ -1,0 +1,627 @@
+tags	metadata tags from the object
+elasti cache manager	handles elasticache creation and destruction
+entity	entity which we want to remove
+cloud front service manager	handles cloudfront services
+kwargs	additional parameters passed when creating entity
+rule	securityrule
+ansible environment	our custom environment which simply allows us to override the class-level values for the template and context classes used by jinja2 internally
+obj_type	type of database object to grant/revoke
+pull cli	is used to up a remote copy of ansible on each managed node each set to run via cron and update playbook source via a source repository
+variables	hash of all variables to find
+server_ids	list of servers to start or stop
+snapshots	list of snapshots to search
+systemd strategy	this is a systemd hostname manipulation strategy class - it uses the hostnamectl command
+error	str error that occurred
+group_name	the name of the group to validate/create
+filter module	ansible math jinja2 filters
+devices	devices class
+facts	this class should only attempt to populate those facts that are mostly generic to all systems
+balancer	apache httpd 2 4 mod_proxy balancer object
+callback module	this is a very trivial example of how any callback function can get at play and task objects
+ansible action fail	an action runtime failure
+open rcstrategy	this is a gentoo openrc hostname manipulation strategy class - it edits the /etc/conf
+cpu	the new cpu value
+condition	condition to be fulfilled
+cache module	a caching module backed by redis
+alert_policy	the target alert policy
+debian strategy	this is a debian family hostname manipulation strategy class - it edits the /etc/hostname file
+aix	aix-specific subclass of hardware defines memory and cpu facts
+ad hoc cli	is an extra-simple tool/framework/api for doing 'remote things'
+additional_argument_spec	an optional dictionary representing the specification for additional module arguments if any
+hpux	this is a hp-ux user manipulation class
+data	reference on dictionary which contain information about
+action	action which should be executed by service on entity
+balancer member	apache 2 4 mod_proxy lb balancer member
+server_list	the list of server ids
+ansible control persist broken pipe error	controlpersist broken pipe
+open bsd service	this is the openbsd service manipulation class - it uses rcctl 8 or /etc/rc
+filter module	ansible core jinja2 filters
+ansible sequence	sub class for lists
+callback module	this callback puts results into a host specific file in a directory in json format
+request_lst	the list of clc request objects
+connection	raw socket accelerated connection
+host vars	a special view of vars_cache that adds values from the inventory when needed
+sorted opt parser	optparser which sorts the options by opt before outputting --help
+task executor	this is the main worker class for the executor pipeline which handles loading an action plugin to actually dispatch the task to
+command	list of command arguments
+named_ports	list of dictionaries in the format of {'name': port}
+exception	reference on exception for which title should be
+connection	local chroot based connections
+max_snapshot_age_secs	filter the result if its older than this
+ohai	this is a subclass of facts for including information gathered from ohai
+response	response from the get method
+csvrecoder	iterator that reads an encoded stream and reencodes the input to utf-8
+generic strategy	this is a generic hostname manipulation strategy class
+acmeaccount	acme account object handles the authorized communication with the
+service_account	gcp service account email used to make requests
+callback base	this is a base ansible callback class that does nothing new callbacks should
+params	ansible dictionary containing configuration
+ansible file not found	a file missing failure
+conditional	this is a mix-in class to be used with base to allow the object to be run conditionally when a condition is met or skipped
+cache module	a caching module backed by json files
+module	reference on module which contain module launch
+field	field name in list_managed_instances response. defaults
+virtual addresses	virtual addresses class
+callback module	this callback module tells you how long your plays ran for
+callback module	this is the default callback interface which simply prints messages to stdout when new callback events are received
+datacenter	the clc-sdk.datacenter instance to use to lookup the group
+free bsd service	this is the freebsd service manipulation class - it uses the /etc/rc conf
+kwargs	additional parameters passed to action
+unknown vlanerror	exception raised when a vlan cannot be found
+additional_required_together	an optional list representing the specification for additional module arguments that must be specified together
+grant_option	only for state "present": if true set
+traffic groups	traffic groups class
+lookup module	create the cartesian product of lists
+module	the module to validate
+ansible options error	bad or incomplete options passed
+backends	ansible dictionary containing backends configuration only
+doc cli	displays information on modules installed in ansible libraries
+client	resource management client for azure
+ansible jsonencoder	simple encoder class to deal with json encoding of internal
+auth	dictionary which contains needed values for connection creation
+aa_policy_id	the anti affinity policy id
+proxy error	failure to connect because of a proxy
+timeout	time before the destroy operation is abandoned
+kwargs	kwargs to be extended
+group_name	string - the server group to delete
+awsconnection	create the connection object and client objects as required
+pulp server	class to interact with a pulp server
+connection	local lxc based connections
+free bsdvirtual	this is a freebsd-specific subclass of virtual it defines
+net bsduser	this is a netbsd user manipulation class
+user	this is a generic user manipulation class that is subclassed based on platform
+port	the port to check and see if it exists
+ansible j2template	a helper class which prevents jinja2 from running _jinja2_vars through dict()
+dragon fly network	this is the dragonfly network class
+method	the load balancing method
+task parameters	access and parse module parameters
+rule	rule dict
+ansible filter error	a templating failure
+my add policy	based on autoaddpolicy in paramiko so we can determine when keys are added and also prompt for input
+lookup_group	string name of the group to search for
+virtual	this is a generic virtual subclass of facts this should be further
+p	datacenter to get policies from
+provision info	provision information class
+group	this is a generic group manipulation class that is subclassed based on platform
+no sslerror	needed to connect to an https url but no ssl library available to verify the certificate
+galaxy login	class to handle authenticating user with galaxy api prior to performing cud operations
+open bsduser	this is a openbsd user manipulation class
+now	simulate time -- used for unit testing
+open bsdstrategy	this is a openbsd family hostname manipulation strategy class - it edits the /etc/myname file
+galaxy	keeps global galaxy info
+name	name of the autoscaler
+inventory script	host inventory parser for ansible using external inventory scripts
+software	software class
+templar	the main class for templating with the main entry-point of template()
+address classes	address group/class class
+pools	pools class
+name	name of the loadbalancer to delete
+entity	entity we want to update if exists
+ansible internal error	internal safeguards tripped something happened in the code that should never happen
+service	service of the entity
+sestore	selinux store
+name	base name to assign the public ip address
+alert_policy_name	the alert policy name
+base selector	abstract selector class a selector supports registering file objects to be monitored
+parent	clc_sdk.parent - the parent group for {group}
+privs	either a list of privileges to grant/revoke
+firewall_policy_id	id of the firewall policy to get
+inventory parser	takes a yaml-format inventory file and builds a list of groups and subgroups with their associated hosts and variable settings
+resource_group	name of a resource group
+expiration_days	the number of days to keep the snapshot
+tag	image tag
+parent_group	clc_sdk.group - the parent group to start the walk
+ejabberd user exception	base exception for ejabberduser class object
+sslvalidation error	failure to connect due to ssl validation failing
+fail_condition	function which checks incorrect state of entity if it returns true exception is raised
+inventory parser	takes an ini-format inventory file and builds a list of groups and subgroups with their associated hosts and variable settings
+state	the state for which the respective command name is required
+as_params	dictionary in ansible-playbook format
+datacenter	the datacenter to search for the template
+volumes	array of bind dicts
+status	enabled / disabled
+server_params	a dictionary of params to use to create the servers
+rhevconn	connection to rhev-m
+servers	list of servers to add alert policy to
+name	the name of the load balancer
+lowerdir	name/path of the lower directory
+ansible action skip	an action runtime skip
+ansible error	this is the base class for all errors raised from ansible code and can be instantiated with two optional parameters beyond the
+httpsclient auth handler	handles client authentication via cert/key
+existing_obj	dict representing current http resource in avi controller
+update_params	the params which should be passed to update method
+unsafe_shell	enable or disable unsafe sell commands
+requests_lst	the list of clc request objects
+mig	managed instance group object from libcloud
+module	the ansiblemodule object
+datacenter	the datacenter to search for a network id
+alert_policy_id	the alert policy id
+hpux	hp-ux-specific subclass of hardware defines memory and cpu facts
+default vmconfig	shallow and deep dict comparison for interfaces
+resource_group	name of an existing resource group
+lazy disk image	object for lazy instantiation of disk image gce
+darwin group	this is a mac os x darwin group manipulation class
+trunks	trunks class
+wait_limit	the number of times to check the status for completion
+module	ansible module reference
+name	the overlay repository id to sync
+msg	str message to report
+firewall_dict	dictionary of request parameters for firewall policy
+filter module	ip address and network manipulation filters
+callback module	selective py callback plugin
+class_name	name of the object's class
+port	the port that the load balancer listens on
+temp_dir	path to the temporary local working directory
+firewall_policy_id	firewall policy id to update
+open bsdnetwork	this is the openbsd network class
+open bsdhardware	openbsd-specific subclass of hardware defines memory cpu and device facts
+sun os	this is a sunos group manipulation class solaris doesn't have
+autoscaler	an initialized gceautoscaler
+connection	func-based connections
+module	the ansiblemodule instance to use
+module six moves urllib request	lazy loading of moved objects in six moves urllib_request
+invalid opts parser	ignore invalid options
+connection	winrm connections over http/https
+keyset	reference on keyset model from which reference on block
+params	dictionary of parameters needed by the module
+server_ids	the list of server_ids to delete the snapshot
+port	port or port range (example "8080", "8080-9090")
+obj	azure object
+result_state	state which should entity has in order to finish task
+free bsdnetwork	this is the freebsd network class
+ports	the list of ports to expose
+allocation_method	one of 'static' or 'dynamic'
+request with method	workaround for using delete/put/etc with urllib2
+playbook executor	this is the primary class for executing playbooks and thus the basis for bin/ansible-playbook operation
+cache module keys	a set subclass that keeps track of insertion time and persists the set in memcached
+state	"present" to grant privileges "absent" to revoke
+package_id	the blueprint package id
+path	full path to location of file which should be read'ed
+nodes	a list of dictionaries containing the nodes to set
+alert_policy_id	the clc alert policy id
+ejabberd user	this object represents a user resource for an ejabberd server the
+aix	this is the aix service src manipulation class - it uses lssrc startsrc stopsrc and refresh for service control
+profile client ssl	client ssl profiles class
+source_account_alias	the source account alias for the firewall policy
+data loader	the dataloader class is used to load and parse yaml or json content either from a given file name or from a string that was previously
+msg	error message text
+ansible parser error	something was detected early that is wrong about a playbook or data file
+group	a group of ansible hosts
+play context	this class is used to consolidate the connection information for hosts in a play and child tasks where the task may override some
+entity	entity to be created or updated
+ports	list of ports and port ranges to add (e.g. ["8080", "8080-9090"])
+task	a task is a language feature that represents a call to a module with given arguments and other parameters
+objs	list of database objects to grant/revoke
+pre_action	function which is executed before running the action
+upperdir	name/path of the upper directory
+net bsd service	this is the netbsd service manipulation class - it uses the /etc/rc conf
+schema_qualifier	some object types ("table", "sequence",
+role include	a derivative of roledefinition used by playbook code when a role is included for execution in a play
+module	the underlying ansible module
+inventory directory	host inventory parser for ansible using a directory of inventories
+elb information	handles elb information
+connection	lxd based connections
+nosystemd timezone	this is a timezone manipulation class for non systemd-powered linux
+fail_condition	if this condition is true raise exception
+free bsd group	this is a freebsd group manipulation class
+mount_point	path on the file system that is mounted
+module	the module to check for intended state
+server_ids	the list of server ids
+do_reload	whether to reload selinux policy after commit
+module six moves urllib parse	lazy loading of moved objects in six moves urllib_parse
+dest	the absolute path of where to save the downloaded content to
+kwargs	additional parameters passed when removing entity
+vars module	loads variables for groups and/or hosts
+action base	this class is the base class for all action plugins and defines code common to all actions
+firewall_dict	firewall policy to delete
+count	number of times this command has been called by itself
+user_agent_product	user agent product. eg 'ansible-python-api'
+snapshot_name	name of lv snapshot
+pool_id	the id string of the load balancer pool
+require_valid_json	if true require credentials to be valid json. default is true
+ce config mixin	ceconfigmixin
+net bsdhardware	netbsd-specific subclass of hardware defines memory and cpu facts
+lb_id	the loadbalancer id
+kwargs	any key=value pairs
+server	the server to start or stop
+package_id	the blue print package id
+protocol	the ip protocol
+lb_id	the id string of the provided load balancer
+cli	the cli string
+config	the layman's configuration to use optional
+response	response from firewall creation api call
+account	reference on pubnub account model from which reference
+action module	print statements during execution
+user_agent_version	version string to append to product. eg 'na' or '0.1'
+datacenter	clc-sdk.datacenter instance to search for the group
+vg_name	name of volume
+name	name of the address
+clc	the clc-sdk instance
+repository	path to the repository. required
+description	string - a text description of the group
+firewall_policy_id	the firewall policy id
+linux tcpconnection info	this is a tcp connection info evaluation strategy class that utilizes information from linux's procfs
+svc	main class that handles daemontools can be subclassed and overridden in case
+connection	ssh based connections with paramiko
+server_id	the clc server id
+instance	a spanner instance object
+filter_list	list of 'currentaction' strings to filter on. only
+ansible callback error	a callback failure
+acmeclient	acme client class uses an acme account object and a csr to
+req	dict data for avi api call
+clc	the clc-python-sdk instance to use
+host data	data about an individual host
+datacenter	string - the datacenter to walk (ex 'uc1')
+container_name	name of the container
+lookup module	sequence lookup module used to generate some sequence of items
+policy_name	name of the alert policy
+entity	entity we want to run action on
+elb manager	handles ec2 instance elb registration and de-registration
+module six moves urllib response	lazy loading of moved objects in six moves urllib_response
+alert_policy_name	the name of the alert policy
+galaxy cli	command to manage ansible roles in shared repostories the default of which is ansible galaxy *https //galaxy ansible com*
+rule_type	set to 'default' if the rule is part of the default set of rules
+params	ansible dictionary containing named_ports configuration
+system info	system information class
+group_name	string - the group to check
+ansible module error	a module failed somehow
+pushover	instantiates a pushover object use it to send notifications
+aixnetwork	this is the aix network class
+module args parser	there are several ways a module and argument set can be expressed # legacy form for a shell command
+parent_name	string - the name of the parent group for group_name
+params	structure that contains the fields
+smart ostimezone	this is a timezone manipulation class for smartos instances
+zone	zone that the autoscaler is located in
+rdp_port	for os_type 'windows' port used in rule allowing rdp access
+libcloud not found	exception raised when apache libcloud cannot be found
+description	description for loadbalancer to be created
+complex dict	transforms a dict to with an argument spec this class will take a dict and apply an ansible argument spec to the
+unknown network error	exception raised when a network or network domain cannot be found
+params	dictionary of autoscaling parameters
+darwin user	this is a darwin mac os x user manipulation class
+callback module	ansible logstash callback plugin ansible
+terminal base	a base class for implementing cli connections
+darwin network	this is the mac os x/darwin network class
+certificates	certificates class
+alias	alias of account
+container_path	path to the container container
+alias	the account alias
+gce	an initialized gce driver object
+p	datacenter to create policy in
+push	bool. push the image once it's tagged
+module six moves urllib error	lazy loading of moved objects in six moves urllib_error
+tcpconnection info	this is a generic tcp connection info strategy class that relies on the psutil module which is not ideal for targets but necessary
+module six moves urllib robotparser	lazy loading of moved objects in six moves urllib_robotparser
+params	ansible dictionary containing autoscaling configuration
+proxy client pool	memcached connection pooling for thread/fork safety inspired by py-redis
+virtual servers	virtual servers class
+f5	f5 icontrol class
+module	ansible module
+facter	this is a subclass of facts for including information gathered from facter
+base module	this is base class for ovirt modules ovirt modules should inherit this
+callback module	logs ansible-playbook and ansible runs to a syslog server in json format make sure you have in ansible
+rule	dict
+callback module	makes ansible much more exciting on os x
+persistence	the load balancing persistence type
+action module	pauses execution for a length or time or until input is received
+server_id	id of the server to modify
+vm	virtualmachine object
+server_ids	list of servers to modify
+keydict	a dictionary that maintains the order of keys as they are added this has become an abuse of the dict interface
+build_command	used for the command and all options
+services	the services to format. this is always a python set
+connection	local iocage based connections
+free bsdhardware	freebsd-specific subclass of hardware defines memory and cpu facts
+ansible mapping	sub class for dictionaries
+ecs service manager	handles ecs services
+credentials_file	path on disk to credentials file
+sslvalidation handler	a custom handler class for ssl validation
+playbook cli	the tool to run *ansible playbooks*, which are a configuration and multinode deployment system
+callback module	this is an example ansible callback plugin that sends status updates to a hipchat channel during playbook execution
+registry_id	optional string containing the registryid
+sun os	this is a sunos user manipulation class - the main difference between this class and the generic user class is that solaris-type distros
+py vmomi device helper	this class is a helper to create easily vmware objects for pyvmomihelper
+parent_name	string - the parent of group_name
+module	the ansible module to fetch command
+ecs cluster manager	handles ecs clusters
+lookup module	transpose a list of arrays
+package_params	the package arguments
+hardware	this is a generic hardware subclass of facts this should be further
+setype	selinux type
+sns topic manager	handles sns topic creation and destruction
+port	the port that the load balancer will listen on
+next action	the next action after an interpreter's exit
+lv_name	name of volume
+vnet	virtualnet object
+cache module	a caching module backed by yaml files
+module	the ansible module to fetch input parameters
+mig	an initialized gceinstancegroupmanager
+callback module	this callback will report facts and reports to foreman https //theforeman org/
+bsdtimezone	this is the timezone implementation for *bsd which works simply through updating the /etc/localtime symlink to point to a valid timezone name under
+poll_interval	number of seconds we should wait until next condition check
+nodes	the list of nodes to be updated to the pool
+p	datacenter to delete a policy from
+proto	protocol ('tcp' or 'udp')
+rhsm pools	this class is used for manipulating pools subscriptions with rhsm
+module	the ansiblemodule instance
+public_ip_protocol	a protocol to allow for the public ips
+aix	this is a aix user manipulation class
+entity	entity which was created
+nodes	nodes class
+search_params	dictionary of parameters to be used for search
+timezone	this is a generic timezone manipulation class that is subclassed based on platform
+variables_dict	pre-parsed optional variables used from a
+ansible lookup error	a lookup failure
+systemd timezone	this is a timezone manipulation class for systemd-powered linux
+open bsdvirtual	this is a openbsd-specific subclass of virtual it defines
+ansible context	a custom context which intercepts resolve() calls and sets a flag internally if any variable lookup returns an ansibleunsafe value
+ansible j2vars	helper class to template all variable content before jinja2 sees it this is
+task data	data about an individual task
+aa_policy_name	the anti affinity policy name
+post_action	function which is executed after running the action
+p	dictionary of policy name
+play	a play is a language feature that represents a list of roles and/or task/handler blocks to execute on a given set of hosts
+linux hardware	linux-specific subclass of hardware defines memory and cpu facts
+strategy base	this is the base class for strategy plugins which contains some common code useful to all strategies like running handlers cleanup actions etc
+zone	zone that the managed instance group is located in
+nodes	the list of nodes to be removed
+missing credentials error	exception raised when credentials for dimension data cloudcontrol cannot be found
+memory	the new memory value
+ecs exec manager	handles ecs tasks
+six meta path importer	a meta path importer to import six moves and its submodules
+include role	a role include is derived from a regular role to handle the special circumstances related to the - include_role
+tags	dictionary of string string pairs
+module	ansible module containing the validated configuration for the deployment template
+pool_id	the id string of the pool
+module	initialized ansible module object
+account	reference on pubnub account model which will be
+net bsdnetwork	this is the netbsd network class
+lb_id	the id string of the load balancer
+wait_timeout_secs	fail this step after this many seconds
+lookup_group	the group to look for
+moved items	lazy loading of moved objects
+enum_modules	list of module names to build enum dependencies from
+name	name of the managed instance group
+device_group	panorama device group or if none then 'all'
+ansible base yamlobject	the base class used to sub-class python built-in objects
+hpuxnetwork	hp-ux-specifig subclass of network defines networking facts
+hurd hardware	gnu hurd specific subclass of hardware define memory and mount facts
+server_ids	the server list where the package needs to be installed
+net bsd group	this is a netbsd group manipulation class
+callback module	this ansible callback plugin mails errors to interested parties
+task queue manager	this class handles the multiprocessing requirements of ansible by creating a pool of worker forks a result handler fork and a
+project_id	gcp project id
+sun oshardware	in addition to the generic memory and cpu facts this also sets swap_reserved_mb and swap_allocated_mb that is available from *swap -s*
+sun osservice	this is the sunos service manipulation class - it uses the svcadm command for controlling services and svcs command for checking status
+snapshot_size_gb	size of snapshot to create
+request_list	a list of clc-sdk.request instances
+param2	value of entity parameter
+name	name of the image. required
+netconf	netconf
+client	aws api client reference boto3
+location	the datacenter the load balancer resides in
+sv	main class that handles daemontools can be subclassed and overridden in case
+module	ansiblemodule
+acmedirectory	the acme server directory gives access to the available resources
+connection	local based connections
+module	module to validate
+timeout	max time to wait in seconds
+vlans	vlans class
+source_lv	name of lv to snapshot
+name	name of the entity
+callback module	logs playbook results per host in /var/log/ansible/hosts
+action module	create inventory groups based on variables
+os_type	one of 'windows' or 'linux'. determins any default rules added to the security group
+nmcli	this is the generic nmcli manipulation class that is subclassed based on platform
+dimension data network module	the dimensiondata_network module for ansible
+free bsdstrategy	this is a freebsd hostname manipulation strategy class - it edits the /etc/rc
+self ips	self ips class
+complex list	extends complexdict to handle a list of dicts
+child_group	clc_sdk.group - the child group to start the walk
+replace	the method used to generate the replacement lines
+policy_name	name of the policy
+count_group	the group to count the servers
+name	the overlay id to uninstall
+callback module	this is an ansible callback plugin that sends status updates to a slack channel during playbook execution
+galaxy api	this class is meant to be used as a api client for an ansible galaxy server
+task result	this class is responsible for interpreting the resulting data from an executed task and provides helper methods for determining
+roles	either a list of role names or "public"
+cloud trail manager	handles cloudtrail configuration
+action module	fail with custom message
+obj_tags	dictionary of tags from an azure object
+rules	rules class
+callback module dense	this is the dense callback interface where screen estate is still valued
+module	the ansible module to fetch username password and switch
+elb manager	handles elb creation and destruction
+group	clc_sdk.group - the group to create
+source_dir	path to the directory to be archived
+public_ip_ports	list of ports to allow for the public ips
+nodes_to_remove	a list of dictionaries containing the nodes to remove
+tag_list	list of tag keys or tag key value pairs
+server_params	the dictionary of server parameters
+red hat strategy	this is a redhat hostname strategy class - it edits the /etc/sysconfig/network file
+should_add_public_ip	boolean - whether or not to provision a public ip for servers. skipped if false
+parent_name	the name of the parent group for group_name
+vault cli	can encrypt any structured data file used by ansible
+aggregate stats	holds stats about per-host activity during playbook runs
+device groups	device groups class
+connection	cli shell ssh connections on paramiko
+lv_name	the name of the logical volume
+connection	local docker based connections
+service	this is the generic service manipulation class that is subclassed based on platform
+connection base	a base class for connections to contain common code
+credentials_file	path to file on disk
+vault aes256	vault implementation using aes-ctr with an hmac-sha256 authentication code
+group_list	a list of groups to search
+dimension data module	the base class containing common functionality used by dimension data modules for ansible
+cron tab	crontab object to write time based crontab file user - the user of the crontab defaults to root
+sun osnetwork	this is the sunos network class
+command	command to run this can be a script and can use spacing
+path	context in the network config to filter the diff
+inventory	host inventory for ansible
+lv_name	name of the logical volume to mount
+server_ids	the list of server_ids to create the snapshot
+message	the error message to raise if there is any error
+message	the error message to throw in case of any error
+nodes_to_add	a list of dictionaries containing the nodes to add
+container manager	perform container management tasks
+num	number to round up
+ansible connection failure	the transport / connection_plugin had a fatal error
+servers	list of servers to add public ips to
+resource_group	string. name of a resource group
+base meta	metaclass for the base object which is used to construct the class attributes based on the fieldattributes available
+conditional	used in command modules to evaluate waitfor conditions
+ssh_port	for os_type 'linux' port used in rule allowing ssh access
+cache module	a caching module backed by pickle files
+ansible unicode	sub class for unicode objects
+cron var	cronvar object to write variables to crontabs
+connection	local zone based connections
+callback module	override for the default callback module
+shared plugin loader obj	a simple object to make pass the various plugin loaders to
+entity	entity we want to remove
+group_description	a short description of the server group used when creating
+serange	selinux mls/mcs range (defaults to 's0')
+connection	ssh based connections
+account	reference on pubnub account model which will be used in
+conn_info	connection info needed
+ports	list of ports and port ranges to delete (e.g. ["8080", "8080-9090"])
+action_condition	function which is executed when checking if action should be executed
+location	datacenter
+headers	headers to convert
+rsp	apiresponse object returned from apisession
+aws	aws client connection
+nodes_to_check	the list of nodes to check for
+connection	connection to the python sdk
+list_url	the url of the remote repositories list to look for the overlay
+force	bool. force tagging even it image already exists with the repository path
+hostname	this is a generic hostname manipulation class that is subclassed based on platform
+cloud formation service manager	handles cloudformation services
+interfaces	interfaces class
+darwin	darwin-specific subclass of hardware defines memory and cpu facts
+package_params	the required argument dict for the package installation
+connection	netconf connections
+role requirement	helper class for galaxy which is used to parse both dependencies specified in meta/main
+application	reference on pubnub application model from which
+selector mapping	mapping of file objects to selector keys
+aix	this is a aix group manipulation class
+retries	the number of retry attempts to make prior to fail. default is 5
+haproxy	used for communicating with haproxy through its local unix socket interface
+entity	entity which was updated
+cli	code behind bin/ansible* programs
+description	description of loadbalancer
+alias	the clc account alias
+ansible dumper	a simple stub class that allows us to add representers for our overridden object types
+seport	instance of seobject.portrecords
+role metadata	this class wraps the parsing and validation of the optional metadata within each role (meta/main
+generic bsd ifconfig network	this is a generic bsd subclass of network using the ifconfig command
+plugin loader	pluginloader loads plugins from the configured plugin directories
+py vmomi cache	this class caches references to objects which are requested multiples times but not modified
+firewall_policy_id	firewall policy id to delete
+csvreader	a csv reader which will iterate over lines in the csv file "f", which is encoded in the given encoding
+location	azure location name
+free bsd user	this is a freebsd user manipulation class - it uses the pw command to manipulate the user database followed by the chpass command
+other	instance of networkconfig to diff against
+cli	cli
+rc	int return code while executing an ansible command
+callback module	this callback module provides per-task timing ongoing playbook elapsed time and ordered list of top 20 longest running tasks at end
+network	this is a generic network subclass of facts this should be further
+acct_alias	the clc account alias
+param	value to be converted
+cloud retry	cloudretry can be used by any cloud provider in order to implement a backoff algorithm/retry effect based on status code from exceptions
+task include	a task include is derived from a regular task to handle the special circumstances related to the - include
+linux virtual	this is a linux-specific subclass of virtual it defines
+net app cdotuser	common operations to manage users and roles
+group_name	string - the name of the clc server group to delete
+changed	whether something changed in this module
+galaxy token	class to storing and retrieving token in ~/ ansible_galaxy
+build_command	command to run
+cli base	basic paramiko-based ssh transport any networkmodule can use
+open bsd group	this is a openbsd group manipulation class
+connection	wrapper around a psycopg2 connection with some convenience methods
+linux network	this is a linux-specific subclass of network it defines
+resource_group	resource group name
+hpuxvirtual	this is a hp-ux specific subclass of virtual it defines
+alert_policy_id	the alert policy id to be associated to the server
+rhsm pool	convenience class for housing subscription information
+connection error	failed to connect to the server
+nodes	the list of nodes to be added
+homebrew	a class to manage homebrew packages
+base file cache module	a caching module backed by file based storage
+name	name of the backend service
+action module	create inventory hosts and groups in the memory inventory
+net	the inspection output for an existing network
+p	dictionary of a policy name
+distribution	this subclass of facts fills the distribution distribution_version and distribution_release variables to do so it checks the existence and content of typical files in /etc containing distribution information
+name	name of loadbalancer
+module six moves urllib	create a six moves urllib namespace that resembles the python 3 namespace
+match	type of diff to perform. valid values are 'line',
+policy_id	the alert policy id
+osxdefaults	class to manage mac os user defaults
+slesstrategy	this is a sles hostname strategy class - it edits the /etc/hostname file
+location	a valid azure location
+name	the overlay id
+module	ansible make module instance
+entity	entity we want to compare with ansible module values
+worker process	the worker thread class which uses taskexecutor to run tasks read from a job queue and pushes results into a results queue
+block	reference on block model from which reference on event
+alpine strategy	this is a alpine linux hostname manipulation strategy class - it edits the /etc/hostname file then run hostname -f /etc/hostname
+module	processed ansible module
+field_list	list of dict representing the fields
+console cli	a repl that allows for running ad-hoc tasks against a chosen inventory (based on dominis' ansible-shell)
+output	output to sanitize
+wait_condition	function which is executed when waiting on result state
+host	a single ansible host
+server_ids	list of servers to delete
+alias	the account alias to search
+hurd pfinet network	this is a gnu hurd specific subclass of network it use fsysopts to
+ansible undefined variable	a templating failure
+name	name of the load balancer
+connection	local bsd jail based connections
+callback module	this callback writes playbook output to a junit formatted xml file
+scopes	list of scopes
+keys	keys class
+filter module	query filter
+clc	clc-sdk instance to use
+server	the server object where the package needs to be installed
+nagios	perform common tasks in nagios related to downtime and notifications
+wait	if true wait for condition if false don't wait
+name	base name to use for the security group
+sun osvirtual	this is a sunos-specific subclass of virtual it defines
+servers	list of clc-sdk.server instances to refresh
+link	link of the entity
+homebrew cask	a class to manage homebrew casks
+param1	user inputted parameter
+clc	the clc-sdk instance to use
+alert_policy_id	the alert policy
+options	opts_string looks like 'discard foo=bar baz=greeble'
+solaris strategy	this is a solaris11 or later hostname manipulation strategy class - it execute hostname command
+server	the clc server object
+ansible runtime error	ansible had a problem while running a playbook
+linux service	this is the linux service manipulation class - it is currently supporting a mixture of binaries and init scripts for controlling services started at
+svr_uuid	uuid of the server
+state	the intended powerstate for the server
+location	datacenter of the firewall policy
+user	reference on authorized user for which one of accounts
+ecs task manager	handles ecs tasks
+alias	alias for account
+cli	the complete cli string to be executed on the target node s

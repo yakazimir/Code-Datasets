@@ -1,0 +1,342 @@
+trace	a record of the past data the algorithm has seen with an entry for each iteration
+backtracking tm	class implementing the temporal memory algorithm as described in the published cortical learning algorithm documentation
+model result	a structure that contains the input to a model and the resulting predictions as well as any related information related to the predictions
+database connection policy iface	database connection policy base class/interface
+period	the period of the duty cycle
+recordNum	record number of this input pattern. record numbers
+spec item	wrapper that translates the data type and access code to a string the original values are an enumerated type in c++ that become
+hs search type	this class enumerates the types of search we can perform
+model chooser	utility class to help with the selection of the 'best' model during hypersearch for a particular job
+region identity policy base	a base class that must be subclassed by users in order to define the testregion instance's specialization
+input	datetime representing the time being encoded
+task runner	this class is responsible for running a single experiment task on the
+inputData	the input data in the format it is received from the data
+categoryToRemove	category label to remove
+scalarValues	input values to encode to string
+error reporting exception	this exception may be raised by our error result reporting code when
+phase manager	manages iteration cycle phase drivers
+pass through encoder	pass an encoded sdr straight to the model
+test option parser	option parser with predefined test options
+sequence machine	base sequence machine class
+claclassifier diff	classifier-like object that diffs the output from different classifiers
+classification	dict of the classification information
+autoRewind	bool
+swarm terminator	class that records the performane of swarms in a sprint and makes decisions about which swarms should stop running
+strings trace	each entry contains strings for example sequence labels
+iteration phase	interface for iterationphasexxxxx classes
+claclassification record	a single record to store data associated with a single prediction for the anomaly classifier
+idsToRemove	a list of row indices to remove
+iteration phase spec learn and infer	this class represents the learn-and-infer phase of the iteration cycle in the taskcontrol block of description
+sdrclassifier	the sdr classifier accepts a binary input pattern from the level below (the "activationpattern") and information from the sensor and
+basic prediction logger	this class implements logging of predictions to files as actual vs predicted values
+model record encoder	encodes metric data input rows for consumption by opf models see
+scalarNames	optional input of scalar names to convert. if none gets
+sparse matrix cortical column adapter	many functions in spatialpooler operate on a columnindex but use an underlying storage implementation based on a sparse matrix in which cortical
+htmprediction model invalid range error	raised when supplied ranges to a method are invalid
+multi encoder	a multiencoder encodes a dictionary or object with multiple components a
+actValues	array of actual values typically obtained from
+metricData	numpy array of metric data. used to calculate minval
+model stats	@private
+field meta type	public values for the field data types valid types are
+perm	an array of permanence values for a column. the array is
+invalid function arg exception	this exception may be raised in response to invalid or incompatible function arguments
+output	to print
+encoded	the encoded output that you want decode
+hypersearch v2	the v2 hypersearch implementation this is one example of a hypersearch
+function source	a source of programmatically-generated data
+modify fields	this recordsensor filter adds noise to the input
+nupic job	@private
+prediction writer iface	this class defines the interface for prediction writer implementation
+formatted	if true the bitoffset is w.r.t. formatted output
+idx	index of the training pattern
+model	this is the base class that all opf model implementations should subclass
+iteration phase learn only	this class implements the "learn-only" phase of the iteration cycle
+modelResult	a :class ~.nupic.frameworks.opf.opfutils.modelresult
+numRecords	how far to seek from end of file
+anomaly region	region for computing the anomaly score
+stream reader	implements a stream reader this is a high level class that owns one or more
+permute float	define a permutation variable which can take on floating point values
+dimensions	represent the topology of an n-dimensional region basically it is a list of integers such as [4 8 6]
+invalid command arg exception	this exception may be raised in response to invalid or incompatible command arguments/values
+temporal memory monitor mixin	mixin for temporalmemory that stores a detailed history for inspection and debugging
+claclassifier factory	factory for instantiating cla classifiers
+consecutive pattern machine	pattern machine class that generates patterns with non-overlapping consecutive on bits
+svmclassifier node	svmclassifiernode implements support vector machines svms which can be used to perform supervised learning by mapping a set of top-level groups beliefs onto
+wrapAround	a boolean value indicating that boundaries should be
+inputData	data to encode. this should be validated by the encoder
+inputRow	sequence of values corresponding to a single input metric
+exponential regression	helper class for computing the average percent change for a best-fit exponential function given a set of x y points
+custom configuration file wrapper	private class to handle creation deletion and editing of the custom configuration file used by this implementation of configuration
+parentFieldName	the name of the encoder which is our parent. this
+inference type	enum one of the following
+moving mode	helper class for computing windowed moving
+iteration phase infer common	basic class providing common implementation for
+metric rmse	computes root-mean-square error
+job fail exception	if a model raises this exception then the runmodelxxx code will mark the job as canceled so that all other workers exit immediately and mark
+cortical columns	sparsematrix variant of _sparsematrixcorticalcolumnadapter use in cases
+permutation utils	@private
+verbosity	integer controlling extent of printouts for debugging
+metric pass thru prediction	this is not a metric but rather a facility for passing the predictions generated by a baseline metric through to the prediction output cache produced
+knnanomaly classifier region	knnanomalyclassifierregion wraps the knnclassifierregion to classify htm_prediction_model state
+exp generator exception	base class for all expgenerator-specific exceptions
+iteration phase infer only	this class implements the "infer-only" phase of the iteration cycle
+random distributed scalar encoder	a scalar encoder encodes a numeric floating point value into an array of bits
+model factory	static factory class that produces a model based on a description dict
+report csvwriter	@private
+pattern machine	base pattern machine class
+metrics iface	a metrics module compares a prediction y to corresponding ground truth x and returns a single measure representing the "goodness" of the prediction
+log encoder	this class wraps the :class scalarencoder
+mapping	list of new category indices. for example mapping=[2 0 1]
+opftask driver	task phase driver implementation conceptually the client injects input records one at a time into
+collection wrapper	wrap an nupic :collection with a dict-like interface the optional valuewrapper is used to wrap values for adaptation purposes
+array parameter helper	this class is used by region _getparametermethods
+counts trace	each entry contains counts (for example # of predicted => active cells)
+computeScores	no effect
+density	the fraction of columns to survive inhibition
+prefix	printed before the header if specified
+overCategories	no effect
+per transaction connection policy	this connection policy establishes/breaks a new connection for every high-level transaction (i
+knnclassifier	this class implements nupic's k nearest neighbor classifier knn is very
+encoder	(:class .encoder) the encoder to add
+metrics trace	each entry contains metrics (for example metric for # of predicted => active cells)
+invalid connection exception	this exception is raised when a worker tries to update a model record that belongs to another worker
+potential	a numpy array specifying the potential pool of the column
+verbosity	@private
+delta encoder	this is an implementation of a delta encoder the delta encoder encodes
+weather joiner	given a data file in standard numenta format and the types of weather you are interested in
+pooled connection policy	this connection policy maintains a pool of connections that are doled out as needed for each transaction
+spatial pooler	this class implements the spatial pooler it is in charge of handling the
+mask	the indices of the columns whose permanences need to be
+coordinate encoder	given a coordinate in an n-dimensional space and a radius around that coordinate the coordinate encoder returns an sdr representation
+temporal memory shim	temporal memory => tm shim class
+sdrcategory encoder	encodes a list of discrete categories described by strings that aren't related to each other
+skipRecords	integer specifying number of records to skip when
+connections	class to hold data representing the connectivity of a collection of cells
+inputVector	a numpy array of 0's and 1's that comprises the input to
+network visualizer	network visualization framework entry point
+monitored tmshim	tm => monitored temporal memory shim class
+activeArray	an array whose size is equal to the number of columns
+description iface	this is the base interface class for description api classes which provide opf configuration parameters
+indices trace	each entry contains indices (for example of predicted => active cells)
+inputValue	optional value of current input to encoders
+hypersearch worker	the hypersearchworker is responsible for evaluating one or more models within a specific hypersearch job
+client job utils	@private
+configuration	this class extends the configurationbase implementation with the ability to read and write custom persistent parameters
+sine wave	generates a sinewave of a given period amplitude and phase shift
+averagingWindow	integer number of records to average over
+patternNZ	list of the active indices from the output below
+minVal	minimum value of metric. used to set up encoders. if none
+records	array of records as in
+linear regression	helper class to compute the slope of a best-fit line given a set of x y points
+configuration base	this class can be used to fetch nupic configuration settings which are stored in one or more xml files
+tmshim mixin	tm => temporal memory shim class
+prevPredictedColumns	array of columns indices predicted in prev step
+inputPattern	pattern to check overlap of
+extended logger	extends the log message by appending custom parameters
+aggregate metric	partial implementation of metrics interface for metrics that accumulate an error and compute an aggregate score potentially
+lock attributes mixin	this class serves as a base or mixin for classes that want to enforce the locked attributes pattern (all attributes should be defined in __init__()
+non temporal prediction log adapter	this class serves as an adapter for a client-instantiated non-temporal log writer
+single shared connection policy	this connection policy maintains a single shared database connection
+fieldStatistics	dictionary of dictionaries with the first level being
+model completion reason	@private
+region	@doc place_holder region description
+metric nrmse	computes normalized root-mean-square error
+dataset reader iface	this is the interface class for a dataset readers
+cell data	class containing cell information internal to the connections
+serializable	serializable base class establishing read() and write() abstract methods readfromfile() and writetofile() concrete methods to support
+iteration phase spec learn only	this class represents the learn-only phase of the iteration cycle in the taskcontrol block of description
+pluggable encoder sensor	a pluggableencodersensor holds a value and encodes it into network output
+periodic activity mgr	todo move to shared script so that we can share it with run_opf_experiment
+bitOffset	offset of the bit to get the description of
+learn	bool if true learn this sample
+value getter base	base class for "value getters" (e g class dictvaluegetter) that are used
+geospatial coordinate encoder	given a gps coordinate and a speed reading the geospatial coordinate encoder returns an sdr representation
+permute variable	the base class of all permutexxx classes that can be used from within a permutation script
+classification	dict of the classification information where
+record	a list of python objects that will be string-ified
+sensor input	represents the mapping of a given inputrecord by the sensor region's encoder
+fieldInfoTuple	must contain name, type, and special
+metric negative log likelihood	computes negative log-likelihood likelihood is the predicted probability of
+bit history	class to store an activationpattern bit history
+add noise	this recordsensor filter adds noise to the input
+hs state	this class encapsulates the hypersearch state which we share with all other workers
+metric two gram	computes error metric based on one-grams the groundtruth passed into
+newInput	a new numerical value used to update the duty cycle
+monitor mixin base	base class for monitormixin each subclass will be a mixin for a particular
+tee	this class captures standard output and writes it to a file
+auto reset filter	initial implementation of auto-reset is fairly simple you just give it a
+anomalyScore	the current anomaly score
+network	@doc place_holder network description
+output	numpy 1-d array of same length returned by
+network xrenderer	network visualization "renderer" implementation to render a network with graphviz
+connectedPct	a value between 0 or 1 governing the chance for each
+dot renderer	network visualization "renderer" implementation to render a network to a dot-formatted document suitable for use w/ graphviz
+historicWindowSize	int size of sliding window of historical
+backtracking tmcpp	class implementing the temporal memory algorithm as described in the published cortical learning algorithm documentation
+network info	data type used as return value type by htmpredictionmodel
+create directory exception	raised on error creating the experiment directory
+index	the index identifying a column in the permanence potential
+stream timeout exception	defines the exception thrown when the input stream times out receiving new records
+proto	object capnp proto object specified in
+predictedColumns	array of columns indices predicted in this step
+dict value getter	creates a "future" reference to a value within a top-level or a nested dictionary
+na ninvalidator	validictory schemavalidator subclass to not accept nan values as numbers
+name	string name of encoder should be unique
+synapse	class containing minimal information to identify a unique synapse
+estimationSamples	int the number of reasonable anomaly scores
+custom error metric	custom error metric class that handles user defined error metrics
+spregion	spregion is designed to implement the spatial pooler compute for a given htm level
+client	simple opf client
+knnclassifier region	knnclassifierregion implements the k nearest neighbor classification algorithm
+claclassifier	a cla classifier accepts a binary input from the level below (the "activationpattern") and information from the sensor and encoders (the
+scalar encoder	a scalar encoder encodes a numeric floating point value into an array of bits
+numSVDDims	int number of egeinvectors used for projection
+learningPeriod	clalearningperiod deprecated - int the number of
+metric aae	computes average absolute error
+two gram model	two-gram benchmark model
+conditional probability table2d	holds frequencies in a 2d grid of bins
+record sensor	a record sensor rs retrieves an information "record" and encodes it to be suitable as input to an htm
+nupic model info	@private
+metric spec	this class represents a single metrics specification in the taskcontrol
+metric	a metric computed over a set of data (usually from a countstrace)
+fieldDataType	string candidate field data type
+timestamp	[optional] timestamp of the ocurrence
+claclassifier region	claclassifierregion implements a cla specific classifier that accepts a binary input from the level below (the "activationpattern") and information from the
+i	index of partition
+temporal memory	class implementing the temporal memory algorithm
+dutyCycles	an array containing one or more duty cycle values that need
+metric multi step probability	this is an "uber" metric which is used to apply one of the other basic metrics to a specific step in a multi-step prediction
+field meta special	public values for the "special" field attribute valid values are
+fields	a sequence of field attribute tuples conforming to the format
+inputCategory	int the category to be associated to the training
+temporal prediction log adapter	this class serves as an adapter for a client-instantiated temporal log writer
+metrics manager	this is a class to handle the computation of metrics properly this class
+results db	this class holds all the information we have accumulated on completed models which particles were used etc
+attr	string candidate value
+inputPattern	list a pattern to be classified
+finalize	bool whether to apply svd to the input patterns
+categoryIndices	single index or list of indices. can also be a
+htmprediction model pickle spinit args	saves sp initialization args
+metric multi	multi metric can combine multiple other sub metrics and weight them to provide combined score
+cat	if not none get the first pattern belonging to category cat. if
+connection factory	database connection factory
+metric ave error	simply the inverse of the accuracy metric
+cat	the required category of closest neighbor
+category encoder	encodes a list of discrete categories described by strings that aren't related to each other so we never emit a mixture of categories
+particle	construct a particle each particle evaluates one or more models
+data buffer	a simple fifo stack add data when it's available and
+bools trace	each entry contains bools for example resets
+anomaly likelihood region	region for computing the anomaly likelihoods
+htmprediction model invalid argument	raised when a supplied value to a method is invalid
+metric multi step	this is an "uber" metric which is used to apply one of the other basic metrics to a specific step in a multi-step prediction
+permute choices	define a permutation variable which can take on discrete choices
+graph viz renderer	network visualization "renderer" implementation to render a network with graphviz
+prediction metrics logger iface	this is the interface for output of prediction metrics
+tmImplementation	string specifying type of temporal memory implementation
+permute int	define a permutation variable which can take on integer values
+metric moving mode	computes error metric based on moving mode prediction
+htmprediction model pickle tpinit args	saves backtrackingtmcpp initialization args
+metric accuracy	computes simple accuracy for an enumerated type all inputs are treated as
+isSparse	int if 0 the input pattern is a dense representation. if
+file record stream	csv file based recordstream implementation each field is a 3-tuple (name, type, special or
+density	the fraction of columns to survive inhibition. this
+encoded	the encoded output. typically received from the topdown
+numSVDSamples	int the number of samples to use for the svd
+random categories	generates random categories
+patternNZ	list of the active indices from the output below. when the
+inputPattern	pattern to check distance with
+configuration	this class can be used to fetch nupic configuration settings which are stored in one or more xml files
+inputPattern	the pattern whose closest neighbor is sought
+special	one of the special field attribute values from
+value	the current metric ("raw") input value eg. "orange", or
+vectorIndices	single index or list of indices
+deferred dict lookup	creates a "future" reference to a value within an implicit dictionary that will be passed to applyvaluegetterstocontainer() in the future (typically
+metric alt mape	computes the "alternative" mean absolute percent error
+weightMatrix	numpy array of the weight matrix
+anomaly	utility class for generating anomaly scores in different ways
+hyper search job	@private
+basic dataset reader	this is a csv file-based implementation of datasetreaderiface
+overrides	overrides for default temporal memory parameters
+gaussian distribution	generates a gaussian distribution
+rowID	int unknown
+scalar space encoder	an encoder that can be used to permute the encodings through different spaces these include absolute value delta log space etc
+partitionId	int partitionid allows you to associate an id with each
+metric mape	computes the "classic" mean absolute percent error
+bad key error	if a model raises this exception then the runmodelxxx code will mark the job as canceled so that all other workers exit immediately and mark
+params	the json dict returned by estimateanomalylikelihoods
+basic prediction writer	this class defines the basic file-based implementation of
+encoder	an encoder converts a value to a sparse distributed representation
+field meta info	this class acts as a container of meta-data for a single field column of a dataset
+overlaps	an array containing the overlap score for each column
+actions	enum class for actions that can be performed
+inputRef	reference to the corresponding input (not applicable
+binary cortical columns	sparsebinarymatrix variant of _sparsematrixcorticalcolumnadapter use in
+metric moving mean	computes error metric based on moving mean prediction
+hyper search runner	@private
+parentFieldName	the name of the encoder which is our parent. this name
+anomalyScores	a list of records. each record is a list with the
+test case base	here we wrap the various unittest testcase assert methods (that
+model terminator	this is essentially an static class that handles the logic for terminating bad models
+record stream iface	this is the interface for the record input/output storage classes
+basic prediction metrics logger	this is the file-based implementation of the interface for output of
+opfdummy model runner	this class runs a 'dummy' opf experiment it will periodically update the
+job completion reason	@private
+progressCB	function callback to report progress
+proto	cap'n proto obj
+htmprediction model classifier helper	this class implements a record classifier used to classify prediction records
+opfmodel runner	this class runs an a given model
+date encoder	a date encoder encodes a date according to encoding parameters specified in its constructor
+segment	class containing minimal information to identify a unique segment
+aggregator	this class provides context and methods for aggregating records the caller
+inputPattern	list the pattern to be assigned a category. if
+reestimationPeriod	int how often we re-estimate the gaussian
+moving average	helper class for computing moving average and sliding window
+dict obj	dictionary that allows attribute-like access to its elements
+sdrclassifier region	sdrclassifierregion implements a sdr classifier that accepts a binary input from the level below (the "activationpattern") and information from the
+activeColumns	array of active column indices
+timeout error	the requested operation timed out
+console printer mixin	mixin class for printing to the console with different verbosity levels
+raisePerm	a boolean value indicating whether the permanence values
+expValues	array of expected scalar values typically obtained from
+iteration phase learn and infer	this class implements the "learn-and-infer" phase of the iteration cycle
+fieldName	name of the field this encoder is encoding provided by
+infer	bool if true perform inference
+partitionId	int if provided all training vectors with partitionid
+anomaly likelihood	helper class for running anomaly likelihood computation to use it simply
+minResolution	minimum resolution of metric. used to set up
+sparseBinaryForm	if true returns a list of the indices of the
+test region	testregion is designed for testing and exploration of cla network mechanisms
+permute encoder	a permutation variable that defines a field encoder this serves as
+inference shifter	shifts time for :class ~ nupic frameworks opf opfutils modelresult objects
+distributionParams	dict with 'mean' and 'stdev' of the distribution
+inputVector	a numpy array of 0's and 1's that comprises the input
+previous value model	previous value model
+tmregion	tmregion is designed to implement the temporal memory compute for a given cla level
+inputData	input data to be encoded
+sparse pass through encoder	convert a bitmap encoded as array indices to an sdr
+prediction logger iface	this class defines the interface for opf prediction logger implementations
+learn	a boolean value indicating whether learning should be
+htmprediction model exception	base exception class for cla model exceptions
+concurrency exceeded error	this exception is raised when g_max_concurrency is exceeded
+fieldName	name of the field
+node_attrs	node attributes to apply to all nodes in graph
+connection wrapper	an instance of this class is returned by acquireconnection() methods of our database connection policy classes
+features	this class can be used to retrieve available and calculated features for a given combination of running environment and user
+segment	the segment class is a container for all of the segment variables and the synapses it owns
+iteration phase spec infer only	this class represents the infer-only phase of the iteration cycle in the taskcontrol block of description
+metric trivial	computes a metric against the ground truth n steps ago the metric to
+invalid spparam value error	the user passed an invalid value for a spatialpooler parameter
+metric neg auc	computes -1 * auc area under the curve of the roc receiver operator characteristics curve
+timestamp	optional date timestamp when the sample occured
+adaptive scalar encoder	this is an implementation of the scalar encoder that adapts the min and max of the scalar encoder dynamically
+data generator	the datagenerator provides a framework for generating encoding saving and exporting records
+nupic job fail exception	this exception signals that the nupic job (e g hypersearch production
+inputData	the data from the source. this is typically an object with
+learningEnabled	bool whether learning should be enabled
+buckets	the list of bucket indices one for each sub-field encoder
+fields	sequence of nupic.data.fieldmeta.fieldmetainfo objects
+columnIndex	the index identifying a column in the permanence
+lock attributes metaclass	this metaclass makes objects attribute-locked by decorating their __init__() and __setstate__() methods with the _allow_new_attributes
+client jobs dao	this data access object dao is used for creating managing and updating the clientjobs database
+maxVal	maximum value of metric. used to set up input encoders. if
+sdrclassifier factory	factory for instantiating sdr classifiers

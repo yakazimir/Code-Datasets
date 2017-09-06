@@ -1,0 +1,1034 @@
+core		get_ipython_dir		get the ipython directory for this platform and user
+core		get_ipython_cache_dir		get the cache directory it is created if it does not exist
+core		get_ipython_package_dir		get the base directory where ipython itself is installed
+core		get_ipython_module_path	module_str	find the path to an ipython module in this version of ipython
+core		locate_profile	profile	find the path to the folder associated with a given profile
+core		embed_kernel	module local_ns	embed and start an ipython kernel in a given scope
+core		start_ipython	argv	launch a normal ipython instance as opposed to embedded ipython
+core		start_kernel	argv	launch a normal ipython kernel instance as opposed to embedded ipython
+core	DisplayHook	check_for_underscore		check if the user has set the '_' variable by hand
+core	DisplayHook	quiet		should we silence the display hook because of ';'?
+core	DisplayHook	start_displayhook		start the displayhook initializing resources
+core	DisplayHook	write_output_prompt		write the output prompt
+core	DisplayHook	compute_format_data	result	compute format data of the object to be displayed
+core	DisplayHook	write_format_data	format_dict md_dict	write the format data dict to the frontend
+core	DisplayHook	update_user_ns	result	update user_ns with various things like _, __, _1 etc
+core	DisplayHook	log_output	format_dict	log the output
+core	DisplayHook	finish_displayhook		finish up all displayhook activities
+core	DisplayHook	__call__	result	printing with history cache management
+core	DisplayHook	cull_cache		output cache is full cull the oldest entries
+core	DisplayTrap	set		set the hook
+core	DisplayTrap	unset		unset the hook
+core		code_name	code number	compute a probably unique name for code for caching
+core	CachingCompiler	ast_parse	source filename symbol	parse code to an ast with the current compiler flags active
+core	CachingCompiler	reset_compiler_flags		reset compiler flags to default state
+core	CachingCompiler	compiler_flags		flags currently active in the compilation process
+core	CachingCompiler	cache	code number	make a name for a block of code and cache the code
+core		check_linecache_ipython		call linecache checkcache() safely protecting our cached values
+core		make_arrow	pad	generate the leading arrow in front of traceback or debugger
+core		BdbQuit_excepthook	et ev tb excepthook	exception hook which handles bdbquit exceptions
+core	Tracer	__init__	colors	deprecated create a local debugger instance
+core	Tracer	__call__		starts an interactive debugger at the point where called
+core		decorate_fn_with_doc	new_fn old_fn additional_text	make new_fn have old_fn's doc string this is particularly useful
+core		_file_lines	fname	return the contents of a named file as a list of lines
+core	Pdb	set_colors	scheme	shorthand access to the color table scheme selector method
+core	Pdb	new_do_restart	arg	restart command in the context of ipython this is exactly the same
+core	Pdb	print_list_lines	filename first last	the printing (as opposed to the parsing part of a 'list' command
+core	Pdb	do_pdef	arg	print the call signature for any callable object
+core	Pdb	do_pdoc	arg	print the docstring for an object
+core	Pdb	do_pfile	arg	print or run through pager the file where an object is defined
+core	Pdb	do_pinfo	arg	provide detailed information about an object
+core	Pdb	do_pinfo2	arg	provide extra detailed information about an object
+core	Pdb	do_psource	arg	print or run through pager the source code for an object
+core		set_trace	frame	start debugging from frame
+core	PayloadManager	write_payload	data single	include or update the specified data payload in the payloadmanager
+core		on_off	tag	return an on/off string for a 1/0 input simple utility function
+core		compress_dhist	dh	compress a directory history into a new one with at most 20 entries
+core		needs_local_scope	func	decorator to mark magic functions which need to local scope to run
+core		magics_class	cls	class decorator for all subclasses of the main magics class
+core		record_magic	dct magic_kind magic_name func	utility function to store a function as a magic of a specific kind
+core		validate_type	magic_kind	ensure that the given magic_kind is valid
+core		_method_magic_marker	magic_kind	decorator factory for methods in magics subclasses
+core		_function_magic_marker	magic_kind	decorator factory for standalone functions
+core	MagicsManager	auto_status		return descriptive string with automagic status
+core	MagicsManager	lsmagic		return a dict of currently available magic functions
+core	MagicsManager	lsmagic_docs	brief missing	return dict of documentation of magic functions
+core	MagicsManager	register		register one or more instances of magics
+core	MagicsManager	register_function	func magic_kind magic_name	expose a standalone function as magic function for ipython
+core	MagicsManager	register_alias	alias_name magic_name magic_kind	register an alias to a magic function
+core	Magics	arg_err	func	print docstring if incorrect arguments were passed
+core	Magics	format_latex	strng	format a string for latex inclusion
+core	Magics	parse_options	arg_str opt_str	parse options passed to an argument string
+core	Magics	default_option	fn optstr	make an entry in the options_table for fn with value optstr
+core	MagicAlias	__call__		call the magic alias
+core		inspect_error		print a message about internal inspect errors
+core		findsource	object	return the entire source file and starting line number for an object
+core		getargs	co	get information about the arguments accepted by a code object
+core		with_patch_inspect	f	decorator for monkeypatching inspect findsource
+core		fix_frame_records_filenames	records	try to fix the filenames in each record from inspect getinnerframes()
+core		find_recursion	etype value records	identify the repeating stack frames from a recursionerror traceback 'records' is a list as returned by verbosetb
+core	TBTools	_get_ostream		output stream that exceptions are written to
+core	TBTools	set_colors		shorthand access to the color table scheme selector method
+core	TBTools	color_toggle		toggle between the currently active color scheme and nocolor
+core	TBTools	stb2text	stb	convert a structured traceback a list to a string
+core	TBTools	text	etype value tb tb_offset	return formatted traceback
+core	TBTools	structured_traceback	etype evalue tb tb_offset	return a list of traceback frames
+core	ListTB	structured_traceback	etype value elist tb_offset	return a color formatted string with the traceback info
+core	ListTB	_format_list	extracted_list	format a list of traceback entry tuples for printing
+core	ListTB	_format_exception_only	etype value	format the exception part of a traceback
+core	ListTB	get_exception_only	etype value	only print the exception type and message without a traceback
+core	ListTB	show_exception_only	etype evalue	only print the exception type and message without a traceback
+core	VerboseTB	__init__	color_scheme call_pdb ostream tb_offset	specify traceback offset headers and color scheme
+core	VerboseTB	format_records	records last_unique recursion_repeat	format the stack frames of the traceback
+core	VerboseTB	format_record	frame file lnum func	format a single stack frame
+core	VerboseTB	format_exception_as_a_whole	etype evalue etb number_of_lines_of_context	formats the header traceback and exception message for a single exception
+core	VerboseTB	structured_traceback	etype evalue etb tb_offset	return a nice text document describing the traceback
+core	VerboseTB	debugger	force	call up the pdb debugger if desired always clean up the tb reference
+core	VerboseTB	__call__	etype evalue etb	this hook can replace sys excepthook for python 2 1 or higher
+core	FormattedTB	stb2text	stb	convert a structured traceback a list to a string
+core	FormattedTB	set_mode	mode	switch to the desired mode
+core	AutoFormattedTB	__call__	etype evalue etb out	print out a formatted exception traceback
+core	SyntaxTB	clear_err_state		return the current error state and clear it
+core	SyntaxTB	stb2text	stb	convert a structured traceback a list to a string
+core		text_repr	value	hopefully pretty robust repr equivalent
+core	InputTransformer	push	line	send a line of input to the transformer returning the transformed input or none if the transformer is waiting for more input
+core	InputTransformer	reset		return transformed any lines that the transformer has accumulated and reset its internal state
+core	InputTransformer	wrap	cls func	can be used by subclasses as a decorator to return a factory that will allow instantiation with the decorated object
+core	StatelessInputTransformer	push	line	send a line of input to the transformer returning the transformed input
+core	StatelessInputTransformer	reset		no-op - exists for compatibility
+core	CoroutineInputTransformer	push	line	send a line of input to the transformer returning the transformed input or none if the transformer is waiting for more
+core	CoroutineInputTransformer	reset		return transformed any lines that the transformer has accumulated and reset its internal state
+core		assemble_logical_lines		join lines following explicit line continuations (\)
+core		_make_help_call	target esc lspace next_input	prepares a pinfo 2 /psearch call from a target name and the escape (i
+core		_tr_system	line_info	translate lines escaped with !
+core		_tr_system2	line_info	translate lines escaped with !!
+core		_tr_help	line_info	translate lines escaped with ?/??
+core		_tr_magic	line_info	translate lines escaped with %
+core		_tr_quote	line_info	translate lines escaped with
+core		_tr_quote2	line_info	translate lines escaped with ;
+core		_tr_paren	line_info	translate lines escaped with /
+core		escaped_commands	line	transform escaped commands - %magic !system ?help + various autocalls
+core		_line_tokens	line	helper for has_comment and ends_in_comment_or_string
+core		has_comment	src	indicate whether an input line has i e ends in or is a comment
+core		ends_in_comment_or_string	src	indicates whether or not an input line ends in a comment or within a multiline string
+core		help_end	line	translate lines with ?/?? at the end
+core		cellmagic	end_on_blank_line	captures & transforms cell magics
+core		_strip_prompts	prompt_re initial_re turnoff_re	remove matching input prompts from a block of input
+core		classic_prompt		strip the >>>/ prompts of the python interactive shell
+core		ipy_prompt		strip ipython's in [1]:/ : prompts
+core		leading_indent		remove leading indentation
+core		strip_encoding_cookie		remove encoding comment if found in first two lines if the first or second line has the # coding utf-8 comment
+core		assign_from_system	line	transform assignment from system commands (e g files = !ls)
+core		assign_from_magic	line	transform assignment from magic commands (e g a = %who_ls)
+core		num_ini_spaces	s	return the number of initial spaces in a string
+core		last_blank	src	determine if the input source ends in a blank
+core		last_two_blanks	src	determine if the input source ends in two blanks
+core		remove_comments	src	remove all comments from input source
+core		get_input_encoding		return the default standard input encoding
+core	InputSplitter	__init__		create a new inputsplitter instance
+core	InputSplitter	reset		reset the input buffer and associated state
+core	InputSplitter	source_reset		return the input source and perform a full reset
+core	InputSplitter	check_complete	source	return whether a block of code is ready to execute or should be continued this is a non-stateful api and will reset the state of this inputsplitter
+core	InputSplitter	push	lines	push one or more lines of input
+core	InputSplitter	push_accepts_more		return whether a block of interactive input can accept more input
+core	InputSplitter	_find_indent	line	compute the new indentation level for a single line
+core	InputSplitter	_store	lines buffer store	store one or more lines of input
+core	IPythonInputSplitter	transforms		quick access to all transformers
+core	IPythonInputSplitter	transforms_in_use		transformers excluding logical line transformers if we're in a python line
+core	IPythonInputSplitter	reset		reset the input buffer and associated state
+core	IPythonInputSplitter	raw_reset		return raw input only and perform a full reset
+core	IPythonInputSplitter	transform_cell	cell	process and translate a cell of input
+core	IPythonInputSplitter	push	lines	push one or more lines of ipython input
+core		page	strng start screen_lines pager_cmd	print a string piping through a pager
+core		install_payload_page		deprecated use show_in_pager hook install this version of page as ipython
+core		get_ipython		get the global interactiveshell instance
+core		exception_colors		return a color table with fields for exception reporting
+core	InteractiveShellApp	init_path		add current working directory '', to sys path
+core	InteractiveShellApp	init_gui_pylab		enable gui event loop integration taking pylab into account
+core	InteractiveShellApp	init_extensions		load all ipython extensions in ipythonapp extensions
+core	InteractiveShellApp	init_code		run the pre-flight code specified via exec_lines
+core	InteractiveShellApp	_run_exec_lines		run lines of code in ipythonapp exec_lines in the user's namespace
+core	InteractiveShellApp	_run_startup_files		run files from profile startup directory
+core	InteractiveShellApp	_run_exec_files		run files from ipythonapp exec_files
+core	InteractiveShellApp	_run_cmd_line_code		run code or file specified at the command-line
+core	InteractiveShellApp	_run_module		run module specified at the command-line
+core	EventManager	__init__	shell available_events	initialise the :class callbackmanager
+core	EventManager	register	event function	register a new event callback parameters
+core	EventManager	unregister	event function	remove a callback from the given event
+core	EventManager	trigger	event	call callbacks for event
+core		pre_execute		fires before code is executed in response to user/frontend action
+core		pre_run_cell		fires before user-entered code runs
+core		post_execute		fires after code is executed in response to user/frontend action
+core		post_run_cell		fires after user-entered code runs
+core		shell_initialized	ip	fires after initialisation of :class ~ipython core interactiveshell interactiveshell
+core		has_open_quotes	s	return whether a string has open quotes
+core		protect_filename	s	escape a string to protect certain characters
+core		expand_user	path	expand '~'-style usernames in strings
+core		compress_user	path tilde_expand tilde_val	does the opposite of expand_user with its outputs
+core		completions_sorting_key	word	key for sorting completions
+core	CompletionSplitter	delims		return the string of delimiter characters
+core	CompletionSplitter	delims	delims	set the delimiters for line splitting
+core	CompletionSplitter	split_line	line cursor_pos	split a line of text with a cursor at the given position
+core	Completer	__init__	namespace global_namespace	create a new completer for the command line
+core	Completer	complete	text state	return the next possible completion for 'text'
+core	Completer	global_matches	text	compute matches when text is a simple name
+core	Completer	attr_matches	text	compute matches when text contains a dot
+core		get__all__entries	obj	returns the strings in the __all__ attribute
+core		match_dict_keys	keys prefix delims	used by dict_key_matches matching the prefix to a list of keys
+core		_safe_isinstance	obj module class_name	checks if obj is an instance of module class_name if loaded
+core		back_unicode_name_matches	text	match unicode characters back to unicode name this does ☃ -> \snowman
+core		back_latex_name_matches	text	match latex characters back to unicode name this does ->\sqrt
+core	IPCompleter	_greedy_changed	change	update the splitter and readline delims when greedy is changed
+core	IPCompleter	__init__	shell namespace global_namespace use_readline	ipcompleter() -> completer return a completer object suitable for use by the readline library
+core	IPCompleter	all_completions	text	wrapper around the complete method for the benefit of emacs
+core	IPCompleter	file_matches	text	match filenames expanding ~user type strings
+core	IPCompleter	python_matches	text	match attributes or global python names
+core	IPCompleter	_default_arguments_from_docstring	doc	parse the first line of docstring for call signature
+core	IPCompleter	_default_arguments	obj	return the list of default arguments of obj if it is callable or empty list otherwise
+core	IPCompleter	python_func_kw_matches	text	match named parameters kwargs of the last open function
+core	IPCompleter	dict_key_matches	text	match string keys in a dictionary after e g 'foo['
+core	IPCompleter	unicode_name_matches	text	match latex-like syntax for unicode characters base on the name of the character
+core	IPCompleter	latex_matches	text	match latex syntax for unicode characters
+core	IPCompleter	complete	text line_buffer cursor_pos	find completions for the given text and line context
+core	CrashHandler	__init__	app contact_name contact_email bug_tracker	create a new crash handler parameters
+core	CrashHandler	__call__	etype evalue etb	handle an exception call for compatible with sys excepthook
+core	CrashHandler	make_report	traceback	return a string containing a crash report
+core		crash_handler_lite	etype evalue tb	a light excepthook adding a small message to the usual traceback
+core		softspace	file newvalue	copied from code py to remove the dependency
+core	ExecutionResult	raise_error		reraises error if success is false, otherwise does nothing
+core	InteractiveShell	get_ipython		return the currently running ipython instance
+core	InteractiveShell	set_autoindent	value	set the autoindent flag
+core	InteractiveShell	init_environment		any changes we need to make to the user's environment
+core	InteractiveShell	init_logstart		initialize logging in case it was requested at the command line
+core	InteractiveShell	init_deprecation_warnings		register default filter for deprecation warning
+core	InteractiveShell	init_virtualenv		add a virtualenv to sys path so the user can import modules from it
+core	InteractiveShell	save_sys_module_state		save the state of hooks in the sys module
+core	InteractiveShell	restore_sys_module_state		restore the state of the sys module
+core	InteractiveShell	set_hook	name hook priority str_key	set_hook name hook -> sets an internal ipython hook
+core	InteractiveShell	register_post_execute	func	deprecated use ip events register('post_run_cell', func)
+core	InteractiveShell	new_main_mod	filename modname	return a new 'main' module object for user code execution
+core	InteractiveShell	clear_main_mod_cache		clear the cache of main modules
+core	InteractiveShell	debugger	force	call the pdb debugger
+core	InteractiveShell	prepare_user_module	user_module user_ns	prepare the module and namespace in which user code will be run
+core	InteractiveShell	init_user_ns		initialize all user-visible namespaces to their minimum defaults
+core	InteractiveShell	all_ns_refs		get a list of references to all the namespace dictionaries in which ipython might store a user-created object
+core	InteractiveShell	reset	new_session	clear all internal namespaces and attempt to release references to user objects
+core	InteractiveShell	del_var	varname by_name	delete a variable from the various namespaces so that as far as possible we're not keeping any hidden references to it
+core	InteractiveShell	reset_selective	regex	clear selective variables from internal namespaces based on a specified regular expression
+core	InteractiveShell	push	variables interactive	inject a group of variables into the ipython user namespace
+core	InteractiveShell	drop_by_id	variables	remove a dict of variables from the user namespace if they are the same as the values in the dictionary
+core	InteractiveShell	_ofind	oname namespaces	find an object in the available namespaces
+core	InteractiveShell	_getattr_property	obj attrname	property-aware getattr to use in object finding
+core	InteractiveShell	_object_find	oname namespaces	find an object and return a struct with info about it
+core	InteractiveShell	_inspect	meth oname namespaces	generic interface to the inspector system
+core	InteractiveShell	object_inspect	oname detail_level	get object info about oname
+core	InteractiveShell	object_inspect_text	oname detail_level	get object info as formatted text
+core	InteractiveShell	object_inspect_mime	oname detail_level	get object info as a mimebundle of formatted representations
+core	InteractiveShell	init_history		sets up the command history and starts regular autosaves
+core	InteractiveShell	set_custom_exc	exc_tuple handler	set_custom_exc(exc_tuple handler) set a custom exception handler which will be called if any of the
+core	InteractiveShell	excepthook	etype value tb	one more defense for gui apps that call sys excepthook
+core	InteractiveShell	_get_exc_info	exc_tuple	get exc_info from a given tuple sys exc_info() or sys last_type etc
+core	InteractiveShell	show_usage_error	exc	show a short message for usageerrors these are special exceptions that shouldn't show a traceback
+core	InteractiveShell	get_exception_only	exc_tuple	return as a string ending with a newline the exception that just occurred without any traceback
+core	InteractiveShell	showtraceback	exc_tuple filename tb_offset exception_only	display the exception that just occurred
+core	InteractiveShell	_showtraceback	etype evalue stb	actually show a traceback
+core	InteractiveShell	showsyntaxerror	filename	display the syntax error that just occurred
+core	InteractiveShell	showindentationerror		called by run_cell when there's an indentationerror in code entered at the prompt
+core	InteractiveShell	init_readline		deprecated moved to terminal subclass here only to simplify the init logic
+core	InteractiveShell	set_next_input	s replace	sets the 'default' input string for the next command line
+core	InteractiveShell	_indent_current_str		return the current level of indentation as a string
+core	InteractiveShell	init_completer		initialize the completion machinery
+core	InteractiveShell	complete	text line cursor_pos	return the completed text and a list of completions
+core	InteractiveShell	set_custom_completer	completer pos	adds a new custom completer function
+core	InteractiveShell	set_completer_frame	frame	set the frame of the completer
+core	InteractiveShell	run_line_magic	magic_name line	execute the given line magic
+core	InteractiveShell	run_cell_magic	magic_name line cell	execute the given cell magic
+core	InteractiveShell	find_line_magic	magic_name	find and return a line magic by name
+core	InteractiveShell	find_cell_magic	magic_name	find and return a cell magic by name
+core	InteractiveShell	find_magic	magic_name magic_kind	find and return a magic of the given type by name
+core	InteractiveShell	magic	arg_s	deprecated use run_line_magic() instead
+core	InteractiveShell	define_macro	name themacro	define a new macro parameters
+core	InteractiveShell	system_piped	cmd	call the given cmd in a subprocess piping stdout/err parameters
+core	InteractiveShell	system_raw	cmd	call the given cmd in a subprocess using os system on windows or
+core	InteractiveShell	getoutput	cmd split depth	get output possibly including stderr from a subprocess
+core	InteractiveShell	auto_rewrite_input	cmd	print to the screen the rewritten form of the user's command
+core	InteractiveShell	_user_obj_error		return simple exception dict
+core	InteractiveShell	_format_user_obj	obj	format a user object to display dict
+core	InteractiveShell	user_expressions	expressions	evaluate a dict of expressions in the user's namespace
+core	InteractiveShell	ex	cmd	execute a normal python statement in user namespace
+core	InteractiveShell	ev	expr	evaluate python expression expr in user namespace
+core	InteractiveShell	safe_execfile	fname	a safe version of the builtin execfile()
+core	InteractiveShell	safe_execfile_ipy	fname shell_futures raise_exceptions	like safe_execfile but for ipy or ipynb files with ipython syntax
+core	InteractiveShell	safe_run_module	mod_name where	a safe version of runpy run_module()
+core	InteractiveShell	run_cell	raw_cell store_history silent shell_futures	run a complete ipython cell
+core	InteractiveShell	transform_ast	node	apply the ast transformations from self ast_transformers
+core	InteractiveShell	run_ast_nodes	nodelist cell_name interactivity compiler	run a sequence of ast nodes the execution mode depends on the
+core	InteractiveShell	run_code	code_obj result	execute a code object
+core	InteractiveShell	enable_matplotlib	gui	enable interactive matplotlib and inline figure support
+core	InteractiveShell	enable_pylab	gui import_all welcome_message	activate pylab support at runtime
+core	InteractiveShell	var_expand	cmd depth formatter	expand python variables in a string
+core	InteractiveShell	mktempfile	data prefix	make a new tempfile and return its filename
+core	InteractiveShell	write	data	deprecated write a string to the default output
+core	InteractiveShell	write_err	data	deprecated write a string to the default error output
+core	InteractiveShell	show_usage		show a usage message
+core	InteractiveShell	extract_input_lines	range_str raw	return as a string a set of input history slices
+core	InteractiveShell	find_user_code	target raw py_only skip_encoding_cookie	get a code string from history file url or a string or macro
+core	InteractiveShell	atexit_operations		this will be executed at the time of exit
+core		display_page	strng start screen_lines	just display no paging screen_lines is ignored
+core		as_hook	page_func	wrap a pager func to strip the self arg so it can be called as a hook
+core		page_dumb	strng start screen_lines	very dumb 'pager' in python for when nothing else works
+core		_detect_screen_size	screen_lines_def	attempt to work out the number of lines on the screen
+core		pager_page	strng start screen_lines pager_cmd	display a string piping through a pager after a certain length
+core		page	data start screen_lines pager_cmd	display content in a pager piping through a pager after a certain length
+core		page_file	fname start pager_cmd	page a file using an optional pager command and starting line
+core		get_pager_cmd	pager_cmd	return a pager command
+core		get_pager_start	pager start	return the string for paging files with an offset
+core		snip_print	str width print_full header	print a string snipping the midsection to fit in width
+core	MagicArgumentParser	error	message	raise a catchable error instead of exiting
+core	MagicArgumentParser	parse_argstring	argstring	split a string into an argument list and parse that argument list
+core		construct_parser	magic_func	construct an argument parser using the function decorations
+core		parse_argstring	magic_func argstring	parse the string of arguments for the given magic function
+core		real_name	magic_func	find the real name of the magic
+core	ArgDecorator	add_to_parser	parser group	add this object's information to the parser if necessary
+core	ArgMethodWrapper	add_to_parser	parser group	add this object's information to the parser
+core	argument_group	add_to_parser	parser group	add this object's information to the parser
+core	ProfileDir	_mkdir	path mode	ensure a directory exists at a given path this is a version of os
+core	ProfileDir	copy_config_file	config_file path overwrite	copy a default config file into the active profile directory
+core	ProfileDir	create_profile_dir	cls profile_dir config	create a new profile directory given a full path
+core	ProfileDir	create_profile_dir_by_name	cls path name config	create a profile dir by profile name and path
+core	ProfileDir	find_profile_dir_by_name	cls ipython_dir name config	find an existing profile dir by profile name return its profiledir
+core	ProfileDir	find_profile_dir	cls profile_dir config	find/create a profile dir and return its profiledir
+core		module_list	path	return the list containing the names of the modules available in the given folder
+core		get_root_modules		returns a list containing the names of all the modules available in the folders of the pythonpath
+core		quick_completer	cmd completions	easily create a trivial completer for a command
+core		module_completion	line	returns a list containing the completion possibilities for an import line
+core		module_completer	event	give completions after user has typed 'import ' or 'from '
+core		magic_run_completer	event	complete files that end in py or ipy or ipynb for the %run command
+core		cd_completer	event	completer function for cd which only returns directories
+core		reset_completer	event	a completer for %reset magic
+core	ExtensionManager	load_extension	module_str	load an ipython extension by its module name
+core	ExtensionManager	unload_extension	module_str	unload an ipython extension by its module name
+core	ExtensionManager	reload_extension	module_str	reload an ipython extension by calling reload
+core	ExtensionManager	install_extension	url filename	download and install an ipython extension
+core		split_user_input	line pattern	split user input into initial whitespace escape character function part and the rest
+core	LineInfo	ofind	ip	do a full attribute-walking lookup of the ifun in the various namespaces for the given ipython interactiveshell instance
+core		default_aliases		return list of shell aliases to auto-define
+core	Alias	validate		validate the alias and return the number of arguments
+core	AliasManager	soft_define_alias	name cmd	define an alias but don't raise on an aliaserror
+core	AliasManager	define_alias	name cmd	define a new alias after validating it
+core	AliasManager	get_alias	name	return an alias or none if no alias by that name exists
+core	AliasManager	is_alias	name	return whether or not a given name has been defined as an alias
+core	AliasManager	retrieve_alias	name	retrieve the command to which an alias expands
+core	BuiltinTrap	add_builtin	key value	add a builtin and save the original
+core	BuiltinTrap	remove_builtin	key orig	remove an added builtin and re-set the original
+core	BuiltinTrap	activate		store ipython references in the __builtin__ namespace
+core	BuiltinTrap	deactivate		remove any builtins which might have been added by add_builtins or restore overwritten ones to their previous values
+core	Logger	logstart	logfname loghead logmode log_output	generate a new log-file with a default header
+core	Logger	switch_log	val	switch logging on/off val should be only a boolean
+core	Logger	logstate		print a status message about the logger
+core	Logger	log	line_mod line_ori	write the sources to a log
+core	Logger	log_write	data kind	write data to the log file if active
+core	Logger	logstop		fully stop logging and close log file
+core		editor	filename linenum wait	open the default editor at the given filename and linenumber
+core		fix_error_editor	filename linenum column msg	deprecated open the editor at the given filename linenumber column and
+core	CommandChainDispatcher	__call__		command chain is called just like normal func
+core	CommandChainDispatcher	add	func priority	add a func to the cmd chain with given priority
+core	CommandChainDispatcher	__iter__		return all objects in chain
+core		shutdown_hook		default shutdown hook
+core		late_startup_hook		executed after ipython has been constructed and configured
+core		show_in_pager	data start screen_lines	run a string through pager
+core		pre_prompt_hook		run before displaying the next prompt use this e
+core		pre_run_code_hook		executed before running the prefiltered code in ipython
+core		clipboard_get		get text from the clipboard
+core	BaseIPythonApplication	init_crash_handler		create a crash handler typically setting sys excepthook to it
+core	BaseIPythonApplication	excepthook	etype evalue tb	this is sys excepthook after init_crashhandler
+core	BaseIPythonApplication	load_config_file	suppress_errors	load the config file
+core	BaseIPythonApplication	init_profile_dir		initialize the profile dir
+core	BaseIPythonApplication	init_config_files		[optionally] copy default config files into profile dir
+core	BaseIPythonApplication	stage_default_config_file		auto generate default config file and stage it into the profile
+core		object_info		make an object info dict with all fields present
+core		get_encoding	obj	get encoding for python source file defining obj returns none if obj is not defined in a sourcefile
+core		getdoc	obj	stable wrapper around inspect getdoc
+core		getsource	obj oname	wrapper around inspect getsource
+core		is_simple_callable	obj	true if obj is a function ()
+core		getargspec	obj	wrapper around :func inspect getfullargspec on python 3 and
+core		format_argspec	argspec	format argspect convenience wrapper around inspect's
+core		call_tip	oinfo format_call	extract call tip data from an oinfo dict
+core		_get_wrapped	obj	get the original object if wrapped in one or more @decorators some objects automatically construct similar objects on any unrecognised
+core		find_file	obj	find the absolute path to the file where an object was defined
+core		find_source_lines	obj	find the line number in a file where an object was defined
+core	Inspector	_getdef	obj oname	return the call signature for any callable object
+core	Inspector	__head	h	return a header string with proper colors
+core	Inspector	noinfo	msg oname	generic message when no information is found
+core	Inspector	pdef	obj oname	print the call signature for any callable object
+core	Inspector	pdoc	obj oname formatter	print the docstring for any object
+core	Inspector	psource	obj oname	print the source code for an object
+core	Inspector	pfile	obj oname	show the whole file where an object was defined
+core	Inspector	_format_fields	fields title_width	formats a list of fields for display
+core	Inspector	_mime_format	text formatter	return a mime bundle representation of the input text
+core	Inspector	_get_info	obj oname formatter info	retrieve an info dict and format it
+core	Inspector	pinfo	obj oname formatter info	show detailed information about an object
+core	Inspector	info	obj oname formatter info	deprecated compute a dict with detailed information about an object
+core	Inspector	_info	obj oname info detail_level	compute a dict with detailed information about an object
+core	Inspector	psearch	pattern ns_table ns_search ignore_case	search namespaces with wildcards for objects
+core	DisplayPublisher	_validate_data	data metadata	validate the display data
+core	DisplayPublisher	publish	data metadata source	publish data and metadata to all frontends
+core	DisplayPublisher	clear_output	wait	clear the output of the cell receiving output
+core		is_shadowed	identifier ip	is the given identifier defined in one of the namespaces which shadow the alias and magic namespaces? note that an identifier is different
+core	PrefilterManager	init_transformers		create the default transformers
+core	PrefilterManager	sort_transformers		sort the transformers by priority
+core	PrefilterManager	transformers		return a list of checkers sorted by priority
+core	PrefilterManager	register_transformer	transformer	register a transformer instance
+core	PrefilterManager	unregister_transformer	transformer	unregister a transformer instance
+core	PrefilterManager	init_checkers		create the default checkers
+core	PrefilterManager	sort_checkers		sort the checkers by priority
+core	PrefilterManager	checkers		return a list of checkers sorted by priority
+core	PrefilterManager	register_checker	checker	register a checker instance
+core	PrefilterManager	unregister_checker	checker	unregister a checker instance
+core	PrefilterManager	init_handlers		create the default handlers
+core	PrefilterManager	handlers		return a dict of all the handlers
+core	PrefilterManager	register_handler	name handler esc_strings	register a handler instance by name with esc_strings
+core	PrefilterManager	unregister_handler	name handler esc_strings	unregister a handler instance by name with esc_strings
+core	PrefilterManager	get_handler_by_name	name	get a handler by its name
+core	PrefilterManager	get_handler_by_esc	esc_str	get a handler by its escape string
+core	PrefilterManager	prefilter_line_info	line_info	prefilter a line that has been converted to a lineinfo object
+core	PrefilterManager	find_handler	line_info	find a handler for the line_info by trying checkers
+core	PrefilterManager	transform_line	line continue_prompt	calls the enabled transformers in order of increasing priority
+core	PrefilterManager	prefilter_line	line continue_prompt	prefilter a single input line as text
+core	PrefilterManager	prefilter_lines	lines continue_prompt	prefilter multiple input lines of text
+core	PrefilterTransformer	transform	line continue_prompt	transform a line returning the new one
+core	PrefilterChecker	check	line_info	inspect line_info and return a handler instance or none
+core	EmacsChecker	check	line_info	emacs ipython-mode tags certain input lines
+core	IPyAutocallChecker	check	line_info	instances of ipyautocall in user_ns get autocalled immediately
+core	AssignmentChecker	check	line_info	check to see if user is assigning to a var for the first time in which case we want to avoid any sort of automagic / autocall games
+core	AutoMagicChecker	check	line_info	if the ifun is magic and automagic is on run it note normal
+core	PythonOpsChecker	check	line_info	if the 'rest' of the line begins with a function call or pretty much any python operator we should simply execute the line (regardless of
+core	AutocallChecker	check	line_info	check if the initial word/function is callable and autocall is on
+core	PrefilterHandler	handle	line_info	handle normal input lines use as a template for handlers
+core	MagicHandler	handle	line_info	execute magic functions
+core	AutoHandler	handle	line_info	handle lines which can be auto-executed quoting if requested
+core	EmacsHandler	handle	line_info	handle input lines marked by python-mode
+core	DisplayFormatter	_formatters_default		activate the default formatters
+core	DisplayFormatter	format	obj include exclude	return a format data dict for an object
+core	DisplayFormatter	format_types		return the format types mime types of the active formatters
+core		_safe_repr	obj	try to return a repr of an object always returns a string at least
+core		catch_format_error	method	show traceback on failed format call
+core	FormatterABC	__call__	obj	return a json'able representation of the object
+core		_mod_name_key	typ	return a (__module__, __name__) tuple for a type
+core		_get_type	obj	return the type of an instance old and new-style
+core	BaseFormatter	__call__	obj	compute the format for an object
+core	BaseFormatter	__contains__	typ	map in to lookup_by_type
+core	BaseFormatter	_check_return	r obj	check that a return value is appropriate return the value if so none otherwise warning if invalid
+core	BaseFormatter	lookup	obj	look up the formatter for a given instance
+core	BaseFormatter	lookup_by_type	typ	look up the registered formatter for a type
+core	BaseFormatter	for_type	typ func	add a format function for a given type
+core	BaseFormatter	for_type_by_name	type_module type_name func	add a format function for a type specified by the full dotted module and name of the type rather than the type of the object
+core	BaseFormatter	pop	typ default	pop a formatter for the given type
+core	BaseFormatter	_in_deferred_types	cls	check if the given class is specified in the deferred type registry
+core	PlainTextFormatter	_float_precision_changed	change	float_precision changed set float_format accordingly
+core	PlainTextFormatter	__call__	obj	compute the pretty representation of the object
+core	JSONFormatter	_check_return	r obj	check that a return value is appropriate return the value if so none otherwise warning if invalid
+core	IPythonDisplayFormatter	__call__	obj	compute the format for an object
+core		format_display_data	obj include exclude	return a format data dict for an object
+core		list_profiles_in	path	list profiles in a given root directory
+core		list_bundled_profiles		list profiles that are bundled with ipython
+core	ProfileList	_print_profiles	profiles	print list of profiles indented
+core	ProfileCreate	_import_app	app_path	import an app class
+core		getfigs		get a list of matplotlib figures by figure numbers
+core		figsize	sizex sizey	set the default figure size to be [sizex sizey]
+core		print_figure	fig fmt bbox_inches	print a figure to an image and return the resulting file data returned data will be bytes unless fmt='svg',
+core		retina_figure	fig	format a figure as a pixel-doubled retina png
+core		mpl_runner	safe_execfile	factory to return a matplotlib-enabled runner for %run
+core		_reshow_nbagg_figure	fig	reshow an nbagg figure
+core		select_figure_formats	shell formats	select figure formats for the inline backend
+core		find_gui_and_backend	gui gui_select	given a gui string return the gui and mpl backend
+core		activate_matplotlib	backend	activate the given backend and set interactive to true
+core		import_pylab	user_ns import_all	populate the namespace with pylab-related values
+core		configure_inline_support	shell backend	configure an ipython shell object for matplotlib use
+core	IPyAutocall	set_ip	ip	will be used to set _ip point to current ipython instance b/f call override this method if you don't want this to happen
+core	Macro	__init__	code	store the macro value as a single string which can be executed
+core	Macro	__getstate__		needed for safe pickling via %store
+core		_safe_exists	path	check path but don't let exceptions raise
+core		_merge	d1 d2	like update but merges sub-dicts instead of clobbering at the top level
+core		_display_mimetype	mimetype objs raw metadata	internal implementation of all display_foo methods parameters
+core		publish_display_data	data metadata source	publish data and metadata to all frontends
+core		display		display a python object in all frontends
+core		display_pretty		display the pretty default representation of an object
+core		display_html		display the html representation of an object
+core		display_markdown		displays the markdown representation of an object
+core		display_svg		display the svg representation of an object
+core		display_png		display the png representation of an object
+core		display_jpeg		display the jpeg representation of an object
+core		display_latex		display the latex representation of an object
+core		display_json		display the json representation of an object
+core		display_javascript		display the javascript representation of an object
+core		display_pdf		display the pdf representation of an object
+core	DisplayObject	__init__	data url filename	create a display object given raw data
+core	DisplayObject	_check_data		override in subclasses if there's something to check
+core	DisplayObject	reload		reload the raw data from file or url
+core	HTML	__html__		this method exists to inform other html-using modules (e g markupsafe
+core	Javascript	__init__	data url filename lib	create a javascript display object given raw data
+core		_pngxy	data	read the width height from a png header
+core		_jpegxy	data	read the width height from a jpeg header
+core	Image	__init__	data url filename format	create a png/jpeg image object given raw data
+core	Image	_retina_shape		load pixel-doubled width and height from image data
+core	Image	reload		reload the raw data from file or url
+core	Image	_data_and_metadata		shortcut for returning metadata with shape information if defined
+core	Video	__init__	data url filename embed	create a video object given raw data or an url
+core		clear_output	wait	clear the output of the current cell receiving output
+core		set_matplotlib_formats		select figure formats for the inline backend optionally pass quality for jpeg
+core		set_matplotlib_close	close	set whether the inline backend closes all figures automatically or not
+core		needs_sqlite	f	decorator return an empty list in the absence of sqlite
+core		catch_corrupt_db	f	a decorator which wraps historyaccessor method calls to catch errors from a corrupt sqlite database move the old database out of the way and create
+core	HistoryAccessor	_db_changed	change	validate the db since it can be an instance of two different types
+core	HistoryAccessor	__init__	profile hist_file	create a new history accessor
+core	HistoryAccessor	_get_hist_file_name	profile	find the history file for the given profile name
+core	HistoryAccessor	init_db		connect to the database and create tables if necessary
+core	HistoryAccessor	writeout_cache		overridden by historymanager to dump the cache before certain database lookups
+core	HistoryAccessor	_run_sql	sql params raw output	prepares and runs an sql query for the history database
+core	HistoryAccessor	get_session_info	session	get info about a session
+core	HistoryAccessor	get_last_session_id		get the last session id currently in the database
+core	HistoryAccessor	get_tail	n raw output include_latest	get the last n lines from the history database
+core	HistoryAccessor	search	pattern raw search_raw output	search the database using unix glob-style matching (wildcards * and ?)
+core	HistoryAccessor	get_range	session start stop raw	retrieve input by session
+core	HistoryAccessor	get_range_by_str	rangestr raw output	get lines of history from a string of ranges as used by magic commands %hist %save %macro etc
+core	HistoryManager	__init__	shell config	create a new history manager associated with a shell instance
+core	HistoryManager	_get_hist_file_name	profile	get default history file name based on the shell's profile
+core	HistoryManager	new_session	conn	get a new session number
+core	HistoryManager	end_session		close the database session filling in the end time and line count
+core	HistoryManager	name_session	name	give the current session a name in the history database
+core	HistoryManager	reset	new_session	clear the session history releasing all object references and optionally open a new session
+core	HistoryManager	get_session_info	session	get info about a session
+core	HistoryManager	_get_range_session	start stop raw output	get input and output history from the current session called by
+core	HistoryManager	get_range	session start stop raw	retrieve input by session
+core	HistoryManager	store_inputs	line_num source source_raw	store source and raw input in history and create input cache variables _i*
+core	HistoryManager	store_output	line_num	if database output logging is enabled this saves all the outputs from the indicated prompt number to the database
+core	HistoryManager	writeout_cache	conn	write any entries in the cache to the database
+core	HistorySavingThread	stop		this can be called from the main thread to safely stop this thread
+core		extract_hist_ranges	ranges_str	turn a string of history ranges into 3-tuples of session start stop
+core		_format_lineno	session line	helper function to format line numbers properly
+core.magics		script_args	f	single decorator for adding script args
+core.magics	ScriptMagics	_script_magics_default		default to a common list of programs
+core.magics	ScriptMagics	_make_script_magic	name	make a named magic that calls %%script with a particular program
+core.magics	ScriptMagics	shebang	line cell	run a cell via a shell command the %%script line is like the #! line of script
+core.magics	ScriptMagics	_run_script	p cell	callback for running the script in the background
+core.magics	ScriptMagics	killbgscripts	_nouse_	kill all bg processes started by %%script and its family
+core.magics	ScriptMagics	kill_bg_processes		kill all bg processes which are still running
+core.magics	MagicsDisplay	_lsmagic		the main implementation of the %lsmagic
+core.magics	MagicsDisplay	_jsonable		turn magics dict into jsonable dict of the same structure
+core.magics	BasicMagics	alias_magic	line	create an alias for an existing line or cell magic
+core.magics	BasicMagics	lsmagic	parameter_s	list currently available magic functions
+core.magics	BasicMagics	_magic_docs	brief rest	return docstrings from magic functions
+core.magics	BasicMagics	magic	parameter_s	print information about the magic function system
+core.magics	BasicMagics	page	parameter_s	pretty print the object and display it through a pager
+core.magics	BasicMagics	profile	parameter_s	print your currently active ipython profile
+core.magics	BasicMagics	pprint	parameter_s	toggle pretty printing on/off
+core.magics	BasicMagics	colors	parameter_s	switch color scheme for prompts info system and exception handlers
+core.magics	BasicMagics	xmode	parameter_s	switch modes for the exception handlers
+core.magics	BasicMagics	quickref	arg	show a quick reference sheet
+core.magics	BasicMagics	doctest_mode	parameter_s	toggle doctest mode on and off
+core.magics	BasicMagics	gui	parameter_s	enable or disable ipython gui event loop integration
+core.magics	BasicMagics	precision	s	set floating point precision for pretty printing
+core.magics	BasicMagics	notebook	s	export and convert ipython notebooks
+core.magics	PylabMagics	matplotlib	line	set up matplotlib to work interactively
+core.magics	PylabMagics	pylab	line	load numpy and matplotlib to work interactively
+core.magics	PylabMagics	_show_matplotlib_backend	gui backend	show matplotlib message backend message
+core.magics	OSMagics	alias	parameter_s	define an alias for a system command
+core.magics	OSMagics	unalias	parameter_s	remove an alias
+core.magics	OSMagics	rehashx	parameter_s	update the alias table with all executable files in $path
+core.magics	OSMagics	pwd	parameter_s	return the current working directory path
+core.magics	OSMagics	cd	parameter_s	change the current working directory
+core.magics	OSMagics	env	parameter_s	get set or list environment variables
+core.magics	OSMagics	set_env	parameter_s	set environment variables assumptions are that either "val" is a
+core.magics	OSMagics	pushd	parameter_s	place the current dir on stack and change directory
+core.magics	OSMagics	popd	parameter_s	change to directory popped off the top of the stack
+core.magics	OSMagics	dirs	parameter_s	return the current directory stack
+core.magics	OSMagics	dhist	parameter_s	print your history of visited directories
+core.magics	OSMagics	sc	parameter_s	shell capture - run shell command and capture output (deprecated use !)
+core.magics	OSMagics	sx	line cell	shell execute - run shell command and capture output (!! is short-hand)
+core.magics	OSMagics	bookmark	parameter_s	manage ipython's bookmark system
+core.magics	OSMagics	pycat	parameter_s	show a syntax-highlighted file through a pager
+core.magics	OSMagics	writefile	line cell	write the contents of the cell to a file
+core.magics	NamespaceMagics	pinfo	parameter_s namespaces	provide detailed information about an object
+core.magics	NamespaceMagics	pinfo2	parameter_s namespaces	provide extra detailed information about an object
+core.magics	NamespaceMagics	pdef	parameter_s namespaces	print the call signature for any callable object
+core.magics	NamespaceMagics	pdoc	parameter_s namespaces	print the docstring for an object
+core.magics	NamespaceMagics	psource	parameter_s namespaces	print or run through pager the source code for an object
+core.magics	NamespaceMagics	pfile	parameter_s namespaces	print or run through pager the file where an object is defined
+core.magics	NamespaceMagics	psearch	parameter_s	search for object in namespaces by wildcard
+core.magics	NamespaceMagics	who_ls	parameter_s	return a sorted list of all interactive variables
+core.magics	NamespaceMagics	who	parameter_s	print all interactive variables with some minimal formatting
+core.magics	NamespaceMagics	whos	parameter_s	like %who but gives some extra information about each variable
+core.magics	NamespaceMagics	reset	parameter_s	resets the namespace by removing all names defined by the user if called without arguments or by removing some types of objects such
+core.magics	NamespaceMagics	reset_selective	parameter_s	resets the namespace by removing names defined by the user
+core.magics	NamespaceMagics	xdel	parameter_s	delete a variable trying to clear it from anywhere that ipython's machinery has references to it
+core.magics	TimeitTemplateFiller	visit_FunctionDef	node	fill in the setup statement
+core.magics	TimeitTemplateFiller	visit_For	node	fill in the statement to be timed
+core.magics	Timer	timeit	number	time 'number' executions of the main statement
+core.magics	ExecutionMagics	prun	parameter_s cell	run a statement through the python code profiler
+core.magics	ExecutionMagics	_run_with_profiler	code opts namespace	run code with profiler used by %prun and %run -p
+core.magics	ExecutionMagics	pdb	parameter_s	control the automatic calling of the pdb interactive debugger
+core.magics	ExecutionMagics	debug	line cell	activate the interactive debugger
+core.magics	ExecutionMagics	tb	s	print the last traceback with the currently active exception mode
+core.magics	ExecutionMagics	run	parameter_s runner file_finder	run the named file inside ipython as a program
+core.magics	ExecutionMagics	_run_with_debugger	code code_ns filename bp_line	run code in debugger with a break point
+core.magics	ExecutionMagics	_run_with_timing	run nruns	run function run and print timing information
+core.magics	ExecutionMagics	timeit	line cell	time execution of a python statement or expression usage in line mode
+core.magics	ExecutionMagics	time	line cell local_ns	time execution of a python statement or expression
+core.magics	ExecutionMagics	macro	parameter_s	define a macro for future re-execution it accepts ranges of history
+core.magics	ExecutionMagics	capture	line cell	run the cell capturing stdout stderr and ipython's rich display() calls
+core.magics		parse_breakpoint	text current_file	returns file line for file line and (current_file line) for line
+core.magics		_format_time	timespan precision	formats the timespan in a human readable form
+core.magics	AutoMagics	automagic	parameter_s	make magic functions callable without having to type the initial %
+core.magics	AutoMagics	autocall	parameter_s	make functions callable without having to type parentheses
+core.magics	LoggingMagics	logstart	parameter_s	start logging anywhere in a session
+core.magics	LoggingMagics	logstop	parameter_s	fully stop logging and close log file
+core.magics	LoggingMagics	logoff	parameter_s	temporarily stop logging
+core.magics	LoggingMagics	logstate	parameter_s	print the status of the logging system
+core.magics		extract_code_ranges	ranges_str	turn a string of range for %%load into 2-tuples of start stop ready to use as a slice of the content splitted by lines
+core.magics		extract_symbols	code symbols	return a tuple (blocks not_found) where blocks is a list of code fragments
+core.magics		strip_initial_indent	lines	for %load strip indent from lines until finding an unindented line
+core.magics	CodeMagics	save	parameter_s	save a set of lines or a macro to a given filename
+core.magics	CodeMagics	pastebin	parameter_s	upload code to github's gist paste bin returning the url
+core.magics	CodeMagics	loadpy	arg_s	alias of %load %loadpy has gained some flexibility and dropped the requirement of a
+core.magics	CodeMagics	load	arg_s	load code into the current frontend
+core.magics	CodeMagics	_find_edit_target	shell args opts last_call	utility method used by magic_edit to find what to edit
+core.magics	CodeMagics	_edit_macro	mname macro	open an editor with the macro data in a file
+core.magics	CodeMagics	edit	parameter_s last_call	bring up an editor and execute the resulting code
+core.magics	ConfigMagics	config	s	configure ipython %config class[
+core.magics	ExtensionMagics	load_ext	module_str	load an ipython extension by its module name
+core.magics	ExtensionMagics	unload_ext	module_str	unload an ipython extension by its module name
+core.magics	ExtensionMagics	reload_ext	module_str	reload an ipython extension by its module name
+core.magics	DisplayMagics	js	line cell	run the cell block of javascript code
+core.magics	DisplayMagics	javascript	line cell	run the cell block of javascript code
+core.magics	DisplayMagics	latex	line cell	render the cell as a block of latex the subset of latex which is support depends on the implementation in
+core.magics	DisplayMagics	svg	line cell	render the cell as an svg literal
+core.magics	DisplayMagics	html	line cell	render the cell as a block of html
+core.magics	HistoryMagics	history	parameter_s	print input history (_i<n> variables), with most recent last
+core.magics	HistoryMagics	recall	arg	repeat a command or get command to input line for editing
+core.magics	HistoryMagics	rerun	parameter_s	re-run previous input by default you can specify ranges of input history to be repeated
+external		get_options		return a list of acceptable qt apis in decreasing order of
+external		commit_api	api	commit to a particular api and trigger importerrors on subsequent
+external		loaded_api		return which api is loaded if any if this returns anything besides none
+external		has_binding	api	safely check for pyqt4/5 pyside or pyside2 without importing submodules supports python <= 3
+external		has_binding_new	api	safely check for pyqt4/5 pyside or pyside2 without importing submodules supports python >= 3
+external		qtapi_version		return which qstring api has been set if any
+external		can_import	api	safely query whether an api is importable without importing it
+external		import_pyqt4	version	import pyqt4 parameters
+external		load_qt	api_options	attempt to import qt given a preference list of permissible bindings
+external.decorators		slow	t	label a test as 'slow'
+external.decorators		setastest	tf	signals to nose that this function is or is not a test
+external.decorators		skipif	skip_condition msg	make function raise skiptest exception if a given condition is true
+external.decorators		knownfailureif	fail_condition msg	make function raise knownfailuretest exception if given condition is true
+external.decorators		deprecated	conditional	filter deprecation warnings while running the test suite
+external.decorators		assert_warns	warning_class func	fail unless a warning of class warning_class is thrown by callable when invoked with arguments args and keyword arguments kwargs
+utils	NamedFileInTemporaryDirectory	__init__	filename mode bufsize	open a file named filename in a temporary directory
+utils		_find_cmd	cmd	find the full path to a bat or exe using the win32api module
+utils		_system_body	p	callback for _system
+utils		system	cmd	win32 version of os system() that works with network shares
+utils		getoutput	cmd	return standard output of executing cmd in a shell
+utils		_find_cmd	cmd	find the full path to a command using which
+utils		system	cmd	system cmd should work in a cli environment on mac osx linux
+utils		getoutput	cmd	getoutput cmd should work in a cli environment on mac osx linux
+utils		check_pid	pid	check if a process with the given pid pid exists
+utils	CapturedIO	stdout		captured standard output
+utils	CapturedIO	stderr		captured standard error
+utils	CapturedIO	outputs		a list of the captured rich display outputs if any
+utils	CapturedIO	show		write my output to sys stdout/err as appropriate
+utils		_writable_dir	path	whether path is a directory to which the user has write access
+utils		get_long_path_name	path	expand a path into its long form
+utils		unquote_filename	name win32	on windows remove leading and trailing quotes from filenames
+utils		compress_user	path	reverse of :func os path expanduser
+utils		get_py_filename	name force_win32	return a valid python filename in the current directory
+utils		filefind	filename path_dirs	find a file by looking through a sequence of paths
+utils		get_home_dir	require_writable	return the 'home' directory as a unicode string
+utils		get_xdg_dir		return the xdg_config_home if it is defined and exists else none
+utils		get_xdg_cache_dir		return the xdg_cache_home if it is defined and exists else none
+utils		expand_path	s	expand $vars and ~names in a string like a shell :examples
+utils		unescape_glob	string	unescape glob pattern in string
+utils		shellglob	args	do glob expansion for each element in args and return a flattened list
+utils		target_outdated	target deps	determine whether a target is out of date
+utils		target_update	target deps cmd	update a target with a given command given a list of dependencies
+utils		filehash	path	make an md5 hash of a file ignoring any differences in line ending characters
+utils		link	src dst	hard links src to dst, returning 0 or errno
+utils		link_or_copy	src dst	attempts to hardlink src to dst, copying if the link fails
+utils		ensure_dir_exists	path mode	ensure that a directory exists if it doesn't exist try to create it and protect against a race condition
+utils		inspect_object	obj	called when you do obj?
+utils		complete_object	obj prev_completions	custom completer dispatching for python objects
+utils		uniq_stable	elems	uniq_stable elems -> list return from an iterable a list of all the unique elements in the input
+utils		flatten	seq	flatten a list of lists not recursive only works for 2d lists
+utils		chop	seq size	chop a sequence into chunks of the given size
+utils		source_to_unicode	txt errors skip_encoding_cookie	converts a bytes string with python source code to unicode
+utils		strip_encoding_cookie	filelike	generator to pull lines from a text-mode file skipping the encoding cookie if it is found in the first two lines
+utils		read_py_file	filename skip_encoding_cookie	read a python file using the encoding declared inside the file
+utils		read_py_url	url errors skip_encoding_cookie	read a python file from a url using the encoding declared inside the file
+utils		_list_readline	x	given a list returns a readline() function that returns the next element with each call
+utils		warn	msg level exit_val	deprecated standard warning printer
+utils		info	msg	deprecated equivalent to warn(msg level=1)
+utils		error	msg	deprecated equivalent to warn(msg level=3)
+utils		fatal	msg exit_val	deprecated equivalent to warn(msg exit_val=exit_val level=4)
+utils		toggle_set_term_title	val	control whether set_term_title is active or not
+utils		_set_term_title_xterm	title	change virtual terminal title in xterm-workalikes
+utils		set_term_title	title	set terminal title using the necessary platform-dependent calls
+utils		timings_out	reps func	timings_out(reps func *args **kw) -> (t_total t_per_call output) execute a function reps times return a tuple with the elapsed total
+utils		timings	reps func	timings(reps func *args **kw) -> (t_total t_per_call) execute a function reps times return a tuple with the elapsed total cpu
+utils		timing	func	timing(func *args **kw) -> t_total execute a function once return the elapsed total cpu time in
+utils		make_color_table	in_class	build a set of color attributes in a class
+utils	ColorScheme	copy	name	return a full copy of the object optionally renaming it
+utils	ColorSchemeTable	__init__	scheme_list default_scheme	create a table of color schemes
+utils	ColorSchemeTable	copy		return full copy of object
+utils	ColorSchemeTable	add_scheme	new_scheme	add a new color scheme to the table
+utils	ColorSchemeTable	set_active_scheme	scheme case_sensitive	set the currently active scheme
+utils		get_stream_enc	stream default	return the given stream's encoding or a default
+utils		getdefaultencoding	prefer_stream	return ipython's guess for the default encoding for bytes as text
+utils		read_no_interrupt	p	read from a pipe ignoring eintr errors
+utils		process_handler	cmd callback stderr	open a command in a shell subprocess and execute a callback
+utils		getoutput	cmd	run a command and return its stdout/stderr as a string
+utils		getoutputerror	cmd	return standard output standard error of executing cmd in a shell
+utils		get_output_error_code	cmd	return standard output standard error return code of executing cmd in a shell
+utils		arg_split	s posix strict	split a command line's arguments in a shell-like manner
+utils		import_item	name	import and return bar given the string foo bar
+utils		untokenize	tokens	convert tokens an iterable back into python source code return
+utils		_get_normal_name	orig_enc	imitates get_normal_name in tokenizer c
+utils		detect_encoding	readline	the detect_encoding() function is used to detect the encoding that should be used to decode a python source file
+utils		open	filename	open a file in read only mode using the encoding detected by detect_encoding()
+utils		tokenize	readline	the tokenize() generator requires one argment readline which must be a callable object which provides the same interface as the
+utils		tokenize	readline tokeneater	the tokenize() function accepts two parameters one representing the input stream and one providing an output mechanism for tokenize()
+utils		untokenize	iterable	transform tokens back into python source code
+utils		generate_tokens	readline	the generate_tokens() generator requires one argment readline which must be a callable object which provides the same interface as the
+utils	StrDispatch	add_s	s obj priority	adds a target 'string' for dispatching
+utils	StrDispatch	add_re	regex obj priority	adds a target regexp for dispatching
+utils	StrDispatch	dispatch	key	get a seq of commandchain objects that match key
+utils	StrDispatch	flat_matches	key	yield all 'value' targets without priority
+utils		flag_calls	func	wrap a function to detect and flag when it gets called
+utils		undoc	func	mark a function or class as undocumented
+utils	Parser	__init__	color_table out parent style	create a parser with a specified color table and output channel
+utils	Parser	format2	raw out scheme	parse and send the colored source
+utils	Parser	__call__	toktype toktext start_pos end_pos	token handler with syntax highlighting
+utils		main	argv	run as a command-line script colorize a python file or stdin using ansi color escapes and print to stdout
+utils		find_cmd	cmd	find absolute path to executable cmd in a cross platform manner
+utils		is_cmd_found	cmd	check whether executable cmd exists or not and return a bool
+utils		pycmd2argv	cmd	take the path of a python command and return a list argv-style
+utils		abbrev_cwd		return abbreviated version of cwd e g d mydir
+utils		buffer_to_bytes	buf	cast a buffer object to bytes
+utils		safe_unicode	e	unicode e with various fallbacks used for exceptions which may not be
+utils		_shutil_which	cmd mode path	given a command mode and a path string return the path which conforms to the given mode on the path or none if there is no such
+utils		annotate		python 3 compatible function annotation for python 2
+utils		with_metaclass	meta	create a base class with a metaclass
+utils	ShimImporter	_mirror_name	fullname	get the name of the mirrored module
+utils	ShimImporter	find_module	fullname path	return self if we should be used to import the module
+utils	ShimImporter	load_module	fullname	import the mirrored module and insert it into sys modules
+utils	ShimModule	__spec__		don't produce __spec__ until requested
+utils	ShimModule	__all__		ensure __all__ is always defined
+utils	Win32ShellCommandController	__init__	cmd mergeout	initializes the shell command controller
+utils	Win32ShellCommandController	run	stdout_func stdin_func stderr_func	runs the process using the provided functions for i/o
+utils	Win32ShellCommandController	_stdin_raw_nonblock		use the raw win32 handle of sys stdin to do non-blocking reads
+utils	Win32ShellCommandController	_stdin_raw_block		use a blocking stdin read
+utils	Win32ShellCommandController	_stdout_raw	s	writes the string to stdout
+utils	Win32ShellCommandController	_stderr_raw	s	writes the string to stdout
+utils	Win32ShellCommandController	_run_stdio		runs the process using the system standard i/o
+utils		system	cmd	win32 version of os system() that works with network shares
+utils		find_module	name path	imp find_module variant that only return path of module
+utils		get_init	dirname	get __init__ file path for module directory
+utils		find_mod	module_name	find module module_name on sys path
+utils		check_version	v check	check version string v >= check if dev/prerelease tags result in typeerror for string-number comparison
+utils	SList	grep	pattern prune field	return all strings matching 'pattern' a regex or callable this is case-insensitive
+utils	SList	fields		collect whitespace-separated fields from string list allows quick awk-like usage of string lists
+utils	SList	sort	field nums	sort by specified fields (see fields()) example :
+utils		indent	instr nspaces ntabs flatten	indent a string a given number of spaces or tabstops
+utils		list_strings	arg	always return a list of strings given a string or list of strings as input
+utils		marquee	txt width mark	return the input string centered in a 'marquee'
+utils		num_ini_spaces	strng	return the number of initial spaces in a string
+utils		format_screen	strng	format a string for screen printing
+utils		dedent	text	equivalent of textwrap dedent that ignores unindented first line
+utils		wrap_paragraphs	text ncols	wrap multiple paragraphs to fit a specified width
+utils		long_substr	data	return the longest common substring in a list of strings
+utils		strip_email_quotes	text	strip leading email quotation characters ('>')
+utils		strip_ansi	source	remove ansi escape codes from text
+utils		_col_chunks	l max_rows row_first	yield successive max_rows-sized column chunks from l
+utils		_find_optimal	rlist row_first separator_size displaywidth	calculate optimal info to columnize a list of string
+utils		_get_or_default	mylist i default	return list item number or default if don't exist
+utils		compute_item_matrix	items row_first empty	returns a nested list and info to columnize items parameters
+utils		columnize	items row_first separator displaywidth	transform a list of strings into a single string with columns
+utils		get_text_list	list_ last_sep sep wrap_item_with	return a string with a natural enumeration of items
+utils		extract_vars		extract a set of variables by name from another frame
+utils		extract_vars_above		extract a set of variables by name from another frame
+utils		debugx	expr pre_msg	print the value of an expression from the caller's frame
+utils		extract_module_locals	depth	returns module locals of the function depth frames away from the caller
+utils		generate_tokens	readline	wrap generate_tokens to catch eof errors
+utils		line_at_cursor	cell cursor_pos	return the line in a cell at a given cursor position used for calling line-based apis that don't support multi-line input yet
+utils		token_at_cursor	cell cursor_pos	get the token at a given cursor used for introspection
+utils		signature	obj	get a signature object for the passed callable
+utils	Parameter	replace	name kind annotation default	creates a customized copy of the parameter
+utils	Signature	__init__	parameters return_annotation __validate_parameters__	constructs signature from the given list of parameter objects and 'return_annotation'
+utils	Signature	from_function	cls func	constructs signature for the given python function
+utils	Signature	replace	parameters return_annotation	creates a customized copy of the signature
+utils	Signature	_bind	args kwargs partial	private method don't use directly
+utils	Signature	bind		get a :class boundarguments object that maps the passed args and kwargs to the function's signature
+utils	Signature	bind_partial		get a :class boundarguments object that partially maps the passed args and kwargs to the function's signature
+utils		create_typestr2type_dicts	dont_include_in_type2typestr	return dictionaries mapping lower case typename (e g 'tuple') to type
+utils		is_type	obj typestr_or_type	is_type(obj typestr_or_type) verifies if obj is of a certain type it
+utils		show_hidden	str show_all	return true for strings starting with single _ if show_all is true
+utils		dict_dir	obj	produce a dictionary of an object's attributes builds on dir2 by
+utils		filter_ns	ns name_pattern type_pattern ignore_case	filter a namespace dictionary by name pattern and item type
+utils		list_namespace	namespace type_pattern filter ignore_case	return dictionary of all objects in a namespace dictionary that match type_pattern and filter
+utils	Struct	__init__		initialize with a dictionary another struct or data
+utils	Struct	__setitem__	key value	set an item with check for allownew
+utils	Struct	__setattr__	key value	set an attr with protection of class members
+utils	Struct	__getattr__	key	get an attr by calling :meth dict __getitem__
+utils	Struct	__iadd__	other	s += s2 is a shorthand for s merge s2
+utils	Struct	__add__	other	s + s2 -> new struct made from s merge s2
+utils	Struct	__sub__	other	s1 - s2 -> remove keys in s2 from s1
+utils	Struct	__isub__	other	inplace remove keys from self that are in other
+utils	Struct	__dict_invert	data	helper function for merge
+utils	Struct	copy		return a copy as a struct
+utils	Struct	hasattr	key	hasattr function available as a method
+utils	Struct	allow_new_attr	allow	set whether new attributes can be created in this struct
+utils	Struct	merge	__loc_data__ __conflict_solve	merge two structs with customizable conflict resolution
+utils		pkg_commit_hash	pkg_path	get short form of commit hash given directory pkg_path we get the commit hash from in order of preference :
+utils		pkg_info	pkg_path	return dict describing the context of this package parameters
+utils		get_sys_info		return useful information about ipython and the system as a dict
+utils		sys_info		return useful information about ipython and the system as a string
+utils		_num_cpus_unix		return the number of active cpus on a unix system
+utils		_num_cpus_darwin		return the number of active cpus on a darwin system
+utils		_num_cpus_windows		return the number of active cpus on a windows system
+utils		num_cpus		return the effective number of cpus in the system as an integer
+utils	Tee	__init__	file_or_name mode channel	construct a new tee object
+utils	Tee	close		close the file and restore the channel
+utils	Tee	write	data	write data to both channels
+utils	Tee	flush		flush both channels
+utils		ask_yes_no	prompt default interrupt	asks a question and returns a boolean (y/n) answer
+utils		temp_pyfile	src ext	make a temporary python file return filename and filehandle
+utils		atomic_writing		deprecated moved to notebook services contents fileio
+utils		raw_print		raw print to sys __stdout__, otherwise identical interface to print()
+utils		raw_print_err		raw print to sys __stderr__, otherwise identical interface to print()
+utils		unicode_std_stream	stream	deprecated moved to nbconvert utils io
+utils		_find_cmd	cmd	find the full path to a command using which
+utils	ProcessHandler	__init__	logfile read_timeout terminate_timeout	arguments are used for pexpect calls
+utils	ProcessHandler	getoutput	cmd	run a command and return its stdout/stderr as a string
+utils	ProcessHandler	getoutput_pexpect	cmd	run a command and return its stdout/stderr as a string
+utils	ProcessHandler	system	cmd	execute a command in a subshell
+utils		utc_aware	unaware	decorator for adding utc tzinfo to datetime's utcfoo methods
+utils		safe_hasattr	obj attr	in recent versions of python hasattr() only catches attributeerror
+utils		dir2	obj	dir2 obj -> list of strings extended version of the python builtin dir(), which does a few extra
+utils		get_real_method	obj name	like getattr but with a few extra sanity checks - if obj is a class ignore its methods
+terminal	TerminalPdb	cmdloop	intro	repeatedly issue a prompt accept input parse an initial prefix off the received input and dispatch to action methods passing them
+terminal		set_trace	frame	start debugging from frame
+terminal	EmbeddedMagics	kill_embedded	parameter_s	%kill_embedded : deactivate for good the current embedded ipython this function after asking for confirmation sets an internal flag so
+terminal	EmbeddedMagics	exit_raise	parameter_s	%exit_raise make the current embedded kernel exit and raise and exception
+terminal	InteractiveShellEmbed	_disable_init_location		disable the current instance creation location
+terminal	InteractiveShellEmbed	init_sys_modules		explicitly overwrite :mod ipython core interactiveshell to do nothing
+terminal	InteractiveShellEmbed	__call__	header local_ns module dummy	activate the interactive interpreter
+terminal	InteractiveShellEmbed	mainloop	local_ns module stack_depth display_banner	embeds ipython into a running python program
+terminal		embed		call this to embed ipython at the current point in your program
+terminal	TerminalInteractiveShell	_make_style_from_name_or_cls	name_or_cls	small wrapper that make an ipython compatible style from a style name we need that to add style for prompt
+terminal	TerminalInteractiveShell	_layout_options		return the current layout option for the current terminal interactiveshell
+terminal	TerminalInteractiveShell	_update_layout		ask for a re computation of the application layout if for example some configuration options have changed
+terminal	TerminalInteractiveShell	auto_rewrite_input	cmd	overridden from the parent class to use fancy rewriting prompt
+terminal	TerminalInteractiveShell	switch_doctest_mode	mode	switch prompts to classic for %doctest_mode
+terminal		get_pasted_lines	sentinel l_input quiet	yield pasted lines until the user enters the given sentinel value
+terminal	TerminalMagics	store_or_execute	block name	execute a block or store it in a variable per the user's request
+terminal	TerminalMagics	rerun_pasted	name	rerun a previously pasted command
+terminal	TerminalMagics	autoindent	parameter_s	toggle autoindent on/off deprecated
+terminal	TerminalMagics	cpaste	parameter_s	paste & execute a pre-formatted code block from clipboard
+terminal	TerminalMagics	paste	parameter_s	paste & execute a pre-formatted code block from clipboard
+terminal		register_ipython_shortcuts	registry shell	set up the prompt_toolkit keyboard shortcuts for ipython
+terminal		previous_history_or_previous_completion	event	control-p in vi edit mode on readline is history next unlike default prompt toolkit
+terminal		next_history_or_next_completion	event	control-n in vi edit mode on readline is history previous unlike default prompt toolkit
+terminal		force_exit	event	force exit with a non-zero return value
+terminal		newline_with_copy_margin	event	preserve margin and cursor position when using
+terminal	IPAppCrashHandler	make_report	traceback	return a string containing a crash report
+terminal	TerminalIPythonApp	_classes_default		this has to be in a method for terminalipythonapp to be available
+terminal	TerminalIPythonApp	parse_command_line	argv	override to allow old '-pylab' flag with deprecation warning
+terminal	TerminalIPythonApp	initialize	argv	do actions after construct but before starting the app
+terminal	TerminalIPythonApp	init_shell		initialize the interactiveshell instance
+terminal	TerminalIPythonApp	init_banner		optionally display the banner
+terminal	TerminalIPythonApp	_pylab_changed	name old new	replace --pylab='inline' with --pylab='auto'
+terminal		load_default_config	ipython_dir	load the default config file from the default ipython_dir
+terminal.pt_inputhooks		inputhook	inputhook_context	inputhook for tk
+terminal.pt_inputhooks		inputhook	context	run the pyglet event loop by processing pending events only
+terminal.pt_inputhooks		inputhook	context	run the pyglet event loop by processing pending events only
+terminal.pt_inputhooks		inputhook	context	when the eventloop of prompt-toolkit is idle call this inputhook
+terminal.pt_inputhooks		register	name inputhook	register the function *inputhook* as an event loop integration
+terminal.pt_inputhooks		_utf8	s	ensure utf8 bytes
+terminal.pt_inputhooks		n	name	create a selector name for objc methods
+terminal.pt_inputhooks		C	classname	get an objc class by name
+terminal.pt_inputhooks		_NSApp		return the global nsapplication instance nsapp
+terminal.pt_inputhooks		_wake	NSApp	wake the application
+terminal.pt_inputhooks		_input_callback	fdref flags info	callback to fire when there's input to be read
+terminal.pt_inputhooks		_stop_on_read	fd	register callback to stop eventloop when there's data on fd
+terminal.pt_inputhooks		inputhook	context	inputhook for cocoa nsapp
+terminal.pt_inputhooks		inputhook_wx1	context	run the wx event loop by processing pending events only
+terminal.pt_inputhooks		inputhook_wx2	context	run the wx event loop polling for stdin
+terminal.pt_inputhooks		inputhook_wx3	context	run the wx event loop by processing pending events only
+lib		inputhook_pyglet		run the pyglet event loop by processing pending events only
+lib		_stdin_ready_posix		return true if there's something to read on stdin posix version
+lib		_stdin_ready_nt		return true if there's something to read on stdin nt version
+lib		_stdin_ready_other		return true assuming there's something to read on stdin
+lib		_use_appnope		should we use appnope for dealing with os x app nap? checks if we are on os x 10
+lib		_ignore_CTRL_C_posix		ignore ctrl+c sigint
+lib		_allow_CTRL_C_posix		take ctrl+c into account sigint
+lib		_ignore_CTRL_C_other		ignore ctrl+c not implemented
+lib		_allow_CTRL_C_other		take ctrl+c into account not implemented
+lib	InputHookManager	get_pyos_inputhook		deprecated since ipython 5 0
+lib	InputHookManager	get_pyos_inputhook_as_func		deprecated since ipython 5 0
+lib	InputHookManager	set_inputhook	callback	deprecated since ipython 5 0
+lib	InputHookManager	clear_inputhook	app	deprecated since ipython 5 0
+lib	InputHookManager	clear_app_refs	gui	deprecated since ipython 5 0
+lib	InputHookManager	register	toolkitname	deprecated since ipython 5 0
+lib	InputHookManager	current_gui		deprecated since ipython 5 0
+lib	InputHookManager	enable_gui	gui app	deprecated since ipython 5 0
+lib	InputHookManager	disable_gui		deprecated since ipython 5 0
+lib	WxInputHook	enable	app	deprecated since ipython 5 0
+lib	WxInputHook	disable		deprecated since ipython 5 0
+lib	Qt4InputHook	enable	app	deprecated since ipython 5 0
+lib	Qt4InputHook	disable_qt4		deprecated since ipython 5 0
+lib	GtkInputHook	enable	app	deprecated since ipython 5 0
+lib	TkInputHook	enable	app	deprecated since ipython 5 0
+lib	GlutInputHook	enable	app	deprecated since ipython 5 0
+lib	GlutInputHook	disable		deprecated since ipython 5 0
+lib	PygletInputHook	enable	app	deprecated since ipython 5 0
+lib	Gtk3InputHook	enable	app	deprecated since ipython 5 0
+lib	Demo	__init__	src title arg_str auto_all	make a new demo object to run the demo simply call the object
+lib	Demo	fload		load file object
+lib	Demo	reload		reload source from disk and initialize state
+lib	Demo	reset		reset the namespace and seek pointer to restart the demo
+lib	Demo	_get_index	index	get the current block index validating and checking status
+lib	Demo	seek	index	move the current seek pointer to the given block
+lib	Demo	back	num	move the seek pointer back num blocks default is 1
+lib	Demo	jump	num	jump a given number of blocks relative to the current one
+lib	Demo	again		move the seek pointer back one block and re-execute
+lib	Demo	edit	index	edit a block
+lib	Demo	show	index	show a single block on screen
+lib	Demo	show_all		show entire demo on screen block by block
+lib	Demo	run_cell	source	execute a string with one or more lines of code
+lib	Demo	__call__	index	run a block of the demo
+lib	Demo	marquee	txt width mark	return the input string centered in a 'marquee'
+lib	Demo	pre_cmd		method called before executing each block
+lib	Demo	post_cmd		method called after executing each block
+lib	IPythonDemo	run_cell	source	execute a string with one or more lines of code
+lib	LineDemo	reload		reload source from disk and initialize state
+lib	ClearMixin	marquee	txt width mark	blank marquee that returns '' no matter what the input
+lib	ClearMixin	pre_cmd		method called before executing each block
+lib		latex_to_png	s encode backend wrap	render a latex string to png
+lib		kpsewhich	filename	invoke kpsewhich command with an argument filename
+lib		genelatex	body wrap	generate latex document for dvipng backend
+lib		latex_to_html	s alt	render latex to html with embedded png data using data uris
+lib		inputhook_glut		run the pyglet event loop by processing pending events only
+lib	BackgroundJobManager	new	func_or_exp	add a new background job and start it in a separate thread
+lib	BackgroundJobManager	__call__		an alias to self status(),
+lib	BackgroundJobManager	_update_status		update the status of the job lists
+lib	BackgroundJobManager	_group_report	group name	report summary for a given job group
+lib	BackgroundJobManager	_group_flush	group name	flush a given job group return true if the group had any elements
+lib	BackgroundJobManager	_status_new		print the status of newly finished jobs
+lib	BackgroundJobManager	status	verbose	print a status of all jobs currently being managed
+lib	BackgroundJobManager	remove	num	remove a finished completed or dead job
+lib	BackgroundJobManager	flush		flush all finished jobs completed and dead from lists
+lib	BackgroundJobManager	result	num	result n -> return the result of job n
+lib	BackgroundJobBase	__init__		must be implemented in subclasses
+lib	BackgroundJobBase	_init		common initialization for all backgroundjob objects
+lib	BackgroundJobExpr	__init__	expression glob loc	create a new job from a string which can be fed to eval()
+lib	BackgroundJobFunc	__init__	func	create a new job from a callable object
+lib		get_parent	globals level	parent name = get_parent globals level return the package that an import is being performed in
+lib		load_next	mod altmod name buf	mod name buf = load_next mod altmod name buf
+lib		import_submodule	mod subname fullname	m = import_submodule mod subname fullname
+lib		add_submodule	mod submod fullname subname	mod {subname} = submod
+lib		ensure_fromlist	mod fromlist buf recursive	handle 'from module import a b c' imports
+lib		deep_import_hook	name globals locals fromlist	replacement for __import__()
+lib		deep_reload_hook	m	replacement for reload()
+lib		reload	module exclude	recursively reload all modules used in the given module optionally
+lib		_dreload	module	**deprecated** import reload explicitly from ipython
+lib		get_app_wx		create a new wx app or return an exiting one
+lib		is_event_loop_running_wx	app	is the wx event loop running
+lib		start_event_loop_wx	app	start the wx event loop in a consistent manner
+lib		get_app_qt4		create a new qt4 app or return an existing one
+lib		is_event_loop_running_qt4	app	is the qt4 event loop running
+lib		start_event_loop_qt4	app	start the qt4 event loop in a consistent manner
+lib		inputhook_wx1		run the wx event loop by processing pending events only
+lib		inputhook_wx2		run the wx event loop polling for stdin
+lib		inputhook_wx3		run the wx event loop by processing pending events only
+lib		build_ipy_lexer	python3	builds ipython lexers depending on the value of python3
+lib	IPythonConsoleLexer	__init__		initialize the ipython console lexer
+lib	IPythonConsoleLexer	buffered_tokens		generator of unprocessed tokens after doing insertions and before changing to a new state
+lib	IPythonConsoleLexer	get_mci	line	parses the line and returns a 3-tuple mode code insertion
+lib		_safe_getattr	obj attr default	safe version of getattr
+lib		pretty	obj verbose max_width newline	pretty print the object's representation
+lib		pprint	obj verbose max_width newline	like pretty but print to stdout
+lib	_PrettyPrinterBase	indent	indent	with statement support for indenting/dedenting
+lib	_PrettyPrinterBase	group	indent open close	like begin_group / end_group but for the with statement
+lib	PrettyPrinter	text	obj	add literal text to the output
+lib	PrettyPrinter	breakable	sep	add a breakable separator to the output this does not mean that it
+lib	PrettyPrinter	break_		explicitly insert a newline into the output maintaining correct indentation
+lib	PrettyPrinter	begin_group	indent open	begin a group if you want support for python < 2 5 which doesn't has
+lib	PrettyPrinter	_enumerate	seq	like enumerate but with an upper limit on the number of items
+lib	PrettyPrinter	end_group	dedent close	end a group see begin_group for more details
+lib	PrettyPrinter	flush		flush data that is left in the buffer
+lib		_get_mro	obj_class	get a reasonable method resolution order of a class and its superclasses for both old-style and new-style classes
+lib	RepresentationPrinter	pretty	obj	pretty print the given object
+lib	RepresentationPrinter	_in_deferred_types	cls	check if the given class is specified in the deferred type registry
+lib		_default_pprint	obj p cycle	the default print function used if an object does not provide one and
+lib		_seq_pprinter_factory	start end basetype	factory that returns a pprint function useful for sequences used by
+lib		_set_pprinter_factory	start end basetype	factory that returns a pprint function useful for sets and frozensets
+lib		_dict_pprinter_factory	start end basetype	factory that returns a pprint function used by the default pprint of dicts and dict proxies
+lib		_super_pprint	obj p cycle	the pprint for the super type
+lib		_re_pattern_pprint	obj p cycle	the pprint function for regular expression patterns
+lib		_type_pprint	obj p cycle	the pprint for classes and types
+lib		_repr_pprint	obj p cycle	a pprint that just redirects to the normal repr function
+lib		_function_pprint	obj p cycle	base pprint for all functions and builtin functions
+lib		_exception_pprint	obj p cycle	base pprint for all exceptions
+lib		for_type	typ func	add a pretty printer for a given type
+lib		for_type_by_name	type_module type_name func	add a pretty printer for a type specified by the module and name of a type rather than the type object itself
+lib		passwd	passphrase algorithm	generate hashed password and salt for use in notebook configuration
+lib		passwd_check	hashed_passphrase passphrase	verify that a given passphrase matches its hashed version
+lib		create_inputhook_qt4	mgr app	create an input hook for running the qt4 application event loop
+lib		win32_clipboard_get		get the current clipboard's text on windows
+lib		osx_clipboard_get		get the clipboard's text on os x
+lib		tkinter_clipboard_get		get the clipboard's text using tkinter
+lib	Audio	reload		reload the raw data from file or url
+lib	Audio	_make_wav	data rate	transform a numpy array to a pcm bytestring
+lib	Audio	_data_and_metadata		shortcut for returning metadata with url information if defined
+lib	IFrame	_repr_html_		return the embed iframe
+lib	FileLink	_repr_html_		return html link to file
+lib	FileLink	__repr__		return absolute path to file
+lib	FileLinks	__init__	path url_prefix included_suffixes result_html_prefix	see :class filelink for the path, url_prefix, result_html_prefix and result_html_suffix parameters
+lib	FileLinks	_get_display_formatter	dirname_output_format fname_output_format fp_format fp_cleaner	generate built-in formatter function
+lib	FileLinks	_get_notebook_display_formatter	spacer	generate function to use for notebook formatting
+lib	FileLinks	_get_terminal_display_formatter	spacer	generate function to use for terminal formatting
+lib	FileLinks	__repr__		return newline-separated absolute paths
+lib		install_editor	template wait	installs the editor that is called by ipython for the %edit magic
+lib		komodo	exe	activestate komodo [edit]
+lib		scite	exe	scite or sc1
+lib		notepadplusplus	exe	notepad++ http //notepad-plus sourceforge net
+lib		jed	exe	jed the lightweight emacsish editor
+lib		idle	exe	idle the editor bundled with python parameters
+lib		mate	exe	textmate the missing editor
+sphinxext		str_to_array	s	simplistic converter of strings from repr to float numpy arrays
+sphinxext		float_doctest	sphinx_shell args input_lines found	doctest which allow the submitted output to vary slightly from the input
+sphinxext		block_parser	part rgxin rgxout fmtin	part is a string of ipython text comprised of at most one input one output comments and blank lines
+sphinxext	EmbeddedSphinxShell	process_input_line	line store_history	process the input capturing stdout
+sphinxext	EmbeddedSphinxShell	process_image	decorator	# build out an image directive like #
+sphinxext	EmbeddedSphinxShell	process_input	data input_prompt lineno	process data block for input token
+sphinxext	EmbeddedSphinxShell	process_output	data output_prompt input_lines output	process data block for output token
+sphinxext	EmbeddedSphinxShell	process_comment	data	process data fpblock for comment token
+sphinxext	EmbeddedSphinxShell	save_image	image_file	saves the image file to disk
+sphinxext	EmbeddedSphinxShell	process_block	block	process block from the block_parser and return a list of processed lines
+sphinxext	EmbeddedSphinxShell	ensure_pyplot		ensures that pyplot has been imported into the embedded ipython shell
+sphinxext	EmbeddedSphinxShell	process_pure_python	content	content is a list of strings it is unedited directive content
+sphinxext	EmbeddedSphinxShell	custom_doctest	decorator input_lines found submitted	perform a specialized doctest
+sphinxext		setup	app	setup as a sphinx extension
+extensions	ModuleReloader	mark_module_skipped	module_name	skip reloading the named module in the future
+extensions	ModuleReloader	mark_module_reloadable	module_name	reload the named module in the future if it is imported
+extensions	ModuleReloader	aimport_module	module_name	import a module and mark it reloadable
+extensions	ModuleReloader	check	check_all do_reload	check whether some modules need to be reloaded
+extensions		update_function	old new	upgrade the code object of a function
+extensions		update_class	old new	replace stuff in the __dict__ of a class and upgrade
+extensions		update_property	old new	replace get/set/del functions of a property
+extensions		superreload	module reload old_objects	enhanced version of the builtin reload function
+extensions	AutoreloadMagics	autoreload	parameter_s	%autoreload => reload modules automatically %autoreload
+extensions	AutoreloadMagics	aimport	parameter_s stream	%aimport => import modules for automatic reloading
+extensions	AutoreloadMagics	post_execute_hook		cache the modification times of any modules imported in this execution
+extensions		load_ipython_extension	ip	load the extension in ipython
+extensions	StoreMagics	store	parameter_s	lightweight persistence for python variables
+extensions		load_ipython_extension	ip	load the extension in ipython
+extensions		load_ipython_extension	ip	load the extension in ipython
+extensions		load_ipython_extension	ip	load the extension in ipython

@@ -1,0 +1,1039 @@
+sheep counter	to be patched in for the time module replacing sleep() and time()
+partition info	holds partition info used by initializer functions
+coordinated session	a wrapped session that works with a tf coordinator
+xla scope	keeps track of previous xla scope calls and depth of current call
+step counter hook	counts the number of training steps
+permission denied error	raised when the caller does not have permission to run an operation
+hash table	a generic hash table implementation
+vocabulary list categorical column	see categorical_column_with_vocabulary_list
+basic rnncell	the most basic rnn cell
+composition	a function composition
+nadam	nesterov adam optimizer
+tensor flow code upgrader	class that handles upgrading a set of python files to tensorflow 1 0
+chrome trace formatter	a helper class for generating traces in chrome trace format
+ordered dict numpy feed fn	creates feed dictionaries from ordereddicts of numpy arrays
+command handler registry	registry of command handlers for cli
+regression head	head for regression with a generalized linear model
+axis	size and label information for an axis
+estimator	estimator class to train and evaluate tensorflow models
+doc generator	main entry point for generating docs
+linear operator	base class defining a [batch of] linear operator[s]
+min max norm	minmaxnorm weight constraint
+feature engineering function test	tests feature_engineering_fn
+sdca with linear loss test	sdca optimizer test class for linear squared loss
+every n	base class for monitors that execute callbacks every n steps
+base in memory source	abstract parent class for numpysource and pandassource
+lambda callback	callback for creating simple custom callbacks on-the-fly
+nan tensor hook	monitors the loss tensor and stops training if loss is nan
+weighted sparse column	see weighted_sparse_column
+walsmodel	a model for weighted alternating least squares matrix factorization
+reshape	reshapes an output to a certain shape
+tree training variables	stores tf variables for training a single random tree
+graph	a tensorflow computation represented as a dataflow graph
+cudnn rnntanh	cudnn implementation of the rnn-tanh model
+average pooling3d	average pooling operation for 3d data spatial or spatio-temporal
+file edit tuple	each edit that is recorded by a fileeditrecorder
+operator pddiag	class representing a batch of positive definite matrices a
+register statistics	a decorator for registering the statistics function for an op type
+exp	compute y = g x = exp x
+tensor forest estimator	an estimator that can train and evaluate a random forest
+array feed fn	creates feed dictionaries from numpy arrays
+synthetic test	test synthetic dataset generation
+out of range error	raised when an operation iterates past the valid input range
+unauthenticated error	the request does not have valid authentication credentials
+feed fn hook	runs feed_fn and sets the feed_dict accordingly
+stochastic tensor	stochastictensor is a basestochastictensor backed by a distribution
+tensor flow test case	base class for tests that need to test tensorflow
+nan loss	nan loss monitor
+checkpoint saver listener	interface for listeners that take action before or after checkpoint save
+cluster config	this class specifies the configurations for a distributed run
+adadelta	adadelta optimizer
+initializer	initializer base class all initializers inherit from this class
+normalize numbers test	tests for normalizenumberfields()
+plus1rnncell	rnn cell generating (output new_state) = input + 1 state + 1
+exponential moving average	maintains moving averages of variables by employing an exponential decay
+operator sqrt solve	operator implements sqrt_solve
+nested rnncell	rnn cell generating (output new_state) = input + 1 state + 1
+failure tolerator	helper for tolerating certain exceptions
+stop at step	monitor to request stop at a specified step
+run config	this class specifies the configurations for an estimator run
+control outputs	the control outputs topology
+crf forward rnn cell	computes the alpha values in a linear-chain crf
+device wrapper cell	class to ensure cell calculation happens on a specific device
+distribution	a generic probability distribution base class
+streaming model port processor	processor for streaming modelports
+gamma	gamma distribution
+square linear operator full matrix symmetric positive definite test	most tests done in the base class linearoperatorderivedclasstest
+pooling3d	pooling layer for arbitrary pooling functions for 3d inputs
+element fetch mapper	fetch mapper for singleton tensors and ops
+singular monitored session	session-like object that handles initialization restoring and hooks
+scaffold	structure to create or gather pieces commonly needed to train a model
+identity	initializer that generates the identity matrix
+unavailable error	raised when the runtime is currently unavailable
+nn	a simple baseline feed-forward neural network
+merge	generic merge layer for elementwise merge functions
+negative binomial	negativebinomial distribution
+rmsprop	rmsprop optimizer
+checkpoint saver hook	saves checkpoints every n steps or seconds
+graph dump	dumps almost all tensors in the graph at every step
+recoverable session	a wrapped session that recreates a session upon certain kinds of errors
+image	an itemhandler that decodes a parsed tensor as an image
+cudnn rnnrelu	cudnn implementation of the rnn-relu model
+csvparser	a transform that parses lines from a csv file
+max pooling2d	max pooling layer for 2d inputs e g images
+random poisson test	this is a large test due to the moments computation taking some time
+data frame column	represents a feature column produced from a dataframe
+state saving rnnestimator learning test	learning tests for state saving rnn estimators
+replica device chooser	class to choose devices for ops in a replicated training setup
+final ops hook	a hook which evaluates tensors at the end of a session
+choose location	a bijector which chooses between one of two location parameters
+multivariate normal diag plus low rank	the multivariate normal distribution on r^k
+already exists error	raised when an entity that we attempted to create already exists
+average pooling2d	average pooling layer for 2d inputs e g images
+custom helper	base abstract class that allows the user to customize sampling
+stochastic soft decisions to data then nn	a hybrid model that samples paths when training
+test decorated class	test decorated class
+cudnn rnnno input c	simple cudnnrnn models without input_c
+register gradient	a decorator for registering the gradient function for an op type
+tfexample decoder	a decoder for tensorflow examples
+strided slice checker	check a given tensor against the numpy result
+sgd	stochastic gradient descent optimizer
+classifier mixin	mixin class for all classifiers
+debug concurrent run calls test	test for debugging concurrent session run() calls
+install command	override the dir where the headers go
+collection	a sized iterable container
+directory deleted error	thrown by load() when the directory is *permanently* gone
+dummy multi dimensional lstm	lstm cell generating (output new_state) = input + 1 state + 1
+kmeans clustering	an estimator for k-means clustering
+update tags	rewrites a python guide so that each section has an explicit tag
+parser config	stores all indexes required to parse the docs
+transformer mixin	mixin class for all transformer estimators
+invert	bijector which inverts another bijector
+tensor like	internal cls for grouping tensor sparsetensor for is_instance
+class page info	collects docs for a class page
+variable	see the @{$variables$variables how to} for a high level overview
+apichange spec	list of maps that describe what changed in the api
+dense kernel mapper	abstract class for a kernel mapper that maps dense inputs to dense outputs
+square linear operator derived class test	base test class appropriate for square operators
+uniform	uniform distribution with low and high parameters
+control flow context	the base class for control flow context
+lazy adam optimizer	variant of the adam optimizer that handles sparse updates more efficiently
+normal no entropy	normal distribution without a entropy method
+metric spec	metricspec connects a model to metric functions
+conv1d	1d convolution layer (e g
+invalid shape error	exception thrown when a tensor's shape deviates from an expected shape
+cropping2d	cropping layer for 2d input e g picture
+invalid hook	invalid hook (not a subclass of sessionrunhook)
+cudnn rnn	creates an rnn model using the underlying cudnn implementation
+greedy embedding helper	a helper for use during inference
+masking	masks a sequence by using a mask value to skip timesteps
+local import	a class that allows us to temporarily import something
+average pooling1d	average pooling layer for 1d inputs
+dnnlinear combined estimator	an estimator for tensorflow linear and dnn joined training models
+tensor flow data frame	tensorflowdataframe implements convenience functions using tensorflow
+strict1d cumsum test	test this private function
+activation	applies an activation function to an output
+summary saver hook	saves summaries every n steps
+loss relative change hook	stops when the change in loss goes below a tolerance
+exp bijector test	tests correctness of the y = g x = exp x transformation
+dense column	represents a column which can be represented as tensor
+dense	just your regular densely-connected nn layer
+base wrapper	base class for the keras scikit-learn wrapper
+leaky re lu	leaky version of a rectified linear unit
+linear operator shape	linearoperator that implements the methods _shape and _shape_tensor
+bernoulli with sigmoid probs	bernoulli with probs = nn sigmoid logits
+item handler	specifies the item-to-features mapping for tf parse_example
+operator pdsqrt diag test	most tests done in the base classes
+embedding wrapper	operator adding input embedding to the given cell
+print tensor	prints given tensors every n steps
+softmax centered bijector test	tests correctness of the y = g x = exp x / sum(exp x transformation
+append docstring	helper class to promote private subclass docstring to public counterpart
+streaming data feeder	data feeder for tf trainer that reads data from iterator
+add	layer that adds a list of inputs
+event generator	class that can add_events and then yield them back
+session debug test base	base class for unit tests of tfdbg running with tf session
+scheduled embedding training helper	a training helper that adds scheduled sampling
+tfrecord options	options used for manipulating tfrecord files
+checkpointed op	op with a custom checkpointing implementation
+sdcaoptimizer	wrapper class for sdca optimizer
+python object to proto visitor	a visitor that summarizes given python objects as protobufs
+hparams	class to hold a set of hyperparameters as name-value pairs
+student twith abs df softplus scale	studentt with df = floor(abs df ) and scale = softplus scale
+ordered dict numpy source	a zero-input transform that produces series from a dict of numpy arrays
+bidirectional grid lstmcell	bidirectional gridlstm cell
+base ui	base class of tfdbg user interface
+shuffle batch	creates shuffled batches from series containing a single row
+normal	the normal distribution with location loc and scale parameters
+vector deterministic	vector deterministic distribution on r^k
+navigation history item	individual item in navigation history
+rnncell	abstract object representing an rnn cell
+flatten	flattens the input does not affect the batch size
+register kl	decorator to register a kl divergence implementation function
+conditional bijector	conditional bijector is a bijector that allows intrinsic conditioning
+concat benchmark	benchmark concat
+rmsprop optimizer	optimizer that implements the rmsprop algorithm
+luong attention	implements luong-style multiplicative attention scoring
+adam optimizer	optimizer that implements the adam algorithm
+tensor	an itemhandler that returns a parsed tensor
+scipy optimizer interface	wrapper allowing scipy optimize minimize to operate a tf session
+non square linear operator derived class test	base test class appropriate for generic rectangular operators
+gradient descent optimizer	optimizer that implements the gradient descent algorithm
+observed stochastic tensor	a stochastictensor with an observed value
+highlight options	options for highlighting elements of a tensor
+rnncell for test	rnn cell for testing
+estimator spec	ops and objects returned from a model_fn and passed to estimator
+sdca model test	base sdca optimizer test class for any loss type
+py guide parser	simple parsing of a guide md file
+softplus bijector test	tests the correctness of the y = g x = log[1 + exp x ] transformation
+input projection wrapper	operator adding an input projection to the given cell
+slim rnncell	a simple wrapper for slim rnn_cells
+adder	abstract base class to add two operators
+bidirectional	bidirectional wrapper for rnns
+average	layer that averages a list of inputs
+server	an in-process tensorflow server for use in distributed training
+stochastic hard decisions to data then nn	a hybrid model that samples paths when training
+wishart operator pd	the matrix wishart distribution on positive definite matrices
+exporter	exporter helps package a tensorflow model for serving
+graph actions test	graph actions tests
+default stack	a thread-local stack of objects for providing implicit defaults
+module page info	collects docs for a module page
+summary writer cache	cache for summary writers
+barrier	represents a key-value map that persists across graph executions
+svstep counter thread	threads to count steps and measure their duration
+strided slice grad test	test that strided slice's custom gradient produces correct gradients
+variable scope	variable scope object to carry defaults to provide to get_variable
+two argument type	use this subclass for parametric types that accept two arguments
+event file writer	writes event protocol buffers to an event file
+checkpoint saver	saves checkpoints every n steps or n seconds
+linear embedding lookup arguments	represents the information needed from a column for embedding lookup
+session run args	represents arguments to be added to a session run() call
+function	a composable function wrapper for a regular python function
+container	a container is a directed acyclic graph of layers
+crossed column	represents a cross transformation also known as conjuction or combination
+max norm	maxnorm weight constraint
+defined function	_definedfunction encapsulates a function definition and its properties
+multi rnncell	rnn cell composed sequentially of multiple simple cells
+scale gradient tests	simple tests of the scale_gradient function
+spatial dropout1d	spatial 1d version of dropout
+aggregation method	a class listing aggregation methods used to combine gradients
+tbplugin	tensorboard plugin interface every plugin must extend from this class
+coupled input forget gate lstmcell	long short-term memory unit lstm recurrent network cell
+fake big query server	fake http server to return schema and data for sample table
+sum	adds two series
+timeline	a class for visualizing execution timelines of tensorflow steps
+queue runner	holds a list of enqueue operations for a queue each to be run in a thread
+batch	batches columns to specified size
+tuner	tuner class is the interface for experiment hyper-parameters tuning
+test class	docstring for testclass itself
+grid1basic rnncell	1d basicrnn cell
+on session init response	response from an on-session-init callback
+on run end request	request to an on-run-end callback
+regressor mixin	mixin class for all regression estimators
+chain	bijector which applies a sequence of bijectors
+maximum	layer that computes the maximum element-wise a list of inputs
+dense resource variable processor	processor for dense resourcevariables
+pooling1d	abstract class for different pooling 1d layers
+conv2d	2d convolution layer e g spatial convolution over images
+export monitor	monitor that exports estimator every n steps
+reference resolver	class for replacing @{ } references with markdown links
+random fourier feature mapper	class that implements random fourier feature mapping rffm in tensorflow
+poisson	poisson distribution
+check calls head	head that checks whether head_ops is called
+text summary plugin asset	provides a registry of text summaries for the tensorboard text plugin
+unicode test case	test case with python3-compatible string comparator
+sdca with hinge loss test	sdca optimizer test class for hinge loss
+weighted moments test	tests for nn weighted_moments
+linear operator udvhupdate	perturb a linearoperator with a rank k update
+zero padding2d	zero-padding layer for 2d input e g picture
+wishart full	the matrix wishart distribution on positive definite matrices
+inconvertible tensor proto	represents a tensorproto that cannot be converted to np ndarray
+dumping debug hook	a debugger hook that dumps debug data to filesystem
+logging trainable	writes trainable variable values into log every n steps
+shared	wraps a scope with variable reuse around the subnetwork
+monitored session test	monitoredsession tests
+variance scaling	initializer capable of adapting its scale to the shape of weights tensors
+text file string table initializer	table initializer for int64 ids to string tables from a text file
+non square linear operator full matrix test	most tests done in the base class linearoperatorderivedclasstest
+coordinated session test	_coordinatedsession tests
+func graph	a helper for construction a function
+test reporting benchmark	this benchmark maybe reports some stuff
+scattered embedding column	see scattered_embedding_column
+bucketized column	represents a bucketization transformation also known as binning
+sequence	a typed sequence
+unknown error	unknown error
+dot	layer that computes a dot product between samples in two tensors
+every checkpoint pre save listener	runs a given op before each checkpoint save
+tfrecord writer	a class to write records to a tfrecords file
+series binary transform	parent class for transforms that operate on two series
+multi head	head implementation for multi objective learning
+grid1lstmcell	1d lstm cell
+layer	base layer class
+fetch handler	handler for structured fetches
+transformed series	a series that results from applying a transform to a list of inputs
+dense	densely-connected layer class
+series	a single output series
+capture variable	captures a variable's values into a collection
+categorical column	represents a categorical feautre
+sparse feature	configuration for parsing a sparse input feature from an example
+padding fifoqueue	a fifoqueue that supports batching variable-sized tensors by padding
+bijector caching test	test caching with brokenbijector
+unimplemented error	raised when an operation has not been implemented
+forest to data then nn	a model that combines a decision forest embedding with a neural net
+tensor flow call visitor	ast visitor that finds tensorflow function calls
+big query request handler	responds to bigquery http requests
+operator pdcholesky	class representing a batch of positive definite matrices a
+scaffold test	scaffold tests
+sparse tensor	represents a sparse tensor
+monitored session	session-like object that handles initialization recovery and hooks
+problem type	enum-like values for the type of problem that the model solves
+session run context	provides information about the session run() call being made
+fused rnncell	abstract object representing a fused rnn cell
+example plugin asset	simple example asset
+key value tensor initializer	table initializers given keys and values tensors
+dnncomposable model	a _composablemodel that implements a dnn
+cudnn gru	cudnn implementation of the gru model
+metric key	metric key strings
+session bundle load no vars test	test the case where there are no variables in the graph
+vector student t	a vector version of student's t-distribution on r^k
+gaussian noise	apply additive zero-centered gaussian noise
+linear operator identity	linearoperator acting like a [batch] square identity matrix
+supervisor	a training helper that checkpoints models and computes summaries
+operator pdsqrt vdvtupdate	operator defined by a=ss^t, where s = m + vdv^t for operatorpd m
+coordinator	a coordinator for threads
+step counter hook	hooks that counts the number of times it is called
+operator	a wrapper for an operator
+imperative mode	imperative mode execution of tensorflow graphs
+initialize clusters hook	initializes clusters or waits for cluster initialization
+dimension	represents the value of one dimension in a tensorshape
+sparse column hashed	see sparse_column_with_hash_bucket
+step stats analysis	stores the step stats analysis output
+base monitor	base class for monitors
+linear operator udvhupdatetest no diag cannot use cholesky	a = l + uv^h l > 0 ==> a is not symmetric and we cannot use a cholesky
+global pooling1d	abstract class for different global pooling 1d layers
+model fn ops	ops returned from a model_fn
+random normal	initializer that generates tensors with a normal distribution
+table initializer base	base class for lookup table initializers
+input layer	layer to be used as an entry point into a graph
+text plugin	text plugin for tensorboard
+profile datum	profile data point
+sdca model	stochastic dual coordinate ascent solver for linear models
+hard decisions to data layer	a layer that learns a soft decision tree but treats it as hard at test
+fake summary writer	fake summary writer
+activity regularization	layer that applies an update to the cost function based input activity
+function detail	a simple class to contain function details
+zero padding1d	zero-padding layer for 1d input e g temporal sequence
+test sequential	most sequential model api tests are covered in training_test py
+declare	declares a tensorflow function
+runge kutta state	saved state of the runge kutta solver
+hard decisions to data then nn	a model that treats tree inference as hard at test
+pandas source	a zero-input transform that produces series from a dataframe
+second or step timer	timer that triggers at most once every n seconds or once every n steps
+cudnn lstm	cudnn implementation of the lstm model
+dnnestimator	a estimator for tensorflow dnn models with user specified _head
+singular monitored session test	tests singularmonitoredsession
+scheduled output training helper	a training helper that adds scheduled sampling directly to outputs
+chi2	chi2 distribution
+reparameterization type	instances of this class represent how sampling is reparameterized
+gamma with softplus concentration rate	gamma with softplus of concentration and rate
+grid2basic rnncell	2d basicrnn cell this creates a 2d cell which receives input and gives output in the first
+queue base	base class for queue implementations
+bahdanau attention	implements bhadanau-style additive attention
+time freq lstmcell	time-frequency long short-term memory unit lstm recurrent network cell
+interval	represents an interval between a start and end value
+base estimator	this is a cross-import when sklearn is not available
+session run values	contains the results of session run()
+debug dump dir	data set from a debug-dump directory on filesystem
+dict	a typed dict
+ref variable processor	processor for variable
+early stopping	stop training when a monitored quantity has stopped improving
+linear operator order of addition test	test that the order of addition is done as specified by tiers
+random forest graphs	builds tf graphs for random forest training and inference
+base monitor wrapper	base monitor wrapper to facilitate testing
+layer norm basic lstmcell	lstm unit with layer normalization and recurrent dropout
+linear operator addition correctness test	tests correctness of addition with combinations of a few adders
+resource exhausted error	some resource has been exhausted
+resnet complete network test	tests with complete small resnet v2 networks
+on session init action	enum-like values for possible action to take on session init
+register shape	no longer used was a decorator for registering a shape function
+sequence input wrapper	a wrapper object for storing sequence-related input
+generator feed fn	creates feed dictionaries from generator of dicts of numpy arrays
+failed precondition error	operation was rejected because the system is not in a state to execute it
+grid lstmcell	grid long short-term memory unit lstm recurrent network cell
+iterator	abstract base class for image data iterators
+base	a class with some useful methods for testing
+validation monitor	runs evaluation of a given estimator at most every n steps
+sharded mutable dense hash table	a sharded version of mutabledensehashtable
+fast gfile	file i/o wrappers without thread locking
+staging area	class for staging inputs no ordering guarantees
+step counter	steps per second monitor
+multivariate normal diag	the multivariate normal distribution on r^k
+aborted error	the operation was aborted typically due to a concurrent action
+item handler callback	an itemhandler that converts the parsed tensors via a given function
+wrapped session test	_wrappedsession tests
+regression output	represents the output of a regression head
+run options metadata hook	a hook that observes & optionally modifies runoptions and runmetadata
+estimator spec eval test	tests estimatorspec in eval mode
+serving input receiver	a return type for a serving_input_receiver_fn
+tensorboard simple server construction test	tests that the default http server is constructed without error
+head	interface for the head/top of a model
+conv3dtranspose	transposed 3d convolution layer sometimes called 3d deconvolution
+walsmatrix factorization	an estimator for weighted matrix factorization using the wals method
+attention wrapper	wraps another rnncell with attention
+cudnn rnnbenchmark	benchmarks cudnn lstm and other related models
+multivariate normal linear operator	the multivariate normal distribution on r^k
+add and return scaled identity	handles additions resulting in an identity family member
+space to batch test	tests input-output pairs for the spacetobatch and batchtospace ops
+kfeature decisions to data then nn	a model that places a soft decision tree embedding before a neural net
+op def library	holds a collection of opdefs can add the corresponding ops to a graph
+directory watcher	a directorywatcher wraps a loader to load from a sequence of paths
+geometric	geometric distribution
+recoverable session test	_recoverablesession tests
+categorical vocabulary	categorical variables vocabulary class
+python file	this class indicates that the object is defined in a regular python file
+dtype	represents the type of the elements in a tensor
+resample test	tests that resampling runs and outputs are close to expected values
+history	saved integration history for use in info_dict
+bounding box	an itemhandler that concatenates a set of parsed tensors to bounding boxes
+student t	student's t-distribution
+tensor handle	represents a handle for a live tensor in a session
+strided slice grad type test	test varied index types and host located memory
+batch normalization	batch normalization layer ioffe and szegedy 2014
+input fn ops	a return type for an input_fn
+extract image patches	functional tests for extractimagepatches op
+tab completion registry	registry for tab completion responses
+raise once at count n	hook that raises an exception at step n
+densify	transforms sparse to dense tensor
+model checkpoint	save the model after every epoch
+summary to event transformer	abstractly implements the summarywriter api
+random tree graphs	builds tf graphs for random tree training and inference
+dirichlet multinomial	dirichlet-multinomial compound distribution
+session run hook	hook to extend calls to monitoredsession run()
+up sampling2d	upsampling layer for 2d inputs
+sdca with smooth hinge loss test	sdca optimizer test class for smooth hinge loss
+categorical processor	maps documents to sequences of word ids
+classproperty	class property decorator
+reduce join test helper test	tests for helper functions
+grucell	gated recurrent unit cell (cf http //arxiv org/abs/1406 1078)
+sparse feature column test	tests for sparsefeaturecolumn
+operator pdidentity test	most tests done in the base class
+random uniform	initializer that generates tensors with a uniform distribution
+composable	a composable function
+directory iterator	iterator capable of reading images from a directory on disk
+device wrapper	operator that ensures an rnncell runs on a particular device
+dynamic rnnestimator learning test	learning tests for dynamic rnn estimators
+indexed slices	a sparse representation of a set of tensor slices at given indices
+difference	subtracts one 'series from another
+global max pooling3d	global max pooling operation for 3d data
+data column collection	collection of datacolumns meant to mimic a proto repeated field
+average pooling1d	average pooling for temporal data
+defun	decorator used to define tensorflow functions
+time distributed	this wrapper allows to apply a layer to every temporal slice of an input
+numeric column	see numeric_column
+benchmark	abstract class that provides helper functions for running benchmarks
+estimator inheritance constraint test	tests that sub classes cannot override methods of estimator
+svtimer checkpoint thread	a thread to checkpoint on a timer
+non square linear operator composition test	most tests done in the base class linearoperatorderivedclasstest
+ugrnncell	update gate recurrent neural network ugrnn cell
+strided slice shape test	test the shape inference of stridedsliceshapes
+watch options	type for return values of watch_fn
+stochastic soft decisions to data layer	a layer that learns a soft decision tree by sampling paths
+operator pddiag base	base class for diagonal operators
+predefined series	a series that requires the cache to already map a given name
+estimator spec train test	tests estimatorspec in train mode
+reduce lron plateau	reduce learning rate when a metric has stopped improving
+operator pdsqrt diag	class representing a batch of positive definite matrices a
+multi output operation	a 'duck-type' wrapper class for a list of tensors acting as an operation
+hooked session test	tests of _hookedsession
+final beam search decoder output	final outputs returned by the beam search after all decoding is finished
+csvlogger	callback that streams epoch results to a csv file
+abstract batch transform	abstract parent class for batching transforms
+transformer	handles all the transformations defined by featurecolumn if needed
+truncated normal	initializer that generates a truncated normal distribution
+tensor board wsgiapp	the tensorboard application conforming to wsgi spec
+byte processor	maps documents into sequence of ids for bytes
+batch normalization	batch normalization layer from http //arxiv org/abs/1502 03167
+binary svm target column	_targetcolumn for binary classification using svms
+embedding metadata	metadata container for an embedding
+output projection wrapper	operator adding an output projection to the given cell
+real valued var len column	represents a real valued feature column for variable length features
+sigmoid	bijector which computes y = g x = 1 / (1 + exp -x )
+gaussian dropout	apply multiplicative 1-centered gaussian noise
+broken bijector	forward and inverse are not inverses of each other
+debug tensor datum	a single tensor dumped by tensorflow debugger tfdbg
+conditional transformed distribution	a transformeddistribution that allows intrinsic conditioning
+data loss error	raised when unrecoverable data loss or corruption is encountered
+base saver builder	base class for savers
+curses navigation history	navigation history containing commands outputs and scroll info
+large concat op test	tests that belong in concat_op_test py but run over large tensors
+callback list	container abstracting a list of callbacks
+logistic	the logistic distribution with location loc and scale parameters
+multivariate normal diag plus low rank test	well tested because this is a simple override of the base class
+concatenate	layer that concatenates a list of inputs
+gmm	an estimator for gmm clustering
+callback	abstract base class used to build new callbacks
+momentum optimizer	optimizer that implements the momentum algorithm
+uniform unit scaling	initializer that generates tensors without scaling variance
+average pooling3d	average pooling layer for 3d inputs e g volumes
+cancelled error	raised when an operation or step is cancelled
+cholesky outer product	compute g x = x @ x t; x is lower-triangular positive-diagonal matrix
+softmax centered	bijector which computes y = g x = exp([x 0]) / sum(exp([x 0]))
+scalar binary transform	parent class for transforms that combine series to a scalar
+sigmoid centered	bijector which computes y = g x = exp([x 0]) / (1 + exp -x
+linear composable model	a _composablemodel that implements linear regression
+sync replicas optimizer	class to synchronize aggregate gradients and pass them to the optimizer
+beam search decoder	beamsearch sampling decoder
+l1l2	regularizer for l1 and l2 regularization
+cleanup func	a helper class to remove a registered function from _py_funcs
+record input	recordinput asynchronously reads and randomly yields tfrecords
+stop at nsession	a wrapped session that stops at the n-th call to _check_stop
+list	a typed list
+base bijector test	tests properties of the bijector base-class
+other example asset	simple example asset
+device spec	represents a possibly partial specification for a tensorflow device
+id table with hash buckets	string to id table wrapper that assigns out-of-vocabulary keys to buckets
+reader source	produces tensors of keys and values using a tf reader
+lazy loader	lazily import a module mainly to avoid pulling in large dependancies
+multiply	layer that multiplies element-wise a list of inputs
+not found error	raised when a requested entity (e g a file or directory) was not found
+reduction	types of loss reduction
+feeder	simple generator for feed_fn, returning 10 * step
+sparse column	represents a sparse feature column also known as categorical features
+grublock cell	block gru cell implementation
+conv recurrent2d	abstract base class for convolutional recurrent layers
+tensor	represents one of the outputs of an operation
+pooling2d	abstract class for different pooling 2d layers
+tfrecord compression type	the type of compression for the record
+iotest	tf learn io operation tests
+transformed distribution	a transformed distribution
+dnnlinear combined classifier	a classifier for tensorflow linear and dnn joined training models
+operator pdbase	class representing a batch of positive definite matrices a
+kmeans benchmark	base class for benchmarks
+random shuffle queue	a queue implementation that dequeues elements in a random order
+monitored training session test	tests monitoredtrainingsession
+keras classifier	implementation of the scikit-learn classifier api for keras
+dict fetch mapper	fetch mapper for dicts
+linear operator identity test	most tests done in the base class linearoperatorderivedclasstest
+adagrad	adagrad optimizer
+strided slice benchmark	benchmark new strided slice operation on non-trivial case
+vocabulary processor	maps documents to sequences of word ids
+big query reader	a reader that outputs keys and tf example values from a bigquery table
+callable	a composable function that simply defers to a callable function
+file writer	writes summary protocol buffers to event files
+extract image patches grad test	gradient-checking for extractimagepatches op
+pooling3d	abstract class for different pooling 3d layers
+linear operator diag test	most tests done in the base class linearoperatorderivedclasstest
+conditional distribution	distribution that supports intrinsic parameters local latents
+deterministic	scalar deterministic distribution on the real line
+node stepper	tensorflow debugger tfdbg stepper
+attention cell wrapper	basic attention cell wrapper
+custom object scope	provides a scope that changes to _global_custom_objects cannot escape
+conv	abstract nd convolution layer private used as implementation base
+sparse tensor	an itemhandler for sparsetensors
+worker session creator	creates a tf session for a worker
+constant	initializer that generates tensors with constant values
+abort at nsession	a mock sessionthat aborts at the n-th run call
+data provider	maps a list of requested data items to tensors from a data source
+skcompat	scikit learn wrapper for tensorflow learn estimator
+summary at end hook	a run hook that saves a summary with the results of evaluation
+test upgrade	test various apis that have been changed in 1 0
+svm	support vector machine svm model for binary classification
+projector plugin asset	provides a registry for assets needed by the projector plugin
+grid2basic lstmcell	2d basiclstm cell this creates a 2d cell which receives input and gives output in the first
+assert test	tests assertprotoequal()
+decisions to data then nn	a model that places a decision tree embedding before a neural net
+default graph stack	a thread-local stack of objects for providing an implicit default graph
+reservoir bucket	a container for items from a stream that implements reservoir sampling
+numpy source	a zero-input transform that produces a single column from a numpy array
+time reversed fused rnn	this is an adaptor to time-reverse a fusedrnncell
+decisions to data layer	a layer that treats soft decisions as data
+doc generator visitor	a visitor that generates docs for a python object when __call__ed
+internal error	raised when the system experiences an internal error
+optimizer	abstract optimizer base class
+max pooling3d	max pooling operation for 3d data spatial or spatio-temporal
+space to batch ndtest	tests input-output pairs for the spacetobatchnd and batchtospacend ops
+adagrad daoptimizer	adagrad dual averaging algorithm for sparse linear models
+base session	a class for interacting with a tensorflow computation
+pooling2d	pooling layer for arbitrary pooling functions for 2d inputs e g images
+optimizer	base class for optimizers
+node	a node describes the connectivity between two layers
+dumping debug wrapper session	debug session wrapper that dumps debug data to filesystem
+invalid scaffold	invalid scaffold (not a subclass of scaffold)
+proximal gradient descent optimizer	optimizer that implements the proximal gradient descent algorithm
+linear operator udvhupdatetest with diag use cholesky	a = l + udu^h d > 0 l > 0 ==> a > 0 and we can use a cholesky
+sparse feature column	represents a sparse feature column
+reader base	base class for different reader types that produce a record every step
+lrucache	lru cache used for storing the last used tensor
+composable model	abc for building blocks that can be used to create estimators
+variable store	variable store that carries a number of named variables
+external optimizer interface	base class for interfaces with external optimization algorithms
+model	fully connected model for mnist
+sparse conditional accumulator	a conditional accumulator for aggregating sparse gradients
+zeros	initializer that generates tensors initialized to 0
+data feeder test	tests for datafeeder
+prediction type	enum-like values for the type of prediction that the model makes
+input spec	specifies the ndim dtype and shape of every input to a layer
+partitioned variable	a container for partitioned variable objects
+next queued sequence batch	nextqueuedsequencebatch stores deferred sequencequeueingstatesaver data
+summary saver	saves summaries every n steps
+dnnclassifier	a classifier for tensorflow dnn models
+dirichlet	dirichlet distribution
+install headers	override how headers are copied
+unit norm	constrains the weights incident to each hidden unit to have unit norm
+type	base class for type checker types
+binary logistic head	head for binary classification with logistic regression
+strided slice test	test the strided slice operation with variants of slices
+remote monitor	callback used to stream events to a server
+template	wrap a function to aid in variable sharing
+rich line	rich single-line text
+intersection rnncell	intersection recurrent neural network +rnn cell
+ops test	ops tests
+test debug wrapper session	a concrete implementation of basedebugwrappersession for test
+multinomial	multinomial distribution
+stability test	tests that estiamtors are reproducible
+text plugin test	test the text summary api
+sequential	linear stack of layers
+linear operator composition	composes one or more linearoperators
+power transform bijector test	tests correctness of the power transformation
+batch norm benchmark	benchmark batch normalization
+sparse column vocabulary	see sparse_column_with_vocabulary_file
+split benchmark	benchmark split!
+sparse column integerized	see sparse_column_with_integerized_feature
+chi2with abs df	chi2 with parameter transform df = floor(abs df )
+hybrid layer	layers are building blocks for hybrid models
+sub graph view	a subgraph view on an existing tf graph
+linear operator diag	linearoperator acting like a [batch] square diagonal matrix
+grid1basic lstmcell	1d basiclstm cell
+base debug wrapper session	base class of debug-wrapper session classes
+cropping3d	cropping layer for 3d data (e g
+mapping	helper class to make it easier to manage caching in bijector
+repeat vector	repeats the input n times
+dnnregressor	a regressor for tensorflow dnn models
+global average pooling1d	global average pooling operation for temporal data
+data frame	a dataframe is a container for ingesting and preprocessing data
+cond context	the context for the conditional construct
+laplace	the laplace distribution with location loc and scale parameters
+local clidebug hook	command-line-interface debugger hook
+max pooling1d	max pooling operation for temporal data
+session benchmark	tests and benchmarks for interacting with the tf session
+allocation maximum	stores the maximum allocation for a given allocator within the timelne
+invalid argument error	raised when an operation receives an invalid argument
+linear operator tri l	linearoperator acting like a [batch] square lower triangular matrix
+linear classifier	linear classifier model
+summary writer	writes summary protocol buffers to event files
+linear opearator udvhupdate broadcasts shape	test that the operator's shape is the broadcast of arguments
+base deterministic	base class for deterministic distributions
+resource variable	variable based on resource handles
+base linear operator identity	base class for identity operators
+tensor proxy	forwards to the methods in the current graph's tensor object
+gru	gated recurrent unit - cho et al
+reshape coder	utility class for mapping to and from another shape
+lstmstate tuple	tuple used by lstm cells for state_size, zero_state, and output state
+tensor array	class wrapping dynamic-sized per-time-step write-once tensor arrays
+grid rnncell	grid recurrent cell
+operator pdderived class test	tests for derived classes
+imperative graph	a class implementing an imperative mode tensorflow graph
+linear operator derived class test	tests for derived classes
+function page info	collects docs for a function page
+lazy builder	handles caching of transformations while building the model
+image data generator	generate minibatches of image data with real-time data augmentation
+bad adder	adder that will fail if used
+power transform	compute y = g x = (1 + x * c)**(1 / c), x >= -1 / c
+vocabulary file categorical column	see categorical_column_with_vocabulary_file
+variable clipping optimizer	wrapper optimizer that clips the norm of specified variables after update
+bernoulli	bernoulli distribution
+sdcalinear regressor	linear regression model using sdca to solve the underlying optimization
+embedding column	represents an embedding column
+flag values	global container and accessor for flags and their values
+grid search test	grid search tests
+setup predict data feeder test	tests for datafeeder setup_predict_data_feeder
+linear estimator	linear model with user specified head
+identity reader	a reader that outputs the queued work as both the key and value
+basic lstmcell	basic lstm recurrent network cell
+sequence queueing state saver	sequencequeueingstatesaver provides access to stateful values from input
+attention wrapper state	namedtuple storing the state of a attentionwrapper
+transformer	transform a subgraph into another one
+chief session creator	creates a tf session for a chief
+proximal adagrad optimizer	optimizer that implements the proximal adagrad algorithm
+locally connected1d	locally-connected layer for 1d inputs
+sparse id lookup config	defines lookup configuration for a sparse feature
+linear regressor	linear regressor model
+text line reader	a reader that outputs the lines of a file delimited by newlines
+identity bijector test	tests correctness of the y = g x = x transformation
+max pooling1d	max pooling layer for 1d inputs
+thresholded re lu	thresholded rectified linear unit
+maskedmatmul benchmark	benchmark masked_matmul_ops
+wrapper	abstract wrapper base class
+menu	a class for text-based menu
+elbo ratio test	show sampling converges to true kl values
+lstmblock cell	basic lstm recurrent network cell
+menu item	a class for an item in a text-based menu
+fixed length record reader	a reader that outputs fixed-length records from a file
+stochastic value type	interface for the valuetype classes
+percentile test with nearest interpolation	test separately because np round and tf round make different choices
+sigmoid centered bijector test	tests correctness of the y = g x = (1 + exp -x )^-1 transformation
+tensor board	tensorboard basic visualizations
+one hot column	represents a one-hot column for use in deep networks
+debug analyzer	analyzer for debug data from dump directories
+graph rewriter	takes a float graph and rewrites it in quantized form
+multivariate normal diag with softplus scale	multivariatenormaldiag with diag_stddev = softplus(diag_stddev)
+feeding functions test case	tests for feeding functions
+model	the model class adds training & evaluation routines to a container
+deadline exceeded error	raised when a deadline expires before an operation could complete
+classification output	represents the output of a classification head
+embedding multiplier test	dnn_model_fn tests
+data decoder	an abstract class which is used to decode data for a provider
+control flow state	maintain the mapping from the loops to their grad states
+operation	represents a graph node that performs computation on tensors
+on run start action	enum-like values for possible action to take on start of a run() call
+file io	fileio class that exposes methods to read / write to / from files
+linear operator udvhupdatetest no diag use cholesky	a = l + uu^h l > 0 ==> a > 0 and we can use a cholesky
+optimizable variable	interface for abstracting over variables in the optimizers
+affine linear operator	compute y = g x shift scale = scale @ x + shift
+global max pooling2d	global max pooling operation for spatial data
+get markdown title	extract the title from a md file
+saved model builder	builds the savedmodel protocol buffer and saves variables and assets
+decoder	an rnn decoder abstract interface object
+wrapped session	wrapper around a tf session
+orthogonal	initializer that generates an orthogonal matrix
+learning rate scheduler	learning rate scheduler
+generator enqueuer	builds a queue out of a data generator
+round robin strategy	returns the next ps task index for placement in round-robin order
+linear operator scaled identity	linearoperator acting like a scaled [batch] identity matrix a = c i
+invert bijector test	tests the correctness of the y = invert bij transformation
+transform	a function from a list of series to a namedtuple of series
+conv3d	3d convolution layer e g spatial convolution over volumes
+inverse gamma with softplus concentration rate	inversegamma with softplus of concentration and rate
+phased lstmcell	phased lstm recurrent network cell
+spatial dropout2d	spatial 2d version of dropout
+total variation test	tests the function total_variation() in image_ops
+control output cache	helper class to manage calculating and caching control_outputs in graph
+stop at step hook	hook that requests stop at a specified step
+fake vector student t	fake scipy implementation for multivariate student's t-distribution
+max pooling2d	max pooling operation for spatial data
+base distribution	abstract base class needed for resolving subclass hierarchy
+non linear test	non-linear estimator tests
+sweep hook	keeps track of row/col sweeps and runs prep ops before each sweep
+estimator spec infer test	tests estimatorspec in infer mode
+event file loader	an eventloader is an iterator that yields event protos
+fractional max pool grad test	tests for fractionalmaxpoolgrad
+file writer cache	cache for file writers
+stub out for testing	support class for stubbing methods out for unit testing
+transpose benchmark	benchmark transpose!
+softplus	bijector which computes y = g x = log[1 + exp x ]
+interactive mode	imperative mode suitable for interactive execution
+multi label head	head for multi-label classification
+byte loader	a loader that loads individual bytes from a file
+tensor tracker	an internal class to track the lifetime of a tensor
+kmeans	creates the graph for k-means clustering
+mapping	a typed mapping
+conv3d	3d convolution layer (e g
+session creator	a factory for tf session
+multivariate normal diag test	well tested because this is a simple override of the base class
+pre lu	parametric rectified linear unit
+session interface	base class for implementations of tensorflow client sessions
+max pooling3d	max pooling layer for 3d inputs e g volumes
+metric keys	metric key strings
+base test	test load csv functions
+adagrad optimizer	optimizer that implements the adagrad algorithm
+single argument type	use this subclass for parametric types that accept only one argument
+step counter hook	hook that counts steps per second
+elu	exponential linear unit
+graph actions train test	tests for train
+conditional accumulator base	a conditional accumulator for aggregating gradients
+monitored session	see monitoredsession or singularmonitoredsession
+priority queue	a queue implementation that dequeues elements in prioritized order
+divide delegate with name	use python2/python3 division delegation to implement divide for tensors
+categorical	categorical distribution
+doc info	a simple struct for holding a doc's url and title
+chain bijector test	tests the correctness of the y = chain bij1 bij2 bij3 transformation
+wishart cholesky	the matrix wishart distribution on positive definite matrices
+operator pdsqrt vdvtupdate test	most tests done in the base class
+on run start request	request to an on-run-start callback
+reroute mode	enums for reroute's mode
+profiler hook	captures cpu/gpu profiling information every n steps or seconds
+zero padding3d	zero-padding layer for 3d data spatial or spatio-temporal
+mutable dense hash table	a generic mutable hash table implementation using tensors as backing store
+kfeature decisions to data layer	a layer that treats soft decisions made on single features as data
+rnnparams saveable	saveableobject implementation that handles the rnn params variable
+test eos masking	tests eos masking used in beam search
+normal with softplus scale	normal with softplus applied to scale
+beta	beta distribution
+sdcalogistic classifier	logistic regression binary classifier using the sdca optimizer
+ones	initializer that generates tensors initialized to 1
+sharded mutable dense hash table test	tests for the shardedmutablehashtable class
+linear operator scaled identity test	most tests done in the base class linearoperatorderivedclasstest
+linear operator apply only	linearoperator that simply wraps a [batch] matrix and implements apply
+operator pdidentity	identity operator in r^k: ax = x
+lstm	long-short term memory unit - hochreiter 1997
+split mask	provide a boolean mask based on a hash of a series
+model fnops test	multi-output tests
+on session init request	request to an on-session-init callback
+add and return diag	handles additions resulting in a diag operator
+list fetch mapper	fetch mapper for lists tuples and namedtuples
+sparsify	transforms dense to sparse tensor
+tuple	a typed tuple
+sdcaestimator	base estimator class for linear models using the sdca optimizer
+regression target column	_targetcolumn for regression
+non interactive debug wrapper session	base class for non-interactive (i e non-cli) debug wrapper sessions
+fully connected layer	a stacked fully-connected feed-forward neural network layer
+global average pooling2d	global average pooling operation for spatial data
+stochastic hard decisions to data layer	a layer that learns a soft decision tree by sampling paths
+on run start response	request from an on-run-start callback
+seq2seq ops test	sequence-to-sequence tests
+ftrl optimizer	optimizer that implements the ftrl algorithm
+feature column	represents a feature column abstraction
+tfdecorator	base class for all tensorflow decorators
+grid2grucell	2d lstm cell this creates a 2d cell which receives input and gives output in the first
+rich text lines	rich multi-line text
+grad loop state	the state used for constructing the gradient graph for a while loop
+list view	immutable list wrapper
+experiment	experiment is a class containing all information needed to train a model
+real valued column	represents a real valued feature column also known as continuous features
+evaluable	interface for objects that are evaluatable by e g experiment
+summary writer cache test	summarywritercache tests
+file edit recorder	record changes that need to be done to the file
+operation proxy	a proxy for the ops operation class
+transformer info	"contains information about the result of a transform operation
+quantized distribution	distribution representing the quantization y = ceiling x
+trainable	interface for objects that are trainable by e g experiment
+proto file	this class indicates that the object is defined in a proto file
+grid2lstmcell	2d lstm cell this creates a 2d cell which receives input and gives output in the first
+reservoir	a map-to-arrays container with deterministic reservoir sampling
+base attention mechanism	a base attentionmechanism class providing common functionality
+python builtin	this class indicated that the object in question is a python builtin
+monitors test	monitors tests
+progbar	displays a progress bar
+hasher spec	a structure for the spec of the hashing function to use for hash buckets
+glstmcell	group lstm cell g-lstm
+event accumulator	an eventaccumulator takes an event generator and accumulates the values
+sparse meta data	store information about the tensor is it sparse?, map_op and rank
+export strategy	a class representing a type of model export
+distribution shape	manage and manipulate distribution shape
+while context	the context for the loop construct
+binary svm head	head for binary classification using svm
+text file initializer	table initializers from a text file
+training helper	a helper for use during training only reads inputs
+renyi ratio test	show renyi_ratio is minimized when the distributions match
+dropout wrapper	operator adding dropout to inputs and outputs of the given cell
+multi class head	'head' for multi class classification
+grpc debug wrapper session	debug session wrapper that send debug data to grpc stream s
+square linear operator composition test	most tests done in the base class linearoperatorderivedclasstest
+fake plugin	a plugin with no functionality
+fixed len feature	configuration for parsing a fixed-length input feature
+fake hook	fake implementation of sessionrunhook
+cluster spec	represents a cluster as a set of "tasks", organized into "jobs"
+global max pooling1d	global max pooling operation for temporal data
+up sampling1d	upsampling layer for 1d inputs
+forest hparams	a base class for holding hyperparameters and calculating good defaults
+fixed len sequence feature	configuration for parsing a variable-length input feature into a tensor
+readline ui	readline-based command-line ui
+gmm algorithm	tensorflow gaussian mixture model clustering class
+initializable lookup table base	initializable lookup table interface
+inline bijector test	tests correctness of the inline constructed bijector
+forest training variables	a container for a forests training data consisting of multiple trees
+generated file	this class indicates that the object is defined in a generated python file
+compiled wrapper	wraps step execution in an xla jit scope
+affine	compute y = g x shift scale = scale @ x + shift
+lstmblock fused cell	fusedrnncell implementation of lstm
+tensor signature	signature of the tensor object
+fetch mapper	definition of the interface provided by fetch mappers
+kernel linear classifier	linear classifier using kernel methods as feature preprocessing
+func registry	a helper class to keep track of registered py functions
+relaxed one hot categorical	relaxedonehotcategorical distribution with temperature and logits
+example parser	a transform that parses serialized tensorflow example protos
+graph keys	standard names to use for graph collections
+sdca with logistic loss test	sdca optimizer test class for logistic loss
+permute	permutes the dimensions of the input according to a given pattern
+global pooling2d	abstract class for different global pooling 2d layers
+union	a sum type
+proto assertions	mix this into a googletest testcase class to get proto2 assertions
+on run end response	response from an on-run-end callback
+tfoptimizer	wrapper class for native tensorflow optimizers
+fractional avg pool grad test	tests for fractionalavgpoolgrad
+tmp info	transformer temporary data
+exp relaxed one hot categorical	exprelaxedonehotcategorical distribution with temperature and logits
+mode keys	standard names for model modes
+add and return matrix	"handles additions resulting in a linearoperatorfullmatrix
+mutable hash table	a generic mutable hash table implementation
+dropout	applies dropout to the input
+axes	axis names and indices for a tensor
+predict output	represents the output of a generic prediction head
+global average pooling3d	global average pooling operation for 3d data
+axis order error	error class for cases where there is no valid axis order
+benchmark registrar	the benchmark class registrar used by abstract benchmark class
+test beam step	tests a single step of beam search
+up sampling3d	upsampling layer for 3d inputs
+conditional accumulator	a conditional accumulator for aggregating gradients
+feeder	helper to manage the plumbing for externally-fed graphs
+one hot categorical	onehotcategorical distribution
+linear operator udvhupdatetest with diag not square	a = l + udu^h d > 0 l > 0 ==> a > 0 and we can use a cholesky
+random gamma test	this is a medium test due to the moments computation taking some time
+local clidebug wrapper session	concrete subclass of basedebugwrappersession implementing a local cli
+boolean mask	apply a boolean mask to a series
+hdf5matrix	representation of hdf5 dataset to be used instead of a numpy array
+average pooling2d	average pooling operation for spatial data
+highway wrapper	rnncell wrapper that adds highway connection on cell input and output
+lambda	wraps arbitrary expression as a layer object
+tfrecord reader	a reader that outputs the records from a tfrecords file
+inline	bijector constructed from custom callables
+logging tensor hook	prints the given tensors once every n local steps or once every n seconds
+feeding queue runner test case	tests for feedingqueuerunner
+curses ui	curses-based command-line ui
+tensor flow benchmark	abstract class that provides helpers for tensorflow benchmarks
+labeled tensor	a tensor with annotated axes
+inverse gamma	inversegamma distribution
+feeding queue runner	a queue runner that allows the feeding of values such as numpy arrays
+test gather tree	tests the gather_tree function
+event multiplexer	an eventmultiplexer manages access to multiple eventaccumulators
+node stepper cli	command-line-interface backend of node stepper
+get samples test	test the private method 'get_samples'
+global pooling3d	abstract class for different global pooling 3d layers
+exponential	exponential distribution
+resnet complete network test	tests with complete small resnet v1 networks
+grad slice checker	tests that we can compute a gradient for var^2
+greedy load balancing strategy	returns the least-loaded ps task for op placement
+identity	compute y = g x = x
+fifoqueue	a queue implementation that dequeues elements in first-in first-out order
+public apivisitor	visitor to use with traverse to visit exactly the public tf api
+multivariate normal tri l	the multivariate normal distribution on r^k
+linear operator full matrix	linearoperator that wraps a [batch] matrix
+residual wrapper	rnncell wrapper that ensures cell inputs are added to the outputs
+var len feature	configuration for parsing a variable-length input feature
+operator solve	operator implements solve
+run hook adapter for monitors	wraps monitors into a sessionrunhook
+training loss forest	random forest that uses training loss as the termination criteria
+profile analyzer	analyzer for profiling data
+bucketized column	see bucketized_column
+non neg	constrains the weights to be non-negative
+optional	an optional type
+sync replicas optimizer hook	a sessionrunhook handles ops related to syncreplicasoptimizer
+conv2dtranspose	transposed 2d convolution layer sometimes called 2d deconvolution
+operator pdfull	class representing a batch of positive definite matrices a
+regularizer	regularizer base class
+adam	adam optimizer
+event logger thread	thread that logs events
+batch ops test	tests for batch_ops {un }batch
+gumbel	the scalar gumbel distribution with location loc and scale parameters
+tensor forest loss hook	monitor to request stop when loss stops decreasing
+laplace with softplus scale	laplace with softplus applied to scale
+fused rnncell adaptor	this is an adaptor for rnncell classes to be used with fusedrnncell
+operator pddiag test	most tests done in the base classes
+cropping1d	cropping layer for 1d input e g temporal sequence
+generate guide index	turn guide files into an index from symbol name to a list of _guiderefs
+lstmcell	long short-term memory unit lstm recurrent network cell
+mixture	mixture distribution
+grpc debug hook	a hook that streams debugger-related events to any grpc_debug_server
+affine bijector test	tests correctness of the y = scale @ x + shift transformation
+op info	all per-op state we would like to precompute/validate
+parallel reader	reader class that uses multiple readers in parallel to improve speed
+whole file reader	a reader that outputs the entire contents of a file as a value
+conc	implements tensor concatenation in network specifications
+target column	_targetcolumn is the abstraction for a single head in a model
+looper thread	a thread that runs code repeatedly optionally on a timer
+recurrent	abstract base class for recurrent layers
+idx	implements the identity function in network specifications
+sigmoid bijector test	tests correctness of the y = g x = (1 + exp -x )^-1 transformation
+registry	provides a registry for saving objects
+conv1d	1d convolution layer e g temporal convolution
+linear operator udvhupdatetest with diag cannot use cholesky	a = l + udu^h d !> 0 l > 0 ==> a !> 0 and we cannot use a cholesky
+linear operator tri ltest	most tests done in the base class linearoperatorderivedclasstest
+pooling1d	pooling layer for arbitrary pooling functions for 1d inputs
+projector plugin	embedding projector
+overloaded function	_overloadedfunction encapsulates an overloaded function
+nascell	neural architecture search nas recurrent network cell
+progbar logger	callback that prints metrics to stdout
+text file id table initializer	table initializer for string to int64 ids tables from a text file
+multi output test	multi-output tests
+conv2dtranspose	transposed convolution layer sometimes called deconvolution
+strong hash spec	a structure to specify a key of the strong keyed hash spec
+plugin asset	this abstract base class allows tensorboard to serialize assets to disk
+local clidebugger wrapper session for test	subclasses the wrapper class for testing
+sparse column keys	see sparse_column_with_keys
+command history	keeps command history and supports lookup
+embedding	turns positive integers indexes into dense vectors of fixed size
+multi class target column	_targetcolumn for classification
+not fitted error	exception class to raise if estimator is used before fitting
+data feeder	data feeder is an example class to sample data for tf trainer
+bijector	interface for invertible transformations of a distribution sample
+saver	saves and restores variables
+locally connected2d	locally-connected layer for 2d inputs
+pandas feed fn	creates feed dictionaries from pandas dataframes
+regression test	linear regression tests
+scroll bar	vertical scrollbar for curses-based cli
+base stochastic tensor	base class for tensor-like objects that emit stochastic values
+block	a named tuple describing a resnet block
+profile data table view	table view of profiling data
+adadelta optimizer	optimizer that implements the adadelta algorithm
+flattened fully connected layer	a stacked fully-connected flattened feed-forward neural network layer
+tensor flow transform	a function from a list of series to a namedtuple of series
+gfile	file i/o wrappers without thread locking
+stop after nevals hook	run hook used by the evaluation routines to run the eval_ops n times
+svsummary thread	a thread to save summaries on a timer
+error	exception for typecheck failures
+helper	interface for implementing sampling in seq2seq decoders
+space to batch cpp test	tests input-output pairs for the spacetobatch and batchtospace ops
+sdca update weights hook	sessionrunhook to update and shrink sdca model weights
+mock readline ui	test subclass of readlineui that bypasses terminal manipulations
+deep embedding lookup arguments	represents the information needed from a column for embedding lookup
+dense read resource variable processor	processor for dense resourcevariables
+hooked session	a _wrappedsession that calls hooks during calls to run()
+unnamed plugin asset	an example asset with a dummy serialize method provided but no name
+simple rnn	fully-connected rnn where the output is to be fed back to input
+binomial	binomial distribution
+estimator	estimator class is the basic tensorflow model trainer/evaluator
+beta with softplus concentration	beta with softplus transform of concentration1 and concentration0
+numpy array iterator	iterator yielding data from a numpy array
+hybrid model	defines a hybrid model
+hints	holds 'is_x' flags that every linearoperator is initialized with
+keras regressor	implementation of the scikit-learn regressor api for keras
+base estimator	abstract baseestimator class to train and evaluate tensorflow models
+mock curses ui	mock subclass of cursesui that bypasses actual terminal manipulations
+spatial dropout3d	spatial 3d version of dropout
+tri lplus vdvtlightweight operator pd	helper/hidden class fake an operatorpd for tril+vdv t
+variable device chooser	device chooser for variables
+function	runs a computation graph
+conv lstm2d	convolutional lstm
+adamax	adamax optimizer from adam paper's section 7
+some random benchmark	this benchmark should automatically be registered in the registry
+moving average optimizer	optimizer that computes a moving average of the variables
+fifoqueue benchmark	benchmark fifoqueue operations
+operator shape	operator implements the abc method _shape
+hash fast	perform a fast hash of a series
+sample value	draw samples possibly adding new outer dimensions along the way
+grid3lstmcell	3d basiclstm cell this creates a 2d cell which receives input and gives output in the first
+square linear operator full matrix test	most tests done in the base class linearoperatorderivedclasstest
+base linear operator udvhupdatetest	base test for this type of operator
+single head	interface for a single head/top of a model
+batch select op test	test broadcasting of select when 'c' is a vec and 't' &'e' are rank2+
+add and return tri l	handles additions resulting in a tril operator
+lookup interface	represent a lookup table that persists across different steps
+output format	an enum used to list the valid output formats for api calls
+dask data feeder	data feeder for that reads data from dask series and dask dataframe
+lstmblock wrapper	this is a helper class that provides housekeeping for lstm cells
+elboforms	constants to control the elbo calculation
+layer	abstract base layer class
+sdca fprint test	tests for the sdcafprint op
+session manager	training helper that restores from checkpoint and creates session
+dataset	represents a dataset specification
+separable conv2d	depthwise separable 2d convolution
+relaxed bernoulli	relaxedbernoulli distribution with temperature and logits parameters
+interactive session	a tensorflow session for use in interactive contexts such as a shell
+global step waiter hook	delays execution until global step reaches wait_until_step
+test debug wrapper session bad action	a concrete implementation of basedebugwrappersession for test
+kernel estimator	generic kernel-based linear estimator
+tokenizer	text tokenization utility class
+dnnlinear combined regressor	a regressor for tensorflow linear and dnn joined training models
+exponential with softplus rate	exponential with softplus transform on rate
+export output	represents an output of a model that can be served
+hashed categorical column	see categorical_column_with_hash_bucket
+basic decoder	basic sampling decoder
+tensor shape	represents the shape of a tensor
+op error	a generic error that is raised when tensorflow execution fails
+custom optimizer	custom optimizer tests
+history	callback that records events into a history object
+op stats	a holder for statistics about an operator
+census data source	source of census data
+load csv test	test load csv functions
+session	a class for running tensorflow operations
+combined test	tests using a mix of all-reduce ops in one session run call
+base logger	callback that accumulates epoch averages of metrics

@@ -1,0 +1,820 @@
+core		resource_find	filename	search for a resource in the list of paths
+core		resource_add_path	path	add a custom path to search in
+core		resource_remove_path	path	remove a search path
+core	LoaderBase	start		start the loader thread/process
+core	LoaderBase	run		main loop for the loader
+core	LoaderBase	stop		stop the loader thread/process
+core	LoaderBase	pause		pause the loader can be useful during interactions
+core	LoaderBase	resume		resume the loader after a :meth pause
+core	LoaderBase	_load	kwargs	internal loading function called by the thread
+core	LoaderBase	_load_local	filename kwargs	internal loading a local file
+core	LoaderBase	_load_urllib	filename kwargs	internal loading a network file first download it save it to a
+core	LoaderBase	_update		internal check if a data is loaded and pass to the client
+core	LoaderBase	image	filename load_callback post_callback	load a image using the loader a proxyimage is returned with a
+core		install_gobject_iteration		import and install gobject context iteration inside our event loop
+core		install_android		install hooks for the android platform
+core		install_twisted_reactor		installs a threaded twisted reactor which will schedule one reactor iteration before the next frame only when twisted needs
+core		uninstall_twisted_reactor		uninstalls the kivy's threaded twisted reactor no more twisted
+core	FactoryBase	is_template	classname	return true if the classname is a template from the :class ~kivy
+core	FactoryBase	register	classname cls module is_template	register a new classname referring to a real class or class definition in a module
+core	FactoryBase	unregister		unregisters the classnames previously registered via the register method
+core	FactoryBase	unregister_from_filename	filename	unregister all the factory objects related to the filename passed in the parameter
+core	GestureDatabase	add_gesture	gesture	add a new gesture to the database
+core	GestureDatabase	find	gesture minscore rotation_invariant	find a matching gesture in the database
+core	GestureDatabase	gesture_to_str	gesture	convert a gesture into a unique string
+core	GestureDatabase	str_to_gesture	data	convert a unique string to a gesture
+core	GesturePoint	__init__	x y	stores the x y coordinates of a point in the gesture
+core	GesturePoint	scale	factor	scales the point by the given factor
+core	GestureStroke	__init__		a stroke in the gesture
+core	GestureStroke	add_point	x y	add_point(x=x_pos y=y_pos) adds a point to the stroke
+core	GestureStroke	scale_stroke	scale_factor	scale_stroke(scale_factor=float) scales the stroke down by scale_factor
+core	GestureStroke	points_distance	point1 point2	points_distance(point1=gesturepoint point2=gesturepoint) returns the distance between two gesturepoints
+core	GestureStroke	stroke_length	point_list	finds the length of the stroke if a point list is given
+core	GestureStroke	normalize_stroke	sample_points	normalizes strokes so that every stroke has a standard number of points
+core	GestureStroke	center_stroke	offset_x offset_y	centers the stroke by offsetting the points
+core	Gesture	__init__	tolerance	gesture([tolerance=float]) creates a new gesture with an optional matching tolerance value
+core	Gesture	_scale_gesture		scales down the gesture to a unit of 1
+core	Gesture	_center_gesture		centers the gesture points of the gesture
+core	Gesture	add_stroke	point_list	adds a stroke to the gesture and returns the stroke instance
+core	Gesture	normalize	stroke_samples	runs the gesture normalization algorithm and calculates the dot product with self
+core	Gesture	get_rigid_rotation	dstpts	extract the rotation to apply to a group of points to minimize the distance to a second group of points
+core	Gesture	dot_product	comparison_gesture	calculates the dot product of the gesture with another gesture
+core	Gesture	get_score	comparison_gesture rotation_invariant	returns the matching score of the gesture against another gesture
+core	Gesture	__eq__	comparison_gesture	allows easy comparisons between gesture instances
+core	Animation	duration		return the duration of the animation
+core	Animation	transition		return the transition of the animation
+core	Animation	animated_properties		return the properties used to animate
+core	Animation	stop_all	widget	stop all animations that concern a specific widget / list of properties
+core	Animation	cancel_all	widget	cancel all animations that concern a specific widget / list of properties
+core	Animation	start	widget	start the animation on a widget
+core	Animation	stop	widget	stop the animation previously applied to a widget triggering the on_complete event
+core	Animation	cancel	widget	cancel the animation previously applied to a widget same
+core	Animation	stop_property	widget prop	even if an animation is running remove a property it will not be
+core	Animation	cancel_property	widget prop	even if an animation is running remove a property it will not be
+core	Animation	have_properties_to_animate	widget	return true if a widget still has properties to animate
+core	Sequence	cancel_property	widget prop	even if an animation is running remove a property it will not be
+core	Sequence	on_anim2_complete	instance widget	repeating logic used with boolean variable "repeat"
+core	AnimationTransition	linear	progress	image : images/anim_linear png
+core	AnimationTransition	in_quad	progress	image : images/anim_in_quad png
+core	AnimationTransition	out_quad	progress	image : images/anim_out_quad png
+core	AnimationTransition	in_out_quad	progress	image : images/anim_in_out_quad png
+core	AnimationTransition	in_cubic	progress	image : images/anim_in_cubic png
+core	AnimationTransition	out_cubic	progress	image : images/anim_out_cubic png
+core	AnimationTransition	in_out_cubic	progress	image : images/anim_in_out_cubic png
+core	AnimationTransition	in_quart	progress	image : images/anim_in_quart png
+core	AnimationTransition	out_quart	progress	image : images/anim_out_quart png
+core	AnimationTransition	in_out_quart	progress	image : images/anim_in_out_quart png
+core	AnimationTransition	in_quint	progress	image : images/anim_in_quint png
+core	AnimationTransition	out_quint	progress	image : images/anim_out_quint png
+core	AnimationTransition	in_out_quint	progress	image : images/anim_in_out_quint png
+core	AnimationTransition	in_sine	progress	image : images/anim_in_sine png
+core	AnimationTransition	out_sine	progress	image : images/anim_out_sine png
+core	AnimationTransition	in_out_sine	progress	image : images/anim_in_out_sine png
+core	AnimationTransition	in_expo	progress	image : images/anim_in_expo png
+core	AnimationTransition	out_expo	progress	image : images/anim_out_expo png
+core	AnimationTransition	in_out_expo	progress	image : images/anim_in_out_expo png
+core	AnimationTransition	in_circ	progress	image : images/anim_in_circ png
+core	AnimationTransition	out_circ	progress	image : images/anim_out_circ png
+core	AnimationTransition	in_out_circ	progress	image : images/anim_in_out_circ png
+core	AnimationTransition	in_elastic	progress	image : images/anim_in_elastic png
+core	AnimationTransition	out_elastic	progress	image : images/anim_out_elastic png
+core	AnimationTransition	in_out_elastic	progress	image : images/anim_in_out_elastic png
+core	AnimationTransition	in_back	progress	image : images/anim_in_back png
+core	AnimationTransition	out_back	progress	image : images/anim_out_back png
+core	AnimationTransition	in_out_back	progress	image : images/anim_in_out_back png
+core	AnimationTransition	in_bounce	progress	image : images/anim_in_bounce png
+core	AnimationTransition	out_bounce	progress	image : images/anim_out_bounce png
+core	AnimationTransition	in_out_bounce	progress	image : images/anim_in_out_bounce png
+core	App	build		initializes the application it will be called only once
+core	App	build_config	config	versionadded : 1 0 7
+core	App	build_settings	settings	versionadded : 1 0 7
+core	App	load_kv	filename	this method is invoked the first time the app is being run if no widget tree has been constructed before for this app
+core	App	get_application_name		return the name of the application
+core	App	get_application_icon		return the icon of the application
+core	App	get_application_config	defaultpath	versionadded : 1 0 7
+core	App	root_window		versionadded : 1 9 0
+core	App	load_config		internal this function is used for returning a configparser with the application configuration
+core	App	directory		versionadded : 1 0 7
+core	App	user_data_dir		versionadded : 1 7 0
+core	App	name		versionadded : 1 0 7
+core	App	run		launches the app in standalone mode
+core	App	stop		stop the application
+core	App	on_start		event handler for the on_start event which is fired after initialization (after build() has been called) but before the
+core	App	on_stop		event handler for the on_stop event which is fired when the application has finished running (i
+core	App	on_pause		event handler called when pause mode is requested you should
+core	App	on_resume		event handler called when your application is resuming from the pause mode
+core	App	get_running_app		return the currently running application instance
+core	App	on_config_change	config section key value	event handler fired when a configuration token has been changed by the settings page
+core	App	open_settings		open the application settings panel it will be created the very
+core	App	display_settings	settings	versionadded : 1 8 0
+core	App	close_settings		close the previously opened settings panel
+core	App	create_settings		create the settings panel this method will normally
+core	App	destroy_settings		versionadded : 1 8 0
+core	Vector	length		returns the length of a vector
+core	Vector	length2		returns the length of a vector squared
+core	Vector	distance	to	returns the distance between two points
+core	Vector	distance2	to	returns the distance between two points squared
+core	Vector	normalize		returns a new vector that has the same direction as vec but has a length of one
+core	Vector	dot	a	computes the dot product of a and b
+core	Vector	angle	a	computes the angle between a and b and returns the angle in degrees
+core	Vector	rotate	angle	rotate the vector with an angle in degrees
+core	Vector	line_intersection	v1 v2 v3 v4	finds the intersection point between the lines 1 v1->v2 and 2 v3->v4 and returns it as a vector object
+core	Vector	segment_intersection	v1 v2 v3 v4	finds the intersection point between segments 1 v1->v2 and 2 v3->v4 and returns it as a vector object
+core	Vector	in_bbox	point a b	return true if point is in the bounding box defined by a and b
+core	ExceptionHandler	handle_exception	exception	handle one exception defaults to returning exceptionmanager
+core	ExceptionManagerBase	add_handler	cls	add a new exception handler to the stack
+core	ExceptionManagerBase	remove_handler	cls	remove a exception handler from the stack
+core	ExceptionManagerBase	handle_exception	inst	called when an exception occurred in the runtouchapp() main loop
+core	EventLoopBase	touches		return the list of all touches currently in down or move states
+core	EventLoopBase	ensure_window		ensure that we have a window
+core	EventLoopBase	set_window	window	set the window used for the event loop
+core	EventLoopBase	add_input_provider	provider auto_remove	add a new input provider to listen for touch events
+core	EventLoopBase	remove_input_provider	provider	remove an input provider
+core	EventLoopBase	add_event_listener	listener	add a new event listener for getting touch events
+core	EventLoopBase	remove_event_listener	listener	remove an event listener from the list
+core	EventLoopBase	start		must be called only once before run()
+core	EventLoopBase	close		exit from the main loop and stop all configured input providers
+core	EventLoopBase	stop		stop all input providers and call callbacks registered using eventloop
+core	EventLoopBase	add_postproc_module	mod	add a postproc input module doubletap tripletap dejitter retaintouch are defaults
+core	EventLoopBase	remove_postproc_module	mod	remove a postproc module
+core	EventLoopBase	remove_android_splash		remove android presplash in sdl2 bootstrap
+core	EventLoopBase	post_dispatch_input	etype me	this function is called by dispatch_input() when we want to dispatch an input event
+core	EventLoopBase	dispatch_input		called by idle() to read events from input providers pass events to postproc and dispatch final events
+core	EventLoopBase	idle		this function is called after every frame by default
+core	EventLoopBase	exit		close the main loop and close the window
+core	EventLoopBase	on_stop		event handler for on_stop events which will be fired right after all input providers have been stopped
+core	EventLoopBase	on_pause		event handler for on_pause which will be fired when the event loop is paused
+core	EventLoopBase	on_start		event handler for on_start which will be fired right after all input providers have been started
+core		_run_mainloop		if no window has been created this will be the executed mainloop
+core		runTouchApp	widget slave	static main function that starts the application loop
+core		stopTouchApp		stop the current application by leaving the main loop
+core	Recognizer	filter		:meth filter returns a subset of objects in :attr self db,
+core	Recognizer	add_gesture	name strokes	add a new gesture to the database this will instantiate a new
+core	Recognizer	parse_gesture	data	parse data formatted by export_gesture() returns a list of
+core	Recognizer	export_gesture	filename	export a list of :class multistrokegesture objects outputs a
+core	Recognizer	import_gesture	data filename	import a list of gestures as formatted by :meth export_gesture
+core	Recognizer	transfer_gesture	tgt	transfers :class multistrokegesture objects from :attr recognizer
+core	Recognizer	prepare_templates		this method is used to prepare :class unistroketemplate objects within the gestures in self
+core	Recognizer	recognize	strokes goodscore timeout delay	search for gestures matching strokes returns a
+core	ProgressTracker	progress		returns the progress as a float 0 is 0% done 1 is 100% this
+core	ProgressTracker	best		return the best match found by recognize() so far it returns a
+core	ProgressTracker	stop		raises a stop flag that is checked by the search process it will
+core	MultistrokeGesture	add_stroke	stroke permute	add a stroke to the self strokes list if permute is true the
+core	MultistrokeGesture	get_distance	cand tpl numpoints	compute the distance from this candiate to a unistroketemplate
+core	MultistrokeGesture	match_candidate	cand	match a given candidate against this multistrokegesture object will
+core	MultistrokeGesture	permute		generate all possible unistroke permutations from self strokes and
+core	UnistrokeTemplate	add_point	p	add a point to the unistroke/path this invalidates all previously
+core	UnistrokeTemplate	prepare	numpoints	this function prepares the unistroketemplate for matching given a target number of points for resample
+core	Candidate	add_stroke	stroke	add a stroke to the candidate this will invalidate all
+core	Candidate	get_start_unit_vector	numpoints orientation_sens	internal use only get the start vector for this candidate with the path resampled to numpoints points
+core	Candidate	get_protractor_vector	numpoints orientation_sens	internal use only return vector for comparing to a
+core	Candidate	get_angle_similarity	tpl	internal use only compute the angle similarity between this candidate and a unistroketemplate object
+core	Candidate	prepare	numpoints	prepare the candidate vectors self strokes is combined to a single
+core	FileHandler	purge_logs	directory	purge log is called randomly to prevent the log directory from being filled by lots and lots of log files
+core		require	version	require can be used to check the minimum version required to run a kivy application
+core		kivy_configure		call post-configuration of kivy
+core		get_includes		retrieves the directories containing includes needed to build new cython modules with kivy as a dependency
+core		kivy_register_post_configuration	callback	register a function to be called when kivy_configure() is called
+core		kivy_usage		kivy usage %s [option ]::
+core	ConfigParser	add_callback	callback section key	add a callback to be called when a specific section or key has changed
+core	ConfigParser	remove_callback	callback section key	removes a callback added with :meth add_callback
+core	ConfigParser	read	filename	read only one filename in contrast to the original configparser of
+core	ConfigParser	set	section option value	functions similarly to pythonconfigparser's set method except that the value is implicitly converted to a string
+core	ConfigParser	setall	section keyvalues	sets multiple key-value pairs in a section keyvalues should be a
+core	ConfigParser	setdefaults	section keyvalues	set multiple key-value defaults in a section keyvalues should be
+core	ConfigParser	setdefault	section option value	set the default value for an option in the specified section
+core	ConfigParser	getdefault	section option defaultvalue	get the value of an option in the specified section if not found
+core	ConfigParser	getdefaultint	section option defaultvalue	get the value of an option in the specified section if not found
+core	ConfigParser	adddefaultsection	section	add a section if the section is missing
+core	ConfigParser	write		write the configuration to the last file opened using the :meth read method
+core	ConfigParser	update_config	filename overwrite	upgrade the configuration based on a new default config file
+core	ConfigParser	_register_named_property	name widget_ref	called by the configparserproperty to register a property which was created with a config name instead of a config object
+core	ConfigParser	get_configparser	name	returns the :class configparser instance whose name is name, or none if not found
+core	ConfigParser	name		the name associated with this configparser instance if not ''
+core		_isclose	a b rel_tol abs_tol	measures whether two floats are "close" to each other identical to
+core		boundary	value minvalue maxvalue	limit a value between a minvalue and maxvalue
+core		intersection	set1 set2	return the intersection of 2 lists
+core		difference	set1 set2	return the difference between 2 lists
+core		interpolate	value_from value_to step	interpolate between two values this can be useful for smoothing some
+core		strtotuple	s	convert a tuple string into a tuple with some security checks
+core		rgba	s	return a kivy color 4 value from 0-1 range from either a hex string or a list of 0-255 values
+core		get_color_from_hex	s	transform a hex string color to a kivy :class ~kivy
+core		get_hex_from_color	color	transform a kivy :class ~kivy graphics color to a hex value :
+core		get_random_color	alpha	returns a random color 4 tuple
+core		is_color_transparent	c	return true if the alpha channel is 0
+core		deprecated	func	this is a decorator which can be used to mark functions as deprecated
+core		format_bytes_to_human	size precision	format a byte value to a human readable representation b kb mb
+core		escape_markup	text	escape markup characters found in the text intended to be used when markup
+core	Cache	register	category limit timeout	register a new category in the cache with the specified limit
+core	Cache	append	category key obj timeout	add a new object to the cache
+core	Cache	get	category key default	get a object from the cache
+core	Cache	get_timestamp	category key default	get the object timestamp in the cache
+core	Cache	get_lastaccess	category key default	get the objects last access time in the cache
+core	Cache	remove	category key	purge the cache
+core	Cache	print_usage		print the cache usage to the console
+core	ClockBaseBehavior	frametime		time spent between the last frame and the current frame in seconds
+core	ClockBaseBehavior	frames		number of internal frames not necessarily drawed from the start of the clock
+core	ClockBaseBehavior	frames_displayed		number of displayed frames from the start of the clock
+core	ClockBaseBehavior	usleep	microseconds	sleeps for the number of microseconds
+core	ClockBaseBehavior	idle		internal waits here until the next frame
+core	ClockBaseBehavior	tick		advance the clock to the next step must be called every frame
+core	ClockBaseBehavior	tick_draw		tick the drawing counter
+core	ClockBaseBehavior	get_fps		get the current average fps calculated by the clock
+core	ClockBaseBehavior	get_rfps		get the current "real" fps calculated by the clock
+core	ClockBaseBehavior	get_time		get the last tick made by the clock
+core	ClockBaseBehavior	get_boottime		get the time in seconds from the application start
+core		mainthread	func	decorator that will schedule the call of the function for the next available frame in the mainthread
+core	Atlas	create	outname filenames size padding	this method can be used to create an atlas manually from a set of images
+core		parse_filename	filename	parse a filename and search for it using resource_find()
+core		parse_color	text	parse a string to a kivy color supported formats
+core		parse_bool	text	parse a string to a boolean ignoring case "true"/"1" is true
+core		parse_string	text	parse a string to a string removing single and double quotes
+core		parse_int2	text	parse a string to a list of exactly 2 integers
+core		parse_float4	text	parse a string to a list of exactly 4 floats
+core		circumcircle	a b c	computes the circumcircle of a triangle defined by a b c
+core		minimum_bounding_circle	points	returns the minimum bounding circle for a set of points
+core	SafeMembrane	safeIn		provides a thread-safe entry point for interactive launching
+core	SafeMembrane	safeOut		provides a thread-safe exit point for interactive launching
+core		pt	value	convert from points to pixels
+core		inch	value	convert from inches to pixels
+core		cm	value	convert from centimeters to pixels
+core		mm	value	convert from millimeters to pixels
+core		dp	value	convert from density-independent pixels to pixels
+core		sp	value	convert from scale-independent pixels to pixels
+core	MetricsBase	dpi		return the dpi of the screen depending on the platform the dpi can
+core	MetricsBase	dpi_rounded		return the dpi of the screen rounded to the nearest of 120 160 240 or 320
+core	MetricsBase	density		return the density of the screen this value is 1 by default
+core	MetricsBase	fontscale		return the fontscale user preference this value is 1 by default but
+core		register_context	name cls	register a new context
+core		get_current_context		return the current context
+core.spelling	SpellingBase	__init__	language	if a language identifier (such as 'en_us') is provided and a matching language exists it is selected
+core.spelling	SpellingBase	select_language	language	from the set of registered languages select the first language for language
+core.spelling	SpellingBase	list_languages		return a list of all supported languages
+core.spelling	SpellingBase	check	word	if word is a valid word in self _language (the currently active
+core.spelling	SpellingBase	suggest	fragment	for a given fragment i e part of a word or a word by itself
+core.clipboard	ClipboardBase	get	mimetype	get the current data in clipboard using the mimetype if possible
+core.clipboard	ClipboardBase	put	data mimetype	put data on the clipboard and attach a mimetype
+core.clipboard	ClipboardBase	get_types		return a list of supported mimetypes
+core.clipboard	ClipboardBase	_ensure_clipboard		ensure that the clipboard has been properly initialised
+core.clipboard	ClipboardBase	copy	data	copy the value provided in argument data into current clipboard
+core.clipboard	ClipboardBase	paste		get text from the system clipboard and return it a usable string
+core.video	VideoBase	_do_eos		versionchanged : 1 4 0
+core.video	VideoBase	_update	dt	update the video content to texture
+core.video	VideoBase	seek	percent	move on percent position
+core.video	VideoBase	stop		stop the video playing
+core.video	VideoBase	pause		pause the video
+core.video	VideoBase	play		play the video
+core.video	VideoBase	load		load the video from the current filename
+core.video	VideoBase	unload		unload the actual video
+core.audio	SoundLoader	register	classobj	register a new class to load the sound
+core.audio	SoundLoader	load	filename	load a sound and return a sound() instance
+core.audio	Sound	get_pos		returns the current position of the audio file
+core.audio	Sound	load		load the file into memory
+core.audio	Sound	unload		unload the file from memory
+core.audio	Sound	play		play the file
+core.audio	Sound	seek	position	go to the <position> in seconds
+core.image	ImageLoaderSDL2	extensions		return accepted extensions for this loader
+core.image	ImageLoaderPygame	extensions		return accepted extensions for this loader
+core.image	ImageLoaderFFPy	extensions		return accepted extensions for this loader
+core.image	ImageLoaderPIL	extensions		return accepted extensions for this loader
+core.image	ImageLoaderPIL	_img_correct	_img_tmp	convert image to the correct format and orientation
+core.image	ImageLoaderPIL	_img_read	im	read images from an animated file
+core.image	ImageData	width		image width in pixels
+core.image	ImageData	height		image height in pixels
+core.image	ImageData	size		image width height in pixels
+core.image	ImageData	add_mipmap	level width height data	add a image for a specific mipmap level
+core.image	ImageData	get_mipmap	level	get the mipmap image at a specific level if it exists
+core.image	ImageData	iterate_mipmaps		iterate over all mipmap images available
+core.image	ImageLoaderBase	load	filename	load an image
+core.image	ImageLoaderBase	can_save		indicate if the loader can save the image object
+core.image	ImageLoaderBase	can_load_memory		indicate if the loader can load an image by passing data
+core.image	ImageLoaderBase	size		image size width height
+core.image	ImageLoaderBase	texture		get the image texture created on the first call
+core.image	ImageLoaderBase	textures		get the textures list for mipmapped image or animated image
+core.image	ImageLoaderBase	nocache		indicate if the texture will not be stored in the cache
+core.image	ImageLoader	zip_loader	filename	read images from an zip file
+core.image	Image	remove_from_cache		remove the image from cache this facilitates re-loading of
+core.image	Image	anim_reset	allow_anim	reset an animation if available
+core.image	Image	anim_available		return true if this image instance has animation available
+core.image	Image	anim_index		return the index number of the image currently in the texture
+core.image	Image	on_texture		this event is fired when the texture reference or content has changed
+core.image	Image	load	filename	load an image :parameters
+core.image	Image	load_memory	data ext filename	internal method to load an image from raw data
+core.image	Image	size		image size width height
+core.image	Image	texture		texture of the image
+core.image	Image	nocache		indicate whether the texture will not be stored in the cache or not
+core.image	Image	save	filename flipped	save image texture to file
+core.image	Image	read_pixel	x y	for a given local x/y position return the pixel color at that position
+core.image		load	filename	load an image
+core.image	ImageLoaderGIF	extensions		return accepted extension for this loader
+core.image	Gif	pop	data length	gets the next $len chars from the data stack import
+core.image	Gif	pops	format data	pop struct get size pop(), unpack()
+core.image	Gif	print_info		prints out some useful info debug?)
+core.image	Gif	new_image	header	adds a new image descriptor
+core.image	ImageDescriptor	setup_header	header	takes a header tuple and fills the attributes
+core.image	ImageDescriptor	get_header		builds a header dynamically
+core.image	GifDecoder	fill		reads the data and fills each field of the file
+core.image	GifDecoder	string_to_bits	string	high level string unpacker
+core.image	GifDecoder	readable	bool_list	converts a list of booleans to a readable list of ints
+core.image	GifDecoder	bits_to_int	bits	high level bit list packer
+core.image	GifDecoder	get_color_table	size	returns a color table in the format [ r g b r g b ]
+core.image	GifDecoder	lzw_decode	input initial_codesize color_table_size	decodes a lzw stream from input import
+core.image		get_bits	flags reverse bits	return a list with $bits items one for each enabled bit
+core.image		pack_bits	bits	convert a bit bool or int tuple into a int
+core.window	Keyboard	release		call this method to release the current keyboard
+core.window	Keyboard	string_to_keycode	value	convert a string to a keycode number according to the :attr keyboard
+core.window	Keyboard	keycode_to_string	value	convert a keycode number to a string according to the :attr keyboard
+core.window	WindowBase	_get_height		rotated window height
+core.window	WindowBase	_animate_content		animate content to ime height
+core.window	WindowBase	_get_effective_size		on density=1 and non-ios displays return system_size else return scaled / rotated size
+core.window	WindowBase	toggle_fullscreen		toggle between fullscreen and windowed mode
+core.window	WindowBase	maximize		maximizes the window this method should be used on desktop
+core.window	WindowBase	minimize		minimizes the window this method should be used on desktop
+core.window	WindowBase	restore		restores the size and position of a maximized or minimized window
+core.window	WindowBase	hide		hides the window this method should be used on desktop
+core.window	WindowBase	show		shows the window this method should be used on desktop
+core.window	WindowBase	raise_window		raise the window this method should be used on desktop
+core.window	WindowBase	close		close the window
+core.window	WindowBase	create_window		will create the main window and configure it
+core.window	WindowBase	on_flip		flip between buffers event
+core.window	WindowBase	flip		flip between buffers
+core.window	WindowBase	add_widget	widget canvas	add a widget to a window
+core.window	WindowBase	remove_widget	widget	remove a widget from a window
+core.window	WindowBase	clear		clear the window with the background color
+core.window	WindowBase	set_title	title	set the window title
+core.window	WindowBase	set_icon	filename	set the icon of the window
+core.window	WindowBase	on_motion	etype me	event called when a motion event is received
+core.window	WindowBase	on_touch_down	touch	event called when a touch down event is initiated
+core.window	WindowBase	on_touch_move	touch	event called when a touch event moves changes location
+core.window	WindowBase	on_touch_up	touch	event called when a touch event is released terminated
+core.window	WindowBase	on_resize	width height	event called when the window is resized
+core.window	WindowBase	screenshot	name	save the actual displayed image in a file
+core.window	WindowBase	on_rotate	rotation	event called when the screen has been rotated
+core.window	WindowBase	on_close		event called when the window is closed
+core.window	WindowBase	on_minimize		event called when the window is minimized
+core.window	WindowBase	on_maximize		event called when the window is maximized
+core.window	WindowBase	on_restore		event called when the window is restored
+core.window	WindowBase	on_hide		event called when the window is hidden
+core.window	WindowBase	on_show		event called when the window is shown
+core.window	WindowBase	on_request_close		event called before we close the window if a bound function returns
+core.window	WindowBase	on_cursor_enter		event called when the cursor enters the window
+core.window	WindowBase	on_cursor_leave		event called when the cursor leaves the window
+core.window	WindowBase	on_mouse_down	x y button modifiers	event called when the mouse is used (pressed/released)
+core.window	WindowBase	on_mouse_move	x y modifiers	event called when the mouse is moved with buttons pressed
+core.window	WindowBase	on_mouse_up	x y button modifiers	event called when the mouse is moved with buttons pressed
+core.window	WindowBase	on_joy_axis	stickid axisid value	event called when a joystick has a stick or other axis moved
+core.window	WindowBase	on_joy_hat	stickid hatid value	event called when a joystick has a hat/dpad moved
+core.window	WindowBase	on_joy_ball	stickid ballid value	event called when a joystick has a ball moved
+core.window	WindowBase	on_joy_button_down	stickid buttonid	event called when a joystick has a button pressed
+core.window	WindowBase	on_joy_button_up	stickid buttonid	event called when a joystick has a button released
+core.window	WindowBase	on_keyboard	key scancode codepoint modifier	event called when keyboard is used
+core.window	WindowBase	on_key_down	key scancode codepoint modifier	event called when a key is down (same arguments as on_keyboard)
+core.window	WindowBase	on_key_up	key scancode codepoint modifier	event called when a key is released (same arguments as on_keyboard)
+core.window	WindowBase	on_textinput	text	event called when text i e alpha numeric non control keys or set
+core.window	WindowBase	on_dropfile	filename	event called when a file is dropped on the application
+core.window	WindowBase	on_memorywarning		event called when the platform have memory issue
+core.window	WindowBase	dpi		return the dpi of the screen if the implementation doesn't support
+core.window	WindowBase	set_vkeyboard_class	cls	versionadded : 1 0 8
+core.window	WindowBase	release_all_keyboards		versionadded : 1 0 8
+core.window	WindowBase	request_keyboard	callback target input_type	versionadded : 1 0 4
+core.window	WindowBase	release_keyboard	target	versionadded : 1 0 4
+core.window	WindowBase	grab_mouse		grab mouse - so won't leave window
+core.camera	CameraAndroid	_copy_to_gpu		a dummy placeholder the image is already in gpu to be consistent with other providers
+core.camera	CameraAndroid	grab_frame		grab current frame thread-safe minimal overhead
+core.camera	CameraAndroid	decode_frame	buf	decode image data from grabbed frame
+core.camera	CameraAndroid	read_frame		grab and decode frame in one call
+core.camera	CameraAndroid	get_camera_count		get the number of available cameras
+core.camera	CameraBase	init_camera		initialise the camera internal
+core.camera	CameraBase	start		start the camera acquire
+core.camera	CameraBase	stop		release the camera
+core.camera	CameraBase	_update	dt	update the camera internal
+core.camera	CameraBase	_copy_to_gpu		copy the the buffer into the texture
+core.text	LabelBase	register	name fn_regular fn_italic fn_bold	register an alias for a font
+core.text	LabelBase	get_system_fonts_dir		return the directories used by the system for fonts
+core.text	LabelBase	get_extents	text	return a tuple width height indicating the size of the specified
+core.text	LabelBase	get_cached_extents		returns a cached version of the :meth get_extents function
+core.text	LabelBase	shorten	text margin	shortens the text to fit into a single line by the width specified by :attr text_size [0]
+core.text	LabelBase	render	real	return a tuple width height to create the image with the user constraints
+core.text	LabelBase	refresh		force re-rendering of the text
+core.text	LabelBase	content_width		return the content width i e the width of the text without
+core.text	LabelBase	content_height		return the content height i e the height of the text without
+core.text	LabelBase	content_size		return the content size width height
+core.text	LabelBase	fontid		return a unique id for all font parameters
+core.text	MarkupLabel	refs		get the bounding box of all the [ref= ]::
+core.text	MarkupLabel	anchors		get the position of all the [anchor= ]::
+core.text	MarkupLabel	markup		return the text with all the markup splitted : >>> markuplabel('[b]hello world[/b]')
+core.text	MarkupLabel	shorten_post	lines w h margin	shortens the text to a single line according to the label options
+tools.pep8checker		tabs_or_spaces	physical_line indent_char	never mix tabs and spaces
+tools.pep8checker		tabs_obsolete	physical_line	for new projects spaces-only are strongly recommended over tabs
+tools.pep8checker		trailing_whitespace	physical_line	trailing whitespace is superfluous
+tools.pep8checker		trailing_blank_lines	physical_line lines line_number total_lines	trailing blank lines are superfluous
+tools.pep8checker		maximum_line_length	physical_line max_line_length multiline noqa	limit all lines to a maximum of 79 characters
+tools.pep8checker		blank_lines	logical_line blank_lines indent_level line_number	separate top-level function and class definitions with two blank lines
+tools.pep8checker		extraneous_whitespace	logical_line	avoid extraneous whitespace
+tools.pep8checker		whitespace_around_keywords	logical_line	avoid extraneous whitespace around keywords
+tools.pep8checker		missing_whitespace_after_import_keyword	logical_line	multiple imports in form from x import a b c should have space between import statement and parenthesised name list
+tools.pep8checker		missing_whitespace	logical_line	each comma semicolon or colon should be followed by whitespace
+tools.pep8checker		indentation	logical_line previous_logical indent_char indent_level	use 4 spaces per indentation level
+tools.pep8checker		continued_indentation	logical_line tokens indent_level hang_closing	continuation lines indentation
+tools.pep8checker		whitespace_before_parameters	logical_line tokens	avoid extraneous whitespace
+tools.pep8checker		whitespace_around_operator	logical_line	avoid extraneous whitespace around an operator
+tools.pep8checker		missing_whitespace_around_operator	logical_line tokens	surround operators with a single space on either side
+tools.pep8checker		whitespace_around_comma	logical_line	avoid extraneous whitespace after a comma or a colon
+tools.pep8checker		whitespace_around_named_parameter_equals	logical_line tokens	don't use spaces around the '=' sign in function arguments
+tools.pep8checker		whitespace_before_comment	logical_line tokens	separate inline comments by at least two spaces
+tools.pep8checker		imports_on_separate_lines	logical_line	place imports on separate lines
+tools.pep8checker		module_imports_on_top_of_file	logical_line indent_level checker_state noqa	place imports at the top of the file
+tools.pep8checker		compound_statements	logical_line	compound statements on the same line are generally discouraged
+tools.pep8checker		explicit_line_join	logical_line tokens	avoid explicit line join between brackets
+tools.pep8checker		break_around_binary_operator	logical_line tokens	avoid breaks before binary operators
+tools.pep8checker		comparison_to_singleton	logical_line noqa	comparison to singletons should use "is" or "is not"
+tools.pep8checker		comparison_negative	logical_line	negative comparison should be done using "not in" and "is not"
+tools.pep8checker		comparison_type	logical_line noqa	object type comparisons should always use isinstance()
+tools.pep8checker		ambiguous_identifier	logical_line tokens	never use the characters 'l', 'o', or 'i' as variable names
+tools.pep8checker		python_3000_has_key	logical_line noqa	the {} has_key() method is removed in python 3 use the 'in' operator
+tools.pep8checker		python_3000_raise_comma	logical_line	when raising an exception use "raise valueerror('message')"
+tools.pep8checker		python_3000_not_equal	logical_line	new code should always use != instead of <>
+tools.pep8checker		python_3000_backticks	logical_line	use repr() instead of backticks in python 3
+tools.pep8checker		expand_indent	line	return the amount of indentation
+tools.pep8checker		mute_string	text	replace contents with 'xxx' to prevent syntax matching
+tools.pep8checker		parse_udiff	diff patterns parent	return a dictionary of matching lines
+tools.pep8checker		normalize_paths	value parent	parse a comma-separated list of paths
+tools.pep8checker		filename_match	filename patterns default	check if patterns contains a pattern that matches filename
+tools.pep8checker		update_counts	s counts	adds one to the counts of each appearance of characters in s
+tools.pep8checker		register_check	check codes	register a new check object
+tools.pep8checker		init_checks_registry		register all globally visible functions
+tools.pep8checker	Checker	report_invalid_syntax		check if the syntax is valid
+tools.pep8checker	Checker	readline		get the next line from the input buffer
+tools.pep8checker	Checker	run_check	check argument_names	run a check plugin
+tools.pep8checker	Checker	init_checker_state	name argument_names	prepare custom state for the specific checker plugin
+tools.pep8checker	Checker	check_physical	line	run all physical checks on a raw input line
+tools.pep8checker	Checker	build_tokens_line		build a logical line from tokens
+tools.pep8checker	Checker	check_logical		build a line from tokens and run all logical checks on it
+tools.pep8checker	Checker	check_ast		build the file's ast and run all ast checks
+tools.pep8checker	Checker	generate_tokens		tokenize the file run physical line checks and yield tokens
+tools.pep8checker	Checker	maybe_check_physical	token	if appropriate based on token check current physical line s
+tools.pep8checker	Checker	check_all	expected line_offset	run all checks on the input file
+tools.pep8checker	BaseReport	start		start the timer
+tools.pep8checker	BaseReport	stop		stop the timer
+tools.pep8checker	BaseReport	init_file	filename lines expected line_offset	signal a new file
+tools.pep8checker	BaseReport	increment_logical_line		signal a new logical line
+tools.pep8checker	BaseReport	error	line_number offset text check	report an error according to options
+tools.pep8checker	BaseReport	get_file_results		return the count of errors and warnings for this file
+tools.pep8checker	BaseReport	get_count	prefix	return the total count of errors and warnings
+tools.pep8checker	BaseReport	get_statistics	prefix	get statistics for message codes that start with the prefix
+tools.pep8checker	BaseReport	print_statistics	prefix	print overall statistics number of errors and warnings
+tools.pep8checker	BaseReport	print_benchmark		print benchmark numbers
+tools.pep8checker	StandardReport	init_file	filename lines expected line_offset	signal a new file
+tools.pep8checker	StandardReport	error	line_number offset text check	report an error according to options
+tools.pep8checker	StandardReport	get_file_results		print the result and return the overall count for this file
+tools.pep8checker	StyleGuide	init_report	reporter	initialize the report instance
+tools.pep8checker	StyleGuide	check_files	paths	run all checks on the paths
+tools.pep8checker	StyleGuide	input_file	filename lines expected line_offset	run all checks on a python source file
+tools.pep8checker	StyleGuide	input_dir	dirname	check all files in this directory and all subdirectories
+tools.pep8checker	StyleGuide	excluded	filename parent	check if the file should be excluded
+tools.pep8checker	StyleGuide	ignore_code	code	check if the error code should be ignored
+tools.pep8checker	StyleGuide	get_checks	argument_name	get all the checks for this category
+tools.pep8checker		get_parser	prog version	create the parser for the program
+tools.pep8checker		read_config	options args arglist parser	read and parse configurations
+tools.pep8checker		process_options	arglist parse_argv config_file parser	process options passed either via arglist or via command line args
+tools.pep8checker		_parse_multi_options	options split_token	split and strip and discard empties
+tools.pep8checker		_main		parse options and run checks on python source
+tools.packaging.pyinstaller_hooks		runtime_hooks		returns a list with the runtime hooks for kivy it can be used with
+tools.packaging.pyinstaller_hooks		hookspath		returns a list with the directory that contains the alternate not the default included with pyinstaller pyinstaller hook for kivy
+tools.packaging.pyinstaller_hooks		get_hooks		returns the dict for the spec hookspath and runtime_hooks values
+tools.packaging.pyinstaller_hooks		get_deps_minimal	exclude_ignored	returns kivy hidden modules as well as excluded modules to be used with analysis
+tools.packaging.pyinstaller_hooks		get_deps_all		similar to :func get_deps_minimal, but this returns all the kivy modules that can indirectly imported
+tools.packaging.pyinstaller_hooks		get_factory_modules		returns a list of all the modules registered in the kivy factory
+tools.packaging.pyinstaller_hooks		add_dep_paths		should be called by the hook it adds the paths with the binary
+network	UrlRequest	get_connection_for_scheme	scheme	return the connection class for a particular scheme
+network	UrlRequest	decode_result	result resp	decode the result fetched from url according to his content-type
+network	UrlRequest	is_finished		return true if the request has finished whether it's a success or a failure
+network	UrlRequest	result		return the result of the request
+network	UrlRequest	resp_headers		if the request has been completed return a dictionary containing the headers of the response
+network	UrlRequest	resp_status		return the status code of the response if the request is complete otherwise return none
+network	UrlRequest	error		return the error of the request
+network	UrlRequest	chunk_size		return the size of a chunk used only in "progress" mode (when on_progress callback is set
+network	UrlRequest	wait	delay	wait for the request to finish (until :attr resp_status is not none)
+adapters	ListAdapter	create_view	index	this method is more complicated than the ones in the :class ~kivy
+adapters	ListAdapter	on_selection_change		on_selection_change() is the default handler for the on_selection_change event
+adapters	ListAdapter	select_list	view_list extend	the select call is made for the items in the provided view_list
+adapters	ListAdapter	trim_left_of_sel		cut list items with indices in sorted_keys that are less than the index of the first selected item if there is a selection
+adapters	ListAdapter	trim_right_of_sel		cut list items with indices in sorted_keys that are greater than the index of the last selected item if there is a selection
+adapters	ListAdapter	trim_to_sel		cut list items with indices in sorted_keys that are less than or greater than the index of the last selected item if there is a
+adapters	ListAdapter	cut_to_sel		same as trim_to_sel but intervening list items within the selected range are also cut leaving only list items that are selected
+adapters	Adapter	get_cls		versionadded : 1 9 0
+adapters	SelectableDataItem	is_selected		a boolean property indicating whether the data item is selected or not
+adapters	DictAdapter	trim_left_of_sel		cut list items with indices in sorted_keys that are less than the index of the first selected item if there is a selection
+adapters	DictAdapter	trim_right_of_sel		cut list items with indices in sorted_keys that are greater than the index of the last selected item if there is a selection
+adapters	DictAdapter	trim_to_sel		cut list items with indices in sorted_keys that are les than or greater than the index of the last selected item if there is a
+adapters	DictAdapter	cut_to_sel		same as trim_to_sel but intervening list items within the selected range are also cut leaving only list items that are selected
+input	MotionEventProvider	start		start the provider this method is automatically called when the
+input	MotionEventProvider	stop		stop the provider
+input	MotionEventProvider	update	dispatch_fn	update the provider and dispatch all the new touch events though the dispatch_fn argument
+input	MotionEventFactory	register	name classname	register a input provider in the database
+input	MotionEventFactory	list		get a list of all available providers
+input	MotionEventFactory	get	name	get a provider class from the provider id
+input	MotionEvent	depack	args	depack args into attributes of the class
+input	MotionEvent	grab	class_instance exclusive	grab this motion event you can grab a touch if you want
+input	MotionEvent	ungrab	class_instance	ungrab a previously grabbed touch
+input	MotionEvent	move	args	move the touch to another position
+input	MotionEvent	scale_for_screen	w h p rotation	scale position for the screen
+input	MotionEvent	push	attrs	push attribute values in attrs onto the stack
+input	MotionEvent	pop		pop attributes values from the stack
+input	MotionEvent	apply_transform_2d	transform	apply a transformation on x y z px py pz
+input	MotionEvent	copy_to	to	copy some attribute to another touch object
+input	MotionEvent	distance	other_touch	return the distance between the current touch and another touch
+input	MotionEvent	dpos		return delta between last position and current position in the screen coordinate system (self
+input	MotionEvent	opos		return the initial position of the touch in the screen coordinate system (self
+input	MotionEvent	ppos		return the previous position of the touch in the screen coordinate system (self
+input	MotionEvent	spos		return the position in the 0-1 coordinate system (self
+input	MotionEvent	is_mouse_scrolling		returns true if the touch is a mousewheel scrolling
+input.providers	TuioMotionEventProvider	register	oscpath classname	register a new path to handle in tuio provider
+input.providers	TuioMotionEventProvider	unregister	oscpath classname	unregister a path to stop handling it in the tuio provider
+input.providers	TuioMotionEventProvider	create	oscpath	create a touch event from a tuio path
+input.providers	TuioMotionEventProvider	start		start the tuio provider
+input.providers	TuioMotionEventProvider	stop		stop the tuio provider
+input.providers	TuioMotionEventProvider	update	dispatch_fn	update the tuio provider pop events from the queue
+input.providers	MouseMotionEventProvider	start		start the mouse provider
+input.providers	MouseMotionEventProvider	stop		stop the mouse provider
+input.providers	MouseMotionEventProvider	update	dispatch_fn	update the mouse provider pop event from the queue
+input.postproc	InputPostprocDoubleTap	find_double_tap	ref	find a double tap touch within self touches
+input.postproc	InputPostprocTripleTap	find_triple_tap	ref	find a triple tap touch within *self touches*
+lang		update_intermediates	base keys bound s	function that is called when an intermediate property is updated and rebind of that property is true
+lang	BuilderBase	load_file	filename	insert a file into the language builder and return the root widget if defined of the kv file
+lang	BuilderBase	unload_file	filename	unload all rules associated with a previously imported file
+lang	BuilderBase	load_string	string	insert a string into the language builder and return the root widget if defined of the kv string
+lang	BuilderBase	template		create a specialized template using a specific context
+lang	BuilderBase	apply_rules	widget rule_name ignored_consts	search all the rules that match rule_name widget and apply them to widget
+lang	BuilderBase	apply	widget ignored_consts	search all the rules that match the widget and apply them
+lang	BuilderBase	match	widget	return a list of :class parserrule objects matching the widget
+lang	BuilderBase	match_rule_name	rule_name	return a list of :class parserrule objects matching the widget
+lang	BuilderBase	sync		execute all the waiting operations such as the execution of all the expressions related to the canvas
+lang	BuilderBase	unbind_widget	uid	unbind all the handlers created by the kv rules of the widget
+lang	BuilderBase	unbind_property	widget name	unbind the handlers created by all the rules of the widget that set the name
+lang	Parser	parse	content	parse the contents of a parser file and return a list of root objects
+lang	Parser	strip_comments	lines	remove all comments from all lines in-place
+lang	Parser	parse_level	level lines spaces	parse the current level (level * spaces) indentation
+uix	ScrollView	scroll_to	widget padding animate	scrolls the viewport to ensure that the given widget is visible optionally with padding and animation
+uix	ScrollView	convert_distance_to_scroll	dx dy	convert a distance in pixels to a scroll distance depending on the content size and the scrollview size
+uix	ScrollView	update_from_scroll		force the reposition of the content according to current value of :attr scroll_x and :attr scroll_y
+uix	SettingsPanel	get_value	section key	return the value of the section/key from the :attr config configparser instance
+uix	InterfaceWithSidebar	add_panel	panel name uid	this method is used by settings to add new panels for possible display
+uix	InterfaceWithSpinner	add_panel	panel name uid	this method is used by settings to add new panels for possible display
+uix	ContentPanel	add_panel	panel name uid	this method is used by settings to add new panels for possible display
+uix	ContentPanel	on_current_uid		the uid of the currently displayed panel changing this will
+uix	Settings	register_type	tp cls	register a new type that can be used in the json definition
+uix	Settings	add_interface		internal creates an instance of :attr settings interface_cls,
+uix	Settings	add_json_panel	title config filename data	create and add a new :class settingspanel using the configuration config with the json definition filename
+uix	Settings	create_json_panel	title config filename data	create new :class settingspanel
+uix	Settings	add_kivy_panel		add a panel for configuring kivy this panel acts directly on the
+uix	MenuSidebar	add_item	name uid	this method is used to add new panels to the menu
+uix	MenuSidebar	on_selected_uid		internal unselects any currently selected menu buttons unless they represent the current panel
+uix	VKeyboard	setup_mode		call this method when you want to readjust the keyboard according to options :attr docked or not with attached :attr target or not
+uix	VKeyboard	setup_mode_dock		setup the keyboard in docked mode
+uix	VKeyboard	setup_mode_free		setup the keyboard in free mode
+uix	VKeyboard	refresh	force	internal recreate the entire widget and graphics according to the selected layout
+uix	VKeyboard	collide_margin	x y	do a collision test and return true if the x y is inside the vkeyboard margin
+uix	ActionBar	_pop_contextual_action_view		remove the current contextualactionview and display either the previous one or the actionview
+uix	Layout	do_layout		this function is called when a layout is called by a trigger
+uix	Layout	layout_hint_with_bounds	sh_sum available_space min_bounded_size sh_min_vals	internal computes the appropriate size hint for all the widgets given potential min or max bounds on the widgets' size
+uix	FileSystemAbstract	listdir	fn	return the list of files in the directory fn
+uix	FileSystemAbstract	getsize	fn	return the size in bytes of a file
+uix	FileSystemAbstract	is_hidden	fn	return true if the file is hidden
+uix	FileSystemAbstract	is_dir	fn	return true if the argument passed to this method is a directory
+uix	FileChooserProgressBase	cancel		cancel any action from the filechoosercontroller
+uix	FileChooserController	entry_touched	entry touch	internal this method must be called by the template when an entry is touched by the user
+uix	FileChooserController	entry_released	entry touch	internal this method must be called by the template when an entry is touched by the user
+uix	FileChooserController	get_nice_size	fn	pass the filepath returns the size in the best human readable
+uix	FileChooserController	cancel		cancel any background action started by filechooser such as loading a new directory
+uix	SelectableView	select		the list item is responsible for updating the display when being selected if desired
+uix	SelectableView	deselect		the list item is responsible for updating the display when being unselected if desired
+uix	TabbedPanel	switch_to	header do_scroll	switch to a specific panel header
+uix	RstDocument	render		force document rendering
+uix	RstDocument	resolve_path	filename	get the path for this filename if the filename doesn't exist
+uix	RstDocument	preload	filename encoding errors	preload a rst file to get its toctree and its title
+uix	RstDocument	goto	ref	scroll to the reference if it's not found nothing will be done
+uix	Label	texture_update		force texture recreation with the current label properties
+uix	Carousel	load_slide	slide	animate to the slide that is passed as the argument
+uix	Carousel	load_previous		animate to the previous slide
+uix	Carousel	load_next	mode	animate to the next slide
+uix	TextInput	cursor_index	cursor	return the cursor index in the text/value
+uix	TextInput	cursor_offset		get the cursor x offset on the current line
+uix	TextInput	get_cursor_from_index	index	return the row col of the cursor from text index
+uix	TextInput	select_text	start end	select a portion of text displayed in this textinput
+uix	TextInput	select_all		select all of the text displayed in this textinput
+uix	TextInput	insert_text	substring from_undo	insert new text at the current cursor position override this
+uix	TextInput	reset_undo		reset undo and redo lists from memory
+uix	TextInput	do_redo		do redo operation
+uix	TextInput	do_undo		do undo operation
+uix	TextInput	do_backspace	from_undo mode	do backspace operation from the current cursor position
+uix	TextInput	do_cursor_movement	action control alt	move the cursor relative to it's current position
+uix	TextInput	get_cursor_from_xy	x y	return the row col of the cursor from an x y position
+uix	TextInput	cancel_selection		cancel current selection if any
+uix	TextInput	delete_selection	from_undo	delete the current text selection if any
+uix	TextInput	_update_selection	finished	update selection text and order of from/to if finished is true
+uix	TextInput	on_double_tap		this event is dispatched when a double tap happens inside textinput
+uix	TextInput	on_triple_tap		this event is dispatched when a triple tap happens inside textinput
+uix	TextInput	on_quad_touch		this event is dispatched when four fingers are touching inside textinput
+uix	TextInput	cut		copy current selection to clipboard then delete it from textinput
+uix	TextInput	copy	data	copy the value provided in argument data into current clipboard
+uix	TextInput	paste		insert text from system :class ~kivy core clipboard clipboard
+uix	EffectBase	set_fbo_shader		sets the :class ~kivy graphics fbo's shader by splicing
+uix	EffectBase	_load_from_source		internal loads the glsl string from a source file
+uix	EffectFbo	set_fs	value	attempt to set the fragment shader to the given value
+uix	EffectWidget	_update_glsl		internal passes new time and resolution uniform variables to the shader
+uix	EffectWidget	refresh_fbo_setup		internal creates and assigns one :class ~kivy graphics fbo
+uix	Video	seek	percent	change the position to a percentage of duration percentage
+uix	Video	unload		unload the video the playback will be stopped
+uix	ModalView	open		show the view window from the :attr attach_to widget if set it
+uix	ModalView	dismiss		close the view if it is open if you really want to close the
+uix	CodeInput	_cursor_offset		get the cursor x offset on the current line
+uix	Widget	proxy_ref		return a proxy reference to the widget i e without creating a
+uix	Widget	collide_point	x y	check if a point x y is inside the widget's axis aligned bounding box
+uix	Widget	collide_widget	wid	check if another widget collides with this widget this function
+uix	Widget	on_touch_down	touch	receive a touch down event
+uix	Widget	on_touch_move	touch	receive a touch move event the touch is in parent coordinates
+uix	Widget	on_touch_up	touch	receive a touch up event the touch is in parent coordinates
+uix	Widget	add_widget	widget index canvas	add a new widget as a child of this widget
+uix	Widget	remove_widget	widget	remove a widget from the children of this widget
+uix	Widget	clear_widgets	children	remove all or the specified :attr ~widget children of this widget
+uix	Widget	export_to_png	filename	saves an image of the widget and its children in png format at the specified filename
+uix	Widget	get_root_window		return the root window
+uix	Widget	get_parent_window		return the parent window
+uix	Widget	walk	restrict loopback	iterator that walks the widget tree starting with this widget and goes forward returning widgets in the order in which layouts display
+uix	Widget	walk_reverse	loopback	iterator that walks the widget tree backwards starting with the widget before this and going backwards returning widgets in the
+uix	Widget	to_widget	x y relative	convert the given coordinate from window to local widget coordinates
+uix	Widget	to_window	x y initial relative	transform local coordinates to window coordinates see
+uix	Widget	to_parent	x y relative	transform local coordinates to parent coordinates see
+uix	Widget	to_local	x y relative	transform parent coordinates to local coordinates see
+uix	Widget	get_window_matrix	x y	calculate the transformation matrix to convert between window and widget coordinates
+uix	Sandbox	on_context_created		override this method in order to load your kv file or do anything else with the newly created context
+uix	Sandbox	on_exception	exception _traceback	override this method in order to catch all the exceptions from children
+uix	Scatter	apply_transform	trans post_multiply anchor	transforms the scatter by applying the "trans" transformation matrix on top of its current transformation state
+uix	Scatter	on_transform_with_touch	touch	called when a touch event has transformed the scatter widget
+uix	Scatter	on_bring_to_front	touch	called when a touch event causes the scatter to be brought to the front of the parent (only if :attr auto_bring_to_front is true)
+uix	TreeView	add_node	node parent	add a new node to the tree
+uix	TreeView	remove_node	node	removes a node from the tree
+uix	TreeView	select_node	node	select a node in the tree
+uix	TreeView	deselect_node		deselect any selected node
+uix	TreeView	toggle_node	node	toggle the state of the node (open/collapsed)
+uix	TreeView	get_node_at_pos	pos	get the node at the position x y
+uix	TreeView	iterate_open_nodes	node	generator to iterate over all the expended nodes starting from node and down
+uix	TreeView	iterate_all_nodes	node	generator to iterate over all nodes from node and down whether expanded or not
+uix	TransitionBase	start	manager	internal starts the transition this is automatically
+uix	TransitionBase	stop		internal stops the transition this is automatically called by the
+uix	TransitionBase	add_screen	screen	internal used to add a screen to the :class screenmanager
+uix	TransitionBase	remove_screen	screen	internal used to remove a screen from the :class screenmanager
+uix	CardTransition	start	manager	internal starts the transition this is automatically
+uix	ScreenManager	get_screen	name	return the screen widget associated with the name or raise a :class screenmanagerexception if not found
+uix	ScreenManager	has_screen	name	return true if a screen with the name has been found
+uix	ScreenManager	__next__		py2k backwards compatibility without six or other lib
+uix	ScreenManager	next		return the name of the next screen from the screen list
+uix	ScreenManager	previous		return the name of the previous screen from the screen list
+uix	ScreenManager	switch_to	screen	add a new screen to the screenmanager and switch to it the previous
+uix	Image	reload		reload image from disk this facilitates re-loading of
+uix	DropDown	open	widget	open the dropdown list and attach it to a specific widget
+uix	DropDown	dismiss		remove the dropdown widget from the window and detach it from the attached widget
+uix	DropDown	select	data	call this method to trigger the on_select event with the data selection
+uix	GestureContainer	get_vectors		return strokes in a format that is acceptable for kivy
+uix	GestureContainer	handles	touch	returns true if this container handles the given touch
+uix	GestureContainer	accept_stroke	count	returns true if this container can accept count new strokes
+uix	GestureContainer	update_bbox	touch	update gesture bbox from a touch coordinate
+uix	GestureContainer	add_stroke	touch line	associate a list of points with a touch uid the line itself is
+uix	GestureContainer	complete_stroke		called on touch up events to keep track of how many strokes
+uix	GestureContainer	single_points_test		returns true if the gesture consists only of single-point strokes
+uix	GestureSurface	on_touch_down	touch	when a new touch is registered the first thing we do is to test if it collides with the bounding box of another known gesture
+uix	GestureSurface	on_touch_move	touch	when a touch moves we add a point to the line on the canvas so the path is updated
+uix	GestureSurface	init_gesture	touch	create a new gesture from touch i e it's the first on
+uix	GestureSurface	get_gesture	touch	returns gesturecontainer associated with given touch
+uix	GestureSurface	find_colliding_gesture	touch	checks if a touch x/y collides with the bounding box of an existing gesture
+uix	GestureSurface	merge_gestures	g other	merges two gestures together the oldest one is retained and the newer one gets the gesturecontainer
+uix	GestureSurface	_complete_dispatcher	dt	this method is scheduled on all touch up events it will dispatch
+uix	GestureSurface	_cleanup	dt	this method is scheduled from _complete_dispatcher to clean up the canvas and internal gesture list after a gesture is completed
+uix	VideoPlayerPlayPause	on_touch_down	touch	versionchanged : 1 4 0
+uix	VideoPlayer	seek	percent	change the position to a percentage of the duration percentage must
+uix.behaviors	KNSpace	fork		returns a new :class knspace instance which will have access to all the named objects in the current namespace but will also have a
+uix.behaviors	EmacsBehavior	delete_word_right		delete text right of the cursor to the end of the word
+uix.behaviors	EmacsBehavior	delete_word_left		delete text left of the cursor to the beginning of word
+uix.behaviors	ToggleButtonBehavior	get_widgets	groupname	return a list of the widgets contained in a specific group if the
+uix.behaviors	ButtonBehavior	trigger_action	duration	trigger whatever action s have been bound to the button by calling both the on_press and on_release callbacks
+uix.behaviors	CompoundSelectionBehavior	select_with_touch	node touch	internal processes a touch on the node this should be called by
+uix.behaviors	CompoundSelectionBehavior	select_with_key_down	keyboard scancode codepoint modifiers	processes a key press this is called when a key press is to be used
+uix.behaviors	CompoundSelectionBehavior	select_with_key_up	keyboard scancode	internal processes a key release this must be called by the
+uix.behaviors	CompoundSelectionBehavior	_select_range	multiselect keep_anchor node idx	selects a range between self _anchor and node or idx
+uix.behaviors	CompoundSelectionBehavior	clear_selection		deselects all the currently selected nodes
+uix.behaviors	CompoundSelectionBehavior	get_selectable_nodes		internal returns a list of the nodes that can be selected it can
+uix.behaviors	CompoundSelectionBehavior	get_index_of_node	node selectable_nodes	internal returns the index of the node within the selectable_nodes returned by :meth get_selectable_nodes
+uix.behaviors	CompoundSelectionBehavior	goto_node	key last_node last_node_idx	internal used by the controller to get the node at the position indicated by key
+uix.behaviors	CompoundSelectionBehavior	select_node	node	selects a node
+uix.behaviors	CompoundSelectionBehavior	deselect_node	node	deselects a possibly selected node
+uix.behaviors	FocusBehavior	_set_on_focus_next	instance value	if changing code ensure following code is not infinite loop widget
+uix.behaviors	FocusBehavior	_handle_post_on_touch_up	touch	called by window after each touch has finished
+uix.behaviors	FocusBehavior	get_focus_next		returns the next focusable widget using either :attr focus_next or the :attr children similar to the order when tabbing forwards
+uix.behaviors	FocusBehavior	get_focus_previous		returns the previous focusable widget using either :attr focus_previous or the :attr children similar to the
+uix.behaviors	FocusBehavior	keyboard_on_key_down	window keycode text modifiers	the method bound to the keyboard when the instance has focus
+uix.behaviors	FocusBehavior	keyboard_on_key_up	window keycode	the method bound to the keyboard when the instance has focus
+uix.behaviors	FocusBehavior	show_keyboard		convenience function to show the keyboard in managed mode
+uix.behaviors	FocusBehavior	hide_keyboard		convenience function to hide the keyboard in managed mode
+uix.recycleview	LayoutSelectionBehavior	apply_selection	index view is_selected	applies the selection to the view this is called internally when
+uix.recycleview	RecycleLayoutManagerBehavior	compute_visible_views	data viewport	viewport is in coordinates of the layout manager
+uix.recycleview	RecycleLayoutManagerBehavior	set_visible_views	indices data viewport	viewport is in coordinates of the layout manager
+uix.recycleview	RecycleLayoutManagerBehavior	refresh_view_layout	index layout view viewport	see :meth ~kivy uix recycleview views recycledataadapter refresh_view_layout
+uix.recycleview	RecycleLayoutManagerBehavior	get_view_index_at	pos	return the view index on which position pos, falls
+uix.recycleview	RecycleLayoutManagerBehavior	goto_view	index	moves the views so that the view corresponding to index is visible
+uix.recycleview		_clean_cache		trims _cached_views cache to half the size of _max_cache_size
+uix.recycleview	RecycleDataViewBehavior	refresh_view_attrs	rv index data	called by the :class recycleadapter when the view is initially populated with the values from the data dictionary for this item
+uix.recycleview	RecycleDataViewBehavior	refresh_view_layout	rv index layout viewport	called when the view's size is updated by the layout manager :class recyclelayoutmanagerbehavior
+uix.recycleview	RecycleDataAdapter	attach_recycleview	rv	associates a :class ~kivy uix recycleview recycleviewbehavior
+uix.recycleview	RecycleDataAdapter	detach_recycleview		removes the :class ~kivy uix recycleview recycleviewbehavior
+uix.recycleview	RecycleDataAdapter	create_view	index data_item viewclass	internal creates and initializes the view for the data at index
+uix.recycleview	RecycleDataAdapter	get_view	index data_item viewclass	internal returns a view instance for the data at index it looks through the various caches and finally creates a view if it
+uix.recycleview	RecycleDataAdapter	refresh_view_attrs	index data_item view	internal syncs the view and brings it up to date with the data
+uix.recycleview	RecycleDataAdapter	refresh_view_layout	index layout view viewport	updates the sizing information of the view
+uix.recycleview	RecycleDataAdapter	make_view_dirty	view index	internal used to flag this view as dirty ready to be used for others
+uix.recycleview	RecycleDataAdapter	make_views_dirty		makes all the current views dirty
+uix.recycleview	RecycleDataAdapter	invalidate		moves all the current views into the global cache
+uix.recycleview	RecycleDataAdapter	set_visible_views	indices data viewclasses	gets a 3-tuple of the new remaining and old views for the current viewport
+uix.recycleview	RecycleDataAdapter	get_visible_view	index	returns the currently visible view associated with index
+uix.recycleview	RecycleViewBehavior	refresh_from_data		this should be called when data changes data changes typically
+uix.recycleview	RecycleViewBehavior	refresh_from_layout		this should be called when the layout changes or needs to change it is
+uix.recycleview	RecycleViewBehavior	refresh_from_viewport		this should be called when the viewport changes and the displayed data must be updated
+uix.recycleview	RecycleDataModelBehavior	attach_recycleview	rv	associates a :class ~kivy
+uix.recycleview	RecycleDataModelBehavior	detach_recycleview		removes the :class ~kivy
+uix.recycleview	RecycleDataModel	observable_dict		a dictionary instance which when modified will trigger a data and consequently an on_data_changed dispatch
+effects	KineticEffect	start	val t	start the movement
+effects	KineticEffect	update	val t	update the movement
+effects	KineticEffect	stop	val t	stop the movement
+effects	KineticEffect	cancel		cancel a movement this can be used in case :meth stop cannot be
+effects	KineticEffect	update_velocity	dt	internal update the velocity according to the frametime and friction
+effects	ScrollEffect	reset	pos	internal reset the value and the velocity to the pos
+modules		create_joycursor	win ctx	create a joycursor instance attached to the *ctx* and bound to the window's :meth ~kivy
+modules		stop	win ctx	stop and unload any active joycursors for the given *ctx*
+modules	ConsoleAddon	init		method called when the addon is instantiated by the console
+modules	ConsoleAddon	activate		method called when the addon is activated by the console
+modules	ConsoleAddon	deactivate		method called when the addon is deactivated by the console
+modules	Console	add_toolbar_widget	widget right	add a widget in the top left toolbar of the console
+modules	Console	remove_toolbar_widget	widget	remove a widget from the toolbar
+modules	Console	add_panel	name cb_activate cb_deactivate cb_refresh	add a new panel in the console
+modules	Console	set_content	content	replace the console content with a new one
+modules	Console	highlight_at	x y	select a widget from a x/y window coordinate
+modules	Console	pick	widget x y	pick a widget at x/y given a root widget
+modules		start	win ctx	create an console instance attached to the *ctx* and bound to the window's :meth ~kivy
+modules		stop	win ctx	stop and unload any active inspectors for the given *ctx*
+modules		create_inspector	win ctx	create an inspector instance attached to the *ctx* and bound to the window's :meth ~kivy
+modules		stop	win ctx	stop and unload any active inspectors for the given *ctx*
+modules	ModuleBase	add_path	path	add a path to search for modules in
+modules	ModuleBase	list		return the list of available modules
+modules	ModuleBase	activate_module	name win	activate a module on a window
+modules	ModuleBase	deactivate_module	name win	deactivate a module from a window
+modules	ModuleBase	register_window	win	add the window to the window list
+modules	ModuleBase	unregister_window	win	remove the window from the window list
+modules	ModuleBase	update		update the status of the module for each window
+modules	ModuleBase	configure		internal configure all the modules before using them
+lib	Device	close		close the mtdev converter
+lib	Device	idle	ms	check state of kernel device :parameters
+lib	Device	has_mtdata		return true if the device has multitouch data
+lib	Device	has_slot		return true if the device has slot information
+lib	Device	has_abs	index	return true if the device has abs data
+lib	Device	get_max_abs		return the maximum number of abs information available
+lib	Device	get_slot		return the slot data
+lib	Device	get_abs	index	return the abs data
+lib.osc		init		instantiates address manager and outsocket as globals
+lib.osc		bind	oscid func oscaddress	bind given oscaddresses with given functions in address manager
+lib.osc		sendMsg	oscAddress dataArray ipAddr port	create and send normal osc msgs defaults to '127
+lib.osc		createBundle		create bundled type of osc messages
+lib.osc		appendToBundle	bundle oscAddress dataArray	create osc message and append it to a given bundle
+lib.osc		sendBundle	bundle ipAddr port	convert bundle to a binary and send it
+lib.osc		createBinaryMsg	oscAddress dataArray typehint	create and return general type binary osc msg
+lib.osc		readQueue	thread_id	read queues from all threads and dispatch message
+lib.osc		listen	ipAddr port	creates a new thread listening to that port defaults to ipaddr='127
+lib.osc		dontListen	thread_id	closes the socket and kills the thread
+lib.osc		hexDump	data	useful utility prints the string in hexadecimal
+lib.osc	OSCMessage	append	argument typehint	appends data to the message updating the typetags based on
+lib.osc	OSCMessage	rawAppend	data	appends raw data to the message use append()
+lib.osc	OSCMessage	getBinary		returns the binary message so far with typetags
+lib.osc		readLong	data	tries to interpret the next 8 bytes of the data as a 64-bit signed integer
+lib.osc		readDouble	data	tries to interpret the next 8 bytes of the data as a 64-bit double float
+lib.osc		OSCBlob	next	convert a string into an osc blob returning a typetag data tuple
+lib.osc		OSCArgument	data	convert some python types to their osc binary representations returning a
+lib.osc		parseArgs	args	given a list of strings produces a list where those strings have been parsed (where
+lib.osc	CallbackManager	handle	data source	given osc data tries to call the callback with the right address
+lib.osc	CallbackManager	dispatch	message source	sends decoded osc data to an appropriate calback
+lib.osc	CallbackManager	add	callback name	adds a callback to our set of callbacks or removes the callback with name if callback
+lib.osc	CallbackManager	unbundler	messages	dispatch the messages in a decoded bundle
+storage	AbstractStore	exists	key	check if a key exists in the store
+storage	AbstractStore	async_exists	callback key	asynchronous version of :meth exists
+storage	AbstractStore	get	key	get the key-value pairs stored at key if the key is not found a
+storage	AbstractStore	async_get	callback key	asynchronous version of :meth get
+storage	AbstractStore	put	key	put new key-value pairs (given in *values*) into the storage any
+storage	AbstractStore	async_put	callback key	asynchronous version of :meth put
+storage	AbstractStore	delete	key	delete a key from the storage if the key is not found a keyerror
+storage	AbstractStore	async_delete	callback key	asynchronous version of :meth delete
+storage	AbstractStore	find		return all the entries matching the filters the entries are
+storage	AbstractStore	async_find	callback	asynchronous version of :meth find
+storage	AbstractStore	keys		return a list of all the keys in the storage
+storage	AbstractStore	async_keys	callback	asynchronously return all the keys in the storage
+storage	AbstractStore	count		return the number of entries in the storage
+storage	AbstractStore	async_count	callback	asynchronously return the number of entries in the storage
+storage	AbstractStore	clear		wipe the whole storage
+storage	AbstractStore	async_clear	callback	asynchronous version of :meth clear

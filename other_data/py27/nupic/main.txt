@@ -1,0 +1,1663 @@
+core	MovingAverage	__init__	windowSize existingHistoricalValues	new instance of movingaverage so method next() can be used
+core	MovingAverage	compute	slidingWindow total newVal windowSize	routine for computing a moving average
+core	MovingAverage	next	newValue	instance method wrapper around compute
+core	MovingAverage	getCurrentAvg		get current average
+core	MovingAverage	__setstate__	state	for loading this object
+core	Serializable	getSchema	cls	get cap'n proto schema note this is an abstract method
+core	Serializable	read	cls proto	create a new object initialized from cap'n proto obj
+core	Serializable	write	proto	write obj instance to cap'n proto object note this is an abstract method
+regions	RegionIdentityPolicyBase	initialize	testRegionObj	called from the scope of the region's pyregion initialize() method
+regions	RegionIdentityPolicyBase	compute	inputs outputs	perform the main computation this method is called in each iteration for each phase the node supports
+regions	RegionIdentityPolicyBase	getOutputElementCount	name	return the number of elements in the given output of the region called from the scope of the region's pyregion
+regions	RegionIdentityPolicyBase	getName		return the name of the region
+regions	TestRegion	__constructEphemeralInstanceVars		initialize ephemeral instance variables (those that aren't serialized)
+regions	TestRegion	initialize		called by network after all links have been set up
+regions	TestRegion	compute	inputs outputs	run one iteration of the region's compute
+regions	TestRegion	getSpec	cls	return the base spec for testregion
+regions	TestRegion	getParameter	parameterName index	get the value of a nodespec parameter most parameters are handled
+regions	TestRegion	setParameter	parameterName index parameterValue	set the value of a spec parameter most parameters are handled
+regions	TestRegion	setIdentityPolicyInstance	identityPolicyObj	testregion command that sets identity policy instance the instance
+regions	TestRegion	getIdentityPolicyInstance		testregion command that returns the identity policy instance that was associated with this testregion instance via setidentitypolicyinstance()
+regions	TestRegion	__getstate__		return serializable state this function will return a version of the
+regions	TestRegion	__setstate__	state	set the state of ourself from a serialized state
+regions		whois_callers_caller		returns traceback namedtuple for our caller's caller
+regions	CLAClassifierRegion	getAlgorithmInstance		returns instance of the underlying claclassifier algorithm object
+regions	CLAClassifierRegion	getParameter	name index	get the value of the parameter
+regions	CLAClassifierRegion	setParameter	name index value	set the value of the parameter
+regions	CLAClassifierRegion	getProtoType		return the pycapnp proto type that the class uses for serialization
+regions	CLAClassifierRegion	writeToProto	proto	write state to proto object
+regions	CLAClassifierRegion	readFromProto	cls proto	read state from proto object
+regions	CLAClassifierRegion	compute	inputs outputs	process one input sample
+regions	CLAClassifierRegion	customCompute	recordNum patternNZ classification	just return the inference value from one input sample the actual
+regions	CLAClassifierRegion	getOutputValues	outputName	return the dictionary of output values note that these are normal python
+regions	CLAClassifierRegion	getOutputElementCount	outputName	returns the width of dataout
+regions		_getTPClass	temporalImp	return the class corresponding to the given temporalimp string
+regions		_buildArgs	f kwargs	get the default arguments from the function and assign as instance vars
+regions		_getAdditionalSpecs	temporalImp kwargs	build the additional specs in three groups for the inspector use the type of the default argument to set the spec type defaulting
+regions	TMRegion	_initialize		initialize all ephemeral data members and give the derived class the opportunity to do the same by invoking the
+regions	TMRegion	compute	inputs outputs	run one iteration of tmregion's compute profiling it if requested
+regions	TMRegion	_compute	inputs outputs	run one iteration of tmregion's compute
+regions	TMRegion	getBaseSpec	cls	return the base spec for tmregion
+regions	TMRegion	getSpec	cls	return the spec for tmregion
+regions	TMRegion	getAlgorithmInstance		returns instance of the underlying temporalmemory algorithm object
+regions	TMRegion	getParameter	parameterName index	get the value of a parameter most parameters are handled automatically by
+regions	TMRegion	setParameter	parameterName index parameterValue	set the value of a spec parameter most parameters are handled
+regions	TMRegion	resetSequenceStates		resets the region's sequence states
+regions	TMRegion	finishLearning		perform an internal optimization step that speeds up inference if we know learning will not be performed anymore
+regions	TMRegion	__getstate__		return serializable state this function will return a version of the
+regions	TMRegion	serializeExtraData	filePath	this method is called during network serialization with an external filename that can be used to bypass pickle for saving large binary states
+regions	TMRegion	deSerializeExtraData	filePath	this method is called during network deserialization with an external filename that can be used to bypass pickle for loading large binary states
+regions	TMRegion	__setstate__	state	set the state of ourself from a serialized state
+regions	TMRegion	_initEphemerals		initialize all ephemerals used by derived classes
+regions	TMRegion	_getEphemeralMembers		callback that returns a list of all "ephemeral" members (i e data members
+regions	TMRegion	_getEphemeralMembersBase		returns list of all ephemeral members
+regions	TMRegion	_getEphemeralMembersAll		returns a concatenated list of both the standard base class ephemeral members as well as any additional ephemeral members
+regions	KNNAnomalyClassifierRegion	getParameter	name index	get the value of the parameter
+regions	KNNAnomalyClassifierRegion	setParameter	name index value	set the value of the parameter
+regions	KNNAnomalyClassifierRegion	compute	inputs outputs	process one input sample
+regions	KNNAnomalyClassifierRegion	getLabelResults		get the labels of the previously computed record
+regions	KNNAnomalyClassifierRegion	classifyStates		reclassifies all internal state
+regions	KNNAnomalyClassifierRegion	classifyState	state	reclassifies given state
+regions	KNNAnomalyClassifierRegion	constructClassificationRecord	inputs	construct a _htmclassificationrecord based on the state of the model passed in through the inputs
+regions	KNNAnomalyClassifierRegion	_addRecordToKNN	record	adds the record to the knn classifier
+regions	KNNAnomalyClassifierRegion	_deleteRecordsFromKNN	recordsToDelete	removes the given records from the classifier
+regions	KNNAnomalyClassifierRegion	_deleteRangeFromKNN	start end	removes any stored records within the range from start to end
+regions	KNNAnomalyClassifierRegion	_recomputeRecordFromKNN	record	returns the classified labeling of record
+regions	KNNAnomalyClassifierRegion	_labelToCategoryNumber	label	since the knn classifier stores categories as numbers we must store each label as a number
+regions	KNNAnomalyClassifierRegion	_labelListToCategoryNumber	labelList	this method takes a list of labels and returns a unique category number
+regions	KNNAnomalyClassifierRegion	_categoryToLabelList	category	converts a category number into a list of labels
+regions	KNNAnomalyClassifierRegion	_getStateAnomalyVector	state	returns a state's anomaly vertor converting it from spare to dense
+regions	KNNAnomalyClassifierRegion	getLabels	start end	get the labels on classified points within range start to end not inclusive
+regions	KNNAnomalyClassifierRegion	addLabel	start end labelName	add the label labelname to each record with record rowid in range from start to end noninclusive of end
+regions	KNNAnomalyClassifierRegion	removeLabels	start end labelFilter	remove labels from each record with record rowid in range from start to end noninclusive of end
+regions	KNNAnomalyClassifierRegion	__getstate__		return serializable state this function will return a version of the
+regions	KNNAnomalyClassifierRegion	__setstate__	state	set the state of ourself from a serialized state
+regions	RecordSensor	__init__	verbosity numCategories	create a node without an encoder or datasource
+regions	RecordSensor	rewind		reset the sensor to beginning of data
+regions	RecordSensor	getNextRecord		get the next record to encode includes getting a record
+regions	RecordSensor	applyFilters	data	apply pre-encoding filters
+regions	RecordSensor	populateCategoriesOut	categories output	populate the output array with the category indices
+regions	RecordSensor	compute	inputs outputs	get a record from the datasource and encode it
+regions	RecordSensor	_convertNonNumericData	spatialOutput temporalOutput output	converts all of the non-numeric fields from spatialoutput and temporaloutput into their scalar equivalents and records them in the output dictionary
+regions	RecordSensor	getOutputValues	outputName	return the dictionary of output values note that these are normal python
+regions	RecordSensor	getOutputElementCount	name	computes the width of dataout
+regions	RecordSensor	setParameter	parameterName index parameterValue	set the value of a spec parameter most parameters are handled
+regions	RecordSensor	getProtoType		return the pycapnp proto type that the class uses for serialization
+regions	RecordSensor	writeToProto	proto	write state to proto object
+regions	RecordSensor	readFromProto	cls proto	read state from proto object
+regions	Spec	invariant		verify the validity of the node spec object the type of each sub-object is verified and then
+regions	Spec	toDict		convert the information of the node spec to a plain dict of basic types the description and singlenodeonly attributes are placed directly in
+regions		getDefaultSPImp		return the default spatial pooler implementation for this region
+regions		getSPClass	spatialImp	return the class corresponding to the given spatialimp string
+regions		_buildArgs	f kwargs	get the default arguments from the function and assign as instance vars
+regions		_getAdditionalSpecs	spatialImp kwargs	build the additional specs in three groups for the inspector use the type of the default argument to set the spec type defaulting
+regions	SPRegion	_initializeEphemeralMembers		initialize all ephemeral data members and give the derived class the opportunity to do the same by invoking the virtual member _initephemerals(),
+regions	SPRegion	_allocateSpatialFDR	rfInput	allocate the spatial pooler instance
+regions	SPRegion	compute	inputs outputs	run one iteration of spregion's compute profiling it if requested
+regions	SPRegion	_compute	inputs outputs	run one iteration of spregion's compute
+regions	SPRegion	_doBottomUpCompute	rfInput resetSignal	do one iteration of inference and/or learning and return the result parameters
+regions	SPRegion	_doTopDownInfer	topDownInput	do one iteration of top-down inference
+regions	SPRegion	getBaseSpec	cls	return the base spec for spregion
+regions	SPRegion	getSpec	cls	return the spec for spregion
+regions	SPRegion	getAlgorithmInstance		returns instance of the underlying spatialpooler algorithm object
+regions	SPRegion	getParameter	parameterName index	get the value of a nodespec parameter most parameters are handled
+regions	SPRegion	setParameter	parameterName index parameterValue	set the value of a spec parameter most parameters are handled
+regions	SPRegion	getProtoType		return the pycapnp proto type that the class uses for serialization
+regions	SPRegion	writeToProto	proto	write state to proto object
+regions	SPRegion	readFromProto	cls proto	read state from proto object
+regions	SPRegion	__getstate__		return serializable state this function will return a version of the
+regions	SPRegion	__setstate__	state	set the state of ourself from a serialized state
+regions	SPRegion	_initEphemerals		initialize all ephemerals used by derived classes
+regions	SPRegion	_getEphemeralMembers		callback that returns a list of all "ephemeral" members (i e data members
+regions	SPRegion	_getEphemeralMembersBase		returns list of all ephemeral members
+regions	SPRegion	_getEphemeralMembersAll		returns a concatenated list of both the standard base class ephemeral members as well as any additional ephemeral members
+regions	SVMClassifierNode	__init__	categoriesOut minC maxC minGamma	@param categoriesout -- the maximum number of distinct category labels that can be learned
+regions	SVMClassifierNode	clear		clear all persistent internal state
+regions	SVMClassifierNode	_initRandom		create and seed random number generator
+regions	SVMClassifierNode	compute	nodeInfo inputs outputs	process one input sample
+regions	SVMClassifierNode	_scan	inputs	run scanning inference and store the results
+regions	SVMClassifierNode	getNodeSpec		return the nodespec for this pynode
+regions	SVMClassifierNode	catIndexToId	catIndex	map category indices internal to category ids external
+regions	SVMClassifierNode	_getHyperplanes		return a numpy array containing the complete set of hyperplanes used by the trained svm classifier
+regions	SVMClassifierNode	simulateTrainingSample	inputWidth category partitionId	debugging/profiling utility method to allow tools to simulate the presentation of training sample
+regions	SVMClassifierNode	getParameter	parameterName nodeSet	get the value of a parameter
+regions	SVMClassifierNode	setParameter	parameterName parameterValue nodeSet	set the value of a parameter
+regions	SVMClassifierNode	__setstate__	state	set the state of ourself from a serialized state
+regions	SVMClassifierNode	__getstate__		return serializable state this function will return a version of the
+regions	SVMClassifierNode	_getEphemeralMembers		returns list of all ephemeral class members
+regions	SVMClassifierNode	_initDataStructures	inputWidth	initialize internal data structures
+regions	SVMClassifierNode	_initSvm	n_dims	initialize svm engine use the swig bindings to initialize an instance of an svm classifier engine
+regions	SVMClassifierNode	_learn	inputVector trueCatIndex partitionId	store current input vector and associated category index
+regions	SVMClassifierNode	_storeSample	trueCatIndex inputVector partitionId	store a training sample and associated category label
+regions	SVMClassifierNode	_infer	sample	consult svm to classify input vector
+regions	SVMClassifierNode	_finishSphering		compute normalization constants for each feature dimension based on the collected training samples
+regions	SVMClassifierNode	_finishLearning		use the c++ implementation to build an svm model
+regions	SVMClassifierNode	_doRecursion	samples validationSets paramRange recursionIndex	perform recursive latin hypercube sampling
+regions	SVMClassifierNode	_validateSvm	C gamma progressStart progressEnd	perform cross-validation to measure the recognition accuracy of an svm
+regions	SVMClassifierNode	_buildSVM	C gamma	train an svm model
+regions	SVMClassifierNode	getAllDistances		return all the prototype distances from all computes available
+regions	SVMClassifierNode	getLatestDistances		get the distances to all training samples pre-svm post-pca
+regions	SVMClassifierNode	getCategoryList		public api for returning the category list
+regions	SVMClassifierNode	_calculateDistances	inputVector	calculate distances in the original input space pre-svm post-pca
+regions	SVMClassifierNode	_calculateAndStoreDistances	inputVector	calculate distances in the original input space pre-svm post-pca
+regions	SVMClassifierNode	setUpcomingPartitionIds	partitionIds	set the queue of upcoming partition ids this can be used instead of the
+regions	SVMClassifierNode	remapCategories	mapping	change the existing category labels
+regions	SVMClassifierNode	changePartitionId	oldPartitionId newPartitionId	change all instances of oldpartitionid to newpartitionid
+regions	SVMClassifierNode	changeCategoriesOfPartitionIds	partitionIds categoryIndices	change the category associated with all vectors with this partitionid s
+regions	SVMClassifierNode	switchToLearning		force a switch back to learning mode not normally supported
+regions	KNNClassifierRegion	_getEphemeralAttributes		list of attributes to not save with serialized state
+regions	KNNClassifierRegion	_initEphemerals		initialize attributes that are not saved with the checkpoint
+regions	KNNClassifierRegion	__setstate__	state	set state from serialized state
+regions	KNNClassifierRegion	__getstate__		get serializable state
+regions	KNNClassifierRegion	getAlgorithmInstance		returns instance of the underlying knnclassifier algorithm object
+regions	KNNClassifierRegion	getParameter	name index	get the value of the parameter
+regions	KNNClassifierRegion	setParameter	name index value	set the value of the parameter
+regions	KNNClassifierRegion	doInference	activeInput	explicitly run inference on a vector that is passed in and return the category id
+regions	KNNClassifierRegion	enableTap	tapPath	begin writing output tap files
+regions	KNNClassifierRegion	disableTap		disable writing of output tap files
+regions	KNNClassifierRegion	handleLogInput	inputs	write inputs to output tap file
+regions	KNNClassifierRegion	handleLogOutput	output	write outputs to output tap file
+regions	KNNClassifierRegion	_storeSample	inputVector trueCatIndex partition	store a training sample and associated category label
+regions	KNNClassifierRegion	compute	inputs outputs	process one input sample this method is called by the runtime engine
+regions	KNNClassifierRegion	getCategoryList		public api for returning the category list this is a required api of the nearestneighbor inspector
+regions	KNNClassifierRegion	getLatestDistances		public api for returning the full scores distance to each prototype from the last
+regions	KNNClassifierRegion	getAllDistances		return all the prototype distances from all computes available
+regions	KNNClassifierRegion	_finishLearning		does nothing kept here for api compatibility
+regions	KNNClassifierRegion	_finishSphering		compute normalization constants for each feature dimension based on the collected training samples
+regions	KNNClassifierRegion	getOutputElementCount	name	this method will be called only when the node is used in nupic 2
+regions	SDRClassifierRegion	initialize		is called once by nupic before the first call to compute()
+regions	SDRClassifierRegion	getAlgorithmInstance		returns instance of the underlying sdrclassifier algorithm object
+regions	SDRClassifierRegion	getParameter	name index	get the value of the parameter
+regions	SDRClassifierRegion	setParameter	name index value	set the value of the parameter
+regions	SDRClassifierRegion	getProtoType		return the pycapnp proto type that the class uses for serialization
+regions	SDRClassifierRegion	writeToProto	proto	write state to proto object
+regions	SDRClassifierRegion	readFromProto	cls proto	read state from proto object
+regions	SDRClassifierRegion	compute	inputs outputs	process one input sample
+regions	SDRClassifierRegion	customCompute	recordNum patternNZ classification	just return the inference value from one input sample the actual
+regions	SDRClassifierRegion	getOutputElementCount	outputName	returns the number of output elements
+regions	PluggableEncoderSensor	setSensedValue	value	sets the value that will be encoded when this region does a compute
+regions.RecordSensorFilters	AddNoise	__init__	noise seed	construct the filter parameters
+regions.RecordSensorFilters	AddNoise	process	encoder data	modify the data in place adding noise
+regions.RecordSensorFilters	ModifyFields	__init__	fields operation seed	construct the filter parameters
+regions.RecordSensorFilters	ModifyFields	process	encoder data	modify the data in place adding noise
+algorithms	CLAClassifierFactory	read	proto	proto claclassifierregionproto capnproto object
+algorithms		computeRawAnomalyScore	activeColumns prevPredictedColumns	computes the raw anomaly score
+algorithms	Anomaly	compute	activeColumns predictedColumns inputValue timestamp	compute the anomaly score as the percent of active columns not predicted
+algorithms		_extractCallingMethodArgs		returns args dictionary from the calling method
+algorithms	BacktrackingTMCPP	__setstate__	state	set the state of ourself from a serialized state
+algorithms	BacktrackingTMCPP	_getEphemeralMembers		list of our member variables that we don't need to be saved
+algorithms	BacktrackingTMCPP	_initEphemerals		initialize all ephemeral members after being restored to a pickled state
+algorithms	BacktrackingTMCPP	saveToFile	filePath	save cells4 state to this file
+algorithms	BacktrackingTMCPP	loadFromFile	filePath	load cells4 state from this file
+algorithms	BacktrackingTMCPP	__getattr__	name	patch __getattr__ so that we can catch the first access to 'cells' and load
+algorithms	BacktrackingTMCPP	compute	bottomUpInput enableLearn computeInfOutput	handle one compute possibly learning
+algorithms	BacktrackingTMCPP	inferPhase2		this calls phase 2 of inference used in multistep prediction
+algorithms	BacktrackingTMCPP	_copyAllocatedStates		if state is allocated in cpp copy over the data into our numpy arrays
+algorithms	BacktrackingTMCPP	_setStatePointers		if we are having cpp use numpy-allocated buffers set these buffer pointers
+algorithms	BacktrackingTMCPP	reset		reset the state of all cells
+algorithms	BacktrackingTMCPP	finishLearning		called when learning has been completed this method just calls
+algorithms	BacktrackingTMCPP	trimSegments	minPermanence minNumSyns	this method deletes all synapses where permanence value is strictly less than self
+algorithms	BacktrackingTMCPP	slowIsSegmentActive	seg timeStep	a segment is active if it has >= activationthreshold connected synapses that are active due to infactivestate
+algorithms	BacktrackingTMCPP	getAvgLearnedSeqLength		return our moving average of learned sequence length
+algorithms	BacktrackingTMCPP	getColCellIdx	idx	get column and cell within column from a global cell index
+algorithms	BacktrackingTMCPP	getSegmentOnCell	c i segIdx	return segment number segidx on cell c i
+algorithms	BacktrackingTMCPP	getNumSegments		return the total number of segments
+algorithms	BacktrackingTMCPP	getNumSynapses		return the total number of synapses
+algorithms	BacktrackingTMCPP	getNumSegmentsInCell	c i	return the total number of segments in cell c i
+algorithms	BacktrackingTMCPP	getSegmentInfo	collectActiveData	returns information about the distribution of segments synapses and permanence values in the current tm
+algorithms	BacktrackingTMCPP	getActiveSegment	c i timeStep	for a given cell return the segment with the strongest _connected_ activation i
+algorithms	BacktrackingTMCPP	getBestMatchingCell	c timeStep learnState	find weakly activated cell in column returns index and segment of most
+algorithms	BacktrackingTMCPP	getLeastAllocatedCell	c	for the given column return the cell with the fewest number of segments
+algorithms	BacktrackingTM	__init__	numberOfCols cellsPerColumn initialPerm connectedPerm	construct the tm @param pamlength number of time steps to remain in "pay attention mode" after
+algorithms	BacktrackingTM	_getEphemeralMembers		list of our member variables that we don't need to be saved
+algorithms	BacktrackingTM	_initEphemerals		initialize all ephemeral members after being restored to a pickled state
+algorithms	BacktrackingTM	__getstate__		@internal return serializable state
+algorithms	BacktrackingTM	__setstate__	state	@internal set the state of ourself from a serialized state
+algorithms	BacktrackingTM	__getattr__	name	@internal patch __getattr__ so that we can catch the first access to 'cells' and load
+algorithms	BacktrackingTM	saveToFile	filePath	implemented in backtrackingtmcpp backtrackingtmcpp savetofile
+algorithms	BacktrackingTM	loadFromFile	filePath	implemented in backtrackingtmcpp backtrackingtmcpp loadfromfile
+algorithms	BacktrackingTM	setRandomSeed	seed	@internal seed the random number generator
+algorithms	BacktrackingTM	getRandomState		@internal return the random number state
+algorithms	BacktrackingTM	setRandomState	state	@internal set the random number state
+algorithms	BacktrackingTM	reset		reset the state of all cells
+algorithms	BacktrackingTM	resetStats		reset the learning and inference stats this will usually be called by
+algorithms	BacktrackingTM	getStats		return the current learning and inference stats this returns a dict
+algorithms	BacktrackingTM	_updateStatsInferEnd	stats bottomUpNZ predictedState colConfidence	called at the end of learning and inference this routine will update a number of stats in our _internalstats dictionary including our computed
+algorithms	BacktrackingTM	printState	aState	print an integer array that is the same shape as activestate
+algorithms	BacktrackingTM	printConfidence	aState maxCols	print a floating point array that is the same shape as activestate
+algorithms	BacktrackingTM	printColConfidence	aState maxCols	print up to maxcols number from a flat floating point array
+algorithms	BacktrackingTM	printParameters		print the parameter settings for the tm
+algorithms	BacktrackingTM	printActiveIndices	state andValues	print the list of [column cellidx] indices for each of the active cells in state
+algorithms	BacktrackingTM	printComputeEnd	output learn	called at the end of inference to print out various diagnostic information based on the current verbosity level
+algorithms	BacktrackingTM	getNumSegmentsInCell	c i	@param c column index
+algorithms	BacktrackingTM	getNumSynapses		@returns the total number of synapses
+algorithms	BacktrackingTM	getNumStrongSynapses		@todo implement this it is used by the node's getparameter() call
+algorithms	BacktrackingTM	getNumStrongSynapsesPerTimeSlot		@todo implement this it is used by the node's getparameter() call
+algorithms	BacktrackingTM	getNumSynapsesPerSegmentMax		@todo implement this it is used by the node's getparameter() call it should return the max # of synapses seen in any one segment
+algorithms	BacktrackingTM	getNumSynapsesPerSegmentAvg		@returns the average number of synapses per segment
+algorithms	BacktrackingTM	getNumSegments		@returns the total number of segments
+algorithms	BacktrackingTM	getNumCells		@returns the total number of cells
+algorithms	BacktrackingTM	getSegmentOnCell	c i segIdx	@param c column index @param i cell index in column
+algorithms	BacktrackingTM	addToSegmentUpdates	c i segUpdate	store a dated potential segment update the "date" iteration index is used
+algorithms	BacktrackingTM	removeSegmentUpdate	updateInfo	remove a segment update called when seg update expires or is processed
+algorithms	BacktrackingTM	computeOutput		computes output for both learning and inference in both cases the
+algorithms	BacktrackingTM	getActiveState		return the current active state this is called by the node to
+algorithms	BacktrackingTM	getPredictedState		return a numpy array predictedcells representing the current predicted state
+algorithms	BacktrackingTM	predict	nSteps	this function gives the future predictions for <nsteps> timesteps starting from the current tm state
+algorithms	BacktrackingTM	_getTPDynamicStateVariableNames		any newly added dynamic states in the tm should be added to this list
+algorithms	BacktrackingTM	_setTPDynamicState	tpDynamicState	set all the dynamic state variables from the <tpdynamicstate> dict
+algorithms	BacktrackingTM	_updateAvgLearnedSeqLength	prevSeqLength	update our moving average of learned sequence length
+algorithms	BacktrackingTM	getAvgLearnedSeqLength		@returns moving average of learned sequence length
+algorithms	BacktrackingTM	inferBacktrack	activeColumns	this "backtracks" our inference state trying to see if we can lock onto the current set of inputs by assuming the sequence started up to n steps
+algorithms	BacktrackingTM	inferPhase1	activeColumns useStartCells	update the inference active state from the last set of predictions and the current bottom-up
+algorithms	BacktrackingTM	inferPhase2		phase 2 for the inference state the computes the predicted state then
+algorithms	BacktrackingTM	updateInferenceState	activeColumns	update the inference state called from compute() on every iteration
+algorithms	BacktrackingTM	learnBacktrackFrom	startOffset readOnly	@internal a utility method called from learnbacktrack
+algorithms	BacktrackingTM	learnBacktrack		this "backtracks" our learning state trying to see if we can lock onto the current set of inputs by assuming the sequence started up to n steps
+algorithms	BacktrackingTM	learnPhase1	activeColumns readOnly	compute the learning active state given the predicted state and the bottom-up input
+algorithms	BacktrackingTM	learnPhase2	readOnly	compute the predicted segments given the current set of active cells
+algorithms	BacktrackingTM	updateLearningState	activeColumns	update the learning state called from compute() on every iteration
+algorithms	BacktrackingTM	compute	bottomUpInput enableLearn computeInfOutput	handle one compute possibly learning
+algorithms	BacktrackingTM	updateSegmentDutyCycles		this gets called on every compute it determines if it's time to
+algorithms	BacktrackingTM	columnConfidences	cellConfidences	compute the column confidences given the cell confidences if
+algorithms	BacktrackingTM	topDownCompute	topDownIn	top-down compute - generate expected input given output of the tm @param topdownin top down input from the level above us
+algorithms	BacktrackingTM	trimSegmentsInCell	colIdx cellIdx segList minPermanence	this method goes through a list of segments for a given cell and deletes all synapses whose permanence is less than minpermanence and deletes
+algorithms	BacktrackingTM	trimSegments	minPermanence minNumSyns	this method deletes all synapses whose permanence is less than minpermanence and deletes any segments that have less than
+algorithms	BacktrackingTM	cleanUpdatesList	col cellIdx seg	removes any update that would be for the given col cellidx segidx
+algorithms	BacktrackingTM	finishLearning		called when learning has been completed this method just calls
+algorithms	BacktrackingTM	checkPrediction2	patternNZs output colConfidence details	this function will replace checkprediction
+algorithms	BacktrackingTM	isSegmentActive	seg activeState	a segment is active if it has >= activationthreshold connected synapses that are active due to activestate
+algorithms	BacktrackingTM	getSegmentActivityLevel	seg activeState connectedSynapsesOnly	this routine computes the activity level of a segment given activestate
+algorithms	BacktrackingTM	getBestMatchingCell	c activeState minThreshold	find weakly activated cell in column with at least minthreshold active synapses
+algorithms	BacktrackingTM	getBestMatchingSegment	c i activeState	for the given cell find the segment with the largest number of active synapses
+algorithms	BacktrackingTM	getCellForNewSegment	colIdx	return the index of a cell in this column which is a good candidate for adding a new segment
+algorithms	BacktrackingTM	getSegmentActiveSynapses	c i s activeState	return a segmentupdate data structure containing a list of proposed changes to segment s
+algorithms	BacktrackingTM	chooseCellsToLearnFrom	c i s n	choose n random cells to learn from
+algorithms	BacktrackingTM	processSegmentUpdates	activeColumns	go through the list of accumulated segment updates and process them as follows
+algorithms	BacktrackingTM	adaptSegment	segUpdate	this function applies segment update information to a segment in a cell
+algorithms	BacktrackingTM	getSegmentInfo	collectActiveData	returns information about the distribution of segments synapses and permanence values in the current tm
+algorithms	Segment	dutyCycle	active readOnly	compute/update and return the positive activations duty cycle of this segment
+algorithms	Segment	debugPrint		print segment information for verbose messaging and debugging
+algorithms	Segment	freeNSynapses	numToFree inactiveSynapseIndices verbosity	free up some synapses in this segment we always free up inactive
+algorithms	Segment	addSynapse	srcCellCol srcCellIdx perm	add a new synapse
+algorithms	Segment	updateSynapses	synapses delta	update a set of synapses in the segment
+algorithms		_labeledInput	activeInputs cellsPerCol	print the list of [column cellidx] indices for each of the active cells in activeinputs
+algorithms	KNNClassifier	clear		clears the state of the knnclassifier
+algorithms	KNNClassifier	prototypeSetCategory	idToCategorize newCategory	allows ids to be assigned a category and subsequently enables users to use - :meth ~
+algorithms	KNNClassifier	removeIds	idsToRemove	there are two caveats first this is a potentially slow operation second
+algorithms	KNNClassifier	removeCategory	categoryToRemove	there are two caveats first this is a potentially slow operation second
+algorithms	KNNClassifier	_removeRows	rowsToRemove	a list of row indices to remove there are two caveats first this is
+algorithms	KNNClassifier	doIteration		utility method to increment the iteration index intended for models that
+algorithms	KNNClassifier	learn	inputPattern inputCategory partitionId isSparse	train the classifier to associate specified input pattern with a particular category
+algorithms	KNNClassifier	getOverlaps	inputPattern	return the degree of overlap between an input pattern and each category stored in the classifier
+algorithms	KNNClassifier	getDistances	inputPattern	return the distances between the input pattern and all other stored patterns
+algorithms	KNNClassifier	infer	inputPattern computeScores overCategories partitionId	finds the category that best matches the input pattern returns the
+algorithms	KNNClassifier	getClosest	inputPattern topKCategories	returns the index of the pattern that is closest to inputpattern the distances of all patterns to inputpattern and the indices of the k
+algorithms	KNNClassifier	closestTrainingPattern	inputPattern cat	returns the closest training pattern to inputpattern that belongs to category "cat"
+algorithms	KNNClassifier	closestOtherTrainingPattern	inputPattern cat	return the closest training pattern that is *not* of the given category "cat"
+algorithms	KNNClassifier	getPattern	idx sparseBinaryForm cat	gets a training pattern either by index or category number
+algorithms	KNNClassifier	getPartitionId	i	gets the partition id given an index
+algorithms	KNNClassifier	getPartitionIdList		:returns a list of complete partition id objects
+algorithms	KNNClassifier	getNumPartitionIds		:returns the number of unique partition ids stored
+algorithms	KNNClassifier	getPartitionIdKeys		:returns a list containing unique non-none partition ids just the keys
+algorithms	KNNClassifier	getPatternIndicesWithPartitionId	partitionId	:returns a list of pattern indices corresponding to this partitionid
+algorithms	KNNClassifier	_addPartitionId	index partitionId	adds partition id for pattern index
+algorithms	KNNClassifier	_rebuildPartitionIdMap	partitionIdList	rebuilds the partition id map using the given partitionidlist
+algorithms	KNNClassifier	_calcDistance	inputPattern distanceNorm	calculate the distances from inputpattern to all stored patterns all
+algorithms	KNNClassifier	_getDistances	inputPattern partitionId	return the distances from inputpattern to all stored patterns
+algorithms	KNNClassifier	finishLearning		used for batch scenarios this method needs to be called between learning
+algorithms	KNNClassifier	computeSVD	numSVDSamples finalize	compute the singular value decomposition svd the svd is a factorization
+algorithms	KNNClassifier	getAdaptiveSVDDims	singularValues fractionOfMax	compute the number of eigenvectors singularvalues to keep
+algorithms	KNNClassifier	_finalizeSVD	numSVDDims	called by finalizelearning() this will project all the patterns onto the
+algorithms	KNNClassifier	remapCategories	mapping	change the category indices
+algorithms	KNNClassifier	setCategoryOfVectors	vectorIndices categoryIndices	change the category associated with this vector s
+algorithms	KNNClassifier	__getstate__		return serializable state
+algorithms	KNNClassifier	__setstate__	state	set the state of this object from a serialized state
+algorithms	_SparseMatrixCorticalColumnAdapter	__getitem__	columnIndex	wraps getrow() such that instances may be indexed by columnindex
+algorithms	SpatialPooler	getColumnDimensions		returns the dimensions of the columns in the region
+algorithms	SpatialPooler	getInputDimensions		returns the dimensions of the input vector
+algorithms	SpatialPooler	getNumColumns		returns the total number of columns
+algorithms	SpatialPooler	getNumInputs		returns the total number of inputs
+algorithms	SpatialPooler	getPotentialRadius		returns the potential radius
+algorithms	SpatialPooler	setPotentialRadius	potentialRadius	sets the potential radius
+algorithms	SpatialPooler	getPotentialPct		returns the potential percent
+algorithms	SpatialPooler	setPotentialPct	potentialPct	sets the potential percent
+algorithms	SpatialPooler	getGlobalInhibition		returns whether global inhibition is enabled
+algorithms	SpatialPooler	setGlobalInhibition	globalInhibition	sets global inhibition
+algorithms	SpatialPooler	getNumActiveColumnsPerInhArea		returns the number of active columns per inhibition area returns a
+algorithms	SpatialPooler	setNumActiveColumnsPerInhArea	numActiveColumnsPerInhArea	sets the number of active columns per inhibition area invalidates the
+algorithms	SpatialPooler	getLocalAreaDensity		returns the local area density returns a value less than 0 if parameter
+algorithms	SpatialPooler	setLocalAreaDensity	localAreaDensity	sets the local area density invalidates the 'numactivecolumnsperinharea'
+algorithms	SpatialPooler	getStimulusThreshold		returns the stimulus threshold
+algorithms	SpatialPooler	setStimulusThreshold	stimulusThreshold	sets the stimulus threshold
+algorithms	SpatialPooler	getInhibitionRadius		returns the inhibition radius
+algorithms	SpatialPooler	setInhibitionRadius	inhibitionRadius	sets the inhibition radius
+algorithms	SpatialPooler	getDutyCyclePeriod		returns the duty cycle period
+algorithms	SpatialPooler	setDutyCyclePeriod	dutyCyclePeriod	sets the duty cycle period
+algorithms	SpatialPooler	getBoostStrength		returns the maximum boost value
+algorithms	SpatialPooler	setBoostStrength	boostStrength	sets the maximum boost value
+algorithms	SpatialPooler	getIterationNum		returns the iteration number
+algorithms	SpatialPooler	setIterationNum	iterationNum	sets the iteration number
+algorithms	SpatialPooler	getIterationLearnNum		returns the learning iteration number
+algorithms	SpatialPooler	setIterationLearnNum	iterationLearnNum	sets the learning iteration number
+algorithms	SpatialPooler	getSpVerbosity		returns the verbosity level
+algorithms	SpatialPooler	setSpVerbosity	spVerbosity	sets the verbosity level
+algorithms	SpatialPooler	getUpdatePeriod		returns the update period
+algorithms	SpatialPooler	setUpdatePeriod	updatePeriod	sets the update period
+algorithms	SpatialPooler	getSynPermTrimThreshold		returns the permanence trim threshold
+algorithms	SpatialPooler	setSynPermTrimThreshold	synPermTrimThreshold	sets the permanence trim threshold
+algorithms	SpatialPooler	getSynPermActiveInc		returns the permanence increment amount for active synapses
+algorithms	SpatialPooler	setSynPermActiveInc	synPermActiveInc	sets the permanence increment amount for active synapses
+algorithms	SpatialPooler	getSynPermInactiveDec		returns the permanence decrement amount for inactive synapses
+algorithms	SpatialPooler	setSynPermInactiveDec	synPermInactiveDec	sets the permanence decrement amount for inactive synapses
+algorithms	SpatialPooler	getSynPermBelowStimulusInc		returns the permanence increment amount for columns that have not been
+algorithms	SpatialPooler	setSynPermBelowStimulusInc	synPermBelowStimulusInc	sets the permanence increment amount for columns that have not been
+algorithms	SpatialPooler	getSynPermConnected		returns the permanence amount that qualifies a synapse as
+algorithms	SpatialPooler	setSynPermConnected	synPermConnected	sets the permanence amount that qualifies a synapse as being
+algorithms	SpatialPooler	getMinPctOverlapDutyCycles		returns the minimum tolerated overlaps given as percent of
+algorithms	SpatialPooler	setMinPctOverlapDutyCycles	minPctOverlapDutyCycles	sets the minimum tolerated activity duty cycle given as percent of
+algorithms	SpatialPooler	getBoostFactors	boostFactors	returns the boost factors for all columns 'boostfactors' size must
+algorithms	SpatialPooler	setBoostFactors	boostFactors	sets the boost factors for all columns 'boostfactors' size must match
+algorithms	SpatialPooler	getOverlapDutyCycles	overlapDutyCycles	returns the overlap duty cycles for all columns 'overlapdutycycles'
+algorithms	SpatialPooler	setOverlapDutyCycles	overlapDutyCycles	sets the overlap duty cycles for all columns 'overlapdutycycles'
+algorithms	SpatialPooler	getActiveDutyCycles	activeDutyCycles	returns the activity duty cycles for all columns 'activedutycycles'
+algorithms	SpatialPooler	setActiveDutyCycles	activeDutyCycles	sets the activity duty cycles for all columns 'activedutycycles'
+algorithms	SpatialPooler	getMinOverlapDutyCycles	minOverlapDutyCycles	returns the minimum overlap duty cycles for all columns
+algorithms	SpatialPooler	setMinOverlapDutyCycles	minOverlapDutyCycles	sets the minimum overlap duty cycles for all columns
+algorithms	SpatialPooler	getPotential	columnIndex potential	returns the potential mapping for a given column 'potential' size
+algorithms	SpatialPooler	setPotential	columnIndex potential	sets the potential mapping for a given column 'potential' size
+algorithms	SpatialPooler	getPermanence	columnIndex permanence	returns the permanence values for a given column 'permanence' size
+algorithms	SpatialPooler	setPermanence	columnIndex permanence	sets the permanence values for a given column 'permanence' size
+algorithms	SpatialPooler	getConnectedSynapses	columnIndex connectedSynapses	returns the connected synapses for a given column
+algorithms	SpatialPooler	getConnectedCounts	connectedCounts	returns the number of connected synapses for all columns
+algorithms	SpatialPooler	getOverlaps		returns the overlap score for each column
+algorithms	SpatialPooler	getBoostedOverlaps		returns the boosted overlap score for each column
+algorithms	SpatialPooler	compute	inputVector learn activeArray	this is the primary public method of the spatialpooler class this
+algorithms	SpatialPooler	stripUnlearnedColumns	activeArray	removes the set of columns who have never been active from the set of active columns selected in the inhibition round
+algorithms	SpatialPooler	_updateMinDutyCycles		updates the minimum duty cycles defining normal activity for a column a
+algorithms	SpatialPooler	_updateMinDutyCyclesGlobal		updates the minimum duty cycles in a global fashion sets the minimum duty
+algorithms	SpatialPooler	_updateMinDutyCyclesLocal		updates the minimum duty cycles the minimum duty cycles are determined
+algorithms	SpatialPooler	_updateDutyCycles	overlaps activeColumns	updates the duty cycles for each column the overlap duty cycle is a moving
+algorithms	SpatialPooler	_updateInhibitionRadius		update the inhibition radius the inhibition radius is a measure of the
+algorithms	SpatialPooler	_avgColumnsPerInput		the average number of columns per input taking into account the topology of the inputs and columns
+algorithms	SpatialPooler	_avgConnectedSpanForColumn1D	columnIndex	the range of connected synapses for column this is used to
+algorithms	SpatialPooler	_avgConnectedSpanForColumn2D	columnIndex	the range of connectedsynapses per column averaged for each dimension
+algorithms	SpatialPooler	_avgConnectedSpanForColumnND	columnIndex	the range of connectedsynapses per column averaged for each dimension
+algorithms	SpatialPooler	_adaptSynapses	inputVector activeColumns	the primary method in charge of learning adapts the permanence values of
+algorithms	SpatialPooler	_bumpUpWeakColumns		this method increases the permanence values of synapses of columns whose activity level has been too low
+algorithms	SpatialPooler	_raisePermanenceToThreshold	perm mask	this method ensures that each column has enough connections to input bits to allow it to become active
+algorithms	SpatialPooler	_updatePermanencesForColumn	perm columnIndex raisePerm	this method updates the permanence matrix with a column's new permanence values
+algorithms	SpatialPooler	_initPermConnected		returns a randomly generated permanence value for a synapses that is initialized in a connected state
+algorithms	SpatialPooler	_initPermNonConnected		returns a randomly generated permanence value for a synapses that is to be initialized in a non-connected state
+algorithms	SpatialPooler	_initPermanence	potential connectedPct	initializes the permanences of a column the method
+algorithms	SpatialPooler	_mapColumn	index	maps a column to its respective input index keeping to the topology of the region
+algorithms	SpatialPooler	_mapPotential	index	maps a column to its input bits this method encapsulates the topology of
+algorithms	SpatialPooler	_updateDutyCyclesHelper	dutyCycles newInput period	updates a duty cycle estimate with a new value this is a helper
+algorithms	SpatialPooler	_updateBoostFactors		update the boost factors for all columns the boost factors are used to
+algorithms	SpatialPooler	_updateBoostFactorsGlobal		update boost factors when global inhibition is used
+algorithms	SpatialPooler	_updateBoostFactorsLocal		update boost factors when local inhibition is used
+algorithms	SpatialPooler	_updateBookeepingVars	learn	updates counter instance variables each round
+algorithms	SpatialPooler	_calculateOverlap	inputVector	this function determines each column's overlap with the current input vector
+algorithms	SpatialPooler	_inhibitColumns	overlaps	performs inhibition this method calculates the necessary values needed to
+algorithms	SpatialPooler	_inhibitColumnsGlobal	overlaps density	perform global inhibition performing global inhibition entails picking the
+algorithms	SpatialPooler	_inhibitColumnsLocal	overlaps density	performs local inhibition local inhibition is performed on a column by
+algorithms	SpatialPooler	_isUpdateRound		returns true if enough rounds have passed to warrant updates of
+algorithms	SpatialPooler	_getColumnNeighborhood	centerColumn	gets a neighborhood of columns
+algorithms	SpatialPooler	_getInputNeighborhood	centerInput	gets a neighborhood of inputs
+algorithms	SpatialPooler	_seed	seed	initialize the random seed
+algorithms	SpatialPooler	__setstate__	state	initialize class properties from stored values
+algorithms	SpatialPooler	printParameters		useful for debugging
+algorithms	TMShimMixin	__init__	numberOfCols cellsPerColumn initialPerm connectedPerm	translate parameters and initialize member variables specific to backtracking_tm py
+algorithms	TMShimMixin	compute	bottomUpInput enableLearn computeInfOutput	(from backtracking_tm py)
+algorithms	TMShimMixin	topDownCompute	topDownIn	(from backtracking_tm py)
+algorithms	MonitoredTMShim	__init__	numberOfCols cellsPerColumn initialPerm connectedPerm	translate parameters and initialize member variables specific to backtracking_tm py
+algorithms	MonitoredTMShim	compute	bottomUpInput enableLearn computeInfOutput	(from backtracking_tm py)
+algorithms	MonitoredTMShim	topDownCompute	topDownIn	(from backtracking_tm py)
+algorithms		_pFormatArray	array_ fmt	return a string with pretty-print of a numpy array using the given format
+algorithms	BitHistory	__init__	classifier bitNum nSteps	constructor for bit history
+algorithms	BitHistory	store	iteration bucketIdx	store a new item in our history
+algorithms	BitHistory	infer	votes	look up and return the votes for each bucketidx for this bit
+algorithms	CLAClassifier	__init__	steps alpha actValueAlpha verbosity	constructor for the cla classifier
+algorithms	CLAClassifier	compute	recordNum patternNZ classification learn	process one input sample
+algorithms	CLAClassifier	infer	patternNZ classification	return the inference value from one input sample the actual
+algorithms	SDRClassifier	compute	recordNum patternNZ classification learn	process one input sample
+algorithms	SDRClassifier	infer	patternNZ classification	return the inference value from one input sample the actual
+algorithms	SDRClassifier	inferSingleStep	patternNZ weightMatrix	perform inference for a single step given an sdr input and a weight
+algorithms	SDRClassifier	_calculateError	recordNum classification	calculate error signal
+algorithms		_pFormatArray	array_ fmt	return a string with pretty-print of a numpy array using the given format
+algorithms	Segment	__init__	cell flatIdx lastUsedIteration ordinal	@param cell int index of the cell that this segment is on
+algorithms	Segment	__eq__	other	explicitly implement this for unit testing the flatidx is not designed
+algorithms	Synapse	__init__	segment presynapticCell permanence ordinal	@param segment object segment object that the synapse is synapsed to
+algorithms	Synapse	__eq__	other	explicitly implement this for unit testing allow floating point
+algorithms		binSearch	arr val	function for running binary search on a sorted list
+algorithms	Connections	__init__	numCells maxSegmentsPerCell maxSynapsesPerSegment	@param numcells int number of cells in collection
+algorithms	Connections	segmentsForCell	cell	returns the segments that belong to a cell
+algorithms	Connections	synapsesForSegment	segment	returns the synapses on a segment
+algorithms	Connections	dataForSynapse	synapse	returns the data for a synapse
+algorithms	Connections	dataForSegment	segment	returns the data for a segment
+algorithms	Connections	getSegment	cell idx	returns a segment object of the specified segment using data from the self
+algorithms	Connections	_leastRecentlyUsedSegment	cell	find this cell's segment that was least recently used
+algorithms	Connections	_minPermanenceSynapse	segment	find this segment's synapse with the smallest permanence
+algorithms	Connections	segmentForFlatIdx	flatIdx	get the segment with the specified flatidx
+algorithms	Connections	segmentFlatListLength		get the needed length for a list to hold a value for every segment's flatidx
+algorithms	Connections	synapsesForPresynapticCell	presynapticCell	returns the synapses for the source cell that they synapse on
+algorithms	Connections	createSegment	cell	adds a new segment on a cell
+algorithms	Connections	destroySegment	segment	destroys a segment
+algorithms	Connections	createSynapse	segment presynapticCell permanence	creates a new synapse on a segment
+algorithms	Connections	destroySynapse	synapse	destroys a synapse
+algorithms	Connections	updateSynapsePermanence	synapse permanence	updates the permanence for a synapse
+algorithms	Connections	computeActivity	activePresynapticCells connectedPermanence	compute each segment's number of active synapses for a given input
+algorithms	Connections	recordSegmentActivity	segment	record the fact that a segment had some activity this information is
+algorithms	Connections	startNewIteration		mark the passage of time this information is used during segment
+algorithms	Connections	numSegments	cell	returns the number of segments
+algorithms	Connections	numSynapses	segment	returns the number of synapses
+algorithms	Connections	segmentPositionSortKey	segment	return a numeric key for sorting this segment
+algorithms	Connections	write	proto	writes serialized data to proto object
+algorithms	Connections	read	cls proto	reads deserialized data from proto object
+algorithms	Connections	__eq__	other	equality operator for connections instances
+algorithms	Connections	__ne__	other	non-equality operator for connections instances
+algorithms		setRandomSeed	seed	set the random seeds helpful to make unit tests repeatable
+algorithms		addNoise	input noise doForeground doBackground	add noise to the given input
+algorithms		generateCoincMatrix	nCoinc length activity	generate a coincidence matrix this is used to generate random inputs to the
+algorithms		generateVectors	numVectors length activity	generate a list of random sparse distributed vectors this is used to generate
+algorithms		generateSimpleSequences	nCoinc seqLength nSeq	generate a set of simple sequences the elements of the sequences will be
+algorithms		generateHubSequences	nCoinc hubs seqLength nSeq	generate a set of hub sequences these are sequences which contain a hub
+algorithms		genTestSeqsForLookback	nPatterns patternLen patternActivity seqLength	generate two sets of sequences the first set of sequences is used to train
+algorithms		generateSimpleCoincMatrix	nCoinc length activity	generate a non overlapping coincidence matrix this is used to generate random
+algorithms		generateSequences	nPatterns patternLen patternActivity hubs	generate a set of simple and hub sequences a simple sequence contains
+algorithms		generateL2Sequences	nL1Patterns l1Hubs l1SeqLength nL1SimpleSequences	generate the simulated output from a spatial pooler that's sitting on top of another spatial pooler / temporal memory pair
+algorithms		vectorsFromSeqList	seqList patternMatrix	convert a list of sequences of pattern indices and a pattern lookup table into a an array of patterns
+algorithms		sameTMParams	tp1 tp2	given two tm instances see if any parameters are different
+algorithms		sameSynapse	syn synapses	given a synapse and a list of synapses check whether this synapse exist in the list
+algorithms		sameSegment	seg1 seg2	return true if seg1 and seg2 are identical ignoring order of synapses
+algorithms		tmDiff	tm1 tm2 verbosity relaxSegmentTests	given two tm instances list the difference between them and returns false if there is a difference
+algorithms		tmDiff2	tm1 tm2 verbosity relaxSegmentTests	given two tm instances list the difference between them and returns false if there is a difference
+algorithms		spDiff	SP1 SP2	function that compares two spatial pooler instances compares the
+algorithms		removeSeqStarts	vectors resets numSteps	convert a list of sequences of pattern indices and a pattern lookup table into a an array of patterns
+algorithms		_accumulateFrequencyCounts	values freqCounts	accumulate a list of values 'values' into the frequency counts 'freqcounts', and return the updated frequency counts
+algorithms		_listOfOnTimesInVec	vector	returns 3 things for a vector * the total on time
+algorithms		_fillInOnTimes	vector durations	helper function used by averageontimepertimestep 'durations' is a vector
+algorithms		averageOnTimePerTimestep	vectors numSamples	computes the average on-time of the outputs that are on at each time step and then averages this over all time steps
+algorithms		averageOnTime	vectors numSamples	returns the average on-time averaged over all on-time runs
+algorithms		plotOutputsOverTime	vectors buVectors title	generate a figure that shows each output over time time goes left to right
+algorithms		plotHistogram	freqCounts title xLabel	this is usually used to display a histogram of the on-times encountered in a particular output
+algorithms		populationStability	vectors numSamples	returns the stability for the population averaged over multiple time steps
+algorithms		percentOutputsStableOverNTimeSteps	vectors numSamples	returns the percent of the outputs that remain completely stable over n time steps
+algorithms		computeSaturationLevels	outputs outputsShape sparseForm	compute the saturation for a continuous level this breaks the level into
+algorithms		checkMatch	input prediction sparse verbosity	compares the actual input with the predicted input and returns results parameters
+algorithms		predictionExtent	inputs resets outputs minOverlapPct	computes the predictive ability of a temporal memory tm this routine returns
+algorithms		getCentreAndSpreadOffsets	spaceShape spreadShape stepSize	generates centre offsets and spread offsets for block-mode based training regimes - star cross block
+algorithms		makeCloneMap	columnsShape outputCloningWidth outputCloningHeight	make a two-dimensional clone map mapping columns to clone master
+algorithms		numpyStr	array format includeIndices includeZeros	pretty print a numpy matrix using the given format string for each value
+algorithms		importAndRunFunction	path moduleName funcName	run a named function specified by a filesystem path module name and function name
+algorithms		getLockedHandle	runtimeElement expression	calls runtimeelement interpret expression and wraps the result
+algorithms		transferCoincidences	network fromElementName toElementName	gets the coincidence matrix from one element and sets it on another element
+algorithms	SDRClassifierFactory	create		create a sdr classifier factory
+algorithms	SDRClassifierFactory	read	proto	:param proto sdrclassifierregionproto capnproto object
+algorithms	TemporalMemoryShim	__init__	columnDimensions cellsPerColumn activationThreshold initialPermanence	translate parameters and initialize member variables
+algorithms	TemporalMemoryShim	compute	activeColumns learn	feeds input record through tm performing inference and learning
+algorithms	TemporalMemory	__init__	columnDimensions cellsPerColumn activationThreshold initialPermanence	@param columndimensions list dimensions of the column space
+algorithms	TemporalMemory	connectionsFactory		create a connections instance temporalmemory subclasses may override this
+algorithms	TemporalMemory	compute	activeColumns learn	perform one time step of the temporal memory algorithm
+algorithms	TemporalMemory	activateCells	activeColumns learn	calculate the active cells using the current active columns and dendrite segments
+algorithms	TemporalMemory	activateDendrites	learn	calculate dendrite segment activity using the current active cells
+algorithms	TemporalMemory	reset		indicates the start of a new sequence clears any predictions and makes sure
+algorithms	TemporalMemory	activatePredictedColumn	column columnActiveSegments columnMatchingSegments prevActiveCells	determines which cells in a predicted column should be added to winner cells list and learns on the segments that correctly predicted this column
+algorithms	TemporalMemory	burstColumn	column columnMatchingSegments prevActiveCells prevWinnerCells	activates all of the cells in an unpredicted active column chooses a winner cell and if learning is turned on learns on one segment growing a new
+algorithms	TemporalMemory	punishPredictedColumn	column columnActiveSegments columnMatchingSegments prevActiveCells	punishes the segments that incorrectly predicted a column to be active
+algorithms	TemporalMemory	_activatePredictedColumn	cls connections random columnActiveSegments	@param connections object connections for the tm
+algorithms	TemporalMemory	_burstColumn	cls connections random column	@param connections object connections for the tm
+algorithms	TemporalMemory	_punishPredictedColumn	cls connections columnMatchingSegments prevActiveCells	@param connections object connections for the tm
+algorithms	TemporalMemory	_leastUsedCell	cls random cells connections	gets the cell with the smallest number of segments
+algorithms	TemporalMemory	_growSynapses	cls connections random segment	creates ndesirednewsynapes synapses on the segment passed in if possible choosing random cells from the previous winner cells that are
+algorithms	TemporalMemory	_adaptSegment	cls connections segment prevActiveCells	updates synapses on segment
+algorithms	TemporalMemory	columnForCell	cell	returns the index of the column that a cell belongs to
+algorithms	TemporalMemory	cellsForColumn	column	returns the indices of cells that belong to a column
+algorithms	TemporalMemory	numberOfColumns		returns the number of columns in this layer
+algorithms	TemporalMemory	numberOfCells		returns the number of cells in this layer
+algorithms	TemporalMemory	mapCellsToColumns	cells	maps cells to the columns they belong to
+algorithms	TemporalMemory	getActiveCells		returns the indices of the active cells
+algorithms	TemporalMemory	getPredictiveCells		returns the indices of the predictive cells
+algorithms	TemporalMemory	getWinnerCells		returns the indices of the winner cells
+algorithms	TemporalMemory	getActiveSegments		returns the active segments
+algorithms	TemporalMemory	getMatchingSegments		returns the matching segments
+algorithms	TemporalMemory	getCellsPerColumn		returns the number of cells per column
+algorithms	TemporalMemory	getColumnDimensions		returns the dimensions of the columns in the region
+algorithms	TemporalMemory	getActivationThreshold		returns the activation threshold
+algorithms	TemporalMemory	setActivationThreshold	activationThreshold	sets the activation threshold
+algorithms	TemporalMemory	getInitialPermanence		get the initial permanence
+algorithms	TemporalMemory	setInitialPermanence	initialPermanence	sets the initial permanence
+algorithms	TemporalMemory	getMinThreshold		returns the min threshold
+algorithms	TemporalMemory	setMinThreshold	minThreshold	sets the min threshold
+algorithms	TemporalMemory	getMaxNewSynapseCount		returns the max new synapse count
+algorithms	TemporalMemory	setMaxNewSynapseCount	maxNewSynapseCount	sets the max new synapse count
+algorithms	TemporalMemory	getPermanenceIncrement		get the permanence increment
+algorithms	TemporalMemory	setPermanenceIncrement	permanenceIncrement	sets the permanence increment
+algorithms	TemporalMemory	getPermanenceDecrement		get the permanence decrement
+algorithms	TemporalMemory	setPermanenceDecrement	permanenceDecrement	sets the permanence decrement
+algorithms	TemporalMemory	getPredictedSegmentDecrement		get the predicted segment decrement
+algorithms	TemporalMemory	setPredictedSegmentDecrement	predictedSegmentDecrement	sets the predicted segment decrement
+algorithms	TemporalMemory	getConnectedPermanence		get the connected permanence
+algorithms	TemporalMemory	setConnectedPermanence	connectedPermanence	sets the connected permanence
+algorithms	TemporalMemory	getMaxSegmentsPerCell		get the maximum number of segments per cell
+algorithms	TemporalMemory	getMaxSynapsesPerSegment		get the maximum number of synapses per segment
+algorithms	TemporalMemory	write	proto	writes serialized data to proto object
+algorithms	TemporalMemory	read	cls proto	reads deserialized data from proto object
+algorithms	TemporalMemory	__eq__	other	non-equality operator for temporalmemory instances
+algorithms	TemporalMemory	__ne__	other	non-equality operator for temporalmemory instances
+algorithms	TemporalMemory	_validateColumn	column	raises an error if column index is invalid
+algorithms	TemporalMemory	_validateCell	cell	raises an error if cell index is invalid
+algorithms	TemporalMemory	getCellIndices	cls cells	returns the indices of the cells passed in
+algorithms	TemporalMemory	getCellIndex	cell	returns the index of the cell
+algorithms	AnomalyLikelihood	__init__	claLearningPeriod learningPeriod estimationSamples historicWindowSize	note anomaly likelihood scores are reported at a flat 0 5 for
+algorithms	AnomalyLikelihood	computeLogLikelihood	likelihood	compute a log scale representation of the likelihood value since the
+algorithms	AnomalyLikelihood	_calcSkipRecords	numIngested windowSize learningPeriod	return the value of skiprecords for passing to estimateanomalylikelihoods if windowsize is very large bigger than the amount of data then this
+algorithms	AnomalyLikelihood	read	cls proto	capnp deserialization method for the anomaly likelihood object
+algorithms	AnomalyLikelihood	write	proto	capnp serialization method for the anomaly likelihood object
+algorithms	AnomalyLikelihood	anomalyProbability	value anomalyScore timestamp	compute the probability that the current value plus anomaly score represents an anomaly given the historical distribution of anomaly scores
+algorithms		estimateAnomalyLikelihoods	anomalyScores averagingWindow skipRecords verbosity	given a series of anomaly scores compute the likelihood for each score this
+algorithms		updateAnomalyLikelihoods	anomalyScores params verbosity	compute updated probabilities for anomalyscores using the given params
+algorithms		_filterLikelihoods	likelihoods redThreshold yellowThreshold	filter the list of raw pre-filtered likelihoods so that we only preserve sharp increases in likelihood
+algorithms		_anomalyScoreMovingAverage	anomalyScores windowSize verbosity	given a list of anomaly scores return a list of averaged records
+algorithms		estimateNormal	sampleData performLowerBoundCheck	:param sampledata :type sampledata numpy array
+algorithms		nullDistribution	verbosity	:param verbosity integer controlling extent of printouts for debugging
+algorithms		tailProbability	x distributionParams	given the normal distribution specified by the mean and standard deviation in distributionparams return the probability of getting samples further
+algorithms		isValidEstimatorParams	p	:returns true if p is a valid estimator params as might be returned by estimateanomalylikelihoods() or updateanomalylikelihoods,
+algorithms.monitor_mixin	MonitorMixinBase	__init__		note if you set the kwarg "mmname", then pretty-printing of traces and metrics will include the name you specify as a tag before every title
+algorithms.monitor_mixin	MonitorMixinBase	mmClearHistory		clears the stored history
+algorithms.monitor_mixin	MonitorMixinBase	mmPrettyPrintTraces	traces breakOnResets	returns pretty-printed table of traces
+algorithms.monitor_mixin	MonitorMixinBase	mmPrettyPrintMetrics	metrics sigFigs	returns pretty-printed table of metrics
+algorithms.monitor_mixin	MonitorMixinBase	mmGetDefaultTraces	verbosity	returns list of default traces to be overridden
+algorithms.monitor_mixin	MonitorMixinBase	mmGetDefaultMetrics	verbosity	returns list of default metrics to be overridden
+algorithms.monitor_mixin	MonitorMixinBase	mmGetCellTracePlot	cellTrace cellCount activityType title	returns plot of the cell activity note that if many timesteps of
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceActiveColumns		@return trace trace of active columns
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTracePredictiveCells		@return trace trace of predictive cells
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceNumSegments		@return trace trace of # segments
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceNumSynapses		@return trace trace of # synapses
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceSequenceLabels		@return trace trace of sequence labels
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceResets		@return trace trace of resets
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTracePredictedActiveCells		@return trace trace of predicted => active cells
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTracePredictedInactiveCells		@return trace trace of predicted => inactive cells
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTracePredictedActiveColumns		@return trace trace of predicted => active columns
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTracePredictedInactiveColumns		@return trace trace of predicted => inactive columns
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetTraceUnpredictedActiveColumns		@return trace trace of unpredicted => active columns
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetMetricFromTrace	trace	convenience method to compute a metric over an indices trace excluding resets
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetMetricSequencesPredictedActiveCellsPerColumn		metric for number of predicted => active cells per column for each sequence
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetMetricSequencesPredictedActiveCellsShared		metric for number of sequences each predicted => active cell appears in note this metric is flawed when it comes to high-order sequences
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmPrettyPrintConnections		pretty print the connections in the temporal memory
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmPrettyPrintSequenceCellRepresentations	sortby	pretty print the cell representations for sequences in the history
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	_mmComputeTransitionTraces		computes the transition traces if necessary
+algorithms.monitor_mixin	TemporalMemoryMonitorMixin	mmGetCellActivityPlot	title showReset resetShading activityType	returns plot of the cell activity
+algorithms.monitor_mixin	Metric	__init__	monitor title data	@param monitor monitormixinbase monitor mixin instance that generated
+algorithms.monitor_mixin	Plot	__init__	monitor title show	@param monitor monitormixinbase monitor mixin instance that generated
+algorithms.monitor_mixin	Plot	addGraph	data position xlabel ylabel	adds a graph to the plot's figure
+algorithms.monitor_mixin	Plot	addHistogram	data position xlabel ylabel	adds a histogram to the plot's figure
+algorithms.monitor_mixin	Plot	add2DArray	data position xlabel ylabel	adds an image to the plot's figure
+algorithms.monitor_mixin	Plot	_addBase	position xlabel ylabel	adds a subplot to the plot's figure at specified position
+algorithms.monitor_mixin	Trace	__init__	monitor title	@param monitor monitormixinbase monitor mixin instance that generated
+algorithms.monitor_mixin	Trace	prettyPrintDatum	datum	@param datum object datum from self data to pretty-print
+algorithms.monitor_mixin	IndicesTrace	makeCountsTrace		@return countstrace a new trace made up of counts of this trace's indices
+algorithms.monitor_mixin	IndicesTrace	makeCumCountsTrace		@return countstrace a new trace made up of cumulative counts of this trace's indices
+datafiles.extra.secondOrder		_generateModel0	numCategories	generate the initial first order and second order transition probabilities for 'model0'
+datafiles.extra.secondOrder		_generateModel1	numCategories	generate the initial first order and second order transition probabilities for 'model1'
+datafiles.extra.secondOrder		_generateModel2	numCategories alpha	generate the initial first order and second order transition probabilities for 'model2'
+datafiles.extra.secondOrder		_generateFile	filename numRecords categoryList initProb	generate a set of records reflecting a set of probabilities
+datafiles.extra.gym.raw		processClubAttendance	f clubs	process the attendance data of one club if the club already exists in the list update its data
+datafiles.extra.gym.raw		processClubConsumption	f clubs	process the consumption a club - skip the header line
+datafiles.extra.generated		writeSimpleTest1	filePath numRecords testNumber	generates requested number of records and saves in a csv file
+engine	Dimensions	__init__		construct a dimensions object
+engine		Array	dtype size ref	factory function that creates typed array or arrayref objects dtype - the data type of the array as string
+engine	Region	__init__	region network	store the wraped region and hosting network the network is the high-level network and not the internal
+engine	Region	getSpecFromType	nodeType	@doc place_holder region getspecfromtype
+engine	Region	compute		@doc place_holder region compute
+engine	Region	getInputData	inputName	@doc place_holder region getinputdata
+engine	Region	getOutputData	outputName	@doc place_holder region getoutputdata
+engine	Region	getInputNames		returns list of input names in spec
+engine	Region	getOutputNames		returns list of output names in spec
+engine	Region	executeCommand	args	@doc place_holder region executecommand
+engine	Region	_getSpec		spec of the region
+engine	Region	_getDimensions		dimensions of the region
+engine	Region	_getNetwork		network for the region
+engine	Region	__hash__		hash a region
+engine	Region	_getParameterMethods	paramName	returns functions to set/get the parameter these are
+engine	Region	getParameter	paramName	get parameter value
+engine	Region	setParameter	paramName value	set parameter value
+engine	Region	_get	method	auto forwarding of properties to get methods of internal region
+engine	Network	__init__		constructor - initialize the internal engine_internal
+engine	Network	_getRegions		get the collection of regions in a network this is a tricky one
+engine	Network	addRegion	name nodeType nodeParams	@doc place_holder network addregion
+engine	Network	addRegionFromBundle	name nodeType dimensions bundlePath	@doc place_holder network addregionfrombundle
+engine	Network	setPhases	name phases	@doc place_holder network setphases
+engine	Network	run	n	@doc place_holder network run
+engine	Network	disableProfiling		@doc place_holder network disableprofiling
+engine	Network	enableProfiling		@doc place_holder network enableprofiling
+engine	Network	getCallbacks		@doc place_holder network getcallbacks
+engine	Network	initialize		@doc place_holder network initialize
+engine	Network	link		@doc place_holder network link
+engine	Network	removeLink		@doc place_holder network removelink
+engine	Network	removeRegion		@doc place_holder network removeregion
+engine	Network	resetProfiling		@doc place_holder network resetprofiling
+engine	Network	save		@doc place_holder network save
+engine	Network	getRegionsByType	regionClass	gets all region instances of a given class (for example nupic
+engine	Network	registerRegion	regionClass	adds the module and class name for the region to the list of classes the network can use
+engine	Network	unregisterRegion	regionName	unregisters a region from the internal list of regions
+database		enableConcurrencyChecks	maxConcurrency raiseException	enable the diagnostic feature for debugging unexpected concurrency in acquiring connectionwrapper instances
+database	ConnectionFactory	get	cls	acquire a connectionwrapper instance that represents a connection to the sql server per nupic
+database	ConnectionFactory	close	cls	close connectionfactory's connection policy typically there is no need
+database	ConnectionFactory	setConnectionPolicyProvider	cls provider	set the method for connectionfactory to use when it needs to instantiate its database connection policy
+database	ConnectionFactory	_createDefaultPolicy	cls	[private] create the default database connection policy instance
+database	ConnectionWrapper	__enter__		[context manager protocol method] permit a connectionwrapper instance to be used in a context manager expression (with
+database	ConnectionWrapper	__exit__	exc_type exc_val exc_tb	[context manager protocol method] release resources
+database	ConnectionWrapper	release		release the database connection and cursor
+database	ConnectionWrapper	_trackInstanceAndCheckForConcurrencyViolation		check for concurrency violation and add self to _clsoutstandinginstances
+database	DatabaseConnectionPolicyIface	close		close the policy instance and its shared database connection
+database	DatabaseConnectionPolicyIface	acquireConnection		get a connection instance
+database	SingleSharedConnectionPolicy	__init__		consruct an instance the instance's open() method must be
+database	SingleSharedConnectionPolicy	close		close the policy instance and its shared database connection
+database	SingleSharedConnectionPolicy	acquireConnection		get a connection instance
+database	SingleSharedConnectionPolicy	_releaseConnection	dbConn cursor	release database connection and cursor passed as a callback to
+database	PooledConnectionPolicy	__init__		consruct an instance the instance's open() method must be
+database	PooledConnectionPolicy	close		close the policy instance and its database connection pool
+database	PooledConnectionPolicy	acquireConnection		get a connection from the pool
+database	PooledConnectionPolicy	_releaseConnection	dbConn cursor	release database connection and cursor passed as a callback to
+database	PerTransactionConnectionPolicy	__init__		consruct an instance the instance's open() method must be
+database	PerTransactionConnectionPolicy	close		close the policy instance
+database	PerTransactionConnectionPolicy	acquireConnection		create a connection instance
+database	PerTransactionConnectionPolicy	_releaseConnection	dbConn cursor	release database connection and cursor passed as a callback to
+database		_getCommonSteadyDBArgsDict		returns a dictionary of arguments for dbutils steadydb steadydbconnection
+database		_getLogger	cls logLevel	gets a logger for the given class in this module
+database		_abbreviate	text threshold	abbreviate the given text to threshold chars and append an ellipsis if its
+database	ClientJobsDAO	dbNamePrefix	cls	get the beginning part of the database name for the current version of the database
+database	ClientJobsDAO	__getDBNamePrefixForVersion	cls dbVersion	get the beginning part of the database name for the given database version
+database	ClientJobsDAO	_getDBName	cls	generates the clientjobs database name for the current version of the database "semi-private" class method for use by friends of the class
+database	ClientJobsDAO	__getDBNameForVersion	cls dbVersion	generates the clientjobs database name for the given version of the
+database	ClientJobsDAO	get		get the instance of the clientjobsdao created for this process or perhaps at some point in the future for this thread
+database	ClientJobsDAO	__init__		instantiate a clientjobsdao instance
+database	ClientJobsDAO	_columnNameDBToPublic	dbName	convert a database internal column name to a public name this
+database	ClientJobsDAO	connect	deleteOldVersions recreate	locate the current version of the jobs db or create a new one and optionally delete old versions laying around
+database	ClientJobsDAO	_initTables	cursor deleteOldVersions recreate	initialize tables if needed parameters
+database	ClientJobsDAO	_getMatchingRowsNoRetries	tableInfo conn fieldsToMatch selectFieldNames	return a sequence of matching rows with the requested field values from a table or empty sequence if nothing matched
+database	ClientJobsDAO	_getMatchingRowsWithRetries	tableInfo fieldsToMatch selectFieldNames maxRows	like _getmatchingrowsnoretries(), but with retries on transient mysql
+database	ClientJobsDAO	_getOneMatchingRowNoRetries	tableInfo conn fieldsToMatch selectFieldNames	return a single matching row with the requested field values from the the requested table or none if nothing matched
+database	ClientJobsDAO	_getOneMatchingRowWithRetries	tableInfo fieldsToMatch selectFieldNames	like _getonematchingrownoretries(), but with retries on transient mysql
+database	ClientJobsDAO	_insertOrGetUniqueJobNoRetries	conn client cmdLine jobHash	attempt to insert a row with the given parameters into the jobs table
+database	ClientJobsDAO	_resumeJobNoRetries	conn jobID alreadyRunning	resumes processing of an existing job that is presently in the status_completed state
+database	ClientJobsDAO	getConnectionID		return our connection id this can be used for worker identification
+database	ClientJobsDAO	jobSuspend	jobID	requests a job to be suspended note this is primarily for suspending production jobs do not use
+database	ClientJobsDAO	jobResume	jobID alreadyRunning	resumes processing of an existing job that is presently in the status_completed state
+database	ClientJobsDAO	jobInsert	client cmdLine clientInfo clientKey	add an entry to the jobs table for a new job request this is called by
+database	ClientJobsDAO	jobInsertUnique	client cmdLine jobHash clientInfo	add an entry to the jobs table for a new job request but only if the same job by the same client is not already running
+database	ClientJobsDAO	_startJobWithRetries	jobID	place the given job in status_running mode the job is expected to be status_notstarted
+database	ClientJobsDAO	jobStartNext		for use only by nupic scheduler also known as clientjobmanager look through the jobs table and see if any new job requests have been
+database	ClientJobsDAO	jobReactivateRunningJobs		look through the jobs table and reactivate all that are already in the running state by setting their _eng_allocate_new_workers fields to true
+database	ClientJobsDAO	jobGetDemand		look through the jobs table and get the demand - minimum and maximum number of workers requested if new workers are to be allocated if there
+database	ClientJobsDAO	jobCancelAllRunningJobs		set cancel field of all currently-running jobs to true
+database	ClientJobsDAO	jobCountCancellingJobs		look through the jobs table and count the running jobs whose cancel field is true
+database	ClientJobsDAO	jobGetCancellingJobs		look through the jobs table and get the list of running jobs whose cancel field is true
+database	ClientJobsDAO	partitionAtIntervals	data intervals	generator to allow iterating slices at dynamic intervals parameters
+database	ClientJobsDAO	_combineResults	result	return a list of namedtuples from the result of a join query a
+database	ClientJobsDAO	jobInfoWithModels	jobID	get all info about a job with model details if available
+database	ClientJobsDAO	jobInfo	jobID	get all info about a job parameters
+database	ClientJobsDAO	jobSetStatus	jobID status useConnectionID	change the status on the given job parameters
+database	ClientJobsDAO	jobSetCompleted	jobID completionReason completionMsg useConnectionID	change the status on the given job to completed parameters
+database	ClientJobsDAO	jobCancel	jobID	cancel the given job this will update the cancel field in the
+database	ClientJobsDAO	jobGetModelIDs	jobID	fetch all the modelids that correspond to a given jobid empty sequence
+database	ClientJobsDAO	getActiveJobCountForClientInfo	clientInfo	return the number of jobs for the given clientinfo and a status that is not completed
+database	ClientJobsDAO	getActiveJobCountForClientKey	clientKey	return the number of jobs for the given clientkey and a status that is not completed
+database	ClientJobsDAO	getActiveJobsForClientInfo	clientInfo fields	fetch jobids for jobs in the table with optional fields given a
+database	ClientJobsDAO	getActiveJobsForClientKey	clientKey fields	fetch jobids for jobs in the table with optional fields given a
+database	ClientJobsDAO	getJobs	fields	fetch jobids for jobs in the table with optional fields
+database	ClientJobsDAO	getFieldsForActiveJobsOfType	jobType fields	helper function for querying the models table including relevant job info where the job type matches the specified jobtype
+database	ClientJobsDAO	jobGetFields	jobID fields	fetch the values of 1 or more fields from a job record here 'fields'
+database	ClientJobsDAO	jobsGetFields	jobIDs fields requireAll	fetch the values of 1 or more fields from a sequence of job records
+database	ClientJobsDAO	jobSetFields	jobID fields useConnectionID ignoreUnchanged	change the values of 1 or more fields in a job here 'fields' is a
+database	ClientJobsDAO	jobSetFieldIfEqual	jobID fieldName newValue curValue	change the value of 1 field in a job to 'newvalue', but only if the current value matches 'curvalue'
+database	ClientJobsDAO	jobIncrementIntField	jobID fieldName increment useConnectionID	incremet the value of 1 field in a job by increment the 'fieldname' is
+database	ClientJobsDAO	jobUpdateResults	jobID results	update the results string and last-update-time fields of a model
+database	ClientJobsDAO	modelsClearAll		delete all models from the models table
+database	ClientJobsDAO	modelInsertAndStart	jobID params paramsHash particleHash	insert a new unique model based on params into the model table in the "running" state
+database	ClientJobsDAO	modelsInfo	modelIDs	get all info for a set of models warning!!!: the order of the results are not necessarily in the same order as
+database	ClientJobsDAO	modelsGetFields	modelIDs fields	fetch the values of 1 or more fields from a sequence of model records
+database	ClientJobsDAO	modelsGetFieldsForJob	jobID fields ignoreKilled	gets the specified fields for all the models for a single job this is
+database	ClientJobsDAO	modelsGetFieldsForCheckpointed	jobID fields	gets fields from all models in a job that have been checkpointed this is
+database	ClientJobsDAO	modelSetFields	modelID fields ignoreUnchanged	change the values of 1 or more fields in a model here 'fields' is a
+database	ClientJobsDAO	modelsGetParams	modelIDs	get the params and paramshash for a set of models
+database	ClientJobsDAO	modelsGetResultAndStatus	modelIDs	get the results string and other status fields for a set of models
+database	ClientJobsDAO	modelsGetUpdateCounters	jobID	return info on all of the models that are in already in the models table for a given job
+database	ClientJobsDAO	modelUpdateResults	modelID results metricValue numRecords	update the results string and/or num_records fields of a model
+database	ClientJobsDAO	modelSetCompleted	modelID completionReason completionMsg cpuTime	mark a model as completed with the given completionreason and completionmsg
+database	ClientJobsDAO	modelAdoptNextOrphan	jobId maxUpdateInterval	look through the models table for an orphaned model which is a model that is not completed yet whose _eng_last_update_time is more than
+frameworks.opf	ModelFactory	__getLogger	cls	get the logger for this object
+frameworks.opf	ModelFactory	create	modelConfig logLevel	create a new model instance given a description dictionary
+frameworks.opf	ModelFactory	loadFromCheckpoint	savedModelDir newSerialization	load saved model
+frameworks.opf	ValueGetterBase	__call__	topContainer	resolves the referenced value if the result is already cached
+frameworks.opf	ValueGetterBase	handleGetValue	topContainer	a "pure virtual" method the derived class must override this method
+frameworks.opf	DictValueGetter	__init__	referenceDict	referencedict explicit reference dictionary that contains the field corresonding to the first key name in dictkeychain
+frameworks.opf	DictValueGetter	handleGetValue	topContainer	this method overrides valuegetterbase's "pure virtual" method it
+frameworks.opf	DeferredDictLookup	__init__		dictkeychain one or more strings the first string is a key that will eventually be defined in the dictionary that will be passed
+frameworks.opf		htmPredictionModelControlEnableSPLearningCb	htmPredictionModel	enables learning in the htmpredictionmodel's spatial pooler see also htmpredictionmodelcontroldisablesplearningcb
+frameworks.opf		htmPredictionModelControlDisableSPLearningCb	htmPredictionModel	disables learning in the htmpredictionmodel's spatial pooler while retaining the ability to re-enable sp learning in the future
+frameworks.opf		htmPredictionModelControlEnableTPLearningCb	htmPredictionModel	enables learning in the htmpredictionmodel's temporal pooler see also htmpredictionmodelcontroldisabletplearningcb
+frameworks.opf		htmPredictionModelControlDisableTPLearningCb	htmPredictionModel	disables learning in the htmpredictionmodel's temporal pooler while retaining the ability to re-enable tm learning in the future
+frameworks.opf	HTMPredictionModelPickleSPInitArgs	__init__	filePath	filepath path of file where sp __init__ args are to be saved
+frameworks.opf	HTMPredictionModelPickleTPInitArgs	__init__	filePath	filepath path of file where tm __init__ args are to be saved
+frameworks.opf	Model	run	inputRecord	run one iteration of this model
+frameworks.opf	Model	finishLearning		place the model in a permanent "finished learning" mode
+frameworks.opf	Model	resetSequenceStates		signal that the input record is the start of a new sequence
+frameworks.opf	Model	getFieldInfo	includeClassifierOnlyField	return the sequence of fieldmetainfo objects specifying the format of model's output
+frameworks.opf	Model	setFieldStatistics	fieldStats	propagate field statistics to the model in case some of its machinery needs it
+frameworks.opf	Model	getRuntimeStats		get runtime statistics specific to this model i
+frameworks.opf	Model	_getLogger		get the logger for this object
+frameworks.opf	Model	getInferenceType		return the inferencetype of this model
+frameworks.opf	Model	enableLearning		turn learning on for the current model
+frameworks.opf	Model	disableLearning		turn learning off for the current model
+frameworks.opf	Model	isLearningEnabled		return the learning state of the current model
+frameworks.opf	Model	enableInference	inferenceArgs	enable inference for this model
+frameworks.opf	Model	getInferenceArgs		return the dict of arguments for the current inference mode
+frameworks.opf	Model	disableInference		turn inference off for the current model
+frameworks.opf	Model	isInferenceEnabled		return the inference state of the current model
+frameworks.opf	Model	getProtoType		return the pycapnp proto type that the class uses for serialization
+frameworks.opf	Model	_getModelCheckpointFilePath	checkpointDir	return the absolute path of the model's checkpoint file
+frameworks.opf	Model	writeToCheckpoint	checkpointDir	serializes model using capnproto and writes data to checkpointdir
+frameworks.opf	Model	readFromCheckpoint	cls checkpointDir	deerializes model from checkpointdir using capnproto
+frameworks.opf	Model	write	proto	write state to proto object
+frameworks.opf	Model	read	cls proto	read state from proto object
+frameworks.opf	Model	save	saveModelDir	save the model in the given directory
+frameworks.opf	Model	_serializeExtraData	extraDataDir	protected method that is called during serialization with an external directory path
+frameworks.opf	Model	load	cls savedModelDir	load saved model
+frameworks.opf	Model	_deSerializeExtraData	extraDataDir	protected method that is called during deserialization (after __setstate__) with an external directory path
+frameworks.opf	Model	_getModelPickleFilePath	saveModelDir	return the absolute path of the model's pickle file
+frameworks.opf	Model	_getModelExtraDataDir	saveModelDir	return the absolute path to the directory where the model's own "extra data" are stored (i
+frameworks.opf	Model	__makeDirectoryFromAbsolutePath	absDirPath	make directory for the given directory path if it doesn't already exist in the filesystem
+frameworks.opf	DescriptionIface	__init__	modelConfig control	modelconfig a dictionary object which holds user-defined settings for model
+frameworks.opf	DescriptionIface	getModelDescription		returns the model creation parameters based on the settings in the config dictionary
+frameworks.opf	DescriptionIface	getModelControl		returns the task instances of the experiment description
+frameworks.opf	DescriptionIface	normalizeStreamSources		inspects the control task and updates any stream sources it finds that are not absolute paths into paths generated by pkg_resources relative to
+frameworks.opf	DescriptionIface	convertNupicEnvToOPF		converts the control element from nupic format to a default opf format with 1 task
+frameworks.opf	ExperimentDescriptionAPI	__init__	modelConfig control	modelconfig a dictionary object which holds user-defined settings for model
+frameworks.opf	ExperimentDescriptionAPI	getModelControl		returns the task instances of the experiment description
+frameworks.opf	ExperimentDescriptionAPI	__validateExperimentControl	control	validates control dictionary for the experiment context
+frameworks.opf	ExperimentDescriptionAPI	__validateNupicControl	control	validates control dictionary for the nupic engine context
+frameworks.opf	PeriodicActivityMgr	__init__	requestedActivities	requestedactivities a sequence of periodicactivityrequest elements
+frameworks.opf	PeriodicActivityMgr	tick		activity tick handler services all activities
+frameworks.opf	PeriodicActivityMgr	__appendActivities	periodicActivities	periodicactivities a sequence of periodicactivityrequest elements
+frameworks.opf	SafeInterpreter	__init__		initialize interpreter with blacklisted nodes removed from supported nodes
+frameworks.opf		loadExperiment	path	loads the experiment description file from the path
+frameworks.opf		loadExperimentDescriptionScriptFromDir	experimentDir	loads the experiment description python script from the given experiment directory
+frameworks.opf		getExperimentDescriptionInterfaceFromModule	module	module imported description py module
+frameworks.opf		_loadDescriptionFile	descriptionPyPath	loads a description file and returns it as a module
+frameworks.opf	PredictionMetricsLoggerIface	emitPeriodicMetrics	metrics	emits periodic metrics metrics a list of prediction_metrics_manager
+frameworks.opf	PredictionMetricsLoggerIface	emitFinalMetrics	metrics	emits final metrics
+frameworks.opf	DatasetReaderIface	getDatasetFieldMetaData		returns a tuple of dataset field metadata descriptors that are arranged in the same order as the columns in the dataset
+frameworks.opf	DatasetReaderIface	next		returns the next record from the dataset the returned record object
+frameworks.opf	PredictionWriterIface	close		closes the writer (e g close the underlying file)
+frameworks.opf	PredictionWriterIface	append	inputRow predictionRow sequenceReset metrics	emits a single prediction as input versus predicted
+frameworks.opf	PredictionWriterIface	checkpoint	checkpointSink maxRows	save a checkpoint of the prediction output stream the checkpoint
+frameworks.opf	BasicPredictionMetricsLogger	__init__	experimentDir label	constructor label a distinguishing string that will be used to distinguish
+frameworks.opf	BasicPredictionMetricsLogger	emitPeriodicMetrics	metrics	emits periodic metrics metrics a list of prediction_metrics_manager
+frameworks.opf	BasicPredictionMetricsLogger	emitFinalMetrics	metrics	emits final metrics
+frameworks.opf	BasicPredictionMetricsLogger	_translateMetricsToJSON	metrics label	translates the given metrics value to json string metrics a list of dictionaries per opftaskdriver
+frameworks.opf	BasicDatasetReader	__init__	streamDefDict	constructor streamdefdict stream definition as defined in
+frameworks.opf	BasicDatasetReader	getDatasetFieldMetaData		[virtual method override] returns a tuple of dataset field metadata descriptors that are
+frameworks.opf	_BasicPredictionWriter	__openDatafile	modelResult	open the data file and write the header row
+frameworks.opf	_BasicPredictionWriter	setLoggedMetrics	metricNames	tell the writer which metrics should be written
+frameworks.opf	_BasicPredictionWriter	close		[virtual method override] closes the writer (e g close the underlying
+frameworks.opf	_BasicPredictionWriter	__getListMetaInfo	inferenceElement	get field metadata information for inferences that are of list type
+frameworks.opf	_BasicPredictionWriter	__getDictMetaInfo	inferenceElement inferenceDict	get field metadate information for inferences that are of dict type
+frameworks.opf	_BasicPredictionWriter	append	modelResult	[virtual method override] emits a single prediction as input versus predicted
+frameworks.opf	_BasicPredictionWriter	checkpoint	checkpointSink maxRows	[virtual method override] save a checkpoint of the prediction output stream
+frameworks.opf	NonTemporalPredictionLogAdapter	__init__	writer	writer non-temporal prediction log writer conforming to predictionwriteriface interface
+frameworks.opf	NonTemporalPredictionLogAdapter	update	modelResult	emit a input/prediction pair if possible
+frameworks.opf	TemporalPredictionLogAdapter	__init__	writer	writer non-temporal prediction log writer conforming to predictionwriteriface interface
+frameworks.opf	TemporalPredictionLogAdapter	update	modelResult	queue up the t i+1 prediction value and emit a t i input/prediction pair if possible
+frameworks.opf	BasicPredictionLogger	__init__	fields experimentDir label inferenceType	constructor fields a non-empty sequence of nupic
+frameworks.opf	BasicPredictionLogger	close		called when the stream is completed
+frameworks.opf	BasicPredictionLogger	writeRecord	modelResult	emits a set of inputs data inferences and metrics from a model resulting from a single record
+frameworks.opf	BasicPredictionLogger	writeRecords	modelResults progressCB	same as writerecord above but emits multiple rows in one shot
+frameworks.opf	BasicPredictionLogger	setLoggedMetrics	metricNames	[virtual method override] sets which metrics should be written to the
+frameworks.opf	BasicPredictionLogger	checkpoint	checkpointSink maxRows	[virtual method override] save a checkpoint of the prediction output stream
+frameworks.opf	_FileUtils	getExperimentInferenceDirPath	experimentDir	experimentdir experiment directory path that contains description py
+frameworks.opf	_FileUtils	createExperimentInferenceDir	cls experimentDir	creates the inference output directory for the given experiment experimentdir experiment directory path that contains description
+frameworks.opf	_FileUtils	makeDirectory	path	makes directory for the given directory path if it doesn't already exist in the filesystem
+frameworks.opf	TwoGramModel	__init__	inferenceType encoderParams	two-gram model constructor
+frameworks.opf	TwoGramModel	run	inputRecord	run one iteration of this model
+frameworks.opf	TwoGramModel	finishLearning		places the model in a permanent "finished learning" mode
+frameworks.opf	TwoGramModel	setFieldStatistics	fieldStats	this method is used for the data source to communicate to the
+frameworks.opf	TwoGramModel	getFieldInfo		returns the metadata specifying the format of the model's output
+frameworks.opf	TwoGramModel	getRuntimeStats		get the runtime statistics specific to the model
+frameworks.opf	TwoGramModel	_getLogger		get the logger created by this subclass
+frameworks.opf	TwoGramModel	resetSequenceStates		called to indicate the start of a new sequence
+frameworks.opf		runExperiment	args model	run a single opf experiment note the caller is resposible for initializing python logging before calling
+frameworks.opf		initExperimentPrng		initialize prngs that may be used by other modules in the experiment stack
+frameworks.opf		_parseCommandLineOptions	args	parse command line options args
+frameworks.opf		reapVarArgsCallback	option optStr value parser	used as optparse callback for reaping a variable number of option args
+frameworks.opf		_reportCommandLineUsageErrorAndExit	parser message	report usage error and exit program with error indication
+frameworks.opf		_runExperimentImpl	options model	creates and runs the experiment args
+frameworks.opf		_getModelCheckpointDir	experimentDir checkpointLabel	creates directory for serialization of the model
+frameworks.opf		getCheckpointParentDir	experimentDir	get checkpoint parent dir
+frameworks.opf		_checkpointLabelFromCheckpointDir	checkpointDir	returns a checkpoint label string for the given model checkpoint directory
+frameworks.opf		_isCheckpointDir	checkpointDir	return true iff checkpointdir appears to be a checkpoint directory
+frameworks.opf		_printAvailableCheckpoints	experimentDir	list available checkpoints for the specified experiment
+frameworks.opf	_TaskRunner	run		runs a single experiment task
+frameworks.opf	_TaskRunner	_createPeriodicActivities		creates and returns a list of activites for this taskrunner instance
+frameworks.opf	PeriodicActivityMgr	__init__	requestedActivities	requestedactivities a sequence of periodicactivityrequest elements
+frameworks.opf	PeriodicActivityMgr	tick		activity tick handler services all activities
+frameworks.opf		main		module-level entry point run according to options in sys argv
+frameworks.opf	PredictionLoggerIface	close		closes connect to output store and cleans up any resources associated
+frameworks.opf	PredictionLoggerIface	writeRecord	modelResult	emits a set of inputs data inferences and metrics from a model resulting from a single record
+frameworks.opf	PredictionLoggerIface	writeRecords	modelResults progressCB	same as writerecord above but emits multiple rows in one shot
+frameworks.opf	PredictionLoggerIface	setLoggedMetrics	metricNames	sets which metrics should be written to the prediction log
+frameworks.opf	PredictionLoggerIface	checkpoint	checkpointSink maxRows	save a checkpoint of the prediction output stream the checkpoint
+frameworks.opf		modelControlFinishLearningCb	model	passes the "finish learning" command to the model note upon completion
+frameworks.opf	MetricsManager	__init__	metricSpecs fieldInfo inferenceType	constructs a metrics manager parameters
+frameworks.opf	MetricsManager	update	results	compute the new metrics values given the next inference/ground-truth values parameters
+frameworks.opf	MetricsManager	getMetrics		gets the current metric values returns a dictionary where each key is the metric-name and the values are
+frameworks.opf	MetricsManager	getMetricDetails	metricLabel	gets detailed info about a given metric in addition to its value this
+frameworks.opf	MetricsManager	getMetricLabels		return the list of labels for the metrics that are being calculated
+frameworks.opf	MetricsManager	_addResults	results	stores the current model results in the manager's internal store
+frameworks.opf	MetricsManager	_getGroundTruth	inferenceElement	get the actual value for this field
+frameworks.opf	MetricsManager	_getInference	inferenceElement	get what the inferred value for this field was
+frameworks.opf	MetricsManager	_getRawGroundTruth		get what the inferred value for this field was
+frameworks.opf	MetricsManager	__constructMetricsModules	metricSpecs	creates the required metrics modules
+frameworks.opf		_testTemporalShift		test to see if the metrics manager correctly shifts records for multistep
+frameworks.opf		requireAnomalyModel	func	decorator for functions that require anomaly models
+frameworks.opf	NetworkInfo	__init__	net statsCollectors	net the cla network instance
+frameworks.opf	HTMPredictionModel	resetSequenceStates		[virtual method override] resets the model's sequence states normally
+frameworks.opf	HTMPredictionModel	finishLearning		[virtual method override] places the model in a permanent "finished learning" mode where it will not be able to learn from subsequent input
+frameworks.opf	HTMPredictionModel	enableLearning		[override] turn learning on for the current model
+frameworks.opf	HTMPredictionModel	disableLearning		[override] turn learning off for the current model
+frameworks.opf	HTMPredictionModel	setAnomalyParameter	param value	set a parameter of the anomaly classifier within this model
+frameworks.opf	HTMPredictionModel	getAnomalyParameter	param	get a parameter of the anomaly classifier within this model
+frameworks.opf	HTMPredictionModel	anomalyRemoveLabels	start end labelFilter	remove labels from the anomaly classifier within this model
+frameworks.opf	HTMPredictionModel	anomalyAddLabel	start end labelName	add labels from the anomaly classifier within this model
+frameworks.opf	HTMPredictionModel	anomalyGetLabels	start end	get labels from the anomaly classifier within this model
+frameworks.opf	HTMPredictionModel	run	inputRecord	run one iteration of this model
+frameworks.opf	HTMPredictionModel	_getSensorInputRecord	inputRecord	inputrecord - dict containing the input to the sensor
+frameworks.opf	HTMPredictionModel	_getClassifierInputRecord	inputRecord	inputrecord - dict containing the input to the sensor
+frameworks.opf	HTMPredictionModel	_anomalyCompute		compute anomaly score if required
+frameworks.opf	HTMPredictionModel	_handleCLAClassifierMultiStep	patternNZ inputTSRecordIdx rawInput	handle the cla classifier compute logic when implementing multi-step prediction
+frameworks.opf	HTMPredictionModel	_removeUnlikelyPredictions	cls likelihoodsDict minLikelihoodThreshold maxPredictionsPerStep	remove entries with 0 likelihood or likelihood less than minlikelihoodthreshold but don't leave an empty dict
+frameworks.opf	HTMPredictionModel	getRuntimeStats		[virtual method override] get runtime statistics specific to this model i
+frameworks.opf	HTMPredictionModel	getFieldInfo	includeClassifierOnlyField	[virtual method override] returns the sequence of fieldmetainfo objects specifying this
+frameworks.opf	HTMPredictionModel	_getLogger		get the logger for this object this is a protected method that is used
+frameworks.opf	HTMPredictionModel	_getSPRegion		returns reference to the network's sp region
+frameworks.opf	HTMPredictionModel	_getTPRegion		returns reference to the network's tm region
+frameworks.opf	HTMPredictionModel	_getSensorRegion		returns reference to the network's sensor region
+frameworks.opf	HTMPredictionModel	_getClassifierRegion		returns reference to the network's classifier region
+frameworks.opf	HTMPredictionModel	_getEncoder		returns sensor region's encoder for the given network
+frameworks.opf	HTMPredictionModel	_getClassifierOnlyEncoder		returns sensor region's encoder that is sent only to the classifier
+frameworks.opf	HTMPredictionModel	_getDataSource		returns data source that we installed in sensor region
+frameworks.opf	HTMPredictionModel	__createCLANetwork	sensorParams spEnable spParams tmEnable	create a cla network and return it
+frameworks.opf	HTMPredictionModel	__getstate__		return serializable state this function will return a version of the
+frameworks.opf	HTMPredictionModel	__setstate__	state	set the state of ourself from a serialized state
+frameworks.opf	HTMPredictionModel	_serializeExtraData	extraDataDir	[virtual method override] this method is called during serialization with an external directory path that can be used to bypass pickle for saving
+frameworks.opf	HTMPredictionModel	_deSerializeExtraData	extraDataDir	[virtual method override] this method is called during deserialization (after __setstate__) with an external directory path that can be used to
+frameworks.opf	HTMPredictionModel	_addAnomalyClassifierRegion	network params spEnable tmEnable	attaches an 'anomalyclassifier' region to the network will remove current
+frameworks.opf	HTMPredictionModel	__manglePrivateMemberName	privateMemberName skipCheck	mangles the given mangled private member name a mangled member name is one whose name begins with two or more underscores and ends with one
+frameworks.opf	PreviousValueModel	run	inputRecord	run one iteration of this model
+frameworks.opf	PreviousValueModel	finishLearning		places the model in a permanent "finished learning" mode
+frameworks.opf	PreviousValueModel	setFieldStatistics	fieldStats	this method is used for the data source to communicate to the
+frameworks.opf	PreviousValueModel	getFieldInfo		returns the metadata specifying the format of the model's output
+frameworks.opf	PreviousValueModel	getRuntimeStats		get the runtime statistics specific to the model
+frameworks.opf	PreviousValueModel	_getLogger		get the logger created by this subclass
+frameworks.opf	PreviousValueModel	resetSequenceStates		called to indicate the start of a new sequence
+frameworks.opf	InferenceElement	getInputElement	inferenceElement	get the sensor input element that corresponds to the given inference element
+frameworks.opf	InferenceElement	isTemporal	inferenceElement	returns true if the inference from this timestep is predicted the input for the next timestep
+frameworks.opf	InferenceElement	getTemporalDelay	inferenceElement key	returns the number of records that elapse between when an inference is made and when the corresponding input record will appear
+frameworks.opf	InferenceElement	getMaxDelay	inferences	returns the maximum delay for the inferenceelements in the inference
+frameworks.opf	InferenceType	isTemporal	inferenceType	returns true if the inference type is 'temporal', i e requires a
+frameworks.opf		validateOpfJsonValue	value opfJsonSchemaFilename	validate a python object against an opf json schema file target target python object to validate typically a dictionary
+frameworks.opf		initLogger	obj	helper function to create a logger object for the current object with
+frameworks.opf		matchPatterns	patterns keys	returns a subset of the keys that match any of the given patterns
+frameworks.opf	HTMPredictionModelClassifierHelper	addLabel	start end labelName	add the label labelname to each record with record rowid in range from start to end noninclusive of end
+frameworks.opf	HTMPredictionModelClassifierHelper	removeLabels	start end labelFilter	remove labels from each record with record rowid in range from start to end noninclusive of end
+frameworks.opf	HTMPredictionModelClassifierHelper	_addRecordToKNN	record	this method will add the record to the knn classifier
+frameworks.opf	HTMPredictionModelClassifierHelper	_deleteRecordsFromKNN	recordsToDelete	this method will remove the given records from the classifier
+frameworks.opf	HTMPredictionModelClassifierHelper	_deleteRangeFromKNN	start end	this method will remove any stored records within the range from start to end
+frameworks.opf	HTMPredictionModelClassifierHelper	_recomputeRecordFromKNN	record	return the classified labeling of record
+frameworks.opf	HTMPredictionModelClassifierHelper	_constructClassificationRecord		construct a _htmclassificationrecord based on the current state of the htm_prediction_model of this classifier
+frameworks.opf	HTMPredictionModelClassifierHelper	compute		run an iteration of this anomaly classifier
+frameworks.opf	HTMPredictionModelClassifierHelper	setAutoDetectWaitRecords	waitRecords	sets the autodetectwaitrecords
+frameworks.opf	HTMPredictionModelClassifierHelper	getAutoDetectWaitRecords		return the autodetectwaitrecords
+frameworks.opf	HTMPredictionModelClassifierHelper	setAutoDetectThreshold	threshold	sets the autodetectthreshold
+frameworks.opf	HTMPredictionModelClassifierHelper	getAutoDetectThreshold		return the autodetectthreshold
+frameworks.opf	HTMPredictionModelClassifierHelper	_labelToCategoryNumber	label	since the knn classifier stores categories as numbers we must store each label as a number
+frameworks.opf	HTMPredictionModelClassifierHelper	_labelListToCategoryNumber	labelList	this method takes a list of labels and returns a unique category number
+frameworks.opf	HTMPredictionModelClassifierHelper	_categoryToLabelList	category	converts a category number into a list of labels
+frameworks.opf	HTMPredictionModelClassifierHelper	_getStateAnomalyVector	state	returns a state's anomaly vertor converting it from spare to dense
+frameworks.opf	IterationPhaseSpecLearnOnly	__init__	nIters	niters number of iterations to remain in this phase an iteration
+frameworks.opf	IterationPhaseSpecLearnOnly	_getImpl	model	creates and returns the _iterationphase-based instance corresponding
+frameworks.opf	IterationPhaseSpecInferOnly	__init__	nIters inferenceArgs	niters number of iterations to remain in this phase
+frameworks.opf	IterationPhaseSpecInferOnly	_getImpl	model	creates and returns the _iterationphase-based instance corresponding
+frameworks.opf	IterationPhaseSpecLearnAndInfer	__init__	nIters inferenceArgs	niter number of iterations to remain in this phase
+frameworks.opf	IterationPhaseSpecLearnAndInfer	_getImpl	model	creates and returns the _iterationphase-based instance corresponding
+frameworks.opf	OPFTaskDriver	__init__	taskControl model	constructor taskcontrol dictionary conforming to opftaskcontrolschema
+frameworks.opf	OPFTaskDriver	replaceIterationCycle	phaseSpecs	replaces the iteration cycle phases
+frameworks.opf	OPFTaskDriver	setup		performs initial setup activities including 'setup' callbacks this
+frameworks.opf	OPFTaskDriver	finalize		perform final activities including 'finish' callbacks this
+frameworks.opf	OPFTaskDriver	handleInputRecord	inputRecord	processes the given record according to the current iteration cycle phase inputrecord record object formatted according to
+frameworks.opf	OPFTaskDriver	getMetrics		gets the current metric values returns a dictionary of metric values
+frameworks.opf	OPFTaskDriver	getMetricLabels		return the list of labels for the metrics that are being calculated
+frameworks.opf	_PhaseManager	__init__	model phaseSpecs	model model instance
+frameworks.opf	_PhaseManager	__advancePhase		advance to the next iteration cycle phase
+frameworks.opf	_PhaseManager	handleInputRecord	inputRecord	processes the given record according to the current phase inputrecord record object formatted according to
+frameworks.opf	_IterationPhase	__init__	nIters	niters number of iterations must be greater than 0
+frameworks.opf	_IterationPhase	enterPhase		performs initialization that is necessary upon entry to the phase must
+frameworks.opf	_IterationPhase	advance		advances the iteration returns true if more iterations remain false if this is the final
+frameworks.opf	_IterationPhaseLearnOnly	__init__	model nIters	model model instance
+frameworks.opf	_IterationPhaseLearnOnly	enterPhase		[_iterationphase method implementation] performs initialization that is necessary upon entry to the phase
+frameworks.opf	_IterationPhaseInferCommon	__init__	model nIters inferenceArgs	model model instance niters number of iterations must be greater than 0
+frameworks.opf	_IterationPhaseInferCommon	enterPhase		[_iterationphase method implementation] performs initialization that is necessary upon entry to the phase
+frameworks.opf	_IterationPhaseInferOnly	__init__	model nIters inferenceArgs	model model instance niters number of iterations must be greater than 0
+frameworks.opf	_IterationPhaseInferOnly	enterPhase		[_iterationphase method implementation] performs initialization that is necessary upon entry to the phase
+frameworks.opf	_IterationPhaseLearnAndInfer	__init__	model nIters inferenceArgs	model model instance niters number of iterations must be greater than 0
+frameworks.opf	_IterationPhaseLearnAndInfer	enterPhase		[_iterationphase method implementation] performs initialization that is necessary upon entry to the phase
+frameworks.opf	MetricSpec	__init__	metric inferenceElement field params	metric a metric type name that identifies which metrics module is to be constructed by the metrics factory method
+frameworks.opf	MetricSpec	getLabel	inferenceType	helper method that generates a unique label for a metricspec / inferencetype pair
+frameworks.opf	MetricSpec	getInferenceTypeFromLabel	cls label	extracts the predicitonkind temporal vs nontemporal from the given
+frameworks.opf		getModule	metricSpec	factory method to return an appropriate metricsiface-based module args
+frameworks.opf	MetricsIface	__init__	metricSpec	instantiate a metricsiface-based module
+frameworks.opf	MetricsIface	addInstance	groundTruth prediction record result	add one instance consisting of ground truth and a prediction
+frameworks.opf	MetricsIface	getMetric		return {value : <current measurement>, "stats" : {<stat> : <value>
+frameworks.opf	AggregateMetric	accumulate	groundTruth prediction accumulatedError historyBuffer	updates the accumulated error given the prediction and the ground truth
+frameworks.opf	AggregateMetric	aggregate	accumulatedError historyBuffer steps	updates the final aggregated score error given the prediction and the ground truth
+frameworks.opf	AggregateMetric	__init__	metricSpec	initialize this metric if the params contains the key 'errormetric', then that is the name of
+frameworks.opf	AggregateMetric	_getShiftedGroundTruth	groundTruth	utility function that saves the passed in groundtruth into a local history buffer and returns the groundtruth from self
+frameworks.opf	MetricPassThruPrediction	addInstance	groundTruth prediction record result	compute and store metric value
+frameworks.opf	MetricPassThruPrediction	getMetric		return the metric value
+frameworks.opf	CustomErrorMetric	mostLikely	pred	helper function to return a scalar value representing the most
+frameworks.opf	CustomErrorMetric	expValue	pred	helper function to return a scalar value representing the expected
+frameworks.opf	MetricNegAUC	accumulate	groundTruth prediction accumulatedError historyBuffer	accumulate history of groundtruth and "prediction" values
+frameworks.opf	MetricMulti	__init__	metricSpec	metricmulti constructor using metricspec is not allowed
+frameworks.opf.common_models		getScalarMetricWithTimeOfDayAnomalyParams	metricData minVal maxVal minResolution	return a dict that can be used to create an anomaly model via opf's modelfactory
+frameworks.opf.common_models		_rangeGen	data std	return reasonable min/max values to use given the data
+frameworks.opf.common_models		_fixupRandomEncoderParams	params minVal maxVal minResolution	given model params figure out the correct parameters for the randomdistributed encoder
+frameworks.viz	NetworkVisualizer	__init__	network	:param network nupic engine network
+frameworks.viz	NetworkVisualizer	export		exports a network as a networkx multidigraph intermediate representation suitable for visualization
+frameworks.viz	DotRenderer	__init__	outp node_attrs	:param outp file-like obj to which rendered graph is written (defaults to sys
+data		rUpdate	original updates	recursively updates the values in original with the values from updates
+data		rApply	d f	recursively applies f to the values in dict d
+data		dictDiffAndReport	da db	compares two python dictionaries at the top level and report differences
+data		dictDiff	da db	compares two python dictionaries at the top level and return differences
+data	CategoryFilter	__init__	filterDict	todo describe filterdict schema
+data	CategoryFilter	match	record	returns true if the record matches any of the provided filters
+data	FieldMetaInfo	createFromFileFieldElement	fieldInfoTuple	creates a :class fieldmeta fieldmetainfo instance from a tuple containing
+data	FieldMetaInfo	createListFromFileFieldList	cls fields	creates a fieldmetainfo list from the a list of tuples basically runs
+data	FieldMetaType	isValid	cls fieldDataType	check a candidate value whether it's one of the valid field data types
+data	FieldMetaSpecial	isValid	cls attr	check a candidate value whether it's one of the valid attributes
+data		sort	filename key outputFile fields	sort a potentially big file filename - the input file standard file format
+data		_sortChunk	records key chunkIndex fields	sort in memory chunk of records records - a list of records read from the original dataset
+data		_mergeFiles	key chunkCount outputFile fields	merge sorted chunk files into a sorted output file
+data	WeatherJoiner	join	generateFlag	writes out a new combined file containing weather data
+data		generateStats	filename statsInfo maxSamples filters	generate requested statistics for a dataset and cache to a file
+data	FunctionSource	_cacheSequenceInfoType		figure out whether reset sequenceid both or neither are present in the data
+data	DeltaFilter	__init__	origField deltaField	add a delta field to the data
+data	InferenceShifter	shift	modelResult	shift the model result and return the new instance
+data		validate	value	validate a python value against json schema validate value schemapath
+data		loadJsonValueFromFile	inputFilePath	loads a json value from a file and converts it to the corresponding python object
+data	FileRecordStream	close		closes the stream
+data	FileRecordStream	rewind		put us back at the beginning of the file again
+data	FileRecordStream	getNextRecord	useCache	returns next available data record from the file
+data	FileRecordStream	appendRecord	record inputBookmark	saves the record in the underlying csv file
+data	FileRecordStream	appendRecords	records inputRef progressCB	saves multiple records in the underlying storage
+data	FileRecordStream	getBookmark		gets a bookmark or anchor to the current position
+data	FileRecordStream	recordsExistAfter	bookmark	returns whether there are more records from current position bookmark
+data	FileRecordStream	seekFromEnd	numRecords	seeks to numrecords from the end and returns a bookmark to the new position
+data	FileRecordStream	setAutoRewind	autoRewind	controls whether :meth ~ filerecordstream getnextrecord should
+data	FileRecordStream	getStats		parse the file using dedicated reader and collect fields stats never
+data	FileRecordStream	clearStats		resets stats collected so far
+data	FileRecordStream	getError		not implemented csv file version does not provide storage for the error
+data	FileRecordStream	setError	error	not implemented csv file version does not provide storage for the error
+data	FileRecordStream	isCompleted		not implemented csv file is always considered completed
+data	FileRecordStream	setCompleted	completed	not implemented csv file is always considered completed nothing to do
+data	FileRecordStream	getFieldNames		:returns list field names associated with the data
+data	FileRecordStream	getFields		:returns a sequence of :class ~ fieldmetainfo
+data	FileRecordStream	_updateSequenceInfo	r	keep track of sequence and make sure time goes forward check if the current record is the beginning of a new sequence
+data	FileRecordStream	_getStartRow	bookmark	extracts start row from the bookmark information
+data	FileRecordStream	_getTotalLineCount		returns count of all lines in dataset including header lines
+data	FileRecordStream	getNextRecordIdx		:returns int the index of the record that will be read next from :meth ~
+data	FileRecordStream	getDataRowCount		:returns int count of data rows in dataset excluding header lines
+data	FileRecordStream	flush		flushes the file
+data	FileRecordStream	__enter__		context guard - enter
+data	FileRecordStream	__exit__	yupe value traceback	context guard - exit ensures that the file is always closed at the end of the 'with' block
+data	FileRecordStream	__iter__		support for the iterator protocol return itself
+data	FileRecordStream	next		implement the iterator protocol
+data		_getFieldIndexBySpecial	fields special	return index of the field matching the field meta special value
+data	ModelRecordEncoder	__init__	fields aggregationPeriod	:param fields non-empty sequence of nupic data fieldmeta fieldmetainfo
+data	ModelRecordEncoder	rewind		put us back at the beginning of the file again
+data	ModelRecordEncoder	encode	inputRow	encodes the given input row as a dict with the keys being the field names
+data	ModelRecordEncoder	_computeTimestampRecordIdx	recordTS	give the timestamp of a record a datetime object compute the record's timestamp index - this is the timestamp divided by the aggregation period
+data	RecordStreamIface	close		close the stream
+data	RecordStreamIface	rewind		put us back at the beginning of the file again)
+data	RecordStreamIface	getNextRecord	useCache	returns next available data record from the storage if usecache is
+data	RecordStreamIface	getNextRecordDict		returns next available data record from the storage as a dict with the keys being the field names
+data	RecordStreamIface	getAggregationMonthsAndSeconds		returns the aggregation period of the record stream as a dict containing 'months' and 'seconds'
+data	RecordStreamIface	getRecordsRange	bookmark range	returns a range of records starting from the bookmark if 'bookmark'
+data	RecordStreamIface	getNextRecordIdx		returns the index of the record that will be read next from
+data	RecordStreamIface	getLastRecords	numRecords	returns a tuple successcode recordsarray where successcode - if the stream had enough records to return true/false
+data	RecordStreamIface	removeOldData		deletes all rows from the table if any data was found
+data	RecordStreamIface	appendRecord	record inputRef	saves the record in the underlying storage
+data	RecordStreamIface	appendRecords	records inputRef progressCB	saves multiple records in the underlying storage
+data	RecordStreamIface	getBookmark		returns an anchor to the current position in the data passing this
+data	RecordStreamIface	recordsExistAfter	bookmark	returns true iff there are records left after the bookmark
+data	RecordStreamIface	seekFromEnd	numRecords	returns a bookmark numrecords from the end of the stream
+data	RecordStreamIface	getStats		returns storage stats like min and max values of the fields
+data	RecordStreamIface	getFieldMin	fieldName	returns current minimum value for the field 'fieldname'
+data	RecordStreamIface	getFieldMax	fieldName	returns current maximum value for the field 'fieldname'
+data	RecordStreamIface	clearStats		resets stats collected so far
+data	RecordStreamIface	getError		returns errors saved in the storage
+data	RecordStreamIface	setError	error	saves specified error in the storage
+data	RecordStreamIface	isCompleted		returns true if all records are already in the storage or false if more records is expected
+data	RecordStreamIface	setCompleted	completed	marks the stream completed true or false
+data	RecordStreamIface	getFieldNames		returns an array of field names associated with the data
+data	RecordStreamIface	getFields		returns a sequence of nupic data fieldmeta fieldmetainfo
+data	RecordStreamIface	getResetFieldIdx		:returns index of the 'reset' field none if no such field
+data	RecordStreamIface	getTimestampFieldIdx		return index of the 'timestamp' field
+data	RecordStreamIface	getSequenceIdFieldIdx		return index of the 'sequenceid' field
+data	RecordStreamIface	getCategoryFieldIdx		return index of the 'category' field
+data	RecordStreamIface	getLearningFieldIdx		return index of the 'learning' field
+data	RecordStreamIface	setTimeout	timeout	set the read timeout in seconds int or floating point
+data	RecordStreamIface	flush		flush the file to disk
+data	NumberStatsCollector	getStats	stats	override of getstats() in basestatscollector
+data		generateStats	filename maxSamples	collect statistics for each of the fields in the user input data file and return a stats dict object
+data		parseTimestamp	s	parses a textual datetime format and return a python datetime object
+data		escape	s	escape commas tabs newlines and dashes in a string
+data		unescape	s	unescapes a string that may contain commas tabs newlines and dashes
+data		parseSdr	s	parses a string containing only 0's and 1's and return a python list object
+data		serializeSdr	sdr	serialize python list object containing only 0's and 1's to string
+data		parseStringList	s	parse a string of space-separated numbers returning a python list
+data		stripList	listObj	convert a list of numbers to a string of space-separated numbers
+data	StreamReader	__init__	streamDef bookmark saveOutput isBlocking	base class constructor performs common initialization parameters
+data	StreamReader	_openStream	dataUrl isBlocking maxTimeout bookmark	open the underlying file stream this only supports 'file //' prefixed paths
+data	StreamReader	close		close the stream
+data	StreamReader	getNextRecord		returns combined data from all sources values only
+data	StreamReader	getDataRowCount		iterates through stream to calculate total records after aggregation
+data	StreamReader	getLastRecords	numRecords	saves the record in the underlying storage
+data	StreamReader	getRecordsRange	bookmark range	returns a range of records starting from the bookmark if 'bookmark'
+data	StreamReader	getNextRecordIdx		returns the index of the record that will be read next from
+data	StreamReader	recordsExistAfter	bookmark	returns true iff there are records left after the bookmark
+data	StreamReader	getAggregationMonthsAndSeconds		returns the aggregation period of the record stream as a dict containing 'months' and 'seconds'
+data	StreamReader	appendRecord	record inputRef	saves the record in the underlying storage
+data	StreamReader	appendRecords	records inputRef progressCB	saves multiple records in the underlying storage
+data	StreamReader	seekFromEnd	numRecords	seeks to numrecords from the end and returns a bookmark to the new position
+data	StreamReader	getFieldNames		returns all fields in all inputs list of plain names
+data	StreamReader	getFields		returns a sequence of nupic data fieldmeta fieldmetainfo
+data	StreamReader	getBookmark		returns a bookmark to the current position
+data	StreamReader	clearStats		resets stats collected so far
+data	StreamReader	getStats		returns stats like min and max values of the fields
+data	StreamReader	getError		returns errors saved in the stream
+data	StreamReader	setError	error	saves specified error in the stream
+data	StreamReader	isCompleted		returns true if all records have been read
+data	StreamReader	setCompleted	completed	marks the stream completed true or false
+data	StreamReader	setTimeout	timeout	set the read timeout
+data	StreamReader	flush		flush the file to disk
+data		initFilter	input filterInfo	initializes internal filter variables for further processing
+data		_filterRecord	filterList record	takes a record and returns true if record meets filter criteria
+data		_aggr_first	inList	returns first non-none element in the list or none if all are none
+data		_aggr_last	inList	returns last non-none element in the list or none if all are none
+data		_aggr_sum	inList	returns sum of the elements in the list missing items are replaced with
+data		_aggr_mean	inList	returns mean of non-none elements of the list
+data		_aggr_mode	inList	returns most common value seen in the non-none elements of the list
+data		_aggr_weighted_mean	inList params	weighted mean uses params must be the same size as inlist and
+data	Aggregator	__init__	aggregationInfo inputFields timeFieldName sequenceIdFieldName	construct an aggregator instance params
+data	Aggregator	_getEndTime	t	add the aggregation period to the input time t and return a datetime object years and months are handled as aspecial case due to leap years
+data	Aggregator	_getFuncPtrAndParams	funcName	given the name of an aggregation function returns the function pointer and param
+data	Aggregator	_createAggregateRecord		generate the aggregated output record
+data	Aggregator	isNullAggregation		return true if no aggregation will be performed either because the aggregationinfo was none or all aggregation params within it were 0
+data	Aggregator	next	record curInputBookmark	return the next aggregated record if any parameters
+data		generateDataset	aggregationInfo inputFilename outputFilename	generate a dataset of aggregated values parameters
+data		getFilename	aggregationInfo inputFile	generate the filename for aggregated dataset the filename is based on the input filename and the
+data.generators	DataGenerator	__init__	name seed verbosity	initialize the dataset generator with a random seed and a name
+data.generators	DataGenerator	getDescription		returns a description of the dataset
+data.generators	DataGenerator	setSeed	seed	set the random seed and the numpy seed
+data.generators	DataGenerator	addField	name fieldParams encoderParams	add a single field to the dataset
+data.generators	DataGenerator	addMultipleFields	fieldsInfo	add multiple fields to the dataset
+data.generators	DataGenerator	defineField	name encoderParams	initialize field using relevant encoder parameters
+data.generators	DataGenerator	setFlag	index flag	set flag for field at index flags are special characters such as 's' for
+data.generators	DataGenerator	generateRecord	record	generate a record each value is stored in its respective field
+data.generators	DataGenerator	generateRecords	records	generate multiple records refer to definition for generaterecord
+data.generators	DataGenerator	getRecord	n	returns the nth record
+data.generators	DataGenerator	getAllRecords		returns all the records
+data.generators	DataGenerator	encodeRecord	record toBeAdded	encode a record as a sparse distributed representation
+data.generators	DataGenerator	encodeAllRecords	records toBeAdded	encodes a list of records
+data.generators	DataGenerator	addValueToField	i value	add 'value' to the field i
+data.generators	DataGenerator	addValuesToField	i numValues	add values to the field i
+data.generators	DataGenerator	getSDRforValue	i j	returns the sdr for jth value at column i
+data.generators	DataGenerator	getZeroedOutEncoding	n	returns the nth encoding with the predictedfield zeroed out
+data.generators	DataGenerator	getTotaln		returns the cumulative n for all the fields in the dataset
+data.generators	DataGenerator	getTotalw		returns the cumulative w for all the fields in the dataset
+data.generators	DataGenerator	getEncoding	n	returns the nth encoding
+data.generators	DataGenerator	getAllEncodings		returns encodings for all the records
+data.generators	DataGenerator	getAllFieldNames		returns all field names
+data.generators	DataGenerator	getAllFlags		returns flags for all fields
+data.generators	DataGenerator	getAllDataTypes		returns data types for all fields
+data.generators	DataGenerator	getFieldDescriptions		returns descriptions for all fields
+data.generators	DataGenerator	saveRecords	path	export all the records into a csv file in numenta format
+data.generators	DataGenerator	removeAllRecords		deletes all the values in the dataset
+data.generators	_field	__init__	name encoderSpec	initialize a field with various parameters such as n w flag datatype encodertype and tag predicted field
+data.generators	_field	addValues	values	add values to the field
+data.generators	_field	addValue	value	add value to the field
+data.generators	_field	encodeValue	value toBeAdded	value is encoded as a sdr using the encoding parameters of the field
+data.generators	_field	_setTypes	encoderSpec	set up the datatypes and initialize encoders
+data.generators	_field	_initializeEncoders	encoderSpec	initialize the encoders
+data.generators		add	reader writer column start	adds a value over a range of rows
+data.generators		scale	reader writer column start	multiplies a value over a range of rows
+data.generators		copy	reader writer start stop	copies a range of values to a new location in the data set
+data.generators		sample	reader writer n start	samples n rows
+data.generators	Distributions	__init__		a distribution is a set of values with certain statistical properties methods/properties that must be implemented by subclasses
+data.generators	Distributions	getNext		returns the next value of the disribution using knowledge about the current state of the distribution as stored in numvalues
+data.generators	Distributions	getData	n	returns the next n values for the distribution as a list
+data.generators	Distributions	getDescription		returns a dict of parameters pertinent to the distribution if any as well as state variables such as numvalues
+data.generators	PatternMachine	__init__	n w num seed	@param n int number of available bits in pattern @param w (int/list) number of on bits in pattern
+data.generators	PatternMachine	get	number	return a pattern for a number
+data.generators	PatternMachine	addNoise	bits amount	add noise to pattern
+data.generators	PatternMachine	numbersForBit	bit	return the set of pattern numbers that match a bit
+data.generators	PatternMachine	numberMapForBits	bits	return a map from number to matching on bits for all numbers that match a set of bits
+data.generators	PatternMachine	prettyPrintPattern	bits verbosity	pretty print a pattern
+data.generators	PatternMachine	_generate		generates set of random patterns
+data.generators	PatternMachine	_getW		gets a value of w for use in generating a pattern
+data.generators	ConsecutivePatternMachine	_generate		generates set of consecutive patterns
+data.generators	SequenceMachine	__init__	patternMachine seed	@param patternmachine patternmachine pattern machine instance
+data.generators	SequenceMachine	generateFromNumbers	numbers	generate a sequence from a list of numbers
+data.generators	SequenceMachine	addSpatialNoise	sequence amount	add spatial noise to each pattern in the sequence
+data.generators	SequenceMachine	prettyPrintSequence	sequence verbosity	pretty print a sequence
+data.generators	SequenceMachine	generateNumbers	numSequences sequenceLength sharedRange	@param numsequences int number of sequences to return
+support	Features	hasFeature	feature group addList removeList	this is the primary method of the class that will return true or false based on the current environment and user
+support	Features	getFeatures	group addList removeList	returns a list of all the active features for the current env/user
+support	Features	_getFeaturesForGroup	group	using feature_groups py calculate the set of features available to the given
+support	Features	getAllFeatures		returns a list of all known features (essentially the contents of feature_list py)
+support	Features	getAllGroups		returns a list of all known feature groups
+support		createLogger	obj	helper function to create a logger object for the current object with
+support		logExceptions	logger	returns a closure suitable for use as function/method decorator for logging exceptions that leave the scope of the decorated function
+support		logEntryExit	getLoggerCallback entryExitLogLevel logArgs logTraceback	returns a closure suitable for use as function/method decorator for logging entry/exit of function/method
+support		retry	timeoutSec initialRetryDelaySec maxRetryDelaySec retryExceptions	returns a closure suitable for use as function/method decorator for retrying a function being decorated
+support		retrySQL	timeoutSec logger	return a closure suitable for use as a decorator for retrying a pymysql dao function on certain failures that warrant retries
+support	Configuration	getCustomDict	cls	return a dict containing all custom configuration properties parameters
+support	Configuration	setCustomProperty	cls propertyName value	set a single custom setting and persist it to the custom configuration store
+support	Configuration	setCustomProperties	cls properties	set multiple custom properties and persist them to the custom configuration store
+support	Configuration	clear	cls	clear all configuration properties from in-memory cache but do not alter the custom configuration file
+support	Configuration	resetCustomConfig	cls	clear all custom configuration settings and delete the persistent custom configuration store
+support	Configuration	loadCustomConfig	cls	loads custom configuration settings from their persistent storage
+support	Configuration	_readStdConfigFiles	cls	intercept the _readstdconfigfiles call from our base config class to read in base and custom configuration settings
+support	_CustomConfigurationFileWrapper	clear	cls persistent	if persistent is true delete the temporary file
+support	_CustomConfigurationFileWrapper	getCustomDict	cls	returns a dict of all temporary values in custom configuration file
+support	_CustomConfigurationFileWrapper	edit	cls properties	edits the xml configuration file with the parameters specified by
+support	_CustomConfigurationFileWrapper	_setPath	cls	sets the path of the custom configuration file
+support	_CustomConfigurationFileWrapper	getPath	cls	get the path of the custom configuration file
+support	Configuration	getString	cls prop	retrieve the requested property as a string if property does not exist
+support	Configuration	getBool	cls prop	retrieve the requested property and return it as a bool if property
+support	Configuration	getInt	cls prop	retrieve the requested property and return it as an int if property
+support	Configuration	getFloat	cls prop	retrieve the requested property and return it as a float if property
+support	Configuration	get	cls prop default	get the value of the given configuration property as string this
+support	Configuration	set	cls prop value	set the value of the given configuration property
+support	Configuration	dict	cls	return a dict containing all of the configuration properties parameters
+support	Configuration	readConfigFile	cls filename path	parse the given xml file and store all properties it describes
+support	Configuration	_readConfigFile	cls filename path	parse the given xml file and return a dict describing the file
+support	Configuration	clear	cls	clear out the entire configuration
+support	Configuration	findConfigFile	cls filename	search the configuration path (specified via the nta_conf_path environment variable) for the given filename
+support	Configuration	getConfigPaths	cls	return the list of paths to search for configuration files
+support	Configuration	setConfigPaths	cls paths	modify the paths we use to search for configuration files
+support	Configuration	_readStdConfigFiles	cls	read in all standard configuration files
+support	NupicJobFailException	getWorkerCompletionMessage		generates a worker completion message that is suitable for the
+support	NupicJobFailException	mapCurrentException	cls e errorCode msg	raises nupicjobfailexception by mapping from another exception that is being handled in the caller's scope and preserves the current exception's
+support		groupby2		like itertools groupby with the following additions
+support		getCallerInfo	depth	utility function to get information about function callers the information is the tuple (function/method name filename class)
+support		title	s additional stream frame	utility function to display nice titles it automatically extracts the name of the function/method it is called from
+support		bringToFront	title	bring a top-level window with a given title
+support		getUserDocumentsPath		find the user's "documents" directory os x "my documents" directory windows or home directory unix
+support		getArgumentDescriptions	f	get the arguments default values and argument descriptions for a function
+support		initLogging	verbose console consoleLevel	initilize nupic logging by reading in from the logging configuration file the
+support		reinitLoggingDir		re- initialize the loging directory for the calling application that uses initlogging() for logging configuration
+support		_genLoggingFilePath		generate a filepath for the calling app
+support		enableLoggingErrorDebugging		overrides the python logging facility's handler handleerror function to
+support		intTo8ByteArray	inValue	converts an int to a packed byte array with left most significant byte
+support		byteArrayToInt	packed_data	converts a byte array into an integer
+support		getSpecialRowID		special row id is 0xff ffff ffff ffff ffff 9 bytes of 0xff
+support		floatSecondsFromTimedelta	td	convert datetime timedelta to seconds in floating point
+support		aggregationToMonthsSeconds	interval	return the number of months and seconds from an aggregation dict that represents a date and time
+support		aggregationDivide	dividend divisor	return the result from dividing two dicts that represent date and time
+support		processCategoryFile	f format categoryColumn categoryColumns	read the data out of the given category file returning a tuple categorycount listofcategories
+support		_allow_new_attributes	f	a decorator that maintains the attribute lock state of an object it coperates with the lockattributesmetaclass see bellow that replaces
+support		_simple_init		trivial init method that just calls base class's __init__() this method is attached to classes that don't define __init__()
+support	ConsolePrinterMixin	__init__	verbosity	initialize console printer functionality
+support	ConsolePrinterMixin	cPrint	level message	print a message to the console
+support		makeDirectoryFromAbsolutePath	absDirPath	makes directory for the given directory path with default permissions
+support		patientLoop	logger maxWaitExponent finalErrorString acceptableError	logger logging object maxwaitexponent 2 ** maxwaitexponent defines max wait time
+support		Enum		utility function for creating enumerations in python example usage
+support.unittesthelpers	TestCaseBase	printTestHeader		print out what test we are running
+support.unittesthelpers	TestCaseBase	printBanner	msg	print out a banner
+support.unittesthelpers	TestCaseBase	addExtraLogItem	item	add an item to the log items list for the currently running session
+support.unittesthelpers	TestCaseBase	__wrapMsg	msg	called by our unittest testcase assertxxxxxx overrides to construct a
+support.unittesthelpers	TestCaseBase	assertEqual	first second msg	unittest testcase assertequal override adds extra log items to msg
+support.unittesthelpers	TestCaseBase	assertNotEqual	first second msg	unittest testcase assertnotequal override adds extra log items to msg
+support.unittesthelpers	TestCaseBase	assertTrue	expr msg	unittest testcase asserttrue override adds extra log items to msg
+support.unittesthelpers	TestCaseBase	assertFalse	expr msg	unittest testcase assertfalse override adds extra log items to msg
+support.unittesthelpers		longTest	testMethod	decorator for specifying tests that only run when --long is specified
+support.unittesthelpers		tagTest	tag comment	a decorator for tagging a test class or test method with the given tag
+support.unittesthelpers	AbstractTemporalMemoryTest	getTMClass		implement this method to specify the temporal memory class
+support.unittesthelpers	AbstractTemporalMemoryTest	getPatternMachine		implement this method to provide the pattern machine
+support.unittesthelpers	AbstractTemporalMemoryTest	getDefaultTMParams		override this method to set the default tm params for self tm
+support.unittesthelpers	AbstractTemporalMemoryTest	init	overrides	initialize temporal memory and other member variables
+support.unittesthelpers		getNumpyRandomGenerator	seed	return a numpy random number generator with the given seed
+support.unittesthelpers		convertPermanences	sourceSP destSP	transfer the permanences from source to dest sp's this is used in test
+support.unittesthelpers		getSeed		generate and log a 32-bit compatible seed value
+support.unittesthelpers		convertSP	pySp newSeed	given an instance of a python spatial_pooler return an instance of the cpp spatial_pooler with identical parameters
+support.unittesthelpers		CreateSP	imp params	helper class for creating an instance of the appropriate spatial pooler using given parameters
+swarming		_escape	s	escape commas tabs newlines and dashes in a string
+swarming		_engineServicesRunning		return true if the engine services are running
+swarming		runWithConfig	swarmConfig options outDir outputLabel	starts a swarm given an dictionary configuration
+swarming		runWithJsonFile	expJsonFilePath options outputLabel permWorkDir	starts a swarm given a path to a json file containing configuration
+swarming		runWithPermutationsScript	permutationsFilePath options outputLabel permWorkDir	starts a swarm given a path to a permutations py script
+swarming		runPermutations	_	deprecated use @ref runwithconfig
+swarming		_clientJobsDB		returns the shared cjdao clientjobsdao instance
+swarming		_nupicHyperSearchHasErrors	hyperSearchJob	check whether any experiments failed in our latest hypersearch
+swarming	_HyperSearchRunner	runNewSearch		start a new hypersearch job and monitor it to completion
+swarming	_HyperSearchRunner	pickupSearch		pick up the latest search from a saved jobid and monitor it to completion
+swarming	_HyperSearchRunner	_launchWorkers	cmdLine numWorkers	launch worker processes to execute the given command line
+swarming	_HyperSearchRunner	__startSearch		starts hypersearch as a worker or runs it inline for the "dryrun" action
+swarming	_HyperSearchRunner	peekSearchJob		retrieves the runner's _hypersearchjob instance note only available after run()
+swarming	_HyperSearchRunner	getDiscoveredMetricsKeys		returns a tuple of all metrics keys discovered while running hypersearch
+swarming	_HyperSearchRunner	printModels	cls options	prints a listing of experiments that would take place without actually executing them
+swarming	_HyperSearchRunner	generateReport	cls options replaceReport hyperSearchJob	prints all available results in the given hypersearch job and emits model information to the permutations report csv
+swarming	_HyperSearchRunner	loadSavedHyperSearchJob	cls permWorkDir outputLabel	instantiates a _hypersearchjob instance from info saved in file
+swarming	_HyperSearchRunner	__saveHyperSearchJobID	cls permWorkDir outputLabel hyperSearchJob	saves the given _hypersearchjob instance's jobid to file
+swarming	_HyperSearchRunner	__loadHyperSearchJobID	cls permWorkDir outputLabel	loads a saved jobid from file parameters
+swarming	_HyperSearchRunner	__getHyperSearchJobIDFilePath	cls permWorkDir outputLabel	returns filepath where to store hypersearch jobid
+swarming	_ReportCSVWriter	emit	modelInfo	emit model info to csv file
+swarming	_ReportCSVWriter	finalize		close file and print report/backup csv file paths
+swarming	_ReportCSVWriter	__openAndInitCSVFile	modelInfo	- backs up old report csv file - opens the report csv file in append or overwrite mode (per
+swarming	_NupicJob	getJobID		semi-private method for retrieving the jobid
+swarming	_NupicJob	getParams		semi-private method for retrieving the job-specific params parameters
+swarming	_HyperSearchJob	queryModelIDs		queuries db for model ids of all currently instantiated models associated with this hypersearch job
+swarming	_HyperSearchJob	getExpectedNumModels	searchMethod	returns the total number of expected models if known -1 if it can't be determined
+swarming	_ClientJobUtils	makeSearchJobParamsDict	cls options forRunning	constructs a dictionary of hypersearch parameters suitable for converting to json and passing as the params argument to clientjobsdao
+swarming	_PermutationUtils	getOptimizationMetricInfo	cls searchJobParams	retrives the optimization key name and optimization function
+swarming		_backupFile	filePath	back up a file
+swarming		_getOneModelInfo	nupicModelID	a convenience function that retrieves inforamtion about a single model see also _itermodels()
+swarming		_iterModels	modelIDs	creates an iterator that returns modelinfo elements for the given modelids warning the order of modelinfo elements returned by the iterator
+swarming	_NupicModelInfo	__unwrapParams		unwraps self __rawinfo params into the equivalent python dictionary
+swarming	_NupicModelInfo	getReportMetrics		retrives a dictionary of metrics designated for report parameters
+swarming	_NupicModelInfo	getOptimizationMetrics		retrives a dictionary of metrics designagted for optimization parameters
+swarming	_NupicModelInfo	getAllMetrics		retrives a dictionary of metrics that combines all report and optimization metrics
+swarming	_NupicModelInfo	__unwrapResults		unwraps self __rawinfo results and caches it in self __cachedresults
+swarming	_NupicModelInfo	getCompletionMsg		returns model completion message
+swarming	_NupicModelInfo	getStartTime		returns model evaluation start time
+swarming	_NupicModelInfo	getEndTime		returns mode evaluation end time
+swarming	InferenceElement	getInputElement	inferenceElement	get the sensor input element that corresponds to the given inference element
+swarming	InferenceElement	isTemporal	inferenceElement	returns true if the inference from this timestep is predicted the input for the next timestep
+swarming	InferenceElement	getTemporalDelay	inferenceElement key	returns the number of records that elapse between when an inference is made and when the corresponding input record will appear
+swarming	InferenceElement	getMaxDelay	inferences	returns the maximum delay for the inferenceelements in the inference
+swarming	InferenceType	isTemporal	inferenceType	returns true if the inference type is 'temporal', i e requires a
+swarming	HypersearchWorker	__init__	options cmdLineArgs	instantiate the hypersearch worker parameters
+swarming	HypersearchWorker	_processUpdatedModels	cjDAO	for all models that modified their results since last time this method was called send their latest results to the hypersearch implementation
+swarming	HypersearchWorker	run		run this worker
+swarming		main	argv	the main function of the hypersearchworker script this parses the command
+swarming		createAndStartSwarm	client clientInfo clientKey params	create and start a swarm job
+swarming		getSwarmModelParams	modelID	retrieve the engine-level model params from a swarm model
+swarming	OPFModelRunner	run		runs the opf model parameters
+swarming	OPFModelRunner	__runTaskMainLoop	numIters learningOffAt	main loop of the opf model runner
+swarming	OPFModelRunner	_finalize		run final activities after a model has run these include recording and
+swarming	OPFModelRunner	__createModelCheckpoint		create a checkpoint from the current model and store it in a dir named
+swarming	OPFModelRunner	__deleteModelCheckpoint	modelID	delete the stored checkpoint for the specified modelid this function is
+swarming	OPFModelRunner	_createPredictionLogger		creates the model's predictionlogger object which is an interface to write
+swarming	OPFModelRunner	__getOptimizedMetricLabel		get the label for the metric being optimized this function also caches
+swarming	OPFModelRunner	_getMetricLabels		returns a list of labels that correspond to metrics being computed
+swarming	OPFModelRunner	_getFieldStats		method which returns a dictionary of field statistics received from the input source
+swarming	OPFModelRunner	_getMetrics		protected function that can be overriden by subclasses its main purpose
+swarming	OPFModelRunner	_updateModelDBResults		retrieves the current results and updates the model's record in the model database
+swarming	OPFModelRunner	__updateJobResultsPeriodic		periodic check to see if this is the best model this should only have an
+swarming	OPFModelRunner	__checkIfBestCompletedModel		reads the current "best model" for the job and returns whether or not the
+swarming	OPFModelRunner	_writePrediction	result	writes the results of one iteration of a model the results are written to
+swarming	OPFModelRunner	__writeRecordsCallback		this callback is called by self __predictionlogger writerecords()
+swarming	OPFModelRunner	__flushPredictionCache		writes the contents of this model's in-memory prediction cache to a permanent
+swarming	OPFModelRunner	__deleteOutputCache	modelID	delete's the output cache associated with the given modelid this actually
+swarming	OPFModelRunner	_initPeriodicActivities		creates and returns a periodicactivitymgr instance initialized with
+swarming	OPFModelRunner	__checkCancelation		check if the cancelation flag has been set for this model
+swarming	OPFModelRunner	__checkMaturity		save the current metric value and see if the model's performance has 'leveled off
+swarming	OPFModelRunner	handleWarningSignal	signum frame	handles a "warning signal" from the scheduler this is received when the
+swarming	OPFModelRunner	__setAsOrphaned		sets the current model as orphaned this is called when the scheduler is
+swarming	ResultsDB	__init__	hsObj	instantiate our results database
+swarming	ResultsDB	update	modelID modelParams modelParamsHash metricResult	insert a new entry or update an existing one if this is an update
+swarming	ResultsDB	getNumErrModels		return number of models that completed with errors
+swarming	ResultsDB	getErrModelIds		return list of models ids that completed with errors
+swarming	ResultsDB	getNumCompletedModels		return total number of models that completed
+swarming	ResultsDB	getModelIDFromParamsHash	paramsHash	return the modelid of the model with the given paramshash or none if not found
+swarming	ResultsDB	numModels	swarmId includeHidden	return the total # of models we have in our database if swarmid is none or in a specific swarm
+swarming	ResultsDB	bestModelIdAndErrScore	swarmId genIdx	return the model id of the model with the best result so far and it's score on the optimize metric
+swarming	ResultsDB	getParticleInfo	modelId	return particle info for a specific modelid
+swarming	ResultsDB	getParticleInfos	swarmId genIdx completed matured	return a list of particlestates for all particles we know about in the given swarm their model ids and metric results
+swarming	ResultsDB	getOrphanParticleInfos	swarmId genIdx	return a list of particlestates for all particles in the given swarm generation that have been orphaned
+swarming	ResultsDB	getMaturedSwarmGenerations		return a list of swarm generations that have completed and the best minimal errscore seen for each of them
+swarming	ResultsDB	firstNonFullGeneration	swarmId minNumParticles	return the generation index of the first generation in the given swarm that does not have numparticles particles in it either still in the
+swarming	ResultsDB	highestGeneration	swarmId	return the generation index of the highest generation in the given swarm
+swarming	ResultsDB	getParticleBest	particleId	return the best score and position for a given particle the position
+swarming	ResultsDB	getResultsPerChoice	swarmId maxGenIdx varName	return a dict of the errors obtained on models that were run with each value from a permutechoice variable
+swarming	HypersearchV2	__init__	searchParams workerID cjDAO jobID	instantiate the hyperseachv2 instance
+swarming	HypersearchV2	_getStreamDef	modelDescription	generate stream definition based on
+swarming	HypersearchV2	__del__		destructor note this is not guaranteed to be called bugs like circular references could prevent it from being called
+swarming	HypersearchV2	close		deletes temporary system objects/files
+swarming	HypersearchV2	_readPermutationsFile	filename modelDescription	read the permutations file and initialize the following member variables _predictedfield field name of the field we are trying to
+swarming	HypersearchV2	getExpectedNumModels		computes the number of models that are expected to complete as part of this instances's hypersearch
+swarming	HypersearchV2	getModelNames		generates a list of model names that are expected to complete as part of this instances's hypersearch
+swarming	HypersearchV2	getPermutationVariables		returns a dictionary of permutation variables
+swarming	HypersearchV2	getComplexVariableLabelLookupDict		generates a lookup dictionary of permutation variables whose values are too complex for labels so that artificial labels have to be generated
+swarming	HypersearchV2	getOptimizationMetricInfo		retrives the optimization key name and optimization function
+swarming	HypersearchV2	_checkForOrphanedModels		if there are any models that haven't been updated in a while consider them dead and mark them as hidden in our resultsdb
+swarming	HypersearchV2	_hsStatePeriodicUpdate	exhaustedSwarmId	periodically check to see if we should remove a certain field combination from evaluation because it is doing so poorly or move on to the next
+swarming	HypersearchV2	_getCandidateParticleAndSwarm	exhaustedSwarmId	find or create a candidate particle to produce a new model
+swarming	HypersearchV2	_okToExit		test if it's ok to exit this worker this is only called when we run
+swarming	HypersearchV2	createModels	numModels	create one or more new models for evaluation these should not be models
+swarming	HypersearchV2	recordModelProgress	modelID modelParams modelParamsHash results	record or update the results for a model this is called by the
+swarming	HypersearchV2	runModel	modelID jobID modelParams modelParamsHash	run the given model
+swarming		_paramsFileHead		this is the first portion of every sub-experiment params file we generate between
+swarming		_paramsFileTail		this is the tail of every params file we generate between the head and the tail
+swarming		_appendReportKeys	keys prefix results	generate a set of possible report keys for an experiment's results
+swarming		_matchReportKeys	reportKeyREs allReportKeys	extract all items from the 'allkeys' list whose key matches one of the regular expressions passed in 'reportkeys'
+swarming		_getReportItem	itemName results	get a specific item by name out of the results dict
+swarming		filterResults	allResults reportKeys optimizeKey	given the complete set of results generated by an experiment (passed in 'results'), filter out and return only the ones the caller wants as
+swarming		_quoteAndEscape	string	string input string ascii or unicode
+swarming		_handleModelRunnerException	jobID modelID jobsDAO experimentDir	perform standard handling of an exception that occurs while running a model
+swarming		runModelGivenBaseAndParams	modelID jobID baseDescription params	this creates an experiment directory with a base py description file
+swarming	PeriodicActivityMgr	__init__	requestedActivities	requestedactivities a sequence of periodicactivityrequest elements
+swarming	PeriodicActivityMgr	tick		activity tick handler services all activities
+swarming		generatePersistentJobGUID		generates a "persistentjobguid" value
+swarming		rCopy	d f discardNoneKeys deepCopy	recursively copies a dict and returns the result
+swarming		rApply	d f	recursively applies f to the values in dict d
+swarming		clippedObj	obj maxElementSize	return a clipped version of obj suitable for printing this is useful when generating log messages by printing data structures but
+swarming		validate	value	validate a python value against json schema validate value schemapath
+swarming		loadJsonValueFromFile	inputFilePath	loads a json value from a file and converts it to the corresponding python object
+swarming		sortedJSONDumpS	obj	return a json representation of obj with sorted keys on any embedded dicts
+swarming	OPFDummyModelRunner	_loadDummyModelParameters	params	loads all the parameters for this dummy model for any paramters
+swarming	OPFDummyModelRunner	_computModelDelay		computes the amount of time if any to delay the run of this model
+swarming	OPFDummyModelRunner	_getMetrics		protected function that can be overridden by subclasses its main purpose
+swarming	OPFDummyModelRunner	run		runs the given opf task against the given model instance
+swarming	OPFDummyModelRunner	_createPredictionLogger		creates the model's predictionlogger object which is an interface to write
+swarming	OPFDummyModelRunner	__shouldSysExit	iteration	checks to see if the model should exit based on the exitafter dummy
+swarming	ModelChooser	updateResultsForJob	forceUpdate	chooses the best model for a given job
+swarming.exp_generator	_CreateDirectoryException	__init__	dirPath reason	dirpath the path that we attempted to create for experiment files
+swarming.exp_generator	_ErrorReportingException	__init__	problem precursor	problem a string-convertible object that describes the problem experienced by the error-reporting funciton
+swarming.exp_generator		_makeUsageErrorStr	errorString usageString	combines an error string and usage string into a regular format so they all look consistent
+swarming.exp_generator		_handleShowSchemaOption		displays command schema to stdout and exit program
+swarming.exp_generator		_handleDescriptionOption	cmdArgStr outDir usageStr hsVersion	parses and validates the --description option args and executes the
+swarming.exp_generator		_handleDescriptionFromFileOption	filename outDir usageStr hsVersion	parses and validates the --descriptionfromfile option and executes the
+swarming.exp_generator		_isInt	x precision	return isint intvalue for a given floating point number
+swarming.exp_generator		_isString	obj	returns whether or not the object is a string
+swarming.exp_generator		_quoteAndEscape	string	string input string ascii or unicode
+swarming.exp_generator		_indentLines	str indentLevels indentFirstLine	indent all lines in the given string
+swarming.exp_generator		_isCategory	fieldType	prediction function for determining whether a function is a categorical variable or a scalar variable
+swarming.exp_generator		_generateMetricSpecString	inferenceElement metric params field	generates the string representation of a metricspec object and returns the metric key associated with the metric
+swarming.exp_generator		_generateFileFromTemplates	templateFileNames outputFilePath replacementDict	generates a file by applying token replacements to the given template file
+swarming.exp_generator		_generateEncoderChoicesV1	fieldInfo	return a list of possible encoder parameter combinations for the given field and the default aggregation function to use
+swarming.exp_generator		_generateEncoderStringsV1	includedFields	generate and return the following encoder related substitution variables encoderspecsstr
+swarming.exp_generator		_generatePermEncoderStr	options encoderDict	generate the string that defines the permutations to apply for a given encoder
+swarming.exp_generator		_generateEncoderStringsV2	includedFields options	generate and return the following encoder related substitution variables encoderspecsstr
+swarming.exp_generator		_handleJAVAParameters	options	handle legacy options temporary
+swarming.exp_generator		_getPropertyValue	schema propertyName options	checks to see if property is specified in 'options' if not reads the
+swarming.exp_generator		_getExperimentDescriptionSchema		returns the experiment description schema this implementation loads it in
+swarming.exp_generator		_generateExperiment	options outputDirPath hsVersion claDescriptionTemplateFile	executes the --description option which includes 1
+swarming.exp_generator		_generateMetricsSubstitutions	options tokenReplacements	generate the token substitution for metrics related fields
+swarming.exp_generator		_generateMetricSpecs	options	generates the metrics for a given inferencetype
+swarming.exp_generator		_generateExtraMetricSpecs	options	generates the non-default metrics specified by the expgenerator params
+swarming.exp_generator		_getPredictedField	options	gets the predicted field and it's datatype from the options dictionary
+swarming.exp_generator		_generateInferenceArgs	options tokenReplacements	generates the token substitutions related to the predicted field
+swarming.exp_generator		expGenerator	args	parses validates and executes command-line options on success performs requested operation and exits program normally
+swarming.hypersearch		Enum		utility function for creating enumerations in python example usage
+swarming.hypersearch		makeDirectoryFromAbsolutePath	absDirPath	makes directory for the given directory path with default permissions
+swarming.hypersearch	ConfigurationBase	getString	cls prop	retrieve the requested property as a string if property does not exist
+swarming.hypersearch	ConfigurationBase	getBool	cls prop	retrieve the requested property and return it as a bool if property
+swarming.hypersearch	ConfigurationBase	getInt	cls prop	retrieve the requested property and return it as an int if property
+swarming.hypersearch	ConfigurationBase	getFloat	cls prop	retrieve the requested property and return it as a float if property
+swarming.hypersearch	ConfigurationBase	get	cls prop default	get the value of the given configuration property as string this
+swarming.hypersearch	ConfigurationBase	set	cls prop value	set the value of the given configuration property
+swarming.hypersearch	ConfigurationBase	dict	cls	return a dict containing all of the configuration properties parameters
+swarming.hypersearch	ConfigurationBase	readConfigFile	cls filename path	parse the given xml file and store all properties it describes
+swarming.hypersearch	ConfigurationBase	_readConfigFile	cls filename path	parse the given xml file and return a dict describing the file
+swarming.hypersearch	ConfigurationBase	clear	cls	clear out the entire configuration
+swarming.hypersearch	ConfigurationBase	findConfigFile	cls filename	search the configuration path (specified via the nta_conf_path environment variable) for the given filename
+swarming.hypersearch	ConfigurationBase	getConfigPaths	cls	return the list of paths to search for configuration files
+swarming.hypersearch	ConfigurationBase	setConfigPaths	cls paths	modify the paths we use to search for configuration files
+swarming.hypersearch	ConfigurationBase	_readStdConfigFiles	cls	read in all standard configuration files
+swarming.hypersearch	Configuration	getCustomDict	cls	return a dict containing all custom configuration properties parameters
+swarming.hypersearch	Configuration	setCustomProperty	cls propertyName value	set a single custom setting and persist it to the custom configuration store
+swarming.hypersearch	Configuration	setCustomProperties	cls properties	set multiple custom properties and persist them to the custom configuration store
+swarming.hypersearch	Configuration	clear	cls	clear all configuration properties from in-memory cache but do not alter the custom configuration file
+swarming.hypersearch	Configuration	resetCustomConfig	cls	clear all custom configuration settings and delete the persistent custom configuration store
+swarming.hypersearch	Configuration	loadCustomConfig	cls	loads custom configuration settings from their persistent storage
+swarming.hypersearch	Configuration	_readStdConfigFiles	cls	intercept the _readstdconfigfiles call from our base config class to read in base and custom configuration settings
+swarming.hypersearch	_CustomConfigurationFileWrapper	clear	cls persistent	if persistent is true delete the temporary file
+swarming.hypersearch	_CustomConfigurationFileWrapper	getCustomDict	cls	returns a dict of all temporary values in custom configuration file
+swarming.hypersearch	_CustomConfigurationFileWrapper	edit	cls properties	edits the xml configuration file with the parameters specified by
+swarming.hypersearch	_CustomConfigurationFileWrapper	_setPath	cls	sets the path of the custom configuration file
+swarming.hypersearch	_CustomConfigurationFileWrapper	getPath	cls	get the path of the custom configuration file
+swarming.hypersearch	ExtendedLogger	debug	msg	log 'msg % args' with severity 'debug'
+swarming.hypersearch	ExtendedLogger	info	msg	log 'msg % args' with severity 'info'
+swarming.hypersearch	ExtendedLogger	warning	msg	log 'msg % args' with severity 'warning'
+swarming.hypersearch	ExtendedLogger	error	msg	log 'msg % args' with severity 'error'
+swarming.hypersearch	ExtendedLogger	critical	msg	log 'msg % args' with severity 'critical'
+swarming.hypersearch	ExtendedLogger	log	level msg	log 'msg % args' with the integer severity 'level'
+swarming.hypersearch	ModelTerminator	getTerminationCallbacks	terminationFunc	returns the periodic checks to see if the model should continue running
+swarming.hypersearch		clean	s	removes trailing whitespace on each line
+swarming.hypersearch	PermuteVariable	getState		return the current state of this particle this is used for
+swarming.hypersearch	PermuteVariable	setState	state	set the current state of this particle this is counterpart to getstate
+swarming.hypersearch	PermuteVariable	getPosition		for int vars returns position to nearest int
+swarming.hypersearch	PermuteVariable	agitate		this causes the variable to jiggle away from its current position
+swarming.hypersearch	PermuteVariable	newPosition	globalBestPosition rng	choose a new position based on results obtained so far from other particles and the passed in globalbestposition
+swarming.hypersearch	PermuteVariable	pushAwayFrom	otherVars rng	choose a new position that is as far away as possible from all 'othervars', where 'othervars' is a list of permutevariable instances
+swarming.hypersearch	PermuteVariable	resetVelocity	rng	reset the velocity to be some fraction of the total distance this
+swarming.hypersearch	PermuteFloat	__init__	min max stepSize inertia	construct a variable that permutes over floating point values using the particle swarm optimization pso algorithm
+swarming.hypersearch	PermuteFloat	__repr__		see comments in base class
+swarming.hypersearch	PermuteFloat	getState		see comments in base class
+swarming.hypersearch	PermuteFloat	setState	state	see comments in base class
+swarming.hypersearch	PermuteFloat	getPosition		see comments in base class
+swarming.hypersearch	PermuteFloat	agitate		see comments in base class
+swarming.hypersearch	PermuteFloat	newPosition	globalBestPosition rng	see comments in base class
+swarming.hypersearch	PermuteFloat	pushAwayFrom	otherPositions rng	see comments in base class
+swarming.hypersearch	PermuteFloat	resetVelocity	rng	see comments in base class
+swarming.hypersearch	PermuteInt	__repr__		see comments in base class
+swarming.hypersearch	PermuteInt	getPosition		see comments in base class
+swarming.hypersearch	PermuteChoices	__repr__		see comments in base class
+swarming.hypersearch	PermuteChoices	getState		see comments in base class
+swarming.hypersearch	PermuteChoices	setState	state	see comments in base class
+swarming.hypersearch	PermuteChoices	setResultsPerChoice	resultsPerChoice	setup our resultsperchoice history based on the passed in resultsperchoice
+swarming.hypersearch	PermuteChoices	getPosition		see comments in base class
+swarming.hypersearch	PermuteChoices	agitate		see comments in base class
+swarming.hypersearch	PermuteChoices	newPosition	globalBestPosition rng	see comments in base class
+swarming.hypersearch	PermuteChoices	pushAwayFrom	otherPositions rng	see comments in base class
+swarming.hypersearch	PermuteChoices	resetVelocity	rng	see comments in base class
+swarming.hypersearch	PermuteEncoder	__repr__		see comments in base class
+swarming.hypersearch	PermuteEncoder	getDict	encoderName flattenedChosenValues	return a dict that can be used to construct this encoder this dict
+swarming.hypersearch	Tests	_testValidPositions	varClass minValue maxValue stepSize	run a bunch of iterations on a permutevar and collect which positions were visited
+swarming.hypersearch	Tests	_testConvergence	varClass minValue maxValue targetValue	test that we can converge on the right answer
+swarming.hypersearch	Tests	run		run unit tests on this module
+swarming.hypersearch	Particle	__init__	hsObj resultsDB flattenedPermuteVars swarmId	create a particle
+swarming.hypersearch	Particle	getState		get the particle state as a dict this is enough information to
+swarming.hypersearch	Particle	initStateFrom	particleId particleState newBest	init all of our variable positions velocities and optionally the best result and best position from the given particle
+swarming.hypersearch	Particle	copyEncoderStatesFrom	particleState	copy all encoder variables from particlestate into this particle
+swarming.hypersearch	Particle	copyVarStatesFrom	particleState varNames	copy specific variables from particlestate into this particle
+swarming.hypersearch	Particle	getPosition		return the position of this particle this returns a dict() of key
+swarming.hypersearch	Particle	getPositionFromState	pState	return the position of a particle given its state dict
+swarming.hypersearch	Particle	agitate		agitate this particle so that it is likely to go to a new position
+swarming.hypersearch	Particle	newPosition	whichVars	choose a new position based on results obtained so far from all other particles
+swarming.hypersearch	HsState	__init__	hsObj	create our state object
+swarming.hypersearch	HsState	isDirty		return true if our local copy of the state has changed since the last time we read from the db
+swarming.hypersearch	HsState	isSearchOver		return true if the search should be considered over
+swarming.hypersearch	HsState	readStateFromDB		set our state to that obtained from the engworkerstate field of the job record
+swarming.hypersearch	HsState	writeStateToDB		update the state in the job record with our local changes if any
+swarming.hypersearch	HsState	getEncoderNameFromKey	key	given an encoder dictionary key get the encoder name
+swarming.hypersearch	HsState	getEncoderKeyFromName	name	given an encoder name get the key
+swarming.hypersearch	HsState	getFieldContributions		return the field contributions statistics
+swarming.hypersearch	HsState	getAllSwarms	sprintIdx	return the list of all swarms in the given sprint
+swarming.hypersearch	HsState	getActiveSwarms	sprintIdx	return the list of active swarms in the given sprint these are swarms
+swarming.hypersearch	HsState	getNonKilledSwarms	sprintIdx	return the list of swarms in the given sprint that were not killed
+swarming.hypersearch	HsState	getCompletedSwarms		return the list of all completed swarms
+swarming.hypersearch	HsState	getCompletingSwarms		return the list of all completing swarms
+swarming.hypersearch	HsState	bestModelInCompletedSwarm	swarmId	return the best model id and it's errscore from the given swarm
+swarming.hypersearch	HsState	bestModelInCompletedSprint	sprintIdx	return the best model id and it's errscore from the given sprint
+swarming.hypersearch	HsState	bestModelInSprint	sprintIdx	return the best model id and it's errscore from the given sprint which may still be in progress
+swarming.hypersearch	HsState	setSwarmState	swarmId newStatus	change the given swarm's state to 'newstate' if 'newstate' is
+swarming.hypersearch	HsState	anyGoodSprintsActive		return true if there are any more good sprints still being explored
+swarming.hypersearch	HsState	isSprintCompleted	sprintIdx	return true if the given sprint has completed
+swarming.hypersearch	HsState	killUselessSwarms		see if we can kill off some speculative swarms if an earlier sprint
+swarming.hypersearch	HsState	isSprintActive	sprintIdx	if the given sprint exists and is active return active=true
+swarming.hypersearch	SwarmTerminator	recordDataPoint	swarmId generation errScore	record the best score for a swarm's generation index x returns list of swarmids to terminate
+encoders	RandomDistributedScalarEncoder	_seed	seed	initialize the random seed
+encoders	RandomDistributedScalarEncoder	getDecoderOutputFieldTypes		see method description in base py
+encoders	RandomDistributedScalarEncoder	getWidth		see method description in base py
+encoders	RandomDistributedScalarEncoder	getBucketIndices	x	see method description in base py
+encoders	RandomDistributedScalarEncoder	mapBucketIndexToNonZeroBits	index	given a bucket index return the list of non-zero bits if the bucket
+encoders	RandomDistributedScalarEncoder	encodeIntoArray	x output	see method description in base py
+encoders	RandomDistributedScalarEncoder	_createBucket	index	create the given bucket index recursively create as many in-between
+encoders	RandomDistributedScalarEncoder	_newRepresentation	index newIndex	return a new representation for newindex that overlaps with the
+encoders	RandomDistributedScalarEncoder	_newRepresentationOK	newRep newIndex	return true if this new candidate representation satisfies all our overlap rules
+encoders	RandomDistributedScalarEncoder	_countOverlapIndices	i j	return the overlap between bucket indices i and j
+encoders	RandomDistributedScalarEncoder	_countOverlap	rep1 rep2	return the overlap between two representations rep1 and rep2 are lists of
+encoders	RandomDistributedScalarEncoder	_overlapOK	i j overlap	return true if the given overlap between bucket indices i and j are acceptable
+encoders	RandomDistributedScalarEncoder	_initializeBucketMap	maxBuckets offset	initialize the bucket map assuming the given number of maxbuckets
+encoders	DateEncoder	getScalarNames	parentFieldName	see method description in base py
+encoders	DateEncoder	getEncodedValues	input	see method description in base py
+encoders	DateEncoder	getScalars	input	see method description in :meth ~ nupic encoders base encoder getscalars
+encoders	DateEncoder	getBucketIndices	input	see method description in base py
+encoders	DateEncoder	encodeIntoArray	input output	see method description in base py
+encoders	CoordinateEncoder	getWidth		see nupic encoders base encoder for more information
+encoders	CoordinateEncoder	getDescription		see nupic encoders base encoder for more information
+encoders	CoordinateEncoder	getScalars	inputData	see nupic encoders base encoder for more information
+encoders	CoordinateEncoder	encodeIntoArray	inputData output	see nupic encoders base encoder for more information
+encoders	CoordinateEncoder	_neighbors	coordinate radius	returns coordinates around given coordinate within given radius
+encoders	CoordinateEncoder	_topWCoordinates	cls coordinates w	returns the top w coordinates by order
+encoders	CoordinateEncoder	_hashCoordinate	coordinate	hash a coordinate to a 64 bit integer
+encoders	CoordinateEncoder	_orderForCoordinate	cls coordinate	returns the order for a coordinate
+encoders	CoordinateEncoder	_bitForCoordinate	cls coordinate n	maps the coordinate to a bit in the sdr
+encoders	GeospatialCoordinateEncoder	getDescription		see nupic encoders base encoder for more information
+encoders	GeospatialCoordinateEncoder	getScalars	inputData	see nupic encoders base encoder for more information
+encoders	GeospatialCoordinateEncoder	encodeIntoArray	inputData output	see nupic encoders base encoder for more information
+encoders	GeospatialCoordinateEncoder	coordinateForPosition	longitude latitude altitude	returns coordinate for given gps position
+encoders	GeospatialCoordinateEncoder	radiusForSpeed	speed	returns radius for given speed
+encoders		_isSequence	obj	helper function to determine if a function is a list or sequence
+encoders	Encoder	getWidth		should return the output width in bits
+encoders	Encoder	encodeIntoArray	inputData output	encodes inputdata and puts the encoded value into the numpy output array which is a 1-d array of length returned by :meth
+encoders	Encoder	setLearning	learningEnabled	set whether learning is enabled
+encoders	Encoder	setFieldStats	fieldName fieldStatistics	this method is called by the model to set the statistics like min and max for the underlying encoders if this information is available
+encoders	Encoder	encode	inputData	convenience wrapper for :meth encodeintoarray
+encoders	Encoder	getScalarNames	parentFieldName	return the field names for each of the scalar values returned by getscalars
+encoders	Encoder	getDecoderOutputFieldTypes		returns a sequence of field types corresponding to the elements in the decoded output field array
+encoders	Encoder	setStateLock	lock	setting this to true freezes the state of the encoder this is separate from the learning state which affects changing parameters
+encoders	Encoder	_getInputValue	obj fieldName	gets the value of a given field from the input record
+encoders	Encoder	getEncoderList		:return a reference to each sub-encoder in this encoder they are
+encoders	Encoder	getScalars	inputData	returns a numpy array containing the sub-field scalar value s for each sub-field of the inputdata
+encoders	Encoder	getEncodedValues	inputData	returns the input in the same format as is returned by :meth
+encoders	Encoder	getBucketIndices	inputData	returns an array containing the sub-field bucket indices for each sub-field of the inputdata
+encoders	Encoder	scalarsToStr	scalarValues scalarNames	return a pretty print string representing the return values from :meth
+encoders	Encoder	getDescription		**must be overridden by subclasses **
+encoders	Encoder	getFieldDescription	fieldName	return the offset and length of a given field within the encoded output
+encoders	Encoder	encodedBitDescription	bitOffset formatted	return a description of the given bit in the encoded output
+encoders	Encoder	pprintHeader	prefix	pretty-print a header that labels the sub-fields of the encoded output
+encoders	Encoder	pprint	output prefix	pretty-print the encoded output using ascii art
+encoders	Encoder	decode	encoded parentFieldName	takes an encoded output and does its best to work backwards and generate the input that would have generated it
+encoders	Encoder	decodedToStr	decodeResults	return a pretty print string representing the return value from :meth
+encoders	Encoder	getBucketValues		**must be overridden by subclasses **
+encoders	Encoder	getBucketInfo	buckets	returns a list of :class encoderresult namedtuples describing the inputs
+encoders	Encoder	topDownCompute	encoded	returns a list of :class encoderresult namedtuples describing the
+encoders	Encoder	closenessScores	expValues actValues fractional	compute closeness scores between the expected scalar value s and actual scalar value s
+encoders	Encoder	getDisplayWidth		calculate width of display for bits plus blanks between fields
+encoders	SDRCategoryEncoder	_seed	seed	initialize the random seed
+encoders	SDRCategoryEncoder	getDecoderOutputFieldTypes		[encoder class virtual method override]
+encoders	SDRCategoryEncoder	_newRep		generate a new and unique representation returns a numpy array
+encoders	SDRCategoryEncoder	getScalars	input	see method description in base py
+encoders	SDRCategoryEncoder	getBucketIndices	input	see method description in base py
+encoders	SDRCategoryEncoder	decode	encoded parentFieldName	see the function description in base py
+encoders	SDRCategoryEncoder	_getTopDownMapping		return the interal _topdownmappingm matrix used for handling the bucketinfo() and topdowncompute() methods
+encoders	SDRCategoryEncoder	getBucketValues		see the function description in base py
+encoders	SDRCategoryEncoder	getBucketInfo	buckets	see the function description in base py
+encoders	SDRCategoryEncoder	topDownCompute	encoded	see the function description in base py
+encoders	SDRCategoryEncoder	closenessScores	expValues actValues fractional	see the function description in base py
+encoders	LogEncoder	getDecoderOutputFieldTypes		encoder class virtual method override
+encoders	LogEncoder	_getScaledValue	inpt	convert the input which is in normal space into log space
+encoders	LogEncoder	getBucketIndices	inpt	see the function description in base py
+encoders	LogEncoder	encodeIntoArray	inpt output	see the function description in base py
+encoders	LogEncoder	decode	encoded parentFieldName	see the function description in base py
+encoders	LogEncoder	getBucketValues		see the function description in base py
+encoders	LogEncoder	getBucketInfo	buckets	see the function description in base py
+encoders	LogEncoder	topDownCompute	encoded	see the function description in base py
+encoders	LogEncoder	closenessScores	expValues actValues fractional	see the function description in base py
+encoders	DeltaEncoder	__init__	w minval maxval periodic	[scalarencoder class method override]
+encoders	DeltaEncoder	topDownCompute	encoded	[scalarencoder class method override]
+encoders	ScalarEncoder	_initEncoder	w minval maxval n	helper function there are three different ways of thinking about the representation
+encoders	ScalarEncoder	_checkReasonableSettings		helper function check if the settings are reasonable for sp to work
+encoders	ScalarEncoder	getDecoderOutputFieldTypes		[encoder class virtual method override]
+encoders	ScalarEncoder	_getFirstOnBit	input	return the bit offset of the first bit to be set in the encoder output
+encoders	ScalarEncoder	getBucketIndices	input	see method description in base py
+encoders	ScalarEncoder	encodeIntoArray	input output learn	see method description in base py
+encoders	ScalarEncoder	decode	encoded parentFieldName	see the function description in base py
+encoders	ScalarEncoder	_generateRangeDescription	ranges	generate description from a text description of the ranges
+encoders	ScalarEncoder	_getTopDownMapping		return the interal _topdownmappingm matrix used for handling the bucketinfo() and topdowncompute() methods
+encoders	ScalarEncoder	getBucketValues		see the function description in base py
+encoders	ScalarEncoder	getBucketInfo	buckets	see the function description in base py
+encoders	ScalarEncoder	topDownCompute	encoded	see the function description in base py
+encoders	ScalarEncoder	closenessScores	expValues actValues fractional	see the function description in base py
+encoders		bitsToString	arr	returns a string representing a numpy array of 0's and 1's
+encoders	SparsePassThroughEncoder	__init__	n w name forced	n is the total bits in input
+encoders	SparsePassThroughEncoder	encodeIntoArray	value output	see method description in base py
+encoders	CategoryEncoder	getDecoderOutputFieldTypes		[encoder class virtual method override]
+encoders	CategoryEncoder	getScalars	input	see method description in base py
+encoders	CategoryEncoder	getBucketIndices	input	see method description in base py
+encoders	CategoryEncoder	decode	encoded parentFieldName	see the function description in base py
+encoders	CategoryEncoder	closenessScores	expValues actValues fractional	see the function description in base py
+encoders	CategoryEncoder	getBucketValues		see the function description in base py
+encoders	CategoryEncoder	getBucketInfo	buckets	see the function description in base py
+encoders	CategoryEncoder	topDownCompute	encoded	see the function description in base py
+encoders	AdaptiveScalarEncoder	_setEncoderParams		set the radius resolution and range these values are updated when minval
+encoders	AdaptiveScalarEncoder	_setMinAndMax	input learn	potentially change the minval and maxval using input
+encoders	AdaptiveScalarEncoder	getBucketIndices	input learn	[overrides nupic encoders scalar scalarencoder getbucketindices]
+encoders	AdaptiveScalarEncoder	encodeIntoArray	input output learn	[overrides nupic encoders scalar scalarencoder encodeintoarray]
+encoders	AdaptiveScalarEncoder	getBucketInfo	buckets	[overrides nupic encoders scalar scalarencoder getbucketinfo]
+encoders	AdaptiveScalarEncoder	topDownCompute	encoded	[overrides nupic encoders scalar scalarencoder topdowncompute]
+encoders	MultiEncoder	addEncoder	name encoder	adds one encoder
+encoders	MultiEncoder	getWidth		represents the sum of the widths of each fields encoding
+encoders	MultiEncoder	addMultipleEncoders	fieldEncodings	:param fieldencodings dict of dicts mapping field names to the field params dict
+encoders	PassThroughEncoder	getDecoderOutputFieldTypes		[encoder class virtual method override]
+encoders	PassThroughEncoder	getScalars	input	see method description in base py
+encoders	PassThroughEncoder	getBucketIndices	input	see method description in base py
+encoders	PassThroughEncoder	encodeIntoArray	inputVal outputVal	see method description in base py
+encoders	PassThroughEncoder	decode	encoded parentFieldName	see the function description in base py
+encoders	PassThroughEncoder	getBucketInfo	buckets	see the function description in base py
+encoders	PassThroughEncoder	topDownCompute	encoded	see the function description in base py
+encoders	PassThroughEncoder	closenessScores	expValues actValues	does a bitwise compare of the two bitmaps and returns a fractonal value between 0 and 1 of how similar they are
+math		pickByDistribution	distribution r	pick a value according to the provided distribution
+math		Indicator	pos size dtype	returns an array of length size and type dtype that is everywhere 0 except in the index in pos
+math		MultiArgMax	x	get tuple actually a generator of indices where the max value of array x occurs
+math		Any	sequence	returns true if any element of the sequence satisfies true
+math		All	sequence	returns true if all elements of the sequence satisfy true and x
+math		Product	sequence	returns the product of the elements of the sequence
+math		MultiIndicator	pos size dtype	returns an array of length size and type dtype that is everywhere 0 except in the indices listed in sequence pos
+math		Distribution	pos size counts dtype	returns an array of length size and type dtype that is everywhere 0 except in the indices listed in sequence pos
+math	ConditionalProbabilityTable2D	__init__	rowHint ncols	constructs a new empty histogram with no rows or columns
+math	ConditionalProbabilityTable2D	numRows		gets the number of rows in the histogram
+math	ConditionalProbabilityTable2D	grow	rows cols	grows the histogram to have rows rows and cols columns
+math	ConditionalProbabilityTable2D	updateRow	row distribution	add distribution to row row
+math	ConditionalProbabilityTable2D	inferRow	distribution	computes the sumprop probability of each row given the input probability of each column
+math	ConditionalProbabilityTable2D	inferRowEvidence	distribution	computes the probability of evidence given each row from the probability of evidence given each column
+math	ConditionalProbabilityTable2D	inferRowCompat	distribution	equivalent to the category inference of zeta1 toplevel
+math	ConditionalProbabilityTable2D	clean_outcpd		hack to act like clean_outcpd on zeta1 toplevelnode
+math		logFactorial	x	approximation to the log of the factorial function
+math	DiscreteDistribution	sample	rgen	generates a random sample from the discrete probability distribution and returns its value and the log of the probability of sampling that value
+math	MultinomialDistribution	logProbability	distn	form of distribution must be an array of counts in order of self keys
+math	PoissonDistribution	sample	rgen	generates a random sample from the poisson probability distribution and returns its value and the log of the probability of sampling that value
+math		lscsum	lx epsilon	accepts log-values as input exponentiates them computes the sum then converts the sum back to log-space and returns the result
+math		lscsum0	lx	accepts log-values as input exponentiates them sums down the rows first dimension then converts the sum back to log-space and returns the result
+math		normalize	lx	accepts log-values as input exponentiates them normalizes and returns the result
+math		nsum0	lx	accepts log-values as input exponentiates them sums down the rows first dimension normalizes and returns the result
+math		lnsum0	lx	accepts log-values as input exponentiates them sums down the rows first dimension normalizes then converts the sum back to
+math		logSumExp	A B out	returns log(exp a + exp b a and b are numpy arrays
+math		logDiffExp	A B out	returns log(exp a - exp b a and b are numpy arrays values in a should be
+math		cross_list		from http //book opensourceproject org cn/lamp/python/pythoncook2/opensource/0596007973/pythoncook2-chp-19-sect-9 html
+math		cross		from http //book opensourceproject org cn/lamp/python/pythoncook2/opensource/0596007973/pythoncook2-chp-19-sect-9 html
+math		dcross		similar to cross(), but generates output dictionaries instead of tuples
+math	DiscreteProposal	propose	current r	generates a random sample from the discrete probability distribution and returns its value the log of the probability of sampling that value and the
+math	PoissonProposal	propose	current r	generates a random sample from the poisson probability distribution with with location and scale parameter equal to the current value passed in
+math		ROCCurve	y_true y_score	compute receiver operating characteristic roc note this implementation is restricted to the binary classification task
+math		AreaUnderCurve	x y	compute area under the curve auc using the trapezoidal rule parameters
+math		_test		this is a toy example to show the basic functionality the dataset is
+math		coordinatesFromIndex	index dimensions	translate an index into coordinates using the given coordinate system
+math		indexFromCoordinates	coordinates dimensions	translate coordinates into an index using the given coordinate system
+math		neighborhood	centerIndex radius dimensions	get the points in the neighborhood of a point
+math		wrappingNeighborhood	centerIndex radius dimensions	like 'neighborhood', except that the neighborhood isn't truncated when it's near an edge

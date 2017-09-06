@@ -1,0 +1,1737 @@
+core	DDLEvents	before_create	target connection	called before create statements are emitted
+core	DDLEvents	after_create	target connection	called after create statements are emitted
+core	DDLEvents	before_drop	target connection	called before drop statements are emitted
+core	DDLEvents	after_drop	target connection	called after drop statements are emitted
+core	DDLEvents	before_parent_attach	target parent	called before a :class schemaitem is associated with
+core	DDLEvents	after_parent_attach	target parent	called after a :class schemaitem is associated with
+core	DDLEvents	column_reflect	inspector table column_info	called for each unit of 'column info' retrieved when a :class
+core	PoolEvents	connect	dbapi_connection connection_record	called at the moment a particular dbapi connection is first created for a given :class
+core	PoolEvents	first_connect	dbapi_connection connection_record	called exactly once for the first time a dbapi connection is checked out from a particular :class
+core	PoolEvents	checkout	dbapi_connection connection_record connection_proxy	called when a connection is retrieved from the pool
+core	PoolEvents	checkin	dbapi_connection connection_record	called when a connection returns to the pool
+core	PoolEvents	reset	dbapi_connection connection_record	called before the "reset" action occurs for a pooled connection
+core	PoolEvents	invalidate	dbapi_connection connection_record exception	called when a dbapi connection is to be "invalidated"
+core	PoolEvents	soft_invalidate	dbapi_connection connection_record exception	called when a dbapi connection is to be "soft invalidated"
+core	PoolEvents	close	dbapi_connection connection_record	called when a dbapi connection is closed
+core	PoolEvents	detach	dbapi_connection connection_record	called when a dbapi connection is "detached" from a pool
+core	PoolEvents	close_detached	dbapi_connection	called when a detached dbapi connection is closed
+core	ConnectionEvents	before_execute	conn clauseelement multiparams params	intercept high level execute() events receiving uncompiled sql constructs and other objects prior to rendering into sql
+core	ConnectionEvents	after_execute	conn clauseelement multiparams params	intercept high level execute() events after execute
+core	ConnectionEvents	before_cursor_execute	conn cursor statement parameters	intercept low-level cursor execute() events before execution receiving the string sql statement and dbapi-specific parameter list to
+core	ConnectionEvents	after_cursor_execute	conn cursor statement parameters	intercept low-level cursor execute() events after execution
+core	ConnectionEvents	dbapi_error	conn cursor statement parameters	intercept a raw dbapi error
+core	ConnectionEvents	handle_error	exception_context	intercept all exceptions processed by the :class connection
+core	ConnectionEvents	engine_connect	conn branch	intercept the creation of a new :class connection
+core	ConnectionEvents	set_connection_execution_options	conn opts	intercept when the :meth connection execution_options
+core	ConnectionEvents	set_engine_execution_options	engine opts	intercept when the :meth engine execution_options
+core	ConnectionEvents	engine_disposed	engine	intercept when the :meth engine dispose method is called
+core	ConnectionEvents	begin	conn	intercept begin() events
+core	ConnectionEvents	rollback	conn	intercept rollback() events as initiated by a :class
+core	ConnectionEvents	commit	conn	intercept commit() events as initiated by a :class
+core	ConnectionEvents	savepoint	conn name	intercept savepoint() events
+core	ConnectionEvents	rollback_savepoint	conn name context	intercept rollback_savepoint() events
+core	ConnectionEvents	release_savepoint	conn name context	intercept release_savepoint() events
+core	ConnectionEvents	begin_twophase	conn xid	intercept begin_twophase() events
+core	ConnectionEvents	prepare_twophase	conn xid	intercept prepare_twophase() events
+core	ConnectionEvents	rollback_twophase	conn xid is_prepared	intercept rollback_twophase() events
+core	ConnectionEvents	commit_twophase	conn xid is_prepared	intercept commit_twophase() events
+core	DialectEvents	do_connect	dialect conn_rec cargs cparams	receive connection arguments before a connection is made
+core	DialectEvents	do_executemany	cursor statement parameters context	receive a cursor to have executemany() called
+core	DialectEvents	do_execute_no_params	cursor statement context	receive a cursor to have execute() with no parameters called
+core	DialectEvents	do_execute	cursor statement parameters context	receive a cursor to have execute() called
+core	PoolListener	_adapt_listener	cls listener	adapt a :class poollistener to individual
+core	PoolListener	connect	dbapi_con con_record	called once for each new db-api connection or pool's creator()
+core	PoolListener	first_connect	dbapi_con con_record	called exactly once for the first db-api connection
+core	PoolListener	checkout	dbapi_con con_record con_proxy	called when a connection is retrieved from the pool
+core	PoolListener	checkin	dbapi_con con_record	called when a connection returns to the pool
+core	ConnectionProxy	execute	conn execute clauseelement	intercept high level execute() events
+core	ConnectionProxy	cursor_execute	execute cursor statement parameters	intercept low-level cursor execute() events
+core	ConnectionProxy	begin	conn begin	intercept begin() events
+core	ConnectionProxy	rollback	conn rollback	intercept rollback() events
+core	ConnectionProxy	commit	conn commit	intercept commit() events
+core	ConnectionProxy	savepoint	conn savepoint name	intercept savepoint() events
+core	ConnectionProxy	rollback_savepoint	conn rollback_savepoint name context	intercept rollback_savepoint() events
+core	ConnectionProxy	release_savepoint	conn release_savepoint name context	intercept release_savepoint() events
+core	ConnectionProxy	begin_twophase	conn begin_twophase xid	intercept begin_twophase() events
+core	ConnectionProxy	prepare_twophase	conn prepare_twophase xid	intercept prepare_twophase() events
+core	ConnectionProxy	rollback_twophase	conn rollback_twophase xid is_prepared	intercept rollback_twophase() events
+core	ConnectionProxy	commit_twophase	conn commit_twophase xid is_prepared	intercept commit_twophase() events
+core		manage	module	return a proxy for a db-api module that automatically pools connections
+core		clear_managers		remove all current db-api 2 0 managers
+core	Pool	__init__	creator recycle echo use_threadlocal	construct a pool
+core	Pool	_should_wrap_creator	creator	detect if creator accepts a single argument or is sent as a legacy style no-arg function
+core	Pool	add_listener	listener	add a :class poollistener-like object to this pool
+core	Pool	unique_connection		produce a dbapi connection that is not referenced by any thread-local context
+core	Pool	_create_connection		called by subclasses to create a new connectionrecord
+core	Pool	_invalidate	connection exception _checkin	mark all connections established within the generation of the given connection as invalidated
+core	Pool	recreate		return a new :class pool, of the same class as this one
+core	Pool	dispose		dispose of this pool
+core	Pool	connect		return a dbapi connection from the pool
+core	Pool	_return_conn	record	given a _connectionrecord return it to the :class pool
+core	Pool	_do_get		implementation for :meth get, supplied by subclasses
+core	Pool	_do_return_conn	conn	implementation for :meth return_conn, supplied by subclasses
+core	_ConnectionRecord	info		the info dictionary associated with the dbapi connection
+core	_ConnectionRecord	record_info		an "info' dictionary associated with the connection record itself
+core	_ConnectionRecord	invalidate	e soft	invalidate the dbapi connection held by this :class _connectionrecord
+core		_finalize_fairy	connection connection_record pool ref	cleanup for a :class _connectionfairy whether or not it's already
+core	_ConnectionFairy	is_valid		return true if this :class _connectionfairy still refers
+core	_ConnectionFairy	info		info dictionary associated with the underlying dbapi connection referred to by this :class
+core	_ConnectionFairy	record_info		info dictionary associated with the :class _connectionrecord
+core	_ConnectionFairy	invalidate	e soft	mark this connection as invalidated
+core	_ConnectionFairy	cursor		return a new dbapi cursor for the underlying connection
+core	_ConnectionFairy	detach		separate this connection from its pool
+core	SingletonThreadPool	dispose		dispose of this pool
+core	QueuePool	__init__	creator pool_size max_overflow timeout	construct a queuepool
+core	_DBProxy	__init__	module poolclass	initializes a new proxy
+core	_DBProxy	connect		activate a connection to the database
+core	_DBProxy	dispose		dispose the pool referenced by the given connect arguments
+core	InstanceLogger	debug	msg	delegate a debug call to the underlying logger
+core	InstanceLogger	info	msg	delegate an info call to the underlying logger
+core	InstanceLogger	warning	msg	delegate a warning call to the underlying logger
+core	InstanceLogger	error	msg	delegate an error call to the underlying logger
+core	InstanceLogger	exception	msg	delegate an exception call to the underlying logger
+core	InstanceLogger	critical	msg	delegate a critical call to the underlying logger
+core	InstanceLogger	log	level msg	delegate a log call to the underlying logger
+core	InstanceLogger	isEnabledFor	level	is this logger enabled for level 'level'?
+core	InstanceLogger	getEffectiveLevel		what's the effective level for this logger?
+core		instance_logger	instance echoflag	create a logger for an instance that implements :class identified
+core		inspect	subject raiseerr	produce an inspection object for the given target
+orm	JoinedLoader	setup_query	context entity path loadopt	add a left outer join to the statement that's being constructed
+orm	QueryableAttribute	info		return the 'info' dictionary for the underlying sql element
+orm	QueryableAttribute	parent		return an inspection instance representing the parent
+orm	QueryableAttribute	_query_clause_element		like __clause_element__(), but called specifically by :class
+orm	QueryableAttribute	_bulk_update_tuples	value	return setter tuples for a bulk update
+orm	QueryableAttribute	property		return the :class mapperproperty associated with this
+orm		create_proxied_attribute	descriptor	create an queryableattribute / user descriptor hybrid
+orm	AttributeImpl	__init__	class_ key callable_ dispatch	construct an attributeimpl
+orm	AttributeImpl	_get_active_history		backwards compat for impl active_history
+orm	AttributeImpl	hasparent	state optimistic	return the boolean value of a hasparent flag attached to the given state
+orm	AttributeImpl	sethasparent	state parent_state value	set a boolean flag on the given item corresponding to whether or not it is attached to a parent object via the
+orm	AttributeImpl	get_all_pending	state dict_ passive	return a list of tuples of state obj for all objects in this attribute's current state
+orm	AttributeImpl	initialize	state dict_	initialize the given state's attribute with an empty value
+orm	AttributeImpl	get	state dict_ passive	retrieve a value from the given object
+orm	AttributeImpl	get_committed_value	state dict_ passive	return the unchanged value of this attribute
+orm	AttributeImpl	set_committed_value	state dict_ value	set an attribute value on the given instance and 'commit' it
+orm	ScalarObjectAttributeImpl	set	state dict_ value initiator	set a value on the given instancestate
+orm	CollectionAttributeImpl	initialize	state dict_	initialize this attribute with an empty collection
+orm	CollectionAttributeImpl	set_committed_value	state dict_ value	set an attribute value on the given instance and 'commit' it
+orm	CollectionAttributeImpl	get_collection	state dict_ user_data passive	retrieve the collectionadapter associated with the given state
+orm		backref_listeners	attribute key uselist	apply listeners to synchronize a two-way relationship
+orm	History	empty		return true if this :class history has no changes
+orm	History	sum		return a collection of added + unchanged + deleted
+orm	History	non_deleted		return a collection of added + unchanged
+orm	History	non_added		return a collection of unchanged + deleted
+orm	History	has_changes		return true if this :class history has changes
+orm		get_history	obj key passive	return a :class history record for the given object
+orm		init_collection	obj key	initialize a collection attribute and return the collection adapter
+orm		init_state_collection	state dict_ key	initialize a collection attribute and return the collection adapter
+orm		set_committed_value	instance key value	set the value of an attribute with no history events
+orm		set_attribute	instance key value	set the value of an attribute firing history events
+orm		get_attribute	instance key	get the value of an attribute firing any callables required
+orm		del_attribute	instance key	delete the value of an attribute firing history events
+orm		flag_modified	instance key	mark an attribute on an instance as 'modified'
+orm		flag_dirty	instance	mark an instance as 'dirty' without any specific attribute mentioned
+orm		source_modified	uowcommit source source_mapper synchronize_pairs	return true if the source object has changes from an old to a
+orm	InstanceState	attrs		return a namespace representing each attribute on the mapped object including its current value
+orm	InstanceState	transient		return true if the object is :term transient
+orm	InstanceState	pending		return true if the object is :term pending
+orm	InstanceState	deleted		return true if the object is :term deleted
+orm	InstanceState	was_deleted		return true if this object is or was previously in the "deleted" state and has not been reverted to persistent
+orm	InstanceState	persistent		return true if the object is :term persistent
+orm	InstanceState	detached		return true if the object is :term detached
+orm	InstanceState	session	sessionlib	return the owning :class session for this instance
+orm	InstanceState	object		return the mapped object represented by this :class
+orm	InstanceState	identity		return the mapped identity of the mapped object
+orm	InstanceState	identity_key		return the identity key for the mapped object
+orm	InstanceState	mapper		return the :class mapper used for this mapepd object
+orm	InstanceState	has_identity		return true if this object has an identity key
+orm	InstanceState	_cleanup	ref	weakref callback cleanup
+orm	InstanceState	dict		return the instance dict used by the object
+orm	InstanceState	_reset	dict_ key	remove the given attribute and any callables associated with it
+orm	InstanceState	_load_expired	state passive	__call__ allows the instancestate to act as a deferred callable for loading expired attributes which is also
+orm	InstanceState	unmodified		return the set of keys which have no uncommitted changes
+orm	InstanceState	unmodified_intersection	keys	return self unmodified intersection keys
+orm	InstanceState	unloaded		return the set of keys which do not have a loaded value
+orm	InstanceState	_commit_all	dict_ instance_dict	commit all attributes unconditionally
+orm	InstanceState	_commit_all_states	iter instance_dict	mass / highly inlined version of commit_all()
+orm	AttributeState	loaded_value		the current value of this attribute as loaded from the database
+orm	AttributeState	value		return the value of this attribute
+orm	AttributeState	history		return the current pre-flush change history for this attribute via the :class
+orm	AttributeState	load_history		return the current pre-flush change history for this attribute via the :class
+orm		_validator_events	desc key validator include_removes	runs a validation method on an attribute value to be set or appended
+orm		polymorphic_union	table_map typecolname aliasname cast_nulls	create a union statement used by a polymorphic mapper
+orm		identity_key		generate "identity key" tuples as are used as keys in the :attr
+orm	AliasedInsp	class_		return the mapped class ultimately represented by this :class
+orm		aliased	element alias name flat	produce an alias of the given element usually an :class aliasedclass
+orm		with_polymorphic	base classes selectable flat	produce an :class aliasedclass construct which specifies
+orm		_orm_annotate	element exclude	deep copy the given clauseelement annotating each element with the "_orm_adapt" flag
+orm		_orm_deannotate	element	remove annotations that link a column to a particular mapping
+orm	_ORMJoin	_splice_into_center	other	splice a join into the center
+orm		join	left right onclause isouter	produce an inner join between left and right clauses
+orm		outerjoin	left right onclause full	produce a left outer join between left and right clauses
+orm		with_parent	instance prop	create filtering criterion that relates this query's primary entity to the given related instance using established :func
+orm		has_identity	object	return true if the given object has a database identity
+orm		was_deleted	object	return true if the given object was deleted within a session flush
+orm		randomize_unitofwork		use random-ordering sets within the unit of work in order to detect unit of work sorting issues
+orm		mixin_user_query	cls	return a new class with appenderquery functionality layered over
+orm		_state_session	state	given an :class instancestate, return the :class session
+orm	_SessionClassMethods	close_all	cls	close *all* sessions in memory
+orm	_SessionClassMethods	identity_key	cls orm_util	return an identity key
+orm	_SessionClassMethods	object_session	cls instance	return the :class session to which an object belongs
+orm	SessionTransaction	parent		the parent :class sessiontransaction of this
+orm	SessionTransaction	_restore_snapshot	dirty_only	restore the restoration state taken before a transaction began
+orm	SessionTransaction	_remove_snapshot		remove the restoration state taken before a transaction began
+orm	Session	__init__	bind autoflush expire_on_commit _enable_transaction_accounting	construct a new session
+orm	Session	info		a user-modifiable dictionary
+orm	Session	begin	subtransactions nested	begin a transaction on this :class session
+orm	Session	begin_nested		begin a nested transaction on this session
+orm	Session	rollback		rollback the current transaction in progress
+orm	Session	commit		flush pending changes and commit the current transaction
+orm	Session	prepare		prepare the current transaction in progress for two phase commit
+orm	Session	connection	mapper clause bind close_with_result	return a :class connection object corresponding to this
+orm	Session	execute	clause params mapper bind	execute a sql expression construct or string statement within the current transaction
+orm	Session	scalar	clause params mapper bind	like :meth ~ session execute but return a scalar result
+orm	Session	close		close this session
+orm	Session	invalidate		close this session using connection invalidation
+orm	Session	expunge_all		remove all object instances from this session
+orm	Session	bind_mapper	mapper bind	associate a :class mapper with a "bind", e g a :class engine
+orm	Session	bind_table	table bind	associate a :class table with a "bind", e g a :class engine
+orm	Session	get_bind	mapper clause	return a "bind" to which this :class session is bound
+orm	Session	query		return a new :class query object corresponding to this
+orm	Session	no_autoflush		return a context manager that disables autoflush
+orm	Session	refresh	instance attribute_names lockmode	expire and refresh the attributes on the given instance
+orm	Session	expire_all		expires all persistent instances within this session
+orm	Session	expire	instance attribute_names	expire the attributes on an instance
+orm	Session	_conditional_expire	state	expire a state if persistent else expunge if pending
+orm	Session	prune		remove unreferenced instances cached in the identity map
+orm	Session	expunge	instance	remove the instance from this session
+orm	Session	add	instance _warn	place an object in the session
+orm	Session	add_all	instances	add the given collection of instances to this session
+orm	Session	delete	instance	mark an instance as deleted
+orm	Session	merge	instance load	copy the state of a given instance into a corresponding instance within this :class
+orm	Session	enable_relationship_loading	obj	associate an object with this :class session for related
+orm	Session	__contains__	instance	return true if the instance is associated with this session
+orm	Session	__iter__		iterate over all pending or persistent instances within this session
+orm	Session	flush	objects	flush all the object changes to the database
+orm	Session	bulk_save_objects	objects return_defaults update_changed_only	perform a bulk save of the given list of objects
+orm	Session	bulk_insert_mappings	mapper mappings return_defaults render_nulls	perform a bulk insert of the given list of mapping dictionaries
+orm	Session	bulk_update_mappings	mapper mappings	perform a bulk update of the given list of mapping dictionaries
+orm	Session	is_modified	instance include_collections passive	return true if the given instance has locally modified attributes
+orm	Session	is_active		true if this :class session is in "transaction mode" and
+orm	Session	_dirty_states		the set of all persistent states considered dirty
+orm	Session	dirty		the set of all persistent instances considered dirty
+orm	Session	deleted		the set of all instances marked as 'deleted' within this session
+orm	Session	new		the set of all instances marked as 'new' within this session
+orm	sessionmaker	__init__	bind class_ autoflush autocommit	construct a new :class sessionmaker
+orm	sessionmaker	__call__		produce a new :class session object using the configuration
+orm	sessionmaker	configure		re configure the arguments for this sessionmaker
+orm		make_transient	instance	alter the state of the given instance so that it is :term transient
+orm		make_transient_to_detached	instance	make the given transient instance :term detached
+orm		object_session	instance	return the :class session to which the given instance belongs
+orm	ClassManager	_all_sqla_attributes	exclude	return an iterator of all classbound attributes that are implement :class
+orm	ClassManager	_attr_has_impl	key	return true if the given attribute is fully initialized
+orm	ClassManager	_subclass_manager	cls	create a new classmanager for a subclass of this classmanager's class
+orm	ClassManager	manage		mark this instance as the manager for its class
+orm	ClassManager	dispose		dissasociate this manager from its class
+orm	ClassManager	state_getter		return a instance -> instancestate callable
+orm	ClassManager	unregister		remove all instrumentation established by this classmanager
+orm	ClassManager	_new_state_if_none	instance	install a default instancestate if none is present
+orm	ClassManager	__bool__		all classmanagers are non-zero regardless of attribute state
+orm	InstrumentationFactory	_locate_extended_factory	class_	overridden by a subclass to do an extended lookup
+orm	InstrumentationFactory	_check_conflicts	class_ factory	overridden by a subclass to test for conflicting factories
+orm		register_class	class_	register class instrumentation
+orm		unregister_class	class_	unregister class instrumentation
+orm		is_instrumented	instance key	return true if the given attribute on the given instance is instrumented by the attributes package
+orm		_generate_init	class_ class_manager	build an __init__ decorator that triggers classmanager events
+orm	InstrumentationEvents	class_instrument	cls	called after the given class is instrumented
+orm	InstrumentationEvents	class_uninstrument	cls	called before the given class is uninstrumented
+orm	InstrumentationEvents	attribute_instrument	cls key inst	called when an attribute is instrumented
+orm	InstanceEvents	first_init	manager cls	called when the first instance of a particular mapping is called
+orm	InstanceEvents	init	target args kwargs	receive an instance when its constructor is called
+orm	InstanceEvents	init_failure	target args kwargs	receive an instance when its constructor has been called and raised an exception
+orm	InstanceEvents	load	target context	receive an object instance after it has been created via __new__, and after initial attribute population has
+orm	InstanceEvents	refresh	target context attrs	receive an object instance after one or more attributes have been refreshed from a query
+orm	InstanceEvents	refresh_flush	target flush_context attrs	receive an object instance after one or more attributes have been refreshed within the persistence of the object
+orm	InstanceEvents	expire	target attrs	receive an object instance after its attributes or some subset have been expired
+orm	InstanceEvents	pickle	target state_dict	receive an object instance when its associated state is being pickled
+orm	InstanceEvents	unpickle	target state_dict	receive an object instance after its associated state has been unpickled
+orm	MapperEvents	instrument_class	mapper class_	receive a class when the mapper is first constructed before instrumentation is applied to the mapped class
+orm	MapperEvents	mapper_configured	mapper class_	called when a specific mapper has completed its own configuration within the scope of the :func
+orm	MapperEvents	before_configured		called before a series of mappers have been configured
+orm	MapperEvents	after_configured		called after a series of mappers have been configured
+orm	MapperEvents	before_insert	mapper connection target	receive an object instance before an insert statement is emitted corresponding to that instance
+orm	MapperEvents	after_insert	mapper connection target	receive an object instance after an insert statement is emitted corresponding to that instance
+orm	MapperEvents	before_update	mapper connection target	receive an object instance before an update statement is emitted corresponding to that instance
+orm	MapperEvents	after_update	mapper connection target	receive an object instance after an update statement is emitted corresponding to that instance
+orm	MapperEvents	before_delete	mapper connection target	receive an object instance before a delete statement is emitted corresponding to that instance
+orm	MapperEvents	after_delete	mapper connection target	receive an object instance after a delete statement has been emitted corresponding to that instance
+orm	SessionEvents	after_transaction_create	session transaction	execute when a new :class sessiontransaction is created
+orm	SessionEvents	after_transaction_end	session transaction	execute when the span of a :class sessiontransaction ends
+orm	SessionEvents	before_commit	session	execute before commit is called
+orm	SessionEvents	after_commit	session	execute after a commit has occurred
+orm	SessionEvents	after_rollback	session	execute after a real dbapi rollback has occurred
+orm	SessionEvents	after_soft_rollback	session previous_transaction	execute after any rollback has occurred including "soft" rollbacks that don't actually emit at the dbapi level
+orm	SessionEvents	before_flush	session flush_context instances	execute before flush process has started
+orm	SessionEvents	after_flush	session flush_context	execute after flush has completed but before commit has been called
+orm	SessionEvents	after_flush_postexec	session flush_context	execute after flush has completed and after the post-exec state occurs
+orm	SessionEvents	after_begin	session transaction connection	execute after a transaction is begun on a connection
+orm	SessionEvents	before_attach	session instance	execute before an instance is attached to a session
+orm	SessionEvents	after_attach	session instance	execute after an instance is attached to a session
+orm	SessionEvents	after_bulk_update	update_context	execute after a bulk update operation to the session
+orm	SessionEvents	after_bulk_delete	delete_context	execute after a bulk delete operation to the session
+orm	SessionEvents	transient_to_pending	session instance	intercept the "transient to pending" transition for a specific object
+orm	SessionEvents	pending_to_transient	session instance	intercept the "pending to transient" transition for a specific object
+orm	SessionEvents	persistent_to_transient	session instance	intercept the "persistent to transient" transition for a specific object
+orm	SessionEvents	pending_to_persistent	session instance	intercept the "pending to persistent"" transition for a specific object
+orm	SessionEvents	detached_to_persistent	session instance	intercept the "detached to persistent" transition for a specific object
+orm	SessionEvents	loaded_as_persistent	session instance	intercept the "loaded as persistent" transition for a specific object
+orm	SessionEvents	persistent_to_deleted	session instance	intercept the "persistent to deleted" transition for a specific object
+orm	SessionEvents	deleted_to_persistent	session instance	intercept the "deleted to persistent" transition for a specific object
+orm	SessionEvents	deleted_to_detached	session instance	intercept the "deleted to detached" transition for a specific object
+orm	SessionEvents	persistent_to_detached	session instance	intercept the "persistent to detached" transition for a specific object
+orm	AttributeEvents	append	target value initiator	receive a collection append event
+orm	AttributeEvents	bulk_replace	target values initiator	receive a collection 'bulk replace' event
+orm	AttributeEvents	remove	target value initiator	receive a collection remove event
+orm	AttributeEvents	set	target value oldvalue initiator	receive a scalar set event
+orm	AttributeEvents	init_scalar	target value dict_	receive a scalar "init" event
+orm	AttributeEvents	init_collection	target collection collection_adapter	receive a 'collection init' event
+orm	AttributeEvents	dispose_collection	target collection collection_adpater	receive a 'collection dispose' event
+orm	QueryEvents	before_compile	query	receive the :class query object before it is composed into a
+orm	ColumnProperty	__init__		provide a column-level property for use with a mapper
+orm	ColumnProperty	expression		return the primary column or expression for this columnproperty
+orm	_UnboundLoad	_bind_loader	entities current_path context raiseerr	convert from an _unboundload() object into a load() object
+orm		contains_eager	loadopt attr alias	indicate that the given attribute should be eagerly loaded from columns stated manually in the query
+orm		load_only	loadopt	indicate that for a particular entity only the given list of column-based attribute names should be loaded all others will be
+orm		joinedload	loadopt attr innerjoin	indicate that the given attribute should be loaded using joined eager loading
+orm		subqueryload	loadopt attr	indicate that the given attribute should be loaded using subquery eager loading
+orm		selectinload	loadopt attr	indicate that the given attribute should be loaded using select in eager loading
+orm		lazyload	loadopt attr	indicate that the given attribute should be loaded using "lazy" loading
+orm		immediateload	loadopt attr	indicate that the given attribute should be loaded using an immediate load with a per-attribute select statement
+orm		noload	loadopt attr	indicate that the given relationship attribute should remain unloaded
+orm		raiseload	loadopt attr sql_only	indicate that the given relationship attribute should disallow lazy loads
+orm		defaultload	loadopt attr	indicate an attribute should load using its default loader style
+orm		defer	loadopt key	indicate that the given column-oriented attribute should be deferred e g
+orm		undefer	loadopt key	indicate that the given column-oriented attribute should be undeferred e
+orm		undefer_group	loadopt name	indicate that columns within the given deferred group name should be undeferred
+orm		_generative		mark a method as generative e g method-chained
+orm		instance_str	instance	return a string describing an instance
+orm		state_str	state	return a string describing an instance via its instancestate
+orm		state_class_str	state	return a string describing an instance's class via its instancestate
+orm		object_mapper	instance	given an object return the primary mapper associated with the object instance
+orm		object_state	instance	given an object return the :class instancestate
+orm		_mapper_or_none	entity	return the :class mapper for the given class or none if the
+orm		_is_mapped_class	entity	return true if the given object is a mapped class :class
+orm		_entity_descriptor	entity key	return a class attribute given an entity and string name
+orm		class_mapper	class_ configure	given a class return the primary :class mapper associated
+orm	InspectionAttrInfo	info		info dictionary associated with the object allowing user-defined data to be associated with this :class
+orm	CompositeProperty	__init__	class_	return a composite column-based property for use with a mapper
+orm	CompositeProperty	do_init		initialization which occurs after the :class compositeproperty
+orm	CompositeProperty	_create_descriptor		create the python descriptor that will serve as the access point on instances of the mapped class
+orm	CompositeProperty	_setup_arguments_on_columns		propagate configuration arguments made on this composite to the target columns for those that apply
+orm	CompositeProperty	_setup_event_handlers		establish events that populate/expire the composite attribute
+orm	CompositeProperty	get_history	state dict_ passive	provided for userland code that uses attributes get_history()
+orm	SynonymProperty	__init__	name map_column descriptor comparator_factory	denote an attribute name as a synonym to a mapped property in that the attribute will mirror the value and expression behavior
+orm	ComparableProperty	__init__	comparator_factory descriptor doc info	provides a method of applying a :class propcomparator
+orm	Mapper	__init__	class_ local_table properties primary_key	return a new :class ~ mapper object
+orm	Mapper	mapper		part of the inspection api
+orm	Mapper	entity		part of the inspection api
+orm	Mapper	_configure_inheritance		configure settings related to inherting and/or inherited mappers being present
+orm	Mapper	_set_concrete_base	mapper	set the given :class mapper as the 'inherits' for this
+orm	Mapper	_configure_class_instrumentation		if this mapper is to be a primary mapper (i e the
+orm	Mapper	_configure_all	cls	class-level path to the :func configure_mappers call
+orm	Mapper	_configure_polymorphic_setter	init	configure an attribute on the mapper representing the 'polymorphic_on' column if applicable and not
+orm	Mapper	_property_from_column	key prop	generate/update a :class columnproprerty given a
+orm	Mapper	_post_configure_properties		call the init() method on all mapperproperties attached to this mapper
+orm	Mapper	add_properties	dict_of_properties	add the given dictionary of properties to this mapper using add_property
+orm	Mapper	add_property	key prop	add an individual mapperproperty to this mapper
+orm	Mapper	get_property	key _configure_mappers	return a mapperproperty associated with the given key
+orm	Mapper	get_property_by_column	column	given a :class column object return the
+orm	Mapper	iterate_properties		return an iterator of all mapperproperty objects
+orm	Mapper	_mappers_from_spec	spec selectable	given a with_polymorphic() argument return the set of mappers it represents
+orm	Mapper	_selectable_from_mappers	mappers innerjoin	given a list of mappers (assumed to be within this mapper's inheritance hierarchy), construct an outerjoin amongst those mapper's
+orm	Mapper	selectable		the :func select construct this :class mapper selects from
+orm	Mapper	_iterate_polymorphic_properties	mappers	return an iterator of mapperproperty objects which will render into a select
+orm	Mapper	attrs		a namespace of all :class mapperproperty objects
+orm	Mapper	all_orm_descriptors		a namespace of all :class inspectionattr attributes associated
+orm	Mapper	synonyms		return a namespace of all :class synonymproperty
+orm	Mapper	column_attrs		return a namespace of all :class columnproperty
+orm	Mapper	relationships		a namespace of all :class relationshipproperty properties
+orm	Mapper	composites		return a namespace of all :class compositeproperty
+orm	Mapper	_get_clause		create a "get clause" based on the primary key this is used
+orm	Mapper	_equivalent_columns		create a map of all *equivalent* columns based on the determination of column pairs that are equated to
+orm	Mapper	_should_exclude	name assigned_name local column	determine whether a particular property should be implicitly present on the class
+orm	Mapper	common_parent	other	return true if the given mapper shares a common inherited parent as this mapper
+orm	Mapper	isa	other	return true if the this mapper inherits from the given mapper
+orm	Mapper	self_and_descendants		the collection including this mapper and all descendant mappers
+orm	Mapper	polymorphic_iterator		iterate through the collection including this mapper and all descendant mappers
+orm	Mapper	primary_mapper		return the primary mapper corresponding to this mapper's class key class
+orm	Mapper	identity_key_from_row	row adapter	return an identity-map key for use in storing/retrieving an item from the identity map
+orm	Mapper	identity_key_from_primary_key	primary_key	return an identity-map key for use in storing/retrieving an item from an identity map
+orm	Mapper	identity_key_from_instance	instance	return the identity key for the given instance based on its primary key attributes
+orm	Mapper	primary_key_from_instance	instance	return the list of primary key values for the given instance
+orm	Mapper	_optimized_get_statement	state attribute_names	assemble a where clause which retrieves a given state by primary key using a minimized set of tables
+orm	Mapper	cascade_iterator	type_ state halt_on	iterate each element and its mapper in an object graph for all relationships that meet the given cascade rule
+orm	Mapper	_table_to_equated		memoized map of tables to collections of columns to be synchronized upwards to the base mapper
+orm		configure_mappers		initialize the inter-mapper relationships of all mappers that have been constructed thus far
+orm		reconstructor	fn	decorate a method as the 'reconstructor' hook
+orm		validates		decorate a method as a 'validator' for one or more named properties
+orm		_event_on_first_init	manager cls	initial mapper compilation trigger
+orm		_event_on_init	state args kwargs	run init_instance hooks
+orm		column_mapped_collection	mapping_spec	a dictionary-based collection type with column-based keying
+orm		attribute_mapped_collection	attr_name	a dictionary-based collection type with attribute-based keying
+orm		mapped_collection	keyfunc	a dictionary-based collection type with arbitrary keying
+orm	collection	appender	fn	tag the method as the collection appender
+orm	collection	remover	fn	tag the method as the collection remover
+orm	collection	iterator	fn	tag the method as the collection remover
+orm	collection	internally_instrumented	fn	tag the method as instrumented
+orm	collection	linker	fn	tag the method as a "linked to attribute" event handler
+orm	collection	converter	fn	tag the method as the collection converter
+orm	collection	adds	arg	mark the method as adding an entity to the collection
+orm	collection	replaces	arg	mark the method as replacing an entity in the collection
+orm	collection	removes	arg	mark the method as removing an entity in the collection
+orm	collection	removes_return		mark the method as removing an entity in the collection
+orm	CollectionAdapter	data		the entity collection being adapted
+orm	CollectionAdapter	_referenced_by_owner		return true if the owner state still refers to this collection
+orm	CollectionAdapter	append_with_event	item initiator	add an entity to the collection firing mutation events
+orm	CollectionAdapter	append_without_event	item	add or restore an entity to the collection firing no events
+orm	CollectionAdapter	append_multiple_without_event	items	add or restore an entity to the collection firing no events
+orm	CollectionAdapter	remove_with_event	item initiator	remove an entity from the collection firing mutation events
+orm	CollectionAdapter	remove_without_event	item	remove an entity from the collection firing no events
+orm	CollectionAdapter	clear_with_event	initiator	empty the collection firing a mutation event for each entity
+orm	CollectionAdapter	clear_without_event		empty the collection firing no events
+orm	CollectionAdapter	__iter__		iterate over entities in the collection
+orm	CollectionAdapter	__len__		count entities in the collection
+orm	CollectionAdapter	fire_append_event	item initiator	notify that a entity has entered the collection
+orm	CollectionAdapter	fire_remove_event	item initiator	notify that a entity has been removed from the collection
+orm	CollectionAdapter	fire_pre_remove_event	initiator	notify that an entity is about to be removed from the collection
+orm		bulk_replace	values existing_adapter new_adapter initiator	load a new collection firing events based on prior like membership
+orm		prepare_instrumentation	factory	prepare a callable for future use as a collection class factory
+orm		__converting_factory	specimen_cls original_factory	return a wrapper that converts a "canned" collection like set dict list into the instrumented* version
+orm		_instrument_class	cls	modify methods in a class and install instrumentation
+orm		_locate_roles_and_methods	cls	search for _sa_instrument_role-decorated methods in method resolution order assign to roles
+orm		_setup_canned_roles	cls roles methods	see if this class has "canned" roles based on a known collection type dict set list
+orm		_assert_required_roles	cls roles methods	ensure all roles are present and apply implicit instrumentation if
+orm		_set_collection_attributes	cls roles methods	apply ad-hoc instrumentation from decorators class-level defaults
+orm		_instrument_membership_mutator	method before argument after	route method args and/or return value through the collection adapter
+orm		__set	collection item _sa_initiator	run set events may eventually be inlined into decorators
+orm		__del	collection item _sa_initiator	run del events may eventually be inlined into decorators
+orm		__before_delete	collection _sa_initiator	special method to run 'commit existing value' methods
+orm		_list_decorators		tailored instrumentation wrappers for any list-like class
+orm		_dict_decorators		tailored instrumentation wrappers for any dict-like mapping class
+orm		_set_binops_check_strict	obj	allow only set frozenset and self __class__-derived
+orm		_set_binops_check_loose	obj	allow anything set-like to participate in set binops
+orm		_set_decorators		tailored instrumentation wrappers for any set-like class
+orm	MappedCollection	__init__	keyfunc	create a new collection with keying provided by keyfunc
+orm	MappedCollection	set	value _sa_initiator	add an item by value consulting the keyfunc for the key
+orm	MappedCollection	remove	value _sa_initiator	remove an item by value consulting the keyfunc for the key
+orm	MappedCollection	_convert	dictlike	validate and convert a dict-like object into values for set()ing
+orm		remote	expr	annotate a portion of a primaryjoin expression with a 'remote' annotation
+orm		foreign	expr	annotate a portion of a primaryjoin expression with a 'foreign' annotation
+orm	RelationshipProperty	__init__	argument secondary primaryjoin secondaryjoin	provide a relationship between two mapped classes
+orm	RelationshipProperty	_value_as_iterable	state dict_ key passive	return a list of tuples state obj for the given key
+orm	RelationshipProperty	mapper		return the targeted :class mapper for this
+orm	RelationshipProperty	table		return the selectable linked to this :class
+orm	RelationshipProperty	_process_dependent_arguments		convert incoming configuration arguments to their proper form
+orm	RelationshipProperty	_check_conflicts		test that this relationship is legal warn about inheritance conflicts
+orm	RelationshipProperty	_get_cascade		return the current cascade setting for this :class
+orm	RelationshipProperty	_columns_are_mapped		return true if all columns in the given collection are mapped by the tables referenced by this :class
+orm	RelationshipProperty	_generate_backref		interpret the 'backref' instruction to create a :func
+orm	RelationshipProperty	_use_get		memoize the 'use_get' attribute of this relationshiploader's lazyloader
+orm	JoinCondition	_determine_joins		determine the 'primaryjoin' and 'secondaryjoin' attributes if not passed to the constructor already
+orm	JoinCondition	primaryjoin_reverse_remote		return the primaryjoin condition suitable for the "reverse" direction
+orm	JoinCondition	_annotate_fks		annotate the primaryjoin and secondaryjoin structures with 'foreign' annotations marking columns
+orm	JoinCondition	_refers_to_parent_table		return true if the join condition contains column comparisons where both columns are in both tables
+orm	JoinCondition	_tables_overlap		return true if parent/child tables have some overlap
+orm	JoinCondition	_annotate_remote		annotate the primaryjoin and secondaryjoin structures with 'remote' annotations marking columns
+orm	JoinCondition	_annotate_remote_secondary		annotate 'remote' in primaryjoin secondaryjoin when 'secondary' is present
+orm	JoinCondition	_annotate_selfref	fn remote_side_given	annotate 'remote' in primaryjoin secondaryjoin when the relationship is detected as self-referential
+orm	JoinCondition	_annotate_remote_from_args		annotate 'remote' in primaryjoin secondaryjoin when the 'remote_side' or '_local_remote_pairs'
+orm	JoinCondition	_annotate_remote_with_overlap		annotate 'remote' in primaryjoin secondaryjoin when the parent/child tables have some set of
+orm	JoinCondition	_annotate_remote_distinct_selectables		annotate 'remote' in primaryjoin secondaryjoin when the parent/child tables are entirely
+orm	JoinCondition	_annotate_local		annotate the primaryjoin and secondaryjoin structures with 'local' annotations
+orm	JoinCondition	_check_foreign_cols	join_condition primary	check the foreign key columns collected and emit error messages
+orm	JoinCondition	_determine_direction		determine if this relationship is one to many many to one many to many
+orm	JoinCondition	_deannotate_pairs	collection	provide deannotation for the various lists of pairs so that using them in hashes doesn't incur
+orm	JoinCondition	join_targets	source_selectable dest_selectable aliased single_crit	given a source and destination selectable create a join between them
+orm	MapperProperty	_memoized_attr_info		info dictionary associated with the object allowing user-defined data to be associated with this :class
+orm	MapperProperty	setup	context entity path adapter	called by query for the purposes of constructing a sql statement
+orm	MapperProperty	create_row_processor	context path mapper result	produce row processing functions and append to the given set of populators lists
+orm	MapperProperty	cascade_iterator	type_ state visited_instances halt_on	iterate through instances related to the given instance for a particular 'cascade', starting with this mapperproperty
+orm	MapperProperty	set_parent	parent init	set the parent mapper that references this mapperproperty
+orm	MapperProperty	instrument_class	mapper	hook called by the mapper to the property to initiate instrumentation of the class attribute managed by this
+orm	MapperProperty	init		called after all mappers are created to assemble relationships between mappers and perform other post-mapper-creation
+orm	MapperProperty	class_attribute		return the class-bound descriptor corresponding to this :class
+orm	MapperProperty	do_init		perform subclass-specific initialization post-mapper-creation steps
+orm	MapperProperty	post_instrument_class	mapper	perform instrumentation adjustments that need to occur after init() has completed
+orm	MapperProperty	merge	session source_state source_dict dest_state	merge the attribute represented by this mapperproperty from source to destination object
+orm	PropComparator	adapt_to_entity	adapt_to_entity	return a copy of this propcomparator which will use the given :class
+orm	PropComparator	_parentmapper		legacy this is renamed to _parententity to be compatible with queryableattribute
+orm	PropComparator	adapter		produce a callable that adapts column expressions to suit an aliased version of this comparator
+orm	PropComparator	of_type	class_	redefine this object in terms of a polymorphic subclass
+orm	PropComparator	any	criterion	return true if this collection contains any member that meets the given criterion
+orm	PropComparator	has	criterion	return true if this element references a member which meets the given criterion
+orm	MapperOption	process_query	query	apply a modification to the given :class query
+orm	MapperOption	process_query_conditionally	query	same as process_query(), except that this option may not apply to the given query
+orm	MapperOption	_generate_cache_key	path	used by the baked loader to see if this option can be cached
+orm	LoaderStrategy	setup_query	context entity path loadopt	establish column and other state for a given querycontext
+orm	LoaderStrategy	create_row_processor	context path loadopt mapper	establish row processing functions for a given querycontext
+orm	MapperExtension	instrument_class	mapper class_	receive a class when the mapper is first constructed and has applied instrumentation to the mapped class
+orm	MapperExtension	init_instance	mapper class_ oldinit instance	receive an instance when its constructor is called
+orm	MapperExtension	init_failed	mapper class_ oldinit instance	receive an instance when its constructor has been called and raised an exception
+orm	MapperExtension	reconstruct_instance	mapper instance	receive an object instance after it has been created via __new__, and after initial attribute population has
+orm	MapperExtension	before_insert	mapper connection instance	receive an object instance before that instance is inserted into its table
+orm	MapperExtension	after_insert	mapper connection instance	receive an object instance after that instance is inserted
+orm	MapperExtension	before_update	mapper connection instance	receive an object instance before that instance is updated
+orm	MapperExtension	after_update	mapper connection instance	receive an object instance after that instance is updated
+orm	MapperExtension	before_delete	mapper connection instance	receive an object instance before that instance is deleted
+orm	MapperExtension	after_delete	mapper connection instance	receive an object instance after that instance is deleted
+orm	SessionExtension	before_commit	session	execute right before commit is called
+orm	SessionExtension	after_commit	session	execute after a commit has occurred
+orm	SessionExtension	after_rollback	session	execute after a rollback has occurred
+orm	SessionExtension	before_flush	session flush_context instances	execute before flush process has started
+orm	SessionExtension	after_flush	session flush_context	execute after flush has completed but before commit has been called
+orm	SessionExtension	after_flush_postexec	session flush_context	execute after flush has completed and after the post-exec state occurs
+orm	SessionExtension	after_begin	session transaction connection	execute after a transaction is begun on a connection transaction is the sessiontransaction
+orm	SessionExtension	after_attach	session instance	execute after an instance is attached to a session
+orm	SessionExtension	after_bulk_update	session query query_context result	execute after a bulk update operation to the session
+orm	SessionExtension	after_bulk_delete	session query query_context result	execute after a bulk delete operation to the session
+orm	AttributeExtension	append	state value initiator	receive a collection append event
+orm	AttributeExtension	remove	state value initiator	receive a remove event
+orm	AttributeExtension	set	state value oldvalue initiator	receive a set event
+orm		track_cascade_events	descriptor prop	establish event listeners on object attributes which handle cascade-on-set/append
+orm	UOWTransaction	was_already_deleted	state	return true if the given state is expired and was deleted previously
+orm	UOWTransaction	is_deleted	state	return true if the given state is marked as deleted within this uowtransaction
+orm	UOWTransaction	remove_state_actions	state	remove pending actions for a state from the uowtransaction
+orm	UOWTransaction	get_attribute_history	state key passive	facade to attributes get_state_history(), including
+orm	UOWTransaction	_mapper_for_dep		return a dynamic mapping of mapper dependencyprocessor to true or false indicating if the dependencyprocessor operates
+orm	UOWTransaction	filter_states_for_dep	dep states	filter the given list of instancestates to those relevant to the given dependencyprocessor
+orm	UOWTransaction	_generate_actions		generate the full unsorted collection of postsortrecs as well as dependency pairs for this uowtransaction
+orm	UOWTransaction	finalize_flush_changes		mark processed objects as clean / deleted after a successful flush()
+orm		create_session	bind	create a new :class session
+orm		relation		a synonym for :func relationship
+orm		dynamic_loader	argument	construct a dynamically-loading mapper property
+orm		backref	name	create a back reference with explicit keyword arguments which are the same arguments one can send to :func relationship
+orm		deferred		indicate a column-based mapped attribute that by default will not load unless accessed
+orm		compile_mappers		initialize the inter-mapper relationships of all mappers that have been defined
+orm		clear_mappers		remove all mappers from all classes
+orm		eagerload		a synonym for :func joinedload()
+orm		eagerload_all		a synonym for :func joinedload_all()
+orm		instances	query cursor context	return an orm result as an iterator
+orm		merge_result	querylib query iterator load	merge a result into this :class query object's session
+orm		get_from_identity	session key passive	look up the given key in the given session's identity map check the object for expired state if found
+orm		load_on_ident	query key refresh_state lockmode	load the given identity key from the database
+orm		_instance_processor	mapper context result path	produce a mapper level row processor callable which processes rows into mapped instances
+orm		load_scalar_attributes	mapper state attribute_names	initiate a column-based attribute refresh operation
+orm		save_obj	base_mapper states uowtransaction single	issue insert and/or update statements for a list of objects
+orm		post_update	base_mapper states uowtransaction post_update_cols	issue update statements on behalf of a relationship() which specifies post_update
+orm		delete_obj	base_mapper states uowtransaction	issue delete statements for a list of objects
+orm		_organize_states_for_save	base_mapper states uowtransaction	make an initial pass across a set of states for insert or update
+orm		_organize_states_for_post_update	base_mapper states uowtransaction	make an initial pass across a set of states for update corresponding to post_update
+orm		_organize_states_for_delete	base_mapper states uowtransaction	make an initial pass across a set of states for delete
+orm		_collect_insert_commands	table states_to_insert bulk return_defaults	identify sets of values to use in insert statements for a list of states
+orm		_collect_update_commands	uowtransaction table states_to_update bulk	identify sets of values to use in update statements for a list of states
+orm		_collect_post_update_commands	base_mapper uowtransaction table states_to_update	identify sets of values to use in update statements for a list of states within a post_update operation
+orm		_collect_delete_commands	base_mapper uowtransaction table states_to_delete	identify values to use in delete statements for a list of states to be deleted
+orm		_emit_update_statements	base_mapper uowtransaction cached_connections mapper	emit update statements corresponding to value lists collected by _collect_update_commands()
+orm		_emit_insert_statements	base_mapper uowtransaction cached_connections mapper	emit insert statements corresponding to value lists collected by _collect_insert_commands()
+orm		_emit_post_update_statements	base_mapper uowtransaction cached_connections mapper	emit update statements corresponding to value lists collected by _collect_post_update_commands()
+orm		_emit_delete_statements	base_mapper uowtransaction cached_connections mapper	emit delete statements corresponding to value lists collected by _collect_delete_commands()
+orm		_finalize_insert_update_commands	base_mapper uowtransaction states	finalize state on states that have been inserted or updated including calling after_insert/after_update events
+orm		_postfetch	mapper uowtransaction table state	expire attributes in need of newly persisted database state after an insert or update statement has proceeded for that
+orm		_connections_for_states	base_mapper uowtransaction states	return an iterator of state state dict mapper connection
+orm	Query	__init__	entities session	construct a :class query directly
+orm	Query	_adapt_clause	clause as_filter orm_only	adapt incoming clauses to transformations which have been applied within this query
+orm	Query	_query_entity_zero		return the first queryentity
+orm	Query	_mapper_zero		return the mapper associated with the first queryentity
+orm	Query	_entity_zero		return the 'entity' mapper or aliasedclass associated with the first queryentity or alternatively the 'select from'
+orm	Query	statement		the full select statement represented by this query
+orm	Query	subquery	name with_labels reduce_columns	return the full select statement represented by this :class
+orm	Query	cte	name recursive	return the full select statement represented by this :class
+orm	Query	label	name	return the full select statement represented by this :class
+orm	Query	as_scalar		return the full select statement represented by this :class
+orm	Query	selectable		return the :class select object emitted by this :class query
+orm	Query	enable_eagerloads	value	control whether or not eager joins and subqueries are rendered
+orm	Query	with_labels		apply column labels to the return value of query statement
+orm	Query	enable_assertions	value	control whether assertions are generated
+orm	Query	whereclause		a readonly attribute which returns the current where criterion for this query
+orm	Query	_with_current_path	path	indicate that this query applies to objects loaded within a certain path
+orm	Query	with_polymorphic	cls_or_mappers selectable polymorphic_on	load columns for inheriting classes
+orm	Query	yield_per	count	yield only count rows at a time
+orm	Query	get	ident	return an instance based on the given primary key identifier or none if not found
+orm	Query	correlate		return a :class query construct which will correlate the given
+orm	Query	autoflush	setting	return a query with a specific 'autoflush' setting
+orm	Query	populate_existing		return a :class query that will expire and refresh all instances
+orm	Query	_with_invoke_all_eagers	value	set the 'invoke all eagers' flag which causes joined- and subquery loaders to traverse into already-loaded related objects
+orm	Query	with_parent	instance property	add filtering criterion that relates the given instance to a child object or collection using its attribute state
+orm	Query	add_entity	entity alias	add a mapped entity to the list of result columns to be returned
+orm	Query	with_session	session	return a :class query that will use the given :class session
+orm	Query	from_self		return a query that selects from this query's select statement
+orm	Query	values		return an iterator yielding result tuples corresponding
+orm	Query	value	column	return a scalar result corresponding to the given column expression
+orm	Query	with_entities		return a new :class query replacing the select list with the
+orm	Query	add_columns		add one or more column expressions to the list of result columns to be returned
+orm	Query	add_column	column	add a column expression to the list of result columns to be returned
+orm	Query	options		return a new query object applying the given list of mapper options
+orm	Query	with_transformation	fn	return a new :class query object transformed by
+orm	Query	with_hint	selectable text dialect_name	add an indexing or other executional context hint for the given entity or selectable to
+orm	Query	with_statement_hint	text dialect_name	add a statement hint to this :class select
+orm	Query	execution_options		set non-sql options which take effect during execution
+orm	Query	with_lockmode	mode	return a new :class query object with the specified "locking mode",
+orm	Query	with_for_update	read nowait of skip_locked	return a new :class query with the specified options for the
+orm	Query	params		add values for bind parameters which may have been specified in filter()
+orm	Query	filter		apply the given filtering criterion to a copy of this :class
+orm	Query	filter_by		apply the given filtering criterion to a copy of this :class
+orm	Query	order_by		apply one or more order by criterion to the query and return the newly resulting query
+orm	Query	group_by		apply one or more group by criterion to the query and return the newly resulting :class
+orm	Query	having	criterion	apply a having criterion to the query and return the newly resulting :class
+orm	Query	union		produce a union of this query against one or more queries
+orm	Query	union_all		produce a union all of this query against one or more queries
+orm	Query	intersect		produce an intersect of this query against one or more queries
+orm	Query	intersect_all		produce an intersect all of this query against one or more queries
+orm	Query	except_		produce an except of this query against one or more queries
+orm	Query	except_all		produce an except all of this query against one or more queries
+orm	Query	join		create a sql join against this :class query object's criterion
+orm	Query	outerjoin		create a left outer join against this query object's criterion and apply generatively returning the newly resulting query
+orm	Query	_join	keys outerjoin full create_aliases	consumes arguments from join() or outerjoin(), places them into a consistent format with which to form the actual join constructs
+orm	Query	_join_left_to_right	left right onclause outerjoin	append a join to the query's from clause
+orm	Query	reset_joinpoint		return a new :class query, where the "join point" has
+orm	Query	select_from		set the from clause of this :class query explicitly
+orm	Query	select_entity_from	from_obj	set the from clause of this :class query to a
+orm	Query	slice	start stop	computes the "slice" of the :class query represented by
+orm	Query	limit	limit	apply a limit to the query and return the newly resulting query
+orm	Query	offset	offset	apply an offset to the query and return the newly resulting query
+orm	Query	distinct		apply a distinct to the query and return the newly resulting query
+orm	Query	prefix_with		apply the prefixes to the query and return the newly resulting query
+orm	Query	suffix_with		apply the suffix to the query and return the newly resulting query
+orm	Query	all		return the results represented by this query as a list
+orm	Query	from_statement	statement	execute the given select statement and return results
+orm	Query	first		return the first result of this query or none if the result doesn't contain any row
+orm	Query	one_or_none		return at most one result or raise an exception
+orm	Query	one		return exactly one result or raise an exception
+orm	Query	scalar		return the first element of the first result or none if no rows present
+orm	Query	column_descriptions		return metadata about the columns which would be returned by this :class
+orm	Query	instances	cursor __context	given a resultproxy cursor as returned by connection execute(),
+orm	Query	merge_result	iterator load	merge a result into this :class query object's session
+orm	Query	exists		a convenience method that turns a query into an exists subquery of the form exists (select 1 from
+orm	Query	count		return a count of rows this query would return
+orm	Query	delete	synchronize_session	perform a bulk delete query
+orm	Query	update	values synchronize_session update_args	perform a bulk update query
+orm	Query	_adjust_for_single_inheritance	context	apply single-table-inheritance filtering
+orm	_MapperEntity	set_with_polymorphic	query cls_or_mappers selectable polymorphic_on	receive an update from a call to query with_polymorphic()
+orm	Bundle	__init__	name	construct a new :class bundle
+orm	Bundle	label	name	provide a copy of this :class bundle passing a new label
+orm	Bundle	create_row_processor	query procs labels	produce the "row processing" function for this :class bundle
+orm	AliasOption	__init__	alias	return a :class mapperoption that will indicate to the :class query
+orm	IdentityMap	_add_unpresent	state key	optional inlined form of add() which can assume item isn't present
+orm	IdentityMap	check_modified		return true if any instancestates present have been marked as 'modified'
+orm	StrongInstanceDict	prune		prune unreferenced non-dirty states
+orm	scoped_session	__init__	session_factory scopefunc	construct a new :class scoped_session
+orm	scoped_session	__call__		return the current :class session, creating it
+orm	scoped_session	remove		dispose of the current :class session, if present
+orm	scoped_session	configure		reconfigure the :class sessionmaker used by this
+orm	scoped_session	query_property	query_cls	return a class property which produces a :class query object
+orm	DependencyProcessor	hasparent	state	return true if the given object instance has a parent according to the instrumentedattribute handled by this
+orm	DependencyProcessor	per_property_preprocessors	uow	establish actions and dependencies related to a flush
+orm	DependencyProcessor	per_state_flush_actions	uow states isdelete	establish actions and dependencies related to a flush
+util	Queue	__init__	maxsize	initialize a queue object with a given maximum size
+util	Queue	qsize		return the approximate size of the queue (not reliable!)
+util	Queue	empty		return true if the queue is empty false otherwise (not reliable!)
+util	Queue	full		return true if the queue is full false otherwise (not reliable!)
+util	Queue	put	item block timeout	put an item into the queue
+util	Queue	put_nowait	item	put an item into the queue without blocking
+util	Queue	get	block timeout	remove and return an item from the queue
+util	Queue	get_nowait		remove and return an item from the queue without blocking
+util	AbstractKeyedTuple	keys		return a list of string key names for this :class keyedtuple
+util	KeyedTuple	_fields		return a tuple of string key names for this :class keyedtuple
+util	KeyedTuple	_asdict		return the contents of this :class keyedtuple as a dictionary
+util	_LW	_asdict		return the contents of this :class keyedtuple as a dictionary
+util	Properties	as_immutable		return an immutable proxy for this :class properties
+util		has_intersection	set_ iterable	return true if any items of set_ are present in iterable
+util		update_copy	d _new	copy the given dict and update with the given values
+util		flatten_iterator	x	given an iterator of which further sub-elements may also be iterators flatten the sub-elements into a single iterator
+util	ScopedRegistry	__init__	createfunc scopefunc	construct a new :class scopedregistry
+util	ScopedRegistry	has		return true if an object is present in the current scope
+util	ScopedRegistry	set	obj	set the value for the current scope
+util	ScopedRegistry	clear		clear the current scope if any
+util		_iter_id	iterable	generator ((id o o) for o in iterable)
+util		deprecated	version message add_deprecation_to_docstring	decorates a function and issues a deprecation warning on use
+util		pending_deprecation	version message add_deprecation_to_docstring	decorates a function and issues a pending deprecation warning on use
+util		_decorate_with_warning	func wtype message docstring_header	wrap a function with a warnings warn and augmented docstring
+util		decode_slice	slc	decode a slice object as sent to __getitem__
+util		map_bits	fn n	call the given function given each nonzero bit from n
+util		decorator	target	a signature-matching decorator factory
+util		public_factory	target location	produce a wrapping function for the given cls or classmethod
+util		get_cls_kwargs	cls _set	return the full set of inherited kwargs for the given cls
+util		get_func_kwargs	func	return the set of legal kwargs for the given func
+util		get_callable_argspec	fn no_self _is_init	return the argument signature for any callable
+util		format_argspec_plus	fn grouped	returns a dictionary of formatted introspected function arguments
+util		format_argspec_init	method grouped	format_argspec_plus with considerations for typical __init__ methods wraps format_argspec_plus with error handling strategies for typical
+util		getargspec_init	method	inspect getargspec with considerations for typical __init__ methods
+util		unbound_method_to_callable	func_or_cls	adjust the incoming callable such that a 'self' argument is not required
+util		generic_repr	obj additional_kw to_inspect omit_kwarg	produce a __repr__() based on direct association of the __init__() specification vs
+util		class_hierarchy	cls	return an unordered sequence of all classes related to cls
+util		iterate_attributes	cls	iterate all the keys and attributes associated with a class without using getattr()
+util		monkeypatch_proxied_specials	into_cls from_cls skip only	automates delegation of __specials__ for a proxying type
+util		methods_equivalent	meth1 meth2	return true if the two methods are the same implementation
+util		as_interface	obj cls methods required	ensure basic interface compliance for an instance or dict of callables
+util		memoized_instancemethod	fn	decorate a method memoize its return value
+util	group_expirable_memoized_property	expire_instance	instance	expire all memoized properties for *instance*
+util		bool_or_str		return a callable that will evaluate a string as boolean or one of a set of "alternate" string values
+util		asint	value	coerce to integer
+util		coerce_kw_type	kw key type_ flexi_bool	if 'key' is present in dict 'kw', coerce its value to type 'type\_' if necessary
+util		constructor_copy	obj cls	instantiate cls using the __dict__ of obj as constructor arguments
+util		counter		return a threadsafe counter function
+util		duck_type_collection	specimen default	given an instance or class guess if it is or is acting as one of the basic collection types list set and dict
+util		dictlike_iteritems	dictlike	return a key value iterator for almost any dict-like object
+util	_symbol	__new__	name doc canonical	construct a new named symbol
+util		set_creation_order	instance	assign a '_creation_order' sequence to the given instance
+util		warn_exception	func	executes the given function catches all exceptions and converts to a warning
+util		warn	msg	issue a warning
+util		warn_limited	msg args	issue a warning with a paramterized string limiting the number of registrations
+util		only_once	fn	decorate the given function to be a no-op after it is called exactly once
+util		chop_traceback	tb exclude_prefix exclude_suffix	chop extraneous lines off beginning and end of a traceback
+util		wrap_callable	wrapper fn	augment functools update_wrapper() to work with objects with
+util		with_metaclass	meta	create a base class with a metaclass
+util		nested		implement contextlib nested mostly for unit tests
+util		sort	tuples allitems deterministic_order	sort the given list of items by dependency
+engine	RowProxy	has_key	key	return true if this rowproxy contains the given key
+engine	RowProxy	items		return a list of tuples each tuple containing a key/value pair
+engine	RowProxy	keys		return the list of keys as strings represented by this rowproxy
+engine	ResultMetaData	_merge_cursor_description	context cursor_description result_columns num_ctx_cols	merge a cursor description with compiled result column information
+engine	ResultMetaData	_colnames_from_description	context cursor_description	extract column names and data types from a cursor description
+engine	ResultProxy	keys		return the current set of string keys for rows
+engine	ResultProxy	rowcount		return the 'rowcount' for this result
+engine	ResultProxy	lastrowid		return the 'lastrowid' accessor on the dbapi cursor
+engine	ResultProxy	returns_rows		true if this :class resultproxy returns rows
+engine	ResultProxy	is_insert		true if this :class resultproxy is the result
+engine	ResultProxy	_cursor_description		may be overridden by subclasses
+engine	ResultProxy	_soft_close		soft close this :class resultproxy
+engine	ResultProxy	close		close this resultproxy
+engine	ResultProxy	inserted_primary_key		return the primary key for the row just inserted
+engine	ResultProxy	last_updated_params		return the collection of updated parameters from this execution
+engine	ResultProxy	last_inserted_params		return the collection of inserted parameters from this execution
+engine	ResultProxy	returned_defaults		return the values of default columns that were fetched using the :meth
+engine	ResultProxy	lastrow_has_defaults		return lastrow_has_defaults() from the underlying :class
+engine	ResultProxy	postfetch_cols		return postfetch_cols() from the underlying :class
+engine	ResultProxy	prefetch_cols		return prefetch_cols() from the underlying :class
+engine	ResultProxy	supports_sane_rowcount		return supports_sane_rowcount from the dialect
+engine	ResultProxy	supports_sane_multi_rowcount		return supports_sane_multi_rowcount from the dialect
+engine	ResultProxy	fetchall		fetch all rows just like db-api cursor fetchall()
+engine	ResultProxy	fetchmany	size	fetch many rows just like db-api cursor
+engine	ResultProxy	fetchone		fetch one row just like db-api cursor fetchone()
+engine	ResultProxy	first		fetch the first row and then close the result set unconditionally
+engine	ResultProxy	scalar		fetch the first column of the first row and close the result set
+engine	EngineStrategy	create		given arguments returns a new engine instance
+engine		connection_memoize	key	decorator memoize a function in a connection info stash
+engine	Connection	__init__	engine connection close_with_result _branch_from	construct a new connection
+engine	Connection	_branch		return a new connection which references this connection's engine and connection but does not have close_with_result enabled
+engine	Connection	_root		return the 'root' connection
+engine	Connection	_clone		create a shallow copy of this connection
+engine	Connection	execution_options		set non-sql options for the connection which take effect during execution
+engine	Connection	closed		return true if this connection is closed
+engine	Connection	invalidated		return true if this connection was invalidated
+engine	Connection	connection		the underlying db-api connection managed by this connection
+engine	Connection	get_isolation_level		return the current isolation level assigned to this :class
+engine	Connection	default_isolation_level		the default isolation level assigned to this :class connection
+engine	Connection	info		info dictionary associated with the underlying dbapi connection referred to by this :class
+engine	Connection	connect		returns a branched version of this :class connection
+engine	Connection	contextual_connect		returns a branched version of this :class connection
+engine	Connection	invalidate	exception	invalidate the underlying dbapi connection associated with this :class
+engine	Connection	detach		detach the underlying db-api connection from its connection pool
+engine	Connection	begin		begin a transaction and return a transaction handle
+engine	Connection	begin_nested		begin a nested transaction and return a transaction handle
+engine	Connection	begin_twophase	xid	begin a two-phase or xa transaction and return a transaction handle
+engine	Connection	in_transaction		return true if a transaction is in progress
+engine	Connection	close		close this :class connection
+engine	Connection	scalar	object	executes and returns the first column of the first row
+engine	Connection	execute	object	executes a sql statement construct and returns a :class
+engine	Connection	_execute_function	func multiparams params	execute a sql functionelement object
+engine	Connection	_execute_default	default multiparams params	execute a schema columndefault object
+engine	Connection	_execute_ddl	ddl multiparams params	execute a schema ddl object
+engine	Connection	_execute_clauseelement	elem multiparams params	execute a sql clauseelement object
+engine	Connection	_execute_compiled	compiled multiparams params	execute a sql compiled object
+engine	Connection	_execute_text	statement multiparams params	execute a string sql statement
+engine	Connection	_execute_context	dialect constructor statement parameters	create an :class executioncontext and execute returning
+engine	Connection	_cursor_execute	cursor statement parameters context	execute a statement + params on the given cursor
+engine	Connection	_safe_close_cursor	cursor	close the given cursor catching exceptions and turning into log warnings
+engine	Connection	transaction	callable_	execute the given function within a transaction boundary
+engine	Connection	run_callable	callable_	given a callable object or function execute it passing a :class
+engine	Transaction	close		close this :class transaction
+engine	Transaction	rollback		roll back this :class transaction
+engine	Transaction	commit		commit this :class transaction
+engine	TwoPhaseTransaction	prepare		prepare this :class twophasetransaction
+engine	Engine	update_execution_options		update the default execution_options dictionary of this :class
+engine	Engine	execution_options		return a new :class engine that will provide
+engine	Engine	name		string name of the :class ~sqlalchemy engine interfaces dialect
+engine	Engine	driver		driver name of the :class ~sqlalchemy engine interfaces dialect
+engine	Engine	dispose		dispose of the connection pool used by this :class engine
+engine	Engine	begin	close_with_result	return a context manager delivering a :class connection
+engine	Engine	transaction	callable_	execute the given function within a transaction boundary
+engine	Engine	run_callable	callable_	given a callable object or function execute it passing a :class
+engine	Engine	execute	statement	executes the given construct and returns a :class resultproxy
+engine	Engine	connect		return a new :class connection object
+engine	Engine	contextual_connect	close_with_result	return a :class connection object which may be part of some
+engine	Engine	table_names	schema connection	return a list of all table names available in the database
+engine	Engine	has_table	table_name schema	return true if the given backend has a table of the given name
+engine	Engine	raw_connection	_connection	return a "raw" dbapi connection from the connection pool
+engine	Dialect	create_connect_args	url	build db-api compatible connection arguments
+engine	Dialect	type_descriptor	cls typeobj	transform a generic type to a dialect-specific type
+engine	Dialect	initialize	connection	called during strategized creation of the dialect with a connection
+engine	Dialect	reflecttable	connection table include_columns exclude_columns	load table description from the database
+engine	Dialect	get_columns	connection table_name schema	return information about columns in table_name
+engine	Dialect	get_primary_keys	connection table_name schema	return information about primary keys in table_name
+engine	Dialect	get_pk_constraint	connection table_name schema	return information about the primary key constraint on table_name
+engine	Dialect	get_foreign_keys	connection table_name schema	return information about foreign_keys in table_name
+engine	Dialect	get_table_names	connection schema	return a list of table names for schema
+engine	Dialect	get_temp_table_names	connection schema	return a list of temporary table names on the given connection if supported by the underlying backend
+engine	Dialect	get_view_names	connection schema	return a list of all view names available in the database
+engine	Dialect	get_temp_view_names	connection schema	return a list of temporary view names on the given connection if supported by the underlying backend
+engine	Dialect	get_view_definition	connection view_name schema	return view definition
+engine	Dialect	get_indexes	connection table_name schema	return information about indexes in table_name
+engine	Dialect	get_unique_constraints	connection table_name schema	return information about unique constraints in table_name
+engine	Dialect	get_check_constraints	connection table_name schema	return information about check constraints in table_name
+engine	Dialect	get_table_comment	connection table_name schema	return the "comment" for the table identified by table_name
+engine	Dialect	normalize_name	name	convert the given name to lowercase if it is detected as case insensitive
+engine	Dialect	denormalize_name	name	convert the given name to a case insensitive identifier for the backend if it is an all-lowercase name
+engine	Dialect	has_table	connection table_name schema	check the existence of a particular table in the database
+engine	Dialect	has_sequence	connection sequence_name schema	check the existence of a particular sequence in the database
+engine	Dialect	_get_server_version_info	connection	retrieve the server version info from the given connection
+engine	Dialect	_get_default_schema_name	connection	return the string name of the currently selected schema from the given connection
+engine	Dialect	do_begin	dbapi_connection	provide an implementation of connection begin(), given a
+engine	Dialect	do_rollback	dbapi_connection	provide an implementation of connection rollback(), given
+engine	Dialect	do_commit	dbapi_connection	provide an implementation of connection commit(), given a
+engine	Dialect	do_close	dbapi_connection	provide an implementation of connection close(), given a dbapi
+engine	Dialect	create_xid		create a two-phase transaction id
+engine	Dialect	do_savepoint	connection name	create a savepoint with the given name
+engine	Dialect	do_rollback_to_savepoint	connection name	rollback a connection to the named savepoint
+engine	Dialect	do_release_savepoint	connection name	release the named savepoint on a connection
+engine	Dialect	do_begin_twophase	connection xid	begin a two phase transaction on the given connection
+engine	Dialect	do_prepare_twophase	connection xid	prepare a two phase transaction on the given connection
+engine	Dialect	do_rollback_twophase	connection xid is_prepared recover	rollback a two phase transaction on the given connection
+engine	Dialect	do_commit_twophase	connection xid is_prepared recover	commit a two phase transaction on the given connection
+engine	Dialect	do_recover_twophase	connection	recover list of uncommitted prepared two phase transaction identifiers on the given connection
+engine	Dialect	do_executemany	cursor statement parameters context	provide an implementation of cursor executemany(statement
+engine	Dialect	do_execute	cursor statement parameters context	provide an implementation of cursor execute(statement
+engine	Dialect	do_execute_no_params	cursor statement parameters context	provide an implementation of cursor execute statement
+engine	Dialect	is_disconnect	e connection cursor	return true if the given db-api error indicates an invalid
+engine	Dialect	connect		return a callable which sets up a newly created dbapi connection
+engine	Dialect	reset_isolation_level	dbapi_conn	given a dbapi connection revert its isolation to the default
+engine	Dialect	set_isolation_level	dbapi_conn level	given a dbapi connection set its isolation level
+engine	Dialect	get_isolation_level	dbapi_conn	given a dbapi connection return its isolation level
+engine	Dialect	get_dialect_cls	cls url	given a url return the :class dialect that will be used
+engine	Dialect	engine_created	cls engine	a convenience hook called before returning the final :class engine
+engine	CreateEnginePlugin	__init__	url kwargs	contruct a new :class createengineplugin
+engine	CreateEnginePlugin	handle_dialect_kwargs	dialect_cls dialect_args	parse and modify dialect kwargs
+engine	CreateEnginePlugin	handle_pool_kwargs	pool_cls pool_args	parse and modify pool kwargs
+engine	CreateEnginePlugin	engine_created	engine	receive the :class engine object when it is fully constructed
+engine	ExecutionContext	create_cursor		return a new cursor generated from this executioncontext's connection
+engine	ExecutionContext	pre_exec		called before an execution of a compiled statement
+engine	ExecutionContext	post_exec		called after the execution of a compiled statement
+engine	ExecutionContext	result		return a result object corresponding to this executioncontext
+engine	ExecutionContext	handle_dbapi_exception	e	receive a dbapi exception which occurred upon execute result fetch etc
+engine	ExecutionContext	should_autocommit_text	statement	parse the given textual statement and return true if it refers to
+engine	ExecutionContext	lastrow_has_defaults		return true if the last insert or update row contained inlined or database-side defaults
+engine	ExecutionContext	get_rowcount		return the dbapi cursor rowcount value or in some
+engine	Connectable	connect		return a :class connection object
+engine	Connectable	contextual_connect		return a :class connection object which may be part of an ongoing
+engine	Connectable	create	entity	emit create statements for the given schema entity
+engine	Connectable	drop	entity	emit drop statements for the given schema entity
+engine	Connectable	execute	object	executes the given construct and returns a :class resultproxy
+engine	Connectable	scalar	object	executes and returns the first column of the first row
+engine	Inspector	__init__	bind	initialize a new :class inspector
+engine	Inspector	from_engine	cls bind	construct a new dialect-specific inspector object from the given engine or connection
+engine	Inspector	default_schema_name		return the default schema name presented by the dialect for the current engine's database user
+engine	Inspector	get_schema_names		return all schema names
+engine	Inspector	get_table_names	schema order_by	return all table names in referred to within a particular schema
+engine	Inspector	get_sorted_table_and_fkc_names	schema	return dependency-sorted table and foreign key constraint names in referred to within a particular schema
+engine	Inspector	get_temp_table_names		return a list of temporary table names for the current bind
+engine	Inspector	get_temp_view_names		return a list of temporary view names for the current bind
+engine	Inspector	get_table_options	table_name schema	return a dictionary of options specified when the table of the given name was created
+engine	Inspector	get_view_names	schema	return all view names in schema
+engine	Inspector	get_view_definition	view_name schema	return definition for view_name
+engine	Inspector	get_columns	table_name schema	return information about columns in table_name
+engine	Inspector	get_primary_keys	table_name schema	return information about primary keys in table_name
+engine	Inspector	get_pk_constraint	table_name schema	return information about primary key constraint on table_name
+engine	Inspector	get_foreign_keys	table_name schema	return information about foreign_keys in table_name
+engine	Inspector	get_indexes	table_name schema	return information about indexes in table_name
+engine	Inspector	get_unique_constraints	table_name schema	return information about unique constraints in table_name
+engine	Inspector	get_table_comment	table_name schema	return information about the table comment for table_name
+engine	Inspector	get_check_constraints	table_name schema	return information about check constraints in table_name
+engine	Inspector	reflecttable	table include_columns exclude_columns _extend_on	given a table object load its internal constructs based on introspection
+engine		create_engine		create a new :class engine instance
+engine		engine_from_config	configuration prefix	create a new engine instance using a configuration dictionary
+engine	URL	_get_entrypoint		return the "entry point" dialect class
+engine	URL	get_dialect		return the sqlalchemy database dialect class corresponding to this url's driver name
+engine	URL	translate_connect_args	names	translate url attributes into a dictionary of connection arguments
+engine		make_url	name_or_url	given a string or unicode instance produce a new url instance
+engine	DefaultDialect	on_connect		return a callable which sets up a newly created dbapi connection
+engine	DefaultDialect	type_descriptor	typeobj	provide a database-specific :class typeengine object given
+engine	DefaultDialect	get_pk_constraint	conn table_name schema	compatibility method adapts the result of get_primary_keys() for those dialects which don't implement get_pk_constraint()
+engine	DefaultDialect	create_xid		create a random two-phase transaction id
+engine	DefaultExecutionContext	_init_ddl	cls dialect connection dbapi_connection	initialize execution context for a ddlelement construct
+engine	DefaultExecutionContext	_init_compiled	cls dialect connection dbapi_connection	initialize execution context for a compiled construct
+engine	DefaultExecutionContext	_expand_in_parameters	compiled processors	handle special 'expanding' parameters in tuples that are rendered on a per-parameter basis for an otherwise fixed sql statement string
+engine	DefaultExecutionContext	_init_statement	cls dialect connection dbapi_connection	initialize execution context for a string sql statement
+engine	DefaultExecutionContext	_init_default	cls dialect connection dbapi_connection	initialize execution context for a columndefault construct
+engine	DefaultExecutionContext	_execute_scalar	stmt type_	execute a string statement on the current cursor returning a scalar result
+engine	DefaultExecutionContext	get_result_processor	type_ colname coltype	return a 'result processor' for a given type as present in cursor
+engine	DefaultExecutionContext	get_lastrowid		return self cursor lastrowid or equivalent after an insert
+engine	DefaultExecutionContext	set_input_sizes	translate exclude_types	given a cursor and clauseparameters call the appropriate style of setinputsizes() on the cursor using db-api types
+dialects		_auto_fn	name	default dialect importer
+dialects.oracle	INTERVAL	__init__	day_precision second_precision	construct an interval
+dialects.oracle	OracleCompiler	default_from		called when a select statement has no froms and no from clause is to be appended
+dialects.oracle	OracleCompiler	get_render_as_alias_suffix	alias_name_text	oracle doesn't like from table as alias
+dialects.oracle	OracleCompiler	_TODO_visit_compound_select	select	need to determine how to get limit/offset into a union for oracle
+dialects.oracle	OracleCompiler	visit_select	select	look for limit and offset in a select statement and if so tries to wrap it in a subquery with rownum criterion
+dialects.oracle	OracleIdentifierPreparer	_bindparam_requires_quotes	value	return true if the given identifier requires quoting
+dialects.oracle	OracleDialect	_resolve_synonym	connection desired_owner desired_synonym desired_table	search for a local synonym matching the given desired owner/name
+dialects.oracle	OracleDialect	get_columns	connection table_name schema	kw arguments can be
+dialects.oracle	OracleDialect	get_foreign_keys	connection table_name schema	kw arguments can be
+dialects.oracle	OracleDialect_cx_oracle	_detect_decimal_char	connection	detect if the decimal separator character is not ' ', as
+dialects.oracle	OracleDialect_cx_oracle	create_xid		create a two-phase transaction id
+dialects.postgresql	JSON	__init__	none_as_null astext_type	construct a :class json type
+dialects.postgresql		Any	other arrexpr operator	a synonym for the :meth array comparator any method
+dialects.postgresql		All	other arrexpr operator	a synonym for the :meth array comparator all method
+dialects.postgresql	ARRAY	__init__	item_type as_tuple dimensions zero_indexes	construct an array
+dialects.postgresql	HSTORE	__init__	text_type	construct a new :class hstore
+dialects.postgresql		_parse_error	hstore_str pos	format an unmarshalling error
+dialects.postgresql		_parse_hstore	hstore_str	parse an hstore from its literal string representation
+dialects.postgresql		_serialize_hstore	val	serialize a dictionary into an hstore literal keys and values must
+dialects.postgresql	Insert	excluded		provide the excluded namespace for an on conflict statement pg's on conflict clause allows reference to the row that would
+dialects.postgresql	Insert	on_conflict_do_update	constraint index_elements index_where set_	specifies a do update set action for on conflict clause
+dialects.postgresql	Insert	on_conflict_do_nothing	constraint index_elements index_where	specifies a do nothing action for on conflict clause
+dialects.postgresql	INTERVAL	__init__	precision fields	construct an interval
+dialects.postgresql	UUID	__init__	as_uuid	construct a uuid type
+dialects.postgresql	ENUM	__init__		construct an :class ~ postgresql enum
+dialects.postgresql	ENUM	create	bind checkfirst	emit create type for this :class ~
+dialects.postgresql	ENUM	drop	bind checkfirst	emit drop type for this :class ~
+dialects.postgresql	ENUM	_check_for_name_in_memos	checkfirst kw	look in the 'ddl runner' for 'memos', then note our name in that collection
+dialects.postgresql	PGInspector	get_table_oid	table_name schema	return the oid for the given table name
+dialects.postgresql	PGInspector	get_enums	schema	return a list of enum objects
+dialects.postgresql	PGInspector	get_foreign_table_names	schema	return a list of foreign table names
+dialects.postgresql	PGInspector	get_view_names	schema include	return all view names in schema
+dialects.postgresql	PGDialect	get_table_oid	connection table_name schema	fetch the oid for schema table_name
+dialects.postgresql	ExcludeConstraint	__init__		create an :class excludeconstraint object
+dialects.postgresql		array_agg		postgresql-specific form of :class array_agg, ensures
+dialects.sqlite	_DateTimeMixin	format_is_text_affinity		return true if the storage format will automatically imply a text affinity
+dialects.sqlite	SQLiteDDLCompiler	define_constraint_remote_table	constraint table preparer	format the remote table clause of a create constraint clause
+dialects.sqlite	SQLiteIdentifierPreparer	format_index	index use_schema name	prepare a quoted index and schema name
+dialects.sqlite	SQLiteDialect	_resolve_type_affinity	type_	return a data type from a reflected column using affinity tules
+dialects.sybase	SybaseInspector	get_table_id	table_name schema	return the table id from table_name and schema
+dialects.sybase	SybaseExecutionContext	set_ddl_autocommit	connection value	must be implemented by subclasses to accommodate ddl executions
+dialects.sybase	SybaseDialect	get_table_id	connection table_name schema	fetch the id for schema table_name
+dialects.mysql	MySQLDialect_mysqldb	_detect_charset	connection	sniff out the character set in use for connection results
+dialects.mysql	_myconnpyBIT	result_processor	dialect coltype	mysql-connector already converts mysql bits so
+dialects.mysql	ENUM	__init__		construct an enum
+dialects.mysql	SET	__init__		construct a set
+dialects.mysql	MySQLCompiler	get_select_precolumns	select	add special mysql keywords in place of distinct
+dialects.mysql	MySQLDDLCompiler	get_column_specification	column	builds column ddl
+dialects.mysql	MySQLDDLCompiler	post_create_table	table	build table-level create options like engine and collate
+dialects.mysql	MySQLTypeCompiler	_extend_numeric	type_ spec	extend a numeric-type declaration with mysql specific extensions
+dialects.mysql	MySQLTypeCompiler	_extend_string	type_ defaults spec	extend a string-type declaration with standard sql character set / collate annotations and mysql specific extensions
+dialects.mysql	MySQLIdentifierPreparer	_quote_free_identifiers		unilaterally identifier-quote any number of strings
+dialects.mysql	MySQLDialect	do_commit	dbapi_connection	execute a commit
+dialects.mysql	MySQLDialect	do_rollback	dbapi_connection	execute a rollback
+dialects.mysql	MySQLDialect	_compat_fetchall	rp charset	proxy result rows to smooth over mysql-python driver inconsistencies
+dialects.mysql	MySQLDialect	_compat_fetchone	rp charset	proxy a result row to smooth over mysql-python driver inconsistencies
+dialects.mysql	MySQLDialect	_compat_first	rp charset	proxy a result row to smooth over mysql-python driver inconsistencies
+dialects.mysql	MySQLDialect	get_table_names	connection schema	return a unicode show tables from a given schema
+dialects.mysql	MySQLDialect	_tabledef_parser		return the mysqltabledefinitionparser generate if needed
+dialects.mysql	MySQLDialect	_detect_casing	connection	sniff out identifier case sensitivity
+dialects.mysql	MySQLDialect	_detect_collations	connection	pull the active collations list from the server
+dialects.mysql	MySQLDialect	_detect_ansiquotes	connection	detect and adjust for the ansi_quotes sql mode
+dialects.mysql	MySQLDialect	_show_create_table	connection table charset full_name	run show create table for a table
+dialects.mysql	MySQLDialect	_describe_table	connection table charset full_name	run describe for a table and return processed rows
+dialects.mysql	MySQLDialect_pyodbc	_detect_charset	connection	sniff out the character set in use for connection results
+dialects.mysql	_oursqlBIT	result_processor	dialect coltype	oursql already converts mysql bits so
+dialects.mysql	MySQLDialect_oursql	do_execute	cursor statement parameters context	provide an implementation of *cursor
+dialects.mysql	MySQLDialect_oursql	_detect_charset	connection	sniff out the character set in use for connection results
+dialects.mysql	MySQLDialect_oursql	_compat_fetchall	rp charset	oursql isn't super-broken like mysqldb yaaay
+dialects.mysql	MySQLDialect_oursql	_compat_fetchone	rp charset	oursql isn't super-broken like mysqldb yaaay
+dialects.mysql	MySQLTableDefinitionParser	_parse_constraints	line	parse a key or constraint line
+dialects.mysql	MySQLTableDefinitionParser	_parse_table_name	line state	extract the table name
+dialects.mysql	MySQLTableDefinitionParser	_parse_table_options	line state	build a dictionary of all reflected table-level options
+dialects.mysql	MySQLTableDefinitionParser	_parse_column	line state	extract column details
+dialects.mysql	MySQLTableDefinitionParser	_describe_to_create	table_name columns	re-format describe output as a show create table string
+dialects.mysql	MySQLTableDefinitionParser	_parse_keyexprs	identifiers	unpack '"col" 2 ,"col" asc'-ish strings into components
+dialects.mysql	MySQLTableDefinitionParser	_prep_regexes		pre-compile regular expressions
+dialects.mysql		_pr_compile	regex cleanup	prepare a 2-tuple of compiled regex and callable
+dialects.mysql		_re_compile	regex	compile a string to regex i and unicode
+dialects.mysql	_cymysqlBIT	result_processor	dialect coltype	convert a mysql's 64 bit variable length binary string to a long
+dialects.mysql	_ZxJDBCBit	result_processor	dialect coltype	converts boolean or byte arrays from mysql connector/j to longs
+dialects.mysql	MySQLDialect_zxjdbc	_detect_charset	connection	sniff out the character set in use for connection results
+dialects.mysql	MySQLDialect_zxjdbc	_driver_kwargs		return kw arg dict to be sent to connect()
+dialects.mysql	NUMERIC	__init__	precision scale asdecimal	construct a numeric
+dialects.mysql	DECIMAL	__init__	precision scale asdecimal	construct a decimal
+dialects.mysql	DOUBLE	__init__	precision scale asdecimal	construct a double
+dialects.mysql	REAL	__init__	precision scale asdecimal	construct a real
+dialects.mysql	FLOAT	__init__	precision scale asdecimal	construct a float
+dialects.mysql	INTEGER	__init__	display_width	construct an integer
+dialects.mysql	BIGINT	__init__	display_width	construct a biginteger
+dialects.mysql	MEDIUMINT	__init__	display_width	construct a mediuminteger
+dialects.mysql	TINYINT	__init__	display_width	construct a tinyint
+dialects.mysql	SMALLINT	__init__	display_width	construct a smallinteger
+dialects.mysql	BIT	__init__	length	construct a bit
+dialects.mysql	BIT	result_processor	dialect coltype	convert a mysql's 64 bit variable length binary string to a long
+dialects.mysql	TIME	__init__	timezone fsp	construct a mysql time type
+dialects.mysql	TIMESTAMP	__init__	timezone fsp	construct a mysql timestamp type
+dialects.mysql	DATETIME	__init__	timezone fsp	construct a mysql datetime type
+dialects.mysql	TEXT	__init__	length	construct a text
+dialects.mysql	TINYTEXT	__init__		construct a tinytext
+dialects.mysql	MEDIUMTEXT	__init__		construct a mediumtext
+dialects.mysql	LONGTEXT	__init__		construct a longtext
+dialects.mysql	VARCHAR	__init__	length	construct a varchar
+dialects.mysql	CHAR	__init__	length	construct a char
+dialects.mysql	NVARCHAR	__init__	length	construct an nvarchar
+dialects.mysql	NCHAR	__init__	length	construct an nchar
+dialects.firebird	FBDialect_kinterbasdb	_get_server_version_info	connection	get the version of the firebird server used by a connection
+dialects.firebird	FBDialect_fdb	_get_server_version_info	connection	get the version of the firebird server used by a connection
+dialects.firebird	FBCompiler	get_select_precolumns	select	called when building a select statement position is just before column list firebird puts the limit and offset right
+dialects.firebird	FBCompiler	limit_clause	select	already taken care of in the get_select_precolumns method
+dialects.firebird	FBDDLCompiler	visit_create_sequence	create	generate a create generator statement for the sequence
+dialects.firebird	FBDDLCompiler	visit_drop_sequence	drop	generate a drop generator statement for the sequence
+dialects.firebird	FBExecutionContext	fire_sequence	seq type_	get the next value from the sequence using gen_id()
+dialects.firebird	FBDialect	has_table	connection table_name schema	return true if the given table exists ignoring the schema
+dialects.firebird	FBDialect	has_sequence	connection sequence_name schema	return true if the given sequence generator exists
+dialects.mssql	MSTypeCompiler	_extend	spec type_ length	extend a string-type declaration with standard sql collate annotations
+dialects.mssql	MSExecutionContext	pre_exec		activate identity_insert if needed
+dialects.mssql	MSExecutionContext	post_exec		disable identity_insert if enabled
+dialects.mssql	MSSQLCompiler	get_select_precolumns	select	ms-sql puts top it's version of limit here
+dialects.mssql	MSSQLCompiler	visit_select	select	look for limit and offset in a select statement and if so tries to wrap it in a subquery with row_number() criterion
+dialects.mssql	MSSQLCompiler	visit_binary	binary	move bind parameters to the right-hand side of an operator where possible
+dialects.mssql	MSSQLCompiler	update_from_clause	update_stmt from_table extra_froms from_hints	render the update from clause specific to mssql
+dialects.mssql	MSSQLStrictCompiler	render_literal_value	value type_	for date and datetime values convert to a string format acceptable to mssql
+dialects.mssql	MSIdentifierPreparer	quote_schema	schema force	prepare a quoted table and schema name
+dialects.mssql	MSExecutionContext_pyodbc	pre_exec		where appropriate issue "select scope_identity()" in the same statement
+testing		expect_warnings		context manager which expects one or more warnings
+testing		expect_warnings_on	db	context manager which expects one or more warnings on specific dialects
+testing		emits_warning		decorator form of expect_warnings()
+testing		emits_warning_on	db	mark a test as emitting a warning on a specific dialect
+testing		uses_deprecated		mark a test as immune from fatal deprecation warnings
+testing		global_cleanup_assertions		check things that have to be finalized at the end of a test suite
+testing		eq_	a b msg	assert a == b with repr messaging on failure
+testing		ne_	a b msg	assert a != b with repr messaging on failure
+testing		le_	a b msg	assert a <= b with repr messaging on failure
+testing		is_	a b msg	assert a is b with repr messaging on failure
+testing		is_not_	a b msg	assert a is not b with repr messaging on failure
+testing		in_	a b msg	assert a in b with repr messaging on failure
+testing		not_in_	a b msg	assert a in not b with repr messaging on failure
+testing		startswith_	a fragment msg	assert a startswith fragment with repr messaging on failure
+testing	AssertsExecutionResults	assert_unordered_result	result cls	as assert_result but the order of objects is not considered
+testing		Table		a schema table wrapper/hook for dialect-specific tweaks
+testing		Column		a schema column wrapper/hook for dialect-specific tweaks
+testing		conforms_partial_ordering	tuples sorted_elements	true if the given sorting conforms to the given partial ordering
+testing		function_named	fn name	return a function with a given __name__
+testing		run_as_contextmanager	ctx fn	run the given function under the given contextmanager simulating the behavior of 'with' to support older
+testing		rowset	results	converts the results of sql execution into a plain set of column tuples
+testing		provide_metadata	fn	provide bound metadata for a single test dropping afterwards
+testing		force_drop_names		force the given table names to be dropped after test complete
+testing		function_call_count	variance	assert a target for a test case's function call count
+testing		setup_filters		set global warning behavior for the test suite
+testing		assert_warnings	fn warning_msgs regex	assert that each of the given warnings are emitted by fn
+testing	ComparableEntity	__eq__	other	'deep sparse compare
+testing		rollback_open_connections	fn	decorator that rolls back all open connections after fn execution
+testing		close_first	fn	decorator that closes all connections before fn execution
+testing		close_open_connections	fn	decorator that closes all connections after fn execution
+testing		testing_engine	url options	produce an engine configured by --options with optional overrides
+testing		mock_engine	dialect_name	provides a mocking engine based on the current testing db
+testing		proxying_engine	conn_cls cursor_cls	produce an engine that provides proxy hooks for common methods
+testing		_server_version	engine	return a server_version_info tuple
+testing		setup_py_test		runner to use for the 'test_suite' entry of your setup py
+testing	TablesTest	_load_fixtures	cls	insert rows as represented by the fixtures() method
+testing	MappedTest	_with_register_classes	cls fn	run a setup method framing the operation with a base class that will catch new subclasses to be established within
+testing	Config	register	cls db db_opts options	add a config as one of the global configs
+testing	SuiteRequirements	create_table		target platform can emit basic createtable ddl
+testing	SuiteRequirements	drop_table		target platform can emit basic droptable ddl
+testing	SuiteRequirements	foreign_keys		target database must support foreign keys
+testing	SuiteRequirements	on_update_cascade		"target database must support on update cascade behavior in
+testing	SuiteRequirements	non_updating_cascade		target database must *not* support on update cascade behavior in
+testing	SuiteRequirements	self_referential_foreign_keys		target database must support self-referential foreign keys
+testing	SuiteRequirements	foreign_key_ddl		target database must support the ddl phrases for foreign key
+testing	SuiteRequirements	named_constraints		target database must support names for constraints
+testing	SuiteRequirements	subqueries		target database must support subqueries
+testing	SuiteRequirements	offset		target database can render offset or an equivalent in a select
+testing	SuiteRequirements	bound_limit_offset		target database can render limit and/or offset using a bound
+testing	SuiteRequirements	parens_in_union_contained_select_w_limit_offset		target database must support parenthesized select in union when limit/offset is specifically present
+testing	SuiteRequirements	parens_in_union_contained_select_wo_limit_offset		target database must support parenthesized select in union when offset/limit is specifically not present
+testing	SuiteRequirements	boolean_col_expressions		target database must support boolean expressions as columns
+testing	SuiteRequirements	nullsordering		target backends that support nulls ordering
+testing	SuiteRequirements	standalone_binds		target database/driver supports bound parameters as column expressions without being in the context of a typed column
+testing	SuiteRequirements	intersect		target database must support intersect or equivalent
+testing	SuiteRequirements	except_		target database must support except or equivalent i e minus
+testing	SuiteRequirements	window_functions		target database must support window functions
+testing	SuiteRequirements	autoincrement_insert		target platform generates new surrogate integer primary key values when insert() is executed excluding the pk column
+testing	SuiteRequirements	fetch_rows_post_commit		target platform will allow cursor fetchone() to proceed after a
+testing	SuiteRequirements	empty_inserts		target platform supports insert with no values i e
+testing	SuiteRequirements	insert_from_select		target platform supports insert from a select
+testing	SuiteRequirements	returning		target platform supports returning
+testing	SuiteRequirements	tuple_in		target platform supports the syntax " x y in x1 y1 x2 y2
+testing	SuiteRequirements	duplicate_names_in_cursor_description		target platform supports a select statement that has the same name repeated more than once in the columns list
+testing	SuiteRequirements	denormalized_names		target database must have 'denormalized', i e
+testing	SuiteRequirements	multivalues_inserts		target database must support multiple values clauses in an insert statement
+testing	SuiteRequirements	implements_get_lastrowid		"target dialect implements the executioncontext get_lastrowid()
+testing	SuiteRequirements	emulated_lastrowid		"target dialect retrieves cursor lastrowid or fetches
+testing	SuiteRequirements	dbapi_lastrowid		"target platform includes a 'lastrowid' accessor on the dbapi cursor object
+testing	SuiteRequirements	views		target database must support views
+testing	SuiteRequirements	schemas		target database must support external schemas and have one named 'test_schema'
+testing	SuiteRequirements	server_side_cursors		target dialect must support server side cursors
+testing	SuiteRequirements	sequences		target database must support sequences
+testing	SuiteRequirements	sequences_optional		target database supports sequences but also optionally as a means of generating new pk values
+testing	SuiteRequirements	view_column_reflection		target database must support retrieval of the columns in a view similarly to how a table is inspected
+testing	SuiteRequirements	view_reflection		target database must support inspection of the full create view definition
+testing	SuiteRequirements	temp_table_names		target dialect supports listing of temporary table names
+testing	SuiteRequirements	temporary_tables		target database supports temporary tables
+testing	SuiteRequirements	temporary_views		target database supports temporary views
+testing	SuiteRequirements	unique_constraint_reflection		target dialect supports reflection of unique constraints
+testing	SuiteRequirements	duplicate_key_raises_integrity_error		target dialect raises integrityerror when reporting an insert with a primary key violation
+testing	SuiteRequirements	unbounded_varchar		target database must support varchar with no length
+testing	SuiteRequirements	unicode_data		target database/dialect must support python unicode objects with non-ascii characters represented delivered as bound parameters
+testing	SuiteRequirements	unicode_ddl		target driver must support some degree of non-ascii symbol names
+testing	SuiteRequirements	datetime_literals		target dialect supports rendering of a date time or datetime as a literal string e
+testing	SuiteRequirements	datetime		target dialect supports representation of python datetime
+testing	SuiteRequirements	datetime_microseconds		target dialect supports representation of python datetime
+testing	SuiteRequirements	datetime_historic		target dialect supports representation of python datetime
+testing	SuiteRequirements	date		target dialect supports representation of python datetime
+testing	SuiteRequirements	date_coerces_from_datetime		target dialect accepts a datetime object as the target of a date column
+testing	SuiteRequirements	date_historic		target dialect supports representation of python datetime
+testing	SuiteRequirements	time		target dialect supports representation of python datetime
+testing	SuiteRequirements	time_microseconds		target dialect supports representation of python datetime
+testing	SuiteRequirements	binary_comparisons		target database/driver can allow blob/binary fields to be compared against a bound parameter value
+testing	SuiteRequirements	binary_literals		target backend supports simple binary literals e g an
+testing	SuiteRequirements	json_type		target platform implements a native json type
+testing	SuiteRequirements	json_array_indexes		"target platform supports numeric array indexes
+testing	SuiteRequirements	precision_numerics_general		target backend has general support for moderately high-precision numerics
+testing	SuiteRequirements	precision_numerics_enotation_small		target backend supports decimal() objects using e notation to represent very small values
+testing	SuiteRequirements	precision_numerics_enotation_large		target backend supports decimal() objects using e notation to represent very large values
+testing	SuiteRequirements	precision_numerics_many_significant_digits		target backend supports values with many digits on both sides such as 319438950232418390
+testing	SuiteRequirements	precision_numerics_retains_significant_digits		a precision numeric type will return empty significant digits i
+testing	SuiteRequirements	precision_generic_float_type		target backend will return native floating point numbers with at least seven decimal places when using the generic float type
+testing	SuiteRequirements	floats_to_four_decimals		target backend can return a floating-point number with four significant digits (such as 15
+testing	SuiteRequirements	fetch_null_from_numeric		target backend doesn't crash when you try to select a numeric value that has a value of null
+testing	SuiteRequirements	text_type		target database must support an unbounded text() "
+testing	SuiteRequirements	empty_strings_varchar		target database can persist/return an empty string with a varchar
+testing	SuiteRequirements	empty_strings_text		target database can persist/return an empty string with an unbounded text
+testing	SuiteRequirements	selectone		target driver must support the literal statement 'select 1'
+testing	SuiteRequirements	savepoints		target database must support savepoints
+testing	SuiteRequirements	two_phase_transactions		target database must support two-phase transactions
+testing	SuiteRequirements	update_from		target must support update from syntax
+testing	SuiteRequirements	update_where_target_in_subquery		target must support update where the same table is present in a subquery in the where clause
+testing	SuiteRequirements	mod_operator_as_percent_sign		target database must use a plain percent '%' as the 'modulus' operator
+testing	SuiteRequirements	percent_schema_names		target backend supports weird identifiers with percent signs in them e
+testing	SuiteRequirements	order_by_label_with_expression		target backend supports order by a column label within an expression
+testing	SuiteRequirements	unicode_connections		target driver must support non-ascii characters being passed at all
+testing	SuiteRequirements	graceful_disconnects		target driver must raise a dbapi-level exception such as interfaceerror when the underlying connection has been closed
+testing	SuiteRequirements	skip_mysql_on_windows		catchall for a large variety of mysql on windows failures
+testing	SuiteRequirements	ad_hoc_engines		test environment must allow ad-hoc engine/connection creation
+testing	SuiteRequirements	threading_with_mock		mark tests that use threading and mock at the same time - stability issues have been observed with coverage + python 3
+testing	SuiteRequirements	predictable_gc		target platform must remove all cycles unconditionally when gc
+testing	SuiteRequirements	no_coverage		test should be skipped if coverage is enabled
+testing	CompiledSQL	_received_statement	execute_observed	reconstruct the statement and params in terms of a target dialect which for compiledsql is just defaultdialect
+testing.plugin		configure_follower	follower_ident	configure required state for a follower
+testing.plugin		memoize_important_follower_config	dict_	store important configuration we will need to send to a follower
+testing.plugin		restore_important_follower_config	dict_	restore important configuration needed by a follower
+testing.plugin		pre_begin	opt	things to set up early before coverage might be setup
+testing.plugin		post_begin		things to set up later once we know coverage is running
+testing.suite	LimitOffsetTest	test_limit_offset_nobinds		test that 'literal binds' mode works - no bound params
+testing.suite	RowFetchTest	test_row_w_scalar_select		test that a scalar select as a column is returned as such and that type conversion works ok
+testing.suite	_LiteralRoundTripFixture	_literal_round_trip	type_ input_ output filter_	test literal rendering
+testing.suite	NumericTest	test_enotation_decimal		test exceedingly small decimals
+testing.suite	NumericTest	test_enotation_decimal_large		test exceedingly large decimals
+testing.suite	EscapingTest	test_percent_sign_round_trip		test that the dbapi accommodates for escaped / nonescaped
+testing.suite	ComponentReflectionTest	test_autoincrement_col		test that 'autoincrement' is reflected according to sqla's policy
+connectors	ZxJDBCConnector	_driver_kwargs		return kw arg dict to be sent to connect()
+connectors	ZxJDBCConnector	_create_jdbc_url	url	create a jdbc url from a :class ~sqlalchemy engine url url
+connectors	MxODBCConnector	_load_mx_exceptions	cls	import mxodbc exception classes into the module namespace as if they had been imported normally
+connectors	MxODBCConnector	_error_handler		return a handler that adjusts mxodbc's raised warnings to emit python standard warnings
+connectors	MxODBCConnector	create_connect_args	url	return a tuple of *args **kwargs for creating a connection
+event	_EventKey	contains		return true if this event key is registered to listen
+event	_Dispatch	_join	other	create a 'join' of this :class _dispatch and another
+event	_Dispatch	_update	other only_propagate	populate from the listeners in another :class _dispatch object
+event		_create_dispatcher_class	cls classname bases dict_	create a :class _dispatch class corresponding to an
+event		listen	target identifier fn	register a listener function for the given target
+event		listens_for	target identifier	decorate a function as a listener for the given target + identifier
+event		remove	target identifier fn	remove an event listener
+event		contains	target identifier fn	return true if the given target/ident/fn is set up to listen
+event	_ClsLevelDispatch	clear		clear all class level listeners
+event	_ClsLevelDispatch	for_modify	obj	return an event collection which can be modified
+event	_EmptyListener	for_modify	obj	return an event collection which can be modified
+event	_EmptyListener	__call__		execute this event
+event	_CompoundListener	exec_once		execute this event but only if it has not been executed already for this collection
+event	_CompoundListener	__call__		execute this event
+event	_ListenerCollection	for_modify	obj	return an event collection which can be modified
+event	_ListenerCollection	_update	other only_propagate	populate from the listeners in another :class _dispatch object
+ext	ShardedQuery	set_shard	shard_id	return a new query limited to a single shard id
+ext	ShardedSession	__init__	shard_chooser id_chooser query_chooser shards	construct a shardedsession
+ext	BakedQuery	bakery	cls size _size_alert	construct a new bakery
+ext	BakedQuery	add_criteria	fn	add a criteria function to this :class bakedquery
+ext	BakedQuery	with_criteria	fn	add a criteria function to a :class bakedquery cloned from this one
+ext	BakedQuery	for_session	session	return a :class result object for this :class bakedquery
+ext	BakedQuery	spoil	full	cancel any query caching that will occur on this bakedquery object
+ext	BakedQuery	_add_lazyload_options	options effective_path	used by per-state lazy loaders to add options to the "lazy load" query from a parent query
+ext	BakedQuery	_bake_subquery_loaders	session context	convert subquery eager loaders in the cache into baked queries
+ext	BakedQuery	_unbake_subquery_loaders	session context params	retrieve subquery eager loaders stored by _bake_subquery_loaders and turn them back into result objects that will iterate just
+ext	Result	params		specify parameters to be replaced into the string sql statement
+ext	Result	count		return the 'count'
+ext	Result	scalar		return the first element of the first result or none if no rows present
+ext	Result	first		return the first row
+ext	Result	one		return exactly one result or raise an exception
+ext	Result	one_or_none		return one or zero results or raise an exception for multiple rows
+ext	Result	all		return all rows
+ext	Result	get	ident	retrieve an object based on identity
+ext	Result	_load_on_ident	query key	load the given identity key from the database
+ext		bake_lazy_loaders		enable the use of baked queries for all lazyloaders systemwide
+ext		unbake_lazy_loaders		disable the use of baked queries for all lazyloaders systemwide
+ext		baked_lazyload	loadopt attr	indicate that the given attribute should be loaded using "lazy" loading with a "baked" query used in the load
+ext		find_native_user_instrumentation_hook	cls	find user-specified instrumentation management for a class
+ext	ExtendedInstrumentationRegistry	_collect_management_factories_for	cls	return a collection of factories in play or specified for a hierarchy
+ext	_ClassInstrumentationAdapter	_new_state_if_none	instance	install a default instancestate if none is present
+ext		_install_instrumented_lookups		replace global class/object management functions with extendedinstrumentationregistry implementations which
+ext		_reinstall_default_lookups		restore simplified lookups
+ext		compiles	class_	register a function as a compiler for a given :class
+ext		deregister	class_	remove all custom compilers associated with a given :class
+ext		association_proxy	target_collection attr	return a python property implementing a view of a target attribute which references an attribute on members of the
+ext	AssociationProxy	__init__	target_collection attr creator getset_factory	construct a new :class associationproxy
+ext	AssociationProxy	remote_attr		the 'remote' :class mapperproperty referenced by this
+ext	AssociationProxy	local_attr		the 'local' :class mapperproperty referenced by this
+ext	AssociationProxy	attr		return a tuple of (local_attr remote_attr)
+ext	AssociationProxy	target_class		the intermediary class handled by this :class associationproxy
+ext	AssociationProxy	scalar		return true if this :class associationproxy proxies a scalar
+ext	AssociationProxy	any	criterion	produce a proxied 'any' expression using exists
+ext	AssociationProxy	has	criterion	produce a proxied 'has' expression using exists
+ext	AssociationProxy	contains	obj	produce a proxied 'contains' expression using exists
+ext	_AssociationCollection	__init__	lazy_collection creator getter setter	constructs an _associationcollection
+ext	_AssociationList	__iter__		iterate over proxied values
+ext	_AssociationList	reverse		not supported use reversed mylist
+ext	_AssociationList	sort		not supported use sorted mylist
+ext	_AssociationSet	__iter__		iterate over proxied values
+ext	hybrid_method	__init__	func expr	create a new :class hybrid_method
+ext	hybrid_method	expression	expr	provide a modifying decorator that defines a sql-expression producing method
+ext	hybrid_property	__init__	fget fset fdel expr	create a new :class hybrid_property
+ext	hybrid_property	overrides		prefix for a method that is overriding an existing attribute
+ext	hybrid_property	getter	fget	provide a modifying decorator that defines a getter method
+ext	hybrid_property	setter	fset	provide a modifying decorator that defines a setter method
+ext	hybrid_property	deleter	fdel	provide a modifying decorator that defines a deletion method
+ext	hybrid_property	expression	expr	provide a modifying decorator that defines a sql-expression producing method
+ext	hybrid_property	comparator	comparator	provide a modifying decorator that defines a custom comparator producing method
+ext	hybrid_property	update_expression	meth	provide a modifying decorator that defines an update tuple producing method
+ext	MutableBase	_parents		dictionary of parent object->attribute name on the parent
+ext	MutableBase	coerce	cls key value	given a value coerce it into the target type
+ext	MutableBase	_get_listen_keys	cls attribute	given a descriptor attribute return a set() of the attribute keys which indicate a change in the state of this attribute
+ext	MutableBase	_listen_on_attribute	cls attribute coerce parent_cls	establish this type as a mutation listener for the given mapped descriptor
+ext	Mutable	changed		subclasses should call this method whenever change events occur
+ext	Mutable	associate_with_attribute	cls attribute	establish this type as a mutation listener for the given mapped descriptor
+ext	Mutable	associate_with	cls sqltype	associate this wrapper with all future mapped columns of the given type
+ext	Mutable	as_mutable	cls sqltype	associate a sql type with this mutable python type
+ext	MutableComposite	changed		subclasses should call this method whenever change events occur
+ext	MutableDict	__setitem__	key value	detect dictionary set events and emit change events
+ext	MutableDict	__delitem__	key	detect dictionary del events and emit change events
+ext	MutableDict	coerce	cls key value	convert plain dictionary to instance of this class
+ext	MutableList	__setitem__	index value	detect list set events and emit change events
+ext	MutableList	__setslice__	start end value	detect list set events and emit change events
+ext	MutableList	__delitem__	index	detect list del events and emit change events
+ext	MutableList	__delslice__	start end	detect list del events and emit change events
+ext	MutableList	coerce	cls index value	convert plain list to instance of this class
+ext	MutableSet	coerce	cls index value	convert plain set to instance of this class
+ext		ordering_list	attr count_from	prepares an :class orderinglist factory for use in mapper definitions
+ext		count_from_0	index collection	numbering function consecutive integers starting at 0
+ext		count_from_1	index collection	numbering function consecutive integers starting at 1
+ext		count_from_n_factory	start	numbering function consecutive integers starting at arbitrary start
+ext		_unsugar_count_from		builds counting functions from keyword arguments
+ext	OrderingList	__init__	ordering_attr ordering_func reorder_on_append	a custom list that manages position information for its children
+ext	OrderingList	reorder		synchronize ordering for the entire collection
+ext	OrderingList	_raw_append	entity	append without any ordering behavior
+ext		_reconstitute	cls dict_ items	reconstitute an :class orderinglist
+ext		classname_for_table	base tablename table	return the class name that should be used given the name of a table
+ext		name_for_scalar_relationship	base local_cls referred_cls constraint	return the attribute name that should be used to refer from one class to another for a scalar object reference
+ext		name_for_collection_relationship	base local_cls referred_cls constraint	return the attribute name that should be used to refer from one class to another for a collection reference
+ext		generate_relationship	base direction return_fn attrname	generate a :func relationship or :func backref on behalf of two
+ext	AutomapBase	prepare	cls engine reflect schema	extract mapped classes and relationships from the :class metadata and
+ext		automap_base	declarative_base	produce a declarative automap base
+ext	index_property	__init__	attr_name index default datatype	create a new :class index_property
+ext.declarative		_get_immediate_cls_attr	cls attrname strict	return an attribute of the class that is either present directly on the class e
+ext.declarative		_add_attribute	cls key value	add an attribute to an existing declarative class
+ext.declarative		_declarative_constructor		a simple constructor that allows initialization from kwargs
+ext.declarative		instrument_declarative	cls registry metadata	given a class configure the class declaratively using the given registry which can be any dictionary and
+ext.declarative		has_inherited_table	cls	given a class return true if any of the classes it inherits from has a mapped table otherwise return false
+ext.declarative		synonym_for	name map_column	decorator make a python @property a query synonym for a column
+ext.declarative		comparable_using	comparator_factory	decorator allow a python @property to be used in query criteria
+ext.declarative	declared_attr	cascading	cls	mark a :class declared_attr as cascading
+ext.declarative		declarative_base	bind metadata mapper cls	construct a base class for declarative class definitions
+ext.declarative		as_declarative		class decorator for :func declarative_base
+ext.declarative	DeferredReflection	prepare	cls engine	reflect all :class table objects for all current
+ext.declarative		add_class	classname cls	add a class to the _decl_class_registry associated with the given declarative class
+sql		register_function	identifier fn package	associate a callable with a particular func name
+sql	FunctionElement	__init__		construct a :class functionelement
+sql	FunctionElement	columns		the set of columns exported by this :class functionelement
+sql	FunctionElement	clauses		return the underlying :class clauselist which contains
+sql	FunctionElement	over	partition_by order_by rows range_	produce an over clause against this function
+sql	FunctionElement	within_group		produce a within group order by expr clause against this function
+sql	FunctionElement	filter		produce a filter clause against this function
+sql	FunctionElement	within_group_type	within_group	for types that define their return type as based on the criteria within a within group order by expression called by the
+sql	FunctionElement	alias	name flat	produce a :class alias construct against this
+sql	FunctionElement	select		produce a :func ~ expression select construct
+sql	FunctionElement	scalar		execute this :class functionelement against an embedded
+sql	FunctionElement	execute		execute this :class functionelement against an embedded
+sql	Function	__init__	name	construct a :class function
+sql	SchemaItem	_init_items		initialize the list of child items for this schemaitem
+sql	SchemaItem	get_children		used to allow schemavisitor access
+sql	SchemaItem	quote		return the value of the quote flag passed to this schema object for those schema items which
+sql	SchemaItem	info		info dictionary associated with the object allowing user-defined data to be associated with this :class
+sql	Table	quote_schema		return the value of the quote_schema flag passed to this :class
+sql	Table	__init__		constructor for :class ~ schema table
+sql	Table	_sorted_constraints		return the set of constraints as a list sorted by creation order
+sql	Table	foreign_key_constraints		:class foreignkeyconstraint objects referred to by this
+sql	Table	key		return the 'key' for this :class table
+sql	Table	bind		return the connectable associated with this table
+sql	Table	add_is_dependent_on	table	add a 'dependency' for this table
+sql	Table	append_column	column	append a :class ~ schema column to this :class ~ schema table
+sql	Table	append_constraint	constraint	append a :class ~ schema constraint to this
+sql	Table	append_ddl_listener	event_name listener	append a ddl event listener to this table
+sql	Table	exists	bind	return true if this table exists
+sql	Table	create	bind checkfirst	issue a create statement for this :class
+sql	Table	drop	bind checkfirst	issue a drop statement for this :class
+sql	Table	tometadata	metadata schema referred_schema_fn name	return a copy of this :class table associated with a different
+sql	Column	__init__		construct a new column object
+sql	Column	references	column	return true if this column references the given column via foreign key
+sql	Column	copy		create a copy of this column, unitialized
+sql	Column	_make_proxy	selectable name key name_is_truncatable	create a *proxy* for this column
+sql	ForeignKey	__init__	column _constraint use_alter name	construct a column-level foreign key
+sql	ForeignKey	copy	schema	produce a copy of this :class foreignkey object
+sql	ForeignKey	_get_colspec	schema table_name	return a string based 'column specification' for this :class
+sql	ForeignKey	references	table	return true if the given :class table is referenced by this
+sql	ForeignKey	get_referent	table	return the :class column in the given :class table
+sql	ForeignKey	_column_tokens		parse a string-based _colspec into its component parts
+sql	ForeignKey	column		return the target :class column referenced by this
+sql	DefaultGenerator	bind		return the connectable associated with this default
+sql	ColumnDefault	__init__	arg	"construct a new :class columndefault
+sql	ColumnDefault	_maybe_wrap_callable	fn	wrap callables that don't accept a context
+sql	Sequence	__init__	name start increment minvalue	construct a :class sequence object
+sql	Sequence	next_value	func	return a :class next_value function element
+sql	Sequence	create	bind checkfirst	creates this sequence in the database
+sql	Sequence	drop	bind checkfirst	drops this sequence from the database
+sql	Constraint	__init__	name deferrable initially _create_rule	create a sql constraint
+sql	ColumnCollectionConstraint	__init__		:param \*columns a sequence of column names or column objects
+sql	ColumnCollectionConstraint	contains_column	col	return true if this constraint contains the given column
+sql	CheckConstraint	__init__	sqltext name deferrable initially	construct a check constraint
+sql	ForeignKeyConstraint	__init__	columns refcolumns name onupdate	construct a composite-capable foreign key
+sql	ForeignKeyConstraint	referred_table		the :class table object to which this
+sql	ForeignKeyConstraint	column_keys		return a list of string keys representing the local columns in this :class
+sql	PrimaryKeyConstraint	_reload	columns	repopulate this :class primarykeyconstraint given
+sql	Index	__init__	name	construct an index object
+sql	Index	bind		return the connectable associated with this index
+sql	Index	create	bind	issue a create statement for this :class
+sql	Index	drop	bind	issue a drop statement for this :class
+sql	MetaData	__init__	bind reflect schema quote_schema	create a new metadata object
+sql	MetaData	is_bound		true if this metadata is bound to an engine or connection
+sql	MetaData	bind		an :class engine or :class connection to which this
+sql	MetaData	_bind_to	url bind	bind this metadata to an engine connection string or url
+sql	MetaData	clear		clear all table objects from this metadata
+sql	MetaData	remove	table	remove the given table object from this metadata
+sql	MetaData	sorted_tables		returns a list of :class table objects sorted in order of
+sql	MetaData	reflect	bind schema views only	load all available table definitions from the database
+sql	MetaData	append_ddl_listener	event_name listener	append a ddl event listener to this metadata
+sql	MetaData	create_all	bind tables checkfirst	create all tables stored in this metadata
+sql	MetaData	drop_all	bind tables checkfirst	drop all tables stored in this metadata
+sql	ThreadLocalMetaData	__init__		construct a threadlocalmetadata
+sql	ThreadLocalMetaData	bind		the bound engine or connection for this thread
+sql	ThreadLocalMetaData	_bind_to	url bind	bind to a connectable in the caller's thread
+sql	ThreadLocalMetaData	is_bound		true if there is a bind for this thread
+sql	ThreadLocalMetaData	dispose		dispose all bound engines in all thread contexts
+sql	String	__init__	length collation convert_unicode unicode_error	create a string-holding type
+sql	Unicode	__init__	length	create a :class unicode object
+sql	UnicodeText	__init__	length	create a unicode-converting text type
+sql	Numeric	__init__	precision scale decimal_return_scale asdecimal	construct a numeric
+sql	Float	__init__	precision asdecimal decimal_return_scale	construct a float
+sql	DateTime	__init__	timezone	construct a new :class datetime
+sql	_Binary	coerce_compared_value	op value	see :meth typeengine coerce_compared_value for a description
+sql	LargeBinary	__init__	length	construct a largebinary type
+sql	SchemaType	create	bind checkfirst	issue create ddl for this type if applicable
+sql	SchemaType	drop	bind checkfirst	issue drop ddl for this type if applicable
+sql	Enum	__init__		construct an enum
+sql	PickleType	__init__	protocol pickler comparator	construct a pickletype
+sql	Boolean	__init__	create_constraint name _create_events	construct a boolean
+sql	Interval	__init__	native second_precision day_precision	construct an interval object
+sql	Interval	coerce_compared_value	op value	see :meth typeengine coerce_compared_value for a description
+sql	JSON	__init__	none_as_null	construct a :class types json type
+sql	ARRAY	__init__	item_type as_tuple dimensions zero_indexes	construct an :class types array
+sql	TIMESTAMP	__init__	timezone	construct a new :class timestamp
+sql		find_join_source	clauses join_to	given a list of from clauses and a selectable return the first index and element from the list of
+sql		visit_binary_product	fn expr	produce a traversal of the given expression delivering column comparisons to the given function
+sql		find_tables	clause check_columns include_aliases include_joins	locate table objects within the given expression
+sql		unwrap_order_by	clause	break up an 'order by' expression into individual column-expressions
+sql		expand_column_list_from_order_by	collist order_by	given the columns clause and order by of a selectable return a list of column expressions that can be added to the collist
+sql		clause_is_present	clause search	given a target clause and a second to search within return true if the target is plainly present in the search without any
+sql		surface_column_elements	clause	traverse and yield only outer-exposed column elements such as would be addressable in the where clause of a select if this element were
+sql		selectables_overlap	left right	return true if left/right have some overlapping selectable
+sql		bind_values	clause	return an ordered list of "bound" values in the given clause
+sql		adapt_criterion_to_null	crit nulls	given criterion containing bind params convert selected elements to is null
+sql		reduce_columns	columns	given a list of columns return a 'reduced' set based on natural equivalents
+sql		criterion_as_pairs	expression consider_as_foreign_keys consider_as_referenced_keys any_operator	traverse an expression and locate binary criterion pairs
+sql		_deep_annotate	element annotations exclude	deep copy the given clauseelement annotating each element with the given annotations dictionary
+sql		_deep_deannotate	element values	deep copy the given element removing annotations
+sql		_shallow_annotate	element annotations	annotate the given clauseelement and copy its internals so that internal objects refer to the new annotated object
+sql	TypeEngine	evaluates_none		return a copy of this type which has the :attr should_evaluate_none
+sql	TypeEngine	compare_against_backend	dialect conn_type	compare this type against the given backend type
+sql	TypeEngine	literal_processor	dialect	return a conversion function for processing literal values that are to be rendered directly without using binds
+sql	TypeEngine	bind_processor	dialect	return a conversion function for processing bind values
+sql	TypeEngine	result_processor	dialect coltype	return a conversion function for processing result row values
+sql	TypeEngine	column_expression	colexpr	given a select column expression return a wrapping sql expression
+sql	TypeEngine	_has_column_expression		memoized boolean check if column_expression is implemented
+sql	TypeEngine	bind_expression	bindvalue	"given a bind value (i e a :class bindparameter instance),
+sql	TypeEngine	_has_bind_expression		memoized boolean check if bind_expression is implemented
+sql	TypeEngine	compare_values	x y	compare two values for equality
+sql	TypeEngine	get_dbapi_type	dbapi	return the corresponding type object from the underlying db-api if any
+sql	TypeEngine	python_type		return the python type object expected to be returned by instances of this type if known
+sql	TypeEngine	with_variant	type_ dialect_name	produce a new type object that will utilize the given type when applied to the dialect of the given name
+sql	TypeEngine	_type_affinity		return a rudimental 'affinity' value expressing the general class of type
+sql	TypeEngine	dialect_impl	dialect	return a dialect-specific implementation for this :class
+sql	TypeEngine	_cached_literal_processor	dialect	return a dialect-specific literal processor for this type
+sql	TypeEngine	_cached_bind_processor	dialect	return a dialect-specific bind processor for this type
+sql	TypeEngine	_cached_result_processor	dialect coltype	return a dialect-specific result processor for this type
+sql	TypeEngine	_dialect_info	dialect	return a dialect-specific registry which caches a dialect-specific implementation bind processing
+sql	TypeEngine	adapt	cls	produce an "adapted" form of this type given an "impl" class to work with
+sql	TypeEngine	coerce_compared_value	op value	suggest a type for a 'coerced' python value in an expression
+sql	TypeEngine	compile	dialect	produce a string-compiled form of this :class typeengine
+sql	UserDefinedType	coerce_compared_value	op value	suggest a type for a 'coerced' python value in an expression
+sql	TypeDecorator	__init__		construct a :class typedecorator
+sql	TypeDecorator	type_engine	dialect	return a dialect-specific :class typeengine instance
+sql	TypeDecorator	load_dialect_impl	dialect	return a :class typeengine object corresponding to a dialect
+sql	TypeDecorator	__getattr__	key	proxy all other undefined accessors to the underlying implementation
+sql	TypeDecorator	process_literal_param	value dialect	receive a literal parameter value to be rendered inline within a statement
+sql	TypeDecorator	process_bind_param	value dialect	receive a bound parameter value to be converted
+sql	TypeDecorator	process_result_value	value dialect	receive a result-row column value to be converted
+sql	TypeDecorator	_has_bind_processor		memoized boolean check if process_bind_param is implemented
+sql	TypeDecorator	_has_literal_processor		memoized boolean check if process_literal_param is implemented
+sql	TypeDecorator	literal_processor	dialect	provide a literal processing function for the given :class
+sql	TypeDecorator	bind_processor	dialect	provide a bound value processing function for the given :class
+sql	TypeDecorator	_has_result_processor		memoized boolean check if process_result_value is implemented
+sql	TypeDecorator	result_processor	dialect coltype	provide a result value processing function for the given :class
+sql	TypeDecorator	coerce_compared_value	op value	suggest a type for a 'coerced' python value in an expression
+sql	TypeDecorator	copy		produce a copy of this :class typedecorator instance
+sql	TypeDecorator	get_dbapi_type	dbapi	return the dbapi type object represented by this :class
+sql	TypeDecorator	compare_values	x y	given two values compare them for equality
+sql	Variant	__init__	base mapping	construct a new :class variant
+sql	Variant	with_variant	type_ dialect_name	return a new :class variant which adds the given
+sql	Variant	comparator_factory		express comparison behavior in terms of the base type
+sql	UpdateBase	params		set the parameters for the statement
+sql	UpdateBase	bind		return a 'bind' linked to this :class updatebase
+sql	UpdateBase	returning		add a :term returning or equivalent clause to this statement
+sql	UpdateBase	with_hint	text selectable dialect_name	add a table hint for a single table to this insert/update/delete statement
+sql	ValuesBase	values		specify a fixed values clause for an insert statement or the set clause for an update
+sql	ValuesBase	return_defaults		make use of a :term returning clause for the purpose of fetching server-side expressions and defaults
+sql	Insert	__init__	table values inline bind	construct an :class insert object
+sql	Insert	from_select	names select include_defaults	return a new :class insert construct which represents
+sql	Update	__init__	table whereclause values inline	construct an :class update object
+sql	Update	where	whereclause	return a new update() construct with the given expression added to its where clause joined to the existing clause via and if any
+sql	Delete	__init__	table whereclause bind returning	construct :class delete object
+sql	Delete	where	whereclause	add the given where clause to a newly returned delete construct
+sql		_inv_impl	expr op	see :meth columnoperators __inv__
+sql		_neg_impl	expr op	see :meth columnoperators __neg__
+sql		_match_impl	expr op other	see :meth columnoperators match
+sql		_distinct_impl	expr op	see :meth columnoperators distinct
+sql		_between_impl	expr op cleft cright	see :meth columnoperators between
+sql	Operators	__and__	other	implement the & operator
+sql	Operators	__or__	other	implement the | operator
+sql	Operators	__invert__		implement the ~ operator
+sql	Operators	op	opstring precedence is_comparison	produce a generic operator function
+sql	Operators	operate	op	operate on an argument
+sql	Operators	reverse_operate	op other	reverse operate on an argument
+sql	ColumnOperators	__lt__	other	implement the < operator
+sql	ColumnOperators	__le__	other	implement the <= operator
+sql	ColumnOperators	__eq__	other	implement the == operator
+sql	ColumnOperators	__ne__	other	implement the != operator
+sql	ColumnOperators	is_distinct_from	other	implement the is distinct from operator
+sql	ColumnOperators	isnot_distinct_from	other	implement the is not distinct from operator
+sql	ColumnOperators	__gt__	other	implement the > operator
+sql	ColumnOperators	__ge__	other	implement the >= operator
+sql	ColumnOperators	__neg__		implement the - operator
+sql	ColumnOperators	__getitem__	index	implement the [] operator
+sql	ColumnOperators	__lshift__	other	implement the << operator
+sql	ColumnOperators	__rshift__	other	implement the >> operator
+sql	ColumnOperators	concat	other	implement the 'concat' operator
+sql	ColumnOperators	like	other escape	implement the like operator
+sql	ColumnOperators	ilike	other escape	implement the ilike operator e g case insensitive like
+sql	ColumnOperators	in_	other	implement the in operator
+sql	ColumnOperators	notin_	other	implement the not in operator
+sql	ColumnOperators	notlike	other escape	implement the not like operator
+sql	ColumnOperators	notilike	other escape	implement the not ilike operator
+sql	ColumnOperators	is_	other	implement the is operator
+sql	ColumnOperators	isnot	other	implement the is not operator
+sql	ColumnOperators	startswith	other	implement the startwith operator
+sql	ColumnOperators	endswith	other	implement the 'endswith' operator
+sql	ColumnOperators	contains	other	implement the 'contains' operator
+sql	ColumnOperators	match	other	implements a database-specific 'match' operator
+sql	ColumnOperators	desc		produce a :func ~ expression desc clause against the
+sql	ColumnOperators	asc		produce a :func ~ expression asc clause against the
+sql	ColumnOperators	nullsfirst		produce a :func ~ expression nullsfirst clause against the
+sql	ColumnOperators	nullslast		produce a :func ~ expression nullslast clause against the
+sql	ColumnOperators	collate	collation	produce a :func ~ expression collate clause against
+sql	ColumnOperators	__radd__	other	implement the + operator in reverse
+sql	ColumnOperators	__rsub__	other	implement the - operator in reverse
+sql	ColumnOperators	__rmul__	other	implement the * operator in reverse
+sql	ColumnOperators	__rdiv__	other	implement the / operator in reverse
+sql	ColumnOperators	__rmod__	other	implement the % operator in reverse
+sql	ColumnOperators	between	cleft cright symmetric	produce a :func ~ expression between clause against
+sql	ColumnOperators	distinct		produce a :func ~ expression distinct clause against the
+sql	ColumnOperators	any_		produce a :func ~ expression any_ clause against the
+sql	ColumnOperators	all_		produce a :func ~ expression all_ clause against the
+sql	ColumnOperators	__add__	other	implement the + operator
+sql	ColumnOperators	__sub__	other	implement the - operator
+sql	ColumnOperators	__mul__	other	implement the * operator
+sql	ColumnOperators	__div__	other	implement the / operator
+sql	ColumnOperators	__mod__	other	implement the % operator
+sql	ColumnOperators	__truediv__	other	implement the // operator
+sql	ColumnOperators	__rtruediv__	other	implement the // operator in reverse
+sql		mirror	op	rotate a comparison operator 180 degrees
+sql	Compiled	__init__	dialect statement bind schema_translate_map	construct a new :class compiled object
+sql	Compiled	compile		produce the internal string representation of this element
+sql	Compiled	sql_compiler		return a compiled that is capable of processing sql expressions
+sql	Compiled	__str__		return the string text of the generated sql or ddl
+sql	Compiled	construct_params	params	return the bind params for this compiled object
+sql	Compiled	params		return the bind params for this compiled object
+sql	Compiled	execute		execute this compiled object
+sql	Compiled	scalar		execute this compiled object and return the result's scalar value
+sql	SQLCompiler	__init__	dialect statement column_keys inline	construct a new :class sqlcompiler object
+sql	SQLCompiler	_init_cte_state		initialize collections related to ctes only if a cte is located to save on the overhead of
+sql	SQLCompiler	_nested_result		special api to support the use case of 'nested result sets'
+sql	SQLCompiler	construct_params	params _group_number _check	return a dictionary of bind parameter keys and values
+sql	SQLCompiler	params		return the bind param dictionary embedded into this compiled object for those values that are present
+sql	SQLCompiler	_create_result_map	result	utility method used for unit tests only
+sql	SQLCompiler	default_from		called when a select statement has no froms and no from clause is to be appended
+sql	SQLCompiler	render_literal_value	value type_	render the value of a bind parameter as a quoted literal
+sql	SQLCompiler	_label_select_column	select column populate_result_map asfrom	produce labeled columns present in a select()
+sql	SQLCompiler	_transform_select_for_nested_joins	select	rewrite any "a join b join c " expression as "a join (select * from b join c) as anon", to support
+sql	SQLCompiler	get_select_precolumns	select	called when building a select statement position is just before column list
+sql	SQLCompiler	update_limit_clause	update_stmt	provide a hook for mysql to add limit to the update
+sql	SQLCompiler	update_tables_clause	update_stmt from_table extra_froms	provide a hook to override the initial table clause in an update statement
+sql	SQLCompiler	update_from_clause	update_stmt from_table extra_froms from_hints	provide a hook to override the generation of an update
+sql	DDLCompiler	define_constraint_remote_table	constraint table preparer	format the remote table clause of a create constraint clause
+sql	IdentifierPreparer	__init__	dialect initial_quote final_quote escape_quote	construct a new identifierpreparer object
+sql	IdentifierPreparer	_escape_identifier	value	escape an identifier
+sql	IdentifierPreparer	_unescape_identifier	value	canonicalize an escaped identifier
+sql	IdentifierPreparer	quote_identifier	value	quote an identifier
+sql	IdentifierPreparer	_requires_quotes	value	return true if the given identifier requires quoting
+sql	IdentifierPreparer	quote_schema	schema force	conditionally quote a schema
+sql	IdentifierPreparer	quote	ident force	conditionally quote an identifier
+sql	IdentifierPreparer	format_table	table use_schema name	prepare a quoted table and schema name
+sql	IdentifierPreparer	format_schema	name quote	prepare a quoted schema name
+sql	IdentifierPreparer	format_column	column use_table name table_name	prepare a quoted column name
+sql	IdentifierPreparer	format_table_seq	table use_schema	format table name and schema as a tuple
+sql	IdentifierPreparer	unformat_identifiers	identifiers	unpack 'schema table column'-like strings into components
+sql		_generate_dispatch	cls	return an optimized visit dispatch function for the cls for use by the compiler
+sql	ClauseVisitor	iterate	obj	traverse the given expression structure returning an iterator of all elements
+sql	ClauseVisitor	traverse	obj	traverse and visit the given expression structure
+sql	ClauseVisitor	_visitor_iterator		iterate through this visitor and each 'chained' visitor
+sql	ClauseVisitor	chain	visitor	'chain' an additional clausevisitor onto this clausevisitor
+sql	CloningVisitor	copy_and_process	list_	apply cloned traversal to the given list of elements and return the new list
+sql	CloningVisitor	traverse	obj	traverse and visit the given expression structure
+sql	ReplacingCloningVisitor	replace	elem	receive pre-copied elements during a cloning traversal
+sql	ReplacingCloningVisitor	traverse	obj	traverse and visit the given expression structure
+sql		iterate	obj opts	traverse the given expression structure returning an iterator
+sql		iterate_depthfirst	obj opts	traverse the given expression structure returning an iterator
+sql		traverse_using	iterator obj visitors	visit the given expression structure using the given iterator of objects
+sql		traverse	obj opts visitors	traverse and visit the given expression structure using the default iterator
+sql		traverse_depthfirst	obj opts visitors	traverse and visit the given expression structure using the depth-first iterator
+sql		cloned_traverse	obj opts visitors	clone the given expression structure allowing modifications by visitors
+sql		replacement_traverse	obj opts replace	clone the given expression structure allowing element replacement by a given replacement function
+sql	_DDLCompiles	_compiler	dialect	return a compiler appropriate for this clauseelement given a dialect
+sql	DDLElement	execute	bind target	execute this ddl immediately
+sql	DDLElement	execute_at	event_name target	link execution of this ddl to the ddl lifecycle of a schemaitem
+sql	DDLElement	against	target	return a copy of this ddl against a specific schema item
+sql	DDLElement	execute_if	dialect callable_ state	return a callable that will execute this ddlelement conditionally
+sql	DDLElement	__call__	target bind	execute the ddl as a ddl_listener
+sql	DDL	__init__	statement on context bind	create a ddl statement
+sql	_CreateDropBase	_create_rule_disable	compiler	allow disable of _create_rule using a callable
+sql	CreateSchema	__init__	name quote	create a new :class createschema construct
+sql	DropSchema	__init__	name quote cascade	create a new :class dropschema construct
+sql	CreateTable	__init__	element on bind include_foreign_key_constraints	create a :class createtable construct
+sql		sort_tables	tables skip_fn extra_dependencies	sort a collection of :class table objects based on dependency
+sql		sort_tables_and_constraints	tables filter_fn extra_dependencies	sort a collection of :class table / :class foreignkeyconstraint
+sql		_generative	fn	mark a method as generative
+sql	DialectKWArgs	argument_for	cls dialect_name argument_name default	add a new kind of dialect-specific keyword argument for this class
+sql	DialectKWArgs	dialect_kwargs		a collection of keyword arguments specified as dialect-specific options to this construct
+sql	DialectKWArgs	kwargs		a synonym for :attr dialectkwargs dialect_kwargs
+sql	DialectKWArgs	dialect_options		a collection of keyword arguments specified as dialect-specific options to this construct
+sql	Executable	execution_options		set non-sql options for the statement which take effect during execution
+sql	Executable	execute		compile and execute this :class executable
+sql	Executable	scalar		compile and execute this :class executable, returning the
+sql	Executable	bind		returns the :class engine or :class connection to
+sql	SchemaEventTarget	_set_parent	parent	associate with this schemaevent's parent object
+sql	ColumnCollection	replace	column	add the given column to this collection removing unaliased versions of this column as well as existing columns with the
+sql	ColumnCollection	add	column	add a column to this collection
+sql		_offset_or_limit_clause	element name type_	convert the given value to an "offset or limit" clause
+sql		_offset_or_limit_clause_asint	clause attrname	convert the "offset or limit" clause of a select construct to an integer
+sql		subquery	alias	return an :class alias object derived
+sql		alias	selectable name flat	return an :class alias object
+sql		lateral	selectable name	return a :class lateral object
+sql		tablesample	selectable sampling name seed	return a :class tablesample object
+sql	HasPrefixes	prefix_with		add one or more expressions following the statement keyword i e
+sql	HasSuffixes	suffix_with		add one or more expressions following the statement as a whole
+sql	FromClause	count	functions whereclause	return a select count generated against this :class
+sql	FromClause	select	whereclause	return a select of this :class fromclause
+sql	FromClause	join	right onclause isouter full	return a :class join from this :class fromclause
+sql	FromClause	outerjoin	right onclause full	return a :class join from this :class fromclause
+sql	FromClause	alias	name flat	return an alias of this :class fromclause
+sql	FromClause	lateral	name	return a lateral alias of this :class fromclause
+sql	FromClause	tablesample	sampling name seed	return a tablesample alias of this :class fromclause
+sql	FromClause	is_derived_from	fromclause	return true if this fromclause is 'derived' from the given fromclause
+sql	FromClause	_is_lexical_equivalent	other	return true if this fromclause and the other represent the same lexical identity
+sql	FromClause	replace_selectable	sqlutil old alias	replace all occurrences of fromclause 'old' with the given alias object returning a copy of this :class
+sql	FromClause	correspond_on_equivalents	column equivalents	return corresponding_column for the given column or if none search for a match in the given dictionary
+sql	FromClause	corresponding_column	column require_embedded	given a :class columnelement, return the exported
+sql	FromClause	description		a brief description of this fromclause
+sql	FromClause	_reset_exported		delete memoized collections when a fromclause is cloned
+sql	FromClause	columns		a named-based collection of :class columnelement objects
+sql	FromClause	primary_key		return the collection of column objects which comprise the primary key of this fromclause
+sql	FromClause	foreign_keys		return the collection of foreignkey objects which this fromclause references
+sql	FromClause	_populate_column_collection		called on subclasses to establish the c collection
+sql	FromClause	_refresh_for_new_column	column	given a column added to the c collection of an underlying
+sql	Join	__init__	left right onclause isouter	construct a new :class join
+sql	Join	_create_outerjoin	cls left right onclause	return an outer join clause element
+sql	Join	_create_join	cls left right onclause	produce a :class join object given two :class fromclause
+sql	Join	_join_condition	cls a b ignore_nonexistent_tables	create a join condition between two tables or selectables
+sql	Join	select	whereclause	create a :class select from this :class join
+sql	Join	alias	sqlutil name flat	return an alias of this :class join
+sql	HasCTE	cte	name recursive	return a new :class cte, or common table expression instance
+sql	TableClause	__init__	name	produce a new :class tableclause
+sql	TableClause	insert	dml values inline	generate an :func insert construct against this
+sql	TableClause	update	dml whereclause values inline	generate an :func update construct against this
+sql	TableClause	delete	dml whereclause	generate a :func delete construct against this
+sql	ForUpdateArg	parse_legacy_select	arg	parse the for_update argument of :func select
+sql	ForUpdateArg	__init__	nowait read of skip_locked	represents arguments specified to :meth select for_update
+sql	SelectBase	as_scalar		return a 'scalar' representation of this selectable which can be used as a column expression
+sql	SelectBase	label	name	return a 'scalar' representation of this selectable embedded as a subquery with a label
+sql	SelectBase	autocommit		return a new selectable with the 'autocommit' flag set to true
+sql	SelectBase	_generate		override the default _generate() method to also clear out exported collections
+sql	GenerativeSelect	for_update		provide legacy dialect support for the for_update attribute
+sql	GenerativeSelect	with_for_update	nowait read of skip_locked	specify a for update clause for this :class generativeselect
+sql	GenerativeSelect	apply_labels		return a new selectable with the 'use_labels' flag set to true
+sql	GenerativeSelect	_limit		get an integer value for the limit this should only be used
+sql	GenerativeSelect	_simple_int_limit		true if the limit clause is a simple integer false if it is not present or is a sql expression
+sql	GenerativeSelect	_simple_int_offset		true if the offset clause is a simple integer false if it is not present or is a sql expression
+sql	GenerativeSelect	_offset		get an integer value for the offset this should only be used
+sql	GenerativeSelect	limit	limit	return a new selectable with the given limit criterion applied
+sql	GenerativeSelect	offset	offset	return a new selectable with the given offset criterion applied
+sql	GenerativeSelect	order_by		return a new selectable with the given list of order by criterion applied
+sql	GenerativeSelect	group_by		return a new selectable with the given list of group by criterion applied
+sql	GenerativeSelect	append_order_by		append the given order by criterion applied to this selectable
+sql	GenerativeSelect	append_group_by		append the given group by criterion applied to this selectable
+sql	CompoundSelect	_create_union	cls	return a union of multiple selectables
+sql	CompoundSelect	_create_union_all	cls	return a union all of multiple selectables
+sql	CompoundSelect	_create_except	cls	return an except of multiple selectables
+sql	CompoundSelect	_create_except_all	cls	return an except all of multiple selectables
+sql	CompoundSelect	_create_intersect	cls	return an intersect of multiple selectables
+sql	CompoundSelect	_create_intersect_all	cls	return an intersect all of multiple selectables
+sql	Select	__init__	columns whereclause from_obj distinct	construct a new :class select
+sql	Select	_get_display_froms	explicit_correlate_froms implicit_correlate_froms	return the full list of 'from' clauses to be displayed
+sql	Select	froms		return the displayed list of fromclause elements
+sql	Select	with_statement_hint	text dialect_name	add a statement hint to this :class select
+sql	Select	with_hint	selectable text dialect_name	add an indexing or other executional context hint for the given selectable to this :class
+sql	Select	locate_all_froms		return a set of all fromclause elements referenced by this select
+sql	Select	inner_columns		an iterator of all columnelement expressions which would be rendered into the columns clause of the resulting select statement
+sql	Select	get_children	column_collections	return child elements as per the clauseelement specification
+sql	Select	column	column	return a new select() construct with the given column expression added to its columns clause
+sql	Select	reduce_columns	sqlutil only_synonyms	return a new :func select construct with redundantly
+sql	Select	with_only_columns	columns	return a new :func select construct with its columns
+sql	Select	where	whereclause	return a new select() construct with the given expression added to its where clause joined to the existing clause via and if any
+sql	Select	having	having	return a new select() construct with the given expression added to its having clause joined to the existing clause via and if any
+sql	Select	distinct		return a new select() construct which will apply distinct to its columns clause
+sql	Select	select_from	fromclause	return a new :func select construct with the
+sql	Select	correlate		return a new :class select which will correlate the given from
+sql	Select	correlate_except		return a new :class select which will omit the given from
+sql	Select	append_correlation	fromclause	append the given correlation expression to this select() construct
+sql	Select	append_column	column	append the given column expression to the columns clause of this select() construct
+sql	Select	append_prefix	clause	append the given columns clause prefix expression to this select() construct
+sql	Select	append_whereclause	whereclause	append the given expression to this select() construct's where criterion
+sql	Select	append_having	having	append the given expression to this select() construct's having criterion
+sql	Select	append_from	fromclause	append the given fromclause expression to this select() construct's from clause
+sql	Select	self_group	against	return a 'grouping' construct as per the clauseelement specification
+sql	Select	union	other	return a sql union of this select() construct against the given selectable
+sql	Select	union_all	other	return a sql union all of this select() construct against the given selectable
+sql	Select	except_	other	return a sql except of this select() construct against the given selectable
+sql	Select	except_all	other	return a sql except all of this select() construct against the given selectable
+sql	Select	intersect	other	return a sql intersect of this select() construct against the given selectable
+sql	Select	intersect_all	other	return a sql intersect all of this select() construct against the given selectable
+sql	ScalarSelect	where	crit	apply a where clause to the select statement referred to by this :class
+sql	Exists	__init__		construct a new :class exists against an existing
+sql	Exists	select_from	clause	return a new :class exists construct applying the given
+sql	Exists	where	clause	return a new exists() construct with the given expression added to its where clause joined to the existing clause via and if any
+sql		collate	expression collation	return the clause expression collate collation
+sql		between	expr lower_bound upper_bound symmetric	produce a between predicate clause
+sql		literal	value type_	return a literal clause bound to a bind parameter
+sql		outparam	key type_	create an 'out' parameter for usage in functions stored procedures for databases which support them
+sql		not_	clause	return a negation of the given clause i e not clause
+sql	ClauseElement	_clone		create a shallow copy of this clauseelement
+sql	ClauseElement	_constructor		return the 'constructor' for this clauseelement
+sql	ClauseElement	_cloned_set		return the set consisting all cloned ancestors of this clauseelement
+sql	ClauseElement	_annotate	values	return a copy of this clauseelement with annotations updated by the given dictionary
+sql	ClauseElement	_with_annotations	values	return a copy of this clauseelement with annotations replaced by the given dictionary
+sql	ClauseElement	_deannotate	values clone	return a copy of this :class clauseelement with annotations
+sql	ClauseElement	unique_params		return a copy with :func bindparam() elements replaced
+sql	ClauseElement	params		return a copy with :func bindparam() elements replaced
+sql	ClauseElement	compare	other	compare this clauseelement to the given clauseelement
+sql	ClauseElement	_copy_internals	clone	reassign internal elements to be clones of themselves
+sql	ClauseElement	get_children		return immediate child elements of this :class clauseelement
+sql	ClauseElement	self_group	against	apply a 'grouping' to this :class clauseelement
+sql	ClauseElement	compile	default bind dialect	compile this sql expression
+sql	ClauseElement	_compiler	dialect	return a compiler appropriate for this clauseelement given a dialect
+sql	ClauseElement	__and__	other	'and' at the clauseelement level
+sql	ClauseElement	__or__	other	'or' at the clauseelement level
+sql	ColumnElement	expression		return a column expression
+sql	ColumnElement	shares_lineage	othercolumn	return true if the given :class columnelement
+sql	ColumnElement	_compare_name_for_result	other	return true if the given column element compares to this one when targeting within a result row
+sql	ColumnElement	_make_proxy	selectable name name_is_truncatable	create a new :class columnelement representing this
+sql	ColumnElement	compare	other use_proxies equivalents	compare this columnelement to another
+sql	ColumnElement	cast	type_	produce a type cast i e cast(<expression> as <type>)
+sql	ColumnElement	label	name	produce a column label i e <columnname> as <name>
+sql	ColumnElement	anon_label		provides a constant 'anonymous label' for this columnelement
+sql	BindParameter	__init__	key value type_ unique	produce a "bound expression"
+sql	BindParameter	_with_value	value	return a copy of this :class bindparameter with the given value
+sql	BindParameter	effective_value		return the value of this bound parameter taking into account if the callable parameter
+sql	BindParameter	compare	other	compare this :class bindparameter to the given clause
+sql	BindParameter	__getstate__		execute a deferred value for serialization purposes
+sql	TextClause	_create_text	text bind bindparams typemap	construct a new :class textclause clause representing
+sql	TextClause	bindparams		establish the values and/or types of bound parameters within this :class
+sql	TextClause	columns	selectable	turn this :class textclause object into a :class textasfrom
+sql	Null	_instance	cls	return a constant :class null construct
+sql	False_	_instance	cls	return a :class false_ construct
+sql	True_	_instance	cls	return a constant :class true_ construct
+sql	ClauseList	compare	other	compare this :class clauselist to the given :class clauselist,
+sql	BooleanClauseList	and_	cls	produce a conjunction of expressions joined by and
+sql	BooleanClauseList	or_	cls	produce a conjunction of expressions joined by or
+sql	Tuple	__init__		return a :class tuple
+sql	Case	__init__	whens value else_	produce a case expression
+sql		literal_column	text type_	produce a :class columnclause object that has the
+sql	Cast	__init__	expression type_	produce a cast expression
+sql	TypeCoerce	__init__	expression type_	associate a sql expression with a particular type without rendering cast
+sql	Extract	__init__	field expr	return a :class extract construct
+sql	UnaryExpression	_create_nullsfirst	cls column	produce the nulls first modifier for an order by expression
+sql	UnaryExpression	_create_nullslast	cls column	produce the nulls last modifier for an order by expression
+sql	UnaryExpression	_create_desc	cls column	produce a descending order by clause element
+sql	UnaryExpression	_create_asc	cls column	produce an ascending order by clause element
+sql	UnaryExpression	_create_distinct	cls expr	produce an column-expression-level unary distinct clause
+sql	UnaryExpression	compare	other	compare this :class unaryexpression against the given :class
+sql	CollectionAggregate	_create_any	cls expr	produce an any expression
+sql	CollectionAggregate	_create_all	cls expr	produce an all expression
+sql	BinaryExpression	compare	other	compare this :class binaryexpression against the given :class binaryexpression
+sql	Over	__init__	element partition_by order_by range_	produce an :class over object against a function
+sql	Over	func		the element referred to by this :class over
+sql	WithinGroup	__init__	element	produce a :class withingroup object against a function
+sql	WithinGroup	over	partition_by order_by	produce an over clause against this :class withingroup
+sql	FunctionFilter	__init__	func	produce a :class functionfilter object against a function
+sql	FunctionFilter	filter		produce an additional filter against the function
+sql	FunctionFilter	over	partition_by order_by	produce an over clause against this filtered function
+sql	Label	__init__	name element type_	return a :class label object for the given :class
+sql	ColumnClause	__init__	text type_ is_literal _selectable	produce a :class columnclause object
+sql		_as_truncated	value	coerce the given value to :class _truncated_label
+sql		_expand_cloned	elements	expand the given set of clauseelements to be the set of all 'cloned' predecessors
+sql		_select_iterables	elements	expand tables into individual columns in the given list of column expressions
+sql		_cloned_intersection	a b	return the intersection of sets a and b counting any overlap between 'cloned' predecessors
+sql		_is_column	col	true if col is an instance of :class columnelement
+sql		_find_columns	clause	locate column objects within the given expression
+sql	AnnotatedColumnElement	name		pull 'name' from parent if not present
+sql	AnnotatedColumnElement	table		pull 'table' from parent if not present
+sql	AnnotatedColumnElement	key		pull 'key' from parent if not present
+sql		_get_crud_params	compiler stmt	create a set of tuples representing column/string pairs for use in an insert or update statement
+sql		_append_param_insert_pk_returning	compiler stmt c values	create a primary key expression in the insert statement and possibly a returning clause for it
+sql		_append_param_insert_pk	compiler stmt c values	create a bound parameter in the insert statement to receive a 'prefetched' default value

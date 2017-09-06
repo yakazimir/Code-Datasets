@@ -1,0 +1,752 @@
+<tt style='background-color:#E8E8E8;'> core.RandPool <a href=' /volatile.py#L628'>__init__</a>()</tt>	Each parameter is a volatile object or a couple volatile object weight.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L27'>__init__</a>(res,name,stats)</tt>	Create a packet list from a list of packets.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L90'>summary</a>(prn,lfilter)</tt>	Prints a summary of each packet prn function to apply to each packet instead of lambda x x.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L102'>nsummary</a>(prn,lfilter)</tt>	Prints a summary of each packet with the packet's number prn function to apply to each packet instead of lambda x x.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L115'>display</a>()</tt>	Deprecated is show().
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L118'>show</a>()</tt>	Best way to display the packet list defaults to nsummary() method.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L122'>filter</a>(func)</tt>	Returns a packet list filtered by a truth function.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L126'>make_table</a>()</tt>	Prints a table using a function that returns for each packet its head column value head row value and displayed value ex p.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L130'>make_lined_table</a>()</tt>	Same as make_table but print a table with lines.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L133'>make_tex_table</a>()</tt>	Same as make_table but print a table with latex syntax.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L137'>plot</a>(f,lfilter,plot_xy)</tt>	Applies a function to each packet to get a value that will be plotted with matplotlib.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L164'>diffplot</a>(f,delay,lfilter)</tt>	Diffplot(f delay=1 lfilter=none) applies a function to couples (l[i],l[i+delay]).
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L191'>multiplot</a>(f,lfilter,plot_xy)</tt>	Uses a function that returns a label and a value for this label then plots all the values label by label.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L227'>rawhexdump</a>()</tt>	Prints an hexadecimal dump of each packet in the list.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L232'>hexraw</a>(lfilter)</tt>	Same as nsummary(), except that if a packet has a raw layer it will be hexdumped.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L245'>hexdump</a>(lfilter)</tt>	Same as nsummary(), except that packets are also hexdumped.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L257'>padding</a>(lfilter)</tt>	Same as hexraw(), for padding layer.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L268'>nzpadding</a>(lfilter)</tt>	Same as padding() but only non null padding.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L283'>conversations</a>(getsrcdst)</tt>	Graphes a conversations between sources and destinations and display it using graphviz and imagemagick.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L324'>afterglow</a>(src,event,dst)</tt>	Experimental clone attempt of http //sourceforge net/projects/afterglow.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L422'>psdump</a>(filename)</tt>	Creates a multi-page postcript file with a psdump of every packet filename name of the file to write to.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L435'>pdfdump</a>(filename)</tt>	Creates a pdf file with a psdump of every packet filename name of the file to write to.
+<tt style='background-color:#E8E8E8;'> core.PacketList <a href=' /plist.py#L448'>sr</a>(multi)</tt>	Sr([multi=1]) -> sndrcvlist packetlist.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L24'>construct_source_candidate_set</a>(addr,plen,laddr,loiface)</tt>	Given all addresses assigned to a specific interface ('laddr' parameter), this function returns the "candidate set" associated with 'addr/plen'.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L73'>get_source_addr_from_candidate_set</a>(dst,candidate_set)</tt>	This function implement a limited version of source address selection algorithm defined in section 5 of rfc 3484.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L189'>in6_mactoifaceid</a>(mac,ulbit)</tt>	Compute the interface id in modified eui-64 format associated to the ethernet address provided as input.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L208'>in6_ifaceidtomac</a>(ifaceid)</tt>	Extract the mac address from provided iface id iface id is provided.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L228'>in6_addrtomac</a>(addr)</tt>	Extract the mac address from provided address none is returned.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L238'>in6_addrtovendor</a>(addr)</tt>	Extract the mac address from a modified eui-64 constructed ipv6 address provided and use the iana oui.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L256'>in6_getLinkScopedMcastAddr</a>(addr,grpid,scope)</tt>	Generate a link-scoped multicast address as described in rfc 4489.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L314'>in6_get6to4Prefix</a>(addr)</tt>	Returns the /48 6to4 prefix associated with provided ipv4 address on error none is returned.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L327'>in6_6to4ExtractAddr</a>(addr)</tt>	Extract ipv4 address embedded in 6to4 address passed address must be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L341'>in6_getLocalUniquePrefix</a>()</tt>	Returns a pseudo-randomly generated local unique prefix function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L369'>in6_getRandomizedIfaceId</a>(ifaceid,previous)</tt>	Implements the interface id generation algorithm described in rfc 3041.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L413'>in6_ctop</a>(addr)</tt>	Convert an ipv6 address in compact representation notation rfc 1924 to printable representation ;-).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L433'>in6_ptoc</a>(addr)</tt>	Converts an ipv6 address in printable representation to rfc 1924 compact representation ;-).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L456'>in6_isaddr6to4</a>(x)</tt>	Return true if provided address in printable format is a 6to4 address (being in 2002 :/16).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L467'>in6_isaddrTeredo</a>(x)</tt>	Return true if provided address is a teredo meaning it is under the /32 conf.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L478'>teredoAddrExtractInfo</a>(x)</tt>	Extract information from a teredo address return value is.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L492'>in6_iseui64</a>(x)</tt>	Return true if provided address has an interface identifier part created in modified eui-64 format (meaning it matches *::*:*ff fe*:*).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L531'>in6_or</a>(a1,a2)</tt>	Provides a bit to bit or of provided addresses they must be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L539'>in6_and</a>(a1,a2)</tt>	Provides a bit to bit and of provided addresses they must be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L547'>in6_xor</a>(a1,a2)</tt>	Provides a bit to bit xor of provided addresses they must be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L555'>in6_cidr2mask</a>(m)</tt>	Return the mask bitstring associated with provided length value.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L572'>in6_getnsma</a>(a)</tt>	Return link-local solicited-node multicast address for given address.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L583'>in6_getnsmac</a>(a)</tt>	Return the multicast mac address associated with provided ipv6 address.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L594'>in6_getha</a>(prefix)</tt>	Return the anycast address associated with all home agents on a given subnet.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L603'>in6_ptop</a>(str)</tt>	Normalizes ipv6 addresses provided in printable format returning the same address in printable format.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L610'>in6_isincluded</a>(addr,prefix,plen)</tt>	Returns true when 'addr' belongs to prefix/plen false otherwise.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L619'>in6_isllsnmaddr</a>(str)</tt>	Return true if provided address is a link-local solicited node multicast address i.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L629'>in6_isdocaddr</a>(str)</tt>	Returns true if provided address in printable format belongs to 2001 db8 :/32 address space reserved for documentation (as defined.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L637'>in6_islladdr</a>(str)</tt>	Returns true if provided address in printable format belongs to.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L644'>in6_issladdr</a>(str)</tt>	Returns true if provided address in printable format belongs to _allocated_ site-local address space (fec0 :/10).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L653'>in6_isuladdr</a>(str)</tt>	Returns true if provided address in printable format belongs to unique local address space (fc00 :/7).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L664'>in6_isgladdr</a>(str)</tt>	Returns true if provided address in printable format belongs to _allocated_ global address space (2000 :/3).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L673'>in6_ismaddr</a>(str)</tt>	Returns true if provided address in printable format belongs to allocated multicast address space (ff00 :/8).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L680'>in6_ismnladdr</a>(str)</tt>	Returns true if address belongs to node-local multicast address.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L687'>in6_ismgladdr</a>(str)</tt>	Returns true if address belongs to global multicast address space (ff0e :/16).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L694'>in6_ismlladdr</a>(str)</tt>	Returns true if address belongs to link-local multicast address.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L701'>in6_ismsladdr</a>(str)</tt>	Returns true if address belongs to site-local multicast address space (ff05 :/16).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L709'>in6_isaddrllallnodes</a>(str)</tt>	Returns true if address is the link-local all-nodes multicast address (ff02 :1).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L717'>in6_isaddrllallservers</a>(str)</tt>	Returns true if address is the link-local all-servers multicast address (ff02 :2).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L725'>in6_getscope</a>(addr)</tt>	Returns the scope of the address.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L752'>in6_get_common_plen</a>(a,b)</tt>	Return common prefix length of ipv6 addresses a and b.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils6.py#L771'>in6_isvalid</a>(address)</tt>	Return true if 'address' is a valid ipv6 address string false otherwise.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L76'>_unpickle</a>(dlist)</tt>	Used to unpack pickling.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L81'>__reduce__</a>()</tt>	Used by pickling methods.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L85'>__reduce_ex__</a>(proto)</tt>	Used by pickling methods.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L89'>__getstate__</a>()</tt>	Mark object as pickable.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L93'>__setstate__</a>(state)</tt>	Rebuild state using pickable methods.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L97'>__deepcopy__</a>(memo)</tt>	Used by copy deepcopy.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L133'>init_fields</a>()</tt>	Initialize each fields of the fields_desc dict.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L139'>do_init_fields</a>(flist)</tt>	Initialize each fields of the fields_desc dict.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L149'>dissection_done</a>(pkt)</tt>	Dev will be called after a dissection is completed.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L154'>post_dissection</a>(pkt)</tt>	Dev is called after the dissection of the whole packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L158'>get_field</a>(fld)</tt>	Dev returns the field instance from the name of the field.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L187'>copy</a>()</tt>	Returns a deep copy of the instance.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L348'>self_build</a>(field_pos_list)</tt>	Create the default layer regarding fields_desc dict.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L374'>do_build_payload</a>()</tt>	Create the default version of the payload layer.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L382'>do_build</a>()</tt>	Create the default version of the layer.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L402'>build</a>()</tt>	Create the current layer.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L413'>post_build</a>(pkt,pay)</tt>	Dev called right after the current layer is build.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L459'>psdump</a>(filename)</tt>	Psdump(filename=none layer_shift=0 rebuild=1) creates an eps file describing a packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L476'>pdfdump</a>(filename)</tt>	Pdfdump(filename=none layer_shift=0 rebuild=1) creates a pdf file describing a packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L643'>extract_padding</a>(s)</tt>	Dev to be overloaded to extract current layer's padding.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L652'>post_dissect</a>(s)</tt>	Dev is called right after the current layer has been dissected.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L656'>pre_dissect</a>(s)</tt>	Dev is called right before the current layer is dissected.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L677'>do_dissect_payload</a>(s)</tt>	Perform the dissection of the layer's payload.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L713'>guess_payload_class</a>(payload)</tt>	Dev guesses the next payload class from layer bonds.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L732'>default_payload_class</a>(payload)</tt>	Dev returns the default payload class if nothing has been found by the guess_payload_class() method.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L742'>hide_defaults</a>()</tt>	Removes fields' values that are the same as default values.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L804'>__gt__</a>(other)</tt>	True if other is an answer from self (self ==> other).
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L812'>__lt__</a>(other)</tt>	True if self is an answer from other (other ==> self).
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L834'>hashret</a>()</tt>	Dev returns a string that has the same value for a request and its answer.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L837'>answers</a>(other)</tt>	Dev true if self is an answer from other.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L843'>haslayer</a>(cls)</tt>	True if self has a layer that is an instance of cls superseded by "cls in self" syntax.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L859'>getlayer</a>(cls,nb,_track)</tt>	Return the nb^th layer that is an instance of cls.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L923'>__contains__</a>(cls)</tt>	"cls in self" returns true if self has a layer which is an instance of cls.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L934'>display</a>()</tt>	Deprecated use show() method.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L938'>_show_or_dump</a>(dump,indent,lvl,label_lvl)</tt>	Internal method that shows or dumps a hierarchical view of a packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L994'>show</a>(dump,indent,lvl,label_lvl)</tt>	Prints or returns (when "dump" is true) a hierarchical view of the packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1007'>show2</a>(dump,indent,lvl,label_lvl)</tt>	Prints or returns (when "dump" is true) a hierarchical view of an assembled version of the packet so that automatic fields are.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1021'>sprintf</a>(fmt,relax)</tt>	Sprintf(format [relax=1]) -> str where format is a string that can include directives.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1126'>mysummary</a>()</tt>	Dev can be overloaded to return a string that summarizes the layer.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1157'>summary</a>(intern)</tt>	Prints a one line summary of a packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1163'>lastlayer</a>(layer)</tt>	Returns the uppest layer of the packet.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1167'>decode_payload_as</a>(cls)</tt>	Reassembles the payload and decode it using another packet class.
+<tt style='background-color:#E8E8E8;'> core.Packet <a href=' /packet.py#L1176'>command</a>()</tt>	Returns a string representing the command you have to type to obtain the same packet.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /packet.py#L1329'>bind_layers</a>(lower,upper,__fval)</tt>	Bind 2 layers on some specific fields' values.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /packet.py#L1360'>split_layers</a>(lower,upper,__fval)</tt>	Split 2 layers previously bound.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /packet.py#L1369'>ls</a>(obj,case_sensitive,verbose)</tt>	List available layers or infos on a given layer class or name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /packet.py#L1448'>fuzz</a>(p,_inplace)</tt>	Transform a layer into a fuzzy layer by replacing some default values by random objects.
+<tt style='background-color:#E8E8E8;'> core.Route6 <a href=' /route6.py#L63'>make_route</a>(dst,gw,dev)</tt>	Internal function : create a route for 'dst' via 'gw'.
+<tt style='background-color:#E8E8E8;'> core.Route6 <a href=' /route6.py#L135'>ifdel</a>(iff)</tt>	Removes all route entries that uses 'iff' interface.
+<tt style='background-color:#E8E8E8;'> core.Route6 <a href=' /route6.py#L145'>ifadd</a>(iff,addr)</tt>	Add an interface 'iff' with provided address into routing table.
+<tt style='background-color:#E8E8E8;'> core.Route6 <a href=' /route6.py#L167'>route</a>(dst,dev)</tt>	Provide best route to ipv6 destination address based on scapy6 internal routing table content.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L67'>warning</a>(x,onlyOnce)</tt>	Prints a warning during runtime.
+<tt style='background-color:#E8E8E8;'> core.ASN1F_field <a href=' /asn1fields.py#L62'>m2i</a>(pkt,s)</tt>	The good thing about safedec is that it may still decode asn1 even if there is a mismatch between the expected tag (self.
+<tt style='background-color:#E8E8E8;'> core.ASN1F_SEQUENCE <a href=' /asn1fields.py#L286'>m2i</a>(pkt,s)</tt>	Asn1f_sequence behaves transparently with nested asn1_objects being dissected one by one.
+<tt style='background-color:#E8E8E8;'> core.ASN1F_CHOICE <a href=' /asn1fields.py#L454'>m2i</a>(pkt,s)</tt>	First we have to retrieve the appropriate choice.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L271'>send</a>(x,inter,loop,count)</tt>	Send packets at layer 3 send(packets [inter=0], [loop=0], [verbose=conf.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L278'>sendp</a>(x,inter,loop,iface)</tt>	Send packets at layer 2 sendp(packets [inter=0], [loop=0], [verbose=conf.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L288'>sendpfast</a>(x,pps,mbps,realtime)</tt>	Send packets at layer 2 using tcpreplay for performance.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L330'>sr</a>(x,promisc,filter,iface)</tt>	Send and receive packets at layer 3.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L348'>sr1</a>(x,promisc,filter,iface)</tt>	Send packets at layer 3 and return only the first answer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L369'>srp</a>(x,promisc,iface,iface_hint)</tt>	Send and receive packets at layer 2.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L389'>srp1</a>()</tt>	Send and receive packets at layer 2 and return only the first answer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L459'>srloop</a>(pkts)</tt>	Send a packet at layer 3 in loop and print the answer each time srloop(pkts [prn], [inter], [count],.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L465'>srploop</a>(pkts)</tt>	Send a packet at layer 2 in loop and print the answer each time srloop(pkts [prn], [inter], [count],.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L531'>srflood</a>(x,promisc,filter,iface)</tt>	Flood and receive packets at layer 3 prn function applied to packets received.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L545'>srpflood</a>(x,promisc,filter,iface)</tt>	Flood and receive packets at layer 2 prn function applied to packets received.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L564'>sniff</a>(count,store,offline,prn)</tt>	Sniff packets sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ].
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L661'>bridge_and_sniff</a>(if1,if2,count,store)</tt>	Forward traffic between two interfaces and sniff packets exchanged bridge_and_sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ].
+<tt style='background-color:#E8E8E8;'> core. <a href=' /sendrecv.py#L734'>tshark</a>()</tt>	Sniff packets and print them calling pkt show(), a bit like text wireshark.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /consts.py#L30'>test_pyx</a>()</tt>	Returns if pyx is correctly installed or not.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L20'>_version_from_git_describe</a>()</tt>	Read the version from git describe it returns the latest tag with an.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /config.py#L282'>isCryptographyValid</a>()</tt>	Check if the cryptography library is present and if it is recent enough (v1.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /config.py#L432'>crypto_validator</a>(func)</tt>	This a decorator to be used for any method relying on the cryptography library.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L66'>hexdump</a>(x,dump)</tt>	Build a tcpdump like hexadecimal view.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L100'>linehexdump</a>(x,onlyasc,onlyhex,dump)</tt>	Build an equivalent view of hexdump() on a single line.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L127'>chexdump</a>(x,dump)</tt>	Build a per byte hexadecimal representation.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L155'>repr_hex</a>(s)</tt>	Convert provided bitstring to a simple string of hex digits.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L159'>hexdiff</a>(x,y)</tt>	Show differences between 2 binary strings.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L299'>fletcher16_checksum</a>(binbuf)</tt>	Calculates fletcher-16 checksum of the given buffer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L311'>fletcher16_checkbytes</a>(binbuf,offset)</tt>	Calculates the fletcher-16 checkbytes returned as 2 byte binary-string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L347'>randstring</a>(l)</tt>	Returns a random string of length l (l >= 0).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L354'>zerofree_randstring</a>(l)</tt>	Returns a random string of length l (l >= 0) without zero in it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L361'>strxor</a>(s1,s2)</tt>	Returns the binary xor of the 2 provided strings s1 and s2 s1 and s2.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L368'>strand</a>(s1,s2)</tt>	Returns the binary and of the 2 provided strings s1 and s2 s1 and s2.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L408'>do_graph</a>(graph,prog,format,target)</tt>	Do_graph(graph prog=conf prog dot format="svg",.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L479'>colgen</a>()</tt>	Returns a generator that mixes provided quantities forever trans a function to convert the three arguments into a color.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L558'>save_object</a>(fname,obj)</tt>	Pickle a python object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L565'>load_object</a>(fname)</tt>	Unpickle a python object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L569'>corrupt_bytes</a>(s,p,n)</tt>	Corrupt a given percentage or number of bytes from a string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L580'>corrupt_bits</a>(s,p,n)</tt>	Flip a given percentage or number of bits from a string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L598'>wrpcap</a>(filename,pkt)</tt>	Write a list of packets to a pcap file filename the name of the file to write packets to or an open.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L616'>rdpcap</a>(filename,count)</tt>	Read a pcap or pcapng file and return a packet list.
+<tt style='background-color:#E8E8E8;'> core.PcapReader_metaclass <a href=' /utils.py#L630'>__new__</a>(cls,name,bases,dct)</tt>	The alternative class attribute is declared in the pcapng variant and set here to the pcap variant.
+<tt style='background-color:#E8E8E8;'> core.PcapReader_metaclass <a href=' /utils.py#L640'>__call__</a>(cls,filename)</tt>	Creates a cls instance use the alternative if that fails.
+<tt style='background-color:#E8E8E8;'> core.PcapReader_metaclass <a href=' /utils.py#L664'>open</a>(filename)</tt>	Open if necessary filename and read the magic.
+<tt style='background-color:#E8E8E8;'> core.RawPcapReader <a href=' /utils.py#L716'>next</a>()</tt>	Implement the iterator protocol on a set of packets in a pcap file.
+<tt style='background-color:#E8E8E8;'> core.RawPcapReader <a href=' /utils.py#L724'>read_packet</a>(size)</tt>	Return a single packet read from the file.
+<tt style='background-color:#E8E8E8;'> core.RawPcapReader <a href=' /utils.py#L737'>dispatch</a>(callback)</tt>	Call the specified callback routine for each packet read this is just a convenience function for the main loop.
+<tt style='background-color:#E8E8E8;'> core.RawPcapReader <a href=' /utils.py#L747'>read_all</a>(count)</tt>	Return a list of all packets in the pcap file.
+<tt style='background-color:#E8E8E8;'> core.RawPcapReader <a href=' /utils.py#L759'>recv</a>(size)</tt>	Emulate a socket.
+<tt style='background-color:#E8E8E8;'> core.RawPcapNgReader <a href=' /utils.py#L845'>read_packet</a>(size)</tt>	Read blocks until it reaches either eof or a packet and returns none or (packet linktype sec usec wirelen ),.
+<tt style='background-color:#E8E8E8;'> core.RawPcapNgReader <a href=' /utils.py#L873'>read_block_idb</a>(block,_)</tt>	Interface description block.
+<tt style='background-color:#E8E8E8;'> core.RawPcapNgReader <a href=' /utils.py#L895'>read_block_epb</a>(block,size)</tt>	Enhanced packet block.
+<tt style='background-color:#E8E8E8;'> core.RawPcapNgReader <a href=' /utils.py#L905'>read_block_spb</a>(block,size)</tt>	Simple packet block.
+<tt style='background-color:#E8E8E8;'> core.RawPcapNgReader <a href=' /utils.py#L917'>read_block_pkt</a>(block,size)</tt>	Obsolete packet block.
+<tt style='background-color:#E8E8E8;'> core.RawPcapWriter <a href=' /utils.py#L961'>__init__</a>(filename,linktype,gz,endianness)</tt>	Filename the name of the file to write packets to or an open writable file-like object.
+<tt style='background-color:#E8E8E8;'> core.RawPcapWriter <a href=' /utils.py#L1016'>write</a>(pkt)</tt>	Accepts either a single packet or a list of packets to be.
+<tt style='background-color:#E8E8E8;'> core.RawPcapWriter <a href=' /utils.py#L1038'>_write_packet</a>(packet,sec,usec,caplen)</tt>	Writes a single packet to the pcap file.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L1121'>wireshark</a>(pktlist)</tt>	Run wireshark on a list of packets.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L1128'>tcpdump</a>(pktlist,dump,getfd,args)</tt>	Run tcpdump or tshark on a list of packets pktlist a packet instance a packetlist instance or a list of packet.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L1240'>get_terminal_width</a>()</tt>	Get terminal width if in a window.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L1276'>pretty_routes</a>(rtlst,header,sortBy)</tt>	Pretty route list and add header.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L1385'>whois</a>(ip_address)</tt>	Whois client for python.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pton_ntop.py#L19'>_inet6_pton</a>(addr)</tt>	Convert an ipv6 address from text representation into binary form used when socket.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pton_ntop.py#L75'>inet_pton</a>(af,addr)</tt>	Convert an ip address from text representation into binary form.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pton_ntop.py#L87'>_inet6_ntop</a>(addr)</tt>	Convert an ipv6 address from binary form into text representation used when socket.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pton_ntop.py#L119'>inet_ntop</a>(af,addr)</tt>	Convert an ip address from binary form into text representation.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L45'>i2len</a>(pkt,x)</tt>	Convert internal value to a length usable by a fieldlenfield.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L48'>i2count</a>(pkt,x)</tt>	Convert internal value to a number of elements usable by a fieldlenfield.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L52'>h2i</a>(pkt,x)</tt>	Convert human value to internal value.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L55'>i2h</a>(pkt,x)</tt>	Convert internal value to human value.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L58'>m2i</a>(pkt,x)</tt>	Convert machine value to internal value.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L61'>i2m</a>(pkt,x)</tt>	Convert internal value to machine value.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L66'>any2i</a>(pkt,x)</tt>	Try to understand the most input values possible and make an internal value from them.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L69'>i2repr</a>(pkt,x)</tt>	Convert internal value to a nice representation.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L72'>addfield</a>(pkt,s,val)</tt>	Add an internal value to a string.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L75'>getfield</a>(pkt,s)</tt>	Extract an internal value from a string.
+<tt style='background-color:#E8E8E8;'> core.Field <a href=' /fields.py#L91'>randval</a>()</tt>	Return a volatile object whose value is both random and suitable for this field.
+<tt style='background-color:#E8E8E8;'> core._EnumField <a href=' /fields.py#L807'>__init__</a>(name,default,enum,fmt)</tt>	Initializes enum fields.
+<tt style='background-color:#E8E8E8;'> tools. <a href=' /tools/UTscapy.py#L197'>parse_config_file</a>(config_path,verb)</tt>	Parse provided json to get configuration.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/ppi.py#L38'>_PPIGuessPayloadClass</a>(p)</tt>	This function tells the packetlistfield how it should extract the tlvs from the payload.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L61'>__init__</a>(name,default,size)</tt>	@param str name this field instance name.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L76'>addfield</a>(pkt,s,val)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L89'>getfield</a>(pkt,s)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L108'>h2i</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L120'>i2h</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L132'>m2i</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L144'>i2m</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.HPackMagicBitField <a href=' /contrib/http2.py#L156'>any2i</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L186'>__init__</a>(name,default,size)</tt>	@param str name the name of this field instance @param int|none default positive null or none default value for this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L205'>h2i</a>(pkt,x)</tt>	@param packet packet|none pkt unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L216'>i2h</a>(pkt,x)</tt>	@param packet packet|none pkt unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L225'>_detect_multi_byte</a>(fb)</tt>	_detect_multi_byte returns whether the abstractuvarintfield is represented on multiple bytes or not.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L239'>_parse_multi_byte</a>(s)</tt>	_parse_multi_byte parses x as a multibyte representation to get the int value of this abstractuvarintfield.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L275'>m2i</a>(pkt,x)</tt>	A tuple is expected for the "x" param only if "size" is different than 8 if a tuple is received some bits.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L303'>i2m</a>(pkt,x)</tt>	@param packet packet|none pkt unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L326'>any2i</a>(pkt,x)</tt>	A "x" value as a string is parsed as a binary encoding of a uvarint an int is considered an internal value.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L350'>i2repr</a>(pkt,x)</tt>	@param packet packet|none pkt probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L359'>addfield</a>(pkt,s,val)</tt>	An abstractuvarintfield prefix always consumes the remaining bits of a bitfield if no current bitfield is in use (no tuple in.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L390'>_detect_bytelen_from_str</a>(s)</tt>	_detect_bytelen_from_str returns the length of the machine representation of an abstractuvarintfield starting at the beginning.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L414'>i2len</a>(pkt,x)</tt>	@param packet packet|none pkt unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L438'>getfield</a>(pkt,s)</tt>	@param packet packet|none pkt the packet instance containing this field probably unused.
+<tt style='background-color:#E8E8E8;'> contrib.AbstractUVarIntField <a href=' /contrib/http2.py#L468'>randval</a>()</tt>	@return volatile volatilevalue a volatile value for this field "long"-compatible internal value.
+<tt style='background-color:#E8E8E8;'> contrib.UVarIntField <a href=' /contrib/http2.py#L477'>__init__</a>(name,default,size)</tt>	@param str name the name of this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.UVarIntField <a href=' /contrib/http2.py#L495'>h2i</a>(pkt,x)</tt>	H2i is overloaded to restrict the acceptable x values not none @param packet.
+<tt style='background-color:#E8E8E8;'> contrib.UVarIntField <a href=' /contrib/http2.py#L508'>i2h</a>(pkt,x)</tt>	I2h is overloaded to restrict the acceptable x values not none @param packet.
+<tt style='background-color:#E8E8E8;'> contrib.UVarIntField <a href=' /contrib/http2.py#L521'>any2i</a>(pkt,x)</tt>	Any2i is overloaded to restrict the acceptable x values not none @param packet.
+<tt style='background-color:#E8E8E8;'> contrib.UVarIntField <a href=' /contrib/http2.py#L534'>i2repr</a>(pkt,x)</tt>	I2repr is overloaded to restrict the acceptable x values not none @param packet.
+<tt style='background-color:#E8E8E8;'> contrib.FieldUVarLenField <a href=' /contrib/http2.py#L548'>__init__</a>(name,default,size,length_of)</tt>	Initializes a fielduvarlenfield @param str name the name of this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.FieldUVarLenField <a href=' /contrib/http2.py#L573'>addfield</a>(pkt,s,val)</tt>	@param packet packet|none pkt the packet instance containing this field instance this parameter must not be.
+<tt style='background-color:#E8E8E8;'> contrib.FieldUVarLenField <a href=' /contrib/http2.py#L592'>i2m</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance this parameter must not be.
+<tt style='background-color:#E8E8E8;'> contrib.FieldUVarLenField <a href=' /contrib/http2.py#L607'>_compute_value</a>(pkt)</tt>	Computes the value of this field based on the provided packet and the length_of field and the adjust callback.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L984'>_huffman_encode_char</a>(cls,c)</tt>	Huffman_encode_char assumes that the static_huffman_tree was.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L1000'>huffman_encode</a>(cls,s)</tt>	Huffman_encode returns the bitstring and the bitlength of the.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L1028'>huffman_decode</a>(cls,i,ibl)</tt>	Huffman_decode decodes the bitstring provided as parameters.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L1086'>huffman_conv2str</a>(cls,bit_str,bit_len)</tt>	Huffman_conv2str converts a bitstring of bit_len bitlength into a binary string.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L1115'>huffman_conv2bitstring</a>(cls,s)</tt>	Huffman_conv2bitstring converts a string into its bitstring representation.
+<tt style='background-color:#E8E8E8;'> contrib.HPackZString <a href=' /contrib/http2.py#L1136'>huffman_compute_decode_tree</a>(cls)</tt>	Huffman_compute_decode_tree initializes/builds the static_huffman_tree.
+<tt style='background-color:#E8E8E8;'> contrib.HPackStrLenField <a href=' /contrib/http2.py#L1195'>_parse</a>(t,s)</tt>	@param bool t whether this string is a huffman compressed string.
+<tt style='background-color:#E8E8E8;'> contrib.HPackStrLenField <a href=' /contrib/http2.py#L1209'>getfield</a>(pkt,s)</tt>	@param packet packet pkt the packet instance containing this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.HPackStrLenField <a href=' /contrib/http2.py#L1236'>m2i</a>(pkt,x)</tt>	@param packet packet pkt the packet instance containing this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.HPackStrLenField <a href=' /contrib/http2.py#L1253'>any2i</a>(pkt,x)</tt>	@param packet packet|none pkt the packet instance containing this field instance.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrString <a href=' /contrib/http2.py#L1305'>self_build</a>(field_pos_list)</tt>	Self_build is overridden because type and len are determined at.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHeaders <a href=' /contrib/http2.py#L1320'>dispatch_hook</a>(cls,s)</tt>	Dispatch_hook returns the subclass of hpackheaders that must be used to dissect the string.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedDataFrame <a href=' /contrib/http2.py#L1442'>get_data_len</a>()</tt>	Get_data_len computes the length of the data field.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedDataFrame <a href=' /contrib/http2.py#L1460'>pre_dissect</a>(s)</tt>	Pre_dissect is filling the s_len property of this instance this.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedHeadersFrame <a href=' /contrib/http2.py#L1522'>get_hdrs_len</a>()</tt>	Get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field and the actual.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedHeadersFrame <a href=' /contrib/http2.py#L1540'>pre_dissect</a>(s)</tt>	Pre_dissect is filling the s_len property of this instance this.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedPriorityHeadersFrame <a href=' /contrib/http2.py#L1591'>get_hdrs_len</a>()</tt>	Get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field the priority.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedPriorityHeadersFrame <a href=' /contrib/http2.py#L1618'>pre_dissect</a>(s)</tt>	Pre_dissect is filling the s_len property of this instance this.
+<tt style='background-color:#E8E8E8;'> contrib.H2SettingsFrame <a href=' /contrib/http2.py#L1741'>__init__</a>()</tt>	__init__ initializes this h2settingsframe if a _pkt arg is provided by keyword then this is an initialization.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedPushPromiseFrame <a href=' /contrib/http2.py#L1803'>get_hdrs_len</a>()</tt>	Get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field reserved.
+<tt style='background-color:#E8E8E8;'> contrib.H2PaddedPushPromiseFrame <a href=' /contrib/http2.py#L1826'>pre_dissect</a>(s)</tt>	Pre_dissect is filling the s_len property of this instance this.
+<tt style='background-color:#E8E8E8;'> contrib.H2Frame <a href=' /contrib/http2.py#L1962'>guess_payload_class</a>(payload)</tt>	Guess_payload_class returns the class object to use for parsing a payload this function uses the h2frame.
+<tt style='background-color:#E8E8E8;'> contrib.H2Frame <a href=' /contrib/http2.py#L2019'>extract_padding</a>(s)</tt>	@param str s the string from which to tell the padding and the payload data apart.
+<tt style='background-color:#E8E8E8;'> contrib.H2Frame <a href=' /contrib/http2.py#L2030'>post_build</a>(p,pay)</tt>	@param str p the stringified packet.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrEntry <a href=' /contrib/http2.py#L2115'>size</a>()</tt>	Size returns the "length" of the header entry as defined in rfc 7541 par4.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrEntry <a href=' /contrib/http2.py#L2124'>__str__</a>()</tt>	__str__ returns the header as it would be formated in textual format.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2232'>__init__</a>(dynamic_table_max_size,dynamic_table_cap_size)</tt>	@param int dynamic_table_max_size the current maximum size of the dynamic entry table in bytes.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2249'>__getitem__</a>(idx)</tt>	Gets an element from the header tables static or dynamic indifferently @param int idx the index number of the entry to retrieve.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2271'>resize</a>(ns)</tt>	Resize the dynamic table if the new size ns must be between 0 and.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2287'>recap</a>(nc)</tt>	Recap changes the maximum size limit of the dynamic table it also.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2303'>_reduce_dynamic_table</a>(new_entry_size)</tt>	_reduce_dynamic_table evicts entries from the dynamic table until it fits in less than the current size limit.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2322'>register</a>(hdrs)</tt>	Register adds to this table the instances of hpacklithdrfldwithincrindexing provided as parameters.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2368'>get_idx_by_name</a>(name)</tt>	Get_idx_by_name returns the index of a matching registered header this implementation will prefer returning a static entry index whenever.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2387'>get_idx_by_name_and_value</a>(name,value)</tt>	Get_idx_by_name_and_value returns the index of a matching registered header.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2408'>__len__</a>()</tt>	__len__ returns the summed length of all dynamic entries.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2414'>gen_txt_repr</a>(hdrs,register)</tt>	Gen_txt_repr returns a "textual" representation of the provided headers.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2473'>_convert_a_header_to_a_h2_header</a>(hdr_name,hdr_value,is_sensitive,should_index)</tt>	_convert_a_header_to_a_h2_header builds a hpackheaders from a header name and a value.
+<tt style='background-color:#E8E8E8;'> contrib.HPackHdrTable <a href=' /contrib/http2.py#L2586'>parse_txt_hdrs</a>(s,stream_id,body,max_frm_sz)</tt>	Parse_txt_hdrs parses headers expressed in text and converts them into a series of h2frames with the "correct" flags.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gtp.py#L681'>IE_Dispatcher</a>(s)</tt>	Choose the correct information element class.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gtp_v2.py#L452'>PCO_option_dispatcher</a>(s)</tt>	Choose the correct pco element.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gtp_v2.py#L604'>PCO_protocol_dispatcher</a>(s)</tt>	Choose the correct pco element.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTimeRawData <a href=' /contrib/pnio_rtc.py#L72'>__init__</a>(_pkt,post_transform,_internal,_underlayer)</tt>	Length=none means that the length must be managed by the user if it's.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTimeRawData <a href=' /contrib/pnio_rtc.py#L92'>length</a>()</tt>	Get the length of the raw data.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/pnio_rtc.py#L144'>_get_ethernet</a>(pkt)</tt>	Find the ethernet packet of underlayer or none.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/pnio_rtc.py#L151'>pnio_update_config</a>(config)</tt>	Update the pnio rtc config.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/pnio_rtc.py#L155'>pnio_get_config</a>(pkt)</tt>	Retrieve the config for a given communication.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/pnio_rtc.py#L170'>_pnio_rtc_guess_payload_class</a>(_pkt,_underlayer)</tt>	A dispatcher for the packet list field which manage the configuration.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L219'>padding_length</a>()</tt>	Compute the length of the padding need for the ethernet frame.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L235'>analyse_data</a>(packets)</tt>	Analyse the data to find heuristical properties and determine.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L244'>find_data</a>(packets)</tt>	Analyse a packet list to extract data offsets from packets data.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L294'>analyse_profisafe</a>(packets,locations)</tt>	Analyse a packet list to find possible profisafe profils.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L322'>analyse_one_profisafe_location</a>(location,entropy)</tt>	Analyse one pnio rtc data location to find if its a profisafe.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L349'>data_entropy</a>(packets,locations)</tt>	Analyse a packet list to find the entropy of each data byte locations possible data locations.
+<tt style='background-color:#E8E8E8;'> contrib.PNIORealTime <a href=' /contrib/pnio_rtc.py#L382'>draw_entropy</a>(packets,locations)</tt>	Plot the entropy of each data byte of pn rt communication.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/pnio_rtc.py#L415'>entropy_of_byte</a>(packets,position)</tt>	Compute the entropy of a byte at a given offset.
+<tt style='background-color:#E8E8E8;'> contrib.Profisafe <a href=' /contrib/pnio_rtc.py#L469'>data_length</a>()</tt>	Return the length of the data.
+<tt style='background-color:#E8E8E8;'> contrib.Profisafe <a href=' /contrib/pnio_rtc.py#L474'>crc_length</a>()</tt>	Return the length of the crc.
+<tt style='background-color:#E8E8E8;'> contrib.Fixed3_6Field <a href=' /contrib/ppi_geotag.py#L47'>i2m</a>(pkt,x)</tt>	Convert internal value to machine value.
+<tt style='background-color:#E8E8E8;'> contrib.Fixed3_7Field <a href=' /contrib/ppi_geotag.py#L81'>i2m</a>(pkt,x)</tt>	Convert internal value to machine value.
+<tt style='background-color:#E8E8E8;'> contrib.Fixed6_4Field <a href=' /contrib/ppi_geotag.py#L115'>i2m</a>(pkt,x)</tt>	Convert internal value to machine value.
+<tt style='background-color:#E8E8E8;'> contrib._CDPChecksum <a href=' /contrib/cdp.py#L311'>_check_len</a>(pkt)</tt>	Check for odd packet length and pad according to cisco spec.
+<tt style='background-color:#E8E8E8;'> contrib.FecTLVField <a href=' /contrib/ldp.py#L97'>size</a>(s)</tt>	Get the size of this field.
+<tt style='background-color:#E8E8E8;'> contrib.LabelTLVField <a href=' /contrib/ldp.py#L117'>size</a>(s)</tt>	Get the size of this field.
+<tt style='background-color:#E8E8E8;'> contrib.AddressTLVField <a href=' /contrib/ldp.py#L147'>size</a>(s)</tt>	Get the size of this field.
+<tt style='background-color:#E8E8E8;'> contrib.ShortVersionField <a href=' /contrib/eigrp.py#L258'>h2i</a>(pkt,x)</tt>	The field accepts string values like v12 1 v1 1 or integer values.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/igmp.py#L15'>isValidMCAddr</a>(ip)</tt>	Convert dotted quad string to long and check the first octet.
+<tt style='background-color:#E8E8E8;'> contrib.IGMP <a href=' /contrib/igmp.py#L56'>post_build</a>(p,pay)</tt>	Called implicitly before a packet is sent to compute and place igmp checksum.
+<tt style='background-color:#E8E8E8;'> contrib.IGMP <a href=' /contrib/igmp.py#L71'>mysummary</a>()</tt>	Display a summary of the igmp object.
+<tt style='background-color:#E8E8E8;'> contrib.IGMP <a href=' /contrib/igmp.py#L80'>igmpize</a>(ip,ether)</tt>	Called to explicitly fixup associated ip and ethernet headers parameters.
+<tt style='background-color:#E8E8E8;'> contrib.IGMP <a href=' /contrib/igmp.py#L112'>adjust_ether</a>(ip,ether)</tt>	Called to explicitly fixup an associated ethernet header the function adjusts the ethernet header destination mac address based on.
+<tt style='background-color:#E8E8E8;'> contrib.IGMP <a href=' /contrib/igmp.py#L129'>adjust_ip</a>(ip)</tt>	Called to explicitly fixup an associated ip header the function adjusts the ip header based on conformance rules.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L182'>additionalAssignment</a>(MobileAllocation_presence,StartingTime_presence)</tt>	Additional assignment section 9 1 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L201'>assignmentCommand</a>(FrequencyList_presence,CellChannelDescription_presence,CellChannelDescription_presence1,MultislotAllocation_presence)</tt>	Assignment command section 9 1 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L298'>assignmentComplete</a>()</tt>	Assignment complete section 9 1 3.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L308'>assignmentFailure</a>()</tt>	Assignment failure section 9 1 4.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L318'>channelModeModify</a>(VgcsTargetModeIdentication_presence,MultiRateConfiguration_presence)</tt>	Channel mode modify section 9 1 5.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L335'>channelModeModifyAcknowledge</a>()</tt>	Channel mode modify acknowledge section 9 1 6.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L346'>channelRelease</a>(BaRange_presence,GroupChannelDescription_presence,GroupCipherKeyNumber_presence,GprsResumption_presence)</tt>	Channel release section 9 1 7.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L385'>cipheringModeCommand</a>()</tt>	Ciphering mode command section 9 1 9.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L398'>cipheringModeComplete</a>(MobileId_presence)</tt>	Ciphering mode complete section 9 1 10.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L410'>classmarkChange</a>(MobileStationClassmark3_presence)</tt>	Classmark change section 9 1 11.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L423'>classmarkEnquiry</a>()</tt>	Classmark enquiry section 9 1 12.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L433'>configurationChangeCommand</a>(ChannelMode_presence,ChannelMode_presence1,ChannelMode_presence2,ChannelMode_presence3)</tt>	Configuration change command section 9 1 12b.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L473'>configurationChangeAcknowledge</a>()</tt>	Configuration change acknowledge section 9 1 12c.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L482'>configurationChangeReject</a>()</tt>	Configuration change reject section 9 1 12d.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L492'>frequencyRedefinition</a>(CellChannelDescription_presence)</tt>	Frequency redefinition section 9 1 13.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L507'>pdchAssignmentCommand</a>(ChannelDescription_presence,CellChannelDescription_presence,MobileAllocation_presence,StartingTime_presence)</tt>	Pdch assignment command section 9 1 13a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L554'>gprsSuspensionRequest</a>()</tt>	Gprs suspension request section 9 1 13b.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L573'>handoverCommand</a>(SynchronizationIndication_presence,FrequencyShortList_presence,FrequencyList_presence,CellChannelDescription_presence)</tt>	Handover command section 9 1 15.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L695'>handoverComplete</a>(MobileTimeDifference_presence)</tt>	Handover complete section 9 1 16.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L707'>handoverFailure</a>()</tt>	Handover failure section 9 1 17.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L720'>immediateAssignment</a>(ChannelDescription_presence,PacketChannelDescription_presence,StartingTime_presence)</tt>	Immediate assignment section 9 1 18.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L752'>immediateAssignmentExtended</a>(StartingTime_presence)</tt>	Immediate assignment extended section 9 1 19.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L773'>immediateAssignmentReject</a>()</tt>	Immediate assignment reject section 9 1 20.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L792'>measurementReport</a>()</tt>	Measurement report section 9 1 21.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L815'>notificationNch</a>()</tt>	Notification/nch section 9 1 21b.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L825'>notificationResponse</a>()</tt>	Notification response section 9 1 21d.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L837'>rrCellChangeOrder</a>()</tt>	Rr-cell change order section 9 1 21e.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L848'>pagingRequestType1</a>(MobileId_presence)</tt>	Paging request type 1 section 9 1 22.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L870'>pagingRequestType2</a>(MobileId_presence)</tt>	Paging request type 2 section 9 1 23.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L888'>pagingRequestType3</a>()</tt>	Paging request type 3 section 9 1 24.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L904'>pagingResponse</a>()</tt>	Paging response section 9 1 25.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L916'>partialRelease</a>()</tt>	Partial release section 9 1 26.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L925'>partialReleaseComplete</a>()</tt>	Partial release complete section 9 1 27.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L934'>physicalInformation</a>()</tt>	Physical information section 9 1 28.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L943'>rrInitialisationRequest</a>()</tt>	Rr initialisation request section 9 1 28 a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L956'>rrStatus</a>()</tt>	Rr status section 9 1 29.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L985'>systemInformationType1</a>()</tt>	System information type 1 section 9 1 31.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L999'>systemInformationType2</a>()</tt>	System information type 2 section 9 1 32.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1013'>systemInformationType2bis</a>()</tt>	System information type 2bis section 9 1 33.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1027'>systemInformationType2ter</a>()</tt>	System information type 2ter section 9 1 34.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1040'>systemInformationType3</a>()</tt>	System information type 3 section 9 1 35.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1060'>systemInformationType4</a>(ChannelDescription_presence,MobileAllocation_presence)</tt>	System information type 4 section 9 1 36.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1083'>systemInformationType5</a>()</tt>	System information type 5 section 9 1 37.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1095'>systemInformationType5bis</a>()</tt>	System information type 5bis section 9 1 38.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1107'>systemInformationType5ter</a>()</tt>	System information type 5ter section 9 1 39.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1119'>systemInformationType6</a>()</tt>	System information type 6 section 9 1 40.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1135'>systemInformationType7</a>()</tt>	System information type 7 section 9 1 41.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1147'>systemInformationType8</a>()</tt>	System information type 8 section 9 1 42.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1159'>systemInformationType9</a>()</tt>	System information type 9 section 9 1 43.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1171'>systemInformationType13</a>()</tt>	System information type 13 section 9 1 43a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1186'>systemInformationType16</a>()</tt>	System information type 16 section 9 1 43d.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1198'>systemInformationType17</a>()</tt>	System information type 17 section 9 1 43e.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1208'>talkerIndication</a>()</tt>	Talker indication section 9 1 44.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1227'>uplinkBusy</a>()</tt>	Uplink busy section 9 1 46.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1250'>uplinkRelease</a>()</tt>	Uplink release section 9 1 48.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1260'>vgcsUplinkGrant</a>()</tt>	Vgcs uplink grant section 9 1 49.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1272'>systemInformationType10</a>()</tt>	System information type 10 section 9 1 50.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1285'>extendedMeasurementOrder</a>()</tt>	Extended measurement order section 9 1 51.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1295'>extendedMeasurementReport</a>()</tt>	Extended measurement report section 9 1 52.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1304'>applicationInformation</a>()</tt>	Application information section 9 1 53.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1318'>authenticationReject</a>()</tt>	Authentication reject section 9 2 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1327'>authenticationRequest</a>()</tt>	Authentication request section 9 2 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1337'>authenticationResponse</a>()</tt>	Authentication response section 9 2 3.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1346'>cmReestablishmentRequest</a>(LocalAreaId_presence)</tt>	Cm re-establishment request section 9 2 4.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1361'>cmServiceAccept</a>()</tt>	Cm service accept section 9 2 5.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1370'>cmServicePrompt</a>()</tt>	Cm service prompt section 9 2 5a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1380'>cmServiceReject</a>()</tt>	Cm service reject section 9 2 6.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1389'>cmServiceAbort</a>()</tt>	Cm service abort section 9 2 7.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1398'>abort</a>()</tt>	Abort section 9 2 8.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1407'>cmServiceRequest</a>(PriorityLevel_presence)</tt>	Cm service request section 9 2 9.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2495'>identityRequest</a>()</tt>	Identity request section 9 4 12.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2504'>identityResponse</a>()</tt>	Identity response section 9 4 13.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1440'>imsiDetachIndication</a>()</tt>	Imsi detach indication section 9 2 12.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1451'>locationUpdatingAccept</a>(MobileId_presence,FollowOnProceed_presence,CtsPermission_presence)</tt>	Location updating accept section 9 2 13.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1472'>locationUpdatingReject</a>()</tt>	Location updating reject section 9 2 14.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1481'>locationUpdatingRequest</a>()</tt>	Location updating request section 9 2 15.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1494'>mmInformation</a>(NetworkName_presence,NetworkName_presence1,TimeZone_presence,TimeZoneAndTime_presence)</tt>	Mm information section 9 2 15a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1519'>mmStatus</a>()</tt>	Mm status section 9 2 16.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1529'>tmsiReallocationCommand</a>()</tt>	Tmsi reallocation command section 9 2 17.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1539'>tmsiReallocationComplete</a>()</tt>	Tmsi reallocation complete section 9 2 18.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1547'>mmNull</a>()</tt>	Mm null section 9 2 19.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1560'>alertingNetToMs</a>(Facility_presence,ProgressIndicator_presence,UserUser_presence)</tt>	Alerting section 9 3 1 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1578'>alertingMsToNet</a>(Facility_presence,UserUser_presence,SsVersionIndicator_presence)</tt>	Alerting section 9 3 1 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1596'>callConfirmed</a>(RepeatIndicator_presence,BearerCapability_presence,BearerCapability_presence1,Cause_presence)</tt>	Call confirmed section 9 3 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1622'>callProceeding</a>(RepeatIndicator_presence,BearerCapability_presence,BearerCapability_presence1,Facility_presence)</tt>	Call proceeding section 9 3 3.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1653'>congestionControl</a>(Cause_presence)</tt>	Congestion control section 9 3 4.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1666'>connectNetToMs</a>(Facility_presence,ProgressIndicator_presence,ConnectedNumber_presence,ConnectedSubaddress_presence)</tt>	Connect section 9 3 5 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1691'>connectMsToNet</a>(Facility_presence,ConnectedSubaddress_presence,UserUser_presence,SsVersionIndicator_presence)</tt>	Connect section 9 3 5 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1712'>connectAcknowledge</a>()</tt>	Connect acknowledge section 9 3 6.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1721'>disconnectNetToMs</a>(Facility_presence,ProgressIndicator_presence,UserUser_presence,AllowedActions_presence)</tt>	Disconnect section 9 3 7 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1743'>disconnectMsToNet</a>(Facility_presence,UserUser_presence,SsVersionIndicator_presence)</tt>	Disconnect section 9 3 7 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1762'>emergencySetup</a>(BearerCapability_presence)</tt>	Emergency setup section 9 3 8.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1774'>facilityNetToMs</a>()</tt>	Facility section 9 3 9 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1783'>facilityMsToNet</a>(SsVersionIndicator_presence)</tt>	Facility section 9 3 9 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1795'>hold</a>()</tt>	Hold section 9 3 10.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1804'>holdAcknowledge</a>()</tt>	Hold acknowledge section 9 3 11.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1813'>holdReject</a>()</tt>	Hold reject section 9 3 12.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1822'>modify</a>(LowLayerCompatibility_presence,HighLayerCompatibility_presence,ReverseCallSetupDirection_presence)</tt>	Modify section 9 3 13.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1842'>modifyComplete</a>(LowLayerCompatibility_presence,HighLayerCompatibility_presence,ReverseCallSetupDirection_presence)</tt>	Modify complete section 9 3 14.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1862'>modifyReject</a>(LowLayerCompatibility_presence,HighLayerCompatibility_presence)</tt>	Modify reject section 9 3 15.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1879'>notify</a>()</tt>	Notify section 9 3 16.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1889'>progress</a>(UserUser_presence)</tt>	Progress section 9 3 17.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1902'>ccEstablishment</a>()</tt>	Cc-establishment section 9 3 17a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1911'>ccEstablishmentConfirmed</a>(RepeatIndicator_presence,BearerCapability_presence,BearerCapability_presence1,Cause_presence)</tt>	Cc-establishment confirmed section 9 3 17b.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1935'>releaseNetToMs</a>()</tt>	Release section 9 3 18 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1947'>releaseMsToNet</a>(Cause_presence,Cause_presence1,Facility_presence,UserUser_presence)</tt>	Release section 9 3 18 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1973'>recall</a>()</tt>	Recall section 9 3 18a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L1984'>releaseCompleteNetToMs</a>(Cause_presence,Facility_presence,UserUser_presence)</tt>	Release complete section 9 3 19 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2002'>releaseCompleteMsToNet</a>(Cause_presence,Facility_presence,UserUser_presence,SsVersionIndicator_presence)</tt>	Release complete section 9 3 19 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2023'>retrieve</a>()</tt>	Retrieve section 9 3 20.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2032'>retrieveAcknowledge</a>()</tt>	Retrieve acknowledge section 9 3 21.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2041'>retrieveReject</a>()</tt>	Retrieve reject section 9 3 22.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2051'>setupMobileTerminated</a>(RepeatIndicator_presence,BearerCapability_presence,BearerCapability_presence1,Facility_presence)</tt>	Setup section 9 3 23 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2141'>setupMobileOriginated</a>(RepeatIndicator_presence,BearerCapability_presence,BearerCapability_presence1,Facility_presence)</tt>	Setup section 9 3 23 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2227'>startCc</a>(CallControlCapabilities_presence)</tt>	Start cc section 9 3 23a.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2238'>startDtmf</a>()</tt>	Start dtmf section 9 3 24.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2248'>startDtmfAcknowledge</a>()</tt>	Start dtmf acknowledge section 9 3 25.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2258'>startDtmfReject</a>()</tt>	Start dtmf reject section 9 3 26.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2267'>status</a>(AuxiliaryStates_presence)</tt>	Status section 9 3 27.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2280'>statusEnquiry</a>()</tt>	Status enquiry section 9 3 28.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2288'>stopDtmf</a>()</tt>	Stop dtmf section 9 3 29.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2297'>stopDtmfAcknowledge</a>()</tt>	Stop dtmf acknowledge section 9 3 30.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2305'>userInformation</a>(MoreData_presence)</tt>	User information section 9 3 31.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2321'>attachRequest</a>(PTmsiSignature_presence,GprsTimer_presence,TmsiStatus_presence)</tt>	Attach request section 9 4 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2345'>attachAccept</a>(PTmsiSignature_presence,GprsTimer_presence,MobileId_presence,MobileId_presence1)</tt>	Attach accept section 9 4 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2375'>attachComplete</a>()</tt>	Attach complete section 9 4 3.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2383'>attachReject</a>()</tt>	Attach reject section 9 4 4.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2392'>detachRequest</a>(GmmCause_presence)</tt>	Detach request section 9 4 5.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2404'>detachRequestMsOriginating</a>()</tt>	Detach request section 9 4 5 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2413'>detachAcceptMsTerminated</a>()</tt>	Detach accept section 9 4 6 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2421'>detachAcceptMsOriginating</a>()</tt>	Detach accept section 9 4 6 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2430'>ptmsiReallocationCommand</a>(PTmsiSignature_presence)</tt>	P-tmsi reallocation command section 9 4 7.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2444'>ptmsiReallocationComplete</a>()</tt>	P-tmsi reallocation complete section 9 4 8.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2452'>authenticationAndCipheringRequest</a>(AuthenticationParameterRAND_presence,CiphKeySeqNr_presence)</tt>	Authentication and ciphering request section 9 4 9.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2470'>authenticationAndCipheringResponse</a>(AuthenticationParameterSRES_presence,MobileId_presence)</tt>	Authentication and ciphering response section 9 4 10.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2487'>authenticationAndCipheringReject</a>()</tt>	Authentication and ciphering reject section 9 4 11.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2513'>routingAreaUpdateRequest</a>(PTmsiSignature_presence,GprsTimer_presence,DrxParameter_presence,TmsiStatus_presence)</tt>	Routing area update request section 9 4 14.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2539'>routingAreaUpdateAccept</a>(PTmsiSignature_presence,MobileId_presence,MobileId_presence1,ReceiveNpduNumbersList_presence)</tt>	Routing area update accept section 9 4 15.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2571'>routingAreaUpdateComplete</a>(ReceiveNpduNumbersList_presence)</tt>	Routing area update complete section 9 4 16.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2582'>routingAreaUpdateReject</a>()</tt>	Routing area update reject section 9 4 17.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2592'>gmmStatus</a>()</tt>	Gmm status section 9 4 18.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2601'>gmmInformation</a>(NetworkName_presence,NetworkName_presence1,TimeZone_presence,TimeZoneAndTime_presence)</tt>	Gmm information section 9 4 19.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2630'>activatePdpContextRequest</a>(AccessPointName_presence,ProtocolConfigurationOptions_presence)</tt>	Activate pdp context request section 9 5 1.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2649'>activatePdpContextAccept</a>(PacketDataProtocolAddress_presence,ProtocolConfigurationOptions_presence)</tt>	Activate pdp context accept section 9 5 2.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2667'>activatePdpContextReject</a>(ProtocolConfigurationOptions_presence)</tt>	Activate pdp context reject section 9 5 3.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2679'>requestPdpContextActivation</a>(AccessPointName_presence)</tt>	Request pdp context activation section 9 5 4.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2691'>requestPdpContextActivationReject</a>()</tt>	Request pdp context activation reject section 9 5 5.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2700'>modifyPdpContextRequest</a>()</tt>	Modify pdp context request section 9 5 6.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2711'>modifyPdpContextAccept</a>()</tt>	Modify pdp context accept section 9 5 7.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2719'>deactivatePdpContextRequest</a>()</tt>	Deactivate pdp context request section 9 5 8.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2728'>deactivatePdpContextAccept</a>()</tt>	Deactivate pdp context accept section 9 5 9.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2736'>activateAaPdpContextRequest</a>(AccessPointName_presence,ProtocolConfigurationOptions_presence,GprsTimer_presence)</tt>	Activate aa pdp context request section 9 5 10.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2759'>activateAaPdpContextAccept</a>(ProtocolConfigurationOptions_presence,GprsTimer_presence)</tt>	Activate aa pdp context accept section 9 5 11.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2779'>activateAaPdpContextReject</a>(ProtocolConfigurationOptions_presence)</tt>	Activate aa pdp context reject section 9 5 12.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2791'>deactivateAaPdpContextRequest</a>()</tt>	Deactivate aa pdp context request section 9 5 13.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2800'>deactivateAaPdpContextAccept</a>()</tt>	Deactivate aa pdp context accept section 9 5 14.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/gsm_um.py#L2808'>smStatus</a>()</tt>	Sm status section 9 5 15.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L80'>_bits_to_bytes_len</a>(length_in_bits)</tt>	Helper function that returns the numbers of bytes necessary to store the given number of bits.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv4 <a href=' /contrib/bgp.py#L94'>mask2iplen</a>(mask)</tt>	Get the ip field mask length in bytes.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv4 <a href=' /contrib/bgp.py#L98'>h2i</a>(pkt,h)</tt>	X x x x/y to "internal" representation.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv4 <a href=' /contrib/bgp.py#L103'>i2h</a>(pkt,i)</tt>	"internal" representation to "human" representation (x.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv4 <a href=' /contrib/bgp.py#L116'>i2m</a>(pkt,i)</tt>	"internal" ip as bytes mask as int to "machine" representation.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv6 <a href=' /contrib/bgp.py#L141'>mask2iplen</a>(mask)</tt>	Get the ip field mask length in bytes.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv6 <a href=' /contrib/bgp.py#L145'>h2i</a>(pkt,h)</tt>	X x x x/y to internal representation.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv6 <a href=' /contrib/bgp.py#L150'>i2h</a>(pkt,i)</tt>	"internal" representation to "human" representation.
+<tt style='background-color:#E8E8E8;'> contrib.BGPFieldIPv6 <a href=' /contrib/bgp.py#L162'>i2m</a>(pkt,i)</tt>	"internal" ip as bytes mask as int to "machine" representation.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L182'>has_extended_length</a>(flags)</tt>	Used in bgppathattr to check if the extended-length flag is set.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L256'>_get_cls</a>(name,fallback_cls)</tt>	Returns class named "name" if it exists fallback_cls otherwise.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L404'>_bgp_dispatcher</a>(payload)</tt>	Returns the right class for a given bgp message.
+<tt style='background-color:#E8E8E8;'> contrib.BGP <a href=' /contrib/bgp.py#L443'>dispatch_hook</a>(cls,_pkt)</tt>	Returns the right class for the given data.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L532'>_bgp_capability_dispatcher</a>(payload)</tt>	Returns the right class for a given bgp capability.
+<tt style='background-color:#E8E8E8;'> contrib.BGPCapability <a href=' /contrib/bgp.py#L571'>dispatch_hook</a>(cls,_pkt)</tt>	Returns the right class for the given data.
+<tt style='background-color:#E8E8E8;'> contrib.BGPCapability <a href=' /contrib/bgp.py#L579'>pre_dissect</a>(s)</tt>	Check that the payload is long enough at least 2 bytes.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L1713'>_get_ext_comm_subtype</a>(type_high)</tt>	Returns a byteenumfield with the right sub-types dict for a given community.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/bgp.py#L2286'>_update_orf_afi_safi</a>(afi,safi)</tt>	Helper function that sets the afi / safi values of orp entries.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/HomePlugAV.py#L135'>FragmentCond</a>(pkt)</tt>	A fragementation field condition.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3gr <a href=' /contrib/igmpv3.py#L57'>post_build</a>(p,pay)</tt>	Called implicitly before a packet is sent.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3gr <a href=' /contrib/igmpv3.py#L66'>mysummary</a>()</tt>	Display a summary of the igmpv3 group record.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L125'>float_encode</a>(value)</tt>	Convert the integer value to its igmpv3 encoded time value if needed.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L146'>post_build</a>(p,pay)</tt>	Called implicitly before a packet is sent to compute and place igmpv3 checksum.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L163'>mysummary</a>()</tt>	Display a summary of the igmpv3 object.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L172'>igmpize</a>(ip,ether)</tt>	Called to explicitly fixup associated ip and ethernet headers parameters.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L210'>adjust_ether</a>(ip,ether)</tt>	Called to explicitly fixup an associated ethernet header the function adjusts the ethernet header destination mac address based on.
+<tt style='background-color:#E8E8E8;'> contrib.IGMPv3 <a href=' /contrib/igmpv3.py#L227'>adjust_ip</a>(ip)</tt>	Called to explicitly fixup an associated ip header the function adjusts the ip header based on conformance rules.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/ospf.py#L170'>_LLSGuessPayloadClass</a>(p)</tt>	Guess the correct lls class for a given payload.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/ospf.py#L256'>_LSAGuessPayloadClass</a>(p)</tt>	Guess the correct lsa class for a given payload.
+<tt style='background-color:#E8E8E8;'> contrib. <a href=' /contrib/ospf.py#L514'>_OSPFv3_LSAGuessPayloadClass</a>(p)</tt>	Guess the correct ospfv3 lsa class for a given payload.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/dns.py#L381'>bitmap2RRlist</a>(bitmap)</tt>	Decode the 'type bit maps' field of the nsec resource record into an integer list.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/dns.py#L421'>RRlist2bitmap</a>(lst)</tt>	Encode a list of integers representing resource records to a bitmap field used in the nsec resource record.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/dns.py#L660'>dyndns_add</a>(nameserver,name,rdata,type)</tt>	Send a dns add message to a nameserver for "name" to have a new "rdata" dyndns_add(nameserver name rdata type="a", ttl=10) -> result code (0=ok).
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/dns.py#L682'>dyndns_del</a>(nameserver,name,type,ttl)</tt>	Send a dns delete message to a nameserver for "name" dyndns_del(nameserver name type="any", ttl=10) -> result code (0=ok).
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/bluetooth.py#L872'>srbt</a>(peer,pkts,inter)</tt>	Send and receive using a bluetooth socket.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/bluetooth.py#L880'>srbt1</a>(peer,pkts)</tt>	Send and receive 1 packet using a bluetooth socket.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/ntp.py#L94'>get_cls</a>(name,fallback_cls)</tt>	Returns class named "name" if it exists fallback_cls otherwise.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/ntp.py#L183'>_ntp_dispatcher</a>(payload)</tt>	Returns the right class for a given ntp packet.
+<tt style='background-color:#E8E8E8;'> layers.NTP <a href=' /layers/ntp.py#L215'>dispatch_hook</a>(cls,_pkt)</tt>	Returns the right class for the given data.
+<tt style='background-color:#E8E8E8;'> layers.NTP <a href=' /layers/ntp.py#L223'>pre_dissect</a>(s)</tt>	Check that the payload is long enough to build a ntp packet.
+<tt style='background-color:#E8E8E8;'> layers.NTPHeader <a href=' /layers/ntp.py#L508'>guess_payload_class</a>(payload)</tt>	Handles ntpv4 extensions and mac part when authentication is used.
+<tt style='background-color:#E8E8E8;'> layers.IPTools <a href=' /layers/inet.py#L40'>whois</a>()</tt>	Whois the source and print the output.
+<tt style='background-color:#E8E8E8;'> layers.IP <a href=' /layers/inet.py#L448'>fragment</a>(fragsize)</tt>	Fragment ip datagrams.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L826'>fragment</a>(pkt,fragsize)</tt>	Fragment a big ip datagram.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L848'>overlap_frag</a>(p,overlap,fragsize,overlap_fragsize)</tt>	Build overlapping fragments to bypass nips.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L867'>defrag</a>(plist)</tt>	Defrag plist -> ([not fragmented], [defragmented], [ [bad fragments], [bad fragments],.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L925'>defragment</a>(plist)</tt>	Defrag plist -> plist defragmented as much as possible.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L1003'>_packetlist_timeskew_graph</a>(ip)</tt>	Tries to graph the timeskew between the timestamps and real time for a given ip.
+<tt style='background-color:#E8E8E8;'> layers.TracerouteResult <a href=' /layers/inet.py#L1090'>trace3D</a>()</tt>	Give a 3d representation of the traceroute.
+<tt style='background-color:#E8E8E8;'> layers.TracerouteResult <a href=' /layers/inet.py#L1199'>world_trace</a>()</tt>	Display traceroute results on a world map.
+<tt style='background-color:#E8E8E8;'> layers.TracerouteResult <a href=' /layers/inet.py#L1435'>graph</a>(ASres,padding)</tt>	X graph(asres=conf as_resolver other args):.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L1455'>traceroute</a>(target,dport,minttl,maxttl)</tt>	Instant tcp traceroute traceroute(target [maxttl=30 ] [dport=80 ] [sport=80 ] [verbose=conf.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L1615'>report_ports</a>(target,ports)</tt>	Portscan a target and output a latex table.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet.py#L1638'>IPID_count</a>(lst,funcID,funcpres)</tt>	Identify ip id values classes in a list of packets.
+<tt style='background-color:#E8E8E8;'> layers.X509_TBSCertificate <a href=' /layers/x509.py#L864'>get_issuer_str</a>()</tt>	Returns a one-line string containing every type/value in a rather specific order.
+<tt style='background-color:#E8E8E8;'> layers.X509_TBSCertList <a href=' /layers/x509.py#L991'>get_issuer_str</a>()</tt>	Returns a one-line string containing every type/value in a rather specific order.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/lltd.py#L308'>_register_lltd_specific_class</a>()</tt>	This can be used as a class decorator if we want to support python 2.
+<tt style='background-color:#E8E8E8;'> layers.LargeTlvBuilder <a href=' /layers/lltd.py#L804'>parse</a>(plist)</tt>	Update the builder using the provided plist plist can.
+<tt style='background-color:#E8E8E8;'> layers.LargeTlvBuilder <a href=' /layers/lltd.py#L833'>get_data</a>()</tt>	Returns a dictionary object keys are strings "source > destincation [content type]", and values are the content.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L56'>getmacbyip</a>(ip,chainCC)</tt>	Return mac address corresponding to a given ip address.
+<tt style='background-color:#E8E8E8;'> layers.MKAParamSet <a href=' /layers/l2.py#L679'>dispatch_hook</a>(cls,_pkt)</tt>	Returns the right parameter set class.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L1164'>arpcachepoison</a>(target,victim,interval)</tt>	Poison target's cache with (your mac victim's ip) couple.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L1191'>arping</a>(net,timeout,cache,verbose)</tt>	Send arp who-has requests to determine which hosts are up arping(net [cache=0 ] [iface=conf.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L1209'>is_promisc</a>(ip,fake_bcast)</tt>	Try to guess if target is in promisc mode the target is provided by its ip.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L1217'>promiscping</a>(net,timeout,fake_bcast)</tt>	Send arp who-has requests to determine which hosts are in promiscuous mode promiscping(net iface=conf.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/l2.py#L1296'>etherleak</a>(target)</tt>	Exploit etherleak flaw.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/dot11.py#L444'>airpwn</a>(iffrom,ifto,replace,pattern)</tt>	Before using this initialize "iffrom" and "ifto" interfaces.
+<tt style='background-color:#E8E8E8;'> layers.AH <a href=' /layers/ipsec.py#L68'>__get_icv_len</a>()</tt>	Compute the size of the icv based on the payloadlen field.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/ipsec.py#L171'>_lcm</a>(a,b)</tt>	Least common multiple between 2 integers.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L185'>__init__</a>(name,cipher,mode,block_size)</tt>	@param name the name of this encryption algorithm @param cipher a cipher module.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L246'>check_key</a>(key)</tt>	Check that the key length is valid.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L256'>generate_iv</a>()</tt>	Generate a random initialization vector.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L264'>new_cipher</a>(key,mode_iv,digest)</tt>	@param key the secret key a byte string @param mode_iv the initialization vector or nonce a byte string.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L290'>pad</a>(esp)</tt>	Add the correct amount of padding so that the data to encrypt is exactly a multiple of the algorithm's block size.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L325'>encrypt</a>(sa,esp,key)</tt>	Encrypt an esp packet @param sa the securityassociation associated with the esp packet.
+<tt style='background-color:#E8E8E8;'> layers.CryptAlgo <a href=' /layers/ipsec.py#L352'>decrypt</a>(sa,esp,key,icv_size)</tt>	Decrypt an esp packet @param sa the securityassociation associated with the esp packet.
+<tt style='background-color:#E8E8E8;'> layers.AuthAlgo <a href=' /layers/ipsec.py#L480'>__init__</a>(name,mac,digestmod,icv_size)</tt>	@param name the name of this integrity algorithm @param mac a message authentication code module.
+<tt style='background-color:#E8E8E8;'> layers.AuthAlgo <a href=' /layers/ipsec.py#L496'>check_key</a>(key)</tt>	Check that the key length is valid.
+<tt style='background-color:#E8E8E8;'> layers.AuthAlgo <a href=' /layers/ipsec.py#L506'>new_mac</a>(key)</tt>	@param key a byte string.
+<tt style='background-color:#E8E8E8;'> layers.AuthAlgo <a href=' /layers/ipsec.py#L517'>sign</a>(pkt,key)</tt>	Sign an ipsec esp or ah packet with this algo.
+<tt style='background-color:#E8E8E8;'> layers.AuthAlgo <a href=' /layers/ipsec.py#L542'>verify</a>(pkt,key)</tt>	Check that the integrity check value icv of a packet is valid.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/ipsec.py#L619'>split_for_transport</a>(orig_pkt,transport_proto)</tt>	Split an ip v6 packet in the correct location to insert an esp or ah header.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/ipsec.py#L678'>zero_mutable_fields</a>(pkt,sending)</tt>	When using ah all "mutable" fields must be "zeroed" before calculating the icv.
+<tt style='background-color:#E8E8E8;'> layers.SecurityAssociation <a href=' /layers/ipsec.py#L755'>__init__</a>(proto,spi,seq_num,crypt_algo)</tt>	@param proto the ipsec proto to use esp or ah @param spi the security parameters index of this sa.
+<tt style='background-color:#E8E8E8;'> layers.SecurityAssociation <a href=' /layers/ipsec.py#L931'>encrypt</a>(pkt,seq_num,iv)</tt>	Encrypt and encapsulate an ip v6 packet with esp or ah according to this securityassociation.
+<tt style='background-color:#E8E8E8;'> layers.SecurityAssociation <a href=' /layers/ipsec.py#L1025'>decrypt</a>(pkt,verify)</tt>	Decrypt and decapsulate an ip v6 packet containing esp or ah.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L73'>neighsol</a>(addr,src,iface,timeout)</tt>	Sends an icmpv6 neighbor solicitation message to get the mac address of the neighbor with specified ipv6 address addr 'src' address is used as source of the message.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L95'>getmacbyip6</a>(ip6,chainCC)</tt>	Returns the mac address corresponding to an ipv6 address neighborcache.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L640'>in6_chksum</a>(nh,u,p)</tt>	Performs ipv6 upper layer checksum computation provided parameters are.
+<tt style='background-color:#E8E8E8;'> layers.HBHOptUnknown <a href=' /layers/inet6.py#L744'>alignment_delta</a>(curpos)</tt>	As specified in section 4 2 of rfc 2460 every options has.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L1081'>defragment6</a>(pktlist)</tt>	Performs defragmentation of a list of ipv6 packets packets are reordered.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L1133'>fragment6</a>(pkt,fragSize)</tt>	Performs fragmentation of an ipv6 packet provided packet ('pkt') must already.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L2107'>computeNIGroupAddr</a>(name)</tt>	Compute the ni group address can take a fqdn as input parameter.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L2143'>names2dnsrepr</a>(x)</tt>	Take as input a list of dns names or a single dns name and encode it in dns format with possible compression.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L2167'>dnsrepr2names</a>(x)</tt>	Take as input a dns encoded string possibly compressed and returns a list of dns names contained in it.
+<tt style='background-color:#E8E8E8;'> layers.AS_resolver6 <a href=' /layers/inet6.py#L3100'>_resolve_one</a>(ip)</tt>	Overloaded version to provide a whois resolution on the embedded ipv4 address if the address is 6to4 or teredo.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3166'>traceroute6</a>(target,dport,minttl,maxttl)</tt>	Instant tcp traceroute using ipv6.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3252'>_NDP_Attack_DAD_DoS</a>(reply_callback,iface,mac_src_filter,tgt_filter)</tt>	Internal generic helper accepting a specific callback as first argument for ns or na reply.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3304'>NDP_Attack_DAD_DoS_via_NS</a>(iface,mac_src_filter,tgt_filter,reply_mac)</tt>	Perform the dad dos attack using ns described in section 4 1 3 of rfc.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3360'>NDP_Attack_DAD_DoS_via_NA</a>(iface,mac_src_filter,tgt_filter,reply_mac)</tt>	Perform the dad dos attack using ns described in section 4 1 3 of rfc.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3421'>NDP_Attack_NA_Spoofing</a>(iface,mac_src_filter,tgt_filter,reply_mac)</tt>	The main purpose of this function is to send fake neighbor advertisement messages to a victim.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3558'>NDP_Attack_NS_Spoofing</a>(src_lladdr,src,target,dst)</tt>	The main purpose of this function is to send fake neighbor solicitations messages to a victim in order to either create a new entry in its neighbor.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3665'>NDP_Attack_Kill_Default_Router</a>(iface,mac_src_filter,ip_src_filter,reply_mac)</tt>	The purpose of the function is to monitor incoming ra messages sent by default routers ra with a non-zero router lifetime values.
+<tt style='background-color:#E8E8E8;'> layers. <a href=' /layers/inet6.py#L3788'>NDP_Attack_Fake_Router</a>(ra,iface,mac_src_filter,ip_src_filter)</tt>	The purpose of this function is to send provided ra message at layer 2 (i.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/keyexchange.py#L47'>phantom_mode</a>(pkt)</tt>	We expect this if tls_version is not set this means we did not process.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/keyexchange.py#L61'>phantom_decorate</a>(f,get_or_add)</tt>	Decorator for version-dependent fields.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSSignature <a href=' /layers/tls/keyexchange.py#L128'>_update_sig</a>(m,key)</tt>	Sign 'm' with the privkey 'key' and update our own 'sig_val'.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSSignature <a href=' /layers/tls/keyexchange.py#L140'>_verify_sig</a>(m,cert)</tt>	Verify that our own 'sig_val' carries the signature of 'm' by the key associated to the cert 'cert'.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerDHParams <a href=' /layers/tls/keyexchange.py#L240'>fill_missing</a>()</tt>	We do not want tlsserverkeyexchange build() to overload and recompute.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerDHParams <a href=' /layers/tls/keyexchange.py#L279'>post_dissection</a>(r)</tt>	Xxx check that the pubkey received is in the group.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerDHParams <a href=' /layers/tls/keyexchange.py#L297'>guess_payload_class</a>(p)</tt>	The signature after the params gets saved as padding.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHExplicitPrimeParams <a href=' /layers/tls/keyexchange.py#L427'>fill_missing</a>()</tt>	We do not want tlsserverkeyexchange build() to overload and recompute.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHExplicitPrimeParams <a href=' /layers/tls/keyexchange.py#L442'>post_dissection</a>(pkt)</tt>	Xxx store the server_kx_pubkey.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHExplicitChar2Params <a href=' /layers/tls/keyexchange.py#L476'>fill_missing</a>()</tt>	We do not want tlsserverkeyexchange build() to overload and recompute.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHExplicitChar2Params <a href=' /layers/tls/keyexchange.py#L485'>post_dissection</a>(pkt)</tt>	Xxx store the server_kx_pubkey.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHNamedCurveParams <a href=' /layers/tls/keyexchange.py#L505'>fill_missing</a>()</tt>	We do not want tlsserverkeyexchange build() to overload and recompute.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerECDHNamedCurveParams <a href=' /layers/tls/keyexchange.py#L552'>post_dissection</a>(r)</tt>	Xxx support compressed point format.
+<tt style='background-color:#E8E8E8;'> layers.tls.ServerPSKParams <a href=' /layers/tls/keyexchange.py#L653'>fill_missing</a>()</tt>	We do not want tlsserverkeyexchange build() to overload and recompute.
+<tt style='background-color:#E8E8E8;'> layers.tls.ClientDiffieHellmanPublic <a href=' /layers/tls/keyexchange.py#L708'>post_dissection</a>(m)</tt>	First we update the client dhparams then we try to update the server.
+<tt style='background-color:#E8E8E8;'> layers.tls.EncryptedPreMasterSecret <a href=' /layers/tls/keyexchange.py#L818'>post_build</a>(pkt,pay)</tt>	We encrypt the premaster secret the 48 bytes with either the server certificate or the temporary rsa key provided in a server key exchange.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/cert.py#L63'>der2pem</a>(der_string,obj)</tt>	Convert der octet string to pem format with optional header.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/cert.py#L74'>pem2der</a>(pem_string)</tt>	Convert pem string to der format.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/cert.py#L88'>split_pem</a>(s)</tt>	Split pem objects useful to process concatenated certificates.
+<tt style='background-color:#E8E8E8;'> layers.tls.PubKey <a href=' /layers/tls/cert.py#L239'>verifyCert</a>(cert)</tt>	Verifies either a cert or an x509_cert.
+<tt style='background-color:#E8E8E8;'> layers.tls._PrivKeyFactory <a href=' /layers/tls/cert.py#L342'>__call__</a>(cls,key_path)</tt>	Key_path may be the path to either _an rsaprivatekey_openssl as generated by openssl ;.
+<tt style='background-color:#E8E8E8;'> layers.tls.PrivKey <a href=' /layers/tls/cert.py#L406'>signTBSCert</a>(tbsCert,h)</tt>	Note that this will always copy the signature field from the tbscertificate into the signaturealgorithm field of the result.
+<tt style='background-color:#E8E8E8;'> layers.tls.PrivKey <a href=' /layers/tls/cert.py#L429'>resignCert</a>(cert)</tt>	Rewrite the signature of either a cert or an x509_cert.
+<tt style='background-color:#E8E8E8;'> layers.tls.PrivKey <a href=' /layers/tls/cert.py#L433'>verifyCert</a>(cert)</tt>	Verifies either a cert or an x509_cert.
+<tt style='background-color:#E8E8E8;'> layers.tls.Cert <a href=' /layers/tls/cert.py#L623'>isIssuerCert</a>(other)</tt>	True if 'other' issued 'self', i e :.
+<tt style='background-color:#E8E8E8;'> layers.tls.Cert <a href=' /layers/tls/cert.py#L633'>isSelfSigned</a>()</tt>	Return true if the certificate is self-signed - issuer and subject are the same.
+<tt style='background-color:#E8E8E8;'> layers.tls.Cert <a href=' /layers/tls/cert.py#L652'>remainingDays</a>(now)</tt>	Based on the value of notafter field returns the number of days the certificate will still be valid.
+<tt style='background-color:#E8E8E8;'> layers.tls.Cert <a href=' /layers/tls/cert.py#L689'>isRevoked</a>(crl_list)</tt>	Given a list of trusted crl their signature has already been verified with trusted anchors this function returns true if.
+<tt style='background-color:#E8E8E8;'> layers.tls.Cert <a href=' /layers/tls/cert.py#L716'>export</a>(filename,fmt)</tt>	Export certificate in 'fmt' format der or pem to file 'filename'.
+<tt style='background-color:#E8E8E8;'> layers.tls.Chain <a href=' /layers/tls/cert.py#L855'>__init__</a>(certList,cert0)</tt>	Construct a chain of certificates starting with a self-signed certificate or any certificate submitted by the user.
+<tt style='background-color:#E8E8E8;'> layers.tls.Chain <a href=' /layers/tls/cert.py#L891'>verifyChain</a>(anchors,untrusted)</tt>	Perform verification of certificate chains for that certificate.
+<tt style='background-color:#E8E8E8;'> layers.tls.Chain <a href=' /layers/tls/cert.py#L917'>verifyChainFromCAFile</a>(cafile,untrusted_file)</tt>	Does the same job as verifychain() but using the list of anchors.
+<tt style='background-color:#E8E8E8;'> layers.tls.Chain <a href=' /layers/tls/cert.py#L944'>verifyChainFromCAPath</a>(capath,untrusted_file)</tt>	Does the same job as verifychainfromcafile() but using the list.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSHandshake <a href=' /layers/tls/handshake.py#L76'>tls_session_update</a>(msg_str)</tt>	Covers both post_build- and post_dissection- context updates.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSHelloRequest <a href=' /layers/tls/handshake.py#L93'>tls_session_update</a>(msg_str)</tt>	Message should not be added to the list of handshake messages that will be hashed in the finished and certificate verify messages.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS_Ext_PrettyPacketList <a href=' /layers/tls/handshake.py#L247'>_show_or_dump</a>(dump,indent,lvl,label_lvl)</tt>	Reproduced from packet py.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/handshake.py#L485'>_TLS_Ext_CertTypeDispatcher</a>(m)</tt>	We need to select the correct one on dissection we use the length for.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientHello <a href=' /layers/tls/handshake.py#L787'>tls_session_update</a>(msg_str)</tt>	Either for parsing or building we store the client_random along with the raw string representing this handshake message.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerHello <a href=' /layers/tls/handshake.py#L840'>tls_session_update</a>(msg_str)</tt>	Either for parsing or building we store the server_random along with the raw string representing this handshake message.
+<tt style='background-color:#E8E8E8;'> layers.tls._ASN1CertListField <a href=' /layers/tls/handshake.py#L922'>getfield</a>(pkt,s)</tt>	Extract certs in a loop.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerKeyExchange <a href=' /layers/tls/handshake.py#L1002'>build</a>()</tt>	We overload build() method in order to provide a valid default value for params based on tls session if not provided.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerKeyExchange <a href=' /layers/tls/handshake.py#L1059'>post_dissection</a>(pkt)</tt>	While previously dissecting server*dhparams the session server_kx_params and client_kx_params should have been updated.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSCKExchKeysField <a href=' /layers/tls/handshake.py#L1205'>m2i</a>(pkt,m)</tt>	The client_kx_msg may be either none encryptedpremastersecret for rsa encryption key exchange clientdiffiehellmanpublic.
+<tt style='background-color:#E8E8E8;'> layers.tls._GenericTLSSessionInheritance <a href=' /layers/tls/session.py#L482'>tls_session_update</a>(msg_str)</tt>	Post_{build dissection}_tls_session_update() are used to update the tlssession context.
+<tt style='background-color:#E8E8E8;'> layers.tls._GenericTLSSessionInheritance <a href=' /layers/tls/session.py#L506'>show2</a>()</tt>	Rebuild the tls packet with the same context and then show() it.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L34'>_tls_compress</a>(alg,p)</tt>	Compress p a tlsplaintext instance using compression algorithm instance alg and return a tlscompressed instance.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L46'>_tls_decompress</a>(alg,c)</tt>	Decompress c a tlscompressed instance using compression algorithm instance alg and return a tlsplaintext instance.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L58'>_tls_mac_add</a>(alg,c,write_seq_num)</tt>	Compute the mac using provided mac alg instance over tlsciphertext c using current write sequence number write_seq_num.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L71'>_tls_mac_verify</a>(alg,p,read_seq_num)</tt>	Verify if the mac in provided message message resulting from decryption and padding removal is valid.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L98'>_tls_add_pad</a>(p,block_size)</tt>	Provided with cipher block size parameter and current tlscompressed packet p after mac addition the function adds required deterministic padding.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L112'>_tls_del_pad</a>(p)</tt>	Provided with a just decrypted tlsciphertext now a tlsplaintext instance p the function removes the trailing padding found in p.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L139'>_tls_encrypt</a>(alg,p)</tt>	Provided with an already maced tlscompressed packet and a stream or block cipher alg the function converts it into a tlsciphertext (i.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L153'>_tls_decrypt</a>(alg,c)</tt>	Provided with a tlsciphertext instance c and a stream or block cipher alg the function decrypts c.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L165'>_tls_aead_auth_encrypt</a>(alg,p,write_seq_num)</tt>	Provided with a tlscompressed instance p the function applies aead cipher alg to p.
+<tt style='background-color:#E8E8E8;'> layers.tls. <a href=' /layers/tls/tools.py#L186'>_tls_aead_auth_decrypt</a>(alg,c,read_seq_num)</tt>	Provided with a tlsciphertext instance c the function applies aead cipher alg auth_decrypt function to c.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L109'>get_next_msg</a>(socket_timeout,retry)</tt>	The purpose of the function is to make next message s available in self.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L190'>add_ClientHello</a>()</tt>	Default tlsclienthello() offers only tls_dhe_rsa_with_aes_128_cbc_sha.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L228'>should_HANDLE_ServerHello</a>()</tt>	Xxx we should check the serverhello attributes for discrepancies with our own clienthello.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L279'>should_HANDLE_SKE_from_CERT</a>()</tt>	Xxx we should check the serverkeyexchange attributes for discrepancies with our own clienthello along with the serverhello and certificate.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L323'>should_HANDLE_CERT_REQ</a>()</tt>	Xxx we should check the certificaterequest attributes for discrepancies with the cipher suite etc.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L375'>should_ADD_CLIENT_CERT</a>()</tt>	If the server sent a certificaterequest we send a certificate message.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L423'>should_ADD_CV_from_ADD_CKE</a>()</tt>	Xxx section 7 4 7 1 of rfc 5246 states that the certificateverify.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L542'>send_recv_data</a>()</tt>	Xxx no live input from the user ; one unique send for now.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L571'>close_session</a>()</tt>	We end the session properly after 2 seconds with a tls alert (warning close_notify).
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSClientAutomaton <a href=' /layers/tls/automaton.py#L591'>FINAL</a>()</tt>	We might call shutdown but it may happen that the server did not wait for us to shutdown after answering our data query.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L653'>get_next_msg</a>()</tt>	The purpose of the function is to make next message s available in self.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L710'>INIT_TLS_SESSION</a>()</tt>	Xxx we should offer the right key according to the client's suites for.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L769'>should_NO_USABLE_CIPHERSUITE</a>()</tt>	We extract cipher suites candidates from the client's proposition.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L787'>NO_USABLE_CIPHERSUITE</a>()</tt>	If there is no available cipher suite close the session with an alert.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L807'>should_REPLY_TO_CH</a>()</tt>	Xxx several enhancements needed here.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L1041'>PROCESS_DATA</a>()</tt>	In the beginning we return a small page with useful information.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLSServerAutomaton <a href=' /layers/tls/automaton.py#L1075'>FINAL</a>()</tt>	We might call shutdown but unit tests with s_client fail with this.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSMsgListField <a href=' /layers/tls/record.py#L60'>m2i</a>(pkt,m)</tt>	Try to parse one of the tls subprotocols (ccs alert handshake or application_data).
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSMsgListField <a href=' /layers/tls/record.py#L82'>getfield</a>(pkt,s)</tt>	If the decryption of the content did not fail with a ciphererror we begin a loop on the clear content in order to get as much messages.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSMsgListField <a href=' /layers/tls/record.py#L127'>i2m</a>(pkt,p)</tt>	Update the context with information from the built packet.
+<tt style='background-color:#E8E8E8;'> layers.tls._TLSMsgListField <a href=' /layers/tls/record.py#L150'>addfield</a>(pkt,s,val)</tt>	Reconstruct the header because the tls type may have been updated.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L221'>__init__</a>()</tt>	As long as 'decipherable' is true _tlsmsglistfield will try to decipher the content of the tls message.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L233'>_tls_auth_decrypt</a>(hdr,s)</tt>	Provided with the record header and aead-ciphered data return the sliced and clear tuple (nonce tlscompressed.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L256'>_tls_decrypt</a>(s)</tt>	Provided with stream- or block-ciphered data return the clear version.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L270'>_tls_hmac_verify</a>(hdr,msg,mac)</tt>	Provided with the record header the tlscompressed fragment and the.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L303'>_tls_decompress</a>(s)</tt>	Provided with the tlscompressed fragment.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L311'>pre_dissect</a>(s)</tt>	Decrypt verify and decompress the message i.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L409'>post_dissect</a>(s)</tt>	Commit the pending read state if it has been triggered.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L422'>do_dissect_payload</a>(s)</tt>	Try to dissect the following data as a tls message.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L441'>_tls_compress</a>(s)</tt>	Provided with the tlsplaintext fragment.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L449'>_tls_auth_encrypt</a>(s)</tt>	Return the tlsciphertext fragment for aead ciphers i e the whole.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L462'>_tls_hmac_add</a>(hdr,msg)</tt>	Provided with the record header concatenation of the tlscompressed type version and length fields and the tlscompressed.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L485'>_tls_pad</a>(s)</tt>	Provided with the concatenation of the tlscompressed fragment and the.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L504'>_tls_encrypt</a>(s)</tt>	Return the stream- or block-ciphered version of the concatenated input.
+<tt style='background-color:#E8E8E8;'> layers.tls.TLS <a href=' /layers/tls/record.py#L512'>post_build</a>(pkt,pay)</tt>	Apply the previous methods according to the writing cipher type.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/suites.py#L19'>get_algs_from_ciphersuite_name</a>(ciphersuite_name)</tt>	Return the 3-tuple made of the key exchange algorithm class the cipher class and the hmac class through the parsing of the ciphersuite name.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._GenericCipherSuite <a href=' /layers/tls/crypto/suites.py#L114'>__init__</a>(tls_version)</tt>	Most of the attributes are fixed and have already been set by the metaclass but we still have to provide tls_version differentiation.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/suites.py#L953'>get_usable_ciphersuites</a>(l,kx)</tt>	From a list of proposed ciphersuites this function returns a list of usable cipher suites i.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._AEADCipher <a href=' /layers/tls/crypto/cipher_aead.py#L55'>__init__</a>(key,salt,nonce_explicit)</tt>	'key' and 'salt' are to be provided as strings whereas the internal 'nonce_explicit' is an integer it is simpler for incrementation.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._AEADCipher <a href=' /layers/tls/crypto/cipher_aead.py#L103'>_update_nonce</a>()</tt>	Increment the explicit nonce while avoiding any overflow.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._AEADCipher <a href=' /layers/tls/crypto/cipher_aead.py#L110'>auth_encrypt</a>(P,A)</tt>	Encrypt the data prepend the explicit part of the nonce and append the computed authentication code.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._AEADCipher <a href=' /layers/tls/crypto/cipher_aead.py#L131'>auth_decrypt</a>(A,C,add_length)</tt>	Decrypt the data and verify the authentication code in this order.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._BlockCipher <a href=' /layers/tls/crypto/cipher_block.py#L71'>encrypt</a>(data)</tt>	Encrypt the data also update the cipher iv this is needed for sslv3.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._BlockCipher <a href=' /layers/tls/crypto/cipher_block.py#L83'>decrypt</a>(data)</tt>	Decrypt the data also update the cipher iv this is needed for sslv3.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._StreamCipher <a href=' /layers/tls/crypto/cipher_stream.py#L37'>__init__</a>(key)</tt>	Note that we have to keep the encryption/decryption state in unique encryptor and decryptor objects.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L35'>pkcs_os2ip</a>(x)</tt>	Accepts a byte string as input parameter and return the associated long.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L49'>pkcs_i2osp</a>(x,xLen)</tt>	Converts a long the first parameter to the associated byte string representation of length l second parameter.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L68'>pkcs_ilen</a>(n)</tt>	This is a log base 256 which determines the minimum octet string length for unequivocal representation of integer n by pkcs_i2osp.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L146'>pkcs_mgf1</a>(mgfSeed,maskLen,h)</tt>	Implements generic mgf1 mask generation function as described in appendix b.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L184'>pkcs_emsa_pss_encode</a>(M,emBits,h,mgf)</tt>	Implements emsa-pss-encode() function described in sect 9 1 1 of rfc 3447.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L231'>pkcs_emsa_pss_verify</a>(M,EM,emBits,h)</tt>	Implements emsa-pss-verify() function described in sect 9 1 2 of rfc 3447.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L290'>pkcs_emsa_pkcs1_v1_5_encode</a>(M,emLen,h)</tt>	Implements emsa-pkcs1-v1_5-encode() function described in sect.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._EncryptAndVerifyRSA <a href=' /layers/tls/crypto/pkcs1.py#L330'>_rsaep</a>(m)</tt>	Internal method providing raw rsa encryption i e simple modular.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._EncryptAndVerifyRSA <a href=' /layers/tls/crypto/pkcs1.py#L381'>_rsavp1</a>(s)</tt>	Internal method providing raw rsa verification i e simple modular.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._EncryptAndVerifyRSA <a href=' /layers/tls/crypto/pkcs1.py#L401'>_rsassa_pss_verify</a>(M,S,h,mgf)</tt>	Implements rsassa-pss-verify() function described in sect 8 1 2.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._EncryptAndVerifyRSA <a href=' /layers/tls/crypto/pkcs1.py#L446'>_rsassa_pkcs1_v1_5_verify</a>(M,S,h)</tt>	Implements rsassa-pkcs1-v1_5-verify() function as described in sect.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._EncryptAndVerifyRSA <a href=' /layers/tls/crypto/pkcs1.py#L483'>verify_legacy</a>(M,S,t,h)</tt>	Verify alleged signature 's' is indeed the signature of message 'm' using 't' signature scheme where 't' can be.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._DecryptAndSignRSA <a href=' /layers/tls/crypto/pkcs1.py#L569'>_rsadp</a>(c)</tt>	Internal method providing raw rsa decryption i e simple modular.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._DecryptAndSignRSA <a href=' /layers/tls/crypto/pkcs1.py#L621'>_rsasp1</a>(m)</tt>	Internal method providing raw rsa signature i e simple modular.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._DecryptAndSignRSA <a href=' /layers/tls/crypto/pkcs1.py#L642'>_rsassa_pss_sign</a>(M,h,mgf,sLen)</tt>	Implements rsassa-pss-sign() function described in sect 8 1 1 of.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._DecryptAndSignRSA <a href=' /layers/tls/crypto/pkcs1.py#L686'>_rsassa_pkcs1_v1_5_sign</a>(M,h)</tt>	Implements rsassa-pkcs1-v1_5-sign() function as described in sect.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto._DecryptAndSignRSA <a href=' /layers/tls/crypto/pkcs1.py#L715'>sign_legacy</a>(M,t,h,mgf)</tt>	Sign message 'm' using 't' signature scheme where 't' can be - none the message 'm' is directly applied the rsasp1 signature.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L790'>create_ca_file</a>(anchor_list,filename)</tt>	Concatenate all the certificates pem format for the export in 'anchor_list' and write the result to file 'filename'.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L811'>create_temporary_ca_file</a>(anchor_list)</tt>	Concatenate all the certificates pem format for the export in 'anchor_list' and write the result to file to a temporary file.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/pkcs1.py#L831'>create_temporary_ca_path</a>(anchor_list,folder)</tt>	Create a ca path folder as defined in openssl terminology by storing all certificates in 'anchor_list' list in pem format.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/prf.py#L19'>_tls_P_hash</a>(secret,seed,req_len,hm)</tt>	Provides the implementation of p_hash function defined in section 5 of rfc 4346 and section 5 of rfc 5246.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/prf.py#L69'>_ssl_PRF</a>(secret,seed,req_len)</tt>	Provides the implementation of sslv3 prf function sslv3-prf secret seed =.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/prf.py#L98'>_tls_PRF</a>(secret,label,seed,req_len)</tt>	Provides the implementation of tls prf function as defined in section 5 of rfc 4346.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto. <a href=' /layers/tls/crypto/prf.py#L126'>_tls12_SHA256PRF</a>(secret,label,seed,req_len)</tt>	Provides the implementation of tls 1 2 prf function as.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto.PRF <a href=' /layers/tls/crypto/prf.py#L182'>compute_master_secret</a>(pre_master_secret,client_random,server_random)</tt>	Return the 48-byte master_secret computed from pre_master_secret client_random and server_random.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto.PRF <a href=' /layers/tls/crypto/prf.py#L194'>derive_key_block</a>(master_secret,server_random,client_random,req_len)</tt>	Perform the derivation of master_secret into a key_block of req_len requested length.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto.PRF <a href=' /layers/tls/crypto/prf.py#L206'>compute_verify_data</a>(con_end,read_or_write,handshake_msg,master_secret)</tt>	Return verify_data based on handshake messages connection end master secret and read_or_write position.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto.PRF <a href=' /layers/tls/crypto/prf.py#L264'>postprocess_key_for_export</a>(key,client_random,server_random,con_end)</tt>	Postprocess cipher key for export ciphersuite i e weakens it.
+<tt style='background-color:#E8E8E8;'> layers.tls.crypto.PRF <a href=' /layers/tls/crypto/prf.py#L291'>generate_iv_for_export</a>(client_random,server_random,con_end,read_or_write)</tt>	Generate iv for export ciphersuite i e weakens it.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/common.py#L15'>get_if</a>(iff,cmd)</tt>	Ease siocgif* ioctl calls.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/linux.py#L165'>get_alias_address</a>(iface_name,ip_mask)</tt>	Get the correct source ip address of an interface alias.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/unix.py#L177'>in6_getifaddr</a>()</tt>	Returns a list of 3-tuples of the form addr scope iface where 'addr' is the address of scope 'scope' associated to the interface.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/__init__.py#L83'>get_if_addr6</a>(iff)</tt>	Returns the main global unicast address associated with provided interface in human readable form.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/__init__.py#L95'>get_if_raw_addr6</a>(iff)</tt>	Returns the main global unicast address associated with provided interface in network format.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/unix.py#L28'>_guess_iface_name</a>(netif)</tt>	We attempt to guess the name of interfaces that are truncated from the output of ifconfig -l.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/unix.py#L143'>_in6_getifaddr</a>(ifname)</tt>	Returns a list of ipv6 addresses configured on the interface ifname.
+<tt style='background-color:#E8E8E8;'> arch. <a href=' /arch/unix.py#L218'>read_routes6</a>()</tt>	Return a list of ipv6 routes than can be used by scapy.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/compatibility.py#L174'>sniff</a>(count,store,offline,prn)</tt>	Sniff packets sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ] [lfilter=none ] + l2listensocket args) -> list of packets.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L58'>_exec_query_ps</a>(cmd,fields)</tt>	Execute a powershell query.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L131'>_exec_query_vbs</a>(cmd,fields)</tt>	Execute a query using vbs currently get-wmiobject queries are.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L163'>exec_query</a>(cmd,fields)</tt>	Execute a system query using powershell if it is available and using vbs/cscript as a fallback.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L174'>_deep_lookup</a>(prog_list,max_depth)</tt>	Quickly iterate through program files to find the programs.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L207'>_where</a>(filename,dirs,env)</tt>	Find file in current dir in deep_lookup cache or in system path.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L225'>win_find_exe</a>(filename,installsubdir,env)</tt>	Find executable in current dir system path or given programfiles subdir.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L309'>get_windows_if_list</a>()</tt>	Returns windows interfaces.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterface <a href=' /arch/windows/__init__.py#L353'>update</a>(data)</tt>	Update info about network interface according to given dnet dictionary.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L426'>dev_from_name</a>(name)</tt>	Return the first pcap device name for a given windows device name.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L435'>dev_from_pcapname</a>(pcap_name)</tt>	Return windows device name for given pcap device name.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L442'>dev_from_index</a>(if_index)</tt>	Return interface name from interface index.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L453'>remove_invalid_ifaces</a>()</tt>	Remove all invalid interfaces.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L459'>reload</a>()</tt>	Reload interface list.
+<tt style='background-color:#E8E8E8;'> arch.windows.NetworkInterfaceDict <a href=' /arch/windows/__init__.py#L464'>show</a>(resolve_mac)</tt>	Print list of available network interfaces in human readable form.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L477'>pcapname</a>(dev)</tt>	Return pypcap device name for given interface or libdnet/scapy device name.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L495'>dev_from_pcapname</a>(pcap_name)</tt>	Return libdnet/scapy device name for given pypcap device name.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L499'>dev_from_index</a>(if_index)</tt>	Return windows adapter name for given windows interface index.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L503'>show_interfaces</a>(resolve_mac)</tt>	Print list of available network interfaces.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L604'>in6_getifaddr</a>()</tt>	Returns all ipv6 addresses found on the computer.
+<tt style='background-color:#E8E8E8;'> arch.windows. <a href=' /arch/windows/__init__.py#L788'>route_add_loopback</a>(routes,ipv6,iflist)</tt>	Add a route to 127 0 0 1 and ::1 to simplify unit tests on windows.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L103'>set_promisc</a>(value)</tt>	Set the interface in promiscuous mode.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L112'>__del__</a>()</tt>	Close the file descriptor on delete.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L116'>guess_cls</a>()</tt>	Guess the packet class that must be used on the interface.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L139'>set_nonblock</a>(set_flag)</tt>	Set the non blocking flag on the socket.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L162'>get_stats</a>()</tt>	Get received / dropped statistics.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L172'>get_blen</a>()</tt>	Get the bpf buffer length.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L182'>fileno</a>()</tt>	Get the underlying file descriptor.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L186'>close</a>()</tt>	Close the super socket.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfSocket <a href=' /arch/bpf/supersocket.py#L300'>send</a>(x)</tt>	Send a frame.
+<tt style='background-color:#E8E8E8;'> arch.bpf._L2bpfSocket <a href=' /arch/bpf/supersocket.py#L198'>recv</a>(x)</tt>	Dummy recv method.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfListenSocket <a href=' /arch/bpf/supersocket.py#L208'>buffered_frames</a>()</tt>	Return the number of frames in the buffer.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfListenSocket <a href=' /arch/bpf/supersocket.py#L212'>get_frame</a>()</tt>	Get a frame or packet from the received list.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfListenSocket <a href=' /arch/bpf/supersocket.py#L223'>bpf_align</a>(bh_h,bh_c)</tt>	Return the index to the end of the current packet.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfListenSocket <a href=' /arch/bpf/supersocket.py#L234'>extract_frames</a>(bpf_buffer)</tt>	Extract all frames from the buffer and stored them in the received list.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfListenSocket <a href=' /arch/bpf/supersocket.py#L274'>recv</a>(x)</tt>	Receive a frame from the network.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L2bpfSocket <a href=' /arch/bpf/supersocket.py#L304'>nonblock_recv</a>()</tt>	Non blocking receive.
+<tt style='background-color:#E8E8E8;'> arch.bpf.L3bpfSocket <a href=' /arch/bpf/supersocket.py#L321'>send</a>(pkt)</tt>	Send a packet.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/supersocket.py#L351'>isBPFSocket</a>(obj)</tt>	Return true is obj is a bpf super socket.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/supersocket.py#L356'>bpf_select</a>(fds_list,timeout)</tt>	A call to recv() can return several frames this functions hides the fact.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L48'>get_if_raw_addr</a>(ifname)</tt>	Returns the ipv4 address configured on 'ifname', packed with inet_pton.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L69'>get_if_raw_hwaddr</a>(ifname)</tt>	Returns the packed mac address configured on 'ifname'.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L99'>get_dev_bpf</a>()</tt>	Returns an opened bpf file object.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L113'>attach_filter</a>(fd,iface,bpf_filter_string)</tt>	Attach a bpf filter to the bpf file descriptor.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L151'>get_if_list</a>()</tt>	Returns a list containing all network interfaces.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L166'>get_working_ifaces</a>()</tt>	Returns an ordered list of interfaces that could be used with bpf.
+<tt style='background-color:#E8E8E8;'> arch.bpf. <a href=' /arch/bpf/core.py#L216'>get_working_if</a>()</tt>	Returns the first interface than can be used with bpf.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/voip.py#L46'>voip_play</a>(s1,lst)</tt>	Play voip packets with raw data that are either sniffed either from an ip or.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/voip.py#L94'>voip_play1</a>(s1,lst)</tt>	Same than voip_play backward compatibility.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/voip.py#L99'>voip_play2</a>(s1)</tt>	Same than voip_play but will play both incoming and outcoming packets.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/voip.py#L131'>voip_play3</a>(lst)</tt>	Same than voip_play but made to read and play voip rtp packets without.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/p0f.py#L273'>p0f</a>(pkt)</tt>	Passive os fingerprinting which os emitted this tcp packet.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/p0f.py#L321'>pkt2uptime</a>(pkt,HZ)</tt>	Calculate the date the machine which emitted the packet booted using tcp timestamp.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/p0f.py#L339'>p0f_impersonate</a>(pkt,osgenre,osdetails,signature)</tt>	Modifies pkt so that p0f will think it has been sent by a specific os.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/p0f.py#L504'>p0f_getlocalsigs</a>()</tt>	This function returns a dictionary of signatures indexed by p0f db (e.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/queso.py#L110'>queso</a>()</tt>	Queso os fingerprinting.

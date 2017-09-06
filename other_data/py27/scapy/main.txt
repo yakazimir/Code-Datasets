@@ -1,0 +1,757 @@
+core	RandPool	__init__		each parameter is a volatile object or a couple volatile object weight
+core	PacketList	__init__	res name stats	create a packet list from a list of packets
+core	PacketList	summary	prn lfilter	prints a summary of each packet prn function to apply to each packet instead of lambda x x
+core	PacketList	nsummary	prn lfilter	prints a summary of each packet with the packet's number prn function to apply to each packet instead of lambda x x
+core	PacketList	display		deprecated is show()
+core	PacketList	show		best way to display the packet list defaults to nsummary() method
+core	PacketList	filter	func	returns a packet list filtered by a truth function
+core	PacketList	make_table		prints a table using a function that returns for each packet its head column value head row value and displayed value ex p
+core	PacketList	make_lined_table		same as make_table but print a table with lines
+core	PacketList	make_tex_table		same as make_table but print a table with latex syntax
+core	PacketList	plot	f lfilter plot_xy	applies a function to each packet to get a value that will be plotted with matplotlib
+core	PacketList	diffplot	f delay lfilter	diffplot(f delay=1 lfilter=none) applies a function to couples (l[i],l[i+delay])
+core	PacketList	multiplot	f lfilter plot_xy	uses a function that returns a label and a value for this label then plots all the values label by label
+core	PacketList	rawhexdump		prints an hexadecimal dump of each packet in the list
+core	PacketList	hexraw	lfilter	same as nsummary(), except that if a packet has a raw layer it will be hexdumped
+core	PacketList	hexdump	lfilter	same as nsummary(), except that packets are also hexdumped
+core	PacketList	padding	lfilter	same as hexraw(), for padding layer
+core	PacketList	nzpadding	lfilter	same as padding() but only non null padding
+core	PacketList	conversations	getsrcdst	graphes a conversations between sources and destinations and display it using graphviz and imagemagick
+core	PacketList	afterglow	src event dst	experimental clone attempt of http //sourceforge net/projects/afterglow
+core	PacketList	psdump	filename	creates a multi-page postcript file with a psdump of every packet filename name of the file to write to
+core	PacketList	pdfdump	filename	creates a pdf file with a psdump of every packet filename name of the file to write to
+core	PacketList	sr	multi	sr([multi=1]) -> sndrcvlist packetlist
+core		construct_source_candidate_set	addr plen laddr loiface	given all addresses assigned to a specific interface ('laddr' parameter), this function returns the "candidate set" associated with 'addr/plen'
+core		get_source_addr_from_candidate_set	dst candidate_set	this function implement a limited version of source address selection algorithm defined in section 5 of rfc 3484
+core		in6_mactoifaceid	mac ulbit	compute the interface id in modified eui-64 format associated to the ethernet address provided as input
+core		in6_ifaceidtomac	ifaceid	extract the mac address from provided iface id iface id is provided
+core		in6_addrtomac	addr	extract the mac address from provided address none is returned
+core		in6_addrtovendor	addr	extract the mac address from a modified eui-64 constructed ipv6 address provided and use the iana oui
+core		in6_getLinkScopedMcastAddr	addr grpid scope	generate a link-scoped multicast address as described in rfc 4489
+core		in6_get6to4Prefix	addr	returns the /48 6to4 prefix associated with provided ipv4 address on error none is returned
+core		in6_6to4ExtractAddr	addr	extract ipv4 address embedded in 6to4 address passed address must be
+core		in6_getLocalUniquePrefix		returns a pseudo-randomly generated local unique prefix function
+core		in6_getRandomizedIfaceId	ifaceid previous	implements the interface id generation algorithm described in rfc 3041
+core		in6_ctop	addr	convert an ipv6 address in compact representation notation rfc 1924 to printable representation ;-)
+core		in6_ptoc	addr	converts an ipv6 address in printable representation to rfc 1924 compact representation ;-)
+core		in6_isaddr6to4	x	return true if provided address in printable format is a 6to4 address (being in 2002 :/16)
+core		in6_isaddrTeredo	x	return true if provided address is a teredo meaning it is under the /32 conf
+core		teredoAddrExtractInfo	x	extract information from a teredo address return value is
+core		in6_iseui64	x	return true if provided address has an interface identifier part created in modified eui-64 format (meaning it matches *::*:*ff fe*:*)
+core		in6_or	a1 a2	provides a bit to bit or of provided addresses they must be
+core		in6_and	a1 a2	provides a bit to bit and of provided addresses they must be
+core		in6_xor	a1 a2	provides a bit to bit xor of provided addresses they must be
+core		in6_cidr2mask	m	return the mask bitstring associated with provided length value
+core		in6_getnsma	a	return link-local solicited-node multicast address for given address
+core		in6_getnsmac	a	return the multicast mac address associated with provided ipv6 address
+core		in6_getha	prefix	return the anycast address associated with all home agents on a given subnet
+core		in6_ptop	str	normalizes ipv6 addresses provided in printable format returning the same address in printable format
+core		in6_isincluded	addr prefix plen	returns true when 'addr' belongs to prefix/plen false otherwise
+core		in6_isllsnmaddr	str	return true if provided address is a link-local solicited node multicast address i
+core		in6_isdocaddr	str	returns true if provided address in printable format belongs to 2001 db8 :/32 address space reserved for documentation (as defined
+core		in6_islladdr	str	returns true if provided address in printable format belongs to
+core		in6_issladdr	str	returns true if provided address in printable format belongs to _allocated_ site-local address space (fec0 :/10)
+core		in6_isuladdr	str	returns true if provided address in printable format belongs to unique local address space (fc00 :/7)
+core		in6_isgladdr	str	returns true if provided address in printable format belongs to _allocated_ global address space (2000 :/3)
+core		in6_ismaddr	str	returns true if provided address in printable format belongs to allocated multicast address space (ff00 :/8)
+core		in6_ismnladdr	str	returns true if address belongs to node-local multicast address
+core		in6_ismgladdr	str	returns true if address belongs to global multicast address space (ff0e :/16)
+core		in6_ismlladdr	str	returns true if address belongs to link-local multicast address
+core		in6_ismsladdr	str	returns true if address belongs to site-local multicast address space (ff05 :/16)
+core		in6_isaddrllallnodes	str	returns true if address is the link-local all-nodes multicast address (ff02 :1)
+core		in6_isaddrllallservers	str	returns true if address is the link-local all-servers multicast address (ff02 :2)
+core		in6_getscope	addr	returns the scope of the address
+core		in6_get_common_plen	a b	return common prefix length of ipv6 addresses a and b
+core		in6_isvalid	address	return true if 'address' is a valid ipv6 address string false otherwise
+core	Packet	_unpickle	dlist	used to unpack pickling
+core	Packet	__reduce__		used by pickling methods
+core	Packet	__reduce_ex__	proto	used by pickling methods
+core	Packet	__getstate__		mark object as pickable
+core	Packet	__setstate__	state	rebuild state using pickable methods
+core	Packet	__deepcopy__	memo	used by copy deepcopy
+core	Packet	init_fields		initialize each fields of the fields_desc dict
+core	Packet	do_init_fields	flist	initialize each fields of the fields_desc dict
+core	Packet	dissection_done	pkt	dev will be called after a dissection is completed
+core	Packet	post_dissection	pkt	dev is called after the dissection of the whole packet
+core	Packet	get_field	fld	dev returns the field instance from the name of the field
+core	Packet	copy		returns a deep copy of the instance
+core	Packet	self_build	field_pos_list	create the default layer regarding fields_desc dict
+core	Packet	do_build_payload		create the default version of the payload layer
+core	Packet	do_build		create the default version of the layer
+core	Packet	build		create the current layer
+core	Packet	post_build	pkt pay	dev called right after the current layer is build
+core	Packet	psdump	filename	psdump(filename=none layer_shift=0 rebuild=1) creates an eps file describing a packet
+core	Packet	pdfdump	filename	pdfdump(filename=none layer_shift=0 rebuild=1) creates a pdf file describing a packet
+core	Packet	extract_padding	s	dev to be overloaded to extract current layer's padding
+core	Packet	post_dissect	s	dev is called right after the current layer has been dissected
+core	Packet	pre_dissect	s	dev is called right before the current layer is dissected
+core	Packet	do_dissect_payload	s	perform the dissection of the layer's payload
+core	Packet	guess_payload_class	payload	dev guesses the next payload class from layer bonds
+core	Packet	default_payload_class	payload	dev returns the default payload class if nothing has been found by the guess_payload_class() method
+core	Packet	hide_defaults		removes fields' values that are the same as default values
+core	Packet	__gt__	other	true if other is an answer from self (self ==> other)
+core	Packet	__lt__	other	true if self is an answer from other (other ==> self)
+core	Packet	hashret		dev returns a string that has the same value for a request and its answer
+core	Packet	answers	other	dev true if self is an answer from other
+core	Packet	haslayer	cls	true if self has a layer that is an instance of cls superseded by "cls in self" syntax
+core	Packet	getlayer	cls nb _track	return the nb^th layer that is an instance of cls
+core	Packet	__contains__	cls	"cls in self" returns true if self has a layer which is an instance of cls
+core	Packet	display		deprecated use show() method
+core	Packet	_show_or_dump	dump indent lvl label_lvl	internal method that shows or dumps a hierarchical view of a packet
+core	Packet	show	dump indent lvl label_lvl	prints or returns (when "dump" is true) a hierarchical view of the packet
+core	Packet	show2	dump indent lvl label_lvl	prints or returns (when "dump" is true) a hierarchical view of an assembled version of the packet so that automatic fields are
+core	Packet	sprintf	fmt relax	sprintf(format [relax=1]) -> str where format is a string that can include directives
+core	Packet	mysummary		dev can be overloaded to return a string that summarizes the layer
+core	Packet	summary	intern	prints a one line summary of a packet
+core	Packet	lastlayer	layer	returns the uppest layer of the packet
+core	Packet	decode_payload_as	cls	reassembles the payload and decode it using another packet class
+core	Packet	command		returns a string representing the command you have to type to obtain the same packet
+core		bind_layers	lower upper __fval	bind 2 layers on some specific fields' values
+core		split_layers	lower upper __fval	split 2 layers previously bound
+core		ls	obj case_sensitive verbose	list available layers or infos on a given layer class or name
+core		fuzz	p _inplace	transform a layer into a fuzzy layer by replacing some default values by random objects
+core	Route6	make_route	dst gw dev	internal function : create a route for 'dst' via 'gw'
+core	Route6	ifdel	iff	removes all route entries that uses 'iff' interface
+core	Route6	ifadd	iff addr	add an interface 'iff' with provided address into routing table
+core	Route6	route	dst dev	provide best route to ipv6 destination address based on scapy6 internal routing table content
+core		warning	x onlyOnce	prints a warning during runtime
+core	ASN1F_field	m2i	pkt s	the good thing about safedec is that it may still decode asn1 even if there is a mismatch between the expected tag (self
+core	ASN1F_SEQUENCE	m2i	pkt s	asn1f_sequence behaves transparently with nested asn1_objects being dissected one by one
+core	ASN1F_CHOICE	m2i	pkt s	first we have to retrieve the appropriate choice
+core		send	x inter loop count	send packets at layer 3 send(packets [inter=0], [loop=0], [verbose=conf
+core		sendp	x inter loop iface	send packets at layer 2 sendp(packets [inter=0], [loop=0], [verbose=conf
+core		sendpfast	x pps mbps realtime	send packets at layer 2 using tcpreplay for performance
+core		sr	x promisc filter iface	send and receive packets at layer 3
+core		sr1	x promisc filter iface	send packets at layer 3 and return only the first answer
+core		srp	x promisc iface iface_hint	send and receive packets at layer 2
+core		srp1		send and receive packets at layer 2 and return only the first answer
+core		srloop	pkts	send a packet at layer 3 in loop and print the answer each time srloop(pkts [prn], [inter], [count],
+core		srploop	pkts	send a packet at layer 2 in loop and print the answer each time srloop(pkts [prn], [inter], [count],
+core		srflood	x promisc filter iface	flood and receive packets at layer 3 prn function applied to packets received
+core		srpflood	x promisc filter iface	flood and receive packets at layer 2 prn function applied to packets received
+core		sniff	count store offline prn	sniff packets sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ]
+core		bridge_and_sniff	if1 if2 count store	forward traffic between two interfaces and sniff packets exchanged bridge_and_sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ]
+core		tshark		sniff packets and print them calling pkt show(), a bit like text wireshark
+core		test_pyx		returns if pyx is correctly installed or not
+core		_version_from_git_describe		read the version from git describe it returns the latest tag with an
+core		isCryptographyValid		check if the cryptography library is present and if it is recent enough (v1
+core		crypto_validator	func	this a decorator to be used for any method relying on the cryptography library
+core		hexdump	x dump	build a tcpdump like hexadecimal view
+core		linehexdump	x onlyasc onlyhex dump	build an equivalent view of hexdump() on a single line
+core		chexdump	x dump	build a per byte hexadecimal representation
+core		repr_hex	s	convert provided bitstring to a simple string of hex digits
+core		hexdiff	x y	show differences between 2 binary strings
+core		fletcher16_checksum	binbuf	calculates fletcher-16 checksum of the given buffer
+core		fletcher16_checkbytes	binbuf offset	calculates the fletcher-16 checkbytes returned as 2 byte binary-string
+core		randstring	l	returns a random string of length l (l >= 0)
+core		zerofree_randstring	l	returns a random string of length l (l >= 0) without zero in it
+core		strxor	s1 s2	returns the binary xor of the 2 provided strings s1 and s2 s1 and s2
+core		strand	s1 s2	returns the binary and of the 2 provided strings s1 and s2 s1 and s2
+core		do_graph	graph prog format target	do_graph(graph prog=conf prog dot format="svg",
+core		colgen		returns a generator that mixes provided quantities forever trans a function to convert the three arguments into a color
+core		save_object	fname obj	pickle a python object
+core		load_object	fname	unpickle a python object
+core		corrupt_bytes	s p n	corrupt a given percentage or number of bytes from a string
+core		corrupt_bits	s p n	flip a given percentage or number of bits from a string
+core		wrpcap	filename pkt	write a list of packets to a pcap file filename the name of the file to write packets to or an open
+core		rdpcap	filename count	read a pcap or pcapng file and return a packet list
+core	PcapReader_metaclass	__new__	cls name bases dct	the alternative class attribute is declared in the pcapng variant and set here to the pcap variant
+core	PcapReader_metaclass	__call__	cls filename	creates a cls instance use the alternative if that fails
+core	PcapReader_metaclass	open	filename	open if necessary filename and read the magic
+core	RawPcapReader	next		implement the iterator protocol on a set of packets in a pcap file
+core	RawPcapReader	read_packet	size	return a single packet read from the file
+core	RawPcapReader	dispatch	callback	call the specified callback routine for each packet read this is just a convenience function for the main loop
+core	RawPcapReader	read_all	count	return a list of all packets in the pcap file
+core	RawPcapReader	recv	size	emulate a socket
+core	RawPcapNgReader	read_packet	size	read blocks until it reaches either eof or a packet and returns none or (packet linktype sec usec wirelen ),
+core	RawPcapNgReader	read_block_idb	block _	interface description block
+core	RawPcapNgReader	read_block_epb	block size	enhanced packet block
+core	RawPcapNgReader	read_block_spb	block size	simple packet block
+core	RawPcapNgReader	read_block_pkt	block size	obsolete packet block
+core	RawPcapWriter	__init__	filename linktype gz endianness	filename the name of the file to write packets to or an open writable file-like object
+core	RawPcapWriter	write	pkt	accepts either a single packet or a list of packets to be
+core	RawPcapWriter	_write_packet	packet sec usec caplen	writes a single packet to the pcap file
+core		wireshark	pktlist	run wireshark on a list of packets
+core		tcpdump	pktlist dump getfd args	run tcpdump or tshark on a list of packets pktlist a packet instance a packetlist instance or a list of packet
+core		get_terminal_width		get terminal width if in a window
+core		pretty_routes	rtlst header sortBy	pretty route list and add header
+core		whois	ip_address	whois client for python
+core		_inet6_pton	addr	convert an ipv6 address from text representation into binary form used when socket
+core		inet_pton	af addr	convert an ip address from text representation into binary form
+core		_inet6_ntop	addr	convert an ipv6 address from binary form into text representation used when socket
+core		inet_ntop	af addr	convert an ip address from binary form into text representation
+core	Field	i2len	pkt x	convert internal value to a length usable by a fieldlenfield
+core	Field	i2count	pkt x	convert internal value to a number of elements usable by a fieldlenfield
+core	Field	h2i	pkt x	convert human value to internal value
+core	Field	i2h	pkt x	convert internal value to human value
+core	Field	m2i	pkt x	convert machine value to internal value
+core	Field	i2m	pkt x	convert internal value to machine value
+core	Field	any2i	pkt x	try to understand the most input values possible and make an internal value from them
+core	Field	i2repr	pkt x	convert internal value to a nice representation
+core	Field	addfield	pkt s val	add an internal value to a string
+core	Field	getfield	pkt s	extract an internal value from a string
+core	Field	randval		return a volatile object whose value is both random and suitable for this field
+core	_EnumField	__init__	name default enum fmt	initializes enum fields
+tools		parse_config_file	config_path verb	parse provided json to get configuration
+contrib		_PPIGuessPayloadClass	p	this function tells the packetlistfield how it should extract the tlvs from the payload
+contrib	HPackMagicBitField	__init__	name default size	@param str name this field instance name
+contrib	HPackMagicBitField	addfield	pkt s val	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	getfield	pkt s	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	h2i	pkt x	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	i2h	pkt x	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	m2i	pkt x	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	i2m	pkt x	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	HPackMagicBitField	any2i	pkt x	@param packet packet|none pkt the packet instance containing this field instance probably unused
+contrib	AbstractUVarIntField	__init__	name default size	@param str name the name of this field instance @param int|none default positive null or none default value for this field instance
+contrib	AbstractUVarIntField	h2i	pkt x	@param packet packet|none pkt unused
+contrib	AbstractUVarIntField	i2h	pkt x	@param packet packet|none pkt unused
+contrib	AbstractUVarIntField	_detect_multi_byte	fb	_detect_multi_byte returns whether the abstractuvarintfield is represented on multiple bytes or not
+contrib	AbstractUVarIntField	_parse_multi_byte	s	_parse_multi_byte parses x as a multibyte representation to get the int value of this abstractuvarintfield
+contrib	AbstractUVarIntField	m2i	pkt x	a tuple is expected for the "x" param only if "size" is different than 8 if a tuple is received some bits
+contrib	AbstractUVarIntField	i2m	pkt x	@param packet packet|none pkt unused
+contrib	AbstractUVarIntField	any2i	pkt x	a "x" value as a string is parsed as a binary encoding of a uvarint an int is considered an internal value
+contrib	AbstractUVarIntField	i2repr	pkt x	@param packet packet|none pkt probably unused
+contrib	AbstractUVarIntField	addfield	pkt s val	an abstractuvarintfield prefix always consumes the remaining bits of a bitfield if no current bitfield is in use (no tuple in
+contrib	AbstractUVarIntField	_detect_bytelen_from_str	s	_detect_bytelen_from_str returns the length of the machine representation of an abstractuvarintfield starting at the beginning
+contrib	AbstractUVarIntField	i2len	pkt x	@param packet packet|none pkt unused
+contrib	AbstractUVarIntField	getfield	pkt s	@param packet packet|none pkt the packet instance containing this field probably unused
+contrib	AbstractUVarIntField	randval		@return volatile volatilevalue a volatile value for this field "long"-compatible internal value
+contrib	UVarIntField	__init__	name default size	@param str name the name of this field instance
+contrib	UVarIntField	h2i	pkt x	h2i is overloaded to restrict the acceptable x values not none @param packet
+contrib	UVarIntField	i2h	pkt x	i2h is overloaded to restrict the acceptable x values not none @param packet
+contrib	UVarIntField	any2i	pkt x	any2i is overloaded to restrict the acceptable x values not none @param packet
+contrib	UVarIntField	i2repr	pkt x	i2repr is overloaded to restrict the acceptable x values not none @param packet
+contrib	FieldUVarLenField	__init__	name default size length_of	initializes a fielduvarlenfield @param str name the name of this field instance
+contrib	FieldUVarLenField	addfield	pkt s val	@param packet packet|none pkt the packet instance containing this field instance this parameter must not be
+contrib	FieldUVarLenField	i2m	pkt x	@param packet packet|none pkt the packet instance containing this field instance this parameter must not be
+contrib	FieldUVarLenField	_compute_value	pkt	computes the value of this field based on the provided packet and the length_of field and the adjust callback
+contrib	HPackZString	_huffman_encode_char	cls c	huffman_encode_char assumes that the static_huffman_tree was
+contrib	HPackZString	huffman_encode	cls s	huffman_encode returns the bitstring and the bitlength of the
+contrib	HPackZString	huffman_decode	cls i ibl	huffman_decode decodes the bitstring provided as parameters
+contrib	HPackZString	huffman_conv2str	cls bit_str bit_len	huffman_conv2str converts a bitstring of bit_len bitlength into a binary string
+contrib	HPackZString	huffman_conv2bitstring	cls s	huffman_conv2bitstring converts a string into its bitstring representation
+contrib	HPackZString	huffman_compute_decode_tree	cls	huffman_compute_decode_tree initializes/builds the static_huffman_tree
+contrib	HPackStrLenField	_parse	t s	@param bool t whether this string is a huffman compressed string
+contrib	HPackStrLenField	getfield	pkt s	@param packet packet pkt the packet instance containing this field instance
+contrib	HPackStrLenField	m2i	pkt x	@param packet packet pkt the packet instance containing this field instance
+contrib	HPackStrLenField	any2i	pkt x	@param packet packet|none pkt the packet instance containing this field instance
+contrib	HPackHdrString	self_build	field_pos_list	self_build is overridden because type and len are determined at
+contrib	HPackHeaders	dispatch_hook	cls s	dispatch_hook returns the subclass of hpackheaders that must be used to dissect the string
+contrib	H2PaddedDataFrame	get_data_len		get_data_len computes the length of the data field
+contrib	H2PaddedDataFrame	pre_dissect	s	pre_dissect is filling the s_len property of this instance this
+contrib	H2PaddedHeadersFrame	get_hdrs_len		get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field and the actual
+contrib	H2PaddedHeadersFrame	pre_dissect	s	pre_dissect is filling the s_len property of this instance this
+contrib	H2PaddedPriorityHeadersFrame	get_hdrs_len		get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field the priority
+contrib	H2PaddedPriorityHeadersFrame	pre_dissect	s	pre_dissect is filling the s_len property of this instance this
+contrib	H2SettingsFrame	__init__		__init__ initializes this h2settingsframe if a _pkt arg is provided by keyword then this is an initialization
+contrib	H2PaddedPushPromiseFrame	get_hdrs_len		get_hdrs_len computes the length of the hdrs field to do this computation the length of the padlen field reserved
+contrib	H2PaddedPushPromiseFrame	pre_dissect	s	pre_dissect is filling the s_len property of this instance this
+contrib	H2Frame	guess_payload_class	payload	guess_payload_class returns the class object to use for parsing a payload this function uses the h2frame
+contrib	H2Frame	extract_padding	s	@param str s the string from which to tell the padding and the payload data apart
+contrib	H2Frame	post_build	p pay	@param str p the stringified packet
+contrib	HPackHdrEntry	size		size returns the "length" of the header entry as defined in rfc 7541 par4
+contrib	HPackHdrEntry	__str__		__str__ returns the header as it would be formated in textual format
+contrib	HPackHdrTable	__init__	dynamic_table_max_size dynamic_table_cap_size	@param int dynamic_table_max_size the current maximum size of the dynamic entry table in bytes
+contrib	HPackHdrTable	__getitem__	idx	gets an element from the header tables static or dynamic indifferently @param int idx the index number of the entry to retrieve
+contrib	HPackHdrTable	resize	ns	resize the dynamic table if the new size ns must be between 0 and
+contrib	HPackHdrTable	recap	nc	recap changes the maximum size limit of the dynamic table it also
+contrib	HPackHdrTable	_reduce_dynamic_table	new_entry_size	_reduce_dynamic_table evicts entries from the dynamic table until it fits in less than the current size limit
+contrib	HPackHdrTable	register	hdrs	register adds to this table the instances of hpacklithdrfldwithincrindexing provided as parameters
+contrib	HPackHdrTable	get_idx_by_name	name	get_idx_by_name returns the index of a matching registered header this implementation will prefer returning a static entry index whenever
+contrib	HPackHdrTable	get_idx_by_name_and_value	name value	get_idx_by_name_and_value returns the index of a matching registered header
+contrib	HPackHdrTable	__len__		__len__ returns the summed length of all dynamic entries
+contrib	HPackHdrTable	gen_txt_repr	hdrs register	gen_txt_repr returns a "textual" representation of the provided headers
+contrib	HPackHdrTable	_convert_a_header_to_a_h2_header	hdr_name hdr_value is_sensitive should_index	_convert_a_header_to_a_h2_header builds a hpackheaders from a header name and a value
+contrib	HPackHdrTable	parse_txt_hdrs	s stream_id body max_frm_sz	parse_txt_hdrs parses headers expressed in text and converts them into a series of h2frames with the "correct" flags
+contrib		IE_Dispatcher	s	choose the correct information element class
+contrib		PCO_option_dispatcher	s	choose the correct pco element
+contrib		PCO_protocol_dispatcher	s	choose the correct pco element
+contrib	PNIORealTimeRawData	__init__	_pkt post_transform _internal _underlayer	length=none means that the length must be managed by the user if it's
+contrib	PNIORealTimeRawData	length		get the length of the raw data
+contrib		_get_ethernet	pkt	find the ethernet packet of underlayer or none
+contrib		pnio_update_config	config	update the pnio rtc config
+contrib		pnio_get_config	pkt	retrieve the config for a given communication
+contrib		_pnio_rtc_guess_payload_class	_pkt _underlayer	a dispatcher for the packet list field which manage the configuration
+contrib	PNIORealTime	padding_length		compute the length of the padding need for the ethernet frame
+contrib	PNIORealTime	analyse_data	packets	analyse the data to find heuristical properties and determine
+contrib	PNIORealTime	find_data	packets	analyse a packet list to extract data offsets from packets data
+contrib	PNIORealTime	analyse_profisafe	packets locations	analyse a packet list to find possible profisafe profils
+contrib	PNIORealTime	analyse_one_profisafe_location	location entropy	analyse one pnio rtc data location to find if its a profisafe
+contrib	PNIORealTime	data_entropy	packets locations	analyse a packet list to find the entropy of each data byte locations possible data locations
+contrib	PNIORealTime	draw_entropy	packets locations	plot the entropy of each data byte of pn rt communication
+contrib		entropy_of_byte	packets position	compute the entropy of a byte at a given offset
+contrib	Profisafe	data_length		return the length of the data
+contrib	Profisafe	crc_length		return the length of the crc
+contrib		IE_Dispatcher	s	choose the correct information element class
+contrib	Fixed3_6Field	i2m	pkt x	convert internal value to machine value
+contrib	Fixed3_7Field	i2m	pkt x	convert internal value to machine value
+contrib	Fixed6_4Field	i2m	pkt x	convert internal value to machine value
+contrib	_CDPChecksum	_check_len	pkt	check for odd packet length and pad according to cisco spec
+contrib	FecTLVField	size	s	get the size of this field
+contrib	LabelTLVField	size	s	get the size of this field
+contrib	AddressTLVField	size	s	get the size of this field
+contrib	ShortVersionField	h2i	pkt x	the field accepts string values like v12 1 v1 1 or integer values
+contrib		isValidMCAddr	ip	convert dotted quad string to long and check the first octet
+contrib	IGMP	post_build	p pay	called implicitly before a packet is sent to compute and place igmp checksum
+contrib	IGMP	mysummary		display a summary of the igmp object
+contrib	IGMP	igmpize	ip ether	called to explicitly fixup associated ip and ethernet headers parameters
+contrib	IGMP	adjust_ether	ip ether	called to explicitly fixup an associated ethernet header the function adjusts the ethernet header destination mac address based on
+contrib	IGMP	adjust_ip	ip	called to explicitly fixup an associated ip header the function adjusts the ip header based on conformance rules
+contrib		additionalAssignment	MobileAllocation_presence StartingTime_presence	additional assignment section 9 1 1
+contrib		assignmentCommand	FrequencyList_presence CellChannelDescription_presence CellChannelDescription_presence1 MultislotAllocation_presence	assignment command section 9 1 2
+contrib		assignmentComplete		assignment complete section 9 1 3
+contrib		assignmentFailure		assignment failure section 9 1 4
+contrib		channelModeModify	VgcsTargetModeIdentication_presence MultiRateConfiguration_presence	channel mode modify section 9 1 5
+contrib		channelModeModifyAcknowledge		channel mode modify acknowledge section 9 1 6
+contrib		channelRelease	BaRange_presence GroupChannelDescription_presence GroupCipherKeyNumber_presence GprsResumption_presence	channel release section 9 1 7
+contrib		cipheringModeCommand		ciphering mode command section 9 1 9
+contrib		cipheringModeComplete	MobileId_presence	ciphering mode complete section 9 1 10
+contrib		classmarkChange	MobileStationClassmark3_presence	classmark change section 9 1 11
+contrib		classmarkEnquiry		classmark enquiry section 9 1 12
+contrib		configurationChangeCommand	ChannelMode_presence ChannelMode_presence1 ChannelMode_presence2 ChannelMode_presence3	configuration change command section 9 1 12b
+contrib		configurationChangeAcknowledge		configuration change acknowledge section 9 1 12c
+contrib		configurationChangeReject		configuration change reject section 9 1 12d
+contrib		frequencyRedefinition	CellChannelDescription_presence	frequency redefinition section 9 1 13
+contrib		pdchAssignmentCommand	ChannelDescription_presence CellChannelDescription_presence MobileAllocation_presence StartingTime_presence	pdch assignment command section 9 1 13a
+contrib		gprsSuspensionRequest		gprs suspension request section 9 1 13b
+contrib		handoverCommand	SynchronizationIndication_presence FrequencyShortList_presence FrequencyList_presence CellChannelDescription_presence	handover command section 9 1 15
+contrib		handoverComplete	MobileTimeDifference_presence	handover complete section 9 1 16
+contrib		handoverFailure		handover failure section 9 1 17
+contrib		immediateAssignment	ChannelDescription_presence PacketChannelDescription_presence StartingTime_presence	immediate assignment section 9 1 18
+contrib		immediateAssignmentExtended	StartingTime_presence	immediate assignment extended section 9 1 19
+contrib		immediateAssignmentReject		immediate assignment reject section 9 1 20
+contrib		measurementReport		measurement report section 9 1 21
+contrib		notificationNch		notification/nch section 9 1 21b
+contrib		notificationResponse		notification response section 9 1 21d
+contrib		rrCellChangeOrder		rr-cell change order section 9 1 21e
+contrib		pagingRequestType1	MobileId_presence	paging request type 1 section 9 1 22
+contrib		pagingRequestType2	MobileId_presence	paging request type 2 section 9 1 23
+contrib		pagingRequestType3		paging request type 3 section 9 1 24
+contrib		pagingResponse		paging response section 9 1 25
+contrib		partialRelease		partial release section 9 1 26
+contrib		partialReleaseComplete		partial release complete section 9 1 27
+contrib		physicalInformation		physical information section 9 1 28
+contrib		rrInitialisationRequest		rr initialisation request section 9 1 28 a
+contrib		rrStatus		rr status section 9 1 29
+contrib		systemInformationType1		system information type 1 section 9 1 31
+contrib		systemInformationType2		system information type 2 section 9 1 32
+contrib		systemInformationType2bis		system information type 2bis section 9 1 33
+contrib		systemInformationType2ter		system information type 2ter section 9 1 34
+contrib		systemInformationType3		system information type 3 section 9 1 35
+contrib		systemInformationType4	ChannelDescription_presence MobileAllocation_presence	system information type 4 section 9 1 36
+contrib		systemInformationType5		system information type 5 section 9 1 37
+contrib		systemInformationType5bis		system information type 5bis section 9 1 38
+contrib		systemInformationType5ter		system information type 5ter section 9 1 39
+contrib		systemInformationType6		system information type 6 section 9 1 40
+contrib		systemInformationType7		system information type 7 section 9 1 41
+contrib		systemInformationType8		system information type 8 section 9 1 42
+contrib		systemInformationType9		system information type 9 section 9 1 43
+contrib		systemInformationType13		system information type 13 section 9 1 43a
+contrib		systemInformationType16		system information type 16 section 9 1 43d
+contrib		systemInformationType17		system information type 17 section 9 1 43e
+contrib		talkerIndication		talker indication section 9 1 44
+contrib		uplinkBusy		uplink busy section 9 1 46
+contrib		uplinkRelease		uplink release section 9 1 48
+contrib		vgcsUplinkGrant		vgcs uplink grant section 9 1 49
+contrib		systemInformationType10		system information type 10 section 9 1 50
+contrib		extendedMeasurementOrder		extended measurement order section 9 1 51
+contrib		extendedMeasurementReport		extended measurement report section 9 1 52
+contrib		applicationInformation		application information section 9 1 53
+contrib		authenticationReject		authentication reject section 9 2 1
+contrib		authenticationRequest		authentication request section 9 2 2
+contrib		authenticationResponse		authentication response section 9 2 3
+contrib		cmReestablishmentRequest	LocalAreaId_presence	cm re-establishment request section 9 2 4
+contrib		cmServiceAccept		cm service accept section 9 2 5
+contrib		cmServicePrompt		cm service prompt section 9 2 5a
+contrib		cmServiceReject		cm service reject section 9 2 6
+contrib		cmServiceAbort		cm service abort section 9 2 7
+contrib		abort		abort section 9 2 8
+contrib		cmServiceRequest	PriorityLevel_presence	cm service request section 9 2 9
+contrib		identityRequest		identity request section 9 2 10
+contrib		identityResponse		identity response section 9 2 11
+contrib		imsiDetachIndication		imsi detach indication section 9 2 12
+contrib		locationUpdatingAccept	MobileId_presence FollowOnProceed_presence CtsPermission_presence	location updating accept section 9 2 13
+contrib		locationUpdatingReject		location updating reject section 9 2 14
+contrib		locationUpdatingRequest		location updating request section 9 2 15
+contrib		mmInformation	NetworkName_presence NetworkName_presence1 TimeZone_presence TimeZoneAndTime_presence	mm information section 9 2 15a
+contrib		mmStatus		mm status section 9 2 16
+contrib		tmsiReallocationCommand		tmsi reallocation command section 9 2 17
+contrib		tmsiReallocationComplete		tmsi reallocation complete section 9 2 18
+contrib		mmNull		mm null section 9 2 19
+contrib		alertingNetToMs	Facility_presence ProgressIndicator_presence UserUser_presence	alerting section 9 3 1 1
+contrib		alertingMsToNet	Facility_presence UserUser_presence SsVersionIndicator_presence	alerting section 9 3 1 2
+contrib		callConfirmed	RepeatIndicator_presence BearerCapability_presence BearerCapability_presence1 Cause_presence	call confirmed section 9 3 2
+contrib		callProceeding	RepeatIndicator_presence BearerCapability_presence BearerCapability_presence1 Facility_presence	call proceeding section 9 3 3
+contrib		congestionControl	Cause_presence	congestion control section 9 3 4
+contrib		connectNetToMs	Facility_presence ProgressIndicator_presence ConnectedNumber_presence ConnectedSubaddress_presence	connect section 9 3 5 1
+contrib		connectMsToNet	Facility_presence ConnectedSubaddress_presence UserUser_presence SsVersionIndicator_presence	connect section 9 3 5 2
+contrib		connectAcknowledge		connect acknowledge section 9 3 6
+contrib		disconnectNetToMs	Facility_presence ProgressIndicator_presence UserUser_presence AllowedActions_presence	disconnect section 9 3 7 1
+contrib		disconnectMsToNet	Facility_presence UserUser_presence SsVersionIndicator_presence	disconnect section 9 3 7 2
+contrib		emergencySetup	BearerCapability_presence	emergency setup section 9 3 8
+contrib		facilityNetToMs		facility section 9 3 9 1
+contrib		facilityMsToNet	SsVersionIndicator_presence	facility section 9 3 9 2
+contrib		hold		hold section 9 3 10
+contrib		holdAcknowledge		hold acknowledge section 9 3 11
+contrib		holdReject		hold reject section 9 3 12
+contrib		modify	LowLayerCompatibility_presence HighLayerCompatibility_presence ReverseCallSetupDirection_presence	modify section 9 3 13
+contrib		modifyComplete	LowLayerCompatibility_presence HighLayerCompatibility_presence ReverseCallSetupDirection_presence	modify complete section 9 3 14
+contrib		modifyReject	LowLayerCompatibility_presence HighLayerCompatibility_presence	modify reject section 9 3 15
+contrib		notify		notify section 9 3 16
+contrib		progress	UserUser_presence	progress section 9 3 17
+contrib		ccEstablishment		cc-establishment section 9 3 17a
+contrib		ccEstablishmentConfirmed	RepeatIndicator_presence BearerCapability_presence BearerCapability_presence1 Cause_presence	cc-establishment confirmed section 9 3 17b
+contrib		releaseNetToMs		release section 9 3 18 1
+contrib		releaseMsToNet	Cause_presence Cause_presence1 Facility_presence UserUser_presence	release section 9 3 18 2
+contrib		recall		recall section 9 3 18a
+contrib		releaseCompleteNetToMs	Cause_presence Facility_presence UserUser_presence	release complete section 9 3 19 1
+contrib		releaseCompleteMsToNet	Cause_presence Facility_presence UserUser_presence SsVersionIndicator_presence	release complete section 9 3 19 2
+contrib		retrieve		retrieve section 9 3 20
+contrib		retrieveAcknowledge		retrieve acknowledge section 9 3 21
+contrib		retrieveReject		retrieve reject section 9 3 22
+contrib		setupMobileTerminated	RepeatIndicator_presence BearerCapability_presence BearerCapability_presence1 Facility_presence	setup section 9 3 23 1
+contrib		setupMobileOriginated	RepeatIndicator_presence BearerCapability_presence BearerCapability_presence1 Facility_presence	setup section 9 3 23 2
+contrib		startCc	CallControlCapabilities_presence	start cc section 9 3 23a
+contrib		startDtmf		start dtmf section 9 3 24
+contrib		startDtmfAcknowledge		start dtmf acknowledge section 9 3 25
+contrib		startDtmfReject		start dtmf reject section 9 3 26
+contrib		status	AuxiliaryStates_presence	status section 9 3 27
+contrib		statusEnquiry		status enquiry section 9 3 28
+contrib		stopDtmf		stop dtmf section 9 3 29
+contrib		stopDtmfAcknowledge		stop dtmf acknowledge section 9 3 30
+contrib		userInformation	MoreData_presence	user information section 9 3 31
+contrib		attachRequest	PTmsiSignature_presence GprsTimer_presence TmsiStatus_presence	attach request section 9 4 1
+contrib		attachAccept	PTmsiSignature_presence GprsTimer_presence MobileId_presence MobileId_presence1	attach accept section 9 4 2
+contrib		attachComplete		attach complete section 9 4 3
+contrib		attachReject		attach reject section 9 4 4
+contrib		detachRequest	GmmCause_presence	detach request section 9 4 5
+contrib		detachRequestMsOriginating		detach request section 9 4 5 2
+contrib		detachAcceptMsTerminated		detach accept section 9 4 6 1
+contrib		detachAcceptMsOriginating		detach accept section 9 4 6 2
+contrib		ptmsiReallocationCommand	PTmsiSignature_presence	p-tmsi reallocation command section 9 4 7
+contrib		ptmsiReallocationComplete		p-tmsi reallocation complete section 9 4 8
+contrib		authenticationAndCipheringRequest	AuthenticationParameterRAND_presence CiphKeySeqNr_presence	authentication and ciphering request section 9 4 9
+contrib		authenticationAndCipheringResponse	AuthenticationParameterSRES_presence MobileId_presence	authentication and ciphering response section 9 4 10
+contrib		authenticationAndCipheringReject		authentication and ciphering reject section 9 4 11
+contrib		identityRequest		identity request section 9 4 12
+contrib		identityResponse		identity response section 9 4 13
+contrib		routingAreaUpdateRequest	PTmsiSignature_presence GprsTimer_presence DrxParameter_presence TmsiStatus_presence	routing area update request section 9 4 14
+contrib		routingAreaUpdateAccept	PTmsiSignature_presence MobileId_presence MobileId_presence1 ReceiveNpduNumbersList_presence	routing area update accept section 9 4 15
+contrib		routingAreaUpdateComplete	ReceiveNpduNumbersList_presence	routing area update complete section 9 4 16
+contrib		routingAreaUpdateReject		routing area update reject section 9 4 17
+contrib		gmmStatus		gmm status section 9 4 18
+contrib		gmmInformation	NetworkName_presence NetworkName_presence1 TimeZone_presence TimeZoneAndTime_presence	gmm information section 9 4 19
+contrib		activatePdpContextRequest	AccessPointName_presence ProtocolConfigurationOptions_presence	activate pdp context request section 9 5 1
+contrib		activatePdpContextAccept	PacketDataProtocolAddress_presence ProtocolConfigurationOptions_presence	activate pdp context accept section 9 5 2
+contrib		activatePdpContextReject	ProtocolConfigurationOptions_presence	activate pdp context reject section 9 5 3
+contrib		requestPdpContextActivation	AccessPointName_presence	request pdp context activation section 9 5 4
+contrib		requestPdpContextActivationReject		request pdp context activation reject section 9 5 5
+contrib		modifyPdpContextRequest		modify pdp context request section 9 5 6
+contrib		modifyPdpContextAccept		modify pdp context accept section 9 5 7
+contrib		deactivatePdpContextRequest		deactivate pdp context request section 9 5 8
+contrib		deactivatePdpContextAccept		deactivate pdp context accept section 9 5 9
+contrib		activateAaPdpContextRequest	AccessPointName_presence ProtocolConfigurationOptions_presence GprsTimer_presence	activate aa pdp context request section 9 5 10
+contrib		activateAaPdpContextAccept	ProtocolConfigurationOptions_presence GprsTimer_presence	activate aa pdp context accept section 9 5 11
+contrib		activateAaPdpContextReject	ProtocolConfigurationOptions_presence	activate aa pdp context reject section 9 5 12
+contrib		deactivateAaPdpContextRequest		deactivate aa pdp context request section 9 5 13
+contrib		deactivateAaPdpContextAccept		deactivate aa pdp context accept section 9 5 14
+contrib		smStatus		sm status section 9 5 15
+contrib		_bits_to_bytes_len	length_in_bits	helper function that returns the numbers of bytes necessary to store the given number of bits
+contrib	BGPFieldIPv4	mask2iplen	mask	get the ip field mask length in bytes
+contrib	BGPFieldIPv4	h2i	pkt h	x x x x/y to "internal" representation
+contrib	BGPFieldIPv4	i2h	pkt i	"internal" representation to "human" representation (x
+contrib	BGPFieldIPv4	i2m	pkt i	"internal" ip as bytes mask as int to "machine" representation
+contrib	BGPFieldIPv6	mask2iplen	mask	get the ip field mask length in bytes
+contrib	BGPFieldIPv6	h2i	pkt h	x x x x/y to internal representation
+contrib	BGPFieldIPv6	i2h	pkt i	"internal" representation to "human" representation
+contrib	BGPFieldIPv6	i2m	pkt i	"internal" ip as bytes mask as int to "machine" representation
+contrib		has_extended_length	flags	used in bgppathattr to check if the extended-length flag is set
+contrib		_get_cls	name fallback_cls	returns class named "name" if it exists fallback_cls otherwise
+contrib		_bgp_dispatcher	payload	returns the right class for a given bgp message
+contrib	BGP	dispatch_hook	cls _pkt	returns the right class for the given data
+contrib		_bgp_capability_dispatcher	payload	returns the right class for a given bgp capability
+contrib	BGPCapability	dispatch_hook	cls _pkt	returns the right class for the given data
+contrib	BGPCapability	pre_dissect	s	check that the payload is long enough at least 2 bytes
+contrib		_get_ext_comm_subtype	type_high	returns a byteenumfield with the right sub-types dict for a given community
+contrib		_update_orf_afi_safi	afi safi	helper function that sets the afi / safi values of orp entries
+contrib		FragmentCond	pkt	a fragementation field condition
+contrib	IGMPv3gr	post_build	p pay	called implicitly before a packet is sent
+contrib	IGMPv3gr	mysummary		display a summary of the igmpv3 group record
+contrib	IGMPv3	float_encode	value	convert the integer value to its igmpv3 encoded time value if needed
+contrib	IGMPv3	post_build	p pay	called implicitly before a packet is sent to compute and place igmpv3 checksum
+contrib	IGMPv3	mysummary		display a summary of the igmpv3 object
+contrib	IGMPv3	igmpize	ip ether	called to explicitly fixup associated ip and ethernet headers parameters
+contrib	IGMPv3	adjust_ether	ip ether	called to explicitly fixup an associated ethernet header the function adjusts the ethernet header destination mac address based on
+contrib	IGMPv3	adjust_ip	ip	called to explicitly fixup an associated ip header the function adjusts the ip header based on conformance rules
+contrib		_LLSGuessPayloadClass	p	guess the correct lls class for a given payload
+contrib		_LSAGuessPayloadClass	p	guess the correct lsa class for a given payload
+contrib		_OSPFv3_LSAGuessPayloadClass	p	guess the correct ospfv3 lsa class for a given payload
+layers		bitmap2RRlist	bitmap	decode the 'type bit maps' field of the nsec resource record into an integer list
+layers		RRlist2bitmap	lst	encode a list of integers representing resource records to a bitmap field used in the nsec resource record
+layers		dyndns_add	nameserver name rdata type	send a dns add message to a nameserver for "name" to have a new "rdata" dyndns_add(nameserver name rdata type="a", ttl=10) -> result code (0=ok)
+layers		dyndns_del	nameserver name type ttl	send a dns delete message to a nameserver for "name" dyndns_del(nameserver name type="any", ttl=10) -> result code (0=ok)
+layers		srbt	peer pkts inter	send and receive using a bluetooth socket
+layers		srbt1	peer pkts	send and receive 1 packet using a bluetooth socket
+layers		get_cls	name fallback_cls	returns class named "name" if it exists fallback_cls otherwise
+layers		_ntp_dispatcher	payload	returns the right class for a given ntp packet
+layers	NTP	dispatch_hook	cls _pkt	returns the right class for the given data
+layers	NTP	pre_dissect	s	check that the payload is long enough to build a ntp packet
+layers	NTPHeader	guess_payload_class	payload	handles ntpv4 extensions and mac part when authentication is used
+layers	IPTools	whois		whois the source and print the output
+layers	IP	fragment	fragsize	fragment ip datagrams
+layers		fragment	pkt fragsize	fragment a big ip datagram
+layers		overlap_frag	p overlap fragsize overlap_fragsize	build overlapping fragments to bypass nips
+layers		defrag	plist	defrag plist -> ([not fragmented], [defragmented], [ [bad fragments], [bad fragments],
+layers		defragment	plist	defrag plist -> plist defragmented as much as possible
+layers		_packetlist_timeskew_graph	ip	tries to graph the timeskew between the timestamps and real time for a given ip
+layers	TracerouteResult	trace3D		give a 3d representation of the traceroute
+layers	TracerouteResult	world_trace		display traceroute results on a world map
+layers	TracerouteResult	graph	ASres padding	x graph(asres=conf as_resolver other args):
+layers		traceroute	target dport minttl maxttl	instant tcp traceroute traceroute(target [maxttl=30 ] [dport=80 ] [sport=80 ] [verbose=conf
+layers		report_ports	target ports	portscan a target and output a latex table
+layers		IPID_count	lst funcID funcpres	identify ip id values classes in a list of packets
+layers	X509_TBSCertificate	get_issuer_str		returns a one-line string containing every type/value in a rather specific order
+layers	X509_TBSCertList	get_issuer_str		returns a one-line string containing every type/value in a rather specific order
+layers		_register_lltd_specific_class		this can be used as a class decorator if we want to support python 2
+layers	LargeTlvBuilder	parse	plist	update the builder using the provided plist plist can
+layers	LargeTlvBuilder	get_data		returns a dictionary object keys are strings "source > destincation [content type]", and values are the content
+layers		getmacbyip	ip chainCC	return mac address corresponding to a given ip address
+layers	MKAParamSet	dispatch_hook	cls _pkt	returns the right parameter set class
+layers		arpcachepoison	target victim interval	poison target's cache with (your mac victim's ip) couple
+layers		arping	net timeout cache verbose	send arp who-has requests to determine which hosts are up arping(net [cache=0 ] [iface=conf
+layers		is_promisc	ip fake_bcast	try to guess if target is in promisc mode the target is provided by its ip
+layers		promiscping	net timeout fake_bcast	send arp who-has requests to determine which hosts are in promiscuous mode promiscping(net iface=conf
+layers		etherleak	target	exploit etherleak flaw
+layers		airpwn	iffrom ifto replace pattern	before using this initialize "iffrom" and "ifto" interfaces
+layers	AH	__get_icv_len		compute the size of the icv based on the payloadlen field
+layers		_lcm	a b	least common multiple between 2 integers
+layers	CryptAlgo	__init__	name cipher mode block_size	@param name the name of this encryption algorithm @param cipher a cipher module
+layers	CryptAlgo	check_key	key	check that the key length is valid
+layers	CryptAlgo	generate_iv		generate a random initialization vector
+layers	CryptAlgo	new_cipher	key mode_iv digest	@param key the secret key a byte string @param mode_iv the initialization vector or nonce a byte string
+layers	CryptAlgo	pad	esp	add the correct amount of padding so that the data to encrypt is exactly a multiple of the algorithm's block size
+layers	CryptAlgo	encrypt	sa esp key	encrypt an esp packet @param sa the securityassociation associated with the esp packet
+layers	CryptAlgo	decrypt	sa esp key icv_size	decrypt an esp packet @param sa the securityassociation associated with the esp packet
+layers	AuthAlgo	__init__	name mac digestmod icv_size	@param name the name of this integrity algorithm @param mac a message authentication code module
+layers	AuthAlgo	check_key	key	check that the key length is valid
+layers	AuthAlgo	new_mac	key	@param key a byte string
+layers	AuthAlgo	sign	pkt key	sign an ipsec esp or ah packet with this algo
+layers	AuthAlgo	verify	pkt key	check that the integrity check value icv of a packet is valid
+layers		split_for_transport	orig_pkt transport_proto	split an ip v6 packet in the correct location to insert an esp or ah header
+layers		zero_mutable_fields	pkt sending	when using ah all "mutable" fields must be "zeroed" before calculating the icv
+layers	SecurityAssociation	__init__	proto spi seq_num crypt_algo	@param proto the ipsec proto to use esp or ah @param spi the security parameters index of this sa
+layers	SecurityAssociation	encrypt	pkt seq_num iv	encrypt and encapsulate an ip v6 packet with esp or ah according to this securityassociation
+layers	SecurityAssociation	decrypt	pkt verify	decrypt and decapsulate an ip v6 packet containing esp or ah
+layers		neighsol	addr src iface timeout	sends an icmpv6 neighbor solicitation message to get the mac address of the neighbor with specified ipv6 address addr 'src' address is used as source of the message
+layers		getmacbyip6	ip6 chainCC	returns the mac address corresponding to an ipv6 address neighborcache
+layers		in6_chksum	nh u p	performs ipv6 upper layer checksum computation provided parameters are
+layers	HBHOptUnknown	alignment_delta	curpos	as specified in section 4 2 of rfc 2460 every options has
+layers		defragment6	pktlist	performs defragmentation of a list of ipv6 packets packets are reordered
+layers		fragment6	pkt fragSize	performs fragmentation of an ipv6 packet provided packet ('pkt') must already
+layers		computeNIGroupAddr	name	compute the ni group address can take a fqdn as input parameter
+layers		names2dnsrepr	x	take as input a list of dns names or a single dns name and encode it in dns format with possible compression
+layers		dnsrepr2names	x	take as input a dns encoded string possibly compressed and returns a list of dns names contained in it
+layers	AS_resolver6	_resolve_one	ip	overloaded version to provide a whois resolution on the embedded ipv4 address if the address is 6to4 or teredo
+layers		traceroute6	target dport minttl maxttl	instant tcp traceroute using ipv6
+layers		_NDP_Attack_DAD_DoS	reply_callback iface mac_src_filter tgt_filter	internal generic helper accepting a specific callback as first argument for ns or na reply
+layers		NDP_Attack_DAD_DoS_via_NS	iface mac_src_filter tgt_filter reply_mac	perform the dad dos attack using ns described in section 4 1 3 of rfc
+layers		NDP_Attack_DAD_DoS_via_NA	iface mac_src_filter tgt_filter reply_mac	perform the dad dos attack using ns described in section 4 1 3 of rfc
+layers		NDP_Attack_NA_Spoofing	iface mac_src_filter tgt_filter reply_mac	the main purpose of this function is to send fake neighbor advertisement messages to a victim
+layers		NDP_Attack_NS_Spoofing	src_lladdr src target dst	the main purpose of this function is to send fake neighbor solicitations messages to a victim in order to either create a new entry in its neighbor
+layers		NDP_Attack_Kill_Default_Router	iface mac_src_filter ip_src_filter reply_mac	the purpose of the function is to monitor incoming ra messages sent by default routers ra with a non-zero router lifetime values
+layers		NDP_Attack_Fake_Router	ra iface mac_src_filter ip_src_filter	the purpose of this function is to send provided ra message at layer 2 (i
+layers.tls		phantom_mode	pkt	we expect this if tls_version is not set this means we did not process
+layers.tls		phantom_decorate	f get_or_add	decorator for version-dependent fields
+layers.tls	_TLSSignature	_update_sig	m key	sign 'm' with the privkey 'key' and update our own 'sig_val'
+layers.tls	_TLSSignature	_verify_sig	m cert	verify that our own 'sig_val' carries the signature of 'm' by the key associated to the cert 'cert'
+layers.tls	ServerDHParams	fill_missing		we do not want tlsserverkeyexchange build() to overload and recompute
+layers.tls	ServerDHParams	post_dissection	r	xxx check that the pubkey received is in the group
+layers.tls	ServerDHParams	guess_payload_class	p	the signature after the params gets saved as padding
+layers.tls	ServerECDHExplicitPrimeParams	fill_missing		we do not want tlsserverkeyexchange build() to overload and recompute
+layers.tls	ServerECDHExplicitPrimeParams	post_dissection	pkt	xxx store the server_kx_pubkey
+layers.tls	ServerECDHExplicitChar2Params	fill_missing		we do not want tlsserverkeyexchange build() to overload and recompute
+layers.tls	ServerECDHExplicitChar2Params	post_dissection	pkt	xxx store the server_kx_pubkey
+layers.tls	ServerECDHNamedCurveParams	fill_missing		we do not want tlsserverkeyexchange build() to overload and recompute
+layers.tls	ServerECDHNamedCurveParams	post_dissection	r	xxx support compressed point format
+layers.tls	ServerPSKParams	fill_missing		we do not want tlsserverkeyexchange build() to overload and recompute
+layers.tls	ClientDiffieHellmanPublic	post_dissection	m	first we update the client dhparams then we try to update the server
+layers.tls	EncryptedPreMasterSecret	post_build	pkt pay	we encrypt the premaster secret the 48 bytes with either the server certificate or the temporary rsa key provided in a server key exchange
+layers.tls		der2pem	der_string obj	convert der octet string to pem format with optional header
+layers.tls		pem2der	pem_string	convert pem string to der format
+layers.tls		split_pem	s	split pem objects useful to process concatenated certificates
+layers.tls	PubKey	verifyCert	cert	verifies either a cert or an x509_cert
+layers.tls	_PrivKeyFactory	__call__	cls key_path	key_path may be the path to either _an rsaprivatekey_openssl as generated by openssl ;
+layers.tls	PrivKey	signTBSCert	tbsCert h	note that this will always copy the signature field from the tbscertificate into the signaturealgorithm field of the result
+layers.tls	PrivKey	resignCert	cert	rewrite the signature of either a cert or an x509_cert
+layers.tls	PrivKey	verifyCert	cert	verifies either a cert or an x509_cert
+layers.tls	Cert	isIssuerCert	other	true if 'other' issued 'self', i e :
+layers.tls	Cert	isSelfSigned		return true if the certificate is self-signed - issuer and subject are the same
+layers.tls	Cert	remainingDays	now	based on the value of notafter field returns the number of days the certificate will still be valid
+layers.tls	Cert	isRevoked	crl_list	given a list of trusted crl their signature has already been verified with trusted anchors this function returns true if
+layers.tls	Cert	export	filename fmt	export certificate in 'fmt' format der or pem to file 'filename'
+layers.tls	Chain	__init__	certList cert0	construct a chain of certificates starting with a self-signed certificate or any certificate submitted by the user
+layers.tls	Chain	verifyChain	anchors untrusted	perform verification of certificate chains for that certificate
+layers.tls	Chain	verifyChainFromCAFile	cafile untrusted_file	does the same job as verifychain() but using the list of anchors
+layers.tls	Chain	verifyChainFromCAPath	capath untrusted_file	does the same job as verifychainfromcafile() but using the list
+layers.tls	_TLSHandshake	tls_session_update	msg_str	covers both post_build- and post_dissection- context updates
+layers.tls	TLSHelloRequest	tls_session_update	msg_str	message should not be added to the list of handshake messages that will be hashed in the finished and certificate verify messages
+layers.tls	TLS_Ext_PrettyPacketList	_show_or_dump	dump indent lvl label_lvl	reproduced from packet py
+layers.tls		_TLS_Ext_CertTypeDispatcher	m	we need to select the correct one on dissection we use the length for
+layers.tls	TLSClientHello	tls_session_update	msg_str	either for parsing or building we store the client_random along with the raw string representing this handshake message
+layers.tls	TLSServerHello	tls_session_update	msg_str	either for parsing or building we store the server_random along with the raw string representing this handshake message
+layers.tls	_ASN1CertListField	getfield	pkt s	extract certs in a loop
+layers.tls	TLSServerKeyExchange	build		we overload build() method in order to provide a valid default value for params based on tls session if not provided
+layers.tls	TLSServerKeyExchange	post_dissection	pkt	while previously dissecting server*dhparams the session server_kx_params and client_kx_params should have been updated
+layers.tls	_TLSCKExchKeysField	m2i	pkt m	the client_kx_msg may be either none encryptedpremastersecret for rsa encryption key exchange clientdiffiehellmanpublic
+layers.tls	_GenericTLSSessionInheritance	tls_session_update	msg_str	post_{build dissection}_tls_session_update() are used to update the tlssession context
+layers.tls	_GenericTLSSessionInheritance	show2		rebuild the tls packet with the same context and then show() it
+layers.tls		_tls_compress	alg p	compress p a tlsplaintext instance using compression algorithm instance alg and return a tlscompressed instance
+layers.tls		_tls_decompress	alg c	decompress c a tlscompressed instance using compression algorithm instance alg and return a tlsplaintext instance
+layers.tls		_tls_mac_add	alg c write_seq_num	compute the mac using provided mac alg instance over tlsciphertext c using current write sequence number write_seq_num
+layers.tls		_tls_mac_verify	alg p read_seq_num	verify if the mac in provided message message resulting from decryption and padding removal is valid
+layers.tls		_tls_add_pad	p block_size	provided with cipher block size parameter and current tlscompressed packet p after mac addition the function adds required deterministic padding
+layers.tls		_tls_del_pad	p	provided with a just decrypted tlsciphertext now a tlsplaintext instance p the function removes the trailing padding found in p
+layers.tls		_tls_encrypt	alg p	provided with an already maced tlscompressed packet and a stream or block cipher alg the function converts it into a tlsciphertext (i
+layers.tls		_tls_decrypt	alg c	provided with a tlsciphertext instance c and a stream or block cipher alg the function decrypts c
+layers.tls		_tls_aead_auth_encrypt	alg p write_seq_num	provided with a tlscompressed instance p the function applies aead cipher alg to p
+layers.tls		_tls_aead_auth_decrypt	alg c read_seq_num	provided with a tlsciphertext instance c the function applies aead cipher alg auth_decrypt function to c
+layers.tls	TLSClientAutomaton	get_next_msg	socket_timeout retry	the purpose of the function is to make next message s available in self
+layers.tls	TLSClientAutomaton	add_ClientHello		default tlsclienthello() offers only tls_dhe_rsa_with_aes_128_cbc_sha
+layers.tls	TLSClientAutomaton	should_HANDLE_ServerHello		xxx we should check the serverhello attributes for discrepancies with our own clienthello
+layers.tls	TLSClientAutomaton	should_HANDLE_SKE_from_CERT		xxx we should check the serverkeyexchange attributes for discrepancies with our own clienthello along with the serverhello and certificate
+layers.tls	TLSClientAutomaton	should_HANDLE_CERT_REQ		xxx we should check the certificaterequest attributes for discrepancies with the cipher suite etc
+layers.tls	TLSClientAutomaton	should_ADD_CLIENT_CERT		if the server sent a certificaterequest we send a certificate message
+layers.tls	TLSClientAutomaton	should_ADD_CV_from_ADD_CKE		xxx section 7 4 7 1 of rfc 5246 states that the certificateverify
+layers.tls	TLSClientAutomaton	send_recv_data		xxx no live input from the user ; one unique send for now
+layers.tls	TLSClientAutomaton	close_session		we end the session properly after 2 seconds with a tls alert (warning close_notify)
+layers.tls	TLSClientAutomaton	FINAL		we might call shutdown but it may happen that the server did not wait for us to shutdown after answering our data query
+layers.tls	TLSServerAutomaton	get_next_msg		the purpose of the function is to make next message s available in self
+layers.tls	TLSServerAutomaton	INIT_TLS_SESSION		xxx we should offer the right key according to the client's suites for
+layers.tls	TLSServerAutomaton	should_NO_USABLE_CIPHERSUITE		we extract cipher suites candidates from the client's proposition
+layers.tls	TLSServerAutomaton	NO_USABLE_CIPHERSUITE		if there is no available cipher suite close the session with an alert
+layers.tls	TLSServerAutomaton	should_REPLY_TO_CH		xxx several enhancements needed here
+layers.tls	TLSServerAutomaton	PROCESS_DATA		in the beginning we return a small page with useful information
+layers.tls	TLSServerAutomaton	FINAL		we might call shutdown but unit tests with s_client fail with this
+layers.tls	_TLSMsgListField	m2i	pkt m	try to parse one of the tls subprotocols (ccs alert handshake or application_data)
+layers.tls	_TLSMsgListField	getfield	pkt s	if the decryption of the content did not fail with a ciphererror we begin a loop on the clear content in order to get as much messages
+layers.tls	_TLSMsgListField	i2m	pkt p	update the context with information from the built packet
+layers.tls	_TLSMsgListField	addfield	pkt s val	reconstruct the header because the tls type may have been updated
+layers.tls	TLS	__init__		as long as 'decipherable' is true _tlsmsglistfield will try to decipher the content of the tls message
+layers.tls	TLS	_tls_auth_decrypt	hdr s	provided with the record header and aead-ciphered data return the sliced and clear tuple (nonce tlscompressed
+layers.tls	TLS	_tls_decrypt	s	provided with stream- or block-ciphered data return the clear version
+layers.tls	TLS	_tls_hmac_verify	hdr msg mac	provided with the record header the tlscompressed fragment and the
+layers.tls	TLS	_tls_decompress	s	provided with the tlscompressed fragment
+layers.tls	TLS	pre_dissect	s	decrypt verify and decompress the message i
+layers.tls	TLS	post_dissect	s	commit the pending read state if it has been triggered
+layers.tls	TLS	do_dissect_payload	s	try to dissect the following data as a tls message
+layers.tls	TLS	_tls_compress	s	provided with the tlsplaintext fragment
+layers.tls	TLS	_tls_auth_encrypt	s	return the tlsciphertext fragment for aead ciphers i e the whole
+layers.tls	TLS	_tls_hmac_add	hdr msg	provided with the record header concatenation of the tlscompressed type version and length fields and the tlscompressed
+layers.tls	TLS	_tls_pad	s	provided with the concatenation of the tlscompressed fragment and the
+layers.tls	TLS	_tls_encrypt	s	return the stream- or block-ciphered version of the concatenated input
+layers.tls	TLS	post_build	pkt pay	apply the previous methods according to the writing cipher type
+layers.tls.crypto		get_algs_from_ciphersuite_name	ciphersuite_name	return the 3-tuple made of the key exchange algorithm class the cipher class and the hmac class through the parsing of the ciphersuite name
+layers.tls.crypto	_GenericCipherSuite	__init__	tls_version	most of the attributes are fixed and have already been set by the metaclass but we still have to provide tls_version differentiation
+layers.tls.crypto		get_usable_ciphersuites	l kx	from a list of proposed ciphersuites this function returns a list of usable cipher suites i
+layers.tls.crypto	_AEADCipher	__init__	key salt nonce_explicit	'key' and 'salt' are to be provided as strings whereas the internal 'nonce_explicit' is an integer it is simpler for incrementation
+layers.tls.crypto	_AEADCipher	_update_nonce		increment the explicit nonce while avoiding any overflow
+layers.tls.crypto	_AEADCipher	auth_encrypt	P A	encrypt the data prepend the explicit part of the nonce and append the computed authentication code
+layers.tls.crypto	_AEADCipher	auth_decrypt	A C add_length	decrypt the data and verify the authentication code in this order
+layers.tls.crypto	_BlockCipher	encrypt	data	encrypt the data also update the cipher iv this is needed for sslv3
+layers.tls.crypto	_BlockCipher	decrypt	data	decrypt the data also update the cipher iv this is needed for sslv3
+layers.tls.crypto	_StreamCipher	__init__	key	note that we have to keep the encryption/decryption state in unique encryptor and decryptor objects
+layers.tls.crypto		pkcs_os2ip	x	accepts a byte string as input parameter and return the associated long
+layers.tls.crypto		pkcs_i2osp	x xLen	converts a long the first parameter to the associated byte string representation of length l second parameter
+layers.tls.crypto		pkcs_ilen	n	this is a log base 256 which determines the minimum octet string length for unequivocal representation of integer n by pkcs_i2osp
+layers.tls.crypto		pkcs_mgf1	mgfSeed maskLen h	implements generic mgf1 mask generation function as described in appendix b
+layers.tls.crypto		pkcs_emsa_pss_encode	M emBits h mgf	implements emsa-pss-encode() function described in sect 9 1 1 of rfc 3447
+layers.tls.crypto		pkcs_emsa_pss_verify	M EM emBits h	implements emsa-pss-verify() function described in sect 9 1 2 of rfc 3447
+layers.tls.crypto		pkcs_emsa_pkcs1_v1_5_encode	M emLen h	implements emsa-pkcs1-v1_5-encode() function described in sect
+layers.tls.crypto	_EncryptAndVerifyRSA	_rsaep	m	internal method providing raw rsa encryption i e simple modular
+layers.tls.crypto	_EncryptAndVerifyRSA	_rsavp1	s	internal method providing raw rsa verification i e simple modular
+layers.tls.crypto	_EncryptAndVerifyRSA	_rsassa_pss_verify	M S h mgf	implements rsassa-pss-verify() function described in sect 8 1 2
+layers.tls.crypto	_EncryptAndVerifyRSA	_rsassa_pkcs1_v1_5_verify	M S h	implements rsassa-pkcs1-v1_5-verify() function as described in sect
+layers.tls.crypto	_EncryptAndVerifyRSA	verify_legacy	M S t h	verify alleged signature 's' is indeed the signature of message 'm' using 't' signature scheme where 't' can be
+layers.tls.crypto	_DecryptAndSignRSA	_rsadp	c	internal method providing raw rsa decryption i e simple modular
+layers.tls.crypto	_DecryptAndSignRSA	_rsasp1	m	internal method providing raw rsa signature i e simple modular
+layers.tls.crypto	_DecryptAndSignRSA	_rsassa_pss_sign	M h mgf sLen	implements rsassa-pss-sign() function described in sect 8 1 1 of
+layers.tls.crypto	_DecryptAndSignRSA	_rsassa_pkcs1_v1_5_sign	M h	implements rsassa-pkcs1-v1_5-sign() function as described in sect
+layers.tls.crypto	_DecryptAndSignRSA	sign_legacy	M t h mgf	sign message 'm' using 't' signature scheme where 't' can be - none the message 'm' is directly applied the rsasp1 signature
+layers.tls.crypto		create_ca_file	anchor_list filename	concatenate all the certificates pem format for the export in 'anchor_list' and write the result to file 'filename'
+layers.tls.crypto		create_temporary_ca_file	anchor_list	concatenate all the certificates pem format for the export in 'anchor_list' and write the result to file to a temporary file
+layers.tls.crypto		create_temporary_ca_path	anchor_list folder	create a ca path folder as defined in openssl terminology by storing all certificates in 'anchor_list' list in pem format
+layers.tls.crypto		_tls_P_hash	secret seed req_len hm	provides the implementation of p_hash function defined in section 5 of rfc 4346 and section 5 of rfc 5246
+layers.tls.crypto		_ssl_PRF	secret seed req_len	provides the implementation of sslv3 prf function sslv3-prf secret seed =
+layers.tls.crypto		_tls_PRF	secret label seed req_len	provides the implementation of tls prf function as defined in section 5 of rfc 4346
+layers.tls.crypto		_tls12_SHA256PRF	secret label seed req_len	provides the implementation of tls 1 2 prf function as
+layers.tls.crypto	PRF	compute_master_secret	pre_master_secret client_random server_random	return the 48-byte master_secret computed from pre_master_secret client_random and server_random
+layers.tls.crypto	PRF	derive_key_block	master_secret server_random client_random req_len	perform the derivation of master_secret into a key_block of req_len requested length
+layers.tls.crypto	PRF	compute_verify_data	con_end read_or_write handshake_msg master_secret	return verify_data based on handshake messages connection end master secret and read_or_write position
+layers.tls.crypto	PRF	postprocess_key_for_export	key client_random server_random con_end	postprocess cipher key for export ciphersuite i e weakens it
+layers.tls.crypto	PRF	generate_iv_for_export	client_random server_random con_end read_or_write	generate iv for export ciphersuite i e weakens it
+arch		get_if	iff cmd	ease siocgif* ioctl calls
+arch		get_alias_address	iface_name ip_mask	get the correct source ip address of an interface alias
+arch		in6_getifaddr		returns a list of 3-tuples of the form addr scope iface where 'addr' is the address of scope 'scope' associated to the interface
+arch		get_if_addr6	iff	returns the main global unicast address associated with provided interface in human readable form
+arch		get_if_raw_addr6	iff	returns the main global unicast address associated with provided interface in network format
+arch		_guess_iface_name	netif	we attempt to guess the name of interfaces that are truncated from the output of ifconfig -l
+arch		_in6_getifaddr	ifname	returns a list of ipv6 addresses configured on the interface ifname
+arch		in6_getifaddr		returns a list of 3-tuples of the form addr scope iface where 'addr' is the address of scope 'scope' associated to the interface
+arch		read_routes6		return a list of ipv6 routes than can be used by scapy
+arch.windows		sniff	count store offline prn	sniff packets sniff([count=0 ] [prn=none ] [store=1 ] [offline=none ] [lfilter=none ] + l2listensocket args) -> list of packets
+arch.windows		_exec_query_ps	cmd fields	execute a powershell query
+arch.windows		_exec_query_vbs	cmd fields	execute a query using vbs currently get-wmiobject queries are
+arch.windows		exec_query	cmd fields	execute a system query using powershell if it is available and using vbs/cscript as a fallback
+arch.windows		_deep_lookup	prog_list max_depth	quickly iterate through program files to find the programs
+arch.windows		_where	filename dirs env	find file in current dir in deep_lookup cache or in system path
+arch.windows		win_find_exe	filename installsubdir env	find executable in current dir system path or given programfiles subdir
+arch.windows		get_windows_if_list		returns windows interfaces
+arch.windows	NetworkInterface	update	data	update info about network interface according to given dnet dictionary
+arch.windows	NetworkInterfaceDict	dev_from_name	name	return the first pcap device name for a given windows device name
+arch.windows	NetworkInterfaceDict	dev_from_pcapname	pcap_name	return windows device name for given pcap device name
+arch.windows	NetworkInterfaceDict	dev_from_index	if_index	return interface name from interface index
+arch.windows	NetworkInterfaceDict	remove_invalid_ifaces		remove all invalid interfaces
+arch.windows	NetworkInterfaceDict	reload		reload interface list
+arch.windows	NetworkInterfaceDict	show	resolve_mac	print list of available network interfaces in human readable form
+arch.windows		pcapname	dev	return pypcap device name for given interface or libdnet/scapy device name
+arch.windows		dev_from_pcapname	pcap_name	return libdnet/scapy device name for given pypcap device name
+arch.windows		dev_from_index	if_index	return windows adapter name for given windows interface index
+arch.windows		show_interfaces	resolve_mac	print list of available network interfaces
+arch.windows		in6_getifaddr		returns all ipv6 addresses found on the computer
+arch.windows		route_add_loopback	routes ipv6 iflist	add a route to 127 0 0 1 and ::1 to simplify unit tests on windows
+arch.bpf	_L2bpfSocket	set_promisc	value	set the interface in promiscuous mode
+arch.bpf	_L2bpfSocket	__del__		close the file descriptor on delete
+arch.bpf	_L2bpfSocket	guess_cls		guess the packet class that must be used on the interface
+arch.bpf	_L2bpfSocket	set_nonblock	set_flag	set the non blocking flag on the socket
+arch.bpf	_L2bpfSocket	get_stats		get received / dropped statistics
+arch.bpf	_L2bpfSocket	get_blen		get the bpf buffer length
+arch.bpf	_L2bpfSocket	fileno		get the underlying file descriptor
+arch.bpf	_L2bpfSocket	close		close the super socket
+arch.bpf	_L2bpfSocket	send	x	dummy send method
+arch.bpf	_L2bpfSocket	recv	x	dummy recv method
+arch.bpf	L2bpfListenSocket	buffered_frames		return the number of frames in the buffer
+arch.bpf	L2bpfListenSocket	get_frame		get a frame or packet from the received list
+arch.bpf	L2bpfListenSocket	bpf_align	bh_h bh_c	return the index to the end of the current packet
+arch.bpf	L2bpfListenSocket	extract_frames	bpf_buffer	extract all frames from the buffer and stored them in the received list
+arch.bpf	L2bpfListenSocket	recv	x	receive a frame from the network
+arch.bpf	L2bpfSocket	send	x	send a frame
+arch.bpf	L2bpfSocket	nonblock_recv		non blocking receive
+arch.bpf	L3bpfSocket	send	pkt	send a packet
+arch.bpf		isBPFSocket	obj	return true is obj is a bpf super socket
+arch.bpf		bpf_select	fds_list timeout	a call to recv() can return several frames this functions hides the fact
+arch.bpf		get_if_raw_addr	ifname	returns the ipv4 address configured on 'ifname', packed with inet_pton
+arch.bpf		get_if_raw_hwaddr	ifname	returns the packed mac address configured on 'ifname'
+arch.bpf		get_dev_bpf		returns an opened bpf file object
+arch.bpf		attach_filter	fd iface bpf_filter_string	attach a bpf filter to the bpf file descriptor
+arch.bpf		get_if_list		returns a list containing all network interfaces
+arch.bpf		get_working_ifaces		returns an ordered list of interfaces that could be used with bpf
+arch.bpf		get_working_if		returns the first interface than can be used with bpf
+modules		voip_play	s1 lst	play voip packets with raw data that are either sniffed either from an ip or
+modules		voip_play1	s1 lst	same than voip_play backward compatibility
+modules		voip_play2	s1	same than voip_play but will play both incoming and outcoming packets
+modules		voip_play3	lst	same than voip_play but made to read and play voip rtp packets without
+modules		p0f	pkt	passive os fingerprinting which os emitted this tcp packet
+modules		pkt2uptime	pkt HZ	calculate the date the machine which emitted the packet booted using tcp timestamp
+modules		p0f_impersonate	pkt osgenre osdetails signature	modifies pkt so that p0f will think it has been sent by a specific os
+modules		p0f_getlocalsigs		this function returns a dictionary of signatures indexed by p0f db (e
+modules		queso		queso os fingerprinting

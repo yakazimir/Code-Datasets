@@ -1,0 +1,1577 @@
+core		is_text_buffer	obj	helper function determining if the passed object is an object that can read and write text or not
+core		is_bytes_buffer	obj	helper function determining if the passed object is an object that can read and write bytes or not
+core		round_away	number	simple function that rounds a number to the nearest integer if the number
+core		create_preview	trace delta	creates a preview trace
+core		merge_previews	stream	merges all preview traces in one stream object does not change the
+core		resample_preview	trace samples method	resamples a preview trace to the chosen number of samples
+core	UTCDateTime	__init__		creates a new utcdatetime object
+core	UTCDateTime	_set		sets current timestamp using kwargs
+core	UTCDateTime	_from_datetime	dt	use python datetime object to set current time
+core	UTCDateTime	_from_timestamp	value	use given timestamp to set current time
+core	UTCDateTime	_from_iso8601_string	value	parses an iso8601 2004 date time string
+core	UTCDateTime	_get_timestamp		returns utc timestamp in seconds
+core	UTCDateTime	__float__		returns utc timestamp in seconds
+core	UTCDateTime	_get_datetime		returns a python datetime object
+core	UTCDateTime	_get_date		returns a python date object
+core	UTCDateTime	_get_year		returns year of the current utcdatetime object
+core	UTCDateTime	_set_year	value	sets year of current utcdatetime object
+core	UTCDateTime	_get_month		returns month as an integer january is 1 december is 12
+core	UTCDateTime	_set_month	value	sets month of current utcdatetime object
+core	UTCDateTime	_get_day		returns day as an integer
+core	UTCDateTime	_set_day	value	sets day of current utcdatetime object
+core	UTCDateTime	_get_weekday		return the day of the week as an integer monday is 0 sunday is 6
+core	UTCDateTime	_get_time		returns a python time object
+core	UTCDateTime	_get_hour		returns hour as an integer
+core	UTCDateTime	_set_hour	value	sets hours of current utcdatetime object
+core	UTCDateTime	_get_minute		returns minute as an integer
+core	UTCDateTime	_set_minute	value	sets minutes of current utcdatetime object
+core	UTCDateTime	_get_second		returns seconds as an integer
+core	UTCDateTime	_set_second	value	sets seconds of current utcdatetime object
+core	UTCDateTime	_get_microsecond		returns microseconds as an integer
+core	UTCDateTime	_set_microsecond	value	sets microseconds of current utcdatetime object
+core	UTCDateTime	_get_julday		returns julian day as an integer
+core	UTCDateTime	_set_julday	value	sets julian day of current utcdatetime object
+core	UTCDateTime	timetuple		return a time struct_time such as returned by time localtime()
+core	UTCDateTime	utctimetuple		return a time struct_time of current utcdatetime object
+core	UTCDateTime	__add__	value	adds seconds and microseconds to current utcdatetime object
+core	UTCDateTime	__sub__	value	subtracts seconds and microseconds from current utcdatetime object
+core	UTCDateTime	__str__		returns iso8601 string representation from current utcdatetime object
+core	UTCDateTime	__unicode__		returns iso8601 unicode representation from current utcdatetime object
+core	UTCDateTime	__eq__	other	rich comparison operator '=='
+core	UTCDateTime	__ne__	other	rich comparison operator '!='
+core	UTCDateTime	__lt__	other	rich comparison operator '<'
+core	UTCDateTime	__le__	other	rich comparison operator '<='
+core	UTCDateTime	__gt__	other	rich comparison operator '>'
+core	UTCDateTime	__ge__	other	rich comparison operator '>='
+core	UTCDateTime	__repr__		returns a representation of utcdatetime object
+core	UTCDateTime	__abs__		returns absolute timestamp value of the current utcdatetime object
+core	UTCDateTime	__hash__		an object is hashable if it has a hash value which never changes during its lifetime
+core	UTCDateTime	strftime	format	return a string representing the date and time controlled by an explicit format string
+core	UTCDateTime	strptime	date_string format	return a utcdatetime corresponding to date_string parsed according to given format
+core	UTCDateTime	timetz		return time object with same hour minute second microsecond and tzinfo attributes
+core	UTCDateTime	utcoffset		returns none (to stay compatible with :class datetime datetime)
+core	UTCDateTime	dst		returns none (to stay compatible with :class datetime datetime)
+core	UTCDateTime	tzname		returns none (to stay compatible with :class datetime datetime)
+core	UTCDateTime	ctime		return a string representing the date and time
+core	UTCDateTime	isoweekday		return the day of the week as an integer monday is 1 sunday is 7
+core	UTCDateTime	isocalendar		returns a tuple containing iso year iso week number iso weekday
+core	UTCDateTime	isoformat	sep	return a string representing the date and time in iso 8601 format
+core	UTCDateTime	format_fissures		returns string representation for the iris fissures protocol
+core	UTCDateTime	format_arclink		returns string representation for the arclink protocol
+core	UTCDateTime	format_seedlink		returns string representation for the seedlink protocol
+core	UTCDateTime	format_seed	compact	returns string representation for a seed volume
+core	UTCDateTime	format_iris_web_service		returns string representation usable for the iris web services
+core	UTCDateTime	_get_precision		returns precision of current utcdatetime object
+core	UTCDateTime	_set_precision	value	set precision of current utcdatetime object
+core	UTCDateTime	toordinal		return proleptic gregorian ordinal january 1 of year 1 is day 1
+core	UTCDateTime	now		returns current utc datetime
+core	UTCDateTime	utcnow		returns current utc datetime
+core	UTCDateTime	_get_hours_after_midnight		calculate foating point hours after midnight
+core	UTCDateTime	matplotlib_date		maplotlib date number representation
+core	Stats	__str__		return better readable string representation of stats object
+core		_add_processing_info	func	this is a decorator that attaches information about a processing call as a string to the trace
+core	Trace	__eq__	other	implements rich comparison of trace objects for "==" operator
+core	Trace	__ne__	other	implements rich comparison of trace objects for "!=" operator
+core	Trace	__lt__	other	too ambiguous throw an error
+core	Trace	__le__	other	too ambiguous throw an error
+core	Trace	__gt__	other	too ambiguous throw an error
+core	Trace	__ge__	other	too ambiguous throw an error
+core	Trace	__nonzero__		no data means no trace
+core	Trace	__str__	id_length	return short summary string of the current trace
+core	Trace	__len__		return number of data samples of the current trace
+core	Trace	__setattr__	key value	__setattr__ method of trace object
+core	Trace	__getitem__	index	__getitem__ method of trace object
+core	Trace	__mul__	num	create a new stream containing num copies of this trace
+core	Trace	__div__	num	split trace into new stream containing num traces of the same size
+core	Trace	__mod__	num	split trace into new stream containing traces with num samples
+core	Trace	__add__	trace method interpolation_samples fill_value	add another trace object to current trace
+core	Trace	get_id		return a seed compatible identifier of the trace
+core	Trace	id	value	set network station location and channel codes from a seed id
+core	Trace	plot		create a simple graph of the current trace
+core	Trace	spectrogram		create a spectrogram plot of the trace
+core	Trace	write	filename format	save current trace into a file
+core	Trace	_ltrim	starttime pad nearest_sample fill_value	cut current trace to given start time for more info see
+core	Trace	_rtrim	endtime pad nearest_sample fill_value	cut current trace to given end time for more info see
+core	Trace	trim	starttime endtime pad nearest_sample	cut current trace to given start and end time
+core	Trace	slice	starttime endtime nearest_sample	return a new trace object with data going from start to end time
+core	Trace	slide	window_length step offset include_partial_windows	generator yielding equal length sliding windows of the trace
+core	Trace	verify		verify current trace object against available meta data
+core	Trace	simulate	paz_remove paz_simulate remove_sensitivity simulate_sensitivity	correct for instrument response / simulate new instrument response
+core	Trace	filter	type	filter the data of the current trace
+core	Trace	trigger	type	run a triggering algorithm on the data of the current trace
+core	Trace	resample	sampling_rate window no_filter strict_length	resample trace data using fourier method spectra are linearly
+core	Trace	decimate	factor no_filter strict_length	downsample trace data by an integer factor
+core	Trace	max		returns the value of the absolute maximum amplitude in the trace
+core	Trace	std		method to get the standard deviation of amplitudes in the trace
+core	Trace	differentiate	method	differentiate the trace with respect to time
+core	Trace	integrate	method	integrate the trace with respect to time
+core	Trace	detrend	type	remove a trend from the trace
+core	Trace	taper	max_percentage type max_length side	taper the trace
+core	Trace	normalize	norm	normalize the trace to its absolute maximum
+core	Trace	copy		returns a deepcopy of the trace
+core	Trace	_internal_add_processing_info	info	add the given informational string to the processing field in the trace's :class ~obspy
+core	Trace	split		split trace object containing gaps using a numpy masked array into several traces
+core	Trace	interpolate	sampling_rate method starttime npts	interpolate the data using various interpolation techniques
+core	Trace	times	type reftime	for convenient plotting compute a numpy array with timing information of all samples in the trace
+core	Trace	_get_response	inventories	search for and return channel response for the trace
+core	Trace	attach_response	inventories	search for and attach channel response to the trace as :class trace
+core	Trace	remove_response	inventory output water_level pre_filt	deconvolve instrument response
+core	Trace	remove_sensitivity	inventory	remove instrument sensitivity
+core		_data_sanity_checks	value	check if a given input is suitable to be used for trace data raises the
+core		read	pathname_or_url format headonly starttime	read waveform files into an obspy stream object
+core		_read	filename format headonly	read a single file into a obspy stream object
+core		_create_example_stream	headonly	create an example stream
+core	Stream	__add__	other	add two streams or a stream with a single trace
+core	Stream	__iadd__	other	add two streams with self += other
+core	Stream	__mul__	num	create a new stream containing num copies of this stream
+core	Stream	__iter__		return a robust iterator for stream traces
+core	Stream	__nonzero__		a stream is considered zero if has no traces
+core	Stream	__len__		return the number of traces in the stream object
+core	Stream	__str__	extended	return short summary string of the current stream
+core	Stream	__eq__	other	implements rich comparison of stream objects for "==" operator
+core	Stream	__ne__	other	implements rich comparison of stream objects for "!=" operator
+core	Stream	__lt__	other	too ambiguous throw an error
+core	Stream	__le__	other	too ambiguous throw an error
+core	Stream	__gt__	other	too ambiguous throw an error
+core	Stream	__ge__	other	too ambiguous throw an error
+core	Stream	__setitem__	index trace	__setitem__ method of obspy stream objects
+core	Stream	__getitem__	index	__getitem__ method of obspy stream objects
+core	Stream	__delitem__	index	passes on the __delitem__ method to the underlying list of traces
+core	Stream	__getslice__	i j k	__getslice__ method of obspy stream objects
+core	Stream	append	trace	append a single trace object to the current stream object
+core	Stream	extend	trace_list	extend the current stream object with a list of trace objects
+core	Stream	get_gaps	min_gap max_gap	determine all trace gaps/overlaps of the stream object
+core	Stream	insert	position object	insert either a single trace or a list of traces before index
+core	Stream	plot		create a waveform plot of the current obspy stream object
+core	Stream	spectrogram		create a spectrogram plot for each trace in the stream
+core	Stream	pop	index	remove and return the trace object specified by index from the stream
+core	Stream	print_gaps	min_gap max_gap	print gap/overlap list summary information of the stream object
+core	Stream	remove	trace	remove the first occurrence of the specified trace object in the stream object
+core	Stream	reverse		reverse the traces of the stream object in place
+core	Stream	sort	keys reverse	sort the traces in the stream object
+core	Stream	write	filename format	save stream into a file
+core	Stream	trim	starttime endtime pad nearest_sample	cut all traces of this stream object to given start and end time
+core	Stream	_ltrim	starttime pad nearest_sample	cut all traces of this stream object to given start time
+core	Stream	_rtrim	endtime pad nearest_sample	cut all traces of this stream object to given end time
+core	Stream	cutout	starttime endtime	cut the given time range out of all traces of this stream object
+core	Stream	slice	starttime endtime keep_empty_traces nearest_sample	return new stream object cut to the given start and end time
+core	Stream	slide	window_length step offset include_partial_windows	generator yielding equal length sliding windows of the stream
+core	Stream	select	network station location channel	return new stream object only with these traces that match the given stats criteria (e
+core	Stream	verify		verify all traces of current stream against available meta data
+core	Stream	_merge_checks		sanity checks for merging
+core	Stream	merge	method fill_value interpolation_samples	merge obspy trace objects with same ids
+core	Stream	simulate	paz_remove paz_simulate remove_sensitivity simulate_sensitivity	correct for instrument response / simulate new instrument response
+core	Stream	filter	type	filter the data of all traces in the stream
+core	Stream	trigger	type	run a triggering algorithm on all traces in the stream
+core	Stream	resample	sampling_rate window no_filter strict_length	resample data in all traces of stream using fourier method
+core	Stream	decimate	factor no_filter strict_length	downsample data in all traces of stream by an integer factor
+core	Stream	max		get the values of the absolute maximum amplitudes of all traces in the stream
+core	Stream	differentiate	method	differentiate all traces with respect to time
+core	Stream	integrate	method	integrate all traces with respect to time
+core	Stream	detrend	type	remove a trend from all traces
+core	Stream	taper		taper all traces in stream
+core	Stream	interpolate		interpolate all traces in a stream
+core	Stream	std		calculate standard deviations of all traces in the stream
+core	Stream	normalize	global_max	normalize all traces in the stream
+core	Stream	rotate	method back_azimuth inclination	rotate stream objects
+core	Stream	copy		return a deepcopy of the stream object
+core	Stream	clear		clear trace list convenience method
+core	Stream	_cleanup	misalignment_threshold	merge consistent trace objects but leave everything else alone
+core	Stream	split		split any trace containing gaps into contiguous unmasked traces
+core	Stream	attach_response	inventories	search for and attach channel response to each trace as trace
+core	Stream	remove_response		deconvolve instrument response for all traces in stream
+core	Stream	remove_sensitivity		remove instrument sensitivity for all traces in stream
+core	Stream	_dummy_stream_from_string	s	helper method to create a dummy stream object with data always equal to one from a string representation of the stream mostly for
+core		_is_pickle	filename	check whether a file is a pickled obspy stream file
+core		_read_pickle	filename	read and return stream from pickled obspy stream file
+core		_write_pickle	stream filename protocol	write a python pickle of current stream
+core.inventory	Station	__init__	code latitude longitude elevation	:type channels list of :class ~obspy core inventory channel channel
+core.inventory	Station	get_contents		returns a dictionary containing the contents of the object
+core.inventory	Station	select	location channel time starttime	returns the :class station object with only the :class ~obspy
+core.inventory	Station	plot	min_freq output location channel	show bode plot of instrument response of all or a subset of the station's channels
+core.inventory	Network	__init__	code stations total_number_of_stations selected_number_of_stations	:type code str
+core.inventory	Network	get_contents		returns a dictionary containing the contents of the object
+core.inventory	Network	get_response	seed_id datetime	find response for a given channel at given time
+core.inventory	Network	get_coordinates	seed_id datetime	return coordinates for a given channel
+core.inventory	Network	select	station location channel time	returns the :class network object with only the :class ~obspy
+core.inventory	Network	plot	projection resolution continent_fill_color water_fill_color	creates a preview map of all stations in current network object
+core.inventory	Network	plot_response	min_freq output station location	show bode plot of instrument response of all or a subset of the network's channels
+core.inventory	BaseNode	__init__	code description comments start_date	:type code str
+core.inventory	BaseNode	alternate_code		from the stationxml definition a code used for display or association alternate to the
+core.inventory	BaseNode	historical_code		from the stationxml definition a previously used code if different from the current code
+core.inventory	BaseNode	copy		returns a deepcopy of the object
+core.inventory	BaseNode	is_active	time starttime endtime	checks if the item was active at some given point in time (time) and/or if it was active at some point during a certain time range
+core.inventory	Equipment	__init__	type description manufacturer vendor	:type type str
+core.inventory	Operator	__init__	agencies contacts website	:type agencies list of str
+core.inventory	Person	__init__	names agencies emails phones	:type names list of str optional
+core.inventory	PhoneNumber	__init__	area_code phone_number country_code description	:type area_code int
+core.inventory	ExternalReference	__init__	uri description	:type uri str
+core.inventory	Comment	__init__	value id begin_effective_time end_effective_time	:type value str
+core.inventory	Site	__init__	name description town county	:type name str
+core.inventory		_seed_id_keyfunction	x	keyfunction to use in sorting two partial seed ids assumes that the last or only "
+core.inventory	Channel	__init__	code location_code latitude longitude	:type code str
+core.inventory	Channel	plot	min_freq output start_stage end_stage	show bode plot of the channel's instrument response
+core.inventory		_create_example_inventory		create an example inventory
+core.inventory		read_inventory	path_or_file_object format	function to read inventory files
+core.inventory	Inventory	__init__	networks source sender created	:type networks list of :class ~obspy
+core.inventory	Inventory	__copy_inventory_metadata	other	will be called after two inventory objects have been merged it
+core.inventory	Inventory	get_contents		returns a dictionary containing the contents of the object
+core.inventory	Inventory	write	path_or_file_object format	writes the inventory object to a file or file-like object in the specified format
+core.inventory	Inventory	get_response	seed_id datetime	find response for a given channel at given time
+core.inventory	Inventory	get_coordinates	seed_id datetime	return coordinates for a given channel
+core.inventory	Inventory	select	network station location channel	returns the :class inventory object with only the :class ~obspy
+core.inventory	Inventory	plot	projection resolution continent_fill_color water_fill_color	creates a preview map of all networks/stations in current inventory object
+core.inventory	Inventory	plot_response	min_freq output network station	show bode plot of instrument response of all or a subset of the inventory's channels
+core.inventory	ResponseStage	__init__	stage_sequence_number stage_gain stage_gain_frequency input_units	:type stage_sequence_number int
+core.inventory	PolesZerosResponseStage	pz_transfer_function_type	value	setter for the transfer function type
+core.inventory	CoefficientsTypeResponseStage	cf_transfer_function_type	value	setter for the transfer function type
+core.inventory	ResponseListElement	__init__	frequency amplitude phase	:type frequency float
+core.inventory	Response	__init__	resource_id instrument_sensitivity instrument_polynomial response_stages	:type resource_id str
+core.inventory	Response	get_evalresp_response_for_frequencies	frequencies output start_stage end_stage	returns frequency response for given frequencies using evalresp
+core.inventory	Response	get_evalresp_response	t_samp nfft output start_stage	returns frequency response and corresponding frequencies using evalresp
+core.inventory	Response	plot	min_freq output start_stage end_stage	show bode plot of instrument response
+core.inventory	Response	get_paz		get poles and zeros stage
+core.inventory	Response	get_sacpz		returns sacpz ascii text representation of response
+core.inventory		paz_to_sacpz_string	paz instrument_sensitivity	returns sacpz ascii text representation of response
+core.inventory	InstrumentSensitivity	__init__	value frequency input_units output_units	:type value float
+core.inventory	InstrumentPolynomial	__init__	input_units output_units frequency_lower_bound frequency_upper_bound	:type approximation_type str
+core.inventory	FilterCoefficient	__init__	value number	:type value float
+core.inventory	CoefficientWithUncertainties	__init__	value number lower_uncertainty upper_uncertainty	:type value float
+core.inventory		_adjust_bode_plot_figure	fig plot_degrees grid show	helper function to do final adjustments to bode plot figure
+core.inventory		_pitick2latex	x	helper function to convert a float that is a multiple of pi/2 to a latex string
+core.util		add_unittests	testsuite module_name	function to add all available unittests of the module with given name (e
+core.util		add_doctests	testsuite module_name	function to add all available doctests of the module with given name (e
+core.util		write_png	arr filename	custom write_png() function matplotlib < 1 3 cannot write rgba png files
+core.util		compare_images	expected actual tol	custom version of :func matplotlib testing compare compare_images
+core.util	ImageComparison	__enter__		set matplotlib defaults
+core.util	ImageComparison	__exit__	exc_type exc_val exc_tb	remove tempfiles and store created images if obspy_keep_images environment variable is set
+core.util	ImageComparison	compare		run a custom version of :func matplotlib
+core.util	ImageComparison	_get_final_filenames		helper function returning the
+core.util	ImageComparison	_copy_tempfiles		copies created images from tempfiles to a subfolder of baseline images
+core.util	ImageComparison	_upload_images		uploads images to imgur
+core.util		compare_xml_strings	doc1 doc2	simple helper function to compare two xml strings
+core.util		remove_unique_ids	xml_string remove_creation_time	removes unique id parts of e g 'publicid=" "' attributes from xml
+core.util		get_all_py_files		return a list with full absolute paths to all py files in obspy file tree
+core.util	Enum	__str__		>>> enum = enum(["c", "a", "b"]) >>> print enum
+core.util	Enum	__repr__		>>> enum = enum(["c", "a", "b"]) >>> print(repr enum
+core.util	ComplexWithUncertainties	__init__		complex type with optional keywords
+core.util		deprecated	warning_msg	this is a decorator which can be used to mark functions as deprecated
+core.util		deprecated_keywords	keywords	decorator for marking keywords as deprecated
+core.util		skip_on_network_error	func	decorator for unittest to mark test routines that fail with certain network errors (e
+core.util		uncompress_file	func filename	decorator used for temporary uncompressing file if gz or bz2 archive
+core.util		raise_if_masked	func	raises if the first argument self in case of methods is a trace with masked values or a stream containing a trace with masked values
+core.util		skip_if_no_data	func	does nothing if the first argument self in case of methods is a trace with no data in it
+core.util		map_example_filename	arg_kwarg_name	decorator that replaces "/path/to/filename" patterns in the arg or kwarg of the specified name with the correct file path
+core.util		_decorate_polyfill	func caller	decorate func caller decorates a function using a caller
+core.util		rlock	func	place a threading recursive lock rlock on the wrapped function
+core.util		cleanse_pymodule_filename	filename	replace all characters not allowed in python module names in filename with "_"
+core.util		_get_lib_name	lib add_extension_suffix	helper function to get an architecture and python version specific library filename
+core.util		_load_cdll	name	helper function to load a shared library built during obspy installation with ctypes
+core.util	AttribDict	__init__		an attribdict can be initialized in two ways it can be given an
+core.util	AttribDict	__getattr__	name default	py3k hasattr() expects an attributeerror no keyerror to be raised if the attribute is not found
+core.util	AttribDict	_pretty_str	priorized_keys min_label_length	return better readable string representation of attribdict object
+core.util		guess_delta	channel	estimate time delta in seconds between each sample from given channel name
+core.util		score_at_percentile	values per limit issorted	calculates the score at the given per percentile of the sequence a
+core.util		flat_not_masked_contiguous	a	find contiguous unmasked data in a masked array along the given axis
+core.util		complexify_string	line	converts a string in the form " real imag " into a complex type
+core.util		to_int_or_zero	value	converts given value to an integer or returns 0 if it fails
+core.util		get_untracked_files_from_git		tries to return a list of files absolute paths that are untracked by git in the repository
+core.util		CatchOutput		a context manager that catches stdout/stderr/exit() for its scope
+core.util		TemporaryWorkingDirectory		a context manager that changes to a temporary working directory
+core.util		factorize_int	x	calculate prime factorization of integer
+core.util		get_window_times	starttime endtime window_length step	function calculating a list of times making up equal length windows from within a given time interval
+core.util	MatplotlibBackend	switch_backend	backend sloppy	switch matplotlib backend
+core.util		limit_numpy_fft_cache	max_size_in_mb_per_cache	numpy's fft implementation utilizes caches to speedup subsequent ffts of the same size
+core.util		create_empty_data_chunk	delta dtype fill_value	creates an numpy array depending on the given data type and fill value
+core.util		get_example_file	filename	function to find the absolute path of a data file the obspy modules are installed to a custom installation directory
+core.util		_get_entry_points	group subgroup	gets a dictionary of all available plug-ins of a group or subgroup
+core.util		_get_ordered_entry_points	group subgroup order_list	gets a ordered dictionary of all available plug-ins of a group or subgroup
+core.util		_get_function_from_entry_point	group type	a "automagic" function searching a given dict of entry points for a valid entry point and returns the function call
+core.util		get_dependency_version	package_name	get version information of a dependency package
+core.util		_read_from_plugin	plugin_type filename format	reads a single file from a plug-in's readformat function
+core.util		get_script_dir_name		get the directory of the current script file this is more robust than
+core.util		make_format_plugin_table	group method numspaces unindent_first_line	returns a markdown formatted table with read waveform plugins to insert in docstrings
+core.util		_get_deprecated_argument_action	old_name new_name real_action	specifies deprecated command-line arguments to scripts
+core.util		download_to_file	url filename_or_buffer chunk_size	helper function to download a potentially large file
+core.util		_normalize_version	version	normalize version number string to adhere with pep440 strictly
+core.event		farfield	mt points type	returns the p/s farfield radiation pattern based on [aki1980]_ eq
+core.event		_fullmt	mt	takes 6 comp moment tensor and returns full 3x3 moment tensor
+core.event	QuantityError	__bool__		boolean testing for quantityerror
+core.event		_bool	value	a custom bool() implementation that returns true for any value including zero of int and float
+core.event		_event_type_class_factory	class_name class_attributes class_contains	class factory to unify the creation of all the types needed for the event handling in obspy
+core.event	ResourceIdentifier	bind_resource_ids	cls	bind the unbound resourceidentifier instances to referred objects
+core.event	ResourceIdentifier	get_referred_object		returns the object associated with the resource identifier
+core.event	ResourceIdentifier	_get_similar_referred_object		find an object with the same resource_id that is not none and return it
+core.event	ResourceIdentifier	set_referred_object	referred_object warn	binds a resourceidentifier instance to an object
+core.event	ResourceIdentifier	convert_id_to_quakeml_uri	authority_id	converts the current id to a valid quakeml uri
+core.event	ResourceIdentifier	get_quakeml_uri	authority_id	returns the id as a valid quakeml uri if possible does not
+core.event	ResourceIdentifier	copy		returns a copy of the resourceidentifier
+core.event	ResourceIdentifier	id		unique identifier of the current instance
+core.event	ResourceIdentifier	uuid		deleting is uuid hash is forbidden and will not work
+core.event	ResourceIdentifier	uuid	value	setting is uuid hash is forbidden and will not work
+core.event	ResourceIdentifier	__hash__		uses the same hash as the resource id this means that class instances
+core.event	ResourceIdentifier	regenerate_uuid		regenerates the uuid part of the id does nothing for resource
+core.event	Event	short_str		returns a short string representation of the current event
+core.event	Event	__str__		print a short summary at the top
+core.event	Event	preferred_origin		returns the preferred origin
+core.event	Event	preferred_magnitude		returns the preferred magnitude
+core.event	Event	preferred_focal_mechanism		returns the preferred focal mechanism
+core.event	Event	plot	kind subplot_size show outfile	plot event location and/or the preferred focal mechanism and radiation pattern
+core.event	Event	__deepcopy__	memodict	reset resource_id's object_id after deep copy to allow the
+core.event	Event	write	filename format	saves event information into a file
+core.event	Catalog	__add__	other	method to add two catalogs
+core.event	Catalog	__delitem__	index	passes on the __delitem__ method to the underlying list of traces
+core.event	Catalog	__eq__	other	__eq__ method of the catalog object
+core.event	Catalog	__getitem__	index	__getitem__ method of the catalog object
+core.event	Catalog	__getslice__	i j k	__getslice__ method of the catalog object
+core.event	Catalog	__iadd__	other	method to add two catalog with self += other
+core.event	Catalog	__iter__		return a robust iterator for events of current catalog
+core.event	Catalog	__len__		returns the number of events in the catalog object
+core.event	Catalog	__setitem__	index event	__setitem__ method of the catalog object
+core.event	Catalog	__str__	print_all	returns short summary string of the current catalog
+core.event	Catalog	append	event	appends a single event object to the current catalog object
+core.event	Catalog	clear		clears event list convenient method
+core.event	Catalog	filter		returns a new catalog object only containing events which match the specified filter rules
+core.event	Catalog	copy		returns a deepcopy of the catalog object
+core.event	Catalog	extend	event_list	extends the current catalog object with a list of event objects
+core.event	Catalog	write	filename format	saves catalog into a file
+core.event	Catalog	plot	projection resolution continent_fill_color water_fill_color	creates preview map of all events in current catalog object
+core.event		read_events	pathname_or_url format	read event files into an obspy catalog object
+core.event		_read	filename format	reads a single event file into a obspy catalog object
+core.event		_create_example_catalog		create an example catalog
+geodetics		calc_vincenty_inverse	lat1 lon1 lat2 lon2	vincenty inverse solution of geodesics on the ellipsoid
+geodetics		gps2dist_azimuth	lat1 lon1 lat2 lon2	computes the distance between two geographic points on the wgs84 ellipsoid and the forward and backward azimuths between these points
+geodetics		kilometers2degrees	kilometer radius	convenience function to convert kilometers to degrees assuming a perfectly spherical earth
+geodetics		degrees2kilometers	degrees radius	convenience function to convert great circle degrees to kilometers assuming a perfectly spherical earth
+geodetics		locations2degrees	lat1 long1 lat2 long2	convenience function to calculate the great circle distance between two points on a spherical earth
+geodetics		mean_longitude	longitudes	compute sample mean longitude assuming longitude in degrees from -180 to 180
+geodetics	FlinnEngdahl	get_quadrant	longitude latitude	return quadrant from given coordinate
+geodetics	FlinnEngdahl	get_region	longitude latitude	return region from given coordinate >>> fe = flinnengdahl()
+geodetics	FlinnEngdahl	get_region_by_number	number	return region with given number >>> fe = flinnengdahl()
+io.ascii		_is_slist	filename	checks whether a file is ascii slist format
+io.ascii		_is_tspair	filename	checks whether a file is ascii tspair format
+io.ascii		_read_slist	filename headonly	reads a ascii slist file and returns an obspy stream object
+io.ascii		_read_tspair	filename headonly	reads a ascii tspair file and returns an obspy stream object
+io.ascii		_write_slist	stream filename	writes a ascii slist file
+io.ascii		_write_tspair	stream filename	writes a ascii tspair file
+io.ascii		_parse_data	data data_type	simple function to read data contained in a stringio object to a numpy array
+io.nlloc		read_nlloc_scatter	filename coordinate_converter	read a nonlinloc scatter file into a numpy array
+io.nlloc		is_nlloc_hyp	filename	checks that a file is actually a nonlinloc hypocenter-phase file
+io.nlloc		read_nlloc_hyp	filename coordinate_converter picks	reads a nonlinloc hypocenter-phase file to a :class ~obspy
+io.nlloc		_read_single_hypocenter	lines coordinate_converter original_picks	given a list of lines (starting with a 'nlloc' line and ending with a 'end_nlloc' line), parse them into an event
+io.nlloc		write_nlloc_obs	catalog filename	write a nonlinloc phase file (nlloc_obs) from a :class ~obspy
+io.stationtxt		is_fdsn_station_text_file	path_or_file_object	simple function checking if the passed object contains a valid fdsn station text file
+io.stationtxt		read_fdsn_station_text_file	path_or_file_object	function reading a fdsn station text file to an inventory object
+io.stationtxt		inventory_to_station_text	inventory_or_network level	function to convert inventory or network to station text representation
+io.stationtxt		_write_stationtxt	inventory path_or_file_object level	writes an inventory object to a file or file-like object in stationtxt format
+io.win		_is_win	filename century	checks whether a file is win or not
+io.win		_read_win	filename century	reads a win file and returns a stream object
+io.ndk		_get_resource_id	cmtname res_type tag	helper function to create consistent resource ids
+io.ndk		_parse_date_time	date time	function taking a tuple of date and time string from an ndk file and converting it to an utcdatetime object
+io.ndk		_is_ndk	filename	checks that a file is actually an ndk file
+io.ndk		_read_ndk	filename	reads an ndk file to a :class ~obspy core event catalog object
+io.wav		_is_wav	filename	checks whether a file is a audio wav file or not
+io.wav		_read_wav	filename headonly	reads a audio wav file and returns an obspy stream object
+io.wav		_write_wav	stream filename framerate rescale	writes a audio wav file from given obspy stream object the seismogram is
+io.cmtsolution		_get_resource_id	cmtname res_type tag	helper function to create consistent resource ids
+io.cmtsolution		_buffer_proxy	filename_or_buf function reset_fp file_mode	calls a function with an open file or file-like object as the first argument
+io.cmtsolution		_is_cmtsolution	filename_or_buf	checks if the file is a cmtsolution file
+io.cmtsolution		_internal_is_cmtsolution	buf	checks if the file is a cmtsolution file
+io.cmtsolution		_read_cmtsolution	filename_or_buf	reads a cmtsolution file to a :class ~obspy core event catalog object
+io.cmtsolution		_internal_read_cmtsolution	buf	reads a cmtsolution file to a :class ~obspy core event catalog object
+io.cmtsolution		_internal_read_single_cmtsolution	buf	reads a single cmtsolution file to a :class ~obspy core event catalog
+io.cmtsolution		_write_cmtsolution	catalog filename_or_buf	write an event to a file
+io.cmtsolution		_internal_write_cmtsolution	buf catalog	write events to a file
+io.cmtsolution		_internal_write_single_cmtsolution	buf event	write an event to a file
+io.pde		_is_mchedr	filename	checks whether a file format is mchedr machine-readable earthquake data report
+io.pde	Unpickler	load	filename	reads mchedr file into obspy catalog object
+io.pde	Unpickler	loads	string	parses mchedr string into obspy catalog object
+io.pde	Unpickler	_tensor_code_sign	code	converts tensor from 'x y z' system to 'r t p'
+io.pde	Unpickler	_decode_fe_region_number	number	converts flinn-engdahl region number to string
+io.pde	Unpickler	_angle_between	u1 u2	returns the angle in degrees between unit vectors 'u1' and 'u2': source https //stackoverflow
+io.pde	Unpickler	_lat_err_to_deg	latitude_stderr	convert latitude error from km to degrees
+io.pde	Unpickler	_lon_err_to_deg	longitude_stderr latitude	convert longitude error from km to degrees
+io.pde	Unpickler	_parse_record_hy	line	parses the 'hypocenter' record hy
+io.pde	Unpickler	_parse_record_e	line event	parses the 'error and magnitude' record e
+io.pde	Unpickler	_parse_record_l	line event	parses the '90 percent error ellipse' record l
+io.pde	Unpickler	_parse_record_a	line event	parses the 'additional parameters' record a
+io.pde	Unpickler	_parse_record_c	line event	parses the 'general comment' record c
+io.pde	Unpickler	_parse_record_ah	line event	parses the 'additional hypocenter' record ah
+io.pde	Unpickler	_parse_record_ae	line event	parses the 'additional hypocenter error and magnitude record' ae
+io.pde	Unpickler	_parse_record_dp	line event	parses the 'source parameter data - primary' record dp
+io.pde	Unpickler	_parse_record_dt	line focal_mechanism	parses the 'source parameter data - tensor' record dt
+io.pde	Unpickler	_parse_record_da	line focal_mechanism	parses the 'source parameter data - principal axes and
+io.pde	Unpickler	_parse_record_dc	line focal_mechanism	parses the 'source parameter data - comment' record dc
+io.pde	Unpickler	_parse_record_p	line event	parses the 'primary phase record' p the primary phase is the first phase of the reading
+io.pde	Unpickler	_parse_record_m	line event pick	parses the 'surface wave record' m
+io.pde	Unpickler	_parse_record_s	line event p_pick p_arrival	parses the 'secondary phases' record s secondary phases are following phases of the reading
+io.pde		_read_mchedr	filename	reads a neic pde mchedr machine-readable earthquake data report file and returns a obspy catalog object
+io.gse2		read_paz	paz_file	read gse paz / calibration file format and returns poles zeros and the seismometer_gain
+io.gse2		attach_paz	tr paz_file	attach tr stats paz attribdict to trace from gse2 paz_file
+io.gse2		_is_gse2	filename	checks whether a file is gse2 or not
+io.gse2		_read_gse2	filename headonly verify_chksum	reads a gse2 file and returns a stream object
+io.gse2		_write_gse2	stream filename inplace	write gse2 file from a stream object
+io.gse2		_is_gse1	filename	checks whether a file is gse1 or not
+io.gse2		_read_gse1	filename headonly verify_chksum	reads a gse1 file and returns a stream object
+io.gse2		read	fh verify_chksum	read gse1 file and return header and data
+io.gse2		read_header	fh	reads gse1 header from file pointer and returns it as dictionary
+io.gse2		_is_gse2	filename	checks whether a file is gse2 0 format
+io.gse2	Unpickler	load	filename	read gse2 0 file into obspy catalog object
+io.gse2	Unpickler	_add_line_nb	message	add line number at the end of a str message
+io.gse2	Unpickler	_warn	message	display a warning message with the line number
+io.gse2	Unpickler	_get_res_id	ident parent parent_res_id	create a :class ~obspy core event base resourceidentifier object
+io.gse2	Unpickler	_check_header	first_line	just check some stuff in header
+io.gse2	Unpickler	_get_channel	station time	use inventory to retrieve channel and location code
+io.gse2	Unpickler	_parse_event	first_line	parse an event
+io.gse2	Unpickler	_parse_origin	event	parse an origin
+io.gse2	Unpickler	_parse_first_line_origin	line event magnitudes	parse the first line of origin data
+io.gse2		_read_gse2	filename inventory default_network_code default_location_code	read a gse2 0 bulletin file and returns an obspy catalog object
+io.gse2		is_gse2	f	checks whether a file is gse2 or not returns true or false
+io.gse2		read_header	fh	reads gse2 header from file pointer and returns it as dictionary
+io.gse2		write_header	f headdict	rewriting the write_header function of gse_functions c
+io.gse2		uncompress_cm6	f n_samps	uncompress n_samps of cm6 compressed data from file pointer fp
+io.gse2		compress_cm6	data	cm6 compress data :type data :class numpy
+io.gse2		verify_checksum	fh data version	calculate checksum from data as in gse_driver c line 60
+io.gse2		read_integer_data	fh npts	reads npts points of uncompressed integers from given file handler
+io.gse2		read	f verify_chksum	read gse2 file and return header and data
+io.gse2		write	headdict data f inplace	write gse2 file given the header and data
+io.gse2		parse_sta2	line	parses a string with a gse2 sta2 header line
+io.gse2		compile_sta2	stats	returns a sta2 line as a string including newline at end from a :class ~obspy
+io.nied		_buffer_proxy	filename_or_buf function reset_fp file_mode	calls a function with an open file or file-like object as the first argument
+io.nied		_is_knet_ascii	filename_or_buf	checks if the file is a valid k-net/kik-net ascii file
+io.nied		_internal_is_knet_ascii	buf	checks if the file is a valid k-net/kik-net ascii file
+io.nied		_prep_hdr_line	name line	helper function to check the contents of a header line and split it
+io.nied		_read_knet_hdr	hdrlines convert_stnm	read the header values into a dictionary
+io.nied		_read_knet_ascii	filename_or_buf	reads a k-net/kik-net ascii file and returns an obspy stream object
+io.nied		_internal_read_knet_ascii	buf	reads a k-net/kik-net ascii file and returns an obspy stream object
+io.nied		gen_sc3_id	dt numenc sym	generate an event id following the seiscomp3 convention by default it
+io.nied		_get_resource_id	name res_type tag	helper function to create consistent resource ids
+io.nied		_buffer_proxy	filename_or_buf function reset_fp file_mode	calls a function with an open file or file-like object as the first argument
+io.nied		_is_fnetmt_catalog	filename_or_buf	checks if the file is an f-net moment tensor file
+io.nied		_internal_is_fnetmt_catalog	buf	test whether file is an f-net moment tensor catalog file by reading the header and the first data line
+io.nied		_read_fnetmt_catalog	filename_or_buf	reads an f-net moment tensor catalog file to a :class ~obspy
+io.nied		_internal_read_fnetmt_catalog	buf	reads an f-net moment tensor catalog file to a :class ~obspy
+io.nied		_internal_read_single_fnetmt_entry	line	reads a single f-net moment tensor solution to a :class ~obspy
+io.kml		inventory_to_kml_string	inventory icon_url icon_size label_size	convert an :class ~obspy core inventory inventory inventory to a kml
+io.kml		catalog_to_kml_string	catalog icon_url label_func icon_size_func	convert a :class ~obspy core event catalog to a kml string
+io.kml		_write_kml	obj filename	write :class ~obspy core inventory inventory inventory or
+io.kml		_rgba_tuple_to_kml_color_code	rgba	convert tuple of red green blue alpha float values 0 0-1 0 to kml
+io.kml		_get_event_timestamp	event	get timestamp information for the event search is perfomed in the
+io.cnv		_write_cnv	catalog filename phase_mapping ifx_list	write a :class ~obspy core event catalog object to cnv event summary
+io.segy		unpack_header_value	endian packed_value length special_format	unpacks a single value
+io.segy		_is_segy	filename	checks whether or not the given file is a seg y file
+io.segy		_read_segy	filename headonly byteorder textual_header_encoding	reads a seg y file and returns an obspy stream object
+io.segy		_write_segy	stream filename data_encoding byteorder	writes a seg y file from given obspy stream object
+io.segy		_is_su	filename	checks whether or not the given file is a seismic unix su file
+io.segy		_read_su	filename headonly byteorder unpack_trace_headers	reads a seismic unix su file and returns an obspy stream object
+io.segy		_write_su	stream filename byteorder	writes a seismic unix su file from given obspy stream object
+io.segy		_segy_trace_str_		monkey patch for the __str__ method of the trace object segy object do not
+io.segy		pack_4byte_ibm	file data endian	packs 4 byte ibm floating points this will only work if the host system
+io.segy		pack_4byte_integer	file data endian	packs 4 byte integers
+io.segy		pack_2byte_integer	file data endian	packs 2 byte integers
+io.segy		pack_4byte_ieee	file data endian	packs 4 byte ieee floating points
+io.segy		unpack_4byte_ibm	file count endian	unpacks 4 byte ibm floating points
+io.segy		unpack_4byte_integer	file count endian	unpacks 4 byte integers
+io.segy		unpack_2byte_integer	file count endian	unpacks 2 byte integers
+io.segy		unpack_4byte_ieee	file count endian	unpacks 4 byte ieee floating points
+io.segy	SEGYFile	__init__	file endian textual_header_encoding unpack_headers	class that internally handles seg y files
+io.segy	SEGYFile	__str__		prints some information about the seg y file
+io.segy	SEGYFile	_autodetect_endianness		tries to automatically determine the endianness of the file at hand
+io.segy	SEGYFile	_create_empty_segy_file_object		creates an empty segyfile object
+io.segy	SEGYFile	_read_textual_header		reads the textual header
+io.segy	SEGYFile	_read_headers		reads the textual and binary file headers starting at the current file pointer position
+io.segy	SEGYFile	write	file data_encoding endian	write a seg y file to file which is either a file like object with a write method or a filename string
+io.segy	SEGYFile	_write	file data_encoding endian	writes seg y to a file like object
+io.segy	SEGYFile	_write_textual_header	file	write the textual header in various encodings the encoding will depend
+io.segy	SEGYFile	_read_traces	unpack_headers headonly yield_each_trace	reads the actual traces starting at the current file pointer position to the end of the file
+io.segy	SEGYBinaryFileHeader	_read_binary_file_header	header	reads the binary file header and stores every value in a class attribute
+io.segy	SEGYBinaryFileHeader	__str__		convenience method to print the binary file header
+io.segy	SEGYBinaryFileHeader	write	file endian	writes the header to an open file like object
+io.segy	SEGYBinaryFileHeader	_create_empty_binary_file_header		just fills all necessary class attributes with zero
+io.segy	SEGYTrace	__init__	file data_encoding endian unpack_headers	convenience class that internally handles a single seg y trace
+io.segy	SEGYTrace	_read_trace	unpack_headers headonly	reads the complete next header starting at the file pointer at self
+io.segy	SEGYTrace	write	file data_encoding endian	writes the trace to a file like object
+io.segy	SEGYTrace	_create_empty_trace		creates an empty trace with an empty header
+io.segy	SEGYTrace	__str__		print some information about the trace
+io.segy	SEGYTrace	__getattr__	name	this method is only called if the attribute is not found in the usual places (i
+io.segy	SEGYTrace	to_obspy_trace	unpack_trace_headers headonly	convert the current trace to an obspy trace object
+io.segy	SEGYTraceHeader	__init__	header endian unpack_headers	will take the 240 byte of the trace header and unpack all values with the given endianness
+io.segy	SEGYTraceHeader	_read_trace_header	header	reads the 240 byte long header and unpacks all values into corresponding class attributes
+io.segy	SEGYTraceHeader	write	file endian	writes the header to an open file like object
+io.segy	SEGYTraceHeader	__getattr__	name	this method is only called if the attribute is not found in the usual places (i
+io.segy	SEGYTraceHeader	__str__		just returns all header values
+io.segy	SEGYTraceHeader	_create_empty_trace_header		init the trace header with zeros
+io.segy		_read_segy	file endian textual_header_encoding unpack_headers	reads a seg y file and returns a segyfile object
+io.segy		_internal_read_segy	file endian textual_header_encoding unpack_headers	reads on open file object and returns a segyfile object
+io.segy		iread_segy	file endian textual_header_encoding unpack_headers	iteratively read a seg-y field and yield single obspy traces
+io.segy		_internal_iread_segy	file endian textual_header_encoding unpack_headers	iteratively read a seg-y field and yield single obspy traces
+io.segy		iread_su	file endian unpack_headers headonly	iteratively read a su field and yield single obspy traces
+io.segy		_internal_iread_su	file endian unpack_headers headonly	iteratively read a su field and yield single obspy traces
+io.segy	SUFile	__init__	file endian unpack_headers headonly	:param file a file like object with the file pointer set at the beginning of the seg y file
+io.segy	SUFile	_autodetect_endianness		tries to automatically determine the endianness of the file at hand
+io.segy	SUFile	_create_empty_su_file_object		creates an empty sufile object
+io.segy	SUFile	__str__		prints some information about the su file
+io.segy	SUFile	_read_traces	unpack_headers headonly yield_each_trace	reads the actual traces starting at the current file pointer position to the end of the file
+io.segy	SUFile	write	file endian	write a su y file to file which is either a file like object with a write method or a filename string
+io.segy	SUFile	_write	file endian	write a su y file to file which is either a file like object with a write method or a filename string
+io.segy		_read_su	file endian unpack_headers headonly	reads a seismic unix su file and returns a sufile object
+io.segy		_internal_read_su	file endian unpack_headers headonly	reads on open file object and returns a sufile object
+io.segy		autodetect_endian_and_sanity_check_su	file	takes an open file and tries to determine the endianness of a seismic unix data file by doing some sanity checks with the unpacked header values
+io.json		get_dump_kwargs	minify no_nulls	return dict of kwargs for :py func json dump or
+io.json		_write_json	obj filename omit_nulls pretty_print	write object to a file in json format :type obj :mod ~obspy
+io.json	Default	__init__	omit_nulls time_format	create a "default" function for jsonencoder for obspy objects
+io.json	Default	__call__	obj	deal with :class ~obspy core event event objects in json encoder
+io.y		_unpack_with_asciiz_and_decode	fmt data	unpack binary data and decode ascii bytestrings stripping asciiz bytestrings correctly as specified by y format definition
+io.y		_parse_tag	fh	reads and parses a single tag
+io.y		_is_y	filename	checks whether a file is a nanometrics y file or not
+io.y		_read_y	filename headonly	reads a nanometrics y file and returns an obspy stream object
+io.arclink		_is_inventory_xml	path_or_file_object	simple function checking if the passed object contains a valid arclink xml 1
+io.arclink		validate_arclink_xml	path_or_object	checks if the given path is a valid arclink_xml file
+io.arclink		_ns	tagname	hoisted namespace function used to find elements
+io.arclink		_read_inventory_xml	path_or_file_object	function for reading an arclink inventory file
+io.arclink		_attr2obj	element attribute convert	reads text from attribute in element
+io.arclink		_tag2obj	element tag convert	reads text from tag in element
+io.arclink		_read_network	inventory_root net_element	reads the network structure
+io.arclink		_get_restricted_status	element	get the restricted_status boolean
+io.arclink		_read_station	inventory_root sta_element	reads the station structure
+io.arclink		_read_site	sta_element	reads site information from the station element tags
+io.arclink		_read_datalogger	equip_element	reads equipment information from datalogger
+io.arclink		_read_sensor	equip_element	reads equipment information from element
+io.arclink		_read_channel	inventory_root cha_element	reads channel element from arclinkxml format
+io.arclink		_read_instrument_sensitivity	sen_element cha_element	reads the instrument sensitivity gain from the sensor and channel element
+io.arclink		_read_response	root sen_element resp_element cha_element	reads response from arclinkxml format
+io.arclink		_read_response_stage	stage rate stage_number input_units	private function to read a response stage
+io.arclink		_tag2pole_or_zero	paz_element count	parses arclinkxml paz format
+io.arclink		_read_float_var	elem cls unit datum	function to read floattype to cls object (based on _read_floattype) normally obspy would read this directly from a tag but with different
+io.sac		enum_string_to_int	header	convert enumerated string values in header dictionary to int values
+io.sac		enum_int_to_string	header	convert enumerated int values in header dictionary to string values
+io.sac		byteswap		swapping of bytes for provided arrays
+io.sac		is_same_byteorder	bo1 bo2	deal with all the ways to compare byte order string representations
+io.sac		_clean_str	value strip_whitespace	remove null values and whitespace return a str this fn is used in two places in sactrace
+io.sac		sac_to_obspy_header	sacheader	make an obspy stats header dictionary from a sac header dictionary
+io.sac		obspy_to_sac_header	stats keep_sac_header	merge a primary with a secondary header reconciling some differences
+io.sac		get_sac_reftime	header	get sac header reference time as a utcdatetime instance from a sac header dictionary
+io.sac		_is_sac	filename	checks whether a file is a sac file or not
+io.sac		_internal_is_sac	buf	checks whether a file-like object contains a sac file or not
+io.sac		_is_sac_xy	filename	checks whether a file is alphanumeric sac file or not
+io.sac		_internal_is_sac_xy	buf	checks whether a file is alphanumeric sac file or not
+io.sac		_read_sac_xy	filename headonly debug_headers	reads an alphanumeric sac file and returns an obspy stream object
+io.sac		_internal_read_sac_xy	buf headonly debug_headers	reads an alphanumeric sac file and returns an obspy stream object
+io.sac		_write_sac_xy	stream filename	writes a alphanumeric sac file
+io.sac		_internal_write_sac_xy	trace buf	writes a single trace to alphanumeric sac file
+io.sac		_read_sac	filename headonly debug_headers fsize	reads an sac file and returns an obspy stream object
+io.sac		_internal_read_sac	buf headonly debug_headers fsize	reads an sac file and returns an obspy stream object
+io.sac		_write_sac	stream filename byteorder	writes a sac file
+io.sac		_internal_write_sac	trace buf byteorder	writes a single trace to an open file or file-like object
+io.sac		_write_sacpz	inventory file_or_file_object	writes an inventory object to a sacpz file
+io.sac		attach_paz	tr paz_file todisp tovel	attach tr stats paz attribdict to trace from sac paz_file
+io.sac		attach_resp	tr resp_file todisp tovel	extract key instrument response information from a resp file which can be extracted from a dataless seed volume by for example using
+io.sac		_set_iztype	iztype	set the iztype which describes what the reftime is
+io.sac	SACTrace	__init__	leven delta b e	initialize a sactrace object using header key-value pairs and a numpy
+io.sac	SACTrace	_header		convenient read-only dictionary of non-null header array values
+io.sac	SACTrace	byteorder		the byte order of the underlying header/data arrays
+io.sac	SACTrace	_byteswap		change the underlying byte order and dtype interpretation of the float int and if present data arrays
+io.sac	SACTrace	reftime		get or set the sac header reference time as a utcdatetime instance
+io.sac	SACTrace	read	cls source headonly ascii	construct an instance from a binary or ascii file on disk
+io.sac	SACTrace	write	dest headonly ascii byteorder	write the header and optionally data arrays to a sac binary file
+io.sac	SACTrace	_from_arrays	cls hf hi hs	low-level array-based constructor
+io.sac	SACTrace	from_obspy_trace	cls trace keep_sac_header	construct an instance from an obspy trace
+io.sac	SACTrace	to_obspy_trace	debug_headers	return an obspy trace instance
+io.sac	SACTrace	validate		check validity of loaded sac file content such as header/data consistency
+io.sac	SACTrace	_format_header_str	hdrlist	produce a print-friendly string of header values for __repr__
+io.sac	SACTrace	listhdr	hdrlist	print header values
+io.sac	SACTrace	lh		alias of listhdr method
+io.sac	SACTrace	_flush_headers		flush to the header arrays any header property values that may not be reflected there such as data min/max/mean npts e
+io.sac	SACTrace	_allt	shift	shift all relative time headers by some value addition
+io.sac	SACTrace	_set_distances	force	calculate dist az baz gcarc if force=true ignore lcalda
+io.sac		init_header_arrays	arrays byteorder	initialize arbitrary header arrays
+io.sac		read_sac	source headonly byteorder checksize	read a sac binary file
+io.sac		read_sac_ascii	source headonly	read a sac ascii/alphanumeric file
+io.sac		write_sac	dest hf hi hs	write the header and optionally data arrays to a sac binary file
+io.sac		write_sac_ascii	dest hf hi hs	write the header and optionally data arrays to a sac ascii file
+io.sac		header_arrays_to_dict	hf hi hs nulls	convert sac header arrays to a more user-friendly dict
+io.sac		dict_to_header_arrays	header byteorder	returns null hf hi hs arrays optionally filled with values from a dictionary
+io.sac		validate_sac_content	hf hi hs data	check validity of loaded sac file content such as header/data consistency
+io.mseed		get_start_and_end_time	file_or_file_object	returns the start and end time of a miniseed file or file-like object
+io.mseed		get_flags	files starttime endtime io_flags	counts all data quality i/o and activity flags of the given miniseed file and returns statistics about the timing quality if applicable
+io.mseed		get_record_information	file_or_file_object offset endian	returns record information about given files and file-like object
+io.mseed		_get_record_information	file_object offset endian	searches the first miniseed record stored in file_object at the current position and returns some information about it
+io.mseed		_ctypes_array_2_numpy_array	buffer_ buffer_elements sampletype	takes a ctypes array and its length and type and returns it as a numpy array
+io.mseed		_convert_msr_to_dict	m	internal method used for setting header attributes
+io.mseed		_convert_datetime_to_mstime	dt	takes a obspy util utcdatetime object and returns an epoch time in ms
+io.mseed		_convert_mstime_to_datetime	timestring	takes a miniseed timestamp and returns a obspy util utcdatetime object
+io.mseed		_unpack_steim_1	data npts swapflag verbose	unpack steim1 compressed data given as numpy array
+io.mseed		_unpack_steim_2	data npts swapflag verbose	unpack steim2 compressed data given as numpy array
+io.mseed		set_flags_in_fixed_headers	filename flags	updates a given miniseed file with some fixed header flags
+io.mseed		_check_flag_value	flag_value	search for a given flag in a given blockette for the current record
+io.mseed		_search_flag_in_blockette	mseed_file_desc first_blockette_offset blockette_number field_offset	search for a given flag in a given blockette for the current record
+io.mseed		_convert_flags_to_raw_byte	expected_flags user_flags recstart recend	converts a flag dictionary to a byte ready to be encoded in a miniseed header
+io.mseed		shift_time_of_file	input_file output_file timeshift	takes a miniseed file and shifts the time of every record by the given amount
+io.mseed		_convert_and_check_encoding_for_writing	encoding	helper function to handle and test encodings
+io.mseed		_is_mseed	filename	checks whether a file is mini-seed/full seed or not
+io.mseed		__is_mseed	fp file_size	internal version of _is_mseed working only with open file-like object
+io.mseed		_read_mseed	mseed_object starttime endtime headonly	reads a mini-seed file and returns a stream object
+io.mseed		_write_mseed	stream filename encoding reclen	write mini-seed file from a stream object
+io.mseed	MST	__init__	trace data dataquality	the init function requires a obspy trace object which will be used to fill self
+io.mseed	MST	__del__		frees all allocated memory
+io.mseed		_get_ms_file_info	f real_name	takes a mini-seed filename as an argument and returns a dictionary with some basic information about the file
+io.mseed	_MSStruct	file_info		for details see util _get_ms_file_info
+io.mseed	_MSStruct	file_pos_from_rec_num	record_number	return byte position of file given a certain record_number
+io.mseed	_MSStruct	read	reclen dataflag skipnotdata verbose	read msrecord using the ms_readmsr_r function the following
+io.mseed	_MSStruct	__del__		method for deallocating msfileparam and msrecord structure
+io.mseed.scripts	RecordAnalyser	__init__	file_object	file_object can either be a filename or any file like object that has read seek and tell methods
+io.mseed.scripts	RecordAnalyser	__eq__	other	compares two records
+io.mseed.scripts	RecordAnalyser	__ne__	other	always needed of __eq__ is defined
+io.mseed.scripts	RecordAnalyser	__next__		jumps to the next record and parses the header
+io.mseed.scripts	RecordAnalyser	goto	record_number	jumps to the specified record and parses its header
+io.mseed.scripts	RecordAnalyser	_parse_header		makes all necessary calls to parse the header
+io.mseed.scripts	RecordAnalyser	_get_endianess		tries to figure out whether or not the file has little or big endian encoding and sets self
+io.mseed.scripts	RecordAnalyser	_read_fixed_header		reads the fixed header of the mini-seed file and writes all entries to self
+io.mseed.scripts	RecordAnalyser	_get_blockettes		loop over header and try to extract all header values!
+io.mseed.scripts	RecordAnalyser	_parse_blockette	blkt_type	parses the blockette blkt_type if nothing is known about the blockette
+io.mseed.scripts	RecordAnalyser	_calculate_start_time		calculates the true record starttime see the seed manual for all
+io.mseed.scripts	RecordAnalyser	__str__		set the string representation of the class
+io.mseed.scripts		main	argv	entry point for setup py
+io.seisan		_is_seisan	filename	checks whether a file is seisan or not
+io.seisan		_get_version	data	extracts seisan version from given data chunk
+io.seisan		_read_seisan	filename headonly	reads a seisan file and returns an obspy stream object
+io.kinemetrics		is_evt	filename_or_object	checks whether a file is evt or not
+io.kinemetrics		read_evt	filename_or_object	reads a evt file and returns a stream object
+io.kinemetrics	EvtVirtual	__getattr__	item	__getattr__ is called only if no class attribute is found
+io.kinemetrics	EvtVirtual	unset_dict		remove all values from dictionary
+io.kinemetrics	EvtVirtual	set_dict	val offset	fill the dictionary with values found in the input 'val' list
+io.kinemetrics	EvtVirtual	__str__		create a string with all dictionary values
+io.kinemetrics	EvtVirtual	_time	blocktime param val offset	change a evt time format to :class ~obspy
+io.kinemetrics	EvtVirtual	_strnull	strn unused_param unused_val unused_offset	change a c string null terminated to python string
+io.kinemetrics	EvtVirtual	_array	unused_firstval param val offset	extract a list of 'size_array' values from val
+io.kinemetrics	EvtVirtual	_arraynull	unused_firstval param val offset	extract a list of 'size_array' values from val
+io.kinemetrics	EvtVirtual	_instrument	code unused_param unused_val unused_offset	change instrument type code to name
+io.kinemetrics	Evt	calibration		apply calibrations on data matrix note about calibration
+io.kinemetrics	Evt	read_file	filename_or_object raw	reads an evt file to the internal data structure
+io.kinemetrics	EvtData	read	file_p length endian param	read data from file_p
+io.kinemetrics	EvtHeader	read	file_p length endian	read the header of evt file
+io.kinemetrics	EvtHeader	make_obspy_dict	numchan	make an obspy dictionary from header dictionary for 1 channel
+io.kinemetrics	EvtHeader	_gpsstatus	value unused_a unused_b unused_c	transform bitarray for gpsstatus in human readable string
+io.kinemetrics	EvtFrameHeader	count		return the number of frames read
+io.kinemetrics	EvtFrameHeader	read	file_p length endian	read a frame
+io.kinemetrics	EvtTag	read	file_p	:type file_p str
+io.stationxml		_is_stationxml	path_or_file_object	simple function checking if the passed object contains a valid stationxml 1
+io.stationxml		validate_stationxml	path_or_object	checks if the given path is a valid stationxml file
+io.stationxml		_read_stationxml	path_or_file_object	function reading a stationxml file
+io.stationxml		_read_base_node	element object_to_write_to _ns	reads the base node structure from element and saves it in object_to_write_to
+io.stationxml		_read_response_stage	stage_elem _ns	this parses all responsestagetypes it will return a different object
+io.stationxml		_write_stationxml	inventory file_or_file_object validate nsmap	writes an inventory object to a buffer
+io.stationxml		_write_network	parent network	helper function converting a network instance to an etree element
+io.stationxml		_float_to_str	x	converts a float to str making for most numbers this results in a
+io.stationxml		_write_element	parent element name	recursively write custom namespace elements
+io.stationxml		_write_extra	parent obj	write information stored in custom tags/attributes in obj extra
+io.stationxml		_obj2tag	parent tag_name tag_value	if tag_value is not none append a subelement to the parent the text of
+io.stationxml		_read_element	prefix ns element extra	recursively read custom namespace elements and add them to extra
+io.stationxml		_read_extra	element obj	add information stored in custom tags/attributes in obj extra
+io.quakeml		_get_first_child_namespace	element	helper function extracting the namespace of an element
+io.quakeml		_xml_doc_from_anything	source	helper function attempting to create an xml etree element from either a filename a file-like object or a byte string
+io.quakeml		_is_quakeml	filename	checks whether a file is quakeml format
+io.quakeml	Unpickler	load	file	reads quakeml file into obspy catalog object
+io.quakeml	Unpickler	loads	string	parses quakeml string into obspy catalog object
+io.quakeml	Unpickler	_arrival	element	converts an etree element into an arrival object
+io.quakeml	Unpickler	_pick	element	converts an etree element into a pick object
+io.quakeml	Unpickler	_time_window	element	converts an etree element into a timewindow object
+io.quakeml	Unpickler	_amplitude	element	converts an etree element into a amplitude object
+io.quakeml	Unpickler	_origin	element arrivals	converts an etree element into an origin object
+io.quakeml	Unpickler	_magnitude	element	converts an etree element into a magnitude object
+io.quakeml	Unpickler	_station_magnitude	element	converts an etree element into a stationmagnitude object
+io.quakeml	Unpickler	_axis	parent name	converts an etree element into an axis object
+io.quakeml	Unpickler	_principal_axes	parent	converts an etree element into an principalaxes object
+io.quakeml	Unpickler	_nodal_plane	parent name	converts an etree element into an nodalplane object
+io.quakeml	Unpickler	_nodal_planes	parent	converts an etree element into an nodalplanes object
+io.quakeml	Unpickler	_source_time_function	parent	converts an etree element into an sourcetimefunction object
+io.quakeml	Unpickler	_tensor	parent	converts an etree element into an tensor object
+io.quakeml	Unpickler	_data_used	parent	converts an etree element into a list of dataused objects
+io.quakeml	Unpickler	_moment_tensor	parent	converts an etree element into an momenttensor object
+io.quakeml	Unpickler	_focal_mechanism	element	converts an etree element into a focalmechanism object
+io.quakeml	Unpickler	_extra	element obj	add information stored in custom tags/attributes in obj extra
+io.quakeml	Pickler	dump	catalog file	writes obspy catalog into given file
+io.quakeml	Pickler	dumps	catalog	returns quakeml string of given obspy catalog object
+io.quakeml	Pickler	_extra	obj element	add information stored in obj extra as custom tags/attributes in
+io.quakeml	Pickler	_arrival	arrival	converts an arrival into etree element object
+io.quakeml	Pickler	_magnitude	magnitude	converts an magnitude into etree element object
+io.quakeml	Pickler	_station_magnitude	magnitude	converts an stationmagnitude into etree element object
+io.quakeml	Pickler	_origin	origin	converts an origin into etree element object
+io.quakeml	Pickler	_amplitude	amp	converts an amplitude into etree element object
+io.quakeml	Pickler	_pick	pick	converts a pick into etree element object
+io.quakeml	Pickler	_nodal_planes	obj element	converts a nodalplanes into etree element object
+io.quakeml	Pickler	_principal_axes	obj element	converts a principalaxes into etree element object
+io.quakeml	Pickler	_moment_tensor	moment_tensor element	converts a momenttensor into etree element object
+io.quakeml	Pickler	_focal_mechanism	focal_mechanism	converts a focalmechanism into etree element object
+io.quakeml	Pickler	_serialize	catalog pretty_print	converts a catalog object into xml string
+io.quakeml		_read_quakeml	filename	reads a quakeml file and returns an obspy catalog object
+io.quakeml		_write_quakeml	catalog filename validate nsmap	writes a quakeml file
+io.quakeml		_read_seishub_event_xml	filename	reads a single seishub event xml file and returns an obspy catalog object
+io.quakeml		_validate	xml_file verbose	validates a quakeml file against the quakeml 1 2 relaxng schema returns
+io.sh		_is_asc	filename	checks whether a file is a seismic handler ascii file or not
+io.sh		_read_asc	filename headonly skip delta	reads a seismic handler ascii file and returns an obspy stream object
+io.sh		_write_asc	stream filename included_headers npl	writes a seismic handler ascii file from given obspy stream object
+io.sh		_is_q	filename	checks whether a file is a seismic handler q file or not
+io.sh		_read_q	filename headonly data_directory byteorder	reads a seismic handler q file and returns an obspy stream object
+io.sh		_write_q	stream filename data_directory byteorder	writes a seismic handler q file from given obspy stream object
+io.sh		to_utcdatetime	value	converts time string used within seismic handler into a utcdatetime
+io.sh		from_utcdatetime	dt	converts utcdatetime object into a time string used within seismic handler
+io.zmap	Pickler	dump	catalog filename	writes obspy catalog into given file
+io.zmap	Pickler	dumps	catalog	returns zmap string of given obspy catalog object
+io.zmap	Pickler	_hz_error	origin	compute horizontal error of origin
+io.zmap	Pickler	_depth_error	origin	return the absolute depth error in km
+io.zmap	Pickler	_num2str	num precision	convert num into a matlab and thus zmap compatible string
+io.zmap	Pickler	_decimal_year	time	return floating point decimal year representation of utcdatetime
+io.zmap	Unpickler	load	filename	returns an obspy catalog object from a zmap file
+io.zmap	Unpickler	loads	zmap_str	returns an obspy catalog object from a zmap string
+io.zmap	Unpickler	_decyear2utc	decimal_year	return utcdatetime from decimal year
+io.zmap		_write_zmap	catalog filename with_uncertainties	writes a zmap file
+io.zmap		_read_zmap	filename	reads a zmap file and returns an obspy catalog object
+io.zmap		_is_zmap	filename	checks whether a file is zmap format
+io.ah		_is_ah	filename	checks whether a file is ah waveform data or not
+io.ah		_read_ah	filename	reads an ah waveform file and returns a stream object
+io.ah		_get_ah_version	filename	returns version of ah waveform data
+io.ah		_read_ah1	filename	reads an ah v1 waveform file and returns a stream object
+io.ah		_read_ah2	filename	reads an ah v2 waveform file and returns a stream object
+io.shapefile		_write_shapefile	obj filename	write :class ~obspy core inventory inventory inventory or
+io.shapefile		_add_catalog_layer	data_source catalog	:type data_source :class osgeo ogr datasource
+io.shapefile		_add_inventory_layer	data_source inventory	:type data_source :class osgeo ogr datasource
+io.seiscomp		_is_sc3ml	path_or_file_object	simple function checking if the passed object contains a valid sc3ml 0 7
+io.seiscomp		validate_sc3ml	path_or_object	checks if the given path is a valid sc3ml file
+io.seiscomp		_read_sc3ml	path_or_file_object	function for reading a stationxml file
+io.seiscomp		_tag2obj	element tag convert	reads text from tag in element
+io.seiscomp		_read_network	inventory_root net_element _ns	reads the network structure
+io.seiscomp		_get_restricted_status	element _ns	get the restricted_status boolean
+io.seiscomp		_read_station	inventory_root sta_element _ns	reads the station structure
+io.seiscomp		_read_site	sta_element _ns	reads site information from the station element tags
+io.seiscomp		_read_datalogger	equip_element _ns	reads equipment information from datalogger
+io.seiscomp		_read_sensor	equip_element _ns	reads equipment information from element
+io.seiscomp		_read_channel	inventory_root cha_element _ns	reads channel element from sc3ml format
+io.seiscomp		_read_instrument_sensitivity	sen_element cha_element _ns	reads the instrument sensitivity gain from the sensor and channel element
+io.seiscomp		_read_response	root sen_element resp_element cha_element	reads response from sc3ml format
+io.seiscomp		_tag2pole_or_zero	paz_element count	parses sc3ml paz format uncertainties on poles removed not present in sc3ml
+io.seiscomp		_read_float_var	elem cls unit datum	function to read floattype to cls object (based on _read_floattype) normally obspy would read this directly from a tag but with different
+io.seiscomp		_validate_sc3ml	path_or_object verbose	validates a sc3ml file against the sc3ml 0 9 schema returns either true or
+io.seiscomp		_write_sc3ml	catalog filename validate verbose	write a sc3ml file since a xslt file is used to write the sc3ml file from
+io.reftek		_timestrings_to_seconds	timestrings	helper routine to convert timestrings of form "dddhhmmsssss" to array of floating point seconds
+io.reftek		_is_reftek130	filename	checks whether a file is reftek130 format or not
+io.reftek		_read_reftek130	filename network location component_codes	read a reftek130 file into an obspy stream
+io.reftek	Reftek130	check_packet_sequence_and_sort		checks if packet sequence is ordered if not shows a warning and sorts
+io.reftek	Reftek130	check_packet_sequence_contiguous		checks if packet sequence is contiguous i e without missing packets
+io.reftek	Reftek130	drop_not_implemented_packet_types		checks if there are packets of a type that is currently not implemented and drop them showing a warning message
+io.reftek	Reftek130	to_stream	network location component_codes headonly	:type headonly bool
+io.reftek	EHPacket	_to_dict		convert to dictionary structure
+io.reftek		_initial_unpack_packets	bytestring	first unpack data with dtype matching itemsize of storage in the reftek file than allocate result array with dtypes for storage of python
+io.reftek		_unpack_C0_C2_data	packets encoding	unpacks sample data from a packet array that uses 'c0' or 'c2' data encoding
+io.reftek		_unpack_C0_C2_data_fast	packets encoding	unpacks sample data from a packet array that uses 'c0' or 'c2' data encoding
+io.reftek		_unpack_C0_C2_data_safe	packets encoding	unpacks sample data from a packet array that uses 'c0' or 'c2' data encoding
+io.xseed		to_tag	name	creates a xml tag from a given string
+io.xseed		to_string	tag	creates a pretty string from any given xml tag
+io.xseed		datetime_2_string	dt compact	generates a valid seed time string from a utcdatetime object
+io.xseed		compare_seed	seed1 seed2	compares two seed files
+io.xseed		lookup_code	blockettes blkt_number field_name lookup_code	loops over a list of blockettes until it finds the blockette with the right number and lookup code
+io.xseed		format_resp	number digits	formats a number according to the resp format
+io.xseed		blockette_34_lookup	abbr lookup	gets certain values from blockette 34 needed for resp output
+io.xseed		set_xpath	blockette identifier	returns an x-path string to a blockette with the correct identifier
+io.xseed		get_xpath	xpath	returns lookup key of xpath expression on abbreviation dictionary
+io.xseed		is_resp	filename	check if a file at the specified location appears to be a resp file
+io.xseed	Parser	__init__	data debug strict compact	initializes the seed parser
+io.xseed	Parser	read	data	general parser method for xml-seed and dataless seed files
+io.xseed	Parser	get_xseed	version split_stations	returns a xseed representation of the current parser object
+io.xseed	Parser	write_xseed	filename	writes a xml-seed file with given name
+io.xseed	Parser	get_seed	compact	returns a seed representation of the current parser object
+io.xseed	Parser	write_seed	filename	writes a dataless seed file with given name
+io.xseed	Parser	get_resp		returns a resp representation of the current parser object
+io.xseed	Parser	_select	seed_id datetime	selects all blockettes related to given seed id and datetime
+io.xseed	Parser	get_coordinates	seed_id datetime	return coordinates from blockette 52
+io.xseed	Parser	write_resp	folder zipped	writes for each channel a resp file within a given folder
+io.xseed	Parser	_parse_seed	data	parses through a whole seed volume
+io.xseed	Parser	get_inventory		function returning a dictionary about whats actually in the parser object
+io.xseed	Parser	_get_abbreviation	identifier_code	helper function returning the abbreviation for the given identifier code
+io.xseed	Parser	_parse_xseed	data	parse a xml-seed string
+io.xseed	Parser	_get_resp_string	resp blockettes station	takes a file like object and a list of blockettes containing all blockettes for one channel and writes them resp like to the bytesio
+io.xseed	Parser	_parse_xml_blockette	xml_blockette record_type xseed_version	takes the lxml tree of any blockette and returns a blockette object
+io.xseed	Parser	_create_cut_and_flush_record	blockettes record_type	takes all blockettes of a record and return a list of finished records
+io.xseed	Parser	_check_blockettes		checks if all blockettes necessary for creating a seed string are available
+io.xseed	Parser	_compare_blockettes	blkt1 blkt2	compares two blockettes
+io.xseed	Parser	_update_internal_seed_structure		takes everything in the self temp dictionary and writes it into the
+io.xseed	Parser	_update_temporary_stations	blkt_id index_nr	loops over all stations finds the corresponding blockettes and changes all abbreviation lookup codes
+io.xseed	Parser	_parse_merged_data	data record_type	this method takes any merged seed record and writes its blockettes in the corresponding dictionary entry of self
+io.xseed	Parser	_create_blockettes_11_and_12	blockette12	creates blockettes 11 and 12 for seed writing and xseed version 1 1
+io.xseed	Parser	_delete_blockettes_11_and_12		deletes blockette 11 and 12
+io.xseed	Parser	rotate_to_zne	stream	rotates the three components of a stream to zne
+io.xseed		is_xseed	path_or_file_object	simple function checking if the passed object contains a xml-seed file
+io.xseed	Field	_format_string	s	using seed specific flags to format strings
+io.xseed.blockette	Blockette055	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette048	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette061	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette058	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette062	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette060	parse_seed	data length	read blockette 60
+io.xseed.blockette	Blockette060	get_seed		writes blockette 60
+io.xseed.blockette	Blockette060	parse_xml	xml_doc version	read xml of blockette 60
+io.xseed.blockette	Blockette060	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette047	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette054	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette	__str__		pretty prints the informations stored in the blockette
+io.xseed.blockette	Blockette	parse_seed	data expected_length	parse given data for blockette fields and create attributes
+io.xseed.blockette	Blockette	get_seed		converts the blockette to a valid seed string and returns it
+io.xseed.blockette	Blockette	parse_xml	xml_doc	reads lxml etree and fills the blockette with the values of it
+io.xseed.blockette	Blockette	get_xml	show_optional xseed_version	returns a xml document representing this blockette
+io.xseed.blockette	Blockette057	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette041	parse_seed	data expected_length	if number of fir coefficients are larger than maximal blockette size of 9999 chars a follow up blockette with the same blockette id and
+io.xseed.blockette	Blockette041	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette043	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette053	get_resp	station channel abbreviations	returns resp string
+io.xseed.blockette	Blockette044	get_resp	station channel abbreviations	returns resp string
+io.pdas		_is_pdas	filename	checks whether a file is a pdas file or not
+io.pdas		_read_pdas	filename	reads a pdas file and returns an obspy stream object
+io.gcf		is_gcf	f	test if file is gcf by reading at least 1 data block
+io.gcf		decode36	data	converts an integer into a base36 string
+io.gcf		decode_date_time	data	decode date and time field
+io.gcf		read_data_block	f headonly channel_prefix	read one data block from gcf file
+io.gcf		read_header	f	reads header only from gcf file
+io.gcf		read	f	reads header and data from gcf file
+io.gcf		merge_gcf_stream	st	merges gcf stream (replacing stream merge -1 for headonly=true)
+io.gcf		_is_gcf	filename	checks whether a file is gcf or not
+io.gcf		_read_gcf	filename headonly	reads a gcf file and returns a stream object
+io.nordic		_is_sfile	sfile	basic test of whether the file is nordic format or not
+io.nordic		_int_conv	string	convenience tool to convert from string to integer
+io.nordic		_float_conv	string	convenience tool to convert from string to float
+io.nordic		_str_conv	number rounded	convenience tool to convert a number either float or int into a string
+io.nordic		_evmagtonor	mag_type	switch from obspy event magnitude types to seisan syntax
+io.nordic		_nortoevmag	mag_type	switch from nordic type magnitude notation to obspy event magnitudes
+io.nordic		readheader	sfile	read header information from a seisan nordic format s-file
+io.nordic		_readheader	f	internal header reader
+io.nordic		read_spectral_info	sfile	read spectral info from an sfile
+io.nordic		_read_spectral_info	f	internal spectral reader
+io.nordic		read_nordic	select_file return_wavnames	read a catalog of events from a nordic formatted select file
+io.nordic		_read_picks	f new_event	internal pick reader use read_nordic instead
+io.nordic		readwavename	sfile	extract the waveform filename from the s-file
+io.nordic		_readwavename	f	internal wave-name reader
+io.nordic		blanksfile	wavefile evtype userid overwrite	generate an empty s-file with a populated header for a given waveform
+io.nordic		write_select	catalog filename userid evtype	function to write a catalog to a select file in nordic format
+io.nordic		_write_nordic	event filename userid evtype	write an :class ~obspy core event event to a nordic formatted s-file
+io.nordic		nordpick	event	format picks in an :class ~obspy core event event event to nordic
+io.seg2	SEG2	read_file	file_object	reads the following file and will return a stream object if
+io.seg2	SEG2	read_file_descriptor_block		handles the reading of the file descriptor block and the free form section following it
+io.seg2	SEG2	parse_next_trace		parse the next trace in the trace pointer list and return a trace object
+io.seg2	SEG2	parse_free_form	free_form_str attrib_dict	parse the free form section stored in free_form_str and save it in attrib_dict
+io.css		_write_css	inventory basename	writes an inventory object to a css database
+io.css		_is_css	filename	checks whether a file is css waveform data header or not
+io.css		_is_nnsa_kb_core	filename	checks whether a file is nnsa kb core waveform data header or not
+io.css		_read_css	filename	reads a css waveform file and returns a stream object
+io.css		_read_nnsa_kb_core	filename	reads a nnsa kb core waveform file and returns a stream object
+taup		evaluate_velocity_at_bottom	layer prop	evaluate material properties at bottom of a velocity layer
+taup		evaluate_velocity_at_top	layer prop	evaluate material properties at top of a velocity layer
+taup		evaluate_velocity_at	layer depth prop	evaluate material properties at some depth in a velocity layer
+taup	DepthRange	_to_array		store all attributes for serialization in a structured array
+taup	DepthRange	_from_array	arr	create instance object from a structured array used in serialization
+taup	Arrival	ray_param_sec_degree		return the ray parameter in seconds per degree
+taup	Arrival	purist_distance		return the purist distance in degrees
+taup	TauBranch	create_branch	s_mod min_p_so_far ray_params	calculates tau for this branch between slowness layers top_layer_num and bot_layer_num inclusive
+taup	TauBranch	insert	ray_param s_mod index	inserts the distance time and tau increment for the slowness sample given to the branch
+taup	TauBranch	difference	top_branch index_p index_s s_mod	generates a new tau branch by "subtracting" the given tau branch from this tau branch self
+taup	TauBranch	path	ray_param downgoing s_mod	called from tauppath to calculate ray paths
+taup	TauBranch	_to_array		store all attributes for serialization in a structured array
+taup	TauBranch	_from_array	arr	create instance object from a structured array used in serialization
+taup	SlownessModel	create_sample		create slowness-depth layers from a velocity model
+taup	SlownessModel	find_critical_points		find all critical points within a velocity model
+taup	SlownessModel	get_num_layers	is_p_wave	number of slowness layers
+taup	SlownessModel	find_depth_from_depths	ray_param top_depth bot_depth is_p_wave	find depth corresponding to a slowness between two given depths
+taup	SlownessModel	find_depth_from_layers	p top_critical_layer bot_critical_layer is_p_wave	find depth corresponding to a slowness p between two velocity layers
+taup	SlownessModel	to_slowness	velocity depth	convert velocity at some depth to slowness
+taup	SlownessModel	interpolate	p top_velocity top_depth slope	interpolate slowness to depth within a layer
+taup	SlownessModel	depth_in_fluid	depth	determine if the given depth is contained within a fluid zone
+taup	SlownessModel	coarse_sample		create a coarse slowness sampling of the velocity model (v_mod)
+taup	SlownessModel	layer_number_above	depth is_p_wave	find the index of the slowness layer that contains the given depth
+taup	SlownessModel	layer_number_below	depth is_p_wave	find the index of the slowness layer that contains the given depth
+taup	SlownessModel	get_slowness_layer	layer is_p_wave	return the slowness_layer of the requested wave type
+taup	SlownessModel	add_slowness	p is_p_wave	add a ray parameter to the slowness sampling for the given wave type
+taup	SlownessModel	ray_param_inc_check		check that no slowness layer's ray parameter interval is too large
+taup	SlownessModel	depth_inc_check		check that no slowness layer is too thick
+taup	SlownessModel	distance_check		check that no slowness layer is too wide or undersampled
+taup	SlownessModel	depth_in_high_slowness	depth ray_param is_p_wave	determine if depth and slowness are within a high slowness zone
+taup	SlownessModel	approx_distance	slowness_turn_layer p is_p_wave	approximate distance for ray turning at the bottom of a layer
+taup	SlownessModel	layer_time_dist	spherical_ray_param layer_num is_p_wave check	calculate time and distance for a ray passing through a layer
+taup	SlownessModel	fix_critical_points		reset the slowness layers that correspond to critical points
+taup	SlownessModel	validate		perform consistency check on the slowness model
+taup	SlownessModel	get_min_turn_ray_param	depth is_p_wave	find minimum slowness turning but not reflected at or above a depth
+taup	SlownessModel	get_min_ray_param	depth is_p_wave	find minimum slowness turning or reflected at or above a depth
+taup	SlownessModel	split_layer	depth is_p_wave	split a slowness layer into two slowness layers
+taup	SlownessModel	_fix_other_layers	other_layers p changed_layer new_top_layer	fix other wave layers when a split is made
+taup	TauPPath	calculate	degrees	call all the necessary calculations to obtain the ray paths
+taup	TauPPath	calculate_path	degrees	calculates the ray paths for phases at the given distance by calling the calculate_path method of the seismicphase class
+taup	TauPCreate	load_velocity_model		try to load a velocity model
+taup	TauPCreate	create_tau_model	v_mod	create :class ~ taumodel from velocity model
+taup	TauPCreate	run		create a tau model from a velocity model
+taup		get_builtin_model_files		get a list of paths to builtin files that can be used for models
+taup		build_taup_model	filename output_folder verbose	build an obspy model file from a "tvel" or "nd" file
+taup		build_all_taup_models		build all :class ~obspy taup tau_model taumodel models in data directory
+taup	Arrivals	plot	plot_type plot_all legend label_arrivals	plot the ray paths if any have been calculated
+taup	TauPyModel	__init__	model verbose planet_flattening cache	loads an already created taupy model
+taup	TauPyModel	get_travel_times	source_depth_in_km distance_in_degree phase_list receiver_depth_in_km	return travel times of every given phase
+taup	TauPyModel	get_pierce_points	source_depth_in_km distance_in_degree phase_list receiver_depth_in_km	return pierce points of every given phase
+taup	TauPyModel	get_ray_paths	source_depth_in_km distance_in_degree phase_list receiver_depth_in_km	return ray paths of every given phase
+taup	TauPyModel	get_travel_times_geo	source_depth_in_km source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg	return travel times of every given phase given geographical data
+taup	TauPyModel	get_pierce_points_geo	source_depth_in_km source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg	return ray paths of every given phase with geographical info
+taup	TauPyModel	get_ray_paths_geo	source_depth_in_km source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg	return ray paths of every given phase with geographical info
+taup		create_taup_model	model_name output_dir input_dir	create a taup model from a tvel file
+taup	VelocityModel	__init__	model_name radius_of_planet min_radius max_radius	object for storing a seismic planet model
+taup	VelocityModel	get_discontinuity_depths		return the depths of discontinuities within the velocity model
+taup	VelocityModel	layer_number_above	depth	find the layer containing the given depth s
+taup	VelocityModel	layer_number_below	depth	find the layer containing the given depth s
+taup	VelocityModel	evaluate_above	depth prop	return the value of the given material property at the given depth s
+taup	VelocityModel	evaluate_below	depth prop	return the value of the given material property at the given depth s
+taup	VelocityModel	depth_at_top	layer	return the depth at the top of the given layer
+taup	VelocityModel	depth_at_bottom	layer	return the depth at the bottom of the given layer
+taup	VelocityModel	validate		perform internal consistency checks on the velocity model
+taup	VelocityModel	read_velocity_file	cls filename	read in a velocity file
+taup	VelocityModel	read_tvel_file	cls filename	read in a velocity model from a "tvel" ascii text file
+taup	VelocityModel	read_nd_file	cls filename	read in a velocity model from a "nd" ascii text file
+taup	VelocityModel	fix_discontinuity_depths		reset depths of major discontinuities
+taup		bullen_radial_slowness	layer p radius_of_planet check	calculate time and distance increments of a spherical ray
+taup		bullen_depth_for	layer ray_param radius_of_planet check	finds the depth for a ray parameter within this layer
+taup		evaluate_at_bullen	layer depth radius_of_planet	find the slowness at the given depth
+taup		create_from_vlayer	v_layer is_p_wave radius_of_planet is_spherical	compute the slowness layer from a velocity layer
+taup	TauModel	calc_tau_inc_from		calculates tau for each branch within a slowness model
+taup	TauModel	depth_correct	depth	called in tauptime computes a new tau model for a source at depth
+taup	TauModel	split_branch	depth	returns a new taumodel with the branches containing depth split at depth
+taup	TauModel	find_branch	depth	finds the branch that either has the depth as its top boundary or strictly contains the depth
+taup	TauModel	get_branch_depths		return an array of the depths that are boundaries between branches
+taup	TauModel	serialize	filename	serialize model to numpy npz binary file
+taup	TauModel	deserialize	filename cache	deserialize model from numpy npz binary file
+taup	SeismicPhase	parse_name	tau_model	construct a branch sequence from the given phase name and tau model
+taup	SeismicPhase	phase_conversion	tau_model from_branch end_action is_p_to_s	change max_ray_param and min_ray_param where there is a phase conversion
+taup	SeismicPhase	add_to_branch	tau_model start_branch end_branch is_p_wave	add branch numbers to branch_seq
+taup	SeismicPhase	sum_branches	tau_model	sum the appropriate branches for this phase
+taup	SeismicPhase	calc_branch_mult	tau_model	calculate how many times the phase passes through a branch up or down
+taup	SeismicPhase	calc_time	degrees	calculate arrival times for this phase sorted by time
+taup	SeismicPhase	calc_pierce	degrees	calculate pierce points for this phase
+taup	SeismicPhase	calc_pierce_from_arrival	curr_arrival	calculate the pierce points for a particular arrival
+taup	SeismicPhase	calc_path	degrees	calculate the paths this phase takes through the planet model
+taup	SeismicPhase	calc_path_from_arrival	curr_arrival	calculate the paths this phase takes through the planet model
+taup	SeismicPhase	handle_special_waves	curr_arrival pierce index	handle head or diffracted waves
+taup		closest_branch_to_depth	tau_model depth_string	find the closest discontinuity to the given depth that can have reflections and phase transformations
+taup		leg_puller	name	tokenize a phase name into legs
+taup		parse_phase_list	phase_list	takes a list of phases returns a list of individual phases performs e g
+taup		get_phase_names	phase_name	called by parse_phase_list to replace e g ttall with the relevant phases
+taup		calc_dist	source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg receiver_longitude_in_deg	given the source and receiver location calculate distance
+taup		calc_dist_azi	source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg receiver_longitude_in_deg	given the source and receiver location calculate the azimuth from the source to the receiver at the source the backazimuth from the receiver
+taup		add_geo_to_arrivals	arrivals source_latitude_in_deg source_longitude_in_deg receiver_latitude_in_deg	add geographical information to arrivals
+taup	TauPTime	run		do all the calculations and print the output if told to the resulting
+taup	TauPTime	depth_correct	depth receiver_depth	corrects the taumodel for the given source depth if not already corrected
+taup	TauPTime	recalc_phases		recalculates the given phases using a possibly new or changed tau model
+taup	TauPTime	calculate	degrees	calculate the arrival times
+taup	TauPTime	calc_time	degrees	calls the calc_time method of seismicphase to calculate arrival times for every phase each sorted by time
+taup	TauPPierce	depth_correct	depth receiver_depth	override tauptime depth_correct so that the pierce points may be
+taup	TauPPierce	calculate	degrees	call all the necessary calculations to obtain the pierce points
+taup	TauPPierce	calculate_pierce	degrees	calculates the pierce points for phases at the given distance by calling the calculate_pierce method of the seismicphase class
+scripts		_get_suites	verbosity names	the obspy test suite
+scripts		_skip_test	test_case msg	helper method intended to be bound to a unittest testcase
+scripts		_recursive_skip	test_suite msg	helper method to recursively skip all tests aggregated in test_suite with the the specified message
+scripts	_TextTestRunner	run	suites	run the given test case or test suite
+scripts		run_tests	verbosity tests report log	this function executes obspy test suites
+scripts		main	argv interactive	entry point for setup py
+scripts		_latency_to_tuple	latency	convert latency in seconds to tuple of days hours minutes seconds
+scripts		_latency_info_string	latency only_days pad	format latency as a plain ascii string
+scripts		_latency_line_html	latency_tuple args color only_days	format a single latency information tuple net sta loc cha latency percentage gap count as a html line
+realtime	RtMemory	initialize	data_type length_input length_output input_initial_value	create and initialize input and output arrays for this rtmemory object
+realtime	RtMemory	_update	memory_array data	update specified memory array using specified number of points from end of specified data array
+realtime	RtMemory	update_output	data	update output memory using specified number of points from end of specified array
+realtime	RtMemory	update_input	data	update input memory using specified number of points from end of specified array
+realtime	RtTrace	rt_process_functions_to_string	cls	return doc string for all predefined real-time processing functions
+realtime	RtTrace	__init__	max_length	initializes an rttrace
+realtime	RtTrace	__eq__	other	implements rich comparison of rttrace objects for "==" operator
+realtime	RtTrace	__add__		too ambiguous throw an error
+realtime	RtTrace	append	trace gap_overlap_check verbose	appends a trace object to this rttrace
+realtime	RtTrace	register_rt_process	process	adds real-time processing algorithm to processing list of this rttrace
+realtime	RtTrace	copy		returns a deepcopy of this rttrace
+realtime		offset	trace offset rtmemory_list	add the specified offset to the data
+realtime		scale	trace factor rtmemory_list	scale array data samples by specified factor
+realtime		integrate	trace rtmemory_list	apply simple rectangular integration to array data
+realtime		differentiate	trace rtmemory_list	apply simple differentiation to array data
+realtime		boxcar	trace width rtmemory_list	apply boxcar smoothing to data in array sample
+realtime		tauc	trace width rtmemory_list	calculate instantaneous period in a fixed window (tau_c)
+realtime		mwpintegral	trace max_time ref_time mem_time	calculate mwp integral on a displacement trace
+realtime		calculate_mwp_mag	peak epicentral_distance	calculate mwp magnitude
+realtime		kurtosis	trace win rtmemory_list	apply recursive kurtosis calculation on data
+db		parse_mapping_data	lines	parses a mapping file used by the indexer
+db	Client	__init__	url session debug	initializes the client
+db	Client	get_network_ids		fetches all possible network id's
+db	Client	get_station_ids	network	fetches all possible station id's
+db	Client	get_location_ids	network station	fetches all possible location id's
+db	Client	get_channel_ids	network station location	fetches all possible channel id's
+db	Client	get_endtimes	network station location channel	generates a list of last end times for each channel
+db	Client	get_waveform_path	network station location channel	generates a list of available waveform files
+db	Client	get_preview	trace_ids starttime endtime network	returns the preview trace
+db	WaveformFileCrawler	_update_or_insert	dataset	add a new file into or modifies existing file in database
+db	WaveformFileCrawler	_delete	path file	remove a file or all files with a given path from the database
+db	WaveformFileCrawler	_select	path	fetch entry from database
+db	WaveformFileCrawler	has_pattern	file	checks if the file name fits to the preferred file pattern
+db	WaveformFileCrawler	_reset_walker		resets the crawler parameters
+db	WaveformFileCrawler	_step_walker		steps current walker object to the next directory
+db	WaveformFileCrawler	iterate		handles exactly one directory
+db	BandpassPreviewFeature	process	trace	bandpass filter (freqmin=0 1 freqmax=20 0) all trace previews
+db	MinMaxAmplitudeFeature	process	trace	generates statistics about the amplitude values
+db.scripts	MyHandler	do_GET		respond to a get request
+signal		spectrum	data win nfft n1	spectrum of a signal
+signal		welch	data win nfft l	spectrum of a signal
+signal		central_frequency	data fs smoothie fk	central frequency of a signal
+signal		central_frequency_unwindowed	data fs	central frequency of a signal
+signal		bandwidth	data fs smoothie fk	bandwidth of a signal
+signal		dominant_period	data fs smoothie fk	predominant period of a signal
+signal		log_spaced_filterbank_matrix	p n fs w	matrix for a log-spaced filterbank
+signal		log_cepstrum	data fs nc p	cepstrum of a signal
+signal		peak_ground_motion	data delta freq damp	peak ground motion parameters compute the maximal displacement velocity acceleration and the peak
+signal		konno_ohmachi_smoothing_window	frequencies center_frequency bandwidth normalize	returns the konno & ohmachi smoothing window for every frequency in frequencies
+signal		calculate_smoothing_matrix	frequencies bandwidth normalize	calculates a len frequencies x len frequencies matrix with the konno & ohmachi window for each frequency as the center frequency
+signal		konno_ohmachi_smoothing	spectra frequencies bandwidth count	smooths a matrix containing one spectra per row with the konno-ohmachi smoothing window
+signal		cosine_sac_taper	freqs flimit	generate a cosine flank frequency domain taper similar to the one sac applies before instrument response deconvolution
+signal		evalresp_for_frequencies	t_samp frequencies filename date	use the evalresp library to extract instrument response information from a seed resp-file for the specified frequencies
+signal		evalresp	t_samp nfft filename date	use the evalresp library to extract instrument response information from a seed resp-file
+signal		corn_freq_2_paz	fc damp	convert corner frequency and damping to poles and zeros 2 zeros at
+signal		paz_to_freq_resp	poles zeros scale_fac t_samp	convert poles and zeros paz to frequency response the output
+signal		waterlevel	spec wlev	return the absolute spectral value corresponding to db wlev in spectrum spec
+signal		invert_spectrum	spec wlev	invert spectrum and shrink values under water-level of max spec amplitude
+signal		paz_2_amplitude_value_of_freq_resp	paz freq	returns amplitude at one frequency for the given poles and zeros
+signal		estimate_magnitude	paz amplitude timespan h_dist	estimates local magnitude from poles and zeros or full response of given instrument the peak to peak amplitude and the time span from peak to peak
+signal		estimate_wood_anderson_amplitude	paz amplitude timespan	convert amplitude in counts measured of instrument with given poles and zeros information for use in :func estimate_magnitude
+signal		estimate_wood_anderson_amplitude_using_response	response amplitude timespan	convert amplitude in counts measured of instrument with given response information for use in :func estimate_magnitude
+signal		util_geo_km	orig_lon orig_lat lon lat	transform lon lat to km with reference to orig_lon and orig_lat on the elliptic earth
+signal		util_lon_lat	orig_lon orig_lat x y	transform x y [km] to decimal degree in reference to orig_lon and orig_lat >>> util_lon_lat(12
+signal		next_pow_2	i	find the next power of two
+signal		prev_pow_2	i	find the previous power of two
+signal		nearest_pow_2	x	finds the nearest integer that is a power of 2
+signal		enframe	x win inc	splits the vector up into overlapping frames beginning at increments of inc
+signal		smooth	x smoothie	smooths a given signal by computing a central moving average
+signal		rdct	x n	computes discrete cosine transform of given signal
+signal		az2baz2az	angle	helper function to convert from azimuth to backazimuth or from backazimuth to azimuth
+signal		_npts2nfft	npts smart	calculates number of points for fft from number of samples in trace
+signal		_cplxreal	z tol	split into complex and real parts combining conjugate pairs
+signal		_nearest_real_complex_idx	fro to which	get the next closest real or complex element based on distance
+signal		_zpk2sos	z p k pairing	return second-order sections from zeros poles and gain of a system parameters
+signal		_sosfilt	sos x axis zi	filter data along one dimension using cascaded second-order sections filter a data sequence x, using a digital iir filter defined by
+signal		eigval	datax datay dataz fk	polarization attributes of a signal
+signal		flinn	stream noise_thres	computes the azimuth incidence rectilinearity and planarity after the eigenstructure decomposition method of [flinn1965b]_
+signal		instantaneous_frequency	data sampling_rate	simple function to estimate the instantaneous frequency based on the derivative of the data and the analytical hilbert data
+signal		vidale_adapt	stream noise_thres fs flow	adaptive window polarization analysis after [vidale1986]_ with the modification of adapted analysis window estimated by estimating the
+signal		particle_motion_odr	stream noise_thres	computes the orientation of the particle motion vector based on an orthogonal regression algorithm
+signal		_get_s_point	stream stime etime	function for computing the trace dependent start time in samples
+signal		polarization_analysis	stream win_len win_frac frqlow	method carrying out polarization analysis with the [flinn1965b]_, [jurkevics1988]_, particlemotion or [vidale1986]_ algorithm
+signal		fft_taper	data	cosine taper 10 percent at each end (like done by [mcnamara2004]_)
+signal		welch_taper	data	applies a welch window to data see
+signal		welch_window	n	return a welch window for data of length n
+signal	PPSD	__init__	stats metadata skip_on_gaps db_bins	initialize the ppsd object setting all fixed information on the station that should not change afterwards to guarantee consistent spectral
+signal	PPSD	len		trace length for one psd segment
+signal	PPSD	period_bin_centers		return centers of period bins geometric mean of left and right edge of period smoothing ranges
+signal	PPSD	period_xedges		returns edges of period histogram bins one element longer than number of bins
+signal	PPSD	period_bin_left_edges		returns left edges of period bins same length as number of bins
+signal	PPSD	period_bin_right_edges		returns right edges of period bins same length as number of bins
+signal	PPSD	_setup_period_binning	period_smoothing_width_octaves period_step_octaves period_limits	set up period binning
+signal	PPSD	__sanity_check	trace	checks if trace is compatible for use in the current ppsd instance
+signal	PPSD	__insert_processed_data	utcdatetime spectrum	inserts the given utcdatetime and processed/octave-binned spectrum at the right position in the lists keeping the order intact
+signal	PPSD	__insert_gap_times	stream	gets gap information of stream and adds the encountered gaps to the gap list of the ppsd instance
+signal	PPSD	__insert_data_times	stream	gets gap information of stream and adds the encountered gaps to the gap list of the ppsd instance
+signal	PPSD	__check_time_present	utcdatetime	checks if the given utcdatetime is already part of the current ppsd instance
+signal	PPSD	add	stream verbose	process all traces with compatible information and add their spectral estimates to the histogram containing the probabilistic psd
+signal	PPSD	__process	tr	processes a segment of data and save the psd information
+signal	PPSD	_stack_selection	starttime endtime time_of_weekday year	for details on restrictions see :meth calculate_histogram
+signal	PPSD	calculate_histogram	starttime endtime time_of_weekday year	calculate and set current 2d histogram stack optionally with start- and endtime and time of day restrictions
+signal	PPSD	get_percentile	percentile	returns periods and approximate psd values for given percentile value
+signal	PPSD	get_mode		returns periods and mode psd values (i e for each frequency the psd
+signal	PPSD	get_mean		returns periods and mean psd values (i e for each frequency the mean
+signal	PPSD	save_npz	filename	saves the ppsd as a compressed numpy binary npz format
+signal	PPSD	load_npz	filename metadata	load previously computed ppsd results
+signal	PPSD	add_npz	filename	add previously computed ppsd results to current ppsd instance
+signal	PPSD	_add_npz	filename	see :meth ppsd add_npz()
+signal	PPSD	plot	filename show_coverage show_histogram show_percentiles	plot the 2d histogram of the current ppsd
+signal	PPSD	_plot_histogram	fig draw filename	reuse a previously created figure returned by :meth plot(show=false) and plot the current histogram stack (pre-computed using
+signal	PPSD	plot_coverage	filename	plot the data coverage of the histogram of the current ppsd
+signal	PPSD	__plot_coverage	ax	helper function to plot coverage into given axes
+signal		get_nlnm		returns periods and psd values for the new low noise model
+signal		get_nhnm		returns periods and psd values for the new high noise model
+signal		envelope	data	envelope of a function
+signal		remez_fir	data freqmin freqmax df	the minimax optimal bandpass using remez algorithm experimental
+signal		lowpass_fir	data freq df winlen	fir-lowpass filter experimental
+signal		integer_decimation	data decimation_factor	downsampling by applying a simple integer decimation
+signal		lowpass_cheby_2	data freq df maxorder	cheby2-lowpass filter filter data by passing data only below a certain frequency
+signal	MSEEDMetadata	__init__	files id prefix starttime	reads the miniseed files and extracts the data quality metrics
+signal	MSEEDMetadata	_get_gaps_and_overlaps		function to get all gaps and overlaps in the user specified or forced window
+signal	MSEEDMetadata	number_of_records		number of records across files before slicing
+signal	MSEEDMetadata	number_of_samples		number of samples across files
+signal	MSEEDMetadata	_extract_mseed_stream_stats		small function to collects the mseed stats
+signal	MSEEDMetadata	_extract_mseed_stream_metadata		collect information from the miniseed headers
+signal	MSEEDMetadata	_compute_sample_metrics		computes metrics on samples contained in the specified time window
+signal	MSEEDMetadata	_compute_continuous_seg_sample_metrics		computes metrics on the samples within each continuous segment
+signal	MSEEDMetadata	_parse_c_stats	tr	:param tr custom dictionary with start end data and sampling_rate
+signal	MSEEDMetadata	get_json_meta	validate	serialize the meta dictionary to json
+signal	MSEEDMetadata	validate_qc_metrics	qc_metrics	validate the passed metrics against the json schema
+signal		linear_regression	xdata ydata weights p0	use linear least squares to fit a function f to data
+signal		_pad_zeros	a num	pad num zeros at both sides of array a
+signal		_xcorr_padzeros	a b shift domain	cross-correlation using scipy with mode='valid' and precedent zero padding
+signal		_xcorr_slice	a b shift domain	cross-correlation using scipy with mode='full' and subsequent slicing
+signal		correlate	a b shift demean	cross-correlation of signals a and b with specified maximal shift
+signal		xcorr	tr1 tr2 shift_len full_xcorr	cross correlation of tr1 and tr2 in the time domain using window_len
+signal		xcorr_3c	st1 st2 shift_len components	calculates the cross correlation on each of the specified components separately stacks them together and estimates the maximum and shift of
+signal		xcorr_max	fct abs_max	return shift and value of the maximum of the cross-correlation function
+signal		xcorr_pick_correction	pick1 trace1 pick2 trace2	calculate the correction for the differential pick time determined by cross correlation of the waveforms in narrow windows around the pick times
+signal		templates_max_similarity	st time streams_templates	compares all event templates in the streams_templates list of streams against the given stream around the time of the suspected event
+signal		cwt	st dt w0 fmin	continuous wavelet transformation in the frequency domain
+signal		tfem	st1 st2 dt fmin	time frequency envelope misfit
+signal		tfpm	st1 st2 dt fmin	time frequency phase misfit
+signal		tem	st1 st2 dt fmin	time-dependent envelope misfit
+signal		tpm	st1 st2 dt fmin	time-dependent phase misfit
+signal		fem	st1 st2 dt fmin	frequency-dependent envelope misfit
+signal		fpm	st1 st2 dt fmin	frequency-dependent phase misfit
+signal		em	st1 st2 dt fmin	single valued envelope misfit
+signal		pm	st1 st2 dt fmin	single valued phase misfit
+signal		tfeg	st1 st2 dt fmin	time frequency envelope goodness-of-fit
+signal		tfpg	st1 st2 dt fmin	time frequency phase goodness-of-fit
+signal		teg	st1 st2 dt fmin	time-dependent envelope goodness-of-fit
+signal		tpg	st1 st2 dt fmin	time-dependent phase goodness-of-fit
+signal		feg	st1 st2 dt fmin	frequency-dependent envelope goodness-of-fit
+signal		fpg	st1 st2 dt fmin	frequency-dependent phase goodness-of-fit
+signal		eg	st1 st2 dt fmin	single valued envelope goodness-of-fit
+signal		pg	st1 st2 dt fmin	single valued phase goodness-of-fit
+signal		plot_tf_misfits	st1 st2 dt t0	plot all time frequency misfits and the time series in one plot per component
+signal		plot_tf_gofs	st1 st2 dt t0	plot all time frequency goodness-of-fits and the time series in one plot per component
+signal		plot_tfr	st dt t0 fmin	plot time frequency representation spectrum and time series of the signal
+signal		integrate_cumtrapz	data dx	performs first order integration of data using the trapezoidal rule
+signal		integrate_spline	data dx k	integrate by generating an interpolating spline and integrating that
+signal		simple	data	detrend signal simply by subtracting a line through the first and last
+signal		polynomial	data order plot	removes a polynomial trend from the data
+signal		spline	data order dspline plot	remove a trend by fitting splines
+signal		recursive_sta_lta_py	a nsta nlta	recursive sta/lta written in python
+signal		carl_sta_trig	a nsta nlta ratio	computes the carlstatrig characteristic function
+signal		classic_sta_lta	a nsta nlta	computes the standard sta/lta from a given input array a the length of
+signal		classic_sta_lta_py	a nsta nlta	computes the standard sta/lta from a given input array a the length of
+signal		trigger_onset	charfct thres1 thres2 max_len	calculate trigger on and off times
+signal		pk_baer	reltrc samp_int tdownmax tupevent	wrapper for p-picker routine by m baer schweizer erdbebendienst
+signal		ar_pick	a b c samp_rate	pick p and s arrivals with an ar-aic + sta/lta algorithm
+signal		plot_trigger	trace cft thr_on thr_off	plot characteristic function of trigger along with waveform data and trigger on/off from given thresholds
+signal		coincidence_trigger	trigger_type thr_on thr_off stream	perform a network coincidence trigger
+signal		array_rotation_strain	subarray ts1 ts2 ts3	this routine calculates the best-fitting rigid body rotation and uniform strain as functions of time and their formal errors given
+signal		get_geometry	stream coordsys return_center verbose	method to calculate the array geometry and the center coordinates in km
+signal		get_timeshift	geometry sll_x sll_y sl_s	returns timeshift table for given array geometry
+signal		get_spoint	stream stime etime	calculates start and end offsets relative to stime and etime for each trace in stream in samples
+signal		array_transff_wavenumber	coords klim kstep coordsys	returns array transfer function as a function of wavenumber difference :type coords numpy
+signal		array_transff_freqslowness	coords slim sstep fmin	returns array transfer function as a function of slowness difference and frequency
+signal		dump	pow_map apow_map i	example function to use with store kwarg in :func ~obspy
+signal		array_processing	stream win_len win_frac sll_x	method for seismic-array-beamforming/fk-analysis/capon
+signal		sonogram	data fs fc1 nofb	sonogram of a signal
+signal		_validate_parameters	data old_start old_dt new_start	validates the parameters for various interpolation functions
+signal		interpolate_1d	data old_start old_dt new_start	wrapper around some scipy interpolation functions
+signal		weighted_average_slopes	data old_start old_dt new_start	implements the weighted average slopes interpolation scheme proposed in [wiggins1976]_ for evenly sampled data
+signal		lanczos_interpolation	data old_start old_dt new_start	function performing lanczos resampling see https //en
+signal		calculate_lanczos_kernel	x a window	helper function to get the actually used kernel for a specific value of a
+signal		plot_lanczos_windows	a filename	helper function producing a plot of all available tapers of the sinc function and their response for the lanczos interpolation
+signal		envelope	data	envelope of a signal
+signal		normalized_envelope	data fs smoothie fk	normalized envelope of a signal
+signal		centroid	data fk	centroid time of a signal
+signal		instantaneous_frequency	data fs fk	instantaneous frequency of a signal
+signal		instantaneous_bandwidth	data fs fk	instantaneous bandwidth of a signal
+signal		rotate_ne_rt	n e ba	rotates horizontal components of a seismogram
+signal		rotate_rt_ne	n e ba	rotates horizontal components of a seismogram
+signal		rotate_zne_lqt	z n e ba	rotates all components of a seismogram
+signal		rotate_lqt_zne	l q t ba	rotates all components of a seismogram
+signal		_dip_azimuth2zse_base_vector	dip azimuth	helper function converting a vector described with azimuth and dip of unit length to a vector in the zse vertical south east base
+signal		rotate2zne	data_1 azimuth_1 dip_1 data_2	rotates an arbitrarily oriented three-component vector to zne
+signal		rel_calib_stack	st1 st2 calib_file window_len	method for relative calibration of sensors using a sensor with known
+signal		_calc_resp	calfile nfft sampfreq	calculate transfer function of known system
+clients		get_proxy_tuple		return system http proxy as a urlparse tuple or () if unset
+clients		valid_address	addr	verify that an ip/port tuple is valid
+clients		http_proxy_connect	address proxy auth	establish a socket connection through an http proxy
+clients	RemoteBaseClient	__init__	debug timeout	base class for all remote mixin classes
+clients	RemoteBaseClient	get_service_version		return a semantic version number of the remote service as a string
+clients	HTTPClient	_handle_requests_http_error	r	error handling for the http errors
+clients	HTTPClient	_download	url params filename data	download the url with get or post and the chosen parameters
+clients	WaveformClient	get_waveforms		returns a stream
+clients	EventClient	get_events		returns a catalog
+clients	StationClient	get_stations		returns an inventory
+clients.seedlink	EasySeedLinkClient	connect		connect to the seedlink server
+clients.seedlink	EasySeedLinkClient	get_info	level	send a seedlink info command and retrieve response
+clients.seedlink	EasySeedLinkClient	capabilities		the server's capabilities parsed from info capabilities cached
+clients.seedlink	EasySeedLinkClient	has_capability	capability	check if the seedlink server has a certain capability
+clients.seedlink	EasySeedLinkClient	has_info_capability	capability	a shortcut for checking for info capabilities
+clients.seedlink	EasySeedLinkClient	_send_and_recv	bytes_ stop_on	send a command to the server and read the response
+clients.seedlink	EasySeedLinkClient	_get_cat		send the cat command to a server and receive the answer
+clients.seedlink	EasySeedLinkClient	select_stream	net station selector	select a stream for data transfer
+clients.seedlink	EasySeedLinkClient	run		start streaming data from the seedlink server
+clients.seedlink	EasySeedLinkClient	close		close the seedlink connection
+clients.seedlink	EasySeedLinkClient	on_terminate		callback for handling connection termination
+clients.seedlink	EasySeedLinkClient	on_seedlink_error		callback for handling seedlink errors
+clients.seedlink	EasySeedLinkClient	on_data	trace	callback for handling the reception of waveform data
+clients.seedlink		create_client	server_url on_data on_seedlink_error on_terminate	quickly create an easyseedlinkclient instance
+clients.seedlink	Client	__init__	server port timeout debug	initializes the seedlink request client
+clients.seedlink	Client	_connect		open new connection to seedlink server
+clients.seedlink	Client	get_waveforms	network station location channel	request waveform data from the seedlink server
+clients.seedlink	Client	_packet_handler	count slpack	custom packet handler that accumulates all waveform packets in a stream
+clients.seedlink	SLClient	__init__	loglevel timeout	creates a new instance of slclient with the specified logging object
+clients.seedlink	SLClient	parse_cmd_line_args	args	parses the command line arguments
+clients.seedlink	SLClient	initialize		initializes this slclient
+clients.seedlink	SLClient	run	packet_handler	start this slclient
+clients.seedlink	SLClient	packet_handler	count slpack	processes each packet received from the seedlinkconnection
+clients.seedlink	SLClient	print_usage	concise	prints the usage message for this class
+clients.seedlink	SLClient	main	cls args	main method - creates and runs an slclient using the specified
+clients.seedlink	SLPacket	get_string_payload		get the miniseed payload parsed as string
+clients.seedlink.client	SeedLinkConnection	__init__	timeout	creates a new instance of seedlinkconnection
+clients.seedlink.client	SeedLinkConnection	is_connected	timeout	returns connection state of the connection socket
+clients.seedlink.client	SeedLinkConnection	get_state		returns the slstate state object
+clients.seedlink.client	SeedLinkConnection	set_net_timeout	netto	sets the network timeout seconds
+clients.seedlink.client	SeedLinkConnection	get_net_timeout		returns the network timeout seconds
+clients.seedlink.client	SeedLinkConnection	set_keep_alive	keepalive	sets interval to send keepalive/heartbeat seconds
+clients.seedlink.client	SeedLinkConnection	get_keep_alive		returns the interval to send keepalive/heartbeat seconds
+clients.seedlink.client	SeedLinkConnection	set_net_delay	netdly	sets the network reconnect delay seconds
+clients.seedlink.client	SeedLinkConnection	get_net_delay		returns the network reconnect delay seconds
+clients.seedlink.client	SeedLinkConnection	set_sl_address	sladdr	sets the host port of the seedlink server
+clients.seedlink.client	SeedLinkConnection	set_last_pkt_time	lastpkttime	sets a specified start time for beginning of data transmission
+clients.seedlink.client	SeedLinkConnection	set_begin_time	start_time_string	sets begin_time for initiation of continuous data transmission
+clients.seedlink.client	SeedLinkConnection	set_end_time	end_time_string	sets end_time for termination of data transmission
+clients.seedlink.client	SeedLinkConnection	terminate		sets terminate flag closes connection and clears state
+clients.seedlink.client	SeedLinkConnection	get_sl_address		returns the host port of the seedlink server
+clients.seedlink.client	SeedLinkConnection	get_streams		returns a copy of the vector of slnetstation objects
+clients.seedlink.client	SeedLinkConnection	get_info_string		returns the results of the last info request
+clients.seedlink.client	SeedLinkConnection	check_slcd		check this seedlinkconnection description has valid parameters
+clients.seedlink.client	SeedLinkConnection	read_stream_list	streamfile defselect	read a list of streams and selectors from a file and add them to the stream chain for configuring a multi-station connection
+clients.seedlink.client	SeedLinkConnection	parse_stream_list	streamlist defselect	parse a string of streams and selectors and add them to the stream chain for configuring a multi-station connection
+clients.seedlink.client	SeedLinkConnection	add_stream	net station selectors_str seqnum	add a new stream entry to the stream chain for the given net/station parameters
+clients.seedlink.client	SeedLinkConnection	set_uni_params	selectors_str seqnum timestamp	set the parameters for a uni-station mode connection for the given slcd struct
+clients.seedlink.client	SeedLinkConnection	set_state_file	statefile	set the state file and recover state
+clients.seedlink.client	SeedLinkConnection	recover_state	statefile	recover the state file and put the sequence numbers and time stamps into the pre-existing stream chain entries
+clients.seedlink.client	SeedLinkConnection	save_state	statefile	save all current sequence numbers and time stamps into the given state file
+clients.seedlink.client	SeedLinkConnection	do_terminate		terminate the collection loop
+clients.seedlink.client	SeedLinkConnection	collect		manage a connection to a seedlink server based on the values given in this seedlinkconnection and to collect data
+clients.seedlink.client	SeedLinkConnection	connect		open a network socket connection to a seedlink server expects sladdr
+clients.seedlink.client	SeedLinkConnection	disconnect		close the network socket associated with this connection
+clients.seedlink.client	SeedLinkConnection	close		closes this seedlinkconnection by closing the network socket and saving the state to the statefile if it exists
+clients.seedlink.client	SeedLinkConnection	is_connected_impl	sock timeout	check a socket for write ability using select() time-out values are also passed seconds for the select() call
+clients.seedlink.client	SeedLinkConnection	send_data	sendbytes code resplen	send bytes to the server this is only designed for small pieces of
+clients.seedlink.client	SeedLinkConnection	receive_data	maxbytes code	read bytes from the server
+clients.seedlink.client	SeedLinkConnection	say_hello		send the hello command and attempt to parse the server version number from the returned string
+clients.seedlink.client	SeedLinkConnection	request_info	info_level	add an info request to the seedlink connection description
+clients.seedlink.client	SeedLinkConnection	send_info_request	info_level verb_level	sends a request for the specified info level the verbosity level
+clients.seedlink.client	SeedLinkConnection	check_version	version	checks server version number against a given specified value
+clients.seedlink.client	SeedLinkConnection	config_link		configure/negotiate data stream s with the remote seedlink server
+clients.seedlink.client	SeedLinkConnection	negotiate_station	curstream	negotiate a seedlink connection for a single station and issue the data command
+clients.seedlink.client	SeedLinkConnection	negotiate_uni_station		negotiate a seedlink connection in uni-station mode and issue the data command
+clients.seedlink.client	SeedLinkConnection	negotiate_multi_station		negotiate a seedlink connection using multi-station mode and issue the end action command
+clients.seedlink.client	SeedLinkConnection	update_stream	slpacket	update the appropriate stream chain entry given a mini-seed record
+clients.seedlink.client	SLState	get_packet		returns last received packet
+clients.seedlink.client	SLState	packet_available		check for full packet available to send
+clients.seedlink.client	SLState	bytes_remaining		return number of bytes remaining in receiving buffer
+clients.seedlink.client	SLState	is_error		check for seedlink error packet
+clients.seedlink.client	SLState	is_end		check for seedlink end packet
+clients.seedlink.client	SLState	packet_is_info		check for seedlink info packet
+clients.seedlink.client	SLState	increment_send_pointer		increments the send pointer by size of one packet
+clients.seedlink.client	SLState	pack_data_buffer		packs the buffer by removing all sent packets and shifting remaining bytes to beginning of buffer
+clients.seedlink.client	SLState	append_bytes	bytes_	appends bytes to the receive buffer after the last received data
+clients.seedlink.client	SLNetStation	__init__	net station selectors seqnum	creates a new instance of slnetstation
+clients.seedlink.client	SLNetStation	append_selectors	new_selectors	appends a selectors string to the current selectors for this slnetstation
+clients.seedlink.client	SLNetStation	get_selectors		returns the selectors as an array of strings
+clients.seedlink.client	SLNetStation	get_sl_time_stamp		returns the time stamp in seedlink string format
+clients.earthworm		get_numpy_type	tpstr	given a tracebuf2 type string from header return appropriate numpy
+clients.earthworm	TraceBuf2	read_tb2	tb2	reads single tracebuf2 packet from beginning of input byte array tb
+clients.earthworm	TraceBuf2	parse_header	head	parse tracebuf header into class variables
+clients.earthworm	TraceBuf2	parse_data	dat	parse tracebuf char array data into self data
+clients.earthworm	TraceBuf2	get_obspy_trace		return class contents as obspy trace object
+clients.earthworm		send_sock_req	server port req_str timeout	sets up socket to server and port sends req_str
+clients.earthworm		get_sock_char_line	sock timeout	retrieves one newline terminated string from input open socket
+clients.earthworm		get_sock_bytes	sock nbytes timeout	listens for nbytes from open socket
+clients.earthworm		get_menu	server port scnl timeout	return list of tanks on server
+clients.earthworm		read_wave_server_v	server port scnl start	reads data for specified time interval and scnl on specified waveserverv
+clients.earthworm		trace_bufs2obspy_stream	tbuflist	returns obspy stream object from input list of tracebuf2 objects
+clients.earthworm	Client	__init__	host port timeout debug	initializes a earthworm wave server client
+clients.earthworm	Client	get_waveforms	network station location channel	retrieves waveform data from earthworm wave server and returns an obspy stream object
+clients.earthworm	Client	save_waveforms	filename network station location	writes a retrieved waveform directly into a file
+clients.earthworm	Client	get_availability	network station location channel	gets a list of data available on the server
+clients.filesystem	Client	__init__	sds_root sds_type format fileborder_seconds	initialize a sds local filesystem client
+clients.filesystem	Client	get_waveforms	network station location channel	read data from a local seiscomp data structure sds directory tree
+clients.filesystem	Client	_get_filenames	network station location channel	get list of filenames for certain waveform and time span
+clients.filesystem	Client	_get_filename	network station location channel	get filename for certain waveform
+clients.filesystem	Client	get_availability_percentage	network station location channel	get percentage of available data
+clients.filesystem	Client	_get_current_endtime	network station location channel	get time of last sample for given stream
+clients.filesystem	Client	get_latency	network station location channel	get latency for given stream i e difference of current time and
+clients.filesystem	Client	has_data	network station location channel	check if specified stream has any data
+clients.filesystem	Client	get_all_nslc	sds_type datetime	return information on what streams are included in archive
+clients.filesystem	Client	get_all_stations	sds_type	return information on what stations are included in archive
+clients.filesystem		_wildcarded_except	exclude	function factory for :mod re repl functions used in :func re sub,
+clients.iris	Client	__init__	base_url user password timeout	initializes the iris web service client
+clients.iris	Client	_fetch	service data headers param_list	send a http request via urllib2
+clients.iris	Client	_to_file_or_data	filename data binary	either writes data into a file if filename is given or directly returns it
+clients.iris	Client	timeseries	network station location channel	low-level interface for timeseries web service of iris (http //service
+clients.iris	Client	resp	network station location channel	low-level interface for resp web service of iris (http //service
+clients.iris	Client	sacpz	network station location channel	low-level interface for sacpz web service of iris (http //service
+clients.iris	Client	distaz	stalat stalon evtlat evtlon	low-level interface for distaz web service of iris (http //service
+clients.iris	Client	flinnengdahl	lat lon rtype	low-level interface for flinnengdahl web service of iris (http //service
+clients.iris	Client	traveltime	model phases evdepth distdeg	low-level interface for traveltime web service of iris (http //service
+clients.iris	Client	evalresp	network station location channel	low-level interface for evalresp web service of iris (http //service
+clients.syngine	Client	__init__	base_url user_agent debug timeout	initializes a syngine client
+clients.syngine	Client	get_model_info	model_name	get some information about a particular model
+clients.syngine	Client	get_available_models		get information about all available velocity models
+clients.syngine	Client	get_service_version		get the service version of the remote syngine server
+clients.syngine	Client	get_waveforms	model network station receiverlatitude	request waveforms using the syngine service
+clients.syngine	Client	get_waveforms_bulk	model bulk eventid sourcelatitude	request waveforms for multiple receivers simultaneously
+clients.arclink	Client	__init__	user host port password	initializes an arclink client
+clients.arclink	Client	get_waveforms	network station location channel	retrieves waveform data via arclink and returns an obspy stream object
+clients.arclink	Client	save_waveforms	filename network station location	writes a retrieved waveform directly into a file
+clients.arclink	Client	get_routing	network station starttime endtime	get primary arclink host for given network/stations/time combination
+clients.arclink	Client	_find_route	routes request_data	searches routing table for requested stream id and date/times
+clients.arclink	Client	get_qc	network station location channel	retrieve qc information of arclink streams
+clients.arclink	Client	get_metadata	network station location channel	returns poles zeros normalization factor and sensitivity and station coordinates for a single channel at a given time
+clients.arclink	Client	get_paz	network station location channel	returns poles zeros normalization factor and sensitivity for a single channel at a given time
+clients.arclink	Client	save_response	filename network station location	writes response information into a file
+clients.arclink	Client	get_inventory	network station location channel	returns information about the available networks and stations in that particular space/time region
+clients.arclink	Client	get_networks	starttime endtime route	returns a dictionary of available networks within the given time span
+clients.arclink	Client	get_stations	starttime endtime network route	returns a dictionary of available stations in the given network s
+clients.neic		asctime		returns the current time as a string hh mm ss
+clients.neic		ascdate		returns the current date at yy/mm/dd
+clients.neic		dsecs	dt	given a timedelta object compute it as double seconds
+clients.neic		get_property	filename key	given a property filename get the value of the given key
+clients.neic	Client	__init__	host port timeout debug	initializes access to a cwb queryserver
+clients.neic	Client	get_waveforms	network station location channel	gets a waveform for a specified net station location and channel from start time to end time
+clients.neic	Client	get_waveforms_nscl	seedname starttime duration	gets a regular expression of channels from a start time for a duration in seconds
+clients.fdsn	CustomRedirectHandler	redirect_request	req fp code msg	copied and modified from the standard library
+clients.fdsn	NoRedirectionHandler	redirect_request	req fp code msg	copied and modified from the standard library
+clients.fdsn	Client	__init__	base_url major_versions user password	initializes an fdsn web service client
+clients.fdsn	Client	get_events	starttime endtime minlatitude maxlatitude	query the event service of the client
+clients.fdsn	Client	get_stations	starttime endtime startbefore startafter	query the station service of the fdsn client
+clients.fdsn	Client	get_waveforms	network station location channel	query the dataselect service of the client
+clients.fdsn	Client	_attach_responses	st	helper method to fetch response via get_stations() and attach it to each trace in stream
+clients.fdsn	Client	get_waveforms_bulk	bulk quality minimumlength longestonly	query the dataselect service of the client bulk request
+clients.fdsn	Client	get_stations_bulk	bulk level includerestricted includeavailability	query the station service of the client bulk request
+clients.fdsn	Client	help	service	print a more extensive help for a given service
+clients.fdsn	Client	_build_url	service resource_type parameters	builds the correct url
+clients.fdsn	Client	_discover_services		automatically discovers available services
+clients.fdsn	Client	get_webservice_version	service	get full version information of webservice as a tuple of ints
+clients.fdsn	Client	_get_webservice_versionstring	service	get full version information of webservice as a string
+clients.fdsn		convert_to_string	value	takes any value and converts it to a string compliant with the fdsn webservices
+clients.fdsn		build_url	base_url service major_version resource_type	url builder for the fdsn webservices
+clients.fdsn		download_url	url opener timeout headers	returns a pair of tuples
+clients.fdsn		parse_simple_xml	xml_string	simple helper function for parsing the catalog and contributor availability files
+clients.fdsn	WADLParser	_convert_boolean	boolean_string	helper function for boolean value conversion
+clients.fdsn	WADLParser	_xpath	doc expr	simple helper method for using xpaths with the default namespace
+clients.fdsn.mass_downloader	Domain	get_query_parameters		return the domain specific query parameters for the :meth ~obspy
+clients.fdsn.mass_downloader	Domain	is_in_domain	latitude longitude	returns true/false depending on the point being in the domain
+clients.fdsn.mass_downloader	Station	has_existing_or_downloaded_time_intervals		returns true if any of the station's time intervals have status "downloaded" or "exists"
+clients.fdsn.mass_downloader	Station	has_existing_time_intervals		returns true if any of the station's time intervals already exist
+clients.fdsn.mass_downloader	Station	remove_files	logger reason	delete all files under it only delete stuff that actually has been
+clients.fdsn.mass_downloader	Station	stationxml_filename	value	setter creating the directory for the file if it does not already exist
+clients.fdsn.mass_downloader	Station	temporal_bounds		return the temporal bounds for the station
+clients.fdsn.mass_downloader	Station	prepare_stationxml_download	stationxml_storage logger	figure out what to download
+clients.fdsn.mass_downloader	Station	prepare_mseed_download	mseed_storage	loop through all channels of the station and distribute filenames and the current status of the channel
+clients.fdsn.mass_downloader	Station	sanitize_downloads	logger	should be run after the miniseed and stationxml downloads finished
+clients.fdsn.mass_downloader	Channel	needs_station_file		determine if the channel requires any station information
+clients.fdsn.mass_downloader	Channel	temporal_bounds		returns a tuple of the minimum start time and the maximum end time
+clients.fdsn.mass_downloader	ClientDownloadHelper	prepare_mseed_download		prepare each station for the miniseed downloading stage
+clients.fdsn.mass_downloader	ClientDownloadHelper	filter_stations_based_on_minimum_distance	existing_client_dl_helpers	removes stations until all stations have a certain minimum distance to each other
+clients.fdsn.mass_downloader	ClientDownloadHelper	prepare_stationxml_download		prepare each station for the stationxml downloading stage
+clients.fdsn.mass_downloader	ClientDownloadHelper	download_stationxml	threads	actually download the stationxml files
+clients.fdsn.mass_downloader	ClientDownloadHelper	download_mseed	chunk_size_in_mb threads_per_client	actually download miniseed data
+clients.fdsn.mass_downloader	ClientDownloadHelper	_remove_failed_and_ignored_stations		removes all stations that have no time interval with either exists or downloaded status
+clients.fdsn.mass_downloader	ClientDownloadHelper	sanitize_downloads		should be run after the miniseed and stationxml downloads finished
+clients.fdsn.mass_downloader	ClientDownloadHelper	_check_downloaded_data		read the downloaded data set the proper status flags and remove data that does not meet the qc criteria
+clients.fdsn.mass_downloader	ClientDownloadHelper	discard_stations	existing_client_dl_helpers	discard all stations part of any of the already existing client download helper instances
+clients.fdsn.mass_downloader	ClientDownloadHelper	get_availability		queries the current client for information on what stations are available given the spatial and temporal restrictions
+clients.fdsn.mass_downloader	MassDownloader	download	domain restrictions mseed_storage stationxml_storage	launch the actual data download
+clients.fdsn.mass_downloader	MassDownloader	_initialize_clients		initialize all clients
+clients.fdsn.mass_downloader	Restrictions	__iter__		iterator yielding time intervals based on the chunklength and temporal settings
+clients.fdsn.mass_downloader		download_stationxml	client client_name bulk filename	download all channels for a station in the already prepared bulk list
+clients.fdsn.mass_downloader		download_and_split_mseed_bulk	client client_name chunks logger	downloads the channels of a list of stations in bulk saves it to a temporary folder and splits it at the record level to obtain the final
+clients.fdsn.mass_downloader	SphericalNearestNeighbour	spherical2cartesian	data	converts a list of :class ~obspy fdsn download_status station
+clients.fdsn.mass_downloader		filter_channel_priority	channels key priorities	this function takes a dictionary containing channels keys and returns a new one filtered with the given priorities list
+clients.fdsn.mass_downloader		safe_delete	filename	"safely" delete a file it really just checks if it exists and if it is a
+clients.fdsn.mass_downloader		get_stationxml_contents	filename	really fast way to get all channels with a response in a stationxml file
+clients.fdsn.mass_downloader		get_stationxml_filename	str_or_fct network station channels	helper function getting the filename of a stationxml file
+clients.fdsn.mass_downloader		get_mseed_filename	str_or_fct network station location	helper function getting the filename of a miniseed file
+clients.seishub		_objectify_result_to_dicts	root	:type root :class lxml objectify objectifiedelement
+clients.seishub	Client	__init__	base_url user password timeout	initializes the seishub web service client
+clients.seishub	Client	ping		ping the seishub server
+clients.seishub	Client	test_auth		test if authentication information is valid raises an exception if
+clients.seishub	Client	_http_request	url method xml_string headers	send a http request via urllib2
+clients.seishub	_BaseRESTClient	get_resource	resource_name format	gets a resource
+clients.seishub	_BaseRESTClient	get_xml_resource	resource_name	gets a xml resource
+clients.seishub	_BaseRESTClient	put_resource	resource_name xml_string headers	puts a xml resource
+clients.seishub	_BaseRESTClient	delete_resource	resource_name headers	deletes a xml resource
+clients.seishub	_WaveformMapperClient	get_network_ids		gets a list of network ids
+clients.seishub	_WaveformMapperClient	get_station_ids	network	gets a list of station ids
+clients.seishub	_WaveformMapperClient	get_location_ids	network station	gets a list of location ids
+clients.seishub	_WaveformMapperClient	get_channel_ids	network station location	gets a list of channel ids
+clients.seishub	_WaveformMapperClient	get_latency	network station location channel	gets a list of network latency values
+clients.seishub	_WaveformMapperClient	get_waveforms	network station location channel	gets a obspy stream object
+clients.seishub	_WaveformMapperClient	get_previews	network station location channel	gets a preview of a obspy stream object
+clients.seishub	_WaveformMapperClient	get_previews_by_ids	trace_ids starttime endtime	gets a preview of a obspy stream object
+clients.seishub	_StationMapperClient	get_list	network station	gets a list of station information
+clients.seishub	_StationMapperClient	get_coordinates	network station datetime location	get coordinate information
+clients.seishub	_StationMapperClient	get_paz	seed_id datetime	get paz for a station at given time span gain is the a0 normalization
+clients.seishub	_EventMapperClient	get_list	limit offset localisation_method author	gets a list of event information
+clients.seishub	_EventMapperClient	get_events		fetches a catalog with event information parameters to narrow down
+clients.seishub	_EventMapperClient	get_kml	nolabels	posts an event get_list() and returns the results as a kml file for
+clients.seishub	_EventMapperClient	save_kml	filename overwrite	posts an event get_list() and writes the results as a kml file for
+imaging		_nearest_pow_2	x	find power of two nearest to x >>> _nearest_pow_2 3
+imaging		spectrogram	data samp_rate per_lap wlen	computes and plots spectrogram of the input data
+imaging		decimal_seconds_format_x_decimals	decimals	function factory for format functions to format date ticklabels with given number of decimals to seconds stripping trailing zeros
+imaging		decimal_seconds_format_date_first_tick	x pos	this format function is used to format date ticklabels with decimal seconds but stripping trailing zeros
+imaging		format_hour_minute	x pos	format tick like '%h %m' but add date to first tick
+imaging		format_hour_minute_second	x pos	format tick like '%h %m %s' but add date to first tick
+imaging		_id_key	id_	compare two trace ids by network/station/location single character component codes according to sane zne/zrt/lqt order
+imaging		_component_code_key	val	compare two single character component codes according to sane zne/zrt/lqt order
+imaging		_timestring	t	returns a full string representation of a :class ~obspy
+imaging	WaveformPlotting	__init__		checks some variables and maps the kwargs to class variables
+imaging	WaveformPlotting	__del__		destructor closes the figure instance if it has been created by the class
+imaging	WaveformPlotting	plot_waveform		creates a graph of any given obspy stream object it either saves the
+imaging	WaveformPlotting	plot		plot the traces showing one graph per trace
+imaging	WaveformPlotting	plot_day		extend the seismogram
+imaging	WaveformPlotting	_plot_event	event	helper function to plot an event into the dayplot
+imaging	WaveformPlotting	_plot_dayplot_scale	unit	plots the dayplot scale if requested
+imaging	WaveformPlotting	__plot_straight	trace ax	just plots the data samples in the self stream useful for smaller
+imaging	WaveformPlotting	__plot_min_max	trace ax	plots the data using a min/max approach that calculated the minimum and maximum values of each "pixel" and then plots only these values
+imaging	WaveformPlotting	__plot_set_x_ticks		goes through all axes in pyplot and sets time ticks on the x axis
+imaging	WaveformPlotting	__dayplot_get_min_max_values		takes a stream object and calculates the min and max values for each pixel in the dayplot
+imaging	WaveformPlotting	__dayplot_normalize_values		normalizes all values in the 3 dimensional array so that the minimum value will be 0 and the maximum value will be 1
+imaging	WaveformPlotting	__dayplot_set_x_ticks		sets the xticks for the dayplot
+imaging	WaveformPlotting	__dayplot_set_y_ticks		sets the yticks for the dayplot
+imaging	WaveformPlotting	plot_section		plots multiple waveforms as a record section on a single plot
+imaging	WaveformPlotting	__sect_init_traces		arrange the trace data used for plotting
+imaging	WaveformPlotting	__sect_scale_traces		the traces have to be scaled to fit between 0-1 each trace
+imaging	WaveformPlotting	__sect_init_time		define the time vector for each trace
+imaging	WaveformPlotting	__sect_init_color		define the color of each trace
+imaging	WaveformPlotting	__sect_fraction_to_offset	fraction	helper function to return fractions from offsets
+imaging	WaveformPlotting	__sect_init_plot		function initialises plot all the illustration is done by self
+imaging	WaveformPlotting	__sect_normalize_traces		this helper function normalizes the traces
+imaging	WaveformPlotting	__setup_figure		the design and look of the whole plot to be produced
+imaging	WaveformPlotting	_warn_on_xaxis_zoom	ax	method to be used as a callback on method=fast, "minmax"-type plots to warn the user when zooming into the plot
+imaging		_setup_figure_and_axes	kind fig subplot_size	setup figure for event plot
+imaging		plot_radiation_pattern	mt kind coordinate_system p_sphere_direction	plot the p/s farfield radiation pattern on a unit sphere grid
+imaging		_plot_radiation_pattern_sphere	ax3d ned_mt type p_sphere_direction	private function that plots a radiation pattern sphere into an :class ~mpl_toolkits
+imaging		_plot_radiation_pattern_quiver	ax3d ned_mt type	private routine that plots the wave farfield into an :class ~mpl_toolkits
+imaging		_plot_beachball	ax2d rtp_mt	private function that plots a beachball into a 2d matplotlib :class ~matplotlib
+imaging		_plot_radiation_pattern_mayavi	ned_mt	plot the radiation pattern using mayavi
+imaging		_oriented_uv_sphere	ntheta nphi orientation	returns a uv sphere (equidistant lat/lon grid) with its north-pole rotated to the input axis
+imaging		_equalarea_spherical_grid	nlat	generates a simple spherical equalarea grid that adjust the number of longitude samples to the latitude
+imaging		plot_basemap	lons lats size color	creates a basemap plot with a data point scatter plot
+imaging		_plot_basemap_into_axes	ax lons lats size	creates a or adds to existing basemap plot with a data point scatter plot in given axes
+imaging		plot_cartopy	lons lats size color	creates a cartopy plot with a data point scatter plot
+imaging		plot_map	method	creates a map plot with a data point scatter plot
+imaging		beach	fm linewidth facecolor bgcolor	return a beach ball as a collection which can be connected to an current matplotlib axes instance (ax
+imaging		beachball	fm linewidth facecolor bgcolor	draws a beach ball diagram of an earthquake focal mechanism based on
+imaging		beach	fm linewidth facecolor bgcolor	return a beach ball as a collection which can be connected to an current matplotlib axes instance (ax
+imaging		beachball	fm linewidth facecolor bgcolor	draws a beach ball diagram of an earthquake focal mechanism
+imaging		plot_mt	T N P size	uses a principal axis t n and p to draw a beach ball plot
+imaging		plot_dc	np1 size xy width	uses one nodal plane of a double couple to draw a beach ball plot
+imaging		strike_dip	n e u	finds strike and dip of plane given normal vector having components n e and u
+imaging		aux_plane	s1 d1 r1	get strike and dip of second plane
+imaging		mt2plane	mt	calculates a nodal plane of a given moment tensor
+imaging		tdl	an bn	helper function for mt2plane
+imaging		mt2axes	mt	calculates the principal axes of a given moment tensor
+imaging		_get_cmap	file_name lut reverse	load a :class ~matplotlib colors linearsegmentedcolormap from
+imaging		_get_all_cmaps		return all colormaps in "obspy/imaging/data" directory including reversed versions
+imaging		_colormap_plot_overview	colormap_names	overview bar plot adapted after http //scipy-cookbook
+imaging		_colormap_plot_ppsd	cmaps	plot for illustrating colormaps ppsd
+imaging		_colormap_plot_array_response	cmaps	plot for illustrating colormaps array response
+imaging		_colormap_plot_cwt	cmaps	plot for illustrating colormaps cwt
+imaging		_colormap_plot_similarity	cmaps	plot for illustrating colormaps similarity matrix
+imaging		_colormap_plot_beamforming_time	cmaps	plot for illustrating colormaps beamforming
+imaging		_colormap_plot_beamforming_polar	cmaps	plot for illustrating colormaps beamforming
+imaging.scripts	MomentTensor	__init__	M system debug	creates a moment tensor object on the basis of a provided mechanism m
+imaging.scripts	MomentTensor	_setup_M	mech	brings the provided mechanism into symmetric 3x3 matrix form
+imaging.scripts	MomentTensor	_rotate_2_NED		rotates the mechanism to the basis ned
+imaging.scripts	MomentTensor	_decompose_M		running the decomposition of the moment tensor object
+imaging.scripts	MomentTensor	_standard_decomposition		decomposition according aki & richards and jost & herrmann into isotropic + deviatoric
+imaging.scripts	MomentTensor	_decomposition_w_2DC		decomposition according aki & richards and jost & herrmann into isotropic + deviatoric
+imaging.scripts	MomentTensor	_decomposition_w_3DC		decomposition according aki & richards and jost & herrmann into - isotropic
+imaging.scripts	MomentTensor	_M_to_principal_axis_system		read in matrix m and set up eigenvalues ew and eigenvectors ev for setting up the principal axis system
+imaging.scripts	MomentTensor	_find_faultplanes		sets the two angle-triples describing the faultplanes of the double couple defined by the eigenvectors p and t of the
+imaging.scripts	MomentTensor	_find_strike_dip_rake	rotation_matrix	returns angles strike dip slip-rake in degrees describing the fault plane
+imaging.scripts	MomentTensor	_cvec	x y z	builds a column vector matrix type from a 3 tuple
+imaging.scripts	MomentTensor	_matrix_to_euler	rotmat	returns three euler angles alpha beta gamma in radians from a rotation matrix
+imaging.scripts	MomentTensor	_unique_euler	alpha beta gamma	uniquify euler angle triplet
+imaging.scripts	MomentTensor	_matrix_w_style_and_system	M2return system style	gives the provided matrix in the desired basis system
+imaging.scripts	MomentTensor	_vector_w_style_and_system	vectors system style	gives the provided vector s in the desired basis system
+imaging.scripts	MomentTensor	get_M	system style	returns the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_decomposition	in_system out_system style	returns a tuple of the decomposition results
+imaging.scripts	MomentTensor	get_full_decomposition		nice compilation of decomposition result to be viewed in the shell (call with 'print')
+imaging.scripts	MomentTensor	_fault_planes_as_str		internal setup of a nice string containing information about the fault planes
+imaging.scripts	MomentTensor	get_input_system	style	returns the basis system of the input
+imaging.scripts	MomentTensor	get_output_system	style	returns the basis system of the input
+imaging.scripts	MomentTensor	get_decomp_type	style	returns the decomposition type
+imaging.scripts	MomentTensor	get_iso	system style	returns the isotropic part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_devi	system style	returns the deviatoric part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC	system style	returns the double couple part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC2	system style	returns the second double couple part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC3	system style	returns the third double couple part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_CLVD	system style	returns the clvd part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC_percentage	system style	returns the percentage of the dc part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_CLVD_percentage	system style	returns the percentage of the dc part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC2_percentage	system style	returns the percentage of the second dc part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_DC3_percentage	system style	returns the percentage of the third dc part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_iso_percentage	system style	returns the percentage of the isotropic part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_devi_percentage	system style	returns the percentage of the deviatoric part of the moment tensor in matrix representation
+imaging.scripts	MomentTensor	get_moment	system style	returns the seismic moment in nm of the moment tensor
+imaging.scripts	MomentTensor	get_mag	system style	returns the moment magnitude m_w of the moment tensor
+imaging.scripts	MomentTensor	get_decomposition_key	system style	10 = standard decomposition (jost & herrmann)
+imaging.scripts	MomentTensor	get_eigvals	system style	returns a list of the eigenvalues of the moment tensor
+imaging.scripts	MomentTensor	get_eigvecs	system style	returns the eigenvectors of the moment tensor
+imaging.scripts	MomentTensor	get_null_axis	system style	returns the neutral axis of the moment tensor
+imaging.scripts	MomentTensor	get_t_axis	system style	returns the tension axis of the moment tensor
+imaging.scripts	MomentTensor	get_p_axis	system style	returns the pressure axis of the moment tensor
+imaging.scripts	MomentTensor	get_transform_matrix	system style	returns the transformation matrix (input system to principal axis system
+imaging.scripts	MomentTensor	get_fps		returns a list of the two faultplane 3-tuples each showing strike dip slip-rake
+imaging.scripts	MomentTensor	get_colour_order		returns the value of the plotting order only important in beachball instances
+imaging.scripts		_return_matrix_vector_array	ma_ve_ar basis_change_matrix	generates the output for the functions yielding matrices vectors and arrays in new basis systems
+imaging.scripts		USE2NED	some_matrix_or_vector	function for basis transform from basis use to ned
+imaging.scripts		XYZ2NED	some_matrix_or_vector	function for basis transform from basis xyz to ned
+imaging.scripts		NWU2NED	some_matrix_or_vector	function for basis transform from basis nwu to ned
+imaging.scripts		NED2USE	some_matrix_or_vector	function for basis transform from basis ned to use
+imaging.scripts		XYZ2USE	some_matrix_or_vector	function for basis transform from basis xyz to use
+imaging.scripts		NED2XYZ	some_matrix_or_vector	function for basis transform from basis ned to xyz
+imaging.scripts		NED2NWU	some_matrix_or_vector	function for basis transform from basis ned to nwu
+imaging.scripts		USE2XYZ	some_matrix_or_vector	function for basis transform from basis use to xyz
+imaging.scripts		NWU2XYZ	some_matrix_or_vector	function for basis transform from basis use to xyz
+imaging.scripts		NWU2USE	some_matrix_or_vector	function for basis transform from basis use to xyz
+imaging.scripts		XYZ2NWU	some_matrix_or_vector	function for basis transform from basis use to xyz
+imaging.scripts		USE2NWU	some_matrix_or_vector	function for basis transform from basis use to xyz
+imaging.scripts		strikediprake_2_moments	strike dip rake	angles are defined as in jost&herman given in degrees
+imaging.scripts		fancy_matrix	m_in	returns a given 3x3 matrix or array in a cute way on the shell if you use 'print' on the return value
+imaging.scripts		fancy_vector	v	returns a given 3-vector or array in a cute way on the shell if you use 'print' on the return value
+imaging.scripts	BeachBall	ploBB	kwargs ax	plots the projection of the beachball onto a unit sphere
+imaging.scripts	BeachBall	save_BB	kwargs	saves the 2d projection of the beachball without plotting
+imaging.scripts	BeachBall	_just_save_bb		saves the beachball unit sphere plot into a given file
+imaging.scripts	BeachBall	get_psxy	kwargs	returns one string to be piped into psxy of gmt
+imaging.scripts	BeachBall	_add_2_GMT_string	FH_string curve colour	writes coordinate pair list of given curve as string into temporal file handler
+imaging.scripts	BeachBall	_set_GMT_attributes		set the beachball lines and nodals as strings into a file handler
+imaging.scripts	BeachBall	get_MT		returns the original moment tensor object handed over to the class at generating this instance
+imaging.scripts	BeachBall	full_sphere_plot	kwargs	plot of the full beachball projected on a circle with a radius 2
+imaging.scripts	BeachBall	_aux_plot		generates the final plot of the total sphere (according to the chosen 2d-projection
+imaging.scripts	BeachBall	pa_plot	kwargs	plot of the solution in the principal axes system
+imaging.scripts	BeachBall	_set_standard_attributes		sets default values of mandatory arguments
+imaging.scripts	BeachBall	_update_attributes	kwargs	makes an internal update of the object's attributes with the provided list of keyword arguments
+imaging.scripts	BeachBall	_setup_BB	unit_circle	setup of the beachball when a plotting method is evoked
+imaging.scripts	BeachBall	_correct_curves		correcting potentially wrong curves
+imaging.scripts	BeachBall	_nodallines_in_NED_system		the two nodal lines between the areas on a beachball are given by the points where tan² alpha = (-ews/(ewn*cos phi **2 + ewh*sin phi **2))
+imaging.scripts	BeachBall	_identify_faultplanes		see if the 2 faultplanes given as attribute of the moment tensor object handed to this instance are consistent with
+imaging.scripts	BeachBall	_find_basis_change_2_new_viewpoint		finding the eulerian angles if you want to rotate an object
+imaging.scripts	BeachBall	_rotate_all_objects_2_new_view		rotate all relevant parts of the solution - namely the eigenvector-projections the 2 nodallines and the faultplanes
+imaging.scripts	BeachBall	_vertical_2D_projection		start the vertical projection of the 3d beachball onto the 2d plane
+imaging.scripts	BeachBall	_stereo_vertical		stereographic/azimuthal conformal 2d projection onto a plane tangent to the lowest point 0 0 1
+imaging.scripts	BeachBall	_orthographic_vertical		orthographic 2d projection onto a plane tangent to the lowest point 0 0 1
+imaging.scripts	BeachBall	_lambert_vertical		lambert azimuthal equal-area 2d projection onto a plane tangent to the lowest point 0 0 1
+imaging.scripts	BeachBall	_gnomonic_vertical		gnomonic 2d projection onto a plane tangent to the lowest point 0 0 1
+imaging.scripts	BeachBall	_build_circles		sets two sets of points describing the unit sphere and the outer circle with r=2
+imaging.scripts	BeachBall	_sort_curve_points	curve	checks if curve points are in right order for line plotting
+imaging.scripts	BeachBall	_smooth_curves		corrects curves for potential large gaps resulting in strange intersection lines on nodals of round and irreagularly shaped
+imaging.scripts	BeachBall	_check_curve_in_curve		checks if one of the two nodallines contains the other one completely
+imaging.scripts	BeachBall	_point_inside_polygon	x y poly	determine if a point is inside a given polygon or not
+imaging.scripts	BeachBall	_pnpoly	verts point	check whether point is in the polygon defined by verts
+imaging.scripts	BeachBall	_projection_2_unit_sphere		brings the complete solution from stereographic projection onto the unit sphere by just shrinking the maximum radius of
+imaging.scripts	BeachBall	_plot_US	ax	generates the final plot of the beachball projection on the unit sphere
+imaging.scripts	BeachBall	_setup_plot_US	plt ax	setting up the figure with the final plot of the unit sphere
+imaging.scripts		compress_start_end	x stop_iteration merge_overlaps margin_in_seconds	compress 2-dimensional array of piecewise continuous start/end time pairs in matplotlib date numbers by merging overlapping and exactly fitting
+imaging.scripts	Scanner	__init__	format verbose recursive ignore_links	see :class ~obspy imaging scripts scan scanner
+imaging.scripts	Scanner	plot	outfile show fig plot_x	plot the information on parsed waveform files
+imaging.scripts	Scanner	analyze_parsed_data	print_gaps starttime endtime seed_ids	prepare information for plotting
+imaging.scripts	Scanner	load_npz	filename	load information on scanned data from npz file
+imaging.scripts	Scanner	save_npz	filename	save information on scanned data to npz file
+imaging.scripts	Scanner	parse	path recursive ignore_links	parse file/directory and store information on encountered waveform files
+imaging.scripts	Scanner	add_stream	stream	add information of provided stream to scanner object
+imaging.scripts		scan	paths format verbose recursive	:type plot bool or str

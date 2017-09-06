@@ -1,0 +1,1006 @@
+core		_add_doc	func doc	add documentation to a function
+core		_import_module	name	import module returning the module after the last dot
+core		add_move	move	add an item to six moves
+core		remove_move	name	remove item from six moves
+core		with_metaclass	meta	create a base class with a metaclass
+core		add_metaclass	metaclass	class decorator for creating a class with a metaclass
+SimDivFilters	TopNOverallPicker	__init__	numToPick probeFps dataSet simMetric	dataset should be a sequence of bitvectors
+SimDivFilters	SpreadPicker	__init__	numToPick probeFps dataSet simMetric	dataset should be a sequence of bitvectors or if expectpickles
+SimDivFilters		load_tests	loader tests ignore	add the doctests from the module
+Dbase		_take	fromL what	given a list froml returns an iterator of the elements specified using their
+Dbase		GetColumns	dBase table fieldString user	gets a set of data from a table
+Dbase		GetData	dBase table fieldString whereString	a more flexible method to get a set of data from a table **arguments**
+Dbase		DatabaseToText	dBase table fields join	pulls the contents of a database and makes a deliminted text file from them **arguments**
+Dbase		TypeFinder	data nRows nCols nullMarker	finds the types of the columns in _data_ if nullmarker is not none elements of the data table which are
+Dbase		_AdjustColHeadings	colHeadings maxColLabelLen	*for internal use* removes illegal characters from column headings
+Dbase		GetTypeStrings	colHeadings colTypes keyCol	returns a list of sql type strings
+Dbase		_AddDataToDb	dBase table user password	*for internal use*
+Dbase		TextFileToDatabase	dBase table inF delim	loads the contents of the text file into a database
+Dbase		DatabaseToDatabase	fromDb fromTbl toDb toTbl	fix at the moment this is a hack
+Dbase	TestCase	test1Txt		test reading from a text file
+Dbase	TestCase	test3Txt		test reading from a text file including null markers
+Dbase	TestCase	testGetData2		using a randomaccessdbresultset
+Dbase	TestCase	testGetData3		using a dbresultset
+Dbase	TestCase	testGetData4		using a randomaccessdbresultset with a transform
+Dbase	TestCase	testGetData5		using a dbresultset with a transform
+Dbase		GetDbNames	user password dirName dBase	returns a list of databases that are available
+Dbase		GetTableNames	dBase user password includeViews	returns a list of tables available in a database
+Dbase		GetColumnNamesAndTypes	dBase table user password	gets a list of columns available in a db table along with their types
+Dbase		GetColumnNames	dBase table user password	gets a list of columns available in a db table
+Dbase	DbConnect	GetTableNames	includeViews	gets a list of tables available in a database **arguments**
+Dbase	DbConnect	GetColumnNames	table join what where	gets a list of columns available in the current table **returns**
+Dbase	DbConnect	GetColumnNamesAndTypes	table join what where	gets a list of columns available in the current table along with their types **returns**
+Dbase	DbConnect	GetColumns	fields table join	gets a set of data from a table **arguments**
+Dbase	DbConnect	GetData	table fields where removeDups	a more flexible method to get a set of data from a table **arguments**
+Dbase	DbConnect	GetDataCount	table where join	returns a count of the number of results a query will return **arguments**
+Dbase	DbConnect	GetCursor		returns a cursor for direct manipulation of the db
+Dbase	DbConnect	KillCursor		closes the cursor
+Dbase	DbConnect	AddTable	tableName colString	adds a table to the database
+Dbase	DbConnect	InsertData	tableName vals	inserts data into a table
+Dbase	DbConnect	InsertColumnData	tableName columnName value where	inserts data into a particular column of the table
+Dbase	DbConnect	AddColumn	tableName colName colType	adds a column to a table
+Dbase	DbConnect	Commit		commits the current transaction
+Dbase		ValidateRDId	ID	returns whether or not an rdid is valid
+Dbase		RDIdToInt	ID validate	returns the integer index for a given rdid throws a valueerror on error
+Dbase		IndexToRDId	idx leadText	converts an integer index into an rdid the format of the id is
+Dbase		GetNextId	conn table idColName	returns the next available id in the database
+Dbase		GetNextRDId	conn table idColName leadText	returns the next available rdid in the database
+Dbase		RegisterItem	conn table value columnName	>>> from rdkit dbase dbconnection import dbconnect
+Dbase	TestCase	testAddTable		tests addtable and gettablenames functionalities
+Dbase	TestCase	testCursor		tests getcursor and gettablenames functionalities
+Dbase	TestCase	testGetData4		non random access
+Dbase	TestCase	testGetData5		using a randomaccessdbresultset with a transform
+Dbase	TestCase	testGetData6		using a dbresultset with a transform
+Dbase	TestCase	test_InsertColumnData		tests insertdata and insertcolumndata functionalities
+Dbase	DbResultBase	Reset		implement in subclasses
+Dbase	TestCase	test1		test indexing in ensure acceptable error conditions
+sping	Font	__cmp__	other	compare two fonts to see if they're the same
+sping	Canvas	__init__	size name	initialize the canvas and set default drawing parameters
+sping	Canvas	isInteractive		returns 1 if onclick onover and onkey events are possible 0 otherwise
+sping	Canvas	canUpdate		returns 1 if the drawing can be meaningfully updated over time (e g screen graphics), 0 otherwise (e g drawing to a file)
+sping	Canvas	clear		call this to clear and reset the graphics context
+sping	Canvas	flush		call this to indicate that any comamnds that have been issued but which might be buffered should be flushed to the screen
+sping	Canvas	save	file format	for backends that can be save to a file or sent to a stream create a valid file out of what's currently been
+sping	Canvas	setInfoLine	s	for interactive canvases displays the given string in the 'info line' somewhere where the user can probably see it
+sping	Canvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping	Canvas	fontHeight	font	find the height of one line of text baseline to baseline of the given font
+sping	Canvas	fontAscent	font	find the ascent height above base of the given font
+sping	Canvas	fontDescent	font	find the descent extent below base of the given font
+sping	Canvas	arcPoints	x1 y1 x2 y2	return a list of points approximating the given arc
+sping	Canvas	curvePoints	x1 y1 x2 y2	return a list of points approximating the given bezier curve
+sping	Canvas	drawMultiLineString	s x y font	breaks string into lines (on
+sping	Canvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping	Canvas	drawLines	lineList color width dash	draw a set of lines of uniform color and width linelist a list of x1 y1 x2 y2 line coordinates
+sping	Canvas	drawString	s x y font	draw a string starting at location x y
+sping	Canvas	drawCurve	x1 y1 x2 y2	draw a bezier curve with control points x1 y1 to x4 y4
+sping	Canvas	drawRect	x1 y1 x2 y2	draw the rectangle between x1 y1 and x2 y2 these should have x1<x2 and y1<y2
+sping	Canvas	drawRoundRect	x1 y1 x2 y2	draw a rounded rectangle between x1 y1 and x2 y2 with corners inset as ellipses with x radius rx and y radius ry these should have x1<x2 y1<y2 rx>0 and ry>0
+sping	Canvas	drawEllipse	x1 y1 x2 y2	draw an orthogonal ellipse inscribed within the rectangle x1 y1 x2 y2 these should have x1<x2 and y1<y2
+sping	Canvas	drawArc	x1 y1 x2 y2	draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees angles start with 0 to the right +x and increase counter-clockwise these should have x1<x2 and y1<y2
+sping	Canvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping	Canvas	drawFigure	partList edgeColor edgeWidth fillColor	drawfigure partlist -- draws a complex figure partlist a set of lines curves and arcs defined by a tuple whose
+sping	Canvas	drawImage	image x1 y1 x2	draw a pil image into the specified rectangle if x2 and y2 are
+sping		getFileObject	file openFlags	common code for every canvas save() operation takes a string
+sping	AffineMatrix	rotate	theta	counter clockwise rotation in standard svg/libart coordinate system
+sping	Color	__init__	red green blue	initialize with red green blue in range [0-1]
+sping	Color	toHexRGB		convert the color back to an integer suitable for the
+sping		HexColor	val	this class converts a hex string or an actual integer number into the corresponding color
+sping	StringSegment	calcNewFont	font	given a font (does not accept font==none), creates a new font based on the format of this text segment
+sping	StringSegment	calcNewY	font y	returns a new y coordinate depending on its whether the string is a sub and super script
+sping	StringFormatter	handle_data	data	creates an intermediate representation of string segments
+sping	StringFormatter	parseSegments	s	given a formatted string will return a list of stringsegment objects with their calculated widths
+sping		fontHeight	canvas font	find the total height ascent + descent of the given font
+sping		fontAscent	canvas font	find the ascent height above base of the given font
+sping		fontDescent	canvas font	find the descent extent below base of the given font
+sping		stringWidth	canvas s font	return the logical width of the string if it were drawn in the current font defaults to canvas font
+sping		rotateXY	x y theta	rotate x y by theta degrees got tranformation from page 299 in linear algebra book
+sping		drawString	canvas s x y	draw a formatted string starting at location x y in canvas
+sping		allTagCombos	canvas x y font	try out all tags and various combinations of them \
+sping.WX	PiddleWxDc	_getWXcolor	color default	converts piddle colors to wx colors
+sping.WX	PiddleWxDc	_getWXbrush	color default_color	converts piddle colors to a wx brush
+sping.WX	PiddleWxDc	_getWXpen	width color default_color	converts piddle colors to a wx pen
+sping.WX	PiddleWxDc	_getWXfont	font	returns a wxfont roughly equivalent to the requested piddle font
+sping.WX	PiddleWxDc	_setWXfont	font	set/return the current font for the dc
+sping.WX	PiddleWxDc	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.WX	PiddleWxDc	fontHeight	font	find the total height ascent + descent of the given font
+sping.WX	PiddleWxDc	fontAscent	font	find the ascent height above base of the given font
+sping.WX	PiddleWxDc	fontDescent	font	find the descent extent below base of the given font
+sping.WX	PiddleWxDc	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.WX	PiddleWxDc	drawString	s x y font	draw a string starting at location x y
+sping.WX	PiddleWxDc	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.WX	PiddleWxDc	drawImage	image x1 y1 x2	draw a pil image into the specified rectangle if x2 and y2 are
+sping.WX	WXCanvas	__init__	size name status_bar interactive	works like all other piddle canvases except with extra interactive controls
+sping.WX	WXCanvas	_OnQuit	event	closes the canvas call to return control your application
+sping.WX	WXCanvas	_OnClear	event	clears the canvas by emptying the memory buffer and redrawing
+sping.WX	WXCanvas	isInteractive		returns 1 if onclick and onover events are possible 0 otherwise
+sping.WX	WXCanvas	canUpdate		returns 1 if the drawing can be meaningfully updated over time (e g
+sping.WX	WXCanvas	flush		copies the contents of the memory buffer to the screen and enters the
+sping.WX	WXCanvas	setInfoLine	s	for interactive canvases displays the given string in the 'info line' somewhere where the user can probably see it
+sping.util	HTMLPiddler	renderOn	aPiddleCanvas	draw the text with apiddlecanvas
+sping.Pyart	PyartCanvas	_findExternalFontName	font	attempts to return proper font name
+sping.PS		latin1FontEncoding	fontname	use this to generating ps code for re-encoding a font as isolatin1
+sping.PS	PsDSC	boundingBoxStr	x0 y0 x1 y1	coordinates of bbox in default ps coordinates
+sping.PS	PsDSC	BeginPageStr	pageSetupStr pageName	use this at the beginning of each page feed it your setup code in the form of a string of postscript
+sping.PS	PSCanvas	_psPageSetupStr	pageheight initialColor font_family font_size	ps code for settin up coordinate system for page in accords w/ piddle standards
+sping.PS	PSCanvas	_findExternalFontName	font	attempts to return proper font name
+sping.PS	PSCanvas	_psNextPage		advance to next page of document
+sping.PS	PSCanvas	clear		clear resets the canvas to it's default state though this
+sping.PS	PSCanvas	save	file format	write the current document to a file or stream and close the file computes any final trailers etc
+sping.PS	PSCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.PS	PSCanvas	drawString	s x y font	drawstring(self s x y font=none color=none angle=0)
+sping.PS	PSCanvas	drawRoundRect	x1 y1 x2 y2	draw a rounded rectangle between x1 y1 and x2 y2 with corners inset as ellipses with x radius rx and y radius ry these should have x1<x2 y1<y2 rx>0 and ry>0
+sping.PS	PSCanvas	drawEllipse	x1 y1 x2 y2	draw an orthogonal ellipse inscribed within the rectangle x1 y1 x2 y2 these should have x1<x2 and y1<y2
+sping.PS	PSCanvas	drawArc	x1 y1 x2 y2	draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees angles start with 0 to the right +x and increase counter-clockwise these should have x1<x2 and y1<y2
+sping.PS	PSCanvas	_genArcCode	x1 y1 x2 y2	calculate the path for an arc inscribed in rectangle defined by x1 y1 x2 y2
+sping.PS	PSCanvas	_drawImageLevel1	image x1 y1 x2	drawimage(self image x1 y1 x2=none y2=none) : if x2 and y2 are ommitted they are calculated from image size
+sping.PS	PSCanvas	_AsciiHexEncode	input	helper function used by images
+sping.Qt		_ColorToQt	color	convenience function for converting a sping pid color to a qt color
+sping.Qt	QtCanvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.Qt	QtCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.Qt	QtCanvas	stringBox	s font	return the logical width and height of the string if it were drawn in the current font defaults to self font
+sping.Qt	QtCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.Qt		_ColorToQt	color	convenience function for converting a sping pid color to a qt color
+sping.Qt	QtCanvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.Qt	QtCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.Qt	QtCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.SVG		_ColorToSVG	color	convenience function for converting a sping pid color to an svg color
+sping.SVG		_PointListToSVG	points dupFirst	convenience function for converting a list of points to a string
+sping.SVG	SVGCanvas	_findExternalFontName	font	attempts to return proper font name
+sping.SVG	SVGCanvas	_FormFontStr	font	form what we hope is a valid svg font string
+sping.SVG	SVGCanvas	_FormArcStr	x1 y1 x2 y2	forms an arc specification for svg
+sping.SVG	SVGCanvas	save	file format	hand hand this either a file= <filename> or file = <an open file object>
+sping.SVG	SVGCanvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.SVG	SVGCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.SVG	SVGCanvas	drawFigure	partList edgeColor edgeWidth fillColor	drawfigure partlist -- draws a complex figure partlist a set of lines curves and arcs defined by a tuple whose
+sping.SVG	SVGCanvas	drawImage	image x1 y1 x2	to the best of my knowledge the only real way to get an image into svg is to read it from a file
+sping.SVG	SVGCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.PIL	PILCanvas	_setColor	c	set the pen color from a piddle color
+sping.PIL	PILCanvas	save	file format	format may be a string specifying a file extension corresponding to an image file format
+sping.PIL	PILCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self defaultfont
+sping.PIL	PILCanvas	fontAscent	font	find the ascent height above base of the given font
+sping.PIL	PILCanvas	fontDescent	font	find the descent extent below base of the given font
+sping.PIL	PILCanvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.PIL	PILCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.PIL	PILCanvas	drawString	s x y font	draw a string starting at location x y
+sping.PIL	PILCanvas	drawImage	image x1 y1 x2	draw a pil image into the specified rectangle if x2 and y2 are
+sping.PDF		parseAFMfile	filename	returns an array holding the widths of all characters in the font
+sping.PDF	PDFCanvas	_resetDefaults		only used in setup - persist from page to page
+sping.PDF	PDFCanvas	showPage		ensure basic settings are the same after a page break
+sping.PDF	PDFCanvas	clear		not wll defined for file formats use same as showpage
+sping.PDF	PDFCanvas	save	file format	saves the file if holding data do
+sping.PDF	PDFCanvas	_updateLineColor	color	triggered when someone assigns to defaultlinecolor
+sping.PDF	PDFCanvas	_updateFillColor	color	triggered when someone assigns to defaultfillcolor
+sping.PDF	PDFCanvas	_updateLineWidth	width	triggered when someone assigns to defaultlinewidth
+sping.PDF	PDFCanvas	_updateFont	font	triggered when someone assigns to defaultfont
+sping.PDF	PDFCanvas	_findPostScriptFontName	font	attempts to return proper font name
+sping.PDF	PDFCanvas	_escape	s	pdf escapes are like python ones but brackets need slashes before them too
+sping.PDF	PDFCanvas	resetDefaults		if you drop down to a lower level piddle can lose track of the current graphics state
+sping.PDF	PDFCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.PDF	PDFCanvas	_endPath	path edgeColor fillColor	in piddle the edge and fil colors might be transparent and might also be none in which case they should be taken
+sping.PDF	PDFCanvas	drawLine	x1 y1 x2 y2	calls the underlying methods in pdfgen canvas for the
+sping.PDF	PDFCanvas	drawLines	lineList color width dash	draws several distinct lines all with same color
+sping.PDF	PDFCanvas	drawString	s x y font	as it says but many options to process it translates
+sping.PDF	PDFCanvas	drawCurve	x1 y1 x2 y2	this could do two totally different things if not closed
+sping.PDF	PDFCanvas	drawArc	x1 y1 x2 y2	this draws a pacman-type shape connected to the centre one
+sping.PDF	PDFCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	as it says easy with paths!
+sping.PDF	PDFCanvas	drawImage	image x1 y1 x2	draw a pil image or image filename into the specified rectangle
+sping.PDF	Canvas	__init__	filename pagesize bottomup	most of the attributes are private - we will use set/get methods as the preferred interface
+sping.PDF	Canvas	_escape	s	pdf escapes are like python ones but brackets need slashes before them too
+sping.PDF	Canvas	pageHasData		info function - app can call it after showpage to see if it needs a save
+sping.PDF	Canvas	showPage		this is where the fun happens
+sping.PDF	Canvas	save	filename fileobj	saves the pdf document to fileobj or to file with name filename
+sping.PDF	Canvas	setPageSize	size	accepts a 2-tuple in points for paper size for this
+sping.PDF	Canvas	transform	a b c d	how can python track this?
+sping.PDF	Canvas	rotate	theta	canvas rotate theta
+sping.PDF	Canvas	saveState		these need expanding to save/restore python's state tracking too
+sping.PDF	Canvas	restoreState		these need expanding to save/restore python's state tracking too
+sping.PDF	Canvas	line	x1 y1 x2 y2	as it says
+sping.PDF	Canvas	lines	linelist	as line(), but slightly more efficient for lots of them -
+sping.PDF	Canvas	grid	xlist ylist	lays out a grid in current line style suuply list of
+sping.PDF	Canvas	bezier	x1 y1 x2 y2	bezier curve with the four given control points
+sping.PDF	Canvas	arc	x1 y1 x2 y2	contributed to piddlepdf by robert kern 28/7/99
+sping.PDF	Canvas	rect	x y width height	draws a rectangle
+sping.PDF	Canvas	ellipse	x1 y1 x2 y2	uses bezierarc which conveniently handles 360 degrees -
+sping.PDF	Canvas	wedge	x1 y1 x2 y2	like arc but connects to the centre of the ellipse
+sping.PDF	Canvas	circle	x_cen y_cen r stroke	special case of ellipse
+sping.PDF	Canvas	roundRect	x y width height	draws a rectangle with rounded corners the corners are
+sping.PDF	Canvas	drawString	x y text	draws a string in the current text styles
+sping.PDF	Canvas	drawRightString	x y text	draws a string right-aligned with the y coordinate
+sping.PDF	Canvas	drawCentredString	x y text	draws a string right-aligned with the y coordinate i
+sping.PDF	Canvas	getAvailableFonts		returns the list of postscript font names available
+sping.PDF	Canvas	setFont	psfontname size leading	sets the font if leading not specified defaults to 1 2 x
+sping.PDF	Canvas	stringWidth	text fontname fontsize	gets width of a string in the given font and size
+sping.PDF	Canvas	setLineCap	mode	0=butt 1=round 2=square
+sping.PDF	Canvas	setLineJoin	mode	0=mitre 1=round 2=bevel
+sping.PDF	Canvas	setDash	array phase	two notations pass two numbers or an array and phase
+sping.PDF	Canvas	beginPath		returns a fresh path object
+sping.PDF	Canvas	drawPath	aPath stroke fill	draw in the mode indicated
+sping.PDF	Canvas	clipPath	aPath stroke fill	clip as well as drawing
+sping.PDF	Canvas	beginText	x y	returns a fresh text object
+sping.PDF	Canvas	drawText	aTextObject	draws a text object
+sping.PDF	Canvas	drawInlineImage	image x y width	draw a pil image into the specified rectangle if width and
+sping.PDF	Canvas	readJPEGInfo	image	read width height and number of components from jpeg file
+sping.PDF	Canvas	setPageCompression	onoff	possible values 1 or 0 (1 for 'on' is the default)
+sping.PDF	Canvas	setPageTransition	effectname duration direction dimension	pdf allows page transition effects for use when giving presentations
+sping.PDF	PDFPathObject	getCode		pack onto one line used internally
+sping.PDF	PDFPathObject	arc	x1 y1 x2 y2	contributed to piddlepdf by robert kern 28/7/99
+sping.PDF	PDFPathObject	arcTo	x1 y1 x2 y2	like arc but draws a line from the current point to the start if the start is not the current point
+sping.PDF	PDFPathObject	rect	x y width height	adds a rectangle to the path
+sping.PDF	PDFPathObject	ellipse	x y width height	adds an ellipse to the path
+sping.PDF	PDFPathObject	circle	x_cen y_cen r	adds a circle to the path
+sping.PDF	PDFPathObject	close		draws a line back to where it started
+sping.PDF	PDFTextObject	getCode		pack onto one line used internally
+sping.PDF	PDFTextObject	setTextTransform	a b c d	like settextorigin but does rotation scaling etc
+sping.PDF	PDFTextObject	moveCursor	dx dy	moves to a point dx dy away from the start of the current line - not from the current point! so if
+sping.PDF	PDFTextObject	getCursor		returns current text position relative to the last origin
+sping.PDF	PDFTextObject	getX		returns current x position relative to the last origin
+sping.PDF	PDFTextObject	getY		returns current y position relative to the last origin
+sping.PDF	PDFTextObject	setFont	psfontname size leading	sets the font if leading not specified defaults to 1 2 x
+sping.PDF	PDFTextObject	setCharSpace	charSpace	adjusts inter-character spacing
+sping.PDF	PDFTextObject	setWordSpace	wordSpace	adjust inter-word spacing this can be used
+sping.PDF	PDFTextObject	setHorizScale	horizScale	stretches text out horizontally
+sping.PDF	PDFTextObject	setLeading	leading	how far to move down at the end of a line
+sping.PDF	PDFTextObject	setTextRenderMode	mode	set the text rendering mode
+sping.PDF	PDFTextObject	setRise	rise	move text baseline up or down to allow superscrip/subscripts
+sping.PDF	PDFTextObject	textOut	text	prints string at current point text cursor moves across
+sping.PDF	PDFTextObject	textLine	text	prints string at current point text cursor moves down
+sping.PDF	PDFTextObject	textLines	stuff trim	prints multi-line or newlined strings moving down one
+sping.PDF		bezierArc	x1 y1 x2 y2	bezierarc(x1 y1 x2 y2 startang=0 extent=90) --> list of bezier curve control points
+sping.PDF		cacheImageFile	filename	processes the image as if for encoding saves to a file ending in ahx
+sping.PDF		preProcessImages	spec	accepts either a filespec ('c \mydir\* jpg') or a list
+sping.PDF		cachedImageExists	filename	determines if a cached image exists which has the same name and equal or newer date to the given
+sping.PDF		_escape	s	pdf escapes are almost like python ones but brackets need slashes before them too
+sping.PDF		_normalizeLineEnds	text desired	ensures all instances of cr lf and crlf end up as the specified one
+sping.PDF		_AsciiHexEncode	input	this is a verbose encoding used for binary data within a pdf file
+sping.PDF		_AsciiHexDecode	input	not used except to provide a test of the preceding
+sping.PDF		_AsciiHexTest	text	do the obvious test for whether ascii hex encoding works
+sping.PDF		_AsciiBase85Encode	input	this is a compact encoding used for binary data within a pdf file
+sping.PDF		_AsciiBase85Decode	input	this is not used - acrobat reader decodes for you - but a round trip is essential for testing
+sping.PDF		_AsciiBase85Test	text	do the obvious test for whether base 85 encoding works
+sping.PDF	PDFDocument	getPosition	key	tell you where the given object is in the file - used for cross-linking an object can call self
+sping.PDF	PDFDocument	setTitle	title	embeds in pdf file
+sping.PDF	PDFDocument	setAuthor	author	embedded in pdf file
+sping.PDF	PDFDocument	setSubject	subject	embeds in pdf file
+sping.PDF	PDFDocument	SaveToFileObject	fileobj	open a file and ask each object in turn to write itself to the file
+sping.PDF	PDFDocument	printPDF		prints it to standard output logs positions for doing trailer
+sping.PDF	PDFDocument	addPage	page	adds page and stream at end maintains pages list
+sping.PDF	PDFObject	save	file	save its content to an open file
+sping.PDF	PDFPage	setCompression	onoff	turns page compression on or off
+sping.PDF		MakeType1Fonts		returns a list of all the standard font objects
+sping.PDF		MakeFontDictionary	startpos count	returns a font dictionary assuming they are all in the file from startpos
+sping.ReportLab	RLCanvas	save	file format	hand this either a file= <filename> or file = <an open file object>
+sping.ReportLab	RLCanvas	_findPostScriptFontName	font	attempts to return proper font name
+sping.ReportLab	RLCanvas	drawLine	x1 y1 x2 y2	draw a straight line between x1 y1 and x2 y2
+sping.ReportLab	RLCanvas	drawCurve	x1 y1 x2 y2	draw a bezier curve with control points x1 y1 to x4 y4
+sping.ReportLab	RLCanvas	drawArc	x1 y1 x2 y2	draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees
+sping.ReportLab	RLCanvas	drawPolygon	pointlist edgeColor edgeWidth fillColor	drawpolygon pointlist -- draws a polygon
+sping.ReportLab	RLCanvas	drawImage	image x1 y1 x2	to the best of my knowledge the only real way to get an image
+sping.ReportLab	RLCanvas	stringWidth	s font	return the logical width of the string if it were drawn in the current font defaults to self font
+sping.examples	Test	saveToPostscript		save the whole canvas to a postscript file
+sping.TK	FontManager	getTkFontString	font	return a string suitable to pass as the -font option to
+sping.TK	FontManager	getTkFontName	font	return a the name associated with the piddle-style font
+sping.TK	FontManager	piddleToTkFont	font	return a tkfont instance based on the pid-style font
+sping.TK	TKCanvas	__init__	size name master scrollingViewPortSize	this canvas allows you to add a tk canvas with a sping api for drawing
+Chem		getStreamIO	sdfString	return a stringio/bytesio for the string
+Chem		NumValenceElectrons	mol	the number of valence electrons the molecule has >>> numvalenceelectrons(chem
+Chem		NumRadicalElectrons	mol	the number of radical electrons the molecule has says nothing about spin state
+Chem		AlignMolToTemplate2D	mol template match clearConfs	arguments - mol the molecule to be aligned
+Chem		_VertexDegrees	mat onlyOnes	*internal use only* this is just a row sum of the matrix
+Chem		_NumAdjacencies	mol dMat	*internal use only*
+Chem		_GetCountDict	arr	*internal use only*
+Chem		_pyHallKierAlpha	m	calculate the hall-kier alpha value for a molecule from equations 58 of rev
+Chem		Ipc	mol avg dMat forceDMat	this returns the information content of the coefficients of the characteristic polynomial of the adjacency matrix of a hydrogen-suppressed graph of a molecule
+Chem		_pyKappa1	mol	hall-kier kappa1 value from equations 58 and 59 of rev
+Chem		_pyKappa2	mol	hall-kier kappa2 value from equations 58 and 60 of rev
+Chem		_pyKappa3	mol	hall-kier kappa3 value from equations 58 61 and 62 of rev
+Chem		Chi0	mol	from equations 1 9 and 10 of rev comp chem vol 2 367-422 1991
+Chem		Chi1	mol	from equations 1 11 and 12 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi0v	mol	from equations 5 9 and 10 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi1v	mol	from equations 5 11 and 12 of rev comp chem vol 2 367-422 1991
+Chem		_pyChiNv_	mol order	from equations 5 15 and 16 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi2v	mol	from equations 5 15 and 16 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi3v	mol	from equations 5 15 and 16 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi4v	mol	from equations 5 15 and 16 of rev comp chem vol 2 367-422 1991
+Chem		_pyChi0n	mol	similar to hall kier chi0v but uses nval instead of valence this makes a big difference after we get out of the first row
+Chem		_pyChi1n	mol	similar to hall kier chi1v but uses nval instead of valence
+Chem		_pyChiNn_	mol order	similar to hall kier chinv but uses nval instead of valence this makes a big difference after we get out of the first row
+Chem		_pyChi2n	mol	similar to hall kier chi2v but uses nval instead of valence this makes a big difference after we get out of the first row
+Chem		_pyChi3n	mol	similar to hall kier chi3v but uses nval instead of valence this makes a big difference after we get out of the first row
+Chem		_pyChi4n	mol	similar to hall kier chi4v but uses nval instead of valence this makes a big difference after we get out of the first row
+Chem		BalabanJ	mol dMat forceDMat	calculate balaban's j value for a molecule **arguments**
+Chem		_AssignSymmetryClasses	mol vdList bdMat forceBDMat	used by bertzct
+Chem		_LookUpBondOrder	atom1Id atom2Id bondDic	used by bertzct
+Chem		_CalculateEntropies	connectionDict atomTypeDict numAtoms	used by bertzct
+Chem		_CreateBondDictEtc	mol numAtoms	_internal use only_
+Chem		BertzCT	mol cutoff dMat forceDMat	a topological index meant to quantify "complexity" of molecules
+Chem	SaltRemover	_initPatterns		>>> remover = saltremover() >>> len(remover
+Chem	SaltRemover	StripMol	mol dontRemoveEverything	>>> remover = saltremover(defndata="[cl br]") >>> len(remover
+Chem	SaltRemover	__call__	mol dontRemoveEverything	>>> remover = saltremover(defndata="[cl br]") >>> len(remover
+Chem		load_tests	loader tests ignore	add the doctests from the module
+Chem		FindMCS	mols minNumAtoms maximize atomCompare	find the maximum common substructure of a set of molecules in the simplest case pass in a list of molecules and get back
+Chem	TestCase	_testPkl10		testing 5k molecule pickles
+Chem	TestCase	testPkl1		testing single molecule pickle
+Chem	TestCase	testPkl2		further pickle tests
+Chem	TestCase	testPkl		testing molecule pickle
+Chem	TestCase	testRings		testing sssr handling
+Chem	TestCase	test2Setters		testing setting bond props
+Chem	TestCase	test3Props		testing bond props
+Chem	TestCase	test4Props2		testing more bond props
+Chem		TransformMol	mol tform confId keepConfs	applies the transformation usually a 4x4 double matrix to a molecule
+Chem		ComputeMolShape	mol confId boxDim spacing	returns a grid representation of the molecule's shape
+Chem		ComputeMolVolume	mol confId gridSpacing boxMargin	calculates the volume of a particular conformer of a molecule based on a grid-encoding of the molecular shape
+Chem		GetBestRMS	ref probe refConfId probeConfId	returns the optimal rms for aligning two molecules taking symmetry into account
+Chem		GetConformerRMS	mol confId1 confId2 atomIds	returns the rms between two conformations
+Chem		GetConformerRMSMatrix	mol atomIds prealigned	returns the rms matrix of the conformers of a molecule
+Chem		EnumerateLibraryFromReaction	reaction sidechainSets returnReactants	returns a generator for the virtual library defined by a reaction and a sequence of sidechain sets
+Chem		ConstrainedEmbed	mol core useTethers coreConfId	generates an embedding of a molecule where part of the molecule is constrained to have particular coordinates
+Chem		AssignBondOrdersFromTemplate	refmol mol	assigns bond orders to a molecule based on the bond orders in a template molecule
+Chem	TestCase	testLinear1		testing first batch of linear mols
+Chem	TestCase	testRings1		testing first batch of rings
+Chem	TestCase	testRings2		testing second batch of rings
+Chem	TestCase	testProblems		testing molecules which have been problematic
+Chem	TestCase	testHighSymmetry		testing tricky high-symmetry molecules
+Chem	TestCase	testFailures		expect failures -> testing molecules which are known to fail
+Chem		outputRedirect		redirect standard output and error to string io and return
+Chem		SATISTypes	mol neighborsToInclude	returns satis codes for all atoms in a molecule the satis definition used is from
+Chem	TestCase	test1		testing first 200 mols from nci
+Chem	TestCase	testIssue2183420		testing a problem with the acceptor definition
+Chem	TestCase_Regression	_regressionData	filename col	return entries form regression dataset
+Chem	MolViewer	InitializePyMol		does some initializations to set up pymol according to our
+Chem	MolViewer	DeleteAll		blows out everything in the viewer
+Chem	MolViewer	DeleteAllExcept	excludes	deletes everything except the items in the provided list of arguments
+Chem	MolViewer	LoadFile	filename name showOnly	calls pymol's "load" command on the given filename the loaded object
+Chem	MolViewer	ShowMol	mol name showOnly highlightFeatures	special case for displaying a molecule or mol block
+Chem	MolViewer	GetSelectedAtoms	whichSelection	returns the selected atoms
+Chem	MolViewer	SelectAtoms	itemId atomIndices selName	selects a set of atoms
+Chem	MolViewer	HighlightAtoms	indices where extraHighlight	highlights a set of atoms
+Chem	MolViewer	SetDisplayStyle	obj style	change the display style of the specified object
+Chem	MolViewer	SelectProteinNeighborhood	aroundObj inObj distance name	selects the area of a protein around a specified object/selection name
+Chem	MolViewer	AddPharmacophore	locs colors label sphereRad	adds a set of spheres
+Chem	MolViewer	GetAtomCoords	sels	returns the coordinates of the selected atoms
+Chem	MolViewer	DisplayHBonds	objName molName proteinName molSelText	toggles display of h bonds between the protein and a specified molecule
+Chem	MolViewer	DisplayCollisions	objName molName proteinName distCutoff	toggles display of collisions between the protein and a specified molecule
+Chem		_doMatch	inv atoms	helper function to check if all atoms in the list are the same
+Chem		_doNotMatch	inv atoms	helper function to check if all atoms in the list are not the same
+Chem		_doMatchExcept1	inv atoms	helper function to check if two atoms in the list are the same
+Chem		_getAtomInvariantsWithRadius	mol radius	helper function to calculate the atom invariants for each atom
+Chem		_getHeavyAtomNeighbors	atom1 aid2	helper function to calculate the number of heavy atom neighbors
+Chem		_getIndexforTorsion	neighbors inv	helper function to calculate the index of the reference atom for
+Chem		_getBondsForTorsions	mol ignoreColinearBonds	determine the bonds or pair of atoms treated like a bond for which torsions should be calculated
+Chem		CalculateTorsionLists	mol maxDev symmRadius ignoreColinearBonds	calculate a list of torsions for a given molecule for each torsion
+Chem		_getTorsionAtomPositions	atoms conf	helper function to retrieve the coordinates of the four atoms
+Chem		CalculateTorsionAngles	mol tors_list tors_list_rings confId	calculate the torsion angles for a list of non-ring and a list of ring torsions
+Chem		_findCentralBond	mol distmat	helper function to identify the atoms of the most central bond
+Chem		_calculateBeta	mol distmat aid1	helper function to calculate the beta for torsion weights according to the formula in the paper
+Chem		CalculateTorsionWeights	mol aid1 aid2 ignoreColinearBonds	calculate the weights for the torsions in a molecule
+Chem		CalculateTFD	torsions1 torsions2 weights	calculate the torsion deviation fingerprint tfd given two lists of torsion angles
+Chem		_getSameAtomOrder	mol1 mol2	generate a new molecule with the atom order of mol1 and coordinates from mol2
+Chem		GetTFDBetweenConformers	mol confIds1 confIds2 useWeights	wrapper to calculate the tfd between two list of conformers of a molecule
+Chem		GetTFDBetweenMolecules	mol1 mol2 confId1 confId2	wrapper to calculate the tfd between two molecules
+Chem		GetTFDMatrix	mol useWeights maxDev symmRadius	wrapper to calculate the matrix of tfd values for the conformers of a molecule
+Chem	TestCase	testBug12b		failures for bug12 which are actually related to bug14
+Chem	TestCase	testGithub112		problems with allchem getbestrms() and molecules with hs
+Chem	FilterMatcher	HasMatch	mol	return true if the filter matches the molecule
+Chem	FilterMatcher	GetMatches	mol matchVect	getmatches mol matchvect -> returns true if the filter matches by default this calls hasmatch and does not modify matchvect
+Chem	FilterMatcher	IsValid	mol	must override this function
+Chem	RecapHierarchyNode	GetAllChildren		returns a dictionary keyed by smiles of children
+Chem	RecapHierarchyNode	GetLeaves		returns a dictionary keyed by smiles of leaf terminal nodes
+Chem	RecapHierarchyNode	getUltimateParents		returns all the nodes in the hierarchy tree that contain this
+Chem		RecapDecompose	mol allNodes minFragmentSize onlyUseReactions	returns the recap decomposition for a molecule
+Chem		FindBRICSBonds	mol randomizeOrder silent	returns the bonds in a molecule that brics would cleave >>> from rdkit import chem
+Chem		BreakBRICSBonds	mol bonds sanitize silent	breaks the brics bonds in a molecule and returns the results >>> from rdkit import chem
+Chem		BRICSDecompose	mol allNodes minFragmentSize onlyUseReactions	returns the brics decomposition for a molecule >>> from rdkit import chem
+Chem	TestCase	testMatch		testing smarts match
+Chem	TestCase	testOrder		testing atom order in smarts match
+Chem		patchPandasHTMLrepr		patched default escaping of html control characters to allow molecule image rendering dataframes
+Chem		patchPandasHeadMethod	n	ensure inheritance of patched to_html in "head" subframe
+Chem		_get_image	x	displayhook function for pil images rendered as png
+Chem		_get_svg_image	mol size highlightAtoms	mol rendered as svg
+Chem		_molge	x y	allows for substructure check using the >= operator (x has substructure y -> x >= y) by
+Chem		PrintAsBase64PNGString	x renderer	returns the molecules as base64 encoded png image
+Chem		_MolPlusFingerprint	m	precomputes fingerprints and stores results in molecule objects to accelerate
+Chem		RenderImagesInAllDataFrames	images	changes the default dataframe rendering to not escape html characters thus allowing rendered images in all dataframes
+Chem		AddMoleculeColumnToFrame	frame smilesCol molCol includeFingerprints	converts the molecules contains in "smilescol" to rdkit molecules and appends them to the dataframe "frame" using the specified column name
+Chem		ChangeMoleculeRendering	frame renderer	allows to change the rendering of the molecules between base64 png images and string representations
+Chem		LoadSDF	filename idName molColName includeFingerprints	read file in sdf format and return as pandas data frame
+Chem		WriteSDF	df out molColName idName	write an sd file for the molecules in the dataframe dataframe columns can be exported as
+Chem		RemoveSaltsFromFrame	frame molCol	removes salts from mols in pandas dataframe's romol column
+Chem		SaveSMILESFromFrame	frame outFile molCol NamesCol	saves smi file smiles are generated from column with rdkit molecules column
+Chem		SaveXlsxFromFrame	frame outFile molCol size	saves pandas dataframe as a xlsx file with embedded images
+Chem		FrameToGridImage	frame column legendsCol	draw grid image of mols in pandas dataframe
+Chem		AddMurckoToFrame	frame molCol MurckoCol Generic	adds column with smiles of murcko scaffolds to pandas dataframe
+Chem		AlignMol	mol scaffold	aligns mol rdkit mol object to scaffold smiles string
+Chem		AlignToScaffold	frame molCol scaffoldCol	aligns molecules in molcol to scaffolds in scaffoldcol
+Chem		InstallPandasTools		monkey patch a few rdkit methods of chem mol
+Chem		UninstallPandasTools		monkey patch a few rdkit methods of chem mol
+Chem		CharacteristicPolynomial	mol mat	calculates the characteristic polynomial for a molecular graph if mat is not passed in the molecule's weighted adjacency matrix will
+Chem		HeavyAtomCount	mol	number of heavy atoms a molecule
+Chem		BuildCatalog	suppl maxPts groupFileName minPath	builds a fragment catalog from a set of molecules in a delimited text block
+Chem		ScoreMolecules	suppl catalog maxPts actName	scores the compounds in a supplier using a catalog **arguments**
+Chem		ScoreFromLists	bitLists suppl catalog maxPts	similar to _scoremolecules()_, but uses pre-calculated bit lists for the molecules this speeds things up a lot
+Chem		CalcGains	suppl catalog topN actName	calculates info gains by constructing fingerprints
+Chem		CalcGainsFromFps	suppl fps topN actName	calculates info gains from a set of fingerprints
+Chem		ProcessGainsData	inF delim idCol gainCol	reads a list of ids and info gains out of an input file
+Chem		ShowDetails	catalog gains nToDo outF	gains should be a sequence of sequences the idcol entry of each
+Chem		FindMolChiralCenters	mol force includeUnassigned	>>> from rdkit import chem >>> mol = chem
+Chem		_LabuteHelper	mol includeHs force	*internal use only*
+Chem		_pyLabuteHelper	mol includeHs force	*internal use only*
+Chem		pySMR_VSA_	mol bins force	*internal use only*
+Chem		pySlogP_VSA_	mol bins force	*internal use only*
+Chem		pyPEOE_VSA_	mol bins force	*internal use only*
+Chem		pyLabuteASA	mol includeHs	calculates labute's approximate surface area asa from moe definition from p
+Chem		_pyTPSAContribs	mol verbose	deprecated this has been reimplmented in c++ calculates atomic contributions to a molecules tpsa
+Chem		_pyTPSA	mol verbose	deprecated this has been reimplmented in c++ calculates the polar surface area of a molecule based upon fragments
+Chem	MolViewer	SelectProteinNeighborhood	aroundObj inObj distance name	fix the surface display stuff here is all screwed up due to differences between the way pymol and dsviewer handle surfaces
+Chem		_skip3rings	mol	the chi3v and chi3n descriptors changed for molecules with 3-rings
+Chem		_hasAromaticAtoms	mol	the bertzct descriptor changed for molecules with aromatic rings
+Chem		_regressionData	filename col	return entries form regression dataset
+Chem	TestCase	__testDesc	fileN col func molFilter	regression tests for descriptor calculator
+Chem	TestCase	testKappa1		test calculation of the hall-kier kappa1 value corrected data from tables 3 and 6 of rev
+Chem	TestCase	testKappa2		test calculation of the hall-kier kappa2 value corrected data from tables 5 and 6 of rev
+Chem	TestCase	testKappa3		test calculation of the hall-kier kappa3 value corrected data from tables 3 and 6 of rev
+Chem	TestCase	testBalabanJ		test calculation of the balaban j value j values are from balaban's paper and have had roundoff
+Chem	TestCase	testChi1n		test calculation of chi1n
+Chem	TestCase	testPathCounts		fix this should be in some other file
+Chem	TestCase_python	_compareImplementations	filename col cFunc pyFunc	comparison of two implementations
+Chem	TestCase	test2BondIter		testing bond iteration
+Chem	TestCase	test3GetBond		testing getbondbetweenatoms idx idx
+Chem	TestCase	test4Props		testing atomic props
+Chem	TestCase	test5Setters		testing setting atomic props
+Chem		_ReadPatts	fileName	*internal use only*
+Chem		_pyGetAtomContribs	mol patts order verbose	*internal use only* calculates atomic contributions to the logp and mr values
+Chem		initParser		initialize the parser
+Chem		existingFile	filename	'type' for argparse - check that filename exists
+Chem	TestCase	test1		basic building stuff
+Chem	TestCase	test4Pkl2		further pickle tests
+Chem		_InitKeys	keyList keyDict	*internal use only*
+Chem		_pyGenMACCSKeys	mol	generates the maccs fingerprint for a molecules **arguments**
+Chem	TestCase	testHsAndTPSA		testing the impact of hs in the graph on psa calculations this was sf
+Chem		readPSAtestData	filename	read test data for psa method from file
+Chem		readRegressionData	filename col	return entries form regression dataset
+Chem.SimpleEnum		load_tests	loader tests ignore	add the doctests from the module
+Chem.SimpleEnum		PreprocessReaction	reaction funcGroupFilename propName	>>> from rdkit chem import allchem
+Chem.SimpleEnum		EnumerateReaction	reaction bbLists uniqueProductsOnly funcGroupFilename	>>> testfile = os path join(rdconfig rdcodedir 'chem','simpleenum','test_data','boronic1 rxn')
+Chem.AtomPairs		ExplainAtomCode	code branchSubtract	**arguments**: - the code to be considered
+Chem.AtomPairs		NumPiElectrons	atom	returns the number of electrons an atom is using for pi bonding >>> m = chem
+Chem.AtomPairs		BitsInCommon	v1 v2	returns the number of bits in common between two vectors
+Chem.AtomPairs		DiceSimilarity	v1 v2 bounds	implements the dice similarity metric
+Chem.AtomPairs		Dot	v1 v2	returns the dot product between two vectors
+Chem.AtomPairs		CosineSimilarity	v1 v2	implements the cosine similarity metric
+Chem.AtomPairs		pyScorePair	at1 at2 dist atomCodes	returns a score for an individual atom pair
+Chem.AtomPairs		ExplainPairScore	score	>>> from rdkit import chem >>> m = chem
+Chem.AtomPairs		GetAtomPairFingerprintAsBitVect	mol	returns the atom-pair fingerprint for a molecule as a sparsebitvect
+Chem.AtomPairs		load_tests	loader tests ignore	add the doctests from the module
+Chem.AtomPairs		AssignPattyTypes	mol defns	>>> from rdkit import chem >>> assignpattytypes(chem
+Chem.AtomPairs		GetBPFingerprint	mol fpfn	>>> from rdkit import chem >>> fp = getbpfingerprint(chem
+Chem.AtomPairs		GetBTFingerprint	mol fpfn	>>> from rdkit import chem >>> mol = chem
+Chem.AtomPairs		pyScorePath	mol path size atomCodes	returns a score for an individual path
+Chem.AtomPairs		ExplainPathScore	score size	>>> from rdkit import chem >>> m = chem
+Chem.fmcs		powerset	iterable	powerset([1 2 3]) --> () 1 2 3 1 2 1 3 2 3 1 2 3
+Chem.fmcs		nonempty_powerset	iterable	nonempty_powerset([1 2 3]) --> 1 2 3 1 2 1 3 2 3 1 2 3
+Chem.Draw	CanvasBase	addCanvasLine	p1 p2 color color2	draw a single line on the canvas this function will draw a line between p1 and p2 with the
+Chem.Draw	CanvasBase	addCanvasText	text pos font color	draw some text the provided text is drawn at position pos using the given
+Chem.Draw	CanvasBase	addCanvasPolygon	ps color	draw a polygon
+Chem.Draw	CanvasBase	addCanvasDashedWedge	p1 p2 p3 dash	draw a dashed wedge the wedge is identified by the three points p1, p2, and p3
+Chem.Draw	CanvasBase	flush		complete any remaining draw operation
+Chem.Draw	Canvas	__init__	image size ctx imageType	canvas can be used in four modes
+Chem.Draw	Canvas	flush		temporary interface must be splitted to different methods
+Chem.Draw		_toJSON	mol	for ipython notebook renders 3d webgl objects
+Chem.Draw		display_pil_image	img	displayhook function for pil images rendered as png
+Chem.Draw		MolToImage	mol size kekulize wedgeBonds	returns a pil image containing a drawing of the molecule arguments
+Chem.Draw		MolToFile	mol fileName size kekulize	generates a drawing of a molecule and writes it to a file
+Chem.Draw		MolToImageFile	mol filename size kekulize	deprecated please use moltofile instead
+Chem.Draw		ShowMol	mol size kekulize wedgeBonds	generates a picture of a molecule and displays it in a tkinter window
+Chem.Draw		MolToMPL	mol size kekulize wedgeBonds	generates a drawing of a molecule on a matplotlib canvas
+Chem.Draw		calcAtomGaussians	mol a step weights	useful things to do with these fig
+Chem.Draw		_MolsToGridImage	mols molsPerRow subImgSize legends	returns a pil image of the grid
+Chem.Draw		_MolsToGridSVG	mols molsPerRow subImgSize legends	returns an svg of the grid
+Chem.Draw		MolToQPixmap	mol size kekulize wedgeBonds	generates a drawing of a molecule on a qt qpixmap
+Chem.Draw	MolDrawing	AddMol	mol centerIt molTrans drawingTrans	set the molecule to be drawn
+Chem.Draw		GetAtomicWeightsForFingerprint	refMol probeMol fpFunction metric	calculates the atomic weights for the probe molecule based on a fingerprint function and a metric
+Chem.Draw		GetAtomicWeightsForModel	probeMol fpFunction predictionFunction	calculates the atomic weights for the probe molecule based on a fingerprint function and the prediction function of a ml model
+Chem.Draw		GetStandardizedWeights	weights	normalizes the weights such that the absolute maximum weight equals 1
+Chem.Draw		GetSimilarityMapFromWeights	mol weights colorMap scale	generates the similarity map for a molecule given the atomic weights
+Chem.Draw		GetSimilarityMapForFingerprint	refMol probeMol fpFunction metric	generates the similarity map for a given reference and probe molecule fingerprint function and similarity metric
+Chem.Draw		GetSimilarityMapForModel	probeMol fpFunction predictionFunction	generates the similarity map for a given ml model and probe molecule and fingerprint function
+Chem.Draw		GetAPFingerprint	mol atomId fpType nBits	calculates the atom pairs fingerprint with the torsions of atomid removed
+Chem.Draw		GetTTFingerprint	mol atomId fpType nBits	calculates the topological torsion fingerprint with the pairs of atomid removed
+Chem.Draw		GetMorganFingerprint	mol atomId radius fpType	calculates the morgan fingerprint with the environments of atomid removed
+Chem.Draw		GetRDKFingerprint	mol atomId fpType nBits	calculates the rdkit fingerprint with the paths of atomid removed
+Chem.MolKey		load_tests	loader tests ignore	add the doctests from the module
+Chem.MolKey		_ctab_has_atoms	ctab_lines	look at atom count position line 4 characters 0 3 return true if the count is >0 false if 0
+Chem.MolKey		_ctab_remove_chiral_flag	ctab_lines	read the chiral flag line 4 characters 12 15 and set it to 0
+Chem.MolKey		GetInchiForCTAB	ctab	>>> from rdkit chem molkey import molkey
+Chem.MolKey		_make_racemate_inchi	inchi	normalize the stereo information t-layer to one selected isomer
+Chem.MolKey		_identify	err ctab inchi stereo_category	compute the molecule key based on the inchi string
+Chem.MolKey		ErrorBitsToText	err	returns a list of error bit descriptions for the error code provided
+Chem.MolKey		GetKeyForCTAB	ctab stereo_info stereo_comment logger	>>> from rdkit chem molkey import molkey
+Chem.MolKey	InchiInfo	get_sp3_stereo		retrieve sp3 stereo information return a 4-item tuple containing
+Chem.MolKey	InchiInfo	get_mobile_h		retrieve mobile h tautomer information return a 2-item tuple containing
+Chem.Fingerprints	TestCase	test4		check containing mols no hs no valence
+Chem.Fingerprints	TestCase	test5		check containing mols use hs no valence
+Chem.Fingerprints	TestCase	test6		check that the bits in a signature of size n which has been folded in half
+Chem.Fingerprints		GetDistanceMatrix	data metric isSimilarity	data should be a list of tuples with fingerprints in position 1 the rest of the elements of the tuple are not important
+Chem.Fingerprints		ClusterFromDetails	details	returns the cluster tree
+Chem.Fingerprints		load_tests	loader tests ignore	add the doctests from the module
+Chem.Fingerprints	DbFpSupplier	__init__	dbResults fpColName usePickles	dbresults should be a subclass of dbase dbresultset dbresultbase
+Chem.Fingerprints	ForwardDbFpSupplier	NextItem		note this has side effects
+Chem.Fingerprints		GetFingerprints	details	returns an iterable sequence of fingerprints each fingerprint will have a _fieldsfromdb member whose first entry is
+Chem.Fingerprints		ScreenFingerprints	details data mol probeFp	returns a list of results
+Chem.Fingerprints		ScreenFromDetails	details mol	returns a list of results
+Chem.Fingerprints	SimilarityScreener	Reset		used to reset screeners that behave as iterators
+Chem.Fingerprints	SimilarityScreener	SetProbe	probeFingerprint	sets our probe fingerprint
+Chem.Fingerprints	SimilarityScreener	GetSingleFingerprint	probe	returns a fingerprint for a single probe object this is potentially useful in initializing our internal
+Chem.Fingerprints	ThresholdScreener	_nextMatch		*internal use only*
+Chem.Fingerprints	ThresholdScreener	Reset		used to reset our internal state so that iteration
+Chem.Fingerprints	ThresholdScreener	__iter__		returns an iterator for this screener
+Chem.Fingerprints	ThresholdScreener	next		required part of iterator interface
+Chem.Fingerprints		GetRDKFingerprint	mol	uses default parameters
+Chem.Fingerprints		FingerprintsFromSmiles	dataSource idCol smiCol fingerprinter	fpargs are passed as keyword arguments to the fingerprinter
+Chem.Fingerprints		FingerprintsFromMols	mols fingerprinter reportFreq maxMols	fpargs are passed as keyword arguments to the fingerprinter
+Chem.Fingerprints		FingerprintsFromPickles	dataSource idCol pklCol fingerprinter	fpargs are passed as keyword arguments to the fingerprinter
+Chem.Fingerprints		Usage		prints a usage string and exits
+Chem.Fingerprints		ParseArgs	details	parses the command line arguments and returns a _fingerprinterdetails_ instance with the results
+Chem.Fraggle		delete_bonds	mol bonds ftype hac	fragment molecule on bonds and reduce to fraggle fragmentation smiles
+Chem.Fraggle		isValidRingCut	mol	to check is a fragment is a valid ring cut it needs to match the smarts [$([#0][r]
+Chem.Fraggle		generate_fraggle_fragmentation	mol verbose	create all possible fragmentations for molecule >>> q = chem
+Chem.Fraggle		atomContrib	subs mol tverskyThresh	atomcontrib algorithm generate fp of query_substructs qfp
+Chem.Fraggle		GetFraggleSimilarity	queryMol refMol tverskyThresh	return the fraggle similarity between two molecules >>> q = chem
+Chem.Fraggle		load_tests	loader tests ignore	add the doctests from the module
+Chem.Fraggle		_of	smiles	order the fragments alphabetically if smiles is none returns none
+Chem.ChemUtils		initParser		initialize the parser for the cli
+Chem.ChemUtils		existingFile	filename	'type' for argparse - check that filename exists
+Chem.ChemUtils		AlignDepict	mol core corePattern acceptFailure	arguments - mol the molecule to be aligned this will come back
+Chem.ChemUtils		initParser		initialize the parser
+Chem.ChemUtils		outputRedirect		redirect standard output and error to string io and return
+Chem.ChemUtils		outputRedirect		redirect standard output and error to string io and return
+Chem.Scaffolds		load_tests	loader tests ignore	add the doctests from the module
+Chem.Scaffolds		MakeScaffoldGeneric	mol	makes a murcko scaffold generic (i e all atom types->c and all bonds ->single
+Chem.Scaffolds		GetScaffoldForMol	mol	return molecule object containing scaffold of mol >>> m = chem
+Chem.Scaffolds		MurckoScaffoldSmiles	smiles mol includeChirality	returns murckscaffold smiles from smiles >>> murckoscaffoldsmiles('cc1cc(oc2nccc ccc c2)ccc1')
+Chem.Scaffolds		MurckoScaffoldSmilesFromSmiles	smiles includeChirality	returns murckscaffold smiles from smiles
+Chem.Features		findNeighbors	atomId adjMat	find the ids of the neighboring atom ids
+Chem.Features		GetAromaticFeatVects	conf featAtoms featLoc scale	compute the direction vector for an aromatic feature
+Chem.Features		GetAcceptor2FeatVects	conf featAtoms scale	get the direction vectors for acceptor of type 2 this is the acceptor with two adjacent heavy atoms
+Chem.Features		GetDonor3FeatVects	conf featAtoms scale	get the direction vectors for donor of type 3 this is a donor with three heavy atoms as neighbors
+Chem.Features		GetAcceptor3FeatVects	conf featAtoms scale	get the direction vectors for donor of type 3 this is a donor with three heavy atoms as neighbors
+Chem.Features		GetDonor2FeatVects	conf featAtoms scale	get the direction vectors for donor of type 2 this is a donor with two heavy atoms as neighbors
+Chem.Features		GetDonor1FeatVects	conf featAtoms scale	get the direction vectors for donor of type 1 this is a donor with one heavy atom
+Chem.Features		GetAcceptor1FeatVects	conf featAtoms scale	get the direction vectors for acceptor of type 1 this is a acceptor with one heavy atom neighbor
+Chem.Suppliers	MolSupplier	NextMol		must be implemented in child class
+Chem.Suppliers	TestCase	assertMolecule	mol i	assert that we have a valid molecule
+Chem.Suppliers	TestCase	assertMolecule	mol i msg	assert that we have a valid molecule
+Chem.Suppliers	DbMolSupplier	__init__	dbResults molColumnFormats nameCol transformFunc	dbresults should be a subclass of dbase dbresultset dbresultbase
+Chem.Suppliers	ForwardDbMolSupplier	__init__	dbResults	dbresults should be an iterator for dbase dbresultset dbresultbase
+Chem.Suppliers	ForwardDbMolSupplier	NextMol		note this has side effects
+Chem.Suppliers	RandomAccessDbMolSupplier	__init__	dbResults	dbresults should be a dbase dbresultset randomaccessdbresultset
+Chem.EState		VSA_EState_	mol bins force	*internal use only*
+Chem.EState		EState_VSA_	mol bins force	*internal use only*
+Chem.EState		_descriptorDocstring	name nbin bins	create a docstring for the descriptor name
+Chem.EState		GetPrincipleQuantumNumber	atNum	get principal quantum number for atom number
+Chem.EState		EStateIndices	mol force	returns a tuple of estate indices for the molecule reference hall mohney and kier
+Chem.EState		_exampleCode		example code for calculating e-state indices
+Chem.EState		FingerprintMol	mol	generates the estate fingerprints for the molecule concept from the paper hall and kier jcics _35_ 1039-1045 1995
+Chem.EState		_exampleCode		example code for calculating e-state fingerprints
+Chem.EState		BuildPatts	rawV	internal use only
+Chem.EState		TypeAtoms	mol	assigns each atom in a molecule to an estate type
+Chem.FeatMaps	MergeMethod	valid	cls mergeMethod	check that mergemethod is valid
+Chem.FeatMaps	MergeMetric	valid	cls mergeMetric	check that mergemetric is valid
+Chem.FeatMaps	DirMergeMode	valid	cls dirMergeMode	check that dirmergemode is valid
+Chem.FeatMaps		__copyAll	res fm1 fm2	no user-serviceable parts inside
+Chem.FeatMaps		GetFeatFeatDistMatrix	fm mergeMetric mergeTol dirMergeMode	note that mergetol is a max value for merging when using distance-based merging and a min value when using score-based merging
+Chem.FeatMaps		MergeFeatPoints	fm mergeMetric mergeTol dirMergeMode	note that mergetol is a max value for merging when using distance-based merging and a min value when using score-based merging
+Chem.FeatMaps		CombineFeatMaps	fm1 fm2 mergeMetric mergeTol	the parameters will be taken from fm1
+Chem.FeatMaps	FeatMapPoint	initFromFeat	feat	>>> from rdkit import geometry >>> sfeat = chemicalfeatures
+Chem.FeatMaps	FeatMapPoint	GetDist2	other	>>> from rdkit import geometry >>> sfeat = chemicalfeatures
+Chem.FeatMaps	FeatMapPoint	GetDirMatch	other useBest	>>> from rdkit import geometry >>> sfeat = chemicalfeatures
+Chem.FeatMaps		load_tests	loader tests ignore	add the doctests from the module
+Chem.FeatMaps		load_tests	loader tests ignore	add the doctests from the module
+Chem.FeatMaps	FeatMap	GetFeatFeatScore	feat1 feat2 typeMatch	feat1 is one of our feats
+Chem.Pharm3D	ExcludedVolume	__init__	featInfo index exclusionDist	featinfo should be a sequence of ([indices],min max) tuples
+Chem.Pharm3D	Pharmacophore	_checkBounds	i j	raises valueerror on failure
+Chem.Pharm3D		load_tests	loader tests ignore	add the doctests from the module
+Chem.Pharm3D		GetAtomHeavyNeighbors	atom	returns a list of the heavy-atom neighbors of the atom passed in
+Chem.Pharm3D		ReplaceGroup	match bounds slop useDirs	adds an entry at the end of the bounds matrix for a point at the center of a multi-point feature
+Chem.Pharm3D		EmbedMol	mol bm atomMatch weight	generates an embedding for a molecule based on a bounds matrix and adds a conformer id 0 to the molecule
+Chem.Pharm3D		AddExcludedVolumes	bm excludedVolumes smoothIt	adds a set of excluded volumes to the bounds matrix and returns the new matrix
+Chem.Pharm3D		UpdatePharmacophoreBounds	bm atomMatch pcophore useDirs	loops over a distance bounds matrix and replaces the elements that are altered by a pharmacophore
+Chem.Pharm3D		EmbedPharmacophore	mol atomMatch pcophore randomSeed	generates one or more embeddings for a molecule that satisfy a pharmacophore atommatch is a sequence of sequences containing atom indices
+Chem.Pharm3D		isNaN	v	provides an os independent way of detecting nans this is intended to be used with values returned from the c++
+Chem.Pharm3D		OptimizeMol	mol bm atomMatches excludedVolumes	carries out a uff optimization for a molecule optionally subject to the constraints in a bounds matrix
+Chem.Pharm3D		EmbedOne	mol name match pcophore	generates statistics for a molecule's embeddings
+Chem.Pharm3D		MatchPharmacophoreToMol	mol featFactory pcophore	generates a list of all possible mappings of a pharmacophore to a molecule returns a 2-tuple
+Chem.Pharm3D		_getFeatDict	mol featFactory features	**internal use only** >>> import os
+Chem.Pharm3D		MatchFeatsToMol	mol featFactory features	generates a list of all possible mappings of each feature to a molecule returns a 2-tuple
+Chem.Pharm3D		CombiEnum	sequence	this generator takes a sequence of sequences as an argument and
+Chem.Pharm3D		DownsampleBoundsMatrix	bm indices maxThresh	removes rows from a bounds matrix that are that are greater than a threshold value away from a set of
+Chem.Pharm3D		CoarseScreenPharmacophore	atomMatch bounds pcophore verbose	>>> from rdkit import geometry >>> from rdkit
+Chem.Pharm3D		Check2DBounds	atomMatch mol pcophore	checks to see if a particular mapping of features onto a molecule satisfies a pharmacophore's 2d restrictions
+Chem.Pharm3D		_checkMatch	match mol bounds pcophore	**internal use only**
+Chem.Pharm3D		ConstrainedEnum	matches mol pcophore bounds	enumerates the list of atom mappings a molecule has to a particular pharmacophore
+Chem.Pharm3D		MatchPharmacophore	matches bounds pcophore useDownsampling	if use2dlimits is set the molecule must also be provided and topological
+Chem.Pharm3D		ComputeChiralVolume	mol centerIdx confId	computes the chiral volume of an atom we're using the chiral volume formula from figure 7 of
+Chem.Subshape		GetShapeShapeDistance	s1 s2 distMetric	returns the distance between two shapes according to the provided metric
+Chem.Subshape		ClusterAlignments	mol alignments builder neighborTol	clusters a set of alignments and returns the cluster centroid
+Chem.Subshape		TransformMol	mol tform confId newConfId	applies the transformation to a molecule and sets it up with a single conformer
+Chem.Subshape	SubshapeAligner	GetTriangleMatches	target query	this is a generator function returning the possible triangle
+Chem.Subshape		GetMoreTerminalPoints	shape pts winRad maxGridVal	adds a set of new terminal points using a max-min algorithm
+Chem.Subshape		FindFarthestGridPoint	shape loc winRad maxGridVal	find the grid point with max occupancy that is furthest from a
+Chem.Subshape		ExpandTerminalPts	shape pts winRad maxGridVal	find additional terminal points until a target number is reached
+Chem.Pharm2D	SigFactory	SetBins	bins	bins should be a list of 2-tuples
+Chem.Pharm2D	SigFactory	GetBitDescriptionAsText	bitIdx includeBins fullPage	returns text with a description of the bit
+Chem.Pharm2D	SigFactory	GetBitDescription	bitIdx	returns a text description of the bit
+Chem.Pharm2D	SigFactory	_findBinIdx	dists bins scaffolds	obsolete this has been rewritten in c++ internal use only
+Chem.Pharm2D	SigFactory	GetBitIdx	featIndices dists sortIndices	returns the index for a pharmacophore described using a set of feature indices and distances
+Chem.Pharm2D	SigFactory	GetBitInfo	idx	returns information about the given bit
+Chem.Pharm2D	SigFactory	Init		initializes internal parameters this **must** be called after
+Chem.Pharm2D		GetTriangles	nPts	returns a tuple with the distance indices for
+Chem.Pharm2D		BinsTriangleInequality	d1 d2 d3	checks the triangle inequality for combinations of distance bins
+Chem.Pharm2D		ScaffoldPasses	combo bins	checks the scaffold passed in to see if all
+Chem.Pharm2D		NumCombinations	nItems nSlots	returns the number of ways to fit nitems into nslots we assume that x y and y x are equivalent and
+Chem.Pharm2D		CountUpTo	nItems nSlots vs idx	figures out where a given combination of indices would
+Chem.Pharm2D		GetIndexCombinations	nItems nSlots slot lastItemVal	generates all combinations of nitems in nslots without including
+Chem.Pharm2D		GetAllCombinations	choices noDups which	does the combinatorial explosion of the possible combinations of the elements of _choices_
+Chem.Pharm2D		GetUniqueCombinations	choices classes which	does the combinatorial explosion of the possible combinations of the elements of _choices_
+Chem.Pharm2D		GetUniqueCombinations_new	choices classes which	does the combinatorial explosion of the possible combinations of the elements of _choices_
+Chem.Pharm2D		UniquifyCombinations	combos	uniquifies the combinations in the argument
+Chem.Pharm2D		GetPossibleScaffolds	nPts bins useTriangleInequality	gets all realizable scaffolds passing the triangle inequality with the
+Chem.Pharm2D		OrderTriangle	featIndices dists	put the distances for a triangle into canonical order
+Chem.Pharm2D		_ShortestPathsMatch	match featureSet sig dMat	internal use only
+Chem.Pharm2D		Gen2DFingerprint	mol sigFactory perms dMat	generates a 2d fingerprint for a molecule using the parameters in _sig_
+Chem.Pharm2D		load_tests	loader tests ignore	add the doctests from the module
+Chem.Pharm2D		GetAtomsMatchingBit	sigFactory bitIdx mol dMat	returns a list of lists of atom indices for a bit **arguments**
+Chem.Pharm2D	Generator	GetBit	idx	returns a bool indicating whether or not the bit is set
+Chem.Pharm2D	Generator	__len__		allows class to support len()
+Chem.Pharm2D	Generator	__getitem__	itm	allows class to support random access
+utils		CompactListRepr	lst	>>> compactlistrepr([0 1 1 1 1 0])
+utils		_myimport	name globals locals fromlist	tell all modules to imported by mcmillan's (or python's) import method
+utils		set_gen_path	path	set the gencache path if not set all modules win32com will be generated to support/gen_py of your apllication
+utils		CDXConvert	inData inFormat outFormat	converts the data passed in from one format to another
+utils		CDXClean	inData inFormat outFormat	calls the cdxlib clean function on the data passed in
+utils		CDXDisplay	inData inFormat clear	displays the data in chemdraw
+utils		CDXGrab	outFormat	returns the contents of the active chemdraw document
+utils		CloseChemdraw		shuts down chemdraw
+utils		Exit		destroys our link to chemdraw
+utils		SaveChemDrawDoc	fileName	force chemdraw to save the active document note the extension of the filename will determine the format
+utils		CloseChemDrawDoc		force chemdraw to save the active document note the extension of the filename will determine the format
+utils		CloseChem3D		shuts down chem3d
+utils		Add3DCoordsToMol	data format props	adds 3d coordinates to the data passed in using chem3d **arguments**
+utils		OptimizeSDFile	inFileName outFileName problemFileName restartEvery	optimizes the structure of every molecule in the input sd file
+utils		load_tests	loader tests ignore	add the doctests from the module
+utils		GetAtomicData	atomDict descriptorsDesired dBase table	pulls atomic data from a database
+utils		SplitComposition	compStr	takes a simple chemical composition and turns into a list of element # pairs
+utils		ConfigToNumElectrons	config ignoreFullD ignoreFullF	counts the number of electrons appearing in a configuration string **arguments**
+utils		MoveToMatchingLine	inFile matchStr fullMatch	skip forward in a file until a given string is found
+ML	ReFile	readline		read the next line and return it
+ML	ReFile	readlines		return a list of all the lines left in the file
+ML	ReFile	rewind		rewinds the file seeks to the beginning
+ML		ReadDataFile	fileName comment depVarCol dataType	read in the data file and return a tuple of two numeric arrays independant variables dependant variables
+ML		message	msg noRet dest	emits messages to _sys stderr_
+ML		error	msg dest	emits messages to _sys stderr_
+ML		ScreenModel	mdl descs data picking	collects the results of screening an individual composite model that match a particular value
+ML		AccumulateCounts	predictions thresh sortIt	accumulates the data for the enrichment plot for a single model **arguments**
+ML		Usage		displays a usage message and exits
+ML		message	msg	emits messages to _sys stdout_
+ML		GrowIt	details composite progressCallback saveIt	does the actual work of building a composite model **arguments**
+ML		BalanceComposite	details composite data1 data2	balances the composite using the parameters provided in details **arguments**
+ML		ShowVersion	includeArgs	prints the version number
+ML		Usage		provides a list of arguments for when this is used from the command line
+ML		SetDefaults	runDetails	initializes a details object with default values **arguments**
+ML		ParseArgs	runDetails	parses command line arguments and updates _rundetails_ **arguments**
+ML		message	msg	emits messages to _sys stdout_
+ML		testall	composite examples badExamples	screens a number of examples past a composite
+ML		RunIt	details progressCallback saveIt setDescNames	does the actual work of building a composite model **arguments**
+ML		ShowVersion	includeArgs	prints the version number
+ML		Usage		provides a list of arguments for when this is used from the command line
+ML		SetDefaults	runDetails	initializes a details object with default values **arguments**
+ML		ParseArgs	runDetails	parses command line arguments and updates _rundetails_ **arguments**
+ML		message	msg noRet	emits messages to _sys stdout_
+ML		error	msg	emits messages to _sys stderr_
+ML		CollectResults	indices dataSet composite callback	screens a set of examples through a composite and returns the results
+ML		DetailedScreen	indices data composite threshold	screens a set of examples cross a composite and breaks the predictions into *correct*,*incorrect* and *unclassified* sets
+ML		ShowVoteResults	indices data composite nResultCodes	screens the results and shows a detailed workup the work of doing the screening and processing the results is
+ML		ScreenIt	composite indices data partialVote	screens a set of data using a composite model and prints out statistics about the screen
+ML		_processVoteList	votes data	*internal use only* converts a list of 4 tuples answer prediction confidence idx into
+ML		ScreenFromDetails	models details callback setup	screens a set of data using a a _compositerun compositerun_
+ML		ScreenToHtml	nGood nBad nRej avgGood	returns the text of a web page showing the screening details
+ML		MakePredPlot	details indices data goodVotes	**arguments** - details a compositerun
+ML		Usage		prints a list of arguments for when this is used from the
+ML		ShowVersion	includeArgs	prints the version number of the program
+ML		SetDefaults	runDetails	initializes a details object with default values **arguments**
+ML	CompositeRun	_CreateTable	cn tblName	*internal use only*
+ML	CompositeRun	Store	db table user password	adds the result to a database
+ML	CompositeRun	GetDataSet		returns a mldataset pulled from a database using our stored values
+ML	CompositeRun	GetDataSetInfo		returns a mldataset pulled from a database using our stored values
+ML.MLUtils		CollectVotes	composite data badOnly	collects the votes from _composite_ for the examples in _data_ **arguments**
+ML.MLUtils		BuildVoteImage	nModels data values trueValues	constructs the actual image
+ML.MLUtils		VoteAndBuildImage	composite data badOnly sortTrueVals	collects votes on the examples and constructs an image
+ML.MLUtils		Usage		provides a list of arguments for when this is used from the command line
+ML.KNN		load_tests	loader tests ignore	add the doctests from the module
+ML.KNN	KNNClassificationModel	ClassifyExample	example appendExamples neighborList	classify a an example by looking at its closest neighbors
+ML.KNN	KNNModel	GetNeighbors	example	returns the k nearest neighbors of the example
+ML.KNN	KNNRegressionModel	PredictExample	example appendExamples weightedAverage neighborList	generates a prediction for an example by looking at its closest neighbors
+ML.KNN		CrossValidate	knnMod testExamples appendExamples	determines the classification error for the testexamples **arguments**
+ML.KNN		CrossValidationDriver	examples attrs nPossibleValues numNeigh	driver function for building a knn model of a specified type
+ML.KNN		EuclideanDist	ex1 ex2 attrs	>>> v1 = [0 1 0 1] >>> v2 = [1 0 1 0]
+ML.KNN		TanimotoDist	ex1 ex2 attrs	>>> v1 = [0 1 0 1] >>> v2 = [1 0 1 0]
+ML.Scoring		CalcROC	scores col	determines a roc curve
+ML.Scoring		CalcAUC	scores col	determines the area under the roc curve
+ML.Scoring		CalcRIE	scores col alpha	rie original definded here sheridan r
+ML.Scoring		CalcBEDROC	scores col alpha	bedroc original defined here truchon j
+ML.Scoring		CalcEnrichment	scores col fractions	determines the enrichment factor for a set of fractions
+ML.Cluster		_LookupDist	dists i j n	*internal use only*
+ML.Cluster		_ToClusters	data nPts ia ib	*internal use only*
+ML.Cluster		ClusterData	data nPts method isDistData	clusters the data points passed in and returns the cluster tree **arguments**
+ML.Cluster		ClusterData	data nPts distThresh isDistData	clusters the data points passed in and returns the list of clusters **arguments**
+ML.Cluster		GetNodeList	cluster	returns an ordered list of all nodes below cluster
+ML.Cluster		GetNodesDownToCentroids	cluster above	returns an ordered list of all nodes below cluster
+ML.Cluster		FindClusterCentroidFromDists	cluster dists	find the point in a cluster which has the smallest summed
+ML.Cluster		_BreadthFirstSplit	cluster n	*internal use only*
+ML.Cluster		_HeightFirstSplit	cluster n	*internal use only*
+ML.Cluster		SplitIntoNClusters	cluster n breadthFirst	splits a cluster tree into a set of branches **arguments**
+ML.Cluster		EuclideanDistance	inData	returns the euclidean metricmat between the points in _indata_ **arguments**
+ML.Cluster		CalcMetricMatrix	inData metricFunc	generates a metric matrix
+ML.Cluster		FindMinValInList	mat nObjs minIdx	finds the minimum value in a metricmatrix and returns it and its indices
+ML.Cluster		ShowMetricMat	metricMat nObjs	displays a metric matrix
+ML.Cluster		StdDev	mat	the standard deviation classifier this uses _ml
+ML.Cluster	TestCase	testDivide		tests the cluster division algorithms
+ML.Cluster	TestCase	test_Cluster		tests the cluster class functionality
+ML.Cluster	Cluster	FindSubtree	index	finds and returns the subtree with a particular index
+ML.Cluster	Cluster	_GenPoints		generates the _points_ and _pointspositions_ lists
+ML.Cluster	Cluster	AddChild	child	adds a child to our list
+ML.Cluster	Cluster	AddChildren	children	adds a bunch of children to our list
+ML.Cluster	Cluster	RemoveChild	child	removes a child from our list
+ML.Cluster	Cluster	Compare	other ignoreExtras	not as choosy as self==other
+ML.Cluster	Cluster	_UpdateLength		updates our length
+ML.Cluster	Cluster	__len__		allows _len cluster _ to work
+ML.Cluster	Cluster	__cmp__	other	allows _cluster1 == cluster2_ to work
+ML.Cluster	ClusterRenderer	_DrawToLimit	cluster	we assume that _drawpos settings have been done already
+ML.Cluster		DrawClusterTree	cluster canvas size ptColors	handles the work of drawing a cluster tree on a sping canvas **arguments**
+ML.Cluster		_DrawClusterTree	cluster canvas size ptColors	handles the work of drawing a cluster tree on a sping canvas **arguments**
+ML.Cluster		ClusterToPDF	cluster fileName size ptColors	handles the work of drawing a cluster tree to an pdf file **arguments**
+ML.Cluster		ClusterToSVG	cluster fileName size ptColors	handles the work of drawing a cluster tree to an svg file **arguments**
+ML.Cluster		ClusterToImg	cluster fileName size ptColors	handles the work of drawing a cluster tree to an image file **arguments**
+ML.InfoTheory	BitClusterer	MapToClusterScores	fp	map the fingerprint to a real valued vector of score based on the bit clusters the dimension of the vector is same as the number of clusters
+ML.InfoTheory	BitClusterer	MapToClusterFP	fp	map the fingerprint to a smaller sized (= number of clusters) fingerprint
+ML.InfoTheory		PyInfoEntropy	results	calculates the informational entropy of a set of results
+ML.InfoTheory		PyInfoGain	varMat	calculates the information gain for a variable **arguments**
+ML.InfoTheory		FormCounts	bitVects actVals whichBit nPossibleActs	generates the counts matrix for a particular bit **arguments**
+ML.InfoTheory		CalcInfoGains	bitVects actVals nPossibleActs nPossibleBitVals	calculates the information gain for a set of points and activity values **arguments**
+ML.InfoTheory		RankBits	bitVects actVals nPossibleBitVals metricFunc	rank a set of bits according to a metric function **arguments**
+ML.InfoTheory		SparseRankBits	bitVects actVals metricFunc	rank a set of bits according to a metric function **arguments**
+ML.Neural	Network	ConstructRandomWeights	minWeight maxWeight	initialize all the weights in the network to random numbers
+ML.Neural	Network	FullyConnectNodes		fully connects each layer in the network to the one above it
+ML.Neural	Network	ConstructNodes	nodeCounts actFunc actFuncParms	build an unconnected network and set node counts **arguments**
+ML.Neural	Network	GetInputNodeList		returns a list of input node indices
+ML.Neural	Network	GetOutputNodeList		returns a list of output node indices
+ML.Neural	Network	GetHiddenLayerNodeList	which	returns a list of hidden nodes in the specified layer
+ML.Neural	Network	GetNumNodes		returns the total number of nodes
+ML.Neural	Network	GetNumHidden		returns the number of hidden layers
+ML.Neural	Network	GetNode	which	returns a particular node
+ML.Neural	Network	GetAllNodes		returns a list of all nodes
+ML.Neural	Network	ClassifyExample	example appendExamples	classifies a given example and returns the results of the output layer
+ML.Neural	Network	GetLastOutputs		returns the complete list of output layer values from the last time this node
+ML.Neural	Network	__str__		provides a string representation of the network
+ML.Neural	Network	__init__	nodeCounts nodeConnections actFunc actFuncParms	constructor this constructs and initializes the network based upon the specified
+ML.Neural	BackProp	StepUpdate	example net resVect	does a backprop step based upon the example **arguments**
+ML.Neural	BackProp	TrainOnLine	examples net maxIts errTol	carries out online training of a neural net the definition of online training is that the network is updated after
+ML.Neural		CrossValidate	net testExamples tolerance appendExamples	determines the classification error for the testexamples **arguments**
+ML.Neural		CrossValidationDriver	examples attrs nPossibleVals holdOutFrac	**arguments** - examples the full set of examples
+ML.Neural	NetNode	Eval	valVect	given a set of inputs valvect returns the output of this node
+ML.Neural	NetNode	SetInputs	inputNodes	sets the input list **arguments**
+ML.Neural	NetNode	GetInputs		returns the input list
+ML.Neural	NetNode	SetWeights	weights	sets the weight list **arguments**
+ML.Neural	NetNode	GetWeights		returns the weight list
+ML.Data		load_tests	loader tests ignore	add the doctests from the module
+ML.Data		_CenterTForm	dataSet	internal use only
+ML.Data		_NormalizeTForm	dataSet	internal use only
+ML.Data		_StandardTForm	dataSet	internal use only
+ML.Data		GetAvailTransforms		returns the list of available data transformations
+ML.Data		StandardizeMatrix	mat	this is the standard *subtract off the average and divide by the deviation* standardization function
+ML.Data		FormCovarianceMatrix	mat	form and return the covariance matrix
+ML.Data		FormCorrelationMatrix	mat	form and return the covariance matrix
+ML.Data		PrincipalComponents	mat reverseOrder	do a principal components analysis
+ML.Data		TransformPoints	tFormMat pts	transforms a set of points using tformmat
+ML.Data		MeanAndDev	vect sampleSD	returns the mean and standard deviation of a vector
+ML.Data		R2	orig residSum	returns the r2 value for a set of predictions
+ML.Data		WriteData	outFile varNames qBounds examples	writes out a qdat file
+ML.Data		ReadVars	inFile	reads the variables and quantization bounds from a qdat or dat file
+ML.Data		ReadQuantExamples	inFile	reads the examples from a qdat file
+ML.Data		ReadGeneralExamples	inFile	reads the examples from a dat file
+ML.Data		BuildQuantDataSet	fileName	builds a data set from a qdat file
+ML.Data		BuildDataSet	fileName	builds a data set from a dat file
+ML.Data		CalcNPossibleUsingMap	data order qBounds nQBounds	calculates the number of possible values for each variable in a data set
+ML.Data		WritePickledData	outName data	writes either a qdat pkl or a dat pkl file
+ML.Data		TakeEnsemble	vect ensembleIds isDataVect	>>> v = [10 20 30 40 50]
+ML.Data		DBToData	dbName tableName user password	constructs an _mldata mldataset_ from a database
+ML.Data		TextToData	reader ignoreCols onlyCols	constructs an _mldata mldataset_ from a bunch of text
+ML.Data		InitRandomNumbers	seed	seeds the random number generators
+ML.Data		RandomizeActivities	dataSet shuffle runDetails	randomizes the activity values of a dataset **arguments**
+ML.Data	MLDataSet	_CalcNPossible	data	calculates the number of possible values of each variable where possible
+ML.Data	MLDataSet	GetNamedData		returns a list of named examples
+ML.Data	MLDataSet	GetAllData		returns a *copy* of the data
+ML.Data	MLDataSet	GetInputData		returns the input data
+ML.Data	MLDataSet	GetResults		returns the result fields from each example
+ML.Data	MLQuantDataSet	_CalcNPossible	data	calculates the number of possible values of each variable
+ML.Data	MLQuantDataSet	GetNamedData		returns a list of named examples
+ML.Data	MLQuantDataSet	GetAllData		returns a *copy* of the data
+ML.Data	MLQuantDataSet	GetInputData		returns the input data
+ML.Data	MLQuantDataSet	GetResults		returns the result fields from each example
+ML.Data		feq	v1 v2 tol	floating point equality with a tolerance factor
+ML.Data		FindVarQuantBound	vals results nPossibleRes	uses findvarmultquantbounds only here for historic reasons
+ML.Data		_GenVarTable	vals cuts starts results	primarily intended for internal use constructs a variable table for the data passed in
+ML.Data		_PyRecurseOnBounds	vals cuts which starts	primarily intended for internal use
+ML.Data		_NewPyRecurseOnBounds	vals cuts which starts	primarily intended for internal use
+ML.Data		FindVarMultQuantBounds	vals nBounds results nPossibleRes	finds multiple quantization bounds for a single variable
+ML.Data		SplitIndices	nPts frac silent legacy	splits a set of indices into a data set into 2 pieces **arguments**
+ML.Data		SplitDataSet	data frac silent	splits a data set into two pieces **arguments**
+ML.Data		SplitDbData	conn fracs table fields	"splits" a data set held in a db by returning lists of ids **arguments**:
+ML.Descriptors		_SubForAtomicVars	cExpr varList dictName	replace atomic variables with the appropriate dictionary lookup
+ML.Descriptors		_SubForCompoundDescriptors	cExpr varList dictName	replace compound variables with the appropriate list index
+ML.Descriptors		_SubMethodArgs	cExpr knownMethods	alters the arguments of calls to calculator methods *not intended for client use*
+ML.Descriptors		CalcSingleCompoundDescriptor	compos argVect atomDict propDict	calculates the value of the descriptor for a single compound **arguments **
+ML.Descriptors		CalcMultipleCompoundsDescriptor	composVect argVect atomDict propDictList	calculates the value of the descriptor for a list of compounds **arguments **
+ML.Descriptors	DescriptorCalculator	ShowDescriptors		prints out a list of the descriptors
+ML.Descriptors	DescriptorCalculator	GetDescriptorNames		returns a list of the names of the descriptors this calculator generates
+ML.Descriptors	DescriptorCalculator	SaveState	fileName	writes this calculator off to a file so that it can be easily loaded later
+ML.Descriptors		GetAllDescriptorNames	db tbl1 tbl2 user	gets possible descriptor names from a database **arguments**
+ML.Descriptors	CompoundDescriptorCalculator	ProcessSimpleList		handles the list of simple descriptors this constructs the list of _nonzerodescriptors_ and _requireddescriptors_
+ML.Descriptors	CompoundDescriptorCalculator	ProcessCompoundList		adds entries from the _compoundlist_ to the list of _requireddescriptors_ each compound descriptor is surveyed
+ML.Descriptors	CompoundDescriptorCalculator	BuildAtomDict		builds the local atomic dict we don't want to keep around all descriptor values for all atoms so this
+ML.Descriptors	CompoundDescriptorCalculator	CalcSimpleDescriptorsForComposition	compos composList	calculates all simple descriptors for a given composition **arguments**
+ML.Descriptors	CompoundDescriptorCalculator	CalcCompoundDescriptorsForComposition	compos composList propDict	calculates all simple descriptors for a given composition **arguments**
+ML.Descriptors	CompoundDescriptorCalculator	CalcDescriptorsForComposition	composVect propDict	calculates all descriptors for a given composition **arguments**
+ML.Descriptors	CompoundDescriptorCalculator	GetDescriptorNames		returns a list of the names of the descriptors this calculator generates
+ML.Descriptors	TestCase	testSingleCalcs		testing calculation of a single descriptor
+ML.Descriptors	TestCase	testMultipleCalcs		testing calculation of multiple descriptors
+ML.Descriptors	MolecularDescriptorCalculator	_findVersions		returns a tuple of the versions of the descriptor calculators
+ML.Descriptors	MolecularDescriptorCalculator	SaveState	fileName	writes this calculator off to a file so that it can be easily loaded later
+ML.Descriptors	MolecularDescriptorCalculator	CalcDescriptors	mol	calculates all descriptors for a given molecule
+ML.Descriptors	MolecularDescriptorCalculator	GetDescriptorNames		returns a tuple of the names of the descriptors this calculator generates
+ML.Descriptors	MolecularDescriptorCalculator	GetDescriptorSummaries		returns a tuple of summaries for the descriptors this calculator generates
+ML.Descriptors	MolecularDescriptorCalculator	GetDescriptorFuncs		returns a tuple of the functions used to generate this calculator's descriptors
+ML.Descriptors	MolecularDescriptorCalculator	GetDescriptorVersions		returns a tuple of the versions of the descriptor calculators
+ML.NaiveBayes	NaiveBayesClassifier	trainModel		we will assume at this point that the training examples have been set we have to estmate the conditional probabilities for each of the binned descriptor
+ML.NaiveBayes	NaiveBayesClassifier	GetClassificationDetails		returns the probability of the last prediction
+ML.NaiveBayes	NaiveBayesClassifier	ClassifyExample	example appendExamples	classify an example by summing over the conditional probabilities
+ML.Composite	BayesComposite	ClassifyExample	example threshold verbose appendExample	classifies the given example using the entire composite **arguments**
+ML.Composite		CompositeToBayesComposite	obj	converts a composite to a bayescomposite if _obj_ is already a bayescomposite or if it is not a _composite
+ML.Composite		BayesCompositeToComposite	obj	converts a bayescomposite to a composite composite
+ML.Composite		BalanceComposite	model set1 set2 weight	adjusts the contents of the composite model so as to maximize the weighted classification accuracty across the two data sets
+ML.Composite	Composite	SetDescriptorNames	names	registers the names of the descriptors this composite uses **arguments**
+ML.Composite	Composite	GetDescriptorNames		returns the names of the descriptors this composite uses
+ML.Composite	Composite	SetQuantBounds	qBounds nPossible	sets the quantization bounds that the composite will use **arguments**
+ML.Composite	Composite	GetQuantBounds		returns the quantization bounds
+ML.Composite	Composite	QuantizeExample	example quantBounds	quantizes an example **arguments**
+ML.Composite	Composite	MakeHistogram		creates a histogram of error/count pairs
+ML.Composite	Composite	CollectVotes	example quantExample appendExample onlyModels	collects votes across every member of the composite for the given example **arguments**
+ML.Composite	Composite	ClassifyExample	example threshold appendExample onlyModels	classifies the given example using the entire composite **arguments**
+ML.Composite	Composite	GetVoteDetails		returns the votes from the last classification
+ML.Composite	Composite	_RemapInput	inputVect	remaps the input so that it matches the expected internal ordering
+ML.Composite	Composite	GetInputOrder		returns the input order used in remapping inputs
+ML.Composite	Composite	SetInputOrder	colNames	sets the input order **arguments**
+ML.Composite	Composite	Grow	examples attrs nPossibleVals buildDriver	grows the composite **arguments**
+ML.Composite	Composite	Pickle	fileName saveExamples	writes this composite off to a file so that it can be easily loaded later **arguments**
+ML.Composite	Composite	AddModel	model error needsQuantization	adds a model to the composite
+ML.Composite	Composite	AverageErrors		convert local summed error to average error
+ML.Composite	Composite	SortModels	sortOnError	sorts the list of models
+ML.Composite	Composite	GetModel	i	returns a particular model
+ML.Composite	Composite	SetModel	i val	replaces a particular model **note**
+ML.Composite	Composite	GetCount	i	returns the count of the _i_th model
+ML.Composite	Composite	SetCount	i val	sets the count of the _i_th model
+ML.Composite	Composite	GetError	i	returns the error of the _i_th model
+ML.Composite	Composite	SetError	i val	sets the error of the _i_th model
+ML.Composite	Composite	GetDataTuple	i	returns all relevant data about a particular model
+ML.Composite	Composite	SetDataTuple	i tup	sets all relevant data for a particular tree in the forest **arguments**
+ML.Composite	Composite	GetAllData		returns everything we know
+ML.Composite	Composite	__len__		allows len composite to work
+ML.Composite	Composite	__getitem__	which	allows composite[i] to work returns the data tuple
+ML.Composite	Composite	__str__		returns a string representation of the composite
+ML.SLT	TestCase	testBurges		testing burges empirical risk bound
+ML.SLT	TestCase	testCherkassky		testing cherkassky empirical risk bound
+ML.SLT	TestCase	testChristiani		testing christiani empirical risk bound
+ML.SLT		BurgesRiskBound	VCDim nData nWrong conf	calculates burges's formulation of the risk bound the formulation is from eqn
+ML.SLT		CristianiRiskBound	VCDim nData nWrong conf	the formulation here is from pg 58 theorem 4 6 of the book
+ML.SLT		CherkasskyRiskBound	VCDim nData nWrong conf	the formulation here is from eqns 4 22 and 4 23 on pg 108 of
+ML.ModelPackage		PackageToXml	pkg summary trainingDataId dataPerformance	generates xml for a package that follows the rd_model dtd
+ML.DecTree		CalcTotalEntropy	examples nPossibleVals	calculates the total entropy of the data set w r t the results
+ML.DecTree		GenVarTable	examples nPossibleVals vars	generates a list of variable tables for the examples passed in
+ML.DecTree		ID3	examples target attrs nPossibleVals	implements the id3 algorithm for constructing decision trees
+ML.DecTree		ID3Boot	examples attrs nPossibleVals initialVar	bootstrapping code for the id3 algorithm see id3 for descriptions of the arguments
+ML.DecTree		CalcTreeNodeSizes	node	recursively calculate the total number of nodes under us
+ML.DecTree		DrawTreeNode	node loc canvas nRes	recursively displays the given tree node and all its children on the canvas
+ML.DecTree	SigTreeNode	ClassifyExample	example appendExamples	recursively classify an example by running it through the tree **arguments**
+ML.DecTree		MaxCount	examples	given a set of examples returns the most common result code
+ML.DecTree		_Pruner	node level	recursively finds and removes the nodes whose removals improve classification **arguments**
+ML.DecTree		PruneTree	tree trainExamples testExamples minimizeTestErrorOnly	implements a reduced-error pruning of decision trees this algorithm is described on page 69 of mitchell's book
+ML.DecTree		BuildQuantTree	examples target attrs nPossibleVals	**arguments** - examples a list of lists ninstances x nvariables+1 of variable
+ML.DecTree		QuantTreeBoot	examples attrs nPossibleVals nBoundsPerVar	bootstrapping code for the quanttree if _initialvar_ is not set the algorithm will automatically
+ML.DecTree		TestTree		testing code for named trees
+ML.DecTree		TestQuantTree		testing code for named trees the created pkl file is required by the unit test code
+ML.DecTree		TestQuantTree2		testing code for named trees the created pkl file is required by the unit test code
+ML.DecTree	DecTreeNode	ClassifyExample	example appendExamples	recursively classify an example by running it through the tree **arguments**
+ML.DecTree	DecTreeNode	AddChild	name label data isTerminal	constructs and adds a child with the specified data to our list **arguments**
+ML.DecTree	QuantTreeNode	ClassifyExample	example appendExamples	recursively classify an example by running it through the tree **arguments**
+ML.DecTree	QuantTreeNode	__str__		returns a string representation of the tree
+ML.DecTree	TreeNode	NameTree	varNames	set the names of each node in the tree from a list of variable names
+ML.DecTree	TreeNode	AddChildNode	node	adds a treenode to the local list of children
+ML.DecTree	TreeNode	AddChild	name label data isTerminal	creates a new treenode and adds a child to the tree **arguments**
+ML.DecTree	TreeNode	PruneChild	child	removes the child node
+ML.DecTree	TreeNode	ReplaceChildIndex	index newChild	replaces a given child with a new one
+ML.DecTree	TreeNode	GetChildren		returns a python list of the children of this node
+ML.DecTree	TreeNode	Destroy		destroys this node and all of its children
+ML.DecTree	TreeNode	GetName		returns the name of this node
+ML.DecTree	TreeNode	SetName	name	sets the name of this node
+ML.DecTree	TreeNode	GetData		returns the data stored at this node
+ML.DecTree	TreeNode	SetData	data	sets the data stored at this node
+ML.DecTree	TreeNode	GetTerminal		returns whether or not this node is terminal
+ML.DecTree	TreeNode	SetTerminal	isTerminal	sets whether or not this node is terminal
+ML.DecTree	TreeNode	GetLabel		returns the label of this node
+ML.DecTree	TreeNode	SetLabel	label	sets the label of this node should be an integer
+ML.DecTree	TreeNode	GetLevel		returns the level of this node
+ML.DecTree	TreeNode	SetLevel	level	sets the level of this node
+ML.DecTree	TreeNode	GetParent		returns the parent of this node
+ML.DecTree	TreeNode	SetParent	parent	sets the parent of this node
+ML.DecTree	TreeNode	Print	level showData	pretty prints the tree
+ML.DecTree	TreeNode	Pickle	fileName	pickles the tree and writes it to disk
+ML.DecTree	TreeNode	__str__		returns a string representation of the tree
+ML.DecTree	TreeNode	__cmp__	other	allows tree1 == tree2
+ML.DecTree	TreeNode	__lt__	other	allows tree1 < tree2
+ML.DecTree		ChooseOptimalRoot	examples trainExamples testExamples attrs	loops through all possible tree roots and chooses the one which produces the best tree **arguments**
+ML.DecTree		CrossValidate	tree testExamples appendExamples	determines the classification error for the testexamples **arguments**
+ML.DecTree		CrossValidationDriver	examples attrs nPossibleVals holdOutFrac	driver function for building trees and doing cross validation **arguments**
+ML.DecTree	Forest	MakeHistogram		creates a histogram of error/count pairs
+ML.DecTree	Forest	CollectVotes	example	collects votes across every member of the forest for the given example
+ML.DecTree	Forest	ClassifyExample	example	classifies the given example using the entire forest **returns** a result and a measure of confidence in it
+ML.DecTree	Forest	GetVoteDetails		returns the details of the last vote the forest conducted
+ML.DecTree	Forest	Grow	examples attrs nPossibleVals nTries	grows the forest by adding trees **arguments**
+ML.DecTree	Forest	Pickle	fileName	writes this forest off to a file so that it can be easily loaded later
+ML.DecTree	Forest	AddTree	tree error	adds a tree to the forest
+ML.DecTree	Forest	AverageErrors		convert summed error to average error
+ML.DecTree	Forest	SortTrees	sortOnError	sorts the list of trees
+ML.DecTree	Forest	GetDataTuple	i	returns all relevant data about a particular tree in the forest
+ML.DecTree	Forest	SetDataTuple	i tup	sets all relevant data for a particular tree in the forest
+ML.DecTree	Forest	GetAllData		returns everything we know
+ML.DecTree	Forest	__len__		allows len forest to work
+ML.DecTree	Forest	__getitem__	which	allows forest[i] to work return the data tuple
+ML.DecTree	Forest	__str__		allows the forest to show itself as a string
+ML.DecTree		_GenerateRandomEnsemble	nToInclude nBits	generates a random subset of a group of indices
+ML.DecTree		BuildSigTree	examples nPossibleRes ensemble random	**arguments** - examples the examples to be classified
+DataStructs	TopNContainer	__init__	size mostNeg	if size is negative all entries will be kept in sorted order
+DataStructs	TopNContainer	Insert	val extra	only does the insertion if val fits
+DataStructs	TopNContainer	GetPts		returns our set of points
+DataStructs	TopNContainer	GetExtras		returns our set of extras
+DataStructs	VectTests	testSparseIdx		test indexing into sparsebitvects
+DataStructs	VectTests	testSparseBitGet		test operations to get sparse bits
+DataStructs	VectTests	testSparseBitOps		test bit operations on sparsebitvects
+DataStructs	VectTests	testTanimotoSim		test tanimoto similarity measure
+DataStructs	VectTests	testOnBitSim		test on bit similarity measure
+DataStructs	VectTests	testNumBitsInCommon		test calculation of number of bits in common
+DataStructs	VectTests	testAllBitSim		test all bit similarity measure
+DataStructs	VectTests	testStringOps		test serialization operations
+DataStructs	VectTests	testFold		test folding fingerprints
+DataStructs	VectTests	testOtherSims		test other similarity measures
+DataStructs	VectTests	testQuickSims		the asymmetric similarity stuff bv pkl
+DataStructs	BitEnsemble	ScoreWithOnBits	other	other must support getonbits()
+DataStructs	BitEnsemble	ScoreWithIndex	other	other must support __getitem__()
+DataStructs		ConstructEnsembleBV	bv bitsToKeep	>>> from rdkit import datastructs >>> bv = datastructs
+DataStructs	TestCase	testdb1		test the sig - db functionality
+DataStructs	TestCase	testdb2		test the sig - db functionality
+DataStructs		load_tests	loader tests ignore	add the doctests from the module
+DataStructs		FingerprintSimilarity	fp1 fp2 metric	returns the calculated similarity between two fingerprints
+DataStructs		_InitScoreTable	dbConn tableName idInfo actInfo	inializes a db table to store our scores
+DataStructs		_ScoreToDb	sig dbConn tableName id	scores the "signature" that is passed in and puts the
+DataStructs	LazySig	__init__	computeFunc sigSize	computefunc should take a single argument the integer bit id
+DataStructs	LazySig	__len__		>>> obj = lazysig lambda x 1 10
+DataStructs	LazySig	__getitem__	which	>>> obj = lazysig lambda x x 10 >>> obj[1]
+VLib		load_tests	loader tests ignore	add the doctests from the module
+VLib	VLibNode	__iter__		part of the iterator interface
+VLib	VLibNode	next		part of the iterator interface
+VLib	VLibNode	reset		resets our iteration state
+VLib	VLibNode	AddChild	child notify	>>> p1 = vlibnode() >>> p2 = vlibnode()
+VLib	VLibNode	RemoveChild	child notify	>>> p1 = vlibnode() >>> c1 = vlibnode()
+VLib	VLibNode	AddParent	parent notify	>>> p1 = vlibnode() >>> p2 = vlibnode()
+VLib	VLibNode	RemoveParent	parent notify	>>> p1 = vlibnode() >>> c1 = vlibnode()
+VLib	VLibNode	Destroy	notify propagateDown propagateUp	>>> p1 = vlibnode() >>> p2 = vlibnode()
+VLib.NodeLib		load_tests	loader tests ignore	add the doctests from the module

@@ -1,0 +1,907 @@
+<tt style='background-color:#E8E8E8;'> core. <a href=' /script.py#L63'>collapse_stmts</a>(stmts)</tt>	Returns a flat list containing every statement in the tree stmts.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L99'>__init__</a>()</tt>	Loads the script by parsing all of the given files and then walking the various asts to initialize this script object.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L214'>scan_script_files</a>()</tt>	Scan the directories for script files.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L327'>load_string</a>(filename,filedata,linenumber)</tt>	Loads ren'py script from a string.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L355'>finish_load</a>(stmts,initcode,check_names,filename)</tt>	Given stmts, a list of ast nodes comprising the root block finishes loading it.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L454'>write_rpyc_header</a>(f)</tt>	Writes an empty version 2 rpyc header to the open binary file f.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L464'>write_rpyc_data</a>(f,slot,data)</tt>	Writes data into slot of a rpyc file the data should be a binary.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L481'>write_rpyc_md5</a>(f,digest)</tt>	Writes the md5 to the end of a rpyc file.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L489'>read_rpyc_data</a>(f,slot)</tt>	Reads the binary data from slot in a rpyc v1 or v2 file returns.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L529'>static_transforms</a>(stmts)</tt>	This performs transformations on the script that can be performed statically.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L757'>init_bytecode</a>()</tt>	Init/loads the bytecode cache.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L770'>update_bytecode</a>()</tt>	Compiles the pycode objects in self all_pycode updating the.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L842'>lookup</a>(label)</tt>	Looks up the given label in the game if the label is not found.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L862'>has_label</a>(label)</tt>	Returns true if the label exists or false otherwise.
+<tt style='background-color:#E8E8E8;'> core.Script <a href=' /script.py#L871'>analyze</a>()</tt>	Analyzes all statements that need analysis.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L240'>interact</a>(type,roll_forward)</tt>	:doc ui :args (roll_forward=none mouse='default').
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L300'>child_or_fixed</a>()</tt>	Causes the current widget to be given child-fixed semantics this.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L321'>at</a>(transform)</tt>	:doc ui specifies a transform that is applied to the next displayable to.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L338'>detached</a>()</tt>	:doc ui do not add the next displayable to any later or container.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L351'>layer</a>(name)</tt>	:doc ui adds displayables to the layer named name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L362'>close</a>(d)</tt>	:doc ui :args ().
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L399'>combine_style</a>(style_prefix,style_suffix)</tt>	Combines a style prefix and style suffix to create a style name then returns the style object corresoinding to that name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L413'>prefixed_style</a>(style_suffix)</tt>	Combines the default style prefix with a style suffix.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L591'>_implicit_add</a>(d)</tt>	A faster version of add to use when we know d is a displayable and isn't transformed.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ui.py#L1383'>screen_id</a>(id_,d)</tt>	:doc ui assigns the displayable d the screen widget id id_, as if it had.
+<tt style='background-color:#E8E8E8;'> core.Formatter <a href=' /substitutions.py#L39'>parse</a>(s)</tt>	Parses s according to ren'py string formatting rules returns a list.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2994'>substitute</a>(s,scope,force,translate)</tt>	Performs translation and formatting on s, as necessary.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /easy.py#L70'>displayable</a>(d,scope)</tt>	:doc udd_utility :name renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /easy.py#L111'>dynamic_image</a>(d,scope,prefix)</tt>	Substitutes a scope into d, then returns a displayable.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /easy.py#L174'>split_properties</a>(properties)</tt>	:doc other splits up properties into multiple dictionaries one per prefix.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L40'>get_path</a>(fn)</tt>	Returns the path to fn relative to the gamedir if any of the directories.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L101'>index_archives</a>()</tt>	Loads in the indexes for the archive files also updates the lower_map.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L199'>cleardirfiles</a>()</tt>	Clears the lists above when the game has changed.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L211'>scandirfiles</a>()</tt>	Scans directories archives and apks and fills out game_files and common_files.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L266'>listdirfiles</a>(common)</tt>	Returns a list of directory file tuples known to the system if.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L446'>load_core</a>(name)</tt>	Returns an open python file object of the given type.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L512'>get_prefixes</a>()</tt>	Returns a list of prefixes to search for files.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L549'>loadable_core</a>(name)</tt>	Returns true if the name is loadable with load false if it is not.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L591'>transfn</a>(name)</tt>	Tries to translate the name to a file that exists in one of the searched directories.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L621'>get_hash</a>(name)</tt>	Returns the time the file m was last modified or 0 if it doesn't exist or is archived.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L749'>auto_mtime</a>(fn)</tt>	Gets the mtime of fn or none if the file does not exist.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L760'>add_auto</a>(fn,force)</tt>	Adds fn as a file we watch for changes if it's mtime changes or the file.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L784'>auto_thread_function</a>()</tt>	This thread sets need_autoreload when necessary.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L814'>auto_init</a>()</tt>	Starts the autoreload thread.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loader.py#L835'>auto_quit</a>()</tt>	Terminates the autoreload thread.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /defaultstore.py#L270'>AlphaBlend</a>(control,old,new,alpha)</tt>	:doc disp_effects this transition uses a control displayable (almost always some sort of.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /defaultstore.py#L287'>At</a>(d)</tt>	:doc disp_at given a displayable d, applies each of the transforms in args.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pyanalysis.py#L96'>const</a>(name)</tt>	:doc const declares a variable in the store to be constant.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pyanalysis.py#L114'>not_const</a>(name)</tt>	:doc const declares a name in the store to be not constant.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /pyanalysis.py#L132'>pure</a>(fn)</tt>	:doc const declares a function as pure.
+<tt style='background-color:#E8E8E8;'> core.DeltaSet <a href=' /pyanalysis.py#L186'>__init__</a>(base,copy)</tt>	Represents a set that stores its contents as differences from a base set.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L288'>imagemap</a>()</tt>	Returns not_const if we're in a non-constant imagemap.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L298'>exit_loop</a>()</tt>	Call this to indicate the current loop is being exited by the continue or break statements.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L313'>at_fixed_point</a>()</tt>	Returns true if we've reached a fixed point where the analysis has not changed since the last time we called this function.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L337'>mark_constant</a>(name)</tt>	Marks name as a potential local constant.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L347'>mark_not_constant</a>(name)</tt>	Marks name as definitely not-constant.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L358'>is_constant</a>(node)</tt>	Returns true if node is constant for the purpose of screen language.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L521'>is_constant_expr</a>(expr)</tt>	Compiles expr into an ast node then returns the result of self.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L534'>python</a>(code)</tt>	Performs analysis on a block of python code.
+<tt style='background-color:#E8E8E8;'> core.Analysis <a href=' /pyanalysis.py#L546'>parameters</a>(parameters)</tt>	Analyzes the parameters to the screen.
+<tt style='background-color:#E8E8E8;'> core.CompilerCache <a href=' /pyanalysis.py#L664'>ast_eval_literal</a>(expr)</tt>	Compiles an expression into an ast.
+<tt style='background-color:#E8E8E8;'> core.CompilerCache <a href=' /pyanalysis.py#L699'>ast_exec</a>(code)</tt>	Compiles a block into an ast.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L160'>run</a>(restart)</tt>	This is called during a single run of the script restarting the script.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L120'>image_exists_imprecise</a>(name)</tt>	Returns true if the image is a plausible image that can be used in a show statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L163'>image_exists_precise</a>(name)</tt>	Returns true if an image exists with the same tag and attributes as name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L192'>image_exists</a>(name,expression,tag,precise)</tt>	Checks a scene or show statement for image existence.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L585'>check_filename_encodings</a>()</tt>	Checks files to ensure that they are displayable in unicode.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L622'>common</a>(n)</tt>	Returns true if the node is in the common directory.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /lint.py#L635'>lint</a>()</tt>	The master lint function that's responsible for staging all of the other checks.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L40'>renpy_pure</a>(fn)</tt>	Marks renpy fn as a pure function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L123'>public_api</a>()</tt>	:undocumented this does nothing except to make warnings about unused imports go away.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L175'>roll_forward_info</a>()</tt>	:doc rollback when in rollback returns the data that was supplied to :func renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L189'>roll_forward_core</a>(value)</tt>	:undocumented to cause a roll_forward to occur return the value of this function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L209'>in_rollback</a>()</tt>	:doc rollback returns true if the game has been rolled back.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L219'>can_rollback</a>()</tt>	:doc rollback returns true if we can rollback.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L229'>in_fixed_rollback</a>()</tt>	:doc blockrollback returns true if rollback is currently occurring and the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L240'>checkpoint</a>(data,keep_rollback)</tt>	:doc rollback :args (data=none).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L260'>block_rollback</a>()</tt>	:doc blockrollback prevents the game from rolling back to before the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L271'>suspend_rollback</a>(flag)</tt>	:doc rollback :args flag.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L287'>fix_rollback</a>()</tt>	:doc blockrollback prevents the user from changing decisions made before the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L297'>retain_after_load</a>()</tt>	:doc retain_after_load causes data modified between the current statement and the statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L311'>count_displayables_in_layer</a>(layer)</tt>	Returns how many displayables are in the supplied layer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L321'>image</a>(name,d)</tt>	:doc se_images defines an image.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L351'>copy_images</a>(old,new)</tt>	:doc image_func copies images beginning with one prefix to images beginning with.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L390'>default_layer</a>(layer,tag,expression)</tt>	:undocumented if layer is not none returns it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L413'>can_show</a>(name,layer,tag)</tt>	:doc image_func determines if name can be used to show an image.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L445'>showing</a>(name,layer)</tt>	:doc image_func returns true if an image with the same tag as name is showing on.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L480'>predict_show</a>(name,layer,what,tag)</tt>	:undocumented predicts a scene or show statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L539'>show</a>(name,at_list,layer,what)</tt>	:doc se_images :args (name at_list=[ ], layer='master', what=none zorder=0 tag=none behind=[ ]).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L662'>hide</a>(name,layer)</tt>	:doc se_images hides an image from a layer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L694'>scene</a>(layer)</tt>	:doc se_images removes all displayables from layer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L725'>input</a>(prompt,default,allow,exclude)</tt>	:doc input calling this function pops up a window asking the player to enter some.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L809'>menu</a>(items,set_expr)</tt>	:undocumented displays a menu and returns to the user the value of the selected.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L860'>choice_for_skipping</a>()</tt>	:doc other tells ren'py that a choice is coming up soon.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L880'>predict_menu</a>()</tt>	:undocumented predicts widgets that are used by the menu.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L909'>display_menu</a>(items,window_style,interact,with_none)</tt>	:doc se_menu :args (items interact=true screen="choice").
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1078'>predict_say</a>(who,what)</tt>	:undocumented this is called to predict the results of a say command.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1096'>scry_say</a>(who,scry)</tt>	:undocumented called when scry is called on a say statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1110'>say</a>(who,what,interact)</tt>	:doc se_say the equivalent of the say statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1150'>imagemap</a>(ground,selected,hotspots,unselected)</tt>	:undocumented use screens already.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1215'>pause</a>(delay,music,with_none,hard)</tt>	:doc other causes ren'py to pause.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1292'>movie_cutscene</a>(filename,delay,loops,stop_music)</tt>	:doc movie_cutscene this displays an mpeg-1 cutscene for the specified number of.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1350'>with_statement</a>(trans,always,paired,clear)</tt>	:doc se_with :name renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1386'>rollback</a>(force,checkpoints,defer,greedy)</tt>	:doc rollback rolls the state of the game back to the last checkpoint.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1438'>toggle_fullscreen</a>()</tt>	:undocumented toggles the fullscreen mode.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1447'>toggle_music</a>()</tt>	:undocumented does nothing.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1454'>has_label</a>(name)</tt>	:doc label returns true if name is a valid label the program or false otherwise.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1469'>get_all_labels</a>()</tt>	:doc label returns the set of all labels defined in the program including labels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1486'>take_screenshot</a>(scale,background)</tt>	:doc loadsave causes a screenshot to be taken.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1500'>full_restart</a>(transition,label,target)</tt>	:doc other causes ren'py to restart returning the user to the main menu.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1517'>utter_restart</a>()</tt>	:undocumented used in the implementation of shift+r.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1528'>reload_script</a>()</tt>	:doc other causes ren'py to save the game reload the script and then load the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L203'>quit</a>(relaunch,status)</tt>	:doc other this causes ren'py to exit entirely.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1568'>jump</a>(label)</tt>	:doc se_jump causes the current statement to end and control to jump to the given.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1579'>jump_out_of_context</a>(label)</tt>	:doc label causes control to leave the current context and then to be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1590'>call</a>(label)</tt>	:doc se_call causes the current ren'py statement to terminate and a jump to a.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1602'>return_statement</a>()</tt>	:doc se_call causes ren'py to return from the current ren'py-level call.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1612'>screenshot</a>(filename)</tt>	:doc other saves a screenshot in filename.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1622'>version</a>(tuple)</tt>	:doc renpy_version if tuple is false returns a string containing "ren'py ", followed by.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1646'>transition</a>(trans,layer,always,force)</tt>	:doc other :args (trans layer=none always=false).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1668'>get_transition</a>(layer)</tt>	:doc other gets the transition for layer, or the entire scene if.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1681'>clear_game_runtime</a>()</tt>	:doc other resets the game runtime counter.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1691'>get_game_runtime</a>()</tt>	:doc other returns the game runtime counter.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1705'>loadable</a>(filename)</tt>	:doc file returns true if the given filename is loadable meaning that it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1718'>exists</a>(filename)</tt>	:doc file_rare returns true if the given filename can be found in the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1738'>restart_interaction</a>()</tt>	:doc other restarts the current interaction.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /game.py#L239'>context</a>()</tt>	:doc context returns an object that is unique to the current context.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1771'>context_nesting_level</a>()</tt>	:doc context returns the nesting level of the current context.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1783'>music_start</a>(filename,loops,fadeout,fadein)</tt>	Deprecated music start function retained for compatibility use.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1792'>music_stop</a>(fadeout)</tt>	Deprecated music start function retained for compatibility use.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1801'>get_filename_line</a>()</tt>	:doc debug returns a pair giving the filename and line number of the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1821'>log</a>(msg)</tt>	:doc debug if :var config.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1856'>force_full_redraw</a>()</tt>	:doc other forces the screen to be redrawn in full.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1896'>dynamic</a>()</tt>	:doc other this can be given one or more variable names as arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1912'>context_dynamic</a>()</tt>	:doc other this can be given one or more variable names as arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1928'>seen_label</a>(label)</tt>	:doc label returns true if the named label has executed at least once on the current user's.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1939'>seen_audio</a>(filename)</tt>	:doc audio returns true if the given filename has been played at least once on the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1952'>seen_image</a>(name)</tt>	:doc image_func returns true if the named image has been seen at least once on the user's.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1968'>file</a>(fn)</tt>	:doc file returns a read-only file-like object that accesses the file named fn.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L1983'>image_size</a>(im)</tt>	:doc file_rare given an image manipulator loads it and returns a (width,.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2007'>get_at_list</a>(name,layer)</tt>	:doc se_images returns the list of transforms being applied to the image with tag name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2027'>show_layer_at</a>(at_list,layer)</tt>	:doc se_images the python equivalent of the show layer layer at at_list.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2043'>free_memory</a>()</tt>	:doc other attempts to free some memory.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2066'>quit_event</a>()</tt>	:doc other triggers a quit event as if the player clicked the quit button in the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2077'>iconify</a>()</tt>	:doc other iconifies the game.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2116'>timeout</a>(seconds)</tt>	:doc udd_utility causes an event to be generated before seconds seconds have elapsed.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2128'>end_interaction</a>(value)</tt>	:doc udd_utility if value is not none immediately ends the current interaction causing.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2145'>scry</a>()</tt>	:doc other returns the scry object for the current statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2175'>load_module</a>(name)</tt>	:doc other this loads the ren'py module named name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2221'>load_string</a>(s,filename)</tt>	:doc other loads s as ren'py script that can be called.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2265'>pop_call</a>()</tt>	:doc other :name renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2282'>call_stack_depth</a>()</tt>	:doc other returns the depth of the call stack of the current context - the number.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2294'>game_menu</a>(screen)</tt>	:undocumented probably not what we want in the presence of screens.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2306'>shown_window</a>()</tt>	:doc other call this to indicate that the window has been shown.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2332'>get_placement</a>(d)</tt>	:doc image_func this gets the placement of displayable d.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2356'>get_image_bounds</a>(tag,width,height,layer)</tt>	:doc image_func if an image with tag exists on layer, returns the bounding box of.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2404'>cache_pin</a>()</tt>	:undocumented cache pin is deprecated.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2423'>cache_unpin</a>()</tt>	:undocumented cache pin is deprecated.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2442'>start_predict</a>()</tt>	:doc image_func this function takes one or more displayables as arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2460'>stop_predict</a>()</tt>	:doc image_func this function takes one or more displayables as arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2477'>start_predict_screen</a>(_screen_name)</tt>	:doc screens causes ren'py to start predicting the screen named _screen_name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2491'>stop_predict_screen</a>(name)</tt>	:doc screens causes ren'py to stop predicting the screen named name will be shown.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2503'>call_screen</a>(_screen_name)</tt>	:doc screens the programmatic equivalent of the call screen statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2547'>list_files</a>(common)</tt>	:doc file lists the files in the game directory and archive files.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2571'>get_renderer_info</a>()</tt>	:doc other returns a dictionary giving information about the renderer ren'py is.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2596'>display_reset</a>()</tt>	:undocumented used internally.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2606'>mode</a>(mode)</tt>	:doc modes causes ren'py to enter the named mode or stay in that mode if it's.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2637'>get_mode</a>()</tt>	:doc modes returns the current mode or none if it is not defined.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2654'>notify</a>(message)</tt>	:doc other causes ren'py to display the message using the notify screen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2674'>variant</a>(name)</tt>	:doc screens returns true if a name is a screen variant that can be chosen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2698'>vibrate</a>(duration)</tt>	:doc other causes the device to vibrate for duration seconds.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2713'>get_say_attributes</a>()</tt>	:doc other gets the attributes associated with the current say statement or.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2726'>get_side_image</a>(prefix_tag,image_tag,not_showing,layer)</tt>	:doc other this attempts to find an image to show as the side image.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2768'>get_physical_size</a>()</tt>	:doc other returns the size of the physical window.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2778'>set_physical_size</a>(size)</tt>	:doc other attempts to set the size of the physical window to size.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2794'>reset_physical_size</a>()</tt>	:doc other attempts to set the size of the physical window to the specified values.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2810'>fsencode</a>(s)</tt>	:doc file_rare :name renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2826'>fsdecode</a>(s)</tt>	:doc file_rare :name renpy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2845'>get_image_load_log</a>(age)</tt>	:doc other a generator that yields a log of image loading activity.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2878'>end_replay</a>()</tt>	:doc replay if we're in a replay ends the replay immediately.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2890'>save_persistent</a>()</tt>	:doc persistent saves the persistent data to disk.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2900'>is_seen</a>(ever)</tt>	:doc other returns true if the current line has been seen by the player.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2914'>get_mouse_pos</a>()</tt>	:doc other returns an x y tuple giving the location of the mouse pointer or the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2925'>set_mouse_pos</a>(x,y,duration)</tt>	:doc other jump the mouse pointer to the location given by arguments x and y.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2940'>set_autoreload</a>(autoreload)</tt>	:doc other sets the autoreload flag which determines if the game will be.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2952'>get_autoreload</a>()</tt>	:doc other gets the autoreload flag.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2962'>count_dialogue_blocks</a>()</tt>	:doc other returns the number of dialogue blocks in the game's original language.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2972'>count_seen_dialogue_blocks</a>()</tt>	:doc other returns the number of dialogue blocks the user has seen in any play-through.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2983'>count_newly_seen_dialogue_blocks</a>()</tt>	:doc other returns the number of dialogue blocks the user has seen for the first time.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L2994'>substitute</a>(s,scope,translate)</tt>	:doc other applies translation and new-style formatting to the string s.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3013'>munge</a>(name,filename)</tt>	:doc other munges name, which must begin with __.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3036'>get_return_stack</a>()</tt>	:doc label returns a list giving the current return stack.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3050'>set_return_stack</a>(stack)</tt>	:doc label sets the current return stack.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3064'>invoke_in_thread</a>(fn)</tt>	:doc other invokes the function fn in a background thread passing it the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3090'>cancel_gesture</a>()</tt>	:doc gesture cancels the current gesture preventing the gesture from being recognized.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3101'>execute_default_statement</a>(start)</tt>	:undocumented executes the default statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3112'>write_log</a>(s)</tt>	:undocumented writes to log.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3122'>predicting</a>()</tt>	:doc screens returns true if ren'py is currently predicting the screen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3132'>get_line_log</a>()</tt>	:undocumented returns the list of lines that have been shown since the last time.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3143'>clear_line_log</a>()</tt>	:undocumented clears the line log.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3153'>add_layer</a>(layer,above,below,menu_clear)</tt>	:doc other adds a new layer to the screen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3207'>maximum_framerate</a>(t)</tt>	:doc other forces ren'py to draw the screen at the maximum framerate for t seconds.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3224'>is_start_interact</a>()</tt>	:doc other returns true if restart_interaction has not been called during the current.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3236'>play</a>(filename,channel)</tt>	:doc audio plays a sound effect.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3254'>get_editable_input_value</a>()</tt>	:undocumented returns the current input value and a flag that is true if it is editable.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3265'>set_editable_input_value</a>(input_value,editable)</tt>	:undocumented sets the currently active input value and if it should be marked as.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3277'>get_refresh_rate</a>(precision)</tt>	:doc other returns the refresh rate of the current screen as a floating-point.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3305'>get_identifier_checkpoints</a>(identifier)</tt>	:doc rollback given a rollback_identifier from a historyentry object returns the number.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3318'>get_adjustment</a>(bar_value)</tt>	:doc other given bar_value, a :class barvalue, returns the :func ui.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /exports.py#L3337'>get_skipping</a>()</tt>	:doc other returns true if the ren'py is skipping "fast" if ren'py is fast skipping.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L231'>normalize</a>()</tt>	:doc color method returns a normalized version of this color where all components fall.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L294'>interpolate</a>(other,fraction)</tt>	:doc color method interpolates between this color and other in the rgb color.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L307'>interpolate_hsv</a>(other,fraction)</tt>	:doc color method interpolates between this color and other in the hsv color.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L328'>interpolate_hls</a>(other,fraction)</tt>	:doc color method interpolates between this color and other in the hls color.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L349'>tint</a>(fraction)</tt>	:doc color method creates a tint of this color by mixing it with white.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L362'>shade</a>(fraction)</tt>	:doc color method creates a shade of this color by mixing it with black.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L375'>opacity</a>(opacity)</tt>	:doc color method multiplies the alpha channel of this color by opacity, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L389'>rotate_hue</a>(rotation)</tt>	:doc color method rotates this color's hue by rotation, and returns the new color.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L401'>replace_hue</a>(hue)</tt>	:doc color method replaces this color's hue with hue, which should be between 0.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L413'>multiply_hls_saturation</a>(saturation)</tt>	:doc color method multiplies this color's saturation by saturation, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L425'>multiply_hsv_saturation</a>(saturation)</tt>	:doc color method multiplies this color's saturation by saturation, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L437'>multiply_value</a>(value)</tt>	:doc color method multiples this color's value by value and returns the result as a.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L449'>replace_hls_saturation</a>(saturation)</tt>	:doc color method replaces this color's saturation with saturation, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L461'>replace_hsv_saturation</a>(saturation)</tt>	:doc color method replace this color's saturation with saturation, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L473'>replace_value</a>(value)</tt>	:doc color method replaces this color's value with value and returns the result as a.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L485'>replace_lightness</a>(lightness)</tt>	:doc color method replaces this color's lightness with lightness, and returns.
+<tt style='background-color:#E8E8E8;'> core.Color <a href=' /color.py#L497'>replace_opacity</a>(opacity)</tt>	:doc color method replaces this color's alpha channel with opacity, and.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /warp.py#L32'>warp</a>()</tt>	Given a filename and line number this attempts to warp the user to that filename and line number.
+<tt style='background-color:#E8E8E8;'> core.Parser <a href=' /screenlang.py#L163'>add</a>(i)</tt>	Adds a clause to this parser.
+<tt style='background-color:#E8E8E8;'> core.Parser <a href=' /screenlang.py#L234'>parse_eval</a>(expr,lineno)</tt>	Parses an expression for eval and then strips off the module and expr instances and adjusts the line number.
+<tt style='background-color:#E8E8E8;'> core.Parser <a href=' /screenlang.py#L257'>parse_exec</a>(code,lineno)</tt>	Parses an expression for exec then strips off the module and adjusts the line number.
+<tt style='background-color:#E8E8E8;'> core.Parser <a href=' /screenlang.py#L293'>parse</a>(l,name)</tt>	This is expected to parse a function statement and to return a list of python ast statements.
+<tt style='background-color:#E8E8E8;'> core.ScreenLangScreen <a href=' /screenlang.py#L1237'>define</a>(location)</tt>	Defines a screen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /screenlang.py#L1364'>parse_screen</a>(l)</tt>	Parses the screen statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /execution.py#L61'>not_infinite_loop</a>(delay)</tt>	:doc other resets the infinite loop detection timer to delay seconds.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /atl.py#L230'>__init__</a>(rollback,context,clear)</tt>	Clear true if we should clear out the context_clear_layers.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L275'>make_dynamic</a>(names,context)</tt>	Makes the variable names listed in names dynamic by backing up their current value if not already dynamic in the current call.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L298'>pop_dynamic</a>()</tt>	Pops one level of the dynamic stack called when the return.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L317'>pop_all_dynamic</a>()</tt>	Pops all levels of the dynamic stack called when we jump.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L338'>goto_label</a>(node_name)</tt>	Sets the name of the node that will be run when this context next executes.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L346'>check_stacks</a>()</tt>	Check and fix stack corruption.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L387'>report_coverage</a>(node)</tt>	Execs a python pass statement on the line of code corresponding to node.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L399'>run</a>(node)</tt>	Executes as many nodes as possible in the current context if the.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L501'>mark_seen</a>()</tt>	Marks the current statement as one that has been seen by the user.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L508'>call</a>(label,return_site)</tt>	Calls the named label.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L531'>pop_call</a>()</tt>	Blindly pops the top call record from the stack.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L546'>lookup_return</a>(pop)</tt>	Returns the node to return to or none if there is no such node.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L580'>rollback_copy</a>()</tt>	Makes a copy of this object suitable for rolling back to.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L599'>predict_call</a>(label,return_site)</tt>	This is called by the prediction code to indicate that a call to label will occur.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L616'>predict_return</a>()</tt>	This predicts that a return will occur.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L631'>predict</a>()</tt>	Performs image prediction calling the given callback with each images that we predict to be loaded in the rough order that.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L703'>seen_current</a>(ever)</tt>	Returns a true value if we have finshed the current statement at least once before.
+<tt style='background-color:#E8E8E8;'> core.Context <a href=' /execution.py#L723'>do_deferred_rollback</a>()</tt>	Called to cause deferred rollback to occur.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /execution.py#L755'>run_context</a>(top)</tt>	Runs the current context until it can't be run anymore while handling the restartcontext and restarttopcontext exceptions.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /atl.py#L128'>correct_type</a>(v,b,ty)</tt>	Corrects the type of v to match ty b is used to inform the match.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /atl.py#L142'>interpolate</a>(t,a,b,type)</tt>	Linearly interpolate the arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /atl.py#L210'>compile_all</a>()</tt>	Called after the init phase is finished and transforms are compiled to compile all transforms.
+<tt style='background-color:#E8E8E8;'> core.ATLTransformBase <a href=' /atl.py#L316'>get_block</a>()</tt>	Returns the compiled block to use.
+<tt style='background-color:#E8E8E8;'> core.ATLTransformBase <a href=' /atl.py#L328'>take_execution_state</a>(t)</tt>	Updates self to begin executing from the same point as t this.
+<tt style='background-color:#E8E8E8;'> core.ATLTransformBase <a href=' /atl.py#L438'>compile</a>()</tt>	Compiles the atl code into a block as necessary updates the.
+<tt style='background-color:#E8E8E8;'> core.RawStatement <a href=' /atl.py#L573'>mark_constant</a>()</tt>	Sets self constant to true if all expressions used in this statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /minstore.py#L49'>_</a>(s)</tt>	:undocumented documented directly in the rst.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L84'>filename</a>(slotname)</tt>	Given a slot name returns a filename.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L91'>scan</a>()</tt>	Scan for files that are added or removed.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L139'>save</a>(slotname,record)</tt>	Saves the save record in slotname.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L151'>list</a>()</tt>	Returns a list of all slots with savefiles in them in arbitrary order.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L159'>mtime</a>(slotname)</tt>	For a slot returns the time the object was saved in that slot.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L169'>json</a>(slotname)</tt>	Returns the json data for slotname.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L204'>screenshot</a>(slotname)</tt>	Returns a displayable that show the screenshot for this slot.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L240'>load</a>(slotname)</tt>	Returns the log component of the file found in slotname, so it can be loaded.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L256'>unlink</a>(slotname)</tt>	Deletes the file in slotname.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L269'>rename</a>(old,new)</tt>	If old exists renames it to new.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L289'>copy</a>(old,new)</tt>	Copies old to new, if old exists.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L305'>load_persistent</a>()</tt>	Returns a list of mtime persistent tuples loaded from the persistent file.
+<tt style='background-color:#E8E8E8;'> core.FileLocation <a href=' /savelocation.py#L317'>save_persistent</a>(data)</tt>	Saves data as the persistent data data is a binary string giving.
+<tt style='background-color:#E8E8E8;'> core.MultiLocation <a href=' /savelocation.py#L367'>newest</a>(slotname)</tt>	Returns the location containing the slotname with the newest mtime.
+<tt style='background-color:#E8E8E8;'> core.MultiLocation <a href=' /savelocation.py#L388'>add</a>(location)</tt>	Adds a new location.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /game.py#L239'>context</a>(index)</tt>	Return the current execution context or the context at the given index if one is specified.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /game.py#L248'>invoke_in_new_context</a>(callable)</tt>	:doc label this function creates a new context and invokes the given python.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /game.py#L299'>call_in_new_context</a>(label)</tt>	:doc label this creates a new context and then starts executing ren'py script.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /game.py#L347'>call_replay</a>(label,scope)</tt>	:doc replay calls a label as a memory.
+<tt style='background-color:#E8E8E8;'> core.StoreDict <a href=' /python.py#L106'>reset</a>()</tt>	Called to reset this to its initial conditions.
+<tt style='background-color:#E8E8E8;'> core.StoreDict <a href=' /python.py#L115'>begin</a>()</tt>	Called to mark the start of a rollback period.
+<tt style='background-color:#E8E8E8;'> core.StoreDict <a href=' /python.py#L122'>get_changes</a>()</tt>	For every key that has changed since begin() was called returns a dictionary mapping the key to its value when begin was called or.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L162'>create_store</a>(name)</tt>	Creates the store with name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L247'>make_clean_stores</a>()</tt>	Copy the clean stores.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L262'>clean_stores</a>()</tt>	Revert the store to the clean copy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L270'>clean_store</a>(name)</tt>	Reverts the named store to its clean copy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L307'>reached</a>(obj,reachable,wait)</tt>	@param obj the object that was reached.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L364'>reached_vars</a>(store,reachable,wait)</tt>	Marks everything reachable from the variables in the store or from the context info objects as reachable.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L460'>set_filename</a>(filename,offset,tree)</tt>	Set the filename attribute to filename on every node in tree.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L477'>unicode_sub</a>(m)</tt>	If the string s contains a unicode character make it into a unicode string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L522'>py_compile</a>(source,mode,filename,lineno)</tt>	Compiles the given source code using the supplied codegenerator.
+<tt style='background-color:#E8E8E8;'> core.RevertableList <a href=' /python.py#L739'>_clean</a>()</tt>	Gets a clean copy of this object before any mutation occurs.
+<tt style='background-color:#E8E8E8;'> core.RevertableList <a href=' /python.py#L746'>_compress</a>(clean)</tt>	Takes a clean copy of this object compresses it and returns compressed information that can be passed to rollback.
+<tt style='background-color:#E8E8E8;'> core.RevertableList <a href=' /python.py#L763'>_rollback</a>(compressed)</tt>	Rolls this object back using the information created by _compress.
+<tt style='background-color:#E8E8E8;'> core.DetRandom <a href=' /python.py#L945'>pushback</a>(l)</tt>	Pushes the random numbers in l onto the stack so they will be generated in the order given.
+<tt style='background-color:#E8E8E8;'> core.DetRandom <a href=' /python.py#L956'>reset</a>()</tt>	Resets the rng removing all of the pushbacked numbers.
+<tt style='background-color:#E8E8E8;'> core.DetRandom <a href=' /python.py#L963'>Random</a>(seed)</tt>	Returns a new rng object separate from the main one.
+<tt style='background-color:#E8E8E8;'> core.Rollback <a href=' /python.py#L1063'>purge_unreachable</a>(reachable,wait)</tt>	Adds objects that are reachable from the store of this rollback to the set of reachable objects and purges.
+<tt style='background-color:#E8E8E8;'> core.Rollback <a href=' /python.py#L1111'>rollback</a>()</tt>	Reverts the state of the game to what it was at the start of the previous checkpoint.
+<tt style='background-color:#E8E8E8;'> core.Rollback <a href=' /python.py#L1138'>rollback_control</a>()</tt>	This rolls back only the control information while leaving the data information intact.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1221'>begin</a>()</tt>	Called before a node begins executing to indicate that the state needs to be saved for rollbacking.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1273'>complete</a>()</tt>	Called after a node is finished executing before a save begins or right before a rollback is attempted.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1316'>get_roots</a>()</tt>	Return a map giving the current roots of the store this is a.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1338'>purge_unreachable</a>(roots,wait)</tt>	This is called to purge objects that are unreachable from the roots from the object rollback lists inside the rollback entries.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1367'>forward_info</a>()</tt>	Returns the current forward info if any.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1381'>checkpoint</a>(data,keep_rollback,hard)</tt>	Called to indicate that this is a checkpoint which means that the user may want to rollback to just before this.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1433'>suspend_checkpointing</a>(flag)</tt>	Called to temporarily suspend checkpointing so any rollback.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1441'>block</a>()</tt>	Called to indicate that the user should not be able to rollback through this checkpoint.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1449'>retain_after_load</a>()</tt>	Called to return data from this statement until the next checkpoint when the game is loaded.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1462'>can_rollback</a>()</tt>	Returns true if we can rollback.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1469'>rollback</a>(checkpoints,force,label,greedy)</tt>	This rolls the system back to the first valid rollback point after having rolled back past the specified number of checkpoints.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1618'>freeze</a>(wait)</tt>	This is called to freeze the store and the log in preparation for serialization.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1636'>discard_freeze</a>()</tt>	Called to indicate that we will not be restoring from the frozen state.
+<tt style='background-color:#E8E8E8;'> core.RollbackLog <a href=' /python.py#L1642'>unfreeze</a>(roots,label)</tt>	Used to unfreeze the game state after a load of this log object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /python.py#L1763'>raise_at_location</a>(e,loc)</tt>	Raises e which must be an exception object at location loc.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /statements.py#L33'>register</a>(name,parse,lint,execute)</tt>	:doc statement_register :name renpy.
+<tt style='background-color:#E8E8E8;'> core.ArgumentParser <a href=' /arguments.py#L53'>__init__</a>(second_pass,description,require_command)</tt>	Creates an argument parser.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L160'>run</a>()</tt>	The default command that when called leads to normal game startup.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L193'>compile</a>()</tt>	This command forces the game script to be recompiled.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L203'>quit</a>()</tt>	This command is used to quit without doing anything.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L213'>rmpersistent</a>()</tt>	This command is used to delete the persistent data.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L226'>register_command</a>(name,function)</tt>	Registers a command that can be invoked when ren'py is run on the command line.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L242'>bootstrap</a>()</tt>	Called during bootstrap to perform an initial parse of the arguments ignoring unknown arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L256'>pre_init</a>()</tt>	Called before init to set up argument parsing.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L270'>post_init</a>()</tt>	Called after init but before the game starts this parses a command.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /arguments.py#L288'>takes_no_arguments</a>(description)</tt>	Used to report that a command takes no arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L37'>write_utf8_traceback_list</a>(out,l)</tt>	Given the traceback list l writes it to out as utf-8.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L64'>traceback_list</a>(tb)</tt>	Given tb, returns a list of (filename line_number function line_text) tuples.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L111'>filter_traceback_list</a>(tl)</tt>	Returns the subset of tl that originates in creator-written files as opposed to those portions that come from ren'py itself.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L127'>open_error_file</a>(fn,mode)</tt>	Opens an error/log/file returns the open file and the filename that.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /error.py#L152'>report_exception</a>(e,editor)</tt>	Reports an exception by writing it to standard error and traceback.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L64'>get_line_text</a>(filename,linenumber)</tt>	Gets the text of the line with filename and linenumber, or the none if the line does not exist.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L76'>adjust_line_locations</a>(filename,linenumber,char_offset,line_offset)</tt>	Adjusts the locations in the line data structure.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L110'>insert_line_before</a>(code,filename,linenumber)</tt>	Adds code immediately before filename and linenumber those must.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L157'>remove_line</a>(filename,linenumber)</tt>	Removes linenumber from filename the line must exist and correspond.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L188'>get_full_text</a>(filename,linenumber)</tt>	Returns the full text of linenumber from filename, including any comment or delimiter characters that exist.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L200'>nodes_on_line</a>(filename,linenumber)</tt>	Returns a list of nodes that are found on the given line.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L214'>first_and_last_nodes</a>(nodes)</tt>	Finds the first and last nodes in nodes, a list of nodes this assumes.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L247'>adjust_ast_linenumbers</a>(filename,linenumber,offset)</tt>	This adjusts the line numbers in the the ast.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L266'>add_to_ast_before</a>(code,filename,linenumber)</tt>	Adds code, which must be a textual line of ren'py code to the ast immediately before statement, which should be an ast node.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /scriptedit.py#L292'>remove_from_ast</a>(filename,linenumber)</tt>	Removes from the ast all statements that happen to be at filename and linenumber, then adjusts the line numbers appropriately.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /curry.py#L55'>curry</a>(fn)</tt>	Takes a callable and returns something that when called returns something that when called again calls the function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /curry.py#L68'>partial</a>(function)</tt>	Stores the arguments and keyword arguments of function and returns something that when called calls the function with.
+<tt style='background-color:#E8E8E8;'> core.Editor <a href=' /editor.py#L53'>begin</a>(new_window)</tt>	Begins an editor transaction.
+<tt style='background-color:#E8E8E8;'> core.Editor <a href=' /editor.py#L62'>end</a>()</tt>	Ends an editor transaction.
+<tt style='background-color:#E8E8E8;'> core.Editor <a href=' /editor.py#L67'>open</a>(filename,line)</tt>	Ensures path is open in the editor this may be called multiple.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L203'>init</a>()</tt>	Loads the persistent data from disk.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /editor.py#L127'>launch_editor</a>(filenames,line,transient)</tt>	Causes the editor to be launched.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L43'>walk_memory</a>(roots,seen)</tt>	Walks over memory trying to account it to the objects in roots each.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L109'>profile_memory_common</a>(packages)</tt>	Profiles object surface and texture memory used in the renpy and store packages.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L144'>profile_memory</a>(fraction,minimum)</tt>	:doc memory profiles object surface and texture memory use by ren'py and the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L199'>diff_memory</a>(update)</tt>	:doc memory profiles objects surface and texture memory use by ren'py and the game.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L252'>profile_rollback</a>()</tt>	:doc memory profiles memory used by the rollback system.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /memory.py#L328'>find_parents</a>(cls)</tt>	Finds the parents of every object of type cls.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L68'>save_dump</a>(roots,log)</tt>	Dumps information about the save to save_dump txt we dump the size.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L196'>safe_rename</a>(old,new)</tt>	Safely rename old to new.
+<tt style='background-color:#E8E8E8;'> core.SaveRecord <a href=' /loadsave.py#L236'>write_file</a>(filename)</tt>	This writes a standard-format savefile to filename.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L383'>save</a>(slotname,extra_info,mutate_flag)</tt>	:doc loadsave :args (filename extra_info='').
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L385'>force_autosave</a>(take_screenshot)</tt>	:doc other forces a background autosave to occur.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L441'>list_saved_games</a>(regexp,fast)</tt>	:doc loadsave lists the save games.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L494'>list_slots</a>(regexp)</tt>	:doc loadsave returns a list of non-empty save slots.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L517'>newest_slot</a>(regexp)</tt>	:doc loadsave returns the name of the newest save slot (the save slot with the most.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L552'>slot_mtime</a>(slotname)</tt>	:doc loadsave returns the modification time for slot, or none if the slot is empty.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L562'>slot_json</a>(slotname)</tt>	:doc loadsave returns the json information for slotname, or none if the slot is.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L573'>slot_screenshot</a>(slotname)</tt>	:doc loadsave returns a display that can be used as the screenshot for slotname,.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L584'>can_load</a>(filename,test)</tt>	:doc loadsave returns true if filename exists as a save slot and false otherwise.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L182'>load</a>(filename)</tt>	Loads persistence data from filename returns none if the data.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L611'>unlink_save</a>(filename)</tt>	:doc loadsave deletes the save slot with the given name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L622'>rename_save</a>(old,new)</tt>	:doc loadsave renames a save from old to new.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L636'>copy_save</a>(old,new)</tt>	:doc loadsave copies the save at old to new.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L648'>cycle_saves</a>(name,count)</tt>	:doc loadsave rotates the first count saves beginning with name.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L731'>clear_slot</a>(slotname)</tt>	Clears a single slot in the cache.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /loadsave.py#L743'>clear_cache</a>()</tt>	Clears the entire cache.
+<tt style='background-color:#E8E8E8;'> core.Persistent <a href=' /persistent.py#L53'>_clear</a>(progress)</tt>	Resets the persistent data.
+<tt style='background-color:#E8E8E8;'> core.Persistent <a href=' /persistent.py#L75'>_update</a>()</tt>	Updates the persistent data to be the latest version of the persistent data.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L119'>safe_deepcopy</a>(o)</tt>	A "safe" version of deepcopy if an object doesn't implement __eq__.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L145'>find_changes</a>()</tt>	This finds changes in the persistent object when it finds a change it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L234'>register_persistent</a>(field,func)</tt>	:doc persistent registers a function that is used to merge values of a persistent field.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L281'>merge</a>(other)</tt>	Merges other which must be a persistent object into the current persistent object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L329'>check_update</a>()</tt>	Checks to see if we need to run update if we do runs update and.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L345'>update</a>(force_save)</tt>	Loads the persistent data from persistent files that are newer than persistent_mtime and merges it into the persistent object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /persistent.py#L383'>save</a>()</tt>	Saves the persistent data to disk.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /dump.py#L61'>dump</a>(error)</tt>	Causes a json dump file to be written if the user has requested it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /add_from.py#L31'>report_missing</a>(target,filename,position)</tt>	Reports that the call statement ending at position in filename is missing a from clause.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /add_from.py#L47'>generate_label</a>(target)</tt>	Generate a reasonable and unique new label for a call to target.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /add_from.py#L69'>process_file</a>(fn)</tt>	Adds missing from clauses to fn.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L77'>get_windows_version</a>()</tt>	When called on windows returns the windows version.
+<tt style='background-color:#E8E8E8;'> core.Backup <a href=' /__init__.py#L228'>backup_module</a>(mod)</tt>	Makes a backup of mod, which must be a python module.
+<tt style='background-color:#E8E8E8;'> core.Backup <a href=' /__init__.py#L273'>restore</a>()</tt>	Restores the modules to a state similar to the state of the modules when the backup was created.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L302'>update_path</a>(package)</tt>	Update the __path__ of package to import binary modules from a libexec directory.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L492'>post_import</a>()</tt>	This is called after import or reload to do further initialization of various modules.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L521'>reload_all</a>()</tt>	Resets all modules to the state they were in right after import_all returned.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L582'>setup_modulefinder</a>(modulefinder)</tt>	Informs modulefinder about the location of modules in nonstandard places.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L599'>import_cython</a>()</tt>	Never called but necessary to ensure that modulefinder will properly grab the various cython modules.
+<tt style='background-color:#E8E8E8;'> core.LogFile <a href=' /log.py#L48'>__init__</a>(name,append,developer,flush)</tt>	Name the name of the logfile without the.
+<tt style='background-color:#E8E8E8;'> core.LogFile <a href=' /log.py#L131'>write</a>(s)</tt>	Formats s with args and writes it to the logfile.
+<tt style='background-color:#E8E8E8;'> core.LogFile <a href=' /log.py#L152'>exception</a>()</tt>	Writes the exception to the logfile.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L37'>statement_name</a>(name)</tt>	Reports the name of this statement to systems like window auto.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L46'>next_node</a>(n)</tt>	Indicates the next node that should be executed when a statement.
+<tt style='background-color:#E8E8E8;'> core.ParameterInfo <a href=' /ast.py#L79'>apply</a>(args,kwargs,ignore_errors)</tt>	Applies args and kwargs to these parameters returns.
+<tt style='background-color:#E8E8E8;'> core.ArgumentInfo <a href=' /ast.py#L171'>evaluate</a>(scope)</tt>	Evaluates the arguments returning a list of arguments and a dictionary of keyword arguments.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L275'>chain_block</a>(block,next)</tt>	This is called to chain together all of the nodes in a block node.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L333'>__init__</a>(loc)</tt>	Initializes this node object.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L345'>diff_info</a>()</tt>	Returns a tuple of diff info about ourself this is used to.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L354'>get_children</a>(f)</tt>	Calls f with this node and its children.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L361'>get_init</a>()</tt>	Returns a node that should be run at init time (that is before the normal start of the script.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L375'>chain</a>(next)</tt>	This is called with the node node that should be followed after executing this node and all nodes that this node.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L386'>replace_next</a>(old,new)</tt>	Replaces instances of the old node with new when it is the next node.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L395'>execute</a>()</tt>	Causes this node to execute and any action it entails to be performed.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L404'>early_execute</a>()</tt>	Called when the module is loaded.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L412'>predict</a>()</tt>	This is called to predictively load images from this node it.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L424'>scry</a>()</tt>	Called to return an object with some general user-definable information about the future.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L434'>restructure</a>(callback)</tt>	Called to restructure the ast.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L446'>get_code</a>(dialogue_filter)</tt>	Returns the canonical form of the code corresponding to this statement.
+<tt style='background-color:#E8E8E8;'> core.Node <a href=' /ast.py#L458'>analyze</a>()</tt>	Called on all code after the init phase to analyze it.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L467'>say_menu_with</a>(expression,callback)</tt>	This handles the with clause of a say or menu statement.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L487'>eval_who</a>(who,fast)</tt>	Evaluates the who parameter to a say statement.
+<tt style='background-color:#E8E8E8;'> core.Label <a href=' /ast.py#L723'>__init__</a>(loc,name,block,parameters)</tt>	Constructs a new label node.
+<tt style='background-color:#E8E8E8;'> core.Python <a href=' /ast.py#L791'>__init__</a>(loc,python_code,hide,store)</tt>	@param code a pycode object.
+<tt style='background-color:#E8E8E8;'> core.EarlyPython <a href=' /ast.py#L842'>__init__</a>(loc,python_code,hide,store)</tt>	@param code a pycode object.
+<tt style='background-color:#E8E8E8;'> core.Image <a href=' /ast.py#L879'>__init__</a>(loc,name,expr,atl)</tt>	@param name the name of the image being defined.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L967'>predict_imspec</a>(imspec,scene,atl)</tt>	Call this to use the given callback to predict the image named in imspec.
+<tt style='background-color:#E8E8E8;'> core.Show <a href=' /ast.py#L1060'>__init__</a>(loc,imspec,atl)</tt>	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a layer.
+<tt style='background-color:#E8E8E8;'> core.Scene <a href=' /ast.py#L1135'>__init__</a>(loc,imgspec,layer,atl)</tt>	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a layer or.
+<tt style='background-color:#E8E8E8;'> core.Hide <a href=' /ast.py#L1185'>__init__</a>(loc,imgspec)</tt>	@param imspec a triple consisting of an image name itself a tuple of strings a list of at expressions and a list of.
+<tt style='background-color:#E8E8E8;'> core.With <a href=' /ast.py#L1254'>__init__</a>(loc,expr,paired)</tt>	@param expr an expression giving a transition or none.
+<tt style='background-color:#E8E8E8;'> core.If <a href=' /ast.py#L1622'>__init__</a>(loc,entries)</tt>	@param entries a list of condition block tuples.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /ast.py#L1803'>get_namespace</a>(store)</tt>	Returns the namespace object for store, and a flag that is true if the namespace is special and false if it is a normal store.
+<tt style='background-color:#E8E8E8;'> core.Screen <a href=' /ast.py#L1942'>__init__</a>(loc,screen)</tt>	@param name the name of the image being defined.
+<tt style='background-color:#E8E8E8;'> core.TranslatePython <a href=' /ast.py#L2124'>__init__</a>(loc,language,python_code)</tt>	@param code a pycode object.
+<tt style='background-color:#E8E8E8;'> core.Style <a href=' /ast.py#L2207'>__init__</a>(loc,name)</tt>	Name the name of the style to define.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L103'>unicode_filename</a>(fn)</tt>	Converts the supplied filename to unicode.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L146'>elide_filename</a>(fn)</tt>	Returns a version of fn that is either relative to the base directory or relative to the ren'py directory.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L180'>list_logical_lines</a>(filename,filedata,linenumber)</tt>	Reads filename, and divides it into logical lines.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L373'>group_logical_lines</a>(lines)</tt>	This takes as input the list of logical line triples output from list_logical_lines and breaks the lines into blocks.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L538'>advance</a>()</tt>	Advances this lexer to the next line in the block the lexer.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L562'>match_regexp</a>(regexp)</tt>	Tries to match the given regexp at the current location on the current line.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L585'>skip_whitespace</a>()</tt>	Advances the current position beyond any contiguous whitespace.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L594'>match</a>(regexp)</tt>	Matches something at the current position skipping past whitespace.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L604'>keyword</a>(word)</tt>	Matches a keyword at the current position a keyword is a word.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L618'>error</a>(msg)</tt>	Convenience function for reporting a parse error at the current location.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L626'>eol</a>()</tt>	Returns true if after skipping whitespace the current position is at the end of the end of the current line or.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L636'>expect_eol</a>()</tt>	If we are not at the end of the line raise an error.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L644'>expect_noblock</a>(stmt)</tt>	Called to indicate this statement does not expect a block.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L655'>expect_block</a>(stmt)</tt>	Called to indicate that the statement requires that a non-empty block is present.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L664'>subblock_lexer</a>(init)</tt>	Returns a new lexer object equiped to parse the block associated with this line.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L674'>string</a>()</tt>	Lexes a string and returns the string to the user or none if no string could be found.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L719'>integer</a>()</tt>	Tries to parse an integer returns a string containing the.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L727'>float</a>()</tt>	Tries to parse a number float returns a string containing the.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L735'>hash</a>()</tt>	Matches the characters in an md5 hash and then some.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L742'>word</a>()</tt>	Parses a name which may be a keyword or not.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L758'>name</a>()</tt>	This tries to parse a name returns the name or none.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L772'>set_global_label</a>(label)</tt>	Set current global_label which is used for label_name calculations.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L821'>label_name_declare</a>()</tt>	Same as label_name but set declare to true.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L827'>image_name_component</a>()</tt>	Matches a word that is a component of an image name (these are.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L842'>python_string</a>()</tt>	This tries to match a python string at the current location.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L891'>dotted_name</a>()</tt>	This tries to match a dotted name which is one or more names separated by dots.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L916'>delimited_python</a>(delim)</tt>	This matches python code up to but not including the non-whitespace delimiter characters.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L944'>python_expression</a>()</tt>	Returns a python expression which is arbitrary python code extending to a colon.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L959'>parenthesised_python</a>()</tt>	Tries to match a parenthesised python expression if it can.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L988'>simple_expression</a>(comma)</tt>	Tries to parse a simple_expression returns the text if it can or.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1049'>comma_expression</a>()</tt>	One or more simple expressions separated by commas including an optional trailing comma.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1057'>checkpoint</a>()</tt>	Returns an opaque representation of the lexer state this can be.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1065'>revert</a>(state)</tt>	Reverts the lexer to the given state state must have been returned.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1074'>get_location</a>()</tt>	Returns a filename line number tuple representing the current physical location of the start of the current logical line.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1082'>require</a>(thing,name)</tt>	Tries to parse thing and reports an error if it cannot be done.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1103'>rest</a>()</tt>	Skips whitespace then returns the rest of the current line and advances the current position to the end of.
+<tt style='background-color:#E8E8E8;'> core.Lexer <a href=' /parser.py#L1116'>python_block</a>()</tt>	Returns the subblock of this code and subblocks of that subblock as indented python code.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1147'>parse_image_name</a>(l,string,nodash)</tt>	This parses an image name and returns it as a tuple it requires.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1188'>parse_simple_expression_list</a>(l)</tt>	This parses a comma-separated list of simple_expressions and returns a list of strings.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1211'>parse_image_specifier</a>(l)</tt>	This parses an image specifier.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1284'>parse_with</a>(l,node)</tt>	Tries to parse the with clause associated with this statement if.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1496'>parse_arguments</a>(l)</tt>	Parse a list of arguments if one is present.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L1588'>statement</a>(keywords)</tt>	A function decorator used to declare a statement keywords is a string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L2432'>parse_statement</a>(l)</tt>	This parses a ren'py statement l is expected to be a ren'py lexer.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L2452'>parse_block</a>(l)</tt>	This parses a block of ren'py statements it returns a list of the.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L2479'>parse</a>(fn,filedata,linenumber)</tt>	Parses a ren'py script contained within the file fn.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /character.py#L105'>predict_show_display_say</a>(who,what,who_args,what_args)</tt>	This is the default function used by character to predict images that will be used by show_display_say.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /character.py#L140'>compute_widget_properties</a>(who_args,what_args,window_args,variant)</tt>	Computes and returns the widget properties.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /character.py#L183'>show_display_say</a>(who,what,who_args,what_args)</tt>	This is called by default by renpy display_say to add the.
+<tt style='background-color:#E8E8E8;'> core.ADVCharacter <a href=' /character.py#L730'>resolve_say_attributes</a>(predict,wanted,remove)</tt>	Deals with image attributes associated with the current say statement.
+<tt style='background-color:#E8E8E8;'> core.ADVCharacter <a href=' /character.py#L931'>add_history</a>(kind,who,what)</tt>	This is intended to be called by subclasses of advcharacter to add history entries to _history_list.
+<tt style='background-color:#E8E8E8;'> core.ADVCharacter <a href=' /character.py#L977'>pop_history</a>()</tt>	This is intended to be called by do_extend to remove entries from _history_list.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /character.py#L994'>Character</a>(name,kind)</tt>	:doc character :args (name kind=adv **args).
+<tt style='background-color:#E8E8E8;'> styledata. <a href=' /styledata/styleutil.py#L68'>expand_anchor</a>(v)</tt>	Turns an anchor into a number.
+<tt style='background-color:#E8E8E8;'> sl2. <a href=' /sl2/sldisplayables.py#L280'>sl2viewport</a>(context)</tt>	This converts the output of renpy ui viewport into something that.
+<tt style='background-color:#E8E8E8;'> sl2. <a href=' /sl2/sldisplayables.py#L302'>sl2vpgrid</a>(context)</tt>	This converts the output of renpy ui viewport into something that.
+<tt style='background-color:#E8E8E8;'> sl2.Parser <a href=' /sl2/slparser.py#L138'>add</a>(i)</tt>	Adds a clause to this parser.
+<tt style='background-color:#E8E8E8;'> sl2.Parser <a href=' /sl2/slparser.py#L182'>parse</a>(loc,l,parent)</tt>	This is expected to parse a function statement and to return a list of python ast statements.
+<tt style='background-color:#E8E8E8;'> sl2.Parser <a href=' /sl2/slparser.py#L199'>parse_contents</a>(l,target,layout_mode,can_has)</tt>	Parses the remainder of the current line of l, and all of its subblock looking for keywords and children.
+<tt style='background-color:#E8E8E8;'> sl2. <a href=' /sl2/slparser.py#L380'>register_sl_displayable</a>()</tt>	:doc custom_sl class :args (name displayable style nchildren=0 scope=false replaces=false default_keywords={}).
+<tt style='background-color:#E8E8E8;'> sl2.DisplayableParser <a href=' /sl2/slparser.py#L490'>__init__</a>(name,displayable,style,nchildren)</tt>	Scope if true the scope is passed into the displayable functionas a keyword.
+<tt style='background-color:#E8E8E8;'> sl2.IfParser <a href=' /sl2/slparser.py#L584'>__init__</a>(name,node_type,parent_contents)</tt>	Node_type the type of node to create.
+<tt style='background-color:#E8E8E8;'> sl2.ForParser <a href=' /sl2/slparser.py#L668'>name_or_tuple_pattern</a>(l)</tt>	Matches either a name or a tuple pattern if a single name is being.
+<tt style='background-color:#E8E8E8;'> sl2. <a href=' /sl2/slparser.py#L972'>parse_screen</a>(l,loc)</tt>	Parses the screen statement.
+<tt style='background-color:#E8E8E8;'> sl2. <a href=' /sl2/slast.py#L65'>compile_expr</a>(node)</tt>	Wraps the node in a python ast and compiles it.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L183'>instantiate</a>(transclude)</tt>	Instantiates a new instance of this class copying the global attributes of this class onto the new instance.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L197'>copy</a>(transclude)</tt>	Makes a copy of this node.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L215'>analyze</a>(analysis)</tt>	Performs static analysis on python code used in this statement.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L222'>prepare</a>(analysis)</tt>	This should be called before the execute code is called and again after init-level code (like the code in a.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L234'>execute</a>(context)</tt>	Execute this node updating context as appropriate.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L241'>keywords</a>(context)</tt>	Execute this node updating context keywords as appropriate.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L249'>copy_on_change</a>(cache)</tt>	Flags the displayables that are created by this node and its children as copy-on-change.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L257'>debug_line</a>()</tt>	Writes information about the line we're on to the debug log.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L273'>used_screens</a>(callback)</tt>	Calls callback with the name of each screen this node and its children use.
+<tt style='background-color:#E8E8E8;'> sl2.SLNode <a href=' /sl2/slast.py#L281'>has_transclude</a>()</tt>	Returns true if this node is a transclude or has a transclude as a child.
+<tt style='background-color:#E8E8E8;'> sl2.SLDisplayable <a href=' /sl2/slast.py#L495'>__init__</a>(loc,displayable,scope,child_or_fixed)</tt>	Displayable a function that when called with the positional and keyword.
+<tt style='background-color:#E8E8E8;'> sl2.SLDisplayable <a href=' /sl2/slast.py#L1005'>wrap_in_showif</a>(d,context,cache)</tt>	Wraps d in a showif displayable.
+<tt style='background-color:#E8E8E8;'> sl2.SLIf <a href=' /sl2/slast.py#L1099'>__init__</a>(loc)</tt>	An ast node that represents an if statement.
+<tt style='background-color:#E8E8E8;'> sl2.SLShowIf <a href=' /sl2/slast.py#L1239'>__init__</a>(loc)</tt>	An ast node that represents an if statement.
+<tt style='background-color:#E8E8E8;'> sl2.SLScreen <a href=' /sl2/slast.py#L1845'>define</a>(location)</tt>	Defines a screen.
+<tt style='background-color:#E8E8E8;'> audio.AndroidVideoChannel <a href=' /audio/androidhw.py#L56'>get_context</a>()</tt>	Returns the musiccontext corresponding to this channel taken from the context object.
+<tt style='background-color:#E8E8E8;'> audio.AndroidVideoChannel <a href=' /audio/androidhw.py#L72'>start</a>()</tt>	Starts playing the first video in the queue.
+<tt style='background-color:#E8E8E8;'> audio.AndroidVideoChannel <a href=' /audio/androidhw.py#L126'>dequeue</a>(even_tight)</tt>	Clears the queued music except for a first item that has not been started.
+<tt style='background-color:#E8E8E8;'> audio.AndroidVideoChannel <a href=' /audio/androidhw.py#L137'>interact</a>()</tt>	Called mostly once per interaction.
+<tt style='background-color:#E8E8E8;'> audio.AndroidVideoChannel <a href=' /audio/androidhw.py#L144'>fadeout</a>(secs)</tt>	Causes the playing music to be faded out for the given number of seconds.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L33'>play</a>(filenames,channel,loop,fadeout)</tt>	:doc audio this stops the music currently playing on the numbered channel dequeues.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L130'>queue</a>(filenames,channel,loop,clear_queue)</tt>	:doc audio this queues the given filenames on the specified channel.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L207'>playable</a>(filename,channel)</tt>	Return true if the given filename is playable on the channel this.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L221'>stop</a>(channel,fadeout)</tt>	:doc audio this stops the music that is currently playing and dequeues all.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L265'>set_music</a>(channel,flag,default)</tt>	Determines if channel will loop by default.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L279'>is_music</a>(channel)</tt>	Returns true if "channel" will loop by default.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L288'>get_delay</a>(time,channel)</tt>	Returns the number of seconds left until the given time in the music.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L313'>get_pos</a>(channel)</tt>	:doc audio returns the current position of the audio or video file on channel, in.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L341'>get_duration</a>(channel)</tt>	:doc audio returns the duration of the audio or video file on channel.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L360'>get_playing</a>(channel)</tt>	:doc audio if the given channel is playing returns the playing file name.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L378'>is_playing</a>(channel)</tt>	:doc audio returns true if the channel is currently playing a sound false if.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L389'>set_volume</a>(volume,delay,channel)</tt>	:doc audio sets the volume of this channel as a fraction of the volume of the.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L417'>set_pan</a>(pan,delay,channel)</tt>	:doc audio sets the pan of this channel.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L445'>set_queue_empty_callback</a>(callback,channel)</tt>	:doc audio this sets a callback that is called when the queue is empty.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L466'>set_pause</a>(value,channel)</tt>	:doc audio sets the pause flag for channel to value.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L481'>get_pause</a>(channel)</tt>	:doc audio returns the pause flag for channel.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L495'>set_mixer</a>(channel,mixer,default)</tt>	This sets the name of the mixer associated with a given channel.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L518'>get_all_mixers</a>()</tt>	This gets all mixers in use.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/music.py#L531'>channel_defined</a>(channel)</tt>	Returns true if the channel exists or false otherwise.
+<tt style='background-color:#E8E8E8;'> audio.IOSVideoChannel <a href=' /audio/ioshw.py#L55'>get_context</a>()</tt>	Returns the musiccontext corresponding to this channel taken from the context object.
+<tt style='background-color:#E8E8E8;'> audio.IOSVideoChannel <a href=' /audio/ioshw.py#L71'>start</a>()</tt>	Starts playing the first video in the queue.
+<tt style='background-color:#E8E8E8;'> audio.IOSVideoChannel <a href=' /audio/ioshw.py#L120'>dequeue</a>(even_tight)</tt>	Clears the queued music except for a first item that has not been started.
+<tt style='background-color:#E8E8E8;'> audio.IOSVideoChannel <a href=' /audio/ioshw.py#L131'>interact</a>()</tt>	Called mostly once per interaction.
+<tt style='background-color:#E8E8E8;'> audio.IOSVideoChannel <a href=' /audio/ioshw.py#L138'>fadeout</a>(secs)</tt>	Causes the playing music to be faded out for the given number of seconds.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L52'>get_serial</a>()</tt>	Gets a globally unique serial number for each music change.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L62'>load</a>(fn)</tt>	Returns a file-like object for the given filename.
+<tt style='background-color:#E8E8E8;'> audio.MusicContext <a href=' /audio/audio.py#L125'>copy</a>()</tt>	Returns a shallow copy of this context.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L231'>get_number</a>()</tt>	Returns the number of this channel allocating a number if that proves necessary.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L247'>get_context</a>()</tt>	Returns the musiccontext corresponding to this channel taken from the context object.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L263'>split_filename</a>(filename,looped)</tt>	Splits a filename into a filename start time and end time.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L316'>periodic</a>()</tt>	This is the periodic call that causes this channel to load new stuff into its queues if necessary.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L454'>dequeue</a>(even_tight)</tt>	Clears the queued music.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L471'>interact</a>()</tt>	Called mostly once per interaction.
+<tt style='background-color:#E8E8E8;'> audio.Channel <a href=' /audio/audio.py#L495'>fadeout</a>(secs)</tt>	Causes the playing music to be faded out for the given number of seconds.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L631'>register_channel</a>(name,mixer,loop,stop_on_mute)</tt>	:doc audio this registers a new audio channel named name.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L817'>periodic</a>()</tt>	The periodic sound callback this is called at around 20hz and is.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L891'>interact</a>()</tt>	Called at least once per interaction.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L933'>rollback</a>()</tt>	On rollback we want to stop all the channels with non-empty sounds.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L945'>pause_all</a>()</tt>	Pause all playback channels.
+<tt style='background-color:#E8E8E8;'> audio. <a href=' /audio/audio.py#L956'>unpause_all</a>()</tt>	Unpause all playback channels.
+<tt style='background-color:#E8E8E8;'> translation.DialogueFile <a href=' /translation/dialogue.py#L115'>__init__</a>(filename,output,tdf,strings)</tt>	Filename the file we're extracting dialogue from.
+<tt style='background-color:#E8E8E8;'> translation.DialogueFile <a href=' /translation/dialogue.py#L152'>write_dialogue</a>()</tt>	Writes the dialogue to the file.
+<tt style='background-color:#E8E8E8;'> translation.DialogueFile <a href=' /translation/dialogue.py#L207'>get_strings</a>()</tt>	Finds the strings in the file.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/dialogue.py#L240'>dialogue_command</a>()</tt>	The dialogue command this updates dialogue txt a file giving all the dialogue.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/scanstrings.py#L112'>scan_strings</a>(filename)</tt>	Scans filename, a file containing ren'py script for translatable strings.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/generation.py#L163'>shorten_filename</a>(filename)</tt>	Shortens a file name returns the shortened filename and a flag that says.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/generation.py#L244'>write_strings</a>(language,filter,min_priority,max_priority)</tt>	Writes strings to the file.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/generation.py#L404'>translate_list_files</a>()</tt>	Returns a list of files that exist and should be scanned for translations.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/generation.py#L430'>count_missing</a>(language,min_priority,max_priority,common_only)</tt>	Prints a count of missing translations for language.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/generation.py#L469'>translate_command</a>()</tt>	The translate command when called from the command line this generates.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/extract.py#L49'>extract_strings</a>()</tt>	The extract strings command.
+<tt style='background-color:#E8E8E8;'> translation.ScriptTranslator <a href=' /translation/__init__.py#L80'>count_translates</a>()</tt>	Return the number of dialogue blocks in the game.
+<tt style='background-color:#E8E8E8;'> translation.ScriptTranslator <a href=' /translation/__init__.py#L87'>take_translates</a>(nodes)</tt>	Takes the translates out of the flattened list of statements and stores them into the dicts above.
+<tt style='background-color:#E8E8E8;'> translation.ScriptTranslator <a href=' /translation/__init__.py#L153'>chain_translates</a>()</tt>	Chains nodes in non-default translates together.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L189'>encode_say_string</a>(s)</tt>	Encodes a string in the format used by ren'py say statements.
+<tt style='background-color:#E8E8E8;'> translation.Restructurer <a href=' /translation/__init__.py#L218'>create_translate</a>(block)</tt>	Creates an ast translate that wraps block the block may only contain.
+<tt style='background-color:#E8E8E8;'> translation.Restructurer <a href=' /translation/__init__.py#L259'>callback</a>(children)</tt>	This should be called with a list of statements it restructures the statements.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L409'>translate_string</a>(s,language)</tt>	Translates interface string s to language if languages is default.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L433'>load_rpt</a>(fn)</tt>	Loads the rpt file fn.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L480'>load_all_rpts</a>()</tt>	Loads all rpt files.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L496'>init_translation</a>()</tt>	Called before the game starts.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L562'>change_language</a>(language)</tt>	:doc translation_functions changes the current language to language, which can be a string or.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L611'>check_language</a>()</tt>	Checks to see if the language has changed if it has jump to the start.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/__init__.py#L633'>known_languages</a>()</tt>	:doc translation_functions returns the set of known languages.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/merge.py#L29'>merge_strings</a>()</tt>	The merge strings command.
+<tt style='background-color:#E8E8E8;'> translation. <a href=' /translation/scanstrings.py#L182'>scan</a>(min_priority,max_priority,common_only)</tt>	Scans all files for translatable strings and comments returns a list.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/pgrender.py#L37'>set_rgba_masks</a>()</tt>	This rebuilds the sample surfaces to ones that use the given masks.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/pgrender.py#L122'>copy_surface</a>(surf,alpha)</tt>	Creates a copy of the surface.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/viewport.py#L29'>edgescroll_proportional</a>(n)</tt>	An edgescroll function that causes the move speed to be proportional from the edge distance.
+<tt style='background-color:#E8E8E8;'> display.Viewport <a href=' /display/viewport.py#L181'>update_offsets</a>(cw,ch,st)</tt>	This is called by render once we know the width (cw) and height (ch) of all the children.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transform.py#L47'>cartesian_to_polar</a>(x,y,xaround,yaround)</tt>	Converts cartesian coordinates to polar coordinates.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transform.py#L64'>polar_to_cartesian</a>(angle,radius,xaround,yaround)</tt>	Converts polart coordinates to cartesian coordinates.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transform.py#L80'>first_not_none</a>()</tt>	Returns the first argument that is not none.
+<tt style='background-color:#E8E8E8;'> display.Transform <a href=' /display/transform.py#L671'>take_state</a>(t)</tt>	Takes the transformation state from object t into this object.
+<tt style='background-color:#E8E8E8;'> display.Transform <a href=' /display/transform.py#L687'>take_execution_state</a>(t)</tt>	Takes the execution state from object t into this object this is.
+<tt style='background-color:#E8E8E8;'> display.Transform <a href=' /display/transform.py#L712'>copy</a>()</tt>	Makes a copy of this transform.
+<tt style='background-color:#E8E8E8;'> display.Transform <a href=' /display/transform.py#L800'>update_state</a>()</tt>	This updates the state to that at self st self at.
+<tt style='background-color:#E8E8E8;'> display.Transform <a href=' /display/transform.py#L944'>update</a>()</tt>	This should be called when a transform property field is updated outside of the callback method to ensure that the change takes effect.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/scale.py#L81'>real_smoothscale</a>(src,size,dest)</tt>	This scales src up or down to size this uses both the pixellate.
+<tt style='background-color:#E8E8E8;'> display.Cache <a href=' /display/im.py#L117'>init</a>()</tt>	Updates the cache object to make use of settings that might be provided by the game-maker.
+<tt style='background-color:#E8E8E8;'> display.Cache <a href=' /display/im.py#L253'>cleanout</a>()</tt>	Cleans out the cache if it's gotten too large returns true.
+<tt style='background-color:#E8E8E8;'> display.Cache <a href=' /display/im.py#L283'>preload_texture</a>(im)</tt>	Preloads im into the cache and loads the corresponding texture into the gpu.
+<tt style='background-color:#E8E8E8;'> display.Cache <a href=' /display/im.py#L320'>start_prediction</a>()</tt>	Called at the start of prediction to ensure the thread runs at least once to clean out the cache.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L418'>free_memory</a>()</tt>	Frees some memory.
+<tt style='background-color:#E8E8E8;'> display.ImageBase <a href=' /display/im.py#L462'>load</a>()</tt>	This function is called by the image cache code to cause this image to be loaded.
+<tt style='background-color:#E8E8E8;'> display.ImageBase <a href=' /display/im.py#L484'>predict_files</a>()</tt>	Returns a list of files that will be accessed when this image operation is performed.
+<tt style='background-color:#E8E8E8;'> display.Image <a href=' /display/im.py#L498'>__init__</a>(filename)</tt>	@param filename the filename that the image will be loaded from.
+<tt style='background-color:#E8E8E8;'> display.Rotozoom <a href=' /display/im.py#L805'>__init__</a>(im,angle,zoom)</tt>	@param im the image to be rotozoomed.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L884'>ramp</a>(start,end)</tt>	Returns a 256 character linear ramp where the first character has the value start and the last character has the value end.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1192'>identity</a>()</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1207'>saturation</a>(level,desat)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1240'>desaturate</a>()</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1253'>tint</a>(r,g,b)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1272'>invert</a>()</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1287'>brightness</a>(b)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1306'>opacity</a>(o)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1321'>contrast</a>(c)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1335'>hue</a>(h)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display.matrix <a href=' /display/im.py#L1359'>colorize</a>(black_color,white_color)</tt>	:doc im_matrixcolor :name im.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1393'>Grayscale</a>(im,desat)</tt>	:doc im_im :args (im **properties).
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1405'>Sepia</a>(im,tint,desat)</tt>	:doc im_im :args (im **properties).
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1417'>Color</a>(im,color)</tt>	This recolors the supplied image mapping colors such that black is black and white is the supplied color.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1428'>Alpha</a>(image,alpha)</tt>	Returns an alpha-mapped version of the image alpha is the maximum.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1532'>image</a>(arg,loose)</tt>	:doc im_image :name image.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1583'>load_image</a>(im)</tt>	:doc udd_utility loads the image manipulator im using the image cache and returns a texture.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/im.py#L1594'>load_surface</a>(im)</tt>	:doc udd_utility loads the image manipulator im using the image cache and returns a pygame surface.
+<tt style='background-color:#E8E8E8;'> display.Sprite <a href=' /display/particle.py#L86'>set_child</a>(d)</tt>	:doc sprites method changes the displayable associated with this sprite to d.
+<tt style='background-color:#E8E8E8;'> display.Sprite <a href=' /display/particle.py#L114'>destroy</a>()</tt>	:doc sprites method destroys this sprite preventing it from being displayed and.
+<tt style='background-color:#E8E8E8;'> display.SpriteManager <a href=' /display/particle.py#L135'>__init__</a>(update,event,predict,ignore_time)</tt>	Update if not none a function that is called each time a sprite.
+<tt style='background-color:#E8E8E8;'> display.SpriteManager <a href=' /display/particle.py#L204'>create</a>(d)</tt>	:doc sprites method creates a new sprite for the displayable d, and adds it to this.
+<tt style='background-color:#E8E8E8;'> display.SpriteManager <a href=' /display/particle.py#L231'>redraw</a>(delay)</tt>	:doc sprites method causes this spritemanager to be redrawn in delay seconds.
+<tt style='background-color:#E8E8E8;'> display.Particles <a href=' /display/particle.py#L348'>__init__</a>(factory)</tt>	@param factory a factory object.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/particle.py#L549'>SnowBlossom</a>(d,count,border,xspeed)</tt>	:doc sprites_extra the snowblossom effect moves multiple instances of a sprite up.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L71'>scale</a>(num,base)</tt>	If num is a float multiplies it by base and returns that otherwise.
+<tt style='background-color:#E8E8E8;'> display.Container <a href=' /display/layout.py#L155'>add</a>(d)</tt>	Adds a child to this container.
+<tt style='background-color:#E8E8E8;'> display.Container <a href=' /display/layout.py#L177'>remove</a>(d)</tt>	Removes the first instance of child from this container may.
+<tt style='background-color:#E8E8E8;'> display.Container <a href=' /display/layout.py#L197'>update</a>()</tt>	This should be called if a child is added to this displayable outside of the render function.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/layout.py#L255'>LiveComposite</a>(size)</tt>	:doc disp_imagelike this creates a new displayable of size, by compositing other.
+<tt style='background-color:#E8E8E8;'> display.Position <a href=' /display/layout.py#L303'>__init__</a>(child,style)</tt>	@param child the child that is being laid out.
+<tt style='background-color:#E8E8E8;'> display.Grid <a href=' /display/layout.py#L374'>__init__</a>(cols,rows,padding,transpose)</tt>	@param cols the number of columns in this widget.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/layout.py#L1288'>ConditionSwitch</a>()</tt>	:doc disp_dynamic this is a displayable that changes what it is showing based on.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/layout.py#L1332'>ShowingSwitch</a>()</tt>	:doc disp_dynamic this is a displayable that changes what it is showing based on the.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/layout.py#L1400'>LiveCrop</a>(rect,child)</tt>	:doc disp_imagelike this created a displayable by cropping child to rect, where.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/tts.py#L152'>displayable</a>(d)</tt>	Causes the tts system to read the text of the displayable d.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/predict.py#L55'>screen</a>(_screen_name)</tt>	Called to predict that the named screen is about to be shown with the given arguments.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/predict.py#L71'>prediction_coroutine</a>(root_widget)</tt>	The image prediction co-routine this predicts the images that can.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/tts.py#L54'>default_tts_function</a>(s)</tt>	Default function which speaks messages using an os-specific method.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/tts.py#L115'>tts</a>(s)</tt>	Speaks the queued messages using the specified function.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/tts.py#L130'>speak</a>(s,translate,force)</tt>	This is called by the system to queue the speaking of message s.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/core.py#L126'>displayable_by_tag</a>(layer,tag)</tt>	Get the displayable on the given layer with the given tag.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/core.py#L160'>place</a>(width,height,sw,sh)</tt>	Performs the ren'py placement algorithm.
+<tt style='background-color:#E8E8E8;'> display.DisplayableArguments <a href=' /display/core.py#L229'>copy</a>()</tt>	Returns a copy of this object with the various fields set to the values they were given in kwargs.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L309'>_copy</a>(args)</tt>	Makes a shallow copy of the displayable if args is provided.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L322'>_duplicate</a>(args)</tt>	Makes a duplicate copy of the following kids of displayables * displayables that can accept arguments.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L341'>_in_current_store</a>()</tt>	Returns a version of this displayable that will not change as it is rendered.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L349'>_unique</a>()</tt>	This is called when a displayable is "born" unique which occurs when there is only a single reference to it.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L359'>parameterize</a>(name,parameters)</tt>	Obsolete alias for _duplicate.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L367'>_equals</a>(o)</tt>	This is a utility method that can be called by a displayable's __eq__ method to compare displayables for type and displayable.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L409'>focus</a>(default)</tt>	Called to indicate that this widget has the focus.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L419'>unfocus</a>(default)</tt>	Called to indicate that this widget has become unfocused.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L433'>set_style_prefix</a>(prefix,root)</tt>	Called to set the style prefix of this widget and its child widgets if any.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L448'>render</a>(width,height,st,at)</tt>	Called to display this displayable this is called with width.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L463'>event</a>(ev,x,y,st)</tt>	Called to report than an event has occured ev is the raw.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L477'>get_placement</a>()</tt>	Returns a style object containing placement information for this displayable.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L486'>visit_all</a>(callback)</tt>	Calls the callback on this displayable and then on all children of this displayable.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L499'>visit</a>()</tt>	Called to ask the displayable to return a list of its children including children taken from styles.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L508'>per_interact</a>()</tt>	Called once per widget per interaction.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L515'>predict_one</a>()</tt>	Called to ask this displayable to call the callback with all the images it may want to load.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L523'>predict_one_action</a>()</tt>	Called to ask this displayable to cause image prediction to occur for images that may be loaded by its actions.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L531'>place</a>(dest,x,y,width)</tt>	This places a render which must be of this displayable within a bounding area.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L569'>set_transform_event</a>(event)</tt>	Sets the transform event of this displayable to event.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L582'>_hide</a>(st,at,kind)</tt>	Returns none if this displayable is ready to be hidden or a replacement displayable if it doesn't want to be hidden.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L591'>_show</a>()</tt>	Called when the displayable is added to a scene list.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L596'>_target</a>()</tt>	If this displayable is part of a chain of one or more references returns the ultimate target of those references.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L605'>_change_transform_child</a>(child)</tt>	If this is a transform makes a copy of the transform and sets the child of the innermost transform to this.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L614'>_clear</a>()</tt>	Clears out the children of this displayable if any.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L646'>_tts</a>()</tt>	Returns the self-voicing text of this displayable and all of its children that cannot take focus.
+<tt style='background-color:#E8E8E8;'> display.Displayable <a href=' /display/core.py#L655'>_tts_all</a>()</tt>	Returns the self-voicing text of this displayable and all of its children that cannot take focus.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L810'>replace_transient</a>()</tt>	Replaces the contents of the transient display list with a copy of the master display list.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L826'>transient_is_empty</a>()</tt>	This returns true if all transient layers are empty this is.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L841'>transform_state</a>(old_thing,new_thing)</tt>	If the old thing is a transform then move the state of that transform to the new thing.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L865'>find_index</a>(layer,tag,zorder,behind)</tt>	This finds the spot in the named layer where we should insert the displayable.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L905'>add</a>(layer,thing,key,zorder)</tt>	Adds something to this scene list some of these names are quite a bit.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1011'>hide_or_replace</a>(layer,index,prefix)</tt>	Hides or replaces the scene list entry at the given index.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1053'>get_all_displayables</a>()</tt>	Gets all displayables reachable from this scene list.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1065'>remove_above</a>(layer,thing)</tt>	Removes everything on the layer that is closer to the user than thing which may be either a tag or a displayable.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1085'>remove</a>(layer,thing)</tt>	Thing is either a key or a displayable this iterates through the.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1109'>clear</a>(layer,hide)</tt>	Clears the named layer making it empty.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1137'>set_times</a>(time)</tt>	This finds entries with a time of none and replaces that time with the given time.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1149'>showing</a>(layer,name)</tt>	Returns true if something with the prefix of the given name is found in the scene list.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1160'>make_layer</a>(layer,properties)</tt>	Creates a fixed with the given layer name and scene_list.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1189'>remove_hide_replaced</a>(layer,tag)</tt>	Removes things that are hiding or replaced that have the given tag.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1201'>remove_hidden</a>()</tt>	Goes through all of the layers and removes things that are hidden and are no longer being kept alive by their hide.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1231'>remove_all_hidden</a>()</tt>	Removes everything hidden even if it's not time yet used when making a rollback copy.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1250'>get_displayable_by_tag</a>(layer,tag)</tt>	Returns the displayable on the layer with the given tag or none if no such displayable exists.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1266'>get_displayable_by_name</a>(layer,name)</tt>	Returns the displayable on the layer with the given name or none if no such displayable exists.
+<tt style='background-color:#E8E8E8;'> display.SceneLists <a href=' /display/core.py#L1282'>get_image_bounds</a>(layer,tag,width,height)</tt>	Implements renpy get_image_bounds().
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/core.py#L1320'>scene_lists</a>(index)</tt>	Returns either the current scenelists object or the one for the context at the given index.
+<tt style='background-color:#E8E8E8;'> display.MouseMove <a href=' /display/core.py#L1347'>perform</a>()</tt>	Performs the mouse move returns true if this should be called.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/core.py#L1368'>get_safe_mode</a>()</tt>	Returns true if we should go into safe mode.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1669'>start</a>()</tt>	Starts the interface by opening a window and setting the mode.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1707'>post_init</a>()</tt>	This is called after display init but before the window is created.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1737'>set_icon</a>()</tt>	This is called to set up the window icon.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1782'>get_draw_constructors</a>()</tt>	Figures out the list of draw constructors to try.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1847'>kill_textures_and_surfaces</a>()</tt>	Kill all textures and surfaces that are loaded.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1857'>set_mode</a>(physical_size)</tt>	This sets the video mode it also picks the draw object.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L1967'>take_screenshot</a>(scale,background)</tt>	This takes a screenshot of the current screen and stores it so that it can gotten using get_screenshot().
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2006'>check_background_screenshot</a>()</tt>	Handles requests for a background screenshot.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2016'>get_screenshot</a>()</tt>	Gets the current screenshot as a string returns none if there isn't.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2037'>lose_screenshot</a>()</tt>	This deallocates the saved screenshot.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2045'>save_screenshot</a>(filename)</tt>	Saves a full-size screenshot in the given filename.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2098'>with_none</a>(overlay)</tt>	Implements the with none command which sets the scene we will be transitioning from.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2127'>set_transition</a>(transition,layer,force)</tt>	Sets the transition that will be performed as part of the next interaction.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2141'>event_peek</a>()</tt>	This peeks the next event it returns none if no event exists.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2160'>event_poll</a>()</tt>	Called to busy-wait for an event while we're waiting to redraw a frame.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2176'>event_wait</a>()</tt>	This is in its own function so that we can track in the profiler how much time is spent in interact.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2212'>compute_scene</a>(scene_lists)</tt>	This converts scene lists into a dictionary mapping layer name to a fixed containing that layer.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2233'>quit_event</a>()</tt>	This is called to handle the user invoking a quit.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2294'>set_mouse_pos</a>(x,y,duration)</tt>	Sets the mouse position duration can be a number of seconds or.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2303'>drawn_since</a>(seconds_ago)</tt>	Returns true if the screen has been drawn in the last seconds_ago, and false otherwise.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2311'>check_suspend</a>(ev)</tt>	Handles the sdl2 suspend process.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2377'>iconified</a>()</tt>	Called when we become an icon.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2389'>restored</a>()</tt>	Called when we are restored from being an icon.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2408'>enter_context</a>()</tt>	Called when we enter a new context.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2418'>post_time_event</a>()</tt>	Posts a time_event object to the queue.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2428'>after_longpress</a>()</tt>	Called after a longpress to ignore the mouse button release.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2436'>text_event_in_queue</a>()</tt>	Returns true if the next event in the queue is a text editing event.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2447'>update_text_rect</a>()</tt>	Updates the text input state and text rectangle.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2477'>maximum_framerate</a>(t)</tt>	Forces ren'py to draw the screen at the maximum framerate for t seconds.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2487'>interact</a>(clear,suppress_window,trans_pause)</tt>	This handles an interaction restarting it if necessary all of the.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L2548'>interact_core</a>(show_mouse,trans_pause,suppress_overlay,suppress_underlay)</tt>	This handles one cycle of displaying an image to the user and then responding to user input.
+<tt style='background-color:#E8E8E8;'> display.Interface <a href=' /display/core.py#L3281'>finish_pending</a>()</tt>	Called before a quit or restart to finish any pending work that might block other threads.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/movetransition.py#L116'>OldMoveTransition</a>(delay,old_widget,new_widget,factory)</tt>	Returns a transition that attempts to find images that have changed position and moves them from the old position to the new transition taking.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/movetransition.py#L446'>MoveTransition</a>(delay,old_widget,new_widget,enter)</tt>	:doc transition function :args (delay enter=none leave=none old=false layers=['master'], time_warp=none enter_time_warp=none leave_time_warp=none).
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/gesture.py#L29'>dispatch_gesture</a>(gesture)</tt>	This is called with a gesture to dispatch it as an event.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/controller.py#L58'>init</a>()</tt>	Initialize gamepad support.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/controller.py#L95'>make_event</a>(name)</tt>	Creates an eventname event with name, and returns it.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/controller.py#L118'>exists</a>()</tt>	Returns true if a controller exists and false otherwise.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/controller.py#L129'>quit</a>(index)</tt>	Quits the controller at index.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/presplash.py#L59'>start</a>(index)</tt>	Starts the controller at index.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/controller.py#L153'>event</a>(ev)</tt>	Processes an event and returns the same event a new event or none if the event has been processed and should be ignored.
+<tt style='background-color:#E8E8E8;'> display.Motion <a href=' /display/motion.py#L57'>__init__</a>(function,period,child,new_widget)</tt>	@param child the child displayable.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/motion.py#L214'>Pan</a>(startpos,endpos,time,child)</tt>	This is used to pan over a child displayable which is almost always an image.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/motion.py#L263'>Move</a>(startpos,endpos,time,child)</tt>	This is used to pan over a child displayable relative to the containing area.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/motion.py#L381'>zoom_render</a>(crend,x,y,w)</tt>	This creates a render that zooms its child.
+<tt style='background-color:#E8E8E8;'> display.ZoomCommon <a href=' /display/motion.py#L408'>__init__</a>(time,child,end_identity,after_child)</tt>	@param time the amount of time it will take to interpolate from the start to the end rectange.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/presplash.py#L46'>run_event_thread</a>()</tt>	Disposes of events while the window is running.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/presplash.py#L59'>start</a>(basedir,gamedir)</tt>	Called to display the presplash when necessary.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/presplash.py#L115'>end</a>()</tt>	Called just before we initialize the display to hide the presplash.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/presplash.py#L135'>sleep</a>()</tt>	Sleep to the end of config minimum_presplash_time.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/error.py#L53'>init_display</a>()</tt>	The minimum amount of code required to init the display.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/error.py#L69'>error_dump</a>()</tt>	Handles dumps in the case where an error occurs.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/error.py#L77'>report_exception</a>(short,full,traceback_fn)</tt>	Reports an exception to the user returns true if the exception should.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/error.py#L147'>report_parse_errors</a>(errors,error_fn)</tt>	Reports an exception to the user returns true if the exception should.
+<tt style='background-color:#E8E8E8;'> display.Clipper <a href=' /display/swdraw.py#L56'>compute</a>(full_redraw)</tt>	This returns a clipping rectangle and a list of update rectangles that cover the changes between the old and new frames.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/swdraw.py#L238'>surface</a>(w,h,alpha)</tt>	Creates a surface that shares a pixel format with the screen the created.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/swdraw.py#L260'>draw_special</a>(what,dest,x,y)</tt>	This handles the special drawing operations such as dissolve and image dissolve.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/swdraw.py#L342'>draw</a>(dest,clip,what,xo)</tt>	This is the simple draw routine which only works when alpha is 1 0.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/swdraw.py#L644'>do_draw_screen</a>(screen_render,full_redraw,swdraw)</tt>	Draws the render produced by render_screen to the screen.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L788'>show_mouse</a>(pos,info)</tt>	Actually shows the mouse.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L813'>hide_mouse</a>()</tt>	Actually hides the mouse.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L830'>draw_mouse</a>(show_mouse)</tt>	This draws the mouse to the screen if necessary it uses the.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L877'>update_mouse</a>()</tt>	Draws the mouse and then updates the screen.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L910'>screenshot</a>(surftree,fullscreen_video)</tt>	Returns a pygame surface containing a screenshot.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L917'>should_redraw</a>(needs_redraw,first_pass)</tt>	Uses the framerate to determine if we can and should redraw.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L953'>draw_screen</a>(surftree,fullscreen_video)</tt>	Draws the screen.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1051'>mutated_surface</a>(surf)</tt>	Called to indicate that the given surface has changed.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1062'>load_texture</a>(surf,transient)</tt>	Creates a texture from the surface in the software implementation.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1082'>solid_texture</a>(w,h,color)</tt>	Creates a texture filled to the edges with color.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1096'>free_memory</a>()</tt>	Frees up memory.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1103'>deinit</a>()</tt>	Called when we're restarted.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1112'>quit</a>()</tt>	Shuts down the drawing system.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1121'>event_peek_sleep</a>()</tt>	Wait a little bit so the cpu doesn't speed up.
+<tt style='background-color:#E8E8E8;'> display.SWDraw <a href=' /display/swdraw.py#L1128'>get_physical_size</a>()</tt>	Return the physical width and height of the screen.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L32'>convert_and_call</a>(function,src,dst)</tt>	This calls the function with the source and destination surface.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L50'>pixellate</a>(src,dst,avgwidth,avgheight)</tt>	This pixellates the source surface first every pixel in the.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L71'>scale</a>(s,size)</tt>	Scales down the supplied pygame surface by the given x and y factors.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L98'>byte_offset</a>(src)</tt>	Given the surface src returns a 4-tuple giving the byte offsets for the red green blue and alpha components of the pixels in.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L126'>linmap</a>(src,dst,rmap,gmap)</tt>	This maps the colors between two surfaces the various map.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L140'>map</a>(src,dst,rmap,gmap)</tt>	This maps the colors between two surfaces the various map.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L153'>twomap</a>(src,dst,white,black)</tt>	Given colors for white and black linearly maps things appropriately taking the alpha channel from white.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/module.py#L184'>alpha_munge</a>(src,dst,amap)</tt>	This samples the red channel from src maps it through amap and place it into the alpha channel of amap.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L43'>movie_stop</a>(clear,only_fullscreen)</tt>	Stops the currently playing movie.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L54'>movie_start</a>(filename,size,loops)</tt>	This starts a movie playing.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L99'>early_interact</a>()</tt>	Called early in the interact process to clear out the fullscreen flag.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L109'>interact</a>()</tt>	This is called each time the screen is drawn and should return true if the movie should display fulscreen.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L381'>update_playing</a>()</tt>	Calls play/stop on movie displayables.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/video.py#L401'>frequent</a>()</tt>	Called to update the video playback returns true if a video refresh is.
+<tt style='background-color:#E8E8E8;'> display.State <a href=' /display/anim.py#L36'>__init__</a>(name,image)</tt>	@param name a string giving the name of this state.
+<tt style='background-color:#E8E8E8;'> display.Edge <a href=' /display/anim.py#L91'>__init__</a>(old,delay,new,trans)</tt>	@param old the name a string of the state that this transition is from.
+<tt style='background-color:#E8E8E8;'> display.SMAnimation <a href=' /display/anim.py#L138'>__init__</a>(initial)</tt>	@param initial the name a string of the initial state we start in.
+<tt style='background-color:#E8E8E8;'> display.SMAnimation <a href=' /display/anim.py#L205'>pick_edge</a>(state)</tt>	This randomly picks an edge out of the given state if one exists.
+<tt style='background-color:#E8E8E8;'> display.SMAnimation <a href=' /display/anim.py#L221'>update_cache</a>()</tt>	Places the correct displayable into the edge cache based on what is contained in the given edge.
+<tt style='background-color:#E8E8E8;'> display.SMAnimation <a href=' /display/anim.py#L291'>__call__</a>(child,new_widget,old_widget)</tt>	Used when this smanimation is used as a smmotion this creates.
+<tt style='background-color:#E8E8E8;'> display.TransitionAnimation <a href=' /display/anim.py#L390'>__init__</a>()</tt>	This takes arguments such that the 1st 4th 7th.
+<tt style='background-color:#E8E8E8;'> display.Blink <a href=' /display/anim.py#L475'>__init__</a>(image,on,off,rise)</tt>	This takes as an argument an image or widget and blinks that image by varying its alpha.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/anim.py#L567'>Filmstrip</a>(image,framesize,gridsize,delay)</tt>	This creates an animation from a single image this image.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transition.py#L191'>Fade</a>(out_time,hold_time,in_time,old_widget)</tt>	:doc transition function :args (out_time hold_time in_time color="#000").
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transition.py#L994'>ComposeTransition</a>(trans,before,after,new_widget)</tt>	:doc transition function :args trans before after.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/transition.py#L1023'>SubTransition</a>(rect,trans,old_widget,new_widget)</tt>	Applies a transition to a subset of the screen not documented.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/dragdrop.py#L33'>default_drag_group</a>()</tt>	Gets the default drag group if it doesn't exist yet creates it.
+<tt style='background-color:#E8E8E8;'> display.Drag <a href=' /display/dragdrop.py#L279'>snap</a>(x,y,delay)</tt>	:doc drag_drop method changes the position of the drag.
+<tt style='background-color:#E8E8E8;'> display.Drag <a href=' /display/dragdrop.py#L327'>set_child</a>(d)</tt>	:doc drag_drop method changes the child of this drag to d.
+<tt style='background-color:#E8E8E8;'> display.Drag <a href=' /display/dragdrop.py#L338'>top</a>()</tt>	:doc drag_drop method raises this displayable to the top of its drag_group.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L689'>add</a>(child)</tt>	:doc drag_drop method adds child, which must be a drag to this draggroup.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L702'>remove</a>(child)</tt>	:doc drag_drop method removes child from this draggroup.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L722'>raise_children</a>(l)</tt>	Raises the children in l to the top of this drag_group using the order given in l for those children.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L755'>get_best_drop</a>(joined)</tt>	Returns the droppable that the members of joined overlap the most.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L789'>get_children</a>()</tt>	Returns a list of drags that are the children of this draggroup.
+<tt style='background-color:#E8E8E8;'> display.DragGroup <a href=' /display/dragdrop.py#L797'>get_child_by_name</a>(name)</tt>	:doc drag_drop method returns the first child of this draggroup that has a drag_name.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/dragdrop.py#L812'>rect_overlap_area</a>(r1,r2)</tt>	Returns the number of pixels by which rectangles r1 and r2 overlap.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/focus.py#L146'>focus_coordinates</a>()</tt>	:doc other this attempts to find the coordinates of the currently-focused.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/focus.py#L168'>before_interact</a>(roots)</tt>	Called before each interaction to choose the focused and grabbed displayables.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/focus.py#L312'>clear_focus</a>()</tt>	Clears the focus when the window loses mouse focus.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/focus.py#L322'>mouse_handler</a>(ev,x,y,default)</tt>	Handle mouse events to see if they change the focus.
+<tt style='background-color:#E8E8E8;'> display.ScreenProfile <a href=' /display/screen.py#L44'>__init__</a>(name,predict,show,update)</tt>	Requests screen profiling for the screen named name, which must be a string.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L113'>get_profile</a>(name)</tt>	Returns the profile object for the screen with name, or a default profile object if none exists.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L162'>cache_get</a>(screen,args,kwargs)</tt>	Returns the cache to use when screen is accessed with args and kwargs.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L691'>get_screen_variant</a>(name,candidates)</tt>	Get a variant screen object for name.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L710'>get_all_screen_variants</a>(name)</tt>	Gets all variants of the screen with name.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L737'>sort_screens</a>()</tt>	Produces a list of sl2 screens in topologically sorted order.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L802'>sorted_variants</a>()</tt>	Produces a list of screen variants in topological order.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L815'>analyze_screens</a>()</tt>	Analyzes all screens.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L834'>prepare_screens</a>()</tt>	Prepares all screens for use.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L859'>define_screen</a>()</tt>	:doc screens :args (name function modal="false", zorder="0", tag=none variant=none).
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L902'>get_screen_layer</a>(name)</tt>	Returns the layer that the screen with name is part of.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L918'>get_screen</a>(name,layer)</tt>	:doc screens returns the screendisplayable with the given name on layer.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L959'>has_screen</a>(name)</tt>	Returns true if a screen with the given name exists.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L976'>show_screen</a>(_screen_name)</tt>	:doc screens the programmatic equivalent of the show screen statement.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1049'>predict_screen</a>(_screen_name)</tt>	Predicts the displayables that make up the given screen.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1119'>hide_screen</a>(tag,layer)</tt>	:doc screens the programmatic equivalent of the hide screen statement.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1175'>get_widget</a>(screen,id,layer)</tt>	:doc screens from the screen on layer, returns the widget with.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1205'>get_widget_properties</a>(id,screen,layer)</tt>	:doc screens returns the properties for the widget with id in the screen.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1237'>before_restart</a>()</tt>	This is called before ren'py restarts to put the screens into restart mode which prevents crashes due to variables being used that are no.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/screen.py#L1253'>show_overlay_screens</a>(suppress_overlay)</tt>	Called from interact to show or hide the overlay screens.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L41'>get_available_image_tags</a>()</tt>	:doc image_func returns a list of image tags that have been defined.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L51'>get_available_image_attributes</a>(tag,attributes)</tt>	:undocumented returns a list of tuples with each tuple representing a possible.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L76'>get_tag_method</a>(tag,method)</tt>	This looks for an image named tag, then tries to grab the given method from it.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L91'>check_image_attributes</a>(tag,attributes)</tt>	:doc image_func checks to see if there is a unique image with the given tag and.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L113'>get_ordered_image_attributes</a>(tag,attributes,sort)</tt>	:doc image_func returns a list of image tags ordered in a way that makes sense to.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L159'>register_image</a>(name,d)</tt>	Registers the existence of an image with name, and that the image used displayable d.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/image.py#L175'>image_exists</a>(name,exact)</tt>	:doc image_func :name renpy.
+<tt style='background-color:#E8E8E8;'> display.ImageReference <a href=' /display/image.py#L234'>__init__</a>(name)</tt>	@param name a tuple of strings the name of the image or else.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L610'>__init__</a>(old)</tt>	Creates a new object if old is given copies the default state.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L643'>get_attributes</a>(layer,tag)</tt>	Get the attributes associated the image with tag on the given layer.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L651'>showing</a>(layer,name,exact)</tt>	Returns true if name is the prefix of an image that is showing on layer or false otherwise.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L677'>get_showing_tags</a>(layer)</tt>	Returns the set of tags being shown on layer.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L684'>predict_scene</a>(layer)</tt>	Predicts the scene statement being called on layer.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L698'>predict_show</a>(layer,name,show)</tt>	Predicts name being shown on layer.
+<tt style='background-color:#E8E8E8;'> display.ShownImageInfo <a href=' /display/image.py#L723'>apply_attributes</a>(layer,tag,name,wanted)</tt>	Given a layer tag and an image name with attributes returns the canonical name of an image if one exists.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L35'>compile_event</a>(key,keydown)</tt>	Compiles a keymap entry into a python expression.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L145'>clear_keymap_cache</a>()</tt>	:doc other clears the keymap cache.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L157'>queue_event</a>(name,up)</tt>	:doc other queues an event with the given name.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L190'>map_event</a>(ev,keysym)</tt>	:doc udd_utility returns true if the pygame event ev matches keysym.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L218'>map_keyup</a>(ev,name)</tt>	Returns true if the event matches the named keycode being released.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L233'>skipping</a>(ev)</tt>	This handles setting skipping in response to the press of one of the control keys.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L263'>predict_action</a>(var)</tt>	Predicts some of the actions that may be caused by a variable.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L279'>run</a>(action)</tt>	:doc run :name renpy.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L309'>run_unhovered</a>(var)</tt>	Calls the unhovered method on the variable if it exists.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L345'>is_selected</a>(action)</tt>	:doc run returns true if action indicates it is selected or false otherwise.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/behavior.py#L364'>is_sensitive</a>(action)</tt>	:doc run returns true if action indicates it is sensitive or false otherwise.
+<tt style='background-color:#E8E8E8;'> display.Adjustment <a href=' /display/behavior.py#L1353'>__init__</a>(range,value,step,page)</tt>	The following parameters correspond to fields or properties on the adjustment object.
+<tt style='background-color:#E8E8E8;'> display.Adjustment <a href=' /display/behavior.py#L1485'>update</a>()</tt>	Updates things that depend on this adjustment without firing the changed handler.
+<tt style='background-color:#E8E8E8;'> display.OnEvent <a href=' /display/behavior.py#L2032'>__init__</a>(event,action)</tt>	Event a string giving the event name.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/emulator.py#L40'>null_emulator</a>(ev,x,y)</tt>	This is used when emulation is not desired.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/emulator.py#L49'>touch_emulator</a>(ev,x,y)</tt>	This emulates an android touch-screen device like a tablet or smartphone.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/emulator.py#L87'>tv_emulator</a>(ev,x,y)</tt>	This emulates a tv-based device like the ouya.
+<tt style='background-color:#E8E8E8;'> display. <a href=' /display/emulator.py#L130'>init_emulator</a>()</tt>	Sets up the emulator.
+<tt style='background-color:#E8E8E8;'> display.ImageMapCache <a href=' /display/imagemap.py#L182'>image_file_hash</a>()</tt>	Returns a hash of the contents of the image files as an integer.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/font.py#L393'>register_sfont</a>(name,size,bold,italics)</tt>	:doc image_fonts this registers an sfont with the given details.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/font.py#L449'>register_mudgefont</a>(name,size,bold,italics)</tt>	:doc image_fonts this registers a mudgefont with the given details.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/font.py#L503'>register_bmfont</a>(name,size,bold,italics)</tt>	:doc image_fonts this registers a bmfont with the given details.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/font.py#L656'>free_memory</a>()</tt>	Clears the font cache.
+<tt style='background-color:#E8E8E8;'> text.FontGroup <a href=' /text/font.py#L690'>add</a>(font,start,end)</tt>	:doc font_group associates a range of characters with a font.
+<tt style='background-color:#E8E8E8;'> text.FontGroup <a href=' /text/font.py#L729'>segment</a>(s)</tt>	Segments s into fonts generates font string tuples.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/text.py#L60'>outline_blits</a>(blits,outline)</tt>	Given a list of blits adjusts it for the given outline size that means.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L162'>__init__</a>(source)</tt>	Creates a new segment of text if source is given this starts off.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L196'>take_style</a>(style,layout)</tt>	Takes the style of this text segment from the named style object.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L231'>glyphs</a>(s,layout)</tt>	Return the list of glyphs corresponding to unicode string s.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L254'>draw</a>(glyphs,di,xo,yo)</tt>	Draws the glyphs to surf.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L269'>assign_times</a>(gt,glyphs)</tt>	Assigns times to the glyphs gt is the starting time of the first.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L278'>subsegment</a>(s)</tt>	This is called to break the current text segment up into multiple text segments.
+<tt style='background-color:#E8E8E8;'> text.TextSegment <a href=' /text/text.py#L306'>bounds</a>(glyphs,bounds,layout)</tt>	Given an x y w h bounding box returns the union of the given bounding box and the bounding box the glyphs will actually be drawn.
+<tt style='background-color:#E8E8E8;'> text.SpaceSegment <a href=' /text/text.py#L325'>__init__</a>(ts,width,height)</tt>	Ts the text segment that this spacesegment follows.
+<tt style='background-color:#E8E8E8;'> text.DisplayableSegment <a href=' /text/text.py#L367'>__init__</a>(ts,d,renders)</tt>	Ts the text segment that this spacesegment follows.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L448'>__init__</a>(text,width,height,renders)</tt>	Text the text object this layout is associated with.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L810'>segment</a>(tokens,style,renders,text_displayable)</tt>	Breaks the text up into segments this creates a list of paragraphs.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L1055'>rtl_paragraph</a>(p)</tt>	Given a paragraph a list of segment text tuples handles rtl and ligaturization.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L1075'>figure_outlines</a>(style)</tt>	Return a list containing the outlines including an outline representing the drop shadow if we have one also including.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L1131'>blits_typewriter</a>(st)</tt>	Given a st and an outline returns a list of blit objects that can be used to blit those objects.
+<tt style='background-color:#E8E8E8;'> text.Layout <a href=' /text/text.py#L1199'>redraw_typewriter</a>(st)</tt>	Return the time of the first glyph that should be shown after st.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/text.py#L1229'>layout_cache_clear</a>()</tt>	Clears the old and new layout caches.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/text.py#L1243'>layout_cache_tick</a>()</tt>	Called once per interaction to merge the old and new layout caches.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1406'>_scope</a>(scope,update)</tt>	Called to update the scope when necessary.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1473'>update</a>()</tt>	This needs to be called after text has been updated but before any layout objects are created.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1566'>kill_layout</a>()</tt>	Kills the layout of this text used when the text or style.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1580'>get_layout</a>()</tt>	Gets the layout of this text if one exists.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1594'>get_virtual_layout</a>()</tt>	Gets the layout of this text if one exists.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1608'>focus</a>(default)</tt>	Called when a hyperlink gains focus.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1633'>unfocus</a>(default)</tt>	Called when a hyperlink loses focus or isn't focused to begin with.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1646'>call_slow_done</a>(st)</tt>	Called when slow is finished.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1657'>event</a>(ev,x,y,st)</tt>	Space enter or click ends slow if it's enabled.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1687'>size</a>(width,height,st,at)</tt>	Attempts to figure out the size of the text the parameters are.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1707'>get_time</a>()</tt>	Returns the amount of time in seconds it will take to display this text.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1893'>tokenize</a>(text)</tt>	Convert the text into a list of tokens.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1916'>apply_custom_tags</a>(tokens)</tt>	Apply new-style custom text tags.
+<tt style='background-color:#E8E8E8;'> text.Text <a href=' /text/text.py#L1990'>get_displayables</a>(tokens)</tt>	Goes through the list of tokens returns the set of displayables that.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/extras.py#L63'>check_text_tags</a>(s)</tt>	:doc lint checks the text tags in s for correctness.
+<tt style='background-color:#E8E8E8;'> text. <a href=' /text/extras.py#L156'>textwrap</a>(s,width,asian)</tt>	Wraps the unicode string s, and returns a list of strings.

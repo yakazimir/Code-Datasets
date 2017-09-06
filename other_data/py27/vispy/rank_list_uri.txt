@@ -1,0 +1,1076 @@
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/normals.py#L10'>compact</a>(vertices,indices,tolerance)</tt>	Compact vertices and indices within given tolerance.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/normals.py#L52'>normals</a>(vertices,indices)</tt>	Compute normals over a triangulated surface.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L16'>create_cube</a>()</tt>	Generate vertices & indices for a filled and outlined cube returns.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L92'>create_plane</a>(width,height,width_segments,height_segments)</tt>	Generate vertices & indices for a filled and outlined plane.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L201'>create_box</a>(width,height,depth,width_segments)</tt>	Generate vertices & indices for a filled and outlined box.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L415'>create_sphere</a>(rows,cols,depth,radius)</tt>	Create a sphere parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L453'>create_cylinder</a>(rows,cols,radius,length)</tt>	Create a cylinder parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L507'>create_cone</a>(cols,radius,length)</tt>	Create a cone parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L546'>create_arrow</a>(rows,cols,radius,length)</tt>	Create a 3d arrow using a cylinder plus cone parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/generation.py#L598'>create_grid_mesh</a>(xs,ys,zs)</tt>	Generate vertices and indices for an implicitly connected mesh.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/parametric.py#L11'>surface</a>(func,umin,umax,ucount)</tt>	Computes the parameterization of a parametric surface.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L115'>padded</a>(padding)</tt>	Return a new rect padded smaller by padding on all sides parameters.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L131'>normalized</a>()</tt>	Return a rect covering the same area but with height and width guaranteed to be positive.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L138'>flipped</a>(x,y)</tt>	Return a rect with the same bounds but with axes inverted parameters.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L167'>__add__</a>(a)</tt>	Return this rect translated by *a*.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L172'>contains</a>(x,y)</tt>	Query if the rectangle contains points parameters.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L193'>_transform_in</a>()</tt>	Return array of coordinates that can be mapped by transform classes.
+<tt style='background-color:#E8E8E8;'> geometry.Rect <a href=' /geometry/rect.py#L200'>_transform_out</a>(coords)</tt>	Return a new rect from coordinates mapped after _transform_in().
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L128'>triangulate</a>()</tt>	Do the triangulation.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L279'>_edge_event</a>(i,j)</tt>	Force edge i j to be present in mesh.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L497'>_find_cut_triangle</a>(edge)</tt>	Return the triangle that has edge[0] as one of its vertices and is bisected by edge.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L520'>_edge_in_front</a>(edge)</tt>	Return the index where *edge* appears in the current front.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L530'>_edge_opposite_point</a>(tri,i)</tt>	Given a triangle return the edge that is opposite point i.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L537'>_adjacent_tri</a>(edge,i)</tt>	Given a triangle formed by edge and i return the triangle that shares edge.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L559'>_tri_from_edge</a>(edge)</tt>	Return the only tri that contains *edge* if two tris share this.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L575'>_edges_in_tri_except</a>(tri,edge)</tt>	Return the edges in *tri*, excluding *edge*.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L585'>_edge_below_front</a>(edge,front_index)</tt>	Return true if *edge* is below the current front.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L601'>_intersected_edge</a>(edges,cut_edge)</tt>	Given a list of *edges*, return the first that is intersected by *cut_edge*.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L609'>_find_edge_intersections</a>()</tt>	Return a dictionary containing for each edge in self edges a list.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L760'>_projection</a>(a,b,c)</tt>	Return projection of a b onto a c arguments are point locations not indexes.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L809'>_edges_intersect</a>(edge1,edge2)</tt>	Return 1 if edges intersect completely endpoints excluded.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L825'>_intersection_matrix</a>(lines)</tt>	Return a 2d array of intercepts such that intercepts[i j] is the intercept of lines[i] onto lines[j].
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L838'>_intersect_edge_arrays</a>(lines1,lines2)</tt>	Return the intercepts of all lines defined in *lines1* as they intersect all lines in *lines2*.
+<tt style='background-color:#E8E8E8;'> geometry.Triangulation <a href=' /geometry/triangulation.py#L880'>_orientation</a>(edge,point)</tt>	Returns +1 if edge[0]->point is clockwise from edge[0]->edge[1], -1 if counterclockwise and 0 if parallel.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/triangulation.py#L999'>triangulate</a>(vertices)</tt>	Triangulate a set of vertices parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/curves.py#L302'>curve3_bezier</a>(p1,p2,p3)</tt>	Generate the vertices for a quadratic bezier curve.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/curves.py#L351'>curve4_bezier</a>(p1,p2,p3,p4)</tt>	Generate the vertices for a third order bezier curve.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L115'>get_faces</a>()</tt>	Array nf 3 of vertex indices three per triangular face.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L122'>get_edges</a>(indexed)</tt>	Edges of the mesh parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L150'>set_faces</a>(faces)</tt>	Set the faces parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L169'>get_vertices</a>(indexed)</tt>	Get the vertices parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L200'>get_bounds</a>()</tt>	Get the mesh bounds returns.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L217'>set_vertices</a>(verts,indexed,reset_normals)</tt>	Set the mesh vertices parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L252'>has_face_indexed_data</a>()</tt>	Return true if this object already has vertex positions indexed.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L260'>has_vertex_color</a>()</tt>	Return true if this data set has vertex color information.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L268'>has_face_color</a>()</tt>	Return true if this data set has face color information.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L276'>get_face_normals</a>(indexed)</tt>	Get face normals parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L308'>get_vertex_normals</a>(indexed)</tt>	Get vertex normals parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L348'>get_vertex_colors</a>(indexed)</tt>	Get vertex colors parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L373'>set_vertex_colors</a>(colors,indexed)</tt>	Set the vertex color array parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L403'>get_face_colors</a>(indexed)</tt>	Get the face colors parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L433'>set_face_colors</a>(colors,indexed)</tt>	Set the face color array parameters.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L461'>n_faces</a>()</tt>	The number of faces in the mesh.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L469'>n_vertices</a>()</tt>	The number of vertices in the mesh.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L510'>get_vertex_faces</a>()</tt>	List mapping each vertex index to a list of face indices that use it.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L558'>save</a>()</tt>	Serialize this mesh to a string appropriate for disk storage returns.
+<tt style='background-color:#E8E8E8;'> geometry.MeshData <a href=' /geometry/meshdata.py#L585'>restore</a>(state)</tt>	Restore the state of a mesh previously saved using save() parameters.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L72'>first_component</a>()</tt>	The vertices of the first component line of the torus knot or link.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L78'>components</a>()</tt>	A list of the vertices in each line of the torus knot or link.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L86'>num_components</a>()</tt>	The number of component lines in the torus link this is equal.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L98'>q</a>()</tt>	The q parameter of the torus knot or link.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L108'>p</a>()</tt>	The p parameter of the torus knot or link.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L118'>minor_radius</a>()</tt>	The minor radius of the torus.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L128'>major_radius</a>()</tt>	The major radius of the torus.
+<tt style='background-color:#E8E8E8;'> geometry.TorusKnot <a href=' /geometry/torusknot.py#L139'>num_points</a>()</tt>	The number of points in the vertices returned for each knot/link.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/calculations.py#L16'>_fast_cross_3d</a>(x,y)</tt>	Compute cross product between list of 3d vectors much faster than np.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/calculations.py#L53'>_calculate_normals</a>(rr,tris)</tt>	Efficiently compute vertex normals for triangulated surface.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/calculations.py#L86'>resize</a>(image,shape,kind)</tt>	Resize an image parameters.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/isosurface.py#L6'>isosurface</a>(data,level)</tt>	Generate isosurface from volumetric data using marching cubes algorithm.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L51'>faces</a>()</tt>	Return an array nf 3 of vertex indexes three per triangular face in the mesh.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L51'>faces</a>(f)</tt>	If vertices and faces are incompatible this will generate vertices from these faces and set them.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L74'>vertices</a>()</tt>	Return an array nf 3 of vertices.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L74'>vertices</a>(v)</tt>	If vertices and faces are incompatible this will generate faces from these vertices and set them.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L90'>edges</a>()</tt>	Return an array nv 2 of vertex indices.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L90'>edges</a>(e)</tt>	Ensures that all edges are valid.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L97'>convex_hull</a>()</tt>	Return an array of vertex indexes representing the convex hull.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L111'>triangulate</a>()</tt>	Triangulates the set of vertices and stores the triangles in faces and the convex hull in convex_hull.
+<tt style='background-color:#E8E8E8;'> geometry.PolygonData <a href=' /geometry/polygon.py#L133'>add_vertex</a>(vertex)</tt>	Adds given vertex and retriangulates to generate new faces.
+<tt style='background-color:#E8E8E8;'> geometry. <a href=' /geometry/isocurve.py#L12'>isocurve</a>(data,level,connected,extend_to_edge)</tt>	Generate isocurve from 2d data using marching squares algorithm.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/_color_dict.py#L6'>get_color_names</a>()</tt>	Get the known color names returns.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/_color_dict.py#L19'>get_color_dict</a>()</tt>	Get the known colors returns.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L20'>_vector_or_scalar</a>(x,type)</tt>	Convert an object to either a scalar or a row or column vector.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L31'>_vector</a>(x,type)</tt>	Convert an object to a row or column vector.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L49'>_normalize</a>(x,cmin,cmax,clip)</tt>	Normalize an array from the range [cmin cmax] to [0 1], with optional clipping.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L69'>_mix_simple</a>(a,b,x)</tt>	Mix b with proportion x with a.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L98'>smoothstep</a>(edge0,edge1,x)</tt>	Performs smooth hermite interpolation between 0 and 1 when edge0 < x < edge1.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L119'>_glsl_mix</a>(controls)</tt>	Generate a glsl template function from a given interpolation patterns and control points.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L160'>_process_glsl_template</a>(template,colors)</tt>	Replace $color_i by color #i in the glsl template.
+<tt style='background-color:#E8E8E8;'> color.BaseColormap <a href=' /color/colormap.py#L210'>map</a>(item)</tt>	Return a rgba array for the requested items.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L282'>_default_controls</a>(ncolors)</tt>	Generate linearly spaced control points from a set of colors.
+<tt style='background-color:#E8E8E8;'> color.Colormap <a href=' /color/colormap.py#L347'>interpolation</a>()</tt>	The interpolation mode of the colormap.
+<tt style='background-color:#E8E8E8;'> color.Colormap <a href=' /color/colormap.py#L363'>map</a>(x)</tt>	The python mapping function from the [0 1] interval to a list of rgba colors.
+<tt style='background-color:#E8E8E8;'> color.CubeHelixColormap <a href=' /color/colormap.py#L381'>__init__</a>(start,rot,gamma,reverse)</tt>	Cube helix colormap a full implementation of dave green's "cubehelix" for matplotlib.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L980'>get_colormap</a>(name)</tt>	Obtain a colormap some colormaps can have additional configuration parameters.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/colormap.py#L1012'>get_colormaps</a>()</tt>	Return the list of colormap names.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_array.py#L20'>_string_to_rgb</a>(color)</tt>	Convert user string or hex color to color array length 3 or 4.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_array.py#L40'>_user_to_rgba</a>(color,expand,clip)</tt>	Convert color s from any set of fmts (str/hex/arr) to rgb a array.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_array.py#L70'>_array_clip_val</a>(val)</tt>	Helper to turn val into array and clip between 0 and 1.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L157'>copy</a>()</tt>	Return a copy.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L161'>_name</a>(cls)</tt>	Helper to get the class name once it's been created.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L204'>extend</a>(colors)</tt>	Extend a colorarray with new colors parameters.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L248'>RGBA</a>()</tt>	Nx4 array of rgba uint8s.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L248'>RGBA</a>(val)</tt>	Set the color using an nx4 array of rgba uint8 values.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L260'>RGB</a>()</tt>	Nx3 array of rgba uint8s.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L260'>RGB</a>(val)</tt>	Set the color using an nx3 array of rgb uint8 values.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L272'>alpha</a>()</tt>	Length-n array of alpha floats.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L272'>alpha</a>(val)</tt>	Set the color using alpha.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L284'>hex</a>()</tt>	Numpy array with n elements each one a hex triplet string.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L284'>hex</a>(val)</tt>	Set the color values using a list of hex strings.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L301'>_hsv</a>()</tt>	Nx3 array of hsv floats.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L296'>hsv</a>(val)</tt>	Set the color values using an nx3 array of hsv floats.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L312'>value</a>()</tt>	Length-n array of color hsv values.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L312'>value</a>(val)</tt>	Set the color using length-n array of from hsv.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L319'>lighter</a>(dv,copy)</tt>	Produce a lighter color if possible parameters.
+<tt style='background-color:#E8E8E8;'> color.ColorArray <a href=' /color/color_array.py#L338'>darker</a>(dv,copy)</tt>	Produce a darker color if possible parameters.
+<tt style='background-color:#E8E8E8;'> color.Color <a href=' /color/color_array.py#L384'>__init__</a>(color,alpha,clip)</tt>	Parse input type and set attribute.
+<tt style='background-color:#E8E8E8;'> color.Color <a href=' /color/color_array.py#L432'>is_blank</a>()</tt>	Boolean indicating whether the color is invisible.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L14'>_check_color_dim</a>(val)</tt>	Ensure val is nx(n_col), usually nx3.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L25'>_hex_to_rgba</a>(hexs)</tt>	Convert hex to rgba permitting alpha values in hex.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L39'>_rgb_to_hex</a>(rgbs)</tt>	Convert rgb to hex triplet.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L49'>_rgb_to_hsv</a>(rgbs)</tt>	Convert nx3 or nx4 rgb to hsv.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L78'>_hsv_to_rgb</a>(hsvs)</tt>	Convert nx3 or nx4 hsv to rgb.
+<tt style='background-color:#E8E8E8;'> color. <a href=' /color/color_space.py#L160'>_lab_to_rgb</a>(labs)</tt>	Convert nx3 or nx4 lab to rgb.
+<tt style='background-color:#E8E8E8;'> visuals.MeshVisual <a href=' /visuals/mesh.py#L212'>set_data</a>(vertices,faces,vertex_colors,face_colors)</tt>	Set the mesh data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.MeshVisual <a href=' /visuals/mesh.py#L257'>mode</a>()</tt>	The triangle mode used to draw this mesh.
+<tt style='background-color:#E8E8E8;'> visuals.MeshVisual <a href=' /visuals/mesh.py#L264'>mesh_data</a>()</tt>	The mesh data.
+<tt style='background-color:#E8E8E8;'> visuals.MeshVisual <a href=' /visuals/mesh.py#L278'>color</a>()</tt>	The uniform color for this mesh.
+<tt style='background-color:#E8E8E8;'> visuals.MeshVisual <a href=' /visuals/mesh.py#L375'>shading</a>()</tt>	The shading method used.
+<tt style='background-color:#E8E8E8;'> visuals.RegularPolygonVisual <a href=' /visuals/regular_polygon.py#L52'>sides</a>()</tt>	The number of sides in the regular polygon.
+<tt style='background-color:#E8E8E8;'> visuals. <a href=' /visuals/tube.py#L109'>_frenet_frames</a>(points,closed)</tt>	Calculates and returns the tangents normals and binormals for the tube.
+<tt style='background-color:#E8E8E8;'> visuals.SpectrogramVisual <a href=' /visuals/spectrogram.py#L53'>freqs</a>()</tt>	The spectrogram frequencies.
+<tt style='background-color:#E8E8E8;'> visuals.AxisVisual <a href=' /visuals/axis.py#L146'>_vec</a>()</tt>	Vector in the direction of the axis line.
+<tt style='background-color:#E8E8E8;'> visuals.Ticker <a href=' /visuals/axis.py#L271'>_tile_ticks</a>(frac,tickvec)</tt>	Tiles tick marks along the axis.
+<tt style='background-color:#E8E8E8;'> visuals.Ticker <a href=' /visuals/axis.py#L278'>_get_tick_frac_labels</a>()</tt>	Get the major ticks minor ticks and major labels.
+<tt style='background-color:#E8E8E8;'> visuals.MaxNLocator <a href=' /visuals/axis.py#L332'>__init__</a>(nbins,steps,trim,integer)</tt>	Keyword args *nbins*.
+<tt style='background-color:#E8E8E8;'> visuals.SphereVisual <a href=' /visuals/sphere.py#L68'>mesh</a>()</tt>	The vispy visuals meshvisual that used to fil in.
+<tt style='background-color:#E8E8E8;'> visuals.SphereVisual <a href=' /visuals/sphere.py#L74'>border</a>()</tt>	The vispy visuals meshvisual that used to draw the border.
+<tt style='background-color:#E8E8E8;'> visuals. <a href=' /visuals/isoline.py#L14'>iso_mesh_line</a>(vertices,tris,vertex_data,levels)</tt>	Generate an isocurve from vertex data in a surface mesh.
+<tt style='background-color:#E8E8E8;'> visuals.IsolineVisual <a href=' /visuals/isoline.py#L139'>levels</a>()</tt>	The threshold at which the isocurves are constructed from the data.
+<tt style='background-color:#E8E8E8;'> visuals.IsolineVisual <a href=' /visuals/isoline.py#L145'>data</a>()</tt>	The mesh data.
+<tt style='background-color:#E8E8E8;'> visuals.IsolineVisual <a href=' /visuals/isoline.py#L150'>set_data</a>(vertices,tris,data)</tt>	Set the data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.IsolineVisual <a href=' /visuals/isoline.py#L178'>set_color</a>(color)</tt>	Set the color parameters.
+<tt style='background-color:#E8E8E8;'> visuals.IsolineVisual <a href=' /visuals/isoline.py#L214'>_compute_iso_color</a>()</tt>	Compute linevisual color from level index and corresponding level.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L450'>set_data</a>(vol,clim)</tt>	Set the volume data.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L498'>clim</a>()</tt>	The contrast limits that were applied to the volume data.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L533'>method</a>()</tt>	The render method to use current options are.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L557'>threshold</a>()</tt>	The threshold value to apply for the isosurface render method.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L575'>relative_step_size</a>()</tt>	The relative step size used during raycasting.
+<tt style='background-color:#E8E8E8;'> visuals.VolumeVisual <a href=' /visuals/volume.py#L583'>_create_vertex_data</a>()</tt>	Create and set positions and texture coords from the given shape we have six faces with 1 quad 2 triangles each resulting in.
+<tt style='background-color:#E8E8E8;'> visuals.RectangleVisual <a href=' /visuals/rectangle.py#L133'>center</a>()</tt>	The center of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.RectangleVisual <a href=' /visuals/rectangle.py#L133'>center</a>(center)</tt>	The center of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.RectangleVisual <a href=' /visuals/rectangle.py#L146'>height</a>()</tt>	The height of the rectangle.
+<tt style='background-color:#E8E8E8;'> visuals.RectangleVisual <a href=' /visuals/rectangle.py#L159'>width</a>()</tt>	The width of the rectangle.
+<tt style='background-color:#E8E8E8;'> visuals.RectangleVisual <a href=' /visuals/rectangle.py#L172'>radius</a>()</tt>	The radius of curvature of rounded corners.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L180'>get_transform</a>(map_from,map_to)</tt>	Return a transform mapping between any two coordinate systems.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L204'>view</a>()</tt>	Return a new view of this visual.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L212'>attach</a>(filt,view)</tt>	Attach a filter to this visual.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L226'>detach</a>(filt,view)</tt>	Detach a filter.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L238'>bounds</a>(axis,view)</tt>	Get the bounds of the visual parameters.
+<tt style='background-color:#E8E8E8;'> visuals.BaseVisual <a href=' /visuals/visual.py#L260'>update</a>()</tt>	Update the visual.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L338'>set_gl_state</a>(preset)</tt>	Define the set of gl state parameters to use when drawing parameters.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L351'>update_gl_state</a>()</tt>	Modify the set of gl state parameters to use when drawing parameters.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L367'>_compute_bounds</a>(axis,view)</tt>	Return the min max bounding values of this visual along *axis* in the local coordinate system.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L373'>_prepare_draw</a>(view)</tt>	This visual is about to be drawn.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L383'>_prepare_transforms</a>(view)</tt>	This method is called whenever the transformsystem instance is changed for a view.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L448'>_get_hook</a>(shader,name)</tt>	Return a functionchain that filters may use to modify the program.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L466'>attach</a>(filt,view)</tt>	Attach a filter to this visual each filter modifies the appearance or behavior of the visual.
+<tt style='background-color:#E8E8E8;'> visuals.Visual <a href=' /visuals/visual.py#L486'>detach</a>(filt,view)</tt>	Detach a filter.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L544'>add_subvisual</a>(visual)</tt>	Add a subvisual parameters.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L558'>remove_subvisual</a>(visual)</tt>	Remove a subvisual parameters.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L578'>draw</a>()</tt>	Draw the visual.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L597'>set_gl_state</a>(preset)</tt>	Define the set of gl state parameters to use when drawing parameters.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L610'>update_gl_state</a>()</tt>	Modify the set of gl state parameters to use when drawing parameters.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L623'>attach</a>(filt,view)</tt>	Attach a filter to this visual each filter modifies the appearance or behavior of the visual.
+<tt style='background-color:#E8E8E8;'> visuals.CompoundVisual <a href=' /visuals/visual.py#L638'>detach</a>(filt,view)</tt>	Detach a filter.
+<tt style='background-color:#E8E8E8;'> visuals.LinearRegionVisual <a href=' /visuals/linear_region.py#L87'>set_data</a>(pos,color)</tt>	Set the data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.LinearRegionVisual <a href=' /visuals/linear_region.py#L155'>_compute_bounds</a>(axis,view)</tt>	Return the min max bounding values of this visual along *axis* in the local coordinate system.
+<tt style='background-color:#E8E8E8;'> visuals.LinearRegionVisual <a href=' /visuals/linear_region.py#L180'>_prepare_draw</a>(view)</tt>	This method is called immediately before each draw.
+<tt style='background-color:#E8E8E8;'> visuals.SurfacePlotVisual <a href=' /visuals/surface_plot.py#L52'>set_data</a>(x,y,z,colors)</tt>	Update the data in this surface plot.
+<tt style='background-color:#E8E8E8;'> visuals.IsosurfaceVisual <a href=' /visuals/isosurface.py#L57'>level</a>()</tt>	The threshold at which the isosurface is constructed from the 3d data.
+<tt style='background-color:#E8E8E8;'> visuals.IsosurfaceVisual <a href=' /visuals/isosurface.py#L63'>set_data</a>(data,vertex_colors,face_colors,color)</tt>	Set the scalar array data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.CubeVisual <a href=' /visuals/cube.py#L57'>mesh</a>()</tt>	The vispy visuals meshvisual that used to fill in.
+<tt style='background-color:#E8E8E8;'> visuals.CubeVisual <a href=' /visuals/cube.py#L67'>border</a>()</tt>	The vispy visuals meshvisual that used to draw the border.
+<tt style='background-color:#E8E8E8;'> visuals.PolygonVisual <a href=' /visuals/polygon.py#L84'>pos</a>()</tt>	The vertex position of the polygon.
+<tt style='background-color:#E8E8E8;'> visuals.PolygonVisual <a href=' /visuals/polygon.py#L95'>color</a>()</tt>	The color of the polygon.
+<tt style='background-color:#E8E8E8;'> visuals.PolygonVisual <a href=' /visuals/polygon.py#L106'>border_color</a>()</tt>	The border color of the polygon.
+<tt style='background-color:#E8E8E8;'> visuals.PolygonVisual <a href=' /visuals/polygon.py#L118'>mesh</a>()</tt>	The vispy visuals meshvisual that is owned by the polygonvisual.
+<tt style='background-color:#E8E8E8;'> visuals.PolygonVisual <a href=' /visuals/polygon.py#L130'>border</a>()</tt>	The vispy visuals linevisual that is owned by the polygonvisual.
+<tt style='background-color:#E8E8E8;'> visuals._BorderVisual <a href=' /visuals/border.py#L109'>visual_border_width</a>()</tt>	The border width in visual coordinates.
+<tt style='background-color:#E8E8E8;'> visuals._BorderVisual <a href=' /visuals/border.py#L172'>border_width</a>()</tt>	The width of the border.
+<tt style='background-color:#E8E8E8;'> visuals._BorderVisual <a href=' /visuals/border.py#L184'>border_color</a>()</tt>	The color of the border in pixels.
+<tt style='background-color:#E8E8E8;'> visuals._BorderVisual <a href=' /visuals/border.py#L195'>pos</a>()</tt>	The center of the bordervisual.
+<tt style='background-color:#E8E8E8;'> visuals._BorderVisual <a href=' /visuals/border.py#L207'>halfdim</a>()</tt>	The half-dimensions measured from the center of the bordervisual.
+<tt style='background-color:#E8E8E8;'> visuals.LinePlotVisual <a href=' /visuals/line_plot.py#L72'>set_data</a>(data)</tt>	Set the line data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.MarkersVisual <a href=' /visuals/markers.py#L502'>set_data</a>(pos,symbol,size,edge_width)</tt>	Set the data used to display this visual.
+<tt style='background-color:#E8E8E8;'> visuals._CoreColorBarVisual <a href=' /visuals/colorbar.py#L117'>_update</a>()</tt>	Rebuilds the shaders and repositions the objects.
+<tt style='background-color:#E8E8E8;'> visuals._CoreColorBarVisual <a href=' /visuals/colorbar.py#L190'>cmap</a>()</tt>	The colormap of the colorbar.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L324'>_update</a>()</tt>	Rebuilds the shaders and repositions the objects.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L339'>_update_positions</a>()</tt>	Updates the positions of the colorbars and labels.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L474'>_calc_positions</a>(center,halfdim,border_width,orientation)</tt>	Calculate the text centeritions given the colorbar parameters.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L563'>pos</a>()</tt>	The position of the text anchor in the local coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L574'>cmap</a>()</tt>	The colormap of the colorbar.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L589'>clim</a>()</tt>	The data limits of the colorbar.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L600'>label</a>()</tt>	The vispy visuals textvisual associated with the label.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L616'>ticks</a>()</tt>	The vispy visuals textvisual associated with the ticks.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L627'>border_width</a>()</tt>	The width of the border around the colorbar in pixels.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L638'>border_color</a>()</tt>	The color of the border around the colorbar in pixels.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L643'>orientation</a>()</tt>	The orientation of the colorbar.
+<tt style='background-color:#E8E8E8;'> visuals.ColorBarVisual <a href=' /visuals/colorbar.py#L665'>size</a>()</tt>	The size of the colorbar.
+<tt style='background-color:#E8E8E8;'> visuals.ImageVisual <a href=' /visuals/image.py#L219'>set_data</a>(image)</tt>	Set the data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.ImageVisual <a href=' /visuals/image.py#L306'>_build_interpolation</a>()</tt>	Rebuild the _data_lookup_fn using different interpolations within.
+<tt style='background-color:#E8E8E8;'> visuals.ImageVisual <a href=' /visuals/image.py#L332'>_build_vertex_data</a>()</tt>	Rebuild the vertex buffers used for rendering the image when using the subdivide method.
+<tt style='background-color:#E8E8E8;'> visuals.ImageVisual <a href=' /visuals/image.py#L359'>_update_method</a>(view)</tt>	Decide which method to use for *view* and configure it accordingly.
+<tt style='background-color:#E8E8E8;'> visuals.ScrollingLinesVisual <a href=' /visuals/scrolling_lines.py#L129'>set_pos_offset</a>(po)</tt>	Set the array of position offsets for each line strip.
+<tt style='background-color:#E8E8E8;'> visuals.ScrollingLinesVisual <a href=' /visuals/scrolling_lines.py#L139'>set_color</a>(color)</tt>	Set the array of colors for each line strip.
+<tt style='background-color:#E8E8E8;'> visuals.ScrollingLinesVisual <a href=' /visuals/scrolling_lines.py#L160'>roll_data</a>(data)</tt>	Append new data to the right side of every line strip and remove as much data from the left.
+<tt style='background-color:#E8E8E8;'> visuals.ScrollingLinesVisual <a href=' /visuals/scrolling_lines.py#L181'>set_data</a>(index,data)</tt>	Set the complete data for a single line strip.
+<tt style='background-color:#E8E8E8;'> visuals.BoxVisual <a href=' /visuals/box.py#L69'>mesh</a>()</tt>	The vispy visuals meshvisual that used to fill in.
+<tt style='background-color:#E8E8E8;'> visuals.BoxVisual <a href=' /visuals/box.py#L79'>border</a>()</tt>	The vispy visuals meshvisual that used to draw the border.
+<tt style='background-color:#E8E8E8;'> visuals.InfiniteLineVisual <a href=' /visuals/infinite_line.py#L85'>set_data</a>(pos,color)</tt>	Set the data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.InfiniteLineVisual <a href=' /visuals/infinite_line.py#L130'>_compute_bounds</a>(axis,view)</tt>	Return the min max bounding values of this visual along *axis* in the local coordinate system.
+<tt style='background-color:#E8E8E8;'> visuals.InfiniteLineVisual <a href=' /visuals/infinite_line.py#L155'>_prepare_draw</a>(view)</tt>	This method is called immediately before each draw.
+<tt style='background-color:#E8E8E8;'> visuals.IsocurveVisual <a href=' /visuals/isocurve.py#L75'>levels</a>()</tt>	The threshold at which the isocurve is constructed from the 2d data.
+<tt style='background-color:#E8E8E8;'> visuals.IsocurveVisual <a href=' /visuals/isocurve.py#L93'>set_data</a>(data)</tt>	Set the scalar array data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.IsocurveVisual <a href=' /visuals/isocurve.py#L126'>_get_verts_and_connect</a>(paths)</tt>	Retrieve vertices and connects from given paths-list.
+<tt style='background-color:#E8E8E8;'> visuals.IsocurveVisual <a href=' /visuals/isocurve.py#L135'>_compute_iso_line</a>()</tt>	Compute linevisual vertices connects and color-index.
+<tt style='background-color:#E8E8E8;'> visuals.IsocurveVisual <a href=' /visuals/isocurve.py#L174'>_compute_iso_color</a>()</tt>	Compute linevisual color from level index and corresponding color.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L96'>center</a>()</tt>	The center of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L96'>center</a>(center)</tt>	The center of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L109'>radius</a>()</tt>	The start radii of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L120'>start_angle</a>()</tt>	The start start_angle of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L131'>span_angle</a>()</tt>	The angular span of the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.EllipseVisual <a href=' /visuals/ellipse.py#L142'>num_segments</a>()</tt>	The number of segments in the ellipse.
+<tt style='background-color:#E8E8E8;'> visuals.GridMeshVisual <a href=' /visuals/gridmesh.py#L55'>set_data</a>(xs,ys,zs,colors)</tt>	Update the mesh data.
+<tt style='background-color:#E8E8E8;'> visuals.filters.PickingFilter <a href=' /visuals/filters/picking.py#L51'>color</a>()</tt>	The rgba color that will be drawn to the framebuffer for visuals that use this filter.
+<tt style='background-color:#E8E8E8;'> visuals.filters.Clipper <a href=' /visuals/filters/clipper.py#L42'>bounds</a>()</tt>	The clipping boundaries.
+<tt style='background-color:#E8E8E8;'> visuals.filters.Clipper <a href=' /visuals/filters/clipper.py#L55'>transform</a>()</tt>	The transform that maps from framebuffer coordinates to clipping coordinates.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ModularProgram <a href=' /visuals/shaders/program.py#L79'>build_if_needed</a>()</tt>	Reset shader source if necesssary.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L43'>__getitem__</a>(item)</tt>	Return the name of the specified object if it has been assigned one.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L49'>compile</a>(pretty)</tt>	Compile all code and return a dict {name code} where the keys are determined by the keyword arguments passed to __init__().
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L120'>_rename_objects_fast</a>()</tt>	Rename all objects quickly to guaranteed-unique names using the id() of each object.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L135'>_rename_objects_pretty</a>()</tt>	Rename all objects like "name_1" to avoid conflicts objects are.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L183'>_is_global</a>(obj)</tt>	Return true if *obj* should be declared in the global namespace.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L196'>_name_available</a>(obj,name,shaders)</tt>	Return true if *name* is available for *obj* in *shaders*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Compiler <a href=' /visuals/shaders/compiler.py#L207'>_assign_name</a>(obj,name,shaders)</tt>	Assign *name* to *obj* in *shaders*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.MultiProgram <a href=' /visuals/shaders/multiprogram.py#L26'>add_program</a>(name)</tt>	Create a program and add it to this multiprogram.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.MultiProgram <a href=' /visuals/shaders/multiprogram.py#L58'>vert</a>()</tt>	A wrapper around all vertex shaders contained in this multiprogram.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.MultiProgram <a href=' /visuals/shaders/multiprogram.py#L70'>frag</a>()</tt>	A wrapper around all fragmet shaders contained in this multiprogram.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.MultiShader <a href=' /visuals/shaders/multiprogram.py#L125'>_new_program</a>(p)</tt>	New program was added to the multiprogram update items in the shader.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L23'>create</a>(obj,ref)</tt>	Convert *obj* to a new shaderobject if the output is a variable.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L60'>name</a>()</tt>	The name of this shader object.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L66'>definition</a>(obj_names)</tt>	Return the glsl definition for this object use *obj_names* to.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L72'>expression</a>(obj_names)</tt>	Return the glsl expression used to reference this object inline.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L77'>dependencies</a>(sort)</tt>	Return all dependencies required to use this object the last item.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L99'>static_names</a>()</tt>	Return a list of names that are declared in this object's definition not including the name of the object itself.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L108'>_add_dep</a>(dep)</tt>	Increment the reference count for *dep* if this is a new.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L118'>_remove_dep</a>(dep)</tt>	Decrement the reference count for *dep* if the reference count.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L130'>_dep_changed</a>(dep,code_changed,value_changed)</tt>	Called when a dependency's expression has changed.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L135'>changed</a>(code_changed,value_changed)</tt>	Inform dependents that this shaderobject has changed.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.ShaderObject <a href=' /visuals/shaders/shader_object.py#L142'>compile</a>()</tt>	Return a compilation of this object and its dependencies.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Variable <a href=' /visuals/shaders/variable.py#L70'>name</a>()</tt>	The name of this variable.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Variable <a href=' /visuals/shaders/variable.py#L78'>vtype</a>()</tt>	The type of variable const uniform attribute varying or inout.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Variable <a href=' /visuals/shaders/variable.py#L84'>dtype</a>()</tt>	The type of data float int vec mat.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Variable <a href=' /visuals/shaders/variable.py#L96'>value</a>()</tt>	The value associated with this variable.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Variable <a href=' /visuals/shaders/variable.py#L147'>state_id</a>()</tt>	Return a unique id that changes whenever the state of the variable has changed.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Varying <a href=' /visuals/shaders/variable.py#L192'>value</a>()</tt>	The value associated with this variable.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Varying <a href=' /visuals/shaders/variable.py#L207'>link</a>(var)</tt>	Link this varying to another object from which it will derive its dtype.
+<tt style='background-color:#E8E8E8;'> visuals.shaders. <a href=' /visuals/shaders/parsing.py#L55'>parse_function_signature</a>(code)</tt>	Return the name arguments and return type of the first function definition found in *code*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders. <a href=' /visuals/shaders/parsing.py#L73'>find_functions</a>(code)</tt>	Return a list of name arguments return type for all function definition2 found in *code*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders. <a href=' /visuals/shaders/parsing.py#L96'>find_prototypes</a>(code)</tt>	Return a list of signatures for each function prototype declared in *code*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders. <a href=' /visuals/shaders/parsing.py#L118'>find_program_variables</a>(code)</tt>	Return a dict describing program variables : {'var_name': ('uniform|attribute|varying', type),.
+<tt style='background-color:#E8E8E8;'> visuals.shaders. <a href=' /visuals/shaders/parsing.py#L136'>find_template_variables</a>(code)</tt>	Return a list of template variables found in *code*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L183'>__setitem__</a>(key,val)</tt>	Setting of replacements through a dict-like syntax.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L273'>__getitem__</a>(key)</tt>	Return a reference to a program variable from this function.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L300'>__call__</a>()</tt>	Set the signature for this function and return an functioncall object.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L317'>name</a>()</tt>	The function name the name may be mangled in the final code.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L324'>args</a>()</tt>	List of input arguments in the function signature : [(arg_name arg_type),.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L333'>rtype</a>()</tt>	The return type of this function.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L347'>code</a>()</tt>	The template code used to generate the definition for this function.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L378'>replace</a>(str1,str2)</tt>	Set verbatim code replacement it is strongly recommended to use function['$foo'] = 'bar' where.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L399'>_parse_template_vars</a>()</tt>	Find all template variables in self _code excluding the.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L414'>_get_replaced_code</a>(names)</tt>	Return code with new name expressions and replacements applied.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.Function <a href=' /visuals/shaders/function.py#L480'>_clean_code</a>(code)</tt>	Return *code* with indentation and leading/trailing blank lines removed.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.MainFunction <a href=' /visuals/shaders/function.py#L540'>add_chain</a>(var)</tt>	Create a new chainfunction and attach to $var.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.FunctionChain <a href=' /visuals/shaders/function.py#L655'>append</a>(function,update)</tt>	Append a new function to the end of this chain.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.FunctionChain <a href=' /visuals/shaders/function.py#L673'>insert</a>(index,function,update)</tt>	Insert a new function into the chain at *index*.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.FunctionChain <a href=' /visuals/shaders/function.py#L681'>remove</a>(function,update)</tt>	Remove a function from the chain.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.StatementList <a href=' /visuals/shaders/function.py#L748'>add</a>(item,position)</tt>	Add an item to the list unless it is already present.
+<tt style='background-color:#E8E8E8;'> visuals.shaders.StatementList <a href=' /visuals/shaders/function.py#L761'>remove</a>(item)</tt>	Remove an item from the list.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L42'>__init__</a>(data,itemsize,dtype,sizeable)</tt>	Create a new buffer using given data and sizes or dtype parameters.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L115'>data</a>()</tt>	The array's elements in memory.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L120'>size</a>()</tt>	Number of base elements in memory.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L125'>itemsize</a>()</tt>	Individual item sizes.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L130'>dtype</a>()</tt>	Describes the format of the elements in the buffer.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L135'>reserve</a>(capacity)</tt>	Set current capacity of the underlying array.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L142'>__len__</a>()</tt>	X __len__() <==> len x.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L153'>__getitem__</a>(key)</tt>	X __getitem__ y <==> x[y].
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L185'>__setitem__</a>(key,data)</tt>	X __setitem__ i y <==> x[i]=y.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L236'>__delitem__</a>(key)</tt>	X __delitem__ y <==> del x[y].
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L285'>insert</a>(index,data,itemsize)</tt>	Insert data before index parameters.
+<tt style='background-color:#E8E8E8;'> visuals.collections.ArrayList <a href=' /visuals/collections/array_list.py#L393'>append</a>(data,itemsize)</tt>	Append data to the end.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggPathCollection <a href=' /visuals/collections/agg_path_collection.py#L30'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggPathCollection <a href=' /visuals/collections/agg_path_collection.py#L101'>append</a>(P,closed,itemsize)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections. <a href=' /visuals/collections/util.py#L13'>dtype_reduce</a>(dtype,level,depth)</tt>	Try to reduce dtype up to a given level when it is possible.
+<tt style='background-color:#E8E8E8;'> visuals.collections. <a href=' /visuals/collections/util.py#L75'>fetchcode</a>(utype,prefix)</tt>	Generate the glsl code needed to retrieve fake uniform values from a texture.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggSegmentCollection <a href=' /visuals/collections/agg_segment_collection.py#L29'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggSegmentCollection <a href=' /visuals/collections/agg_segment_collection.py#L88'>append</a>(P0,P1,itemsize)</tt>	Append a new set of segments to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections. <a href=' /visuals/collections/base_collection.py#L22'>next_power_of_2</a>(n)</tt>	Return next power of 2 greater than or equal to n.
+<tt style='background-color:#E8E8E8;'> visuals.collections.Item <a href=' /visuals/collections/base_collection.py#L39'>__init__</a>(parent,key,vertices,indices)</tt>	Create an item from an existing collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.Item <a href=' /visuals/collections/base_collection.py#L97'>__getitem__</a>(key)</tt>	Get a specific uniforms value.
+<tt style='background-color:#E8E8E8;'> visuals.collections.Item <a href=' /visuals/collections/base_collection.py#L107'>__setitem__</a>(key,value)</tt>	Set a specific uniforms value.
+<tt style='background-color:#E8E8E8;'> visuals.collections.BaseCollection <a href=' /visuals/collections/base_collection.py#L206'>__len__</a>()</tt>	X __len__() <==> len x.
+<tt style='background-color:#E8E8E8;'> visuals.collections.BaseCollection <a href=' /visuals/collections/base_collection.py#L315'>__delitem__</a>(index)</tt>	X __delitem__ y <==> del x[y].
+<tt style='background-color:#E8E8E8;'> visuals.collections.BaseCollection <a href=' /visuals/collections/base_collection.py#L403'>__setitem__</a>(key,data)</tt>	X __setitem__ i y <==> x[i]=y.
+<tt style='background-color:#E8E8E8;'> visuals.collections.BaseCollection <a href=' /visuals/collections/base_collection.py#L453'>_compute_texture_shape</a>(size)</tt>	Compute uniform texture shape.
+<tt style='background-color:#E8E8E8;'> visuals.collections.BaseCollection <a href=' /visuals/collections/base_collection.py#L466'>_update</a>()</tt>	Update vertex buffers & texture.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggPointCollection <a href=' /visuals/collections/agg_point_collection.py#L23'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawTriangleCollection <a href=' /visuals/collections/raw_triangle_collection.py#L40'>append</a>(points,indices)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawPathCollection <a href=' /visuals/collections/raw_path_collection.py#L17'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawPathCollection <a href=' /visuals/collections/raw_path_collection.py#L66'>append</a>(P,closed,itemsize)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggFastPathCollection <a href=' /visuals/collections/agg_fast_path_collection.py#L32'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggFastPathCollection <a href=' /visuals/collections/agg_fast_path_collection.py#L93'>append</a>(P,closed,itemsize)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.AggFastPathCollection <a href=' /visuals/collections/agg_fast_path_collection.py#L179'>bake</a>(P,key,closed,itemsize)</tt>	Given a path p return the baked vertices as they should be copied in the collection if the path has already been appended.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawPolygonCollection <a href=' /visuals/collections/raw_polygon_collection.py#L41'>append</a>(points)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.Collection <a href=' /visuals/collections/collection.py#L144'>view</a>(transform,viewport)</tt>	Return a view on the collection using provided transform.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawPointCollection <a href=' /visuals/collections/raw_point_collection.py#L30'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawPointCollection <a href=' /visuals/collections/raw_point_collection.py#L77'>append</a>(P,itemsize)</tt>	Append a new set of vertices to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawSegmentCollection <a href=' /visuals/collections/raw_segment_collection.py#L25'>__init__</a>(user_dtype,transform,vertex,fragment)</tt>	Initialize the collection.
+<tt style='background-color:#E8E8E8;'> visuals.collections.RawSegmentCollection <a href=' /visuals/collections/raw_segment_collection.py#L71'>append</a>(P0,P1,itemsize)</tt>	Append a new set of segments to the collection.
+<tt style='background-color:#E8E8E8;'> visuals.graphs. <a href=' /visuals/graphs/util.py#L54'>_straight_line_vertices</a>(adjacency_mat,node_coords,directed)</tt>	Generate the vertices for straight lines between nodes.
+<tt style='background-color:#E8E8E8;'> visuals.graphs. <a href=' /visuals/graphs/util.py#L98'>_rescale_layout</a>(pos,scale)</tt>	Normalize the given coordinate list to the range [0 scale].
+<tt style='background-color:#E8E8E8;'> visuals.graphs.GraphVisual <a href=' /visuals/graphs/graph.py#L177'>set_data</a>(adjacency_mat)</tt>	Set the data parameters.
+<tt style='background-color:#E8E8E8;'> visuals.graphs.layouts. <a href=' /visuals/graphs/layouts/circular.py#L16'>circular</a>(adjacency_mat,directed)</tt>	Places all nodes on a single circle.
+<tt style='background-color:#E8E8E8;'> visuals.graphs.layouts. <a href=' /visuals/graphs/layouts/random.py#L16'>random</a>(adjacency_mat,directed,random_state)</tt>	Place the graph nodes at random places.
+<tt style='background-color:#E8E8E8;'> visuals.graphs.layouts.fruchterman_reingold <a href=' /visuals/graphs/layouts/force_directed.py#L59'>__call__</a>(adjacency_mat,directed)</tt>	Starts the calculation of the graph layout.
+<tt style='background-color:#E8E8E8;'> visuals.graphs.layouts. <a href=' /visuals/graphs/layouts/force_directed.py#L190'>_calculate_delta_pos</a>(adjacency_arr,pos,t,optimal)</tt>	Helper to calculate the delta position.
+<tt style='background-color:#E8E8E8;'> visuals.graphs.layouts. <a href=' /visuals/graphs/layouts/__init__.py#L22'>get_layout</a>(name)</tt>	Retrieve a graph layout some graph layouts accept extra options.
+<tt style='background-color:#E8E8E8;'> visuals.line.LineVisual <a href=' /visuals/line/line.py#L130'>method</a>()</tt>	The current drawing method.
+<tt style='background-color:#E8E8E8;'> visuals.line.LineVisual <a href=' /visuals/line/line.py#L150'>set_data</a>(pos,color,width,connect)</tt>	Set the data used to draw this visual.
+<tt style='background-color:#E8E8E8;'> visuals.line.LineVisual <a href=' /visuals/line/line.py#L240'>_compute_bounds</a>(axis,view)</tt>	Get the bounds parameters.
+<tt style='background-color:#E8E8E8;'> visuals.line._AggLineVisual <a href=' /visuals/line/line.py#L463'>_agg_bake</a>(cls,vertices,color,closed)</tt>	Bake a list of 2d vertices for rendering them as thick line each line.
+<tt style='background-color:#E8E8E8;'> visuals.line.ArrowVisual <a href=' /visuals/line/arrow.py#L191'>set_data</a>(pos,color,width,connect)</tt>	Set the data used for this visual parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms. <a href=' /visuals/transforms/_util.py#L12'>arg_to_array</a>(func)</tt>	Decorator to convert argument to array.
+<tt style='background-color:#E8E8E8;'> visuals.transforms. <a href=' /visuals/transforms/_util.py#L47'>as_vec4</a>(obj,default)</tt>	Convert obj to 4-element vector (numpy array with shape[-1] == 4) parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms. <a href=' /visuals/transforms/_util.py#L85'>arg_to_vec4</a>(func,self_,arg)</tt>	Decorator for converting argument to vec4 format suitable for 4x4 matrix multiplication.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformCache <a href=' /visuals/transforms/_util.py#L143'>get</a>(path)</tt>	Get a transform from the cache that maps along *path*, which must be a list of transforms to apply in reverse order (last transform is.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformCache <a href=' /visuals/transforms/_util.py#L171'>roll</a>()</tt>	Increase the age of all items in the cache by 1 items whose age.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.LogTransform <a href=' /visuals/transforms/nonlinear.py#L73'>base</a>()</tt>	*base* is a tuple x y z containing the log base that should be applied to each axis of the input vector.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MagnifyTransform <a href=' /visuals/transforms/nonlinear.py#L247'>center</a>()</tt>	The x y center point of the transform.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MagnifyTransform <a href=' /visuals/transforms/nonlinear.py#L261'>mag</a>()</tt>	The scale factor used in the central region of the transform.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MagnifyTransform <a href=' /visuals/transforms/nonlinear.py#L277'>radii</a>()</tt>	The inner and outer radii of the circular area bounding the transform.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.NullTransform <a href=' /visuals/transforms/linear.py#L26'>map</a>(coords)</tt>	Map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.NullTransform <a href=' /visuals/transforms/linear.py#L37'>imap</a>(coords)</tt>	Inverse map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L95'>map</a>(coords)</tt>	Map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L115'>imap</a>(coords)</tt>	Invert map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L181'>move</a>(move)</tt>	Change the translation of this transform by the amount given.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L192'>zoom</a>(zoom,center,mapped)</tt>	Update the transform such that its scale factor is changed but the specified center point is left unchanged.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L222'>from_mapping</a>(cls,x0,x1)</tt>	Create an sttransform from the given mapping see set_mapping for details.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.STTransform <a href=' /visuals/transforms/linear.py#L244'>set_mapping</a>(x0,x1,update)</tt>	Configure this transform such that it maps points x0 => x1 parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L348'>map</a>(coords)</tt>	Map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L365'>imap</a>(coords)</tt>	Inverse map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L409'>translate</a>(pos)</tt>	Translate the matrix the translation is applied *after* the transformations already present.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L424'>scale</a>(scale,center)</tt>	Scale the matrix about a given origin.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L446'>rotate</a>(angle,axis)</tt>	Rotate the matrix by some angle about a given axis.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L462'>set_mapping</a>(points1,points2)</tt>	Set to a 3d transformation matrix that maps points1 onto points2.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L476'>set_ortho</a>(l,r,b,t)</tt>	Set ortho transform parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L516'>set_perspective</a>(fov,aspect,near,far)</tt>	Set the perspective parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.MatrixTransform <a href=' /visuals/transforms/linear.py#L532'>set_frustum</a>(l,r,b,t)</tt>	Set the frustum parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L73'>transforms</a>()</tt>	The list of transform that make up the transform chain.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L98'>simplified</a>()</tt>	A simplified representation of the same transformation.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L134'>map</a>(coords)</tt>	Map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L151'>imap</a>(coords)</tt>	Inverse map coordinates parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L181'>append</a>(tr)</tt>	Add a new transform to the end of this chain.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L195'>prepend</a>(tr)</tt>	Add a new transform to the beginning of this chain.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.ChainTransform <a href=' /visuals/transforms/chain.py#L209'>_subtr_changed</a>(ev)</tt>	One of the internal transforms changed propagate the signal.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.SimplifiedChainTransform <a href=' /visuals/transforms/chain.py#L251'>source_changed</a>(event)</tt>	Generate a simplified chain by joining adjacent transforms.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L76'>map</a>(obj)</tt>	Return *obj* mapped through the forward transformation.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L87'>imap</a>(obj)</tt>	Return *obj* mapped through the inverse transformation.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L98'>inverse</a>()</tt>	The inverse of this transform.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L118'>dynamic</a>()</tt>	Boolean flag that indicates whether this transform is expected to change frequently.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L122'>shader_map</a>()</tt>	Return a shader function that accepts only a single vec4 argument and defines new attributes / uniforms supplying the function with.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L136'>_shader_object</a>()</tt>	This method allows transforms to be assigned directly to shader template variables.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L149'>update</a>()</tt>	Called to inform any listeners that this transform has changed.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.BaseTransform <a href=' /visuals/transforms/base_transform.py#L155'>__mul__</a>(tr)</tt>	Transform multiplication returns a new transform that is equivalent to the two operands performed in series.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.PanZoomTransform <a href=' /visuals/transforms/interactive.py#L28'>attach</a>(canvas)</tt>	Attach this tranform to a canvas parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.PanZoomTransform <a href=' /visuals/transforms/interactive.py#L47'>on_resize</a>(event)</tt>	Resize handler parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.PanZoomTransform <a href=' /visuals/transforms/interactive.py#L62'>on_mouse_move</a>(event)</tt>	Mouse move handler parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.PanZoomTransform <a href=' /visuals/transforms/interactive.py#L89'>on_mouse_wheel</a>(event)</tt>	Mouse wheel handler parameters.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L164'>configure</a>(viewport,fbo_size,fbo_rect,canvas)</tt>	Automatically configure the transformsystem * canvas_transform maps from the canvas logical pixel.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L236'>canvas</a>()</tt>	The canvas being drawn to.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L253'>dpi</a>()</tt>	Physical resolution of the document coordinate system dots per inch.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L265'>visual_transform</a>()</tt>	Transform mapping from visual local coordinate frame to scene coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L276'>scene_transform</a>()</tt>	Transform mapping from scene coordinate frame to document coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L287'>document_transform</a>()</tt>	Transform mapping from document coordinate frame to the framebuffer physical pixel coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L298'>canvas_transform</a>()</tt>	Transform mapping from canvas coordinate frame to framebuffer coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L309'>framebuffer_transform</a>()</tt>	Transform mapping from pixel coordinate frame to rendering coordinate frame.
+<tt style='background-color:#E8E8E8;'> visuals.transforms.TransformSystem <a href=' /visuals/transforms/transform_system.py#L313'>get_transform</a>(map_from,map_to)</tt>	Return a transform mapping between any two coordinate systems.
+<tt style='background-color:#E8E8E8;'> visuals.text.SDFRenderer <a href=' /visuals/text/_sdf.py#L252'>render_to_texture</a>(data,texture,offset,size)</tt>	Render a sdf to a texture at a given offset and size parameters.
+<tt style='background-color:#E8E8E8;'> visuals.text.SDFRenderer <a href=' /visuals/text/_sdf.py#L288'>_render_edf</a>(orig_tex)</tt>	Render an edf to a texture.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextureFont <a href=' /visuals/text/text.py#L55'>ratio</a>()</tt>	Ratio of the initial high-res to final stored low-res glyph.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextureFont <a href=' /visuals/text/text.py#L60'>slop</a>()</tt>	Extra space along each glyph edge due to sdf borders.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextureFont <a href=' /visuals/text/text.py#L72'>_load_char</a>(char)</tt>	Build and store a glyph corresponding to an individual character parameters.
+<tt style='background-color:#E8E8E8;'> visuals.text.FontManager <a href=' /visuals/text/text.py#L119'>get_font</a>(face,bold,italic)</tt>	Get a font described by face and size.
+<tt style='background-color:#E8E8E8;'> visuals.text. <a href=' /visuals/text/text.py#L132'>_text_to_vbo</a>(text,font,anchor_x,anchor_y)</tt>	Convert text characters to vbo.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextVisual <a href=' /visuals/text/text.py#L355'>text</a>()</tt>	The text string.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextVisual <a href=' /visuals/text/text.py#L383'>font_size</a>()</tt>	The font size in points of the text.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextVisual <a href=' /visuals/text/text.py#L394'>color</a>()</tt>	The color of the text.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextVisual <a href=' /visuals/text/text.py#L405'>rotation</a>()</tt>	The rotation of the text clockwise in degrees.
+<tt style='background-color:#E8E8E8;'> visuals.text.TextVisual <a href=' /visuals/text/text.py#L416'>pos</a>()</tt>	The position of the text anchor in the local coordinate frame.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/wrappers.py#L23'>use</a>(app,gl)</tt>	Set the usage options for vispy specify what app backend and gl backend to use.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/wrappers.py#L97'>run_subprocess</a>(command,return_code)</tt>	Run command using subprocess popen.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/filter.py#L8'>gaussian_filter</a>(data,sigma)</tt>	Drop-in replacement for scipy ndimage gaussian_filter.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/eq.py#L5'>eq</a>(a,b)</tt>	The great missing equivalence function guaranteed evaluation to a single bool value.
+<tt style='background-color:#E8E8E8;'> util.Frozen <a href=' /util/frozen.py#L19'>freeze</a>()</tt>	Freeze the object so that only existing properties can be set.
+<tt style='background-color:#E8E8E8;'> util.Frozen <a href=' /util/frozen.py#L23'>unfreeze</a>()</tt>	Unfreeze the object so that additional properties can be added.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L15'>translate</a>(offset,dtype)</tt>	Translate by an offset x y z.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L39'>scale</a>(s,dtype)</tt>	Non-uniform scaling along the x y and z axes parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L58'>rotate</a>(angle,axis,dtype)</tt>	The 3x3 rotation matrix for rotation about a vector.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L80'>ortho</a>(left,right,bottom,top)</tt>	Create orthographic projection matrix parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L118'>frustum</a>(left,right,bottom,top)</tt>	Create view frustum parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L156'>perspective</a>(fovy,aspect,znear,zfar)</tt>	Create perspective projection matrix parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/transforms.py#L181'>affine_map</a>(points1,points2)</tt>	Find a 3d transformation matrix that maps points1 onto points2.
+<tt style='background-color:#E8E8E8;'> util.Profiler <a href=' /util/profiler.py#L64'>__new__</a>(cls,msg,disabled,delayed)</tt>	Optionally create a new profiler based on caller's qualname.
+<tt style='background-color:#E8E8E8;'> util.Profiler <a href=' /util/profiler.py#L94'>__call__</a>(msg)</tt>	Register or print a new message with timing information.
+<tt style='background-color:#E8E8E8;'> util.Profiler <a href=' /util/profiler.py#L121'>finish</a>(msg)</tt>	Add a final message flush the message list if no parent profiler.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/logs.py#L22'>_get_vispy_caller</a>()</tt>	Helper to get vispy calling function from the stack.
+<tt style='background-color:#E8E8E8;'> util._VispyStreamHandler <a href=' /util/logs.py#L82'>_vispy_emit_match_andor_record</a>(record)</tt>	Log message emitter that optionally matches and/or records.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/logs.py#L129'>set_log_level</a>(verbose,match,return_old)</tt>	Convenience function for setting the logging level parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/logs.py#L249'>log_exception</a>(level,tb_skip)</tt>	Send an exception and traceback to the logger.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/logs.py#L276'>_handle_exception</a>(ignore_callback_errors,print_callback_errors,obj,cb_event)</tt>	Helper for prining errors in callbacks see eventemitter.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/logs.py#L337'>_serialize_buffer</a>(buffer,array_serialization)</tt>	Serialize a numpy array.
+<tt style='background-color:#E8E8E8;'> util.Event <a href=' /util/event.py#L62'>source</a>()</tt>	The object that the event applies to i e the source of the event.
+<tt style='background-color:#E8E8E8;'> util.Event <a href=' /util/event.py#L68'>sources</a>()</tt>	List of objects that the event applies to (i e are or have.
+<tt style='background-color:#E8E8E8;'> util.Event <a href=' /util/event.py#L102'>handled</a>()</tt>	This boolean property indicates whether the event has already been acted on by an event handler.
+<tt style='background-color:#E8E8E8;'> util.Event <a href=' /util/event.py#L115'>blocked</a>()</tt>	This boolean property indicates whether the event will be delivered to event callbacks.
+<tt style='background-color:#E8E8E8;'> util.Event <a href=' /util/event.py#L144'>__str__</a>()</tt>	Shorter string representation.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L218'>ignore_callback_errors</a>()</tt>	Whether exceptions during callbacks will be caught by the emitter this allows it to continue invoking other callbacks if an error.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L236'>print_callback_errors</a>()</tt>	Print a message and stack trace if a callback raises an exception valid values are "first" only show first instance "reminders" (show.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L243'>callback_refs</a>()</tt>	The set of callback references.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L248'>callbacks</a>()</tt>	The set of callbacks.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L259'>source</a>()</tt>	The object that events generated by this emitter apply to.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L266'>connect</a>(callback,ref,position,before)</tt>	Connect this emitter to a new callback.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L375'>disconnect</a>(callback)</tt>	Disconnect a callback from this emitter.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L405'>__call__</a>()</tt>	__call__(**kwargs) invoke all callbacks for this emitter.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L494'>blocked</a>(callback)</tt>	Return boolean indicating whether the emitter is blocked for the given callback.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L500'>block</a>(callback)</tt>	Block this emitter any attempts to emit an event while blocked.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L510'>unblock</a>(callback)</tt>	Unblock this emitter see :func event eventemitter block.
+<tt style='background-color:#E8E8E8;'> util.EventEmitter <a href=' /util/event.py#L527'>blocker</a>(callback)</tt>	Return an eventblocker to be used in 'with' statements notes.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L619'>__getitem__</a>(name)</tt>	Return the emitter assigned to the specified name.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L627'>__setitem__</a>(name,emitter)</tt>	Alias for emittergroup add(name=emitter).
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L633'>add</a>(auto_connect)</tt>	Add one or more eventemitter instances to this emitter group.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L692'>emitters</a>()</tt>	List of current emitters in this group.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L698'>__iter__</a>()</tt>	Iterates over the names of emitters in this group.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L705'>block_all</a>()</tt>	Block all emitters in this group.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L712'>unblock_all</a>()</tt>	Unblock all emitters in this group.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L719'>connect</a>(callback,ref,position,before)</tt>	Connect the callback to the event group the callback will receive.
+<tt style='background-color:#E8E8E8;'> util.EmitterGroup <a href=' /util/event.py#L731'>disconnect</a>(callback)</tt>	Disconnect the callback from this group see.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L28'>copy</a>()</tt>	Create an exact copy of this quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L33'>norm</a>()</tt>	Returns the norm of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L54'>normalize</a>()</tt>	Returns a normalized unit length version of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L61'>conjugate</a>()</tt>	Obtain the conjugate of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L73'>inverse</a>()</tt>	Returns q conjugate()/q norm()**2.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L87'>exp</a>()</tt>	Returns the exponent of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L105'>log</a>()</tt>	Returns the natural logarithm of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L142'>__mul__</a>(q2)</tt>	Multiply two quaternions.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L152'>rotate_point</a>(p)</tt>	Rotate a point instance using this quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L164'>get_matrix</a>()</tt>	Create a 4x4 homography matrix that represents the rotation of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L193'>get_axis_angle</a>()</tt>	Get the axis-angle representation of the quaternion.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L212'>create_from_axis_angle</a>(cls,angle,ax,ay)</tt>	Classmethod to create a quaternion from an axis-angle representation.
+<tt style='background-color:#E8E8E8;'> util.Quaternion <a href=' /util/quaternion.py#L225'>create_from_euler_angles</a>(cls,rx,ry,rz)</tt>	Classmethod to create a quaternion given the euler angles.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fetching.py#L23'>load_data_file</a>(fname,directory,force_download)</tt>	Get a standard vispy demo data file parameters.
+<tt style='background-color:#E8E8E8;'> util.ProgressBar <a href=' /util/fetching.py#L113'>update</a>(cur_value,mesg)</tt>	Update progressbar with current value of process parameters.
+<tt style='background-color:#E8E8E8;'> util.ProgressBar <a href=' /util/fetching.py#L155'>update_with_increment_value</a>(increment_value,mesg)</tt>	Update progressbar with the value of the increment instead of the current value of process as in update().
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fetching.py#L174'>_chunk_read</a>(response,local_file,chunk_size,initial_size)</tt>	Download a file chunk by chunk and show advancement can also be used when resuming downloads over http.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fetching.py#L210'>_chunk_write</a>(chunk,local_file,progress)</tt>	Write a chunk to file and update the progress bar.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fetching.py#L216'>_fetch_file</a>(url,file_name,print_destination)</tt>	Load requested file downloading it if needed or requested parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fetching.py#L264'>sizeof_fmt</a>(num)</tt>	Turn number of bytes into human-readable str.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fourier.py#L8'>stft</a>(x,n_fft,step,fs)</tt>	Compute the stft parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/fourier.py#L59'>fft_freqs</a>(n_fft,fs)</tt>	Return frequencies for dft parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L35'>_init</a>()</tt>	Create global config object parse command flags.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L138'>_parse_command_line_arguments</a>()</tt>	Transform vispy specific command line args to vispy config.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L188'>_get_vispy_app_dir</a>()</tt>	Helper to get the default directory for storing vispy data.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L288'>get_config_keys</a>()</tt>	The config keys known by vispy and their allowed data types.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L300'>_get_config_fname</a>()</tt>	Helper for the vispy config file.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L311'>_load_config</a>()</tt>	Helper to load prefs from ~/ vispy/vispy json.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L321'>save_config</a>()</tt>	Save configuration keys to vispy config file parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L343'>set_data_dir</a>(directory,create,save)</tt>	Set vispy data download directory parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L370'>_enable_profiling</a>()</tt>	Start profiling and register callback to print stats when the program exits.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/config.py#L390'>sys_info</a>(fname,overwrite)</tt>	Get relevant system and debugging information parameters.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/osmesa_gl.py#L5'>fix_osmesa_gl_lib</a>()</tt>	When using osmesa the gl functions from libgl are included in libosmesa.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/ptime.py#L18'>winTime</a>()</tt>	Return the current time in seconds with high precision (windows version use manager.
+<tt style='background-color:#E8E8E8;'> util. <a href=' /util/ptime.py#L27'>unixTime</a>()</tt>	Return the current time in seconds with high precision (unix version use manager.
+<tt style='background-color:#E8E8E8;'> util.Key <a href=' /util/keys.py#L34'>name</a>()</tt>	The primary name of the key.
+<tt style='background-color:#E8E8E8;'> util.dpi. <a href=' /util/dpi/_quartz.py#L10'>get_dpi</a>(raise_error)</tt>	Get screen dpi from the os parameters.
+<tt style='background-color:#E8E8E8;'> util.dpi. <a href=' /util/dpi/_linux.py#L15'>_get_dpi_from</a>(cmd,pattern,func)</tt>	Match pattern against the output of func passing the results as floats to func.
+<tt style='background-color:#E8E8E8;'> util.fonts. <a href=' /util/fonts/_triage.py#L24'>list_fonts</a>()</tt>	List system fonts returns.
+<tt style='background-color:#E8E8E8;'> util.fonts. <a href=' /util/fonts/_quartz.py#L164'>_get_k_p_a</a>(font,left,right)</tt>	This actually calculates the kerning + advance.
+<tt style='background-color:#E8E8E8;'> util.fonts. <a href=' /util/fonts/_freetype.py#L45'>_load_glyph</a>(f,char,glyphs_dict)</tt>	Load glyph from font into dict.
+<tt style='background-color:#E8E8E8;'> util.fonts. <a href=' /util/fonts/_vispy_fonts.py#L13'>_get_vispy_font_filename</a>(face,bold,italic)</tt>	Fetch a remote vispy font.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L70'>assert_image_approved</a>(image,standard_file,message)</tt>	Check that an image test result matches a pre-approved standard.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L156'>assert_image_match</a>(im1,im2,min_corr,px_threshold)</tt>	Check that two images match.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L248'>make_diff_image</a>(im1,im2)</tt>	Return image array showing the differences between im1 and im2.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L265'>downsample</a>(data,n,axis)</tt>	Downsample by averaging points together across axis.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L365'>get_test_data_repo</a>()</tt>	Return the path to a git repository with the required commit checked out.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L452'>git_status</a>(path)</tt>	Return a string listing all changes to the working tree in a git repository.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/image_tester.py#L460'>git_commit_id</a>(path,ref)</tt>	Return the commit id of *ref* in the git repository at *path*.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L33'>_safe_rep</a>(obj,short)</tt>	Helper for assert_* ports.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L44'>_safe_str</a>(obj)</tt>	Helper for assert_* ports.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L52'>_format_msg</a>(msg,std_msg)</tt>	Helper for assert_* ports.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L64'>nottest</a>(func)</tt>	Decorator to mark a function or method as *not* a test.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L192'>has_application</a>(backend,has,capable)</tt>	Determine if a suitable app backend exists.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L223'>requires_application</a>(backend,has,capable)</tt>	Return a decorator for tests that require an application.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L235'>requires_img_lib</a>()</tt>	Decorator for tests that require an image library.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L245'>has_ipython</a>(version)</tt>	Function that checks the presence of ipython.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L273'>has_matplotlib</a>(version)</tt>	Determine if mpl is a usable version.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L309'>TestingCanvas</a>(bgcolor,size,dpi,decorate)</tt>	Class wrapper to avoid importing scene until necessary.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_testing.py#L358'>run_tests_if_main</a>()</tt>	Run tests in a given file if it is run as a script.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_runners.py#L51'>_unit</a>(mode,extra_arg_string,coverage)</tt>	Run unit tests using a particular mode.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_runners.py#L126'>_docs</a>()</tt>	Test docstring paramters using vispy/utils/tests/test_docstring_parameters.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_runners.py#L183'>_check_line_endings</a>()</tt>	Check all files in the repository for cr characters.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_runners.py#L249'>_examples</a>(fnames_str)</tt>	Run examples and make sure they work.
+<tt style='background-color:#E8E8E8;'> testing. <a href=' /testing/_runners.py#L336'>test</a>(label,extra_arg_string,coverage)</tt>	Test vispy software parameters.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/datasets.py#L14'>load_iris</a>()</tt>	Load the iris dataset.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/datasets.py#L27'>load_crate</a>()</tt>	Load an image of a crate returns.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/datasets.py#L38'>pack_unit</a>(value)</tt>	Packs float values between [0 1] into 4 unsigned int8.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/datasets.py#L52'>pack_ieee</a>(value)</tt>	Packs float ieee binary representation into 4 unsigned int8.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/datasets.py#L64'>load_spatial_filters</a>(packed)</tt>	Load spatial-filters kernel parameters.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/mesh.py#L13'>read_mesh</a>(fname)</tt>	Read mesh data from file.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/mesh.py#L46'>write_mesh</a>(fname,vertices,faces,normals)</tt>	Write mesh data to file.
+<tt style='background-color:#E8E8E8;'> io.WavefrontReader <a href=' /io/wavefront.py#L54'>read</a>(cls,fname)</tt>	Read fname fmt this classmethod is the entry point for reading obj files.
+<tt style='background-color:#E8E8E8;'> io.WavefrontReader <a href=' /io/wavefront.py#L87'>readLine</a>()</tt>	The method that reads a line and processes it.
+<tt style='background-color:#E8E8E8;'> io.WavefrontReader <a href=' /io/wavefront.py#L119'>readTuple</a>(line,n)</tt>	Reads a tuple of numbers e g vertices normals or teture coords.
+<tt style='background-color:#E8E8E8;'> io.WavefrontReader <a href=' /io/wavefront.py#L125'>readFace</a>(line)</tt>	Each face consists of three or more sets of indices each set.
+<tt style='background-color:#E8E8E8;'> io.WavefrontReader <a href=' /io/wavefront.py#L200'>finish</a>()</tt>	Converts gathere lists to numpy arrays and creates basemesh instance.
+<tt style='background-color:#E8E8E8;'> io.WavefrontWriter <a href=' /io/wavefront.py#L228'>write</a>(cls,fname,vertices,faces)</tt>	This classmethod is the entry point for writing mesh data to obj.
+<tt style='background-color:#E8E8E8;'> io.WavefrontWriter <a href=' /io/wavefront.py#L265'>writeLine</a>(text)</tt>	Simple writeline function to write a line of code to the file.
+<tt style='background-color:#E8E8E8;'> io.WavefrontWriter <a href=' /io/wavefront.py#L272'>writeTuple</a>(val,what)</tt>	Writes a tuple of numbers on one line.
+<tt style='background-color:#E8E8E8;'> io.WavefrontWriter <a href=' /io/wavefront.py#L283'>writeFace</a>(val,what)</tt>	Write the face info to the net line.
+<tt style='background-color:#E8E8E8;'> io.WavefrontWriter <a href=' /io/wavefront.py#L300'>writeMesh</a>(vertices,faces,normals,values)</tt>	Write the given mesh instance.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L17'>_make_png</a>(data,level)</tt>	Convert numpy array to png byte array.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L101'>read_png</a>(filename)</tt>	Read a png file to rgb8 or rgba8 unlike imread this requires no external dependencies.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L136'>write_png</a>(filename,data)</tt>	Write a png file unlike imsave this requires no external dependencies.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L159'>imread</a>(filename,format)</tt>	Read image data from disk requires imageio or pil.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L197'>imsave</a>(filename,im,format)</tt>	Save image data to disk requires imageio or pil.
+<tt style='background-color:#E8E8E8;'> io. <a href=' /io/image.py#L226'>_check_img_lib</a>()</tt>	Utility to search for imageio or pil.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/inputhook.py#L17'>set_interactive</a>(enabled,app)</tt>	Activate the ipython hook for vispy if the app is not specified the.
+<tt style='background-color:#E8E8E8;'> app.VisPyInputHook <a href=' /app/inputhook.py#L36'>enable</a>(app)</tt>	Activate event loop integration with this vispy application.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/_default_app.py#L13'>use_app</a>(backend_name,call_reuse)</tt>	Get/create the default application object it is safe to call this function multiple times as long as.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/_default_app.py#L51'>create</a>()</tt>	Create the native application.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/_default_app.py#L58'>run</a>()</tt>	Enter the native gui event loop.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/_default_app.py#L65'>quit</a>()</tt>	Quit the native gui event loop.
+<tt style='background-color:#E8E8E8;'> app. <a href=' /app/_default_app.py#L72'>process_events</a>()</tt>	Process all pending gui events if the mainloop is not running this should be done regularly to.
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L72'>app</a>()</tt>	The vispy application instance on which this timer is based.
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L97'>start</a>(interval,iterations)</tt>	Start the timer.
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L126'>stop</a>()</tt>	Stop the timer.
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L143'>native</a>()</tt>	The native timer on which this timer is based.
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L171'>connect</a>(callback)</tt>	Alias for self events timeout connect().
+<tt style='background-color:#E8E8E8;'> app.Timer <a href=' /app/timer.py#L175'>disconnect</a>(callback)</tt>	Alias for self events timeout disconnect().
+<tt style='background-color:#E8E8E8;'> app.BaseCanvasBackend <a href=' /app/base.py#L80'>_process_backend_kwargs</a>(kwargs)</tt>	Simple utility to retrieve kwargs in predetermined order.
+<tt style='background-color:#E8E8E8;'> app.QtCanvas <a href=' /app/qt.py#L74'>update</a>()</tt>	Call update() on both this widget and the internal canvas.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L58'>backend_name</a>()</tt>	The name of the gui backend that this app wraps.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L67'>backend_module</a>()</tt>	The module object that defines the backend.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L73'>process_events</a>()</tt>	Process all pending gui events if the mainloop is not.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L80'>sleep</a>(duration_sec)</tt>	Sleep for the given duration in seconds.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L94'>create</a>()</tt>	Create the native application.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L100'>is_interactive</a>()</tt>	Determine if the user requested interactive mode.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L120'>run</a>(allow_interactive)</tt>	Enter the native gui event loop.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L139'>reuse</a>()</tt>	Called when the application is reused in an interactive session.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L147'>quit</a>()</tt>	Quit the native gui event loop.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L152'>native</a>()</tt>	The native gui application instance.
+<tt style='background-color:#E8E8E8;'> app.Application <a href=' /app/application.py#L158'>_use</a>(backend_name)</tt>	Select a backend by name see class docstring for details.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L213'>create_native</a>()</tt>	Create the native widget if not already done so if the widget.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L270'>context</a>()</tt>	The opengl context of the native widget it gives access to opengl functions to call on this canvas object.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L279'>app</a>()</tt>	The vispy application instance on which this canvas is based.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L285'>native</a>()</tt>	The native widget object on which this canvas is based.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L297'>dpi</a>()</tt>	The physical resolution of the canvas in dots per inch.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L302'>connect</a>(fun)</tt>	Connect a function to an event the name of the function.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L339'>size</a>()</tt>	The size of canvas/window.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L344'>physical_size</a>()</tt>	The physical size of the canvas/window which may differ from the.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L350'>pixel_scale</a>()</tt>	The ratio between the number of logical pixels or 'points', and the physical pixels on the device.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L375'>position</a>()</tt>	The position of canvas/window relative to screen.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L386'>title</a>()</tt>	The title of canvas/window.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L392'>fps</a>()</tt>	The fps of canvas/window as the rate that events draw is emitted.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L398'>set_current</a>(event)</tt>	Make this the active gl canvas parameters.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L409'>swap_buffers</a>(event)</tt>	Swap gl buffers such that the offscreen buffer becomes visible parameters.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L419'>show</a>(visible,run)</tt>	Show or hide the canvas parameters.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L433'>update</a>(event)</tt>	Inform the backend that the canvas needs to be redrawn parameters.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L444'>close</a>()</tt>	Close the canvas notes.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L460'>_update_fps</a>(event)</tt>	Update the fps after every window.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L470'>measure_fps</a>(window,callback)</tt>	Measure the current fps sets the update window connects the draw event to update_fps.
+<tt style='background-color:#E8E8E8;'> app.Canvas <a href=' /app/canvas.py#L520'>render</a>()</tt>	Render the canvas to an offscreen buffer and return the image array.
+<tt style='background-color:#E8E8E8;'> app.MouseEvent <a href=' /app/canvas.py#L633'>is_dragging</a>()</tt>	Indicates whether this event is part of a mouse drag operation.
+<tt style='background-color:#E8E8E8;'> app.MouseEvent <a href=' /app/canvas.py#L639'>drag_events</a>()</tt>	Return a list of all mouse events in the current drag operation.
+<tt style='background-color:#E8E8E8;'> app.MouseEvent <a href=' /app/canvas.py#L658'>trail</a>()</tt>	Return an n 2 array of mouse coordinates for every event in the current mouse drag operation.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_glfw.py#L133'>_set_config</a>(config)</tt>	Set gl configuration.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_glfw.py#L133'>_set_config</a>(c)</tt>	Set gl configuration for glfw.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_qt.py#L251'>_get_qpoint_pos</a>(pos)</tt>	Return the coordinates of a qpointf object.
+<tt style='background-color:#E8E8E8;'> app.backends.CanvasBackendEgl <a href=' /app/backends/_qt.py#L548'>get_window_id</a>()</tt>	Get the window id of a pyside widget might also work for pyqt4.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_wx.py#L165'>_get_mods</a>(evt)</tt>	Helper to extract list of mods from event.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_wx.py#L175'>_process_key</a>(evt)</tt>	Helper to convert from wx keycode to vispy keycode.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_ipynb_util.py#L19'>_extract_buffers</a>(commands)</tt>	Extract all data buffers from the list of glir commands and replace them by buffer pointers {buffer <buffer_index>}.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_ipynb_util.py#L38'>_serialize_item</a>(item)</tt>	Internal function serialize native types.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_ipynb_util.py#L67'>_serialize_command</a>(command_modified)</tt>	Serialize a single glir modified command the modification relates.
+<tt style='background-color:#E8E8E8;'> app.backends. <a href=' /app/backends/_ipynb_util.py#L73'>create_glir_message</a>(commands,array_serialization)</tt>	Create a json-serializable message of glir commands numpy arrays.
+<tt style='background-color:#E8E8E8;'> app.backends.CanvasBackend <a href=' /app/backends/_glfw.py#L483'>_process_mod</a>(key,down)</tt>	Process possible keyboard modifiers glfw provides "mod" with many callbacks but not critically the.
+<tt style='background-color:#E8E8E8;'> app.backends.ipython. <a href=' /app/backends/ipython/_widget.py#L21'>_stop_timers</a>(canvas)</tt>	Stop all timers in a canvas.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L166'>histogram</a>(data,bins,color,orientation)</tt>	Calculate and show a histogram of data parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L191'>image</a>(data,cmap,clim,fg_color)</tt>	Show an image parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L223'>mesh</a>(vertices,faces,vertex_colors,face_colors)</tt>	Show a 3d mesh parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L280'>plot</a>(data,color,symbol,line_kind)</tt>	Plot a series of data using lines and markers parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L343'>spectrogram</a>(x,n_fft,step,fs)</tt>	Calculate and show a spectrogram parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L388'>volume</a>(vol,clim,method,threshold)</tt>	Show a 3d volume parameters.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L424'>surface</a>(zdata)</tt>	Show a 3d surface plot.
+<tt style='background-color:#E8E8E8;'> plot.PlotWidget <a href=' /plot/plotwidget.py#L441'>colorbar</a>(cmap,position,label,clim)</tt>	Show a colorbar parameters.
+<tt style='background-color:#E8E8E8;'> plot.Fig <a href=' /plot/fig.py#L47'>plot_widgets</a>()</tt>	List of the associated plotwidget instances.
+<tt style='background-color:#E8E8E8;'> plot.Fig <a href=' /plot/fig.py#L52'>__getitem__</a>(idxs)</tt>	Get an axis.
+<tt style='background-color:#E8E8E8;'> glsl. <a href=' /glsl/__init__.py#L12'>find</a>(name)</tt>	Locate a filename into the shader library.
+<tt style='background-color:#E8E8E8;'> glsl. <a href=' /glsl/__init__.py#L37'>get</a>(name)</tt>	Retrieve code from the given filename.
+<tt style='background-color:#E8E8E8;'> glsl.SpatialFilter <a href=' /glsl/build-spatial-filters.py#L87'>weight</a>(x)</tt>	Return filter weight for a distance x.
+<tt style='background-color:#E8E8E8;'> glsl.Bessel <a href=' /glsl/build-spatial-filters.py#L493'>besj</a>(x,n)</tt>	Function besj calculates bessel function of first kind of order n arguments.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/glir.py#L58'>as_enum</a>(enum)</tt>	Turn a possibly string enum into an integer enum.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L97'>command</a>()</tt>	Send a command see the command spec at.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L103'>set_verbose</a>(verbose)</tt>	Set verbose or not if true the glir commands are printed.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L110'>show</a>(filter)</tt>	Print the list of commands currently in the queue if filter is.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L132'>clear</a>()</tt>	Pop the whole queue and associated queues and return a list of commands.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L140'>flush</a>(parser)</tt>	Flush all current commands to the glir interpreter.
+<tt style='background-color:#E8E8E8;'> gloo._GlirQueueShare <a href=' /gloo/glir.py#L148'>_filter</a>(commands,parser)</tt>	Filter data/size commands that are overridden by a size command.
+<tt style='background-color:#E8E8E8;'> gloo.GlirQueue <a href=' /gloo/glir.py#L190'>command</a>()</tt>	Send a command see the command spec at.
+<tt style='background-color:#E8E8E8;'> gloo.GlirQueue <a href=' /gloo/glir.py#L196'>set_verbose</a>(verbose)</tt>	Set verbose or not if true the glir commands are printed.
+<tt style='background-color:#E8E8E8;'> gloo.GlirQueue <a href=' /gloo/glir.py#L203'>clear</a>()</tt>	Pop the whole queue and associated queues and return a list of commands.
+<tt style='background-color:#E8E8E8;'> gloo.GlirQueue <a href=' /gloo/glir.py#L209'>associate</a>(queue)</tt>	Merge this queue with another.
+<tt style='background-color:#E8E8E8;'> gloo.GlirQueue <a href=' /gloo/glir.py#L229'>flush</a>(parser)</tt>	Flush all current commands to the glir interpreter.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/glir.py#L235'>convert_shaders</a>(convert,shaders)</tt>	Modify shading code so that we can write code once and make it run "everywhere".
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/glir.py#L296'>as_es2_command</a>(command)</tt>	Modify a desktop command so it works on es2.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlirParser <a href=' /gloo/glir.py#L320'>is_remote</a>()</tt>	Whether the code is executed remotely i e gloo gl cannot.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlirParser <a href=' /gloo/glir.py#L326'>convert_shaders</a>()</tt>	Whether to convert shading code valid values are 'es2' and.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlirParser <a href=' /gloo/glir.py#L332'>parse</a>(commands)</tt>	Parse the glir commands or sent them away.
+<tt style='background-color:#E8E8E8;'> gloo.GlirParser <a href=' /gloo/glir.py#L377'>_parse</a>(command)</tt>	Parse a single command.
+<tt style='background-color:#E8E8E8;'> gloo.GlirParser <a href=' /gloo/glir.py#L444'>parse</a>(commands)</tt>	Parse a list of commands.
+<tt style='background-color:#E8E8E8;'> gloo.GlirParser <a href=' /gloo/glir.py#L460'>get_object</a>(id_)</tt>	Get the object with the given id or none if it does not exist.
+<tt style='background-color:#E8E8E8;'> gloo.GlirParser <a href=' /gloo/glir.py#L465'>_gl_initialize</a>()</tt>	Deal with compatibility desktop does not have sprites enabled by default.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L595'>activate</a>()</tt>	Avoid overhead in calling gluseprogram with same arg.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L604'>deactivate</a>()</tt>	Avoid overhead in calling gluseprogram with same arg.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L613'>set_shaders</a>(vert,frag)</tt>	This function takes care of setting the shading code and compiling+linking it into a working program object that is ready.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L654'>_get_active_attributes_and_uniforms</a>()</tt>	Retrieve active attributes and uniforms to be able to check that all uniforms/attributes are set by the user.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L681'>_parse_error</a>(error)</tt>	Parses a single glsl error and extracts the linenr and description other glir implementations may omit this.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L704'>_get_error</a>(code,errors,indentation)</tt>	Get error and show the faulty line + some context other glir implementations may omit this.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L732'>set_texture</a>(name,value)</tt>	Set a texture sampler value is the id of the texture to link.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L764'>set_uniform</a>(name,type_,value)</tt>	Set a uniform value value is assumed to have been checked.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L804'>set_attribute</a>(name,type_,value)</tt>	Set an attribute value value is assumed to have been checked.
+<tt style='background-color:#E8E8E8;'> gloo.GlirProgram <a href=' /gloo/glir.py#L892'>draw</a>(mode,selection)</tt>	Draw program in given mode with given selection indexbuffer or first count.
+<tt style='background-color:#E8E8E8;'> gloo.GlirTexture <a href=' /gloo/glir.py#L1012'>_get_alignment</a>(width)</tt>	Determines a textures byte alignment.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/glir.py#L1132'>_check_pyopengl_3D</a>()</tt>	Helper to ensure users have opengl for 3d texture support for now.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L134'>set_shaders</a>(vert,frag)</tt>	Set the vertex and fragment shaders.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L161'>shaders</a>()</tt>	Source code for vertex and fragment shader.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L167'>variables</a>()</tt>	A list of the variables in use by the current program the list is obtained by parsing the glsl source code.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L184'>_parse_variables_from_code</a>()</tt>	Parse uniforms attributes and varyings from the source code.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L224'>bind</a>(data)</tt>	Bind a vertexbuffer that has structured data parameters.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L240'>_process_pending_variables</a>()</tt>	Try to apply the variables that were set but not known yet.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L249'>__setitem__</a>(name,data)</tt>	Setting uniform or attribute data this method requires the information about the variable that we.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L394'>__getitem__</a>(name)</tt>	Get user-defined data for attributes and uniforms.
+<tt style='background-color:#E8E8E8;'> gloo.Program <a href=' /gloo/program.py#L404'>draw</a>(mode,indices,check_error)</tt>	Draw the attribute arrays in the specified mode.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/context.py#L45'>get_current_canvas</a>()</tt>	Get the currently active canvas returns none if there is no canvas available.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/wrappers.py#L64'>_check_valid</a>(key,val,valid)</tt>	Helper to check valid options.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/wrappers.py#L71'>_to_args</a>(x)</tt>	Convert to args representation.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/wrappers.py#L78'>_check_conversion</a>(key,valid_dict)</tt>	Check for existence of key in dict return value or raise error.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L100'>set_viewport</a>()</tt>	Set the opengl viewport this is a wrapper for gl.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L114'>set_depth_range</a>(near,far)</tt>	Set depth values parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L126'>set_front_face</a>(mode)</tt>	Set which faces are front-facing parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L136'>set_cull_face</a>(mode)</tt>	Set front back or both faces to be culled parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L146'>set_line_width</a>(width)</tt>	Set line width parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L159'>set_polygon_offset</a>(factor,units)</tt>	Set the scale and units used to calculate depth values parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L181'>clear</a>(color,depth,stencil)</tt>	Clear the screen buffers this is a wrapper for gl.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L213'>set_clear_color</a>(color,alpha)</tt>	Set the screen clear color this is a wrapper for gl.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L227'>set_clear_depth</a>(depth)</tt>	Set the clear value for the depth buffer this is a wrapper for gl.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L239'>set_clear_stencil</a>(index)</tt>	Set the clear value for the stencil buffer this is a wrapper for gl.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L253'>set_blend_func</a>(srgb,drgb,salpha,dalpha)</tt>	Specify pixel arithmetic for rgb and alpha parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L273'>set_blend_color</a>(color)</tt>	Set the blend color parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L283'>set_blend_equation</a>(mode_rgb,mode_alpha)</tt>	Specify the equation for rgb and alpha blending parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L304'>set_scissor</a>(x,y,w,h)</tt>	Define the scissor box parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L320'>set_stencil_func</a>(func,ref,mask,face)</tt>	Set front or back function and reference value parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L338'>set_stencil_mask</a>(mask,face)</tt>	Control the front or back writing of individual bits in the stencil parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L350'>set_stencil_op</a>(sfail,dpfail,dppass,face)</tt>	Set front or back stencil test actions parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L374'>set_depth_func</a>(func)</tt>	Specify the value used for depth buffer comparisons parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L385'>set_depth_mask</a>(flag)</tt>	Toggle writing into the depth buffer parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L395'>set_color_mask</a>(red,green,blue,alpha)</tt>	Toggle writing of frame buffer color components parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L412'>set_sample_coverage</a>(value,invert)</tt>	Specify multisample coverage parameters parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L432'>get_state_presets</a>()</tt>	The available gl state presets returns.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L442'>set_state</a>(preset)</tt>	Set opengl rendering state optionally using a preset parameters.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L533'>finish</a>()</tt>	Wait for gl commands to to finish this creates a glir command for glfinish and then processes the.
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L547'>flush</a>()</tt>	Flush gl commands this is a wrapper for glflush().
+<tt style='background-color:#E8E8E8;'> gloo.BaseGlooFunctions <a href=' /gloo/wrappers.py#L560'>set_hint</a>(target,mode)</tt>	Set opengl drawing hint parameters.
+<tt style='background-color:#E8E8E8;'> gloo.GlooFunctions <a href=' /gloo/wrappers.py#L578'>glir</a>()</tt>	The glir queue corresponding to the current canvas.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/wrappers.py#L606'>read_pixels</a>(viewport,alpha,out_type)</tt>	Read pixels from the currently selected buffer.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/wrappers.py#L666'>get_gl_configuration</a>()</tt>	Read the current gl configuration this function uses constants that are not in the opengl es 2.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/util.py#L11'>_screenshot</a>(viewport,alpha)</tt>	Take a screenshot using glreadpixels not sure where to put this.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/util.py#L52'>check_variable</a>(name)</tt>	Return none if *name* is expected to be a valid variable name in any glsl version.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/util.py#L76'>check_enum</a>(enum,name,valid)</tt>	Get lowercase string representation of enum.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/util.py#L118'>draw_texture</a>(tex)</tt>	Draw a 2d texture to the current viewport parameters.
+<tt style='background-color:#E8E8E8;'> gloo.RenderBuffer <a href=' /gloo/framebuffer.py#L52'>resize</a>(shape,format)</tt>	Set the render-buffer size and format parameters.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L123'>activate</a>()</tt>	Activate/use this frame buffer.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L133'>deactivate</a>()</tt>	Stop using this frame buffer the previous framebuffer will be made active.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L173'>color_buffer</a>()</tt>	Color buffer attachment.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L182'>depth_buffer</a>()</tt>	Depth buffer attachment.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L191'>stencil_buffer</a>()</tt>	Stencil buffer attachment.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L195'>shape</a>()</tt>	The shape of the texture/renderbuffer attached to this framebuffer.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L207'>resize</a>(shape)</tt>	Resize all attached buffers with the given shape parameters.
+<tt style='background-color:#E8E8E8;'> gloo.FrameBuffer <a href=' /gloo/framebuffer.py#L229'>read</a>(mode,alpha)</tt>	Return array of pixel values in an attached buffer parameters.
+<tt style='background-color:#E8E8E8;'> gloo.Buffer <a href=' /gloo/buffer.py#L55'>nbytes</a>()</tt>	Buffer size in bytes.
+<tt style='background-color:#E8E8E8;'> gloo.Buffer <a href=' /gloo/buffer.py#L61'>set_subdata</a>(data,offset,copy)</tt>	Set a sub-region of the buffer deferred operation.
+<tt style='background-color:#E8E8E8;'> gloo.Buffer <a href=' /gloo/buffer.py#L90'>set_data</a>(data,copy)</tt>	Set data in the buffer deferred operation.
+<tt style='background-color:#E8E8E8;'> gloo.Buffer <a href=' /gloo/buffer.py#L116'>resize_bytes</a>(size)</tt>	Resize this buffer deferred operation.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L157'>set_subdata</a>(data,offset,copy)</tt>	Set a sub-region of the buffer deferred operation.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L178'>set_data</a>(data,copy)</tt>	Set data deferred operation parameters.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L204'>offset</a>()</tt>	Buffer offset in bytes relative to base.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L210'>stride</a>()</tt>	Stride of data in memory.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L216'>size</a>()</tt>	Number of elements in the buffer.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L221'>itemsize</a>()</tt>	The total number of bytes required to store the array data.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L227'>glsl_type</a>()</tt>	Glsl declaration strings required for a variable to hold this data.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L241'>resize_bytes</a>(size)</tt>	Resize the buffer in-place deferred operation parameters.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L256'>__getitem__</a>(key)</tt>	Create a view on this buffer.
+<tt style='background-color:#E8E8E8;'> gloo.DataBuffer <a href=' /gloo/buffer.py#L263'>__setitem__</a>(key,data)</tt>	Set data deferred operation.
+<tt style='background-color:#E8E8E8;'> gloo.DataBufferView <a href=' /gloo/buffer.py#L390'>offset</a>()</tt>	Buffer offset in bytes relative to base.
+<tt style='background-color:#E8E8E8;'> gloo.DataBufferView <a href=' /gloo/buffer.py#L396'>base</a>()</tt>	Buffer base if this buffer is a view on another buffer.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/buffer.py#L457'>_last_stack_str</a>()</tt>	Print stack trace from call that didn't originate from here.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/preprocessor.py#L12'>remove_comments</a>(code)</tt>	Remove c-style comment from glsl code string.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/preprocessor.py#L31'>merge_includes</a>(code)</tt>	Merge all includes recursively.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/preprocessor.py#L64'>preprocess</a>(code)</tt>	Preprocess a code by removing comments version and merging includes.
+<tt style='background-color:#E8E8E8;'> gloo.GLObject <a href=' /gloo/globject.py#L58'>__init__</a>()</tt>	Initialize the object in the default state.
+<tt style='background-color:#E8E8E8;'> gloo.GLObject <a href=' /gloo/globject.py#L80'>delete</a>()</tt>	Delete the object from gpu memory.
+<tt style='background-color:#E8E8E8;'> gloo.GLObject <a href=' /gloo/globject.py#L99'>id</a>()</tt>	The id of this gl object used to reference the gl object in glir.
+<tt style='background-color:#E8E8E8;'> gloo.GLObject <a href=' /gloo/globject.py#L106'>glir</a>()</tt>	The glir queue for this object.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/context.py#L34'>get_default_config</a>()</tt>	Get the default opengl context configuration returns.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/context.py#L63'>set_current_canvas</a>(canvas)</tt>	Make a canvas active used primarily by the canvas itself.
+<tt style='background-color:#E8E8E8;'> gloo. <a href=' /gloo/context.py#L79'>forget_canvas</a>(canvas)</tt>	Forget about the given canvas used by the canvas when closed.
+<tt style='background-color:#E8E8E8;'> gloo.GLContext <a href=' /gloo/context.py#L120'>create_shared</a>(name,ref)</tt>	For the app backends to create the glshared object.
+<tt style='background-color:#E8E8E8;'> gloo.GLContext <a href=' /gloo/context.py#L134'>config</a>()</tt>	A dictionary describing the configuration of this gl context.
+<tt style='background-color:#E8E8E8;'> gloo.GLContext <a href=' /gloo/context.py#L140'>glir</a>()</tt>	The glir queue for the context this queue is for objects.
+<tt style='background-color:#E8E8E8;'> gloo.GLContext <a href=' /gloo/context.py#L147'>shared</a>()</tt>	Get the object that represents the namespace that can potentially be shared between multiple contexts.
+<tt style='background-color:#E8E8E8;'> gloo.GLContext <a href=' /gloo/context.py#L154'>capabilities</a>()</tt>	The opengl capabilities.
+<tt style='background-color:#E8E8E8;'> gloo.GLShared <a href=' /gloo/context.py#L215'>parser</a>()</tt>	The glir parser shared between contexts.
+<tt style='background-color:#E8E8E8;'> gloo.GLShared <a href=' /gloo/context.py#L220'>add_ref</a>(name,ref)</tt>	Add a reference for the backend object that gives access to the low level context.
+<tt style='background-color:#E8E8E8;'> gloo.GLShared <a href=' /gloo/context.py#L233'>name</a>()</tt>	The name of the canvas backend that this shared namespace is associated with.
+<tt style='background-color:#E8E8E8;'> gloo.GLShared <a href=' /gloo/context.py#L240'>ref</a>()</tt>	A reference stored internally via a weakref to an object that the backend system can use to obtain the low-level.
+<tt style='background-color:#E8E8E8;'> gloo.FakeCanvas <a href=' /gloo/context.py#L269'>flush</a>()</tt>	Flush commands call this after setting to context to current.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L143'>shape</a>()</tt>	Data shape last dimension indicates number of color channels.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L149'>format</a>()</tt>	The texture format color channels.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L161'>wrapping</a>()</tt>	Texture wrapping mode.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L185'>interpolation</a>()</tt>	Texture interpolation for minification and magnification.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L226'>_resize</a>(shape,format,internalformat)</tt>	Internal method for resize.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L300'>_set_data</a>(data,offset,copy)</tt>	Internal method for set_data.
+<tt style='background-color:#E8E8E8;'> gloo.BaseTexture <a href=' /gloo/texture.py#L326'>__setitem__</a>(key,data)</tt>	X __getitem__ y <==> x[y].
+<tt style='background-color:#E8E8E8;'> gloo.Texture1D <a href=' /gloo/texture.py#L431'>glsl_type</a>()</tt>	Glsl declaration strings required for a variable to hold this data.
+<tt style='background-color:#E8E8E8;'> gloo.Texture1D <a href=' /gloo/texture.py#L437'>glsl_sampler_type</a>()</tt>	Glsl type of the sampler.
+<tt style='background-color:#E8E8E8;'> gloo.Texture1D <a href=' /gloo/texture.py#L443'>glsl_sample</a>()</tt>	Glsl function that samples the texture.
+<tt style='background-color:#E8E8E8;'> gloo.Texture2D <a href=' /gloo/texture.py#L499'>glsl_type</a>()</tt>	Glsl declaration strings required for a variable to hold this data.
+<tt style='background-color:#E8E8E8;'> gloo.Texture2D <a href=' /gloo/texture.py#L505'>glsl_sampler_type</a>()</tt>	Glsl type of the sampler.
+<tt style='background-color:#E8E8E8;'> gloo.Texture2D <a href=' /gloo/texture.py#L511'>glsl_sample</a>()</tt>	Glsl function that samples the texture.
+<tt style='background-color:#E8E8E8;'> gloo.Texture3D <a href=' /gloo/texture.py#L573'>glsl_type</a>()</tt>	Glsl declaration strings required for a variable to hold this data.
+<tt style='background-color:#E8E8E8;'> gloo.Texture3D <a href=' /gloo/texture.py#L579'>glsl_sampler_type</a>()</tt>	Glsl type of the sampler.
+<tt style='background-color:#E8E8E8;'> gloo.Texture3D <a href=' /gloo/texture.py#L585'>glsl_sample</a>()</tt>	Glsl function that samples the texture.
+<tt style='background-color:#E8E8E8;'> gloo.TextureEmulated3D <a href=' /gloo/texture.py#L726'>set_data</a>(data,offset,copy)</tt>	Set texture data parameters.
+<tt style='background-color:#E8E8E8;'> gloo.TextureEmulated3D <a href=' /gloo/texture.py#L750'>resize</a>(shape,format,internalformat)</tt>	Set the texture size and format parameters.
+<tt style='background-color:#E8E8E8;'> gloo.TextureEmulated3D <a href=' /gloo/texture.py#L777'>shape</a>()</tt>	Data shape last dimension indicates number of color channels.
+<tt style='background-color:#E8E8E8;'> gloo.TextureEmulated3D <a href=' /gloo/texture.py#L798'>glsl_sample</a>()</tt>	Glsl function that samples the texture.
+<tt style='background-color:#E8E8E8;'> gloo.TextureAtlas <a href=' /gloo/texture.py#L839'>get_free_region</a>(width,height)</tt>	Get a free region of given size and allocate it parameters.
+<tt style='background-color:#E8E8E8;'> gloo.TextureAtlas <a href=' /gloo/texture.py#L902'>_fit</a>(index,width,height)</tt>	Test if region width height fit into self _atlas_nodes[index].
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/_pyopengl2.py#L22'>glBufferData</a>(target,data,usage)</tt>	Data can be numpy array or the size of data to allocate.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/pyopengl2.py#L18'>_patch</a>()</tt>	Monkey-patch pyopengl to fix a bug in glbuffersubdata.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/pyopengl2.py#L48'>_get_function_from_pyopengl</a>(funcname)</tt>	Try getting the given function from pyopengl return a dummy function that shows a warning when called if it.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/glplus.py#L17'>_inject</a>()</tt>	Inject functions and constants from pyopengl but leave out the names that are deprecated or that we provide in our api.
+<tt style='background-color:#E8E8E8;'> gloo.gl.DebugProxy <a href=' /gloo/gl/__init__.py#L65'>_arg_repr</a>(arg)</tt>	Get a useful and not too large represetation of an argument.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/__init__.py#L102'>use_gl</a>(target)</tt>	Let vispy use the target opengl es 2 0 implementation.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/__init__.py#L153'>_clear_namespace</a>()</tt>	Clear names that are not part of the strict es api.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/__init__.py#L165'>_copy_gl_functions</a>(source,dest,constants)</tt>	Inject all objects that start with 'gl' from the source into the dest.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/__init__.py#L190'>check_error</a>(when)</tt>	Check this from time to time to detect gl errors.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/__init__.py#L214'>_fix_osmesa_gl_lib_if_testing</a>()</tt>	This functions checks if we a running test with the osmesa backends and fix the gl library if needed.
+<tt style='background-color:#E8E8E8;'> gloo.gl. <a href=' /gloo/gl/gl2.py#L58'>_get_gl_version</a>(_lib)</tt>	Helper to get the gl version string.
+<tt style='background-color:#E8E8E8;'> scene.VisualNode <a href=' /scene/visuals.py#L43'>_set_clipper</a>(node,clipper)</tt>	Assign a clipper that is inherited from a parent node.
+<tt style='background-color:#E8E8E8;'> scene.VisualNode <a href=' /scene/visuals.py#L61'>picking</a>()</tt>	Boolean that determines whether this node and its children are drawn in picking mode.
+<tt style='background-color:#E8E8E8;'> scene.VisualNode <a href=' /scene/visuals.py#L71'>_update_trsys</a>(event)</tt>	Transform object s have changed for this node assign these to the visual's transformsystem.
+<tt style='background-color:#E8E8E8;'> scene.VisualNode <a href=' /scene/visuals.py#L91'>interactive</a>()</tt>	Whether this widget should be allowed to accept mouse and touch events.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L28'>pos</a>()</tt>	The position of this event in the local coordinate system of the visual.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L38'>last_event</a>()</tt>	The mouse event immediately prior to this one this.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L49'>press_event</a>()</tt>	The mouse press event that initiated a mouse drag if any.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L59'>button</a>()</tt>	The button pressed or released on this event.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L65'>buttons</a>()</tt>	A list of all buttons currently pressed on the mouse.
+<tt style='background-color:#E8E8E8;'> scene.SceneMouseEvent <a href=' /scene/events.py#L71'>delta</a>()</tt>	The increment by which the mouse wheel has moved.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L89'>visible</a>()</tt>	Whether this node should be drawn or not only applicable to.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L114'>_set_clipper</a>(node,clipper)</tt>	Assign a clipper that is inherited from a parent node.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L128'>clip_children</a>()</tt>	Boolean indicating whether children of this node will inherit its clipper.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L137'>clipper</a>()</tt>	A visual filter that can be used to clip visuals to the boundaries of this node.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L153'>order</a>()</tt>	A value used to determine the order in which nodes are drawn.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L158'>children</a>()</tt>	A copy of the list of children of this node do not add.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L181'>parent</a>()</tt>	The parent of this node in the scenegraph.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L224'>on_parent_change</a>(event)</tt>	Parent change event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L234'>is_child</a>(node)</tt>	Check if a node is a child of the current node parameters.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L254'>canvas</a>()</tt>	The canvas in which this node's scenegraph is being drawn.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L273'>document_node</a>()</tt>	The node to be used as the document coordinate system.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L278'>scene_node</a>()</tt>	The first ancestor of this node that is a subscene instance or self if no such node exists.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L325'>update</a>()</tt>	Emit an event to inform listeners that properties of this node have changed.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L348'>document</a>()</tt>	The document is an optional property that is an node representing the coordinate system from which this node should make physical.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L362'>transform</a>()</tt>	The transform that maps the local coordinate frame to the coordinate frame of the parent.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L371'>set_transform</a>(type_)</tt>	Create a new transform of *type* and assign it to this node.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L387'>_update_trsys</a>(event)</tt>	Called when has changed.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L402'>parent_chain</a>()</tt>	Return the list of parents starting from this node the chain ends.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L418'>describe_tree</a>(with_transform)</tt>	Create tree diagram of children parameters.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L434'>_describe_tree</a>(prefix,with_transform)</tt>	Helper function to actuall construct the tree.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L451'>common_parent</a>(node)</tt>	Return the common parent of two entities if the entities have no common parent return none.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L474'>node_path_to_child</a>(node)</tt>	Return a list describing the path from this node to a child node if *node* is not a grand child of this node then raise runtimeerror.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L525'>node_path</a>(node)</tt>	Return two lists describing the path from this node to another parameters.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L572'>node_path_transforms</a>(node)</tt>	Return the list of transforms along the path to another node.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L593'>node_transform</a>(node)</tt>	Return the transform that maps from the coordinate system of *self* to the local coordinate system of *node*.
+<tt style='background-color:#E8E8E8;'> scene.Node <a href=' /scene/node.py#L624'>picking</a>()</tt>	Boolean that determines whether this node and its children are drawn in picking mode.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L152'>scene</a>()</tt>	The subscene object that represents the root node of the scene graph to be displayed.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L163'>central_widget</a>()</tt>	Returns the default widget that occupies the entire area of the canvas.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L182'>update</a>(node)</tt>	Update the scene parameters.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L195'>on_draw</a>(event)</tt>	Draw handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L209'>render</a>(region,size,bgcolor)</tt>	Render the scene to an offscreen buffer and return the image array.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L255'>draw_visual</a>(visual,event)</tt>	Draw a visual and its children to the canvas or currently active framebuffer.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L300'>_generate_draw_order</a>(node)</tt>	Return a list giving the order to draw visuals.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L316'>_update_scenegraph</a>(event)</tt>	Called when topology of scenegraph has changed.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L367'>visual_at</a>(pos)</tt>	Return the visual at a given position parameters.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L393'>_visual_bounds_at</a>(pos,node)</tt>	Find a visual whose bounding rect encompasses *pos*.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L425'>visuals_at</a>(pos,radius)</tt>	Return a list of visuals within *radius* pixels of *pos*.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L452'>_render_picking</a>()</tt>	Render the scene in picking mode returning a 2d array of visual ids.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L465'>on_resize</a>(event)</tt>	Resize handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L481'>on_close</a>(event)</tt>	Close event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L495'>push_viewport</a>(viewport)</tt>	Push a viewport x y w h on the stack values must be integers.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L522'>pop_viewport</a>()</tt>	Pop a viewport from the stack.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L535'>push_fbo</a>(fbo,offset,csize)</tt>	Push an fbo on the stack.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L565'>pop_fbo</a>()</tt>	Pop an fbo from the stack.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L578'>_current_framebuffer</a>()</tt>	Return (fbo origin canvas_size) for the current fbo on the stack or for the canvas if there is no fbo.
+<tt style='background-color:#E8E8E8;'> scene.SceneCanvas <a href=' /scene/canvas.py#L587'>_update_transforms</a>()</tt>	Update the canvas's transformsystem to correct for the current canvas size framebuffer and viewport.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L68'>aspect</a>()</tt>	The ratio between the x and y dimension e g to show a.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L76'>zoom</a>(factor,center)</tt>	Zoom in or out at the given center parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L116'>pan</a>()</tt>	Pan the view.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L140'>rect</a>()</tt>	The rectangular border of the viewbox visible area expressed in the coordinate system of the scene.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L180'>viewbox_resize_event</a>(event)</tt>	Modify the data aspect and scale factor to adjust to the new window size.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PanZoomCamera <a href=' /scene/cameras/panzoom.py#L191'>viewbox_mouse_event</a>(event)</tt>	The subscene received a mouse event update transform accordingly.
+<tt style='background-color:#E8E8E8;'> scene.cameras. <a href=' /scene/cameras/_base.py#L12'>make_camera</a>(cam_type)</tt>	Factory function for creating new cameras using a string name.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L113'>rotation</a>()</tt>	Get the full rotation this rotation is composed of the.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L125'>auto_roll</a>()</tt>	Whether to rotate the camera automaticall to try and attempt to keep z up.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L129'>keymap</a>()</tt>	A dictionary that maps keys to thruster directions the keys in this dictionary are vispy key descriptions (from.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L146'>_set_range</a>(init)</tt>	Reset the view.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L231'>on_timer</a>(event)</tt>	Timer event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L326'>viewbox_key_event</a>(event)</tt>	Viewbox key event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.FlyCamera <a href=' /scene/cameras/fly.py#L359'>viewbox_mouse_event</a>(event)</tt>	Viewbox mouse event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PerspectiveCamera <a href=' /scene/cameras/perspective.py#L48'>viewbox_mouse_event</a>(event)</tt>	The viewbox received a mouse event update transform accordingly.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PerspectiveCamera <a href=' /scene/cameras/perspective.py#L75'>scale_factor</a>()</tt>	The measure for the scale or range that the camera should cover for the panzoomcamera and turntablecamera this translates to.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PerspectiveCamera <a href=' /scene/cameras/perspective.py#L80'>near_clip_distance</a>()</tt>	The distance of the near clipping plane from the camera's position.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PerspectiveCamera <a href=' /scene/cameras/perspective.py#L86'>_set_range</a>(init)</tt>	Reset the camera view using the known limits.
+<tt style='background-color:#E8E8E8;'> scene.cameras.PerspectiveCamera <a href=' /scene/cameras/perspective.py#L120'>viewbox_resize_event</a>(event)</tt>	The viewbox resize handler to update the transform parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L186'>distance</a>()</tt>	The user-set distance if none default the distance is.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L194'>viewbox_mouse_event</a>(event)</tt>	The viewbox received a mouse event update transform accordingly.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L262'>_update_camera_pos</a>()</tt>	Set the camera position and orientation.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L314'>_update_rotation</a>(event)</tt>	Update rotation parmeters based on mouse movement.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L318'>_rotate_tr</a>()</tt>	Rotate the transformation matrix based on camera parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.Base3DRotationCamera <a href=' /scene/cameras/perspective.py#L322'>_dist_to_trans</a>(dist)</tt>	Convert mouse x y movement into x y z translations.
+<tt style='background-color:#E8E8E8;'> scene.cameras.ArcballCamera <a href=' /scene/cameras/arcball.py#L53'>_update_rotation</a>(event)</tt>	Update rotation parmeters based on mouse movement.
+<tt style='background-color:#E8E8E8;'> scene.cameras.ArcballCamera <a href=' /scene/cameras/arcball.py#L65'>_rotate_tr</a>()</tt>	Rotate the transformation matrix based on camera parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.ArcballCamera <a href=' /scene/cameras/arcball.py#L71'>_dist_to_trans</a>(dist)</tt>	Convert mouse x y movement into x y z translations.
+<tt style='background-color:#E8E8E8;'> scene.cameras. <a href=' /scene/cameras/arcball.py#L84'>_arcball</a>(xy,wh)</tt>	Convert x y coordinates to w x y z quaternion parameters adapted from.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L71'>elevation</a>()</tt>	The angle of the camera in degrees above the horizontal x z plane.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L84'>azimuth</a>()</tt>	The angle of the camera in degrees around the y axis an angle of.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L101'>roll</a>()</tt>	The angle of the camera in degrees around the z axis an angle of.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L111'>orbit</a>(azim,elev)</tt>	Orbits the camera around the center position.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L125'>_update_rotation</a>(event)</tt>	Update rotation parmeters based on mouse movement.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L134'>_rotate_tr</a>()</tt>	Rotate the transformation matrix based on camera parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.TurntableCamera <a href=' /scene/cameras/turntable.py#L140'>_dist_to_trans</a>(dist)</tt>	Convert mouse x y movement into x y z translations.
+<tt style='background-color:#E8E8E8;'> scene.cameras.MagnifyCamera <a href=' /scene/cameras/magnify.py#L83'>viewbox_mouse_event</a>(event)</tt>	Viewbox mouse event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.MagnifyCamera <a href=' /scene/cameras/magnify.py#L112'>on_timer</a>(event)</tt>	Timer event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.MagnifyCamera <a href=' /scene/cameras/magnify.py#L139'>viewbox_resize_event</a>(event)</tt>	Viewbox resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L104'>depth_value</a>()</tt>	The depth value to use in orthographic and perspective projection for orthographic projections depth_value is the distance between.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L112'>_depth_to_z</a>(depth)</tt>	Get the z-coord given the depth value.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L118'>_viewbox_set</a>(viewbox)</tt>	Friend method of viewbox to register itself.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L130'>_viewbox_unset</a>(viewbox)</tt>	Friend method of viewbox to unregister itself.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L141'>viewbox</a>()</tt>	The viewbox that this camera applies to.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L156'>interactive</a>()</tt>	Boolean describing whether the camera should enable or disable user interaction.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L183'>up</a>()</tt>	The dimension that is considered up.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L201'>center</a>()</tt>	The center location for this camera the exact meaning of this value differs per type of camera but.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L218'>fov</a>()</tt>	Field-of-view angle of the camera if 0 the camera is in.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L228'>set_range</a>(x,y,z,margin)</tt>	Set the range of the view region for the camera parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L299'>reset</a>()</tt>	Reset the view to the default state.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L304'>set_default_state</a>()</tt>	Set the current state to be the default state to be applied when calling reset().
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L310'>get_state</a>()</tt>	Get the current view state of the camera returns a dict of key-value pairs.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L322'>set_state</a>(state)</tt>	Set the view state of the camera should be a dict or kwargs as returned by get_state.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L343'>link</a>(camera)</tt>	Link this camera with another camera of the same type linked camera's keep each-others' state in sync.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L365'>view_changed</a>()</tt>	Called when this camera is changes its view also called.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L389'>pre_transform</a>()</tt>	A transform to apply to the beginning of the scene transform in addition to anything else provided by this camera.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L394'>viewbox_mouse_event</a>(event)</tt>	Viewbox mouse event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L404'>on_canvas_change</a>(event)</tt>	Canvas change event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L421'>viewbox_key_event</a>(event)</tt>	Viewbox key event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L432'>viewbox_resize_event</a>(event)</tt>	The viewbox resize handler to update the transform parameters.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L442'>_update_transform</a>()</tt>	Subclasses should reimplement this method to update the scene transform by calling self.
+<tt style='background-color:#E8E8E8;'> scene.cameras.BaseCamera <a href=' /scene/cameras/base_camera.py#L448'>_set_scene_transform</a>(tr)</tt>	Called by subclasses to configure the viewbox scene transform.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Console <a href=' /scene/widgets/console.py#L156'>on_resize</a>(event)</tt>	Resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Console <a href=' /scene/widgets/console.py#L166'>clear</a>()</tt>	Clear the console.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Console <a href=' /scene/widgets/console.py#L170'>write</a>(text,wrap)</tt>	Write text and scroll parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Console <a href=' /scene/widgets/console.py#L188'>text_color</a>()</tt>	The color of the text.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Console <a href=' /scene/widgets/console.py#L197'>font_size</a>()</tt>	The font size in points of the text.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L232'>text_color</a>()</tt>	The color of the text.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L241'>font_size</a>()</tt>	The font size in points of the text.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L245'>_resize_buffers</a>(font_scale)</tt>	Resize buffers only if necessary.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L292'>clear</a>()</tt>	Clear the console.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L300'>write</a>(text,wrap)</tt>	Write text and scroll parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L319'>_do_pending_writes</a>()</tt>	Do any pending text writes.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ConsoleVisual <a href=' /scene/widgets/console.py#L340'>_insert_text_buf</a>(line,idx)</tt>	Insert text into bytes buffers.
+<tt style='background-color:#E8E8E8;'> scene.widgets.AxisWidget <a href=' /scene/widgets/axis.py#L34'>on_resize</a>(event)</tt>	Resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.AxisWidget <a href=' /scene/widgets/axis.py#L61'>link_view</a>(view)</tt>	Link this axis to a viewbox this makes it so that the axis's domain always matches the.
+<tt style='background-color:#E8E8E8;'> scene.widgets.AxisWidget <a href=' /scene/widgets/axis.py#L81'>_view_changed</a>(event)</tt>	Linked view transform has changed update ticks.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Label <a href=' /scene/widgets/label.py#L30'>on_resize</a>(event)</tt>	Resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L110'>size</a>()</tt>	The size w h of this widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L122'>width</a>()</tt>	The actual width of this widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L132'>width_min</a>()</tt>	The minimum width the widget can have.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L132'>width_min</a>(width_min)</tt>	Set the minimum height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L158'>width_max</a>()</tt>	The maximum width the widget can have.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L158'>width_max</a>(width_max)</tt>	Set the maximum width of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L178'>height</a>()</tt>	The actual height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L188'>height_min</a>()</tt>	The minimum height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L188'>height_min</a>(height_min)</tt>	Set the minimum height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L213'>height_max</a>()</tt>	The maximum height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L213'>height_max</a>(height_max)</tt>	Set the maximum height of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L244'>inner_rect</a>()</tt>	The rectangular area inside the margin border and padding.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L267'>stretch</a>()</tt>	Stretch factors w h used when determining how much space to allocate to this widget in a layout.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L283'>_update_clipper</a>()</tt>	Called whenever the clipper for this widget may need to be updated.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L302'>border_color</a>()</tt>	The color of the border.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L315'>bgcolor</a>()</tt>	The background color of the widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L344'>_update_line</a>()</tt>	Update border line to match new shape.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L419'>add_widget</a>(widget)</tt>	Add a widget as a managed child of this widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L442'>add_grid</a>()</tt>	Create a new grid and add it as a child widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L452'>add_view</a>()</tt>	Create a new viewbox and add it as a child widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Widget <a href=' /scene/widgets/widget.py#L462'>remove_widget</a>(widget)</tt>	Remove a widget as a managed child of this widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ColorBarWidget <a href=' /scene/widgets/colorbar.py#L90'>on_resize</a>(event)</tt>	Resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ColorBarWidget <a href=' /scene/widgets/colorbar.py#L104'>_calc_size</a>()</tt>	Calculate a size.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ColorBarWidget <a href=' /scene/widgets/colorbar.py#L162'>border_color</a>()</tt>	The color of the border around the colorbar in pixels.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ColorBarWidget <a href=' /scene/widgets/colorbar.py#L172'>border_width</a>()</tt>	The width of the border around the colorbar in pixels.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L50'>__getitem__</a>(idxs)</tt>	Return an item or create it if the location is available.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L85'>add_widget</a>(widget,row,col,row_span)</tt>	Add a new widget to this grid this will cause other widgets in the.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L150'>remove_widget</a>(widget)</tt>	Remove a widget from this grid.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L165'>resize_widget</a>(widget,row_span,col_span)</tt>	Resize a widget in the grid to new dimensions.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L198'>add_grid</a>(row,col,row_span,col_span)</tt>	Create a new grid and add it as a child widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.Grid <a href=' /scene/widgets/grid.py#L220'>add_view</a>(row,col,row_span,col_span)</tt>	Create a new viewbox and add it as a child widget.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L86'>camera</a>()</tt>	Get/set the camera in use by this viewbox if a string is given (e.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L116'>is_in_scene</a>(node)</tt>	Get whether the given node is inside the scene of this viewbox.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L126'>get_scene_bounds</a>(dim)</tt>	Get the total bounds based on the visuals present in the scene parameters.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L165'>scene</a>()</tt>	The root node of the scene viewed by this viewbox.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L171'>add</a>(node)</tt>	Add an node to the scene for this viewbox.
+<tt style='background-color:#E8E8E8;'> scene.widgets.ViewBox <a href=' /scene/widgets/viewbox.py#L184'>on_resize</a>(event)</tt>	Resize event handler parameters.
+<tt style='background-color:#E8E8E8;'> ipython. <a href=' /ipython/ipython.py#L9'>load_ipython_extension</a>(ipython)</tt>	Entry point of the ipython extension.
+<tt style='background-color:#E8E8E8;'> ipython. <a href=' /ipython/ipython.py#L33'>_load_webgl_backend</a>(ipython)</tt>	Load the webgl backend for the ipython notebook.
+<tt style='background-color:#E8E8E8;'> ipython. <a href=' /ipython/ipython.py#L46'>unload_ipython_extension</a>(ipython)</tt>	Unload the ipython extension.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/fontconfig.py#L114'>_list_fonts</a>()</tt>	List system fonts.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L55'>_stdin_ready_posix</a>()</tt>	Return true if there's something to read on stdin posix version.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L60'>_stdin_ready_nt</a>()</tt>	Return true if there's something to read on stdin nt version.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L64'>_stdin_ready_other</a>()</tt>	Return true assuming there's something to read on stdin.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L69'>_ignore_CTRL_C_posix</a>()</tt>	Ignore ctrl+c sigint.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L73'>_allow_CTRL_C_posix</a>()</tt>	Take ctrl+c into account sigint.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L77'>_ignore_CTRL_C_other</a>()</tt>	Ignore ctrl+c not implemented.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/ipy_inputhook.py#L81'>_allow_CTRL_C_other</a>()</tt>	Take ctrl+c into account not implemented.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L130'>get_pyos_inputhook</a>()</tt>	Return the current pyos_inputhook as a ctypes c_void_p.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L134'>get_pyos_inputhook_as_func</a>()</tt>	Return the current pyos_inputhook as a ctypes pyfuncype.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L138'>set_inputhook</a>(callback)</tt>	Set pyos_inputhook to callback and return the previous one.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L154'>clear_inputhook</a>(app)</tt>	Set pyos_inputhook to null and return the previous one.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L172'>clear_app_refs</a>(gui)</tt>	Clear ipython's internal reference to an application instance.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L192'>register</a>(toolkitname)</tt>	Register a class to provide the event loop for a given gui.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L214'>current_gui</a>()</tt>	Return a string indicating the currently active gui or none.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L218'>enable_gui</a>(gui,app)</tt>	Switch amongst gui input hooks by name.
+<tt style='background-color:#E8E8E8;'> ext.InputHookManager <a href=' /ext/ipy_inputhook.py#L262'>disable_gui</a>()</tt>	Disable gui event loop integration.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/osmesa.py#L57'>allocate_pixels_buffer</a>(width,height)</tt>	Helper function to allocate a buffer to contain an image of.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cubehelix.py#L35'>cubehelix</a>(start,rot,gamma,reverse)</tt>	A full implementation of dave green's "cubehelix" for matplotlib.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/egl.py#L227'>eglGetError</a>()</tt>	Check for errors returns an enum int.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/egl.py#L233'>eglGetDisplay</a>(display)</tt>	Connect to the egl display server.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/egl.py#L242'>eglInitialize</a>(display)</tt>	Initialize egl and return egl version tuple.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/egl.py#L253'>eglTerminate</a>(display)</tt>	Initialize egl and return egl version tuple.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/egl.py#L259'>eglQueryString</a>(display,name)</tt>	Query string from display.
+<tt style='background-color:#E8E8E8;'> ext.ObjCMethod <a href=' /ext/cocoapy.py#L595'>ctype_for_encoding</a>(encoding)</tt>	Return ctypes type for an encoded objective-c type.
+<tt style='background-color:#E8E8E8;'> ext.ObjCSubclass <a href=' /ext/cocoapy.py#L864'>classmethod</a>(encoding)</tt>	Function decorator for class methods.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cocoapy.py#L963'>get_NSString</a>(string)</tt>	Autoreleased version of cfstr.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cocoapy.py#L1032'>cfnumber_to_number</a>(cfnumber)</tt>	Convert cfnumber to python int or float.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cocoapy.py#L1062'>cftype_to_value</a>(cftype)</tt>	Convert a cftype into an equivalent python type.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cocoapy.py#L1085'>cfset_to_set</a>(cfset)</tt>	Convert cfset to python set.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/cocoapy.py#L1099'>cfarray_to_list</a>(cfarray)</tt>	Convert cfarray to python list.
+<tt style='background-color:#E8E8E8;'> ext. <a href=' /ext/six.py#L25'>_find_module</a>(name,path)</tt>	Alternative to imp find_module that can also search in subpackages.
+<tt style='background-color:#E8E8E8;'> ext._bundled.FunctionMaker <a href=' /ext/_bundled/decorator.py#L128'>update</a>(func)</tt>	Update the signature of func with the data in self.
+<tt style='background-color:#E8E8E8;'> ext._bundled.FunctionMaker <a href=' /ext/_bundled/decorator.py#L140'>make</a>(src_templ,evaldict,addsource)</tt>	Make a new function from a given template and update the signature.
+<tt style='background-color:#E8E8E8;'> ext._bundled.FunctionMaker <a href=' /ext/_bundled/decorator.py#L169'>create</a>(cls,obj,body,evaldict)</tt>	Create a function from the strings name signature and body.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/decorator.py#L191'>decorator</a>(caller,func)</tt>	Decorator caller converts a caller function into a decorator decorator caller func decorates a function using a caller.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/decorator.py#L232'>__call__</a>(func)</tt>	Context manager decorator.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/freetype.py#L205'>get_handle</a>()</tt>	Get unique ft_library handle.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/freetype.py#L218'>version</a>()</tt>	Return the version of the freetype library being used as a tuple of.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L33'>__init__</a>()</tt>	Initialize an ordered dictionary signature is the same as for.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L49'>__setitem__</a>(key,value,dict_setitem)</tt>	Od __setitem__ i y <==> od[i]=y.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L60'>__delitem__</a>(key,dict_delitem)</tt>	Od __delitem__ y <==> del od[y].
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L70'>__iter__</a>()</tt>	Od __iter__() <==> iter od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L78'>__reversed__</a>()</tt>	Od __reversed__() <==> reversed od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L86'>clear</a>()</tt>	Od clear() -> none remove all items from od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L98'>popitem</a>(last)</tt>	Od popitem() -> k v return and remove a key value pair.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L123'>keys</a>()</tt>	Od keys() -> list of keys in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L127'>values</a>()</tt>	Od values() -> list of values in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L131'>items</a>()</tt>	Od items() -> list of key value pairs in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L135'>iterkeys</a>()</tt>	Od iterkeys() -> an iterator over the keys in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L139'>itervalues</a>()</tt>	Od itervalues -> an iterator over the values in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L144'>iteritems</a>()</tt>	Od iteritems -> an iterator over the key value items in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L149'>update</a>()</tt>	Od update(e **f) -> none update od from dict/iterable e and f.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L185'>pop</a>(key,default)</tt>	Od pop(k[,d]) -> v remove specified key and return the corresponding value.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L198'>setdefault</a>(key,default)</tt>	Od setdefault(k[,d]) -> od get k d also set od[k]=d if k not in od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L205'>__repr__</a>(_repr_running)</tt>	Od __repr__() <==> repr od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L218'>__reduce__</a>()</tt>	Return state information for pickling.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L228'>copy</a>()</tt>	Od copy() -> a shallow copy of od.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L232'>fromkeys</a>(cls,iterable,value)</tt>	Od fromkeys(s[, v]) -> new ordered dictionary with keys from s.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L243'>__eq__</a>(other)</tt>	Od __eq__ y <==> od==y comparison to another od is order-sensitive.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L257'>viewkeys</a>()</tt>	Od viewkeys() -> a set-like object providing a view on od's keys.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L261'>viewvalues</a>()</tt>	Od viewvalues() -> an object providing a view on od's values.
+<tt style='background-color:#E8E8E8;'> ext._bundled.OrderedDict <a href=' /ext/_bundled/ordereddict.py#L265'>viewitems</a>()</tt>	Od viewitems() -> a set-like object providing a view on od's items.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L72'>isarray</a>(x)</tt>	Same as isinstance x array except on python 2 2 where it.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L83'>tostring</a>(row)</tt>	Python3 definition array tostring() is deprecated in python3.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L101'>interleave_planes</a>(ipixels,apixels,ipsize,apsize)</tt>	Interleave colour planes e g rgb + a = rgba.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L131'>check_palette</a>(palette)</tt>	Check a palette argument (to the :class writer class) for validity.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L160'>check_sizes</a>(size,width,height)</tt>	Check that these arguments in supplied are consistent.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L181'>check_color</a>(c,greyscale,which)</tt>	Checks that a colour argument for transparent or background options is the right form.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L227'>__init__</a>(width,height,size,greyscale)</tt>	Create a png encoder object.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L464'>make_palette</a>()</tt>	Create the byte sequences for a plte and if necessary a trns chunk.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L483'>write</a>(outfile,rows)</tt>	Write a png image to the output file rows should be.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L510'>write_passes</a>(outfile,rows,packed)</tt>	Write a png image to the output file.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L678'>write_array</a>(outfile,pixels)</tt>	Write an array in flat row flat pixel format as a png file on the output file.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L689'>write_packed</a>(outfile,rows)</tt>	Write png file to outfile the pixel data comes from rows.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L709'>convert_pnm</a>(infile,outfile)</tt>	Convert a pnm file containing raw pixel data into a png file with the parameters set in the writer object.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L725'>convert_ppm_and_pgm</a>(ppmfile,pgmfile,outfile)</tt>	Convert a ppm and pgm file containing raw pixel data into a png outfile with the parameters set in the writer object.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L746'>file_scanlines</a>(infile)</tt>	Generates boxed rows in flat pixel format from the input file infile.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L772'>array_scanlines</a>(pixels)</tt>	Generates boxed rows flat pixels from flat rows flat pixels in an array.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Writer <a href=' /ext/_bundled/png.py#L786'>array_scanlines_interlace</a>(pixels)</tt>	Generator for interlaced scanlines from an array pixels is.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L822'>write_chunk</a>(outfile,tag,data)</tt>	Write a png chunk to the output file including length and checksum.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L838'>write_chunks</a>(out,chunks)</tt>	Create a png file by writing out the chunks.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L845'>filter_scanline</a>(type,line,fo,prev)</tt>	Apply a scanline filter to a scanline type specifies the.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L932'>from_array</a>(a,mode,info)</tt>	Create a png :class image object from a 2- or 3-dimensional array.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Image <a href=' /ext/_bundled/png.py#L1157'>save</a>(file)</tt>	Save the image to *file* if *file* looks like an open file.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1204'>__init__</a>(_guess)</tt>	Create a png decoder object.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1251'>chunk</a>(seek,lenient)</tt>	Read the next png chunk from the input file returns a (*type*,*data*) tuple.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1304'>chunks</a>()</tt>	Return an iterator that will yield each chunk as a (*chunktype*, *content*) pair.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1315'>undo_filter</a>(filter_type,scanline,previous)</tt>	Undo the filter for a scanline scanline is a sequence of.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1426'>deinterlace</a>(raw)</tt>	Read raw pixel data undo filters deinterlace and flatten.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1474'>iterboxed</a>(rows)</tt>	Iterator that yields each scanline in boxed row flat pixel format.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1504'>serialtoflat</a>(bytes,width)</tt>	Convert serial format byte stream pixel data to flat row flat pixel.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1531'>iterstraight</a>(raw)</tt>	Iterator that undoes the effect of filtering and yields each row in serialised format as a sequence of bytes.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1560'>validate_signature</a>()</tt>	If signature header has not been read then read and validate it otherwise do nothing.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1571'>preamble</a>(lenient)</tt>	Extract the image metadata by reading the initial part of the png file up to the start of the idat chunk.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1594'>chunklentype</a>()</tt>	Reads just enough of the input to determine the next chunk's length and type returned as a (*length*, *type*) pair.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1613'>process_chunk</a>(lenient)</tt>	Process the next chunk and its data this only processes the.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1735'>read</a>(lenient)</tt>	Read the png file and decode it returns (width, height,.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1808'>read_flat</a>()</tt>	Read a png file and decode it into flat row flat pixel format.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1826'>palette</a>(alpha)</tt>	Returns a palette that is a sequence of 3-tuples or 4-tuples synthesizing it from the plte and trns chunks.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1849'>asDirect</a>()</tt>	Returns the image data as a direct representation of an x * y * planes array.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1954'>asFloat</a>(maxval)</tt>	Return image pixels as per :meth asdirect method but scale all pixel values to be floating point values between 0.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1970'>_as_rescale</a>(get,targetbitdepth)</tt>	Helper used by :meth asrgb8 and :meth asrgba8.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L1986'>asRGB8</a>()</tt>	Return the image data as an rgb pixels with 8-bits per sample.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L2007'>asRGBA8</a>()</tt>	Return the image data as rgba pixels with 8-bits per sample.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L2017'>asRGB</a>()</tt>	Return image as rgb pixels rgb colour images are passed.
+<tt style='background-color:#E8E8E8;'> ext._bundled.Reader <a href=' /ext/_bundled/png.py#L2046'>asRGBA</a>()</tt>	Return image as rgba pixels greyscales are expanded into.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/png.py#L2095'>check_bitdepth_colortype</a>(bitdepth,colortype)</tt>	Check that bitdepth and colortype are both valid and specified in a valid combination.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2129'>undo_filter_sub</a>(filter_unit,scanline,previous,result)</tt>	Undo sub filter.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2143'>undo_filter_up</a>(filter_unit,scanline,previous,result)</tt>	Undo up filter.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2152'>undo_filter_average</a>(filter_unit,scanline,previous,result)</tt>	Undo up filter.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2167'>undo_filter_paeth</a>(filter_unit,scanline,previous,result)</tt>	Undo paeth filter.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2200'>convert_l_to_rgba</a>(row,result)</tt>	Convert a grayscale image to rgba this method assumes.
+<tt style='background-color:#E8E8E8;'> ext._bundled.pngfilters <a href=' /ext/_bundled/png.py#L2209'>convert_rgb_to_rgba</a>(row,result)</tt>	Convert an rgb image to rgba this method assumes the.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L72'>_add_doc</a>(func,doc)</tt>	Add documentation to a function.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L77'>_import_module</a>(name)</tt>	Import module returning the module after the last dot.
+<tt style='background-color:#E8E8E8;'> ext._bundled._SixMetaPathImporter <a href=' /ext/_bundled/six.py#L200'>is_package</a>(fullname)</tt>	Return true if the named module is a package.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L464'>add_move</a>(move)</tt>	Add an item to six moves.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L469'>remove_move</a>(name)</tt>	Remove item from six moves.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L714'>with_metaclass</a>(meta)</tt>	Create a base class with a metaclass.
+<tt style='background-color:#E8E8E8;'> ext._bundled. <a href=' /ext/_bundled/six.py#L725'>add_metaclass</a>(metaclass)</tt>	Class decorator for creating a class with a metaclass.
+<tt style='background-color:#E8E8E8;'> ext._bundled.cassowary.Constraint <a href=' /ext/_bundled/cassowary/expression.py#L461'>__init__</a>(param1,operator,param2,strength)</tt>	Define a new linear constraint.
+<tt style='background-color:#E8E8E8;'> ext._bundled.cassowary. <a href=' /ext/_bundled/cassowary/utils.py#L12'>approx_equal</a>(a,b,epsilon)</tt>	A comparison mechanism for floats.
+<tt style='background-color:#E8E8E8;'> ext._bundled.cassowary. <a href=' /ext/_bundled/cassowary/utils.py#L17'>repr_strength</a>(strength)</tt>	Convert a numerical strength constant into a human-readable value.

@@ -1,0 +1,212 @@
+op	hold an operator of arbitrary arity
+plane plot	abstract class for plotting on plane currently scatter and hexbin
+substitution	a decorator to take a function's docstring and perform string substitution on it
+frequency inferer	not sure if i can avoid the state machine here
+ndframe	n-dimensional analogue of dataframe store multi-dimensional in a
+i at indexer	fast integer location scalar accessor
+option error	exception for pandas options backwards compatible with keyerror
+text file reader	passed dialect overrides any of the related parser options
+timedelta index resampler groupby	provides a resample of a groupby implementation
+interval dtype type	the type of intervaldtype this metaclass determines subclass ability
+datelike ops	common ops for datetimeindex/periodindex but not timedeltaindex
+period dtype type	the type of perioddtype this metaclass determines subclass ability
+appendable panel table	suppor the new appendable table formats
+stata value label	parse a categorical column and prepare formatted output
+quarter end	dateoffset increments between business quarter dates startingmonth = 1 corresponds to dates like 1/31/2007 4/30/2007
+select nseries	implement n largest/smallest for series
+excel file	class for parsing tabular excel sheets into dataframe objects
+grouper	a grouper allows the user to specify a groupby instruction for a target object
+sas7bdatreader	read sas files in sas7bdat format
+expanding groupby	provides a expanding groupby implementation
+categorical	represents a categorical variable in classic r / s-plus fashion categoricals can only take on only a limited and usually fixed number
+week	weekly offset parameters
+custom business day	**experimental** dateoffset subclass representing possibly n business days excluding holidays
+group by plot	class implementing the plot attribute for groupby objects
+sqlite table	patch the sqltable for fallback support
+hdfstore	dict-like io interface for storing pandas objects in pytables either fixed or table format
+expanding	provides expanding transformations
+appendable multi frame table	a frame with a multi-index
+legacy table	an appendable table allow append/query/delete operations to a
+mplplot	base class for assembling a pandas plot using matplotlib
+string mixin	implements string methods so long as object defines a __unicode__ method
+sparse block	implement as a list of sparse arrays of the same dtype
+easter	dateoffset for the easter holiday using logic defined in dateutil
+expr	object encapsulating an expression
+undefined variable error	nameerror subclass for local variables
+base iterator	subclass this and provide a "__next__()" method to obtain an iterator
+selection mixin	mixin implementing the selection & aggregation interface on a group-like
+rolling groupby	provides a rolling groupby implementation
+sqlite database	version of sqldatabase to support sqlite connections fallback without sqlalchemy
+numeric index	provide numeric type operations
+parser error	exception that is thrown by an error is encountered in pd read_csv
+dict wrapper	provide attribute-style access to a nested dict
+bin op	hold a binary operator and its operands
+select nframe	implement n largest/smallest for dataframe
+sqldatabase	this class enables convertion between dataframe and sql databases using sqlalchemy to handle database abstraction
+num expr engine	numexpr engine class
+sparse data frame	dataframe containing sparse floating point data in the form of sparseseries objects
+rngcontext	context manager to set the numpy random number generator speed returns
+datetime tzblock	implement a datetime64 block with a tz attribute
+unsorted index error	error raised when attempting to get a slice of a multiindex and the index has not been lexsorted
+timelike ops	common ops for timedeltaindex/datetimeindex but not periodindex
+python engine	evaluate an expression in python space
+byear end	dateoffset increments between business eom dates
+sparse list	data structure for accumulating data to be converted into a sparsearray
+datetime tzdtype	a np dtype duck-typed class suitable for holding a custom datetime with tz
+frame plot methods	dataframe plotting accessor and method examples
+data frame formatter	render a dataframe self
+sqltable	for mapping pandas tables to sql tables
+year offset	dateoffset that just needs a month
+concatenator	orchestrates a concatenation operation for blockmanagers
+csswarning	this css syntax cannot currently be parsed
+scope	object to hold scope with a few bells to deal with some custom syntax and contexts added by pandas
+interval index	immutable index implementing an ordered sliceable set intervalindex
+loc indexer	purely label-location based indexer for selection by label
+resampler	class for resampling datetimelike data a groupby-like operation
+date offset	standard kind of date increment used for a date range
+fixed	represent an object in my store
+datetime index ops mixin	common ops mixin to support a unified inteface datetimelike index
+year begin	dateoffset increments between calendar year begin dates
+pandas delegate	an abstract base class for delegating methods/properties
+sparse series	data structure for labeled sparse floating point data parameters
+group by	class for grouping and aggregating relational data see aggregate
+excel writer	class for writing dataframe objects into excel sheets default is to use xlwt for xls openpyxl for xlsx
+op	wrapper around series arithmetic operations
+multi index	a multi-level or hierarchical index object for pandas objects parameters
+semi month begin	two dateoffset's per month repeating on the first day of the month and day_of_month
+year end	dateoffset increments between calendar year ends
+term value	hold a term value the we use to construct a condition/filter
+bquarter end	dateoffset increments between business quarter dates startingmonth = 1 corresponds to dates like 1/31/2007 4/30/2007
+iterator	manage the unpacking iteration
+semi month end	two dateoffset's per month repeating on the last day of the month and day_of_month
+unary op	hold a unary operator and its operands parameters
+empty data error	exception that is thrown in pd read_csv (by both the c and
+fy5253	describes 52-53 week fiscal year this is also known as a 4-4-5 calendar
+index	immutable ndarray implementing an ordered sliceable set the basic object
+time grouper	custom groupby class for time-interval grouping
+timedelta index	immutable ndarray of timedelta64 data represented internally as int64 and which can be boxed to timedelta objects
+custom business month end	**experimental** dateoffset of one custom business month
+period index resampler groupby	provides a resample of a groupby implementation
+time series timedelta formatter	formats the ticks along an axis controlled by a :class timedeltaindex
+window	provides rolling window calculcations
+business mixin	mixin to business types to provide related functions
+option context	context manager to temporarily set options in the with statement context
+custom business hour	dateoffset subclass representing possibly n custom business days
+block manager	core internal data structure to implement dataframe series panel etc
+timedelta properties	accessor object for datetimelike properties of the series values
+generic index col	an index which is not represented in the data of the table
+simple mock	poor man's mocking object note only works for new-style classes assumes __getattribute__ exists
+categorical accessor	accessor object for categorical properties of the series values
+at indexer	fast label-based scalar accessor similarly to loc, at provides **label** based scalar lookups
+datetime properties	accessor object for datetimelike properties of the series values
+pandas sql	subclasses should define read_sql and to_sql
+fixed width reader	a reader of fixed-width lines
+cssto excel converter	a callable for converting css declarations to excelwriter styles supports parts of css 2
+frozen list	container that doesn't allow setting item *but* because it's technically non-hashable will be used
+ixindexer	a primarily label-location based indexer with integer position fallback
+unsupported function call	if attempting to call a numpy function on a pandas object
+panel	represents wide format panel data stored as 3-dimensional array parameters
+html frame parser	base class for parsers that parse html into dataframes
+legacy frame table	support the legacy frame table
+groupby	a simple groupby different from the one in itertools
+index slice	create an object to more easily perform multi-index slicing examples
+fixed width field parser	specialization that converts fixed-width fields into dataframes
+deprecated module	class for mocking deprecated modules
+generic fixed	a generified fixed version
+business month end	dateoffset increments between business eom dates
+no new attributes mixin	mixin which prevents adding new attributes
+base expr visitor	custom ast walker parsers of other engines should subclass this class
+time series date formatter	formats the ticks along an axis controlled by a :class periodindex
+appendable frame table	suppor the new appendable table formats
+grouping	holds the grouping information for a single key parameters
+assert raises contextmanager	context manager behind assert_raises_regex
+business day	dateoffset subclass representing possibly n business days
+extension dtype	a np dtype duck-typed class suitable for holding a custom dtype
+index col	an index column description class
+time series date locator	locates the ticks along an axis controlled by a :class series
+generic data indexable col	represent a generic pytables data column
+abstract holiday calendar	abstract interface to create holidays following certain rules
+appender	a function decorator that will append an addendum to the docstring of the target function
+data col	a data holding column by definition this is not indexable
+chain map	a chainmap groups multiple dicts or other mappings together to create a single updateable view
+legacy panel table	support the legacy panel table
+stata missing value	an observation's missing value
+beautiful soup html5lib frame parser	html to dataframe parser that uses beautifulsoup under the hood
+selection	carries out a selection operation on a tables table object
+categorical index	immutable index implementing an ordered sliceable set categoricalindex
+lxml frame parser	html to dataframe parser that uses lxml under the hood
+byear begin	dateoffset increments between business year begin dates
+data indexable col	represent a data column that can be indexed
+appendable table	suppor the new appendable table formats
+quarter offset	quarter representation - doesn't call super
+styler	helps style a dataframe or series according to the data with html and css
+appendable ndim table	suppor the new appendable table formats
+index ops mixin	common ops mixin to support a unified inteface / docs for series /
+eng formatter	formats float values according to engineering format
+excel formatter	class for formatting a dataframe to a list of excelcells parameters
+range index	immutable index implementing a monotonic range rangeindex is a
+div	div operator to special case casting
+expr	hold a pytables like expression comprised of possibly multiple 'terms' parameters
+table iterator	define the iteration interface on a table
+accessor property	descriptor for implementing accessor properties like series str
+business month begin	dateoffset of one business month at beginning
+categorical dtype type	the type of categoricaldtype this metaclass determines subclass ability
+merge operation	perform a database sql merge operation between two dataframe objects
+series plot methods	series plotting accessor and method examples
+scalar block	a scalar compat block
+cssresolver	a callable for parsing and resolving css to atomic properties
+appendable series table	support the new appendable table formats
+time op	wrapper around series datetime/time/timedelta arithmetic operations
+wormtable	a write-once read-many table this format does not allow appending to a table
+utf8recoder	iterator that reads an encoded stream and reencodes the input to utf-8
+unserializable warning	warning that is raised when a dataframe cannot be serialized
+data frame	two-dimensional size-mutable potentially heterogeneous tabular data structure with labeled axes rows and columns
+i loc indexer	purely integer-location based indexing for selection by position
+scalar access indexer	access scalars quickly
+generic table	a table that read/writes the generic pytables table format
+month end	dateoffset of one month end
+period index	immutable ndarray holding ordinal values indicating regular periods in time such as particular years quarters months etc
+latex formatter	used to render a dataframe to a latex tabular/longtable environment output
+non consolidatable mix in	hold methods for the nonconsolidatable blocks
+datetime index	immutable ndarray of datetime64 data represented internally as int64 and which can be boxed to timestamp objects that are subclasses of datetime and
+usfederal holiday calendar	us federal government holiday calendar based on rules specified by https //www
+string methods	vectorized string functions for series and index nas stay na unless
+openpyxl22writer	note support for openpyxl v2 2 is currently experimental gh7565
+business hour	dateoffset subclass representing possibly n business days
+datetime index resampler groupby	provides a resample of a groupby implementation
+base grouper	this is an internal grouper class which actually holds
+string accessor mixin	mixin to add a str acessor to the class
+holiday	class that defines a holiday with start/end dates and rules for observance
+table	represent a table facilitate read/write of various types of tables
+group by mixin	provide the groupby facilities
+parser warning	warning that is raised in pd read_csv whenever it is necessary
+dtype warning	warning that is raised for a dtype incompatiblity this is
+mmap wrapper	wrapper for the python's mmap class so that it can be properly read in by python's csv
+single block manager	manage a single block with
+last week of month	describes monthly dates in last week of month like "the last tuesday of each month"
+abstract method error	raise this error instead of notimplementederror for abstract methods while keeping compatibility with python 2 and python 3
+month begin	dateoffset of one month at beginning
+appendable multi series table	support the new appendable table formats
+datetime tzdtype type	the type of datetimetzdtype this metaclass determines subclass ability
+series	one-dimensional ndarray with axis labels including time series
+period properties	accessor object for datetimelike properties of the series values
+unstacker	helper class to unstack data / pivot with multi-level index parameters
+key mapper	ease my suffering map compressed group id -> key tuple
+pandas object	baseclass for various pandas objects
+abstract engine	object serving as a base class for all engines
+week of month	describes monthly dates like "the tuesday of the 2nd week of each month" parameters
+categorical dtype	a np dtype duck-typed class suitable for holding a custom categorical
+performance warning	warnings shown when there is a possible performance impact
+stata writer	a class for writing stata binary dta files parameters
+group by mixin	provide the groupby facilities to the mixed object
+table plotter	layout some dataframes in vertical/horizontal layout for explanation
+test case	the test case class that we originally used when using the nosetests framework
+custom business month begin	**experimental** dateoffset of one custom business month
+options	stores pandas plotting options
+block	canonical n-dimensional unit of homogeneous dtype contained in a pandas
+ext type	exttype represents ext type in msgpack
+ewm	provides exponential weighted functions
+docstring wrapper	decorator to wrap a function
+sparse array	data structure for labeled sparse floating point 1-d data parameters
+fy5253quarter	dateoffset increments between business quarter dates for 52-53 week fiscal year also known as a 4-4-5 calendar
+openpyxl20writer	note support for openpyxl v2 is currently experimental gh7565

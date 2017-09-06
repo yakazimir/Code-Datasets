@@ -1,0 +1,1392 @@
+classification	EllipticEnvelopeClassifier	mahalanobis	observations	computes squared mahalanobis distances of given observations
+classification	SimpleTreeModel	to_string	node level	return a text-based representation of the tree
+classification		argmaxrnd	a random_seed	find the index of the maximum value for a given 1-d numpy array
+classification		entropy	x	calculate information-theoretic entropy measure for a given distribution
+classification		likelihood_ratio_statistic	x y	calculate likelihood ratio statistic for given distributions
+classification		get_dist	Y W domain	determine the class distribution for a given array of classifications
+classification		hash_dist	x	for a given distribution calculate a hash value that can be used to seed the rng
+classification	Evaluator	evaluate_rule	rule	characterise a search heuristic
+classification	Validator	validate_rule	rule	characterise a heuristic to avoid the over-fitting of noisy data and to reduce computation time
+classification	SearchAlgorithm	select_candidates	rules	select candidate rules to be further specialised
+classification	SearchAlgorithm	filter_rules	rules	filter rules to be considered in the next iteration
+classification	SearchStrategy	initialise_rule	X Y W target_class	develop a starting rule
+classification	Selector	filter_instance	x	filter a single instance
+classification	Selector	filter_data	X	filter several instances concurrently
+classification	Rule	__init__	selectors parent_rule domain initial_class_dist	initialise a rule
+classification	Rule	filter_and_store	X Y W target_class	apply data and target class to a rule
+classification	Rule	is_valid		return true if the rule passes the general validator's requirements
+classification	Rule	is_significant		return true if the rule passes the significance validator's requirements is significant in regard to its parent
+classification	Rule	do_evaluate		evaluate the rule's quality and complexity
+classification	Rule	evaluate_instance	x	evaluate a single instance
+classification	Rule	evaluate_data	X	evaluate several instances concurrently
+classification	Rule	create_model		determine prediction class probabilities
+classification	Rule	seed		forward relevant information to develop new rules
+classification	RuleHunter	__call__	X Y W target_class	return a single rule
+classification	_RuleLearner	__init__	preprocessors base_rules	constrain the search algorithm with a list of base rules
+classification	_RuleLearner	find_rules	X Y W target_class	the top-level control procedure of the separate-and-conquer algorithm
+classification	_RuleLearner	exclusive_cover_and_remove	X Y W new_rule	cover and remove
+classification	_RuleLearner	weighted_cover_and_remove	X Y W new_rule	cover and remove
+classification	_RuleLearner	generate_default_rule	X Y W domain	generate a default rule which mimics a majority classifier
+classification	_RuleClassifier	ordered_predict	X	following a decision list for each instance rules are tried in order until one fires
+classification	_RuleClassifier	unordered_predict	X	following an unordered set of rules for each instance all rules are tried and those that fire are collected
+classification	CN2Classifier	predict	X	following a decision list for each instance rules are tried in order until one fires
+classification	CN2UnorderedClassifier	predict	X	following an unordered set of rules for each instance all rules are tried and those that fire are collected
+classification	CN2SDClassifier	predict	X	in contrast to the classic cn2 algorithm all applicable rules are taken into account even though cn2sd induces ordered rules
+classification	CN2SDUnorderedClassifier	predict	X	following an unordered set of rules for each instance all rules are tried and those that fire are collected
+classification	ConstantModel	__init__	dist unif_maj	constructs orange classification majoritymodel that always
+classification	ConstantModel	predict	X	returns majority class for each given instance in x
+canvas		package_dirname	package	return the directory path where package is located
+canvas		package	qualified_name	return the enclosing package name where qualified_name is located
+canvas		search_paths_from_description	desc	return the search paths for the category/widgetdescription
+canvas	resource_loader	from_description	cls desc	construct an resource from a widget or category description
+canvas	resource_loader	add_search_paths	paths	add paths to the list of search paths
+canvas	resource_loader	search_paths		return a list of all search paths
+canvas	resource_loader	split_prefix	path	split prefixed path
+canvas	resource_loader	find	name	find a resource matching name
+canvas		fix_win_pythonw_std_stream		on windows when running without a console using pythonw exe the
+canvas		init		initialize the qcoreapplication organizationdomain applicationname
+canvas		data_dir		return the application data directory if the directory path
+canvas		cache_dir		return the application cache directory if the directory path
+canvas		log_dir		return the application log directory
+canvas		widget_settings_dir		return the widget settings directory
+canvas		recent_schemes		return a list of recently accessed schemes
+canvas		save_recent_scheme_list	scheme_list	save the list of recently accessed schemes
+canvas		default_entry_point		return a default orange widgets entry point for loading
+canvas		widgets_entry_points		return an entrypoint iterator for all 'orange widget' entry
+canvas		application_icon		return the main application icon
+canvas.document	UserInteraction	start		start the interaction this is called by the :class canvasscene when
+canvas.document	UserInteraction	end		finish the interaction restore any leftover state in this method
+canvas.document	UserInteraction	cancel	reason	cancel the interaction with reason
+canvas.document	UserInteraction	isFinished		is the interaction finished
+canvas.document	UserInteraction	isCanceled		was the interaction canceled
+canvas.document	UserInteraction	cancelReason		return the reason the interaction was canceled
+canvas.document	UserInteraction	mousePressEvent	event	handle a qgraphicsscene mousepressevent
+canvas.document	UserInteraction	mouseMoveEvent	event	handle a graphicsscene mousemoveevent
+canvas.document	UserInteraction	mouseReleaseEvent	event	handle a qgraphicsscene mousereleaseevent
+canvas.document	UserInteraction	mouseDoubleClickEvent	event	handle a qgraphicsscene mousedoubleclickevent
+canvas.document	UserInteraction	keyPressEvent	event	handle a qgraphicsscene keypressevent
+canvas.document	UserInteraction	keyReleaseEvent	event	handle a qgraphicsscene keypressevent
+canvas.document		reversed_arguments	func	return a function with reversed argument order
+canvas.document	NewLinkAction	remove_tmp_anchor		remove a temporary anchor point from the current target item
+canvas.document	NewLinkAction	create_tmp_anchor	item	create a new tmp anchor at the item (:class nodeitem)
+canvas.document	NewLinkAction	can_connect	target_item	is the connection between self from_item (item where the drag
+canvas.document	NewLinkAction	set_link_target_anchor	anchor	set the temp line target anchor
+canvas.document	NewLinkAction	target_node_item_at	pos	return a suitable :class nodeitem at position pos on which a link can be dropped
+canvas.document	NewLinkAction	create_new	event	create and return a new node with a quickmenu
+canvas.document	NewLinkAction	connect_nodes	source_node sink_node	connect source_node to sink_node if there are more then one
+canvas.document	NewLinkAction	edit_links	source_node sink_node initial_links	show and execute the editlinksdialog
+canvas.document	NewLinkAction	cleanup		cleanup all temporary items in the scene that are left
+canvas.document		edit_links	scheme source_node sink_node initial_links	show and execute the editlinksdialog
+canvas.document		add_links_plan	scheme links force_replace	return a plan for adding a list of links to the scheme
+canvas.document		conflicting_single_link	scheme link	find and return an existing link in scheme connected to the same input channel as link if the channel has the 'single' flag
+canvas.document	NewNodeAction	create_new	pos search_text	create a new widget with a quickmenu at pos in screen coordinates
+canvas.document	RectangleSelectionAction	update_selection	event	update the selection rectangle from a qgraphicsscenemouseevent event instance
+canvas.document	RectangleSelectionAction	viewport_rect		return the bounding rect of the document's viewport on the scene
+canvas.document	RectangleSelectionAction	_bound_selection_rect	rect	bound the selection rect to a sensible size
+canvas.document	EditNodeLinksAction	edit_links	initial_links	show and execute the editlinksdialog
+canvas.document		point_to_tuple	point	convert a qpointf into a x y tuple
+canvas.document	NewArrowAnnotation	setColor	color	set the color for the new arrow
+canvas.document		rect_to_tuple	rect	convert a qrectf into a x y width height tuple
+canvas.document	NewTextAnnotation	createNewAnnotation	rect	create a new textannotation at with rect as the geometry
+canvas.document	NewTextAnnotation	defaultTextGeometry	point	return the default text geometry used in case the user single
+canvas.document	ResizeTextAnnotation	commit		commit the current item geometry state to the document
+canvas.document	ResizeArrowAnnotation	commit		commit the current geometry of the item to the document
+canvas.document	SchemeEditWidget	__setupScene	scene	set up a :class canvasscene instance for use by the editor
+canvas.document	SchemeEditWidget	__teardownScene	scene	tear down an instance of :class canvasscene that was used by the editor
+canvas.document	SchemeEditWidget	toolbarActions		return a list of actions that can be inserted into a toolbar
+canvas.document	SchemeEditWidget	menuBarActions		return a list of actions that can be inserted into a qmenubar
+canvas.document	SchemeEditWidget	isModified		is the document is a modified state
+canvas.document	SchemeEditWidget	setModified	modified	set the document modified state
+canvas.document	SchemeEditWidget	isModifiedStrict		is the document modified
+canvas.document	SchemeEditWidget	setQuickMenuTriggers	triggers	set quick menu trigger flags
+canvas.document	SchemeEditWidget	quickMenuTriggers		return quick menu trigger flags
+canvas.document	SchemeEditWidget	setChannelNamesVisible	visible	set channel names visibility state when enabled the links
+canvas.document	SchemeEditWidget	channelNamesVisible		return the channel name visibility state
+canvas.document	SchemeEditWidget	setNodeAnimationEnabled	enabled	set the node item animation enabled state
+canvas.document	SchemeEditWidget	nodeAnimationEnabled		return the node item animation enabled state
+canvas.document	SchemeEditWidget	undoStack		return the undo stack
+canvas.document	SchemeEditWidget	setPath	path	set the path associated with the current scheme
+canvas.document	SchemeEditWidget	path		return the path associated with the scheme
+canvas.document	SchemeEditWidget	setScheme	scheme	set the :class ~ scheme scheme instance to display/edit
+canvas.document	SchemeEditWidget	scheme		return the :class ~ scheme scheme edited by the widget
+canvas.document	SchemeEditWidget	scene		return the :class qgraphicsscene instance used to display the current scheme
+canvas.document	SchemeEditWidget	view		return the :class qgraphicsview instance used to display the current scene
+canvas.document	SchemeEditWidget	quickMenu		return a :class ~ quickmenu quickmenu popup menu instance for
+canvas.document	SchemeEditWidget	setTitle	title	set the scheme title
+canvas.document	SchemeEditWidget	setDescription	description	set the scheme description string
+canvas.document	SchemeEditWidget	addNode	node	add a new node (:class schemenode) to the document
+canvas.document	SchemeEditWidget	createNewNode	description title position	create a new :class schemenode and add it to the document
+canvas.document	SchemeEditWidget	newNodeHelper	description title position	return a new initialized :class schemenode if title
+canvas.document	SchemeEditWidget	enumerateTitle	title	enumerate a title string i e add a number in parentheses so
+canvas.document	SchemeEditWidget	nextPosition		return the next default node position as a x y tuple this is
+canvas.document	SchemeEditWidget	removeNode	node	remove a node (:class schemenode) from the scheme
+canvas.document	SchemeEditWidget	renameNode	node title	rename a node (:class schemenode) to title
+canvas.document	SchemeEditWidget	addLink	link	add a link (:class schemelink) to the scheme
+canvas.document	SchemeEditWidget	removeLink	link	remove a link (:class schemelink) from the scheme
+canvas.document	SchemeEditWidget	addAnnotation	annotation	add annotation (:class baseschemeannotation) to the scheme
+canvas.document	SchemeEditWidget	removeAnnotation	annotation	remove annotation (:class baseschemeannotation) from the scheme
+canvas.document	SchemeEditWidget	removeSelected		remove all selected items in the scheme
+canvas.document	SchemeEditWidget	selectAll		select all selectable items in the scheme
+canvas.document	SchemeEditWidget	toggleZoom	zoom	toggle view zoom if zoom is true the scheme is displayed
+canvas.document	SchemeEditWidget	alignToGrid		align nodes to a grid
+canvas.document	SchemeEditWidget	focusNode		return the current focused :class schemenode or none if no
+canvas.document	SchemeEditWidget	selectedNodes		return all selected :class schemenode items
+canvas.document	SchemeEditWidget	selectedAnnotations		return all selected :class baseschemeannotation items
+canvas.document	SchemeEditWidget	openSelected		open show and raise all widgets for the current selected nodes
+canvas.document	SchemeEditWidget	editNodeTitle	node	edit rename the node's title opens an input dialog
+canvas.document	SchemeEditWidget	_setUserInteractionHandler	handler	helper method for setting the user interaction handlers
+canvas.document	SchemeEditWidget	__onItemFocusedIn	item	annotation item has gained focus
+canvas.document	SchemeEditWidget	__onItemFocusedOut	item	annotation item lost focus
+canvas.document	SchemeEditWidget	__onEditingFinished	item	text annotation editing has finished
+canvas.document	SchemeEditWidget	__onRenameAction		rename was requested for the selected widget
+canvas.document	SchemeEditWidget	__onHelpAction		help was requested for the selected widget
+canvas.document	SchemeEditWidget	__showHelpFor	help_url	show help for an "help" url
+canvas.document	SchemeEditWidget	__toggleLinkEnabled	enabled	link 'enabled' state was toggled in the context menu
+canvas.document	SchemeEditWidget	__linkRemove		remove link was requested from the context menu
+canvas.document	SchemeEditWidget	__linkReset		link reset from the context menu was requested
+canvas.document	SchemeEditWidget	__duplicateSelected		duplicate currently selected nodes
+canvas.document	SchemeEditWidget	__startControlPointEdit	item	start a control point edit interaction for item
+canvas.document	SchemeEditWidget	__endControlPointEdit		end the current control point edit interaction
+canvas.document	SchemeEditWidget	__updateFont		update the font for the "text size' menu and the default font used in the canvasscene
+canvas.document		mouse_drag_distance	event button	return the manhattan distance between the mouse position when the button was pressed and the current mouse position
+canvas.document		set_enabled_all	objects enable	set enabled properties on all objects (objects with setenabled method)
+canvas.document		is_printable	unichar	return true if the unicode character unichar is a printable character
+canvas.document	EditLinksDialog	setNodes	source_node sink_node	set the source/sink nodes (:class schemenode instances)
+canvas.document	EditLinksDialog	setLinks	links	set a list of links to display between the source and sink nodes
+canvas.document	EditLinksDialog	links		return the links between the source and sink node
+canvas.document		find_item_at	scene pos order type	find an object in a :class qgraphicsscene scene at pos
+canvas.document	LinksEditWidget	removeItems	items	remove child items from the widget and scene
+canvas.document	LinksEditWidget	clear		clear the editor state source and sink nodes channels
+canvas.document	LinksEditWidget	setNodes	source sink	set the source/sink nodes (:class schemenode instances) between which to edit the links
+canvas.document	LinksEditWidget	setLinks	links	set a list of links to display between the source and sink nodes
+canvas.document	LinksEditWidget	links		return the links between the source and sink node
+canvas.document	LinksEditWidget	addLink	output input	add a link between output (:class outputsignal) and input (:class inputsignal)
+canvas.document	LinksEditWidget	removeLink	output input	remove a link between the output and input channels
+canvas.document	LinksEditWidget	clearLinks		clear remove all the links
+canvas.document	LinksEditWidget	__updateState		update the widget with the new source/sink node signal descriptions
+canvas.document	EditLinksNode	setIconSize	size	set the icon size for the node
+canvas.document	EditLinksNode	iconSize		return the icon size
+canvas.document	EditLinksNode	setIcon	icon	set the icon to display
+canvas.document	EditLinksNode	icon		return the icon
+canvas.document	EditLinksNode	setSchemeNode	node	set an instance of schemenode the widget will be initialized
+canvas.document	EditLinksNode	anchor	channel	return the anchor item for the channel name
+canvas.document	ChannelAnchor	setChannel	channel	set the channel description
+canvas.document	ChannelAnchor	channel		return the channel description
+canvas.document	GraphicsTextWidget	_onDocumentSizeChanged	size	the doc size has changed
+canvas.document	MenuPage	setTitle	title	set the title of the page
+canvas.document	MenuPage	title		return the title of this page
+canvas.document	MenuPage	setIcon	icon	set icon for this menu page
+canvas.document	MenuPage	icon		return the icon of this manu page
+canvas.document	MenuPage	setFilterFunc	func	set the filtering function func should a function taking a single
+canvas.document	MenuPage	setModel	model	reimplemented from :func tooltree setmodel
+canvas.document	MenuPage	setRootIndex	index	reimplemented from :func tooltree setrootindex
+canvas.document	MenuPage	rootIndex		reimplemented from :func tooltree rootindex
+canvas.document	MenuPage	sizeHint		reimplemented from :func qwidget sizehint
+canvas.document	ItemDisableFilter	setFilterFunc	func	set the filtering function
+canvas.document	ItemDisableFilter	flags	index	reimplemented from :class qsortfilterproxymodel flags
+canvas.document	SuggestMenuPage	setModel	model	reimplmemented from :ref menupage setmodel
+canvas.document	SuggestMenuPage	setFilterFixedString	pattern	set the fixed string filtering pattern only items which contain the
+canvas.document	SuggestMenuPage	setFilterRegExp	pattern	set the regular expression filtering pattern only items matching
+canvas.document	SuggestMenuPage	setFilterWildCard	pattern	set a wildcard filtering pattern
+canvas.document	SuggestMenuPage	setFilterFunc	func	set a filtering function
+canvas.document	SortFilterProxyModel	setFilterFunc	func	set the filtering function
+canvas.document	MenuStackWidget	sizeHint		size hint is the maximum width and median height of the widgets contained in the stack
+canvas.document	TabBarWidget	setChangeOnHover	changeOnHover	if set to true the tab widget will change the current index when the mouse hovers over a tab button
+canvas.document	TabBarWidget	changeOnHover		does the current tab index follow the mouse cursor
+canvas.document	TabBarWidget	count		return the number of tabs in the widget
+canvas.document	TabBarWidget	addTab	text icon toolTip	add a new tab and return it's index
+canvas.document	TabBarWidget	insertTab	index text icon toolTip	insert a tab at index
+canvas.document	TabBarWidget	removeTab	index	remove a tab at index
+canvas.document	TabBarWidget	setTabIcon	index icon	set the icon for tab at index
+canvas.document	TabBarWidget	setTabToolTip	index toolTip	set tooltip for tab at index
+canvas.document	TabBarWidget	setTabText	index text	set tab text for tab at index
+canvas.document	TabBarWidget	setTabPalette	index palette	set the tab button palette
+canvas.document	TabBarWidget	setCurrentIndex	index	set the current tab index
+canvas.document	TabBarWidget	currentIndex		return the current index
+canvas.document	TabBarWidget	button	index	return the tabbutton instance for index
+canvas.document	TabBarWidget	__updateTab	index	update the tab button
+canvas.document	TabBarWidget	__calcSloppyRegion	current	given a current mouse cursor position return a region of the widget where hover/move events should change the current tab only on a
+canvas.document	TabBarWidget	__setSloppyButton	button	set the current sloppy button a tab button inside sloppy region and reset the sloppy timeout
+canvas.document	PagedMenu	addPage	page title icon toolTip	add a page to the menu and return its index
+canvas.document	PagedMenu	insertPage	index page title icon	insert page at index
+canvas.document	PagedMenu	page	index	return the page at index
+canvas.document	PagedMenu	removePage	index	remove the page at index
+canvas.document	PagedMenu	count		return the number of pages
+canvas.document	PagedMenu	setCurrentIndex	index	set the current page index
+canvas.document	PagedMenu	currentIndex		return the index of the current page
+canvas.document	PagedMenu	setCurrentPage	page	set page to be the current shown page
+canvas.document	PagedMenu	currentPage		return the current page
+canvas.document	PagedMenu	indexOf	page	return the index of page
+canvas.document	PagedMenu	tabButton	index	return the tab button instance for index
+canvas.document	QuickMenu	setSizeGripEnabled	enabled	enable the resizing of the menu with a size grip in a bottom right corner enabled by default
+canvas.document	QuickMenu	sizeGripEnabled		is the size grip enabled
+canvas.document	QuickMenu	addPage	name page	add the page (:class menupage) with name and return it's index
+canvas.document	QuickMenu	createPage	index	create a new page based on the contents of an index (:class qmodeindex) item
+canvas.document	QuickMenu	setModel	model	set the model containing the actions
+canvas.document	QuickMenu	setFilterFunc	func	set a filter function
+canvas.document	QuickMenu	popup	pos searchText	popup the menu at pos in screen coordinates 'search' text field
+canvas.document	QuickMenu	exec_	pos searchText	execute the menu at position pos in global screen coordinates
+canvas.document	QuickMenu	hideEvent	event	reimplemented from :class qwidget
+canvas.document	QuickMenu	setCurrentPage	page	set the current shown page to page
+canvas.document	QuickMenu	setCurrentIndex	index	set the current page index
+canvas.document	QuickMenu	__clearCurrentItems		clear any selected or current items in all the menus
+canvas.document	QuickMenu	__onTriggered	action	re-emit the action from the page
+canvas.document	QuickMenu	triggerSearch		trigger action search this changes to current page to the
+canvas.document	ItemViewKeyNavigator	setView	view	set the qlistview
+canvas.document	ItemViewKeyNavigator	view		return the view
+canvas.document	ItemViewKeyNavigator	moveCurrent	rows columns	move the current index by rows columns
+canvas.document	ItemViewKeyNavigator	activateCurrent		activate the current index
+canvas.document	ItemViewKeyNavigator	ensureCurrent		ensure the view has a current item if one is available
+canvas.document	WindowSizeGrip	setCorner	corner	set the corner (:class qt corner) where the size grip should
+canvas.document	WindowSizeGrip	corner		return the corner where the size grip is positioned
+canvas.canvas		composition	f g	return a composition of two functions
+canvas.canvas		angle	point1 point2	return the angle between the two points in range from -180 to 180
+canvas.canvas	CanvasScene	clear_scene		clear reset the scene
+canvas.canvas	CanvasScene	set_scheme	scheme	set the scheme to display populates the scene with nodes and links
+canvas.canvas	CanvasScene	set_registry	registry	set the widget registry
+canvas.canvas	CanvasScene	set_anchor_layout	layout	set an :class ~ layout anchorlayout
+canvas.canvas	CanvasScene	anchor_layout		return the anchor layout instance
+canvas.canvas	CanvasScene	set_channel_names_visible	visible	set the channel names visibility
+canvas.canvas	CanvasScene	channel_names_visible		return the channel names visibility state
+canvas.canvas	CanvasScene	set_node_animation_enabled	enabled	set node animation enabled state
+canvas.canvas	CanvasScene	add_node_item	item	add a :class nodeitem instance to the scene
+canvas.canvas	CanvasScene	add_node	node	add and return a default constructed :class nodeitem for a
+canvas.canvas	CanvasScene	new_node_item	widget_desc category_desc	construct an new :class nodeitem from a widgetdescription
+canvas.canvas	CanvasScene	remove_node_item	item	remove item (:class nodeitem) from the scene
+canvas.canvas	CanvasScene	remove_node	node	remove the :class nodeitem instance that was previously
+canvas.canvas	CanvasScene	node_items		return all :class nodeitem instances in the scene
+canvas.canvas	CanvasScene	add_link_item	item	add a link (:class linkitem) to the scene
+canvas.canvas	CanvasScene	add_link	scheme_link	create and add a :class linkitem instance for a
+canvas.canvas	CanvasScene	new_link_item	source_item source_channel sink_item sink_channel	construct and return a new :class linkitem
+canvas.canvas	CanvasScene	remove_link_item	item	remove a link (:class linkitem) from the scene
+canvas.canvas	CanvasScene	remove_link	scheme_link	remove a :class linkitem instance that was previously constructed
+canvas.canvas	CanvasScene	link_items		return all :class linkitem\s in the scene
+canvas.canvas	CanvasScene	add_annotation_item	annotation	add an :class annotation item to the scene
+canvas.canvas	CanvasScene	add_annotation	scheme_annot	create a new item for :class schemeannotation and add it to the scene
+canvas.canvas	CanvasScene	remove_annotation_item	annotation	remove an :class annotation instance from the scene
+canvas.canvas	CanvasScene	remove_annotation	scheme_annotation	remove an :class annotation instance that was previously added
+canvas.canvas	CanvasScene	annotation_items		return all :class annotation items in the scene
+canvas.canvas	CanvasScene	commit_scheme_node	node	commit the node into the scheme
+canvas.canvas	CanvasScene	commit_scheme_link	link	commit a scheme link
+canvas.canvas	CanvasScene	node_for_item	item	return the schemenode for the item
+canvas.canvas	CanvasScene	item_for_node	node	return the :class nodeitem instance for a :class schemenode
+canvas.canvas	CanvasScene	link_for_item	item	return the schemelink for item (:class linkitem)
+canvas.canvas	CanvasScene	item_for_link	link	return the :class linkitem for a :class schemelink
+canvas.canvas	CanvasScene	selected_node_items		return the selected :class nodeitem's
+canvas.canvas	CanvasScene	selected_annotation_items		return the selected :class annotation's
+canvas.canvas	CanvasScene	node_links	node_item	return all links from the node_item (:class nodeitem)
+canvas.canvas	CanvasScene	node_output_links	node_item	return a list of all output links from node_item
+canvas.canvas	CanvasScene	node_input_links	node_item	return a list of all input links for node_item
+canvas.canvas	CanvasScene	neighbor_nodes	node_item	return a list of node_item's (class nodeitem) neighbor nodes
+canvas.canvas	CanvasScene	item_at	pos type_or_tuple buttons	return the item at pos that is an instance of the specified type (type_or_tuple)
+canvas.canvas		grab_svg	scene	return a svg rendering of the scene contents
+canvas.canvas	CanvasView	__autoScrollAdvance		advance the auto scroll
+canvas.canvas.items		bezier_subdivide	cp t	subdivide a cubic bezier curve defined by the control points cp
+canvas.canvas.items		qpainterpath_simple_split	path t	split a qpainterpath defined simple curve
+canvas.canvas.items		path_link_disabled	basepath	return a qpainterpath 'styled' to indicate a 'disabled' link
+canvas.canvas.items	LinkAnchorIndicator	setHoverState	state	the hover state is set by the linkitem
+canvas.canvas.items	LinkItem	setSourceItem	item anchor	set the source item (:class nodeitem) use anchor
+canvas.canvas.items	LinkItem	setSinkItem	item anchor	set the sink item (:class nodeitem) use anchor
+canvas.canvas.items	LinkItem	setFont	font	set the font for the channel names text item
+canvas.canvas.items	LinkItem	font		return the font for the channel names text
+canvas.canvas.items	LinkItem	setChannelNamesVisible	visible	set the visibility of the channel name text
+canvas.canvas.items	LinkItem	setSourceName	name	set the name of the source used in channel name text
+canvas.canvas.items	LinkItem	sourceName		return the source name
+canvas.canvas.items	LinkItem	setSinkName	name	set the name of the sink used in channel name text
+canvas.canvas.items	LinkItem	sinkName		return the sink name
+canvas.canvas.items	LinkItem	setEnabled	enabled	reimplemented from :class qgraphicsobject set link enabled state
+canvas.canvas.items	LinkItem	setDynamicEnabled	enabled	set the link's dynamic enabled state
+canvas.canvas.items	LinkItem	isDynamicEnabled		is the link dynamic enabled
+canvas.canvas.items	LinkItem	setDynamic	dynamic	mark the link as dynamic (i e it responds to
+canvas.canvas.items	LinkItem	isDynamic		is the link dynamic
+canvas.canvas.items	LinkItem	setRuntimeState	state	style the link appropriate to the linkitem state
+canvas.canvas.items	GraphicsTextEdit	setPlaceholderText	text	set the placeholder text this is shown when the item has no text
+canvas.canvas.items	GraphicsTextEdit	placeholderText		return the placeholder text
+canvas.canvas.items	TextAnnotation	adjustSize		resize to a reasonable size
+canvas.canvas.items	TextAnnotation	setFramePen	pen	set the frame pen by default qt nopen is used (i e the frame
+canvas.canvas.items	TextAnnotation	framePen		return the frame pen
+canvas.canvas.items	TextAnnotation	setFrameBrush	brush	set the frame brush
+canvas.canvas.items	TextAnnotation	frameBrush		return the frame brush
+canvas.canvas.items	TextAnnotation	setPlainText	text	set the annotation plain text
+canvas.canvas.items	TextAnnotation	setHtml	text	set the annotation rich text
+canvas.canvas.items	TextAnnotation	setDefaultTextColor	color	set the default text color
+canvas.canvas.items	TextAnnotation	setTextMargins	left top right bottom	set the text margins
+canvas.canvas.items	TextAnnotation	textMargins		return the text margins
+canvas.canvas.items	TextAnnotation	document		return the qtextdocument instance used internally
+canvas.canvas.items	TextAnnotation	startEdit		start the annotation text edit process
+canvas.canvas.items	TextAnnotation	endEdit		end the annotation edit
+canvas.canvas.items	ArrowItem	setLine	line	set the baseline of the arrow (:class qlinef)
+canvas.canvas.items	ArrowItem	line		return the baseline of the arrow
+canvas.canvas.items	ArrowItem	setLineWidth	lineWidth	set the width of the arrow
+canvas.canvas.items	ArrowItem	lineWidth		return the width of the arrow
+canvas.canvas.items	ArrowItem	setArrowStyle	style	set the arrow style (arrowitem plain or arrowitem concave)
+canvas.canvas.items	ArrowItem	arrowStyle		return the arrow style
+canvas.canvas.items		arrow_path_plain	line width	return an :class qpainterpath of a plain looking arrow
+canvas.canvas.items		arrow_path_concave	line width	return a :class qpainterpath of a pretty looking arrow
+canvas.canvas.items	ArrowAnnotation	setAutoAdjustGeometry	autoAdjust	if set to true then the geometry will be adjusted whenever the arrow is changed with setline
+canvas.canvas.items	ArrowAnnotation	autoAdjustGeometry		should the geometry of the item be adjusted automatically when setline is called
+canvas.canvas.items	ArrowAnnotation	setLine	line	set the arrow base line (a qlinef in object coordinates)
+canvas.canvas.items	ArrowAnnotation	line		return the arrow base line (qlinef in object coordinates)
+canvas.canvas.items	ArrowAnnotation	setColor	color	set arrow brush color
+canvas.canvas.items	ArrowAnnotation	color		return the arrow brush color
+canvas.canvas.items	ArrowAnnotation	setLineWidth	lineWidth	set the arrow line width
+canvas.canvas.items	ArrowAnnotation	lineWidth		return the arrow line width
+canvas.canvas.items	ArrowAnnotation	adjustGeometry		adjust the widget geometry to exactly fit the arrow inside while preserving the arrow path scene geometry
+canvas.canvas.items	ArrowAnnotation	__updateStyleState		update the arrows' brush pen based on it's state
+canvas.canvas.items		create_palette	light_color color	return a new :class qpalette from for the :class nodebodyitem
+canvas.canvas.items		default_palette		create and return a default palette for a node
+canvas.canvas.items	NodeBodyItem	setShapeRect	rect	set the item's shape rect the item should be confined within
+canvas.canvas.items	NodeBodyItem	setPalette	palette	set the body color palette (:class qpalette)
+canvas.canvas.items	NodeBodyItem	setAnimationEnabled	enabled	set the node animation enabled
+canvas.canvas.items	NodeBodyItem	setProcessingState	state	set the processing state of the node
+canvas.canvas.items	NodeBodyItem	setProgress	progress	set the progress indicator state of the node progress should
+canvas.canvas.items	NodeBodyItem	ping		trigger a 'ping' animation
+canvas.canvas.items	NodeBodyItem	paint	painter option widget	paint the shape and a progress meter
+canvas.canvas.items	NodeBodyItem	setSelected	selected	set the selected state
+canvas.canvas.items	NodeBodyItem	setHasFocus	focus	set the has focus state
+canvas.canvas.items	AnchorPoint	anchorScenePos		return anchor position in scene coordinates
+canvas.canvas.items	AnchorPoint	setAnchorDirection	direction	set the preferred direction qpointf in item coordinates
+canvas.canvas.items	AnchorPoint	anchorDirection		return the preferred anchor direction
+canvas.canvas.items	NodeAnchorItem	parentNodeItem		return a parent :class nodeitem or none if this anchor's parent is not a :class nodeitem instance
+canvas.canvas.items	NodeAnchorItem	setAnchorPath	path	set the anchor's curve path as a :class qpainterpath
+canvas.canvas.items	NodeAnchorItem	anchorPath		return the anchor path (:class qpainterpath) this is a curve on
+canvas.canvas.items	NodeAnchorItem	setAnchored	anchored	set the items anchored state when false the item draws it self
+canvas.canvas.items	NodeAnchorItem	setConnectionHint	hint	set the connection hint this can be used to indicate if
+canvas.canvas.items	NodeAnchorItem	count		return the number of anchor points
+canvas.canvas.items	NodeAnchorItem	addAnchor	anchor position	add a new :class anchorpoint to this item and return it's index
+canvas.canvas.items	NodeAnchorItem	insertAnchor	index anchor position	insert a new :class anchorpoint at index
+canvas.canvas.items	NodeAnchorItem	removeAnchor	anchor	remove and delete the anchor point
+canvas.canvas.items	NodeAnchorItem	takeAnchor	anchor	remove the anchor but don't delete it
+canvas.canvas.items	NodeAnchorItem	anchorPoints		return a list of anchor points
+canvas.canvas.items	NodeAnchorItem	anchorPoint	index	return the anchor point at index
+canvas.canvas.items	NodeAnchorItem	setAnchorPositions	positions	set the anchor positions in percentages 0 1 along the path curve
+canvas.canvas.items	NodeAnchorItem	anchorPositions		return the positions of anchor points as a list of floats where each float is between 0 and 1 and specifies where along the anchor
+canvas.canvas.items	NodeAnchorItem	__updatePositions		update anchor points positions
+canvas.canvas.items		standard_icon	standard_pixmap	return return the application style's standard icon for a qstyle
+canvas.canvas.items	GraphicsIconItem	setIcon	icon	set the icon (:class qicon)
+canvas.canvas.items	GraphicsIconItem	icon		return the icon (:class qicon)
+canvas.canvas.items	GraphicsIconItem	setIconSize	size	set the icon (and this item's) size (:class qsize)
+canvas.canvas.items	GraphicsIconItem	iconSize		return the icon size (:class qsize)
+canvas.canvas.items	GraphicsIconItem	setTransformationMode	mode	set pixmap transformation mode (qt smoothtransformation or
+canvas.canvas.items	GraphicsIconItem	transformationMode		return the pixmap transformation mode
+canvas.canvas.items	NodeItem	from_node	cls node	create an :class nodeitem instance and initialize it from a :class schemenode instance
+canvas.canvas.items	NodeItem	from_node_meta	cls meta_description	create an nodeitem instance from a node meta description
+canvas.canvas.items	NodeItem	setupGraphics		set up the graphics
+canvas.canvas.items	NodeItem	setWidgetDescription	desc	set widget description
+canvas.canvas.items	NodeItem	setWidgetCategory	desc	set the widget category
+canvas.canvas.items	NodeItem	setIcon	icon	set the node item's icon (:class qicon)
+canvas.canvas.items	NodeItem	setColor	color selectedColor	set the widget color
+canvas.canvas.items	NodeItem	setTitle	title	set the node title the title text is displayed at the bottom of the
+canvas.canvas.items	NodeItem	title		return the node title
+canvas.canvas.items	NodeItem	setFont	font	set the title text font (:class qfont)
+canvas.canvas.items	NodeItem	font		return the title text font
+canvas.canvas.items	NodeItem	setAnimationEnabled	enabled	set the node animation enabled state
+canvas.canvas.items	NodeItem	animationEnabled		are node animations enabled
+canvas.canvas.items	NodeItem	setProcessingState	state	set the node processing state i e the node is processing
+canvas.canvas.items	NodeItem	processingState		the node processing state
+canvas.canvas.items	NodeItem	setProgress	progress	set the node work progress state number between 0 and 100
+canvas.canvas.items	NodeItem	progress		return the node work progress state
+canvas.canvas.items	NodeItem	setStatusMessage	message	set the node status message text
+canvas.canvas.items	NodeItem	setStateMessage	message	set a state message to display over the item
+canvas.canvas.items	NodeItem	newInputAnchor		create and return a new input :class anchorpoint
+canvas.canvas.items	NodeItem	removeInputAnchor	anchor	remove input anchor
+canvas.canvas.items	NodeItem	newOutputAnchor		create and return a new output :class anchorpoint
+canvas.canvas.items	NodeItem	removeOutputAnchor	anchor	remove output anchor
+canvas.canvas.items	NodeItem	inputAnchors		return a list of all input anchor points
+canvas.canvas.items	NodeItem	outputAnchors		return a list of all output anchor points
+canvas.canvas.items	NodeItem	setAnchorRotation	angle	set the anchor rotation
+canvas.canvas.items	NodeItem	anchorRotation		return the anchor rotation
+canvas.canvas.items	NodeItem	__updateTitleText		update the title text item
+canvas.canvas.items	NodeItem	__updateMessages		update message items position visibility and tool tips
+canvas.canvas.items		NodeItem_toolTipHelper	node links_in links_out	a helper function for constructing a standard tooltip for the node in on the canvas
+canvas.canvas.items		saturated	color factor	return a saturated color
+canvas.canvas.items		sample_path	path num	sample num equidistant points from the path (qpainterpath)
+canvas.canvas.items		radial_gradient	color color_light	radial_gradient qcolor qcolor radial_gradient qcolor int
+canvas.canvas.items		toGraphicsObjectIfPossible	item	return the item as a qgraphicsobject if possible
+canvas.canvas.items		linspace	count	return count evenly spaced points from 0 1 interval excluding
+canvas.canvas.items		uniform_linear_layout	points	layout the points a list of floats in 0 1 range in a uniform
+canvas.canvas.items		invert_permutation_indices	indices	invert the permutation giver by indices
+canvas.canvas.items		stroke_path	path pen	create a qpainterpath stroke from the path drawn with pen
+canvas.canvas.items	ControlPoint	setAnchor	anchor	set anchor position
+canvas.canvas.items	ControlPoint	setConstraint	constraint	set the constraint for the point qt vertical qt horizontal or 0
+canvas.canvas.items	ControlPoint	constrain	pos	constrain the pos
+canvas.canvas.items	ControlPointRect	controlPoint	anchor	return the anchor point (:class controlpoint) at anchor position or none if an anchor point is not set
+canvas.canvas.items	ControlPointRect	setRect	rect	set the control point rectangle (:class qrectf)
+canvas.canvas.items	ControlPointRect	rect		return the control point rectangle
+canvas.canvas.items	ControlPointRect	setControlMargins		set the controls points on the margins around rect
+canvas.canvas.items	ControlPointRect	isControlActive		return the state of the control true if the control is
+canvas.canvas.items	ControlPointRect	__pointsLayout		layout the control points
+canvas.canvas.items	ControlPointLine	isControlActive		return the state of the control true if the control is
+canvas.canvas.items	GraphicsPathObject	setPath	path	set the items path (:class qpainterpath)
+canvas.canvas.items	GraphicsPathObject	path		return the items path
+canvas.canvas.items	GraphicsPathObject	setBrush	brush	set the items brush (:class qbrush)
+canvas.canvas.items	GraphicsPathObject	brush		return the items brush
+canvas.canvas.items	GraphicsPathObject	setPen	pen	set the items outline pen (:class qpen)
+canvas.canvas.items	GraphicsPathObject	pen		return the items pen
+canvas.canvas.items		shapeFromPath	path pen	create a qpainterpath shape from the path drawn with pen
+canvas.gui	FramelessWindow	setRadius	radius	set the window rounded border radius
+canvas.gui	FramelessWindow	radius		return the border radius
+canvas.gui		clipMinMax	size minSize maxSize	clip the size so it is bigger then minsize but smaller than maxsize
+canvas.gui		fixSizePolicy	size hint policy	fix size so it conforms to the size policy and the given size hint
+canvas.gui	StackLayout	_onCurrentChanged	index	current widget changed invalidate the layout
+canvas.gui	AnimatedStackedWidget	setAnimationEnabled	animationEnabled	enable/disable transition animations
+canvas.gui	AnimatedStackedWidget	animationEnabled		is the transition animation enabled
+canvas.gui	AnimatedStackedWidget	addWidget	widget	append the widget to the stack and return its index
+canvas.gui	AnimatedStackedWidget	insertWidget	index widget	insert widget into the stack at index
+canvas.gui	AnimatedStackedWidget	removeWidget	widget	remove widget from the stack
+canvas.gui	AnimatedStackedWidget	widget	index	return the widget at index
+canvas.gui	AnimatedStackedWidget	indexOf	widget	return the index of widget in the stack
+canvas.gui	AnimatedStackedWidget	count		return the number of widgets in the stack
+canvas.gui	AnimatedStackedWidget	setCurrentWidget	widget	set the current shown widget
+canvas.gui	AnimatedStackedWidget	setCurrentIndex	index	set the current shown widget index
+canvas.gui	AnimatedStackedWidget	currentIndex		return the current shown widget index
+canvas.gui	AnimatedStackedWidget	__transitionStart		start the transition
+canvas.gui	AnimatedStackedWidget	__onTransitionFinished		transition has finished
+canvas.gui	CrossFadePixmapWidget	setPixmap	pixmap	set pixmap 1
+canvas.gui	CrossFadePixmapWidget	setPixmap2	pixmap	set pixmap 2
+canvas.gui	CrossFadePixmapWidget	setBlendingFactor	factor	set the blending factor between the two pixmaps
+canvas.gui	CrossFadePixmapWidget	blendingFactor		pixmap blending factor between 0 0 and 1 0
+canvas.gui	CrossFadePixmapWidget	sizeHint		return an interpolated size between pixmap1 size()
+canvas.gui	CrossFadePixmapWidget	paintEvent	event	paint the interpolated pixmap image
+canvas.gui	CollapsibleDockWidget	setExpanded	state	set the widgets expanded state
+canvas.gui	CollapsibleDockWidget	expanded		is the dock widget in expanded state if true the
+canvas.gui	CollapsibleDockWidget	setExpandedWidget	widget	set the widget with contents to show while expanded
+canvas.gui	CollapsibleDockWidget	expandedWidget		return the widget previously set with setexpandedwidget, or none if no widget has been set
+canvas.gui	CollapsibleDockWidget	setCollapsedWidget	widget	set the widget with contents to show while collapsed
+canvas.gui	CollapsibleDockWidget	collapsedWidget		return the widget previously set with setcollapsedwidget, or none if no widget has been set
+canvas.gui	CollapsibleDockWidget	setAnimationEnabled	animationEnabled	enable/disable the transition animation
+canvas.gui	CollapsibleDockWidget	animationEnabled		is transition animation enabled
+canvas.gui	CollapsibleDockWidget	currentWidget		return the current shown widget depending on the expanded state
+canvas.gui	CollapsibleDockWidget	expand		expand the dock (same as setexpanded true )
+canvas.gui	CollapsibleDockWidget	collapse		collapse the dock (same as setexpanded false )
+canvas.gui	CollapsibleDockWidget	__fixIcon		fix the dock close icon
+canvas.gui	DropShadowFrame	setColor	color	set the color of the shadow
+canvas.gui	DropShadowFrame	color		return the color of the drop shadow
+canvas.gui	DropShadowFrame	setRadius	radius	set the drop shadow's blur radius
+canvas.gui	DropShadowFrame	radius		return the shadow blur radius
+canvas.gui	DropShadowFrame	setWidget	widget	set the widget around which to show the shadow
+canvas.gui	DropShadowFrame	widget		return the widget that was set by setwidget
+canvas.gui	DropShadowFrame	__updateGeometry		update the shadow geometry to fit the widget's changed geometry
+canvas.gui	DropShadowFrame	__updatePixmap		update the cached shadow pixmap
+canvas.gui	DropShadowFrame	__shadowPixmapFragments	pixmap_rect shadow_rect	return a list of 8 qrectf fragments for drawing a shadow
+canvas.gui	_DropShadowWidget	setOffset	offset	set the drop shadow offset (qpoint)
+canvas.gui	_DropShadowWidget	setRadius	radius	set the drop shadow blur radius (float)
+canvas.gui	_DropShadowWidget	setColor	color	set the drop shadow color (qcolor)
+canvas.gui	_DropShadowWidget	_updateShadowPixmap		update the cached drop shadow pixmap
+canvas.gui	_DropShadowWidget	_shadowPixmapFragments	pixmap_rect shadow_rect	return a list of 8 qrectf fragments for drawing a shadow
+canvas.gui	SplashScreen	setTextRect	rect	set the rectangle (:class qrect) in which to show the message text
+canvas.gui	SplashScreen	textRect		return the text message rectangle
+canvas.gui	SplashScreen	drawContents	painter	reimplementation of drawcontents to limit the drawing inside textrext
+canvas.gui	SplashScreen	showMessage	message alignment color	show the message with color and alignment
+canvas.gui	LineEdit	setAction	action position	set action to be displayed at position existing action
+canvas.gui	LineEdit	actionAt	position	return :class qaction at position
+canvas.gui	LineEdit	removeActionAt	position	remove the action at position
+canvas.gui	LineEdit	button	position	return the button (:class lineeditbutton) for the action at position
+canvas.gui	ToolGrid	setButtonSize	size	set the button size
+canvas.gui	ToolGrid	buttonSize		return the button size
+canvas.gui	ToolGrid	setIconSize	size	set the button icon size
+canvas.gui	ToolGrid	iconSize		return the icon size
+canvas.gui	ToolGrid	setToolButtonStyle	style	set the tool button style
+canvas.gui	ToolGrid	toolButtonStyle		return the tool button style
+canvas.gui	ToolGrid	setColumnCount	columns	set the number of button/action columns
+canvas.gui	ToolGrid	columns		return the number of columns in the grid
+canvas.gui	ToolGrid	clear		clear all actions/buttons
+canvas.gui	ToolGrid	insertAction	before action	insert a new action at the position currently occupied by before can also be an index
+canvas.gui	ToolGrid	setActions	actions	clear the grid and add actions
+canvas.gui	ToolGrid	buttonForAction	action	return the :class qtoolbutton instance button for action
+canvas.gui	ToolGrid	createButtonForAction	action	create and return a :class qtoolbutton for action
+canvas.gui	ToolGrid	count		return the number of buttons/actions in the grid
+canvas.gui	ToolGrid	__insertActionButton	index action	create a button for the action and add it to the layout at index
+canvas.gui	ToolGrid	__removeActionButton	action	remove the button for the action from the layout and delete it
+canvas.gui	ToolGrid	__shiftGrid	start count	shift all buttons starting at index start by count cells
+canvas.gui	ToolGrid	__relayout		relayout the buttons
+canvas.gui	ToolGrid	__indexOf	button	return the index of button widget
+canvas.gui	ToolBoxTabButton	setNativeStyling	state	render tab buttons as native or css styled :class qtoolbuttons
+canvas.gui	ToolBoxTabButton	nativeStyling		use :class qstyle's to paint the class qtoolbutton look
+canvas.gui	ToolBox	setExclusive	exclusive	set exclusive tabs only one tab can be open at a time
+canvas.gui	ToolBox	exclusive		are the tabs in the toolbox exclusive
+canvas.gui	ToolBox	setTabButtonHeight	height	set the tab button height
+canvas.gui	ToolBox	tabButtonHeight		return the tab button height
+canvas.gui	ToolBox	setTabIconSize	size	set the tab button icon size
+canvas.gui	ToolBox	tabIconSize		return the tab icon size
+canvas.gui	ToolBox	tabButton	index	return the tab button at index
+canvas.gui	ToolBox	tabAction	index	return open/close action for the tab at index
+canvas.gui	ToolBox	addItem	widget text icon toolTip	append the widget in a new tab and return its index
+canvas.gui	ToolBox	insertItem	index widget text icon	insert the widget in a new tab at position index
+canvas.gui	ToolBox	removeItem	index	remove the widget at index
+canvas.gui	ToolBox	count		return the number of widgets inserted in the toolbox
+canvas.gui	ToolBox	widget	index	return the widget at index
+canvas.gui	ToolBox	createTabButton	widget text icon toolTip	create the tab button for widget
+canvas.gui	ToolBox	ensureWidgetVisible	child xmargin ymargin	scroll the contents so child widget instance is visible inside the viewport
+canvas.gui	ToolBox	__updateSelected		update the tab buttons selected style flags
+canvas.gui	ToolBox	__updatePositions		update the tab buttons position style flags
+canvas.gui		find	iterable	find(iterable [what [key=none [predicate=operator eq]]])
+canvas.gui	QuickHelp	showHelp	text timeout	show help for timeout milliseconds if timeout is 0 then
+canvas.gui	QuickHelp	clearHelp		clear help text previously set with showhelp
+canvas.gui	QuickHelp	showPermanentHelp	text	set permanent help text the text may be temporarily overridden
+canvas.gui	QuickHelp	currentText		return the current shown text
+canvas.gui	DynamicResizeToolBar	__layout	size	layout the buttons to fit inside size
+canvas.gui		uniform_layout_helper	items contents_rect expanding spacing	set fixed sizes on 'items' so they can be laid out in contents_rect and fill the whole space
+canvas.gui		updates_disabled	widget	disable qwidget updates using qwidget setupdatesenabled
+canvas.gui		signals_disabled	qobject	disables signals on an instance of qobject
+canvas.gui		disabled	qobject	disables a disablable qobject instance
+canvas.gui		StyledWidget_paintEvent	event	a default styled qwidget subclass paintevent function
+canvas.gui		is_transparency_supported		is window transparency supported by the current windowing system
+canvas.gui		has_x11		is qt build against x11 server
+canvas.gui		is_x11_compositing_enabled		is x11 compositing manager running
+canvas.gui		is_dwm_compositing_enabled		is desktop window manager compositing aero enabled
+canvas.gui		gradient_darker	grad factor	return a copy of the qgradient darkened by factor
+canvas.gui		brush_darker	brush factor	return a copy of the brush darkened by factor
+canvas.gui		create_gradient	base_color stop finalStop	create a default linear gradient using base_color
+canvas.gui		create_css_gradient	base_color stop finalStop	create a qt css linear gradient fragment based on the base_color
+canvas.gui		css_gradient	gradient	given an instance of a qlineargradient return an equivalent qt css gradient fragment
+canvas.gui		message_critical	text title informative_text details	show a critical message
+canvas.gui		message_warning	text title informative_text details	show a warning message
+canvas.gui		message_information	text title informative_text details	show an information message box
+canvas.gui		message_question	text title informative_text details	show an message box asking the user to select some predefined course of action set by buttons argument
+canvas.gui		message	icon text title informative_text	show a message helper function
+canvas.gui		OSX_NSURL_toLocalFile	url	return os x nsurl file reference as local file path or '' if not nsurl
+canvas.gui	ToolTree	setFlattened	flatten	show the actions in a flattened view
+canvas.gui	ToolTree	flattened		are actions shown in a flattened tree a list
+canvas.gui	ToolTree	setRootIndex	index	set the root index
+canvas.gui	ToolTree	rootIndex		return the root index
+canvas.gui	ToolTree	view		return the qtreeview instance used
+canvas.gui	ToolTree	setActionRole	role	set the action role by default this is userrole
+canvas.gui	ToolTree	__onActivated	index	the item was activated if index has an action we need to trigger it
+canvas.gui	ToolTree	ensureCurrent		ensure the view has a current item if one is available
+canvas.gui	FlattenedTreeItemModel	setSourceRootIndex	rootIndex	set the source root index
+canvas.gui	FlattenedTreeItemModel	sourceRootIndex		return the source root index
+canvas.gui	FlattenedTreeItemModel	setFlatteningMode	mode	set the flattening mode
+canvas.gui	FlattenedTreeItemModel	flatteningMode		return the flattening mode
+canvas.gui	FlattenedTreeItemModel	_indexKey	index	return a key for index from the source model into the _source_offset map
+canvas.gui	FlattenedTreeItemModel	_indexFromKey	key_path	return an source qmodelindex for the given key
+canvas.scheme	SchemeArrowAnnotation	set_line	start_pos end_pos	set arrow lines start and end position ( x y tuples)
+canvas.scheme	SchemeArrowAnnotation	start_pos		start position of the arrow base point
+canvas.scheme	SchemeArrowAnnotation	end_pos		end position of the arrow arrow head points toward the end
+canvas.scheme	SchemeArrowAnnotation	set_geometry	geometry	set the geometry of the arrow as a start and end position tuples (e
+canvas.scheme	SchemeArrowAnnotation	geometry		return the start and end positions of the arrow
+canvas.scheme	SchemeArrowAnnotation	set_color	color	set the fill color for the arrow as a string (#rgb, #rrggbb, #rrrgggbbb, #rrrrggggbbbb format or one of svg color keyword
+canvas.scheme	SchemeArrowAnnotation	color		the arrow's fill color
+canvas.scheme	SchemeTextAnnotation	set_rect	rect	set the text geometry bounding rectangle ( x y width height tuple)
+canvas.scheme	SchemeTextAnnotation	rect		text bounding rectangle
+canvas.scheme	SchemeTextAnnotation	set_geometry	rect	set the text geometry (same as set_rect)
+canvas.scheme	SchemeTextAnnotation	geometry		text annotation geometry (same as rect
+canvas.scheme	SchemeTextAnnotation	set_text	text	set the annotation text
+canvas.scheme	SchemeTextAnnotation	set_font	font	set the annotation's font as a dictionary of font properties at the moment only family and size are used
+canvas.scheme	SchemeTextAnnotation	font		annotation's font property dictionary
+canvas.scheme	SignalManager	_can_process		return a bool indicating if the manger can enter the main processing loop
+canvas.scheme	SignalManager	scheme		return the parent class scheme instance
+canvas.scheme	SignalManager	start		start the update loop
+canvas.scheme	SignalManager	stop		stop the update loop
+canvas.scheme	SignalManager	pause		pause the updates
+canvas.scheme	SignalManager	state		return the current state
+canvas.scheme	SignalManager	_set_runtime_state	state	set the runtime state
+canvas.scheme	SignalManager	runtime_state		return the runtime state this can be signalmanager waiting
+canvas.scheme	SignalManager	signals_on_link	link	return _signal instances representing the current values present on the link
+canvas.scheme	SignalManager	link_contents	link	return the contents on link
+canvas.scheme	SignalManager	purge_link	link	purge the link send none for all ids currently present
+canvas.scheme	SignalManager	_schedule	signals	schedule a list of :class _signal for delivery
+canvas.scheme	SignalManager	_update_link	link	schedule update of a single link
+canvas.scheme	SignalManager	process_queued	max_nodes	process queued signals
+canvas.scheme	SignalManager	process_node	node	process pending input signals for node
+canvas.scheme	SignalManager	compress_signals	signals	compress a list of :class _signal instances to be delivered
+canvas.scheme	SignalManager	send_to_node	node signals	abstract reimplement in subclass
+canvas.scheme	SignalManager	is_pending	node	is node (class schemenode) scheduled for processing (i e
+canvas.scheme	SignalManager	pending_nodes		return a list of pending nodes
+canvas.scheme	SignalManager	pending_input_signals	node	return a list of pending input signals for node
+canvas.scheme	SignalManager	remove_pending_signals	node	remove pending signals for node
+canvas.scheme	SignalManager	blocking_nodes		return a list of nodes in a blocking state
+canvas.scheme	SignalManager	node_update_front		return a list of nodes on the update front i e nodes scheduled for
+canvas.scheme	SignalManager	_update		schedule processing at a later time
+canvas.scheme		can_enable_dynamic	link value	can the a dynamic link (:class schemelink) be enabled forvalue
+canvas.scheme		compress_signals	signals	compress a list of signals
+canvas.scheme		dependent_nodes	scheme node	return a list of all nodes in breadth first order in scheme that are dependent on node,
+canvas.scheme		unique	iterable	return unique elements of iterable while preserving their order
+canvas.scheme	SchemeNode	input_channels		return a list of input channels (:class inputsignal) for the node
+canvas.scheme	SchemeNode	output_channels		return a list of output channels (:class outputsignal) for the node
+canvas.scheme	SchemeNode	input_channel	name	return the input channel matching name raise a valueerror
+canvas.scheme	SchemeNode	output_channel	name	return the output channel matching name raise an valueerror
+canvas.scheme	SchemeNode	set_title	title	set the node title
+canvas.scheme	SchemeNode	title		the node title
+canvas.scheme	SchemeNode	set_position	pos	set the position ( x y tuple) of the node
+canvas.scheme	SchemeNode	position		x y tuple containing the position of the node in the scheme
+canvas.scheme	SchemeNode	set_progress	value	set the progress value
+canvas.scheme	SchemeNode	progress		the current progress value -1 if progress is not set
+canvas.scheme	SchemeNode	set_processing_state	state	set the node processing state
+canvas.scheme	SchemeNode	processing_state		the node processing state 0 for not processing 1 the node is busy
+canvas.scheme	SchemeNode	set_state_message	message	set a message to be displayed by a scheme view for this node
+canvas.scheme	SchemeNode	state_messages		return a list of all state messages
+canvas.scheme	WidgetsScheme	widget_for_node	node	return the owwidget instance for a node
+canvas.scheme	WidgetsScheme	node_for_widget	widget	return the schemenode instance for the widget
+canvas.scheme	WidgetsScheme	sync_node_properties		sync the widget settings/properties with the schemenode properties
+canvas.scheme	WidgetManager	set_scheme	scheme	set the :class widgetsscheme instance to manage
+canvas.scheme	WidgetManager	scheme		return the scheme instance on which this manager is installed
+canvas.scheme	WidgetManager	signal_manager		return the signal manager in use on the :func scheme
+canvas.scheme	WidgetManager	widget_for_node	node	return the owwidget instance for the scheme node
+canvas.scheme	WidgetManager	node_for_widget	widget	return the schemenode instance for the owwidget
+canvas.scheme	WidgetManager	widget_properties	node	return the current widget properties/settings
+canvas.scheme	WidgetManager	set_creation_policy	policy	set the widget creation policy parameters
+canvas.scheme	WidgetManager	creation_policy		return the current widget creation policy returns
+canvas.scheme	WidgetManager	add_widget_for_node	node	create a new owwidget instance for the corresponding scheme node
+canvas.scheme	WidgetManager	remove_widget_for_node	node	remove the owwidget instance for node
+canvas.scheme	WidgetManager	_delete_widget	widget	delete the owbasewidget instance
+canvas.scheme	WidgetManager	create_widget_instance	node	create a owwidget instance for the node
+canvas.scheme	WidgetManager	node_processing_state	node	return the processing state flags for the node
+canvas.scheme	WidgetManager	widget_processing_state	widget	return the processing state flags for the widget
+canvas.scheme	WidgetManager	__on_help_request		help shortcut was pressed we send a qwhatsthisclickedevent to
+canvas.scheme	WidgetManager	__on_activate_parent		activate parent shortcut was pressed
+canvas.scheme	WidgetManager	__initialize_widget_state	node widget	initialize the tracked info/warning/error message state
+canvas.scheme	WidgetManager	__on_widget_state_changed	msg	the owbasewidget info/warning/error state has changed
+canvas.scheme	WidgetManager	__on_processing_state_changed	state	a widget processing state has changed (progressbarinit/finished)
+canvas.scheme	WidgetManager	__on_processing_started	node	signal manager entered the input update loop for the node
+canvas.scheme	WidgetManager	__on_processing_finished	node	signal manager exited the input update loop for the node
+canvas.scheme	WidgetManager	__on_blocking_state_changed	state	owwidget blocking state has changed
+canvas.scheme	WidgetManager	__update_node_processing_state	node	update the node processing_state to reflect the widget state
+canvas.scheme	WidgetsSignalManager	send	widget channelname value signal_id	send method compatible with owbasewidget
+canvas.scheme	WidgetsSignalManager	is_blocking	node	reimplemented from signalmanager
+canvas.scheme	WidgetsSignalManager	send_to_node	node signals	implementation of signalmanager send_to_node
+canvas.scheme	WidgetsSignalManager	compress_signals	signals	reimplemented from :func signalmanager compress_signals
+canvas.scheme	WidgetsSignalManager	process_signals_for_widget	node widget signals	process new signals for the owbasewidget
+canvas.scheme		mock_error_owwidget	node message	create a mock owwidget instance for node
+canvas.scheme	Scheme	nodes		a list of all nodes (:class schemenode) currently in the scheme
+canvas.scheme	Scheme	links		a list of all links (:class schemelink) currently in the scheme
+canvas.scheme	Scheme	annotations		a list of all annotations (:class baseschemeannotation) in the
+canvas.scheme	Scheme	set_title	title	set the scheme title text
+canvas.scheme	Scheme	title		the title human readable string of the scheme
+canvas.scheme	Scheme	set_description	description	set the scheme description text
+canvas.scheme	Scheme	description		scheme description text
+canvas.scheme	Scheme	add_node	node	add a node to the scheme an error is raised if the node is
+canvas.scheme	Scheme	new_node	description title position properties	create a new :class schemenode and add it to the scheme
+canvas.scheme	Scheme	remove_node	node	remove a node from the scheme all links into and out of the
+canvas.scheme	Scheme	__remove_node_links	node	remove all links for node
+canvas.scheme	Scheme	add_link	link	add a link to the scheme
+canvas.scheme	Scheme	new_link	source_node source_channel sink_node sink_channel	create a new :class schemelink from arguments and add it to
+canvas.scheme	Scheme	remove_link	link	remove a link from the scheme
+canvas.scheme	Scheme	check_connect	link	check if the link can be added to the scheme and raise an appropriate exception
+canvas.scheme	Scheme	creates_cycle	link	return true if link would introduce a cycle in the scheme
+canvas.scheme	Scheme	compatible_channels	link	return true if the channels in link have compatible types
+canvas.scheme	Scheme	can_connect	link	return true if link can be added to the scheme
+canvas.scheme	Scheme	upstream_nodes	start_node	return a set of all nodes upstream from start_node (i e
+canvas.scheme	Scheme	downstream_nodes	start_node	return a set of all nodes downstream from start_node
+canvas.scheme	Scheme	is_ancestor	node child	return true if node is an ancestor node of child is upstream of the child in the workflow
+canvas.scheme	Scheme	children	node	return a set of all children of node
+canvas.scheme	Scheme	parents	node	return a set of all parents of node
+canvas.scheme	Scheme	input_links	node	return a list of all input links (:class schemelink) connected
+canvas.scheme	Scheme	output_links	node	return a list of all output links (:class schemelink) connected
+canvas.scheme	Scheme	propose_links	source_node sink_node	return a list of ordered (:class outputsignal, :class inputsignal, weight) tuples that could be added to
+canvas.scheme	Scheme	add_annotation	annotation	add an annotation (:class baseschemeannotation subclass) instance to the scheme
+canvas.scheme	Scheme	remove_annotation	annotation	remove the annotation instance from the scheme
+canvas.scheme	Scheme	clear		remove all nodes links and annotation items from the scheme
+canvas.scheme	Scheme	sync_node_properties		called before saving allowing a subclass to update/sync
+canvas.scheme	Scheme	save_to	stream pretty pickle_fallback	save the scheme as an xml formated file to stream see also
+canvas.scheme	Scheme	load_from	stream	load the scheme from xml formated stream
+canvas.scheme	Scheme	set_runtime_env	key value	set a runtime environment variable key to value
+canvas.scheme	Scheme	get_runtime_env	key default	return a runtime environment variable for key
+canvas.scheme	Scheme	runtime_env		return a view to the full runtime environment
+canvas.scheme		compatible_channels	source_channel sink_channel	do the channels in link have compatible types i e can they be
+canvas.scheme		can_connect	source_node sink_node	return true if any output from source_node can be connected to any input of sink_node
+canvas.scheme		possible_links	source_node sink_node	return a list of outputsignal inputsignal tuples that can connect the two nodes
+canvas.scheme	SchemeLink	source_type		return the type of the source channel
+canvas.scheme	SchemeLink	sink_type		return the type of the sink channel
+canvas.scheme	SchemeLink	is_dynamic		is this link dynamic
+canvas.scheme	SchemeLink	set_enabled	enabled	enable/disable the link
+canvas.scheme	SchemeLink	enabled		is this link enabled
+canvas.scheme	SchemeLink	set_dynamic_enabled	enabled	enable/disable the dynamic link has no effect if the link
+canvas.scheme	SchemeLink	dynamic_enabled		is this a dynamic link and is dynamic_enabled set to true
+canvas.scheme	SchemeLink	set_runtime_state	state	set the link's runtime state
+canvas.scheme	SchemeLink	set_tool_tip	tool_tip	set the link tool tip
+canvas.scheme	SchemeLink	tool_tip		link tool tip
+canvas.scheme		string_eval	source	evaluate a python string literal source raise valueerror if
+canvas.scheme		tuple_eval	source	evaluate a python tuple literal source where the elements are constrained to be int float or string
+canvas.scheme		terminal_eval	source	evaluate a python 'constant' string number none true false source
+canvas.scheme		sniff_version	stream	parse a scheme stream and return the scheme's serialization version string
+canvas.scheme		parse_scheme	scheme stream error_handler allow_pickle_data	parse a saved scheme from stream and populate a scheme instance (:class scheme)
+canvas.scheme		scheme_node_from_element	node_el registry	create a schemenode from an element instance
+canvas.scheme		parse_scheme_v_2_0	etree scheme error_handler widget_registry	parse an elementtree instance
+canvas.scheme		parse_scheme_v_1_0	etree scheme error_handler widget_registry	elementtree instance of an old ows scheme format
+canvas.scheme		inf_range	start step	return an infinite range iterator
+canvas.scheme		scheme_to_etree	scheme data_format pickle_fallback	return an xml etree elementtree representation of the scheme
+canvas.scheme		scheme_to_ows_stream	scheme stream pretty pickle_fallback	write scheme to a a stream in orange scheme ows v 2 0 format
+canvas.scheme		indent	element level indent	indent an instance of a :class element based on
+canvas.scheme		dumps	obj format prettyprint pickle_fallback	serialize obj using format ('json' or 'literal') and return its string representation and the used serialization format ('literal',
+canvas.scheme		literal_dumps	obj prettyprint indent	write obj into a string as a python literal
+canvas.help	HelpManager	set_registry	registry	set the widget registry for which the manager should provide help
+canvas.help	HelpManager	registry		return the previously set with set_registry
+canvas.help		is_develop_egg	dist	is the distribution installed in development mode setup py develop
+canvas.help		left_trim_lines	lines	remove all unnecessary leading space from lines
+canvas.help		trim_trailing_lines	lines	trim trailing blank lines
+canvas.help		trim_leading_lines	lines	trim leading blank lines
+canvas.help		trim	string	trim a string in pep-256 compatible way
+canvas.help		get_meta_entry	dist name	get the contents of the named entry from the distributions pkg-info file
+canvas.help		get_dist_url	dist	return the 'url' of the distribution as passed to setup function
+canvas.application	UserSettingsDialog	__setupUi		set up the ui
+canvas.application		decorate_welcome_icon	icon background_color	return a qicon with a circle shaped background
+canvas.application	WelcomeDialog	setShowAtStartup	show	set the 'show at startup' check box state
+canvas.application	WelcomeDialog	showAtStartup		return the 'show at startup' check box state
+canvas.application	WelcomeDialog	addRow	actions background	add a row with actions
+canvas.application	WelcomeDialog	insertRow	index actions background	insert a row with actions at index
+canvas.application	WelcomeDialog	insertAction	row index action background	insert action in row in position index
+canvas.application	WelcomeDialog	insertButton	row index button	insert button in row in position index
+canvas.application	WelcomeDialog	createButton	action background	create a tool button for action
+canvas.application	WelcomeDialog	buttonAt	i j	return the button at i-t row and j-th column
+canvas.application	WelcomeDialog	triggeredAction		return the action that was triggered by the user
+canvas.application	WelcomeDialog	__on_actionTriggered	action	called when the button action is triggered
+canvas.application	SplitterResizer	setSize	size	set the size of the controlled widget either width or height depending on the orientation
+canvas.application	SplitterResizer	size		return the size of the widget in the splitter either height of width depending on the splitter orientation
+canvas.application	SplitterResizer	setSplitterAndWidget	splitter widget	set the qsplitter and qwidget instance the resizer should control
+canvas.application	SplitterResizer	toogleExpandedAction		return a qaction that can be used to toggle expanded state
+canvas.application	SplitterResizer	open		open the controlled widget expand it to sizehint
+canvas.application	SplitterResizer	close		close the controlled widget shrink to size 0
+canvas.application	SplitterResizer	setExpanded	expanded	set the expanded state
+canvas.application	SplitterResizer	expanded		return the expanded state
+canvas.application	SplitterResizer	__update		update the splitter sizes
+canvas.application	QuickHelpWidget	minimumSizeHint		reimplemented to allow the splitter to resize the widget with a continuous animation
+canvas.application	CanvasToolDock	setQuickHelpVisible	state	set the quick help box visibility status
+canvas.application	CanvasToolDock	setQuickHelpAnimationEnabled	enabled	enable/disable the quick help animation
+canvas.application	CanvasToolDock	toogleQuickHelpAction		return a checkable qaction for help show/hide
+canvas.application	QuickCategoryToolbar	setModel	model	set the registry model
+canvas.application	QuickCategoryToolbar	__initFromModel	model	initialize the toolbar from the model
+canvas.application	QuickCategoryToolbar	createActionForItem	item	create the qaction instance for item
+canvas.application	QuickCategoryToolbar	createButtonForAction	action	create a button for the action
+canvas.application	CategoryPopupMenu	setCategoryItem	item	set the category root item (:class qstandarditem)
+canvas.application		iter_item	item	iterate over child items of a qstandarditem
+canvas.application	WidgetToolGrid	setModel	model rootIndex	set a model (qstandarditemmodel) for the tool grid the
+canvas.application	WidgetToolGrid	model		return the model for the tool grid
+canvas.application	WidgetToolGrid	rootIndex		return the root index of the model
+canvas.application	WidgetToolGrid	setActionRole	role	set the action role this is the model role containing a
+canvas.application	WidgetToolGrid	actionRole		return the action role
+canvas.application	WidgetToolGrid	__initFromModel	model rootIndex	initialize the grid from the model with rootindex as the root
+canvas.application	WidgetToolGrid	__insertItem	index item	insert a widget action (from a qstandarditem) at index
+canvas.application	WidgetToolGrid	__on_rowsInserted	parent start end	insert items from range start end into the grid
+canvas.application	WidgetToolGrid	__on_rowsRemoved	parent start end	remove items from range start end from the grid
+canvas.application	WidgetToolGrid	__startDrag	button	start a drag from button
+canvas.application	WidgetToolBox	setIconSize	size	set the widget icon size icons in the button grid
+canvas.application	WidgetToolBox	iconSize		return the widget buttons icon size
+canvas.application	WidgetToolBox	setButtonSize	size	set fixed widget button size
+canvas.application	WidgetToolBox	buttonSize		return the widget button size
+canvas.application	WidgetToolBox	saveState		return the toolbox state (as a qbytearray)
+canvas.application	WidgetToolBox	restoreState	state	restore the toolbox from a :class qbytearray state
+canvas.application	WidgetToolBox	setModel	model	set the widget registry model (:class qstandarditemmodel) for this toolbox
+canvas.application	WidgetToolBox	__insertItem	item index	insert category item at index
+canvas.application	WidgetToolBox	__on_itemChanged	item	item contents have changed
+canvas.application	WidgetToolBox	__on_rowsInserted	parent start end	items have been inserted in the model
+canvas.application	WidgetToolBox	__on_rowsRemoved	parent start end	rows have been removed from the model
+canvas.application	SchemeInfoEdit	setScheme	scheme	set the scheme to display/edit
+canvas.application	SchemeInfoEdit	commit		commit the current contents of the editor widgets back to the scheme
+canvas.application	SchemeInfoDialog	setShowAtNewScheme	checked	set the 'show at new scheme' check state
+canvas.application	SchemeInfoDialog	showAtNewScheme		return the check state of the 'show at new scheme' check box
+canvas.application	SchemeInfoDialog	setScheme	scheme	set the scheme to display/edit
+canvas.application	OutputView	setMaximumLines	lines	set the maximum number of lines to keep displayed
+canvas.application	OutputView	maximumLines		return the maximum number of lines in the display
+canvas.application	OutputView	clear		clear the displayed text
+canvas.application	OutputView	setCurrentCharFormat	charformat	set the qtextcharformat to be used when writing
+canvas.application	OutputView	toPlainText		return the full contents of the output view
+canvas.application	OutputView	formated	color background weight italic	return a formated file like object proxy
+canvas.application		update_char_format	baseformat color background weight	return a copy of baseformat :class qtextcharformat with updated color weight background and font properties
+canvas.application		update_font	basefont weight italic underline	return a copy of basefont :class qfont with updated properties
+canvas.application.workflows		list_schemes	package	return a list of example workflows
+canvas.application.workflows		workflow_entry_points		return an iterator over all example workflows
+canvas.application.workflows		example_workflows		return all known example workflows
+canvas.application.workflows	ExampleWorkflow	abspath		return absolute filename for the scheme if possible else raise an valueerror
+canvas.application.workflows	ExampleWorkflow	stream		return the workflow file as an open stream
+canvas.utils		find_meta_property	obj name	return a named (name) qmetaproperty of a qobject instance obj
+canvas.utils		find_notifier	obj name	return the notifier signal name (str) for the property of object (instance of qobject)
+canvas.utils	AbstractBoundProperty	set	value	set value to the property
+canvas.utils	AbstractBoundProperty	get		return the property value
+canvas.utils	AbstractBoundProperty	notifyChanged		notify the binding of a change in the property value
+canvas.utils	AbstractBoundProperty	bindTo	source	bind this property to source (instance of abstractboundproperty)
+canvas.utils	AbstractBoundProperty	unbind		unbind the currently bound property (set with bindto)
+canvas.utils	AbstractBoundProperty	update		update the property value from source property (bindto)
+canvas.utils	AbstractBoundProperty	reset		reset the property if possible
+canvas.utils	PropertyBindingExpr	sources		return all source property bindings appearing in the expression namespace
+canvas.utils	BindingManager	bindings		return target source binding tuples
+canvas.utils		binding_for	obj name parent	return a suitable binding for property name of an obj
+canvas.utils		dotted_getattr	obj name	getattr like function accepting a dotted name for attribute lookup
+canvas.utils		qualified_name	obj	return a qualified name for obj type or function
+canvas.utils		name_lookup	qualified_name	return the object referenced by a qualified name dotted name
+canvas.utils		asmodule	module	return the :class module instance named by module
+canvas.preview	PreviewDialog	setItems	items	set the items a list of strings for preview/selection
+canvas.preview	PreviewDialog	setModel	model	set the model for preview/selection
+canvas.preview	PreviewDialog	model		return the model
+canvas.preview	PreviewDialog	setCurrentIndex	index	set the current selected shown index
+canvas.preview	PreviewDialog	setHeading	heading	set heading as the heading string ('<h3>preview</h3>' by default)
+canvas.preview	PreviewDialog	heading		return the heading string
+canvas.preview	TextLabel	setText	text	set the text string to display
+canvas.preview	TextLabel	text		return the text
+canvas.preview	TextLabel	setTextElideMode	mode	set elide mode (qt textelidemode)
+canvas.preview	TextLabel	setAlignment	align	set text alignment (qt alignment)
+canvas.preview	PreviewBrowser	setModel	model	set the item model for preview
+canvas.preview	PreviewBrowser	model		return the item model
+canvas.preview	PreviewBrowser	setPreviewDelegate	delegate	set the delegate to render the preview images
+canvas.preview	PreviewBrowser	setCurrentIndex	index	set the selected preview item index
+canvas.preview	PreviewBrowser	currentIndex		return the current selected index
+canvas.preview	PreviewBrowser	__onSelectionChanged		selected item in the preview list has changed
+canvas.preview	PreviewBrowser	__onDataChanged	topleft bottomRight	data changed update the preview if current index in the changed range
+canvas.preview	PreviewBrowser	__onDoubleClicked	index	double click on an item in the preview item list
+canvas.preview	PreviewBrowser	__update		update the current description
+canvas.preview		preview_parse	scheme_file	return the title description and thumbnail svg image data from a scheme_file can be a file path or a file-like object
+canvas.preview		scheme_svg_thumbnail	scheme_file	load the scheme scheme from a file and return it's svg image representation
+canvas.preview		scan_update	item	given a preview item scan the scheme file ('item path') and update the
+canvas.preview	PreviewModel	delayedScanUpdate	delay	run a delayed preview item scan update
+canvas.preview	PreviewItem	name		return the name title of the item (same as text()
+canvas.preview	PreviewItem	setName	value	set the item name value if not empty will be used as
+canvas.preview	PreviewItem	description		return the detailed description for the item
+canvas.preview	PreviewItem	thumbnail		return the thumbnail svg string for the preview item
+canvas.preview	PreviewItem	setThumbnail	thumbnail	set the thumbnail svg contents as a string
+canvas.preview	PreviewItem	path		return the path item data
+canvas.preview	PreviewItem	setPath	path	set the path data of the item
+canvas.registry	WidgetDescription	from_module	cls module	get the widget description from a module
+canvas.registry	CategoryDescription	from_package	cls package	get the categorydescription from a package
+canvas.registry	WidgetRegistry	categories		return a list all top level :class categorydescription instances ordered by priority
+canvas.registry	WidgetRegistry	category	name	find and return a :class categorydescription by its name
+canvas.registry	WidgetRegistry	has_category	name	return true if a category with name exist in this registry
+canvas.registry	WidgetRegistry	widgets	category	return a list of all widgets in the registry if category is
+canvas.registry	WidgetRegistry	widget	qualified_name	return a :class widgetdescription identified by qualified_name
+canvas.registry	WidgetRegistry	has_widget	qualified_name	return true if the widget with qualified_name exists in this registry
+canvas.registry	WidgetRegistry	register_widget	desc	register a :class widgetdescription instance
+canvas.registry	WidgetRegistry	register_category	desc	register a :class categorydescription instance
+canvas.registry	WidgetRegistry	_insert_category	desc	insert category description into 'registry' list
+canvas.registry	WidgetRegistry	_insert_widget	category desc	insert widget description desc into category
+canvas.registry	QtWidgetRegistry	model		return the widget descriptions in a qt item model instance qstandarditemmodel
+canvas.registry	QtWidgetRegistry	item_for_widget	widget	return the qstandarditem for the widget
+canvas.registry	QtWidgetRegistry	action_for_widget	widget	return the qaction instance for the widget can be a string or a widgetdescription instance
+canvas.registry	QtWidgetRegistry	create_action_for_item	item	create a qaction instance for the widget description item
+canvas.registry	QtWidgetRegistry	_insert_category	desc	override to update the item model and emit the signals
+canvas.registry	QtWidgetRegistry	_insert_widget	category desc	override to update the item model and emit the signals
+canvas.registry	QtWidgetRegistry	_cat_desc_to_std_item	desc	create a qstandarditem for the category description
+canvas.registry	QtWidgetRegistry	_widget_desc_to_std_item	desc category	create a qstandarditem for the widget description
+canvas.registry		tooltip_helper	desc	widget tooltip construction helper
+canvas.registry		whats_this_helper	desc include_more_link	a what's this text construction helper if include_more_link is
+canvas.registry		run_discovery	entry_points_iter cached	run the default discovery and return an instance of :class qtwidgetregistry
+canvas.registry		global_registry	entry_point_group	return a global widgetregistry instance for the entry point group
+canvas.registry		set_global_registry	registry entry_point_group	set the global widgetregistry instance for the entry point group
+canvas.registry		default_category_for_module	module	return a default constructed :class categorydescription for a module
+canvas.registry	WidgetDiscovery	run	entry_points_iter	run the widget discovery process from an entry point iterator (yielding :class pkg_resources
+canvas.registry	WidgetDiscovery	process_widget_module	module name category_name distribution	process a widget module
+canvas.registry	WidgetDiscovery	process_category_package	category name distribution	process a category package
+canvas.registry	WidgetDiscovery	process_loader	callable	process a callable loader function
+canvas.registry	WidgetDiscovery	handle_widget	desc	handle a found widget description
+canvas.registry	WidgetDiscovery	handle_category	desc	handle a found category description
+canvas.registry	WidgetDiscovery	iter_widget_descriptions	package category_name distribution	return an iterator over widget descriptions accessible from package
+canvas.registry	WidgetDiscovery	widget_description	module widget_name category_name distribution	return a widget description from a module
+canvas.registry	WidgetDiscovery	cache_insert	module mtime description distribution	insert the description into the cache
+canvas.registry	WidgetDiscovery	cache_get	mod_path distribution	get the cache entry for mod_path
+canvas.registry	WidgetDiscovery	cache_has_valid_entry	mod_path distribution	does the cache have a valid entry for mod_path
+canvas.registry	WidgetDiscovery	cache_can_ignore	mod_path distribution	can the mod_path be ignored (i e it was determined that it
+canvas.registry	WidgetDiscovery	cache_log_error	mod_path error distribution	cache that the error occurred while processing mod_path
+canvas.registry		fix_pyext	mod_path	fix a module filename path extension to always end with the modules source file (i
+canvas.registry		module_name_split	name	split the module name into package name and module name
+canvas.registry		module_modified_time	module	return the modules source filename and modified time as a tuple (source_filename modified_time)
+canvas.registry		asmodule	module	return the module references by module name if module is
+canvas.registry		run_discovery	entry_point cached	run the default widget discovery and return a :class widgetregistry instance
+canvas.registry		registry_cache_filename		return the pickled registry cache filename also make sure the
+canvas.registry		registry_cache		return the registry cache dictionary
+canvas.registry		save_registry_cache	cache	save pickle the registry cache return true on success
+canvas.report	Report	show_report		raise the report window
+canvas.report	Report	get_widget_name_extension		return the text that is added to the section name in the report
+canvas.report	Report	create_report_html		start a new section in report and call :obj send_report method to add content
+canvas.report	Report	report_items	name items	add a sequence of pairs or an ordereddict as a html list to report
+canvas.report	Report	report_name	name	add a section name to the report
+canvas.report	Report	report_data	name data	add description of data table to the report
+canvas.report	Report	report_domain	name domain	add description of domain to the report
+canvas.report	Report	report_data_brief	name data	add description of data table to the report
+canvas.report	Report	report_plot	name plot	add a plot to the report
+canvas.report	Report	report_table	name table header_rows header_columns	add content of a table to the report
+canvas.report	Report	report_list	name data limit	add a list to the report
+canvas.report	Report	report_paragraph	name text	add a paragraph to the report
+canvas.report	Report	report_caption	text	add caption to the report
+canvas.report	Report	report_raw	name html	add raw html to the report
+canvas.report	Report	combo_value	combo	add the value of a combo box to the report
+canvas.report		plural	s number suffix	insert the number into the string and make plural where marked if needed
+canvas.report		plural_w	s number suffix capitalize	insert the number into the string and make plural where marked if needed
+canvas.report		bool_str	v	convert a boolean to a string
+canvas.report		clip_string	s limit sep	clip a string at a given character and add " " if the string was clipped
+canvas.report		clipped_list	items limit less_lookups total_min	return a clipped comma-separated representation of the list
+canvas.report		get_html_section	name	return a new section as html with the given name and a time stamp
+canvas.report		get_html_subsection	name	return a subsection as html with the given name
+canvas.report		render_items	items	render a sequence of pairs or an ordereddict as a html list
+canvas.report		render_items_vert	items	render a sequence of pairs or an ordereddict as a comma-separated list
+canvas.report		get_html_img	scene	create html img element with base64-encoded image from the scene
+canvas.report		describe_domain	domain	return an :obj ordereddict describing a domain description contains keys "features", "meta attributes" and "targets"
+canvas.report		describe_data	data	return an :obj ordereddict describing the data description contains keys "data instances" with the number of instances
+canvas.report		describe_domain_brief	domain	return an :obj ordereddict with the number of features metas and classes description contains "features" and "meta attributes" with the number of
+canvas.report		describe_data_brief	data	return an :obj ordereddict with a brief description of data
+canvas.report		list_legend	model selected	create html with a legend constructed from a qt model or a view
+preprocess	Discretize	__call__	data	compute and apply discretization of the given data returns a new
+preprocess	Impute	__call__	data	apply an imputation method to the given data set returns a new
+preprocess	RemoveConstant	__call__	data	remove columns with constant values from the data set and return the resulting data table
+preprocess	RemoveNaNClasses	__call__	data	remove rows that contain nan in any class variable from the data set and return the resulting data table
+preprocess	Normalize	__call__	data	compute and apply normalization of the given data returns a new
+preprocess	Randomize	__call__	data	apply randomization of the given data returns a new
+preprocess	PreprocessorList	__call__	data	applies a list of preprocessors to the data set
+preprocess	Transformation	__init__	variable	:param variable the variable whose transformed value is returned
+preprocess	Transformation	__call__	data	return transformed column from the data by extracting the column view from the data and passing it to the transform method
+preprocess	Transformation	transform	c	return the transformed value of the argument c, which can be a number of a vector view
+preprocess	Indicator	__init__	variable value	:param variable the variable whose transformed value is returned
+preprocess	Indicator1	__init__	variable value	:param variable the variable whose transformed value is returned
+preprocess	Normalizer	__init__	variable offset factor	:param variable the variable whose transformed value is returned
+preprocess	Lookup	__init__	variable lookup_table	:param variable the variable whose transformed value is returned
+preprocess	Discretization	__call__	data variable	compute discretization of the given variable on the given data
+preprocess	EntropyMDL	_normalize	cls X axis out	normalize x array so it sums to 1 0 over the axis
+preprocess	EntropyMDL	_entropy_normalized	cls D axis	compute the entropy of distribution array d
+preprocess	EntropyMDL	_entropy	cls D axis	compute the entropy of distribution d
+preprocess	EntropyMDL	_entropy1	cls D	compute the entropy of distributions in d one per each row
+preprocess	EntropyMDL	_entropy2	cls D	compute the entropy of distributions in d one per each row
+preprocess	EntropyMDL	_entropy_cuts_sorted	cls CS	return the class information entropy induced by partitioning the cs distribution at all n-1 candidate cut points
+preprocess	EntropyMDL	_entropy_discretize_sorted	cls C force	entropy discretization on a sorted c
+preprocess	DomainDiscretizer	__call__	data fixed	compute and return discretized domain
+preprocess	Remove	__call__	data	removes unused features or classes from the given data returns a new
+preprocess		is_var	exp	is exp a var node
+preprocess		is_removed	exp	is exp a removed node
+preprocess		_contains	exp cls	does node contain a sub node of type cls
+preprocess		is_reduced	exp	does exp contain a reduced node
+preprocess		is_sorted	exp	does exp contain a reduced node
+preprocess		merge_transforms	exp	merge consecutive removed reduced or transformed nodes
+preprocess		merge_lookup	A B	merge two consecutive lookup transforms into one
+misc		data_dir_base		return the platform dependent application directory
+misc		data_dir		return the platform dependent orange data directory
+misc		widget_settings_dir		return the platform dependent directory where widgets save their settings
+misc		cache_dir		return the platform dependent orange cache directory
+distance		_preprocess	table	remove categorical attributes and impute missing values
+distance		_orange_to_numpy	x	convert :class orange data table and :class orange data rowinstance
+distance	Distance	__call__	e1 e2 axis impute	:param e1 input data instances we calculate distances between all pairs
+distance	SklDistance	__init__	metric name supports_sparse	args metric the metric to be used for distance calculation
+distance	SpearmanDistance	__init__	absolute name	constructor for spearman's and absolute spearman's distances
+distance	PearsonDistance	__init__	absolute name	constructor for pearson's and absolute pearson's distances
+distance	MahalanobisDistance	fit	data axis	compute the covariance matrix needed for calculating distances
+statistics	Continuous	__getitem__	index	return contingencies for a given class value
+statistics		_count_nans_per_row_sparse	X weights	count the number of nans undefined values per row
+statistics		bincount	X max_val weights minlength	return counts of values in array x
+statistics		countnans	X weights axis dtype	count the undefined elements in arr along given axis
+statistics		contingency	X y max_X max_y	compute the contingency matrices for each column of x excluding the masked versus the vector y
+statistics		stats	X weights compute_variance	compute min max #nans mean and variance
+statistics		_sparse_has_zeros	x	check if sparse matrix contains any implicit zeros
+statistics		nanmin	x axis	equivalent of np nammin that supports sparse or dense matrices
+statistics		nanmax	x axis	equivalent of np nammax that supports sparse or dense matrices
+statistics		mean	x	equivalent of np mean that supports sparse or dense matrices
+statistics		nanmean	x	equivalent of np nanmean that supports sparse or dense matrices
+statistics		unique	x return_counts	equivalent of np unique that supports sparse or dense matrices
+statistics		get_distributions_for_columns	data columns	compute the distributions for columns
+statistics	DomainBasicStats	__getitem__	index	index can be a variable variable name or an integer meta attributes
+data	Storage	_compute_basic_stats	columns	compute basic stats for each of the columns
+data	Storage	_compute_distributions	columns	compute distribution of values for the given columns
+data	Storage	_compute_contingency	col_vars row_var	compute contingency matrices for one or more discrete or continuous variables against the specified discrete variable
+data		one_hot	values dtype	return a one-hot transform of values parameters
+data		scale	values min max	return values scaled to [min max]
+data	SharedComputeValue	__call__	data shared_data	fallback if common parts are not passed
+data	SharedComputeValue	compute	data shared_data	given precomputed shared data perform variable-specific part of computation and return new variable values
+data	Instance	__init__	domain data id	construct a new data instance
+data	Instance	domain		the domain describing the instance's values
+data	Instance	x		instance's attributes as a 1-dimensional numpy array whose length equals len(self
+data	Instance	y		instance's classes as a 1-dimensional numpy array whose length equals len(self
+data	Instance	metas		instance's meta attributes as a 1-dimensional numpy array whose length equals len(self
+data	Instance	list		all instance's values including attributes classes and meta attributes as a list whose length equals len(self
+data	Instance	weight		the weight of the data instance default is 1
+data	Instance	attributes		return iterator over the instance's attributes
+data	Instance	classes		return iterator over the instance's class attributes
+data	Instance	get_class		return the class value as an instance of :obj orange data value
+data	Instance	get_classes		return the class value as a list of instances of :obj orange
+data	Instance	set_class	value	set the instance's class throws an exception if there are multiple
+modelling	Fitter	get_learner	problem_type	get the learner for a given problem type
+modelling	Fitter	_change_kwargs	kwargs problem_type	handle the kwargs to be passed to the learner before they are used
+modelling	Fitter	supports_weights		the fitter supports weights if both the classification and regression learners support weights
+modelling	Fitter	get_params	problem_type	access the specific learner params of a given learner
+clustering		data_clustering	data distance linkage	return the hierarchical clustering of the data set's rows
+clustering		feature_clustering	data distance linkage	return the hierarchical clustering of the data set's columns
+clustering		dist_matrix_linkage	matrix linkage	return linkage using a precomputed distance matrix
+clustering		dist_matrix_clustering	matrix linkage	return the hierarchical clustering using a precomputed distance matrix
+clustering		tree_from_linkage	linkage	return a tree representation of a clustering encoded in a linkage matrix
+clustering		leaves	tree branches	return an iterator over the leaf nodes in a tree structure
+clustering		prune	cluster level height condition	prune the clustering instance cluster
+clustering		cluster_depths	cluster	return a dictionary mapping :class tree instances to their depth
+clustering		top_clusters	tree k	return k topmost clusters from hierarchical clustering
+clustering		optimal_leaf_ordering	tree distances progress_callback	order the leaves in the clustering tree
+regression	MeanLearner	fit_storage	data	construct a :obj meanmodel by computing the mean value of the given data
+regression	MeanModel	__init__	dist domain	construct :obj orange regression meanmodel that always returns the
+regression	MeanModel	predict	X	return predictions that is the same mean value for each given instance in x
+projection		torgerson	distances n_components	perform classical mds torgerson scaling
+widgets.model	OWLoadModel	browse		select a filename using an open file dialog
+widgets.model	OWLoadModel	reload		reload the current file
+widgets.model	OWLoadModel	load	filename	load the object from filename and send it to output
+widgets.model	OWLoadModel	_remember	filename	remember filename was accessed
+widgets.model	CustomRuleLearner	set_progress_advance_callback	f	assign callback to update the corresponding widget's progress bar after each generated rule
+widgets.model	CustomRuleLearner	clear_progress_advance_callback		make sure to clear the callback function immediately after the classifier is trained
+widgets.model	CustomRuleLearner	find_rules_and_measure_progress	X Y W target_class	the top-level control procedure of the separate-and-conquer algorithm
+widgets.model	OWRuleLearner	update_model		ensure that the progress bar is updated only if the generated learner is used within this widget (for example it must not be
+widgets.model	OWSaveModel	setModel	model	set input model
+widgets.model	OWSaveModel	save	filename	save the model to filename model must not be none
+widgets.model	OWSaveModel	savecurrent		save the model to current selected filename
+widgets.model	OWSaveModel	browse		select a filename using a save file dialog
+widgets.model	OWRandomForest	get_learner_parameters		called by send report to list the parameters of the learner
+widgets.evaluate		confusion_matrix	res index	compute confusion matrix args
+widgets.evaluate	BorderedItemDelegate	paint	painter option index	overloads paint to draw borders
+widgets.evaluate	OWConfusionMatrix	set_results	results	set the input results
+widgets.evaluate	OWConfusionMatrix	clear		reset the widget clear controls
+widgets.evaluate	OWConfusionMatrix	select_correct		select the diagonal elements of the matrix
+widgets.evaluate	OWConfusionMatrix	select_wrong		select the off-diagonal elements of the matrix
+widgets.evaluate	OWConfusionMatrix	cell_clicked	model_index	handle cell click event
+widgets.evaluate	OWConfusionMatrix	commit		output data instances corresponding to selected cells
+widgets.evaluate	OWLiftCurve	set_results	results	set the input evaluation results
+widgets.evaluate	OWLiftCurve	clear		clear the widget state
+widgets.visualize	OWPythagoreanForest	set_rf	model	when a different forest is given
+widgets.visualize	OWPythagoreanForest	clear		clear all relevant data from the widget
+widgets.visualize	OWPythagoreanForest	update_depth		when the max depth slider is changed
+widgets.visualize	OWPythagoreanForest	update_colors		when the target class or coloring method is changed
+widgets.visualize	OWPythagoreanForest	update_size_calc		when the size calculation of the trees is changed
+widgets.visualize	OWPythagoreanForest	zoom_changed		when we update the "zoom" slider
+widgets.visualize	OWPythagoreanForest	disable_ui		temporarly disable the ui while trees may be redrawn
+widgets.visualize	OWPythagoreanForest	_calculate_zoom	zoom_level	calculate the max size for grid items from zoom level setting
+widgets.visualize	OWPythagoreanForest	onDeleteWidget		when deleting the widget
+widgets.visualize	OWPythagoreanForest	commit		commit the selected tree to output
+widgets.visualize	SklRandomForestAdapter	get_trees		get the tree adapters in the random forest
+widgets.visualize	SklRandomForestAdapter	domain		get the domain
+widgets.visualize	MosaicVizRank	__init__	master	add the spin box for maximal number of attributes
+widgets.visualize	MosaicVizRank	initialize		clear the ordering to trigger recomputation when needed
+widgets.visualize	MosaicVizRank	initialize_keep_ordering		initialize triggered by change of coloring
+widgets.visualize	MosaicVizRank	run		add handling of the spin box for maximal number of attributes
+widgets.visualize	MosaicVizRank	max_attr_changed		change the button label when the maximal number of attributes changes
+widgets.visualize	MosaicVizRank	check_preconditions		require at least one variable to allow ranking
+widgets.visualize	MosaicVizRank	compute_attr_order		order attributes by relief if there is a target variable in case of
+widgets.visualize	MosaicVizRank	state_count		return the number of combinations starting with a single attribute
+widgets.visualize	MosaicVizRank	iterate_states	state	iterate through all combinations of attributes as ordered by relief starting with a single attribute if mosaic is colored by class
+widgets.visualize	MosaicVizRank	compute_score	state	compute score using chi-square test of independence
+widgets.visualize	MosaicVizRank	row_for_state	score state	the row consists of attributes sorted by name class is at the beginning if present so it's on the x-axis and not lost somewhere
+widgets.visualize	OWMosaicDisplay	_get_discrete_data	data	discretizes continuous attributes
+widgets.visualize	OWTreeGraph	set_node_info		set the content of the node
+widgets.visualize	OWTreeGraph	ctree	model	input signal handler
+widgets.visualize	OWTreeGraph	walkcreate	node parent	create a structure of tree nodes from the given model
+widgets.visualize	OWTreeGraph	update_node_info_cls	node	update the printed contents of the node for classification trees
+widgets.visualize	OWTreeGraph	update_node_info_reg	node	update the printed contents of the node for regression trees
+widgets.visualize	OWTreeGraph	toggle_node_color_cls		update the node color for classification trees
+widgets.visualize	OWTreeGraph	toggle_node_color_reg		update the node color for regression trees
+widgets.visualize	OWBoxPlot	draw_axis		draw the horizontal axis and sets self scale_x
+widgets.visualize	OWBoxPlot	draw_axis_disc		draw the horizontal axis and sets self scale_x for discrete attributes
+widgets.visualize		split_domain	domain split_label	split the domain based on values of split_label value
+widgets.visualize		candidate_split_labels	data	return candidate labels on which we can split the data
+widgets.visualize	OWHeatMap	set_dataset	data	set the input dataset to display
+widgets.visualize	OWHeatMap	_make_parts	data group_var group_key	make initial parts for data split by group_var group_key
+widgets.visualize	OWHeatMap	__update_margins		update horizontal dendrogram and text list widgets margins to include the space for average stripe
+widgets.visualize	OWHeatMap	heatmap_widgets		iterate over heatmap widgets
+widgets.visualize	OWHeatMap	label_widgets		iterate over graphicssimpletextlist widgets
+widgets.visualize	OWHeatMap	dendrogram_widgets		iterate over dendrogram widgets
+widgets.visualize	OWHeatMap	update_averages_stripe		update the visibility of the averages stripe
+widgets.visualize	OWHeatMap	update_grid_spacing		update layout spacing
+widgets.visualize	GraphicsHeatmapWidget	clear		clear/reset the widget
+widgets.visualize	GraphicsHeatmapWidget	set_heatmap	heatmap	set the heatmap data for display
+widgets.visualize	GraphicsHeatmapWidget	set_heatmap_data	data	set the heatmap data for display
+widgets.visualize	GraphicsHeatmapWidget	_update_pixmap		update the pixmap if its construction arguments changed
+widgets.visualize	GraphicsHeatmapWidget	cell_at	pos	return the cell row column from pos in local coordinates
+widgets.visualize	GraphicsHeatmapWidget	cell_rect	row column	return a rectangle in local coordinates containing the cell at row and column
+widgets.visualize	GraphicsHeatmapWidget	row_rect	row	return a qrectf in local coordinates containing the entire row
+widgets.visualize	HeatmapScene	select_from_dendrogram	dendrogram key	select all heatmap rows which belong to the dendrogram
+widgets.visualize	GraphicsSimpleTextList	clear		remove all text items
+widgets.visualize	GraphicsSimpleTextList	set_labels	labels	set the text labels to show in the widget
+widgets.visualize	GraphicsSimpleTextList	setAlignment	alignment	set alignment of text items in the widget
+widgets.visualize	HeatmapSelectionManager	select_rows	rows heatmap clear	add rows to selection if heatmap is provided the rows
+widgets.visualize	HeatmapSelectionManager	remove_rows	rows	remove rows from the selection
+widgets.visualize	HeatmapSelectionManager	selection_start	heatmap_widget event	selection started by heatmap_widget due to event
+widgets.visualize	HeatmapSelectionManager	selection_update	heatmap_widget event	selection updated by heatmap_widget due to event mouse drag
+widgets.visualize	HeatmapSelectionManager	selection_finish	heatmap_widget event	selection finished by heatmap_widget due to event
+widgets.visualize	HeatmapSelectionManager	selection_add	start end heatmap clear	add/remove a selection range from start to end
+widgets.visualize	HeatmapSelectionManager	update_selection_rects		update the selection rects
+widgets.visualize	GraphNode	graph_edges		get a list of the edges that stem from the node
+widgets.visualize	GraphNode	graph_add_edge	edge	add an edge stemming from the node
+widgets.visualize	TreeGraphicsScene	_fix_pos	node x y	fix the position of the tree stemming from the given node
+widgets.visualize	OWParallelGraph	add_relevant_selections	old_selection_conditions	keep only conditions related to the currently visualized attributes
+widgets.visualize	OWParallelGraph	draw_statistics		draw lines that represent standard deviation or quartiles
+widgets.visualize	OWParallelGraph	draw_distributions		draw distributions with discrete attributes
+widgets.visualize	OWVennDiagram	_invalidate	keys incremental	invalidate input for a list of input keys
+widgets.visualize		pairwise	iterable	return an iterator over consecutive pairs in iterable
+widgets.visualize		table_concat	tables	concatenate a list of tables
+widgets.visualize		copy_descriptor	descriptor newname	create a copy of the descriptor
+widgets.visualize		reshape_wide	table varlist idvarlist groupvarlist	reshape a data table into a wide format
+widgets.visualize		unique	seq	return an iterator over unique items of seq
+widgets.visualize		varying_between	table idvar	return a list of all variables with non constant values between groups defined by idvar
+widgets.visualize		uniquify	strings	return a list of unique strings
+widgets.visualize		string_attributes	domain	return all string attributes from the domain
+widgets.visualize		discrete_attributes	domain	return all discrete attributes from the domain
+widgets.visualize		source_attributes	domain	return all suitable attributes for the venn diagram
+widgets.visualize		disjoint	sets	return all disjoint subsets
+widgets.visualize		disjoint_set_label	i n simplify	return a html formated label for a disjoint set indexed by i
+widgets.visualize		line_extended	line distance	return an qlinef extended by distance units in the positive direction
+widgets.visualize		group_table_indices	table key_var	group table indices based on values of selected columns (key_vars)
+widgets.visualize		selected_index	view	return the selected integer index row in the view
+widgets.visualize	OWDistributions	display_contingency		set the contingency to display
+widgets.visualize		dist_sum	dXW1 dXW2	a sum of two continuous distributions
+widgets.visualize		average_shifted_histogram	a h m weights	compute the average shifted histogram
+widgets.visualize	OWPythagorasTree	set_tree	model	when a different tree is given
+widgets.visualize	OWPythagorasTree	clear		clear all relevant data from the widget
+widgets.visualize	OWPythagorasTree	update_depth		this method should be called when the depth changes
+widgets.visualize	OWPythagorasTree	update_colors		when the target class / node coloring needs to be updated
+widgets.visualize	OWPythagorasTree	update_size_calc		when the tree size calculation is updated
+widgets.visualize	OWPythagorasTree	invalidate_tree		when the tree needs to be completely recalculated
+widgets.visualize	OWPythagorasTree	update_tooltip_enabled		when the tooltip visibility is changed and need to be updated
+widgets.visualize	OWPythagorasTree	update_show_legend		when the legend visibility needs to be updated
+widgets.visualize	OWPythagorasTree	_update_log_scale_slider		on calc method combo box changed
+widgets.visualize	OWPythagorasTree	_set_max_depth		set the depth to the max depth and update appropriate actors
+widgets.visualize	OWPythagorasTree	onDeleteWidget		when deleting the widget
+widgets.visualize	OWPythagorasTree	commit		commit the selected data to output
+widgets.visualize	OWSilhouettePlot	set_data	data	set the input data set
+widgets.visualize	OWSilhouettePlot	clear		clear the widget state
+widgets.visualize	OWSilhouettePlot	commit		commit/send the current selection to the output
+widgets.visualize	SilhouettePlot	setScores	scores labels values colors	set the silhouette scores/labels to for display
+widgets.visualize	SilhouettePlot	setBarHeight	height	set silhouette bar height row height
+widgets.visualize	SilhouettePlot	barHeight		return the silhouette bar row height
+widgets.visualize	SilhouettePlot	clear		clear the widget state
+widgets.visualize	OWSieveDiagram	set_data	data	discretize continuous attributes and put all attributes and discrete metas into self
+widgets.visualize	OWSieveDiagram	update_attr		update the graph and selection
+widgets.visualize	OWSieveDiagram	set_input_features	attr_list	handler for the features signal
+widgets.visualize	OWSieveDiagram	resolve_shown_attributes		use the attributes from the input signal if the signal is present and at least two attributes appear in the domain
+widgets.visualize	OWSieveDiagram	select_area	area event	add or remove the clicked area from the selection
+widgets.visualize	OWSieveDiagram	update_selection		update the graph pen width to show the current selection
+widgets.visualize	OWSieveDiagram	update_graph		update the graph
+widgets.visualize.utils	Anchorable	recalculate_offset		this is called whenever the item is being moved and needs to recalculate its offset
+widgets.visualize.utils	Anchorable	update_pos		update the widget position relative to the viewport
+widgets.visualize.utils	Anchorable	__calculate_actual_offset	offset	take the offset specified in the constructor and calculate the actual offset from the top left corner of the item so positioning can
+widgets.visualize.utils	AnchorableGraphicsView	update_anchored_items		update all the items that subclass the anchorable class
+widgets.visualize.utils	ContinuousLegendItem	_format_values	values	get the formatted values to output
+widgets.visualize.utils	Legend	set_domain	domain	handle receiving the domain object
+widgets.visualize.utils	Legend	set_items	values	handle receiving an array of items
+widgets.visualize.utils	Legend	setVisible	is_visible	only display the legend if it contains any items
+widgets.visualize.utils	ZoomableGraphicsView	__handle_zoom	direction	handle zoom event direction is positive if zooming in otherwise negative
+widgets.visualize.utils	ZoomableGraphicsView	set_central_widget	widget	set the central widget in the view
+widgets.visualize.utils	ZoomableGraphicsView	central_widget_rect		get the bounding box of the central widget
+widgets.visualize.utils	ZoomableGraphicsView	recalculate_and_fit		recalculate the optimal zoom and fits the content into view
+widgets.visualize.utils	ZoomableGraphicsView	reset_zoom		reset the zoom to the optimal factor
+widgets.visualize.utils		lac	conts k nsteps window_size	k expected classes
+widgets.visualize.utils.tree	SklTreeAdapter	_subnode_range	node	get the range of indices where there are subnodes of the given node
+widgets.visualize.utils.tree	SklTreeAdapter	get_samples_in_leaves		get an array of instance indices that belong to each leaf
+widgets.visualize.utils.tree	Rule	merge_with	rule	merge the current rule with the given rule
+widgets.data	SampleFoldIndices	__init__	folds stratified random_state	samples data based on a number of folds
+widgets.data		add_origin	examples filename	adds attribute with file location to each string variable used for relative filenames stored in string variables (e
+widgets.data	OWFile	dragEnterEvent	event	accept drops of valid file urls
+widgets.data	OWFile	dropEvent	event	handle file drops
+widgets.data	OWMergeData	_compute_reduced_extra_data	var_extra_data	prepare a table with extra columns that will appear in the merged
+widgets.data	OWMergeData	_values	data var as_string	return an iterotor over keys for rows of the table
+widgets.data	OWMergeData	_get_keymap	cls data var as_string	return a generator of pairs key index by enumerating and switching the values for rows (method _values)
+widgets.data	OWMergeData	_augment_indices	var_data extra_map as_string	compute a two-row array of indices
+widgets.data	OWMergeData	_merge_indices	var_data extra_map as_string	use _augment_indices to compute the array of indices
+widgets.data	OWMergeData	_combine_indices	var_data extra_map as_string	use _augment_indices to compute the array of indices
+widgets.data	OWMergeData	_join_table_by_indices	reduced_extra indices	join horizontally self data and reduced_extra taking the pairs
+widgets.data	OWMergeData	_join_array_by_indices	left right indices string_cols	join horizontally two arrays taking pairs of rows given in indices
+widgets.data		selected_row	view	return the index of selected row in a view (:class qlistview) the view's selection mode must be a qabstractitemview
+widgets.data	FeatureConstructorSettingsHandler	is_valid_item	setting descriptor attrs metas	check if descriptor can be used with given domain
+widgets.data	OWFeatureConstructor	setDescriptors	descriptors	set a list of variable descriptors to edit
+widgets.data	OWFeatureConstructor	setData	data	set the input dataset
+widgets.data		freevars	exp env	return names of all free variables in a parsed expression ast
+widgets.data		validate_exp	exp	validate an ast ast expression
+widgets.data		bind_variable	descriptor env	descriptor env ->
+widgets.data		table	shape fill	return a 2d table with shape filed with fill
+widgets.data	OWRank	switchRanksMode	index	switch between discrete/continuous/no_class mode
+widgets.data	OWRank	updateScores	measuresMask	update the current computed scores
+widgets.data	OWRank	updateRankModel	measuresMask	update the rankmodel
+widgets.data	OWRank	onSelectItem	index	called when the user selects/unselects an item in the table view
+widgets.data	OWRank	measuresSelectionChanged	measure	measure selection has changed update column visibility
+widgets.data	OWRank	updateVisibleScoreColumns		update the visible columns of the scores view
+widgets.data	OWImpute	set_default_method	index	set the current selected default imputation method
+widgets.data	OWImpute	get_method_for_column	column_index	returns the imputation method for column by its index
+widgets.data	OWDiscretize	_update_points		update the induced cut points
+widgets.data	OWDiscretize	discretized_domain		return the current effective discretized domain
+widgets.data		_index_to_enum	enum i	enums by default are not int-comparable so use an ad-hoc mapping of
+widgets.data		_enum_to_index	enum key	enums by default are not int-comparable so use an ad-hoc mapping of
+widgets.data	OWPreprocess	load	saved	load a preprocessor list from a dict
+widgets.data	OWPreprocess	save	model	save the preprocessor list to a dict
+widgets.data	OWPreprocess	set_data	data	set the input data set
+widgets.data		slices	indices	group the given integer indices into slices
+widgets.data		source_model	view	return the source model for the qt item view if it uses the qsortfilterproxymodel
+widgets.data		source_indexes	indexes view	map model indexes through a views qsortfilterproxymodel
+widgets.data		delslice	model start end	delete the start end slice rows from the model
+widgets.data	ClassVarListItemModel	dropMimeData	mime action row column	ensure only one variable can be dropped onto the view
+widgets.data	VariablesListItemView	dragEnterEvent	event	reimplemented from qlistview dragenterevent
+widgets.data	VariablesListItemView	acceptsDropEvent	event	should the drop event be accepted?
+widgets.data	ClassVariableItemView	acceptsDropEvent	event	reimplemented ensure only one variable is in the model
+widgets.data	OWSelectAttributes	update_domain_role_hints		update the domain hints to be stored in the widgets settings
+widgets.data	OWSelectAttributes	selected_rows	view	return the selected rows in the view
+widgets.data	OWSelectAttributes	update_completer_model		this gets called when the model for available attributes changes through either drag/drop or the left/right button actions
+widgets.data	OWSelectAttributes	update_completer_prefix	filter	prefixes all items in the completer model with the current already done completion to enable the completion of multiple keywords
+widgets.data	PythonConsole	_moveCursorToInputLine		move the cursor to the input line if not already there if the cursor
+widgets.data	PythonConsole	pasteCode	source	paste source code into the console
+widgets.data	PythonConsole	insertFromMimeData	source	reimplemented from qplaintextedit insertfrommimedata
+widgets.data		interleave	seq1 seq2	interleave elements of seq2 between consecutive elements of seq1
+widgets.data		select_row	view row	select a row in an item view
+widgets.data.utils	BaseEditor	parameters		return the parameters as a dictionary
+widgets.data.utils	BaseEditor	createinstance	params	create the preprocessor instance given the stored parameters dict
+widgets.data.utils	StandardItemModel	moveRow	sourceParent sourceRow destParent destRow	move sourcerow from sourceparent to destinationrow under destparent
+widgets.data.utils	StandardItemModel	moveRows	sourceParent sourceRow count destParent	move count rows starting with the given sourcerow under parent sourceparent to row destrow under parent destparent
+widgets.data.utils	Controller	setModel	model	set the model for the view
+widgets.data.utils	Controller	model		return the model
+widgets.data.utils	Controller	createWidgetFor	index	create a qwidget instance for the index (:class qmodelindex)
+widgets.data.utils	Controller	setWidgetData	widget index	set/update the widget state from the model at index
+widgets.data.utils	Controller	setModelData	widget index	get the data from the widget state and set/update the model at index
+widgets.data.utils	SequenceFlow	addWidget	widget title	add widget with title to list of widgets in the last position
+widgets.data.utils	SequenceFlow	insertWidget	index widget title	insert widget with title at index
+widgets.data.utils	SequenceFlow	removeWidget	widget	remove widget from the list
+widgets.data.utils	SequenceFlow	clear		clear the list remove all widgets
+widgets.data.utils	SequenceFlow	widgets		return a list of all widgets
+widgets.data.utils	SequenceFlow	indexOf	widget	return the index logical position of widget
+widgets.data.utils	SequenceFlow	setTitle	index title	set title for widget at index
+widgets.unsupervised		select_rows	view row_indices command	select rows in view
+widgets.unsupervised		burt_table	data variables	construct a 'burt table' all values cross-tabulation for variables
+widgets.unsupervised		correspondence	A	:param numpy ndarray a
+widgets.unsupervised	OWMDS	set_data	data	set the input data set
+widgets.unsupervised	OWMDS	set_disimilarity	matrix	set the dissimilarity distance matrix
+widgets.unsupervised	OWMDS	set_subset_data	subset_data	set a subset of data input to highlight in the plot
+widgets.unsupervised	OWMDS	__set_update_loop	loop	set the update loop coroutine
+widgets.unsupervised	DendrogramWidget	set_root	root	set the root cluster
+widgets.unsupervised	DendrogramWidget	item	node	return the dendrogramnode instance representing the cluster
+widgets.unsupervised	DendrogramWidget	height_at	point	return the cluster height at the point in widget local coordinates
+widgets.unsupervised	DendrogramWidget	pos_at_height	height	return a point in local coordinates for height in cluster height scale
+widgets.unsupervised	DendrogramWidget	_set_hover_item	item	set the currently highlighted item
+widgets.unsupervised	DendrogramWidget	leaf_items		iterate over the dendrogram leaf items (:class qgraphicsitem)
+widgets.unsupervised	DendrogramWidget	leaf_anchors		iterate over the dendrogram leaf anchor points (:class qpointf)
+widgets.unsupervised	DendrogramWidget	selected_nodes		return the selected clusters
+widgets.unsupervised	DendrogramWidget	set_selected_items	items	set the item selection
+widgets.unsupervised	DendrogramWidget	set_selected_clusters	clusters	set the selected clusters
+widgets.unsupervised	DendrogramWidget	select_item	item state	set the items selection state to select_state
+widgets.unsupervised	DendrogramWidget	_add_selection	item	add selection rooted at item
+widgets.unsupervised	DendrogramWidget	_remove_selection	item	remove selection rooted at item
+widgets.unsupervised	DendrogramWidget	_selected_sub_items	item	return all selected subclusters under item
+widgets.unsupervised	DendrogramWidget	_selected_super_item	item	return the selected super item if it exists
+widgets.unsupervised	DendrogramWidget	_re_enumerate_selections		re enumerate the selection items and update the colors
+widgets.unsupervised	DendrogramWidget	_selection_poly	item	return an selection item covering the selection rooted at item
+widgets.unsupervised	DendrogramWidget	_update_selection_items		update the shapes of selection items after a scale change
+widgets.unsupervised	GraphicsSimpleTextList	clear		remove all text items
+widgets.unsupervised	GraphicsSimpleTextList	set_labels	labels	set the text labels
+widgets.unsupervised	GraphicsSimpleTextList	setAlignment	alignment	set alignment of text items in the widget
+widgets.unsupervised		clusters_at_height	root height	return a list of clusters by cutting the clustering at height
+widgets.unsupervised	OWDistances	set_data	data	set the input data set from which to compute the distances
+widgets.unsupervised	OWDistances	refresh_metrics		refresh available metrics depending on the input data's sparsenes
+widgets.unsupervised	DistanceMapItem	_cellAt	pos	return the i j cell index at pos in local coordinates
+widgets.unsupervised	DistanceMapItem	_cellCloseTo	pos	return the i j cell index closest to pos in local coordinates
+widgets.utils		get_next_name	names name	returns next 'possible' attribute name the name should not be duplicated
+widgets.utils		create_annotated_table	data selected_indices	returns data with concatenated flag column flag column represents
+widgets.utils	ProgressBarMixin	progressBarInit	processEvents	initialize the widget's progress (i e show and set progress to 0%)
+widgets.utils	ProgressBarMixin	progressBarSet	value processEvents	set the current progress bar to value
+widgets.utils	ProgressBarMixin	progressBarValue		return the state of the progress bar
+widgets.utils	ProgressBarMixin	progressBarAdvance	value processEvents	advance the progress bar by value
+widgets.utils	ProgressBarMixin	progressBarFinished	processEvents	stop the widget's progress i e hide the progress bar
+widgets.utils	ProgressBarMixin	progressBar	iterations	context manager for progress bar
+widgets.utils	ScaleData	get_valid_list	indices	get array of 0 and 1 of len = len self data if there is a missing
+widgets.utils	ScaleData	get_valid_indices	indices	get array with numbers that represent the instance indices that have a valid data value
+widgets.utils	ScaleScatterPlotData	get_xy_data_positions	xattr yattr filter_valid copy	create x-y projection of attributes in attrlist
+widgets.utils	DomainEditor	_iter_vals	x	iterate over values of sparse or dense arrays
+widgets.utils	DomainEditor	_to_column	x to_sparse dtype	transform list of values to sparse/dense column array
+widgets.utils	DomainEditor	get_domain	domain data	create domain and dataset from changes made in the widget
+widgets.utils	DomainEditor	_get_column	data source_var source_place	extract column from data and preserve sparsity
+widgets.utils	DomainEditor	parse_domain	domain	convert domain into variable representation used by the vartablemodel
+widgets.utils		locked	mutex	a context manager for locking an instance of a qmutex
+widgets.utils	_TaskDepotThread	transfer	obj thread	transfer obj (:class qobject) instance from this thread to the target thread (a :class qthread)
+widgets.utils	_TaskRunnable	run		reimplemented from qrunnable run
+widgets.utils	_Runnable	run		reimplemented from qrunnable run
+widgets.utils	ThreadExecutor	submit	func	schedule the func(*args **kwargs) to be executed and return an :class future instance representing the result of the computation
+widgets.utils	ThreadExecutor	shutdown	wait	shutdown the executor and free all resources if wait is true then
+widgets.utils	Future	cancel		attempt to cancel the the call return false if the call is
+widgets.utils	Future	cancelled		return true if call was successfully cancelled
+widgets.utils	Future	done		return true if the call was successfully cancelled or finished running
+widgets.utils	Future	running		return true if the call is currently being executed
+widgets.utils	Future	result	timeout	return the result of the :class futures computation if timeout
+widgets.utils	Future	exception	timeout	return the exception instance if any resulting from the execution of the :class future
+widgets.utils	Future	set_result	result	set the result of the computation called by the worker thread
+widgets.utils	Future	set_exception	exception	set the exception instance that was raised by the computation called by the worker thread
+widgets.utils	StateChangedEvent	state		return the new state future pending future cancelled
+widgets.utils	FutureWatcher	isCancelled		was the future cancelled
+widgets.utils	FutureWatcher	isDone		is the future done was cancelled or has finished
+widgets.utils	FutureWatcher	isRunning		is the future running i e has started
+widgets.utils	FutureWatcher	isStarted		has the future computation started
+widgets.utils	FutureWatcher	result		return the result of the computation
+widgets.utils	FutureWatcher	exception		return the exception instance or none if no exception was raised
+widgets.utils	FutureWatcher	customEvent	event	reimplemented from qobject customevent
+widgets.utils	FutureWatcher	_stateChanged	future state	the future state has changed (called by :class future)
+widgets.utils		check_sql_input	f	wrapper for widget's set_data method that first checks if the input
+widgets.utils.plot	OWPlot	__init__	parent name show_legend axes	creates a new graph if your visualization uses axes other than xbottom and yleft, specify them in the
+widgets.utils.plot	OWPlot	map_to_graph	point axes zoom	maps point, which can be ether a tuple of x y a qpoint or a qpointf from data coordinates to plot coordinates
+widgets.utils.plot	OWPlot	map_from_graph	point axes zoom	maps point, which can be ether a tuple of x y a qpoint or a qpointf from plot coordinates to data coordinates
+widgets.utils.plot	OWPlot	activate_zooming		activates the zooming mode where the user can zoom in and out with a single mouse click
+widgets.utils.plot	OWPlot	activate_rectangle_selection		activates the rectangle selection mode where the user can select points in a rectangular area
+widgets.utils.plot	OWPlot	activate_selection		activates the point selection mode where the user can select points by clicking on them
+widgets.utils.plot	OWPlot	activate_polygon_selection		activates the polygon selection mode where the user can select points by drawing a polygon around them
+widgets.utils.plot	OWPlot	activate_panning		activates the panning mode where the user can move the zoom projection by dragging the mouse
+widgets.utils.plot	OWPlot	set_show_main_title	b	shows the main title if b is true, and hides it otherwise
+widgets.utils.plot	OWPlot	set_main_title	t	sets the main title to t
+widgets.utils.plot	OWPlot	set_axis_labels	axis_id labels values	sets the labels of axis axis_id to labels this is used for axes displaying a discrete data type
+widgets.utils.plot	OWPlot	set_axis_scale	axis_id min max step_size	sets the scale of axis axis_id to show an interval between min and max
+widgets.utils.plot	OWPlot	add_custom_curve	curve enableLegend	adds a custom plotitem curve to the plot
+widgets.utils.plot	OWPlot	add_curve	name brushColor penColor size	creates a new :obj owcurve with the specified parameters and adds it to the graph
+widgets.utils.plot	OWPlot	set_main_curve_data	x_data y_data color_data label_data	creates a single curve that can have points of different colors shapes and sizes
+widgets.utils.plot	OWPlot	remove_curve	item	removes item from the plot
+widgets.utils.plot	OWPlot	add_axis	axis_id title title_above title_location	creates an :obj orangewidgets plot owaxis with the specified axis_id and title
+widgets.utils.plot	OWPlot	remove_all_axes	user_only	removes all axes from the plot
+widgets.utils.plot	OWPlot	add_custom_axis	axis_id axis	adds a custom axis with id axis_id to the plot
+widgets.utils.plot	OWPlot	clear		clears the plot removing all curves markers and tooltips
+widgets.utils.plot	OWPlot	clear_markers		removes all markers added with :meth add_marker from the plot
+widgets.utils.plot	OWPlot	update_layout		updates the plot layout
+widgets.utils.plot	OWPlot	update_zoom		updates the zoom transformation of the plot items
+widgets.utils.plot	OWPlot	update_axes	zoom_only	updates the axes
+widgets.utils.plot	OWPlot	replot		replot the entire graph
+widgets.utils.plot	OWPlot	legend		returns the plot's legend which is a :obj orangewidgets plot owlegend
+widgets.utils.plot	OWPlot	transform_from_rects	r1 r2	returns a qtransform that maps from rectangle r1 to r2
+widgets.utils.plot	OWPlot	add_selection	reg	selects all points in the region reg using the current :attr selection_behavior
+widgets.utils.plot	OWPlot	data_rect_for_axes	x_axis y_axis	calculates the bounding rectangle in data coordinates for the axes x_axis and y_axis
+widgets.utils.plot	OWPlot	transform_for_axes	x_axis y_axis	returns the graph transform that maps from data to scene coordinates using axes x_axis and y_axis
+widgets.utils.plot	OWPlot	transform	axis_id value	transforms the value from data to plot coordinates along the axis axis_id
+widgets.utils.plot	OWPlot	inv_transform	axis_id value	transforms the value from plot to data coordinates along the axis axis_id
+widgets.utils.plot	OWPlot	set_palette	p	sets the plot palette to p
+widgets.utils.plot	OWPlot	update_theme		updates the current color theme depending on the value of :attr theme_name
+widgets.utils.plot	VertexBuffer	__init__	data format_description usage	constructs vbo and prepares vertex attribute bindings opengl context must be up already (initializegl
+widgets.utils.plot	VertexBuffer	draw	primitives first count	renders primitives from data array by default it renders triangles using all the data consult
+widgets.utils.plot	OWOpenGLRenderer	set_transform	model view projection viewport	sets current projection model view and viewport transforms model parameter
+widgets.utils.plot	OWOpenGLRenderer	draw_line	position0 position1 color0 color1	draws a line using current transform
+widgets.utils.plot	OWOpenGLRenderer	draw_rectangle	position0 position1 position2 position3	draws a rectangle using current transform vertices must specified in clockwise or counter-clockwise order (otherwise nothing
+widgets.utils.plot	OWOpenGLRenderer	draw_triangle	position0 position1 position2 color0	draws a triangle using current transform
+widgets.utils.plot	OWPlot3D	legend		returns the plot's legend which is a :obj orangewidgets plot owlegend
+widgets.utils.plot	OWPlot3D	get_mvp		return current model view and projection transforms
+widgets.utils.plot	OWPlot3D	set_2D_mode		sets ortho projection and identity modelview transform a convenience method which
+widgets.utils.plot	OWPlot3D	set_features	x_index y_index z_index color_index	explains to the plot how to interpret the data set by :meth set_plot_data its arguments
+widgets.utils.plot	OWPlot3D	set_plot_data	data subset_data	sets the data to be drawn data is expected to be scaled already (see owscatterplot3d for example)
+widgets.utils.plot	OWPlot3D	set_valid_data	valid_data	specifies which examples are invalid and should not be displayed
+widgets.utils.plot	OWPlot3D	set_new_zoom	min max	specifies new zoom in data coordinates zoom is provided in form of plot translation
+widgets.utils.plot	OWPlot3D	zoom_out		restores previous zoom level
+widgets.utils.plot	OWPlot3D	map_to_plot	point	maps point to plot coordinates applies current translation and scale
+widgets.utils.plot	OWPlot3D	map_to_data	point	maps point to data coordinates applies inverse of the current translation and scale
+widgets.utils.plot	OWPlot3D	get_min_max_selected	area	returns min/max x/y/z coordinate values of currently selected points
+widgets.utils.plot	OWPlot3D	get_selected_indices		returns indices of currently selected points examples
+widgets.utils.plot	OWPlot3D	select_points	area behavior	selects all points inside volume specified by rectangular area and current camera transform using selection behavior
+widgets.utils.plot	OWPlot3D	set_selection_behavior	behavior	sets selection behavior
+widgets.utils.plot	OWPlot3D	set_palette	p	sets the plot palette to p
+widgets.utils.plot	OWPlot3D	clear		clears the plot legend but remembers plot transformations zoom scale translation
+widgets.utils.plot	OWPlot3D	clear_plot_transformations		forgets plot transformations zoom scale translation
+widgets.utils.plot		resize_plot_item_list	lst size item_type parent	efficiently resizes a list of qgraphicsitems plotitems curves etc
+widgets.utils.plot		move_item	item pos animate duration	animates item to move to position pos
+widgets.utils.plot	TooltipManager	addToolTip	x y text customX	adds a tool tip if a tooltip with the same name already exists it updates it instead of adding a new one
+widgets.utils.plot	TooltipManager	maybeTip	x y	decides whether to pop up a tool tip and which text to show in it
+widgets.utils.plot	TooltipManager	removeAll		removes all tips
+widgets.utils.plot	PolygonCurve	polygon_from_data	xData yData	creates a polygon from a list of x and y coordinates
+widgets.utils.plot	PlotGrid	set_x_enabled	b	enables or disabled vertial grid lines
+widgets.utils.plot	PlotGrid	is_x_enabled		returns whether vertical grid lines are enabled
+widgets.utils.plot	PlotGrid	set_y_enabled	b	enables or disabled horizontal grid lines
+widgets.utils.plot	PlotGrid	is_y_enabled		returns whether horizontal grid lines are enabled
+widgets.utils.plot	PlotGrid	set_pen	pen	sets the pen used for drawing the grid lines
+widgets.utils.plot	OWLegend	clear		removes all items from the legend
+widgets.utils.plot	OWLegend	add_curve	curve	adds a legend item with the same point symbol and name as curve
+widgets.utils.plot	OWLegend	add_item	category value point	adds an item with title value and point symbol point to the specified category
+widgets.utils.plot	OWLegend	remove_category	category	removes category and all items that belong to it
+widgets.utils.plot	OWLegend	update_items		updates the legend repositioning the items according to the legend's orientation
+widgets.utils.plot	OWLegend	set_orientation	orientation	sets the legend's orientation to orientation
+widgets.utils.plot	OWLegend	set_floating	floating pos	if floating is true, the legend can be dragged with the mouse
+widgets.utils.plot	OWPlotGUI	_check_box	widget value label cb_name	adds a :obj qcheckbox to widget
+widgets.utils.plot	OWPlotGUI	antialiasing_check_box	widget	creates a check box that toggles the antialiasing of the plot
+widgets.utils.plot	OWPlotGUI	show_legend_check_box	widget	creates a check box that shows and hides the plot legend
+widgets.utils.plot	OWPlotGUI	animations_check_box	widget	creates a check box that enabled or disables animations
+widgets.utils.plot	OWPlotGUI	point_size_slider	widget	creates a slider that controls point size
+widgets.utils.plot	OWPlotGUI	alpha_value_slider	widget	creates a slider that controls point transparency
+widgets.utils.plot	OWPlotGUI	color_value_combo	widget	creates a combo box that controls point color
+widgets.utils.plot	OWPlotGUI	shape_value_combo	widget	creates a combo box that controls point shape
+widgets.utils.plot	OWPlotGUI	size_value_combo	widget	creates a combo box that controls point size
+widgets.utils.plot	OWPlotGUI	label_value_combo	widget	creates a combo box that controls point label
+widgets.utils.plot	OWPlotGUI	point_properties_box	widget box	creates a box with controls for common point properties
+widgets.utils.plot	OWPlotGUI	plot_settings_box	widget box	creates a box with controls for common plot settings
+widgets.utils.plot	OWPlotGUI	create_box	ids widget box name	creates a :obj qgroupbox with text name and adds it to widget
+widgets.utils.plot	OWPlotGUI	tool_button	id widget	creates an :obj owbutton and adds it to the parent widget
+widgets.utils.plot	OWPlotGUI	menu_button	main_action_id ids widget	creates an :obj owbutton with a popup-menu and adds it to the parent widget
+widgets.utils.plot	OWPlotGUI	state_buttons	orientation buttons widget nomargin	this function creates a set of checkable buttons and connects them so that only one may be checked at a time
+widgets.utils.plot	OWPlotGUI	toolbar	widget text orientation buttons	creates an :obj owtoolbar with the specified text, orientation and buttons and adds it to widget

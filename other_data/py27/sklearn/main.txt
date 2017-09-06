@@ -1,0 +1,1532 @@
+core		_cov	X shrinkage	estimate covariance matrix using optional shrinkage
+core		_class_means	X y	compute class means
+core		_class_cov	X y priors shrinkage	compute class covariance matrix
+core	LinearDiscriminantAnalysis	_solve_lsqr	X y shrinkage	least squares solver
+core	LinearDiscriminantAnalysis	fit	X y	fit lineardiscriminantanalysis model according to the given training data and parameters
+core	LinearDiscriminantAnalysis	transform	X	project data to maximize class separation
+core	LinearDiscriminantAnalysis	predict_log_proba	X	estimate log probability
+core	QuadraticDiscriminantAnalysis	fit	X y	fit the model according to the given training data and parameters
+core	QuadraticDiscriminantAnalysis	decision_function	X	apply decision function to an array of samples
+core	QuadraticDiscriminantAnalysis	predict	X	perform classification on an array of test vectors x
+core	QuadraticDiscriminantAnalysis	predict_proba	X	return posterior probabilities of classification
+core	QuadraticDiscriminantAnalysis	predict_log_proba	X	return posterior probabilities of classification
+core		johnson_lindenstrauss_min_dim	n_samples eps	find a 'safe' number of components to randomly project to the distortion introduced by a random projection p only changes the
+core		_check_density	density n_features	factorize density check according to li et al
+core		_check_input_size	n_components n_features	factorize argument checking for random matrix generation
+core		gaussian_random_matrix	n_components n_features random_state	generate a dense gaussian random matrix
+core		sparse_random_matrix	n_components n_features density random_state	generalized achlioptas random sparse matrix for random projection setting density to 1 / 3 will yield the original matrix by dimitris
+core	BaseRandomProjection	_make_random_matrix	n_components n_features	generate the random projection matrix parameters
+core	BaseRandomProjection	fit	X y	generate a sparse random projection matrix parameters
+core	BaseRandomProjection	transform	X y	project the data by using matrix product with the random matrix parameters
+core	GaussianRandomProjection	_make_random_matrix	n_components n_features	generate the random projection matrix parameters
+core	SparseRandomProjection	_make_random_matrix	n_components n_features	generate the random projection matrix parameters
+core		_translate_train_sizes	train_sizes n_max_training_samples	determine absolute sizes of training subsets and validate 'train_sizes'
+core		_incremental_fit_estimator	estimator X y classes	train estimator on training subsets incrementally and compute scores
+core	RBFSampler	fit	X y	fit the model with x
+core	RBFSampler	transform	X y	apply the approximate feature map to x
+core	SkewedChi2Sampler	fit	X y	fit the model with x
+core	SkewedChi2Sampler	transform	X y	apply the approximate feature map to x
+core	AdditiveChi2Sampler	transform	X y	apply approximate feature map to x
+core	Nystroem	fit	X y	fit estimator to data
+core	Nystroem	transform	X	apply feature map to x
+core		_first_and_last_element	arr	returns first and last element of numpy array or sparse matrix
+core		clone	estimator safe	constructs a new estimator with the same parameters
+core		_pprint	params offset printer	pretty print the dictionary 'params' parameters
+core	BaseEstimator	_get_param_names	cls	get parameter names for the estimator
+core	BaseEstimator	get_params	deep	get parameters for this estimator
+core	BaseEstimator	set_params		set the parameters of this estimator
+core	ClassifierMixin	score	X y sample_weight	returns the mean accuracy on the given test data and labels
+core	RegressorMixin	score	X y sample_weight	returns the coefficient of determination r^2 of the prediction
+core	ClusterMixin	fit_predict	X y	performs clustering on x and returns cluster labels
+core	BiclusterMixin	biclusters_		convenient way to get row and column indicators together
+core	BiclusterMixin	get_indices	i	row and column indices of the i'th bicluster
+core	BiclusterMixin	get_shape	i	shape of the i'th bicluster
+core	BiclusterMixin	get_submatrix	i data	returns the submatrix corresponding to bicluster i
+core	TransformerMixin	fit_transform	X y	fit to data then transform it
+core	DensityMixin	score	X y	returns the score of the model on the data x
+core		is_classifier	estimator	returns true if the given estimator is probably a classifier
+core		is_regressor	estimator	returns true if the given estimator is probably a regressor
+core	BaseNB	_joint_log_likelihood	X	compute the unnormalized posterior log probability of x i
+core	BaseNB	predict	X	perform classification on an array of test vectors x
+core	BaseNB	predict_log_proba	X	return log-probability estimates for the test vector x
+core	BaseNB	predict_proba	X	return probability estimates for the test vector x
+core	GaussianNB	fit	X y sample_weight	fit gaussian naive bayes according to x y parameters
+core	GaussianNB	_update_mean_variance	n_past mu var X	compute online update of gaussian mean and variance
+core	GaussianNB	partial_fit	X y classes sample_weight	incremental fit on a batch of samples
+core	GaussianNB	_partial_fit	X y classes _refit	actual implementation of gaussian nb fitting
+core	BaseDiscreteNB	partial_fit	X y classes sample_weight	incremental fit on a batch of samples
+core	BaseDiscreteNB	fit	X y sample_weight	fit naive bayes classifier according to x y parameters
+core	MultinomialNB	_count	X Y	count and smooth feature occurrences
+core	MultinomialNB	_update_feature_log_prob		apply smoothing to raw counts and recompute log probabilities
+core	MultinomialNB	_joint_log_likelihood	X	calculate the posterior log probability of the samples x
+core	BernoulliNB	_count	X Y	count and smooth feature occurrences
+core	BernoulliNB	_update_feature_log_prob		apply smoothing to raw counts and recompute log probabilities
+core	BernoulliNB	_joint_log_likelihood	X	calculate the posterior log probability of the samples x
+core	_PartitionIterator	_iter_test_masks		generates boolean masks corresponding to test sets
+core	_PartitionIterator	_iter_test_indices		generates integer indices corresponding to test sets
+core	BaseShuffleSplit	_iter_indices		generate train test indices
+core		_approximate_mode	class_counts n_draws rng	computes approximate mode of multivariate hypergeometric
+core		_index_param_value	X v indices	private helper function for parameter value indexing
+core		cross_val_predict	estimator X y cv	generate cross-validated estimates for each input data point
+core		_fit_and_predict	estimator X y train	fit estimator and predict values for a given dataset split
+core		_check_is_partition	locs n	check whether locs is a reordering of the array np arange n
+core		cross_val_score	estimator X y scoring	evaluate a score by cross-validation
+core		_fit_and_score	estimator X y scorer	fit estimator and compute scores for a given dataset split
+core		_safe_split	estimator X y indices	create subset of dataset and properly handle kernels
+core		_score	estimator X_test y_test scorer	compute the score of an estimator on a given test set
+core		_permutation_test_score	estimator X y cv	auxiliary function for permutation_test_score
+core		_shuffle	y labels random_state	return a shuffled copy of y eventually shuffle among same labels
+core		check_cv	cv X y classifier	input checker utility for building a cv in a user friendly way
+core		permutation_test_score	estimator X y cv	evaluate the significance of a cross-validated score with permutations
+core		train_test_split		split arrays or matrices into random train and test subsets
+core	MultiOutputEstimator	partial_fit	X y classes sample_weight	incrementally fit the model to data
+core	MultiOutputEstimator	fit	X y sample_weight	fit the model to data
+core	MultiOutputEstimator	predict	X	predict multi-output variable using a model trained for each target variable
+core	MultiOutputRegressor	partial_fit	X y sample_weight	incrementally fit the model to data
+core	MultiOutputRegressor	score	X y sample_weight	returns the coefficient of determination r^2 of the prediction
+core	MultiOutputClassifier	score	X y	"returns the mean accuracy on the given test data and labels
+core		_fit_binary	estimator X y classes	fit a single binary estimator
+core		_partial_fit_binary	estimator X y	partially fit a single binary estimator
+core		_predict_binary	estimator X	make predictions using a single binary estimator
+core		_check_estimator	estimator	make sure that an estimator implements the necessary methods
+core	OneVsRestClassifier	fit	X y	fit underlying estimators
+core	OneVsRestClassifier	partial_fit	X y classes	partially fit underlying estimators should be used when memory is inefficient to train all data
+core	OneVsRestClassifier	predict	X	predict multi-class targets using underlying estimators
+core	OneVsRestClassifier	decision_function	X	returns the distance of each sample from the decision boundary for each class
+core	OneVsRestClassifier	multilabel_		whether this is a multilabel classifier
+core	OneVsRestClassifier	_pairwise		indicate if wrapped estimator is using a precomputed gram matrix
+core		_fit_ovo_binary	estimator X y i	fit a single binary estimator one-vs-one
+core		_partial_fit_ovo_binary	estimator X y i	partially fit a single binary estimator one-vs-one
+core	OneVsOneClassifier	fit	X y	fit underlying estimators
+core	OneVsOneClassifier	partial_fit	X y classes	partially fit underlying estimators should be used when memory is inefficient to train all data
+core	OneVsOneClassifier	predict	X	estimate the best class label for each sample in x
+core	OneVsOneClassifier	decision_function	X	decision function for the onevsoneclassifier
+core	OneVsOneClassifier	_pairwise		indicate if wrapped estimator is using a precomputed gram matrix
+core	OutputCodeClassifier	fit	X y	fit underlying estimators
+core	OutputCodeClassifier	predict	X	predict multi-class targets using underlying estimators
+core		setup_module	module	fixture for the tests to assure globally controllable seeding of rngs
+core	ParameterGrid	__iter__		iterate over the points in the grid
+core	ParameterGrid	__len__		number of points on the grid
+core	ParameterGrid	__getitem__	ind	get the parameters that would be indth in iteration
+core	ParameterSampler	__len__		number of points that will be sampled
+core		fit_grid_point	X y estimator parameters	run fit on one set of parameters
+core	_CVScoreTuple	__repr__		simple custom repr to summarize the main info
+core	BaseSearchCV	score	X y	returns the score on the given data if the estimator has been refit
+core	BaseSearchCV	predict	X	call predict on the estimator with the best found parameters
+core	BaseSearchCV	predict_proba	X	call predict_proba on the estimator with the best found parameters
+core	BaseSearchCV	predict_log_proba	X	call predict_log_proba on the estimator with the best found parameters
+core	BaseSearchCV	decision_function	X	call decision_function on the estimator with the best found parameters
+core	BaseSearchCV	transform	X	call transform on the estimator with the best found parameters
+core	BaseSearchCV	inverse_transform	Xt	call inverse_transform on the estimator with the best found parameters
+core	BaseSearchCV	_fit	X y parameter_iterable	actual fitting performing the search over parameters
+core	GridSearchCV	fit	X y	run fit with all sets of parameters
+core	RandomizedSearchCV	fit	X y	run fit on the estimator with randomly drawn parameters
+core	KernelRidge	fit	X y sample_weight	fit kernel ridge regression model parameters
+core	KernelRidge	predict	X	predict using the kernel ridge model parameters
+core	Pipeline	get_params	deep	get parameters for this estimator
+core	Pipeline	set_params		set the parameters of this estimator
+core	Pipeline	fit	X y	fit the model fit all the transforms one after the other and transform the
+core	Pipeline	fit_transform	X y	fit the model and transform with the final estimator fits all the transforms one after the other and transforms the
+core	Pipeline	predict	X	apply transforms to the data and predict with the final estimator parameters
+core	Pipeline	fit_predict	X y	applies fit_predict of last step in pipeline after transforms
+core	Pipeline	predict_proba	X	apply transforms and predict_proba of the final estimator parameters
+core	Pipeline	decision_function	X	apply transforms and decision_function of the final estimator parameters
+core	Pipeline	predict_log_proba	X	apply transforms and predict_log_proba of the final estimator parameters
+core	Pipeline	transform		apply transforms and transform with the final estimator this also works where final estimator is none: all prior
+core	Pipeline	inverse_transform		apply inverse transformations in reverse order all estimators in the pipeline must support inverse_transform
+core	Pipeline	score	X y sample_weight	apply transforms and score with the final estimator parameters
+core		_name_estimators	estimators	generate names for estimators
+core		make_pipeline		construct a pipeline from the given estimators
+core	FeatureUnion	get_params	deep	get parameters for this estimator
+core	FeatureUnion	set_params		set the parameters of this estimator
+core	FeatureUnion	_iter		generate name est weight tuples excluding none transformers
+core	FeatureUnion	get_feature_names		get feature names from all transformers
+core	FeatureUnion	fit	X y	fit all transformers using x
+core	FeatureUnion	fit_transform	X y	fit all transformers transform the data and concatenate results
+core	FeatureUnion	transform	X	transform x separately by each transformer concatenate results
+core		make_union		construct a featureunion from the given transformers
+core	DummyClassifier	fit	X y sample_weight	fit the random classifier
+core	DummyClassifier	predict	X	perform classification on test vectors x
+core	DummyClassifier	predict_proba	X	return probability estimates for the test vectors x
+core	DummyClassifier	predict_log_proba	X	return log probability estimates for the test vectors x
+core	DummyRegressor	fit	X y sample_weight	fit the random regressor
+core	DummyRegressor	predict	X	perform classification on test vectors x
+core		check_increasing	x y	determine whether y is monotonically correlated with x
+core		isotonic_regression	y sample_weight y_min y_max	solve the isotonic regression model : min sum w[i] (y[i] - y_[i]) ** 2
+core	IsotonicRegression	_build_f	X y	build the f_ interp1d function
+core	IsotonicRegression	_build_y	X y sample_weight trim_duplicates	build the y_ isotonicregression
+core	IsotonicRegression	fit	X y sample_weight	fit the model using x y as training data
+core	IsotonicRegression	transform	T	transform new data by linear interpolation parameters
+core	IsotonicRegression	predict	T	predict new data by linear interpolation
+core	IsotonicRegression	__getstate__		pickle-protocol - return state of the estimator
+core	IsotonicRegression	__setstate__	state	pickle-protocol - set state of the estimator
+core	CalibratedClassifierCV	fit	X y sample_weight	fit the calibrated model parameters
+core	CalibratedClassifierCV	predict_proba	X	posterior probabilities of classification this function returns posterior probabilities of classification
+core	CalibratedClassifierCV	predict	X	predict the target of new samples can be different from the
+core	_CalibratedClassifier	fit	X y sample_weight	calibrate the fitted model parameters
+core	_CalibratedClassifier	predict_proba	X	posterior probabilities of classification this function returns posterior probabilities of classification
+core		_sigmoid_calibration	df y sample_weight	probability calibration with sigmoid method platt 2000 parameters
+core	_SigmoidCalibration	fit	X y sample_weight	fit the model using x y as training data
+core	_SigmoidCalibration	predict	T	predict new data by linear interpolation
+core		calibration_curve	y_true y_prob normalize n_bins	compute true and predicted probabilities for a calibration curve
+svm		l1_min_c	X y loss fit_intercept	return the lowest bound for c such that for c in (l1_min_c infinity) the model is guaranteed not to be empty
+svm	LinearSVC	fit	X y sample_weight	fit the model according to the given training data
+svm	LinearSVR	fit	X y sample_weight	fit the model according to the given training data
+svm	OneClassSVM	fit	X y sample_weight	detects the soft boundary of the set of samples x
+svm	OneClassSVM	decision_function	X	distance of the samples x to the separating hyperplane
+svm	OneClassSVM	predict	X	perform classification on samples in x
+svm		_one_vs_one_coef	dual_coef n_support support_vectors	generate primal coefficients from dual coefficients for the one-vs-one multi class libsvm in the case
+svm	BaseLibSVM	fit	X y sample_weight	fit the svm model according to the given training data
+svm	BaseLibSVM	_validate_targets	y	validation of y and class_weight
+svm	BaseLibSVM	predict	X	perform regression on samples in x
+svm	BaseLibSVM	_compute_kernel	X	return the data transformed by a callable kernel
+svm	BaseLibSVM	_decision_function	X	distance of the samples x to the separating hyperplane
+svm	BaseSVC	decision_function	X	distance of the samples x to the separating hyperplane
+svm	BaseSVC	predict	X	perform classification on samples in x
+svm	BaseSVC	predict_proba		compute probabilities of possible outcomes for samples in x
+svm	BaseSVC	predict_log_proba		compute log probabilities of possible outcomes for samples in x
+svm		_get_liblinear_solver_type	multi_class penalty loss dual	find the liblinear magic number for the solver
+svm		_fit_liblinear	X y C fit_intercept	used by logistic regression and cv and linearsvc
+covariance		_objective	mle precision_ alpha	evaluation of the graph-lasso objective function the objective function is made of a shifted scaled version of the
+covariance		_dual_gap	emp_cov precision_ alpha	expression of the dual gap convergence criterion the specific definition is given in duchi "projected subgradient methods
+covariance		alpha_max	emp_cov	find the maximum alpha for which there are some non-zeros off-diagonal
+covariance		graph_lasso	emp_cov alpha cov_init mode	l1-penalized covariance estimator read more in the :ref user guide <sparse_inverse_covariance>
+covariance		graph_lasso_path	X alphas cov_init X_test	l1-penalized covariance estimator along a path of decreasing alphas read more in the :ref user guide <sparse_inverse_covariance>
+covariance	GraphLassoCV	fit	X y	fits the graphlasso covariance model to x
+covariance		c_step	X n_support remaining_iterations initial_estimates	c_step procedure described in [rouseeuw1984]_ aiming at computing mcd
+covariance		select_candidates	X n_support n_trials select	finds the best pure subset of observations to compute mcd from it
+covariance		fast_mcd	X support_fraction cov_computation_method random_state	estimates the minimum covariance determinant matrix
+covariance	MinCovDet	fit	X y	fits a minimum covariance determinant with the fastmcd algorithm
+covariance	MinCovDet	correct_covariance	data	apply a correction to raw minimum covariance determinant estimates
+covariance	MinCovDet	reweight_covariance	data	re-weight raw minimum covariance determinant estimates
+covariance	OutlierDetectionMixin	decision_function	X raw_values	compute the decision function of the given observations
+covariance	OutlierDetectionMixin	predict	X	outlyingness of observations in x according to the fitted model
+covariance		log_likelihood	emp_cov precision	computes the sample mean of the log_likelihood under a covariance model
+covariance		empirical_covariance	X assume_centered	computes the maximum likelihood covariance estimator parameters
+covariance	EmpiricalCovariance	_set_covariance	covariance	saves the covariance and precision estimates storage is done accordingly to self
+covariance	EmpiricalCovariance	get_precision		getter for the precision matrix
+covariance	EmpiricalCovariance	fit	X y	fits the maximum likelihood estimator covariance model according to the given training data and parameters
+covariance	EmpiricalCovariance	score	X_test y	computes the log-likelihood of a gaussian data set with self
+covariance	EmpiricalCovariance	error_norm	comp_cov norm scaling squared	computes the mean squared error between two covariance estimators
+covariance	EmpiricalCovariance	mahalanobis	observations	computes the squared mahalanobis distances of given observations
+covariance		shrunk_covariance	emp_cov shrinkage	calculates a covariance matrix shrunk on the diagonal read more in the :ref user guide <shrunk_covariance>
+covariance	ShrunkCovariance	fit	X y	fits the shrunk covariance model according to the given training data and parameters
+covariance		ledoit_wolf_shrinkage	X assume_centered block_size	estimates the shrunk ledoit-wolf covariance matrix
+covariance		ledoit_wolf	X assume_centered block_size	estimates the shrunk ledoit-wolf covariance matrix
+covariance	LedoitWolf	fit	X y	fits the ledoit-wolf shrunk covariance model according to the given training data and parameters
+covariance		oas	X assume_centered	estimate covariance with the oracle approximating shrinkage algorithm
+covariance	OAS	fit	X y	fits the oracle approximating shrinkage covariance model according to the given training data and parameters
+mixture		log_normalize	v axis	normalized probabilities from unnormalized log-probabilites
+mixture		wishart_log_det	a b detB n_features	expected value of the log of the determinant of a wishart the expected value of the logarithm of the determinant of a
+mixture		wishart_logz	v s dets n_features	the logarithm of the normalization constant for the wishart distribution
+mixture		_bound_wishart	a B detB	returns a function of the dof scale matrix and its determinant
+mixture		_sym_quad_form	x mu A	helper function to calculate symmetric quadratic form x t * a * x
+mixture		_bound_state_log_lik	X initial_bound precs means	update the bound with likelihood terms for standard covariance types
+mixture	_DPGMMBase	_get_precisions		return precisions as a full matrix
+mixture	_DPGMMBase	score_samples	X	return the likelihood of the data under the model
+mixture	_DPGMMBase	_update_concentration	z	update the concentration parameters for each cluster
+mixture	_DPGMMBase	_update_means	X z	update the variational distributions for the means
+mixture	_DPGMMBase	_update_precisions	X z	update the variational distributions for the precisions
+mixture	_DPGMMBase	_monitor	X z n end	monitor the lower bound during iteration debug method to help see exactly when it is failing to converge as
+mixture	_DPGMMBase	_do_mstep	X z params	maximize the variational lower bound update each of the parameters to maximize the lower bound
+mixture	_DPGMMBase	_initialize_gamma		initializes the concentration parameters
+mixture	_DPGMMBase	_bound_concentration		the variational lower bound for the concentration parameter
+mixture	_DPGMMBase	_bound_means		the variational lower bound for the mean parameters
+mixture	_DPGMMBase	_bound_precisions		returns the bound term related to precisions
+mixture	_DPGMMBase	_bound_proportions	z	returns the bound term related to proportions
+mixture	_DPGMMBase	lower_bound	X z	returns a lower bound on model evidence based on x and membership
+mixture	_DPGMMBase	_fit	X y	estimate model parameters with the variational algorithm
+mixture	VBGMM	_fit	X y	estimate model parameters with the variational algorithm
+mixture	VBGMM	score_samples	X	return the likelihood of the data under the model
+mixture	VBGMM	_monitor	X z n end	monitor the lower bound during iteration debug method to help see exactly when it is failing to converge as
+mixture		_check_shape	param param_shape name	validate the shape of the input parameter 'param'
+mixture		_check_X	X n_components n_features	check the input data x
+mixture	BaseMixture	_check_initial_parameters	X	check values of the basic parameters
+mixture	BaseMixture	_check_parameters	X	check initial parameters of the derived class
+mixture	BaseMixture	_initialize_parameters	X random_state	initialize the model parameters
+mixture	BaseMixture	_initialize	X resp	initialize the model parameters of the derived class
+mixture	BaseMixture	fit	X y	estimate model parameters with the em algorithm
+mixture	BaseMixture	score_samples	X	compute the weighted log probabilities for each sample
+mixture	BaseMixture	score	X y	compute the per-sample average log-likelihood of the given data x
+mixture	BaseMixture	predict	X y	predict the labels for the data samples in x using trained model
+mixture	BaseMixture	predict_proba	X	predict posterior probability of data per each component
+mixture	BaseMixture	sample	n_samples	generate random samples from the fitted gaussian distribution
+mixture	BaseMixture	_estimate_weighted_log_prob	X	estimate the weighted log-probabilities log p(x | z) + log weights
+mixture	BaseMixture	_estimate_log_weights		estimate log-weights in em algorithm e[ log pi ] in vb algorithm
+mixture	BaseMixture	_estimate_log_prob	X	estimate the log-probabilities log p(x | z)
+mixture	BaseMixture	_estimate_log_prob_resp	X	estimate log probabilities and responsibilities for each sample
+mixture	BaseMixture	_print_verbose_msg_init_beg	n_init	print verbose message on initialization
+mixture	BaseMixture	_print_verbose_msg_iter_end	n_iter diff_ll	print verbose message on initialization
+mixture	BaseMixture	_print_verbose_msg_init_end	ll	print verbose message on the end of iteration
+mixture		_check_weights	weights n_components	check the user provided 'weights'
+mixture		_check_means	means n_components n_features	validate the provided 'means'
+mixture		_check_precision_positivity	precision covariance_type	check a precision vector is positive-definite
+mixture		_check_precision_matrix	precision covariance_type	check a precision matrix is symmetric and positive-definite
+mixture		_check_precisions_full	precisions covariance_type	check the precision matrices are symmetric and positive-definite
+mixture		_check_precisions	precisions covariance_type n_components n_features	validate user provided precisions
+mixture		_estimate_gaussian_covariances_full	resp X nk means	estimate the full covariance matrices
+mixture		_estimate_gaussian_covariances_tied	resp X nk means	estimate the tied covariance matrix
+mixture		_estimate_gaussian_covariances_diag	resp X nk means	estimate the diagonal covariance vectors
+mixture		_estimate_gaussian_covariances_spherical	resp X nk means	estimate the spherical variance values
+mixture		_estimate_gaussian_parameters	X resp reg_covar covariance_type	estimate the gaussian distribution parameters
+mixture		_compute_precision_cholesky	covariances covariance_type	compute the cholesky decomposition of the precisions
+mixture		_compute_log_det_cholesky	matrix_chol covariance_type n_features	compute the log-det of the cholesky decomposition of matrices
+mixture		_estimate_log_gaussian_prob	X means precisions_chol covariance_type	estimate the log gaussian probability
+mixture	GaussianMixture	_check_parameters	X	check the gaussian mixture parameters are well defined
+mixture	GaussianMixture	_initialize	X resp	initialization of the gaussian mixture parameters
+mixture	GaussianMixture	_n_parameters		return the number of free parameters in the model
+mixture	GaussianMixture	bic	X	bayesian information criterion for the current model on the input x
+mixture	GaussianMixture	aic	X	akaike information criterion for the current model on the input x
+mixture		log_multivariate_normal_density	X means covars covariance_type	compute the log probability under a multivariate gaussian distribution
+mixture		sample_gaussian	mean covar covariance_type n_samples	generate random samples from a gaussian distribution
+mixture	_GMMBase	_get_covars		covariance parameters for each mixture component
+mixture	_GMMBase	_set_covars	covars	provide values for covariance
+mixture	_GMMBase	score_samples	X	return the per-sample likelihood of the data under the model
+mixture	_GMMBase	score	X y	compute the log probability under the model
+mixture	_GMMBase	predict	X	predict label for data
+mixture	_GMMBase	predict_proba	X	predict posterior probability of data under each gaussian in the model
+mixture	_GMMBase	sample	n_samples random_state	generate random samples from the model
+mixture	_GMMBase	fit_predict	X y	fit and then predict labels for data
+mixture	_GMMBase	_fit	X y do_prediction	estimate model parameters with the em algorithm
+mixture	_GMMBase	fit	X y	estimate model parameters with the em algorithm
+mixture	_GMMBase	_do_mstep	X responsibilities params min_covar	perform the mstep of the em algorithm and return the cluster weights
+mixture	_GMMBase	_n_parameters		return the number of free parameters in the model
+mixture	_GMMBase	bic	X	bayesian information criterion for the current model fit and the proposed data
+mixture	_GMMBase	aic	X	akaike information criterion for the current model fit and the proposed data
+mixture		_log_multivariate_normal_density_diag	X means covars	compute gaussian log-density at x for a diagonal model
+mixture		_log_multivariate_normal_density_spherical	X means covars	compute gaussian log-density at x for a spherical model
+mixture		_log_multivariate_normal_density_tied	X means covars	compute gaussian log-density at x for a tied model
+mixture		_log_multivariate_normal_density_full	X means covars min_covar	log probability for full covariance matrices
+mixture		_validate_covars	covars covariance_type n_components	do basic checks on matrix covariance sizes and values
+mixture		distribute_covar_matrix_to_match_covariance_type	tied_cv covariance_type n_components	create all the covariance matrices from a given template
+mixture		_covar_mstep_diag	gmm X responsibilities weighted_X_sum	perform the covariance m step for diagonal cases
+mixture		_covar_mstep_spherical		perform the covariance m step for spherical cases
+mixture		_covar_mstep_full	gmm X responsibilities weighted_X_sum	perform the covariance m step for full cases
+mixture		_covar_mstep_tied	gmm X responsibilities weighted_X_sum	perform the covariance m step for tied cases
+mixture		_log_dirichlet_norm	dirichlet_concentration	compute the log of the dirichlet distribution normalization term
+mixture		_log_wishart_norm	degrees_of_freedom log_det_precisions_chol n_features	compute the log of the wishart distribution normalization term
+mixture	BayesianGaussianMixture	_check_parameters	X	check that the parameters are well defined
+mixture	BayesianGaussianMixture	_check_weights_parameters		check the parameter of the dirichlet distribution
+mixture	BayesianGaussianMixture	_check_means_parameters	X	check the parameters of the gaussian distribution
+mixture	BayesianGaussianMixture	_check_precision_parameters	X	check the prior parameters of the precision distribution
+mixture	BayesianGaussianMixture	_checkcovariance_prior_parameter	X	check the covariance_prior_
+mixture	BayesianGaussianMixture	_initialize	X resp	initialization of the mixture parameters
+mixture	BayesianGaussianMixture	_estimate_weights	nk	estimate the parameters of the dirichlet distribution
+mixture	BayesianGaussianMixture	_estimate_means	nk xk	estimate the parameters of the gaussian distribution
+mixture	BayesianGaussianMixture	_estimate_precisions	nk xk sk	estimate the precisions parameters of the precision distribution
+mixture	BayesianGaussianMixture	_estimate_wishart_full	nk xk sk	estimate the full wishart distribution parameters
+mixture	BayesianGaussianMixture	_estimate_wishart_tied	nk xk sk	estimate the tied wishart distribution parameters
+mixture	BayesianGaussianMixture	_estimate_wishart_diag	nk xk sk	estimate the diag wishart distribution parameters
+mixture	BayesianGaussianMixture	_estimate_wishart_spherical	nk xk sk	estimate the spherical wishart distribution parameters
+mixture	BayesianGaussianMixture	_compute_lower_bound	log_resp log_prob_norm	estimate the lower bound of the model
+decomposition	_BasePCA	get_covariance		compute data covariance with the generative model
+decomposition	_BasePCA	get_precision		compute data precision matrix with the generative model
+decomposition	_BasePCA	fit	X y	placeholder for fit subclasses should implement this method!
+decomposition	_BasePCA	transform	X y	apply dimensionality reduction to x
+decomposition	_BasePCA	inverse_transform	X y	transform data back to its original space
+decomposition	FactorAnalysis	fit	X y	fit the factoranalysis model to x using em parameters
+decomposition	FactorAnalysis	transform	X	apply dimensionality reduction to x using the model
+decomposition	FactorAnalysis	get_covariance		compute data covariance with the factoranalysis model
+decomposition	FactorAnalysis	get_precision		compute data precision matrix with the factoranalysis model
+decomposition	FactorAnalysis	score_samples	X	compute the log-likelihood of each sample
+decomposition	FactorAnalysis	score	X y	compute the average log-likelihood of the samples
+decomposition		_gs_decorrelation	w W j	orthonormalize w wrt the first j rows of w parameters
+decomposition		_sym_decorrelation	W	symmetric decorrelation i
+decomposition		_ica_def	X tol g fun_args	deflationary fastica using fun approx to neg-entropy function used internally by fastica
+decomposition		fastica	X n_components algorithm whiten	perform fast independent component analysis
+decomposition	FastICA	_fit	X compute_sources	fit the model parameters
+decomposition	FastICA	fit_transform	X y	fit the model and recover the sources from x
+decomposition	FastICA	fit	X y	fit the model to x
+decomposition	FastICA	transform	X y copy	recover the sources from x apply the unmixing matrix
+decomposition	FastICA	inverse_transform	X copy	transform the sources back to the mixed data apply mixing matrix
+decomposition	TruncatedSVD	fit	X y	fit lsi model on training data x
+decomposition	TruncatedSVD	fit_transform	X y	fit lsi model to x and perform dimensionality reduction on x
+decomposition	TruncatedSVD	transform	X	perform dimensionality reduction on x
+decomposition	TruncatedSVD	inverse_transform	X	transform x back to its original space
+decomposition	IncrementalPCA	fit	X y	fit the model with x using minibatches of size batch_size
+decomposition	IncrementalPCA	partial_fit	X y check_input	incremental fit with x all of x is processed as a single batch
+decomposition		norm	x	dot product-based euclidean norm implementation see http //fseoane
+decomposition		trace_dot	X Y	trace of np dot x y t
+decomposition		_beta_divergence	X W H beta	compute the beta-divergence of x and dot w h
+decomposition		_special_sparse_dot	W H X	computes np dot w h only where x is non zero
+decomposition		_compute_regularization	alpha l1_ratio regularization	compute l1 and l2 regularization coefficients for w and h
+decomposition		_beta_loss_to_float	beta_loss	convert string beta_loss to float
+decomposition		_initialize_nmf	X n_components init eps	algorithms for nmf initialization
+decomposition		_update_coordinate_descent	X W Ht l1_reg	helper function for _fit_coordinate_descent update w to minimize the objective function iterating once over all
+decomposition		_fit_coordinate_descent	X W H tol	compute non-negative matrix factorization nmf with coordinate descent the objective function is minimized with an alternating minimization of w
+decomposition		_multiplicative_update_w	X W H beta_loss	update w in multiplicative update nmf
+decomposition		_multiplicative_update_h	X W H beta_loss	update h in multiplicative update nmf
+decomposition		_fit_multiplicative_update	X W H beta_loss	compute non-negative matrix factorization with multiplicative update the objective function is _beta_divergence x wh and is minimized with an
+decomposition		non_negative_factorization	X W H n_components	compute non-negative matrix factorization nmf find two non-negative matrices w h whose product approximates the non-
+decomposition	NMF	fit_transform	X y W H	learn a nmf model for the data x and returns the transformed data
+decomposition	NMF	fit	X y	learn a nmf model for the data x
+decomposition	NMF	transform	X	transform the data x according to the fitted nmf model
+decomposition	NMF	inverse_transform	W	transform data back to its original space
+decomposition	SparsePCA	fit	X y	fit the model from data in x
+decomposition	SparsePCA	transform	X ridge_alpha	least squares projection of the data onto the sparse components
+decomposition	MiniBatchSparsePCA	fit	X y	fit the model from data in x
+decomposition		_update_doc_distribution	X exp_topic_word_distr doc_topic_prior max_iters	e-step update document-topic distribution
+decomposition	LatentDirichletAllocation	_check_params		check model parameters
+decomposition	LatentDirichletAllocation	_init_latent_vars	n_features	initialize latent variables
+decomposition	LatentDirichletAllocation	_e_step	X cal_sstats random_init parallel	e-step in em update
+decomposition	LatentDirichletAllocation	_em_step	X total_samples batch_update parallel	em update for 1 iteration
+decomposition	LatentDirichletAllocation	_check_non_neg_array	X whom	check x format check x format and make sure no negative value in x
+decomposition	LatentDirichletAllocation	partial_fit	X y	online vb with mini-batch update
+decomposition	LatentDirichletAllocation	fit	X y	learn model for the data x with variational bayes method
+decomposition	LatentDirichletAllocation	_unnormalized_transform	X	transform data x according to fitted model
+decomposition	LatentDirichletAllocation	transform	X	transform data x according to the fitted model
+decomposition	LatentDirichletAllocation	_approx_bound	X doc_topic_distr sub_sampling	estimate the variational bound
+decomposition	LatentDirichletAllocation	score	X y	calculate approximate log-likelihood as score
+decomposition	LatentDirichletAllocation	_perplexity_precomp_distr	X doc_topic_distr sub_sampling	calculate approximate perplexity for data x with ability to accept precomputed doc_topic_distr
+decomposition	LatentDirichletAllocation	perplexity	X doc_topic_distr sub_sampling	calculate approximate perplexity for data x
+decomposition		_sparse_encode	X dictionary gram cov	generic sparse coding each column of the result is the solution to a lasso problem
+decomposition		sparse_encode	X dictionary gram cov	sparse coding each row of the result is the solution to a sparse coding problem
+decomposition		_update_dict	dictionary Y code verbose	update the dense dictionary factor in place
+decomposition		dict_learning	X n_components alpha max_iter	solves a dictionary learning matrix factorization problem
+decomposition		dict_learning_online	X n_components alpha n_iter	solves a dictionary learning matrix factorization problem online
+decomposition	SparseCodingMixin	transform	X y	encode the data as a sparse combination of the dictionary atoms
+decomposition	SparseCoder	fit	X y	do nothing and return the estimator unchanged this method is just there to implement the usual api and hence
+decomposition	DictionaryLearning	fit	X y	fit the model from data in x
+decomposition	MiniBatchDictionaryLearning	fit	X y	fit the model from data in x
+decomposition	MiniBatchDictionaryLearning	partial_fit	X y iter_offset	updates the model using the data in x as a mini-batch
+decomposition		_assess_dimension_	spectrum rank n_samples n_features	compute the likelihood of a rank rank dataset the dataset is assumed to be embedded in gaussian noise of shape(n
+decomposition		_infer_dimension_	spectrum n_samples n_features	infers the dimension of a dataset of shape (n_samples n_features) the dataset is described by its spectrum spectrum
+decomposition	PCA	fit	X y	fit the model with x
+decomposition	PCA	fit_transform	X y	fit the model with x and apply the dimensionality reduction on x
+decomposition	PCA	_fit	X	dispatch to the right submethod depending on the chosen solver
+decomposition	PCA	_fit_full	X n_components	fit the model by computing full svd on x
+decomposition	PCA	_fit_truncated	X n_components svd_solver	fit the model by computing truncated svd by arpack or randomized
+decomposition	PCA	score_samples	X	return the log-likelihood of each sample
+decomposition	PCA	score	X y	return the average log-likelihood of all samples
+decomposition	RandomizedPCA	fit	X y	fit the model with x by extracting the first principal components
+decomposition	RandomizedPCA	_fit	X	fit the model to the data x
+decomposition	RandomizedPCA	transform	X y	apply dimensionality reduction on x
+decomposition	RandomizedPCA	fit_transform	X y	fit the model with x and apply the dimensionality reduction on x
+decomposition	RandomizedPCA	inverse_transform	X y	transform data back to its original space
+decomposition	KernelPCA	_fit_transform	K	fit's using kernel k
+decomposition	KernelPCA	fit	X y	fit the model from data in x
+decomposition	KernelPCA	fit_transform	X y	fit the model from data in x and transform x
+decomposition	KernelPCA	inverse_transform	X	transform x back to original space
+externals		signature	obj	get a signature object for the passed callable
+externals	Parameter	replace	name kind annotation default	creates a customized copy of the parameter
+externals	Signature	__init__	parameters return_annotation __validate_parameters__	constructs signature from the given list of parameter objects and 'return_annotation'
+externals	Signature	from_function	cls func	constructs signature for the given python function
+externals	Signature	replace	parameters return_annotation	creates a customized copy of the signature
+externals	Signature	_bind	args kwargs partial	private method don't use directly
+externals	Signature	bind		get a boundarguments object that maps the passed args and kwargs to the function's signature
+externals	Signature	bind_partial		get a boundarguments object that partially maps the passed args and kwargs to the function's signature
+externals		_add_doc	func doc	add documentation to a function
+externals		_import_module	name	import module returning the module after the last dot
+externals		add_move	move	add an item to six moves
+externals		remove_move	name	remove item from six moves
+externals		iterkeys	d	return an iterator over the keys of a dictionary
+externals		itervalues	d	return an iterator over the values of a dictionary
+externals		iteritems	d	return an iterator over the key value pairs of a dictionary
+externals		iterlists	d	return an iterator over the (key [values]) pairs of a dictionary
+externals		with_metaclass	meta	create a base class with a metaclass
+externals		add_metaclass	metaclass	class decorator for creating a class with a metaclass
+externals.joblib		get_func_code	func	attempts to retrieve a reliable function code hash
+externals.joblib		_clean_win_chars	string	windows cannot encode some characters in filename
+externals.joblib		get_func_name	func resolv_alias win_characters	return the function import path as a list of module names and a name for the function
+externals.joblib		getfullargspec	func	compatibility function to provide inspect getfullargspec in python 2
+externals.joblib		_signature_str	function_name arg_spec	helper function to output a function signature
+externals.joblib		_function_called_str	function_name args kwargs	helper function to output a function call
+externals.joblib		filter_args	func ignore_lst args kwargs	filters the given args and kwargs using a list of arguments to ignore and a function specification
+externals.joblib		format_call	func args kwargs object_name	returns a nicely formatted statement displaying the function call with the given arguments
+externals.joblib		get_active_backend		return the active default backend
+externals.joblib		parallel_backend	backend n_jobs	change the default backend used by parallel inside a with block
+externals.joblib		cpu_count		return the number of cpus
+externals.joblib		_verbosity_filter	index verbose	returns false for indices increasingly apart the distance depending on the value of verbose
+externals.joblib		delayed	function check_pickle	decorator used to capture the arguments of a function
+externals.joblib		register_parallel_backend	name factory make_default	register a new parallel backend factory
+externals.joblib		effective_n_jobs	n_jobs	determine the number of jobs that can actually run in parallel n_jobs is the is the number of workers requested by the callers
+externals.joblib	Parallel	_initialize_backend		build a process or thread pool and return the number of workers
+externals.joblib	Parallel	_dispatch	batch	queue the batch for computing with or without multiprocessing warning this method is not thread-safe it should be only called
+externals.joblib	Parallel	dispatch_next		dispatch more data for parallel processing this method is meant to be called concurrently by the multiprocessing
+externals.joblib	Parallel	dispatch_one_batch	iterator	prefetch the tasks for the next batch and dispatch them
+externals.joblib	Parallel	_print	msg msg_args	display the message on stout or stderr depending on verbosity
+externals.joblib	Parallel	print_progress		display the process of the parallel execution only a fraction of time controlled by self
+externals.joblib		with_metaclass	meta	create a base class with a metaclass
+externals.joblib		hex_str	an_int	convert an int to an hexadecimal string
+externals.joblib		read_zfile	file_handle	read the z-file and return the content as a string
+externals.joblib		write_zfile	file_handle data compress	write the data in the given file as a z-file
+externals.joblib	NDArrayWrapper	__init__	filename subclass allow_mmap	constructor store the useful information for later
+externals.joblib	NDArrayWrapper	read	unpickler	reconstruct the array
+externals.joblib	ZNDArrayWrapper	__init__	filename init_args state	constructor store the useful information for later
+externals.joblib	ZNDArrayWrapper	read	unpickler	reconstruct the array from the meta-information and the z-file
+externals.joblib	ZipNumpyUnpickler	load_build		set the state of a newly created object
+externals.joblib		load_compatibility	filename	reconstruct a python object from a file persisted with joblib dump
+externals.joblib		safe_repr	value	hopefully pretty robust repr equivalent
+externals.joblib		uniq_stable	elems	uniq_stable elems -> list return from an iterable a list of all the unique elements in the input
+externals.joblib		fix_frame_records_filenames	records	try to fix the filenames in each record from inspect getinnerframes()
+externals.joblib		format_exc	etype evalue etb context	return a nice text document describing the traceback
+externals.joblib		_is_raw_file	fileobj	check if fileobj is a raw file object e g created with open
+externals.joblib		_detect_compressor	fileobj	return the compressor matching fileobj
+externals.joblib		_buffered_read_file	fobj	return a buffered version of a read file object
+externals.joblib		_buffered_write_file	fobj	return a buffered version of a write file object
+externals.joblib		_read_fileobject	fileobj filename mmap_mode	utility function opening the right fileobject from a filename
+externals.joblib		_write_fileobject	filename compress	return the right compressor file object in write mode
+externals.joblib	BinaryZlibFile	close		flush and close the file
+externals.joblib	BinaryZlibFile	closed		true if this file is closed
+externals.joblib	BinaryZlibFile	fileno		return the file descriptor for the underlying file
+externals.joblib	BinaryZlibFile	seekable		return whether the file supports seeking
+externals.joblib	BinaryZlibFile	readable		return whether the file was opened for reading
+externals.joblib	BinaryZlibFile	writable		return whether the file was opened for writing
+externals.joblib	BinaryZlibFile	read	size	read up to size uncompressed bytes from the file
+externals.joblib	BinaryZlibFile	readinto	b	read up to len b bytes into b
+externals.joblib	BinaryZlibFile	write	data	write a byte string to the file
+externals.joblib	BinaryZlibFile	seek	offset whence	change the file position
+externals.joblib	BinaryZlibFile	tell		return the current file position
+externals.joblib		_read_bytes	fp size error_template	read from file-like object until size bytes are read
+externals.joblib		extract_first_line	func_code	extract the first line information from the function code text if available
+externals.joblib		_get_func_fullname	func	compute the part of part associated with a function
+externals.joblib		_cache_key_to_dir	cachedir func argument_hash	compute directory associated with a given cache key
+externals.joblib		_load_output	output_dir func_name timestamp metadata	load output of a computation
+externals.joblib		_get_cache_items	root_path	get cache information for reducing the size of the cache
+externals.joblib		_get_cache_items_to_delete	root_path bytes_limit	get cache items to delete to keep the cache under a size limit
+externals.joblib		concurrency_safe_write	to_write filename write_func	writes an object into a file in a concurrency-safe way
+externals.joblib	MemorizedResult	get		read value from cache and return it
+externals.joblib	MemorizedResult	clear		clear value from cache
+externals.joblib	MemorizedFunc	_cached_call	args kwargs	call wrapped function and cache result or read cache if available
+externals.joblib	MemorizedFunc	call_and_shelve		call wrapped function cache result and return a reference
+externals.joblib	MemorizedFunc	__reduce__		we don't store the timestamp when pickling to avoid the hash depending from it
+externals.joblib	MemorizedFunc	_get_output_dir		return the directory in which are persisted the result of the function called with the given arguments
+externals.joblib	MemorizedFunc	_get_func_dir	mkdir	get the directory corresponding to the cache for the function
+externals.joblib	MemorizedFunc	_hash_func		hash a function to key the online cache
+externals.joblib	MemorizedFunc	_write_func_code	filename func_code first_line	write the function code and the filename to a file
+externals.joblib	MemorizedFunc	_check_previous_func_code	stacklevel	stacklevel is the depth a which this function is called to issue useful warnings to the user
+externals.joblib	MemorizedFunc	clear	warn	empty the function's cache
+externals.joblib	MemorizedFunc	call		force the execution of the function with the given arguments and persist the output values
+externals.joblib	MemorizedFunc	_persist_output	output dir	persist the given output tuple in the directory
+externals.joblib	MemorizedFunc	_persist_input	output_dir duration args kwargs	save a small summary of the call using json format in the output directory
+externals.joblib	Memory	cache	func ignore verbose mmap_mode	decorates the given function func to only compute its return value for input arguments not cached on disk
+externals.joblib	Memory	clear	warn	erase the complete cache directory
+externals.joblib	Memory	reduce_size		remove cache folders to make cache size fit in bytes_limit
+externals.joblib	Memory	eval	func	eval function func with arguments *args and **kwargs, in the context of the memory
+externals.joblib	Memory	__reduce__		we don't store the timestamp when pickling to avoid the hash depending from it
+externals.joblib		_squeeze_time	t	remove 1s to the time under windows this is the time it take to
+externals.joblib	Logger	format	obj indent	return the formated representation of the object
+externals.joblib	PrintTime	__call__	msg total	print the time elapsed between the last call and the current call with an optional message
+externals.joblib	NumpyHasher	save	obj	subclass the save method to hash ndarray subclass rather than pickling them
+externals.joblib		hash	obj hash_name coerce_mmap	quick calculation of a hash to identify uniquely python objects containing numpy arrays
+externals.joblib		_get_backing_memmap	a	recursively look up the original np memmap instance base if any
+externals.joblib		has_shareable_memory	a	return true if a is backed by some mmap buffer directly or not
+externals.joblib		_strided_from_memmap	filename dtype mode offset	reconstruct an array view on a memory mapped file
+externals.joblib		_reduce_memmap_backed	a m	pickling reduction for memmap backed arrays
+externals.joblib		reduce_memmap	a	pickle the descriptors of a memmap instance to reopen on same file
+externals.joblib	CustomizablePickler	register	type reduce_func	attach a reducer function to a given type in the dispatch table
+externals.joblib		delete_folder	folder_path	utility function to cleanup a temporary folder if still existing
+externals.joblib	ParallelBackendBase	effective_n_jobs	n_jobs	determine the number of jobs that can actually run in parallel n_jobs is the number of workers requested by the callers
+externals.joblib	ParallelBackendBase	apply_async	func callback	schedule a func to be run
+externals.joblib	ParallelBackendBase	configure	n_jobs parallel	reconfigure the backend and return the number of workers
+externals.joblib	ParallelBackendBase	terminate		shutdown the process or thread pool
+externals.joblib	ParallelBackendBase	compute_batch_size		determine the optimal batch size
+externals.joblib	ParallelBackendBase	batch_completed	batch_size duration	callback indicate how long it took to run a batch
+externals.joblib	ParallelBackendBase	get_exceptions		list of exception types to be captured
+externals.joblib	ParallelBackendBase	abort_everything	ensure_ready	abort any running tasks this is called when an exception has been raised when executing a tasks
+externals.joblib	SequentialBackend	effective_n_jobs	n_jobs	determine the number of jobs which are going to run in parallel
+externals.joblib	SequentialBackend	apply_async	func callback	schedule a func to be run
+externals.joblib	PoolManagerMixin	effective_n_jobs	n_jobs	determine the number of jobs which are going to run in parallel
+externals.joblib	PoolManagerMixin	terminate		shutdown the process or thread pool
+externals.joblib	PoolManagerMixin	apply_async	func callback	schedule a func to be run
+externals.joblib	PoolManagerMixin	abort_everything	ensure_ready	shutdown the pool and restart a new one with the same parameters
+externals.joblib	AutoBatchingMixin	compute_batch_size		determine the optimal batch size
+externals.joblib	AutoBatchingMixin	batch_completed	batch_size duration	callback indicate how long it took to run a batch
+externals.joblib	ThreadingBackend	configure	n_jobs parallel	build a process or thread pool and return the number of workers
+externals.joblib	MultiprocessingBackend	effective_n_jobs	n_jobs	determine the number of jobs which are going to run in parallel
+externals.joblib	MultiprocessingBackend	configure	n_jobs parallel	build a process or thread pool and return the number of workers
+externals.joblib	MultiprocessingBackend	terminate		shutdown the process or thread pool
+externals.joblib		disk_used	path	return the disk usage in a directory
+externals.joblib		memstr_to_bytes	text	convert a memory text to its value in bytes
+externals.joblib		mkdirp	d	ensure directory d exists like mkdir -p on unix no guarantee that the directory is writable
+externals.joblib		rm_subdirs	path onerror	remove all subdirectories in this path
+externals.joblib	NumpyArrayWrapper	__init__	subclass shape order dtype	constructor store the useful information for later
+externals.joblib	NumpyArrayWrapper	write_array	array pickler	write array bytes to pickler file handle
+externals.joblib	NumpyArrayWrapper	read_array	unpickler	read array from unpickler file handle
+externals.joblib	NumpyArrayWrapper	read_mmap	unpickler	read an array using numpy memmap
+externals.joblib	NumpyArrayWrapper	read	unpickler	read the array corresponding to this wrapper
+externals.joblib	NumpyPickler	_create_array_wrapper	array	create and returns a numpy array wrapper from a numpy array
+externals.joblib	NumpyPickler	save	obj	subclass the pickler save method
+externals.joblib	NumpyUnpickler	load_build		called to set the state of a newly created object
+externals.joblib		dump	value filename compress protocol	persist an arbitrary python object into one file
+externals.joblib		_unpickle	fobj filename mmap_mode	internal unpickling function
+externals.joblib		load	filename mmap_mode	reconstruct a python object from a file persisted with joblib dump
+manifold		barycenter_weights	X Z reg	compute barycenter weights of x from y along the first axis we estimate the weights to assign to each point in y[i] to recover
+manifold		barycenter_kneighbors_graph	X n_neighbors reg n_jobs	computes the barycenter weighted graph of k-neighbors for points in x parameters
+manifold		null_space	M k k_skip eigen_solver	find the null space of a matrix m
+manifold		locally_linear_embedding	X n_neighbors n_components reg	perform a locally linear embedding analysis on the data
+manifold	LocallyLinearEmbedding	fit	X y	compute the embedding vectors for data x parameters
+manifold	LocallyLinearEmbedding	fit_transform	X y	compute the embedding vectors for data x and transform x
+manifold	LocallyLinearEmbedding	transform	X	transform new points into embedding space
+manifold	Isomap	reconstruction_error		compute the reconstruction error for the embedding
+manifold	Isomap	fit	X y	compute the embedding vectors for data x parameters
+manifold	Isomap	fit_transform	X y	fit the model from data in x and transform x
+manifold		_graph_connected_component	graph node_id	find the largest graph connected components that contains one
+manifold		_graph_is_connected	graph	return whether the graph is connected true or not false
+manifold		_set_diag	laplacian value norm_laplacian	set the diagonal of the laplacian matrix and convert it to a sparse format well suited for eigenvalue decomposition
+manifold		spectral_embedding	adjacency n_components eigen_solver random_state	project the sample on the first eigenvectors of the graph laplacian
+manifold	SpectralEmbedding	_get_affinity_matrix	X Y	calculate the affinity matrix from data parameters
+manifold	SpectralEmbedding	fit	X y	fit the model from data in x
+manifold	SpectralEmbedding	fit_transform	X y	fit the model from data in x and transform x
+manifold		_smacof_single	dissimilarities metric n_components init	computes multidimensional scaling using smacof algorithm parameters
+manifold		smacof	dissimilarities metric n_components init	computes multidimensional scaling using the smacof algorithm
+manifold	MDS	fit	X y init	computes the position of the points in the embedding space parameters
+manifold	MDS	fit_transform	X y init	fit the data from x and returns the embedded coordinates parameters
+manifold		_joint_probabilities	distances desired_perplexity verbose	compute joint probabilities p_ij from distances
+manifold		_joint_probabilities_nn	distances neighbors desired_perplexity verbose	compute joint probabilities p_ij from distances using just nearest neighbors
+manifold		_kl_divergence	params P degrees_of_freedom n_samples	t-sne objective function gradient of the kl divergence of p_ijs and q_ijs and the absolute error
+manifold		_kl_divergence_error	params P neighbors degrees_of_freedom	t-sne objective function the absolute error of the kl divergence of p_ijs and q_ijs
+manifold		_kl_divergence_bh	params P neighbors degrees_of_freedom	t-sne objective function kl divergence of p_ijs and q_ijs
+manifold		_gradient_descent	objective p0 it n_iter	batch gradient descent with momentum and individual gains
+manifold		trustworthiness	X X_embedded n_neighbors precomputed	expresses to what extent the local structure is retained
+manifold	TSNE	_fit	X skip_num_points	fit the model using x as training data
+manifold	TSNE	fit_transform	X y	fit x into an embedded space and return that transformed output
+manifold	TSNE	fit	X y	fit x into an embedded space
+ensemble	LossFunction	init_estimator		default init estimator for loss function
+ensemble	LossFunction	__call__	y pred sample_weight	compute the loss of prediction pred and y
+ensemble	LossFunction	negative_gradient	y y_pred	compute the negative gradient
+ensemble	LossFunction	update_terminal_regions	tree X y residual	update the terminal regions (=leaves) of the given tree and updates the current predictions of the model
+ensemble	LossFunction	_update_terminal_region	tree terminal_regions leaf X	template method for updating terminal regions (=leaves)
+ensemble	LeastSquaresError	update_terminal_regions	tree X y residual	least squares does not need to update terminal regions
+ensemble	LeastAbsoluteError	negative_gradient	y pred	1 0 if y - pred > 0 0 else -1 0
+ensemble	LeastAbsoluteError	_update_terminal_region	tree terminal_regions leaf X	lad updates terminal regions to median estimates
+ensemble	ClassificationLossFunction	_score_to_proba	score	template method to convert scores to probabilities
+ensemble	ClassificationLossFunction	_score_to_decision	score	template method to convert scores to decisions
+ensemble	BinomialDeviance	__call__	y pred sample_weight	compute the deviance (= 2 * negative log-likelihood)
+ensemble	BinomialDeviance	negative_gradient	y pred	compute the residual (= negative gradient)
+ensemble	BinomialDeviance	_update_terminal_region	tree terminal_regions leaf X	make a single newton-raphson step
+ensemble	MultinomialDeviance	negative_gradient	y pred k	compute negative gradient for the k-th class
+ensemble	MultinomialDeviance	_update_terminal_region	tree terminal_regions leaf X	make a single newton-raphson step
+ensemble	VerboseReporter	update	j est	update reporter with new iteration
+ensemble	BaseGradientBoosting	_fit_stage	i X y y_pred	fit another stage of n_classes_ trees to the boosting model
+ensemble	BaseGradientBoosting	_check_params		check validity of parameters and raise valueerror if not valid
+ensemble	BaseGradientBoosting	_init_state		initialize model state and allocate model state data structures
+ensemble	BaseGradientBoosting	_clear_state		clear the state of the gradient boosting model
+ensemble	BaseGradientBoosting	_resize_state		add additional n_estimators entries to all attributes
+ensemble	BaseGradientBoosting	_check_initialized		check that the estimator is initialized raising an error if not
+ensemble	BaseGradientBoosting	fit	X y sample_weight monitor	fit the gradient boosting model
+ensemble	BaseGradientBoosting	_fit_stages	X y y_pred sample_weight	iteratively fits the stages
+ensemble	BaseGradientBoosting	_init_decision_function	X	check input and compute prediction of init
+ensemble	BaseGradientBoosting	_staged_decision_function	X	compute decision function of x for each iteration
+ensemble	BaseGradientBoosting	feature_importances_		return the feature importances the higher the more important the feature
+ensemble	BaseGradientBoosting	apply	X	apply trees in the ensemble to x return leaf indices
+ensemble	GradientBoostingClassifier	decision_function	X	compute the decision function of x
+ensemble	GradientBoostingClassifier	staged_decision_function	X	compute decision function of x for each iteration
+ensemble	GradientBoostingClassifier	predict	X	predict class for x
+ensemble	GradientBoostingClassifier	staged_predict	X	predict class at each stage for x
+ensemble	GradientBoostingClassifier	predict_proba	X	predict class probabilities for x
+ensemble	GradientBoostingClassifier	predict_log_proba	X	predict class log-probabilities for x
+ensemble	GradientBoostingClassifier	staged_predict_proba	X	predict class probabilities at each stage for x
+ensemble	GradientBoostingRegressor	predict	X	predict regression target for x
+ensemble	GradientBoostingRegressor	staged_predict	X	predict regression target at each stage for x
+ensemble	GradientBoostingRegressor	apply	X	apply trees in the ensemble to x return leaf indices
+ensemble	BaseWeightBoosting	fit	X y sample_weight	build a boosted classifier/regressor from the training set x y
+ensemble	BaseWeightBoosting	_boost	iboost X y sample_weight	implement a single boost
+ensemble	BaseWeightBoosting	staged_score	X y sample_weight	return staged scores for x y
+ensemble	BaseWeightBoosting	feature_importances_		return the feature importances the higher the more important the feature
+ensemble	BaseWeightBoosting	_validate_X_predict	X	ensure that x is in the proper format
+ensemble		_samme_proba	estimator n_classes X	calculate algorithm 4 step 2 equation c) of zhu et al [1]
+ensemble	AdaBoostClassifier	fit	X y sample_weight	build a boosted classifier from the training set x y
+ensemble	AdaBoostClassifier	_validate_estimator		check the estimator and set the base_estimator_ attribute
+ensemble	AdaBoostClassifier	_boost	iboost X y sample_weight	implement a single boost
+ensemble	AdaBoostClassifier	_boost_real	iboost X y sample_weight	implement a single boost using the samme r real algorithm
+ensemble	AdaBoostClassifier	_boost_discrete	iboost X y sample_weight	implement a single boost using the samme discrete algorithm
+ensemble	AdaBoostClassifier	predict	X	predict classes for x
+ensemble	AdaBoostClassifier	staged_predict	X	return staged predictions for x
+ensemble	AdaBoostClassifier	decision_function	X	compute the decision function of x
+ensemble	AdaBoostClassifier	staged_decision_function	X	compute decision function of x for each boosting iteration
+ensemble	AdaBoostClassifier	predict_proba	X	predict class probabilities for x
+ensemble	AdaBoostClassifier	staged_predict_proba	X	predict class probabilities for x
+ensemble	AdaBoostClassifier	predict_log_proba	X	predict class log-probabilities for x
+ensemble	AdaBoostRegressor	fit	X y sample_weight	build a boosted regressor from the training set x y
+ensemble	AdaBoostRegressor	_validate_estimator		check the estimator and set the base_estimator_ attribute
+ensemble	AdaBoostRegressor	_boost	iboost X y sample_weight	implement a single boost for regression perform a single boost according to the adaboost
+ensemble	AdaBoostRegressor	predict	X	predict regression value for x
+ensemble	AdaBoostRegressor	staged_predict	X	return staged predictions for x
+ensemble	IsolationForest	predict	X	predict if a particular sample is an outlier or not
+ensemble	IsolationForest	decision_function	X	average anomaly score of x of the base classifiers
+ensemble		_average_path_length	n_samples_leaf	the average path length in a n_samples itree which is equal to the average path length of an unsuccessful bst search since the
+ensemble		_set_random_states	estimator random_state	sets fixed random_state parameters for an estimator finds all parameters ending random_state and sets them to integers
+ensemble	BaseEnsemble	_validate_estimator	default	check the estimator and the n_estimator attribute set the base_estimator_ attribute
+ensemble	BaseEnsemble	_make_estimator	append random_state	make and configure a copy of the base_estimator_ attribute
+ensemble	BaseEnsemble	__len__		returns the number of estimators in the ensemble
+ensemble	BaseEnsemble	__getitem__	index	returns the index'th estimator in the ensemble
+ensemble	BaseEnsemble	__iter__		returns iterator over estimators in the ensemble
+ensemble		_partition_estimators	n_estimators n_jobs	private function used to partition estimators between jobs
+ensemble		_generate_indices	random_state bootstrap n_population n_samples	draw randomly sampled indices
+ensemble		_generate_bagging_indices	random_state bootstrap_features bootstrap_samples n_features	randomly draw feature and sample indices
+ensemble		_parallel_build_estimators	n_estimators ensemble X y	private function used to build a batch of estimators within a job
+ensemble		_parallel_predict_proba	estimators estimators_features X n_classes	private function used to compute proba- predictions within a job
+ensemble		_parallel_predict_log_proba	estimators estimators_features X n_classes	private function used to compute log probabilities within a job
+ensemble		_parallel_decision_function	estimators estimators_features X	private function used to compute decisions within a job
+ensemble		_parallel_predict_regression	estimators estimators_features X	private function used to compute predictions within a job
+ensemble	BaseBagging	fit	X y sample_weight	build a bagging ensemble of estimators from the training set x y
+ensemble	BaseBagging	_fit	X y max_samples max_depth	build a bagging ensemble of estimators from the training set x y
+ensemble	BaseBagging	_set_oob_score	X y	calculate out of bag predictions and score
+ensemble	BaseBagging	estimators_samples_		the subset of drawn samples for each base estimator
+ensemble	BaggingClassifier	_validate_estimator		check the estimator and set the base_estimator_ attribute
+ensemble	BaggingClassifier	predict	X	predict class for x
+ensemble	BaggingClassifier	predict_proba	X	predict class probabilities for x
+ensemble	BaggingClassifier	predict_log_proba	X	predict class log-probabilities for x
+ensemble	BaggingClassifier	decision_function	X	average of the decision functions of the base classifiers
+ensemble	BaggingRegressor	predict	X	predict regression target for x
+ensemble	BaggingRegressor	_validate_estimator		check the estimator and set the base_estimator_ attribute
+ensemble		_generate_sample_indices	random_state n_samples	private function used to _parallel_build_trees function
+ensemble		_generate_unsampled_indices	random_state n_samples	private function used to forest _set_oob_score function
+ensemble		_parallel_build_trees	tree forest X y	private function used to fit a single tree in parallel
+ensemble	BaseForest	apply	X	apply trees in the forest to x return leaf indices
+ensemble	BaseForest	decision_path	X	return the decision path in the forest
+ensemble	BaseForest	fit	X y sample_weight	build a forest of trees from the training set x y
+ensemble	BaseForest	_set_oob_score	X y	calculate out of bag predictions and score
+ensemble	BaseForest	_validate_X_predict	X	validate x whenever one tries to predict apply predict_proba
+ensemble	BaseForest	feature_importances_		return the feature importances the higher the more important the feature
+ensemble	ForestClassifier	_set_oob_score	X y	compute out-of-bag score
+ensemble	ForestClassifier	predict	X	predict class for x
+ensemble	ForestClassifier	predict_proba	X	predict class probabilities for x
+ensemble	ForestClassifier	predict_log_proba	X	predict class log-probabilities for x
+ensemble	ForestRegressor	predict	X	predict regression target for x
+ensemble	ForestRegressor	_set_oob_score	X y	compute out-of-bag scores
+ensemble	RandomTreesEmbedding	fit_transform	X y sample_weight	fit estimator and transform dataset
+ensemble		_grid_from_X	X percentiles grid_resolution	generate a grid of points based on the percentiles of x
+ensemble		partial_dependence	gbrt target_variables grid X	partial dependence of target_variables
+ensemble		plot_partial_dependence	gbrt X features feature_names	partial dependence plots for features
+ensemble		_parallel_fit_estimator	estimator X y sample_weight	private function used to fit an estimator within a job
+ensemble	VotingClassifier	fit	X y sample_weight	fit the estimators
+ensemble	VotingClassifier	_weights_not_none		get the weights of not none estimators
+ensemble	VotingClassifier	predict	X	predict class labels for x
+ensemble	VotingClassifier	_collect_probas	X	collect results from clf predict calls
+ensemble	VotingClassifier	_predict_proba	X	predict class probabilities for x in 'soft' voting
+ensemble	VotingClassifier	predict_proba		compute probabilities of possible outcomes for samples in x
+ensemble	VotingClassifier	transform	X	return class labels or probabilities for x for each estimator
+ensemble	VotingClassifier	set_params		setting the parameters for the voting classifier valid parameter keys can be listed with get_params()
+ensemble	VotingClassifier	get_params	deep	get the parameters of the votingclassifier
+ensemble	VotingClassifier	_predict	X	collect results from clf predict calls
+feature_extraction		_tosequence	X	turn x into a sequence or ndarray avoiding a copy if possible
+feature_extraction	DictVectorizer	fit	X y	learn a list of feature name -> indices mappings
+feature_extraction	DictVectorizer	fit_transform	X y	learn a list of feature name -> indices mappings and transform x
+feature_extraction	DictVectorizer	inverse_transform	X dict_type	transform array or sparse matrix x back to feature mappings
+feature_extraction	DictVectorizer	transform	X y	transform feature->value dicts to array or sparse matrix
+feature_extraction	DictVectorizer	get_feature_names		returns a list of feature names ordered by their indices
+feature_extraction	DictVectorizer	restrict	support indices	restrict the features to those in support using feature selection
+feature_extraction		strip_accents_unicode	s	transform accentuated unicode symbols into their simple counterpart warning the python-level loop and join operations make this
+feature_extraction		strip_accents_ascii	s	transform accentuated unicode symbols into ascii or nothing warning this solution is only suited for languages that have a direct
+feature_extraction		strip_tags	s	basic regexp based html / xml tag stripper function for serious html/xml preprocessing you should rather use an external
+feature_extraction	VectorizerMixin	decode	doc	decode the input into a string of unicode symbols the decoding strategy depends on the vectorizer parameters
+feature_extraction	VectorizerMixin	_word_ngrams	tokens stop_words	turn tokens into a sequence of n-grams after stop words filtering
+feature_extraction	VectorizerMixin	_char_ngrams	text_document	tokenize text_document into a sequence of character n-grams
+feature_extraction	VectorizerMixin	_char_wb_ngrams	text_document	whitespace sensitive char-n-gram tokenization
+feature_extraction	VectorizerMixin	build_preprocessor		return a function to preprocess the text before tokenization
+feature_extraction	VectorizerMixin	build_tokenizer		return a function that splits a string into a sequence of tokens
+feature_extraction	VectorizerMixin	get_stop_words		build or fetch the effective stop words list
+feature_extraction	VectorizerMixin	build_analyzer		return a callable that handles preprocessing and tokenization
+feature_extraction	VectorizerMixin	_check_vocabulary		check if vocabulary is empty or missing not fit-ed
+feature_extraction	HashingVectorizer	partial_fit	X y	does nothing this transformer is stateless
+feature_extraction	HashingVectorizer	fit	X y	does nothing this transformer is stateless
+feature_extraction	HashingVectorizer	transform	X y	transform a sequence of documents to a document-term matrix
+feature_extraction		_document_frequency	X	count the number of non-zero values for each feature in sparse x
+feature_extraction	CountVectorizer	_sort_features	X vocabulary	sort features by name
+feature_extraction	CountVectorizer	_limit_features	X vocabulary high low	remove too rare or too common features
+feature_extraction	CountVectorizer	_count_vocab	raw_documents fixed_vocab	create sparse feature matrix and vocabulary where fixed_vocab=false
+feature_extraction	CountVectorizer	fit	raw_documents y	learn a vocabulary dictionary of all tokens in the raw documents
+feature_extraction	CountVectorizer	fit_transform	raw_documents y	learn the vocabulary dictionary and return term-document matrix
+feature_extraction	CountVectorizer	transform	raw_documents	transform documents to document-term matrix
+feature_extraction	CountVectorizer	inverse_transform	X	return terms per document with nonzero entries in x
+feature_extraction	CountVectorizer	get_feature_names		array mapping from feature integer indices to feature name
+feature_extraction		_make_int_array		construct an array array of a type suitable for scipy sparse indices
+feature_extraction	TfidfTransformer	fit	X y	learn the idf vector global term weights
+feature_extraction	TfidfTransformer	transform	X copy	transform a count matrix to a tf or tf-idf representation parameters
+feature_extraction	TfidfVectorizer	fit	raw_documents y	learn vocabulary and idf from training set
+feature_extraction	TfidfVectorizer	fit_transform	raw_documents y	learn vocabulary and idf return term-document matrix
+feature_extraction	TfidfVectorizer	transform	raw_documents copy	transform documents to document-term matrix
+feature_extraction		_make_edges_3d	n_x n_y n_z	returns a list of edges for a 3d image
+feature_extraction		_mask_edges_weights	mask edges weights	apply a mask to edges weighted or not
+feature_extraction		_to_graph	n_x n_y n_z mask	auxiliary function for img_to_graph and grid_to_graph
+feature_extraction		img_to_graph	img mask return_as dtype	graph of the pixel-to-pixel gradient connections edges are weighted with the gradient values
+feature_extraction		grid_to_graph	n_x n_y n_z mask	graph of the pixel-to-pixel connections edges exist if 2 voxels are connected
+feature_extraction		_compute_n_patches	i_h i_w p_h p_w	compute the number of patches that will be extracted in an image
+feature_extraction		extract_patches	arr patch_shape extraction_step	extracts patches of any n-dimensional array in place using strides
+feature_extraction		extract_patches_2d	image patch_size max_patches random_state	reshape a 2d image into a collection of patches the resulting patches are allocated in a dedicated array
+feature_extraction		reconstruct_from_patches_2d	patches image_size	reconstruct the image from all of its patches
+feature_extraction	PatchExtractor	fit	X y	do nothing and return the estimator unchanged this method is just there to implement the usual api and hence
+feature_extraction	PatchExtractor	transform	X	transforms the image samples in x into a matrix of patch data
+feature_extraction		_iteritems	d	like d iteritems but accepts any collections mapping
+feature_extraction	FeatureHasher	transform	raw_X y	transform a sequence of instances to a scipy sparse matrix
+cluster		_k_init	X n_clusters x_squared_norms random_state	init n_clusters seeds according to k-means++ parameters
+cluster		_validate_center_shape	X n_centers centers	check if centers is compatible with x and n_centers
+cluster		_tolerance	X tol	return a tolerance which is independent of the dataset
+cluster		k_means	X n_clusters init precompute_distances	k-means clustering algorithm
+cluster		_kmeans_single_lloyd	X n_clusters max_iter init	a single run of k-means assumes preparation completed prior
+cluster		_labels_inertia_precompute_dense	X x_squared_norms centers distances	compute labels and inertia using a full distance matrix
+cluster		_labels_inertia	X x_squared_norms centers precompute_distances	e step of the k-means em algorithm
+cluster		_init_centroids	X k init random_state	compute the initial centroids parameters
+cluster	KMeans	_check_fit_data	X	verify that the number of samples given is larger than k
+cluster	KMeans	fit	X y	compute k-means clustering
+cluster	KMeans	fit_predict	X y	compute cluster centers and predict cluster index for each sample
+cluster	KMeans	fit_transform	X y	compute clustering and transform x to cluster-distance space
+cluster	KMeans	transform	X y	transform x to a cluster-distance space
+cluster	KMeans	_transform	X	guts of transform method no input validation
+cluster	KMeans	predict	X	predict the closest cluster each sample in x belongs to
+cluster	KMeans	score	X y	opposite of the value of x on the k-means objective
+cluster		_mini_batch_step	X x_squared_norms centers counts	incremental update of the centers for the minibatch k-means algorithm
+cluster		_mini_batch_convergence	model iteration_idx n_iter tol	helper function to encapsulate the early stopping logic
+cluster	MiniBatchKMeans	fit	X y	compute the centroids on x by chunking it into mini-batches
+cluster	MiniBatchKMeans	_labels_inertia_minibatch	X	compute labels and inertia using mini batches
+cluster	MiniBatchKMeans	partial_fit	X y	update k means estimate on a single mini-batch x
+cluster	MiniBatchKMeans	predict	X	predict the closest cluster each sample in x belongs to
+cluster		affinity_propagation	S preference convergence_iter max_iter	perform affinity propagation clustering of data read more in the :ref user guide <affinity_propagation>
+cluster	AffinityPropagation	fit	X y	create affinity matrix from negative euclidean distances then apply affinity propagation clustering
+cluster	AffinityPropagation	predict	X	predict the closest cluster each sample in x belongs to
+cluster		dbscan	X eps min_samples metric	perform dbscan clustering from vector array or distance matrix
+cluster	DBSCAN	fit	X y sample_weight	perform dbscan clustering from features or distance matrix
+cluster	DBSCAN	fit_predict	X y sample_weight	performs clustering on x and returns cluster labels
+cluster		estimate_bandwidth	X quantile n_samples random_state	estimate the bandwidth to use with the mean-shift algorithm
+cluster		mean_shift	X bandwidth seeds bin_seeding	perform mean shift clustering of data using a flat kernel
+cluster		get_bin_seeds	X bin_size min_bin_freq	finds seeds for mean_shift
+cluster	MeanShift	predict	X	predict the closest cluster each sample in x belongs to
+cluster		_scale_normalize	X	normalize x by scaling rows and columns independently
+cluster		_bistochastic_normalize	X max_iter tol	normalize rows and columns of x simultaneously so that all rows sum to one constant and all columns sum to a different
+cluster		_log_normalize	X	normalize x according to kluger's log-interactions scheme
+cluster	BaseSpectral	fit	X	creates a biclustering for x
+cluster	BaseSpectral	_svd	array n_components n_discard	returns first n_components left and right singular vectors u and v discarding the first n_discard
+cluster	SpectralBiclustering	_fit_best_piecewise	vectors n_best n_clusters	find the n_best vectors that are best approximated by piecewise constant vectors
+cluster	SpectralBiclustering	_project_and_cluster	data vectors n_clusters	project data to vectors and cluster the result
+cluster	AgglomerationTransform	transform	X	transform a new matrix using the built clustering parameters
+cluster	AgglomerationTransform	inverse_transform	Xred	inverse the transformation
+cluster		_fix_connectivity	X connectivity n_components affinity	fixes the connectivity matrix
+cluster		ward_tree	X connectivity n_clusters return_distance	ward clustering based on a feature matrix
+cluster		linkage_tree	X connectivity n_components n_clusters	linkage agglomerative clustering based on a feature matrix
+cluster		_hc_cut	n_clusters children n_leaves	function cutting the ward tree for a given number of clusters
+cluster	AgglomerativeClustering	fit	X y	fit the hierarchical clustering on the data parameters
+cluster	FeatureAgglomeration	fit	X y	fit the hierarchical clustering on the data
+cluster		discretize	vectors copy max_svd_restarts n_iter_max	search for a partition matrix clustering which is closest to the eigenvector embedding
+cluster		spectral_clustering	affinity n_clusters n_components eigen_solver	apply clustering to a projection to the normalized laplacian
+cluster	SpectralClustering	fit	X y	creates an affinity matrix for x using the selected affinity then applies spectral clustering to this affinity matrix
+cluster		_iterate_sparse_X	X	this little hack returns a densified row when iterating over a sparse matrix instead of constructing a sparse matrix for every row that is
+cluster		_split_node	node threshold branching_factor	the node has to be split if there is no place for a new subcluster in the node
+cluster	_CFNode	update_split_subclusters	subcluster new_subcluster1 new_subcluster2	remove a subcluster from a node and update it with the split subclusters
+cluster	_CFNode	insert_cf_subcluster	subcluster	insert a new subcluster into the node
+cluster	_CFSubcluster	merge_subcluster	nominee_cluster threshold	check if a cluster is worthy enough to be merged if
+cluster	_CFSubcluster	radius		return radius of the subcluster
+cluster	Birch	fit	X y	build a cf tree for the input data
+cluster	Birch	_get_leaves		retrieve the leaves of the cf node
+cluster	Birch	partial_fit	X y	online learning prevents rebuilding of cftree from scratch
+cluster	Birch	predict	X	predict data using the centroids_ of subclusters
+cluster	Birch	transform	X y	transform x into subcluster centroids dimension
+cluster	Birch	_global_clustering	X	global clustering for the subclusters obtained after fitting
+semi_supervised		_not_converged	y_truth y_prediction tol	basic convergence check
+semi_supervised	BaseLabelPropagation	predict	X	performs inductive inference across the model
+semi_supervised	BaseLabelPropagation	predict_proba	X	predict probability for each possible outcome
+semi_supervised	BaseLabelPropagation	fit	X y	fit a semi-supervised label propagation model based all the input data is provided matrix x labeled and unlabeled
+semi_supervised	LabelPropagation	_build_graph		matrix representing a fully connected graph between each sample this basic implementation creates a non-stochastic affinity matrix so
+semi_supervised	LabelSpreading	_build_graph		graph matrix for label spreading computes the graph laplacian
+feature_selection		_clean_nans	scores	fixes issue #1240 nans can't be properly compared so change them to the smallest value of scores's dtype
+feature_selection		f_oneway		performs a 1-way anova
+feature_selection		f_classif	X y	compute the anova f-value for the provided sample
+feature_selection		_chisquare	f_obs f_exp	fast replacement for scipy stats chisquare
+feature_selection		chi2	X y	compute chi-squared stats between each non-negative feature and class
+feature_selection		f_regression	X y center	univariate linear regression tests
+feature_selection	_BaseFilter	fit	X y	run score function on x y and get the appropriate features
+feature_selection	VarianceThreshold	fit	X y	learn empirical variances from x
+feature_selection	SelectorMixin	get_support	indices	get a mask or integer index of the features selected parameters
+feature_selection	SelectorMixin	_get_support_mask		get the boolean mask indicating which features are selected returns
+feature_selection	SelectorMixin	transform	X	reduce x to the selected features
+feature_selection	SelectorMixin	inverse_transform	X	reverse the transformation operation parameters
+feature_selection		_rfe_single_fit	rfe estimator X y	return the score for a fit across one fold
+feature_selection	RFE	fit	X y	fit the rfe model and then the underlying estimator on the selected features
+feature_selection	RFE	predict	X	reduce x to the selected features and then predict using the underlying estimator
+feature_selection	RFE	score	X y	reduce x to the selected features and then return the score of the underlying estimator
+feature_selection	RFECV	fit	X y	fit the rfe model and automatically tune the number of selected features
+feature_selection		_compute_mi_cc	x y n_neighbors	compute mutual information between two continuous variables
+feature_selection		_compute_mi_cd	c d n_neighbors	compute mutual information between continuous and discrete variables
+feature_selection		_compute_mi	x y x_discrete y_discrete	compute mutual information between two variables
+feature_selection		_iterate_columns	X columns	iterate over columns of a matrix
+feature_selection		_estimate_mi	X y discrete_features discrete_target	estimate mutual information between the features and the target
+feature_selection		mutual_info_regression	X y discrete_features n_neighbors	estimate mutual information for a continuous target variable
+feature_selection		mutual_info_classif	X y discrete_features n_neighbors	estimate mutual information for a discrete target variable
+feature_selection		_get_feature_importances	estimator norm_order	retrieve or aggregate feature importances from estimator
+feature_selection		_calculate_threshold	estimator importances threshold	interpret the threshold value
+feature_selection	SelectFromModel	fit	X y	fit the selectfrommodel meta-transformer
+feature_selection	SelectFromModel	partial_fit	X y	fit the selectfrommodel meta-transformer only once
+datasets		fetch_olivetti_faces	data_home shuffle random_state download_if_missing	loader for the olivetti faces data-set from at&t
+datasets		fetch_california_housing	data_home download_if_missing	loader for the california housing dataset from statlib
+datasets		_load_coverage	F header_length dtype	load a coverage file from an open file object
+datasets		_load_csv	F	load csv file
+datasets		construct_grids	batch	construct the map grid from the batch object parameters
+datasets		fetch_species_distributions	data_home download_if_missing	loader for species distribution dataset from phillips et al 2006
+datasets		load_svmlight_file	f n_features dtype multilabel	load datasets in the svmlight / libsvm format into sparse csr matrix this format is a text-based format with one sample per line
+datasets		load_svmlight_files	files n_features dtype multilabel	load dataset from multiple files in svmlight format this function is equivalent to mapping load_svmlight_file over a list of
+datasets		dump_svmlight_file	X y f zero_based	dump the dataset in svmlight / libsvm file format
+datasets		fetch_rcv1	data_home subset download_if_missing random_state	load the rcv1 multilabel dataset downloading it if necessary
+datasets		_inverse_permutation	p	inverse permutation p
+datasets		_find_permutation	a b	find the permutation from a to b
+datasets		scale_face	face	scale back to 0-1 range in case of normalization for plotting
+datasets		check_fetch_lfw	data_home funneled download_if_missing	helper function to download any missing lfw data
+datasets		_load_imgs	file_paths slice_ color resize	internally used to load images
+datasets		_fetch_lfw_people	data_folder_path slice_ color resize	perform the actual data loading for the lfw people dataset this operation is meant to be cached by a joblib wrapper
+datasets		fetch_lfw_people	data_home funneled resize min_faces_per_person	loader for the labeled faces in the wild lfw people dataset this dataset is a collection of jpeg pictures of famous people
+datasets		_fetch_lfw_pairs	index_file_path data_folder_path slice_ color	perform the actual data loading for the lfw pairs dataset this operation is meant to be cached by a joblib wrapper
+datasets		fetch_lfw_pairs	subset data_home funneled resize	loader for the labeled faces in the wild lfw pairs dataset this dataset is a collection of jpeg pictures of famous people
+datasets		get_data_home	data_home	return the path of the scikit-learn data dir
+datasets		clear_data_home	data_home	delete all the content of the data home cache
+datasets		load_files	container_path description categories load_content	load text files with categories as subfolder names
+datasets		load_data	module_path data_file_name	loads data from module_path/data/data_file_name
+datasets		load_wine	return_X_y	load and return the wine dataset classification
+datasets		load_iris	return_X_y	load and return the iris dataset classification
+datasets		load_breast_cancer	return_X_y	load and return the breast cancer wisconsin dataset classification
+datasets		load_digits	n_class return_X_y	load and return the digits dataset classification
+datasets		load_diabetes	return_X_y	load and return the diabetes dataset regression
+datasets		load_linnerud	return_X_y	load and return the linnerud dataset multivariate regression
+datasets		load_boston	return_X_y	load and return the boston house-prices dataset regression
+datasets		load_sample_images		load sample images for image manipulation
+datasets		load_sample_image	image_name	load the numpy array of a single sample image parameters
+datasets		_pkl_filepath		ensure different filenames for python 2 and python 3 pickles an object pickled under python 3 cannot be loaded under python 2
+datasets		fetch_covtype	data_home download_if_missing random_state shuffle	load the covertype dataset downloading it if necessary
+datasets		_generate_hypercube	samples dimensions rng	returns distinct binary samples of length dimensions
+datasets		make_classification	n_samples n_features n_informative n_redundant	generate a random n-class classification problem
+datasets		make_multilabel_classification	n_samples n_features n_classes n_labels	generate a random multilabel classification problem
+datasets		make_hastie_10_2	n_samples random_state	generates data for binary classification used in hastie et al
+datasets		make_regression	n_samples n_features n_informative n_targets	generate a random regression problem
+datasets		make_circles	n_samples shuffle noise random_state	make a large circle containing a smaller circle in 2d
+datasets		make_moons	n_samples shuffle noise random_state	make two interleaving half circles a simple toy dataset to visualize clustering and classification
+datasets		make_blobs	n_samples n_features centers cluster_std	generate isotropic gaussian blobs for clustering
+datasets		make_friedman1	n_samples n_features noise random_state	generate the "friedman \#1" regression problem this dataset is described in friedman [1] and breiman [2]
+datasets		make_friedman2	n_samples noise random_state	generate the "friedman \#2" regression problem this dataset is described in friedman [1] and breiman [2]
+datasets		make_friedman3	n_samples noise random_state	generate the "friedman \#3" regression problem this dataset is described in friedman [1] and breiman [2]
+datasets		make_low_rank_matrix	n_samples n_features effective_rank tail_strength	generate a mostly low rank matrix with bell-shaped singular values most of the variance can be explained by a bell-shaped curve of width
+datasets		make_sparse_coded_signal	n_samples n_components n_features n_nonzero_coefs	generate a signal as a sparse combination of dictionary elements
+datasets		make_sparse_uncorrelated	n_samples n_features random_state	generate a random regression problem with sparse uncorrelated design this dataset is described in celeux et al [1]
+datasets		make_spd_matrix	n_dim random_state	generate a random symmetric positive-definite matrix
+datasets		make_sparse_spd_matrix	dim alpha norm_diag smallest_coef	generate a sparse symmetric definite positive matrix
+datasets		make_swiss_roll	n_samples noise random_state	generate a swiss roll dataset
+datasets		make_s_curve	n_samples noise random_state	generate an s curve dataset
+datasets		make_gaussian_quantiles	mean cov n_samples n_features	generate isotropic gaussian and label samples by quantile this classification dataset is constructed by taking a multi-dimensional
+datasets		make_biclusters	shape n_clusters noise minval	generate an array with constant block diagonal structure for biclustering
+datasets		make_checkerboard	shape n_clusters noise minval	generate an array with block checkerboard structure for biclustering
+datasets		fetch_kddcup99	subset shuffle random_state percent10	load and return the kddcup 99 dataset classification
+datasets		_fetch_brute_kddcup99	subset data_home download_if_missing random_state	load the kddcup99 dataset downloading it if necessary
+datasets		_mkdirp	d	ensure directory d exists like mkdir -p on unix no guarantee that the directory is writable
+datasets		mldata_filename	dataname	convert a raw name for a data set in a mldata org filename
+datasets		fetch_mldata	dataname target_name data_name transpose_data	fetch an mldata org data set
+datasets		load_mlcomp	name_or_id set_ mlcomp_root	load a datasets as downloaded from http //mlcomp org
+datasets		download_20newsgroups	target_dir cache_path	download the 20 newsgroups data and stored it as a zipped pickle
+datasets		strip_newsgroup_header	text	given text in "news" format strip the headers by removing everything before the first blank line
+datasets		strip_newsgroup_quoting	text	given text in "news" format strip lines beginning with the quote characters > or |, plus lines that often introduce a quoted section
+datasets		strip_newsgroup_footer	text	given text in "news" format attempt to remove a signature block
+datasets		fetch_20newsgroups	data_home subset categories shuffle	load the filenames and data from the 20 newsgroups dataset
+datasets		fetch_20newsgroups_vectorized	subset remove data_home	load the 20 newsgroups dataset and transform it into tf-idf vectors
+neural_network		identity	X	simply return the input array
+neural_network		logistic	X	compute the logistic function inplace
+neural_network		tanh	X	compute the hyperbolic tan function inplace
+neural_network		relu	X	compute the rectified linear unit function inplace
+neural_network		softmax	X	compute the k-way softmax function inplace
+neural_network		inplace_identity_derivative	Z delta	apply the derivative of the identity function do nothing
+neural_network		inplace_logistic_derivative	Z delta	apply the derivative of the logistic sigmoid function
+neural_network		inplace_tanh_derivative	Z delta	apply the derivative of the hyperbolic tanh function
+neural_network		inplace_relu_derivative	Z delta	apply the derivative of the relu function
+neural_network		squared_loss	y_true y_pred	compute the squared loss for regression
+neural_network		log_loss	y_true y_prob	compute logistic loss for classification
+neural_network		binary_log_loss	y_true y_prob	compute binary logistic loss for classification
+neural_network	BernoulliRBM	transform	X	compute the hidden layer activation probabilities p(h=1|v=x)
+neural_network	BernoulliRBM	_mean_hiddens	v	computes the probabilities p(h=1|v)
+neural_network	BernoulliRBM	_sample_hiddens	v rng	sample from the distribution p(h|v)
+neural_network	BernoulliRBM	_sample_visibles	h rng	sample from the distribution p(v|h)
+neural_network	BernoulliRBM	_free_energy	v	computes the free energy f v = - log sum_h exp(-e v h
+neural_network	BernoulliRBM	gibbs	v	perform one gibbs sampling step
+neural_network	BernoulliRBM	partial_fit	X y	fit the model to the data x which should contain a partial segment of the data
+neural_network	BernoulliRBM	_fit	v_pos rng	inner fit for one mini-batch
+neural_network	BernoulliRBM	score_samples	X	compute the pseudo-likelihood of x
+neural_network	BernoulliRBM	fit	X y	fit the model to the data x
+neural_network	BaseOptimizer	update_params	grads	update parameters with given gradients parameters
+neural_network	BaseOptimizer	iteration_ends	time_step	perform update to learning rate and potentially other states at the
+neural_network	BaseOptimizer	trigger_stopping	msg verbose	decides whether it is time to stop training
+neural_network	SGDOptimizer	iteration_ends	time_step	perform updates to learning rate and potential other states at the
+neural_network	SGDOptimizer	_get_updates	grads	get the values used to update params with given gradients parameters
+neural_network	AdamOptimizer	_get_updates	grads	get the values used to update params with given gradients parameters
+neural_network		_pack	coefs_ intercepts_	pack the parameters into a single vector
+neural_network	BaseMultilayerPerceptron	_unpack	packed_parameters	extract the coefficients and intercepts from packed_parameters
+neural_network	BaseMultilayerPerceptron	_forward_pass	activations	perform a forward pass on the network by computing the values of the neurons in the hidden layers and the output layer
+neural_network	BaseMultilayerPerceptron	_compute_loss_grad	layer n_samples activations deltas	compute the gradient of loss with respect to coefs and intercept for specified layer
+neural_network	BaseMultilayerPerceptron	_loss_grad_lbfgs	packed_coef_inter X y activations	compute the mlp loss function and its corresponding derivatives with respect to the different parameters given in the initialization
+neural_network	BaseMultilayerPerceptron	_backprop	X y activations deltas	compute the mlp loss function and its corresponding derivatives with respect to each parameter weights and bias vectors
+neural_network	BaseMultilayerPerceptron	fit	X y	fit the model to data matrix x and target s y
+neural_network	BaseMultilayerPerceptron	partial_fit		fit the model to data matrix x and target y
+neural_network	BaseMultilayerPerceptron	_predict	X	predict using the trained model parameters
+neural_network	MLPClassifier	predict	X	predict using the multi-layer perceptron classifier parameters
+neural_network	MLPClassifier	fit	X y	fit the model to data matrix x and target s y
+neural_network	MLPClassifier	partial_fit		fit the model to data matrix x and target y
+neural_network	MLPClassifier	predict_log_proba	X	return the log of probability estimates
+neural_network	MLPRegressor	predict	X	predict using the multi-layer perceptron model
+tree		_color_brew	n	generate n colors with equally spaced hues
+tree		export_graphviz	decision_tree out_file max_depth feature_names	export a decision tree in dot format
+tree	BaseDecisionTree	_validate_X_predict	X check_input	validate x whenever one tries to predict apply predict_proba
+tree	BaseDecisionTree	predict	X check_input	predict class or regression value for x
+tree	BaseDecisionTree	apply	X check_input	returns the index of the leaf that each sample is predicted as
+tree	BaseDecisionTree	decision_path	X check_input	return the decision path in the tree
+tree	BaseDecisionTree	feature_importances_		return the feature importances
+tree	DecisionTreeClassifier	fit	X y sample_weight check_input	build a decision tree classifier from the training set x y
+tree	DecisionTreeClassifier	predict_proba	X check_input	predict class probabilities of the input samples x
+tree	DecisionTreeClassifier	predict_log_proba	X	predict class log-probabilities of the input samples x
+tree	DecisionTreeRegressor	fit	X y sample_weight check_input	build a decision tree regressor from the training set x y
+utils		assert_warns	warning_class func	test that a certain warning occurs
+utils		assert_warns_message	warning_class message func	test that a certain warning occurs and with a certain message
+utils		ignore_warnings	obj category	context manager and decorator to ignore warnings
+utils	_IgnoreWarnings	__call__	fn	decorator to catch and hide warnings without visual nesting
+utils		assert_raise_message	exceptions message function	helper function to test error messages in exceptions
+utils		fake_mldata	columns_dict dataname matfile ordering	create a fake mldata data set
+utils	mock_mldata_urlopen	__init__	mock_datasets	object that mocks the urlopen function to fake requests to mldata
+utils		all_estimators	include_meta_estimators include_other type_filter include_dont_test	get a list of all estimators from sklearn
+utils		set_random_state	estimator random_state	set random state of an estimator if it has the random_state param
+utils		if_matplotlib	func	test decorator that skips test if matplotlib not installed
+utils		skip_if_32bit	func	test decorator that skips tests on 32bit platforms
+utils		if_safe_multiprocessing_with_blas	func	decorator for tests involving both blas calls and multiprocessing
+utils		clean_warning_registry		safe way to reset warnings
+utils		check_skip_travis		skip test if being run on travis
+utils		_delete_folder	folder_path warn	utility function to cleanup a temporary folder if still existing
+utils		_line_search_wolfe12	f fprime xk pk	same as line_search_wolfe1 but fall back to line_search_wolfe2 if suitable step length is not found and raise an exception if a
+utils		_cg	fhess_p fgrad maxiter tol	solve iteratively the linear system 'fhess_p xsupi = fgrad'
+utils		newton_cg	grad_hess func grad x0	minimization of scalar function of one or more variables using the newton-cg algorithm
+utils		_rankdata	a method	assign ranks to data dealing with ties appropriately
+utils		_weighted_percentile	array sample_weight percentile	compute the weighted percentile of array with sample_weight
+utils		parallel_helper	obj methodname	helper to workaround python 2 limitations of pickling instance methods
+utils		_sym_ortho	a b	stable implementation of givens rotation
+utils		lsqr	A b damp atol	find the least-squares solution to a large sparse linear system of equations
+utils		compute_class_weight	class_weight classes y	estimate class weights for unbalanced datasets
+utils		compute_sample_weight	class_weight y indices	estimate sample weights by class for unbalanced datasets
+utils		linear_assignment	X	solve the linear assignment problem using the hungarian algorithm
+utils	_HungarianState	_find_prime_in_row	row	find the first prime element in the specified row returns
+utils	_HungarianState	_clear_covers		clear all covered matrix cells
+utils		_hungarian	cost_matrix	the hungarian algorithm
+utils		_step1	state	steps 1 and 2 in the wikipedia page
+utils		_step3	state	cover each column containing a starred zero if n columns are covered
+utils		_step4	state	find a noncovered zero and prime it if there is no starred zero
+utils		_step5	state	construct a series of alternating primed and starred zeros as follows
+utils		_step6	state	add the value found in step 4 to every element of each covered row and subtract it from every element of each uncovered column
+utils		_aligned_zeros	shape dtype order align	allocate a new ndarray with aligned memory
+utils		_eigs	A k M sigma	find k eigenvalues and eigenvectors of the square matrix a
+utils		_eigsh	A k M sigma	find k eigenvalues and eigenvectors of the real symmetric square matrix or complex hermitian matrix a
+utils		_svds	A k ncv tol	compute the largest k singular values/vectors for a sparse matrix
+utils		choice	a size replace p	choice(a size=none replace=true p=none) generates a random sample from a given 1-d array
+utils		random_choice_csc	n_samples classes class_probability random_state	generate a sparse random matrix given column class distributions parameters
+utils		single_source_shortest_path_length	graph source cutoff	return the shortest path length from source to all reachable nodes
+utils		graph_laplacian	csgraph normed return_diag	return the laplacian matrix of a directed graph
+utils	deprecated	_decorate_fun	fun	decorate function fun
+utils		norm	x	compute the euclidean or frobenius norm of x
+utils		squared_norm	x	squared euclidean or frobenius norm of x
+utils		row_norms	X squared	row-wise squared euclidean norm of x
+utils		fast_logdet	A	compute log(det a for a symmetric equivalent to : np
+utils		density	w	compute density of a sparse vector
+utils		safe_sparse_dot	a b dense_output	dot product that handle the sparse matrix case correctly uses blas gemm as replacement for numpy
+utils		randomized_range_finder	A size n_iter power_iteration_normalizer	computes an orthonormal matrix whose range approximates the range of a
+utils		randomized_svd	M n_components n_oversamples n_iter	computes a truncated randomized svd parameters
+utils		logsumexp	arr axis	computes the sum of arr assuming arr is in the log domain
+utils		weighted_mode	a w axis	returns an array of the weighted modal most common value in a if there is more than one such value only the first is returned
+utils		pinvh	a cond rcond lower	compute the moore-penrose pseudo-inverse of a hermetian matrix
+utils		cartesian	arrays out	generate a cartesian product of input arrays
+utils		svd_flip	u v u_based_decision	sign correction to ensure deterministic output from svd
+utils		log_logistic	X out	compute the log of the logistic function log(1 / (1 + e ** -x))
+utils		softmax	X copy	calculate the softmax function
+utils		safe_min	X	returns the minimum value of a dense or a csr/csc matrix
+utils		make_nonnegative	X min_value	ensure x min() >= min_value
+utils		_incremental_mean_and_var	X last_mean last_variance last_sample_count	calculate mean update and a youngs and cramer variance update
+utils		_deterministic_vector_sign_flip	u	modify the sign of vectors for reproducibility flips the sign of elements of all the vectors rows of u such that
+utils		stable_cumsum	arr axis rtol atol	use high precision for cumsum and check that final value matches sum parameters
+utils		_assert_all_finite	X	like assert_all_finite but only for ndarray
+utils		assert_all_finite	X	throw a valueerror if x contains nan or infinity
+utils		as_float_array	X copy force_all_finite	converts an array-like to an array of floats the new dtype will be np
+utils		_is_arraylike	x	returns whether the input is array-like
+utils		_num_samples	x	return number of samples in array-like x
+utils		_shape_repr	shape	return a platform independent representation of an array shape under python 2 the long type introduces an 'l' suffix when using the
+utils		check_consistent_length		check that all arrays have consistent first dimensions
+utils		indexable		make arrays indexable for cross-validation
+utils		_ensure_sparse_format	spmatrix accept_sparse dtype copy	convert a sparse matrix to a given format
+utils		check_array	array accept_sparse dtype order	input validation on an array list sparse matrix or similar
+utils		check_X_y	X y accept_sparse dtype	input validation for standard estimators
+utils		column_or_1d	y warn	ravel column or 1d numpy array else raises an error parameters
+utils		check_random_state	seed	turn seed into a np random randomstate instance
+utils		has_fit_parameter	estimator parameter	checks whether the estimator's fit method supports the given parameter
+utils		check_symmetric	array tol raise_warning raise_exception	make sure that array is 2d square and symmetric
+utils		check_is_fitted	estimator attributes msg all_or_any	perform is_fitted validation for estimator
+utils		check_non_negative	X whom	check if there is any negative value in an array
+utils		total_seconds	delta	helper function to emulate function total_seconds introduced in python2
+utils		check_estimator	Estimator	check if estimator adheres to scikit-learn conventions
+utils		_is_32bit		detect if process is 32bit python
+utils		check_estimators_pickle	name Estimator	test that we can pickle all estimators
+utils		check_clusterer_compute_labels_predict	name Clusterer	check that predict is invariant of compute_labels
+utils		check_estimators_fit_returns_self	name Estimator	check if self is returned when calling fit
+utils		check_estimators_unfitted	name Estimator	check that predict raises an exception in an unfitted estimator
+utils		check_class_weight_balanced_linear_classifier	name Classifier	test class weights with non-contiguous class labels
+utils		check_no_fit_attributes_set_in_init	name Estimator	check that estimator __init__ doesn't set trailing-_ attributes
+utils		unique_labels		extract an ordered array of unique labels we don't allow
+utils		is_multilabel	y	check if y is in a multilabel format
+utils		check_classification_targets	y	ensure that target y is of a non-regression type
+utils		type_of_target	y	determine the type of data indicated by target y parameters
+utils		_check_partial_fit_first_call	clf classes	private helper function for factorizing common classes param logic estimators that implement the partial_fit api need to be provided with
+utils		class_distribution	y sample_weight	compute class priors from multioutput-multiclass target data parameters
+utils		_ovr_decision_function	predictions confidences n_classes	compute a continuous tie-breaking ovr decision function
+utils		safe_mask	X mask	return a mask which is safe to use on x
+utils		axis0_safe_slice	X mask len_mask	this mask is safer than safe_mask since it returns an empty array when a sparse matrix is sliced with a boolean mask
+utils		safe_indexing	X indices	return items or rows from x using indices
+utils		resample		resample arrays or sparse matrices in a consistent way the default strategy implements one step of the bootstrapping
+utils		shuffle		shuffle arrays or sparse matrices in a consistent way this is a convenience alias to resample(*arrays replace=false) to do
+utils		safe_sqr	X copy	element wise squaring of array-likes and sparse matrices
+utils		gen_batches	n batch_size	generator to create slices containing batch_size elements from 0 to n
+utils		gen_even_slices	n n_packs n_samples	generator to create n_packs slices going up to n
+utils		_get_n_jobs	n_jobs	get number of jobs for the computation
+utils		tosequence	x	cast iterable x to a sequence avoiding a copy if possible
+utils		indices_to_mask	indices mask_length	convert list of indices to boolean mask
+utils		_raise_typeerror	X	raises a typeerror if x is not a csr or csc matrix
+utils		inplace_csr_column_scale	X scale	inplace column scaling of a csr matrix
+utils		inplace_csr_row_scale	X scale	inplace row scaling of a csr matrix
+utils		mean_variance_axis	X axis	compute mean and variance along an axix on a csr or csc matrix parameters
+utils		incr_mean_variance_axis	X axis last_mean last_var	compute incremental mean and variance along an axix on a csr or csc matrix
+utils		inplace_column_scale	X scale	inplace column scaling of a csc/csr matrix
+utils		inplace_row_scale	X scale	inplace row scaling of a csr or csc matrix
+utils		inplace_swap_row_csc	X m n	swaps two rows of a csc matrix in-place
+utils		inplace_swap_row_csr	X m n	swaps two rows of a csr matrix in-place
+utils		inplace_swap_row	X m n	swaps two rows of a csc/csr matrix in-place
+utils		inplace_swap_column	X m n	swaps two columns of a csc/csr matrix in-place
+utils		min_max_axis	X axis	compute minimum and maximum along an axis on a csr or csc matrix parameters
+utils		count_nonzero	X axis sample_weight	a variant of x getnnz() with extension to weighting on axis 0
+utils		_get_median	data n_zeros	compute the median of data with n_zeros additional zeros
+utils		_get_elem_at_rank	rank data n_negative n_zeros	find the value in data augmented with n_zeros for the given rank
+utils		csc_median_axis_0	X	find the median across axis 0 of a csc matrix
+utils		if_delegate_has_method	delegate	create a decorator for methods that are delegated to a sub-estimator this enables ducktyping by hasattr returning true according to the
+utils		_safe_split	estimator X y indices	create subset of dataset and properly handle kernels
+utils.sparsetools		validate_graph	csgraph directed dtype csr_output	routine for validation and conversion of csgraph inputs
+gaussian_process		constant	x	zero order polynomial (constant p = 1) regression model
+gaussian_process		linear	x	first order polynomial (linear p = n+1) regression model
+gaussian_process		quadratic	x	second order polynomial (quadratic p = n* n-1 /2+n+1) regression model
+gaussian_process	GaussianProcessRegressor	fit	X y	fit gaussian process regression model
+gaussian_process	GaussianProcessRegressor	predict	X return_std return_cov	predict using the gaussian process regression model we can also predict based on an unfitted model by using the gp prior
+gaussian_process	GaussianProcessRegressor	sample_y	X n_samples random_state	draw samples from gaussian process and evaluate at x
+gaussian_process	GaussianProcessRegressor	log_marginal_likelihood	theta eval_gradient	returns log-marginal likelihood of theta for training data
+gaussian_process		l1_cross_distances	X	computes the nonzero componentwise l1 cross-distances between the vectors in x
+gaussian_process	GaussianProcess	fit	X y	the gaussian process model fitting method
+gaussian_process	GaussianProcess	predict	X eval_MSE batch_size	this function evaluates the gaussian process model at x
+gaussian_process	GaussianProcess	reduced_likelihood_function	theta	this function determines the blup parameters and evaluates the reduced likelihood function for the given autocorrelation parameters theta
+gaussian_process	GaussianProcess	_arg_max_reduced_likelihood_function		this function estimates the autocorrelation parameters theta as the maximizer of the reduced likelihood function
+gaussian_process		absolute_exponential	theta d	absolute exponential autocorrelation model
+gaussian_process		squared_exponential	theta d	squared exponential correlation model radial basis function
+gaussian_process		generalized_exponential	theta d	generalized exponential correlation model
+gaussian_process		pure_nugget	theta d	spatial independence correlation model pure nugget
+gaussian_process		cubic	theta d	cubic correlation model : theta d --> r theta d =
+gaussian_process		linear	theta d	linear correlation model : theta d --> r theta d =
+gaussian_process	_BinaryGaussianProcessClassifierLaplace	fit	X y	fit gaussian process classification model parameters
+gaussian_process	_BinaryGaussianProcessClassifierLaplace	predict	X	perform classification on an array of test vectors x
+gaussian_process	_BinaryGaussianProcessClassifierLaplace	predict_proba	X	return probability estimates for the test vector x
+gaussian_process	_BinaryGaussianProcessClassifierLaplace	log_marginal_likelihood	theta eval_gradient	returns log-marginal likelihood of theta for training data
+gaussian_process	_BinaryGaussianProcessClassifierLaplace	_posterior_mode	K return_temporaries	mode-finding for binary laplace gpc and fixed kernel
+gaussian_process	GaussianProcessClassifier	fit	X y	fit gaussian process classification model parameters
+gaussian_process	GaussianProcessClassifier	predict	X	perform classification on an array of test vectors x
+gaussian_process	GaussianProcessClassifier	predict_proba	X	return probability estimates for the test vector x
+gaussian_process	GaussianProcessClassifier	log_marginal_likelihood	theta eval_gradient	returns log-marginal likelihood of theta for training data
+gaussian_process	Kernel	get_params	deep	get parameters of this kernel
+gaussian_process	Kernel	set_params		set the parameters of this kernel
+gaussian_process	Kernel	clone_with_theta	theta	returns a clone of self with given hyperparameters theta
+gaussian_process	Kernel	n_dims		returns the number of non-fixed hyperparameters of the kernel
+gaussian_process	Kernel	hyperparameters		returns a list of all hyperparameter specifications
+gaussian_process	Kernel	theta		returns the flattened log-transformed non-fixed hyperparameters
+gaussian_process	Kernel	theta	theta	sets the flattened log-transformed non-fixed hyperparameters
+gaussian_process	Kernel	bounds		returns the log-transformed bounds on the theta
+gaussian_process	Kernel	__call__	X Y eval_gradient	evaluate the kernel
+gaussian_process	Kernel	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	Kernel	is_stationary		returns whether the kernel is stationary
+gaussian_process	NormalizedKernelMixin	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	StationaryKernelMixin	is_stationary		returns whether the kernel is stationary
+gaussian_process	CompoundKernel	get_params	deep	get parameters of this kernel
+gaussian_process	CompoundKernel	theta		returns the flattened log-transformed non-fixed hyperparameters
+gaussian_process	CompoundKernel	theta	theta	sets the flattened log-transformed non-fixed hyperparameters
+gaussian_process	CompoundKernel	bounds		returns the log-transformed bounds on the theta
+gaussian_process	CompoundKernel	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	CompoundKernel	is_stationary		returns whether the kernel is stationary
+gaussian_process	CompoundKernel	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	KernelOperator	get_params	deep	get parameters of this kernel
+gaussian_process	KernelOperator	hyperparameters		returns a list of all hyperparameter
+gaussian_process	KernelOperator	theta		returns the flattened log-transformed non-fixed hyperparameters
+gaussian_process	KernelOperator	theta	theta	sets the flattened log-transformed non-fixed hyperparameters
+gaussian_process	KernelOperator	bounds		returns the log-transformed bounds on the theta
+gaussian_process	KernelOperator	is_stationary		returns whether the kernel is stationary
+gaussian_process	Sum	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	Sum	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	Product	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	Product	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	Exponentiation	get_params	deep	get parameters of this kernel
+gaussian_process	Exponentiation	hyperparameters		returns a list of all hyperparameter
+gaussian_process	Exponentiation	theta		returns the flattened log-transformed non-fixed hyperparameters
+gaussian_process	Exponentiation	theta	theta	sets the flattened log-transformed non-fixed hyperparameters
+gaussian_process	Exponentiation	bounds		returns the log-transformed bounds on the theta
+gaussian_process	Exponentiation	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	Exponentiation	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	Exponentiation	is_stationary		returns whether the kernel is stationary
+gaussian_process	ConstantKernel	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	ConstantKernel	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	WhiteKernel	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	WhiteKernel	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	RBF	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	Matern	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	RationalQuadratic	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	ExpSineSquared	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	DotProduct	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	DotProduct	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	DotProduct	is_stationary		returns whether the kernel is stationary
+gaussian_process	PairwiseKernel	__call__	X Y eval_gradient	return the kernel k x y and optionally its gradient
+gaussian_process	PairwiseKernel	diag	X	returns the diagonal of the kernel k x x
+gaussian_process	PairwiseKernel	is_stationary		returns whether the kernel is stationary
+neighbors		_find_matching_indices	tree bin_X left_mask right_mask	finds indices in sorted array of integers
+neighbors		_find_longest_prefix_match	tree bin_X hash_size left_masks	find the longest prefix match in tree for each query in bin_x most significant bits are considered as the prefix
+neighbors		_array_of_arrays	list_of_arrays	creates an array of array from list of arrays
+neighbors	LSHForest	_compute_distances	query candidates	computes the cosine distance
+neighbors	LSHForest	_generate_masks		creates left and right masks for all hash lengths
+neighbors	LSHForest	_get_candidates	query max_depth bin_queries n_neighbors	performs the synchronous ascending phase
+neighbors	LSHForest	_get_radius_neighbors	query max_depth bin_queries radius	finds radius neighbors from the candidates obtained
+neighbors	LSHForest	fit	X y	fit the lsh forest on the data
+neighbors	LSHForest	_query	X	performs descending phase to find maximum depth
+neighbors	LSHForest	kneighbors	X n_neighbors return_distance	returns n_neighbors of approximate nearest neighbors
+neighbors	LSHForest	radius_neighbors	X radius return_distance	finds the neighbors within a given radius of a point or points
+neighbors	LSHForest	partial_fit	X y	inserts new data into the already fitted lsh forest
+neighbors	LocalOutlierFactor	fit_predict	X y	"fits the model to the training set x and returns the labels 1 inlier -1 outlier on the training set according to the lof score
+neighbors	LocalOutlierFactor	fit	X y	fit the model using x as training data
+neighbors	LocalOutlierFactor	_predict	X	predict the labels 1 inlier -1 outlier of x according to lof
+neighbors	LocalOutlierFactor	_decision_function	X	opposite of the local outlier factor of x (as bigger is better i
+neighbors	LocalOutlierFactor	_local_reachability_density	distances_X neighbors_indices	the local reachability density lrd the lrd of a sample is the inverse of the average reachability
+neighbors		_check_weights	weights	check to make sure weights are valid
+neighbors		_get_weights	dist weights	get the weights from an array of distances and a parameter weights
+neighbors	KNeighborsMixin	kneighbors	X n_neighbors return_distance	finds the k-neighbors of a point
+neighbors	KNeighborsMixin	kneighbors_graph	X n_neighbors mode	computes the weighted graph of k-neighbors for points in x parameters
+neighbors	RadiusNeighborsMixin	radius_neighbors	X radius return_distance	finds the neighbors within a given radius of a point or points
+neighbors	RadiusNeighborsMixin	radius_neighbors_graph	X radius mode	computes the weighted graph of neighbors for points in x neighborhoods are restricted the points at a distance lower than
+neighbors	SupervisedFloatMixin	fit	X y	fit the model using x as training data and y as target values parameters
+neighbors	SupervisedIntegerMixin	fit	X y	fit the model using x as training data and y as target values parameters
+neighbors	UnsupervisedMixin	fit	X y	fit the model using x as training data parameters
+neighbors	KNeighborsRegressor	predict	X	predict the target for the provided data parameters
+neighbors	RadiusNeighborsRegressor	predict	X	predict the target for the provided data parameters
+neighbors		_check_params	X metric p metric_params	check the validity of the input parameters
+neighbors		_query_include_self	X include_self	return the query based on include_self param
+neighbors		kneighbors_graph	X n_neighbors mode metric	computes the weighted graph of k-neighbors for points in x read more in the :ref user guide <unsupervised_neighbors>
+neighbors		radius_neighbors_graph	X radius mode metric	computes the weighted graph of neighbors for points in x neighborhoods are restricted the points at a distance lower than
+neighbors	KernelDensity	fit	X y	fit the kernel density model on the data
+neighbors	KernelDensity	score_samples	X	evaluate the density model on the data
+neighbors	KernelDensity	score	X y	compute the total log probability under the model
+neighbors	KernelDensity	sample	n_samples random_state	generate random samples from the model
+neighbors	KNeighborsClassifier	predict	X	predict the class labels for the provided data parameters
+neighbors	KNeighborsClassifier	predict_proba	X	return probability estimates for the test data x
+neighbors	RadiusNeighborsClassifier	predict	X	predict the class labels for the provided data parameters
+neighbors	NearestCentroid	fit	X y	fit the nearestcentroid model according to the given training data
+neighbors	NearestCentroid	predict	X	perform classification on an array of test vectors x
+model_selection		cross_val_score	estimator X y groups	evaluate a score by cross-validation read more in the :ref user guide <cross_validation>
+model_selection		_fit_and_score	estimator X y scorer	fit estimator and compute scores for a given dataset split
+model_selection		_score	estimator X_test y_test scorer	compute the score of an estimator on a given test set
+model_selection		cross_val_predict	estimator X y groups	generate cross-validated estimates for each input data point read more in the :ref user guide <cross_validation>
+model_selection		_fit_and_predict	estimator X y train	fit estimator and predict values for a given dataset split
+model_selection		_check_is_permutation	indices n_samples	check whether indices is a reordering of the array np arange(n_samples)
+model_selection		_index_param_value	X v indices	private helper function for parameter value indexing
+model_selection		permutation_test_score	estimator X y groups	evaluate the significance of a cross-validated score with permutations read more in the :ref user guide <cross_validation>
+model_selection		_permutation_test_score	estimator X y groups	auxiliary function for permutation_test_score
+model_selection		_shuffle	y groups random_state	return a shuffled copy of y eventually shuffle among same groups
+model_selection		_translate_train_sizes	train_sizes n_max_training_samples	determine absolute sizes of training subsets and validate 'train_sizes'
+model_selection		_incremental_fit_estimator	estimator X y classes	train estimator on training subsets incrementally and compute scores
+model_selection	ParameterGrid	__iter__		iterate over the points in the grid
+model_selection	ParameterGrid	__len__		number of points on the grid
+model_selection	ParameterGrid	__getitem__	ind	get the parameters that would be indth in iteration
+model_selection	ParameterSampler	__len__		number of points that will be sampled
+model_selection		fit_grid_point	X y estimator parameters	run fit on one set of parameters
+model_selection	_CVScoreTuple	__repr__		simple custom repr to summarize the main info
+model_selection	BaseSearchCV	score	X y	returns the score on the given data if the estimator has been refit
+model_selection	BaseSearchCV	predict	X	call predict on the estimator with the best found parameters
+model_selection	BaseSearchCV	predict_proba	X	call predict_proba on the estimator with the best found parameters
+model_selection	BaseSearchCV	predict_log_proba	X	call predict_log_proba on the estimator with the best found parameters
+model_selection	BaseSearchCV	decision_function	X	call decision_function on the estimator with the best found parameters
+model_selection	BaseSearchCV	transform	X	call transform on the estimator with the best found parameters
+model_selection	BaseSearchCV	inverse_transform	Xt	call inverse_transform on the estimator with the best found params
+model_selection	BaseSearchCV	fit	X y groups	run fit with all sets of parameters
+model_selection	GridSearchCV	_get_param_iterator		return parametergrid instance for the given param_grid
+model_selection	RandomizedSearchCV	_get_param_iterator		return parametersampler instance for the given distributions
+model_selection	BaseCrossValidator	split	X y groups	generate indices to split data into training and test set
+model_selection	BaseCrossValidator	_iter_test_masks	X y groups	generates boolean masks corresponding to test sets
+model_selection	BaseCrossValidator	_iter_test_indices	X y groups	generates integer indices corresponding to test sets
+model_selection	BaseCrossValidator	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator
+model_selection	LeaveOneOut	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	LeavePOut	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	_BaseKFold	split	X y groups	generate indices to split data into training and test set
+model_selection	_BaseKFold	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	StratifiedKFold	split	X y groups	generate indices to split data into training and test set
+model_selection	TimeSeriesSplit	split	X y groups	generate indices to split data into training and test set
+model_selection	LeaveOneGroupOut	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	LeavePGroupsOut	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	_RepeatedSplits	split	X y groups	generates indices to split data into training and test set
+model_selection	_RepeatedSplits	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	BaseShuffleSplit	split	X y groups	generate indices to split data into training and test set
+model_selection	BaseShuffleSplit	_iter_indices	X y groups	generate train test indices
+model_selection	BaseShuffleSplit	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection		_approximate_mode	class_counts n_draws rng	computes approximate mode of multivariate hypergeometric
+model_selection	StratifiedShuffleSplit	split	X y groups	generate indices to split data into training and test set
+model_selection		_validate_shuffle_split_init	test_size train_size	validation helper to check the test_size and train_size at init
+model_selection		_validate_shuffle_split	n_samples test_size train_size	validation helper to check if the test/test sizes are meaningful wrt to the
+model_selection	PredefinedSplit	split	X y groups	generate indices to split data into training and test set
+model_selection	PredefinedSplit	_iter_test_masks		generates boolean masks corresponding to test sets
+model_selection	PredefinedSplit	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	_CVIterableWrapper	get_n_splits	X y groups	returns the number of splitting iterations in the cross-validator parameters
+model_selection	_CVIterableWrapper	split	X y groups	generate indices to split data into training and test set
+model_selection		check_cv	cv y classifier	input checker utility for building a cross-validator parameters
+model_selection		train_test_split		split arrays or matrices into random train and test subsets quick utility that wraps input validation and
+linear_model	BaseSGD	_validate_params		validate input params
+linear_model	BaseSGD	_get_loss_function	loss	get concrete lossfunction object for str loss
+linear_model	BaseSGD	_validate_sample_weight	sample_weight n_samples	set the sample weight array
+linear_model	BaseSGD	_allocate_parameter_mem	n_classes n_features coef_init intercept_init	allocate mem for parameters initialize if provided
+linear_model		_prepare_fit_binary	est y i	initialization for fit_binary
+linear_model		fit_binary	est i X y	fit a single binary classifier
+linear_model	BaseSGDClassifier	_fit_binary	X y alpha C	fit a binary classifier on x and y
+linear_model	BaseSGDClassifier	_fit_multiclass	X y alpha C	fit a multi-class classifier by combining binary classifiers each binary classifier predicts one class versus all others
+linear_model	BaseSGDClassifier	partial_fit	X y classes sample_weight	fit linear model with stochastic gradient descent
+linear_model	BaseSGDClassifier	fit	X y coef_init intercept_init	fit linear model with stochastic gradient descent
+linear_model	SGDClassifier	predict_log_proba		log of probability estimates
+linear_model	BaseSGDRegressor	partial_fit	X y sample_weight	fit linear model with stochastic gradient descent
+linear_model	BaseSGDRegressor	fit	X y coef_init intercept_init	fit linear model with stochastic gradient descent
+linear_model	BaseSGDRegressor	_decision_function	X	predict using the linear model parameters
+linear_model	BaseSGDRegressor	predict	X	predict using the linear model parameters
+linear_model		_modified_weiszfeld_step	X x_old	modified weiszfeld step
+linear_model		_spatial_median	X max_iter tol	spatial median l1 median
+linear_model		_breakdown_point	n_samples n_subsamples	approximation of the breakdown point
+linear_model		_lstsq	X y indices fit_intercept	least squares estimator for theilsenregressor class
+linear_model	TheilSenRegressor	fit	X y	fit linear model
+linear_model		_cholesky_omp	X y n_nonzero_coefs tol	orthogonal matching pursuit step using the cholesky decomposition
+linear_model		_gram_omp	Gram Xy n_nonzero_coefs tol_0	orthogonal matching pursuit step on a precomputed gram matrix
+linear_model		orthogonal_mp	X y n_nonzero_coefs tol	orthogonal matching pursuit omp solves n_targets orthogonal matching pursuit problems
+linear_model		orthogonal_mp_gram	Gram Xy n_nonzero_coefs tol	gram orthogonal matching pursuit omp solves n_targets orthogonal matching pursuit problems using only
+linear_model	OrthogonalMatchingPursuit	fit	X y	fit the model using x y as training data
+linear_model		_omp_path_residues	X_train y_train X_test y_test	compute the residues on left-out data for a full lars path parameters
+linear_model	OrthogonalMatchingPursuitCV	fit	X y	fit the model using x y as training data
+linear_model		lars_path	X y Xy Gram	compute least angle regression or lasso path using lars algorithm [1] the optimization objective for the case method='lasso' is :
+linear_model	Lars	fit	X y Xy	fit the model using x y as training data
+linear_model		_lars_path_residues	X_train y_train X_test y_test	compute the residues on left-out data for a full lars path parameters
+linear_model	LarsCV	fit	X y	fit the model using x y as training data
+linear_model	LassoLarsIC	fit	X y copy_X	fit the model using x y as training data
+linear_model		get_auto_step_size	max_squared_sum alpha_scaled loss fit_intercept	compute automatic step size for sag solver the step size is set to 1 / (alpha_scaled + l + fit_intercept) where l is
+linear_model		sag_solver	X y sample_weight loss	sag solver for ridge and logisticregression sag stands for stochastic average gradient the gradient of the loss is
+linear_model	BayesianRidge	fit	X y	fit the model parameters
+linear_model	BayesianRidge	predict	X return_std	predict using the linear model
+linear_model	ARDRegression	fit	X y	fit the ardregression model according to the given training data and parameters
+linear_model	ARDRegression	predict	X return_std	predict using the linear model
+linear_model	BaseRandomizedLinearModel	fit	X y	fit the model using x y as training data
+linear_model	BaseRandomizedLinearModel	_make_estimator_and_params	X y	return the parameters passed to the estimator
+linear_model	BaseRandomizedLinearModel	_get_support_mask		get the boolean mask indicating which features are selected
+linear_model	RandomizedLogisticRegression	_preprocess_data	X y fit_intercept normalize	center the data in x but not in y
+linear_model		_lasso_stability_path	X y mask weights	inner loop of lasso_stability_path
+linear_model		lasso_stability_path	X y scaling random_state	stability path based on randomized lasso estimates read more in the :ref user guide <randomized_l1>
+linear_model		make_dataset	X y sample_weight random_state	create dataset abstraction for sparse and dense inputs
+linear_model		sparse_center_data	X y fit_intercept normalize	compute information needed to center data to have mean zero along axis 0
+linear_model		center_data	X y fit_intercept normalize	centers data to have mean zero along axis 0 this is here because
+linear_model		_preprocess_data	X y fit_intercept normalize	centers data to have mean zero along axis 0 if fit_intercept=false or if
+linear_model		_rescale_data	X y sample_weight	rescale data so as to support sample_weight
+linear_model	LinearModel	predict	X	predict using the linear model parameters
+linear_model	LinearModel	_set_intercept	X_offset y_offset X_scale	set the intercept_
+linear_model	LinearClassifierMixin	decision_function	X	predict confidence scores for samples
+linear_model	LinearClassifierMixin	predict	X	predict class labels for samples in x
+linear_model	LinearClassifierMixin	_predict_proba_lr	X	probability estimation for ovr logistic regression
+linear_model	SparseCoefMixin	densify		convert coefficient matrix to dense array format
+linear_model	SparseCoefMixin	sparsify		convert coefficient matrix to sparse format
+linear_model	LinearRegression	fit	X y sample_weight	fit linear model
+linear_model		_pre_fit	X y Xy precompute	aux function used at beginning of fit in linear models
+linear_model		_dynamic_max_trials	n_inliers n_samples min_samples probability	determine number trials such that at least one outlier-free subset is sampled for the given inlier/outlier ratio
+linear_model	RANSACRegressor	fit	X y sample_weight	fit estimator using ransac algorithm
+linear_model	RANSACRegressor	predict	X	predict using the estimated model
+linear_model	RANSACRegressor	score	X y	returns the score of the prediction
+linear_model		ridge_regression	X y alpha sample_weight	solve the ridge equation by the method of normal equations
+linear_model	Ridge	fit	X y sample_weight	fit ridge regression model parameters
+linear_model	RidgeClassifier	fit	X y sample_weight	fit ridge regression model
+linear_model	_RidgeGCV	_errors_and_values_helper	alpha y v Q	helper function to avoid code duplication between self _errors and
+linear_model	_RidgeGCV	_errors_and_values_svd_helper	alpha y v U	helper function to avoid code duplication between self _errors_svd
+linear_model	_RidgeGCV	fit	X y sample_weight	fit ridge regression model parameters
+linear_model	_BaseRidgeCV	fit	X y sample_weight	fit ridge regression model parameters
+linear_model	RidgeClassifierCV	fit	X y sample_weight	fit the ridge classifier
+linear_model		_alpha_grid	X y Xy l1_ratio	compute the grid of alpha values for elastic net parameter search parameters
+linear_model		lasso_path	X y eps n_alphas	compute lasso path with coordinate descent the lasso optimization function varies for mono and multi-outputs
+linear_model		enet_path	X y l1_ratio eps	compute elastic net path with coordinate descent the elastic net optimization function varies for mono and multi-outputs
+linear_model	ElasticNet	fit	X y check_input	fit model with coordinate descent
+linear_model	ElasticNet	sparse_coef_		sparse representation of the fitted coef_
+linear_model	ElasticNet	_decision_function	X	decision function of the linear model parameters
+linear_model		_path_residuals	X y train test	returns the mse for the models computed by 'path' parameters
+linear_model	LinearModelCV	fit	X y	fit linear model with coordinate descent fit is on grid of alphas and best alpha estimated by cross-validation
+linear_model	MultiTaskElasticNet	fit	X y	fit multitaskelasticnet model with coordinate descent parameters
+linear_model		_huber_loss_and_gradient	w X y epsilon	returns the huber loss and the gradient
+linear_model	HuberRegressor	fit	X y sample_weight	fit the model according to the given training data
+linear_model		_intercept_dot	w X y	computes y * np dot x w
+linear_model		_logistic_loss_and_grad	w X y alpha	computes the logistic loss and gradient
+linear_model		_logistic_loss	w X y alpha	computes the logistic loss
+linear_model		_logistic_grad_hess	w X y alpha	computes the gradient and the hessian in the case of a logistic loss
+linear_model		_multinomial_loss	w X Y alpha	computes multinomial loss and class probabilities
+linear_model		_multinomial_loss_grad	w X Y alpha	computes the multinomial loss gradient and class probabilities
+linear_model		_multinomial_grad_hess	w X Y alpha	computes the gradient and the hessian in the case of a multinomial loss
+linear_model		logistic_regression_path	X y pos_class Cs	compute a logistic regression model for a list of regularization parameters
+linear_model		_log_reg_scoring_path	X y train test	computes scores across logistic_regression_path parameters
+linear_model	LogisticRegression	fit	X y sample_weight	fit the model according to the given training data
+linear_model	LogisticRegression	predict_log_proba	X	log of probability estimates
+linear_model	LogisticRegressionCV	fit	X y sample_weight	fit the model according to the given training data
+linear_model	PassiveAggressiveClassifier	partial_fit	X y classes	fit linear model with passive aggressive algorithm
+linear_model	PassiveAggressiveClassifier	fit	X y coef_init intercept_init	fit linear model with passive aggressive algorithm
+linear_model	PassiveAggressiveRegressor	partial_fit	X y	fit linear model with passive aggressive algorithm
+linear_model	PassiveAggressiveRegressor	fit	X y coef_init intercept_init	fit linear model with passive aggressive algorithm
+metrics		_average_binary_score	binary_metric y_true y_score average	average a binary metric for multilabel classification parameters
+metrics		auc	x y reorder	compute area under the curve auc using the trapezoidal rule this is a general function given points on a curve
+metrics		average_precision_score	y_true y_score average sample_weight	compute average precision ap from prediction scores this score corresponds to the area under the precision-recall curve
+metrics		roc_auc_score	y_true y_score average sample_weight	compute area under the curve auc from prediction scores note this implementation is restricted to the binary classification task
+metrics		_binary_clf_curve	y_true y_score pos_label sample_weight	calculate true and false positives per binary classification threshold
+metrics		precision_recall_curve	y_true probas_pred pos_label sample_weight	compute precision-recall pairs for different probability thresholds note this implementation is restricted to the binary classification task
+metrics		roc_curve	y_true y_score pos_label sample_weight	compute receiver operating characteristic roc note this implementation is restricted to the binary classification task
+metrics		label_ranking_average_precision_score	y_true y_score	compute ranking-based average precision label ranking average precision lrap is the average over each ground
+metrics		coverage_error	y_true y_score sample_weight	coverage error measure compute how far we need to go through the ranked scores to cover all
+metrics		label_ranking_loss	y_true y_score sample_weight	compute ranking loss measure compute the average number of label pairs that are incorrectly ordered
+metrics		_check_reg_targets	y_true y_pred multioutput	check that y_true and y_pred belong to the same regression task parameters
+metrics		mean_absolute_error	y_true y_pred sample_weight multioutput	mean absolute error regression loss read more in the :ref user guide <mean_absolute_error>
+metrics		mean_squared_error	y_true y_pred sample_weight multioutput	mean squared error regression loss read more in the :ref user guide <mean_squared_error>
+metrics		mean_squared_log_error	y_true y_pred sample_weight multioutput	mean squared logarithmic error regression loss read more in the :ref user guide <mean_squared_log_error>
+metrics		median_absolute_error	y_true y_pred	median absolute error regression loss read more in the :ref user guide <median_absolute_error>
+metrics		explained_variance_score	y_true y_pred sample_weight multioutput	explained variance regression score function best possible score is 1
+metrics		r2_score	y_true y_pred sample_weight multioutput	r^2 coefficient of determination regression score function
+metrics		_check_targets	y_true y_pred	check that y_true and y_pred belong to the same classification task this converts multiclass or binary types to a common shape and raises a
+metrics		accuracy_score	y_true y_pred normalize sample_weight	accuracy classification score
+metrics		confusion_matrix	y_true y_pred labels sample_weight	compute confusion matrix to evaluate the accuracy of a classification by definition a confusion matrix :math c is such that :math c_{i j}
+metrics		cohen_kappa_score	y1 y2 labels weights	cohen's kappa a statistic that measures inter-annotator agreement
+metrics		jaccard_similarity_score	y_true y_pred normalize sample_weight	jaccard similarity coefficient score the jaccard index [1], or jaccard similarity coefficient defined as
+metrics		matthews_corrcoef	y_true y_pred sample_weight	compute the matthews correlation coefficient mcc for binary classes the matthews correlation coefficient is used in machine learning as a
+metrics		zero_one_loss	y_true y_pred normalize sample_weight	zero-one classification loss
+metrics		f1_score	y_true y_pred labels pos_label	compute the f1 score also known as balanced f-score or f-measure the f1 score can be interpreted as a weighted average of the precision and
+metrics		fbeta_score	y_true y_pred beta labels	compute the f-beta score the f-beta score is the weighted harmonic mean of precision and recall
+metrics		_prf_divide	numerator denominator metric modifier	performs division and handles divide-by-zero
+metrics		precision_recall_fscore_support	y_true y_pred beta labels	compute precision recall f-measure and support for each class the precision is the ratio tp / tp + fp where tp is the number of
+metrics		precision_score	y_true y_pred labels pos_label	compute the precision the precision is the ratio tp / tp + fp where tp is the number of
+metrics		recall_score	y_true y_pred labels pos_label	compute the recall the recall is the ratio tp / tp + fn where tp is the number of
+metrics		classification_report	y_true y_pred labels target_names	build a text report showing the main classification metrics read more in the :ref user guide <classification_report>
+metrics		hamming_loss	y_true y_pred labels sample_weight	compute the average hamming loss
+metrics		log_loss	y_true y_pred eps normalize	log loss aka logistic loss or cross-entropy loss
+metrics		hinge_loss	y_true pred_decision labels sample_weight	average hinge loss non-regularized in binary class case assuming labels in y_true are encoded with +1 and -1
+metrics		_check_binary_probabilistic_predictions	y_true y_prob	check that y_true is binary and y_prob contains valid probabilities
+metrics		brier_score_loss	y_true y_prob sample_weight pos_label	compute the brier score
+metrics		_return_float_dtype	X Y	1 if dtype of x and y is float32 then dtype float32 is returned
+metrics		check_pairwise_arrays	X Y precomputed dtype	set x and y appropriately and checks inputs if y is none it is set as a pointer to x (i
+metrics		check_paired_arrays	X Y	set x and y appropriately and checks inputs for paired distances all paired distance metrics should use this function first to assert that
+metrics		euclidean_distances	X Y Y_norm_squared squared	considering the rows of x (and y=x) as vectors compute the distance matrix between each pair of vectors
+metrics		pairwise_distances_argmin_min	X Y axis metric	compute minimum distances between one point and a set of points
+metrics		pairwise_distances_argmin	X Y axis metric	compute minimum distances between one point and a set of points
+metrics		manhattan_distances	X Y sum_over_features size_threshold	compute the l1 distances between the vectors in x and y
+metrics		cosine_distances	X Y	compute cosine distance between samples in x and y
+metrics		paired_euclidean_distances	X Y	computes the paired euclidean distances between x and y read more in the :ref user guide <metrics>
+metrics		paired_manhattan_distances	X Y	compute the l1 distances between the vectors in x and y
+metrics		paired_cosine_distances	X Y	computes the paired cosine distances between x and y read more in the :ref user guide <metrics>
+metrics		paired_distances	X Y metric	computes the paired distances between x and y
+metrics		linear_kernel	X Y	compute the linear kernel between x and y
+metrics		polynomial_kernel	X Y degree gamma	compute the polynomial kernel between x and y : k x y = (gamma <x y> + coef0)^degree
+metrics		sigmoid_kernel	X Y gamma coef0	compute the sigmoid kernel between x and y : k x y = tanh(gamma <x y> + coef0)
+metrics		rbf_kernel	X Y gamma	compute the rbf gaussian kernel between x and y : k x y = exp(-gamma ||x-y||^2)
+metrics		laplacian_kernel	X Y gamma	compute the laplacian kernel between x and y
+metrics		cosine_similarity	X Y dense_output	compute cosine similarity between samples in x and y
+metrics		additive_chi2_kernel	X Y	computes the additive chi-squared kernel between observations in x and y the chi-squared kernel is computed between each pair of rows in x and y
+metrics		chi2_kernel	X Y gamma	computes the exponential chi-squared kernel x and y
+metrics		distance_metrics		valid metrics for pairwise_distances
+metrics		_parallel_pairwise	X Y func n_jobs	break the pairwise matrix in n_jobs even slices
+metrics		_pairwise_callable	X Y metric	handle the callable case for pairwise_{distances kernels}
+metrics		pairwise_distances	X Y metric n_jobs	compute the distance matrix from a vector array x and optional y
+metrics		kernel_metrics		valid metrics for pairwise_kernels this function simply returns the valid pairwise distance metrics
+metrics		pairwise_kernels	X Y metric filter_params	compute the kernel between arrays x and optional array y
+metrics	_BaseScorer	_factory_args		return non-default make_scorer arguments for repr
+metrics	_PredictScorer	__call__	estimator X y_true sample_weight	evaluate predicted target values for x relative to y_true
+metrics	_ProbaScorer	__call__	clf X y sample_weight	evaluate predicted probabilities for x relative to y_true
+metrics	_ThresholdScorer	__call__	clf X y sample_weight	evaluate decision function output for x relative to y_true
+metrics		_passthrough_scorer	estimator	function that wraps estimator score
+metrics		check_scoring	estimator scoring allow_none	determine scorer from user options
+metrics		make_scorer	score_func greater_is_better needs_proba needs_threshold	make a scorer from a performance metric or loss function
+metrics.cluster		check_clusterings	labels_true labels_pred	check that the two clusterings matching 1d integer arrays
+metrics.cluster		contingency_matrix	labels_true labels_pred eps sparse	build a contingency matrix describing the relationship between labels
+metrics.cluster		adjusted_rand_score	labels_true labels_pred	rand index adjusted for chance
+metrics.cluster		homogeneity_completeness_v_measure	labels_true labels_pred	compute the homogeneity and completeness and v-measure scores at once
+metrics.cluster		homogeneity_score	labels_true labels_pred	homogeneity metric of a cluster labeling given a ground truth
+metrics.cluster		completeness_score	labels_true labels_pred	completeness metric of a cluster labeling given a ground truth
+metrics.cluster		v_measure_score	labels_true labels_pred	v-measure cluster labeling given a ground truth
+metrics.cluster		mutual_info_score	labels_true labels_pred contingency	mutual information between two clusterings
+metrics.cluster		adjusted_mutual_info_score	labels_true labels_pred	adjusted mutual information between two clusterings
+metrics.cluster		normalized_mutual_info_score	labels_true labels_pred	normalized mutual information between two clusterings
+metrics.cluster		fowlkes_mallows_score	labels_true labels_pred sparse	measure the similarity of two clusterings of a set of points
+metrics.cluster		entropy	labels	calculates the entropy for a labeling
+metrics.cluster		_check_rows_and_columns	a b	unpacks the row and column arrays and checks their shape
+metrics.cluster		_jaccard	a_rows a_cols b_rows b_cols	jaccard coefficient on the elements of the two biclusters
+metrics.cluster		_pairwise_similarity	a b similarity	computes pairwise similarity matrix
+metrics.cluster		consensus_score	a b similarity	the similarity of two sets of biclusters
+metrics.cluster		silhouette_score	X labels metric sample_size	compute the mean silhouette coefficient of all samples
+metrics.cluster		silhouette_samples	X labels metric	compute the silhouette coefficient for each sample
+metrics.cluster		calinski_harabaz_score	X labels	compute the calinski and harabaz score
+cross_decomposition		_nipals_twoblocks_inner_loop	X Y mode max_iter	inner loop of the iterative nipals algorithm
+cross_decomposition		_center_scale_xy	X Y scale	center x y and scale if the scale parameter==true
+cross_decomposition	_PLS	fit	X Y	fit model to data
+cross_decomposition	_PLS	transform	X Y copy	apply the dimension reduction learned on the train data
+cross_decomposition	_PLS	predict	X copy	apply the dimension reduction learned on the train data
+cross_decomposition	_PLS	fit_transform	X y	learn and apply the dimension reduction on the train data
+cross_decomposition	PLSSVD	transform	X Y	apply the dimension reduction learned on the train data
+cross_decomposition	PLSSVD	fit_transform	X y	learn and apply the dimension reduction on the train data
+preprocessing		_handle_zeros_in_scale	scale copy	makes sure that whenever scale is zero we handle it correctly
+preprocessing		scale	X axis with_mean with_std	standardize a dataset along any axis center to the mean and component wise scale to unit variance
+preprocessing	MinMaxScaler	_reset		reset internal data-dependent state of the scaler if necessary
+preprocessing	MinMaxScaler	fit	X y	compute the minimum and maximum to be used for later scaling
+preprocessing	MinMaxScaler	partial_fit	X y	online computation of min and max on x for later scaling
+preprocessing	MinMaxScaler	transform	X	scaling features of x according to feature_range
+preprocessing	MinMaxScaler	inverse_transform	X	undo the scaling of x according to feature_range
+preprocessing		minmax_scale	X feature_range axis copy	transforms features by scaling each feature to a given range
+preprocessing	StandardScaler	_reset		reset internal data-dependent state of the scaler if necessary
+preprocessing	StandardScaler	fit	X y	compute the mean and std to be used for later scaling
+preprocessing	StandardScaler	partial_fit	X y	online computation of mean and std on x for later scaling
+preprocessing	StandardScaler	transform	X y copy	perform standardization by centering and scaling parameters
+preprocessing	StandardScaler	inverse_transform	X copy	scale back the data to the original representation parameters
+preprocessing	MaxAbsScaler	_reset		reset internal data-dependent state of the scaler if necessary
+preprocessing	MaxAbsScaler	fit	X y	compute the maximum absolute value to be used for later scaling
+preprocessing	MaxAbsScaler	partial_fit	X y	online computation of max absolute value of x for later scaling
+preprocessing	MaxAbsScaler	transform	X y	scale the data parameters
+preprocessing	MaxAbsScaler	inverse_transform	X	scale back the data to the original representation parameters
+preprocessing		maxabs_scale	X axis copy	scale each feature to the [-1 1] range without breaking the sparsity
+preprocessing	RobustScaler	_check_array	X copy	makes sure centering is not enabled for sparse matrices
+preprocessing	RobustScaler	fit	X y	compute the median and quantiles to be used for scaling
+preprocessing	RobustScaler	transform	X y	center and scale the data parameters
+preprocessing	RobustScaler	inverse_transform	X	scale back the data to the original representation parameters
+preprocessing		robust_scale	X axis with_centering with_scaling	standardize a dataset along any axis center to the median and component wise scale
+preprocessing	PolynomialFeatures	get_feature_names	input_features	return feature names for output features parameters
+preprocessing	PolynomialFeatures	fit	X y	compute number of output features
+preprocessing	PolynomialFeatures	transform	X y	transform data to polynomial features parameters
+preprocessing		normalize	X norm axis copy	scale input vectors individually to unit norm vector length
+preprocessing	Normalizer	fit	X y	do nothing and return the estimator unchanged this method is just there to implement the usual api and hence
+preprocessing	Normalizer	transform	X y copy	scale each non zero row of x to unit norm parameters
+preprocessing		binarize	X threshold copy	boolean thresholding of array-like or scipy sparse matrix
+preprocessing	Binarizer	fit	X y	do nothing and return the estimator unchanged this method is just there to implement the usual api and hence
+preprocessing	Binarizer	transform	X y copy	binarize each element of x parameters
+preprocessing	KernelCenterer	fit	K y	fit kernelcenterer parameters
+preprocessing	KernelCenterer	transform	K y copy	center kernel matrix
+preprocessing		add_dummy_feature	X value	augment dataset with an additional dummy feature
+preprocessing		_transform_selected	X transform selected copy	apply a transform function to portion of selected features parameters
+preprocessing	OneHotEncoder	fit	X y	fit onehotencoder to x
+preprocessing	OneHotEncoder	_fit_transform	X	assumes x contains only categorical features
+preprocessing	OneHotEncoder	fit_transform	X y	fit onehotencoder to x then transform x
+preprocessing	OneHotEncoder	_transform	X	assumes x contains only categorical features
+preprocessing	OneHotEncoder	transform	X	transform x using one-hot encoding
+preprocessing		_get_mask	X value_to_mask	compute the boolean mask x == missing_values
+preprocessing		_most_frequent	array extra_value n_repeat	compute the most frequent value in a 1d array extended with [extra_value] * n_repeat where extra_value is assumed to be not part
+preprocessing	Imputer	fit	X y	fit the imputer on x
+preprocessing	Imputer	_sparse_fit	X strategy missing_values axis	fit the transformer on sparse data
+preprocessing	Imputer	_dense_fit	X strategy missing_values axis	fit the transformer on dense data
+preprocessing	Imputer	transform	X	impute all missing values in x
+preprocessing		_check_numpy_unicode_bug	labels	check that user is not subject to an old numpy bug fixed in master before 1
+preprocessing	LabelEncoder	fit	y	fit label encoder parameters
+preprocessing	LabelEncoder	fit_transform	y	fit label encoder and return encoded labels parameters
+preprocessing	LabelEncoder	transform	y	transform labels to normalized encoding
+preprocessing	LabelEncoder	inverse_transform	y	transform labels back to original encoding
+preprocessing	LabelBinarizer	fit	y	fit label binarizer parameters
+preprocessing	LabelBinarizer	fit_transform	y	fit label binarizer and transform multi-class labels to binary labels
+preprocessing	LabelBinarizer	transform	y	transform multi-class labels to binary labels the output of transform is sometimes referred to by some authors as
+preprocessing	LabelBinarizer	inverse_transform	Y threshold	transform binary labels back to multi-class labels parameters
+preprocessing		label_binarize	y classes neg_label pos_label	binarize labels in a one-vs-all fashion several regression and binary classification algorithms are
+preprocessing		_inverse_binarize_multiclass	y classes	inverse label binarization transformation for multiclass
+preprocessing		_inverse_binarize_thresholding	y output_type classes threshold	inverse label binarization transformation using thresholding
+preprocessing	MultiLabelBinarizer	fit	y	fit the label sets binarizer storing classes_ parameters
+preprocessing	MultiLabelBinarizer	fit_transform	y	fit the label sets binarizer and transform the given label sets parameters
+preprocessing	MultiLabelBinarizer	transform	y	transform the given label sets parameters
+preprocessing	MultiLabelBinarizer	_transform	y class_mapping	transforms the label sets with a given mapping
+preprocessing	MultiLabelBinarizer	inverse_transform	yt	transform the given indicator matrix into label sets parameters
+preprocessing		_identity	X	the identity function
+_build_utils		build_from_c_and_cpp_files	extensions	modify the extensions to build from the c and cpp files
+_build_utils		maybe_cythonize_extensions	top_path config	tweaks for building extensions between release and development mode

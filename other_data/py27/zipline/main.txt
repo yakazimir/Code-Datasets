@@ -1,0 +1,753 @@
+core		main	extension strict_extensions default_extension	top level zipline entry point
+core		extract_option_object	option	convert a click option call into a click option object
+core		ipython_only	option	mark that an option should only be exposed in ipython
+core		run	ctx algofile algotext define	run a backtest for the given algorithm
+core		zipline_magic	line cell	the zipline ipython cell magic
+core		ingest	bundle assets_version show_progress	ingest the data for the given bundle
+core		clean	bundle before after keep_last	clean up data downloaded with the ingest command
+core		bundles		list all of the available data bundles
+core		_deprecated_getitem_method	name attrs	create a deprecated __getitem__ method that tells users to use getattr instead
+core	TradingAlgorithm	__init__		initialize sids and other state variables
+core	TradingAlgorithm	init_engine	get_loader	construct and store a pipelineengine from loader
+core	TradingAlgorithm	initialize		call self _initialize with self made available to zipline api
+core	TradingAlgorithm	__repr__		n b this does not yet represent a string that can be used
+core	TradingAlgorithm	_create_clock		if the clock property is not set then create one based on frequency
+core	TradingAlgorithm	get_generator		override this method to add new logic to the construction of the generator
+core	TradingAlgorithm	run	data overwrite_sim_params	run the algorithm
+core	TradingAlgorithm	calculate_capital_changes	dt emission_rate is_interday portfolio_value_adjustment	if there is a capital change for a given dt this means the the change occurs before handle_data on the given dt
+core	TradingAlgorithm	get_environment	field	query the execution environment
+core	TradingAlgorithm	fetch_csv	url pre_func post_func date_column	fetch a csv from a remote url and register the data so that it is queryable from the data object
+core	TradingAlgorithm	add_event	rule callback	adds an event to the algorithm's eventmanager
+core	TradingAlgorithm	schedule_function	func date_rule time_rule half_days	schedules a function to be called according to some timed rules
+core	TradingAlgorithm	record		track and record values each day
+core	TradingAlgorithm	set_benchmark	benchmark	set the benchmark asset
+core	TradingAlgorithm	symbol	symbol_str	lookup an equity by its ticker symbol
+core	TradingAlgorithm	continuous_future	root_symbol_str offset roll adjustment	create a specifier for a continuous contract
+core	TradingAlgorithm	symbols		lookup multuple equities as a list
+core	TradingAlgorithm	sid	sid	lookup an asset by its unique asset identifier
+core	TradingAlgorithm	future_symbol	symbol	lookup a futures contract with a given symbol
+core	TradingAlgorithm	_calculate_order_value_amount	asset value	calculates how many shares/contracts to order based on the type of asset being ordered
+core	TradingAlgorithm	order	asset amount limit_price stop_price	place an order
+core	TradingAlgorithm	round_order	amount	convert number of shares to an integer
+core	TradingAlgorithm	validate_order_params	asset amount limit_price stop_price	helper method for validating parameters to the order api function
+core	TradingAlgorithm	__convert_order_params_for_blotter	limit_price stop_price style	helper method for converting deprecated limit_price and stop_price arguments into executionstyle instances
+core	TradingAlgorithm	order_value	asset value limit_price stop_price	place an order by desired value rather than desired number of shares
+core	TradingAlgorithm	on_dt_changed	dt	callback triggered by the simulation loop whenever the current dt changes
+core	TradingAlgorithm	get_datetime	tz	returns the current simulation datetime
+core	TradingAlgorithm	set_slippage	us_equities us_futures	set the slippage models for the simulation
+core	TradingAlgorithm	set_commission	us_equities us_futures	sets the commission models for the simulation
+core	TradingAlgorithm	set_cancel_policy	cancel_policy	sets the order cancellation policy for the simulation
+core	TradingAlgorithm	set_symbol_lookup_date	dt	set the date for which symbols will be resolved to their assets (symbols may map to different firms or underlying assets at
+core	TradingAlgorithm	order_percent	asset percent limit_price stop_price	place an order in the specified asset corresponding to the given percent of the current portfolio value
+core	TradingAlgorithm	order_target	asset target limit_price stop_price	place an order to adjust a position to a target number of shares if
+core	TradingAlgorithm	order_target_value	asset target limit_price stop_price	place an order to adjust a position to a target value if
+core	TradingAlgorithm	order_target_percent	asset target limit_price stop_price	place an order to adjust a position to a target percent of the current portfolio value
+core	TradingAlgorithm	batch_order_target_percent	weights	place orders towards a given portfolio of weights
+core	TradingAlgorithm	get_open_orders	asset	retrieve all of the current open orders
+core	TradingAlgorithm	get_order	order_id	lookup an order based on the order id returned from one of the order functions
+core	TradingAlgorithm	cancel_order	order_param	cancel an open order
+core	TradingAlgorithm	history	bar_count frequency field ffill	deprecated use data history instead
+core	TradingAlgorithm	register_account_control	control	register a new accountcontrol to be checked on each bar
+core	TradingAlgorithm	set_max_leverage	max_leverage	set a limit on the maximum leverage of the algorithm
+core	TradingAlgorithm	register_trading_control	control	register a new tradingcontrol to be checked prior to order calls
+core	TradingAlgorithm	set_max_position_size	asset max_shares max_notional on_error	set a limit on the number of shares and/or dollar value held for the given sid
+core	TradingAlgorithm	set_max_order_size	asset max_shares max_notional on_error	set a limit on the number of shares and/or dollar value of any single order placed for sid
+core	TradingAlgorithm	set_max_order_count	max_count on_error	set a limit on the number of orders that can be placed in a single day
+core	TradingAlgorithm	set_do_not_order_list	restricted_list on_error	set a restriction on which assets can be ordered
+core	TradingAlgorithm	set_asset_restrictions	restrictions on_error	set a restriction on which assets can be ordered
+core	TradingAlgorithm	set_long_only	on_error	set a rule specifying that this algorithm cannot take short positions
+core	TradingAlgorithm	attach_pipeline	pipeline name chunks	register a pipeline to be computed at the start of each day
+core	TradingAlgorithm	pipeline_output	name	get the results of the pipeline that was attached with the name name
+core	TradingAlgorithm	_pipeline_output	pipeline chunks	internal implementation of pipeline_output
+core	TradingAlgorithm	_run_pipeline	pipeline start_session chunksize	compute pipeline, providing values for at least start_date
+core	TradingAlgorithm	all_api_methods	cls	return a list of all the tradingalgorithm api methods
+testing		to_utc	time_str	convert a string in us/eastern time to utc
+testing		str_to_seconds	s	convert a pandas-intelligible string to integer seconds since utc
+testing		all_pairs_matching_predicate	values pred	return an iterator of all pairs v0 v1 from values such that pred v0 v1 == true
+testing		product_upper_triangle	values include_diagonal	return an iterator over pairs v0 v1 drawn from values
+testing		all_subindices	index	return all valid sub-indices of a pandas index
+testing		chrange	start stop	construct an iterable of length-1 strings beginning with start and ending with stop
+testing		make_trade_data_for_asset_info	dates asset_info price_start price_step_by_date	convert the asset info dataframe into a dataframe of trade data for each sid and write to the writer if provided
+testing		check_allclose	actual desired rtol atol	wrapper around np testing assert_allclose that also verifies that inputs
+testing		check_arrays	x y err_msg verbose	wrapper around np testing assert_array_equal that also verifies that inputs
+testing		empty_assets_db		context manager for creating an empty assets db
+testing		empty_asset_finder		context manager for creating an empty asset finder
+testing		subtest	iterator	construct a subtest in a unittest
+testing		assert_timestamp_equal	left right compare_nat_equal msg	assert that two pandas timestamp objects are the same
+testing		powerset	values	return the power set (i e the set of all subsets) of entries in values
+testing		to_series	knowledge_dates earning_dates	helper for converting a dict of strings to a series of datetimes
+testing		gen_calendars	start stop critical_dates	generate calendars to use as inputs
+testing		temp_pipeline_engine	calendar sids random_seed symbols	a contextmanager that yields a simplepipelineengine holding a reference to an assetfinder generated via tmp_asset_finder
+testing		parameter_space	__fail_fast	wrapper around subtest that allows passing keywords mapping names to iterables of values
+testing		make_alternating_boolean_array	shape first_value	create a 2d numpy array with the given shape containing alternating values of false true false true
+testing		make_cascading_boolean_array	shape first_value	create a numpy array with the given shape containing cascading boolean values with first_value being the top-left value
+testing		permute_rows	seed array	shuffle each row in array based on permutations generated by seed
+testing		make_test_handler	testcase	returns a testhandler which will be used by the given testcase this
+testing		write_compressed	path content	write a compressed gzipped file to path
+testing		read_compressed	path	write a compressed gzipped file from path
+testing		patch_os_environment	remove	context manager for patching the operating system environment
+testing		patch_read_csv	url_map module strict	patch pandas read_csv to map lookups from url to another
+testing		ensure_doctest	f name	ensure that an object gets doctested this is useful for instances
+testing	ZiplineTestCase	init_class_fixtures	cls	override and implement this classmethod to register resources that should be created and/or torn down on a per-class basis
+testing	ZiplineTestCase	enter_class_context	cls context_manager	enter a context manager to be exited during the teardownclass
+testing	ZiplineTestCase	add_class_callback	cls callback	register a callback to be executed during teardownclass
+testing	ZiplineTestCase	enter_instance_context	context_manager	enter a context manager that should be exited during teardown
+testing	ZiplineTestCase	add_instance_callback	callback	register a callback to be executed during teardown
+testing		alias	attr_name	make a fixture attribute an alias of another fixture's attribute by default
+testing	WithAssetFinder	make_asset_finder	cls	returns a new assetfinder returns
+testing	WithSeededRandomPipelineEngine	raw_expected_values	column start_date end_date	get an array containing the raw values we expect to be produced for the given dates between start_date and end_date inclusive
+testing	WithSeededRandomPipelineEngine	run_pipeline	pipeline start_date end_date	run a pipeline with self seeded_random_engine
+testing		keywords	func	get the argument names of a function >>> def f(x y=2):
+testing		filter_kwargs	f kwargs	return a dict of valid kwargs for f from a subset of kwargs examples
+testing		_s	word seq suffix	adds a suffix to word if some sequence has anything other than exactly one element
+testing		_fmt_path	path	format the path for final display
+testing		_fmt_msg	msg	format the message for final display
+testing		assert_is_subclass	subcls cls msg	assert that subcls is a subclass of cls
+testing		assert_regex	result expected msg	assert that expected matches the result
+testing		assert_raises_regex	exc pattern msg	assert that some exception is raised in a context and that the message matches some pattern
+testing		assert_equal	result expected path msg	assert that two objects are equal using the == operator
+testing		_check_sets	result expected msg path	compare two sets this is used to check dictionary keys and sets
+testing		_register_assert_equal_wrapper	type_ assert_eq	register a new check for an ndframe object
+testing		assert_timestamp_and_datetime_equal	result expected path msg	branch for comparing python datetime which includes pandas timestamp and np
+gens		date_sorted_sources		takes an iterable of sources generating namestrings and piping their output into date_sort
+gens	AlgorithmSimulator	transform		main generator work loop
+gens	AlgorithmSimulator	_cleanup_expired_assets	dt position_assets	clear out any assets that have expired before starting a new sim day
+gens	AlgorithmSimulator	_get_daily_message	dt algo perf_tracker	get a perf message for the given datetime
+gens	AlgorithmSimulator	_get_minute_message	dt algo perf_tracker	get a perf message for the given datetime
+gens		hash_args		define a unique string for any set of representable args
+gens		assert_datasource_protocol	event	assert that an event meets the protocol for datasource outputs
+gens		assert_trade_protocol	event	assert that an event meets the protocol for datasource trade outputs
+gens		assert_datasource_unframe_protocol	event	assert that an event is valid output of zp datasource_unframe
+data	ContinuousFutureSessionBarReader	trading_calendar		returns the zipline utils calendar trading_calendar used to read
+data	ContinuousFutureSessionBarReader	get_value	continuous_future dt field	retrieve the value at the given coordinates
+data	ContinuousFutureSessionBarReader	get_last_traded_dt	asset dt	get the latest minute on or before dt in which asset traded
+data	ContinuousFutureMinuteBarReader	trading_calendar		returns the zipline utils calendar trading_calendar used to read
+data	ContinuousFutureMinuteBarReader	get_value	continuous_future dt field	retrieve the value at the given coordinates
+data	ContinuousFutureMinuteBarReader	get_last_traded_dt	asset dt	get the latest minute on or before dt in which asset traded
+data	DataPortal	handle_extra_source	source_df sim_params	extra sources always have a sid column
+data	DataPortal	get_last_traded_dt	asset dt data_frequency	given an asset and dt returns the last traded dt from the viewpoint of the given dt
+data	DataPortal	_is_extra_source	asset field map	internal method that determines if this asset/field combination represents a fetcher value or a regular ohlcvp lookup
+data	DataPortal	get_spot_value	assets field dt data_frequency	public api method that returns a scalar value representing the value of the desired asset's field at either the given dt
+data	DataPortal	get_adjustments	assets field dt perspective_dt	returns a list of adjustments between the dt and perspective_dt for the given field and list of assets
+data	DataPortal	get_adjusted_value	asset field dt perspective_dt	returns a scalar value representing the value of the desired asset's field at the given dt with adjustments applied
+data	DataPortal	_get_history_daily_window	assets end_dt bar_count field_to_use	internal method that returns a dataframe containing history bars of daily frequency for the given sids
+data	DataPortal	_get_history_minute_window	assets end_dt bar_count field_to_use	internal method that returns a dataframe containing history bars of minute frequency for the given sids
+data	DataPortal	get_history_window	assets end_dt bar_count frequency	public api method that returns a dataframe containing the requested history window
+data	DataPortal	_get_minute_window_data	assets field minutes_for_window	internal method that gets a window of adjusted minute data for an asset and specified date range
+data	DataPortal	_get_daily_window_data	assets field days_in_window extra_slot	internal method that gets a window of adjusted daily data for a sid and specified date range
+data	DataPortal	_get_adjustment_list	asset adjustments_dict table_name	internal method that returns a list of adjustments for the given sid
+data	DataPortal	get_splits	assets dt	returns any splits for the given sids and the given dt
+data	DataPortal	get_stock_dividends	sid trading_days	returns all the stock dividends for a specific sid that occur in the given trading range
+data	DataPortal	get_fetcher_assets	dt	returns a list of assets for the current date as defined by the fetcher data
+data	DataPortal	get_current_future_chain	continuous_future dt	retrieves the future chain for the contract at the given dt according the continuous_future specification
+data		last_modified_time	path	get the last modified time of path as a timestamp
+data		get_data_filepath	name	returns a handle to data file
+data		has_data_for_dates	series_or_df first_date last_date	does series_or_df have data on or before first_date and on or after
+data		load_market_data	trading_day trading_days bm_symbol	load benchmark returns and treasury yield curves for the given calendar and benchmark symbol
+data		ensure_benchmark_data	symbol first_date last_date now	ensure we have benchmark data for symbol from first_date to last_date parameters
+data		ensure_treasury_data	symbol first_date last_date now	ensure we have treasury data from treasury module associated with symbol
+data		_load_raw_yahoo_data	indexes stocks start end	load closing prices from yahoo finance
+data		load_from_yahoo	indexes stocks start end	loads price data from yahoo into a dataframe for each of the indicated assets
+data		load_bars_from_yahoo	indexes stocks start end	loads data from yahoo into a panel with the following column names for each indicated security
+data		format_yahoo_index_url	symbol start_date end_date	format a url for querying yahoo finance for index data
+data		get_benchmark_returns	symbol start_date end_date	get a series of benchmark returns from yahoo
+data	HistoryCompatibleUSEquityAdjustmentReader	_get_adjustments_in_range	asset dts field	get the float64multiply objects to pass to an adjustedarraywindow
+data	HistoryLoader	_ensure_sliding_windows	assets dts field is_perspective_after	ensure that there is a float64multiply window for each asset that can provide data for the given parameters
+data	HistoryLoader	history	assets dts field is_perspective_after	a window of pricing data with adjustments applied assuming that the end of the window is the day before the current simulation time
+data		_sid_subdir_path	sid	format subdir path to limit the number directories in any given subdirectory to 100
+data		convert_cols	cols scale_factor sid invalid_data_behavior	adapt ohlcv columns into uint32 columns
+data	BcolzMinuteBarMetadata	write	rootdir	write the metadata to a json file in the rootdir
+data	BcolzMinuteBarWriter	open	cls rootdir end_session	open an existing rootdir for writing
+data	BcolzMinuteBarWriter	_init_ctable	path	create empty ctable for given path
+data	BcolzMinuteBarWriter	_ensure_ctable	sid	ensure that a ctable exists for sid, then return it
+data	BcolzMinuteBarWriter	pad	sid date	fill sid container with empty data through the specified date
+data	BcolzMinuteBarWriter	set_sid_attrs	sid	write all the supplied kwargs as attributes of the sid's file
+data	BcolzMinuteBarWriter	write	data show_progress invalid_data_behavior	write a stream of minute data
+data	BcolzMinuteBarWriter	write_sid	sid df invalid_data_behavior	write the ohlcv data for the given sid
+data	BcolzMinuteBarWriter	write_cols	sid dts cols invalid_data_behavior	write the ohlcv data for the given sid
+data	BcolzMinuteBarWriter	_write_cols	sid dts cols invalid_data_behavior	internal method for write_cols and write
+data	BcolzMinuteBarWriter	data_len_for_day	day	return the number of data points up to and including the provided day
+data	BcolzMinuteBarWriter	truncate	date	truncate data beyond this date in all ctables
+data	BcolzMinuteBarReader	_minutes_to_exclude		calculate the minutes which should be excluded when a window occurs on days which had an early close i
+data	BcolzMinuteBarReader	_minute_exclusion_tree		build an interval tree keyed by the start and end of each range of positions should be dropped from windows
+data	BcolzMinuteBarReader	table_len	sid	returns the length of the underlying table for this sid
+data	BcolzMinuteBarReader	get_value	sid dt field	retrieve the pricing info for the given sid dt and field
+data	BcolzMinuteBarReader	_find_position_of_minute	minute_dt	internal method that returns the position of the given minute in the list of every trading minute since market open of the first trading
+data	MinuteBarUpdateReader	read	dts sids	read and return pricing update data
+data	H5MinuteBarUpdateWriter	write	frames	write the frames to the target hdf5 file using the format used by pd
+data		parse_treasury_csv_column	column	parse a treasury csv column into a more human-readable format
+data		earliest_possible_date		the earliest date for which we can load data from this module
+data		get_daily_10yr_treasury_data		download daily 10 year treasury rates from the federal reserve and return a pandas
+data	BarReader	trading_calendar		returns the zipline utils calendar trading_calendar used to read
+data	BarReader	get_value	sid dt field	retrieve the value at the given coordinates
+data	BarReader	get_last_traded_dt	asset dt	get the latest minute on or before dt in which asset traded
+data		_format_url	instrument_type instrument_ids start_date end_date	format a url for loading data from bank of canada
+data		load_frame	url skiprows	load a dataframe of data from a bank of canada site
+data		check_known_inconsistencies	bill_data bond_data	there are a couple quirks in the data provided by bank of canada
+data		earliest_possible_date		the earliest date for which we can load data from this module
+data		winsorise_uint32	df invalid_data_behavior column	drops any record where a value would not fit into a uint32
+data	BcolzDailyBarWriter	write_csvs	asset_map show_progress invalid_data_behavior	read csvs as dataframes from our asset map
+data	BcolzDailyBarWriter	_write_internal	iterator assets	internal implementation of write
+data	BcolzDailyBarReader	_compute_slices	start_idx end_idx assets	compute the raw row indices to load for each asset on a query for the given dates after applying a shift
+data	BcolzDailyBarReader	_spot_col	colname	get the colname from daily_bar_table and read all of it into memory caching the result
+data	SQLiteAdjustmentWriter	write_dividend_payouts	frame	write dividend payout data to sqlite table dividend_payouts
+data	SQLiteAdjustmentWriter	calc_dividend_ratios	dividends	calculate the ratios to apply to equities when looking back at pricing history so that the price is smoothed over the ex_date when the market
+data	SQLiteAdjustmentWriter	write_dividend_data	dividends stock_dividends	write both dividend payouts and the derived price adjustment ratios
+data	SQLiteAdjustmentWriter	write	splits mergers dividends stock_dividends	writes data to a sqlite file to be read by sqliteadjustmentreader
+data	SQLiteAdjustmentReader	unpack_db_to_component_dfs	convert_dates	returns the set of known tables in the adjustments file in dataframe form
+data		minute_frame_to_session_frame	minute_frame calendar	resample a dataframe with minute data into the frame expected by a bcolzdailybarwriter
+data		minute_to_session	column close_locs data out	resample an array with minute data into an array with session data
+data	DailyHistoryAggregator	opens	assets dt	the open field's aggregation returns the first value that occurs for the day if there has been no data on or before the dt the open
+data	DailyHistoryAggregator	highs	assets dt	the high field's aggregation returns the largest high seen between the market open and the current dt
+data	DailyHistoryAggregator	lows	assets dt	the low field's aggregation returns the smallest low seen between the market open and the current dt
+data	DailyHistoryAggregator	closes	assets dt	the close field's aggregation returns the latest close at the given dt
+data	DailyHistoryAggregator	volumes	assets dt	the volume field's aggregation returns the sum of all volumes between the market open and the dt
+data.bundles		to_bundle_ingest_dirname	ts	convert a pandas timestamp into the name of the directory for the ingestion
+data.bundles		from_bundle_ingest_dirname	cs	read a bundle ingestion directory name into a pandas timestamp
+data.bundles		_make_bundle_core		create a family of data bundle functions that read from the same bundle mapping
+data.bundles		_fetch_raw_metadata	api_key cache retries environ	generator that yields each page of data from the metadata endpoint as a dataframe
+data.bundles		fetch_symbol_metadata_frame	api_key cache retries environ	download quandl symbol metadata
+data.bundles		format_metadata_url	api_key page_number	build the query rl for the quandl wiki metadata
+data.bundles		format_wiki_url	api_key symbol start_date end_date	build a query url for a quandl wiki dataset
+data.bundles		fetch_single_equity	api_key symbol start_date end_date	download data for a single equity
+data.bundles		quandl_bundle	environ asset_db_writer minute_bar_writer daily_bar_writer	build a zipline data bundle from the quandl wiki dataset
+data.bundles		download_with_progress	url chunk_size	download streaming data from a url printing progress information to the terminal
+data.bundles		download_without_progress	url	download data from a url returning a bytesio containing the loaded data
+data.bundles		yahoo_equities	symbols start end	create a data bundle ingest function from a set of symbols loaded from yahoo
+assets		make_rotating_equity_info	num_assets first_start frequency periods_between_starts	create a dataframe representing lifetimes of assets that are constantly rotating in and out of existence
+assets		make_simple_equity_info	sids start_date end_date symbols	create a dataframe representing assets that exist for the full duration between start_date and end_date
+assets		make_jagged_equity_info	num_assets start_date first_end frequency	create a dataframe representing assets that all begin at the same start date but have cascading end dates
+assets		make_future_info	first_sid root_symbols years notice_date_func	create a dataframe representing futures for root_symbols during year
+assets		make_commodity_future_info	first_sid root_symbols years month_codes	make futures testing data that simulates the notice/expiration date behavior of physical commodities like oil
+assets		downgrade	engine desired_version	downgrades the assets db at the given engine to the desired version
+assets		_pragma_foreign_keys	connection on	sets the pragma foreign_keys state of the sqlite database disabling
+assets		downgrades	src	decorator for marking that a method is a downgrade to a version to the previous version
+assets		_downgrade_v1	op	downgrade assets db by removing the 'tick_size' column and renaming the 'multiplier' column
+assets		_downgrade_v2	op	downgrade assets db by removing the 'auto_close_date' column
+assets		_downgrade_v3	op	downgrade assets db by adding a not null constraint on equities
+assets		_downgrade_v4	op	downgrades assets db by copying the exchange_full column to exchange, then dropping the exchange_full column
+assets	RollFinder	get_rolls	root_symbol start end offset	get the rolls i e the session at which to hop from contract to
+assets	VolumeRollFinder	_active_contract	oc front back dt	return the active contract based on the previous trading day's volume
+assets		merge_ownership_periods	mappings	given a dict of mappings where the values are lists of ownershipperiod objects returns a dict with the same structure with
+assets		build_ownership_map	table key_from_row value_from_row	builds a dict mapping to lists of ownershipperiods from a db table
+assets		_filter_kwargs	names dict_	filter out kwargs from a dictionary
+assets		_convert_asset_timestamp_fields	dict_	takes in a dict of asset init args and converts dates to pd timestamps
+assets	AssetFinder	_reset_caches		reset our asset caches
+assets	AssetFinder	reload_symbol_maps		clear the in memory symbol lookup maps
+assets	AssetFinder	lookup_asset_types	sids	retrieve asset types for a list of sids
+assets	AssetFinder	group_by_type	sids	group a list of sids by asset type
+assets	AssetFinder	retrieve_asset	sid default_none	retrieve the asset for a given sid
+assets	AssetFinder	retrieve_all	sids default_none	retrieve all assets in sids
+assets	AssetFinder	retrieve_equities	sids	retrieve equity objects for a list of sids
+assets	AssetFinder	retrieve_futures_contracts	sids	retrieve future objects for an iterable of sids
+assets	AssetFinder	_select_most_recent_symbols_chunk	sid_group	retrieve the most recent symbol for a set of sids
+assets	AssetFinder	_retrieve_assets	sids asset_tbl asset_type	internal function for loading assets from a table
+assets	AssetFinder	lookup_symbol	symbol as_of_date fuzzy	lookup an equity by symbol
+assets	AssetFinder	lookup_symbols	symbols as_of_date fuzzy	lookup a list of equities by symbol
+assets	AssetFinder	lookup_future_symbol	symbol	lookup a future contract by symbol
+assets	AssetFinder	get_supplementary_field	sid field_name as_of_date	get the value of a supplementary field for an asset
+assets	AssetFinder	_symbol_lookups		an iterable of symbol lookup functions to use with lookup_generic attempts equities lookup then futures
+assets	AssetFinder	_lookup_generic_scalar	asset_convertible as_of_date matches missing	convert asset_convertible to an asset
+assets	AssetFinder	lookup_generic	asset_convertible_or_iterable as_of_date	convert a assetconvertible or iterable of assetconvertibles into a list of asset objects
+assets	AssetFinder	map_identifier_index_to_sids	index as_of_date	this method is for use in sanitizing a user's dataframe or panel inputs
+assets	AssetFinder	_compute_asset_lifetimes		compute and cache a recarry of asset lifetimes
+assets	AssetFinder	lifetimes	dates include_start_date	compute a dataframe representing asset lifetimes for the specified date range
+assets		was_active	reference_date_value asset	whether or not asset was active at the time corresponding to reference_date_value
+assets		only_active_assets	reference_date_value assets	filter an iterable of asset objects down to just assets that were alive at the time corresponding to reference_date_value
+assets		split_delimited_symbol	symbol	takes in a symbol that may be delimited and splits it in to a company symbol and share class symbol
+assets		_generate_output_dataframe	data_subset defaults	generates an output dataframe from the given subset of user-provided data the given column names and the given default values
+assets		_split_symbol_mappings	df	split out the symbol sid mappings from the raw data
+assets		_dt_to_epoch_ns	dt_series	convert a timeseries into an int64index of nanoseconds since the epoch
+assets		check_version_info	conn version_table expected_version	checks for a version value in the version table
+assets		write_version_info	conn version_table version_value	inserts the version value in to the version table
+assets	AssetDBWriter	write	equities futures exchanges root_symbols	write asset metadata to a sqlite database
+assets	AssetDBWriter	_all_tables_present	txn	checks if any tables are present in the current assets database
+assets	AssetDBWriter	init_db	txn	connect to database and create tables
+assets	AssetDBWriter	_load_data	equities futures exchanges root_symbols	returns a standard set of pandas dataframes
+pipeline	CustomTermMixin	compute	today assets out	override this method with a function that writes a value into out
+pipeline	CustomTermMixin	_allocate_output	windows shape	allocate an output array whose rows should be passed to self compute
+pipeline	CustomTermMixin	_compute	windows dates assets mask	call the user's compute function on each window with a pre-built output array
+pipeline	AliasedMixin	make_aliased_type	cls other_base	factory for making aliased{filter factor classifier}
+pipeline	DownsampledMixin	compute_extra_rows	all_dates start_date end_date min_extra_rows	ensure that min_extra_rows pushes us back to a computation date
+pipeline	DownsampledMixin	_compute	inputs dates assets mask	compute by delegating to self _wrapped_term _compute on sample dates
+pipeline	DownsampledMixin	make_downsampled_type	cls other_base	factory for making downsampled{filter factor classifier}
+pipeline	PipelineEngine	run_pipeline	pipeline start_date end_date	compute values for pipeline between start_date and end_date
+pipeline		default_populate_initial_workspace	initial_workspace root_mask_term execution_plan dates	the default implementation for populate_initial_workspace this
+pipeline	SimplePipelineEngine	run_pipeline	pipeline start_date end_date	compute a pipeline
+pipeline	SimplePipelineEngine	_compute_root_mask	start_date end_date extra_rows	compute a lifetimes matrix from our assetfinder then drop columns that didn't exist at all during the query dates
+pipeline	SimplePipelineEngine	_inputs_for_term	term workspace graph	compute inputs for the given term
+pipeline	SimplePipelineEngine	compute_chunk	graph dates assets initial_workspace	compute the pipeline terms in the graph for the requested start and end dates
+pipeline	SimplePipelineEngine	_to_narrow	terms data mask dates	convert raw computed pipeline results into a dataframe for public apis
+pipeline	SimplePipelineEngine	_validate_compute_chunk_params	dates assets initial_workspace	verify that the values passed to compute_chunk are well-formed
+pipeline		select_sampling_indices	dates frequency	choose entries from dates to use for downsampling at frequency
+pipeline		_ensure_element	tup elem	create a tuple containing all elements of tup plus elem
+pipeline		method_name_for_op	op commute	get the name of the python magic method corresponding to op
+pipeline	NumericalExpression	_validate		ensure that our expression string has variables of the form x_0 x_1
+pipeline	NumericalExpression	_compute	arrays dates assets mask	compute our stored expression string with numexpr
+pipeline	NumericalExpression	_rebind_variables	new_inputs	return self _expr with all variables rebound to the indices implied by
+pipeline	NumericalExpression	_merge_expressions	other	merge the inputs of two numericalexpressions into a single input tuple rewriting their respective string expressions to make input names
+pipeline	NumericalExpression	build_binary_op	op other	compute new expression strings and a new inputs tuple for combining self and other with a binary operator
+pipeline	Term	__new__	cls domain dtype missing_value	memoized constructor for terms
+pipeline	Term	_pop_params	cls kwargs	pop entries from the kwargs passed to cls __new__ based on the values
+pipeline	Term	__init__		noop constructor to play nicely with our caching __new__ subclasses
+pipeline	Term	_static_identity	cls domain dtype missing_value	return the identity of the term that would be constructed from the given arguments
+pipeline	Term	_validate		assert that this term is well-formed this should be called exactly
+pipeline	Term	compute_extra_rows	all_dates start_date end_date min_extra_rows	calculate the number of extra rows needed to compute self
+pipeline	Term	inputs		a tuple of other terms needed as direct inputs for this term
+pipeline	Term	windowed		boolean indicating whether this term is a trailing-window computation
+pipeline	Term	mask		a filter representing asset/date pairs to include while computing this term
+pipeline	Term	dependencies		a dictionary mapping terms that must be computed before self to the number of extra rows needed for those terms
+pipeline	ComputableTerm	_compute	inputs dates assets mask	subclasses should implement this to perform actual computation
+pipeline	ComputableTerm	windowed		whether or not this term represents a trailing window computation
+pipeline	ComputableTerm	dependencies		the number of extra rows needed for each of our inputs to compute this term
+pipeline	ComputableTerm	postprocess	data	called with an result of self, unravelled i e 1-dimensional
+pipeline	ComputableTerm	to_workspace_value	result assets	called with a column of the result of a pipeline this needs to put
+pipeline	ComputableTerm	_downsampled_type		the expression type to return from self downsample()
+pipeline	ComputableTerm	downsample	frequency	make a term that computes from self at lower-than-daily frequency
+pipeline	ComputableTerm	_aliased_type		the expression type to return from self alias()
+pipeline	ComputableTerm	alias	name	make a term from self that names the expression
+pipeline		validate_dtype	termname dtype missing_value	validate a dtype and missing_value passed to term __new__
+pipeline		_assert_valid_categorical_missing_value	value	check that value is a valid categorical missing_value
+pipeline		restrict_to_dtype	dtype message_template	a factory for decorators that restrict term methods to only be callable on terms with a specific dtype
+pipeline		delimit	delimiters content	surround content with the first and last characters of delimiters
+pipeline		roots	g	get nodes from graph g with indegree 0
+pipeline		_render	g out format_ include_asset_exists	draw g as a graph to out, in format format
+pipeline		display_graph	g format include_asset_exists	display a termgraph interactively from within ipython
+pipeline		format_attrs	attrs	format key value pairs from attrs into graphviz attrs format
+pipeline	TermGraph	_add_to_graph	term parents	add a term and all its children to graph
+pipeline	TermGraph	outputs		dict mapping names to designated output terms
+pipeline	TermGraph	execution_order	refcounts	return a topologically-sorted iterator over the terms in self which need to be computed
+pipeline	TermGraph	initial_refcounts	initial_terms	calculate initial refcounts for execution of this graph
+pipeline	TermGraph	_decref_depencies_recursive	term refcounts garbage	decrement terms recursively
+pipeline	TermGraph	decref_dependencies	term refcounts	decrement in-edges for term after computation
+pipeline	ExecutionPlan	set_extra_rows	term all_dates start_date end_date	compute extra_rows for transitive dependencies of root_terms
+pipeline	ExecutionPlan	offset		for all pairs term input such that input is an input to term, compute a mapping :
+pipeline	ExecutionPlan	extra_rows		a dict mapping term -> # of extra rows to load/compute of term
+pipeline	ExecutionPlan	_ensure_extra_rows	term N	ensure that we're going to compute at least n extra rows of term
+pipeline	ExecutionPlan	mask_and_dates_for_term	term root_mask_term workspace all_dates	load mask and mask row labels for term
+pipeline		engine_from_files	daily_bar_path adjustments_path asset_db_path calendar	construct a simplepipelineengine from local filesystem resources
+pipeline	Pipeline	columns		the columns registered with this pipeline
+pipeline	Pipeline	screen		the screen applied to the rows of this pipeline
+pipeline	Pipeline	add	term name overwrite	add a column
+pipeline	Pipeline	remove	name	remove a column
+pipeline	Pipeline	set_screen	screen overwrite	set a screen on this pipeline
+pipeline	Pipeline	to_execution_plan	screen_name default_screen all_dates start_date	compile into an executionplan
+pipeline	Pipeline	to_simple_graph	screen_name default_screen	compile into a simple termgraph with no extra row metadata
+pipeline	Pipeline	_prepare_graph_terms	screen_name default_screen	helper for to_graph and to_execution_plan
+pipeline	Pipeline	show_graph	format	render this pipeline as a dag
+pipeline.filters		concat_tuples		concatenate a sequence of tuples into one tuple
+pipeline.filters		binary_operator	op	factory function for making binary operator methods on a filter subclass
+pipeline.filters		unary_operator	op	factory function for making unary operator methods for filters
+pipeline.filters	NumExprFilter	create	cls expr binds	helper for creating new numexprfactors
+pipeline.filters	NumExprFilter	_compute	arrays dates assets mask	compute our result with numexpr then re-apply mask
+pipeline.filters	PercentileFilter	_validate		ensure that our percentile bounds are well-formed
+pipeline.filters	PercentileFilter	_compute	arrays dates assets mask	for each row in the input compute a mask of all values falling between the given percentiles
+pipeline.data	Column	bind	name	bind a column object to its name
+pipeline.data	_BoundColumnDescr	__get__	instance owner	produce a concrete boundcolumn object when accessed
+pipeline.data	BoundColumn	dataset		the dataset to which this column is bound
+pipeline.data	BoundColumn	name		the name of this column
+pipeline.data	BoundColumn	qualname		the fully-qualified name of this column
+pipeline.classifiers	Classifier	isnull		a filter producing true for values where this term has missing data
+pipeline.classifiers	Classifier	notnull		a filter producing true for values where this term has complete data
+pipeline.classifiers	Classifier	eq	other	construct a filter returning true for asset/date pairs where the output of self matches other
+pipeline.classifiers	Classifier	__ne__	other	construct a filter returning true for asset/date pairs where the output of self matches other
+pipeline.classifiers	Classifier	startswith	prefix	construct a filter matching values starting with prefix
+pipeline.classifiers	Classifier	endswith	suffix	construct a filter matching values ending with suffix
+pipeline.classifiers	Classifier	has_substring	substring	construct a filter matching values containing substring
+pipeline.classifiers	Classifier	matches	pattern	construct a filter that checks regex matches against pattern
+pipeline.classifiers	Classifier	element_of	choices	construct a filter indicating whether values are in choices
+pipeline.classifiers	Classifier	to_workspace_value	result assets	called with the result of a pipeline this needs to return an object
+pipeline.classifiers	CustomClassifier	_allocate_output	windows shape	override the default array allocation to produce a labelarray when we have a string-like dtype
+pipeline.factors		exponential_weights	length decay_rate	build a weight vector for an exponentially-weighted statistic
+pipeline.factors	_ExponentialWeightedFactor	from_span	cls inputs window_length span	convenience constructor for passing decay_rate in terms of span
+pipeline.factors	_ExponentialWeightedFactor	from_halflife	cls inputs window_length halflife	convenience constructor for passing decay_rate in terms of half life
+pipeline.factors	_ExponentialWeightedFactor	from_center_of_mass	cls inputs window_length center_of_mass	convenience constructor for passing decay_rate in terms of center of mass
+pipeline.factors		coerce_numbers_to_my_dtype	f	a decorator for methods whose signature is f self other that coerces other to self
+pipeline.factors		binop_return_dtype	op left right	compute the expected return dtype for the given binary operator
+pipeline.factors		binary_operator	op	factory function for making binary operator methods on a factor subclass
+pipeline.factors		reflected_binary_operator	op	factory function for making binary operator methods on a factor
+pipeline.factors		unary_operator	op	factory function for making unary operator methods for factors
+pipeline.factors		function_application	func	factory function for producing function application methods for factor subclasses
+pipeline.factors	Factor	demean	mask groupby	construct a factor that computes self and subtracts the mean from row of the result
+pipeline.factors	Factor	zscore	mask groupby	construct a factor that z-scores each day's results
+pipeline.factors	Factor	rank	method ascending mask groupby	construct a new factor representing the sorted rank of each column within each row
+pipeline.factors	Factor	pearsonr	target correlation_length mask	construct a new factor that computes rolling pearson correlation coefficients between target and the columns of self
+pipeline.factors	Factor	spearmanr	target correlation_length mask	construct a new factor that computes rolling spearman rank correlation coefficients between target and the columns of self
+pipeline.factors	Factor	linear_regression	target regression_length mask	construct a new factor that performs an ordinary least-squares regression predicting the columns of self from target
+pipeline.factors	Factor	winsorize	min_percentile max_percentile mask groupby	construct a factor returns a winsorized row winsorizing changes values
+pipeline.factors	Factor	quantiles	bins mask	construct a classifier computing quantiles of the output of self
+pipeline.factors	Factor	quartiles	mask	construct a classifier computing quartiles over the output of self
+pipeline.factors	Factor	quintiles	mask	construct a classifier computing quintile labels on self
+pipeline.factors	Factor	deciles	mask	construct a classifier computing decile labels on self
+pipeline.factors	Factor	top	N mask groupby	construct a filter matching the top n asset values of self each day
+pipeline.factors	Factor	bottom	N mask groupby	construct a filter matching the bottom n asset values of self each day
+pipeline.factors	Factor	percentile_between	min_percentile max_percentile mask	construct a new filter representing entries from the output of this factor that fall within the percentile range defined by min_percentile
+pipeline.factors	Factor	isnull		a filter producing true for values where this factor has missing data
+pipeline.factors	Factor	notnull		a filter producing true for values where this factor has complete data
+pipeline.factors	Factor	isnan		a filter producing true for all values where this factor is nan
+pipeline.factors	Factor	notnan		a filter producing true for values where this factor is not nan
+pipeline.factors	Factor	isfinite		a filter producing true for values where this factor is anything but nan inf or -inf
+pipeline.factors	Rank	_validate		verify that the stored rank method is valid
+pipeline.factors	Rank	_compute	arrays dates assets mask	for each row in the input compute a like-shaped array of per-row ranks
+pipeline.factors		winsorize	row min_percentile max_percentile	this implementation is based on scipy stats mstats winsorize
+pipeline.loaders		make_eye_loader	dates sids	make a pipelineloader that emits np eye arrays for the columns in
+pipeline.loaders		make_seeded_random_loader	seed dates sids	make a pipelineloader that emits random arrays seeded with seed for the columns in testingdataset
+pipeline.loaders		required_estimates_fields	columns	compute the set of resource columns required to serve columns
+pipeline.loaders		validate_column_specs	events columns	verify that the columns of events can be used by a earningsestimatesloader to serve the boundcolumns described by
+pipeline.loaders	EarningsEstimatesLoader	get_requested_quarter_data	zero_qtr_data zeroth_quarter_idx stacked_last_per_qtr num_announcements	selects the requested data for each date
+pipeline.loaders	EarningsEstimatesLoader	get_split_adjusted_asof_idx	dates	compute the index in dates where the split-adjusted-asof-date falls
+pipeline.loaders	EarningsEstimatesLoader	collect_overwrites_for_sid	group dates requested_qtr_data last_per_qtr	given a sid collect all overwrites that should be applied for this sid at each quarter boundary
+pipeline.loaders	EarningsEstimatesLoader	merge_into_adjustments_for_all_sids	all_adjustments_for_sid col_to_all_adjustments	merge adjustments for a particular sid into a dictionary containing adjustments for all sids
+pipeline.loaders	EarningsEstimatesLoader	get_adjustments	zero_qtr_data requested_qtr_data last_per_qtr dates	creates an adjustedarray from the given estimates data for the given dates
+pipeline.loaders	EarningsEstimatesLoader	create_overwrites_for_quarter	col_to_overwrites next_qtr_start_idx last_per_qtr quarters_with_estimates_for_sid	add entries to the dictionary of columns to adjustments for the given sid and the given quarter
+pipeline.loaders	EarningsEstimatesLoader	get_last_data_per_qtr	assets_with_data columns dates	determine the last piece of information we know for each column on each date in the index for each sid and quarter
+pipeline.loaders	NextEarningsEstimatesLoader	get_zeroth_quarter_idx	stacked_last_per_qtr	filters for releases that are on or after each simulation date and determines the next quarter by picking out the upcoming release for
+pipeline.loaders	PreviousEarningsEstimatesLoader	get_zeroth_quarter_idx	stacked_last_per_qtr	filters for releases that are on or after each simulation date and determines the previous quarter by picking out the most recent
+pipeline.loaders	SplitAdjustedEstimatesLoader	get_adjustments_for_sid	group dates requested_qtr_data last_per_qtr	collects both overwrites and adjustments for a particular sid
+pipeline.loaders	SplitAdjustedEstimatesLoader	get_adjustments	zero_qtr_data requested_qtr_data last_per_qtr dates	calculates both split adjustments and overwrites for all sids
+pipeline.loaders	SplitAdjustedEstimatesLoader	determine_end_idx_for_adjustment	adjustment_ts dates upper_bound requested_quarter	determines the date until which the adjustment at the given date index should be applied for the given quarter
+pipeline.loaders	SplitAdjustedEstimatesLoader	collect_pre_split_asof_date_adjustments	split_adjusted_asof_date_idx sid_idx pre_adjustments requested_split_adjusted_columns	collect split adjustments that occur before the split-adjusted-asof-date
+pipeline.loaders	SplitAdjustedEstimatesLoader	collect_post_asof_split_adjustments	post_adjustments requested_qtr_data sid sid_idx	collect split adjustments that occur after the split-adjusted-asof-date
+pipeline.loaders	SplitAdjustedEstimatesLoader	retrieve_split_adjustment_data_for_sid	dates sid split_adjusted_asof_idx	dates : pd datetimeindex
+pipeline.loaders	SplitAdjustedEstimatesLoader	merge_split_adjustments_with_overwrites	pre post overwrites requested_split_adjusted_columns	merge split adjustments with the dict containing overwrites
+pipeline.loaders	PreviousSplitAdjustedEarningsEstimatesLoader	collect_split_adjustments	adjustments_for_sid requested_qtr_data dates sid	collect split adjustments for previous quarters and apply them to the given dictionary of splits for the given sid
+pipeline.loaders	NextSplitAdjustedEarningsEstimatesLoader	collect_split_adjustments	adjustments_for_sid requested_qtr_data dates sid	collect split adjustments for future quarters re-apply adjustments
+pipeline.loaders	PrecomputedLoader	load_adjusted_array	columns dates assets mask	load by delegating to sub-loaders
+pipeline.loaders	SeededRandomLoader	values	dtype dates sids	make a random array of shape (len dates len sids with dtype
+pipeline.loaders	SeededRandomLoader	state		make a new randomstate from our seed
+pipeline.loaders	SeededRandomLoader	_float_values	shape	return uniformly-distributed floats between -0 0 and 100 0
+pipeline.loaders	SeededRandomLoader	_int_values	shape	return uniformly-distributed integers between 0 and 100
+pipeline.loaders	SeededRandomLoader	_datetime_values	shape	return uniformly-distributed dates in 2014
+pipeline.loaders	SeededRandomLoader	_bool_values	shape	return uniformly-distributed true/false values
+pipeline.loaders		make_bar_data	asset_info calendar	for a given asset/date/column combination we generate a corresponding raw value using the following formula for ohlcv columns
+pipeline.loaders		expected_bar_value	asset_id date colname	check that the raw value for an asset/date/column triple is as expected
+pipeline.loaders		expected_bar_values_2d	dates asset_info colname	return an 2d array containing cls expected_value(asset_id date
+pipeline.loaders		required_event_fields	next_value_columns previous_value_columns	compute the set of resource columns required to serve next_value_columns and previous_value_columns
+pipeline.loaders		validate_column_specs	events next_value_columns previous_value_columns	verify that the columns of events can be used by an eventsloader to serve the boundcolumns described by next_value_columns and
+pipeline.loaders	EventsLoader	split_next_and_previous_event_columns	requested_columns	split requested columns into columns that should load the next known value and columns that should load the previous known value
+pipeline.loaders	USEquityPricingLoader	from_files	cls pricing_path adjustments_path	create a loader from a bcolz equity pricing dir and a sqlite adjustments path
+pipeline.loaders	DataFrameLoader	format_adjustments	dates assets	build a dict of adjustment objects in the format expected by adjustedarray
+pipeline.loaders	DataFrameLoader	load_adjusted_array	columns dates assets mask	load data from our stored baseline
+pipeline.loaders		is_sorted_ascending	a	check if a numpy array is sorted
+pipeline.loaders		next_event_indexer	all_dates all_sids event_dates event_timestamps	construct an index array that when applied to an array of values produces a 2d array containing the values associated with the next event for each
+pipeline.loaders		previous_event_indexer	all_dates all_sids event_dates event_timestamps	construct an index array that when applied to an array of values produces a 2d array containing the values associated with the previous event for
+pipeline.loaders		normalize_data_query_time	dt time tz	apply the correct time and timezone to a date
+pipeline.loaders		normalize_data_query_bounds	lower upper time tz	adjust the first and last dates in the requested datetime index based on the provided query time and tz
+pipeline.loaders		normalize_timestamp_to_query_time	df time tz inplace	update the timestamp field of a dataframe to normalize dates around some data query time/timezone
+pipeline.loaders		check_data_query_args	data_query_time data_query_tz	checks the data_query_time and data_query_tz arguments for loaders and raises a standard exception if one is none and the other is not
+pipeline.loaders		last_in_date_group	df dates assets reindex	determine the last piece of information known on each date in the date index for each group
+pipeline.loaders		ffill_across_cols	df columns name_map	forward fill values in a dataframe with special logic to handle cases that pd
+pipeline.loaders.blaze		datashape_type_to_numpy	type_	given a datashape type return the associated numpy type maps
+pipeline.loaders.blaze		new_dataset	expr deltas missing_values	creates or returns a dataset from a pair of blaze expressions
+pipeline.loaders.blaze		_check_resources	name expr resources	validate that the expression and resources passed match up
+pipeline.loaders.blaze		_check_datetime_field	name measure	check that a field is a datetime inside some measure
+pipeline.loaders.blaze		_get_metadata	field expr metadata_expr no_metadata_rule	find the correct metadata expression for the expression
+pipeline.loaders.blaze		_ad_as_ts	expr	duplicate the asof_date column as the timestamp column
+pipeline.loaders.blaze		_ensure_timestamp_field	dataset_expr deltas checkpoints	verify that the baseline and deltas expressions have a timestamp field
+pipeline.loaders.blaze		from_blaze	expr deltas checkpoints loader	create a pipeline api object from a blaze expression
+pipeline.loaders.blaze		overwrite_novel_deltas	baseline deltas dates	overwrite any deltas into the baseline set that would have changed our most recently known value
+pipeline.loaders.blaze		overwrite_from_dates	asof dense_dates sparse_dates asset_idx	construct an overwrite with the correct start and end date based on the asof date of the delta
+pipeline.loaders.blaze		adjustments_from_deltas_no_sids	dense_dates sparse_dates column_idx column_name	collect all the adjustments that occur in a dataset that does not have a sid column
+pipeline.loaders.blaze		adjustments_from_deltas_with_sids	dense_dates sparse_dates column_idx column_name	collect all the adjustments that occur in a dataset that has a sid column
+pipeline.loaders.blaze		bind_expression_to_resources	expr resources	bind a blaze expression to resources
+pipeline.loaders.blaze		get_materialized_checkpoints	checkpoints colnames lower_dt odo_kwargs	computes a lower bound and a dataframe checkpoints
+pipeline.loaders.blaze		ffill_query_in_range	expr lower upper checkpoints	query a blaze expression in a given time range properly forward filling from values that fall before the lower date
+pipeline.loaders.blaze		load_raw_data	assets dates data_query_time data_query_tz	given an expression representing data to load perform normalization and forward-filling and return the data materialized
+sources		date_gen	start end trading_calendar delta	utility to generate a stream of dates
+sources	PandasCSV	parse_date_str_series	format_str tz date_str_series data_frequency	efficient parsing for a 1d pandas/numpy object containing string representations of dates
+sources	PandasCSV	_lookup_unconflicted_symbol	symbol	attempt to find a unique asset whose symbol is the given string
+sources	BenchmarkSource	_initialize_precalculated_series	asset trading_calendar trading_days data_portal	internal method that pre-calculates the benchmark return series for use in the simulation
+utils		explode	df	take a dataframe and return a triple of (df
+utils		_time_to_micros	time	convert a time into microseconds since midnight
+utils		mask_between_time	dts start end include_start	return a mask of all of the datetimes in dts that are between start and end
+utils		find_in_sorted_index	dts dt	find the index of dt in dts
+utils		nearest_unequal_elements	dts dt	find values in dts closest but not equal to dt
+utils		timedelta_to_integral_seconds	delta	convert a pd timedelta to a number of seconds as an int
+utils		timedelta_to_integral_minutes	delta	convert a pd timedelta to a number of minutes as an int
+utils		clear_dataframe_indexer_caches	df	clear cached attributes from a pandas dataframe
+utils		_weak_lru_cache	maxsize	users should only access the lru_cache through its public api cache_info cache_clear
+utils	_WeakArgsOrderedDict	move_to_end	key	move an existing element to the end
+utils		weak_lru_cache	maxsize	weak least-recently-used cache decorator
+utils		tolerant_equals	a b atol rtol	check if a and b are equal with some tolerance
+utils		round_if_near_integer	a epsilon	round a to the nearest integer if that integer is within an epsilon of a
+utils		pad_lines_after_first	prefix s	apply a prefix to each line in s after the first
+utils		format_docstring	owner_name docstring formatters	template formatters into docstring
+utils		templated_docstring		decorator allowing the use of templated docstrings
+utils	Argument	parse_argspec	callable_	takes a callable and returns a tuple with the list of argument objects the name of *args and the name of **kwargs
+utils		_expect_extra	expected present exc_unexpected exc_missing	checks for the presence of an extra to the argument list raises expections
+utils		verify_callable_argspec	callable_ expected_args expect_starargs expect_kwargs	checks the callable_ to make sure that it satisfies the given expectations
+utils		dumps_with_persistent_ids	obj protocol	performs a pickle dumps on the given object substituting all references to a tradingenvironment or assetfinder with tokenized representations
+utils		loads_with_persistent_ids	str env	performs a pickle loads on the given string substituting the given tradingenvironment in to any tokenized representations of a
+utils	RollingPanel	oldest_frame	raw	get the oldest frame in the panel
+utils	RollingPanel	extend_back	missing_dts	resizes the buffer to hold a new window with a new cap_multiple
+utils	RollingPanel	get_current	item raw start end	get a panel that is the current data in view it is not safe to persist
+utils	RollingPanel	set_current	panel	set the values stored in our current in-view data to be values of the passed panel
+utils	RollingPanel	_roll_data		roll window worth of data up to position zero
+utils	MutableIndexRollingPanel	oldest_frame	raw	get the oldest frame in the panel
+utils	MutableIndexRollingPanel	get_current		get a panel that is the current data in view it is not safe to persist
+utils	MutableIndexRollingPanel	set_current	panel	set the values stored in our current in-view data to be values of the passed panel
+utils	MutableIndexRollingPanel	_roll_data		roll window worth of data up to position zero
+utils		hidden	path	check if a path is hidden
+utils		ensure_directory	path	ensure that a directory named "path" exists
+utils		ensure_directory_containing	path	ensure that the directory containing path exists
+utils		ensure_file	path	ensure that a file exists this will create any parent directories needed
+utils		last_modified_time	path	get the last modified time of path as a timestamp
+utils		modified_since	path dt	check whether path was modified since dt
+utils		zipline_root	environ	get the root directory for all zipline-managed files
+utils		zipline_path	paths environ	get a path relative to the zipline root
+utils		default_extension	environ	get the path to the default zipline extension file
+utils		data_root	environ	the root directory for zipline data files
+utils		ensure_data_root	environ	ensure that the data root exists
+utils		data_path	paths environ	get a path relative to the zipline data directory
+utils		cache_root	environ	the root directory for zipline cache files
+utils		ensure_cache_root	environ	ensure that the data root exists
+utils		cache_path	paths environ	get a path relative to the zipline cache directory
+utils		create_daily_trade_source	sids sim_params env trading_calendar	creates trade_count trades for each sid in sids list
+utils		preprocess		decorator that applies pre-processors to the arguments of a function before calling the function
+utils		call	f	wrap a function in a processor that calls f on the argument before passing it along
+utils		_build_preprocessed_function	func processors args_defaults varargs	build a preprocessed function with the same signature as func
+utils		verify_indices_all_unique	obj	check that all axes of a pandas object are unique
+utils		optionally	preprocessor	modify a preprocessor to explicitly allow none
+utils		ensure_dtype	func argname arg	argument preprocessor that converts the input into a numpy dtype
+utils		ensure_timezone	func argname arg	argument preprocessor that converts the input into a tzinfo object
+utils		ensure_timestamp	func argname arg	argument preprocessor that converts the input into a pandas timestamp object
+utils		expect_dtypes	__funcname	preprocessing decorator that verifies inputs have expected numpy dtypes
+utils		expect_kinds		preprocessing decorator that verifies inputs have expected dtype kinds
+utils		expect_types	__funcname	preprocessing decorator that verifies inputs have expected types
+utils		make_check	exc_type template pred actual	factory for making preprocessing functions that check a predicate on the input value
+utils		optional	type_	helper for use with expect_types when an input can be type_ or none
+utils		expect_element	__funcname	preprocessing decorator that verifies inputs are elements of some expected collection
+utils		expect_bounded	__funcname	preprocessing decorator verifying that inputs fall inclusively between bounds
+utils		expect_strictly_bounded	__funcname	preprocessing decorator verifying that inputs fall exclusively between bounds
+utils		expect_dimensions	__funcname	preprocessing decorator that verifies inputs are numpy arrays with a specific dimensionality
+utils		coerce	from_ to	a preprocessing decorator that coerces inputs of a given type by passing them to a callable
+utils		coerce_types		preprocessing decorator that applies type coercions
+utils		create_test_zipline		:param config a configuration object that is a dict with - sid - an integer which will be used as the asset id
+utils		naive_to_utc	ts	converts a utc tz-naive timestamp to a tz-aware timestamp
+utils		ensure_utc	time tz	normalize a time if the time is tz-naive assume it is utc
+utils		_build_offset	offset kwargs default	builds the offset argument for event rules
+utils		_build_date	date kwargs	builds the date argument for event rules
+utils		_build_time	time kwargs	builds the time argument for event rules
+utils		lossless_float_to_int	funcname func argname arg	a preprocessor that coerces integral floats to ints
+utils	EventManager	add_event	event prepend	adds an event to the manager
+utils	Event	handle_data	context data dt	calls the callable only when the rule is triggered
+utils	EventRule	should_trigger	dt	checks if the rule should trigger with its current state
+utils	StatelessRule	and_	rule	logical and of two rules triggers only when both rules trigger
+utils	ComposedRule	should_trigger	dt	composes the two rules with a lazy composer
+utils	ComposedRule	lazy_and	first_should_trigger second_should_trigger dt	lazily ands the two rules this will not call the should_trigger of the
+utils	Always	always_trigger	dt	a should_trigger implementation that will always trigger
+utils	Never	never_trigger	dt	a should_trigger implementation that will never trigger
+utils	AfterOpen	calculate_dates	dt	given a date find that day's open and period end open + offset
+utils	BeforeClose	calculate_dates	dt	given a dt find that day's close and period start close - offset
+utils	StatefulRule	new_should_trigger	callable_	replace the should trigger implementation for the current rule
+utils		make_eventrule	date_rule time_rule cal half_days	constructs an event rule from the factory api
+utils		NaT_for_dtype	dtype	retrieve nat with the same units as dtype
+utils		make_kind_check	python_types numpy_kind	make a function that checks whether a scalar or array is of a given kind (e
+utils		coerce_to_dtype	dtype value	make a value with the specified numpy dtype
+utils		default_missing_value_for_dtype	dtype	get the default fill value for dtype
+utils		repeat_first_axis	array count	restride array to repeat count times along the first axis
+utils		repeat_last_axis	array count	restride array to repeat count times along the last axis
+utils		rolling_window	array length	restride an array of shape (x_0
+utils		isnat	obj	check if a value is np nat
+utils		is_missing	data missing_value	generic is_missing function that handles nan and nat
+utils		busday_count_mask_NaT	begindates enddates out	simple of numpy busday_count that returns float arrays rather than int
+utils		ignore_nanwarnings		helper for building a warningcontext that ignores warnings from numpy's nanfunctions
+utils		vectorized_is_element	array choices	check if each element of array is in choices
+utils		as_column	a	convert an array of shape n into an array of shape n 1
+utils		changed_locations	a include_first	compute indices of values in a that differ from the previous value
+utils		_run	handle_data initialize before_trading_start analyze	run a backtest for the given algorithm
+utils		load_extensions	default extensions strict environ	load all of the given extensions this should be called by run_algo
+utils		run_algorithm	start end initialize capital_base	run a trading algorithm
+utils		bases_mro	bases	yield classes in the order that methods should be looked up from the base classes of an object
+utils		is_final	name mro	checks if name is a final object in the given mro
+utils	FinalMeta	__setattr__	name value	this stops the final attributes from being reassigned on the class object
+utils	final	__set__	instance value	final objects cannot be reassigned this is the most import concept
+utils		invert	d	invert a dictionary into a dictionary of sets
+utils		invert_unique	d check	invert a dictionary with unique values into a dictionary with k v pairs flipped
+utils		compose_types	a	compose multiple classes together
+utils		with_metaclasses	metaclasses	make a class inheriting from bases whose metaclass inherits from all of metaclasses
+utils		maybe_show_progress	it show_progress	optionally show a progress bar for the given iterator
+utils		from_tuple	tup	convert a tuple into a range with error handling
+utils		maybe_from_tuple	tup_or_range	convert a tuple into a range but pass ranges through silently
+utils		_check_steps	a b	check that the steps of a and b are both 1
+utils		overlap	a b	check if two ranges overlap
+utils		merge	a b	merge two ranges with step == 1
+utils		_combine	n rs	helper for _group_ranges
+utils		group_ranges	ranges	group any overlapping ranges into a single range
+utils		intersecting_ranges	ranges	return any ranges that intersect
+utils	SecurityList	__init__	data current_date_func asset_finder	data a nested dictionary
+utils		load_from_directory	list_name	to resolve the symbol in the leveraged_etf list the date on which the symbol was in effect is needed
+utils	ZiplineAPI	__enter__		set the given algo instance storing any previously-existing instance
+utils	ZiplineAPI	__exit__	_type _value _tb	restore the algo instance stored in __enter__
+utils		require_not_initialized	exception	decorator for api methods that should only be called during or before tradingalgorithm
+utils		require_initialized	exception	decorator for api methods that should only be called after tradingalgorithm
+utils		disallowed_in_before_trading_start	exception	decorator for api methods that cannot be called from within tradingalgorithm
+utils	ApplyAsyncResult	successful		did the function execute without raising an exception?
+utils	ApplyAsyncResult	get		return the result of calling the function or reraise any exceptions that were raised
+utils	ApplyAsyncResult	ready		has the function finished executing
+utils	ApplyAsyncResult	wait		wait until the function is finished executing
+utils	SequentialPool	apply_async	f args kwargs callback	apply a function but emulate the api of an asynchronous call
+utils	SequentialPool	apply	f args kwargs	apply a function
+utils	CachedObject	unwrap	dt	get the cached value
+utils	CachedObject	_unsafe_get_value		you almost certainly shouldn't use this
+utils	ExpiringCache	get	key dt	get the value of a cached object
+utils	ExpiringCache	set	key value expiration_dt	adds a new key value pair to the cache
+utils	working_file	path		alias for name to be consistent with :class ~zipline
+utils	working_file	_commit		sync the temporary file to the final path
+utils	working_dir	ensure_dir		ensures a subdirectory of the working directory
+utils	working_dir	getpath		get a path relative to the working directory
+utils	working_dir	_commit		sync the temporary directory to the final path
+utils		apply	f	apply a function to arguments
+utils		same		check if all values in a sequence are equal
+utils		_gen_unzip	it elem_len	helper for unzip which checks the lengths of each element in it
+utils		unzip	seq elem_len	unzip a length n sequence of length m sequences into m seperate length n sequences
+utils		getattrs	value attrs default	perform a chained application of getattr on value with the values in attrs
+utils		set_attribute	name value	decorator factory for setting attributes on a function
+utils		foldr	f seq default	fold a function over a sequence with right associativity
+utils		deprecated	msg stacklevel	used to mark a function as deprecated
+utils		enum	option	construct a new enum object
+utils.calendars	TradingCalendarDispatcher	get_calendar	name	retrieves an instance of an tradingcalendar whose name is given
+utils.calendars	TradingCalendarDispatcher	has_calendar	name	do we have or have the ability to make a calendar with name?
+utils.calendars	TradingCalendarDispatcher	register_calendar	name calendar force	registers a calendar for retrieval by the get_calendar method
+utils.calendars	TradingCalendarDispatcher	register_calendar_type	name calendar_type force	registers a calendar by type
+utils.calendars	TradingCalendarDispatcher	register_calendar_alias	alias real_name force	register an alias for a calendar
+utils.calendars	TradingCalendarDispatcher	resolve_alias	name	resolve a calendar alias for retrieval
+utils.calendars	TradingCalendarDispatcher	deregister_calendar	name	if a calendar is registered with the given name it is de-registered
+utils.calendars	TradingCalendarDispatcher	clear_calendars		deregisters all current registered calendars
+utils.calendars	TradingCalendar	special_opens		a list of special open times and corresponding holidaycalendars
+utils.calendars	TradingCalendar	special_closes		a list of special close times and corresponding holidaycalendars
+utils.calendars	TradingCalendar	is_session	dt	given a dt returns whether it's a valid session label
+utils.calendars	TradingCalendar	is_open_on_minute	dt	given a dt return whether this exchange is open at the given dt
+utils.calendars	TradingCalendar	next_open	dt	given a dt returns the next open
+utils.calendars	TradingCalendar	next_close	dt	given a dt returns the next close
+utils.calendars	TradingCalendar	previous_open	dt	given a dt returns the previous open
+utils.calendars	TradingCalendar	previous_close	dt	given a dt returns the previous close
+utils.calendars	TradingCalendar	next_minute	dt	given a dt return the next exchange minute if the given dt is not
+utils.calendars	TradingCalendar	previous_minute	dt	given a dt return the previous exchange minute
+utils.calendars	TradingCalendar	next_session_label	session_label	given a session label returns the label of the next session
+utils.calendars	TradingCalendar	previous_session_label	session_label	given a session label returns the label of the previous session
+utils.calendars	TradingCalendar	minutes_for_session	session_label	given a session label return the minutes for that session
+utils.calendars	TradingCalendar	sessions_in_range	start_session_label end_session_label	given start and end session labels return all the sessions in that range inclusive
+utils.calendars	TradingCalendar	sessions_window	session_label count	given a session label and a window size returns a list of sessions of size count + 1 that either starts with the given session
+utils.calendars	TradingCalendar	session_distance	start_session_label end_session_label	given a start and end session label returns the distance between them
+utils.calendars	TradingCalendar	minutes_in_range	start_minute end_minute	given start and end minutes return all the calendar minutes in that range inclusive
+utils.calendars	TradingCalendar	minutes_for_sessions_in_range	start_session_label end_session_label	returns all the minutes for all the sessions from the given start session label to the given end session label inclusive
+utils.calendars	TradingCalendar	open_and_close_for_session	session_label	returns a tuple of timestamps of the open and close of the session represented by the given label
+utils.calendars	TradingCalendar	all_minutes		returns a datetimeindex representing all the minutes in this calendar
+utils.calendars	TradingCalendar	minute_to_session_label	dt direction	given a minute get the label of its containing session
+utils.calendars	TradingCalendar	minute_index_to_session_labels	index	given a sorted datetimeindex of market minutes return a datetimeindex of the corresponding session labels
+utils.calendars	TradingCalendar	_special_dates	calendars ad_hoc_dates start_date end_date	union an iterable of pairs of the form time calendar and an iterable of pairs of the form (time [dates])
+utils.calendars		days_at_time	days t tz day_offset	create an index of days at time t, interpreted in timezone tz
+utils.calendars		_overwrite_special_dates	midnight_utcs opens_or_closes special_opens_or_closes	overwrite dates in open_or_closes with corresponding dates in special_opens_or_closes using midnight_utcs for alignment
+lib		quantiles	data nbins_or_partition_bounds	compute rowwise array quantiles on an input
+lib		compare_arrays	left right	eq check with a short-circuit for identical objects
+lib	LabelArray	from_codes_and_metadata	cls codes categories reverse_categories	rehydrate a labelarray from the codes and metadata
+lib	LabelArray	from_categorical	cls categorical missing_value	create a labelarray from a pandas categorical
+lib	LabelArray	__array_finalize__	obj	called by numpy after array construction
+lib	LabelArray	as_int_array		convert self into a regular ndarray of ints
+lib	LabelArray	as_string_array		convert self back into an array of strings
+lib	LabelArray	as_categorical	name	coerce self into a pandas categorical
+lib	LabelArray	as_categorical_frame	index columns name	coerce self into a pandas dataframe of categoricals
+lib	LabelArray	__setslice__	i j sequence	this method was deprecated in python 2 0 it predates slice objects
+lib	LabelArray	is_missing		like isnan but checks for locations where we store missing values
+lib	LabelArray	not_missing		like ~isnan but checks for locations where we store missing values
+lib	LabelArray	_equality_check	op	shared code for __eq__ and __ne__, parameterized on the actual comparison operator to use
+lib	LabelArray	empty_like	shape	make an empty labelarray with the same categories as self, filled with self
+lib	LabelArray	map_predicate	f	map a function from str -> bool element-wise over self
+lib	LabelArray	matches	pattern	elementwise regex match
+lib	LabelArray	element_of	container	check if each element of self is an of container
+lib		naive_grouped_rowwise_apply	data group_labels func func_args	simple implementation of grouped row-wise function application
+lib		can_represent_dtype	dtype	can we build an adjustedarray for a baseline of dtype?
+lib		is_categorical	dtype	do we represent this dtype with labelarrays rather than ndarrays?
+lib		_normalize_array	data missing_value	coerce buffer data for an adjustedarray into a standard scalar representation returning the coerced array and a dict of argument to pass
+lib	AdjustedArray	data		the data stored in this array
+lib	AdjustedArray	dtype		the dtype of the data stored in this array
+lib	AdjustedArray	_iterator_type		the iterator produced when traverse is called on this array
+lib	AdjustedArray	traverse	window_length offset perspective_offset	produce an iterator rolling windows rows over our data
+lib	AdjustedArray	inspect		return a string representation of the data stored in this array
+lib		ensure_ndarray	ndarray_or_adjusted_array	return the input as a numpy ndarray
+lib		_check_window_params	data window_length	check that a window of length window_length is well-defined on data
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+examples		simplex_projection	v b	projection vectors to the simplex domain implemented according to the paper efficient projections onto the
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+examples		run_example	example_name environ	run an example module from zipline examples
+examples		_test_args		extra arguments to use when zipline's automated tests run this example
+finance	Restrictions	is_restricted	assets dt	is the asset restricted restrictionstates frozen on the given dt?
+finance	Restrictions	__or__	other_restriction	base implementation for combining two restrictions
+finance	_UnionRestrictions	__or__	other_restriction	overrides the base implementation for combining two restrictions of which the left side is a _unionrestrictions
+finance	StaticRestrictions	is_restricted	assets dt	an asset is restricted for all dts if it is in the static list
+finance	HistoricalRestrictions	is_restricted	assets dt	returns whether or not an asset or iterable of assets is restricted on a dt
+finance	TradingControl	__init__	on_error	track any arguments that should be printed in the error message generated by self
+finance	TradingControl	validate	asset amount portfolio algo_datetime	before any order is executed by tradingalgorithm this method should be called *exactly once* on each registered tradingcontrol object
+finance	TradingControl	handle_violation	asset amount datetime metadata	handle a tradingcontrolviolation either by raising or logging and error with information about the failure
+finance	MaxOrderCount	validate	asset amount portfolio algo_datetime	fail if we've already placed self max_count orders today
+finance	RestrictedListOrder	validate	asset amount portfolio algo_datetime	fail if the asset is in the restricted_list
+finance	MaxOrderSize	validate	asset amount portfolio algo_datetime	fail if the magnitude of the given order exceeds either self max_shares
+finance	MaxPositionSize	validate	asset amount portfolio algo_datetime	fail if the given order would cause the magnitude of our position to be greater in shares than self
+finance	LongOnly	validate	asset amount portfolio algo_datetime	fail if we would hold negative shares of asset after completing this order
+finance	AssetDateBounds	validate	asset amount portfolio algo_datetime	fail if the algo has passed this asset's end_date or before the asset's start date
+finance	AccountControl	__init__		track any arguments that should be printed in the error message generated by self
+finance	AccountControl	validate	_portfolio _account _algo_datetime _algo_current_data	on each call to handle data by tradingalgorithm this method should be called *exactly once* on each registered accountcontrol object
+finance	AccountControl	fail		raise an accountcontrolviolation with information about the failure
+finance	MaxLeverage	__init__	max_leverage	max_leverage is the gross leverage in decimal form for example
+finance	MaxLeverage	validate	_portfolio _account _algo_datetime _algo_current_data	fail if the leverage is greater than the allowed leverage
+finance	TradingEnvironment	write_data		write data into the asset_db
+finance		noop_load		a method that can be substituted in as the load method in a tradingenvironment to prevent it from loading benchmarks
+finance	ExecutionStyle	get_limit_price	is_buy	get the limit price for this order
+finance	ExecutionStyle	get_stop_price	is_buy	get the stop price for this order
+finance	ExecutionStyle	exchange		the exchange to which this order should be routed
+finance	LimitOrder	__init__	limit_price exchange	store the given price
+finance	StopOrder	__init__	stop_price exchange	store the given price
+finance	StopLimitOrder	__init__	limit_price stop_price exchange	store the given prices
+finance		asymmetric_round_price_to_penny	price prefer_round_down diff	asymmetric rounding function for adjusting prices to two places in a way that "improves" the price
+finance		check_stoplimit_prices	price label	check to make sure the stop/limit prices are reasonable and raise a badorderparameters exception if not
+finance	CancelPolicy	should_cancel	event	should all open orders be cancelled? parameters
+finance		fill_price_worse_than_limit_price	fill_price order	checks whether the fill price is worse than the order's limit price
+finance	SlippageModel	process_order	data order	process how orders get filled
+finance	MarketImpactBase	get_txn_volume	data order	return the number of shares we would like to order in this minute
+finance	MarketImpactBase	simulated_impact	order current_price current_volume txn_volume	calculate simulated price impact
+finance	MarketImpactBase	_get_window_data	data asset window_length	internal utility method to return the trailing mean volume over the past 'window_length' days and volatility of close prices for a
+finance	CommissionModel	calculate	order transaction	calculate the amount of commission to charge on order as a result of transaction
+finance		calculate_per_unit_commission	order transaction cost_per_unit initial_commission	if there is a minimum commission if the order hasn't had a commission paid yet pay the minimum
+finance	PerEquityTrade	__init__	cost	cost parameter is the cost of a trade regardless of share count
+finance	PerEquityTrade	calculate	order transaction	if the order hasn't had a commission paid yet pay the fixed commission
+finance	PerDollar	__init__	cost	cost parameter is the cost of a trade per-dollar 0 0015
+finance	PerDollar	calculate	order transaction	pay commission based on dollar value of shares
+finance	Order	__init__	dt asset amount stop	@dt - datetime datetime that the order was placed
+finance	Order	check_triggers	price dt	update internal state based on price triggers and the trade event's price
+finance	Order	check_order_triggers	current_price	given an order and a trade event return a tuple of (stop_reached limit_reached)
+finance	Order	triggered		for a market order true
+finance	Order	__repr__		string representation for this object
+finance	Order	__unicode__		unicode representation for this object
+finance	Blotter	order	asset amount style order_id	place an order
+finance	Blotter	batch_order	order_arg_lists	place a batch of orders
+finance	Blotter	cancel_all_orders_for_asset	asset warn relay_status	cancel all open orders for a given asset
+finance	Blotter	reject	order_id reason	mark the given order as 'rejected', which is functionally similar to cancelled
+finance	Blotter	hold	order_id reason	mark the order with order_id as 'held' held is functionally similar
+finance	Blotter	process_splits	splits	processes a list of splits by modifying any open orders as needed
+finance	Blotter	get_transactions	bar_data	creates a list of transactions based on the current open orders slippage model and commission model
+finance	Blotter	prune_orders	closed_orders	removes all given orders from the blotter's open_orders list
+finance.risk		choose_treasury	select_treasury treasury_curves start_session end_session	find the latest known interest rate for a given duration within a date range
+finance.risk	RiskMetricsPeriod	to_dict		creates a dictionary representing the state of the risk report
+finance.risk	RiskMetricsCumulative	to_dict		creates a dictionary representing the state of the risk report
+finance.risk	RiskReport	__init__	algorithm_returns sim_params trading_calendar treasury_curves	algorithm_returns needs to be a list of daily_return objects
+finance.risk	RiskReport	to_dict		riskmetrics are calculated for rolling windows in four lengths : - 1_month
+finance.performance	PerformanceTracker	to_dict	emission_type	creates a dictionary representing the state of this tracker
+finance.performance	PerformanceTracker	check_upcoming_dividends	next_session adjustment_reader	check if we currently own any stocks with dividends whose ex_date is the next trading day
+finance.performance	PerformanceTracker	handle_minute_close	dt data_portal	handles the close of the given minute in minute emission
+finance.performance	PerformanceTracker	handle_market_close	dt data_portal	handles the close of the given day in both minute and daily emission
+finance.performance	PerformanceTracker	handle_simulation_end		when the simulation is complete run the full period risk report and send it out on the results socket
+finance.performance	Position	earn_dividend	dividend	register the number of shares we held at this dividend's ex date so that we can pay out the correct amount on the dividend's pay date
+finance.performance	Position	earn_stock_dividend	stock_dividend	register the number of shares we held at this dividend's ex date so that we can pay out the correct amount on the dividend's pay date
+finance.performance	Position	handle_split	asset ratio	update the position by the split ratio and return the resulting fractional share that will be converted into cash
+finance.performance	Position	adjust_commission_cost_basis	asset cost	a note about cost-basis in zipline all positions are considered to share a cost basis even if they were executed in different
+finance.performance	Position	to_dict		creates a dictionary representing the state of this position
+finance.performance	PerformancePeriod	_calculate_execution_cash_flow	txn	calculates the cash flow from executing the given transaction
+finance.performance	PerformancePeriod	to_dict	dt	creates a dictionary representing the state of this performance period
+finance.performance	PerformancePeriod	as_portfolio		the purpose of this method is to provide a portfolio object to algorithms running inside the same trading
+finance.performance	PositionTracker	handle_splits	splits	processes a list of splits by modifying any positions as needed
+finance.performance	PositionTracker	earn_dividends	dividends stock_dividends	given a list of dividends whose ex_dates are all the next trading day calculate and store the cash and/or stock payments to be paid on each
+finance.performance	PositionTracker	pay_dividends	next_trading_day	returns a cash payment based on the dividends that should be paid out according to the accumulated bookkeeping of earned unpaid and stock

@@ -1,0 +1,817 @@
+<tt style='background-color:#E8E8E8;'> core. <a href=' /resources.py#L46'>resource_find</a>(filename)</tt>	Search for a resource in the list of paths.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /resources.py#L65'>resource_add_path</a>(path)</tt>	Add a custom path to search in.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /resources.py#L74'>resource_remove_path</a>(path)</tt>	Remove a search path.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L210'>start</a>()</tt>	Start the loader thread/process.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L214'>run</a>()</tt>	Main loop for the loader.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L218'>stop</a>()</tt>	Stop the loader thread/process.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L222'>pause</a>()</tt>	Pause the loader can be useful during interactions.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L229'>resume</a>()</tt>	Resume the loader after a :meth pause.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L245'>_load</a>(kwargs)</tt>	Internal loading function called by the thread.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L278'>_load_local</a>(filename,kwargs)</tt>	Internal loading a local file.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L284'>_load_urllib</a>(filename,kwargs)</tt>	Internal loading a network file first download it save it to a.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L381'>_update</a>()</tt>	Internal check if a data is loaded and pass to the client.
+<tt style='background-color:#E8E8E8;'> core.LoaderBase <a href=' /loader.py#L417'>image</a>(filename,load_callback,post_callback)</tt>	Load a image using the loader a proxyimage is returned with a.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /support.py#L13'>install_gobject_iteration</a>()</tt>	Import and install gobject context iteration inside our event loop.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /support.py#L65'>install_android</a>()</tt>	Install hooks for the android platform.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /support.py#L149'>install_twisted_reactor</a>()</tt>	Installs a threaded twisted reactor which will schedule one reactor iteration before the next frame only when twisted needs.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /support.py#L252'>uninstall_twisted_reactor</a>()</tt>	Uninstalls the kivy's threaded twisted reactor no more twisted.
+<tt style='background-color:#E8E8E8;'> core.FactoryBase <a href=' /factory.py#L56'>is_template</a>(classname)</tt>	Return true if the classname is a template from the :class ~kivy.
+<tt style='background-color:#E8E8E8;'> core.FactoryBase <a href=' /factory.py#L67'>register</a>(classname,cls,module,is_template)</tt>	Register a new classname referring to a real class or class definition in a module.
+<tt style='background-color:#E8E8E8;'> core.FactoryBase <a href=' /factory.py#L102'>unregister</a>()</tt>	Unregisters the classnames previously registered via the register method.
+<tt style='background-color:#E8E8E8;'> core.FactoryBase <a href=' /factory.py#L113'>unregister_from_filename</a>(filename)</tt>	Unregister all the factory objects related to the filename passed in the parameter.
+<tt style='background-color:#E8E8E8;'> core.GestureDatabase <a href=' /gesture.py#L52'>add_gesture</a>(gesture)</tt>	Add a new gesture to the database.
+<tt style='background-color:#E8E8E8;'> core.GestureDatabase <a href=' /gesture.py#L56'>find</a>(gesture,minscore,rotation_invariant)</tt>	Find a matching gesture in the database.
+<tt style='background-color:#E8E8E8;'> core.GestureDatabase <a href=' /gesture.py#L73'>gesture_to_str</a>(gesture)</tt>	Convert a gesture into a unique string.
+<tt style='background-color:#E8E8E8;'> core.GestureDatabase <a href=' /gesture.py#L81'>str_to_gesture</a>(data)</tt>	Convert a unique string to a gesture.
+<tt style='background-color:#E8E8E8;'> core.GesturePoint <a href=' /gesture.py#L91'>__init__</a>(x,y)</tt>	Stores the x y coordinates of a point in the gesture.
+<tt style='background-color:#E8E8E8;'> core.GesturePoint <a href=' /gesture.py#L96'>scale</a>(factor)</tt>	Scales the point by the given factor.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L109'>__init__</a>()</tt>	A stroke in the gesture.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L139'>add_point</a>(x,y)</tt>	Add_point(x=x_pos y=y_pos) adds a point to the stroke.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L147'>scale_stroke</a>(scale_factor)</tt>	Scale_stroke(scale_factor=float) scales the stroke down by scale_factor.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L154'>points_distance</a>(point1,point2)</tt>	Points_distance(point1=gesturepoint point2=gesturepoint) returns the distance between two gesturepoints.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L163'>stroke_length</a>(point_list)</tt>	Finds the length of the stroke if a point list is given.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L177'>normalize_stroke</a>(sample_points)</tt>	Normalizes strokes so that every stroke has a standard number of points.
+<tt style='background-color:#E8E8E8;'> core.GestureStroke <a href=' /gesture.py#L223'>center_stroke</a>(offset_x,offset_y)</tt>	Centers the stroke by offsetting the points.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L241'>__init__</a>(tolerance)</tt>	Gesture([tolerance=float]) creates a new gesture with an optional matching tolerance value.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L255'>_scale_gesture</a>()</tt>	Scales down the gesture to a unit of 1.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L275'>_center_gesture</a>()</tt>	Centers the gesture points of the gesture.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L298'>add_stroke</a>(point_list)</tt>	Adds a stroke to the gesture and returns the stroke instance.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L320'>normalize</a>(stroke_samples)</tt>	Runs the gesture normalization algorithm and calculates the dot product with self.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L331'>get_rigid_rotation</a>(dstpts)</tt>	Extract the rotation to apply to a group of points to minimize the distance to a second group of points.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L347'>dot_product</a>(comparison_gesture)</tt>	Calculates the dot product of the gesture with another gesture.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L374'>get_score</a>(comparison_gesture,rotation_invariant)</tt>	Returns the matching score of the gesture against another gesture.
+<tt style='background-color:#E8E8E8;'> core.Gesture <a href=' /gesture.py#L393'>__eq__</a>(comparison_gesture)</tt>	Allows easy comparisons between gesture instances.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L142'>duration</a>()</tt>	Return the duration of the animation.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L148'>transition</a>()</tt>	Return the transition of the animation.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L154'>animated_properties</a>()</tt>	Return the properties used to animate.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L160'>stop_all</a>(widget)</tt>	Stop all animations that concern a specific widget / list of properties.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L181'>cancel_all</a>(widget)</tt>	Cancel all animations that concern a specific widget / list of properties.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L204'>start</a>(widget)</tt>	Start the animation on a widget.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L212'>stop</a>(widget)</tt>	Stop the animation previously applied to a widget triggering the on_complete event.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L220'>cancel</a>(widget)</tt>	Cancel the animation previously applied to a widget same.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L232'>stop_property</a>(widget,prop)</tt>	Even if an animation is running remove a property it will not be.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L246'>cancel_property</a>(widget,prop)</tt>	Even if an animation is running remove a property it will not be.
+<tt style='background-color:#E8E8E8;'> core.Animation <a href=' /animation.py#L262'>have_properties_to_animate</a>(widget)</tt>	Return true if a widget still has properties to animate.
+<tt style='background-color:#E8E8E8;'> core.Sequence <a href=' /animation.py#L442'>cancel_property</a>(widget,prop)</tt>	Even if an animation is running remove a property it will not be.
+<tt style='background-color:#E8E8E8;'> core.Sequence <a href=' /animation.py#L468'>on_anim2_complete</a>(instance,widget)</tt>	Repeating logic used with boolean variable "repeat".
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L540'>linear</a>(progress)</tt>	Image : images/anim_linear png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L545'>in_quad</a>(progress)</tt>	Image : images/anim_in_quad png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L551'>out_quad</a>(progress)</tt>	Image : images/anim_out_quad png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L557'>in_out_quad</a>(progress)</tt>	Image : images/anim_in_out_quad png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L567'>in_cubic</a>(progress)</tt>	Image : images/anim_in_cubic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L573'>out_cubic</a>(progress)</tt>	Image : images/anim_out_cubic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L580'>in_out_cubic</a>(progress)</tt>	Image : images/anim_in_out_cubic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L590'>in_quart</a>(progress)</tt>	Image : images/anim_in_quart png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L596'>out_quart</a>(progress)</tt>	Image : images/anim_out_quart png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L603'>in_out_quart</a>(progress)</tt>	Image : images/anim_in_out_quart png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L613'>in_quint</a>(progress)</tt>	Image : images/anim_in_quint png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L619'>out_quint</a>(progress)</tt>	Image : images/anim_out_quint png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L626'>in_out_quint</a>(progress)</tt>	Image : images/anim_in_out_quint png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L636'>in_sine</a>(progress)</tt>	Image : images/anim_in_sine png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L642'>out_sine</a>(progress)</tt>	Image : images/anim_out_sine png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L648'>in_out_sine</a>(progress)</tt>	Image : images/anim_in_out_sine png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L654'>in_expo</a>(progress)</tt>	Image : images/anim_in_expo png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L662'>out_expo</a>(progress)</tt>	Image : images/anim_out_expo png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L670'>in_out_expo</a>(progress)</tt>	Image : images/anim_in_out_expo png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L684'>in_circ</a>(progress)</tt>	Image : images/anim_in_circ png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L690'>out_circ</a>(progress)</tt>	Image : images/anim_out_circ png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L697'>in_out_circ</a>(progress)</tt>	Image : images/anim_in_out_circ png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L707'>in_elastic</a>(progress)</tt>	Image : images/anim_in_elastic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L719'>out_elastic</a>(progress)</tt>	Image : images/anim_out_elastic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L730'>in_out_elastic</a>(progress)</tt>	Image : images/anim_in_out_elastic png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L746'>in_back</a>(progress)</tt>	Image : images/anim_in_back png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L752'>out_back</a>(progress)</tt>	Image : images/anim_out_back png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L759'>in_out_back</a>(progress)</tt>	Image : images/anim_in_out_back png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L789'>in_bounce</a>(progress)</tt>	Image : images/anim_in_bounce png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L795'>out_bounce</a>(progress)</tt>	Image : images/anim_out_bounce png.
+<tt style='background-color:#E8E8E8;'> core.AnimationTransition <a href=' /animation.py#L801'>in_out_bounce</a>(progress)</tt>	Image : images/anim_in_out_bounce png.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L489'>build</a>()</tt>	Initializes the application it will be called only once.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L501'>build_config</a>(config)</tt>	Versionadded : 1 0 7.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L517'>build_settings</a>(settings)</tt>	Versionadded : 1 0 7.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L536'>load_kv</a>(filename)</tt>	This method is invoked the first time the app is being run if no widget tree has been constructed before for this app.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L603'>get_application_name</a>()</tt>	Return the name of the application.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L613'>get_application_icon</a>()</tt>	Return the icon of the application.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L621'>get_application_config</a>(defaultpath)</tt>	Versionadded : 1 0 7.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L665'>root_window</a>()</tt>	Versionadded : 1 9 0.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L673'>load_config</a>()</tt>	Internal this function is used for returning a configparser with the application configuration.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L726'>directory</a>()</tt>	Versionadded : 1 0 7.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L742'>user_data_dir</a>()</tt>	Versionadded : 1 7 0.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L783'>name</a>()</tt>	Versionadded : 1 0 7.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L796'>run</a>()</tt>	Launches the app in standalone mode.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L831'>stop</a>()</tt>	Stop the application.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L845'>on_start</a>()</tt>	Event handler for the on_start event which is fired after initialization (after build() has been called) but before the.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L852'>on_stop</a>()</tt>	Event handler for the on_stop event which is fired when the application has finished running (i.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L859'>on_pause</a>()</tt>	Event handler called when pause mode is requested you should.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L876'>on_resume</a>()</tt>	Event handler called when your application is resuming from the pause mode.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L890'>get_running_app</a>()</tt>	Return the currently running application instance.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L898'>on_config_change</a>(config,section,key,value)</tt>	Event handler fired when a configuration token has been changed by the settings page.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L904'>open_settings</a>()</tt>	Open the application settings panel it will be created the very.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L925'>display_settings</a>(settings)</tt>	Versionadded : 1 8 0.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L949'>close_settings</a>()</tt>	Close the previously opened settings panel.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L964'>create_settings</a>()</tt>	Create the settings panel this method will normally.
+<tt style='background-color:#E8E8E8;'> core.App <a href=' /app.py#L995'>destroy_settings</a>()</tt>	Versionadded : 1 8 0.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L219'>length</a>()</tt>	Returns the length of a vector.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L231'>length2</a>()</tt>	Returns the length of a vector squared.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L243'>distance</a>(to)</tt>	Returns the distance between two points.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L256'>distance2</a>(to)</tt>	Returns the distance between two points squared.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L265'>normalize</a>()</tt>	Returns a new vector that has the same direction as vec but has a length of one.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L280'>dot</a>(a)</tt>	Computes the dot product of a and b.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L289'>angle</a>(a)</tt>	Computes the angle between a and b and returns the angle in degrees.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L304'>rotate</a>(angle)</tt>	Rotate the vector with an angle in degrees.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L318'>line_intersection</a>(v1,v2,v3,v4)</tt>	Finds the intersection point between the lines 1 v1->v2 and 2 v3->v4 and returns it as a vector object.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L352'>segment_intersection</a>(v1,v2,v3,v4)</tt>	Finds the intersection point between segments 1 v1->v2 and 2 v3->v4 and returns it as a vector object.
+<tt style='background-color:#E8E8E8;'> core.Vector <a href=' /vector.py#L395'>in_bbox</a>(point,a,b)</tt>	Return true if point is in the bounding box defined by a and b.
+<tt style='background-color:#E8E8E8;'> core.ExceptionHandler <a href=' /base.py#L55'>handle_exception</a>(exception)</tt>	Handle one exception defaults to returning exceptionmanager.
+<tt style='background-color:#E8E8E8;'> core.ExceptionManagerBase <a href=' /base.py#L72'>add_handler</a>(cls)</tt>	Add a new exception handler to the stack.
+<tt style='background-color:#E8E8E8;'> core.ExceptionManagerBase <a href=' /base.py#L77'>remove_handler</a>(cls)</tt>	Remove a exception handler from the stack.
+<tt style='background-color:#E8E8E8;'> core.ExceptionManagerBase <a href=' /base.py#L82'>handle_exception</a>(inst)</tt>	Called when an exception occurred in the runtouchapp() main loop.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L115'>touches</a>()</tt>	Return the list of all touches currently in down or move states.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L121'>ensure_window</a>()</tt>	Ensure that we have a window.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L129'>set_window</a>(window)</tt>	Set the window used for the event loop.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L134'>add_input_provider</a>(provider,auto_remove)</tt>	Add a new input provider to listen for touch events.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L142'>remove_input_provider</a>(provider)</tt>	Remove an input provider.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L148'>add_event_listener</a>(listener)</tt>	Add a new event listener for getting touch events.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L154'>remove_event_listener</a>(listener)</tt>	Remove an event listener from the list.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L160'>start</a>()</tt>	Must be called only once before run().
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L169'>close</a>()</tt>	Exit from the main loop and stop all configured input providers.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L176'>stop</a>()</tt>	Stop all input providers and call callbacks registered using eventloop.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L196'>add_postproc_module</a>(mod)</tt>	Add a postproc input module doubletap tripletap dejitter retaintouch are defaults.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L202'>remove_postproc_module</a>(mod)</tt>	Remove a postproc module.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L207'>remove_android_splash</a>()</tt>	Remove android presplash in sdl2 bootstrap.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L218'>post_dispatch_input</a>(etype,me)</tt>	This function is called by dispatch_input() when we want to dispatch an input event.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L309'>dispatch_input</a>()</tt>	Called by idle() to read events from input providers pass events to postproc and dispatch final events.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L329'>idle</a>()</tt>	This function is called after every frame by default.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L373'>exit</a>()</tt>	Close the main loop and close the window.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L379'>on_stop</a>()</tt>	Event handler for on_stop events which will be fired right after all input providers have been stopped.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L384'>on_pause</a>()</tt>	Event handler for on_pause which will be fired when the event loop is paused.
+<tt style='background-color:#E8E8E8;'> core.EventLoopBase <a href=' /base.py#L389'>on_start</a>()</tt>	Event handler for on_start which will be fired right after all input providers have been started.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /base.py#L399'>_run_mainloop</a>()</tt>	If no window has been created this will be the executed mainloop.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /base.py#L416'>runTouchApp</a>(widget,slave)</tt>	Static main function that starts the application loop.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /base.py#L509'>stopTouchApp</a>()</tt>	Stop the current application by leaving the main loop.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L185'>filter</a>()</tt>	:meth filter returns a subset of objects in :attr self db,.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L351'>add_gesture</a>(name,strokes)</tt>	Add a new gesture to the database this will instantiate a new.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L367'>parse_gesture</a>(data)</tt>	Parse data formatted by export_gesture() returns a list of.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L385'>export_gesture</a>(filename)</tt>	Export a list of :class multistrokegesture objects outputs a.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L423'>import_gesture</a>(data,filename)</tt>	Import a list of gestures as formatted by :meth export_gesture.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L440'>transfer_gesture</a>(tgt)</tt>	Transfers :class multistrokegesture objects from :attr recognizer.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L453'>prepare_templates</a>()</tt>	This method is used to prepare :class unistroketemplate objects within the gestures in self.
+<tt style='background-color:#E8E8E8;'> core.Recognizer <a href=' /multistroke.py#L471'>recognize</a>(strokes,goodscore,timeout,delay)</tt>	Search for gestures matching strokes returns a.
+<tt style='background-color:#E8E8E8;'> core.ProgressTracker <a href=' /multistroke.py#L729'>progress</a>()</tt>	Returns the progress as a float 0 is 0% done 1 is 100% this.
+<tt style='background-color:#E8E8E8;'> core.ProgressTracker <a href=' /multistroke.py#L737'>best</a>()</tt>	Return the best match found by recognize() so far it returns a.
+<tt style='background-color:#E8E8E8;'> core.ProgressTracker <a href=' /multistroke.py#L753'>stop</a>()</tt>	Raises a stop flag that is checked by the search process it will.
+<tt style='background-color:#E8E8E8;'> core.MultistrokeGesture <a href=' /multistroke.py#L878'>add_stroke</a>(stroke,permute)</tt>	Add a stroke to the self strokes list if permute is true the.
+<tt style='background-color:#E8E8E8;'> core.MultistrokeGesture <a href=' /multistroke.py#L885'>get_distance</a>(cand,tpl,numpoints)</tt>	Compute the distance from this candiate to a unistroketemplate.
+<tt style='background-color:#E8E8E8;'> core.MultistrokeGesture <a href=' /multistroke.py#L924'>match_candidate</a>(cand)</tt>	Match a given candidate against this multistrokegesture object will.
+<tt style='background-color:#E8E8E8;'> core.MultistrokeGesture <a href=' /multistroke.py#L991'>permute</a>()</tt>	Generate all possible unistroke permutations from self strokes and.
+<tt style='background-color:#E8E8E8;'> core.UnistrokeTemplate <a href=' /multistroke.py#L1113'>add_point</a>(p)</tt>	Add a point to the unistroke/path this invalidates all previously.
+<tt style='background-color:#E8E8E8;'> core.UnistrokeTemplate <a href=' /multistroke.py#L1136'>prepare</a>(numpoints)</tt>	This function prepares the unistroketemplate for matching given a target number of points for resample.
+<tt style='background-color:#E8E8E8;'> core.Candidate <a href=' /multistroke.py#L1207'>add_stroke</a>(stroke)</tt>	Add a stroke to the candidate this will invalidate all.
+<tt style='background-color:#E8E8E8;'> core.Candidate <a href=' /multistroke.py#L1222'>get_start_unit_vector</a>(numpoints,orientation_sens)</tt>	Internal use only get the start vector for this candidate with the path resampled to numpoints points.
+<tt style='background-color:#E8E8E8;'> core.Candidate <a href=' /multistroke.py#L1230'>get_protractor_vector</a>(numpoints,orientation_sens)</tt>	Internal use only return vector for comparing to a.
+<tt style='background-color:#E8E8E8;'> core.Candidate <a href=' /multistroke.py#L1235'>get_angle_similarity</a>(tpl)</tt>	Internal use only compute the angle similarity between this candidate and a unistroketemplate object.
+<tt style='background-color:#E8E8E8;'> core.Candidate <a href=' /multistroke.py#L1254'>prepare</a>(numpoints)</tt>	Prepare the candidate vectors self strokes is combined to a single.
+<tt style='background-color:#E8E8E8;'> core.FileHandler <a href=' /logger.py#L111'>purge_logs</a>(directory)</tt>	Purge log is called randomly to prevent the log directory from being filled by lots and lots of log files.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L73'>require</a>(version)</tt>	Require can be used to check the minimum version required to run a kivy application.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L149'>kivy_configure</a>()</tt>	Call post-configuration of kivy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L157'>get_includes</a>()</tt>	Retrieves the directories containing includes needed to build new cython modules with kivy as a dependency.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L169'>kivy_register_post_configuration</a>(callback)</tt>	Register a function to be called when kivy_configure() is called.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L178'>kivy_usage</a>()</tt>	Kivy usage %s [option ]::.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L380'>add_callback</a>(callback,section,key)</tt>	Add a callback to be called when a specific section or key has changed.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L393'>remove_callback</a>(callback,section,key)</tt>	Removes a callback added with :meth add_callback.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L412'>read</a>(filename)</tt>	Read only one filename in contrast to the original configparser of.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L451'>set</a>(section,option,value)</tt>	Functions similarly to pythonconfigparser's set method except that the value is implicitly converted to a string.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L466'>setall</a>(section,keyvalues)</tt>	Sets multiple key-value pairs in a section keyvalues should be a.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L480'>setdefaults</a>(section,keyvalues)</tt>	Set multiple key-value defaults in a section keyvalues should be.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L488'>setdefault</a>(section,option,value)</tt>	Set the default value for an option in the specified section.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L495'>getdefault</a>(section,option,defaultvalue)</tt>	Get the value of an option in the specified section if not found.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L505'>getdefaultint</a>(section,option,defaultvalue)</tt>	Get the value of an option in the specified section if not found.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L514'>adddefaultsection</a>(section)</tt>	Add a section if the section is missing.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L521'>write</a>()</tt>	Write the configuration to the last file opened using the :meth read method.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L537'>update_config</a>(filename,overwrite)</tt>	Upgrade the configuration based on a new default config file.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L548'>_register_named_property</a>(name,widget_ref)</tt>	Called by the configparserproperty to register a property which was created with a config name instead of a config object.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L588'>get_configparser</a>(name)</tt>	Returns the :class configparser instance whose name is name, or none if not found.
+<tt style='background-color:#E8E8E8;'> core.ConfigParser <a href=' /config.py#L624'>name</a>()</tt>	The name associated with this configparser instance if not ''.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /compat.py#L75'>_isclose</a>(a,b,rel_tol,abs_tol)</tt>	Measures whether two floats are "close" to each other identical to.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L29'>boundary</a>(value,minvalue,maxvalue)</tt>	Limit a value between a minvalue and maxvalue.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L34'>intersection</a>(set1,set2)</tt>	Return the intersection of 2 lists.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L39'>difference</a>(set1,set2)</tt>	Return the difference between 2 lists.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L44'>interpolate</a>(value_from,value_to,step)</tt>	Interpolate between two values this can be useful for smoothing some.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L67'>strtotuple</a>(s)</tt>	Convert a tuple string into a tuple with some security checks.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L91'>rgba</a>(s)</tt>	Return a kivy color 4 value from 0-1 range from either a hex string or a list of 0-255 values.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L112'>get_color_from_hex</a>(s)</tt>	Transform a hex string color to a kivy :class ~kivy.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L126'>get_hex_from_color</a>(color)</tt>	Transform a kivy :class ~kivy graphics color to a hex value :.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L139'>get_random_color</a>(alpha)</tt>	Returns a random color 4 tuple.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L153'>is_color_transparent</a>(c)</tt>	Return true if the alpha channel is 0.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L317'>deprecated</a>(func)</tt>	This is a decorator which can be used to mark functions as deprecated.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L389'>format_bytes_to_human</a>(size,precision)</tt>	Format a byte value to a human readable representation b kb mb.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /utils.py#L453'>escape_markup</a>(text)</tt>	Escape markup characters found in the text intended to be used when markup.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L41'>register</a>(category,limit,timeout)</tt>	Register a new category in the cache with the specified limit.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L63'>append</a>(category,key,obj,timeout)</tt>	Add a new object to the cache.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L97'>get</a>(category,key,default)</tt>	Get a object from the cache.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L115'>get_timestamp</a>(category,key,default)</tt>	Get the object timestamp in the cache.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L132'>get_lastaccess</a>(category,key,default)</tt>	Get the objects last access time in the cache.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L149'>remove</a>(category,key)</tt>	Purge the cache.
+<tt style='background-color:#E8E8E8;'> core.Cache <a href=' /cache.py#L221'>print_usage</a>()</tt>	Print the cache usage to the console.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L492'>frametime</a>()</tt>	Time spent between the last frame and the current frame in seconds.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L501'>frames</a>()</tt>	Number of internal frames not necessarily drawed from the start of the clock.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L510'>frames_displayed</a>()</tt>	Number of displayed frames from the start of the clock.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L516'>usleep</a>(microseconds)</tt>	Sleeps for the number of microseconds.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L521'>idle</a>()</tt>	Internal waits here until the next frame.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L545'>tick</a>()</tt>	Advance the clock to the next step must be called every frame.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L585'>tick_draw</a>()</tt>	Tick the drawing counter.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L592'>get_fps</a>()</tt>	Get the current average fps calculated by the clock.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L597'>get_rfps</a>()</tt>	Get the current "real" fps calculated by the clock.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L606'>get_time</a>()</tt>	Get the last tick made by the clock.
+<tt style='background-color:#E8E8E8;'> core.ClockBaseBehavior <a href=' /clock.py#L610'>get_boottime</a>()</tt>	Get the time in seconds from the application start.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /clock.py#L779'>mainthread</a>(func)</tt>	Decorator that will schedule the call of the function for the next available frame in the mainthread.
+<tt style='background-color:#E8E8E8;'> core.Atlas <a href=' /atlas.py#L225'>create</a>(outname,filenames,size,padding)</tt>	This method can be used to create an atlas manually from a set of images.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L21'>parse_filename</a>(filename)</tt>	Parse a filename and search for it using resource_find().
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L38'>parse_color</a>(text)</tt>	Parse a string to a kivy color supported formats.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L95'>parse_bool</a>(text)</tt>	Parse a string to a boolean ignoring case "true"/"1" is true.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L105'>parse_string</a>(text)</tt>	Parse a string to a string removing single and double quotes.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L112'>parse_int2</a>(text)</tt>	Parse a string to a list of exactly 2 integers.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /parser.py#L130'>parse_float4</a>(text)</tt>	Parse a string to a list of exactly 4 floats.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /geometry.py#L13'>circumcircle</a>(a,b,c)</tt>	Computes the circumcircle of a triangle defined by a b c.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /geometry.py#L51'>minimum_bounding_circle</a>(points)</tt>	Returns the minimum bounding circle for a set of points.
+<tt style='background-color:#E8E8E8;'> core.SafeMembrane <a href=' /interactive.py#L201'>safeIn</a>()</tt>	Provides a thread-safe entry point for interactive launching.
+<tt style='background-color:#E8E8E8;'> core.SafeMembrane <a href=' /interactive.py#L207'>safeOut</a>()</tt>	Provides a thread-safe exit point for interactive launching.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L109'>pt</a>(value)</tt>	Convert from points to pixels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L115'>inch</a>(value)</tt>	Convert from inches to pixels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L121'>cm</a>(value)</tt>	Convert from centimeters to pixels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L127'>mm</a>(value)</tt>	Convert from millimeters to pixels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L133'>dp</a>(value)</tt>	Convert from density-independent pixels to pixels.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /metrics.py#L139'>sp</a>(value)</tt>	Convert from scale-independent pixels to pixels.
+<tt style='background-color:#E8E8E8;'> core.MetricsBase <a href=' /metrics.py#L150'>dpi</a>()</tt>	Return the dpi of the screen depending on the platform the dpi can.
+<tt style='background-color:#E8E8E8;'> core.MetricsBase <a href=' /metrics.py#L177'>dpi_rounded</a>()</tt>	Return the dpi of the screen rounded to the nearest of 120 160 240 or 320.
+<tt style='background-color:#E8E8E8;'> core.MetricsBase <a href=' /metrics.py#L191'>density</a>()</tt>	Return the density of the screen this value is 1 by default.
+<tt style='background-color:#E8E8E8;'> core.MetricsBase <a href=' /metrics.py#L214'>fontscale</a>()</tt>	Return the fontscale user preference this value is 1 by default but.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /context.py#L80'>register_context</a>(name,cls)</tt>	Register a new context.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /context.py#L94'>get_current_context</a>()</tt>	Return the current context.
+<tt style='background-color:#E8E8E8;'> core.spelling.SpellingBase <a href=' /core/spelling/__init__.py#L53'>__init__</a>(language)</tt>	If a language identifier (such as 'en_us') is provided and a matching language exists it is selected.
+<tt style='background-color:#E8E8E8;'> core.spelling.SpellingBase <a href=' /core/spelling/__init__.py#L79'>select_language</a>(language)</tt>	From the set of registered languages select the first language for language.
+<tt style='background-color:#E8E8E8;'> core.spelling.SpellingBase <a href=' /core/spelling/__init__.py#L93'>list_languages</a>()</tt>	Return a list of all supported languages.
+<tt style='background-color:#E8E8E8;'> core.spelling.SpellingBase <a href=' /core/spelling/__init__.py#L101'>check</a>(word)</tt>	If word is a valid word in self _language (the currently active.
+<tt style='background-color:#E8E8E8;'> core.spelling.SpellingBase <a href=' /core/spelling/__init__.py#L115'>suggest</a>(fragment)</tt>	For a given fragment i e part of a word or a word by itself.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L30'>get</a>(mimetype)</tt>	Get the current data in clipboard using the mimetype if possible.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L36'>put</a>(data,mimetype)</tt>	Put data on the clipboard and attach a mimetype.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L42'>get_types</a>()</tt>	Return a list of supported mimetypes.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L47'>_ensure_clipboard</a>()</tt>	Ensure that the clipboard has been properly initialised.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L65'>copy</a>(data)</tt>	Copy the value provided in argument data into current clipboard.
+<tt style='background-color:#E8E8E8;'> core.clipboard.ClipboardBase <a href=' /core/clipboard/__init__.py#L75'>paste</a>()</tt>	Get text from the system clipboard and return it a usable string.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L157'>_do_eos</a>()</tt>	Versionchanged : 1 4 0.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L172'>_update</a>(dt)</tt>	Update the video content to texture.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L177'>seek</a>(percent)</tt>	Move on percent position.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L181'>stop</a>()</tt>	Stop the video playing.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L185'>pause</a>()</tt>	Pause the video.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L192'>play</a>()</tt>	Play the video.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L196'>load</a>()</tt>	Load the video from the current filename.
+<tt style='background-color:#E8E8E8;'> core.video.VideoBase <a href=' /core/video/__init__.py#L200'>unload</a>()</tt>	Unload the actual video.
+<tt style='background-color:#E8E8E8;'> core.audio.SoundLoader <a href=' /core/audio/__init__.py#L69'>register</a>(classobj)</tt>	Register a new class to load the sound.
+<tt style='background-color:#E8E8E8;'> core.audio.SoundLoader <a href=' /core/audio/__init__.py#L75'>load</a>(filename)</tt>	Load a sound and return a sound() instance.
+<tt style='background-color:#E8E8E8;'> core.audio.Sound <a href=' /core/audio/__init__.py#L176'>get_pos</a>()</tt>	Returns the current position of the audio file.
+<tt style='background-color:#E8E8E8;'> core.audio.Sound <a href=' /core/audio/__init__.py#L191'>load</a>()</tt>	Load the file into memory.
+<tt style='background-color:#E8E8E8;'> core.audio.Sound <a href=' /core/audio/__init__.py#L195'>unload</a>()</tt>	Unload the file from memory.
+<tt style='background-color:#E8E8E8;'> core.audio.Sound <a href=' /core/audio/__init__.py#L199'>play</a>()</tt>	Play the file.
+<tt style='background-color:#E8E8E8;'> core.audio.Sound <a href=' /core/audio/__init__.py#L209'>seek</a>(position)</tt>	Go to the <position> in seconds.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderSDL2 <a href=' /core/image/img_sdl2.py#L19'>extensions</a>()</tt>	Return accepted extensions for this loader.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderPygame <a href=' /core/image/img_pygame.py#L20'>extensions</a>()</tt>	Return accepted extensions for this loader.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderFFPy <a href=' /core/image/img_ffpyplayer.py#L44'>extensions</a>()</tt>	Return accepted extensions for this loader.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderPIL <a href=' /core/image/img_pil.py#L41'>extensions</a>()</tt>	Return accepted extensions for this loader.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderPIL <a href=' /core/image/img_pil.py#L52'>_img_correct</a>(_img_tmp)</tt>	Convert image to the correct format and orientation.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderPIL <a href=' /core/image/img_pil.py#L68'>_img_read</a>(im)</tt>	Read images from an animated file.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L107'>width</a>()</tt>	Image width in pixels.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L114'>height</a>()</tt>	Image height in pixels.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L137'>size</a>()</tt>	Image width height in pixels.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L155'>add_mipmap</a>(level,width,height,data)</tt>	Add a image for a specific mipmap level.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L162'>get_mipmap</a>(level)</tt>	Get the mipmap image at a specific level if it exists.
+<tt style='background-color:#E8E8E8;'> core.image.ImageData <a href=' /core/image/__init__.py#L172'>iterate_mipmaps</a>()</tt>	Iterate over all mipmap images available.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L204'>load</a>(filename)</tt>	Load an image.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L208'>can_save</a>()</tt>	Indicate if the loader can save the image object.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L214'>can_load_memory</a>()</tt>	Indicate if the loader can load an image by passing data.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L272'>size</a>()</tt>	Image size width height.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L278'>texture</a>()</tt>	Get the image texture created on the first call.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L288'>textures</a>()</tt>	Get the textures list for mipmapped image or animated image.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderBase <a href=' /core/image/__init__.py#L298'>nocache</a>()</tt>	Indicate if the texture will not be stored in the cache.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoader <a href=' /core/image/__init__.py#L311'>zip_loader</a>(filename)</tt>	Read images from an zip file.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L542'>remove_from_cache</a>()</tt>	Remove the image from cache this facilitates re-loading of.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L578'>anim_reset</a>(allow_anim)</tt>	Reset an animation if available.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L634'>anim_available</a>()</tt>	Return true if this image instance has animation available.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L642'>anim_index</a>()</tt>	Return the index number of the image currently in the texture.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L660'>on_texture</a>()</tt>	This event is fired when the texture reference or content has changed.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L668'>load</a>(filename)</tt>	Load an image :parameters.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L748'>load_memory</a>(data,ext,filename)</tt>	Internal method to load an image from raw data.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L768'>size</a>()</tt>	Image size width height.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L786'>texture</a>()</tt>	Texture of the image.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L794'>nocache</a>()</tt>	Indicate whether the texture will not be stored in the cache or not.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L802'>save</a>(filename,flipped)</tt>	Save image texture to file.
+<tt style='background-color:#E8E8E8;'> core.image.Image <a href=' /core/image/__init__.py#L870'>read_pixel</a>(x,y)</tt>	For a given local x/y position return the pixel color at that position.
+<tt style='background-color:#E8E8E8;'> core.image. <a href=' /core/image/__init__.py#L912'>load</a>(filename)</tt>	Load an image.
+<tt style='background-color:#E8E8E8;'> core.image.ImageLoaderGIF <a href=' /core/image/img_gif.py#L47'>extensions</a>()</tt>	Return accepted extension for this loader.
+<tt style='background-color:#E8E8E8;'> core.image.Gif <a href=' /core/image/img_gif.py#L194'>pop</a>(data,length)</tt>	Gets the next $len chars from the data stack import.
+<tt style='background-color:#E8E8E8;'> core.image.Gif <a href=' /core/image/img_gif.py#L204'>pops</a>(format,data)</tt>	Pop struct get size pop(), unpack().
+<tt style='background-color:#E8E8E8;'> core.image.Gif <a href=' /core/image/img_gif.py#L209'>print_info</a>()</tt>	Prints out some useful info debug?).
+<tt style='background-color:#E8E8E8;'> core.image.Gif <a href=' /core/image/img_gif.py#L224'>new_image</a>(header)</tt>	Adds a new image descriptor.
+<tt style='background-color:#E8E8E8;'> core.image.ImageDescriptor <a href=' /core/image/img_gif.py#L265'>setup_header</a>(header)</tt>	Takes a header tuple and fills the attributes.
+<tt style='background-color:#E8E8E8;'> core.image.ImageDescriptor <a href=' /core/image/img_gif.py#L285'>get_header</a>()</tt>	Builds a header dynamically.
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L307'>fill</a>()</tt>	Reads the data and fills each field of the file.
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L421'>string_to_bits</a>(string)</tt>	High level string unpacker.
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L431'>readable</a>(bool_list)</tt>	Converts a list of booleans to a readable list of ints.
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L436'>bits_to_int</a>(bits)</tt>	High level bit list packer.
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L446'>get_color_table</a>(size)</tt>	Returns a color table in the format [ r g b r g b ].
+<tt style='background-color:#E8E8E8;'> core.image.GifDecoder <a href=' /core/image/img_gif.py#L462'>lzw_decode</a>(input,initial_codesize,color_table_size)</tt>	Decodes a lzw stream from input import.
+<tt style='background-color:#E8E8E8;'> core.image. <a href=' /core/image/img_gif.py#L557'>get_bits</a>(flags,reverse,bits)</tt>	Return a list with $bits items one for each enabled bit.
+<tt style='background-color:#E8E8E8;'> core.image. <a href=' /core/image/img_gif.py#L572'>pack_bits</a>(bits)</tt>	Convert a bit bool or int tuple into a int.
+<tt style='background-color:#E8E8E8;'> core.window.Keyboard <a href=' /core/window/__init__.py#L143'>release</a>()</tt>	Call this method to release the current keyboard.
+<tt style='background-color:#E8E8E8;'> core.window.Keyboard <a href=' /core/window/__init__.py#L180'>string_to_keycode</a>(value)</tt>	Convert a string to a keycode number according to the :attr keyboard.
+<tt style='background-color:#E8E8E8;'> core.window.Keyboard <a href=' /core/window/__init__.py#L187'>keycode_to_string</a>(value)</tt>	Convert a keycode number to a string according to the :attr keyboard.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L484'>_get_height</a>()</tt>	Rotated window height.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L575'>_animate_content</a>()</tt>	Animate content to ime height.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L663'>_get_effective_size</a>()</tt>	On density=1 and non-ios displays return system_size else return scaled / rotated size.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L928'>toggle_fullscreen</a>()</tt>	Toggle between fullscreen and windowed mode.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L937'>maximize</a>()</tt>	Maximizes the window this method should be used on desktop.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L950'>minimize</a>()</tt>	Minimizes the window this method should be used on desktop.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L963'>restore</a>()</tt>	Restores the size and position of a maximized or minimized window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L976'>hide</a>()</tt>	Hides the window this method should be used on desktop.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L989'>show</a>()</tt>	Shows the window this method should be used on desktop.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1002'>raise_window</a>()</tt>	Raise the window this method should be used on desktop.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1015'>close</a>()</tt>	Close the window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1019'>create_window</a>()</tt>	Will create the main window and configure it.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1073'>on_flip</a>()</tt>	Flip between buffers event.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1077'>flip</a>()</tt>	Flip between buffers.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1084'>add_widget</a>(widget,canvas)</tt>	Add a widget to a window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1100'>remove_widget</a>(widget)</tt>	Remove a widget from a window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1121'>clear</a>()</tt>	Clear the window with the background color.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1132'>set_title</a>(title)</tt>	Set the window title.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1139'>set_icon</a>(filename)</tt>	Set the icon of the window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1173'>on_motion</a>(etype,me)</tt>	Event called when a motion event is received.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1195'>on_touch_down</a>(touch)</tt>	Event called when a touch down event is initiated.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1207'>on_touch_move</a>(touch)</tt>	Event called when a touch event moves changes location.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1219'>on_touch_up</a>(touch)</tt>	Event called when a touch event is released terminated.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1231'>on_resize</a>(width,height)</tt>	Event called when the window is resized.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1338'>screenshot</a>(name)</tt>	Save the actual displayed image in a file.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1353'>on_rotate</a>(rotation)</tt>	Event called when the screen has been rotated.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1358'>on_close</a>()</tt>	Event called when the window is closed.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1363'>on_minimize</a>()</tt>	Event called when the window is minimized.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1373'>on_maximize</a>()</tt>	Event called when the window is maximized.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1383'>on_restore</a>()</tt>	Event called when the window is restored.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1393'>on_hide</a>()</tt>	Event called when the window is hidden.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1403'>on_show</a>()</tt>	Event called when the window is shown.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1413'>on_request_close</a>()</tt>	Event called before we close the window if a bound function returns.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1426'>on_cursor_enter</a>()</tt>	Event called when the cursor enters the window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1436'>on_cursor_leave</a>()</tt>	Event called when the cursor leaves the window.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1446'>on_mouse_down</a>(x,y,button,modifiers)</tt>	Event called when the mouse is used (pressed/released).
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1450'>on_mouse_move</a>(x,y,modifiers)</tt>	Event called when the mouse is moved with buttons pressed.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1454'>on_mouse_up</a>(x,y,button,modifiers)</tt>	Event called when the mouse is moved with buttons pressed.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1458'>on_joy_axis</a>(stickid,axisid,value)</tt>	Event called when a joystick has a stick or other axis moved.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1464'>on_joy_hat</a>(stickid,hatid,value)</tt>	Event called when a joystick has a hat/dpad moved.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1470'>on_joy_ball</a>(stickid,ballid,value)</tt>	Event called when a joystick has a ball moved.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1476'>on_joy_button_down</a>(stickid,buttonid)</tt>	Event called when a joystick has a button pressed.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1482'>on_joy_button_up</a>(stickid,buttonid)</tt>	Event called when a joystick has a button released.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1488'>on_keyboard</a>(key,scancode,codepoint,modifier)</tt>	Event called when keyboard is used.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1521'>on_key_down</a>(key,scancode,codepoint,modifier)</tt>	Event called when a key is down (same arguments as on_keyboard).
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1530'>on_key_up</a>(key,scancode,codepoint,modifier)</tt>	Event called when a key is released (same arguments as on_keyboard).
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1540'>on_textinput</a>(text)</tt>	Event called when text i e alpha numeric non control keys or set.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1550'>on_dropfile</a>(filename)</tt>	Event called when a file is dropped on the application.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1564'>on_memorywarning</a>()</tt>	Event called when the platform have memory issue.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1576'>dpi</a>()</tt>	Return the dpi of the screen if the implementation doesn't support.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1649'>set_vkeyboard_class</a>(cls)</tt>	Versionadded : 1 0 8.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1657'>release_all_keyboards</a>()</tt>	Versionadded : 1 0 8.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1668'>request_keyboard</a>(callback,target,input_type)</tt>	Versionadded : 1 0 4.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1773'>release_keyboard</a>(target)</tt>	Versionadded : 1 0 4.
+<tt style='background-color:#E8E8E8;'> core.window.WindowBase <a href=' /core/window/__init__.py#L1799'>grab_mouse</a>()</tt>	Grab mouse - so won't leave window.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraAndroid <a href=' /core/camera/camera_android.py#L153'>_copy_to_gpu</a>()</tt>	A dummy placeholder the image is already in gpu to be consistent with other providers.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraAndroid <a href=' /core/camera/camera_android.py#L160'>grab_frame</a>()</tt>	Grab current frame thread-safe minimal overhead.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraAndroid <a href=' /core/camera/camera_android.py#L170'>decode_frame</a>(buf)</tt>	Decode image data from grabbed frame.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraAndroid <a href=' /core/camera/camera_android.py#L187'>read_frame</a>()</tt>	Grab and decode frame in one call.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraAndroid <a href=' /core/camera/camera_android.py#L193'>get_camera_count</a>()</tt>	Get the number of available cameras.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraBase <a href=' /core/camera/__init__.py#L104'>init_camera</a>()</tt>	Initialise the camera internal.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraBase <a href=' /core/camera/__init__.py#L108'>start</a>()</tt>	Start the camera acquire.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraBase <a href=' /core/camera/__init__.py#L112'>stop</a>()</tt>	Release the camera.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraBase <a href=' /core/camera/__init__.py#L116'>_update</a>(dt)</tt>	Update the camera internal.
+<tt style='background-color:#E8E8E8;'> core.camera.CameraBase <a href=' /core/camera/__init__.py#L120'>_copy_to_gpu</a>()</tt>	Copy the the buffer into the texture.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L223'>register</a>(name,fn_regular,fn_italic,fn_bold)</tt>	Register an alias for a font.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L289'>get_system_fonts_dir</a>()</tt>	Return the directories used by the system for fonts.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L328'>get_extents</a>(text)</tt>	Return a tuple width height indicating the size of the specified.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L333'>get_cached_extents</a>()</tt>	Returns a cached version of the :meth get_extents function.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L365'>shorten</a>(text,margin)</tt>	Shortens the text to fit into a single line by the width specified by :attr text_size [0].
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L598'>render</a>(real)</tt>	Return a tuple width height to create the image with the user constraints.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L664'>refresh</a>()</tt>	Force re-rendering of the text.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L735'>content_width</a>()</tt>	Return the content width i e the width of the text without.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L743'>content_height</a>()</tt>	Return the content height i e the height of the text without.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L751'>content_size</a>()</tt>	Return the content size width height.
+<tt style='background-color:#E8E8E8;'> core.text.LabelBase <a href=' /core/text/__init__.py#L758'>fontid</a>()</tt>	Return a unique id for all font parameters.
+<tt style='background-color:#E8E8E8;'> core.text.MarkupLabel <a href=' /core/text/markup.py#L78'>refs</a>()</tt>	Get the bounding box of all the [ref= ]::.
+<tt style='background-color:#E8E8E8;'> core.text.MarkupLabel <a href=' /core/text/markup.py#L86'>anchors</a>()</tt>	Get the position of all the [anchor= ]::.
+<tt style='background-color:#E8E8E8;'> core.text.MarkupLabel <a href=' /core/text/markup.py#L94'>markup</a>()</tt>	Return the text with all the markup splitted : >>> markuplabel('[b]hello world[/b]').
+<tt style='background-color:#E8E8E8;'> core.text.MarkupLabel <a href=' /core/text/markup.py#L457'>shorten_post</a>(lines,w,h,margin)</tt>	Shortens the text to a single line according to the label options.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L135'>tabs_or_spaces</a>(physical_line,indent_char)</tt>	Never mix tabs and spaces.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L154'>tabs_obsolete</a>(physical_line)</tt>	For new projects spaces-only are strongly recommended over tabs.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L165'>trailing_whitespace</a>(physical_line)</tt>	Trailing whitespace is superfluous.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L186'>trailing_blank_lines</a>(physical_line,lines,line_number,total_lines)</tt>	Trailing blank lines are superfluous.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L202'>maximum_line_length</a>(physical_line,max_line_length,multiline,noqa)</tt>	Limit all lines to a maximum of 79 characters.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L240'>blank_lines</a>(logical_line,blank_lines,indent_level,line_number)</tt>	Separate top-level function and class definitions with two blank lines.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L301'>extraneous_whitespace</a>(logical_line)</tt>	Avoid extraneous whitespace.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L333'>whitespace_around_keywords</a>(logical_line)</tt>	Avoid extraneous whitespace around keywords.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L356'>missing_whitespace_after_import_keyword</a>(logical_line)</tt>	Multiple imports in form from x import a b c should have space between import statement and parenthesised name list.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L373'>missing_whitespace</a>(logical_line)</tt>	Each comma semicolon or colon should be followed by whitespace.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L399'>indentation</a>(logical_line,previous_logical,indent_char,indent_level)</tt>	Use 4 spaces per indentation level.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L430'>continued_indentation</a>(logical_line,tokens,indent_level,hang_closing)</tt>	Continuation lines indentation.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L629'>whitespace_before_parameters</a>(logical_line,tokens)</tt>	Avoid extraneous whitespace.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L661'>whitespace_around_operator</a>(logical_line)</tt>	Avoid extraneous whitespace around an operator.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L684'>missing_whitespace_around_operator</a>(logical_line,tokens)</tt>	Surround operators with a single space on either side.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L776'>whitespace_around_comma</a>(logical_line)</tt>	Avoid extraneous whitespace after a comma or a colon.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L794'>whitespace_around_named_parameter_equals</a>(logical_line,tokens)</tt>	Don't use spaces around the '=' sign in function arguments.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L844'>whitespace_before_comment</a>(logical_line,tokens)</tt>	Separate inline comments by at least two spaces.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L885'>imports_on_separate_lines</a>(logical_line)</tt>	Place imports on separate lines.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L904'>module_imports_on_top_of_file</a>(logical_line,indent_level,checker_state,noqa)</tt>	Place imports at the top of the file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L956'>compound_statements</a>(logical_line)</tt>	Compound statements on the same line are generally discouraged.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1016'>explicit_line_join</a>(logical_line,tokens)</tt>	Avoid explicit line join between brackets.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1055'>break_around_binary_operator</a>(logical_line,tokens)</tt>	Avoid breaks before binary operators.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1104'>comparison_to_singleton</a>(logical_line,noqa)</tt>	Comparison to singletons should use "is" or "is not".
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1138'>comparison_negative</a>(logical_line)</tt>	Negative comparison should be done using "not in" and "is not".
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1159'>comparison_type</a>(logical_line,noqa)</tt>	Object type comparisons should always use isinstance().
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1182'>ambiguous_identifier</a>(logical_line,tokens)</tt>	Never use the characters 'l', 'o', or 'i' as variable names.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1234'>python_3000_has_key</a>(logical_line,noqa)</tt>	The {} has_key() method is removed in python 3 use the 'in' operator.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1245'>python_3000_raise_comma</a>(logical_line)</tt>	When raising an exception use "raise valueerror('message')".
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1258'>python_3000_not_equal</a>(logical_line)</tt>	New code should always use != instead of <>.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1271'>python_3000_backticks</a>(logical_line)</tt>	Use repr() instead of backticks in python 3.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1317'>expand_indent</a>(line)</tt>	Return the amount of indentation.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1344'>mute_string</a>(text)</tt>	Replace contents with 'xxx' to prevent syntax matching.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1364'>parse_udiff</a>(diff,patterns,parent)</tt>	Return a dictionary of matching lines.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1389'>normalize_paths</a>(value,parent)</tt>	Parse a comma-separated list of paths.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1407'>filename_match</a>(filename,patterns,default)</tt>	Check if patterns contains a pattern that matches filename.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1417'>update_counts</a>(s,counts)</tt>	Adds one to the counts of each appearance of characters in s.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1452'>register_check</a>(check,codes)</tt>	Register a new check object.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L1470'>init_checks_registry</a>()</tt>	Register all globally visible functions.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1529'>report_invalid_syntax</a>()</tt>	Check if the syntax is valid.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1542'>readline</a>()</tt>	Get the next line from the input buffer.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1552'>run_check</a>(check,argument_names)</tt>	Run a check plugin.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1559'>init_checker_state</a>(name,argument_names)</tt>	Prepare custom state for the specific checker plugin.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1564'>check_physical</a>(line)</tt>	Run all physical checks on a raw input line.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1576'>build_tokens_line</a>()</tt>	Build a logical line from tokens.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1609'>check_logical</a>()</tt>	Build a line from tokens and run all logical checks on it.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1643'>check_ast</a>()</tt>	Build the file's ast and run all ast checks.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1655'>generate_tokens</a>()</tt>	Tokenize the file run physical line checks and yield tokens.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1670'>maybe_check_physical</a>(token)</tt>	If appropriate based on token check current physical line s.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.Checker <a href=' /tools/pep8checker/pep8.py#L1700'>check_all</a>(expected,line_offset)</tt>	Run all checks on the input file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1792'>start</a>()</tt>	Start the timer.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1796'>stop</a>()</tt>	Stop the timer.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1800'>init_file</a>(filename,lines,expected,line_offset)</tt>	Signal a new file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1810'>increment_logical_line</a>()</tt>	Signal a new logical line.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1814'>error</a>(line_number,offset,text,check)</tt>	Report an error according to options.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1833'>get_file_results</a>()</tt>	Return the count of errors and warnings for this file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1837'>get_count</a>(prefix)</tt>	Return the total count of errors and warnings.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1842'>get_statistics</a>(prefix)</tt>	Get statistics for message codes that start with the prefix.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1853'>print_statistics</a>(prefix)</tt>	Print overall statistics number of errors and warnings.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.BaseReport <a href=' /tools/pep8checker/pep8.py#L1858'>print_benchmark</a>()</tt>	Print benchmark numbers.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StandardReport <a href=' /tools/pep8checker/pep8.py#L1885'>init_file</a>(filename,lines,expected,line_offset)</tt>	Signal a new file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StandardReport <a href=' /tools/pep8checker/pep8.py#L1891'>error</a>(line_number,offset,text,check)</tt>	Report an error according to options.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StandardReport <a href=' /tools/pep8checker/pep8.py#L1900'>get_file_results</a>()</tt>	Print the result and return the overall count for this file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L1982'>init_report</a>(reporter)</tt>	Initialize the report instance.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L1987'>check_files</a>(paths)</tt>	Run all checks on the paths.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L2005'>input_file</a>(filename,lines,expected,line_offset)</tt>	Run all checks on a python source file.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L2013'>input_dir</a>(dirname)</tt>	Check all files in this directory and all subdirectories.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L2035'>excluded</a>(filename,parent)</tt>	Check if the file should be excluded.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L2050'>ignore_code</a>(code)</tt>	Check if the error code should be ignored.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker.StyleGuide <a href=' /tools/pep8checker/pep8.py#L2063'>get_checks</a>(argument_name)</tt>	Get all the checks for this category.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L2077'>get_parser</a>(prog,version)</tt>	Create the parser for the program.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L2139'>read_config</a>(options,args,arglist,parser)</tt>	Read and parse configurations.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L2214'>process_options</a>(arglist,parse_argv,config_file,parser)</tt>	Process options passed either via arglist or via command line args.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L2265'>_parse_multi_options</a>(options,split_token)</tt>	Split and strip and discard empties.
+<tt style='background-color:#E8E8E8;'> tools.pep8checker. <a href=' /tools/pep8checker/pep8.py#L2281'>_main</a>()</tt>	Parse options and run checks on python source.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L102'>runtime_hooks</a>()</tt>	Returns a list with the runtime hooks for kivy it can be used with.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L110'>hookspath</a>()</tt>	Returns a list with the directory that contains the alternate not the default included with pyinstaller pyinstaller hook for kivy.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L126'>get_hooks</a>()</tt>	Returns the dict for the spec hookspath and runtime_hooks values.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L133'>get_deps_minimal</a>(exclude_ignored)</tt>	Returns kivy hidden modules as well as excluded modules to be used with analysis.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L237'>get_deps_all</a>()</tt>	Similar to :func get_deps_minimal, but this returns all the kivy modules that can indirectly imported.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L262'>get_factory_modules</a>()</tt>	Returns a list of all the modules registered in the kivy factory.
+<tt style='background-color:#E8E8E8;'> tools.packaging.pyinstaller_hooks. <a href=' /tools/packaging/pyinstaller_hooks/__init__.py#L269'>add_dep_paths</a>()</tt>	Should be called by the hook it adds the paths with the binary.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L382'>get_connection_for_scheme</a>(scheme)</tt>	Return the connection class for a particular scheme.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L396'>decode_result</a>(result,resp)</tt>	Decode the result fetched from url according to his content-type.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L490'>is_finished</a>()</tt>	Return true if the request has finished whether it's a success or a failure.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L497'>result</a>()</tt>	Return the result of the request.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L504'>resp_headers</a>()</tt>	If the request has been completed return a dictionary containing the headers of the response.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L511'>resp_status</a>()</tt>	Return the status code of the response if the request is complete otherwise return none.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L518'>error</a>()</tt>	Return the error of the request.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L525'>chunk_size</a>()</tt>	Return the size of a chunk used only in "progress" mode (when on_progress callback is set.
+<tt style='background-color:#E8E8E8;'> network.UrlRequest <a href=' /network/urlrequest.py#L532'>wait</a>(delay)</tt>	Wait for the request to finish (until :attr resp_status is not none).
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L220'>create_view</a>(index)</tt>	This method is more complicated than the ones in the :class ~kivy.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L273'>on_selection_change</a>()</tt>	On_selection_change() is the default handler for the on_selection_change event.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L363'>select_list</a>(view_list,extend)</tt>	The select call is made for the items in the provided view_list.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L430'>trim_left_of_sel</a>()</tt>	Cut list items with indices in sorted_keys that are less than the index of the first selected item if there is a selection.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L438'>trim_right_of_sel</a>()</tt>	Cut list items with indices in sorted_keys that are greater than the index of the last selected item if there is a selection.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L447'>trim_to_sel</a>()</tt>	Cut list items with indices in sorted_keys that are less than or greater than the index of the last selected item if there is a.
+<tt style='background-color:#E8E8E8;'> adapters.ListAdapter <a href=' /adapters/listadapter.py#L459'>cut_to_sel</a>()</tt>	Same as trim_to_sel but intervening list items within the selected range are also cut leaving only list items that are selected.
+<tt style='background-color:#E8E8E8;'> adapters.Adapter <a href=' /adapters/adapter.py#L144'>get_cls</a>()</tt>	Versionadded : 1 9 0.
+<tt style='background-color:#E8E8E8;'> adapters.SelectableDataItem <a href=' /adapters/models.py#L72'>is_selected</a>()</tt>	A boolean property indicating whether the data item is selected or not.
+<tt style='background-color:#E8E8E8;'> adapters.DictAdapter <a href=' /adapters/dictadapter.py#L109'>trim_left_of_sel</a>()</tt>	Cut list items with indices in sorted_keys that are less than the index of the first selected item if there is a selection.
+<tt style='background-color:#E8E8E8;'> adapters.DictAdapter <a href=' /adapters/dictadapter.py#L121'>trim_right_of_sel</a>()</tt>	Cut list items with indices in sorted_keys that are greater than the index of the last selected item if there is a selection.
+<tt style='background-color:#E8E8E8;'> adapters.DictAdapter <a href=' /adapters/dictadapter.py#L133'>trim_to_sel</a>()</tt>	Cut list items with indices in sorted_keys that are les than or greater than the index of the last selected item if there is a.
+<tt style='background-color:#E8E8E8;'> adapters.DictAdapter <a href=' /adapters/dictadapter.py#L148'>cut_to_sel</a>()</tt>	Same as trim_to_sel but intervening list items within the selected range are also cut leaving only list items that are selected.
+<tt style='background-color:#E8E8E8;'> input.MotionEventProvider <a href=' /input/provider.py#L24'>start</a>()</tt>	Start the provider this method is automatically called when the.
+<tt style='background-color:#E8E8E8;'> input.MotionEventProvider <a href=' /input/provider.py#L31'>stop</a>()</tt>	Stop the provider.
+<tt style='background-color:#E8E8E8;'> input.MotionEventProvider <a href=' /input/provider.py#L36'>update</a>(dispatch_fn)</tt>	Update the provider and dispatch all the new touch events though the dispatch_fn argument.
+<tt style='background-color:#E8E8E8;'> input.MotionEventFactory <a href=' /input/factory.py#L21'>register</a>(name,classname)</tt>	Register a input provider in the database.
+<tt style='background-color:#E8E8E8;'> input.MotionEventFactory <a href=' /input/factory.py#L26'>list</a>()</tt>	Get a list of all available providers.
+<tt style='background-color:#E8E8E8;'> input.MotionEventFactory <a href=' /input/factory.py#L31'>get</a>(name)</tt>	Get a provider class from the provider id.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L289'>depack</a>(args)</tt>	Depack args into attributes of the class.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L301'>grab</a>(class_instance,exclusive)</tt>	Grab this motion event you can grab a touch if you want.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L335'>ungrab</a>(class_instance)</tt>	Ungrab a previously grabbed touch.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L344'>move</a>(args)</tt>	Move the touch to another position.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L356'>scale_for_screen</a>(w,h,p,rotation)</tt>	Scale position for the screen.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L399'>push</a>(attrs)</tt>	Push attribute values in attrs onto the stack.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L407'>pop</a>()</tt>	Pop attributes values from the stack.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L414'>apply_transform_2d</a>(transform)</tt>	Apply a transformation on x y z px py pz.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L424'>copy_to</a>(to)</tt>	Copy some attribute to another touch object.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L429'>distance</a>(other_touch)</tt>	Return the distance between the current touch and another touch.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L438'>dpos</a>()</tt>	Return delta between last position and current position in the screen coordinate system (self.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L444'>opos</a>()</tt>	Return the initial position of the touch in the screen coordinate system (self.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L450'>ppos</a>()</tt>	Return the previous position of the touch in the screen coordinate system (self.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L456'>spos</a>()</tt>	Return the position in the 0-1 coordinate system (self.
+<tt style='background-color:#E8E8E8;'> input.MotionEvent <a href=' /input/motionevent.py#L480'>is_mouse_scrolling</a>()</tt>	Returns true if the touch is a mousewheel scrolling.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L114'>register</a>(oscpath,classname)</tt>	Register a new path to handle in tuio provider.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L119'>unregister</a>(oscpath,classname)</tt>	Unregister a path to stop handling it in the tuio provider.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L125'>create</a>(oscpath)</tt>	Create a touch event from a tuio path.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L132'>start</a>()</tt>	Start the tuio provider.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L139'>stop</a>()</tt>	Stop the tuio provider.
+<tt style='background-color:#E8E8E8;'> input.providers.TuioMotionEventProvider <a href=' /input/providers/tuio.py#L143'>update</a>(dispatch_fn)</tt>	Update the tuio provider pop events from the queue.
+<tt style='background-color:#E8E8E8;'> input.providers.MouseMotionEventProvider <a href=' /input/providers/mouse.py#L159'>start</a>()</tt>	Start the mouse provider.
+<tt style='background-color:#E8E8E8;'> input.providers.MouseMotionEventProvider <a href=' /input/providers/mouse.py#L168'>stop</a>()</tt>	Stop the mouse provider.
+<tt style='background-color:#E8E8E8;'> input.providers.MouseMotionEventProvider <a href=' /input/providers/mouse.py#L281'>update</a>(dispatch_fn)</tt>	Update the mouse provider pop event from the queue.
+<tt style='background-color:#E8E8E8;'> input.postproc.InputPostprocDoubleTap <a href=' /input/postproc/doubletap.py#L35'>find_double_tap</a>(ref)</tt>	Find a double tap touch within self touches.
+<tt style='background-color:#E8E8E8;'> input.postproc.InputPostprocTripleTap <a href=' /input/postproc/tripletap.py#L37'>find_triple_tap</a>(ref)</tt>	Find a triple tap touch within *self touches*.
+<tt style='background-color:#E8E8E8;'> lang. <a href=' /lang/builder.py#L93'>update_intermediates</a>(base,keys,bound,s)</tt>	Function that is called when an intermediate property is updated and rebind of that property is true.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L276'>load_file</a>(filename)</tt>	Insert a file into the language builder and return the root widget if defined of the kv file.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L303'>unload_file</a>(filename)</tt>	Unload all rules associated with a previously imported file.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L330'>load_string</a>(string)</tt>	Insert a string into the language builder and return the root widget if defined of the kv string.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L387'>template</a>()</tt>	Create a specialized template using a specific context.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L418'>apply_rules</a>(widget,rule_name,ignored_consts)</tt>	Search all the rules that match rule_name widget and apply them to widget.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L437'>apply</a>(widget,ignored_consts)</tt>	Search all the rules that match the widget and apply them.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L645'>match</a>(widget)</tt>	Return a list of :class parserrule objects matching the widget.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L661'>match_rule_name</a>(rule_name)</tt>	Return a list of :class parserrule objects matching the widget.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L678'>sync</a>()</tt>	Execute all the waiting operations such as the execution of all the expressions related to the canvas.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L701'>unbind_widget</a>(uid)</tt>	Unbind all the handlers created by the kv rules of the widget.
+<tt style='background-color:#E8E8E8;'> lang.BuilderBase <a href=' /lang/builder.py#L748'>unbind_property</a>(widget,name)</tt>	Unbind the handlers created by all the rules of the widget that set the name.
+<tt style='background-color:#E8E8E8;'> lang.Parser <a href=' /lang/parser.py#L479'>parse</a>(content)</tt>	Parse the contents of a parser file and return a list of root objects.
+<tt style='background-color:#E8E8E8;'> lang.Parser <a href=' /lang/parser.py#L513'>strip_comments</a>(lines)</tt>	Remove all comments from all lines in-place.
+<tt style='background-color:#E8E8E8;'> lang.Parser <a href=' /lang/parser.py#L528'>parse_level</a>(level,lines,spaces)</tt>	Parse the current level (level * spaces) indentation.
+<tt style='background-color:#E8E8E8;'> uix.ScrollView <a href=' /uix/scrollview.py#L887'>scroll_to</a>(widget,padding,animate)</tt>	Scrolls the viewport to ensure that the given widget is visible optionally with padding and animation.
+<tt style='background-color:#E8E8E8;'> uix.ScrollView <a href=' /uix/scrollview.py#L938'>convert_distance_to_scroll</a>(dx,dy)</tt>	Convert a distance in pixels to a scroll distance depending on the content size and the scrollview size.
+<tt style='background-color:#E8E8E8;'> uix.ScrollView <a href=' /uix/scrollview.py#L960'>update_from_scroll</a>()</tt>	Force the reposition of the content according to current value of :attr scroll_x and :attr scroll_y.
+<tt style='background-color:#E8E8E8;'> uix.SettingsPanel <a href=' /uix/settings.py#L644'>get_value</a>(section,key)</tt>	Return the value of the section/key from the :attr config configparser instance.
+<tt style='background-color:#E8E8E8;'> uix.InterfaceWithSidebar <a href=' /uix/settings.py#L710'>add_panel</a>(panel,name,uid)</tt>	This method is used by settings to add new panels for possible display.
+<tt style='background-color:#E8E8E8;'> uix.InterfaceWithSpinner <a href=' /uix/settings.py#L767'>add_panel</a>(panel,name,uid)</tt>	This method is used by settings to add new panels for possible display.
+<tt style='background-color:#E8E8E8;'> uix.ContentPanel <a href=' /uix/settings.py#L832'>add_panel</a>(panel,name,uid)</tt>	This method is used by settings to add new panels for possible display.
+<tt style='background-color:#E8E8E8;'> uix.ContentPanel <a href=' /uix/settings.py#L852'>on_current_uid</a>()</tt>	The uid of the currently displayed panel changing this will.
+<tt style='background-color:#E8E8E8;'> uix.Settings <a href=' /uix/settings.py#L943'>register_type</a>(tp,cls)</tt>	Register a new type that can be used in the json definition.
+<tt style='background-color:#E8E8E8;'> uix.Settings <a href=' /uix/settings.py#L951'>add_interface</a>()</tt>	Internal creates an instance of :attr settings interface_cls,.
+<tt style='background-color:#E8E8E8;'> uix.Settings <a href=' /uix/settings.py#L968'>add_json_panel</a>(title,config,filename,data)</tt>	Create and add a new :class settingspanel using the configuration config with the json definition filename.
+<tt style='background-color:#E8E8E8;'> uix.Settings <a href=' /uix/settings.py#L980'>create_json_panel</a>(title,config,filename,data)</tt>	Create new :class settingspanel.
+<tt style='background-color:#E8E8E8;'> uix.Settings <a href=' /uix/settings.py#L1022'>add_kivy_panel</a>()</tt>	Add a panel for configuring kivy this panel acts directly on the.
+<tt style='background-color:#E8E8E8;'> uix.MenuSidebar <a href=' /uix/settings.py#L1206'>add_item</a>(name,uid)</tt>	This method is used to add new panels to the menu.
+<tt style='background-color:#E8E8E8;'> uix.MenuSidebar <a href=' /uix/settings.py#L1226'>on_selected_uid</a>()</tt>	Internal unselects any currently selected menu buttons unless they represent the current panel.
+<tt style='background-color:#E8E8E8;'> uix.VKeyboard <a href=' /uix/vkeyboard.py#L455'>setup_mode</a>()</tt>	Call this method when you want to readjust the keyboard according to options :attr docked or not with attached :attr target or not.
+<tt style='background-color:#E8E8E8;'> uix.VKeyboard <a href=' /uix/vkeyboard.py#L470'>setup_mode_dock</a>()</tt>	Setup the keyboard in docked mode.
+<tt style='background-color:#E8E8E8;'> uix.VKeyboard <a href=' /uix/vkeyboard.py#L495'>setup_mode_free</a>()</tt>	Setup the keyboard in free mode.
+<tt style='background-color:#E8E8E8;'> uix.VKeyboard <a href=' /uix/vkeyboard.py#L546'>refresh</a>(force)</tt>	Internal recreate the entire widget and graphics according to the selected layout.
+<tt style='background-color:#E8E8E8;'> uix.VKeyboard <a href=' /uix/vkeyboard.py#L729'>collide_margin</a>(x,y)</tt>	Do a collision test and return true if the x y is inside the vkeyboard margin.
+<tt style='background-color:#E8E8E8;'> uix.ActionBar <a href=' /uix/actionbar.py#L720'>_pop_contextual_action_view</a>()</tt>	Remove the current contextualactionview and display either the previous one or the actionview.
+<tt style='background-color:#E8E8E8;'> uix.Layout <a href=' /uix/layout.py#L78'>do_layout</a>()</tt>	This function is called when a layout is called by a trigger.
+<tt style='background-color:#E8E8E8;'> uix.Layout <a href=' /uix/layout.py#L107'>layout_hint_with_bounds</a>(sh_sum,available_space,min_bounded_size,sh_min_vals)</tt>	Internal computes the appropriate size hint for all the widgets given potential min or max bounds on the widgets' size.
+<tt style='background-color:#E8E8E8;'> uix.FileSystemAbstract <a href=' /uix/filechooser.py#L140'>listdir</a>(fn)</tt>	Return the list of files in the directory fn.
+<tt style='background-color:#E8E8E8;'> uix.FileSystemAbstract <a href=' /uix/filechooser.py#L145'>getsize</a>(fn)</tt>	Return the size in bytes of a file.
+<tt style='background-color:#E8E8E8;'> uix.FileSystemAbstract <a href=' /uix/filechooser.py#L150'>is_hidden</a>(fn)</tt>	Return true if the file is hidden.
+<tt style='background-color:#E8E8E8;'> uix.FileSystemAbstract <a href=' /uix/filechooser.py#L155'>is_dir</a>(fn)</tt>	Return true if the argument passed to this method is a directory.
+<tt style='background-color:#E8E8E8;'> uix.FileChooserProgressBase <a href=' /uix/filechooser.py#L211'>cancel</a>()</tt>	Cancel any action from the filechoosercontroller.
+<tt style='background-color:#E8E8E8;'> uix.FileChooserController <a href=' /uix/filechooser.py#L587'>entry_touched</a>(entry,touch)</tt>	Internal this method must be called by the template when an entry is touched by the user.
+<tt style='background-color:#E8E8E8;'> uix.FileChooserController <a href=' /uix/filechooser.py#L616'>entry_released</a>(entry,touch)</tt>	Internal this method must be called by the template when an entry is touched by the user.
+<tt style='background-color:#E8E8E8;'> uix.FileChooserController <a href=' /uix/filechooser.py#L664'>get_nice_size</a>(fn)</tt>	Pass the filepath returns the size in the best human readable.
+<tt style='background-color:#E8E8E8;'> uix.FileChooserController <a href=' /uix/filechooser.py#L757'>cancel</a>()</tt>	Cancel any background action started by filechooser such as loading a new directory.
+<tt style='background-color:#E8E8E8;'> uix.SelectableView <a href=' /uix/selectableview.py#L42'>select</a>()</tt>	The list item is responsible for updating the display when being selected if desired.
+<tt style='background-color:#E8E8E8;'> uix.SelectableView <a href=' /uix/selectableview.py#L48'>deselect</a>()</tt>	The list item is responsible for updating the display when being unselected if desired.
+<tt style='background-color:#E8E8E8;'> uix.TabbedPanel <a href=' /uix/tabbedpanel.py#L491'>switch_to</a>(header,do_scroll)</tt>	Switch to a specific panel header.
+<tt style='background-color:#E8E8E8;'> uix.RstDocument <a href=' /uix/rst.py#L544'>render</a>()</tt>	Force document rendering.
+<tt style='background-color:#E8E8E8;'> uix.RstDocument <a href=' /uix/rst.py#L549'>resolve_path</a>(filename)</tt>	Get the path for this filename if the filename doesn't exist.
+<tt style='background-color:#E8E8E8;'> uix.RstDocument <a href=' /uix/rst.py#L557'>preload</a>(filename,encoding,errors)</tt>	Preload a rst file to get its toctree and its title.
+<tt style='background-color:#E8E8E8;'> uix.RstDocument <a href=' /uix/rst.py#L606'>goto</a>(ref)</tt>	Scroll to the reference if it's not found nothing will be done.
+<tt style='background-color:#E8E8E8;'> uix.Label <a href=' /uix/label.py#L335'>texture_update</a>()</tt>	Force texture recreation with the current label properties.
+<tt style='background-color:#E8E8E8;'> uix.Carousel <a href=' /uix/carousel.py#L272'>load_slide</a>(slide)</tt>	Animate to the slide that is passed as the argument.
+<tt style='background-color:#E8E8E8;'> uix.Carousel <a href=' /uix/carousel.py#L290'>load_previous</a>()</tt>	Animate to the previous slide.
+<tt style='background-color:#E8E8E8;'> uix.Carousel <a href=' /uix/carousel.py#L297'>load_next</a>(mode)</tt>	Animate to the next slide.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L574'>cursor_index</a>(cursor)</tt>	Return the cursor index in the text/value.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L597'>cursor_offset</a>()</tt>	Get the cursor x offset on the current line.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L610'>get_cursor_from_index</a>(index)</tt>	Return the row col of the cursor from text index.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L629'>select_text</a>(start,end)</tt>	Select a portion of text displayed in this textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L650'>select_all</a>()</tt>	Select all of the text displayed in this textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L670'>insert_text</a>(substring,from_undo)</tt>	Insert new text at the current cursor position override this.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L767'>reset_undo</a>()</tt>	Reset undo and redo lists from memory.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L775'>do_redo</a>()</tt>	Do redo operation.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L812'>do_undo</a>()</tt>	Do undo operation.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L847'>do_backspace</a>(from_undo,mode)</tt>	Do backspace operation from the current cursor position.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1080'>do_cursor_movement</a>(action,control,alt)</tt>	Move the cursor relative to it's current position.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1168'>get_cursor_from_xy</a>(x,y)</tt>	Return the row col of the cursor from an x y position.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1195'>cancel_selection</a>()</tt>	Cancel current selection if any.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1205'>delete_selection</a>(from_undo)</tt>	Delete the current text selection if any.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1249'>_update_selection</a>(finished)</tt>	Update selection text and order of from/to if finished is true.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1283'>on_double_tap</a>()</tt>	This event is dispatched when a double tap happens inside textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1299'>on_triple_tap</a>()</tt>	This event is dispatched when a triple tap happens inside textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1310'>on_quad_touch</a>()</tt>	This event is dispatched when four fingers are touching inside textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1687'>cut</a>()</tt>	Copy current selection to clipboard then delete it from textinput.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1700'>copy</a>(data)</tt>	Copy the value provided in argument data into current clipboard.
+<tt style='background-color:#E8E8E8;'> uix.TextInput <a href=' /uix/textinput.py#L1714'>paste</a>()</tt>	Insert text from system :class ~kivy core clipboard clipboard.
+<tt style='background-color:#E8E8E8;'> uix.EffectBase <a href=' /uix/effectwidget.py#L399'>set_fbo_shader</a>()</tt>	Sets the :class ~kivy graphics fbo's shader by splicing.
+<tt style='background-color:#E8E8E8;'> uix.EffectBase <a href=' /uix/effectwidget.py#L411'>_load_from_source</a>()</tt>	Internal loads the glsl string from a source file.
+<tt style='background-color:#E8E8E8;'> uix.EffectFbo <a href=' /uix/effectwidget.py#L591'>set_fs</a>(value)</tt>	Attempt to set the fragment shader to the given value.
+<tt style='background-color:#E8E8E8;'> uix.EffectWidget <a href=' /uix/effectwidget.py#L685'>_update_glsl</a>()</tt>	Internal passes new time and resolution uniform variables to the shader.
+<tt style='background-color:#E8E8E8;'> uix.EffectWidget <a href=' /uix/effectwidget.py#L697'>refresh_fbo_setup</a>()</tt>	Internal creates and assigns one :class ~kivy graphics fbo.
+<tt style='background-color:#E8E8E8;'> uix.Video <a href=' /uix/video.py#L142'>seek</a>(percent)</tt>	Change the position to a percentage of duration percentage.
+<tt style='background-color:#E8E8E8;'> uix.Video <a href=' /uix/video.py#L229'>unload</a>()</tt>	Unload the video the playback will be stopped.
+<tt style='background-color:#E8E8E8;'> uix.ModalView <a href=' /uix/modalview.py#L166'>open</a>()</tt>	Show the view window from the :attr attach_to widget if set it.
+<tt style='background-color:#E8E8E8;'> uix.ModalView <a href=' /uix/modalview.py#L192'>dismiss</a>()</tt>	Close the view if it is open if you really want to close the.
+<tt style='background-color:#E8E8E8;'> uix.CodeInput <a href=' /uix/codeinput.py#L192'>_cursor_offset</a>()</tt>	Get the cursor x offset on the current line.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L351'>proxy_ref</a>()</tt>	Return a proxy reference to the widget i e without creating a.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L382'>collide_point</a>(x,y)</tt>	Check if a point x y is inside the widget's axis aligned bounding box.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L404'>collide_widget</a>(wid)</tt>	Check if another widget collides with this widget this function.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L440'>on_touch_down</a>(touch)</tt>	Receive a touch down event.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L460'>on_touch_move</a>(touch)</tt>	Receive a touch move event the touch is in parent coordinates.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L471'>on_touch_up</a>(touch)</tt>	Receive a touch up event the touch is in parent coordinates.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L489'>add_widget</a>(widget,index,canvas)</tt>	Add a new widget as a child of this widget.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L564'>remove_widget</a>(widget)</tt>	Remove a widget from the children of this widget.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L590'>clear_widgets</a>(children)</tt>	Remove all or the specified :attr ~widget children of this widget.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L607'>export_to_png</a>(filename)</tt>	Saves an image of the widget and its children in png format at the specified filename.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L652'>get_root_window</a>()</tt>	Return the root window.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L663'>get_parent_window</a>()</tt>	Return the parent window.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L704'>walk</a>(restrict,loopback)</tt>	Iterator that walks the widget tree starting with this widget and goes forward returning widgets in the order in which layouts display.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L793'>walk_reverse</a>(loopback)</tt>	Iterator that walks the widget tree backwards starting with the widget before this and going backwards returning widgets in the.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L848'>to_widget</a>(x,y,relative)</tt>	Convert the given coordinate from window to local widget coordinates.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L857'>to_window</a>(x,y,initial,relative)</tt>	Transform local coordinates to window coordinates see.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L868'>to_parent</a>(x,y,relative)</tt>	Transform local coordinates to parent coordinates see.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L881'>to_local</a>(x,y,relative)</tt>	Transform parent coordinates to local coordinates see.
+<tt style='background-color:#E8E8E8;'> uix.Widget <a href=' /uix/widget.py#L902'>get_window_matrix</a>(x,y)</tt>	Calculate the transformation matrix to convert between window and widget coordinates.
+<tt style='background-color:#E8E8E8;'> uix.Sandbox <a href=' /uix/sandbox.py#L93'>on_context_created</a>()</tt>	Override this method in order to load your kv file or do anything else with the newly created context.
+<tt style='background-color:#E8E8E8;'> uix.Sandbox <a href=' /uix/sandbox.py#L99'>on_exception</a>(exception,_traceback)</tt>	Override this method in order to catch all the exceptions from children.
+<tt style='background-color:#E8E8E8;'> uix.Scatter <a href=' /uix/scatter.py#L400'>apply_transform</a>(trans,post_multiply,anchor)</tt>	Transforms the scatter by applying the "trans" transformation matrix on top of its current transformation state.
+<tt style='background-color:#E8E8E8;'> uix.Scatter <a href=' /uix/scatter.py#L562'>on_transform_with_touch</a>(touch)</tt>	Called when a touch event has transformed the scatter widget.
+<tt style='background-color:#E8E8E8;'> uix.Scatter <a href=' /uix/scatter.py#L577'>on_bring_to_front</a>(touch)</tt>	Called when a touch event causes the scatter to be brought to the front of the parent (only if :attr auto_bring_to_front is true).
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L284'>add_node</a>(node,parent)</tt>	Add a new node to the tree.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L313'>remove_node</a>(node)</tt>	Removes a node from the tree.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L346'>select_node</a>(node)</tt>	Select a node in the tree.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L356'>deselect_node</a>()</tt>	Deselect any selected node.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L364'>toggle_node</a>(node)</tt>	Toggle the state of the node (open/collapsed).
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L376'>get_node_at_pos</a>(pos)</tt>	Get the node at the position x y.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L385'>iterate_open_nodes</a>(node)</tt>	Generator to iterate over all the expended nodes starting from node and down.
+<tt style='background-color:#E8E8E8;'> uix.TreeView <a href=' /uix/treeview.py#L411'>iterate_all_nodes</a>(node)</tt>	Generator to iterate over all nodes from node and down whether expanded or not.
+<tt style='background-color:#E8E8E8;'> uix.TransitionBase <a href=' /uix/screenmanager.py#L361'>start</a>(manager)</tt>	Internal starts the transition this is automatically.
+<tt style='background-color:#E8E8E8;'> uix.TransitionBase <a href=' /uix/screenmanager.py#L384'>stop</a>()</tt>	Internal stops the transition this is automatically called by the.
+<tt style='background-color:#E8E8E8;'> uix.TransitionBase <a href=' /uix/screenmanager.py#L394'>add_screen</a>(screen)</tt>	Internal used to add a screen to the :class screenmanager.
+<tt style='background-color:#E8E8E8;'> uix.TransitionBase <a href=' /uix/screenmanager.py#L399'>remove_screen</a>(screen)</tt>	Internal used to remove a screen from the :class screenmanager.
+<tt style='background-color:#E8E8E8;'> uix.CardTransition <a href=' /uix/screenmanager.py#L622'>start</a>(manager)</tt>	Internal starts the transition this is automatically.
+<tt style='background-color:#E8E8E8;'> uix.ScreenManager <a href=' /uix/screenmanager.py#L1056'>get_screen</a>(name)</tt>	Return the screen widget associated with the name or raise a :class screenmanagerexception if not found.
+<tt style='background-color:#E8E8E8;'> uix.ScreenManager <a href=' /uix/screenmanager.py#L1068'>has_screen</a>(name)</tt>	Return true if a screen with the name has been found.
+<tt style='background-color:#E8E8E8;'> uix.ScreenManager <a href=' /uix/screenmanager.py#L1088'>next</a>()</tt>	Return the name of the next screen from the screen list.
+<tt style='background-color:#E8E8E8;'> uix.ScreenManager <a href=' /uix/screenmanager.py#L1092'>previous</a>()</tt>	Return the name of the previous screen from the screen list.
+<tt style='background-color:#E8E8E8;'> uix.ScreenManager <a href=' /uix/screenmanager.py#L1105'>switch_to</a>(screen)</tt>	Add a new screen to the screenmanager and switch to it the previous.
+<tt style='background-color:#E8E8E8;'> uix.Image <a href=' /uix/image.py#L293'>reload</a>()</tt>	Reload image from disk this facilitates re-loading of.
+<tt style='background-color:#E8E8E8;'> uix.DropDown <a href=' /uix/dropdown.py#L230'>open</a>(widget)</tt>	Open the dropdown list and attach it to a specific widget.
+<tt style='background-color:#E8E8E8;'> uix.DropDown <a href=' /uix/dropdown.py#L254'>dismiss</a>()</tt>	Remove the dropdown widget from the window and detach it from the attached widget.
+<tt style='background-color:#E8E8E8;'> uix.DropDown <a href=' /uix/dropdown.py#L272'>select</a>(data)</tt>	Call this method to trigger the on_select event with the data selection.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L125'>get_vectors</a>()</tt>	Return strokes in a format that is acceptable for kivy.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L146'>handles</a>(touch)</tt>	Returns true if this container handles the given touch.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L152'>accept_stroke</a>(count)</tt>	Returns true if this container can accept count new strokes.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L158'>update_bbox</a>(touch)</tt>	Update gesture bbox from a touch coordinate.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L174'>add_stroke</a>(touch,line)</tt>	Associate a list of points with a touch uid the line itself is.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L182'>complete_stroke</a>()</tt>	Called on touch up events to keep track of how many strokes.
+<tt style='background-color:#E8E8E8;'> uix.GestureContainer <a href=' /uix/gesturesurface.py#L189'>single_points_test</a>()</tt>	Returns true if the gesture consists only of single-point strokes.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L332'>on_touch_down</a>(touch)</tt>	When a new touch is registered the first thing we do is to test if it collides with the bounding box of another known gesture.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L360'>on_touch_move</a>(touch)</tt>	When a touch moves we add a point to the line on the canvas so the path is updated.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L412'>init_gesture</a>(touch)</tt>	Create a new gesture from touch i e it's the first on.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L461'>get_gesture</a>(touch)</tt>	Returns gesturecontainer associated with given touch.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L468'>find_colliding_gesture</a>(touch)</tt>	Checks if a touch x/y collides with the bounding box of an existing gesture.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L485'>merge_gestures</a>(g,other)</tt>	Merges two gestures together the oldest one is retained and the newer one gets the gesturecontainer.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L546'>_complete_dispatcher</a>(dt)</tt>	This method is scheduled on all touch up events it will dispatch.
+<tt style='background-color:#E8E8E8;'> uix.GestureSurface <a href=' /uix/gesturesurface.py#L591'>_cleanup</a>(dt)</tt>	This method is scheduled from _complete_dispatcher to clean up the canvas and internal gesture list after a gesture is completed.
+<tt style='background-color:#E8E8E8;'> uix.VideoPlayerPlayPause <a href=' /uix/videoplayer.py#L135'>on_touch_down</a>(touch)</tt>	Versionchanged : 1 4 0.
+<tt style='background-color:#E8E8E8;'> uix.VideoPlayer <a href=' /uix/videoplayer.py#L587'>seek</a>(percent)</tt>	Change the position to a percentage of the duration percentage must.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.KNSpace <a href=' /uix/behaviors/knspace.py#L377'>fork</a>()</tt>	Returns a new :class knspace instance which will have access to all the named objects in the current namespace but will also have a.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.EmacsBehavior <a href=' /uix/behaviors/emacs.py#L109'>delete_word_right</a>()</tt>	Delete text right of the cursor to the end of the word.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.EmacsBehavior <a href=' /uix/behaviors/emacs.py#L123'>delete_word_left</a>()</tt>	Delete text left of the cursor to the beginning of word.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.ToggleButtonBehavior <a href=' /uix/behaviors/togglebutton.py#L131'>get_widgets</a>(groupname)</tt>	Return a list of the widgets contained in a specific group if the.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.ButtonBehavior <a href=' /uix/behaviors/button.py#L188'>trigger_action</a>(duration)</tt>	Trigger whatever action s have been bound to the button by calling both the on_press and on_release callbacks.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L294'>select_with_touch</a>(node,touch)</tt>	Internal processes a touch on the node this should be called by.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L348'>select_with_key_down</a>(keyboard,scancode,codepoint,modifiers)</tt>	Processes a key press this is called when a key press is to be used.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L424'>select_with_key_up</a>(keyboard,scancode)</tt>	Internal processes a key release this must be called by the.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L480'>_select_range</a>(multiselect,keep_anchor,node,idx)</tt>	Selects a range between self _anchor and node or idx.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L526'>clear_selection</a>()</tt>	Deselects all the currently selected nodes.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L536'>get_selectable_nodes</a>()</tt>	Internal returns a list of the nodes that can be selected it can.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L571'>get_index_of_node</a>(node,selectable_nodes)</tt>	Internal returns the index of the node within the selectable_nodes returned by :meth get_selectable_nodes.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L577'>goto_node</a>(key,last_node,last_node_idx)</tt>	Internal used by the controller to get the node at the position indicated by key.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L635'>select_node</a>(node)</tt>	Selects a node.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.CompoundSelectionBehavior <a href=' /uix/behaviors/compoundselection.py#L667'>deselect_node</a>(node)</tt>	Deselects a possibly selected node.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L240'>_set_on_focus_next</a>(instance,value)</tt>	If changing code ensure following code is not infinite loop widget.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L445'>_handle_post_on_touch_up</a>(touch)</tt>	Called by window after each touch has finished.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L490'>get_focus_next</a>()</tt>	Returns the next focusable widget using either :attr focus_next or the :attr children similar to the order when tabbing forwards.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L497'>get_focus_previous</a>()</tt>	Returns the previous focusable widget using either :attr focus_previous or the :attr children similar to the.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L504'>keyboard_on_key_down</a>(window,keycode,text,modifiers)</tt>	The method bound to the keyboard when the instance has focus.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L532'>keyboard_on_key_up</a>(window,keycode)</tt>	The method bound to the keyboard when the instance has focus.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L551'>show_keyboard</a>()</tt>	Convenience function to show the keyboard in managed mode.
+<tt style='background-color:#E8E8E8;'> uix.behaviors.FocusBehavior <a href=' /uix/behaviors/focus.py#L558'>hide_keyboard</a>()</tt>	Convenience function to hide the keyboard in managed mode.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.LayoutSelectionBehavior <a href=' /uix/recycleview/layout.py#L111'>apply_selection</a>(index,view,is_selected)</tt>	Applies the selection to the view this is called internally when.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleLayoutManagerBehavior <a href=' /uix/recycleview/layout.py#L199'>compute_visible_views</a>(data,viewport)</tt>	Viewport is in coordinates of the layout manager.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleLayoutManagerBehavior <a href=' /uix/recycleview/layout.py#L204'>set_visible_views</a>(indices,data,viewport)</tt>	Viewport is in coordinates of the layout manager.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleLayoutManagerBehavior <a href=' /uix/recycleview/layout.py#L209'>refresh_view_layout</a>(index,layout,view,viewport)</tt>	See :meth ~kivy uix recycleview views recycledataadapter refresh_view_layout.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleLayoutManagerBehavior <a href=' /uix/recycleview/layout.py#L216'>get_view_index_at</a>(pos)</tt>	Return the view index on which position pos, falls.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleLayoutManagerBehavior <a href=' /uix/recycleview/layout.py#L244'>goto_view</a>(index)</tt>	Moves the views so that the view corresponding to index is visible.
+<tt style='background-color:#E8E8E8;'> uix.recycleview. <a href=' /uix/recycleview/views.py#L40'>_clean_cache</a>()</tt>	Trims _cached_views cache to half the size of _max_cache_size.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataViewBehavior <a href=' /uix/recycleview/views.py#L57'>refresh_view_attrs</a>(rv,index,data)</tt>	Called by the :class recycleadapter when the view is initially populated with the values from the data dictionary for this item.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataViewBehavior <a href=' /uix/recycleview/views.py#L76'>refresh_view_layout</a>(rv,index,layout,viewport)</tt>	Called when the view's size is updated by the layout manager :class recyclelayoutmanagerbehavior.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L153'>attach_recycleview</a>(rv)</tt>	Associates a :class ~kivy uix recycleview recycleviewbehavior.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L159'>detach_recycleview</a>()</tt>	Removes the :class ~kivy uix recycleview recycleviewbehavior.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L165'>create_view</a>(index,data_item,viewclass)</tt>	Internal creates and initializes the view for the data at index.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L178'>get_view</a>(index,data_item,viewclass)</tt>	Internal returns a view instance for the data at index it looks through the various caches and finally creates a view if it.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L219'>refresh_view_attrs</a>(index,data_item,view)</tt>	Internal syncs the view and brings it up to date with the data.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L242'>refresh_view_layout</a>(index,layout,view,viewport)</tt>	Updates the sizing information of the view.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L275'>make_view_dirty</a>(view,index)</tt>	Internal used to flag this view as dirty ready to be used for others.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L282'>make_views_dirty</a>()</tt>	Makes all the current views dirty.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L305'>invalidate</a>()</tt>	Moves all the current views into the global cache.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L329'>set_visible_views</a>(indices,data,viewclasses)</tt>	Gets a 3-tuple of the new remaining and old views for the current viewport.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataAdapter <a href=' /uix/recycleview/views.py#L367'>get_visible_view</a>(index)</tt>	Returns the currently visible view associated with index.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleViewBehavior <a href=' /uix/recycleview/__init__.py#L257'>refresh_from_data</a>()</tt>	This should be called when data changes data changes typically.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleViewBehavior <a href=' /uix/recycleview/__init__.py#L273'>refresh_from_layout</a>()</tt>	This should be called when the layout changes or needs to change it is.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleViewBehavior <a href=' /uix/recycleview/__init__.py#L282'>refresh_from_viewport</a>()</tt>	This should be called when the viewport changes and the displayed data must be updated.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataModelBehavior <a href=' /uix/recycleview/datamodel.py#L81'>attach_recycleview</a>(rv)</tt>	Associates a :class ~kivy.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataModelBehavior <a href=' /uix/recycleview/datamodel.py#L90'>detach_recycleview</a>()</tt>	Removes the :class ~kivy.
+<tt style='background-color:#E8E8E8;'> uix.recycleview.RecycleDataModel <a href=' /uix/recycleview/datamodel.py#L141'>observable_dict</a>()</tt>	A dictionary instance which when modified will trigger a data and consequently an on_data_changed dispatch.
+<tt style='background-color:#E8E8E8;'> effects.KineticEffect <a href=' /effects/kinetic.py#L117'>start</a>(val,t)</tt>	Start the movement.
+<tt style='background-color:#E8E8E8;'> effects.KineticEffect <a href=' /effects/kinetic.py#L132'>update</a>(val,t)</tt>	Update the movement.
+<tt style='background-color:#E8E8E8;'> effects.KineticEffect <a href=' /effects/kinetic.py#L144'>stop</a>(val,t)</tt>	Stop the movement.
+<tt style='background-color:#E8E8E8;'> effects.KineticEffect <a href=' /effects/kinetic.py#L164'>cancel</a>()</tt>	Cancel a movement this can be used in case :meth stop cannot be.
+<tt style='background-color:#E8E8E8;'> effects.KineticEffect <a href=' /effects/kinetic.py#L172'>update_velocity</a>(dt)</tt>	Internal update the velocity according to the frametime and friction.
+<tt style='background-color:#E8E8E8;'> effects.ScrollEffect <a href=' /effects/scroll.py#L86'>reset</a>(pos)</tt>	Internal reset the value and the velocity to the pos.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/joycursor.py#L266'>create_joycursor</a>(win,ctx)</tt>	Create a joycursor instance attached to the *ctx* and bound to the window's :meth ~kivy.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/inspector.py#L747'>stop</a>(win,ctx)</tt>	Stop and unload any active inspectors for the given *ctx*.
+<tt style='background-color:#E8E8E8;'> modules.ConsoleAddon <a href=' /modules/console.py#L342'>init</a>()</tt>	Method called when the addon is instantiated by the console.
+<tt style='background-color:#E8E8E8;'> modules.ConsoleAddon <a href=' /modules/console.py#L347'>activate</a>()</tt>	Method called when the addon is activated by the console.
+<tt style='background-color:#E8E8E8;'> modules.ConsoleAddon <a href=' /modules/console.py#L352'>deactivate</a>()</tt>	Method called when the addon is deactivated by the console.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L824'>add_toolbar_widget</a>(widget,right)</tt>	Add a widget in the top left toolbar of the console.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L831'>remove_toolbar_widget</a>(widget)</tt>	Remove a widget from the toolbar.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L836'>add_panel</a>(name,cb_activate,cb_deactivate,cb_refresh)</tt>	Add a new panel in the console.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L871'>set_content</a>(content)</tt>	Replace the console content with a new one.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L910'>highlight_at</a>(x,y)</tt>	Select a widget from a x/y window coordinate.
+<tt style='background-color:#E8E8E8;'> modules.Console <a href=' /modules/console.py#L947'>pick</a>(widget,x,y)</tt>	Pick a widget at x/y given a root widget.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/console.py#L1038'>start</a>(win,ctx)</tt>	Create an console instance attached to the *ctx* and bound to the window's :meth ~kivy.
+<tt style='background-color:#E8E8E8;'> modules. <a href=' /modules/inspector.py#L724'>create_inspector</a>(win,ctx)</tt>	Create an inspector instance attached to the *ctx* and bound to the window's :meth ~kivy.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L124'>add_path</a>(path)</tt>	Add a path to search for modules in.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L141'>list</a>()</tt>	Return the list of available modules.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L170'>activate_module</a>(name,win)</tt>	Activate a module on a window.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L191'>deactivate_module</a>(name,win)</tt>	Deactivate a module from a window.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L204'>register_window</a>(win)</tt>	Add the window to the window list.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L210'>unregister_window</a>(win)</tt>	Remove the window from the window list.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L216'>update</a>()</tt>	Update the status of the module for each window.
+<tt style='background-color:#E8E8E8;'> modules.ModuleBase <a href=' /modules/__init__.py#L231'>configure</a>()</tt>	Internal configure all the modules before using them.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L150'>close</a>()</tt>	Close the mtdev converter.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L159'>idle</a>(ms)</tt>	Check state of kernel device :parameters.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L183'>has_mtdata</a>()</tt>	Return true if the device has multitouch data.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L190'>has_slot</a>()</tt>	Return true if the device has slot information.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L197'>has_abs</a>(index)</tt>	Return true if the device has abs data.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L210'>get_max_abs</a>()</tt>	Return the maximum number of abs information available.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L215'>get_slot</a>()</tt>	Return the slot data.
+<tt style='background-color:#E8E8E8;'> lib.Device <a href=' /lib/mtdev.py#L224'>get_abs</a>(index)</tt>	Return the abs data.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L114'>init</a>()</tt>	Instantiates address manager and outsocket as globals.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L121'>bind</a>(oscid,func,oscaddress)</tt>	Bind given oscaddresses with given functions in address manager.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L131'>sendMsg</a>(oscAddress,dataArray,ipAddr,port)</tt>	Create and send normal osc msgs defaults to '127.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L140'>createBundle</a>()</tt>	Create bundled type of osc messages.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L151'>appendToBundle</a>(bundle,oscAddress,dataArray)</tt>	Create osc message and append it to a given bundle.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L157'>sendBundle</a>(bundle,ipAddr,port)</tt>	Convert bundle to a binary and send it.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L164'>createBinaryMsg</a>(oscAddress,dataArray,typehint)</tt>	Create and return general type binary osc msg.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L175'>readQueue</a>(thread_id)</tt>	Read queues from all threads and dispatch message.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L236'>listen</a>(ipAddr,port)</tt>	Creates a new thread listening to that port defaults to ipaddr='127.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/oscAPI.py#L250'>dontListen</a>(thread_id)</tt>	Closes the socket and kills the thread.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L54'>hexDump</a>(data)</tt>	Useful utility prints the string in hexadecimal.
+<tt style='background-color:#E8E8E8;'> lib.osc.OSCMessage <a href=' /lib/osc/OSC.py#L89'>append</a>(argument,typehint)</tt>	Appends data to the message updating the typetags based on.
+<tt style='background-color:#E8E8E8;'> lib.osc.OSCMessage <a href=' /lib/osc/OSC.py#L104'>rawAppend</a>(data)</tt>	Appends raw data to the message use append().
+<tt style='background-color:#E8E8E8;'> lib.osc.OSCMessage <a href=' /lib/osc/OSC.py#L108'>getBinary</a>()</tt>	Returns the binary message so far with typetags.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L161'>readLong</a>(data)</tt>	Tries to interpret the next 8 bytes of the data as a 64-bit signed integer.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L173'>readDouble</a>(data)</tt>	Tries to interpret the next 8 bytes of the data as a 64-bit double float.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L195'>OSCBlob</a>(next)</tt>	Convert a string into an osc blob returning a typetag data tuple.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L211'>OSCArgument</a>(data)</tt>	Convert some python types to their osc binary representations returning a.
+<tt style='background-color:#E8E8E8;'> lib.osc. <a href=' /lib/osc/OSC.py#L250'>parseArgs</a>(args)</tt>	Given a list of strings produces a list where those strings have been parsed (where.
+<tt style='background-color:#E8E8E8;'> lib.osc.CallbackManager <a href=' /lib/osc/OSC.py#L326'>handle</a>(data,source)</tt>	Given osc data tries to call the callback with the right address.
+<tt style='background-color:#E8E8E8;'> lib.osc.CallbackManager <a href=' /lib/osc/OSC.py#L332'>dispatch</a>(message,source)</tt>	Sends decoded osc data to an appropriate calback.
+<tt style='background-color:#E8E8E8;'> lib.osc.CallbackManager <a href=' /lib/osc/OSC.py#L364'>add</a>(callback,name)</tt>	Adds a callback to our set of callbacks or removes the callback with name if callback.
+<tt style='background-color:#E8E8E8;'> lib.osc.CallbackManager <a href=' /lib/osc/OSC.py#L373'>unbundler</a>(messages)</tt>	Dispatch the messages in a decoded bundle.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L136'>exists</a>(key)</tt>	Check if a key exists in the store.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L141'>async_exists</a>(callback,key)</tt>	Asynchronous version of :meth exists.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L155'>get</a>(key)</tt>	Get the key-value pairs stored at key if the key is not found a.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L161'>async_get</a>(callback,key)</tt>	Asynchronous version of :meth get.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L174'>put</a>(key)</tt>	Put new key-value pairs (given in *values*) into the storage any.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L183'>async_put</a>(callback,key)</tt>	Asynchronous version of :meth put.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L198'>delete</a>(key)</tt>	Delete a key from the storage if the key is not found a keyerror.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L206'>async_delete</a>(callback,key)</tt>	Asynchronous version of :meth delete.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L221'>find</a>()</tt>	Return all the entries matching the filters the entries are.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L239'>async_find</a>(callback)</tt>	Asynchronous version of :meth find.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L257'>keys</a>()</tt>	Return a list of all the keys in the storage.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L262'>async_keys</a>(callback)</tt>	Asynchronously return all the keys in the storage.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L267'>count</a>()</tt>	Return the number of entries in the storage.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L272'>async_count</a>(callback)</tt>	Asynchronously return the number of entries in the storage.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L277'>clear</a>()</tt>	Wipe the whole storage.
+<tt style='background-color:#E8E8E8;'> storage.AbstractStore <a href=' /storage/__init__.py#L282'>async_clear</a>(callback)</tt>	Asynchronous version of :meth clear.

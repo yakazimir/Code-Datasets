@@ -1,0 +1,983 @@
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L70'>_add_doc</a>(func,doc)</tt>	Add documentation to a function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L75'>_import_module</a>(name)</tt>	Import module returning the module after the last dot.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L405'>add_move</a>(move)</tt>	Add an item to six moves.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L410'>remove_move</a>(name)</tt>	Remove item from six moves.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L653'>with_metaclass</a>(meta)</tt>	Create a base class with a metaclass.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /six.py#L658'>add_metaclass</a>(metaclass)</tt>	Class decorator for creating a class with a metaclass.
+<tt style='background-color:#E8E8E8;'> SimDivFilters.TopNOverallPicker <a href=' /SimDivFilters/SimilarityPickers.py#L102'>__init__</a>(numToPick,probeFps,dataSet,simMetric)</tt>	Dataset should be a sequence of bitvectors.
+<tt style='background-color:#E8E8E8;'> SimDivFilters.SpreadPicker <a href=' /SimDivFilters/SimilarityPickers.py#L205'>__init__</a>(numToPick,probeFps,dataSet,simMetric)</tt>	Dataset should be a sequence of bitvectors or if expectpickles.
+<tt style='background-color:#E8E8E8;'> SimDivFilters. <a href=' /SimDivFilters/UnitTestSimilarityPickers.py#L21'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L27'>_take</a>(fromL,what)</tt>	Given a list froml returns an iterator of the elements specified using their.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L33'>GetColumns</a>(dBase,table,fieldString,user)</tt>	Gets a set of data from a table.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L67'>GetData</a>(dBase,table,fieldString,whereString)</tt>	A more flexible method to get a set of data from a table **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L147'>DatabaseToText</a>(dBase,table,fields,join)</tt>	Pulls the contents of a database and makes a deliminted text file from them **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L204'>TypeFinder</a>(data,nRows,nCols,nullMarker)</tt>	Finds the types of the columns in _data_ if nullmarker is not none elements of the data table which are.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L252'>_AdjustColHeadings</a>(colHeadings,maxColLabelLen)</tt>	*for internal use* removes illegal characters from column headings.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L275'>GetTypeStrings</a>(colHeadings,colTypes,keyCol)</tt>	Returns a list of sql type strings.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L315'>_AddDataToDb</a>(dBase,table,user,password)</tt>	*for internal use*.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L371'>TextFileToDatabase</a>(dBase,table,inF,delim)</tt>	Loads the contents of the text file into a database.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbUtils.py#L440'>DatabaseToDatabase</a>(fromDb,fromTbl,toDb,toTbl)</tt>	Fix at the moment this is a hack.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbUtils.py#L69'>test1Txt</a>()</tt>	Test reading from a text file.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbUtils.py#L78'>test3Txt</a>()</tt>	Test reading from a text file including null markers.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L119'>testGetData2</a>()</tt>	Using a randomaccessdbresultset.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L129'>testGetData3</a>()</tt>	Using a dbresultset.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L147'>testGetData4</a>()</tt>	Non random access.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L161'>testGetData5</a>()</tt>	Using a randomaccessdbresultset with a transform.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbInfo.py#L24'>GetDbNames</a>(user,password,dirName,dBase)</tt>	Returns a list of databases that are available.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbInfo.py#L61'>GetTableNames</a>(dBase,user,password,includeViews)</tt>	Returns a list of tables available in a database.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbInfo.py#L139'>GetColumnNamesAndTypes</a>(dBase,table,user,password)</tt>	Gets a list of columns available in a db table along with their types.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/DbInfo.py#L176'>GetColumnNames</a>(dBase,table,user,password)</tt>	Gets a list of columns available in a db table.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L52'>GetTableNames</a>(includeViews)</tt>	Gets a list of tables available in a database **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L72'>GetColumnNames</a>(table,join,what,where)</tt>	Gets a list of columns available in the current table **returns**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L88'>GetColumnNamesAndTypes</a>(table,join,what,where)</tt>	Gets a list of columns available in the current table along with their types **returns**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L108'>GetColumns</a>(fields,table,join)</tt>	Gets a set of data from a table **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L128'>GetData</a>(table,fields,where,removeDups)</tt>	A more flexible method to get a set of data from a table **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L159'>GetDataCount</a>(table,where,join)</tt>	Returns a count of the number of results a query will return **arguments**.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L185'>GetCursor</a>()</tt>	Returns a cursor for direct manipulation of the db.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L197'>KillCursor</a>()</tt>	Closes the cursor.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L206'>AddTable</a>(tableName,colString)</tt>	Adds a table to the database.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L242'>InsertData</a>(tableName,vals)</tt>	Inserts data into a table.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L269'>InsertColumnData</a>(tableName,columnName,value,where)</tt>	Inserts data into a particular column of the table.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L287'>AddColumn</a>(tableName,colName,colType)</tt>	Adds a column to a table.
+<tt style='background-color:#E8E8E8;'> Dbase.DbConnect <a href=' /Dbase/DbConnection.py#L305'>Commit</a>()</tt>	Commits the current transaction.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L18'>ValidateRDId</a>(ID)</tt>	Returns whether or not an rdid is valid.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L47'>RDIdToInt</a>(ID,validate)</tt>	Returns the integer index for a given rdid throws a valueerror on error.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L86'>IndexToRDId</a>(idx,leadText)</tt>	Converts an integer index into an rdid the format of the id is.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L140'>GetNextId</a>(conn,table,idColName)</tt>	Returns the next available id in the database.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L156'>GetNextRDId</a>(conn,table,idColName,leadText)</tt>	Returns the next available rdid in the database.
+<tt style='background-color:#E8E8E8;'> Dbase. <a href=' /Dbase/StorageUtils.py#L171'>RegisterItem</a>(conn,table,value,columnName)</tt>	>>> from rdkit dbase dbconnection import dbconnect.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L56'>testAddTable</a>()</tt>	Tests addtable and gettablenames functionalities.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L74'>testCursor</a>()</tt>	Tests getcursor and gettablenames functionalities.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L176'>testGetData6</a>()</tt>	Using a dbresultset with a transform.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbConnect.py#L227'>test_InsertColumnData</a>()</tt>	Tests insertdata and insertcolumndata functionalities.
+<tt style='background-color:#E8E8E8;'> Dbase.DbResultBase <a href=' /Dbase/DbResultSet.py#L29'>Reset</a>()</tt>	Implement in subclasses.
+<tt style='background-color:#E8E8E8;'> Dbase.TestCase <a href=' /Dbase/UnitTestDbResultSet.py#L28'>test1</a>()</tt>	Test indexing in ensure acceptable error conditions.
+<tt style='background-color:#E8E8E8;'> sping.Font <a href=' /sping/pid.py#L153'>__cmp__</a>(other)</tt>	Compare two fonts to see if they're the same.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L204'>__init__</a>(size,name)</tt>	Initialize the canvas and set default drawing parameters.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L242'>isInteractive</a>()</tt>	Returns 1 if onclick onover and onkey events are possible 0 otherwise.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L246'>canUpdate</a>()</tt>	Returns 1 if the drawing can be meaningfully updated over time (e g screen graphics), 0 otherwise (e g drawing to a file).
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L253'>clear</a>()</tt>	Call this to clear and reset the graphics context.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L257'>flush</a>()</tt>	Call this to indicate that any comamnds that have been issued but which might be buffered should be flushed to the screen.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L263'>save</a>(file,format)</tt>	For backends that can be save to a file or sent to a stream create a valid file out of what's currently been.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L279'>setInfoLine</a>(s)</tt>	For interactive canvases displays the given string in the 'info line' somewhere where the user can probably see it.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L290'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L296'>fontHeight</a>(font)</tt>	Find the height of one line of text baseline to baseline of the given font.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L304'>fontAscent</a>(font)</tt>	Find the ascent height above base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L308'>fontDescent</a>(font)</tt>	Find the descent extent below base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L314'>arcPoints</a>(x1,y1,x2,y2)</tt>	Return a list of points approximating the given arc.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L340'>curvePoints</a>(x1,y1,x2,y2)</tt>	Return a list of points approximating the given bezier curve.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L393'>drawMultiLineString</a>(s,x,y,font)</tt>	Breaks string into lines (on.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L413'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L417'>drawLines</a>(lineList,color,width,dash)</tt>	Draw a set of lines of uniform color and width linelist a list of x1 y1 x2 y2 line coordinates.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L427'>drawString</a>(s,x,y,font)</tt>	Draw a string starting at location x y.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L437'>drawCurve</a>(x1,y1,x2,y2)</tt>	Draw a bezier curve with control points x1 y1 to x4 y4.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L444'>drawRect</a>(x1,y1,x2,y2)</tt>	Draw the rectangle between x1 y1 and x2 y2 these should have x1<x2 and y1<y2.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L452'>drawRoundRect</a>(x1,y1,x2,y2)</tt>	Draw a rounded rectangle between x1 y1 and x2 y2 with corners inset as ellipses with x radius rx and y radius ry these should have x1<x2 y1<y2 rx>0 and ry>0.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L473'>drawEllipse</a>(x1,y1,x2,y2)</tt>	Draw an orthogonal ellipse inscribed within the rectangle x1 y1 x2 y2 these should have x1<x2 and y1<y2.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L481'>drawArc</a>(x1,y1,x2,y2)</tt>	Draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees angles start with 0 to the right +x and increase counter-clockwise these should have x1<x2 and y1<y2.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L497'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L505'>drawFigure</a>(partList,edgeColor,edgeWidth,fillColor)</tt>	Drawfigure partlist -- draws a complex figure partlist a set of lines curves and arcs defined by a tuple whose.
+<tt style='background-color:#E8E8E8;'> sping.Canvas <a href=' /sping/pid.py#L532'>drawImage</a>(image,x1,y1,x2)</tt>	Draw a pil image into the specified rectangle if x2 and y2 are.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/pid.py#L543'>getFileObject</a>(file,openFlags)</tt>	Common code for every canvas save() operation takes a string.
+<tt style='background-color:#E8E8E8;'> sping.AffineMatrix <a href=' /sping/pid.py#L578'>rotate</a>(theta)</tt>	Counter clockwise rotation in standard svg/libart coordinate system.
+<tt style='background-color:#E8E8E8;'> sping.Color <a href=' /sping/colors.py#L11'>__init__</a>(red,green,blue)</tt>	Initialize with red green blue in range [0-1].
+<tt style='background-color:#E8E8E8;'> sping.Color <a href=' /sping/colors.py#L57'>toHexRGB</a>()</tt>	Convert the color back to an integer suitable for the.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/colors.py#L70'>HexColor</a>(val)</tt>	This class converts a hex string or an actual integer number into the corresponding color.
+<tt style='background-color:#E8E8E8;'> sping.StringSegment <a href=' /sping/stringformat.py#L113'>calcNewFont</a>(font)</tt>	Given a font (does not accept font==none), creates a new font based on the format of this text segment.
+<tt style='background-color:#E8E8E8;'> sping.StringSegment <a href=' /sping/stringformat.py#L129'>calcNewY</a>(font,y)</tt>	Returns a new y coordinate depending on its whether the string is a sub and super script.
+<tt style='background-color:#E8E8E8;'> sping.StringFormatter <a href=' /sping/stringformat.py#L266'>handle_data</a>(data)</tt>	Creates an intermediate representation of string segments.
+<tt style='background-color:#E8E8E8;'> sping.StringFormatter <a href=' /sping/stringformat.py#L292'>parseSegments</a>(s)</tt>	Given a formatted string will return a list of stringsegment objects with their calculated widths.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L310'>fontHeight</a>(canvas,font)</tt>	Find the total height ascent + descent of the given font.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L315'>fontAscent</a>(canvas,font)</tt>	Find the ascent height above base of the given font.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L320'>fontDescent</a>(canvas,font)</tt>	Find the descent extent below base of the given font.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L332'>stringWidth</a>(canvas,s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to canvas font.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L351'>rotateXY</a>(x,y,theta)</tt>	Rotate x y by theta degrees got tranformation from page 299 in linear algebra book.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L362'>drawString</a>(canvas,s,x,y)</tt>	Draw a formatted string starting at location x y in canvas.
+<tt style='background-color:#E8E8E8;'> sping. <a href=' /sping/stringformat.py#L426'>allTagCombos</a>(canvas,x,y,font)</tt>	Try out all tags and various combinations of them \.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L38'>_getWXcolor</a>(color,default)</tt>	Converts piddle colors to wx colors.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L51'>_getWXbrush</a>(color,default_color)</tt>	Converts piddle colors to a wx brush.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L67'>_getWXpen</a>(width,color,default_color)</tt>	Converts piddle colors to a wx pen.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L86'>_getWXfont</a>(font)</tt>	Returns a wxfont roughly equivalent to the requested piddle font.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L114'>_setWXfont</a>(font)</tt>	Set/return the current font for the dc.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L132'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L138'>fontHeight</a>(font)</tt>	Find the total height ascent + descent of the given font.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L142'>fontAscent</a>(font)</tt>	Find the ascent height above base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L147'>fontDescent</a>(font)</tt>	Find the descent extent below base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L157'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L165'>drawString</a>(s,x,y,font)</tt>	Draw a string starting at location x y.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L226'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.WX.PiddleWxDc <a href=' /sping/WX/pidWxDc.py#L259'>drawImage</a>(image,x1,y1,x2)</tt>	Draw a pil image into the specified rectangle if x2 and y2 are.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L219'>__init__</a>(size,name,status_bar,interactive)</tt>	Works like all other piddle canvases except with extra interactive controls.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L365'>_OnQuit</a>(event)</tt>	Closes the canvas call to return control your application.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L369'>_OnClear</a>(event)</tt>	Clears the canvas by emptying the memory buffer and redrawing.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L378'>isInteractive</a>()</tt>	Returns 1 if onclick and onover events are possible 0 otherwise.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L382'>canUpdate</a>()</tt>	Returns 1 if the drawing can be meaningfully updated over time (e g.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L393'>flush</a>()</tt>	Copies the contents of the memory buffer to the screen and enters the.
+<tt style='background-color:#E8E8E8;'> sping.WX.WXCanvas <a href=' /sping/WX/pidWX.py#L401'>setInfoLine</a>(s)</tt>	For interactive canvases displays the given string in the 'info line' somewhere where the user can probably see it.
+<tt style='background-color:#E8E8E8;'> sping.util.HTMLPiddler <a href=' /sping/util/HTMLPiddler.py#L73'>renderOn</a>(aPiddleCanvas)</tt>	Draw the text with apiddlecanvas.
+<tt style='background-color:#E8E8E8;'> sping.Pyart.PyartCanvas <a href=' /sping/Pyart/pidPyart.py#L102'>_findExternalFontName</a>(font)</tt>	Attempts to return proper font name.
+<tt style='background-color:#E8E8E8;'> sping.PS. <a href=' /sping/PS/pidPS.py#L100'>latin1FontEncoding</a>(fontname)</tt>	Use this to generating ps code for re-encoding a font as isolatin1.
+<tt style='background-color:#E8E8E8;'> sping.PS.PsDSC <a href=' /sping/PS/pidPS.py#L176'>boundingBoxStr</a>(x0,y0,x1,y1)</tt>	Coordinates of bbox in default ps coordinates.
+<tt style='background-color:#E8E8E8;'> sping.PS.PsDSC <a href=' /sping/PS/pidPS.py#L180'>BeginPageStr</a>(pageSetupStr,pageName)</tt>	Use this at the beginning of each page feed it your setup code in the form of a string of postscript.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L323'>_psPageSetupStr</a>(pageheight,initialColor,font_family,font_size)</tt>	Ps code for settin up coordinate system for page in accords w/ piddle standards.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L365'>_findExternalFontName</a>(font)</tt>	Attempts to return proper font name.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L411'>_psNextPage</a>()</tt>	Advance to next page of document.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L420'>clear</a>()</tt>	Clear resets the canvas to it's default state though this.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L448'>save</a>(file,format)</tt>	Write the current document to a file or stream and close the file computes any final trailers etc.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L485'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L598'>drawString</a>(s,x,y,font)</tt>	Drawstring(self s x y font=none color=none angle=0).
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L633'>drawRoundRect</a>(x1,y1,x2,y2)</tt>	Draw a rounded rectangle between x1 y1 and x2 y2 with corners inset as ellipses with x radius rx and y radius ry these should have x1<x2 y1<y2 rx>0 and ry>0.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L674'>drawEllipse</a>(x1,y1,x2,y2)</tt>	Draw an orthogonal ellipse inscribed within the rectangle x1 y1 x2 y2 these should have x1<x2 and y1<y2.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L682'>drawArc</a>(x1,y1,x2,y2)</tt>	Draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees angles start with 0 to the right +x and increase counter-clockwise these should have x1<x2 and y1<y2.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L712'>_genArcCode</a>(x1,y1,x2,y2)</tt>	Calculate the path for an arc inscribed in rectangle defined by x1 y1 x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L805'>_drawImageLevel1</a>(image,x1,y1,x2)</tt>	Drawimage(self image x1 y1 x2=none y2=none) : if x2 and y2 are ommitted they are calculated from image size.
+<tt style='background-color:#E8E8E8;'> sping.PS.PSCanvas <a href=' /sping/PS/pidPS.py#L881'>_AsciiHexEncode</a>(input)</tt>	Helper function used by images.
+<tt style='background-color:#E8E8E8;'> sping.Qt. <a href=' /sping/Qt/pidQt.py#L43'>_ColorToQt</a>(color)</tt>	Convenience function for converting a sping pid color to a qt color.
+<tt style='background-color:#E8E8E8;'> sping.Qt.QtCanvas <a href=' /sping/Qt/pidQt.py#L119'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.Qt.QtCanvas <a href=' /sping/Qt/pidQt.py#L154'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.Qt.QtCanvas <a href=' /sping/Qt/pidQt4.py#L252'>stringBox</a>(s,font)</tt>	Return the logical width and height of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.Qt.QtCanvas <a href=' /sping/Qt/pidQt.py#L281'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.SVG. <a href=' /sping/SVG/pidSVG.py#L60'>_ColorToSVG</a>(color)</tt>	Convenience function for converting a sping pid color to an svg color.
+<tt style='background-color:#E8E8E8;'> sping.SVG. <a href=' /sping/SVG/pidSVG.py#L70'>_PointListToSVG</a>(points,dupFirst)</tt>	Convenience function for converting a list of points to a string.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L107'>_findExternalFontName</a>(font)</tt>	Attempts to return proper font name.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L153'>_FormFontStr</a>(font)</tt>	Form what we hope is a valid svg font string.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L194'>_FormArcStr</a>(x1,y1,x2,y2)</tt>	Forms an arc specification for svg.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L251'>save</a>(file,format)</tt>	Hand hand this either a file= <filename> or file = <an open file object>.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L280'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L309'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L545'>drawFigure</a>(partList,edgeColor,edgeWidth,fillColor)</tt>	Drawfigure partlist -- draws a complex figure partlist a set of lines curves and arcs defined by a tuple whose.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L605'>drawImage</a>(image,x1,y1,x2)</tt>	To the best of my knowledge the only real way to get an image into svg is to read it from a file.
+<tt style='background-color:#E8E8E8;'> sping.SVG.SVGCanvas <a href=' /sping/SVG/pidSVG.py#L627'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L155'>_setColor</a>(c)</tt>	Set the pen color from a piddle color.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L167'>save</a>(file,format)</tt>	Format may be a string specifying a file extension corresponding to an image file format.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L194'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self defaultfont.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L210'>fontAscent</a>(font)</tt>	Find the ascent height above base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L221'>fontDescent</a>(font)</tt>	Find the descent extent below base of the given font.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L233'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L277'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L330'>drawString</a>(s,x,y,font)</tt>	Draw a string starting at location x y.
+<tt style='background-color:#E8E8E8;'> sping.PIL.PILCanvas <a href=' /sping/PIL/pidPIL.py#L383'>drawImage</a>(image,x1,y1,x2)</tt>	Draw a pil image into the specified rectangle if x2 and y2 are.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfmetrics.py#L246'>parseAFMfile</a>(filename)</tt>	Returns an array holding the widths of all characters in the font.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L238'>resetDefaults</a>()</tt>	If you drop down to a lower level piddle can lose track of the current graphics state.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L142'>showPage</a>()</tt>	Ensure basic settings are the same after a page break.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L160'>clear</a>()</tt>	Not wll defined for file formats use same as showpage.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L167'>save</a>(file,format)</tt>	Saves the file if holding data do.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L199'>_updateLineColor</a>(color)</tt>	Triggered when someone assigns to defaultlinecolor.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L203'>_updateFillColor</a>(color)</tt>	Triggered when someone assigns to defaultfillcolor.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L207'>_updateLineWidth</a>(width)</tt>	Triggered when someone assigns to defaultlinewidth.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L211'>_updateFont</a>(font)</tt>	Triggered when someone assigns to defaultfont.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L216'>_findPostScriptFontName</a>(font)</tt>	Attempts to return proper font name.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L230'>_escape</a>(s)</tt>	Pdf escapes are like python ones but brackets need slashes before them too.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L249'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L276'>_endPath</a>(path,edgeColor,fillColor)</tt>	In piddle the edge and fil colors might be transparent and might also be none in which case they should be taken.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L295'>drawLine</a>(x1,y1,x2,y2)</tt>	Calls the underlying methods in pdfgen canvas for the.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L315'>drawLines</a>(lineList,color,width,dash)</tt>	Draws several distinct lines all with same color.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L330'>drawString</a>(s,x,y,font)</tt>	As it says but many options to process it translates.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L387'>drawCurve</a>(x1,y1,x2,y2)</tt>	This could do two totally different things if not closed.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L468'>drawArc</a>(x1,y1,x2,y2)</tt>	This draws a pacman-type shape connected to the centre one.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L509'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	As it says easy with paths!.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFCanvas <a href=' /sping/PDF/pidPDF.py#L604'>drawImage</a>(image,x1,y1,x2)</tt>	Draw a pil image or image filename into the specified rectangle.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L114'>__init__</a>(filename,pagesize,bottomup)</tt>	Most of the attributes are private - we will use set/get methods as the preferred interface.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L171'>_escape</a>(s)</tt>	Pdf escapes are like python ones but brackets need slashes before them too.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L189'>pageHasData</a>()</tt>	Info function - app can call it after showpage to see if it needs a save.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L193'>showPage</a>()</tt>	This is where the fun happens.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L213'>save</a>(filename,fileobj)</tt>	Saves the pdf document to fileobj or to file with name filename.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L226'>setPageSize</a>(size)</tt>	Accepts a 2-tuple in points for paper size for this.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L242'>transform</a>(a,b,c,d)</tt>	How can python track this?.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L255'>rotate</a>(theta)</tt>	Canvas rotate theta.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L274'>saveState</a>()</tt>	These need expanding to save/restore python's state tracking too.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L278'>restoreState</a>()</tt>	These need expanding to save/restore python's state tracking too.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L301'>line</a>(x1,y1,x2,y2)</tt>	As it says.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L305'>lines</a>(linelist)</tt>	As line(), but slightly more efficient for lots of them -.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L313'>grid</a>(xlist,ylist)</tt>	Lays out a grid in current line style suuply list of.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L327'>bezier</a>(x1,y1,x2,y2)</tt>	Bezier curve with the four given control points.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L332'>arc</a>(x1,y1,x2,y2)</tt>	Contributed to piddlepdf by robert kern 28/7/99.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L354'>rect</a>(x,y,width,height)</tt>	Draws a rectangle.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L359'>ellipse</a>(x1,y1,x2,y2)</tt>	Uses bezierarc which conveniently handles 360 degrees -.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L370'>wedge</a>(x1,y1,x2,y2)</tt>	Like arc but connects to the centre of the ellipse.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L388'>circle</a>(x_cen,y_cen,r,stroke)</tt>	Special case of ellipse.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L397'>roundRect</a>(x,y,width,height)</tt>	Draws a rectangle with rounded corners the corners are.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L449'>drawString</a>(x,y,text)</tt>	Draws a string in the current text styles.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L456'>drawRightString</a>(x,y,text)</tt>	Draws a string right-aligned with the y coordinate.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L463'>drawCentredString</a>(x,y,text)</tt>	Draws a string right-aligned with the y coordinate i.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L471'>getAvailableFonts</a>()</tt>	Returns the list of postscript font names available.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L478'>setFont</a>(psfontname,size,leading)</tt>	Sets the font if leading not specified defaults to 1 2 x.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L491'>stringWidth</a>(text,fontname,fontsize)</tt>	Gets width of a string in the given font and size.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L500'>setLineCap</a>(mode)</tt>	0=butt 1=round 2=square.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L506'>setLineJoin</a>(mode)</tt>	0=mitre 1=round 2=bevel.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L516'>setDash</a>(array,phase)</tt>	Two notations pass two numbers or an array and phase.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L534'>beginPath</a>()</tt>	Returns a fresh path object.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L538'>drawPath</a>(aPath,stroke,fill)</tt>	Draw in the mode indicated.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L543'>clipPath</a>(aPath,stroke,fill)</tt>	Clip as well as drawing.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L548'>beginText</a>(x,y)</tt>	Returns a fresh text object.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L552'>drawText</a>(aTextObject)</tt>	Draws a text object.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L561'>drawInlineImage</a>(image,x,y,width)</tt>	Draw a pil image into the specified rectangle if width and.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L678'>readJPEGInfo</a>(image)</tt>	Read width height and number of components from jpeg file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L723'>setPageCompression</a>(onoff)</tt>	Possible values 1 or 0 (1 for 'on' is the default).
+<tt style='background-color:#E8E8E8;'> sping.PDF.Canvas <a href=' /sping/PDF/pdfgen.py#L731'>setPageTransition</a>(effectname,duration,direction,dimension)</tt>	Pdf allows page transition effects for use when giving presentations.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L808'>getCode</a>()</tt>	Pack onto one line used internally.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L821'>arc</a>(x1,y1,x2,y2)</tt>	Contributed to piddlepdf by robert kern 28/7/99.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L837'>arcTo</a>(x1,y1,x2,y2)</tt>	Like arc but draws a line from the current point to the start if the start is not the current point.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L845'>rect</a>(x,y,width,height)</tt>	Adds a rectangle to the path.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L849'>ellipse</a>(x,y,width,height)</tt>	Adds an ellipse to the path.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L856'>circle</a>(x_cen,y_cen,r)</tt>	Adds a circle to the path.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPathObject <a href=' /sping/PDF/pdfgen.py#L864'>close</a>()</tt>	Draws a line back to where it started.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L891'>getCode</a>()</tt>	Pack onto one line used internally.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L905'>setTextTransform</a>(a,b,c,d)</tt>	Like settextorigin but does rotation scaling etc.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L917'>moveCursor</a>(dx,dy)</tt>	Moves to a point dx dy away from the start of the current line - not from the current point! so if.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L923'>getCursor</a>()</tt>	Returns current text position relative to the last origin.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L927'>getX</a>()</tt>	Returns current x position relative to the last origin.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L931'>getY</a>()</tt>	Returns current y position relative to the last origin.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L935'>setFont</a>(psfontname,size,leading)</tt>	Sets the font if leading not specified defaults to 1 2 x.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L948'>setCharSpace</a>(charSpace)</tt>	Adjusts inter-character spacing.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L953'>setWordSpace</a>(wordSpace)</tt>	Adjust inter-word spacing this can be used.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L960'>setHorizScale</a>(horizScale)</tt>	Stretches text out horizontally.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L965'>setLeading</a>(leading)</tt>	How far to move down at the end of a line.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L970'>setTextRenderMode</a>(mode)</tt>	Set the text rendering mode.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L986'>setRise</a>(rise)</tt>	Move text baseline up or down to allow superscrip/subscripts.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L1000'>textOut</a>(text)</tt>	Prints string at current point text cursor moves across.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L1006'>textLine</a>(text)</tt>	Prints string at current point text cursor moves down.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFTextObject <a href=' /sping/PDF/pdfgen.py#L1017'>textLines</a>(stuff,trim)</tt>	Prints multi-line or newlined strings moving down one.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfgeom.py#L13'>bezierArc</a>(x1,y1,x2,y2)</tt>	Bezierarc(x1 y1 x2 y2 startang=0 extent=90) --> list of bezier curve control points.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L18'>cacheImageFile</a>(filename)</tt>	Processes the image as if for encoding saves to a file ending in ahx.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L54'>preProcessImages</a>(spec)</tt>	Accepts either a filespec ('c \mydir\* jpg') or a list.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L71'>cachedImageExists</a>(filename)</tt>	Determines if a cached image exists which has the same name and equal or newer date to the given.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L93'>_escape</a>(s)</tt>	Pdf escapes are almost like python ones but brackets need slashes before them too.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L103'>_normalizeLineEnds</a>(text,desired)</tt>	Ensures all instances of cr lf and crlf end up as the specified one.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L113'>_AsciiHexEncode</a>(input)</tt>	This is a verbose encoding used for binary data within a pdf file.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L125'>_AsciiHexDecode</a>(input)</tt>	Not used except to provide a test of the preceding.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L142'>_AsciiHexTest</a>(text)</tt>	Do the obvious test for whether ascii hex encoding works.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L155'>_AsciiBase85Encode</a>(input)</tt>	This is a compact encoding used for binary data within a pdf file.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L223'>_AsciiBase85Decode</a>(input)</tt>	This is not used - acrobat reader decodes for you - but a round trip is essential for testing.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfutils.py#L308'>_AsciiBase85Test</a>(text)</tt>	Do the obvious test for whether base 85 encoding works.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L110'>getPosition</a>(key)</tt>	Tell you where the given object is in the file - used for cross-linking an object can call self.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L116'>setTitle</a>(title)</tt>	Embeds in pdf file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L120'>setAuthor</a>(author)</tt>	Embedded in pdf file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L124'>setSubject</a>(subject)</tt>	Embeds in pdf file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L162'>SaveToFileObject</a>(fileobj)</tt>	Open a file and ask each object in turn to write itself to the file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L192'>printPDF</a>()</tt>	Prints it to standard output logs positions for doing trailer.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFDocument <a href=' /sping/PDF/pdfdoc.py#L209'>addPage</a>(page)</tt>	Adds page and stream at end maintains pages list.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFObject <a href=' /sping/PDF/pdfdoc.py#L301'>save</a>(file)</tt>	Save its content to an open file.
+<tt style='background-color:#E8E8E8;'> sping.PDF.PDFPage <a href=' /sping/PDF/pdfdoc.py#L408'>setCompression</a>(onoff)</tt>	Turns page compression on or off.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfdoc.py#L507'>MakeType1Fonts</a>()</tt>	Returns a list of all the standard font objects.
+<tt style='background-color:#E8E8E8;'> sping.PDF. <a href=' /sping/PDF/pdfdoc.py#L518'>MakeFontDictionary</a>(startpos,count)</tt>	Returns a font dictionary assuming they are all in the file from startpos.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L71'>save</a>(file,format)</tt>	Hand this either a file= <filename> or file = <an open file object>.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L84'>_findPostScriptFontName</a>(font)</tt>	Attempts to return proper font name.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L99'>drawLine</a>(x1,y1,x2,y2)</tt>	Draw a straight line between x1 y1 and x2 y2.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L120'>drawCurve</a>(x1,y1,x2,y2)</tt>	Draw a bezier curve with control points x1 y1 to x4 y4.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L130'>drawArc</a>(x1,y1,x2,y2)</tt>	Draw a partial ellipse inscribed within the rectangle x1 y1 x2 y2 starting at startang degrees and covering extent degrees.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L148'>drawPolygon</a>(pointlist,edgeColor,edgeWidth,fillColor)</tt>	Drawpolygon pointlist -- draws a polygon.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L198'>drawImage</a>(image,x1,y1,x2)</tt>	To the best of my knowledge the only real way to get an image.
+<tt style='background-color:#E8E8E8;'> sping.ReportLab.RLCanvas <a href=' /sping/ReportLab/pidReportLab.py#L204'>stringWidth</a>(s,font)</tt>	Return the logical width of the string if it were drawn in the current font defaults to self font.
+<tt style='background-color:#E8E8E8;'> sping.examples.Test <a href=' /sping/examples/tkCanvas-with-scrollbars.py#L19'>saveToPostscript</a>()</tt>	Save the whole canvas to a postscript file.
+<tt style='background-color:#E8E8E8;'> sping.TK.FontManager <a href=' /sping/TK/pidTK.py#L107'>getTkFontString</a>(font)</tt>	Return a string suitable to pass as the -font option to.
+<tt style='background-color:#E8E8E8;'> sping.TK.FontManager <a href=' /sping/TK/pidTK.py#L117'>getTkFontName</a>(font)</tt>	Return a the name associated with the piddle-style font.
+<tt style='background-color:#E8E8E8;'> sping.TK.FontManager <a href=' /sping/TK/pidTK.py#L122'>piddleToTkFont</a>(font)</tt>	Return a tkfont instance based on the pid-style font.
+<tt style='background-color:#E8E8E8;'> sping.TK.TKCanvas <a href=' /sping/TK/pidTK.py#L181'>__init__</a>(size,name,master,scrollingViewPortSize)</tt>	This canvas allows you to add a tk canvas with a sping api for drawing.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestPandasTools.py#L332'>getStreamIO</a>(sdfString)</tt>	Return a stringio/bytesio for the string.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Descriptors.py#L93'>NumValenceElectrons</a>(mol)</tt>	The number of valence electrons the molecule has >>> numvalenceelectrons(chem.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Descriptors.py#L115'>NumRadicalElectrons</a>(mol)</tt>	The number of radical electrons the molecule has says nothing about spin state.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TemplateAlign.py#L16'>AlignMolToTemplate2D</a>(mol,template,match,clearConfs)</tt>	Arguments - mol the molecule to be aligned.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L32'>_VertexDegrees</a>(mat,onlyOnes)</tt>	*internal use only* this is just a row sum of the matrix.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L45'>_NumAdjacencies</a>(mol,dMat)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L53'>_GetCountDict</a>(arr)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L63'>_pyHallKierAlpha</a>(m)</tt>	Calculate the hall-kier alpha value for a molecule from equations 58 of rev.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L94'>Ipc</a>(mol,avg,dMat,forceDMat)</tt>	This returns the information content of the coefficients of the characteristic polynomial of the adjacency matrix of a hydrogen-suppressed graph of a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L125'>_pyKappa1</a>(mol)</tt>	Hall-kier kappa1 value from equations 58 and 59 of rev.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L143'>_pyKappa2</a>(mol)</tt>	Hall-kier kappa2 value from equations 58 and 60 of rev.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L161'>_pyKappa3</a>(mol)</tt>	Hall-kier kappa3 value from equations 58 61 and 62 of rev.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L191'>Chi0</a>(mol)</tt>	From equations 1 9 and 10 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L206'>Chi1</a>(mol)</tt>	From equations 1 11 and 12 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L250'>_pyChi0v</a>(mol)</tt>	From equations 5 9 and 10 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L262'>_pyChi1v</a>(mol)</tt>	From equations 5 11 and 12 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L275'>_pyChiNv_</a>(mol,order)</tt>	From equations 5 15 and 16 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L293'>_pyChi2v</a>(mol)</tt>	From equations 5 15 and 16 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L300'>_pyChi3v</a>(mol)</tt>	From equations 5 15 and 16 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L307'>_pyChi4v</a>(mol)</tt>	From equations 5 15 and 16 of rev comp chem vol 2 367-422 1991.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L319'>_pyChi0n</a>(mol)</tt>	Similar to hall kier chi0v but uses nval instead of valence this makes a big difference after we get out of the first row.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L332'>_pyChi1n</a>(mol)</tt>	Similar to hall kier chi1v but uses nval instead of valence.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L345'>_pyChiNn_</a>(mol,order)</tt>	Similar to hall kier chinv but uses nval instead of valence this makes a big difference after we get out of the first row.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L364'>_pyChi2n</a>(mol)</tt>	Similar to hall kier chi2v but uses nval instead of valence this makes a big difference after we get out of the first row.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L372'>_pyChi3n</a>(mol)</tt>	Similar to hall kier chi3v but uses nval instead of valence this makes a big difference after we get out of the first row.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L380'>_pyChi4n</a>(mol)</tt>	Similar to hall kier chi4v but uses nval instead of valence this makes a big difference after we get out of the first row.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L421'>BalabanJ</a>(mol,dMat,forceDMat)</tt>	Calculate balaban's j value for a molecule **arguments**.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L497'>_AssignSymmetryClasses</a>(mol,vdList,bdMat,forceBDMat)</tt>	Used by bertzct.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L524'>_LookUpBondOrder</a>(atom1Id,atom2Id,bondDic)</tt>	Used by bertzct.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L541'>_CalculateEntropies</a>(connectionDict,atomTypeDict,numAtoms)</tt>	Used by bertzct.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L554'>_CreateBondDictEtc</a>(mol,numAtoms)</tt>	_internal use only_.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/GraphDescriptors.py#L590'>BertzCT</a>(mol,cutoff,dMat,forceDMat)</tt>	A topological index meant to quantify "complexity" of molecules.
+<tt style='background-color:#E8E8E8;'> Chem.SaltRemover <a href=' /Chem/SaltRemover.py#L52'>_initPatterns</a>()</tt>	>>> remover = saltremover() >>> len(remover.
+<tt style='background-color:#E8E8E8;'> Chem.SaltRemover <a href=' /Chem/SaltRemover.py#L89'>StripMol</a>(mol,dontRemoveEverything)</tt>	>>> remover = saltremover(defndata="[cl br]") >>> len(remover.
+<tt style='background-color:#E8E8E8;'> Chem.SaltRemover <a href=' /Chem/SaltRemover.py#L185'>__call__</a>(mol,dontRemoveEverything)</tt>	>>> remover = saltremover(defndata="[cl br]") >>> len(remover.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestDocTestsChem.py#L9'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MCS.py#L264'>FindMCS</a>(mols,minNumAtoms,maximize,atomCompare)</tt>	Find the maximum common substructure of a set of molecules in the simplest case pass in a list of molecules and get back.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChem.py#L76'>_testPkl10</a>()</tt>	Testing 5k molecule pickles.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChem.py#L95'>testPkl1</a>()</tt>	Testing single molecule pickle.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChem.py#L103'>testPkl2</a>()</tt>	Further pickle tests.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChem.py#L116'>testPkl</a>()</tt>	Testing molecule pickle.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChem.py#L136'>testRings</a>()</tt>	Testing sssr handling.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemBond.py#L33'>test2Setters</a>()</tt>	Testing setting bond props.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemBond.py#L41'>test3Props</a>()</tt>	Testing bond props.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemBond.py#L50'>test4Props2</a>()</tt>	Testing more bond props.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L49'>TransformMol</a>(mol,tform,confId,keepConfs)</tt>	Applies the transformation usually a 4x4 double matrix to a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L66'>ComputeMolShape</a>(mol,confId,boxDim,spacing)</tt>	Returns a grid representation of the molecule's shape.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L74'>ComputeMolVolume</a>(mol,confId,gridSpacing,boxMargin)</tt>	Calculates the volume of a particular conformer of a molecule based on a grid-encoding of the molecular shape.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L94'>GetBestRMS</a>(ref,probe,refConfId,probeConfId)</tt>	Returns the optimal rms for aligning two molecules taking symmetry into account.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L139'>GetConformerRMS</a>(mol,confId1,confId2,atomIds)</tt>	Returns the rms between two conformations.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L175'>GetConformerRMSMatrix</a>(mol,atomIds,prealigned)</tt>	Returns the rms matrix of the conformers of a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L218'>EnumerateLibraryFromReaction</a>(reaction,sidechainSets,returnReactants)</tt>	Returns a generator for the virtual library defined by a reaction and a sequence of sidechain sets.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L274'>ConstrainedEmbed</a>(mol,core,useTethers,coreConfId)</tt>	Generates an embedding of a molecule where part of the molecule is constrained to have particular coordinates.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/AllChem.py#L368'>AssignBondOrdersFromTemplate</a>(refmol,mol)</tt>	Assigns bond orders to a molecule based on the bond orders in a template molecule.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L38'>testLinear1</a>()</tt>	Testing first batch of linear mols.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L56'>testRings1</a>()</tt>	Testing first batch of rings.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L69'>testRings2</a>()</tt>	Testing second batch of rings.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L77'>testProblems</a>()</tt>	Testing molecules which have been problematic.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L98'>testHighSymmetry</a>()</tt>	Testing tricky high-symmetry molecules.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSmiles.py#L112'>testFailures</a>()</tt>	Expect failures -> testing molecules which are known to fail.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestFeatFinderCLI.py#L60'>outputRedirect</a>()</tt>	Redirect standard output and error to string io and return.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/SATIS.py#L31'>SATISTypes</a>(mol,neighborsToInclude)</tt>	Returns satis codes for all atoms in a molecule the satis definition used is from.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemv2.py#L77'>test1</a>()</tt>	Basic building stuff.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestLipinski.py#L93'>testIssue2183420</a>()</tt>	Testing a problem with the acceptor definition.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase_Regression <a href=' /Chem/UnitTestLipinski.py#L108'>_regressionData</a>(filename,col)</tt>	Return entries form regression dataset.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/PyMol.py#L42'>InitializePyMol</a>()</tt>	Does some initializations to set up pymol according to our.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L103'>DeleteAll</a>()</tt>	Blows out everything in the viewer.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L108'>DeleteAllExcept</a>(excludes)</tt>	Deletes everything except the items in the provided list of arguments.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L156'>LoadFile</a>(filename,name,showOnly)</tt>	Calls pymol's "load" command on the given filename the loaded object.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L115'>ShowMol</a>(mol,name,showOnly,highlightFeatures)</tt>	Special case for displaying a molecule or mol block.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L169'>GetSelectedAtoms</a>(whichSelection)</tt>	Returns the selected atoms.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L221'>SelectAtoms</a>(itemId,atomIndices,selName)</tt>	Selects a set of atoms.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L217'>HighlightAtoms</a>(indices,where,extraHighlight)</tt>	Highlights a set of atoms.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L268'>SetDisplayStyle</a>(obj,style)</tt>	Change the display style of the specified object.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L309'>SelectProteinNeighborhood</a>(aroundObj,inObj,distance,name)</tt>	Fix the surface display stuff here is all screwed up due to differences between the way pymol and dsviewer handle surfaces.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L249'>AddPharmacophore</a>(locs,colors,label,sphereRad)</tt>	Adds a set of spheres.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/DSViewer.py#L235'>GetAtomCoords</a>(sels)</tt>	Returns the coordinates of the selected atoms.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/PyMol.py#L198'>DisplayHBonds</a>(objName,molName,proteinName,molSelText)</tt>	Toggles display of h bonds between the protein and a specified molecule.
+<tt style='background-color:#E8E8E8;'> Chem.MolViewer <a href=' /Chem/PyMol.py#L208'>DisplayCollisions</a>(objName,molName,proteinName,distCutoff)</tt>	Toggles display of collisions between the protein and a specified molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L21'>_doMatch</a>(inv,atoms)</tt>	Helper function to check if all atoms in the list are the same.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L39'>_doNotMatch</a>(inv,atoms)</tt>	Helper function to check if all atoms in the list are not the same.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L57'>_doMatchExcept1</a>(inv,atoms)</tt>	Helper function to check if two atoms in the list are the same.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L82'>_getAtomInvariantsWithRadius</a>(mol,radius)</tt>	Helper function to calculate the atom invariants for each atom.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L102'>_getHeavyAtomNeighbors</a>(atom1,aid2)</tt>	Helper function to calculate the number of heavy atom neighbors.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L117'>_getIndexforTorsion</a>(neighbors,inv)</tt>	Helper function to calculate the index of the reference atom for.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L141'>_getBondsForTorsions</a>(mol,ignoreColinearBonds)</tt>	Determine the bonds or pair of atoms treated like a bond for which torsions should be calculated.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L204'>CalculateTorsionLists</a>(mol,maxDev,symmRadius,ignoreColinearBonds)</tt>	Calculate a list of torsions for a given molecule for each torsion.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L277'>_getTorsionAtomPositions</a>(atoms,conf)</tt>	Helper function to retrieve the coordinates of the four atoms.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L296'>CalculateTorsionAngles</a>(mol,tors_list,tors_list_rings,confId)</tt>	Calculate the torsion angles for a list of non-ring and a list of ring torsions.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L334'>_findCentralBond</a>(mol,distmat)</tt>	Helper function to identify the atoms of the most central bond.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L366'>_calculateBeta</a>(mol,distmat,aid1)</tt>	Helper function to calculate the beta for torsion weights according to the formula in the paper.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L398'>CalculateTorsionWeights</a>(mol,aid1,aid2,ignoreColinearBonds)</tt>	Calculate the weights for the torsions in a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L465'>CalculateTFD</a>(torsions1,torsions2,weights)</tt>	Calculate the torsion deviation fingerprint tfd given two lists of torsion angles.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L505'>_getSameAtomOrder</a>(mol1,mol2)</tt>	Generate a new molecule with the atom order of mol1 and coordinates from mol2.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L534'>GetTFDBetweenConformers</a>(mol,confIds1,confIds2,useWeights)</tt>	Wrapper to calculate the tfd between two list of conformers of a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L574'>GetTFDBetweenMolecules</a>(mol1,mol2,confId1,confId2)</tt>	Wrapper to calculate the tfd between two molecules.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/TorsionFingerprints.py#L615'>GetTFDMatrix</a>(mol,useWeights,maxDev,symmRadius)</tt>	Wrapper to calculate the matrix of tfd values for the conformers of a molecule.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestOldBugs.py#L70'>testBug12b</a>()</tt>	Failures for bug12 which are actually related to bug14.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestOldBugs.py#L96'>testGithub112</a>()</tt>	Problems with allchem getbestrms() and molecules with hs.
+<tt style='background-color:#E8E8E8;'> Chem.FilterMatcher <a href=' /Chem/FilterCatalog.py#L41'>HasMatch</a>(mol)</tt>	Return true if the filter matches the molecule.
+<tt style='background-color:#E8E8E8;'> Chem.FilterMatcher <a href=' /Chem/FilterCatalog.py#L46'>GetMatches</a>(mol,matchVect)</tt>	Getmatches mol matchvect -> returns true if the filter matches by default this calls hasmatch and does not modify matchvect.
+<tt style='background-color:#E8E8E8;'> Chem.FilterMatcher <a href=' /Chem/FilterCatalog.py#L60'>IsValid</a>(mol)</tt>	Must override this function.
+<tt style='background-color:#E8E8E8;'> Chem.RecapHierarchyNode <a href=' /Chem/Recap.py#L102'>GetAllChildren</a>()</tt>	Returns a dictionary keyed by smiles of children.
+<tt style='background-color:#E8E8E8;'> Chem.RecapHierarchyNode <a href=' /Chem/Recap.py#L110'>GetLeaves</a>()</tt>	Returns a dictionary keyed by smiles of leaf terminal nodes.
+<tt style='background-color:#E8E8E8;'> Chem.RecapHierarchyNode <a href=' /Chem/Recap.py#L120'>getUltimateParents</a>()</tt>	Returns all the nodes in the hierarchy tree that contain this.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Recap.py#L146'>RecapDecompose</a>(mol,allNodes,minFragmentSize,onlyUseReactions)</tt>	Returns the recap decomposition for a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BRICS.py#L238'>FindBRICSBonds</a>(mol,randomizeOrder,silent)</tt>	Returns the bonds in a molecule that brics would cleave >>> from rdkit import chem.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BRICS.py#L310'>BreakBRICSBonds</a>(mol,bonds,sanitize,silent)</tt>	Breaks the brics bonds in a molecule and returns the results >>> from rdkit import chem.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BRICS.py#L387'>BRICSDecompose</a>(mol,allNodes,minFragmentSize,onlyUseReactions)</tt>	Returns the brics decomposition for a molecule >>> from rdkit import chem.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemSmarts.py#L28'>testMatch</a>()</tt>	Testing smarts match.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemSmarts.py#L36'>testOrder</a>()</tt>	Testing atom order in smarts match.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L163'>patchPandasHTMLrepr</a>()</tt>	Patched default escaping of html control characters to allow molecule image rendering dataframes.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L176'>patchPandasHeadMethod</a>(n)</tt>	Ensure inheritance of patched to_html in "head" subframe.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L185'>_get_image</a>(x)</tt>	Displayhook function for pil images rendered as png.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L197'>_get_svg_image</a>(mol,size,highlightAtoms)</tt>	Mol rendered as svg.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L223'>_molge</a>(x,y)</tt>	Allows for substructure check using the >= operator (x has substructure y -> x >= y) by.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L246'>PrintAsBase64PNGString</a>(x,renderer)</tt>	Returns the molecules as base64 encoded png image.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L264'>_MolPlusFingerprint</a>(m)</tt>	Precomputes fingerprints and stores results in molecule objects to accelerate.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L273'>RenderImagesInAllDataFrames</a>(images)</tt>	Changes the default dataframe rendering to not escape html characters thus allowing rendered images in all dataframes.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L286'>AddMoleculeColumnToFrame</a>(frame,smilesCol,molCol,includeFingerprints)</tt>	Converts the molecules contains in "smilescol" to rdkit molecules and appends them to the dataframe "frame" using the specified column name.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L300'>ChangeMoleculeRendering</a>(frame,renderer)</tt>	Allows to change the rendering of the molecules between base64 png images and string representations.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L318'>LoadSDF</a>(filename,idName,molColName,includeFingerprints)</tt>	Read file in sdf format and return as pandas data frame.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L361'>WriteSDF</a>(df,out,molColName,idName)</tt>	Write an sd file for the molecules in the dataframe dataframe columns can be exported as.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L423'>RemoveSaltsFromFrame</a>(frame,molCol)</tt>	Removes salts from mols in pandas dataframe's romol column.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L434'>SaveSMILESFromFrame</a>(frame,outFile,molCol,NamesCol)</tt>	Saves smi file smiles are generated from column with rdkit molecules column.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L451'>SaveXlsxFromFrame</a>(frame,outFile,molCol,size)</tt>	Saves pandas dataframe as a xlsx file with embedded images.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L508'>FrameToGridImage</a>(frame,column,legendsCol)</tt>	Draw grid image of mols in pandas dataframe.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L520'>AddMurckoToFrame</a>(frame,molCol,MurckoCol,Generic)</tt>	Adds column with smiles of murcko scaffolds to pandas dataframe.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L534'>AlignMol</a>(mol,scaffold)</tt>	Aligns mol rdkit mol object to scaffold smiles string.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L544'>AlignToScaffold</a>(frame,molCol,scaffoldCol)</tt>	Aligns molecules in molcol to scaffolds in scaffoldcol.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L553'>InstallPandasTools</a>()</tt>	Monkey patch a few rdkit methods of chem mol.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/PandasTools.py#L563'>UninstallPandasTools</a>()</tt>	Monkey patch a few rdkit methods of chem mol.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Graphs.py#L24'>CharacteristicPolynomial</a>(mol,mat)</tt>	Calculates the characteristic polynomial for a molecular graph if mat is not passed in the molecule's weighted adjacency matrix will.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Lipinski.py#L76'>HeavyAtomCount</a>(mol)</tt>	Number of heavy atoms a molecule.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L84'>BuildCatalog</a>(suppl,maxPts,groupFileName,minPath)</tt>	Builds a fragment catalog from a set of molecules in a delimited text block.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L132'>ScoreMolecules</a>(suppl,catalog,maxPts,actName)</tt>	Scores the compounds in a supplier using a catalog **arguments**.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L194'>ScoreFromLists</a>(bitLists,suppl,catalog,maxPts)</tt>	Similar to _scoremolecules()_, but uses pre-calculated bit lists for the molecules this speeds things up a lot.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L251'>CalcGains</a>(suppl,catalog,topN,actName)</tt>	Calculates info gains by constructing fingerprints.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L304'>CalcGainsFromFps</a>(suppl,fps,topN,actName)</tt>	Calculates info gains from a set of fingerprints.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L365'>ProcessGainsData</a>(inF,delim,idCol,gainCol)</tt>	Reads a list of ids and info gains out of an input file.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/BuildFragmentCatalog.py#L377'>ShowDetails</a>(catalog,gains,nToDo,outF)</tt>	Gains should be a sequence of sequences the idcol entry of each.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/__init__.py#L66'>FindMolChiralCenters</a>(mol,force,includeUnassigned)</tt>	>>> from rdkit import chem >>> mol = chem.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L32'>_LabuteHelper</a>(mol,includeHs,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L55'>_pyLabuteHelper</a>(mol,includeHs,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L121'>pySMR_VSA_</a>(mol,bins,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L160'>pySlogP_VSA_</a>(mol,bins,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L195'>pyPEOE_VSA_</a>(mol,bins,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L300'>pyLabuteASA</a>(mol,includeHs)</tt>	Calculates labute's approximate surface area asa from moe definition from p.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L318'>_pyTPSAContribs</a>(mol,verbose)</tt>	Deprecated this has been reimplmented in c++ calculates atomic contributions to a molecules tpsa.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MolSurf.py#L462'>_pyTPSA</a>(mol,verbose)</tt>	Deprecated this has been reimplmented in c++ calculates the polar surface area of a molecule based upon fragments.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestGraphDescriptors_2.py#L31'>_skip3rings</a>(mol)</tt>	The chi3v and chi3n descriptors changed for molecules with 3-rings.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestGraphDescriptors_2.py#L36'>_hasAromaticAtoms</a>(mol)</tt>	The bertzct descriptor changed for molecules with aromatic rings.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestGraphDescriptors_2.py#L41'>_regressionData</a>(filename,col)</tt>	Return entries form regression dataset.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L60'>__testDesc</a>(fileN,col,func,molFilter)</tt>	Regression tests for descriptor calculator.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L132'>testKappa1</a>()</tt>	Test calculation of the hall-kier kappa1 value corrected data from tables 3 and 6 of rev.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L148'>testKappa2</a>()</tt>	Test calculation of the hall-kier kappa2 value corrected data from tables 5 and 6 of rev.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L171'>testKappa3</a>()</tt>	Test calculation of the hall-kier kappa3 value corrected data from tables 3 and 6 of rev.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L191'>testBalabanJ</a>()</tt>	Test calculation of the balaban j value j values are from balaban's paper and have had roundoff.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L357'>testChi1n</a>()</tt>	Test calculation of chi1n.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestGraphDescriptors_2.py#L441'>testPathCounts</a>()</tt>	Fix this should be in some other file.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase_python <a href=' /Chem/UnitTestGraphDescriptors_2.py#L499'>_compareImplementations</a>(filename,col,cFunc,pyFunc)</tt>	Comparison of two implementations.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemAtom.py#L33'>test2BondIter</a>()</tt>	Testing bond iteration.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemAtom.py#L42'>test3GetBond</a>()</tt>	Testing getbondbetweenatoms idx idx.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemAtom.py#L47'>test4Props</a>()</tt>	Testing atomic props.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemAtom.py#L57'>test5Setters</a>()</tt>	Testing setting atomic props.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Crippen.py#L32'>_ReadPatts</a>(fileName)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/Crippen.py#L73'>_pyGetAtomContribs</a>(mol,patts,order,verbose)</tt>	*internal use only* calculates atomic contributions to the logp and mr values.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/FeatFinderCLI.py#L37'>initParser</a>()</tt>	Initialize the parser.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/FeatFinderCLI.py#L60'>existingFile</a>(filename)</tt>	'type' for argparse - check that filename exists.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestChemv2.py#L129'>test4Pkl2</a>()</tt>	Further pickle tests.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MACCSkeys.py#L220'>_InitKeys</a>(keyList,keyDict)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/MACCSkeys.py#L237'>_pyGenMACCSKeys</a>(mol)</tt>	Generates the maccs fingerprint for a molecules **arguments**.
+<tt style='background-color:#E8E8E8;'> Chem.TestCase <a href=' /Chem/UnitTestSurf.py#L80'>testHsAndTPSA</a>()</tt>	Testing the impact of hs in the graph on psa calculations this was sf.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestSurf.py#L213'>readPSAtestData</a>(filename)</tt>	Read test data for psa method from file.
+<tt style='background-color:#E8E8E8;'> Chem. <a href=' /Chem/UnitTestSurf.py#L226'>readRegressionData</a>(filename,col)</tt>	Return entries form regression dataset.
+<tt style='background-color:#E8E8E8;'> Chem.SimpleEnum. <a href=' /Chem/SimpleEnum/UnitTestEnumerator.py#L14'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.SimpleEnum. <a href=' /Chem/SimpleEnum/Enumerator.py#L42'>PreprocessReaction</a>(reaction,funcGroupFilename,propName)</tt>	>>> from rdkit chem import allchem.
+<tt style='background-color:#E8E8E8;'> Chem.SimpleEnum. <a href=' /Chem/SimpleEnum/Enumerator.py#L158'>EnumerateReaction</a>(reaction,bbLists,uniqueProductsOnly,funcGroupFilename)</tt>	>>> testfile = os path join(rdconfig rdcodedir 'chem','simpleenum','test_data','boronic1 rxn').
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L17'>ExplainAtomCode</a>(code,branchSubtract)</tt>	**arguments**: - the code to be considered.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L69'>NumPiElectrons</a>(atom)</tt>	Returns the number of electrons an atom is using for pi bonding >>> m = chem.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L122'>BitsInCommon</a>(v1,v2)</tt>	Returns the number of bits in common between two vectors.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L159'>DiceSimilarity</a>(v1,v2,bounds)</tt>	Implements the dice similarity metric.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L219'>Dot</a>(v1,v2)</tt>	Returns the dot product between two vectors.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Utils.py#L275'>CosineSimilarity</a>(v1,v2)</tt>	Implements the cosine similarity metric.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Pairs.py#L38'>pyScorePair</a>(at1,at2,dist,atomCodes)</tt>	Returns a score for an individual atom pair.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Pairs.py#L70'>ExplainPairScore</a>(score)</tt>	>>> from rdkit import chem >>> m = chem.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Pairs.py#L101'>GetAtomPairFingerprintAsBitVect</a>(mol)</tt>	Returns the atom-pair fingerprint for a molecule as a sparsebitvect.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/UnitTestDescriptors.py#L22'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Sheridan.py#L53'>AssignPattyTypes</a>(mol,defns)</tt>	>>> from rdkit import chem >>> assignpattytypes(chem.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Sheridan.py#L77'>GetBPFingerprint</a>(mol,fpfn)</tt>	>>> from rdkit import chem >>> fp = getbpfingerprint(chem.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Sheridan.py#L93'>GetBTFingerprint</a>(mol,fpfn)</tt>	>>> from rdkit import chem >>> mol = chem.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Torsions.py#L33'>pyScorePath</a>(mol,path,size,atomCodes)</tt>	Returns a score for an individual path.
+<tt style='background-color:#E8E8E8;'> Chem.AtomPairs. <a href=' /Chem/AtomPairs/Torsions.py#L90'>ExplainPathScore</a>(score,size)</tt>	>>> from rdkit import chem >>> m = chem.
+<tt style='background-color:#E8E8E8;'> Chem.fmcs. <a href=' /Chem/fmcs/fmcs.py#L1362'>powerset</a>(iterable)</tt>	Powerset([1 2 3]) --> () 1 2 3 1 2 1 3 2 3 1 2 3.
+<tt style='background-color:#E8E8E8;'> Chem.fmcs. <a href=' /Chem/fmcs/fmcs.py#L1369'>nonempty_powerset</a>(iterable)</tt>	Nonempty_powerset([1 2 3]) --> 1 2 3 1 2 1 3 2 3 1 2 3.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.CanvasBase <a href=' /Chem/Draw/canvasbase.py#L17'>addCanvasLine</a>(p1,p2,color,color2)</tt>	Draw a single line on the canvas this function will draw a line between p1 and p2 with the.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.CanvasBase <a href=' /Chem/Draw/canvasbase.py#L27'>addCanvasText</a>(text,pos,font,color)</tt>	Draw some text the provided text is drawn at position pos using the given.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.CanvasBase <a href=' /Chem/Draw/canvasbase.py#L35'>addCanvasPolygon</a>(ps,color)</tt>	Draw a polygon.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.CanvasBase <a href=' /Chem/Draw/canvasbase.py#L43'>addCanvasDashedWedge</a>(p1,p2,p3,dash)</tt>	Draw a dashed wedge the wedge is identified by the three points p1, p2, and p3.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.CanvasBase <a href=' /Chem/Draw/canvasbase.py#L55'>flush</a>()</tt>	Complete any remaining draw operation.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.Canvas <a href=' /Chem/Draw/aggCanvas.py#L32'>__init__</a>(image,size,ctx,imageType)</tt>	Canvas can be used in four modes.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.Canvas <a href=' /Chem/Draw/aggCanvas.py#L191'>flush</a>()</tt>	Temporary interface must be splitted to different methods.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/IPythonConsole.py#L87'>_toJSON</a>(mol)</tt>	For ipython notebook renders 3d webgl objects.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/IPythonConsole.py#L176'>display_pil_image</a>(img)</tt>	Displayhook function for pil images rendered as png.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L63'>MolToImage</a>(mol,size,kekulize,wedgeBonds)</tt>	Returns a pil image containing a drawing of the molecule arguments.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L149'>MolToFile</a>(mol,fileName,size,kekulize)</tt>	Generates a drawing of a molecule and writes it to a file.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L190'>MolToImageFile</a>(mol,filename,size,kekulize)</tt>	Deprecated please use moltofile instead.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L203'>ShowMol</a>(mol,size,kekulize,wedgeBonds)</tt>	Generates a picture of a molecule and displays it in a tkinter window.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L229'>MolToMPL</a>(mol,size,kekulize,wedgeBonds)</tt>	Generates a drawing of a molecule on a matplotlib canvas.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L262'>calcAtomGaussians</a>(mol,a,step,weights)</tt>	Useful things to do with these fig.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L325'>_MolsToGridImage</a>(mols,molsPerRow,subImgSize,legends)</tt>	Returns a pil image of the grid.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L353'>_MolsToGridSVG</a>(mols,molsPerRow,subImgSize,legends)</tt>	Returns an svg of the grid.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/__init__.py#L450'>MolToQPixmap</a>(mol,size,kekulize,wedgeBonds)</tt>	Generates a drawing of a molecule on a qt qpixmap.
+<tt style='background-color:#E8E8E8;'> Chem.Draw.MolDrawing <a href=' /Chem/Draw/MolDrawing.py#L327'>AddMol</a>(mol,centerIt,molTrans,drawingTrans)</tt>	Set the molecule to be drawn.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L46'>GetAtomicWeightsForFingerprint</a>(refMol,probeMol,fpFunction,metric)</tt>	Calculates the atomic weights for the probe molecule based on a fingerprint function and a metric.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L80'>GetAtomicWeightsForModel</a>(probeMol,fpFunction,predictionFunction)</tt>	Calculates the atomic weights for the probe molecule based on a fingerprint function and the prediction function of a ml model.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L105'>GetStandardizedWeights</a>(weights)</tt>	Normalizes the weights such that the absolute maximum weight equals 1.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L121'>GetSimilarityMapFromWeights</a>(mol,weights,colorMap,scale)</tt>	Generates the similarity map for a molecule given the atomic weights.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L171'>GetSimilarityMapForFingerprint</a>(refMol,probeMol,fpFunction,metric)</tt>	Generates the similarity map for a given reference and probe molecule fingerprint function and similarity metric.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L190'>GetSimilarityMapForModel</a>(probeMol,fpFunction,predictionFunction)</tt>	Generates the similarity map for a given ml model and probe molecule and fingerprint function.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L217'>GetAPFingerprint</a>(mol,atomId,fpType,nBits)</tt>	Calculates the atom pairs fingerprint with the torsions of atomid removed.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L250'>GetTTFingerprint</a>(mol,atomId,fpType,nBits)</tt>	Calculates the topological torsion fingerprint with the pairs of atomid removed.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L277'>GetMorganFingerprint</a>(mol,atomId,radius,fpType)</tt>	Calculates the morgan fingerprint with the environments of atomid removed.
+<tt style='background-color:#E8E8E8;'> Chem.Draw. <a href=' /Chem/Draw/SimilarityMaps.py#L344'>GetRDKFingerprint</a>(mol,atomId,fpType,nBits)</tt>	Calculates the rdkit fingerprint with the paths of atomid removed.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/UnitTestMolKey.py#L25'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L126'>_ctab_has_atoms</a>(ctab_lines)</tt>	Look at atom count position line 4 characters 0 3 return true if the count is >0 false if 0.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L150'>_ctab_remove_chiral_flag</a>(ctab_lines)</tt>	Read the chiral flag line 4 characters 12 15 and set it to 0.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L237'>GetInchiForCTAB</a>(ctab)</tt>	>>> from rdkit chem molkey import molkey.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L270'>_make_racemate_inchi</a>(inchi)</tt>	Normalize the stereo information t-layer to one selected isomer.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L326'>_identify</a>(err,ctab,inchi,stereo_category)</tt>	Compute the molecule key based on the inchi string.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L358'>ErrorBitsToText</a>(err)</tt>	Returns a list of error bit descriptions for the error code provided.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey. <a href=' /Chem/MolKey/MolKey.py#L367'>GetKeyForCTAB</a>(ctab,stereo_info,stereo_comment,logger)</tt>	>>> from rdkit chem molkey import molkey.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey.InchiInfo <a href=' /Chem/MolKey/InchiInfo.py#L112'>get_sp3_stereo</a>()</tt>	Retrieve sp3 stereo information return a 4-item tuple containing.
+<tt style='background-color:#E8E8E8;'> Chem.MolKey.InchiInfo <a href=' /Chem/MolKey/InchiInfo.py#L154'>get_mobile_h</a>()</tt>	Retrieve mobile h tautomer information return a 2-item tuple containing.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.TestCase <a href=' /Chem/Fingerprints/UnitTestFingerprints.py#L34'>test4</a>()</tt>	Check containing mols no hs no valence.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.TestCase <a href=' /Chem/Fingerprints/UnitTestFingerprints.py#L47'>test5</a>()</tt>	Check containing mols use hs no valence.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.TestCase <a href=' /Chem/Fingerprints/UnitTestFingerprints.py#L60'>test6</a>()</tt>	Check that the bits in a signature of size n which has been folded in half.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/ClusterMols.py#L33'>GetDistanceMatrix</a>(data,metric,isSimilarity)</tt>	Data should be a list of tuples with fingerprints in position 1 the rest of the elements of the tuple are not important.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/ClusterMols.py#L92'>ClusterFromDetails</a>(details)</tt>	Returns the cluster tree.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/UnitTestDbFpSupplier.py#L21'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.DbFpSupplier <a href=' /Chem/Fingerprints/DbFpSupplier.py#L27'>__init__</a>(dbResults,fpColName,usePickles)</tt>	Dbresults should be a subclass of dbase dbresultset dbresultbase.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.ForwardDbFpSupplier <a href=' /Chem/Fingerprints/DbFpSupplier.py#L105'>NextItem</a>()</tt>	Note this has side effects.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/MolSimilarity.py#L109'>GetFingerprints</a>(details)</tt>	Returns an iterable sequence of fingerprints each fingerprint will have a _fieldsfromdb member whose first entry is.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/MolSimilarity.py#L161'>ScreenFingerprints</a>(details,data,mol,probeFp)</tt>	Returns a list of results.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/MolSimilarity.py#L209'>ScreenFromDetails</a>(details,mol)</tt>	Returns a list of results.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.SimilarityScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L48'>Reset</a>()</tt>	Used to reset screeners that behave as iterators.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.SimilarityScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L53'>SetProbe</a>(probeFingerprint)</tt>	Sets our probe fingerprint.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.SimilarityScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L57'>GetSingleFingerprint</a>(probe)</tt>	Returns a fingerprint for a single probe object this is potentially useful in initializing our internal.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.ThresholdScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L93'>_nextMatch</a>()</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.ThresholdScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L109'>Reset</a>()</tt>	Used to reset our internal state so that iteration.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.ThresholdScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L116'>__iter__</a>()</tt>	Returns an iterator for this screener.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints.ThresholdScreener <a href=' /Chem/Fingerprints/SimilarityScreener.py#L122'>next</a>()</tt>	Required part of iterator interface.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L44'>GetRDKFingerprint</a>(mol)</tt>	Uses default parameters.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L78'>FingerprintsFromSmiles</a>(dataSource,idCol,smiCol,fingerprinter)</tt>	Fpargs are passed as keyword arguments to the fingerprinter.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L103'>FingerprintsFromMols</a>(mols,fingerprinter,reportFreq,maxMols)</tt>	Fpargs are passed as keyword arguments to the fingerprinter.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L126'>FingerprintsFromPickles</a>(dataSource,idCol,pklCol,fingerprinter)</tt>	Fpargs are passed as keyword arguments to the fingerprinter.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L350'>Usage</a>()</tt>	Prints a usage string and exits.
+<tt style='background-color:#E8E8E8;'> Chem.Fingerprints. <a href=' /Chem/Fingerprints/FingerprintMols.py#L437'>ParseArgs</a>(details)</tt>	Parses the command line arguments and returns a _fingerprinterdetails_ instance with the results.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/FraggleSim.py#L85'>delete_bonds</a>(mol,bonds,ftype,hac)</tt>	Fragment molecule on bonds and reduce to fraggle fragmentation smiles.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/FraggleSim.py#L177'>isValidRingCut</a>(mol)</tt>	To check is a fragment is a valid ring cut it needs to match the smarts [$([#0][r].
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/FraggleSim.py#L185'>generate_fraggle_fragmentation</a>(mol,verbose)</tt>	Create all possible fragmentations for molecule >>> q = chem.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/FraggleSim.py#L251'>atomContrib</a>(subs,mol,tverskyThresh)</tt>	Atomcontrib algorithm generate fp of query_substructs qfp.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/FraggleSim.py#L353'>GetFraggleSimilarity</a>(queryMol,refMol,tverskyThresh)</tt>	Return the fraggle similarity between two molecules >>> q = chem.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/UnitTestFraggle.py#L18'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.Fraggle. <a href=' /Chem/Fraggle/UnitTestFraggle.py#L25'>_of</a>(smiles)</tt>	Order the fragments alphabetically if smiles is none returns none.
+<tt style='background-color:#E8E8E8;'> Chem.ChemUtils. <a href=' /Chem/ChemUtils/AlignDepict.py#L55'>initParser</a>()</tt>	Initialize the parser.
+<tt style='background-color:#E8E8E8;'> Chem.ChemUtils. <a href=' /Chem/ChemUtils/SDFToCSV.py#L67'>existingFile</a>(filename)</tt>	'type' for argparse - check that filename exists.
+<tt style='background-color:#E8E8E8;'> Chem.ChemUtils. <a href=' /Chem/ChemUtils/AlignDepict.py#L15'>AlignDepict</a>(mol,core,corePattern,acceptFailure)</tt>	Arguments - mol the molecule to be aligned this will come back.
+<tt style='background-color:#E8E8E8;'> Chem.ChemUtils. <a href=' /Chem/ChemUtils/UnitTestAlignDepict.py#L45'>outputRedirect</a>()</tt>	Redirect standard output and error to string io and return.
+<tt style='background-color:#E8E8E8;'> Chem.Scaffolds. <a href=' /Chem/Scaffolds/UnitTestMurckoScaffold.py#L19'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.Scaffolds. <a href=' /Chem/Scaffolds/MurckoScaffold.py#L18'>MakeScaffoldGeneric</a>(mol)</tt>	Makes a murcko scaffold generic (i e all atom types->c and all bonds ->single.
+<tt style='background-color:#E8E8E8;'> Chem.Scaffolds. <a href=' /Chem/Scaffolds/MurckoScaffold.py#L58'>GetScaffoldForMol</a>(mol)</tt>	Return molecule object containing scaffold of mol >>> m = chem.
+<tt style='background-color:#E8E8E8;'> Chem.Scaffolds. <a href=' /Chem/Scaffolds/MurckoScaffold.py#L95'>MurckoScaffoldSmiles</a>(smiles,mol,includeChirality)</tt>	Returns murckscaffold smiles from smiles >>> murckoscaffoldsmiles('cc1cc(oc2nccc ccc c2)ccc1').
+<tt style='background-color:#E8E8E8;'> Chem.Scaffolds. <a href=' /Chem/Scaffolds/MurckoScaffold.py#L115'>MurckoScaffoldSmilesFromSmiles</a>(smiles,includeChirality)</tt>	Returns murckscaffold smiles from smiles.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L29'>findNeighbors</a>(atomId,adjMat)</tt>	Find the ids of the neighboring atom ids.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L63'>GetAromaticFeatVects</a>(conf,featAtoms,featLoc,scale)</tt>	Compute the direction vector for an aromatic feature.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L118'>GetAcceptor2FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for acceptor of type 2 this is the acceptor with two adjacent heavy atoms.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L187'>GetDonor3FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for donor of type 3 this is a donor with three heavy atoms as neighbors.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L206'>GetAcceptor3FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for donor of type 3 this is a donor with three heavy atoms as neighbors.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L248'>GetDonor2FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for donor of type 2 this is a donor with two heavy atoms as neighbors.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L326'>GetDonor1FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for donor of type 1 this is a donor with one heavy atom.
+<tt style='background-color:#E8E8E8;'> Chem.Features. <a href=' /Chem/Features/FeatDirUtilsRD.py#L360'>GetAcceptor1FeatVects</a>(conf,featAtoms,scale)</tt>	Get the direction vectors for acceptor of type 1 this is a acceptor with one heavy atom neighbor.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.MolSupplier <a href=' /Chem/Suppliers/MolSupplier.py#L37'>NextMol</a>()</tt>	Must be implemented in child class.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.TestCase <a href=' /Chem/Suppliers/UnitTestSmilesMolSupplier.py#L30'>assertMolecule</a>(mol,i)</tt>	Assert that we have a valid molecule.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.TestCase <a href=' /Chem/Suppliers/UnitTestSmilesMolSupplier.py#L30'>assertMolecule</a>(mol,i,msg)</tt>	Assert that we have a valid molecule.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.DbMolSupplier <a href=' /Chem/Suppliers/DbMolSupplier.py#L30'>__init__</a>(dbResults,molColumnFormats,nameCol,transformFunc)</tt>	Dbresults should be a subclass of dbase dbresultset dbresultbase.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.ForwardDbMolSupplier <a href=' /Chem/Suppliers/DbMolSupplier.py#L110'>__init__</a>(dbResults)</tt>	Dbresults should be an iterator for dbase dbresultset dbresultbase.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.ForwardDbMolSupplier <a href=' /Chem/Suppliers/DbMolSupplier.py#L122'>NextMol</a>()</tt>	Note this has side effects.
+<tt style='background-color:#E8E8E8;'> Chem.Suppliers.RandomAccessDbMolSupplier <a href=' /Chem/Suppliers/DbMolSupplier.py#L142'>__init__</a>(dbResults)</tt>	Dbresults should be a dbase dbresultset randomaccessdbresultset.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/EState_VSA.py#L33'>VSA_EState_</a>(mol,bins,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/EState_VSA.py#L64'>EState_VSA_</a>(mol,bins,force)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/EState_VSA.py#L84'>_descriptorDocstring</a>(name,nbin,bins)</tt>	Create a docstring for the descriptor name.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/EState.py#L19'>GetPrincipleQuantumNumber</a>(atNum)</tt>	Get principal quantum number for atom number.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/EState.py#L37'>EStateIndices</a>(mol,force)</tt>	Returns a tuple of estate indices for the molecule reference hall mohney and kier.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/Fingerprinter.py#L49'>_exampleCode</a>()</tt>	Example code for calculating e-state fingerprints.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/Fingerprinter.py#L22'>FingerprintMol</a>(mol)</tt>	Generates the estate fingerprints for the molecule concept from the paper hall and kier jcics _35_ 1039-1045 1995.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/AtomTypes.py#L102'>BuildPatts</a>(rawV)</tt>	Internal use only.
+<tt style='background-color:#E8E8E8;'> Chem.EState. <a href=' /Chem/EState/AtomTypes.py#L119'>TypeAtoms</a>(mol)</tt>	Assigns each atom in a molecule to an estate type.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.MergeMethod <a href=' /Chem/FeatMaps/FeatMapUtils.py#L23'>valid</a>(cls,mergeMethod)</tt>	Check that mergemethod is valid.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.MergeMetric <a href=' /Chem/FeatMaps/FeatMapUtils.py#L38'>valid</a>(cls,mergeMetric)</tt>	Check that mergemetric is valid.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.DirMergeMode <a href=' /Chem/FeatMaps/FeatMapUtils.py#L51'>valid</a>(cls,dirMergeMode)</tt>	Check that dirmergemode is valid.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps. <a href=' /Chem/FeatMaps/FeatMapUtils.py#L58'>__copyAll</a>(res,fm1,fm2)</tt>	No user-serviceable parts inside.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps. <a href=' /Chem/FeatMaps/FeatMapUtils.py#L66'>GetFeatFeatDistMatrix</a>(fm,mergeMetric,mergeTol,dirMergeMode)</tt>	Note that mergetol is a max value for merging when using distance-based merging and a min value when using score-based merging.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps. <a href=' /Chem/FeatMaps/FeatMapUtils.py#L111'>MergeFeatPoints</a>(fm,mergeMetric,mergeTol,dirMergeMode)</tt>	Note that mergetol is a max value for merging when using distance-based merging and a min value when using score-based merging.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps. <a href=' /Chem/FeatMaps/FeatMapUtils.py#L228'>CombineFeatMaps</a>(fm1,fm2,mergeMetric,mergeTol)</tt>	The parameters will be taken from fm1.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.FeatMapPoint <a href=' /Chem/FeatMaps/FeatMapPoint.py#L22'>initFromFeat</a>(feat)</tt>	>>> from rdkit import geometry >>> sfeat = chemicalfeatures.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.FeatMapPoint <a href=' /Chem/FeatMaps/FeatMapPoint.py#L49'>GetDist2</a>(other)</tt>	>>> from rdkit import geometry >>> sfeat = chemicalfeatures.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.FeatMapPoint <a href=' /Chem/FeatMaps/FeatMapPoint.py#L63'>GetDirMatch</a>(other,useBest)</tt>	>>> from rdkit import geometry >>> sfeat = chemicalfeatures.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps. <a href=' /Chem/FeatMaps/UnitTestFeatMap.py#L24'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.FeatMaps.FeatMap <a href=' /Chem/FeatMaps/FeatMaps.py#L121'>GetFeatFeatScore</a>(feat1,feat2,typeMatch)</tt>	Feat1 is one of our feats.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D.ExcludedVolume <a href=' /Chem/Pharm3D/ExcludedVolume.py#L14'>__init__</a>(featInfo,index,exclusionDist)</tt>	Featinfo should be a sequence of ([indices],min max) tuples.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D.Pharmacophore <a href=' /Chem/Pharm3D/Pharmacophore.py#L70'>_checkBounds</a>(i,j)</tt>	Raises valueerror on failure.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/UnitTestEmbed.py#L33'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L33'>GetAtomHeavyNeighbors</a>(atom)</tt>	Returns a list of the heavy-atom neighbors of the atom passed in.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L62'>ReplaceGroup</a>(match,bounds,slop,useDirs)</tt>	Adds an entry at the end of the bounds matrix for a point at the center of a multi-point feature.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L149'>EmbedMol</a>(mol,bm,atomMatch,weight)</tt>	Generates an embedding for a molecule based on a bounds matrix and adds a conformer id 0 to the molecule.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L202'>AddExcludedVolumes</a>(bm,excludedVolumes,smoothIt)</tt>	Adds a set of excluded volumes to the bounds matrix and returns the new matrix.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L259'>UpdatePharmacophoreBounds</a>(bm,atomMatch,pcophore,useDirs)</tt>	Loops over a distance bounds matrix and replaces the elements that are altered by a pharmacophore.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L321'>EmbedPharmacophore</a>(mol,atomMatch,pcophore,randomSeed)</tt>	Generates one or more embeddings for a molecule that satisfy a pharmacophore atommatch is a sequence of sequences containing atom indices.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L442'>isNaN</a>(v)</tt>	Provides an os independent way of detecting nans this is intended to be used with values returned from the c++.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L464'>OptimizeMol</a>(mol,bm,atomMatches,excludedVolumes)</tt>	Carries out a uff optimization for a molecule optionally subject to the constraints in a bounds matrix.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L608'>EmbedOne</a>(mol,name,match,pcophore)</tt>	Generates statistics for a molecule's embeddings.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L695'>MatchPharmacophoreToMol</a>(mol,featFactory,pcophore)</tt>	Generates a list of all possible mappings of a pharmacophore to a molecule returns a 2-tuple.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L739'>_getFeatDict</a>(mol,featFactory,features)</tt>	**internal use only** >>> import os.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L776'>MatchFeatsToMol</a>(mol,featFactory,features)</tt>	Generates a list of all possible mappings of each feature to a molecule returns a 2-tuple.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L825'>CombiEnum</a>(sequence)</tt>	This generator takes a sequence of sequences as an argument and.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L854'>DownsampleBoundsMatrix</a>(bm,indices,maxThresh)</tt>	Removes rows from a bounds matrix that are that are greater than a threshold value away from a set of.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L911'>CoarseScreenPharmacophore</a>(atomMatch,bounds,pcophore,verbose)</tt>	>>> from rdkit import geometry >>> from rdkit.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L1008'>Check2DBounds</a>(atomMatch,mol,pcophore)</tt>	Checks to see if a particular mapping of features onto a molecule satisfies a pharmacophore's 2d restrictions.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L1049'>_checkMatch</a>(match,mol,bounds,pcophore)</tt>	**internal use only**.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L1067'>ConstrainedEnum</a>(matches,mol,pcophore,bounds)</tt>	Enumerates the list of atom mappings a molecule has to a particular pharmacophore.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L1099'>MatchPharmacophore</a>(matches,bounds,pcophore,useDownsampling)</tt>	If use2dlimits is set the molecule must also be provided and topological.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm3D. <a href=' /Chem/Pharm3D/EmbedLib.py#L1186'>ComputeChiralVolume</a>(mol,centerIdx,confId)</tt>	Computes the chiral volume of an atom we're using the chiral volume formula from figure 7 of.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/SubshapeAligner.py#L51'>GetShapeShapeDistance</a>(s1,s2,distMetric)</tt>	Returns the distance between two shapes according to the provided metric.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/SubshapeAligner.py#L65'>ClusterAlignments</a>(mol,alignments,builder,neighborTol)</tt>	Clusters a set of alignments and returns the cluster centroid.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/SubshapeAligner.py#L85'>TransformMol</a>(mol,tform,confId,newConfId)</tt>	Applies the transformation to a molecule and sets it up with a single conformer.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape.SubshapeAligner <a href=' /Chem/Subshape/SubshapeAligner.py#L112'>GetTriangleMatches</a>(target,query)</tt>	This is a generator function returning the possible triangle.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/BuilderUtils.py#L143'>GetMoreTerminalPoints</a>(shape,pts,winRad,maxGridVal)</tt>	Adds a set of new terminal points using a max-min algorithm.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/BuilderUtils.py#L169'>FindFarthestGridPoint</a>(shape,loc,winRad,maxGridVal)</tt>	Find the grid point with max occupancy that is furthest from a.
+<tt style='background-color:#E8E8E8;'> Chem.Subshape. <a href=' /Chem/Subshape/BuilderUtils.py#L191'>ExpandTerminalPts</a>(shape,pts,winRad,maxGridVal)</tt>	Find additional terminal points until a target number is reached.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L52'>SetBins</a>(bins)</tt>	Bins should be a list of 2-tuples.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L79'>GetBitDescriptionAsText</a>(bitIdx,includeBins,fullPage)</tt>	Returns text with a description of the bit.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L99'>GetBitDescription</a>(bitIdx)</tt>	Returns a text description of the bit.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L118'>_findBinIdx</a>(dists,bins,scaffolds)</tt>	Obsolete this has been rewritten in c++ internal use only.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L193'>GetBitIdx</a>(featIndices,dists,sortIndices)</tt>	Returns the index for a pharmacophore described using a set of feature indices and distances.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L259'>GetBitInfo</a>(idx)</tt>	Returns information about the given bit.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.SigFactory <a href=' /Chem/Pharm2D/SigFactory.py#L309'>Init</a>()</tt>	Initializes internal parameters this **must** be called after.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L60'>GetTriangles</a>(nPts)</tt>	Returns a tuple with the distance indices for.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L91'>BinsTriangleInequality</a>(d1,d2,d3)</tt>	Checks the triangle inequality for combinations of distance bins.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L111'>ScaffoldPasses</a>(combo,bins)</tt>	Checks the scaffold passed in to see if all.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L131'>NumCombinations</a>(nItems,nSlots)</tt>	Returns the number of ways to fit nitems into nslots we assume that x y and y x are equivalent and.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L154'>CountUpTo</a>(nItems,nSlots,vs,idx)</tt>	Figures out where a given combination of indices would.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L204'>GetIndexCombinations</a>(nItems,nSlots,slot,lastItemVal)</tt>	Generates all combinations of nitems in nslots without including.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L241'>GetAllCombinations</a>(choices,noDups,which)</tt>	Does the combinatorial explosion of the possible combinations of the elements of _choices_.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L281'>GetUniqueCombinations</a>(choices,classes,which)</tt>	Does the combinatorial explosion of the possible combinations of the elements of _choices_.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L309'>GetUniqueCombinations_new</a>(choices,classes,which)</tt>	Does the combinatorial explosion of the possible combinations of the elements of _choices_.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L325'>UniquifyCombinations</a>(combos)</tt>	Uniquifies the combinations in the argument.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L345'>GetPossibleScaffolds</a>(nPts,bins,useTriangleInequality)</tt>	Gets all realizable scaffolds passing the triangle inequality with the.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Utils.py#L364'>OrderTriangle</a>(featIndices,dists)</tt>	Put the distances for a triangle into canonical order.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Generate.py#L45'>_ShortestPathsMatch</a>(match,featureSet,sig,dMat)</tt>	Internal use only.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Generate.py#L84'>Gen2DFingerprint</a>(mol,sigFactory,perms,dMat)</tt>	Generates a 2d fingerprint for a molecule using the parameters in _sig_.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/UnitTestUtils.py#L21'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D. <a href=' /Chem/Pharm2D/Matcher.py#L31'>GetAtomsMatchingBit</a>(sigFactory,bitIdx,mol,dMat)</tt>	Returns a list of lists of atom indices for a bit **arguments**.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.Generator <a href=' /Chem/Pharm2D/LazyGenerator.py#L85'>GetBit</a>(idx)</tt>	Returns a bool indicating whether or not the bit is set.
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.Generator <a href=' /Chem/Pharm2D/LazyGenerator.py#L105'>__len__</a>()</tt>	Allows class to support len().
+<tt style='background-color:#E8E8E8;'> Chem.Pharm2D.Generator <a href=' /Chem/Pharm2D/LazyGenerator.py#L111'>__getitem__</a>(itm)</tt>	Allows class to support random access.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/listutils.py#L10'>CompactListRepr</a>(lst)</tt>	>>> compactlistrepr([0 1 1 1 1 0]).
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/comhack.py#L33'>_myimport</a>(name,globals,locals,fromlist)</tt>	Tell all modules to imported by mcmillan's (or python's) import method.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/comhack.py#L51'>set_gen_path</a>(path)</tt>	Set the gencache path if not set all modules win32com will be generated to support/gen_py of your apllication.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L87'>CDXConvert</a>(inData,inFormat,outFormat)</tt>	Converts the data passed in from one format to another.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L120'>CDXClean</a>(inData,inFormat,outFormat)</tt>	Calls the cdxlib clean function on the data passed in.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L145'>CDXDisplay</a>(inData,inFormat,clear)</tt>	Displays the data in chemdraw.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L161'>CDXGrab</a>(outFormat)</tt>	Returns the contents of the active chemdraw document.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L179'>CloseChemdraw</a>()</tt>	Shuts down chemdraw.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L191'>Exit</a>()</tt>	Destroys our link to chemdraw.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L199'>SaveChemDrawDoc</a>(fileName)</tt>	Force chemdraw to save the active document note the extension of the filename will determine the format.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L209'>CloseChemDrawDoc</a>()</tt>	Force chemdraw to save the active document note the extension of the filename will determine the format.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L286'>CloseChem3D</a>()</tt>	Shuts down chem3d.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L297'>Add3DCoordsToMol</a>(data,format,props)</tt>	Adds 3d coordinates to the data passed in using chem3d **arguments**.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemdraw.py#L360'>OptimizeSDFile</a>(inFileName,outFileName,problemFileName,restartEvery)</tt>	Optimizes the structure of every molecule in the input sd file.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/UnitTestUtils.py#L11'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemutils.py#L21'>GetAtomicData</a>(atomDict,descriptorsDesired,dBase,table)</tt>	Pulls atomic data from a database.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemutils.py#L81'>SplitComposition</a>(compStr)</tt>	Takes a simple chemical composition and turns into a list of element # pairs.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/chemutils.py#L115'>ConfigToNumElectrons</a>(config,ignoreFullD,ignoreFullF)</tt>	Counts the number of electrons appearing in a configuration string **arguments**.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/fileutils.py#L14'>MoveToMatchingLine</a>(inFile,matchStr,fullMatch)</tt>	Skip forward in a file until a given string is found.
+<tt style='background-color:#E8E8E8;'> ML.ReFile <a href=' /ML/files.py#L21'>readline</a>()</tt>	Read the next line and return it.
+<tt style='background-color:#E8E8E8;'> ML.ReFile <a href=' /ML/files.py#L35'>readlines</a>()</tt>	Return a list of all the lines left in the file.
+<tt style='background-color:#E8E8E8;'> ML.ReFile <a href=' /ML/files.py#L50'>rewind</a>()</tt>	Rewinds the file seeks to the beginning.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/files.py#L63'>ReadDataFile</a>(fileName,comment,depVarCol,dataType)</tt>	Read in the data file and return a tuple of two numeric arrays independant variables dependant variables.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L139'>message</a>(msg,noRet,dest)</tt>	Emits messages to _sys stderr_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L154'>error</a>(msg,dest)</tt>	Emits messages to _sys stderr_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/EnrichPlot.py#L120'>ScreenModel</a>(mdl,descs,data,picking)</tt>	Collects the results of screening an individual composite model that match a particular value.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/EnrichPlot.py#L190'>AccumulateCounts</a>(predictions,thresh,sortIt)</tt>	Accumulates the data for the enrichment plot for a single model **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L1201'>Usage</a>()</tt>	Prints a list of arguments for when this is used from the.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L139'>message</a>(msg)</tt>	Emits messages to _sys stdout_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/GrowComposite.py#L129'>GrowIt</a>(details,composite,progressCallback,saveIt)</tt>	Does the actual work of building a composite model **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/GrowComposite.py#L283'>BalanceComposite</a>(details,composite,data1,data2)</tt>	Balances the composite using the parameters provided in details **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L1210'>ShowVersion</a>(includeArgs)</tt>	Prints the version number of the program.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/CompositeRun.py#L20'>SetDefaults</a>(runDetails)</tt>	Initializes a details object with default values **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/BuildComposite.py#L794'>ParseArgs</a>(runDetails)</tt>	Parses command line arguments and updates _rundetails_ **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/BuildComposite.py#L238'>testall</a>(composite,examples,badExamples)</tt>	Screens a number of examples past a composite.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/BuildComposite.py#L703'>RunIt</a>(details,progressCallback,saveIt,setDescNames)</tt>	Does the actual work of building a composite model **arguments**.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L139'>message</a>(msg,noRet)</tt>	Emits messages to _sys stdout_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L154'>error</a>(msg)</tt>	Emits messages to _sys stderr_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L180'>CollectResults</a>(indices,dataSet,composite,callback)</tt>	Screens a set of examples through a composite and returns the results.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L254'>DetailedScreen</a>(indices,data,composite,threshold)</tt>	Screens a set of examples cross a composite and breaks the predictions into *correct*,*incorrect* and *unclassified* sets.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L319'>ShowVoteResults</a>(indices,data,composite,nResultCodes)</tt>	Screens the results and shows a detailed workup the work of doing the screening and processing the results is.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L466'>ScreenIt</a>(composite,indices,data,partialVote)</tt>	Screens a set of data using a composite model and prints out statistics about the screen.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L581'>_processVoteList</a>(votes,data)</tt>	*internal use only* converts a list of 4 tuples answer prediction confidence idx into.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L648'>ScreenFromDetails</a>(models,details,callback,setup)</tt>	Screens a set of data using a a _compositerun compositerun_.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L893'>ScreenToHtml</a>(nGood,nBad,nRej,avgGood)</tt>	Returns the text of a web page showing the screening details.
+<tt style='background-color:#E8E8E8;'> ML. <a href=' /ML/ScreenComposite.py#L1061'>MakePredPlot</a>(details,indices,data,goodVotes)</tt>	**arguments** - details a compositerun.
+<tt style='background-color:#E8E8E8;'> ML.CompositeRun <a href=' /ML/CompositeRun.py#L166'>_CreateTable</a>(cn,tblName)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> ML.CompositeRun <a href=' /ML/CompositeRun.py#L187'>Store</a>(db,table,user,password)</tt>	Adds the result to a database.
+<tt style='background-color:#E8E8E8;'> ML.CompositeRun <a href=' /ML/CompositeRun.py#L222'>GetDataSet</a>()</tt>	Returns a mldataset pulled from a database using our stored values.
+<tt style='background-color:#E8E8E8;'> ML.CompositeRun <a href=' /ML/CompositeRun.py#L234'>GetDataSetInfo</a>()</tt>	Returns a mldataset pulled from a database using our stored values.
+<tt style='background-color:#E8E8E8;'> ML.MLUtils. <a href=' /ML/MLUtils/VoteImg.py#L16'>CollectVotes</a>(composite,data,badOnly)</tt>	Collects the votes from _composite_ for the examples in _data_ **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.MLUtils. <a href=' /ML/MLUtils/VoteImg.py#L67'>BuildVoteImage</a>(nModels,data,values,trueValues)</tt>	Constructs the actual image.
+<tt style='background-color:#E8E8E8;'> ML.MLUtils. <a href=' /ML/MLUtils/VoteImg.py#L121'>VoteAndBuildImage</a>(composite,data,badOnly,sortTrueVals)</tt>	Collects votes on the examples and constructs an image.
+<tt style='background-color:#E8E8E8;'> ML.MLUtils. <a href=' /ML/MLUtils/VoteImg.py#L157'>Usage</a>()</tt>	Provides a list of arguments for when this is used from the command line.
+<tt style='background-color:#E8E8E8;'> ML.KNN. <a href=' /ML/KNN/UnitTestKNN.py#L20'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> ML.KNN.KNNClassificationModel <a href=' /ML/KNN/KNNClassificationModel.py#L37'>ClassifyExample</a>(example,appendExamples,neighborList)</tt>	Classify a an example by looking at its closest neighbors.
+<tt style='background-color:#E8E8E8;'> ML.KNN.KNNModel <a href=' /ML/KNN/KNNModel.py#L69'>GetNeighbors</a>(example)</tt>	Returns the k nearest neighbors of the example.
+<tt style='background-color:#E8E8E8;'> ML.KNN.KNNRegressionModel <a href=' /ML/KNN/KNNRegressionModel.py#L37'>PredictExample</a>(example,appendExamples,weightedAverage,neighborList)</tt>	Generates a prediction for an example by looking at its closest neighbors.
+<tt style='background-color:#E8E8E8;'> ML.KNN. <a href=' /ML/KNN/CrossValidate.py#L25'>CrossValidate</a>(knnMod,testExamples,appendExamples)</tt>	Determines the classification error for the testexamples **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.KNN. <a href=' /ML/KNN/CrossValidate.py#L67'>CrossValidationDriver</a>(examples,attrs,nPossibleValues,numNeigh)</tt>	Driver function for building a knn model of a specified type.
+<tt style='background-color:#E8E8E8;'> ML.KNN. <a href=' /ML/KNN/DistFunctions.py#L10'>EuclideanDist</a>(ex1,ex2,attrs)</tt>	>>> v1 = [0 1 0 1] >>> v2 = [1 0 1 0].
+<tt style='background-color:#E8E8E8;'> ML.KNN. <a href=' /ML/KNN/DistFunctions.py#L33'>TanimotoDist</a>(ex1,ex2,attrs)</tt>	>>> v1 = [0 1 0 1] >>> v2 = [1 0 1 0].
+<tt style='background-color:#E8E8E8;'> ML.Scoring. <a href=' /ML/Scoring/Scoring.py#L19'>CalcROC</a>(scores,col)</tt>	Determines a roc curve.
+<tt style='background-color:#E8E8E8;'> ML.Scoring. <a href=' /ML/Scoring/Scoring.py#L47'>CalcAUC</a>(scores,col)</tt>	Determines the area under the roc curve.
+<tt style='background-color:#E8E8E8;'> ML.Scoring. <a href=' /ML/Scoring/Scoring.py#L91'>CalcRIE</a>(scores,col,alpha)</tt>	Rie original definded here sheridan r.
+<tt style='background-color:#E8E8E8;'> ML.Scoring. <a href=' /ML/Scoring/Scoring.py#L101'>CalcBEDROC</a>(scores,col,alpha)</tt>	Bedroc original defined here truchon j.
+<tt style='background-color:#E8E8E8;'> ML.Scoring. <a href=' /ML/Scoring/Scoring.py#L126'>CalcEnrichment</a>(scores,col,fractions)</tt>	Determines the enrichment factor for a set of fractions.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Murtagh.py#L40'>_LookupDist</a>(dists,i,j,n)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Murtagh.py#L54'>_ToClusters</a>(data,nPts,ia,ib)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Butina.py#L20'>ClusterData</a>(data,nPts,method,isDistData)</tt>	Clusters the data points passed in and returns the cluster tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Butina.py#L20'>ClusterData</a>(data,nPts,distThresh,isDistData)</tt>	Clusters the data points passed in and returns the list of clusters **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L16'>GetNodeList</a>(cluster)</tt>	Returns an ordered list of all nodes below cluster.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L42'>GetNodesDownToCentroids</a>(cluster,above)</tt>	Returns an ordered list of all nodes below cluster.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L65'>FindClusterCentroidFromDists</a>(cluster,dists)</tt>	Find the point in a cluster which has the smallest summed.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L118'>_BreadthFirstSplit</a>(cluster,n)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L141'>_HeightFirstSplit</a>(cluster,n)</tt>	*internal use only*.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterUtils.py#L164'>SplitIntoNClusters</a>(cluster,n,breadthFirst)</tt>	Splits a cluster tree into a set of branches **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Resemblance.py#L33'>EuclideanDistance</a>(inData)</tt>	Returns the euclidean metricmat between the points in _indata_ **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Resemblance.py#L58'>CalcMetricMatrix</a>(inData,metricFunc)</tt>	Generates a metric matrix.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Resemblance.py#L79'>FindMinValInList</a>(mat,nObjs,minIdx)</tt>	Finds the minimum value in a metricmatrix and returns it and its indices.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Resemblance.py#L118'>ShowMetricMat</a>(metricMat,nObjs)</tt>	Displays a metric matrix.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/Standardize.py#L18'>StdDev</a>(mat)</tt>	The standard deviation classifier this uses _ml.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.TestCase <a href=' /ML/Cluster/UnitTestCluster.py#L40'>testDivide</a>()</tt>	Tests the cluster division algorithms.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.TestCase <a href=' /ML/Cluster/UnitTestCluster.py#L118'>test_Cluster</a>()</tt>	Tests the cluster class functionality.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L116'>FindSubtree</a>(index)</tt>	Finds and returns the subtree with a particular index.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L129'>_GenPoints</a>()</tt>	Generates the _points_ and _pointspositions_ lists.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L148'>AddChild</a>(child)</tt>	Adds a child to our list.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L160'>AddChildren</a>(children)</tt>	Adds a bunch of children to our list.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L172'>RemoveChild</a>(child)</tt>	Removes a child from our list.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L212'>Compare</a>(other,ignoreExtras)</tt>	Not as choosy as self==other.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L260'>_UpdateLength</a>()</tt>	Updates our length.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L271'>__len__</a>()</tt>	Allows _len cluster _ to work.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.Cluster <a href=' /ML/Cluster/Clusters.py#L277'>__cmp__</a>(other)</tt>	Allows _cluster1 == cluster2_ to work.
+<tt style='background-color:#E8E8E8;'> ML.Cluster.ClusterRenderer <a href=' /ML/Cluster/ClusterVis.py#L116'>_DrawToLimit</a>(cluster)</tt>	We assume that _drawpos settings have been done already.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterVis.py#L208'>_DrawClusterTree</a>(cluster,canvas,size,ptColors)</tt>	Handles the work of drawing a cluster tree on a sping canvas **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterVis.py#L324'>ClusterToPDF</a>(cluster,fileName,size,ptColors)</tt>	Handles the work of drawing a cluster tree to an pdf file **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterVis.py#L366'>ClusterToSVG</a>(cluster,fileName,size,ptColors)</tt>	Handles the work of drawing a cluster tree to an svg file **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Cluster. <a href=' /ML/Cluster/ClusterVis.py#L409'>ClusterToImg</a>(cluster,fileName,size,ptColors)</tt>	Handles the work of drawing a cluster tree to an image file **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory.BitClusterer <a href=' /ML/InfoTheory/BitClusterer.py#L45'>MapToClusterScores</a>(fp)</tt>	Map the fingerprint to a real valued vector of score based on the bit clusters the dimension of the vector is same as the number of clusters.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory.BitClusterer <a href=' /ML/InfoTheory/BitClusterer.py#L62'>MapToClusterFP</a>(fp)</tt>	Map the fingerprint to a smaller sized (= number of clusters) fingerprint.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/entropy.py#L27'>PyInfoEntropy</a>(results)</tt>	Calculates the informational entropy of a set of results.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/entropy.py#L67'>PyInfoGain</a>(varMat)</tt>	Calculates the information gain for a variable **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/BitRank.py#L26'>FormCounts</a>(bitVects,actVals,whichBit,nPossibleActs)</tt>	Generates the counts matrix for a particular bit **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/BitRank.py#L59'>CalcInfoGains</a>(bitVects,actVals,nPossibleActs,nPossibleBitVals)</tt>	Calculates the information gain for a set of points and activity values **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/BitRank.py#L89'>RankBits</a>(bitVects,actVals,nPossibleBitVals,metricFunc)</tt>	Rank a set of bits according to a metric function **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.InfoTheory. <a href=' /ML/InfoTheory/BitRank.py#L173'>SparseRankBits</a>(bitVects,actVals,metricFunc)</tt>	Rank a set of bits according to a metric function **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L38'>ConstructRandomWeights</a>(minWeight,maxWeight)</tt>	Initialize all the weights in the network to random numbers.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L54'>FullyConnectNodes</a>()</tt>	Fully connects each layer in the network to the one above it.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L75'>ConstructNodes</a>(nodeCounts,actFunc,actFuncParms)</tt>	Build an unconnected network and set node counts **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L106'>GetInputNodeList</a>()</tt>	Returns a list of input node indices.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L111'>GetOutputNodeList</a>()</tt>	Returns a list of output node indices.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L116'>GetHiddenLayerNodeList</a>(which)</tt>	Returns a list of hidden nodes in the specified layer.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L121'>GetNumNodes</a>()</tt>	Returns the total number of nodes.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L126'>GetNumHidden</a>()</tt>	Returns the number of hidden layers.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L131'>GetNode</a>(which)</tt>	Returns a particular node.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L136'>GetAllNodes</a>()</tt>	Returns a list of all nodes.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L141'>ClassifyExample</a>(example,appendExamples)</tt>	Classifies a given example and returns the results of the output layer.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L173'>GetLastOutputs</a>()</tt>	Returns the complete list of output layer values from the last time this node.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L178'>__str__</a>()</tt>	Provides a string representation of the network.
+<tt style='background-color:#E8E8E8;'> ML.Neural.Network <a href=' /ML/Neural/Network.py#L189'>__init__</a>(nodeCounts,nodeConnections,actFunc,actFuncParms)</tt>	Constructor this constructs and initializes the network based upon the specified.
+<tt style='background-color:#E8E8E8;'> ML.Neural.BackProp <a href=' /ML/Neural/Trainers.py#L36'>StepUpdate</a>(example,net,resVect)</tt>	Does a backprop step based upon the example **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural.BackProp <a href=' /ML/Neural/Trainers.py#L121'>TrainOnLine</a>(examples,net,maxIts,errTol)</tt>	Carries out online training of a neural net the definition of online training is that the network is updated after.
+<tt style='background-color:#E8E8E8;'> ML.Neural. <a href=' /ML/Neural/CrossValidate.py#L16'>CrossValidate</a>(net,testExamples,tolerance,appendExamples)</tt>	Determines the classification error for the testexamples **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural. <a href=' /ML/Neural/CrossValidate.py#L52'>CrossValidationDriver</a>(examples,attrs,nPossibleVals,holdOutFrac)</tt>	**arguments** - examples the full set of examples.
+<tt style='background-color:#E8E8E8;'> ML.Neural.NetNode <a href=' /ML/Neural/NetNode.py#L35'>Eval</a>(valVect)</tt>	Given a set of inputs valvect returns the output of this node.
+<tt style='background-color:#E8E8E8;'> ML.Neural.NetNode <a href=' /ML/Neural/NetNode.py#L60'>SetInputs</a>(inputNodes)</tt>	Sets the input list **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural.NetNode <a href=' /ML/Neural/NetNode.py#L78'>GetInputs</a>()</tt>	Returns the input list.
+<tt style='background-color:#E8E8E8;'> ML.Neural.NetNode <a href=' /ML/Neural/NetNode.py#L84'>SetWeights</a>(weights)</tt>	Sets the weight list **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Neural.NetNode <a href=' /ML/Neural/NetNode.py#L102'>GetWeights</a>()</tt>	Returns the weight list.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/UnitTestDoctests.py#L15'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Transforms.py#L7'>_CenterTForm</a>(dataSet)</tt>	Internal use only.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Transforms.py#L14'>_NormalizeTForm</a>(dataSet)</tt>	Internal use only.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Transforms.py#L21'>_StandardTForm</a>(dataSet)</tt>	Internal use only.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Transforms.py#L35'>GetAvailTransforms</a>()</tt>	Returns the list of available data transformations.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L13'>StandardizeMatrix</a>(mat)</tt>	This is the standard *subtract off the average and divide by the deviation* standardization function.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L42'>FormCovarianceMatrix</a>(mat)</tt>	Form and return the covariance matrix.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L54'>FormCorrelationMatrix</a>(mat)</tt>	Form and return the covariance matrix.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L81'>PrincipalComponents</a>(mat,reverseOrder)</tt>	Do a principal components analysis.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L101'>TransformPoints</a>(tFormMat,pts)</tt>	Transforms a set of points using tformmat.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L126'>MeanAndDev</a>(vect,sampleSD)</tt>	Returns the mean and standard deviation of a vector.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Stats.py#L145'>R2</a>(orig,residSum)</tt>	Returns the r2 value for a set of predictions.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L73'>WriteData</a>(outFile,varNames,qBounds,examples)</tt>	Writes out a qdat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L98'>ReadVars</a>(inFile)</tt>	Reads the variables and quantization bounds from a qdat or dat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L135'>ReadQuantExamples</a>(inFile)</tt>	Reads the examples from a qdat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L171'>ReadGeneralExamples</a>(inFile)</tt>	Reads the examples from a dat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L216'>BuildQuantDataSet</a>(fileName)</tt>	Builds a data set from a qdat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L235'>BuildDataSet</a>(fileName)</tt>	Builds a data set from a dat file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L254'>CalcNPossibleUsingMap</a>(data,order,qBounds,nQBounds)</tt>	Calculates the number of possible values for each variable in a data set.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L314'>WritePickledData</a>(outName,data)</tt>	Writes either a qdat pkl or a dat pkl file.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L335'>TakeEnsemble</a>(vect,ensembleIds,isDataVect)</tt>	>>> v = [10 20 30 40 50].
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L354'>DBToData</a>(dbName,tableName,user,password)</tt>	Constructs an _mldata mldataset_ from a database.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L410'>TextToData</a>(reader,ignoreCols,onlyCols)</tt>	Constructs an _mldata mldataset_ from a bunch of text.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L477'>InitRandomNumbers</a>(seed)</tt>	Seeds the random number generators.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/DataUtils.py#L631'>RandomizeActivities</a>(dataSet,shuffle,runDetails)</tt>	Randomizes the activity values of a dataset **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLDataSet <a href=' /ML/Data/MLData.py#L82'>_CalcNPossible</a>(data)</tt>	Calculates the number of possible values of each variable where possible.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLDataSet <a href=' /ML/Data/MLData.py#L142'>GetNamedData</a>()</tt>	Returns a list of named examples.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLDataSet <a href=' /ML/Data/MLData.py#L156'>GetAllData</a>()</tt>	Returns a *copy* of the data.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLDataSet <a href=' /ML/Data/MLData.py#L162'>GetInputData</a>()</tt>	Returns the input data.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLDataSet <a href=' /ML/Data/MLData.py#L174'>GetResults</a>()</tt>	Returns the result fields from each example.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLQuantDataSet <a href=' /ML/Data/MLData.py#L221'>_CalcNPossible</a>(data)</tt>	Calculates the number of possible values of each variable.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLQuantDataSet <a href=' /ML/Data/MLData.py#L235'>GetNamedData</a>()</tt>	Returns a list of named examples.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLQuantDataSet <a href=' /ML/Data/MLData.py#L249'>GetAllData</a>()</tt>	Returns a *copy* of the data.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLQuantDataSet <a href=' /ML/Data/MLData.py#L255'>GetInputData</a>()</tt>	Returns the input data.
+<tt style='background-color:#E8E8E8;'> ML.Data.MLQuantDataSet <a href=' /ML/Data/MLData.py#L266'>GetResults</a>()</tt>	Returns the result fields from each example.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L31'>feq</a>(v1,v2,tol)</tt>	Floating point equality with a tolerance factor.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L50'>FindVarQuantBound</a>(vals,results,nPossibleRes)</tt>	Uses findvarmultquantbounds only here for historic reasons.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L57'>_GenVarTable</a>(vals,cuts,starts,results)</tt>	Primarily intended for internal use constructs a variable table for the data passed in.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L100'>_PyRecurseOnBounds</a>(vals,cuts,which,starts)</tt>	Primarily intended for internal use.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L164'>_NewPyRecurseOnBounds</a>(vals,cuts,which,starts)</tt>	Primarily intended for internal use.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/Quantize.py#L283'>FindVarMultQuantBounds</a>(vals,nBounds,results,nPossibleRes)</tt>	Finds multiple quantization bounds for a single variable.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/SplitData.py#L14'>SplitIndices</a>(nPts,frac,silent,legacy)</tt>	Splits a set of indices into a data set into 2 pieces **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/SplitData.py#L136'>SplitDataSet</a>(data,frac,silent)</tt>	Splits a data set into two pieces **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Data. <a href=' /ML/Data/SplitData.py#L166'>SplitDbData</a>(conn,fracs,table,fields)</tt>	"splits" a data set held in a db by returning lists of ids **arguments**:.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/Parser.py#L234'>_SubForAtomicVars</a>(cExpr,varList,dictName)</tt>	Replace atomic variables with the appropriate dictionary lookup.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/Parser.py#L245'>_SubForCompoundDescriptors</a>(cExpr,varList,dictName)</tt>	Replace compound variables with the appropriate list index.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/Parser.py#L256'>_SubMethodArgs</a>(cExpr,knownMethods)</tt>	Alters the arguments of calls to calculator methods *not intended for client use*.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/Parser.py#L288'>CalcSingleCompoundDescriptor</a>(compos,argVect,atomDict,propDict)</tt>	Calculates the value of the descriptor for a single compound **arguments **.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/Parser.py#L373'>CalcMultipleCompoundsDescriptor</a>(composVect,argVect,atomDict,propDictList)</tt>	Calculates the value of the descriptor for a list of compounds **arguments **.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.DescriptorCalculator <a href=' /ML/Descriptors/Descriptors.py#L28'>ShowDescriptors</a>()</tt>	Prints out a list of the descriptors.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.DescriptorCalculator <a href=' /ML/Descriptors/Descriptors.py#L44'>GetDescriptorNames</a>()</tt>	Returns a list of the names of the descriptors this calculator generates.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.DescriptorCalculator <a href=' /ML/Descriptors/Descriptors.py#L50'>SaveState</a>(fileName)</tt>	Writes this calculator off to a file so that it can be easily loaded later.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors. <a href=' /ML/Descriptors/CompoundDescriptors.py#L21'>GetAllDescriptorNames</a>(db,tbl1,tbl2,user)</tt>	Gets possible descriptor names from a database **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L213'>ProcessSimpleList</a>()</tt>	Handles the list of simple descriptors this constructs the list of _nonzerodescriptors_ and _requireddescriptors_.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L239'>ProcessCompoundList</a>()</tt>	Adds entries from the _compoundlist_ to the list of _requireddescriptors_ each compound descriptor is surveyed.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L252'>BuildAtomDict</a>()</tt>	Builds the local atomic dict we don't want to keep around all descriptor values for all atoms so this.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L274'>CalcSimpleDescriptorsForComposition</a>(compos,composList)</tt>	Calculates all simple descriptors for a given composition **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L315'>CalcCompoundDescriptorsForComposition</a>(compos,composList,propDict)</tt>	Calculates all simple descriptors for a given composition **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L347'>CalcDescriptorsForComposition</a>(composVect,propDict)</tt>	Calculates all descriptors for a given composition **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.CompoundDescriptorCalculator <a href=' /ML/Descriptors/CompoundDescriptors.py#L380'>GetDescriptorNames</a>()</tt>	Returns a list of the names of the descriptors this calculator generates.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.TestCase <a href=' /ML/Descriptors/UnitTestParser.py#L27'>testSingleCalcs</a>()</tt>	Testing calculation of a single descriptor.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.TestCase <a href=' /ML/Descriptors/UnitTestParser.py#L35'>testMultipleCalcs</a>()</tt>	Testing calculation of multiple descriptors.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L44'>_findVersions</a>()</tt>	Returns a tuple of the versions of the descriptor calculators.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L57'>SaveState</a>(fileName)</tt>	Writes this calculator off to a file so that it can be easily loaded later.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L73'>CalcDescriptors</a>(mol)</tt>	Calculates all descriptors for a given molecule.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L94'>GetDescriptorNames</a>()</tt>	Returns a tuple of the names of the descriptors this calculator generates.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L100'>GetDescriptorSummaries</a>()</tt>	Returns a tuple of summaries for the descriptors this calculator generates.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L115'>GetDescriptorFuncs</a>()</tt>	Returns a tuple of the functions used to generate this calculator's descriptors.
+<tt style='background-color:#E8E8E8;'> ML.Descriptors.MolecularDescriptorCalculator <a href=' /ML/Descriptors/MoleculeDescriptors.py#L125'>GetDescriptorVersions</a>()</tt>	Returns a tuple of the versions of the descriptor calculators.
+<tt style='background-color:#E8E8E8;'> ML.NaiveBayes.NaiveBayesClassifier <a href=' /ML/NaiveBayes/ClassificationModel.py#L158'>trainModel</a>()</tt>	We will assume at this point that the training examples have been set we have to estmate the conditional probabilities for each of the binned descriptor.
+<tt style='background-color:#E8E8E8;'> ML.NaiveBayes.NaiveBayesClassifier <a href=' /ML/NaiveBayes/ClassificationModel.py#L246'>GetClassificationDetails</a>()</tt>	Returns the probability of the last prediction.
+<tt style='background-color:#E8E8E8;'> ML.NaiveBayes.NaiveBayesClassifier <a href=' /ML/NaiveBayes/ClassificationModel.py#L250'>ClassifyExample</a>(example,appendExamples)</tt>	Classify an example by summing over the conditional probabilities.
+<tt style='background-color:#E8E8E8;'> ML.Composite.BayesComposite <a href=' /ML/Composite/BayesComposite.py#L99'>ClassifyExample</a>(example,threshold,verbose,appendExample)</tt>	Classifies the given example using the entire composite **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite. <a href=' /ML/Composite/BayesComposite.py#L148'>CompositeToBayesComposite</a>(obj)</tt>	Converts a composite to a bayescomposite if _obj_ is already a bayescomposite or if it is not a _composite.
+<tt style='background-color:#E8E8E8;'> ML.Composite. <a href=' /ML/Composite/BayesComposite.py#L163'>BayesCompositeToComposite</a>(obj)</tt>	Converts a bayescomposite to a composite composite.
+<tt style='background-color:#E8E8E8;'> ML.Composite. <a href=' /ML/Composite/AdjustComposite.py#L16'>BalanceComposite</a>(model,set1,set2,weight)</tt>	Adjusts the contents of the composite model so as to maximize the weighted classification accuracty across the two data sets.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L79'>SetDescriptorNames</a>(names)</tt>	Registers the names of the descriptors this composite uses **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L94'>GetDescriptorNames</a>()</tt>	Returns the names of the descriptors this composite uses.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L100'>SetQuantBounds</a>(qBounds,nPossible)</tt>	Sets the quantization bounds that the composite will use **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L124'>GetQuantBounds</a>()</tt>	Returns the quantization bounds.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L161'>QuantizeExample</a>(example,quantBounds)</tt>	Quantizes an example **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L204'>MakeHistogram</a>()</tt>	Creates a histogram of error/count pairs.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L229'>CollectVotes</a>(example,quantExample,appendExample,onlyModels)</tt>	Collects votes across every member of the composite for the given example **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L263'>ClassifyExample</a>(example,threshold,appendExample,onlyModels)</tt>	Classifies the given example using the entire composite **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L321'>GetVoteDetails</a>()</tt>	Returns the votes from the last classification.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L328'>_RemapInput</a>(inputVect)</tt>	Remaps the input so that it matches the expected internal ordering.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L360'>GetInputOrder</a>()</tt>	Returns the input order used in remapping inputs.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L366'>SetInputOrder</a>(colNames)</tt>	Sets the input order **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L408'>Grow</a>(examples,attrs,nPossibleVals,buildDriver)</tt>	Grows the composite **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L499'>Pickle</a>(fileName,saveExamples)</tt>	Writes this composite off to a file so that it can be easily loaded later **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L517'>AddModel</a>(model,error,needsQuantization)</tt>	Adds a model to the composite.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L556'>AverageErrors</a>()</tt>	Convert local summed error to average error.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L562'>SortModels</a>(sortOnError)</tt>	Sorts the list of models.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L583'>GetModel</a>(i)</tt>	Returns a particular model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L589'>SetModel</a>(i,val)</tt>	Replaces a particular model **note**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L600'>GetCount</a>(i)</tt>	Returns the count of the _i_th model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L606'>SetCount</a>(i,val)</tt>	Sets the count of the _i_th model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L612'>GetError</a>(i)</tt>	Returns the error of the _i_th model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L618'>SetError</a>(i,val)</tt>	Sets the error of the _i_th model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L624'>GetDataTuple</a>(i)</tt>	Returns all relevant data about a particular model.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L643'>SetDataTuple</a>(i,tup)</tt>	Sets all relevant data for a particular tree in the forest **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L666'>GetAllData</a>()</tt>	Returns everything we know.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L682'>__len__</a>()</tt>	Allows len composite to work.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L688'>__getitem__</a>(which)</tt>	Allows composite[i] to work returns the data tuple.
+<tt style='background-color:#E8E8E8;'> ML.Composite.Composite <a href=' /ML/Composite/Composite.py#L694'>__str__</a>()</tt>	Returns a string representation of the composite.
+<tt style='background-color:#E8E8E8;'> ML.SLT.TestCase <a href=' /ML/SLT/UnitTestRisk.py#L23'>testBurges</a>()</tt>	Testing burges empirical risk bound.
+<tt style='background-color:#E8E8E8;'> ML.SLT.TestCase <a href=' /ML/SLT/UnitTestRisk.py#L30'>testCherkassky</a>()</tt>	Testing cherkassky empirical risk bound.
+<tt style='background-color:#E8E8E8;'> ML.SLT.TestCase <a href=' /ML/SLT/UnitTestRisk.py#L38'>testChristiani</a>()</tt>	Testing christiani empirical risk bound.
+<tt style='background-color:#E8E8E8;'> ML.SLT. <a href=' /ML/SLT/Risk.py#L14'>BurgesRiskBound</a>(VCDim,nData,nWrong,conf)</tt>	Calculates burges's formulation of the risk bound the formulation is from eqn.
+<tt style='background-color:#E8E8E8;'> ML.SLT. <a href=' /ML/SLT/Risk.py#L57'>CristianiRiskBound</a>(VCDim,nData,nWrong,conf)</tt>	The formulation here is from pg 58 theorem 4 6 of the book.
+<tt style='background-color:#E8E8E8;'> ML.SLT. <a href=' /ML/SLT/Risk.py#L96'>CherkasskyRiskBound</a>(VCDim,nData,nWrong,conf)</tt>	The formulation here is from eqns 4 22 and 4 23 on pg 108 of.
+<tt style='background-color:#E8E8E8;'> ML.ModelPackage. <a href=' /ML/ModelPackage/PackageUtils.py#L45'>PackageToXml</a>(pkg,summary,trainingDataId,dataPerformance)</tt>	Generates xml for a package that follows the rd_model dtd.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/ID3.py#L20'>CalcTotalEntropy</a>(examples,nPossibleVals)</tt>	Calculates the total entropy of the data set w r t the results.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/ID3.py#L43'>GenVarTable</a>(examples,nPossibleVals,vars)</tt>	Generates a list of variable tables for the examples passed in.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/ID3.py#L79'>ID3</a>(examples,target,attrs,nPossibleVals)</tt>	Implements the id3 algorithm for constructing decision trees.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/ID3.py#L179'>ID3Boot</a>(examples,attrs,nPossibleVals,initialVar)</tt>	Bootstrapping code for the id3 algorithm see id3 for descriptions of the arguments.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/TreeVis.py#L35'>CalcTreeNodeSizes</a>(node)</tt>	Recursively calculate the total number of nodes under us.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/TreeVis.py#L95'>DrawTreeNode</a>(node,loc,canvas,nRes)</tt>	Recursively displays the given tree node and all its children on the canvas.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.SigTreeNode <a href=' /ML/DecTree/SigTree.py#L25'>ClassifyExample</a>(example,appendExamples)</tt>	Recursively classify an example by running it through the tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/PruneTree.py#L19'>MaxCount</a>(examples)</tt>	Given a set of examples returns the most common result code.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/PruneTree.py#L50'>_Pruner</a>(node,level)</tt>	Recursively finds and removes the nodes whose removals improve classification **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/PruneTree.py#L163'>PruneTree</a>(tree,trainExamples,testExamples,minimizeTestErrorOnly)</tt>	Implements a reduced-error pruning of decision trees this algorithm is described on page 69 of mitchell's book.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildQuantTree.py#L87'>BuildQuantTree</a>(examples,target,attrs,nPossibleVals)</tt>	**arguments** - examples a list of lists ninstances x nvariables+1 of variable.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildQuantTree.py#L211'>QuantTreeBoot</a>(examples,attrs,nPossibleVals,nBoundsPerVar)</tt>	Bootstrapping code for the quanttree if _initialvar_ is not set the algorithm will automatically.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildQuantTree.py#L304'>TestTree</a>()</tt>	Testing code for named trees.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildQuantTree.py#L316'>TestQuantTree</a>()</tt>	Testing code for named trees the created pkl file is required by the unit test code.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildQuantTree.py#L339'>TestQuantTree2</a>()</tt>	Testing code for named trees the created pkl file is required by the unit test code.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.DecTreeNode <a href=' /ML/DecTree/DecTree.py#L40'>ClassifyExample</a>(example,appendExamples)</tt>	Recursively classify an example by running it through the tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.DecTreeNode <a href=' /ML/DecTree/DecTree.py#L69'>AddChild</a>(name,label,data,isTerminal)</tt>	Constructs and adds a child with the specified data to our list **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.QuantTreeNode <a href=' /ML/DecTree/QuantTree.py#L25'>ClassifyExample</a>(example,appendExamples)</tt>	Recursively classify an example by running it through the tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.QuantTreeNode <a href=' /ML/DecTree/QuantTree.py#L87'>__str__</a>()</tt>	Returns a string representation of the tree.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L51'>NameTree</a>(varNames)</tt>	Set the names of each node in the tree from a list of variable names.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L75'>AddChildNode</a>(node)</tt>	Adds a treenode to the local list of children.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L90'>AddChild</a>(name,label,data,isTerminal)</tt>	Creates a new treenode and adds a child to the tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L113'>PruneChild</a>(child)</tt>	Removes the child node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L123'>ReplaceChildIndex</a>(index,newChild)</tt>	Replaces a given child with a new one.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L135'>GetChildren</a>()</tt>	Returns a python list of the children of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L141'>Destroy</a>()</tt>	Destroys this node and all of its children.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L151'>GetName</a>()</tt>	Returns the name of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L157'>SetName</a>(name)</tt>	Sets the name of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L163'>GetData</a>()</tt>	Returns the data stored at this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L169'>SetData</a>(data)</tt>	Sets the data stored at this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L175'>GetTerminal</a>()</tt>	Returns whether or not this node is terminal.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L181'>SetTerminal</a>(isTerminal)</tt>	Sets whether or not this node is terminal.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L187'>GetLabel</a>()</tt>	Returns the label of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L193'>SetLabel</a>(label)</tt>	Sets the label of this node should be an integer.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L199'>GetLevel</a>()</tt>	Returns the level of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L205'>SetLevel</a>(level)</tt>	Sets the level of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L211'>GetParent</a>()</tt>	Returns the parent of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L217'>SetParent</a>(parent)</tt>	Sets the parent of this node.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L223'>Print</a>(level,showData)</tt>	Pretty prints the tree.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L245'>Pickle</a>(fileName)</tt>	Pickles the tree and writes it to disk.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L252'>__str__</a>()</tt>	Returns a string representation of the tree.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L265'>__cmp__</a>(other)</tt>	Allows tree1 == tree2.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.TreeNode <a href=' /ML/DecTree/Tree.py#L274'>__lt__</a>(other)</tt>	Allows tree1 < tree2.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/CrossValidate.py#L20'>ChooseOptimalRoot</a>(examples,trainExamples,testExamples,attrs)</tt>	Loops through all possible tree roots and chooses the one which produces the best tree **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/CrossValidate.py#L82'>CrossValidate</a>(tree,testExamples,appendExamples)</tt>	Determines the classification error for the testexamples **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/CrossValidate.py#L118'>CrossValidationDriver</a>(examples,attrs,nPossibleVals,holdOutFrac)</tt>	Driver function for building trees and doing cross validation **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L33'>MakeHistogram</a>()</tt>	Creates a histogram of error/count pairs.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L54'>CollectVotes</a>(example)</tt>	Collects votes across every member of the forest for the given example.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L68'>ClassifyExample</a>(example)</tt>	Classifies the given example using the entire forest **returns** a result and a measure of confidence in it.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L91'>GetVoteDetails</a>()</tt>	Returns the details of the last vote the forest conducted.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L99'>Grow</a>(examples,attrs,nPossibleVals,nTries)</tt>	Grows the forest by adding trees **arguments**.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L133'>Pickle</a>(fileName)</tt>	Writes this forest off to a file so that it can be easily loaded later.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L145'>AddTree</a>(tree,error)</tt>	Adds a tree to the forest.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L169'>AverageErrors</a>()</tt>	Convert summed error to average error.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L176'>SortTrees</a>(sortOnError)</tt>	Sorts the list of trees.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L213'>GetDataTuple</a>(i)</tt>	Returns all relevant data about a particular tree in the forest.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L232'>SetDataTuple</a>(i,tup)</tt>	Sets all relevant data for a particular tree in the forest.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L249'>GetAllData</a>()</tt>	Returns everything we know.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L265'>__len__</a>()</tt>	Allows len forest to work.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L271'>__getitem__</a>(which)</tt>	Allows forest[i] to work return the data tuple.
+<tt style='background-color:#E8E8E8;'> ML.DecTree.Forest <a href=' /ML/DecTree/Forest.py#L277'>__str__</a>()</tt>	Allows the forest to show itself as a string.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildSigTree.py#L26'>_GenerateRandomEnsemble</a>(nToInclude,nBits)</tt>	Generates a random subset of a group of indices.
+<tt style='background-color:#E8E8E8;'> ML.DecTree. <a href=' /ML/DecTree/BuildSigTree.py#L45'>BuildSigTree</a>(examples,nPossibleRes,ensemble,random)</tt>	**arguments** - examples the examples to be classified.
+<tt style='background-color:#E8E8E8;'> DataStructs.TopNContainer <a href=' /DataStructs/TopNContainer.py#L20'>__init__</a>(size,mostNeg)</tt>	If size is negative all entries will be kept in sorted order.
+<tt style='background-color:#E8E8E8;'> DataStructs.TopNContainer <a href=' /DataStructs/TopNContainer.py#L32'>Insert</a>(val,extra)</tt>	Only does the insertion if val fits.
+<tt style='background-color:#E8E8E8;'> DataStructs.TopNContainer <a href=' /DataStructs/TopNContainer.py#L52'>GetPts</a>()</tt>	Returns our set of points.
+<tt style='background-color:#E8E8E8;'> DataStructs.TopNContainer <a href=' /DataStructs/TopNContainer.py#L56'>GetExtras</a>()</tt>	Returns our set of extras.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L34'>testSparseIdx</a>()</tt>	Test indexing into sparsebitvects.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L55'>testSparseBitGet</a>()</tt>	Test operations to get sparse bits.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L66'>testSparseBitOps</a>()</tt>	Test bit operations on sparsebitvects.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L82'>testTanimotoSim</a>()</tt>	Test tanimoto similarity measure.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L104'>testOnBitSim</a>()</tt>	Test on bit similarity measure.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L126'>testNumBitsInCommon</a>()</tt>	Test calculation of number of bits in common.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L148'>testAllBitSim</a>()</tt>	Test all bit similarity measure.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L170'>testStringOps</a>()</tt>	Test serialization operations.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L298'>testFold</a>()</tt>	Test folding fingerprints.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L314'>testOtherSims</a>()</tt>	Test other similarity measures.
+<tt style='background-color:#E8E8E8;'> DataStructs.VectTests <a href=' /DataStructs/UnitTestcBitVect.py#L335'>testQuickSims</a>()</tt>	The asymmetric similarity stuff bv pkl.
+<tt style='background-color:#E8E8E8;'> DataStructs.BitEnsemble <a href=' /DataStructs/BitEnsemble.py#L41'>ScoreWithOnBits</a>(other)</tt>	Other must support getonbits().
+<tt style='background-color:#E8E8E8;'> DataStructs.BitEnsemble <a href=' /DataStructs/BitEnsemble.py#L50'>ScoreWithIndex</a>(other)</tt>	Other must support __getitem__().
+<tt style='background-color:#E8E8E8;'> DataStructs. <a href=' /DataStructs/BitUtils.py#L13'>ConstructEnsembleBV</a>(bv,bitsToKeep)</tt>	>>> from rdkit import datastructs >>> bv = datastructs.
+<tt style='background-color:#E8E8E8;'> DataStructs.TestCase <a href=' /DataStructs/UnitTestBitEnsemble.py#L88'>testdb1</a>()</tt>	Test the sig - db functionality.
+<tt style='background-color:#E8E8E8;'> DataStructs.TestCase <a href=' /DataStructs/UnitTestBitEnsemble.py#L113'>testdb2</a>()</tt>	Test the sig - db functionality.
+<tt style='background-color:#E8E8E8;'> DataStructs. <a href=' /DataStructs/UnitTestDocTests.py#L19'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> DataStructs. <a href=' /DataStructs/__init__.py#L33'>FingerprintSimilarity</a>(fp1,fp2,metric)</tt>	Returns the calculated similarity between two fingerprints.
+<tt style='background-color:#E8E8E8;'> DataStructs. <a href=' /DataStructs/BitEnsembleDb.py#L17'>_InitScoreTable</a>(dbConn,tableName,idInfo,actInfo)</tt>	Inializes a db table to store our scores.
+<tt style='background-color:#E8E8E8;'> DataStructs. <a href=' /DataStructs/BitEnsembleDb.py#L36'>_ScoreToDb</a>(sig,dbConn,tableName,id)</tt>	Scores the "signature" that is passed in and puts the.
+<tt style='background-color:#E8E8E8;'> DataStructs.LazySig <a href=' /DataStructs/LazySignature.py#L10'>__init__</a>(computeFunc,sigSize)</tt>	Computefunc should take a single argument the integer bit id.
+<tt style='background-color:#E8E8E8;'> DataStructs.LazySig <a href=' /DataStructs/LazySignature.py#L22'>__len__</a>()</tt>	>>> obj = lazysig lambda x 1 10.
+<tt style='background-color:#E8E8E8;'> DataStructs.LazySig <a href=' /DataStructs/LazySignature.py#L32'>__getitem__</a>(which)</tt>	>>> obj = lazysig lambda x x 10 >>> obj[1].
+<tt style='background-color:#E8E8E8;'> VLib. <a href=' /VLib/UnitTestVLib.py#L20'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L25'>__iter__</a>()</tt>	Part of the iterator interface.
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L30'>next</a>()</tt>	Part of the iterator interface.
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L37'>reset</a>()</tt>	Resets our iteration state.
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L50'>AddChild</a>(child,notify)</tt>	>>> p1 = vlibnode() >>> p2 = vlibnode().
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L77'>RemoveChild</a>(child,notify)</tt>	>>> p1 = vlibnode() >>> c1 = vlibnode().
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L99'>AddParent</a>(parent,notify)</tt>	>>> p1 = vlibnode() >>> p2 = vlibnode().
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L124'>RemoveParent</a>(parent,notify)</tt>	>>> p1 = vlibnode() >>> c1 = vlibnode().
+<tt style='background-color:#E8E8E8;'> VLib.VLibNode <a href=' /VLib/Node.py#L146'>Destroy</a>(notify,propagateDown,propagateUp)</tt>	>>> p1 = vlibnode() >>> p2 = vlibnode().
+<tt style='background-color:#E8E8E8;'> VLib.NodeLib. <a href=' /VLib/NodeLib/UnitTestNodeLib.py#L23'>load_tests</a>(loader,tests,ignore)</tt>	Add the doctests from the module.

@@ -1,0 +1,192 @@
+count	stores information about the word count
+container	this is the base class for containers that can have one or more children
+formatter	a string formatter that uses ren'py's formatting rules ren'py uses
+function statement parser	this is responsible for parsing function statements
+position	controls the placement of a displayable on the screen using supplied position properties
+parameterized text	:doc text this is a displayable that can be shown with an additional string
+image dissolve	:doc transition function :args (image time ramplen=8 reverse=false alpha=true time_warp=none)
+roll forward	this behavior implements rollforward
+dynamic displayable	:doc disp_dynamic a displayable that can change its child based on a python
+multiple transition	:doc transition function :args args
+parse error exception	this is raised when a parse error occurs after it has been reported to the user
+edge	this creates an edge that can be used with a smanimation
+dialogue text tags	this object parses the text tags that only make sense in dialogue like {fast}, {p}, {w}, and {nw}
+slcache	the type of cache associated with an sldisplayable
+renpy importer	an importer that tries to load modules from the places where ren'py searches for data files
+quit exception	an exception of this class will let us force a safe quit from anywhere in the program
+slshow if	the ast node that corresponds to the showif statement
+sprite	:doc sprites class this represents a sprite that is managed by the spritemanager
+many	a widget that takes many children
+child or fixed	if one widget is added then it is added directly to our parent
+slnode	the base class for screen language nodes
+draw info	this object is supplied as a parameter to the draw method of the various segments
+string	this stores information about a translation string or comment
+font group	:doc font_group :args ()
+log file	this manages one of our logfiles
+smanimation	this creates a state-machine animation such an animation is
+choice jump	:doc blockrollback a menu choice action that returns value, while managing the button
+utter restart exception	an exception of this type forces an even harder restart causing ren'py and the script to be reloaded
+dynamic image	:doc disp_imagelike :args name
+context	this is the context object which stores the current context of the game interpreter
+text	:doc text :args (text slow=none scope=none substitute=none slow_done=none **properties)
+style	this represents a style parameter to a function
+prefix style	this represents a prefixed style parameter to a function
+rollback log	this class manages the list of rollback objects
+ttsroot	an exception that can be used to cause the tts system to read the text of the root displayable rather than text of the currently focused
+borders	:doc disp_imagelike this object provides border size and tiling information to a :func frame
+save record	this is passed to the save locations it contains the information that
+displayable arguments	represents a set of arguments that can be passed to a duplicated displayable
+frame	:doc disp_imagelike :args (image left=0 top=0 right=none bottom=none tile=false **properties)
+imagemap	stores information about the images used by an imagemap
+transform	documented in sphinx because we can't scan this object
+advcharacter	the character object contains information about a character when
+store backup	this creates a copy of the current store as it was at the start of the current statement
+color	:doc color class :args (color=none hls=none hsv=none rgb=none alpha=1
+flag segment	a do-nothing segment that just exists so we can flag the start and end of a run of text
+keyword	this represents an optional keyword parameter to a function
+alpha mask	:doc disp_imagelike this displayable takes its colors from child, and its alpha channel
+store module	this class represents one of the modules containing the store of data
+surface	this allows us to wrap around pygame's surface to change its mode as necessary
+alpha dissolve	:doc transition function :args (control delay=0
+show if	this is a displayable that wraps displayables that are underneath a showif statement
+clipper	this is used to calculate the clipping rectangle and update rectangles used for a particular draw of the screen
+displayable	the base class for every object in ren'py that can be displayed to the screen
+layout	represents the layout of text
+jump out exception	this should be raised with a label as the only argument this exits
+full restart exception	an exception of this type forces a hard restart completely destroying the store and config and so on
+grid	a grid is a widget that evenly allocates space to its children
+argument parser	creates an argument parser that is capable of parsing the standard ren'py arguments as well as arguments that are specific to a sub-command
+analysis	represents the result of code analysis and provides tools to perform code analysis
+absolute	this represents an absolute float coordinate
+factor scale	:doc im_im an image manipulator that scales im a second image manipulator
+menu entry	the object passed into the choice screen
+scene lists	this stores the current scene lists that are being used to display things to the user
+custom parser	:doc custom_sl class :name renpy
+push move	:doc transition function :args (time mode="pushright")
+screen cache	represents an entry in the screen cache upon creation puts itself into
+script	this class represents a ren'py script which is parsed out of a collection of script files
+image reference	imagereference objects are used to reference images by their name which is a tuple of strings corresponding to the name used to define
+node	a node in the abstract syntax tree of the program
+choice action base	base class for choice actions the choice is identified by a label
+rotozoom	this is an image manipulator that is a smooth rotation and zoom of another image manipulator
+lexer	the lexer that is used to lex script files this works on the idea
+blit	represents a blit command which can be used to render a texture to a render
+motion	this is used to move a child displayable around the screen it
+detached	used to indicate a widget is detached from the stack
+text segment	this represents a segment of text that has a single set of properties applied to it
+state	this creates a state that can be used in a smanimation
+editor	this class is intended to be subclassed by editor subclasses it provides a
+alpha mask	:doc im_im an image manipulator that takes two image manipulators base and
+transition animation	a displayable that draws an animation with each frame separated by a transition
+parse trie	this is a trie of words that's used to pick a parser function
+adjustment	:doc ui :name ui
+live tile	:doc disp_imagelike tiles child until it fills the area allocated to this displayable
+image base	this is the base class for all of the various kinds of images that we can possibly have
+bar value	this can be passed to the value method of bar and hotbar
+pixellate	:doc transition function :args time steps
+matrix color	:doc im_matrixcolor an image operator that uses matrix to linearly transform the
+translate string	a node used for translated strings
+drag	:doc drag_drop class :args (d=none drag_name=none draggable=true droppable=true drag_raise=true dragged=none dropped=none drag_handle=(0
+flip	:doc im_im an image manipulator that flips im an image manipulator
+music context	this stores information about the music in a game this object
+script error	exception that is raised if the script is somehow inconsistent or otherwise wrong
+no transition	:doc transition function :name pause
+jump exception	this should be raised with a label as the only argument this causes
+twocolor	this takes as arguments two colors white and black the image is
+flatten	:doc disp_imagelike this flattens child, which may be made up of multiple textures into
+screen lang screen	this represents a screen defined in the screen language
+solid	:doc disp_imagelike a displayable that fills the area its assigned with color
+joy behavior	this is a behavior intended for joystick calibration if a joystick
+translate block	runs a block of code when changing the language
+pause behavior	this is a class implementing the pause behavior which is to return a value after a certain amount of time has elapsed
+sprite manager	:doc sprites class this displayable manages a collection of sprites and displays
+compressed list	compresses the changes in a queue-like list what this does is to try
+slcontext	a context object that can be passed to the execute methods and can also be placed in renpy
+input	this is a displayable that takes text as input
+matrix	:doc im_matrixcolor constructs an im
+end replay	raise this exception to end the current replay (the current call to call_replay)
+queue entry	a queue entry object
+recolor	this adjusts the colors of the image that is its child it takes as an
+layout class	this is used to generate declarative versions of multibox and grid
+string translator	this object stores the translations for a single language it can also
+ignore event	exception that is raised when we want to ignore an event but also don't want to return anything
+file current screenshot	:doc file_action_function a displayable that shows the screenshot that will be saved with the current
+curry	stores a callable and some arguments when called calls the
+control	represents control flow
+slblock	represents a screen language block that can contain keyword arguments and child displayables
+translate early block	this is similar to the translateblock except it runs before deferred styles do
+translate python	runs python code when changing the language
+proxy	this class proxies a field from the transform to its state
+channel	this stores information about the currently-playing music
+compiler cache	objects of this class are used to cache the compiliation of python code
+scale	:doc im_im an image manipulator that scales im an image manipulator to
+bar	implements a bar that can display an integer value and respond to clicks on that value
+mouse move	this contains information about the current mouse move
+sound stop behavior	this is a class implementing the sound stop behavior which is to return false when a sound is no longer playing
+timer state	stores the state of the timer which may need to be rolled back
+predict info	not used anymore but needed for backwards compatibility
+file location	a location that saves files to a directory on disk
+image	this image manipulator loads an image from a file
+null	:doc disp_imagelike :name null
+store dict	this class represents the dictionary of a store module it logs
+preferences	stores preferences that will one day be persisted
+no rollback	:doc norollback class instances of classes inheriting from this class do not participate in
+drag group	:doc drag_drop class represents a group of drags
+cache	this represents cached information about a save slot
+choice return	:doc blockrollback a menu choice action that returns value, while managing the button
+particles	supports particle motion using the old api
+dissolve	:doc transition function :args (time alpha=false time_warp=none)
+slscreen	this represents a screen defined in the screen language 2
+rollback	allows the state of the game to be rolled back to the point just before a node began executing
+say behavior	this is a class that implements the say behavior which is to return true ending the interaction if
+object	our own base class contains methods to simplify serialization
+multi location	a location that saves in multiple places when loading or otherwise
+backup	this represents a backup of all of the fields in the python modules comprising ren'py shortly after they were imported
+positional	this represents a positional parameter to a function
+conditional	this class renders its child if and only if the condition is true
+history entry	instances of this object are used to represent history entries in _history_list
+parameter info	this class is used to store information about parameters to a label
+end interaction	exception that can be raised for example during the render method of a displayable to end the current interaction immediately
+space segment	a segment that's used to render horizontal or vertical whitespace
+interface	this represents the user interface that interacts with the user
+image button	used to implement the guts of an image button
+on event	this is a displayable that runs an action in response to a transform event
+screen displayable	a screen is a collection of widgets that are displayed together this
+sldisplayable	a screen language ast node that corresponds to a displayable being added to the tree
+action	this can be passed to the clicked method of a button or hotspot it is
+swdraw	this uses the software renderer to draw to the screen
+scry	this is used to store information about the future if we know it unlike
+end translate	a node added implicitly after each translate block it's responsible for
+image cache crop	this handles the cropping of an imagemap component
+ignore layers	raise this to have the event ignored by layers but reach the underlay
+crop move	:doc transition function :args (time mode="slideright", startcrop=(0
+slfor	the ast node that corresponds to a for statement this only supports
+keymap	this is a behavior that maps keys to actions that are called when the key is pressed
+screen profile	:doc profile_screen :name renpy
+move interpolate	this displayable has two children it interpolates between the positions
+shown image info	this class keeps track of which images are being shown right now and what the attributes of those images are
+slif	a screen language ast node that corresponds to an if/elif/else statement
+screen	a screen is a collection of widgets that are displayed together
+call exception	raise this exception to cause the current statement to terminate and control to be transferred to the named label
+exception info	context manager that sets exception_info iff an exception occurs
+sentinel	this is used to represent a sentinel object there will be exactly one
+displayable segment	a segment that's used to render horizontal or vertical whitespace
+tile	:doc im_im an image manipulator that tiles the image manipulator im, until
+composite	:doc im_im this image manipulator composites multiple images together to
+restart top context	restarts the top context if label is given calls that label
+transition	this is the base class of most transitions it takes care of event
+scaled image font	represents an imagefont scaled by a given factor
+scene list entry	represents a scene list entry since this was replacing a tuple
+image map crop	this handles the cropping of uncached imagemap components
+map	this adjusts the colors of the image that is its child it takes
+sprite cache	this stores information about a displayble including the identity of the displayable and when it was first displayed
+null file	this file raises an error on input and ioerror on read
+py analysis	this analyzes python code to determine which variables should be marked const and which should be marked non-const
+crop	:doc im_im :args im rect
+movie	:doc movie this is a displayable that shows the current movie
+line number holder	holds the expected line number
+window	a window that has padding and margins and can place a background behind its child
+one	a widget that expects exactly one child
+restart context	restarts the current context if label is given calls that label
+translate	a translation block produced either by explicit translation statements or implicit translation blocks
+line	represents a logical line in a file

@@ -1,0 +1,1400 @@
+core		get_script_home		get the directory containing the program entry module
+core		get_settings_path	name	get a directory to save user preferences
+core	Location	open	filename mode	open a file at this location
+core	FileLocation	__init__	path	create a location given a relative or absolute path
+core	ZIPLocation	__init__	zip dir	create a location given an open zip file and a path within that file
+core	URLLocation	__init__	base_url	create a location given a base url
+core	Loader	__init__	path script_home	create a loader for the given path
+core	Loader	reindex		refresh the file index
+core	Loader	file	name mode	load a resource
+core	Loader	location	name	get the location of a resource
+core	Loader	add_font	name	add a font resource to the application
+core	Loader	_get_texture_atlas_bin	width height	a heuristic for determining the atlas bin to use for a given image size
+core	Loader	image	name flip_x flip_y rotate	load an image with optional transformation
+core	Loader	animation	name flip_x flip_y rotate	load an animation with optional transformation
+core	Loader	get_cached_image_names		get a list of image filenames that have been cached
+core	Loader	get_cached_animation_names		get a list of animation filenames that have been cached
+core	Loader	get_texture_bins		get a list of texture bins in use
+core	Loader	media	name streaming	load a sound or video resource
+core	Loader	texture	name	load a texture
+core	Loader	html	name	load an html document
+core	Loader	attributed	name	load an attributed text document
+core	Loader	text	name	load a plain text document
+core	Loader	get_cached_texture_names		get the names of textures currently cached
+core		debug_print	enabled_or_option	get a debug printer that is enabled based on a boolean input or a pyglet option
+core	SpriteGroup	__init__	texture blend_src blend_dest parent	create a sprite group
+core	Sprite	__init__	img x y blend_src	create a sprite
+core	Sprite	delete		force immediate removal of the sprite from video memory
+core	Sprite	group		parent graphics group
+core	Sprite	image		image or animation to display
+core	Sprite	position		the x y coordinates of the sprite as a tuple
+core	Sprite	set_position	x y	set the x and y coordinates of the sprite simultaneously
+core	Sprite	x		x coordinate of the sprite
+core	Sprite	y		y coordinate of the sprite
+core	Sprite	rotation		clockwise rotation of the sprite in degrees
+core	Sprite	scale		base scaling factor
+core	Sprite	scale_x		horizontal scaling factor
+core	Sprite	scale_y		vertical scaling factor
+core	Sprite	update	x y rotation scale	simultaneously change the position rotation or scale
+core	Sprite	width		scaled width of the sprite
+core	Sprite	height		scaled height of the sprite
+core	Sprite	visible		true if the sprite will be drawn
+core	Sprite	draw		draw the sprite at its current position
+core	LibraryLoader	load_library		find and load a library
+core	MachOLibraryLoader	find_library	path	implements the dylib search as specified in apple documentation http //developer
+core	MachOLibraryLoader	find_framework	path	implement runtime framework search as described by http //developer
+core	EventDispatcher	register_event_type	cls name	register an event type with the dispatcher
+core	EventDispatcher	push_handlers		push a level onto the top of the handler stack then attach zero or more event handlers
+core	EventDispatcher	_get_handlers	args kwargs	implement handler matching on arguments for set_handlers and remove_handlers
+core	EventDispatcher	set_handlers		attach one or more event handlers to the top level of the handler stack
+core	EventDispatcher	set_handler	name handler	attach a single event handler
+core	EventDispatcher	pop_handlers		pop the top level of event handlers off the stack
+core	EventDispatcher	remove_handlers		remove event handlers from the event stack
+core	EventDispatcher	remove_handler	name handler	remove a single event handler
+core	EventDispatcher	dispatch_event	event_type	dispatch a single event to the attached handlers
+core	EventDispatcher	event		function decorator for an event handler
+core		_choose_darwin_platform		choose between darwin's carbon and cocoa implementations
+core		_read_environment		read defaults for options from environment
+core	Clock	__init__	fps_limit time_function	initialise a clock with optional framerate limit and custom time function
+core	Clock	update_time		get the elapsed time since the last call to update_time
+core	Clock	call_scheduled_functions	dt	call scheduled functions that elapsed on the last update_time
+core	Clock	tick	poll	signify that one frame has passed
+core	Clock	_limit		sleep until the next frame is due called automatically by
+core	Clock	get_sleep_time	sleep_idle	get the time until the next item is scheduled
+core	Clock	set_fps_limit	fps_limit	set the framerate limit
+core	Clock	get_fps_limit		get the framerate limit
+core	Clock	get_fps		get the average fps of recent history
+core	Clock	_get_nearest_ts		schedule from now unless now is sufficiently close to last_ts in which case use last_ts
+core	Clock	schedule	func	schedule a function to be called every frame
+core	Clock	schedule_once	func delay	schedule a function to be called once after delay seconds
+core	Clock	schedule_interval	func interval	schedule a function to be called every interval seconds
+core	Clock	schedule_interval_soft	func interval	schedule a function to be called every interval seconds beginning at a time that does not coincide with other scheduled
+core	Clock	unschedule	func	remove a function from the schedule
+core		set_default	default	set the default clock to use for all module-level functions
+core		get_default		return the clock instance that is used by all module-level clock functions
+core		tick	poll	signify that one frame has passed on the default clock
+core		get_sleep_time	sleep_idle	get the time until the next item is scheduled on the default clock
+core		get_fps		return the current measured fps of the default clock
+core		set_fps_limit	fps_limit	set the framerate limit for the default clock
+core		get_fps_limit		get the framerate limit for the default clock
+core		schedule	func	schedule 'func' to be called every frame on the default clock
+core		schedule_interval	func interval	schedule 'func' to be called every 'interval' seconds on the default clock
+core		schedule_interval_soft	func interval	schedule 'func' to be called every 'interval' seconds on the default clock beginning at a time that does not coincide with other scheduled
+core		schedule_once	func delay	schedule 'func' to be called once after 'delay' seconds can be a float on the default clock
+core		unschedule	func	remove 'func' from the default clock's schedule no error
+core	ClockDisplay	__init__	font interval format color	create a clockdisplay
+core	ClockDisplay	unschedule		remove the display from its clock's schedule
+core	ClockDisplay	update_text	dt	scheduled method to update the label text
+core	ClockDisplay	draw		method called each frame to render the label
+core		dump_python		dump python version and environment to stdout
+core		dump_pyglet		dump pyglet version and options
+core		dump_window		dump display window screen and default config info
+core		dump_gl	context	dump gl info
+core		dump_glu		dump glu info
+core		dump_glx		dump glx info
+core		dump_media		dump pyglet media info
+core		dump_avbin		dump avbin info
+core		dump_al		dump openal info
+core		dump_wintab		dump wintab info
+core		dump		dump all information to stdout
+canvas	Display	__init__	name x_screen	create a display connection for the given name and screen
+canvas	Display	get_screens		get the available screens
+canvas	Display	get_default_screen		get the default screen as specified by the user's operating system preferences
+canvas	Display	get_windows		get the windows currently attached to this display
+canvas	Screen	__init__	display x y width	:parameters display : ~pyglet
+canvas	Screen	get_best_config	template	get the best available gl config
+canvas	Screen	get_matching_configs	template	get a list of configs that match a specification
+canvas	Screen	get_modes		get a list of screen modes supported by this screen
+canvas	Screen	get_mode		get the current display mode for this screen
+canvas	Screen	get_closest_mode	width height	get the screen mode that best matches a given size
+canvas	Screen	set_mode	mode	set the display mode for this screen
+canvas	Screen	restore_mode		restore the screen mode to the user's default
+canvas		get_display		get the default display device
+canvas	CarbonDisplay	_on_quit		called when the user tries to quit the application
+font		_enum_font_names	logfont textmetricex fonttype param	callback function to be executed during enumfontfamiliesex call for each font name
+font		query	charset	prepare and call enumfontfamiliesex
+font		have_font	name refresh	return true if font with specified name is present the result
+font		font_list	vector_only monospace_only	return list of system installed font names
+font	TruetypeInfo	__init__	filename	read the given truetype file
+font	TruetypeInfo	get_font_selection_flags		return the font selection flags as defined in os/2 table
+font	TruetypeInfo	is_bold		returns true iff the font describes itself as bold
+font	TruetypeInfo	is_italic		returns true iff the font describes itself as italic
+font	TruetypeInfo	get_names		returns a dictionary of names defined in the file
+font	TruetypeInfo	get_name	name platform languages	returns the value of the given name in this font
+font	TruetypeInfo	get_horizontal_metrics		return all horizontal metric entries in table format
+font	TruetypeInfo	get_character_advances		return a dictionary of character->advance
+font	TruetypeInfo	get_glyph_advances		return a dictionary of glyph->advance
+font	TruetypeInfo	get_character_kernings		return a dictionary of left right ->kerning the key of the dictionary is a tuple of left right
+font	TruetypeInfo	get_glyph_kernings		return a dictionary of left right ->kerning the key of the dictionary is a tuple of left right
+font	TruetypeInfo	get_glyph_map		calculate and return a reverse character map
+font	TruetypeInfo	get_character_map		return the character map
+font	TruetypeInfo	close		close the font file
+font		_read_table		generic table constructor used for table formats listed at end of file
+font		get_grapheme_clusters	text	implements table 2 of uax #29 grapheme cluster boundaries
+font	Glyph	set_bearings	baseline left_side_bearing advance	set metrics for this glyph
+font	GlyphTextureAtlas	apply_blend_state		set the opengl blend state for the glyphs in this texture
+font	GlyphTextureAtlas	fit	image	place image within this texture
+font	Font	add_font_data	cls data	add font data to the font loader
+font	Font	have_font	cls name	determine if a font with the given name is installed
+font	Font	create_glyph	image	create a glyph using the given image
+font	Font	get_glyphs	text	create and return a list of glyphs for text
+font	Font	get_glyphs_for_width	text width	return a list of glyphs for text that fit within the given width
+font		have_font	name	check if specified system font name is available
+font		load	name size bold italic	load a font for rendering
+font		add_file	font	add a font to pyglet's search path
+font		add_directory	dir	add a directory of fonts to pyglet's search path
+font	GlyphString	__init__	text glyphs x y	create a glyph string
+font	GlyphString	get_break_index	from_index width	find a breakpoint within the text for a given width
+font	GlyphString	get_subwidth	from_index to_index	return the width of a slice of this string
+font	GlyphString	draw	from_index to_index	draw a region of the glyph string
+font	Text	__init__	font text x y	create displayable text
+font	CarbonGlyphRenderer	_create_bitmap_context	width height	create or recreate bitmap and quartz context
+libs.darwin.cocoapy		get_NSString	string	autoreleased version of cfstr
+libs.darwin.cocoapy		cfnumber_to_number	cfnumber	convert cfnumber to python int or float
+libs.darwin.cocoapy		cftype_to_value	cftype	convert a cftype into an equivalent python type
+libs.darwin.cocoapy		cfset_to_set	cfset	convert cfset to python set
+libs.darwin.cocoapy		cfarray_to_list	cfarray	convert cfarray to python list
+libs.darwin.cocoapy		x86_should_use_stret	restype	try to figure out when a return type will be passed on stack
+libs.darwin.cocoapy		should_use_fpret	restype	determine if objc_msgsend_fpret is required to return a floating point type
+libs.darwin.cocoapy		parse_type_encoding	encoding	takes a type encoding string and outputs a list of the separated type codes
+libs.darwin.cocoapy	ObjCMethod	__init__	method	initialize with an objective-c method pointer we then determine
+libs.darwin.cocoapy	ObjCMethod	ctype_for_encoding	encoding	return ctypes type for an encoded objective-c type
+libs.darwin.cocoapy	ObjCMethod	get_prototype		returns a ctypes cfunctype for the method
+libs.darwin.cocoapy	ObjCMethod	get_callable		returns a python-callable version of the method's imp
+libs.darwin.cocoapy	ObjCMethod	__call__	objc_id	call the method with the given id and arguments you do not need
+libs.darwin.cocoapy	ObjCBoundMethod	__init__	method objc_id	initialize with a method and objcinstance or objcclass object
+libs.darwin.cocoapy	ObjCBoundMethod	__call__		call the method with the given arguments
+libs.darwin.cocoapy	ObjCClass	__new__	cls class_name_or_ptr	create a new objcclass instance or return a previously created instance for the given objective-c class
+libs.darwin.cocoapy	ObjCClass	cache_instance_methods		create and store python representations of all instance methods implemented by this class but does not find methods of superclass
+libs.darwin.cocoapy	ObjCClass	cache_class_methods		create and store python representations of all class methods implemented by this class but does not find methods of superclass
+libs.darwin.cocoapy	ObjCClass	get_instance_method	name	returns a python representation of the named instance method either by looking it up in the cached list of methods or by searching
+libs.darwin.cocoapy	ObjCClass	get_class_method	name	returns a python representation of the named class method either by looking it up in the cached list of methods or by searching
+libs.darwin.cocoapy	ObjCClass	__getattr__	name	returns a callable method object with the given name
+libs.darwin.cocoapy	ObjCInstance	__new__	cls object_ptr	create a new objcinstance or return a previously created one for the given object_ptr which should be an objective-c id
+libs.darwin.cocoapy	ObjCInstance	__getattr__	name	returns a callable method object with the given name
+libs.darwin.cocoapy		convert_method_arguments	encoding args	used by objcsubclass to convert objective-c method arguments to python values before passing them on to the python-defined method
+libs.darwin.cocoapy	ObjCSubclass	register		register the new class with the objective-c runtime
+libs.darwin.cocoapy	ObjCSubclass	add_ivar	varname vartype	add instance variable named varname to the subclass
+libs.darwin.cocoapy	ObjCSubclass	rawmethod	encoding	decorator for instance methods without any fancy shenanigans
+libs.darwin.cocoapy	ObjCSubclass	method	encoding	function decorator for instance methods
+libs.darwin.cocoapy	ObjCSubclass	classmethod	encoding	function decorator for class methods
+app	XlibSelectDevice	fileno		get the file handle for select() for this device
+app	XlibSelectDevice	select		perform event processing on the device
+app	XlibSelectDevice	poll		check if the device has events ready to process
+app	PlatformEventLoop	is_running		return true if the event loop is currently processing or false if it is blocked or not activated
+app	PlatformEventLoop	post_event	dispatcher event	post an event into the main application thread
+app	PlatformEventLoop	dispatch_posted_events		immediately dispatch all pending events
+app	PlatformEventLoop	notify		notify the event loop that something needs processing
+app	PlatformEventLoop	step	timeout	:todo in mac/linux return true if didn't time out
+app	EventLoop	run		begin processing events scheduled functions and window updates
+app	EventLoop	_run		the simplest standard run loop using constant timeout suitable
+app	EventLoop	_run_estimated		run-loop that continually estimates function mapping requested timeout to measured timeout using a least-squares linear regression
+app	EventLoop	enter_blocking		called by pyglet internal processes when the operating system is about to block due to a user interaction
+app	EventLoop	exit_blocking		called by pyglet internal processes when the blocking operation completes
+app	EventLoop	idle		called during each iteration of the event loop
+app	EventLoop	exit		safely exit the event loop at the end of the current iteration
+app	EventLoop	sleep	timeout	wait for some amount of time or until the has_exit flag is set or exit is called
+app	EventLoop	on_window_close	window	default window close handler
+app		run		begin processing events scheduled functions and window updates
+app		exit		exit the application event loop
+media	Player	seek_next_frame		step forwards one video frame in the current source
+media	Player	on_player_eos		the player ran out of sources
+media	Player	on_source_group_eos		the current source group ran out of data
+media	PlayerGroup	__init__	players	create a player group for the given set of players
+media	PlayerGroup	play		begin playing all players in the group simultaneously
+media	PlayerGroup	pause		pause all players in the group simultaneously
+media	MediaThread	stop		stop the thread and wait for it to terminate
+media	MediaThread	sleep	timeout	wait for some amount of time or until notified
+media	MediaThread	notify		interrupt the current sleep operation
+media.sources		load	filename file streaming	load a source from a file
+media.sources	ProceduralSource	get_audio_data	num_bytes	return num_bytes bytes of audio data
+media.sources	ProceduralSource	_generate_data	num_bytes offset	generate num_bytes bytes of data
+media.sources	ProceduralSource	save	filename	save the audio to disk as a standard riff wave
+media.sources	AudioData	consume	bytes audio_format	remove some data from beginning of packet all events are
+media.sources	AudioData	get_string_data		return data as a string python 3 return as bytes
+media.sources	Source	play		play the source
+media.sources	Source	get_animation		import all video frames into memory as an animation
+media.sources	Source	get_next_video_timestamp		get the timestamp of the next video frame
+media.sources	Source	get_next_video_frame		get the next video frame
+media.sources	Source	seek	timestamp	seek to given timestamp
+media.sources	Source	_get_queue_source		return the source to be used as the queue source for a player
+media.sources	Source	get_audio_data	bytes	get next packet of audio data
+media.sources	StreamingSource	_get_queue_source		return the source to be used as the queue source for a player
+media.sources	StaticSource	__init__	source	construct a staticsource for the data in source
+media.sources	StaticMemorySource	__init__	data audio_format	construct a memory source over the given data buffer
+media.sources	SourceGroup	get_audio_data	bytes	get next audio packet
+media.sources	SourceGroup	translate_timestamp	timestamp	get source-relative timestamp for the audio player's timestamp
+media.sources	SourceGroup	get_next_video_timestamp		get the timestamp of the next video frame
+media.sources	SourceGroup	get_next_video_frame		get the next video frame
+media.sources	AVbinSource	_ensure_video_packets		process packets until a video packet has been queued and begun decoding
+media.drivers	AbstractAudioPlayer	__init__	source_group player	create a new audio player
+media.drivers	AbstractAudioPlayer	stop		stop pause playback
+media.drivers	AbstractAudioPlayer	delete		stop playing and clean up all resources used by player
+media.drivers	AbstractAudioPlayer	_play_group	audio_players	begin simultaneous playback on a list of audio players
+media.drivers	AbstractAudioPlayer	_stop_group	audio_players	stop simultaneous playback on a list of audio players
+media.drivers	AbstractAudioPlayer	clear		clear all buffered data and prepare for replacement data
+media.drivers	AbstractAudioPlayer	get_time		return approximation of current playback time within current source
+media.drivers	AbstractAudioPlayer	set_volume	volume	see player volume
+media.drivers	AbstractAudioPlayer	set_position	position	see player position
+media.drivers	AbstractAudioPlayer	set_min_distance	min_distance	see player min_distance
+media.drivers	AbstractAudioPlayer	set_max_distance	max_distance	see player max_distance
+media.drivers	AbstractAudioPlayer	set_pitch	pitch	see player pitch
+media.drivers	AbstractAudioPlayer	set_cone_orientation	cone_orientation	see player cone_orientation
+media.drivers	AbstractAudioPlayer	set_cone_inner_angle	cone_inner_angle	see player cone_inner_angle
+media.drivers	AbstractAudioPlayer	set_cone_outer_angle	cone_outer_angle	see player cone_outer_angle
+media.drivers	AbstractAudioPlayer	set_cone_outer_gain	cone_outer_gain	see player cone_outer_gain
+media.drivers	SilentAudioPacket	consume	dt	try to consume dt seconds of audio data return number of seconds consumed
+media.drivers	SilentAudioPlayerPacketConsumer	_consume_data		consume content of packets that should have been played back up to now
+media.drivers	SilentAudioPlayerPacketConsumer	_calculate_offset		calculate the current offset into the cached packages
+media.drivers	SilentAudioPlayerPacketConsumer	_buffer_data		read data from the audio source into the internal buffer
+media.drivers	SilentAudioPlayerPacketConsumer	_add_audio_data	audio_data	add a package of audio data to the internal buffer update timestamps to reflect
+media.drivers	SilentAudioPlayerPacketConsumer	_get_sleep_time		determine how long to sleep until next event or next batch of data needs to be read
+media.drivers	SilentAudioPlayerPacketConsumer	_dispatch_events		dispatch any events for the current timestamp
+media.drivers.directsound	DirectSoundBufferFactory	_create_primary_buffer_desc	cls	primary buffer with 3d and volume capabilities
+media.drivers.directsound	DirectSoundBuffer	current_position		tuple of current play position and current write position
+media.drivers.directsound	DirectSoundBuffer	min_distance		the minimum distance which is the distance from the listener at which sounds in this buffer begin to be attenuated
+media.drivers.directsound	DirectSoundBuffer	max_distance		the maximum distance which is the distance from the listener beyond which sounds in this buffer are no longer attenuated
+media.drivers.directsound	DirectSoundBuffer	frequency	value	the frequency in samples per second at which the buffer is playing
+media.drivers.directsound	DirectSoundBuffer	cone_orientation		the orientation of the sound projection cone
+media.drivers.directsound	DirectSoundBuffer	cone_angles		the inside and outside angles of the sound projection cone
+media.drivers.directsound	DirectSoundBuffer	set_cone_angles	inside outside	the inside and outside angles of the sound projection cone
+media.drivers.directsound	DirectSoundBuffer	cone_outside_volume		the volume of the sound outside the outside angle of the sound projection cone
+media.drivers.directsound		_gain2db	gain	convert linear gain in range [0 0 1 0] to 100ths of db
+media.drivers.directsound		_db2gain	db	convert 100ths of db to linear gain
+media.drivers.pulse	PulseAudioMainLoop	start		start running the mainloop
+media.drivers.pulse	PulseAudioMainLoop	delete		clean up the mainloop
+media.drivers.pulse	PulseAudioMainLoop	lock		lock the threaded mainloop against events required for all
+media.drivers.pulse	PulseAudioMainLoop	unlock		unlock the mainloop thread
+media.drivers.pulse	PulseAudioMainLoop	signal		signal the mainloop thread to break from a wait
+media.drivers.pulse	PulseAudioMainLoop	wait		wait for a signal
+media.drivers.pulse	PulseAudioMainLoop	_context_new		construct a new context in this mainloop
+media.drivers.pulse	PulseAudioMainLoop	_get_app_name		get the application name as advertised to the pulseaudio server
+media.drivers.pulse	PulseAudioLockable	lock		lock the threaded mainloop against events required for all
+media.drivers.pulse	PulseAudioLockable	unlock		unlock the mainloop thread
+media.drivers.pulse	PulseAudioLockable	signal		signal the mainloop thread to break from a wait
+media.drivers.pulse	PulseAudioLockable	wait		wait for a signal
+media.drivers.pulse	PulseAudioContext	delete		completely shut down pulseaudio client
+media.drivers.pulse	PulseAudioContext	connect	server	connect the context to a pulseaudio server
+media.drivers.pulse	PulseAudioContext	create_stream	audio_format	create a new audio stream
+media.drivers.pulse	PulseAudioContext	create_sample_spec	audio_format	create a pulseaudio sample spec from pyglet audio format
+media.drivers.pulse	PulseAudioContext	set_input_volume	stream volume	set the volume for a stream
+media.drivers.pulse	PulseAudioStream	on_write_needed	nbytes underflow	a write is requested from pulseaudio
+media.drivers.pulse	PulseAudioOperation	wait		wait until operation is either done or cancelled
+media.drivers.pulse	PulseAudioDriver	connect	server	connect to pulseaudio server
+media.drivers.pulse	PulseAudioDriver	delete		completely shut down pulseaudio client
+media.drivers.openal	OpenALObject	_check_error	cls message	check whether there is an openal error and raise exception if present
+media.drivers.openal	OpenALObject	_raise_error	cls message	raise an exception try to check for openal error code too
+media.drivers.openal	OpenALDevice	check_context_error	message	check whether there is an openal error and raise exception if present
+media.drivers.openal	OpenALDevice	_raise_context_error	message	raise an exception try to check for openal error code too
+media.drivers.openal	OpenALBufferPool	get_buffer		convenience for returning one buffer name
+media.drivers.openal	OpenALBufferPool	get_buffers	number	returns an array containing number buffer names the returned list must
+media.drivers.openal	OpenALBufferPool	unqueue_buffer	buf	a buffer has finished playing free it
+media.drivers.openal	OpenALBufferPool	create_buffer		create a new buffer
+gl	GLUInfo	set_active_context		store information for the currently active context
+gl	GLUInfo	have_version	major minor release	determine if a version of glu is supported
+gl	GLUInfo	get_version		get the current glu version
+gl	GLUInfo	have_extension	extension	determine if a glu extension is available
+gl	GLUInfo	get_extensions		get a list of available glu extensions
+gl	Config	__init__		create a template config with the given attributes
+gl	Config	get_gl_attributes		return a list of attributes set on this config
+gl	Config	match	canvas	return a list of matching complete configs for the given canvas
+gl	Config	create_context	share	create a gl context that satisifies this configuration
+gl	Config	is_complete		determine if this config is complete and able to create a context
+gl	CanvasConfig	create_context	share	create a gl context that satisifies this configuration
+gl	Context	destroy		release the context
+gl	Context	delete_texture	texture_id	safely delete a texture belonging to this context
+gl	Context	delete_buffer	buffer_id	safely delete a buffer object belonging to this context
+gl	Context	get_info		get the opengl information for this context
+gl	GLInfo	set_active_context		store information for the currently active context
+gl	GLInfo	have_extension	extension	determine if an opengl extension is available
+gl	GLInfo	get_extensions		get a list of available opengl extensions
+gl	GLInfo	get_version		get the current opengl version
+gl	GLInfo	have_version	major minor release	determine if a version of opengl is supported
+gl	GLInfo	get_renderer		determine the renderer string of the opengl context
+gl	GLInfo	get_vendor		determine the vendor string of the opengl context
+gl		have_context		determine if a default opengl context has been set yet
+gl	Win32Config	_get_pixel_format_descriptor_matching_configs	canvas	get matching configs using standard pixelformatdescriptor technique
+gl	Win32Config	_get_arb_pixel_format_matching_configs	canvas	get configs using the wgl_arb_pixel_format extension
+gl		get_current_context		return the active opengl context
+image		load	filename file decoder	load an image from a file
+image		create	width height pattern	create an image optionally filled with the given pattern
+image	ImagePattern	create_image	width height	create an image of the given size
+image	SolidColorImagePattern	__init__	color	create a solid image pattern with the given color
+image	CheckerImagePattern	__init__	color1 color2	initialise with the given colors
+image	AbstractImage	get_image_data		get an imagedata view of this image
+image	AbstractImage	image_data		an imagedata view of this image
+image	AbstractImage	get_texture	rectangle force_rectangle	a texture view of this image
+image	AbstractImage	texture		get a texture view of this image
+image	AbstractImage	get_mipmapped_texture		retrieve a texture instance with all mipmap levels filled in
+image	AbstractImage	mipmapped_texture		a texture view of this image
+image	AbstractImage	get_region	x y width height	retrieve a rectangular region of this image
+image	AbstractImage	save	filename file encoder	save this image to a file
+image	AbstractImage	blit	x y z	draw this image to the active framebuffers
+image	AbstractImage	blit_into	source x y z	draw source on this image
+image	AbstractImage	blit_to_texture	target level x y	draw this image on the currently bound texture at target
+image	AbstractImageSequence	get_texture_sequence		get a texturesequence
+image	AbstractImageSequence	texture_sequence		access this image sequence as a texture sequence
+image	AbstractImageSequence	get_animation	period loop	create an animation over this image sequence for the given constant framerate
+image	AbstractImageSequence	__getitem__	slice	retrieve a list of image
+image	AbstractImageSequence	__setitem__	slice image	replace one or more images in the sequence
+image	AbstractImageSequence	__iter__		iterate over the images in sequence
+image	ImageData	__init__	width height format data	initialise image data
+image	ImageData	format		format string of the data read-write
+image	ImageData	data		the byte data of the image read-write
+image	ImageData	get_data	format pitch	get the byte data of the image
+image	ImageData	set_data	format pitch data	set the byte data of the image
+image	ImageData	set_mipmap_image	level image	set a mipmap image for a particular level
+image	ImageData	create_texture	cls rectangle force_rectangle	create a texture containing this image
+image	ImageData	get_mipmapped_texture		return a texture with mipmaps
+image	ImageData	get_region	x y width height	retrieve a rectangular region of this image data
+image	ImageData	blit_to_texture	target level x y	draw this image to to the currently bound texture at target
+image	ImageData	_convert	format pitch	return data in the desired format does not alter this instance's current format or pitch
+image	CompressedImageData	__init__	width height gl_format data	construct a compressedimagedata with the given compressed data
+image	CompressedImageData	set_mipmap_data	level data	set data for a mipmap level
+image	CompressedImageData	_verify_driver_supported		assert that the extension required for this image data is supported
+image	Texture	delete		delete the texture from video memory
+image	Texture	create	cls width height internalformat	create an empty texture
+image	Texture	create_for_size	cls target min_width min_height	create a texture with dimensions at least min_width min_height
+image	Texture	get_image_data	z	get the image data of this texture
+image	Texture	image_data		an imagedata view of this texture
+image	Texture	get_transform	flip_x flip_y rotate	create a copy of this image applying a simple transformation
+image	TileableTexture	blit_tiled	x y z width	blit this texture tiled over the given area
+image	BufferManager	get_viewport		get the current opengl viewport dimensions
+image	BufferManager	get_color_buffer		get the color buffer
+image	BufferManager	get_aux_buffer		get a free auxiliary buffer
+image	BufferManager	get_depth_buffer		get the depth buffer
+image	BufferManager	get_buffer_mask		get a free bitmask buffer
+image		get_buffer_manager		get the buffer manager for the current opengl context
+image	ImageGrid	__init__	image rows columns item_width	construct a grid for the given image
+image		load_animation	filename file decoder	load an animation from a file
+image	Animation	__init__	frames	create an animation directly from a list of frames
+image	Animation	add_to_texture_bin	bin	add the images of the animation to a texturebin
+image	Animation	get_transform	flip_x flip_y rotate	create a copy of this animation applying a simple transformation
+image	Animation	get_duration		get the total duration of the animation in seconds
+image	Animation	get_max_width		get the maximum image frame width
+image	Animation	get_max_height		get the maximum image frame height
+image	Animation	from_image_sequence	cls sequence period loop	create an animation from a list of images and a constant framerate
+image	AnimationFrame	__init__	image duration	create an animation frame from an image
+image		get_max_texture_size		query the maximum texture size available
+image	Allocator	__init__	width height	create an allocator of the given size
+image	Allocator	alloc	width height	get a free area in the allocator of the given size
+image	Allocator	get_usage		get the fraction of area already allocated
+image	Allocator	get_fragmentation		get the fraction of area that's unlikely to ever be used based on current allocation behaviour
+image	TextureAtlas	__init__	width height	create a texture atlas of the given size
+image	TextureAtlas	add	img	add an image to the atlas
+image	TextureBin	__init__	texture_width texture_height	create a texture bin for holding atlases of the given size
+image	TextureBin	add	img	add an image into this texture bin
+image.codecs	PackedImageData	get_texture	rectangle force_rectangle	the parameters 'rectangle' and 'force_rectangle' are ignored
+image.codecs		read	file	read a gif file stream
+image.codecs		_gerror_to_string	error	convert a gerror to a string
+image.codecs	ImageDecoder	get_file_extensions		return a list of accepted file extensions e g [' png', ' bmp']
+image.codecs	ImageDecoder	get_animation_file_extensions		return a list of accepted file extensions e g [' gif', ' flc']
+image.codecs	ImageDecoder	decode	file filename	decode the given file object and return an instance of image
+image.codecs	ImageDecoder	decode_animation	file filename	decode the given file object and return an instance of animation
+image.codecs	ImageEncoder	get_file_extensions		return a list of accepted file extensions e g [' png', ' bmp']
+image.codecs	ImageEncoder	encode	image file filename options	encode the given image to the given file filename
+image.codecs		get_encoders	filename	get an ordered list of encoders to attempt filename can be used
+image.codecs		get_decoders	filename	get an ordered list of decoders to attempt filename can be used
+image.codecs		get_animation_decoders	filename	get an ordered list of decoders to attempt filename can be used
+image.codecs		add_decoders	module	add a decoder module the module must define get_decoders once
+image.codecs		add_encoders	module	add an encoder module the module must define get_encoders once
+input	CarbonTabletCanvas	_tablet_event	next_handler ev data	process tablet event and return true if some event was processed
+input	Device	open	window exclusive	open the device to begin receiving input from it
+input	Device	close		close the device
+input	Device	get_controls		get a list of controls provided by the device
+input	Control	value		current value of the control
+input	Joystick	open	window exclusive	open the joystick device see device open
+input	Joystick	close		close the joystick device see device close
+input	Joystick	on_joyaxis_motion	joystick axis value	the value of a joystick axis changed
+input	Joystick	on_joybutton_press	joystick button	a button on the joystick was pressed
+input	Joystick	on_joybutton_release	joystick button	a button on the joystick was released
+input	Joystick	on_joyhat_motion	joystick hat_x hat_y	the value of the joystick hat switch changed
+input	AppleRemote	open	window exclusive	open the device see device open
+input	AppleRemote	close		close the device see device close
+input	AppleRemote	on_button_press	button	a button on the remote was pressed
+input	AppleRemote	on_button_release	button	a button on the remote was released
+input	Tablet	open	window	open a tablet device for a window
+input	TabletCanvas	close		close the tablet device for this window
+input		get_apple_remote	display	get the apple remote control device
+graphics		interleave_attributes	attributes	interleave attribute offsets
+graphics		serialize_attributes	count attributes	serialize attribute offsets
+graphics		create_attribute	format	create a vertex attribute description from a format string
+graphics	AbstractAttribute	__init__	count gl_type	create the attribute accessor
+graphics	AbstractAttribute	enable		enable the attribute using glenableclientstate
+graphics	AbstractAttribute	set_pointer	offset	setup this attribute to point to the currently bound buffer at the given offset
+graphics	AbstractAttribute	get_region	buffer start count	map a buffer region using this attribute as an accessor
+graphics	AbstractAttribute	set_region	buffer start count data	set the data over a region of the buffer
+graphics	TexCoordAttribute	convert_to_multi_tex_coord_attribute		changes the class of the attribute to multitexcoordattribute
+graphics		draw	size mode	draw a primitive immediately
+graphics		draw_indexed	size mode indices	draw a primitive with indexed vertices immediately
+graphics		_parse_data	data	given a list of data items returns (formats initial_arrays)
+graphics		vertex_list	count	create a vertexlist not associated with a batch group or mode
+graphics		vertex_list_indexed	count indices	create an indexedvertexlist not associated with a batch group or mode
+graphics	Batch	__init__		create a graphics batch
+graphics	Batch	invalidate		force the batch to update the draw list
+graphics	Batch	add	count mode group	add a vertex list to the batch
+graphics	Batch	add_indexed	count mode group indices	add an indexed vertex list to the batch
+graphics	Batch	migrate	vertex_list mode group batch	migrate a vertex list to another batch and/or group
+graphics	Batch	_update_draw_list		visit group tree in preorder and create a list of bound methods to call
+graphics	Batch	draw		draw the batch
+graphics	Batch	draw_subset	vertex_lists	draw only some vertex lists in the batch
+graphics	Group	__init__	parent	create a group
+graphics	Group	set_state		apply the opengl state change
+graphics	Group	unset_state		repeal the opengl state change
+graphics	Group	set_state_recursive		set this group and its ancestry
+graphics	Group	unset_state_recursive		unset this group and its ancestry
+graphics	TextureGroup	__init__	texture parent	create a texture group
+graphics	OrderedGroup	__init__	order parent	create an ordered group
+graphics		create_attribute_usage	format	create an attribute and usage pair from a format string the
+graphics		create_domain		create a vertex domain covering the given attribute usage formats
+graphics		create_indexed_domain		create an indexed vertex domain covering the given attribute usage formats
+graphics	VertexDomain	_safe_alloc	count	allocate vertices resizing the buffers if necessary
+graphics	VertexDomain	_safe_realloc	start count new_count	reallocate vertices resizing the buffers if necessary
+graphics	VertexDomain	create	count	create a vertexlist in this domain
+graphics	VertexDomain	draw	mode vertex_list	draw vertices in the domain
+graphics	VertexList	get_size		get the number of vertices in the list
+graphics	VertexList	get_domain		get the domain this vertex list belongs to
+graphics	VertexList	draw	mode	draw this vertex list in the given opengl mode
+graphics	VertexList	resize	count	resize this group
+graphics	VertexList	delete		delete this group
+graphics	VertexList	migrate	domain	move this group from its current domain and add to the specified one
+graphics	IndexedVertexDomain	_safe_index_alloc	count	allocate indices resizing the buffers if necessary
+graphics	IndexedVertexDomain	_safe_index_realloc	start count new_count	reallocate indices resizing the buffers if necessary
+graphics	IndexedVertexDomain	create	count index_count	create an indexedvertexlist in this domain
+graphics	IndexedVertexDomain	get_index_region	start count	get a region of the index buffer
+graphics	IndexedVertexDomain	draw	mode vertex_list	draw vertices in the domain
+graphics	IndexedVertexList	resize	count index_count	resize this group
+graphics	IndexedVertexList	delete		delete this group
+graphics	IndexedVertexList	migrate	domain	move this group from its current indexed domain and add to the specified one
+graphics	Allocator	__init__	capacity	create an allocator for a buffer of the specified capacity
+graphics	Allocator	set_capacity	size	resize the maximum buffer size
+graphics	Allocator	alloc	size	allocate memory in the buffer
+graphics	Allocator	realloc	start size new_size	reallocate a region of the buffer
+graphics	Allocator	dealloc	start size	free a region of the buffer
+graphics	Allocator	get_allocated_regions		get a list of aggregate allocated regions
+graphics	Allocator	get_fragmented_free_size		returns the amount of space unused not including the final free block
+graphics	Allocator	get_free_size		return the amount of space unused
+graphics	Allocator	get_usage		return fraction of capacity currently allocated
+graphics	Allocator	get_fragmentation		return fraction of free space that is not expandable
+graphics		create_buffer	size target usage vbo	create a buffer of vertex data
+graphics		create_mappable_buffer	size target usage vbo	create a mappable buffer of vertex data
+graphics	AbstractBuffer	bind		bind this buffer to its opengl target
+graphics	AbstractBuffer	unbind		reset the buffer's opengl target
+graphics	AbstractBuffer	set_data	data	set the entire contents of the buffer
+graphics	AbstractBuffer	set_data_region	data start length	set part of the buffer contents
+graphics	AbstractBuffer	map	invalidate	map the entire buffer into system memory
+graphics	AbstractBuffer	unmap		unmap a previously mapped memory block
+graphics	AbstractBuffer	resize	size	resize the buffer to a new size
+graphics	AbstractBuffer	delete		delete this buffer reducing system resource usage
+graphics	AbstractMappable	get_region	start size ptr_type	map a region of the buffer into a ctypes array of the desired type
+graphics	AbstractBufferRegion	invalidate		mark this region as changed
+graphics	IndirectArrayRegion	__init__	region size component_count component_stride	wrap a buffer region
+extlibs		isarray	x	same as isinstance x array except on python 2 2 where it
+extlibs		interleave_planes	ipixels apixels ipsize apsize	interleave colour planes e g rgb + a = rgba
+extlibs		check_palette	palette	check a palette argument (to the :class writer class) for validity
+extlibs		check_sizes	size width height	check that these arguments in supplied are consistent
+extlibs		check_color	c greyscale which	checks that a colour argument for transparent or background options is the right form
+extlibs	Writer	__init__	width height size greyscale	create a png encoder object
+extlibs	Writer	make_palette		create the byte sequences for a plte and if necessary a trns chunk
+extlibs	Writer	write	outfile rows	write a png image to the output file rows should be
+extlibs	Writer	write_passes	outfile rows packed	write a png image to the output file
+extlibs	Writer	write_array	outfile pixels	write an array in flat row flat pixel format as a png file on the output file
+extlibs	Writer	write_packed	outfile rows	write png file to outfile the pixel data comes from rows
+extlibs	Writer	convert_pnm	infile outfile	convert a pnm file containing raw pixel data into a png file with the parameters set in the writer object
+extlibs	Writer	convert_ppm_and_pgm	ppmfile pgmfile outfile	convert a ppm and pgm file containing raw pixel data into a png outfile with the parameters set in the writer object
+extlibs	Writer	file_scanlines	infile	generates boxed rows in flat pixel format from the input file infile
+extlibs	Writer	array_scanlines	pixels	generates boxed rows flat pixels from flat rows flat pixels in an array
+extlibs	Writer	array_scanlines_interlace	pixels	generator for interlaced scanlines from an array pixels is
+extlibs		write_chunk	outfile tag data	write a png chunk to the output file including length and checksum
+extlibs		write_chunks	out chunks	create a png file by writing out the chunks
+extlibs		filter_scanline	type line fo prev	apply a scanline filter to a scanline type specifies the
+extlibs		from_array	a mode info	create a png :class image object from a 2- or 3-dimensional array
+extlibs	Image	save	file	save the image to *file* if *file* looks like an open file
+extlibs	Reader	__init__	_guess	create a png decoder object
+extlibs	Reader	chunk	seek lenient	read the next png chunk from the input file returns a (*type*,*data*) tuple
+extlibs	Reader	chunks		return an iterator that will yield each chunk as a (*chunktype*, *content*) pair
+extlibs	Reader	undo_filter	filter_type scanline previous	undo the filter for a scanline scanline is a sequence of
+extlibs	Reader	deinterlace	raw	read raw pixel data undo filters deinterlace and flatten
+extlibs	Reader	iterboxed	rows	iterator that yields each scanline in boxed row flat pixel format
+extlibs	Reader	serialtoflat	bytes width	convert serial format byte stream pixel data to flat row flat pixel
+extlibs	Reader	iterstraight	raw	iterator that undoes the effect of filtering and yields each row in serialised format as a sequence of bytes
+extlibs	Reader	validate_signature		if signature header has not been read then read and validate it otherwise do nothing
+extlibs	Reader	preamble	lenient	extract the image metadata by reading the initial part of the png file up to the start of the idat chunk
+extlibs	Reader	chunklentype		reads just enough of the input to determine the next chunk's length and type returned as a (*length*, *type*) pair
+extlibs	Reader	process_chunk	lenient	process the next chunk and its data this only processes the
+extlibs	Reader	read	lenient	read the png file and decode it returns (width, height,
+extlibs	Reader	read_flat		read a png file and decode it into flat row flat pixel format
+extlibs	Reader	palette	alpha	returns a palette that is a sequence of 3-tuples or 4-tuples synthesizing it from the plte and trns chunks
+extlibs	Reader	asDirect		returns the image data as a direct representation of an x * y * planes array
+extlibs	Reader	asFloat	maxval	return image pixels as per :meth asdirect method but scale all pixel values to be floating point values between 0
+extlibs	Reader	_as_rescale	get targetbitdepth	helper used by :meth asrgb8 and :meth asrgba8
+extlibs	Reader	asRGB8		return the image data as an rgb pixels with 8-bits per sample
+extlibs	Reader	asRGBA8		return the image data as rgba pixels with 8-bits per sample
+extlibs	Reader	asRGB		return image as rgb pixels rgb colour images are passed
+extlibs	Reader	asRGBA		return image as rgba pixels greyscales are expanded into
+extlibs		check_bitdepth_colortype	bitdepth colortype	check that bitdepth and colortype are both valid and specified in a valid combination
+extlibs		read_pam_header	infile	read the rest of a pam header infile should be positioned
+extlibs		read_pnm_header	infile supported	read a pnm header returning format width height depth maxval
+extlibs		write_pnm	file width height pixels	write a netpbm pnm/pam file
+extlibs		color_triple	color	convert a command line colour value to a rgb triple of integers
+extlibs		_add_common_options	parser	call *parser add_option* for each of the options that are
+extlibs		_main	argv	run the png encoder with options from the command line
+extlibs.future.py2_3.libfuturize		commatize	leafs	accepts/turns (name name name name)
+extlibs.future.py2_3.libfuturize		indentation	node	returns the indentation for this node iff a node is in a suite then it has indentation
+extlibs.future.py2_3.libfuturize		indentation_step	node	dirty little trick to get the difference between each indentation level implemented by finding the shortest indentation string
+extlibs.future.py2_3.libfuturize		suitify	parent	turn the stuff after the first colon in parent's children
+extlibs.future.py2_3.libfuturize		NameImport	package as_name prefix	accepts a package name node name to import it as string and
+extlibs.future.py2_3.libfuturize		import_binding_scope	node	generator yields all nodes for which a node (an import_stmt) has scope
+extlibs.future.py2_3.libfuturize		future_import	feature node	this seems to work
+extlibs.future.py2_3.libfuturize		future_import2	feature node	an alternative to future_import() which might not work
+extlibs.future.py2_3.libfuturize		parse_args	arglist scheme	parse a list of arguments into a dict
+extlibs.future.py2_3.libfuturize		touch_import_top	package name_to_import node	works like does_tree_import but adds an import statement at the top if it was not imported (but below any __future__ imports)
+extlibs.future.py2_3.libfuturize		check_future_import	node	if this is a future import return set of symbols that are imported else return none
+extlibs.future.py2_3.libfuturize		is_shebang_comment	node	comments are prefixes for leaf nodes returns whether the given node has a
+extlibs.future.py2_3.libfuturize		is_encoding_comment	node	comments are prefixes for leaf nodes returns whether the given node has a
+extlibs.future.py2_3.libfuturize.fixes		match_division	node	__future__ division redefines the meaning of a single slash for division
+extlibs.future.py2_3.libfuturize.fixes	FixDivisionSafe	start_tree	tree name	skip this fixer if "__future__ division" is already imported
+extlibs.future.py2_3.libfuturize.fixes	FixDivisionSafe	match	node	since the tree needs to be fixed once and only once if and only if it matches we can start discarding matches after the first
+extlibs.future.py2_3.libfuturize.fixes	FixDivisionSafe	match	node	since the tree needs to be fixed once and only once if and only if it matches then we can start discarding matches after we make the first
+extlibs.future.py2_3.libfuturize.fixes		has_metaclass	parent	we have to check the cls_node without changing it
+extlibs.future.py2_3.libfuturize.fixes		fixup_parse_tree	cls_node	one-line classes don't get a suite in the parse tree so we add
+extlibs.future.py2_3.libfuturize.fixes		fixup_simple_stmt	parent i stmt_node	if there is a semi-colon all the parts count as part of the same simple_stmt
+extlibs.future.py2_3.libfuturize.fixes		fixup_indent	suite	if an indent is followed by a thing with a prefix then nuke the prefix
+extlibs.future.py2_3.libfuturize.fixes	FixAbsoluteImport	transform	node results	copied from fiximport transform(), but with this line added in
+extlibs.future.py2_3.libfuturize.fixes	FixAbsoluteImport	probably_a_local_import	imp_name	like the corresponding method in the base class but this also supports cython modules
+extlibs.future.py2_3.libpasteurize.fixes		match_division	node	__future__ division redefines the meaning of a single slash for division
+extlibs.future.py2_3.libpasteurize.fixes	FixDivision	match	node	since the tree needs to be fixed once and only once if and only if it matches then we can start discarding matches after we make the first
+extlibs.future.py2_3.libpasteurize.fixes		all_modules_subpattern		builds a pattern for all toplevel names
+extlibs.future.py2_3.libpasteurize.fixes		build_import_pattern	mapping1 mapping2	mapping1 a dict mapping py3k modules to all possible py2k replacements
+extlibs.future.py2_3.libpasteurize.fixes		assignment_source	num_pre num_post LISTNAME ITERNAME	accepts num_pre and num_post which are counts of values
+extlibs.future.py2_3.libpasteurize.fixes	FixUnpacking	fix_implicit_context	node results	only example of the implicit context is a for loop so only fix that
+extlibs.future.py2_3.libpasteurize.fixes	FixUnpacking	transform	node results	a b c d e f *g h i = range 100 changes to
+extlibs.future.py2_3.libpasteurize.fixes		all_patterns	name	accepts a string and returns a pattern of possible patterns involving that name called by simple_mapping_to_pattern for each name in the mapping it receives
+extlibs.future.py2_3.libpasteurize.fixes		gen_params	raw_params	generator that yields tuples of (name default_value) for each parameter in the list if no default is given then it is default_value is none (not leaf(token
+extlibs.future.py2_3.libpasteurize.fixes		remove_params	raw_params kwargs_default	removes all keyword-only args from the params list and a bare star if any
+extlibs.future.py2_3.libpasteurize.fixes		needs_fixing	raw_params kwargs_default	returns string with the name of the kwargs dict if the params after the first star need fixing
+extlibs.future.py2_3.libpasteurize.fixes	FixAnnotations	transform	node results	this just strips annotations from the funcdef completely
+extlibs.future.py2_3.libpasteurize.fixes	Feature	message_text		format the above text with the name and minimum version required
+extlibs.future.py2_3.libpasteurize.fixes	Features	update_mapping		called every time we care about the mapping of names to features
+extlibs.future.py2_3.libpasteurize.fixes	Features	PATTERN		uses the mapping of names to features to return a pattern suitable for using the lib2to3 patcomp
+extlibs.future.py2_3.libpasteurize.fixes	Features	__getitem__	key	implement a simple mapping to get patterns from names
+extlibs.future.py2_3.past.types	olddict	has_key	k	d has_key k -> true if d has a key k else false
+extlibs.future.py2_3.past.types	olddict	__native__		hook for the past utils native() function
+extlibs.future.py2_3.past.types		unescape	s	interprets strings with escape sequences example
+extlibs.future.py2_3.past.translation	RTs	setup		call this before using the refactoring tools to create them on demand if needed
+extlibs.future.py2_3.past.translation	RTs	setup_detect_python2		call this before using the refactoring tools to create them on demand if needed
+extlibs.future.py2_3.past.translation		splitall	path	split a path into all components from python cookbook
+extlibs.future.py2_3.past.translation		common_substring	s1 s2	returns the longest common substring to the two strings starting from the left
+extlibs.future.py2_3.past.translation		detect_python2	source pathname	returns a bool indicating whether we think the code is py2
+extlibs.future.py2_3.past.translation	Py2Fixer	include	paths	pass in a sequence of module names such as 'plotrique plotting' that
+extlibs.future.py2_3.past.translation	Py2Fixer	exclude	paths	pass in a sequence of strings such as 'mymodule' that if present at the leftmost side of the full package name would cause
+extlibs.future.py2_3.past.translation		detect_hooks		returns true if the import hooks are installed false if not
+extlibs.future.py2_3.past.utils		with_metaclass	meta	function from jinja2/_compat py license bsd
+extlibs.future.py2_3.past.utils		native	obj	on py2 this is a no-op native obj -> obj on py3 returns the corresponding native py3 types that are
+extlibs.future.py2_3.past.utils		old_div	a b	equivalent to a / b on python 2 without from __future__ import division
+extlibs.future.py2_3.future.types	newlist	copy		l copy() -> list -- a shallow copy of l
+extlibs.future.py2_3.future.types	newlist	clear		l clear() -> none -- remove all items from l
+extlibs.future.py2_3.future.types	newlist	__new__	cls	list() -> new empty list
+extlibs.future.py2_3.future.types	newlist	__radd__	left	left + self
+extlibs.future.py2_3.future.types	newlist	__getitem__	y	x __getitem__ y <==> x[y]
+extlibs.future.py2_3.future.types	newlist	__native__		hook for the future utils native() function
+extlibs.future.py2_3.future.types	newobject	__native__		hook for the future utils native() function
+extlibs.future.py2_3.future.types	newint	__new__	cls x base	from the py3 int docstring | int(x=0) -> integer
+extlibs.future.py2_3.future.types	newint	__repr__		without the l suffix
+extlibs.future.py2_3.future.types	newint	__bool__		so subclasses can override this py3-style
+extlibs.future.py2_3.future.types	newint	to_bytes	length byteorder signed	return an array of bytes representing an integer
+extlibs.future.py2_3.future.types	newint	from_bytes	cls mybytes byteorder signed	return the integer represented by the given array of bytes
+extlibs.future.py2_3.future.types	newrange	index	value	return the 0-based position of integer value in the sequence this range represents
+extlibs.future.py2_3.future.types	newrange	count	value	return the number of ocurrences of integer value in the sequence this range represents
+extlibs.future.py2_3.future.types	newrange	__contains__	value	return true if the integer value occurs in the sequence this range represents
+extlibs.future.py2_3.future.types	newrange	__getitem__	index	return the element at position index in the sequence this range represents or raise :class indexerror if the
+extlibs.future.py2_3.future.types	newrange	__getitem_slice	slce	return a range which represents the requested slce of the sequence represented by this range
+extlibs.future.py2_3.future.types	newrange	__iter__		return an iterator which enumerates the elements of the sequence this range represents
+extlibs.future.py2_3.future.types	newbytes	__new__	cls	from the py3 bytes docstring bytes(iterable_of_ints) -> bytes
+extlibs.future.py2_3.future.types	newbytes	decode	encoding errors	returns a newstr i e unicode subclass
+extlibs.future.py2_3.future.types	newbytes	splitlines	keepends	b splitlines([keepends]) -> list of lines
+extlibs.future.py2_3.future.types	newbytes	rindex	sub	s rindex(sub [,start [,end]]) -> int
+extlibs.future.py2_3.future.types	newbytes	index	sub	returns index of sub in bytes
+extlibs.future.py2_3.future.types	newbytes	__getattribute__	name	a trick to cause the hasattr builtin-fn to return false for the 'encode' method on py2
+extlibs.future.py2_3.future.types	newbytes	rstrip	bytes_to_strip	strip trailing bytes contained in the argument
+extlibs.future.py2_3.future.types	newbytes	strip	bytes_to_strip	strip leading and trailing bytes contained in the argument
+extlibs.future.py2_3.future.types	newbytes	lower		b lower() -> copy of b
+extlibs.future.py2_3.future.types	newbytes	upper		b upper() -> copy of b
+extlibs.future.py2_3.future.types	newbytes	maketrans	cls frm to	b maketrans frm to -> translation table
+extlibs.future.py2_3.future.types	newstr	__new__	cls	from the py3 str docstring str(object='') -> str
+extlibs.future.py2_3.future.types	newstr	__repr__		without the u prefix
+extlibs.future.py2_3.future.types	newstr	__getitem__	y	warning python <= 2 7 6 has a bug that causes this method never to be called
+extlibs.future.py2_3.future.types	newstr	__radd__	left	left + self
+extlibs.future.py2_3.future.types	newstr	encode	encoding errors	returns bytes encode s using the codec registered for encoding
+extlibs.future.py2_3.future.types	newstr	index	sub	like newstr find() but raise valueerror when the substring is not
+extlibs.future.py2_3.future.types	newstr	splitlines	keepends	s splitlines(keepends=false) -> list of strings
+extlibs.future.py2_3.future.types	newstr	__getattribute__	name	a trick to cause the hasattr builtin-fn to return false for the 'decode' method on py2
+extlibs.future.py2_3.future.types	newstr	__native__		a hook for the future utils native() function
+extlibs.future.py2_3.future.types	newstr	maketrans	x y z	return a translation table usable for str translate()
+extlibs.future.py2_3.future.types	newstr	translate	table	s translate table -> str
+extlibs.future.py2_3.future.types	newdict	items		on python 2 7+:
+extlibs.future.py2_3.future.types	newdict	keys		on python 2 7+:
+extlibs.future.py2_3.future.types	newdict	values		on python 2 7+:
+extlibs.future.py2_3.future.types	newdict	__new__	cls	dict() -> new empty dictionary dict mapping -> new dictionary initialized from a mapping object's
+extlibs.future.py2_3.future.types	newdict	__native__		hook for the future utils native() function
+extlibs.future.py2_3.future.types		disallow_types	argnums disallowed_types	a decorator that raises a typeerror if any of the given numbered arguments is of the corresponding given type (e
+extlibs.future.py2_3.future.types		no	mytype argnums	a shortcut for the disallow_types decorator that disallows only one type in any position in argnums
+extlibs.future.py2_3.future.backports		_eintr_retry	func	restart a system call interrupted by eintr
+extlibs.future.py2_3.future.backports	BaseServer	__init__	server_address RequestHandlerClass	constructor may be extended do not override
+extlibs.future.py2_3.future.backports	BaseServer	server_activate		called by constructor to activate the server
+extlibs.future.py2_3.future.backports	BaseServer	serve_forever	poll_interval	handle one request at a time until shutdown
+extlibs.future.py2_3.future.backports	BaseServer	shutdown		stops the serve_forever loop
+extlibs.future.py2_3.future.backports	BaseServer	service_actions		called by the serve_forever() loop
+extlibs.future.py2_3.future.backports	BaseServer	handle_request		handle one request possibly blocking
+extlibs.future.py2_3.future.backports	BaseServer	_handle_request_noblock		handle one request without blocking
+extlibs.future.py2_3.future.backports	BaseServer	handle_timeout		called if no new request arrives within self timeout
+extlibs.future.py2_3.future.backports	BaseServer	verify_request	request client_address	verify the request may be overridden
+extlibs.future.py2_3.future.backports	BaseServer	server_close		called to clean-up the server
+extlibs.future.py2_3.future.backports	BaseServer	finish_request	request client_address	finish one request by instantiating requesthandlerclass
+extlibs.future.py2_3.future.backports	BaseServer	shutdown_request	request	called to shutdown and close an individual request
+extlibs.future.py2_3.future.backports	BaseServer	close_request	request	called to clean up an individual request
+extlibs.future.py2_3.future.backports	BaseServer	handle_error	request client_address	handle an error gracefully may be overridden
+extlibs.future.py2_3.future.backports	TCPServer	__init__	server_address RequestHandlerClass bind_and_activate	constructor may be extended do not override
+extlibs.future.py2_3.future.backports	TCPServer	server_bind		called by constructor to bind the socket
+extlibs.future.py2_3.future.backports	TCPServer	server_activate		called by constructor to activate the server
+extlibs.future.py2_3.future.backports	TCPServer	server_close		called to clean-up the server
+extlibs.future.py2_3.future.backports	TCPServer	fileno		return socket file number
+extlibs.future.py2_3.future.backports	TCPServer	get_request		get the request and client address from the socket
+extlibs.future.py2_3.future.backports	TCPServer	shutdown_request	request	called to shutdown and close an individual request
+extlibs.future.py2_3.future.backports	TCPServer	close_request	request	called to clean up an individual request
+extlibs.future.py2_3.future.backports	ForkingMixIn	collect_children		internal routine to wait for children that have exited
+extlibs.future.py2_3.future.backports	ForkingMixIn	handle_timeout		wait for zombies after self timeout seconds of inactivity
+extlibs.future.py2_3.future.backports	ForkingMixIn	service_actions		collect the zombie child processes regularly in the forkingmixin
+extlibs.future.py2_3.future.backports	ForkingMixIn	process_request	request client_address	fork a new subprocess to process the request
+extlibs.future.py2_3.future.backports	ThreadingMixIn	process_request_thread	request client_address	same as in baseserver but as a thread
+extlibs.future.py2_3.future.backports	ThreadingMixIn	process_request	request client_address	start a new thread to process the request
+extlibs.future.py2_3.future.backports		ceil	x	return the ceiling of x as an int
+extlibs.future.py2_3.future.backports	_OrderedDict	__init__		initialize an ordered dictionary signature is the same as for
+extlibs.future.py2_3.future.backports	_OrderedDict	__setitem__	key value dict_setitem	od __setitem__ i y <==> od[i]=y
+extlibs.future.py2_3.future.backports	_OrderedDict	__delitem__	key dict_delitem	od __delitem__ y <==> del od[y]
+extlibs.future.py2_3.future.backports	_OrderedDict	__iter__		od __iter__() <==> iter od
+extlibs.future.py2_3.future.backports	_OrderedDict	__reversed__		od __reversed__() <==> reversed od
+extlibs.future.py2_3.future.backports	_OrderedDict	clear		od clear() -> none remove all items from od
+extlibs.future.py2_3.future.backports	_OrderedDict	popitem	last	od popitem() -> k v return and remove a key value pair
+extlibs.future.py2_3.future.backports	_OrderedDict	keys		od keys() -> list of keys in od
+extlibs.future.py2_3.future.backports	_OrderedDict	values		od values() -> list of values in od
+extlibs.future.py2_3.future.backports	_OrderedDict	items		od items() -> list of key value pairs in od
+extlibs.future.py2_3.future.backports	_OrderedDict	iterkeys		od iterkeys() -> an iterator over the keys in od
+extlibs.future.py2_3.future.backports	_OrderedDict	itervalues		od itervalues -> an iterator over the values in od
+extlibs.future.py2_3.future.backports	_OrderedDict	iteritems		od iteritems -> an iterator over the key value items in od
+extlibs.future.py2_3.future.backports	_OrderedDict	update		od update(e **f) -> none update od from dict/iterable e and f
+extlibs.future.py2_3.future.backports	_OrderedDict	pop	key default	od pop(k[,d]) -> v remove specified key and return the corresponding value if key is not found d is returned if given
+extlibs.future.py2_3.future.backports	_OrderedDict	setdefault	key default	od setdefault(k[,d]) -> od get k d also set od[k]=d if k not in od
+extlibs.future.py2_3.future.backports	_OrderedDict	__repr__	_repr_running	od __repr__() <==> repr od
+extlibs.future.py2_3.future.backports	_OrderedDict	__reduce__		return state information for pickling
+extlibs.future.py2_3.future.backports	_OrderedDict	copy		od copy() -> a shallow copy of od
+extlibs.future.py2_3.future.backports	_OrderedDict	fromkeys	cls iterable value	od fromkeys(s[, v]) -> new ordered dictionary with keys from s and
+extlibs.future.py2_3.future.backports	_OrderedDict	__eq__	other	od __eq__ y <==> od==y comparison to another od is
+extlibs.future.py2_3.future.backports	_OrderedDict	viewkeys		od viewkeys() -> a set-like object providing a view on od's keys
+extlibs.future.py2_3.future.backports	_OrderedDict	viewvalues		od viewvalues() -> an object providing a view on od's values
+extlibs.future.py2_3.future.backports	_OrderedDict	viewitems		od viewitems() -> a set-like object providing a view on od's items
+extlibs.future.py2_3.future.backports	_Counter	__init__	iterable	create a new empty counter object and if given count elements
+extlibs.future.py2_3.future.backports	_Counter	most_common	n	list the n most common elements and their counts from the most common to the least
+extlibs.future.py2_3.future.backports	_Counter	elements		iterator over elements repeating each as many times as its count
+extlibs.future.py2_3.future.backports	_Counter	update	iterable	like dict update() but add counts instead of replacing them
+extlibs.future.py2_3.future.backports	_Counter	copy		like dict copy() but returns a counter instance instead of a dict
+extlibs.future.py2_3.future.backports	_Counter	__delitem__	elem	like dict __delitem__() but does not raise keyerror for missing
+extlibs.future.py2_3.future.backports	_Counter	__add__	other	add counts from two counters
+extlibs.future.py2_3.future.backports	_Counter	__sub__	other	subtract count but keep only results with positive counts
+extlibs.future.py2_3.future.backports	_Counter	__or__	other	union is the maximum of value in either of the input counters
+extlibs.future.py2_3.future.backports	_Counter	__and__	other	intersection is the minimum of corresponding counts
+extlibs.future.py2_3.future.backports		_is_leap	year	year -> 1 if leap year else 0
+extlibs.future.py2_3.future.backports		_days_before_year	year	year -> number of days before january 1st of year
+extlibs.future.py2_3.future.backports		_days_in_month	year month	year month -> number of days in that month in that year
+extlibs.future.py2_3.future.backports		_days_before_month	year month	year month -> number of days in year preceding first day of month
+extlibs.future.py2_3.future.backports		_ymd2ord	year month day	year month day -> ordinal considering 01-jan-0001 as day 1
+extlibs.future.py2_3.future.backports		_ord2ymd	n	ordinal -> year month day considering 01-jan-0001 as day 1
+extlibs.future.py2_3.future.backports	timedelta	total_seconds		total seconds in the duration
+extlibs.future.py2_3.future.backports	date	fromtimestamp	cls t	construct a date from a posix timestamp (like time time())
+extlibs.future.py2_3.future.backports	date	today	cls	construct a date from time time()
+extlibs.future.py2_3.future.backports	date	fromordinal	cls n	contruct a date from a proleptic gregorian ordinal
+extlibs.future.py2_3.future.backports	date	__repr__		convert to formal string for repr()
+extlibs.future.py2_3.future.backports	date	ctime		return ctime() style string
+extlibs.future.py2_3.future.backports	date	strftime	fmt	format using strftime()
+extlibs.future.py2_3.future.backports	date	isoformat		return the date formatted according to iso
+extlibs.future.py2_3.future.backports	date	timetuple		return local time tuple compatible with time localtime()
+extlibs.future.py2_3.future.backports	date	toordinal		return proleptic gregorian ordinal for the year month and day
+extlibs.future.py2_3.future.backports	date	replace	year month day	return a new date with new values for the specified fields
+extlibs.future.py2_3.future.backports	date	__add__	other	add a date to a timedelta
+extlibs.future.py2_3.future.backports	date	__sub__	other	subtract two dates or a date and a timedelta
+extlibs.future.py2_3.future.backports	date	weekday		return day of the week where monday == 0 sunday == 6
+extlibs.future.py2_3.future.backports	date	isoweekday		return day of the week where monday == 1 sunday == 7
+extlibs.future.py2_3.future.backports	date	isocalendar		return a 3-tuple containing iso year week number and weekday
+extlibs.future.py2_3.future.backports	tzinfo	tzname	dt	datetime -> string name of time zone
+extlibs.future.py2_3.future.backports	tzinfo	utcoffset	dt	datetime -> minutes east of utc negative for west of utc
+extlibs.future.py2_3.future.backports	tzinfo	dst	dt	datetime -> dst offset in minutes east of utc
+extlibs.future.py2_3.future.backports	tzinfo	fromutc	dt	datetime in utc -> datetime in local time
+extlibs.future.py2_3.future.backports	time	tzinfo		timezone info object
+extlibs.future.py2_3.future.backports	time	_tzstr	sep	return formatted timezone offset +xx xx or none
+extlibs.future.py2_3.future.backports	time	__repr__		convert to formal string for repr()
+extlibs.future.py2_3.future.backports	time	isoformat		return the time formatted according to iso
+extlibs.future.py2_3.future.backports	time	strftime	fmt	format using strftime() the date part of the timestamp passed
+extlibs.future.py2_3.future.backports	time	utcoffset		return the timezone offset in minutes east of utc negative west of utc
+extlibs.future.py2_3.future.backports	time	tzname		return the timezone name
+extlibs.future.py2_3.future.backports	time	dst		return 0 if dst is not in effect or the dst offset in minutes eastward if dst is in effect
+extlibs.future.py2_3.future.backports	time	replace	hour minute second microsecond	return a new time with new values for the specified fields
+extlibs.future.py2_3.future.backports	datetime	tzinfo		timezone info object
+extlibs.future.py2_3.future.backports	datetime	fromtimestamp	cls t tz	construct a datetime from a posix timestamp (like time time())
+extlibs.future.py2_3.future.backports	datetime	utcfromtimestamp	cls t	construct a utc datetime from a posix timestamp (like time time())
+extlibs.future.py2_3.future.backports	datetime	now	cls tz	construct a datetime from time time() and optional time zone info
+extlibs.future.py2_3.future.backports	datetime	utcnow	cls	construct a utc datetime from time time()
+extlibs.future.py2_3.future.backports	datetime	combine	cls date time	construct a datetime from a given date and a given time
+extlibs.future.py2_3.future.backports	datetime	timetuple		return local time tuple compatible with time localtime()
+extlibs.future.py2_3.future.backports	datetime	timestamp		return posix timestamp as float
+extlibs.future.py2_3.future.backports	datetime	utctimetuple		return utc time tuple compatible with time gmtime()
+extlibs.future.py2_3.future.backports	datetime	date		return the date part
+extlibs.future.py2_3.future.backports	datetime	time		return the time part with tzinfo none
+extlibs.future.py2_3.future.backports	datetime	timetz		return the time part with same tzinfo
+extlibs.future.py2_3.future.backports	datetime	replace	year month day hour	return a new datetime with new values for the specified fields
+extlibs.future.py2_3.future.backports	datetime	ctime		return ctime() style string
+extlibs.future.py2_3.future.backports	datetime	isoformat	sep	return the time formatted according to iso
+extlibs.future.py2_3.future.backports	datetime	__repr__		convert to formal string for repr()
+extlibs.future.py2_3.future.backports	datetime	__str__		convert to string for str()
+extlibs.future.py2_3.future.backports	datetime	strptime	cls date_string format	string format -> new datetime parsed from a string (like time strptime())
+extlibs.future.py2_3.future.backports	datetime	utcoffset		return the timezone offset in minutes east of utc negative west of utc
+extlibs.future.py2_3.future.backports	datetime	tzname		return the timezone name
+extlibs.future.py2_3.future.backports	datetime	dst		return 0 if dst is not in effect or the dst offset in minutes eastward if dst is in effect
+extlibs.future.py2_3.future.backports	datetime	__add__	other	add a datetime and a timedelta
+extlibs.future.py2_3.future.backports	datetime	__sub__	other	subtract two datetimes or a datetime and a timedelta
+extlibs.future.py2_3.future.backports	timezone	__repr__		convert to formal string for repr()
+extlibs.future.py2_3.future.backports	socket	__repr__		wrap __repr__() to reveal the real class name
+extlibs.future.py2_3.future.backports	socket	dup		dup() -> socket object return a new socket object connected to the same system resource
+extlibs.future.py2_3.future.backports	socket	accept		accept() -> socket object address info wait for an incoming connection
+extlibs.future.py2_3.future.backports	socket	makefile	mode buffering	makefile -> an i/o stream connected to the socket
+extlibs.future.py2_3.future.backports	socket	detach		detach() -> file descriptor close the socket object without closing the underlying file descriptor
+extlibs.future.py2_3.future.backports		fromfd	fd family type proto	fromfd(fd family type[, proto]) -> socket object create a socket object from a duplicate of the given file
+extlibs.future.py2_3.future.backports	SocketIO	readinto	b	read up to len b bytes into the writable buffer *b* and return the number of bytes read
+extlibs.future.py2_3.future.backports	SocketIO	write	b	write the given bytes or bytearray object *b* to the socket and return the number of bytes written
+extlibs.future.py2_3.future.backports	SocketIO	readable		true if the socketio is open for reading
+extlibs.future.py2_3.future.backports	SocketIO	writable		true if the socketio is open for writing
+extlibs.future.py2_3.future.backports	SocketIO	seekable		true if the socketio is open for seeking
+extlibs.future.py2_3.future.backports	SocketIO	fileno		return the file descriptor of the underlying socket
+extlibs.future.py2_3.future.backports	SocketIO	close		close the socketio object this doesn't close the underlying
+extlibs.future.py2_3.future.backports		getfqdn	name	get fully qualified domain name from name
+extlibs.future.py2_3.future.backports		create_connection	address timeout source_address	connect to *address* and return the socket object
+extlibs.future.py2_3.future.backports	ParserBase	getpos		return current line number and offset
+extlibs.future.py2_3.future.backports.urllib		urlretrieve	url filename reporthook data	retrieve a url into a temporary location on disk
+extlibs.future.py2_3.future.backports.urllib		request_host	request	return request-host as defined by rfc 2965
+extlibs.future.py2_3.future.backports.urllib	Request	get_method		return a string indicating the http request method
+extlibs.future.py2_3.future.backports.urllib	OpenerDirector	open	fullurl data timeout	accept a url or a request object python-future if the url is passed as a byte-string decode it first
+extlibs.future.py2_3.future.backports.urllib		build_opener		create an opener object from a list of handlers
+extlibs.future.py2_3.future.backports.urllib	HTTPRedirectHandler	redirect_request	req fp code msg	return a request or none in response to a redirect
+extlibs.future.py2_3.future.backports.urllib		_parse_proxy	proxy	return (scheme user password host/port) given a url or an authority
+extlibs.future.py2_3.future.backports.urllib	HTTPPasswordMgr	reduce_uri	uri default_port	accept authority or uri and extract only the authority and path
+extlibs.future.py2_3.future.backports.urllib	HTTPPasswordMgr	is_suburi	base test	check if test is below base in a uri tree both args must be uris in reduced form
+extlibs.future.py2_3.future.backports.urllib	AbstractHTTPHandler	do_open	http_class req	return an httpresponse object for the request using http_class
+extlibs.future.py2_3.future.backports.urllib		parse_keqv_list	l	parse list of key=value strings where keys are not duplicated
+extlibs.future.py2_3.future.backports.urllib		parse_http_list	s	parse lists as described by rfc 2068 section 2
+extlibs.future.py2_3.future.backports.urllib	URLopener	addheader		add a header to be used by the http interface only e
+extlibs.future.py2_3.future.backports.urllib	URLopener	open	fullurl data	use urlopener() open file instead of open(file 'r')
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_unknown	fullurl data	overridable interface to open unknown url type
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_unknown_proxy	proxy fullurl data	overridable interface to open unknown url type
+extlibs.future.py2_3.future.backports.urllib	URLopener	retrieve	url filename reporthook data	retrieve url returns filename headers for a local object or tempfilename headers for a remote object
+extlibs.future.py2_3.future.backports.urllib	URLopener	_open_generic_http	connection_factory url data	make an http connection using connection_class
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_http	url data	use http protocol
+extlibs.future.py2_3.future.backports.urllib	URLopener	http_error	url fp errcode errmsg	handle http errors
+extlibs.future.py2_3.future.backports.urllib	URLopener	http_error_default	url fp errcode errmsg	default error handler close the connection and raise ioerror
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_file	url	use local file or ftp depending on form of url
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_local_file	url	use local file
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_ftp	url	use ftp protocol
+extlibs.future.py2_3.future.backports.urllib	URLopener	open_data	url data	use "data" url
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_default	url fp errcode errmsg	default error handling -- don't raise an exception
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_302	url fp errcode errmsg	error 302 -- relocated temporarily
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_301	url fp errcode errmsg	error 301 -- also relocated permanently
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_303	url fp errcode errmsg	error 303 -- also relocated essentially identical to 302
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_307	url fp errcode errmsg	error 307 -- relocated but turn post into error
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_401	url fp errcode errmsg	error 401 -- authentication required
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	http_error_407	url fp errcode errmsg	error 407 -- proxy authentication required
+extlibs.future.py2_3.future.backports.urllib	FancyURLopener	prompt_user_passwd	host realm	override this in a gui environment!
+extlibs.future.py2_3.future.backports.urllib		localhost		return the ip address of the magic hostname 'localhost'
+extlibs.future.py2_3.future.backports.urllib		thishost		return the ip addresses of the current host
+extlibs.future.py2_3.future.backports.urllib		ftperrors		return the set of errors raised by the ftp class
+extlibs.future.py2_3.future.backports.urllib		noheaders		return an empty email message object
+extlibs.future.py2_3.future.backports.urllib		getproxies_environment		return a dictionary of scheme -> proxy server url mappings
+extlibs.future.py2_3.future.backports.urllib		proxy_bypass_environment	host	test if proxies should not be used for a particular host
+extlibs.future.py2_3.future.backports.urllib		_proxy_bypass_macosx_sysconf	host proxy_settings	return true iff this host shouldn't be accessed using a proxy this function uses the macosx framework systemconfiguration
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	mtime		returns the time the robots txt file was last fetched
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	modified		sets the time the robots txt file was last fetched to the
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	set_url	url	sets the url referring to a robots txt file
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	read		reads the robots txt url and feeds it to the parser
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	parse	lines	parse the input lines from a robots txt file
+extlibs.future.py2_3.future.backports.urllib	RobotFileParser	can_fetch	useragent url	using the parsed robots txt decide if useragent can fetch url
+extlibs.future.py2_3.future.backports.urllib	Entry	applies_to	useragent	check if this entry applies to the specified agent
+extlibs.future.py2_3.future.backports.urllib		clear_cache		clear the parse cache and the quoters cache
+extlibs.future.py2_3.future.backports.urllib		urlparse	url scheme allow_fragments	parse a url into 6 components <scheme>://<netloc>/<path>;<params>?<query>#<fragment>
+extlibs.future.py2_3.future.backports.urllib		urlsplit	url scheme allow_fragments	parse a url into 5 components <scheme>://<netloc>/<path>?<query>#<fragment>
+extlibs.future.py2_3.future.backports.urllib		urlunparse	components	put a parsed url back together again this may result in a
+extlibs.future.py2_3.future.backports.urllib		urlunsplit	components	combine the elements of a tuple as returned by urlsplit() into a complete url as a string
+extlibs.future.py2_3.future.backports.urllib		urljoin	base url allow_fragments	join a base url and a possibly relative url to form an absolute interpretation of the latter
+extlibs.future.py2_3.future.backports.urllib		urldefrag	url	removes any existing fragment from url
+extlibs.future.py2_3.future.backports.urllib		unquote_to_bytes	string	unquote_to_bytes('abc%20def') -> b'abc def'
+extlibs.future.py2_3.future.backports.urllib		unquote	string encoding errors	replace %xx escapes by their single-character equivalent the optional
+extlibs.future.py2_3.future.backports.urllib		parse_qs	qs keep_blank_values strict_parsing encoding	parse a query given as a string argument
+extlibs.future.py2_3.future.backports.urllib		parse_qsl	qs keep_blank_values strict_parsing encoding	parse a query given as a string argument
+extlibs.future.py2_3.future.backports.urllib		unquote_plus	string encoding errors	like unquote(), but also replace plus signs by spaces as required for unquoting html form values
+extlibs.future.py2_3.future.backports.urllib	Quoter	__init__	safe	safe bytes object
+extlibs.future.py2_3.future.backports.urllib		quote	string safe encoding errors	quote('abc def') -> 'abc%20def' each part of a url e
+extlibs.future.py2_3.future.backports.urllib		quote_plus	string safe encoding errors	like quote(), but also replace ' ' with '+', as required for quoting html form values
+extlibs.future.py2_3.future.backports.urllib		quote_from_bytes	bs safe	like quote(), but accepts a bytes object rather than a str and does not perform string-to-bytes encoding
+extlibs.future.py2_3.future.backports.urllib		urlencode	query doseq safe encoding	encode a sequence of two-element tuples or dictionary into a url query string
+extlibs.future.py2_3.future.backports.urllib		to_bytes	url	to_bytes(u"url") --> 'url'
+extlibs.future.py2_3.future.backports.urllib		unwrap	url	unwrap('<url type //host/path>') --> 'type //host/path'
+extlibs.future.py2_3.future.backports.urllib		splittype	url	splittype('type opaquestring') --> 'type', 'opaquestring'
+extlibs.future.py2_3.future.backports.urllib		splithost	url	splithost('//host[:port]/path') --> 'host[:port]', '/path'
+extlibs.future.py2_3.future.backports.urllib		splituser	host	splituser('user[:passwd]@host[:port]') --> 'user[:passwd]', 'host[:port]'
+extlibs.future.py2_3.future.backports.urllib		splitpasswd	user	splitpasswd('user passwd') -> 'user', 'passwd'
+extlibs.future.py2_3.future.backports.urllib		splitport	host	splitport('host port') --> 'host', 'port'
+extlibs.future.py2_3.future.backports.urllib		splitnport	host defport	split host and port returning numeric port
+extlibs.future.py2_3.future.backports.urllib		splitquery	url	splitquery('/path?query') --> '/path', 'query'
+extlibs.future.py2_3.future.backports.urllib		splittag	url	splittag('/path#tag') --> '/path', 'tag'
+extlibs.future.py2_3.future.backports.urllib		splitattr	url	splitattr('/path attr1=value1 attr2=value2 ') ->
+extlibs.future.py2_3.future.backports.urllib		splitvalue	attr	splitvalue('attr=value') --> 'attr', 'value'
+extlibs.future.py2_3.future.backports.html		escape	s quote	replace special characters "&", "<" and ">" to html-safe sequences
+extlibs.future.py2_3.future.backports.html	HTMLParser	__init__	strict	initialize and reset this instance
+extlibs.future.py2_3.future.backports.html	HTMLParser	reset		reset this instance loses all unprocessed data
+extlibs.future.py2_3.future.backports.html	HTMLParser	feed	data	feed data to the parser
+extlibs.future.py2_3.future.backports.html	HTMLParser	close		handle any buffered data
+extlibs.future.py2_3.future.backports.html	HTMLParser	get_starttag_text		return full source of start tag '< >'
+extlibs.future.py2_3.future.backports.email	_PolicyBase	__init__		create new policy possibly overriding some defaults
+extlibs.future.py2_3.future.backports.email	_PolicyBase	clone		return a new instance with specified attributes changed
+extlibs.future.py2_3.future.backports.email	_PolicyBase	__add__	other	non-default values from right operand override those from left
+extlibs.future.py2_3.future.backports.email	Policy	handle_defect	obj defect	based on policy either raise defect or call register_defect
+extlibs.future.py2_3.future.backports.email	Policy	register_defect	obj defect	record 'defect' on 'obj'
+extlibs.future.py2_3.future.backports.email	Policy	header_max_count	name	return the maximum allowed number of headers named 'name'
+extlibs.future.py2_3.future.backports.email	Policy	header_source_parse	sourcelines	given a list of linesep terminated strings constituting the lines of a single header return the name value tuple that should be stored
+extlibs.future.py2_3.future.backports.email	Policy	header_store_parse	name value	given the header name and the value provided by the application program return the name value that should be stored in the model
+extlibs.future.py2_3.future.backports.email	Policy	header_fetch_parse	name value	given the header name and the value from the model return the value to be returned to the application program that is requesting that
+extlibs.future.py2_3.future.backports.email	Policy	fold	name value	given the header name and the value from the model return a string containing linesep characters that implement the folding of the header
+extlibs.future.py2_3.future.backports.email	Policy	fold_binary	name value	given the header name and the value from the model return binary data containing linesep characters that implement the folding of the
+extlibs.future.py2_3.future.backports.email	Compat32	header_source_parse	sourcelines	+ the name is parsed as everything up to the ':' and returned unmodified
+extlibs.future.py2_3.future.backports.email	Compat32	header_store_parse	name value	+ the name and value are returned unmodified
+extlibs.future.py2_3.future.backports.email	Compat32	header_fetch_parse	name value	+ if the value contains binary data it is converted into a header object
+extlibs.future.py2_3.future.backports.email	Compat32	fold	name value	+ headers are folded using the header folding algorithm which preserves
+extlibs.future.py2_3.future.backports.email	Compat32	fold_binary	name value	+ headers are folded using the header folding algorithm which preserves
+extlibs.future.py2_3.future.backports.email	Generator	flatten	msg unixfrom linesep	print the message object tree rooted at msg to the output file specified when the generator instance was created
+extlibs.future.py2_3.future.backports.email	Generator	clone	fp	clone this generator with the exact same options
+extlibs.future.py2_3.future.backports.email	DecodedGenerator	__init__	outfp mangle_from_ maxheaderlen fmt	like generator __init__() except that an additional optional
+extlibs.future.py2_3.future.backports.email	EmailPolicy	header_max_count	name	+ the implementation for this class returns the max_count attribute from
+extlibs.future.py2_3.future.backports.email	EmailPolicy	header_source_parse	sourcelines	+ the name is parsed as everything up to the ':' and returned unmodified
+extlibs.future.py2_3.future.backports.email	EmailPolicy	header_store_parse	name value	+ the name is returned unchanged
+extlibs.future.py2_3.future.backports.email	EmailPolicy	header_fetch_parse	name value	+ if the value has a 'name' attribute it is returned to unmodified
+extlibs.future.py2_3.future.backports.email	EmailPolicy	fold	name value	+ header folding is controlled by the refold_source policy setting
+extlibs.future.py2_3.future.backports.email	EmailPolicy	fold_binary	name value	+ the same as fold if cte_type is 7bit except that the returned value is
+extlibs.future.py2_3.future.backports.email		add_charset	charset header_enc body_enc output_charset	add character set properties to the global registry
+extlibs.future.py2_3.future.backports.email		add_alias	alias canonical	add a character set alias
+extlibs.future.py2_3.future.backports.email		add_codec	charset codecname	add a codec that map characters in the given charset to/from unicode
+extlibs.future.py2_3.future.backports.email	Charset	get_body_encoding		return the content-transfer-encoding used for body encoding
+extlibs.future.py2_3.future.backports.email	Charset	get_output_charset		return the output character set
+extlibs.future.py2_3.future.backports.email	Charset	header_encode	string	header-encode a string by converting it first to bytes
+extlibs.future.py2_3.future.backports.email	Charset	header_encode_lines	string maxlengths	header-encode a string by converting it first to bytes
+extlibs.future.py2_3.future.backports.email	Charset	body_encode	string	body-encode a string by converting it first to bytes
+extlibs.future.py2_3.future.backports.email	Address	__init__	display_name username domain addr_spec	create an object represeting a full email address
+extlibs.future.py2_3.future.backports.email	Address	addr_spec		the addr_spec (username@domain) portion of the address quoted according to rfc 5322 rules but with no content transfer encoding
+extlibs.future.py2_3.future.backports.email	Group	__init__	display_name addresses	create an object representing an address group
+extlibs.future.py2_3.future.backports.email	HeaderRegistry	__init__	base_class default_class use_default_map	create a header_factory that works with the policy api
+extlibs.future.py2_3.future.backports.email	HeaderRegistry	map_to_type	name cls	register cls as the specialized class for handling "name" headers
+extlibs.future.py2_3.future.backports.email	HeaderRegistry	__call__	name value	create a header instance for header 'name' from 'value'
+extlibs.future.py2_3.future.backports.email		_formatparam	param value quote	convenience function to format and return a key=value pair
+extlibs.future.py2_3.future.backports.email	Message	__str__		return the entire formatted message as a string
+extlibs.future.py2_3.future.backports.email	Message	as_string	unixfrom maxheaderlen	return the entire formatted message as a unicode string
+extlibs.future.py2_3.future.backports.email	Message	is_multipart		return true if the message consists of multiple parts
+extlibs.future.py2_3.future.backports.email	Message	attach	payload	add the given payload to the current payload
+extlibs.future.py2_3.future.backports.email	Message	get_payload	i decode	return a reference to the payload
+extlibs.future.py2_3.future.backports.email	Message	set_payload	payload charset	set the payload to the given value
+extlibs.future.py2_3.future.backports.email	Message	set_charset	charset	set the charset of the payload to a given character set
+extlibs.future.py2_3.future.backports.email	Message	get_charset		return the charset instance associated with the message's payload
+extlibs.future.py2_3.future.backports.email	Message	__len__		return the total number of headers including duplicates
+extlibs.future.py2_3.future.backports.email	Message	__getitem__	name	get a header value
+extlibs.future.py2_3.future.backports.email	Message	__setitem__	name val	set the value of a header
+extlibs.future.py2_3.future.backports.email	Message	__delitem__	name	delete all occurrences of a header if present
+extlibs.future.py2_3.future.backports.email	Message	keys		return a list of all the message's header field names
+extlibs.future.py2_3.future.backports.email	Message	values		return a list of all the message's header values
+extlibs.future.py2_3.future.backports.email	Message	items		get all the message's header fields and values
+extlibs.future.py2_3.future.backports.email	Message	get	name failobj	get a header value
+extlibs.future.py2_3.future.backports.email	Message	set_raw	name value	store name and value in the model without modification
+extlibs.future.py2_3.future.backports.email	Message	raw_items		return the name value header pairs without modification
+extlibs.future.py2_3.future.backports.email	Message	get_all	name failobj	return a list of all the values for the named field
+extlibs.future.py2_3.future.backports.email	Message	add_header	_name _value	extended header setting
+extlibs.future.py2_3.future.backports.email	Message	replace_header	_name _value	replace a header
+extlibs.future.py2_3.future.backports.email	Message	get_content_type		return the message's content type
+extlibs.future.py2_3.future.backports.email	Message	get_content_maintype		return the message's main content type
+extlibs.future.py2_3.future.backports.email	Message	get_content_subtype		returns the message's sub-content type
+extlibs.future.py2_3.future.backports.email	Message	get_default_type		return the default' content type
+extlibs.future.py2_3.future.backports.email	Message	set_default_type	ctype	set the default' content type
+extlibs.future.py2_3.future.backports.email	Message	get_params	failobj header unquote	return the message's content-type parameters as a list
+extlibs.future.py2_3.future.backports.email	Message	get_param	param failobj header unquote	return the parameter value if found in the content-type header
+extlibs.future.py2_3.future.backports.email	Message	set_param	param value header requote	set a parameter in the content-type header
+extlibs.future.py2_3.future.backports.email	Message	del_param	param header requote	remove the given parameter completely from the content-type header
+extlibs.future.py2_3.future.backports.email	Message	set_type	type header requote	set the main type and subtype for the content-type header
+extlibs.future.py2_3.future.backports.email	Message	get_filename	failobj	return the filename associated with the payload if present
+extlibs.future.py2_3.future.backports.email	Message	get_boundary	failobj	return the boundary associated with the payload if present
+extlibs.future.py2_3.future.backports.email	Message	set_boundary	boundary	set the boundary parameter in content-type to 'boundary'
+extlibs.future.py2_3.future.backports.email	Message	get_content_charset	failobj	return the charset parameter of the content-type header
+extlibs.future.py2_3.future.backports.email	Message	get_charsets	failobj	return a list containing the charset s used in this message
+extlibs.future.py2_3.future.backports.email		walk		walk over the message tree yielding each subpart
+extlibs.future.py2_3.future.backports.email		body_line_iterator	msg decode	iterate over the parts returning string payloads line-by-line
+extlibs.future.py2_3.future.backports.email		typed_subpart_iterator	msg maintype subtype	iterate over the subparts with a given mime type
+extlibs.future.py2_3.future.backports.email		_structure	msg fp level include_default	a handy debugging aid
+extlibs.future.py2_3.future.backports.email		decode_header	header	decode a message header value without converting charset
+extlibs.future.py2_3.future.backports.email		make_header	decoded_seq maxlinelen header_name continuation_ws	create a header from a sequence of pairs as returned by decode_header() decode_header() takes a header value string and returns a sequence of
+extlibs.future.py2_3.future.backports.email	Header	__init__	s charset maxlinelen header_name	create a mime-compliant header that can contain many character sets
+extlibs.future.py2_3.future.backports.email	Header	__str__		return the string value of the header
+extlibs.future.py2_3.future.backports.email	Header	append	s charset errors	append a string to the mime header
+extlibs.future.py2_3.future.backports.email	Header	_nonctext	s	true if string s is not a ctext character of rfc822
+extlibs.future.py2_3.future.backports.email	Header	encode	splitchars maxlinelen linesep	encode a message header into an rfc-compliant format
+extlibs.future.py2_3.future.backports.email		header_check	octet	return true if the octet should be escaped with header quopri
+extlibs.future.py2_3.future.backports.email		body_check	octet	return true if the octet should be escaped with body quopri
+extlibs.future.py2_3.future.backports.email		header_length	bytearray	return a header quoted-printable encoding length
+extlibs.future.py2_3.future.backports.email		body_length	bytearray	return a body quoted-printable encoding length
+extlibs.future.py2_3.future.backports.email		unquote	s	turn a string in the form =ab to the ascii character with value 0xab
+extlibs.future.py2_3.future.backports.email		header_encode	header_bytes charset	encode a single header line with quoted-printable like encoding
+extlibs.future.py2_3.future.backports.email	_body_accumulator	write_str	s	add string s to the accumulated body
+extlibs.future.py2_3.future.backports.email	_body_accumulator	newline		write eol then start new line
+extlibs.future.py2_3.future.backports.email	_body_accumulator	write_soft_break		write a soft break then start a new line
+extlibs.future.py2_3.future.backports.email	_body_accumulator	write_wrapped	s extra_room	add a soft line break if needed then write s
+extlibs.future.py2_3.future.backports.email		body_encode	body maxlinelen eol	encode with quoted-printable wrapping at maxlinelen characters
+extlibs.future.py2_3.future.backports.email		decode	encoded eol	decode a quoted-printable string
+extlibs.future.py2_3.future.backports.email		_unquote_match	match	turn a match in the form =ab to the ascii character with value 0xab
+extlibs.future.py2_3.future.backports.email		header_decode	s	decode a string encoded with rfc 2045 mime header q' encoding
+extlibs.future.py2_3.future.backports.email		parsedate_tz	data	convert a date string to a time tuple
+extlibs.future.py2_3.future.backports.email		_parsedate_tz	data	convert date to extended time tuple
+extlibs.future.py2_3.future.backports.email		parsedate	data	convert a time string to a time tuple
+extlibs.future.py2_3.future.backports.email		mktime_tz	data	turn a 10-tuple as returned by parsedate_tz() into a posix timestamp
+extlibs.future.py2_3.future.backports.email		quote	str	prepare string to be used in a quoted string
+extlibs.future.py2_3.future.backports.email	AddrlistClass	__init__	field	initialize a new instance
+extlibs.future.py2_3.future.backports.email	AddrlistClass	gotonext		skip white space and extract comments
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getaddrlist		parse all addresses
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getaddress		parse the next address
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getrouteaddr		parse a route address return-path value
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getaddrspec		parse an rfc 2822 addr-spec
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getdomain		get the complete domain name from an address
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getdelimited	beginchar endchars allowcomments	parse a header fragment delimited by special characters
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getquote		get a quote-delimited fragment from self's field
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getcomment		get a parenthesis-delimited fragment from self's field
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getdomainliteral		parse an rfc 2822 domain-literal
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getatom	atomends	parse an rfc 2822 atom
+extlibs.future.py2_3.future.backports.email	AddrlistClass	getphraselist		parse a sequence of rfc 2822 phrases
+extlibs.future.py2_3.future.backports.email		header_length	bytearray	return the length of s when it is encoded with base64
+extlibs.future.py2_3.future.backports.email		header_encode	header_bytes charset	encode a single header line with base64 encoding in a given charset
+extlibs.future.py2_3.future.backports.email		body_encode	s maxlinelen eol	encode a string with base64
+extlibs.future.py2_3.future.backports.email		decode	string	decode a raw base64 string returning a bytes object
+extlibs.future.py2_3.future.backports.email		message_from_string	s	parse a string into a message object model
+extlibs.future.py2_3.future.backports.email		message_from_bytes	s	parse a bytes string into a message object model
+extlibs.future.py2_3.future.backports.email		message_from_file	fp	read a file and parse its contents into a message object model
+extlibs.future.py2_3.future.backports.email		message_from_binary_file	fp	read a binary file and parse its contents into a message object model
+extlibs.future.py2_3.future.backports.email		_validate_xtext	xtext	if input token contains ascii non-printables register a defect
+extlibs.future.py2_3.future.backports.email		_get_ptext_to_endchars	value endchars	scan printables/quoted-pairs until endchars and return unquoted ptext
+extlibs.future.py2_3.future.backports.email		_decode_ew_run	value	decode a run of rfc2047 encoded words
+extlibs.future.py2_3.future.backports.email		get_fws	value	fws = 1*wsp this isn't the rfc definition
+extlibs.future.py2_3.future.backports.email		get_encoded_word	value	encoded-word = "=?" charset "?" encoding "?" encoded-text "?="
+extlibs.future.py2_3.future.backports.email		get_unstructured	value	unstructured = (*([fws] vchar) *wsp) / obs-unstruct obs-unstruct = *((*lf *cr * obs-utext *lf *cr)) / fws)
+extlibs.future.py2_3.future.backports.email		get_qp_ctext	value	ctext = <printable ascii except \ > this is not the rfc ctext since we are handling nested comments in comment
+extlibs.future.py2_3.future.backports.email		get_qcontent	value	qcontent = qtext / quoted-pair we allow anything except the dquote character but if we find any ascii
+extlibs.future.py2_3.future.backports.email		get_atext	value	atext = <matches _atext_matcher> we allow any non-atom_ends in atext but add an invalidatextdefect to
+extlibs.future.py2_3.future.backports.email		get_bare_quoted_string	value	bare-quoted-string = dquote *([fws] qcontent) [fws] dquote a quoted-string without the leading or trailing white space
+extlibs.future.py2_3.future.backports.email		get_comment	value	comment = "(" *([fws] ccontent) [fws] ")" ccontent = ctext / quoted-pair / comment
+extlibs.future.py2_3.future.backports.email		get_cfws	value	cfws = (1*([fws] comment) [fws]) / fws
+extlibs.future.py2_3.future.backports.email		get_quoted_string	value	quoted-string = [cfws] <bare-quoted-string> [cfws] 'bare-quoted-string' is an intermediate class defined by this
+extlibs.future.py2_3.future.backports.email		get_atom	value	atom = [cfws] 1*atext [cfws]
+extlibs.future.py2_3.future.backports.email		get_dot_atom_text	value	dot-text = 1*atext *(" " 1*atext)
+extlibs.future.py2_3.future.backports.email		get_dot_atom	value	dot-atom = [cfws] dot-atom-text [cfws]
+extlibs.future.py2_3.future.backports.email		get_word	value	word = atom / quoted-string either atom or quoted-string may start with cfws
+extlibs.future.py2_3.future.backports.email		get_phrase	value	phrase = 1*word / obs-phrase obs-phrase = word *(word / "
+extlibs.future.py2_3.future.backports.email		get_local_part	value	local-part = dot-atom / quoted-string / obs-local-part
+extlibs.future.py2_3.future.backports.email		get_obs_local_part	value	obs-local-part = word *(" " word)
+extlibs.future.py2_3.future.backports.email		get_dtext	value	dtext = <printable ascii except \ [ ]> / obs-dtext obs-dtext = obs-no-ws-ctl / quoted-pair
+extlibs.future.py2_3.future.backports.email		get_domain_literal	value	domain-literal = [cfws] "[" *([fws] dtext) [fws] "]" [cfws]
+extlibs.future.py2_3.future.backports.email		get_domain	value	domain = dot-atom / domain-literal / obs-domain obs-domain = atom *("
+extlibs.future.py2_3.future.backports.email		get_addr_spec	value	addr-spec = local-part "@" domain
+extlibs.future.py2_3.future.backports.email		get_obs_route	value	obs-route = obs-domain-list ":" obs-domain-list = *(cfws / ",") "@" domain *("," [cfws] ["@" domain])
+extlibs.future.py2_3.future.backports.email		get_angle_addr	value	angle-addr = [cfws] "<" addr-spec ">" [cfws] / obs-angle-addr
+extlibs.future.py2_3.future.backports.email		get_display_name	value	display-name = phrase because this is simply a name-rule we don't return a display-name
+extlibs.future.py2_3.future.backports.email		get_name_addr	value	name-addr = [display-name] angle-addr
+extlibs.future.py2_3.future.backports.email		get_mailbox	value	mailbox = name-addr / addr-spec
+extlibs.future.py2_3.future.backports.email		get_invalid_mailbox	value endchars	read everything up to one of the chars in endchars
+extlibs.future.py2_3.future.backports.email		get_mailbox_list	value	mailbox-list = (mailbox *("," mailbox)) / obs-mbox-list obs-mbox-list = *([cfws] ",") mailbox *("," [mailbox / cfws])
+extlibs.future.py2_3.future.backports.email		get_group_list	value	group-list = mailbox-list / cfws / obs-group-list
+extlibs.future.py2_3.future.backports.email		get_group	value	group = display-name ":" [group-list] ";" [cfws]
+extlibs.future.py2_3.future.backports.email		get_address	value	address = mailbox / group note that counter-intuitively an address can be either a single address or
+extlibs.future.py2_3.future.backports.email		get_address_list	value	address_list = (address *("," address)) / obs-addr-list obs-addr-list = *([cfws] ",") address *("," [address / cfws])
+extlibs.future.py2_3.future.backports.email		parse_mime_version	value	mime-version = [cfws] 1*digit [cfws] " " [cfws] 1*digit [cfws]
+extlibs.future.py2_3.future.backports.email		get_invalid_parameter	value	read everything up to the next ';'
+extlibs.future.py2_3.future.backports.email		get_ttext	value	ttext = <matches _ttext_matcher> we allow any non-token_ends in ttext but add defects to the token's
+extlibs.future.py2_3.future.backports.email		get_token	value	token = [cfws] 1*ttext [cfws] the rfc equivalent of ttext is any us-ascii chars except space ctls or
+extlibs.future.py2_3.future.backports.email		get_attrtext	value	attrtext = 1*(any non-attribute_ends character) we allow any non-attribute_ends in attrtext but add defects to the
+extlibs.future.py2_3.future.backports.email		get_attribute	value	[cfws] 1*attrtext [cfws] this version of the bnf makes the cfws explicit and as usual we use a
+extlibs.future.py2_3.future.backports.email		get_extended_attrtext	value	attrtext = 1*(any non-attribute_ends character plus '%') this is a special parsing routine so that we get a value that
+extlibs.future.py2_3.future.backports.email		get_extended_attribute	value	[cfws] 1*extended_attrtext [cfws] this is like the non-extended version except we allow % characters so that
+extlibs.future.py2_3.future.backports.email		get_section	value	'*' digits the formal bnf is more complicated because leading 0s are not allowed
+extlibs.future.py2_3.future.backports.email		get_value	value	quoted-string / attribute
+extlibs.future.py2_3.future.backports.email		get_parameter	value	attribute [section] ["*"] [cfws] "=" value the cfws is implied by the rfc but not made explicit in the bnf
+extlibs.future.py2_3.future.backports.email		parse_mime_parameters	value	parameter *( ";" parameter that bnf is meant to indicate this routine should only be called after
+extlibs.future.py2_3.future.backports.email		_find_mime_parameters	tokenlist value	do our best to find the parameters in an invalid mime header
+extlibs.future.py2_3.future.backports.email		parse_content_type_header	value	maintype "/" subtype *( ";" parameter the maintype and substype are tokens
+extlibs.future.py2_3.future.backports.email		parse_content_disposition_header	value	disposition-type *( ";" parameter
+extlibs.future.py2_3.future.backports.email		formataddr	pair charset	the inverse of parseaddr(), this takes a 2-tuple of the form (realname email_address) and returns the string value suitable
+extlibs.future.py2_3.future.backports.email		getaddresses	fieldvalues	return a list of realname email for each fieldvalue
+extlibs.future.py2_3.future.backports.email		formatdate	timeval localtime usegmt	returns a date string as specified by rfc 2822 e g :
+extlibs.future.py2_3.future.backports.email		format_datetime	dt usegmt	turn a datetime into a date string as specified in rfc 2822
+extlibs.future.py2_3.future.backports.email		make_msgid	idstring domain	returns a string suitable for rfc 2822 compliant message-id e g
+extlibs.future.py2_3.future.backports.email		unquote	str	remove quotes from a string
+extlibs.future.py2_3.future.backports.email		decode_rfc2231	s	decode string according to rfc 2231
+extlibs.future.py2_3.future.backports.email		encode_rfc2231	s charset language	encode string according to rfc 2231
+extlibs.future.py2_3.future.backports.email		decode_params	params	decode parameters list according to rfc 2231
+extlibs.future.py2_3.future.backports.email		localtime	dt isdst	return local time as an aware datetime object
+extlibs.future.py2_3.future.backports.email		encode_base64	msg	encode the message's payload in base64
+extlibs.future.py2_3.future.backports.email		encode_quopri	msg	encode the message's payload in quoted-printable
+extlibs.future.py2_3.future.backports.email		encode_7or8bit	msg	set the content-transfer-encoding header to 7bit or 8bit
+extlibs.future.py2_3.future.backports.email	Parser	__init__	_class	parser of rfc 2822 and mime email messages
+extlibs.future.py2_3.future.backports.email	Parser	parse	fp headersonly	create a message structure from the data in a file
+extlibs.future.py2_3.future.backports.email	Parser	parsestr	text headersonly	create a message structure from a string
+extlibs.future.py2_3.future.backports.email	BytesParser	__init__		parser of binary rfc 2822 and mime email messages
+extlibs.future.py2_3.future.backports.email	BytesParser	parse	fp headersonly	create a message structure from the data in a binary file
+extlibs.future.py2_3.future.backports.email	BytesParser	parsebytes	text headersonly	create a message structure from a byte string
+extlibs.future.py2_3.future.backports.email	BufferedSubFile	push	data	push some new data into this object
+extlibs.future.py2_3.future.backports.email	FeedParser	feed	data	push more data into the parser
+extlibs.future.py2_3.future.backports.email	FeedParser	close		parse all remaining data and return the root message object
+extlibs.future.py2_3.future.backports.email		decode	ew	decode encoded word and return string charset lang defects tuple
+extlibs.future.py2_3.future.backports.email		encode	string charset encoding lang	encode string using the cte encoding that produces the shorter result
+extlibs.future.py2_3.future.backports.email.mime	MIMEBase	__init__	_maintype _subtype	this constructor adds a content-type and a mime-version header
+extlibs.future.py2_3.future.backports.email.mime	MIMEMessage	__init__	_msg _subtype	create a message/* type mime document
+extlibs.future.py2_3.future.backports.email.mime	MIMEApplication	__init__	_data _subtype _encoder	create an application/* type mime document
+extlibs.future.py2_3.future.backports.email.mime	MIMEText	__init__	_text _subtype _charset	create a text/* type mime document
+extlibs.future.py2_3.future.backports.email.mime	MIMEImage	__init__	_imagedata _subtype _encoder	create an image/* type mime document
+extlibs.future.py2_3.future.backports.email.mime	MIMEMultipart	__init__	_subtype boundary _subparts	creates a multipart/* type message
+extlibs.future.py2_3.future.backports.email.mime		_whatsnd	data	try to identify a sound file type
+extlibs.future.py2_3.future.backports.email.mime	MIMEAudio	__init__	_audiodata _subtype _encoder	create an audio/* type mime document
+extlibs.future.py2_3.future.backports.xmlrpc		resolve_dotted_attribute	obj attr allow_dotted_names	resolve_dotted_attribute(a 'b c d') => a b c d
+extlibs.future.py2_3.future.backports.xmlrpc		list_public_methods	obj	returns a list of attribute strings found in the specified
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	register_instance	instance allow_dotted_names	registers an instance to respond to xml-rpc requests
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	register_function	function name	registers a function to respond to xml-rpc requests
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	register_introspection_functions		registers the xml-rpc introspection methods in the system namespace
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	register_multicall_functions		registers the xml-rpc multicall method in the system namespace
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	_marshaled_dispatch	data dispatch_method path	dispatches an xml-rpc method from marshalled xml data
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	system_listMethods		system listmethods() => ['add', 'subtract', 'multiple']
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	system_methodSignature	method_name	system methodsignature('add') => [double int int]
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	system_methodHelp	method_name	system methodhelp('add') => "adds two integers together"
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	system_multicall	call_list	system multicall([{'methodname': 'add', 'params': [2 2]}, ]) => [[4], ]
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCDispatcher	_dispatch	method params	dispatches the xml-rpc method
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCRequestHandler	do_POST		handles the http post request
+extlibs.future.py2_3.future.backports.xmlrpc	SimpleXMLRPCRequestHandler	log_request	code size	selectively log an accepted request
+extlibs.future.py2_3.future.backports.xmlrpc	CGIXMLRPCRequestHandler	handle_xmlrpc	request_text	handle a single xml-rpc request
+extlibs.future.py2_3.future.backports.xmlrpc	CGIXMLRPCRequestHandler	handle_get		handle a single http get request
+extlibs.future.py2_3.future.backports.xmlrpc	CGIXMLRPCRequestHandler	handle_request	request_text	handle a single xml-rpc request passed through a cgi post method
+extlibs.future.py2_3.future.backports.xmlrpc	ServerHTMLDoc	markup	text escape funcs classes	mark up some plain text given a context of symbols to look for
+extlibs.future.py2_3.future.backports.xmlrpc	ServerHTMLDoc	docroutine	object name mod funcs	produce html documentation for a function or method object
+extlibs.future.py2_3.future.backports.xmlrpc	ServerHTMLDoc	docserver	server_name package_documentation methods	produce html documentation for an xml-rpc server
+extlibs.future.py2_3.future.backports.xmlrpc	XMLRPCDocGenerator	set_server_title	server_title	set the html title of the generated server documentation
+extlibs.future.py2_3.future.backports.xmlrpc	XMLRPCDocGenerator	set_server_name	server_name	set the name of the generated html server documentation
+extlibs.future.py2_3.future.backports.xmlrpc	XMLRPCDocGenerator	set_server_documentation	server_documentation	set the documentation string for the entire server
+extlibs.future.py2_3.future.backports.xmlrpc	XMLRPCDocGenerator	generate_html_documentation		generate_html_documentation() => html documentation for the server generates html documentation for the server using introspection for
+extlibs.future.py2_3.future.backports.xmlrpc	DocXMLRPCRequestHandler	do_GET		handles the http get request
+extlibs.future.py2_3.future.backports.xmlrpc	DocCGIXMLRPCRequestHandler	handle_get		handles the http get request
+extlibs.future.py2_3.future.backports.xmlrpc		getparser	use_datetime use_builtin_types	getparser() -> parser unmarshaller create an instance of the fastest available parser and attach it
+extlibs.future.py2_3.future.backports.xmlrpc		dumps	params methodname methodresponse encoding	data [,options] -> marshalled data convert an argument tuple or a fault instance to an xml-rpc
+extlibs.future.py2_3.future.backports.xmlrpc		loads	data use_datetime use_builtin_types	data -> unmarshalled data method name convert an xml-rpc packet to unmarshalled data plus a method
+extlibs.future.py2_3.future.backports.xmlrpc		gzip_encode	data	data -> gzip encoded data
+extlibs.future.py2_3.future.backports.xmlrpc		gzip_decode	data	gzip encoded data -> unencoded data
+extlibs.future.py2_3.future.backports.xmlrpc	ServerProxy	__call__	attr	a workaround to get special attributes on the serverproxy
+extlibs.future.py2_3.future.backports.http	HTTPServer	server_bind		override server_bind to store the server name
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	parse_request		parse a request internal
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	handle_expect_100		decide what to do with an "expect 100-continue" header
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	handle_one_request		handle a single http request
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	handle		handle multiple requests if necessary
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	send_error	code message	send and log an error reply
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	send_response	code message	add the response header to the headers buffer and log the response code
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	send_response_only	code message	send the response header only
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	send_header	keyword value	send a mime header to the headers buffer
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	end_headers		send the blank line ending the mime headers
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	log_request	code size	log an accepted request
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	log_error	format	log an error
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	log_message	format	log an arbitrary message
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	version_string		return the server software version string
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	date_time_string	timestamp	return the current date and time formatted for a message header
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	log_date_time_string		return the current time formatted for logging
+extlibs.future.py2_3.future.backports.http	BaseHTTPRequestHandler	address_string		return the client address
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	do_GET		serve a get request
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	do_HEAD		serve a head request
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	send_head		common code for get and head commands
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	list_directory	path	helper to produce a directory listing absent index html
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	translate_path	path	translate a /-separated path to the local filename syntax
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	copyfile	source outputfile	copy all data between two file objects
+extlibs.future.py2_3.future.backports.http	SimpleHTTPRequestHandler	guess_type	path	guess the type of a file
+extlibs.future.py2_3.future.backports.http		_url_collapse_path	path	given a url path remove extra '/'s and ' ' path elements and collapse
+extlibs.future.py2_3.future.backports.http		nobody_uid		internal routine to get nobody's uid
+extlibs.future.py2_3.future.backports.http		executable	path	test for executable file
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	do_POST		serve a post request
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	send_head		version of send_head that support cgi scripts
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	is_cgi		test whether self path corresponds to a cgi script
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	is_executable	path	test whether argument path is an executable file
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	is_python	path	test whether argument path is a python script
+extlibs.future.py2_3.future.backports.http	CGIHTTPRequestHandler	run_cgi		execute a cgi script
+extlibs.future.py2_3.future.backports.http		test	HandlerClass ServerClass protocol port	test the http request handler class
+extlibs.future.py2_3.future.backports.http		_quote	str LegalChars	quote a string for use in a cookie header
+extlibs.future.py2_3.future.backports.http	BaseCookie	value_decode	val	real_value coded_value = value_decode string called prior to setting a cookie's value from the network
+extlibs.future.py2_3.future.backports.http	BaseCookie	value_encode	val	real_value coded_value = value_encode value called prior to setting a cookie's value from the dictionary
+extlibs.future.py2_3.future.backports.http	BaseCookie	__set	key real_value coded_value	private method for setting a cookie's value
+extlibs.future.py2_3.future.backports.http	BaseCookie	__setitem__	key value	dictionary style assignment
+extlibs.future.py2_3.future.backports.http	BaseCookie	output	attrs header sep	return a string suitable for http
+extlibs.future.py2_3.future.backports.http	BaseCookie	js_output	attrs	return a string suitable for javascript
+extlibs.future.py2_3.future.backports.http	BaseCookie	load	rawdata	load cookies from a string (presumably http_cookie) or from a dictionary
+extlibs.future.py2_3.future.backports.http	HTTPMessage	getallmatchingheaders	name	find all header lines matching a given header name
+extlibs.future.py2_3.future.backports.http		parse_headers	fp _class	parses only rfc2822 headers from a file pointer
+extlibs.future.py2_3.future.backports.http	HTTPResponse	isclosed		true if the connection is closed
+extlibs.future.py2_3.future.backports.http	HTTPResponse	_safe_read	amt	read the number of bytes requested compensating for partial reads
+extlibs.future.py2_3.future.backports.http	HTTPResponse	_safe_readinto	b	same as _safe_read but for reading into a buffer
+extlibs.future.py2_3.future.backports.http	HTTPResponse	getheaders		return list of header value tuples
+extlibs.future.py2_3.future.backports.http	HTTPConnection	set_tunnel	host port headers	sets up the host and the port for the http connect tunnelling
+extlibs.future.py2_3.future.backports.http	HTTPConnection	connect		connect to the host and port specified in __init__
+extlibs.future.py2_3.future.backports.http	HTTPConnection	close		close the connection to the http server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	send	data	send data' to the server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	_output	s	add a line of output to the current request buffer
+extlibs.future.py2_3.future.backports.http	HTTPConnection	_send_output	message_body	send the currently buffered request and clear the buffer
+extlibs.future.py2_3.future.backports.http	HTTPConnection	putrequest	method url skip_host skip_accept_encoding	send a request to the server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	putheader	header	send a request header line to the server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	endheaders	message_body	indicate that the last header line has been sent to the server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	request	method url body headers	send a complete request to the server
+extlibs.future.py2_3.future.backports.http	HTTPConnection	getresponse		get the response from the server
+extlibs.future.py2_3.future.backports.http		time2isoz	t	return a string representing time in seconds since epoch t
+extlibs.future.py2_3.future.backports.http		time2netscape	t	return a string representing time in seconds since epoch t
+extlibs.future.py2_3.future.backports.http		http2time	text	returns time in seconds since epoch of time represented by a string
+extlibs.future.py2_3.future.backports.http		iso2time	text	as for http2time but parses the iso 8601 formats
+extlibs.future.py2_3.future.backports.http		unmatched	match	return unmatched part of re match object
+extlibs.future.py2_3.future.backports.http		split_header_words	header_values	parse header values into a list of lists containing key value pairs
+extlibs.future.py2_3.future.backports.http		join_header_words	lists	do the inverse almost of the conversion done by split_header_words
+extlibs.future.py2_3.future.backports.http		parse_ns_headers	ns_headers	ad-hoc parser for netscape protocol cookie-attributes
+extlibs.future.py2_3.future.backports.http		is_HDN	text	return true if text is a host domain name
+extlibs.future.py2_3.future.backports.http		domain_match	A B	return true if domain a domain-matches domain b according to rfc 2965
+extlibs.future.py2_3.future.backports.http		liberal_is_HDN	text	return true if text is a sort-of-like a host domain name
+extlibs.future.py2_3.future.backports.http		user_domain_match	A B	for blocking/accepting domains
+extlibs.future.py2_3.future.backports.http		request_host	request	return request-host as defined by rfc 2965
+extlibs.future.py2_3.future.backports.http		eff_request_host	request	return a tuple request-host effective request-host name
+extlibs.future.py2_3.future.backports.http		request_path	request	path component of request-uri as defined by rfc 2965
+extlibs.future.py2_3.future.backports.http		escape_path	path	escape any invalid characters in http url and uppercase all escapes
+extlibs.future.py2_3.future.backports.http		reach	h	return reach of host h as defined by rfc 2965 section 1
+extlibs.future.py2_3.future.backports.http		is_third_party	request	rfc 2965 section 3 3 6
+extlibs.future.py2_3.future.backports.http	CookiePolicy	set_ok	cookie request	return true if and only if cookie should be accepted from server
+extlibs.future.py2_3.future.backports.http	CookiePolicy	return_ok	cookie request	return true if and only if cookie should be returned to server
+extlibs.future.py2_3.future.backports.http	CookiePolicy	domain_return_ok	domain request	return false if cookies should not be returned given cookie domain
+extlibs.future.py2_3.future.backports.http	CookiePolicy	path_return_ok	path request	return false if cookies should not be returned given cookie path
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	__init__	blocked_domains allowed_domains netscape rfc2965	constructor arguments should be passed as keyword arguments only
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	blocked_domains		return the sequence of blocked domains as a tuple
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	set_blocked_domains	blocked_domains	set the sequence of blocked domains
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	allowed_domains		return none or the sequence of allowed domains as a tuple
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	set_allowed_domains	allowed_domains	set the sequence of allowed domains or none
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	set_ok	cookie request	if you override set_ok(), be sure to call this method if it returns
+extlibs.future.py2_3.future.backports.http	DefaultCookiePolicy	return_ok	cookie request	if you override return_ok(), be sure to call this method if it
+extlibs.future.py2_3.future.backports.http		deepvalues	mapping	iterates over nested mapping depth-first in sorted order by key
+extlibs.future.py2_3.future.backports.http	CookieJar	_cookies_for_request	request	return a list of cookies to be returned to server
+extlibs.future.py2_3.future.backports.http	CookieJar	_cookie_attrs	cookies	return a list of cookie-attributes to be returned to server
+extlibs.future.py2_3.future.backports.http	CookieJar	add_cookie_header	request	add correct cookie header to request urllib request request object
+extlibs.future.py2_3.future.backports.http	CookieJar	_normalized_cookie_tuples	attrs_set	return list of tuples containing normalised cookie information
+extlibs.future.py2_3.future.backports.http	CookieJar	make_cookies	response request	return sequence of cookie objects extracted from response object
+extlibs.future.py2_3.future.backports.http	CookieJar	set_cookie_if_ok	cookie request	set a cookie if policy says it's ok to do so
+extlibs.future.py2_3.future.backports.http	CookieJar	set_cookie	cookie	set a cookie without checking whether or not it should be set
+extlibs.future.py2_3.future.backports.http	CookieJar	extract_cookies	response request	extract cookies from response where allowable given the request
+extlibs.future.py2_3.future.backports.http	CookieJar	clear	domain path name	clear some cookies
+extlibs.future.py2_3.future.backports.http	CookieJar	clear_session_cookies		discard all session cookies
+extlibs.future.py2_3.future.backports.http	CookieJar	clear_expired_cookies		discard all expired cookies
+extlibs.future.py2_3.future.backports.http	CookieJar	__len__		return number of contained cookies
+extlibs.future.py2_3.future.backports.http	FileCookieJar	__init__	filename delayload policy	cookies are not loaded from the named file until either the load() or
+extlibs.future.py2_3.future.backports.http	FileCookieJar	save	filename ignore_discard ignore_expires	save cookies to a file
+extlibs.future.py2_3.future.backports.http	FileCookieJar	load	filename ignore_discard ignore_expires	load cookies from a file
+extlibs.future.py2_3.future.backports.http	FileCookieJar	revert	filename ignore_discard ignore_expires	clear all cookies and reload cookies from a saved file
+extlibs.future.py2_3.future.backports.http		lwp_cookie_str	cookie	return string representation of cookie in an the lwp cookie file format
+extlibs.future.py2_3.future.backports.http	LWPCookieJar	as_lwp_str	ignore_discard ignore_expires	return cookies as a string of "\n"-separated "set-cookie3" headers
+extlibs.future.py2_3.future.utils		surrogateescape_handler	exc	pure python implementation of the pep 383 the "surrogateescape" error handler of python 3
+extlibs.future.py2_3.future.utils		replace_surrogate_encode	mystring	returns a unicode string not the more logical bytes because the codecs register_error functionality expects this
+extlibs.future.py2_3.future.utils		replace_surrogate_decode	mybytes	returns a unicode string
+extlibs.future.py2_3.future.utils		register_surrogateescape		registers the surrogateescape error handler on python 2 only
+extlibs.future.py2_3.future.utils		python_2_unicode_compatible	cls	a decorator that defines __unicode__ and __str__ methods under python 2
+extlibs.future.py2_3.future.utils		with_metaclass	meta	function from jinja2/_compat py license bsd
+extlibs.future.py2_3.future.utils		isidentifier	s dotted	a function equivalent to the str isidentifier method on py3
+extlibs.future.py2_3.future.utils		viewitems	obj	function for iterating over dictionary items with the same set-like behaviour on py2
+extlibs.future.py2_3.future.utils		viewkeys	obj	function for iterating over dictionary keys with the same set-like behaviour on py2
+extlibs.future.py2_3.future.utils		viewvalues	obj	function for iterating over dictionary values with the same set-like behaviour on py2
+extlibs.future.py2_3.future.utils		iteritems	obj	use this only if compatibility with python versions before 2 7 is
+extlibs.future.py2_3.future.utils		iterkeys	obj	use this only if compatibility with python versions before 2 7 is
+extlibs.future.py2_3.future.utils		itervalues	obj	use this only if compatibility with python versions before 2 7 is
+extlibs.future.py2_3.future.utils		bind_method	cls name func	bind a method to class python 2 and python 3 compatible
+extlibs.future.py2_3.future.utils		_get_caller_globals_and_locals		returns the globals and locals of the calling frame
+extlibs.future.py2_3.future.utils		_repr_strip	mystring	returns the string without any initial or final quotes
+extlibs.future.py2_3.future.utils		implements_iterator	cls	from jinja2/_compat py license bsd
+extlibs.future.py2_3.future.utils		is_new_style	cls	python 2 7 has both new-style and old-style classes old-style classes can
+extlibs.future.py2_3.future.utils		istext	obj	deprecated use :
+extlibs.future.py2_3.future.utils		isbytes	obj	deprecated use :
+extlibs.future.py2_3.future.utils		isnewbytes	obj	equivalent to the result of isinstance obj newbytes were __instancecheck__ not overridden on the newbytes subclass
+extlibs.future.py2_3.future.utils		isint	obj	deprecated tests whether an object is a py3 int or either a py2 int or
+extlibs.future.py2_3.future.utils		native	obj	on py3 this is a no-op native obj -> obj
+extlibs.future.py2_3.future.utils		old_div	a b	deprecated import old_div from past utils instead
+extlibs.future.py2_3.future.utils		as_native_str	encoding	a decorator to turn a function or method call that returns text i e
+extlibs.future.py2_3.future.standard_library	RenameImport	__init__	old_to_new	pass in a dictionary-like object mapping from old names to new names
+extlibs.future.py2_3.future.standard_library	RenameImport	_find_and_load_module	name path	finds and loads it but if there's a in the name handles it
+extlibs.future.py2_3.future.standard_library		is_py2_stdlib_module	m	tries to infer whether the module m is from the python 2 standard library
+extlibs.future.py2_3.future.standard_library		scrub_py2_sys_modules		removes any python 2 standard library modules from sys modules that
+extlibs.future.py2_3.future.standard_library		restore_sys_modules	scrubbed	add any previously scrubbed modules back to the sys modules cache
+extlibs.future.py2_3.future.standard_library		install_aliases		monkey-patches the standard library in py2 6/7 to provide
+extlibs.future.py2_3.future.standard_library		install_hooks		this function installs the future standard_library import hook into
+extlibs.future.py2_3.future.standard_library		enable_hooks		deprecated use install_hooks() instead this will be removed by
+extlibs.future.py2_3.future.standard_library		remove_hooks	scrub_sys_modules	this function removes the import hook from sys meta_path
+extlibs.future.py2_3.future.standard_library		disable_hooks		deprecated use remove_hooks() instead this will be removed by
+extlibs.future.py2_3.future.standard_library		detect_hooks		returns true if the import hooks are installed false if not
+extlibs.future.py2_3.future.standard_library		cache_py2_modules		currently this function is unneeded as we are not attempting to provide import hooks for modules with ambiguous names email urllib pickle
+extlibs.future.py2_3.future.standard_library		import_	module_name backport	pass a potentially dotted module name of a python 3 standard library module
+extlibs.future.py2_3.future.standard_library		from_import	module_name	example use >>> httpconnection = from_import('http
+extlibs.future.py2_3.future.builtins		disabled_function	name	returns a function that cannot be called
+extlibs.future.py2_3.future.builtins		newnext	iterator default	next(iterator[, default]) return the next item from the iterator
+extlibs.future.py2_3.future.builtins		newround	number ndigits	see python 3 documentation uses banker's rounding
+extlibs.future.py2_3.future.builtins		from_float_26	f	converts a float to a decimal number exactly
+extlibs.future.py2_3.future.builtins		newsuper	typ type_or_obj framedepth	like builtin super(), but capable of magic
+window		modifiers_string	modifiers	return a string describing a set of modifiers
+window		symbol_string	symbol	return a string describing a key symbol
+window		motion_string	motion	return a string describing a text motion
+window		user_key	scancode	return a key symbol for a key not supported by pyglet
+window	WindowEventLogger	__init__	logfile	create a windoweventlogger which writes to logfile
+window	MouseCursor	draw	x y	abstract render method
+window	ImageMouseCursor	__init__	image hot_x hot_y	create a mouse cursor from an image
+window		_PlatformEventHandler	data	decorator for platform event handlers
+window	BaseWindow	__init__	width height caption resizable	create a window
+window	BaseWindow	_recreate	changes	recreate the window with current attributes
+window	BaseWindow	flip		swap the opengl front and back buffers
+window	BaseWindow	switch_to		make this window the current opengl rendering context
+window	BaseWindow	set_fullscreen	fullscreen screen mode width	toggle to or from fullscreen
+window	BaseWindow	on_resize	width height	a default resize event handler
+window	BaseWindow	on_close		default on_close handler
+window	BaseWindow	on_key_press	symbol modifiers	default on_key_press handler
+window	BaseWindow	close		close the window
+window	BaseWindow	draw_mouse_cursor		draw the custom mouse cursor
+window	BaseWindow	caption		the window caption title read-only
+window	BaseWindow	resizeable		true if the window is resizable read-only
+window	BaseWindow	style		the window style one of the window_style_* constants
+window	BaseWindow	fullscreen		true if the window is currently fullscreen read-only
+window	BaseWindow	visible		true if the window is currently visible read-only
+window	BaseWindow	vsync		true if buffer flips are synchronised to the screen's vertical retrace
+window	BaseWindow	display		the display this window belongs to read-only
+window	BaseWindow	screen		the screen this window is fullscreen in read-only
+window	BaseWindow	config		a gl config describing the context of this window read-only
+window	BaseWindow	context		the opengl context attached to this window read-only
+window	BaseWindow	width		the width of the window in pixels read-write
+window	BaseWindow	height		the height of the window in pixels read-write
+window	BaseWindow	set_caption	caption	set the window's caption
+window	BaseWindow	set_minimum_size	width height	set the minimum size of the window
+window	BaseWindow	set_maximum_size	width height	set the maximum size of the window
+window	BaseWindow	set_size	width height	resize the window
+window	BaseWindow	get_size		return the current size of the window
+window	BaseWindow	set_location	x y	set the position of the window
+window	BaseWindow	get_location		return the current position of the window
+window	BaseWindow	activate		attempt to restore keyboard focus to the window
+window	BaseWindow	set_visible	visible	show or hide the window
+window	BaseWindow	minimize		minimize the window
+window	BaseWindow	maximize		maximize the window
+window	BaseWindow	set_vsync	vsync	enable or disable vertical sync control
+window	BaseWindow	set_mouse_visible	visible	show or hide the mouse cursor
+window	BaseWindow	set_mouse_platform_visible	platform_visible	set the platform-drawn mouse cursor visibility this is called
+window	BaseWindow	set_mouse_cursor	cursor	change the appearance of the mouse cursor
+window	BaseWindow	set_exclusive_mouse	exclusive	hide the mouse cursor and direct all mouse events to this window
+window	BaseWindow	set_exclusive_keyboard	exclusive	prevent the user from switching away from this window using keyboard accelerators
+window	BaseWindow	get_system_mouse_cursor	name	obtain a system mouse cursor
+window	BaseWindow	set_icon		set the window icon
+window	BaseWindow	clear		clear the window
+window	BaseWindow	dispatch_events		poll the operating system event queue for new events and call attached event handlers
+window	FPSDisplay	update		records a new data point at the current time this method
+window	FPSDisplay	set_fps	fps	set the label text for the given fps estimation
+window	FPSDisplay	draw		draw the label
+window		get_platform		get an instance of the platform most appropriate for this system
+window	Platform	get_display	name	get a display device by name
+window	Platform	get_default_display		get the default display device
+window		buttons_string	buttons	return a string describing a set of active mouse buttons
+window.win32	Win32Window	_reset_exclusive_mouse_screen		recalculate screen coords of mouse warp point for exclusive mouse
+window.cocoa	CocoaWindow	on_resize	width height	override default implementation to support retina displays
+text		_parse_distance	distance dpi	parse a distance string and return corresponding distance in pixels as an integer
+text	_GlyphBox	__init__	owner font glyphs advance	create a run of glyphs sharing the same texture
+text	_InlineElementBox	__init__	element	create a glyph run holding a single element
+text	TextLayout	__init__	document width height multiline	create a text layout
+text	TextLayout	begin_update		indicate that a number of changes to the layout or document are about to occur
+text	TextLayout	end_update		perform pending layout changes since begin_update
+text	TextLayout	delete		remove this layout from its batch
+text	TextLayout	draw		draw this text layout
+text	TextLayout	on_insert_text	start text	event handler for abstractdocument on_insert_text
+text	TextLayout	on_delete_text	start end	event handler for abstractdocument on_delete_text
+text	TextLayout	on_style_text	start end attributes	event handler for abstractdocument on_style_text
+text	TextLayout	_flow_glyphs_wrap	glyphs owner_runs start end	word-wrap styled text into lines of fixed width
+text	IncrementalTextLayout	set_selection	start end	set the text selection range
+text	IncrementalTextLayout	get_position_from_point	x y	get the closest document position to a point
+text	IncrementalTextLayout	get_point_from_position	position line	get the x y coordinates of a position in the document
+text	IncrementalTextLayout	get_line_from_point	x y	get the closest line index to a point
+text	IncrementalTextLayout	get_point_from_line	line	get the x y coordinates of a line index
+text	IncrementalTextLayout	get_line_from_position	position	get the line index of a character position in the document
+text	IncrementalTextLayout	get_position_from_line	line	get the first document character position of a given line index
+text	IncrementalTextLayout	get_position_on_line	line x	get the closest document position for a given line index and x coordinate
+text	IncrementalTextLayout	get_line_count		get the number of lines in the text layout
+text	IncrementalTextLayout	ensure_line_visible	line	adjust view_y so that the line with the given index is visible
+text	IncrementalTextLayout	ensure_x_visible	x	adjust view_x so that the given x coordinate is visible
+text	DocumentDecoder	decode	text location	decode document text
+text		get_decoder	filename mimetype	get a document decoder for the given filename and mime type
+text		load	filename file mimetype	load a document from a file
+text		decode_html	text location	create a document directly from some html formatted text
+text		decode_attributed	text	create a document directly from some attributed text
+text		decode_text	text	create a document directly from some plain text
+text	DocumentLabel	__init__	document x y width	create a label for a given document
+text	DocumentLabel	text		the text of the label
+text	DocumentLabel	font_name		font family name
+text	DocumentLabel	font_size		font size in points
+text	DocumentLabel	bold		bold font style
+text	DocumentLabel	italic		italic font style
+text	DocumentLabel	get_style	name	get a document style value by name
+text	DocumentLabel	set_style	name value	set a document style value by name over the whole document
+text	Label	__init__	text font_name font_size bold	create a plain text label
+text	HTMLLabel	__init__	text location x y	create a label with an html string
+text	HTMLLabel	text		html formatted text of the label
+text	Caret	__init__	layout batch color	create a caret for a layout
+text	Caret	delete		remove the caret from its batch
+text	Caret	get_style	attribute	get the document's named style at the caret's current position
+text	Caret	set_style	attributes	set the document style at the caret's current position
+text	Caret	move_to_point	x y	move the caret close to the given window coordinate
+text	Caret	select_to_point	x y	move the caret close to the given window coordinate while maintaining the mark
+text	Caret	select_word	x y	select the word at the given window coordinate
+text	Caret	select_paragraph	x y	select the paragraph at the given window coordinate
+text	Caret	on_text	text	handler for the pyglet window window on_text event
+text	Caret	on_text_motion	motion select	handler for the pyglet window window on_text_motion event
+text	Caret	on_text_motion_select	motion	handler for the pyglet window window on_text_motion_select event
+text	Caret	on_mouse_scroll	x y scroll_x scroll_y	handler for the pyglet window window on_mouse_scroll event
+text	Caret	on_mouse_press	x y button modifiers	handler for the pyglet window window on_mouse_press event
+text	Caret	on_mouse_drag	x y dx dy	handler for the pyglet window window on_mouse_drag event
+text	Caret	on_activate		handler for the pyglet window window on_activate event
+text	Caret	on_deactivate		handler for the pyglet window window on_deactivate event
+text	InlineElement	place	layout x y	construct an instance of the element at the given coordinates
+text	InlineElement	remove	layout	remove this element from a layout
+text	AbstractDocument	get_paragraph_start	pos	get the starting position of a paragraph
+text	AbstractDocument	get_paragraph_end	pos	get the end position of a paragraph
+text	AbstractDocument	get_style_runs	attribute	get a style iterator over the given style attribute
+text	AbstractDocument	get_style	attribute position	get an attribute style at the given position
+text	AbstractDocument	get_style_range	attribute start end	get an attribute style over the given range
+text	AbstractDocument	get_font_runs	dpi	get a style iterator over the pyglet font font instances used in
+text	AbstractDocument	get_font	position dpi	get the font instance used at the given position
+text	AbstractDocument	insert_text	start text attributes	insert text into the document
+text	AbstractDocument	delete_text	start end	delete text from the document
+text	AbstractDocument	insert_element	position element attributes	insert a element into the document
+text	AbstractDocument	get_element	position	get the element at a specified position
+text	AbstractDocument	set_style	start end attributes	set text style of some or all of the document
+text	AbstractDocument	set_paragraph_style	start end attributes	set the style for a range of paragraphs
+text	RunList	__init__	size initial	create a run list of the given size and a default value
+text	RunList	insert	pos length	insert characters into the run list
+text	RunList	delete	start end	remove characters from the run list
+text	RunList	set_run	start end value	set the value of a range of characters
+text	RunList	get_run_iterator		get an extended iterator over the run list
+text	RunList	__getitem__	index	get the value at a character position
+text	AbstractRunIterator	__getitem__	index	get the value at a given index
+text	AbstractRunIterator	ranges	start end	iterate over a subrange of the run list
+text	OverriddenRunIterator	__init__	base_iterator start end value	create a derived iterator
+text	FilteredRunIterator	__init__	base_iterator filter default	create a filtered run iterator
+text.formats	ListBuilder	begin	decoder style	begin a list
+text.formats	ListBuilder	item	decoder style value	begin a list item
+text.formats	ListBuilder	get_mark	value	get the mark text for the next list item
+text.formats	UnorderedListBuilder	__init__	mark	create an unordered list with constant mark text
+text.formats	OrderedListBuilder	__init__	start format	create an ordered list with sequentially numbered mark text

@@ -1,0 +1,2017 @@
+data_log_element	element to be parsed
+first_blockette_offset	tells the function where the first blockette
+outfile	output file path to directly save the resulting image
+total_number_of_stations	the total number of stations
+width	width in number of sample points for filter
+startafter	limit to metadata epochs starting after specified
+color	face color of marker symbol (see
+maxlatitude	limit to stations with a latitude smaller than the
+minlatitude	limit to events with a latitude larger than the
+pad	gives the possibility to trim at time points outside the
+record_number	record number to jump to (first record has record
+keep_empty	if set to true, networks/stations that match
+value	the actual comment string
+show_percentiles	enable/disable plotting of approximated
+val	list of value
+rescale	maximum to maximal representable number
+noheader	specifying noheader will strip the header from the
+headonly	bool
+catalog	input catalog for cnv output.
+maxbytes	maximum number of bytes to read
+dist_degree	plot trace distance in degree from epicenter. if
+plot	if true, brings up a plot that illustrates how the
+frequency	frequency object
+netdly	the network reconnect delay in seconds
+apply_calib	automatically applies the calibration factor
+begin_effective_time	the effective start date
+localization_dict	enables limited localization of the dayplot
+description	a short description of of the filter
+unpack_trace_headers	determines whether or not all trace header
+stats	filled obspy stats header
+time	evaluate the response at the given time. if not specified
+field_offset	how many bytes we have to skip before attaining the
+fixed string	a string field with a fixed width
+evt data	class to manage data in evt file
+starttime	limit to events on or after the specified start time
+blockette032	blockette 032 cited source dictionary blockette
+starttime	only regard networks/stations/channels active at or
+restrictions	non-spatial downloading restrictions
+mseedmetadata	a container for miniseed specific metadata including quality control parameters
+starttime	start time of requested time window
+torad	change to radians
+full_xcorr	if true, the complete xcorr function will be
+blockette041	blockette 041 fir dictionary blockette
+nolabels	hide labels of events in kml. can be useful with large
+calfile	file containing poles zeros and scale factor for known
+reclen	if it is none it will be automatically determined for every
+show_coverage	enable/disable second axes with representation of
+sfile	path to the s-file
+dspline	the distance in samples between two spline nodes
+unpickler	de-serializes a mchedr string into an obspy catalog object
+station mapper client	interface to access the seishub station web service
+on_terminate	a function or callable that is called when the
+format	format of the file to read (e.g. "mseed"). see
+report	submits a test report if enabled (default is false)
+value	timestamp in seconds
+label	label string for legend
+param	a list with the size of the list ('size_array'),
+max_time	maximum time in seconds after ref_time to apply mwp
+smoothie	number of past/future values to calculate moving average
+verify_chksum	if true verify checksum and raise exception if it
+rt trace	an object containing data of a continuous series constructed dynamically from sequential data packets
+distkm	distance between the source and station in kilometers
+datetime	only return all streams that have data at specified
+creation_date	date and time utc when the station was first
+st1	signal 1 of two signals to compare type numpy.ndarray with
+parameters	comma-separated list of qc parameters. the following
+inventory	the inventory instance to be written
+verbose	controls verbosity a value of 0 will result in no
+min_label_length	minimum label length for keywords. defaults
+bandpass preview feature	bandpass filter (freqmin=0 1 freqmax=20 0) all trace previews
+file	file name
+sourceforce	specify a force source as a list of fr, ft,
+title	title above plot. if left none, an automatic title
+data_unit	if given the scale of the data will be drawn on the
+filename	ah file to be checked
+data_1	data component 1
+data_directory	data directory where the corresponding qbn will be
+line	line to check and split
+station	station id
+file	file name to read
+thr1	threshold to trigger for pick c.f. paper
+filename	name of the output file
+endtime	if set data after the specified time is excluded
+catalog	the obspy catalog object to write
+code	the seed channel code for this channel
+unpickler	de-serialize a gse2 0 string into an obspy catalog object
+noise_tresh	variance of the noise sphere data points are excluded
+longitude	specify the longitude to the used for a radius
+x	value [km] to calculate relative coordinate in degree
+etime	end time for the analysis
+unpack	unpack compressed waveform files before storing to disk
+no redirection handler	handler that does not direct!
+delta	number of samples for data chunk
+nodal plane	a nodal plane
+allow_turn	whether to allow the ray to turn in the middle of a
+data	data to determine centroid time of
+isoweek	if set restricts the data that is included in the
+data	steim compressed data as a numpy array
+timestamp	seedlink time stamp in a utcdatetime format for
+other	catalog object for comparison
+external reference	from the stationxml definition this type contains a uri and description for external data that users
+network	from the stationxml definition this type represents the network layer all station metadata is
+filename	the file name to save to. the plot will be shown if it is
+scanner	class to scan contents of waveform files file by file or recursively across directory trees
+stage_gain_frequency	frequency of stage gain
+keywords	old/new keyword names as key/value pairs
+chunks	a list of tuples each denoting a single miniseed chunk
+model	the model name. either an internal taupy model or a
+freq_passband	if true return additionally to the filtered data
+slstate	class to manage seedlinkconnection state
+type	'p' or 's' p or s wave
+reclen	should be set to the desired data record length in bytes
+types	the type of data this channel collects. corresponds to
+io_flags	extract i/o flag counts
+priorities	the desired channels with descending priority. channels
+data availability	a description of time series data availability this information should
+evt base error	base class for all evt specific errors
+wavefiles	waveforms to associate the nordic file with
+minlongitude	limit to stations with a longitude larger than the
+url	a string that indicates database dialect and connection
+blockette054	blockette 054 response coefficients blockette
+trace_ids	trace ids to be used in the network coincidence sum. a
+colormap	only used if color_per_network=true. specifies
+log	filename of install log file to append to report
+remove_sensitivity	determines if data is divided by
+hi	sac int header array
+nfft	number of points for fft
+filter coefficient	a filter coefficient
+network	network code to fill in for all data (network code is not
+user	user name of http digest authentication for access to
+time	find the response for the given time. time cannot be used
+sender	name of the institution sending this message
+select_file	nordic formatted select.out file to open
+fig	use an existing matplotlib figure instance
+magnitudes	store magnitudes in a list to keep
+data_2	data component 2
+lon	longitude of interest
+filename	seg y rev1 file to be read
+source_latitude_in_deg	source latitude in degrees
+GMT_type	fill/lines/evs select type of string
+data	data to apply the taper to. inplace operation but also
+w_1	width of the fem and fpm axes
+checksize	if true check that the theoretical file size from the
+output_folder	directory in which the built
+events	an optional list of events can be drawn on the plot if
+options	required keyword arguments to be passed the respective
+cmap	specify a custom colormap instance. if not specified then the
+pickler	serializes an obspy catalog object into quakeml format
+network	network code e.g. 'bw'
+image comparison	handles the comparison against a baseline image in an image test
+reltrc	time series as numpy.ndarray float32 data possibly filtered
+is_p_wave	return p layer count (true) or s layer count
+testsuite	testsuite to which the tests should be added
+overwrite	overwrite existing file otherwise if file exists an
+filename	name of file to write. in case an open file or
+labels	annotations for the individual data points
+selected_number_of_channels	number of channels recorded at this
+orientation	the orientation of the time axis either
+vendor	the vendor of the equipment
+filename	sac file to be read
+unpack_header	determines whether or not all headers will be
+reverse	whether to return the specified colormap reverted
+sac header error	raised if header has issues
+GMT_show_1FP	flag if one faultplane is to be shown default
+ray_param	slowness aka ray parameter to find in s/km
+seismic phase	stores and transforms seismic phase names to and from their corresponding sequence of branches
+value	day
+starttime	specifies the desired start time for the synthetic
+value	minutes
+format	if no implicit valid format is provided within the
+client	seedlink request client
+data	data array to use for update
+is_p_wave	whether to add to the p wave (true) or the s wave
+endtime	end time may be used in conjunction with
+num	number of samples in each trace in returned stream. last
+segysample interval error	raised if the interval between two samples is too large
+segyerror	base segy exception class
+input_units_description	string optional
+easy seed link client exception	a base exception for all errors triggered explicitly by easyseedlinkclient
+unpack_headers	determines whether or not all headers will be
+name	tag name of axis
+decimation_factor	the applied decimation factor
+endtime	specify the end time of slice
+updatedafter	limit to events updated after the specified time
+mindepth	limit to events with depth in kilometers larger than
+response stage	from the stationxml definition this complex type represents channel response and covers seed
+GMT_FP_index	1 or 2 default is 2
+version	xseed version string (default is 1.1)
+buf	sac file to be read
+mass downloader	class facilitating data acquisition across all fdsn web service implementations
+t_samp	sampling interval in seconds
+data	data to filter
+timeout	the network timeout in seconds
+on_seedlink_error	a function or callable that is called when a
+GMT_pressure_colour	pressure area of bb - colour flag for -z in
+sta_element	channel element
+sfile	sfile to read from
+tick_rotation	tick rotation in degrees
+validate	validate the json string against the schema before
+xml_string	xml for a send request (put/post)
+lat	latitude to calculate relative coordinate in km
+filename	q header file to be read. must have a qhd file
+n_samps	number of samples
+spherical nearest neighbour	spherical nearest neighbour queries using scipy's fast kd-tree implementation
+attrib dict	a class which behaves like a dictionary
+strn	string to convert
+evtlon	event longitude
+spec	the spectrum
+country_code	the country code
+A	maximum value of goodness-of-fit for perfect agreement
+keep_sac_header	if true any old stats.sac header values are
+sac invalid content error	raised if headers and/or data are not valid
+method	method to use for differentiation. defaults to
+minfreq	the minimum frequency hz at which response will be
+real_name	realname of the file needed for calculating size
+color	the events will be color-coded based on the chosen
+st	gcf stream object whith no data
+sta_element	station element to be read
+type	type may be set to either 'normal' to produce the
+resp_file	path to resp-file or file pointer
+coords	coordinates of stations in longitude and latitude in degrees
+station	from the stationxml definition this type represents a station epoch
+axes	plot into given axes this deactivates the fmt and
+segytrace	convenience class that internally handles a single seg y trace
+f	file pointer to start of gse2 file to be checked
+fh	file pointer
+sta_element	station element
+maxradius	limit results to stations within the specified
+channel	the 3 character channel code or regular expression
+header	sac header dictionary
+datay	data of y component. see description of datax
+is_p_wave	whether to look at p (true) velocity or s
+layer	the velocity layer to use for evaluation
+file	open file like object or a string which will be assumed to be
+flush	if true, all data will be packed into records. if
+evt header	class to manage header of evt file
+evloc	the event location lat lon using decimal degrees
+calibration_units_description	description of units e.g
+show	whether to open up any interactive plot after plotting
+principal axes	this class describes the principal axes of a double-couple moment tensor solution
+package_name	name of package to return version info for
+filename	win file to be checked
+_ns	namespace
+fileborder_seconds	defines in which cases the client checks the
+similarity_threshold	similarity threshold 0.0-1.0 at which a
+filename	name of the q file to write
+method	method to use for plotting. possible values are
+agency	agency that generated the file
+filename	ascii file to be read
+phase_list	list of phases for which travel times should be
+edgecolor	color of the edges. defaults to 'k' black
+network	network id
+station	station code
+subplots_adjust_bottom	the bottom side of the subplots of the
+filename	target file name or open file-like object
+f	file pointer to to gse2 file to write
+protocol	pickle protocol defaults to 2
+description	a description of the external data
+order	the order of the polynomial to fit
+wlev	water level to use
+samp_rate	number of samples per second
+evtlon	great-circle distance from source to station in decimal
+b	second signal to correlate with first signal
+flinn engdahl	load data from asc files and allow to resolve coordinates or region numbers to flinn engdahl region names
+max_len	maximum length of triggered event in samples. a new
+client	seishub database request client class
+chunk_size_in_mb	attempt to download data in chunks of this
+station	station code of requested data (e.g. "anmo")
+timeshift	the time-shift to be applied in 0.0001 e.g. 1e-4
+sen_element	sensor element to be parsed
+grid_linewidth	float value in points of the grid line width
+receiverlatitude	specify the receiver latitude in degrees
+skip_on_gaps	determines whether time segments with gaps should
+mt	focal mechanism nm x 6 (m11 m22 m33 m12 m13 m23 - the
+p	number of filters in filterbank
+format	file format the data is stored in see
+lat2	latitude of point b in degrees (positive for northern
+data	the actual data
+instrument sensitivity	from the stationxml definition the total sensitivity for a channel representing the complete
+xaxis_frequency	if set to true, the x axis will be frequency
+starttime	start of time span to remove from stream
+origin uncertainty	this class describes the location uncertainties of an origin
+starttime	whether to use a fixed start time for the plot and
+intercept_origin	if true: solves y=a*x default ;
+time	only include channels active at given point in time
+timeout	seconds before a connection timeout is raised (default
+GMT_tension_colour	tension area of bb - colour flag for -z in
+time	only include networks/stations/channels active at given
+station	only plot matching stations. accepts unix style
+win	window multiplied to each frame length determines frame length
+file_or_file_object	the file or file-like object to be written to
+custom float	helper class to inherit from and which stores a float number that is extendable
+fill_value	fill value for gaps. defaults to none. traces
+bmap	basemap instance in provided matplotlib axes ax to reuse. if
+source	full path string for file-like object from a sac binary
+st2	stream or trace object unknown
+taper	if true, a cosine taper is applied to the waveform data
+value	complex type for sensitivity and frequency ranges
+title	title above plot
+st	one or multi-component stream to check against event templates
+n	length of fft
+emails	self-explanatory. multiple emails allowed
+text test result	a custom test result class that can print formatted text results to a stream
+obs py auto date formatter	derived class to allow for more customized formatting with older matplotlib versions (older than 1
+authority_id	the base url of the resulting string. defaults to
+base client	base class for common methods
+waveform indexer	a waveform indexer server
+byteorder	desired byte order of initialized arrays (little native
+radius_of_planet	reference radius km usually radius of the
+cmaps	list of :class ~matplotlib.colors.colormap
+data	data array to integrate
+check	whether to perform checks of input consistency
+icon_size	icon size
+default_channel_code	default channel code used if stations
+kernelwidth	specify the width of the sinc kernel used for
+endtime	end date and time
+dip	dip object
+moment tensor	a moment tensor
+lower_uncertainty	lower uncertainty aka minuserror
+todisp	change a velocity transfer function to a displacement
+geometry	nested list containing the arrays geometry as returned by
+endtime	only regard stations active before or at given point in
+starttime	limit results to time series samples on or after the
+attribute	name of attribute to be read
+zeros	the zeros of the transfer function
+segytrace header too small error	raised if the trace header is not the required 240 byte long
+source_longitude_in_deg	source location longitude in degrees
+line	string in the form " real imag "
+log	logarithmic frequency axis if true linear frequency axis
+function	the function to call
+max_len_delete	do not write events longer than max_len into
+strip_far_future_end_times	leave out likely fictitious end times of
+datetime	time to get coordinates for
+polynomial response stage	from the stationxml definition response expressed as a polynomial (allows non-linear sensors to be
+draw	if true the figure canvas is explicitly re-drawn which
+ax	existing matplotlib axes instance optionally with previous
+data	data to determine instantaneous bandwidth of
+dt	a utcdatetime object
+code	the seed network station or channel code
+trace_ids	list of trace ids e.g. ['bw.manz..ehe']
+zmap_str	obspy catalog object
+window	specifies the window applied to the signal in the
+filename	seg y file to be checked
+filename	seed resp-filename or open file like object with resp
+endtime	specifies the desired end time for the synthetic
+orig_lon	longitude of reference origin
+value	julian day
+frequency_lower_bound	lower frequency bound
+header	sac header
+equal_scale	if enabled all plots are equally scaled
+endtime	only include channels active before or at given point
+alpha	transparency of the traces between 0.0 - 1.0
+keep_empty_traces	empty traces will be kept if set to true
+npl	number of data columns in file default to four
+shift_len	total length of samples to shift for cross correlation
+created	the time when the document was created. will be set to
+depth	the depth at which the material property should be
+mem_time	length in seconds of data memory (must be much larger
+updatedafter	limit to metadata updated after specified date
+value	seconds to add
+method	the method to use 0 == bf 1 == capon
+special_handling	switches on customized handling for
+h_dist	hypocentral distance [km]
+proj_kwargs	keyword arguments to pass to the cartopy
+file	a file like object with the file pointer set at the
+priorized_keys	keywords of current attribdict which will be
+inc	increment to shift frames in samples
+filename	ah v1 file to be read
+serial_number	the serial number of the equipment
+datax	data of x component. note this is most useful with
+kwargs	additional kwargs that get passed on to
+rtype	return type. can be one of 'code', 'region' or
+event	the event to write
+data quality encoder	custom encoder capable of dealing with numpy and obspy types
+easy seed link client	an easy-to-use seedlink client
+catalog	the catalog to write. can only contain one event
+year	if set restricts the data that is included in the stack
+station client	base class for clients supporting inventory objects
+elevation	elevation of the sensor
+old_start	the start of the array as a number
+azimuth_2	the azimuth of component 2
+mseed_object	filename or open file like object that contains the
+input_units	input units of stage
+st2	signal 2 of two signals to compare type and shape as st1
+coordsys	valid values 'lonlat' and 'xy', choose which stream
+filename	the path to the file
+endtime	specify the end time to read
+starttime	only show channels active at or after given point in
+network	network code e.g. 'iu'
+sfile	path to sfile
+damp	damping factor. default is set to 0.1
+obs py ndkwarning	base warning for this module
+outfile	filename for image output (e.g
+location_code	the seed location code for this channel
+data	filename url xseed/seed string file pointer or
+endtime	end of time span to remove from stream
+strict_length	leave traces unchanged for which end time of
+options	necessary keyword arguments for the respective
+circular domain	a circular domain defined by a center point and minimum and maximum radius from that point in degrees
+input_units_description	the units of the data as input from the
+actual	the filename of the actual png file
+quiet	as quiet gets smaller carl_sta_trig gets more sensitive
+param	not used
+maxorder	maximal order of the designed cheby2 filter
+blockette031	blockette 031 comment description blockette
+x	signal to split in frames
+staloc	station locations for which the phases will be listed
+method	determines the rotation method
+long1	longitude of point 1 in degrees
+filename	quakeml file to be read
+nofb	number of half octave bands
+arrivals	set of taup arrivals
+dt	specify the sampling interval in seconds. only upsampling
+client httpexception	exception that should be raised for all http exceptions
+unindent_first_line	determines if first line should start with
+format	output format. either as full seed ('fseed') or
+inventory_root	base inventory element of sc3ml
+fk	filter coefficients for computing time derivative
+seg2	class to read and write seg 2 formatted files the main reason this is
+endtime	the end time
+network	network code. no wildcards supported by obspy
+per_lap	percentage of overlap of sliding window ranging from 0
+bytes_	the bytes to send to the server
+f2	frequency of the upper .andpass window
+element	etree element
+equipment	an object containing a detailed description of an equipment
+authors	the authors of this comment
+data	see :py func struct.unpack
+filename	name of the nanometrics y file to be checked
+network	filter result by given network id if given. defaults
+nf	number of logarithmically spaced frequencies between fmin and
+event_removal	if true the event elements will be removed. this can
+service	name of service
+memory_array	memory array input or output in this
+plot_type	either "spherical" or "cartesian"
+files	miniseed file or list of miniseed files
+var_noise	resembles a sphere of noise in pm where the 3c is
+capability	the info capability to check for
+pick2	time of pick for trace2
+mult	pad zeros to length mult * wlen. this will make the
+window_len	length of sliding window in seconds
+alpha	the alpha level of the beach ball. defaults to 1.0
+headdict	obspy header
+major_versions	allows to specify custom major version numbers
+restricted	requesting only networks/stations/streams that have
+output	output units. one of
+matchtimeseries	only include data for which matching time
+origin	this class represents the focal time and geographical location of an earthquake hypocenter as well as additional meta-information
+sds_root	root directory of sds archive
+bo1	byte order string. can be one of {'l', 'little', 'l', '<',
+delete_long_trigger	if false default single station
+paz	overall instrument sensitivity of response
+radius	radius of the earth used for the calculation
+a	the width of the window in samples on either side. runtime
+on the fly data unpacker	tie-up a data sample unpack function with its parameters
+location	location code e.g. ''
+request with method	improved urllib2 request class for which the http method can be set to
+s_pick	if true, also pick the s phase otherwise only the p
+data	if specified this will be sent directly sent to the
+stop_time	time at which the search for data is stopped and
+radius_of_planet	the radius in km of the planet to use
+depth	the local depth or overburden of the instrument's
+route	enables arclink routing. defaults to true
+id	id of comment must be 0 or greater
+minmagnitude	limit to events with a magnitude larger than the
+coefficients	list of polynomial coefficients
+keep_empty	if set to true, stations that match
+component_codes	iterable of single-character component codes (e.g
+network	network code e.g. 'uw', wildcards allowed
+float with uncertainties	helper class to inherit from and which stores a float with a given valid range upper/lower uncertainties and eventual additional attributes
+vel_thres	threshold for velocity
+event	the class event describes a seismic event which does not necessarily need to be a tectonic earthquake
+filter	none for no filtering or name of filter type
+thr_off	threshold for switching single station trigger off
+header_byteorder	must be either 0 or '<' for lsbf or
+kilometer	distance in kilometers
+comment	comment holds information on comments to a resource as well as author and creation time information
+face_color	face color of the matplotlib canvas
+reftime	the reference time to which the relative scale will
+location	location code e.g. '00'. use '--' for empty
+type	method to use for integration. defaults to
+locid	location id
+is_p_wave	whether to use the p (true) or s (false)
+trace	:class ~obspy.core.trace.trace object to append to
+cft	characteristic function as returned by a trigger in
+maxlongitude	limit to events with a longitude smaller than the
+latitude	wgs84 latitude
+frequency	complex type for sensitivity and frequency
+tol	the tolerance (a color value difference where 255 is the
+dip_3	the dip of component 3
+a	seismic trace
+calibration_dates	a list with all calibration dates of the
+phones	self-explanatory. multiple phone numbers allowed
+samples	desired number of samples
+weights	if not none the uncertainties in the ydata array. these
+xy	origin position of the beach ball as tuple. defaults to
+buffer_elements	length of the whole buffer
+label_arrivals	label the arrivals with their respective phase
+spoint	array with traces' individual start times in samples
+station	the station code
+message	message to be displayed
+timestamp	miniseed timestring epoch time string in ms
+utcdate time	a utc-based datetime object
+catalog	input catalog data
+tau branch	provides storage and methods for distance time and tau increments for a branch
+maxlongitude	limit to stations with a longitude smaller than
+new_event	event to associate picks with
+kind	one of
+stage_gain	value of stage gain
+zipped	compresses all files into a single zip archive named by
+ident	id of
+client exception	base exception for client classes
+end_stage	sequence number of last stage that will be used
+plot	false for no plot at all true for interactive window str for
+decimation_delay	the estimated pure delay from the decimation
+streamfile	name of file containing list of streams and
+defselect	default selectors
+fill_value	if none, masked array is returned else the
+net	the network id
+trace	waveform data
+sta_s	length of sta for the s arrival in seconds
+factor	factor by which the sampling rate is lowered by
+latitude	latitude object
+big_endian	true means the header is encoded in big endian and
+trace	:class ~obspy.core.trace.trace object to append to this
+channel	channel code e.g. 'ehe'. channel code may
+byteorder	enforce byte order for data file. can be little endian
+input_initial_value	initialization value for the input
+minradius	limit results to stations within the specified
+l_s	length of variance window for the s arrival in seconds
+source_latitude_in_deg	source location latitude in degrees
+nsmap	additional custom namespace abbreviation mappings
+amplitude	the value for the amplitude response at this
+includeavailability	specify if results should include
+axes	list/tuple of two axes instances to plot the
+offset	return results starting at the event count specified
+flush_headers	if true update data headers like 'depmin' and
+thres2	value below which trigger of characteristic function
+blockette053	blockette 053 response (poles & zeros) blockette
+amplitude	this class represents a quantification of the waveform anomaly usually a single amplitude measurement or a measurement of the visible signal
+subplot_size	width/height of one single subplot cell in inches
+channel	potentially wildcarded channel code. if not given
+seed link connection	class to manage a connection to a seedlink server using a socket
+length_input	length of the input memory array
+is_p_wave	whether this velocity layer is for compressional/p
+minlatitude	limit to stations with a latitude larger than the
+val	not used
+norm	'global' or 'local' normalization of the misfit
+uri	the uri to the external data
+rtmemory_list	persistent memory used by this process for specified
+max_percentage	maximum percentage to adjust the colormap. the
+filename	filename to write to. suffix ".kml" will be appended if
+store	a custom function which gets called on each iteration. it is
+endtime	only regard networks/stations/channels active before or
+width	symbol size of beach ball. defaults to 200
+stats	a container for additional header information of a obspy trace object
+pre_amplifier	the pre-amplifier
+old_dt	the time delta of the current array
+st	time dependent signal
+sample_rate	this is a group of elements that represent sample
+data_encoding	the data encoding is an integer with the following
+type	type of taper to use for detrending. defaults to
+value	microseconds
+type	method to use for detrending. defaults to 'simple'
+delta	if skip is used delta defines sample offset in
+filename	name of the audio seisan file to be checked
+model_name	the name of the model. case insensitive
+format	specify output file to be either miniseed or a zip
+stime	time to start
+bgcolor	the background color. defaults to 'w' white
+filter_options	filter options that get passed on to
+value	month
+lta_s	length of lta for the s arrival in seconds
+blockette052	blockette 052 channel identifier blockette
+p_sphere_direction	if this is 'inwards', the tension regions of the
+filename	name of the audio wav file to write
+resource_id	this field contains a string that should serve as a
+verbose	print validation error log if true
+filename	if plot option is selected specifying a filename here
+spherical_ray_param	the spherical ray parameter of the
+location	location code to fill in for all data (network code is not
+sample_rate_ratio_number_seconds	the sample rate expressed as
+matplotlib backend	a helper class for switching the matplotlib backend
+tests	one or more of the following validity tests
+endtime	only read data samples before or at the end time
+zorder	set zorder. artists with lower zorder values are drawn
+headers	additional header information for request
+upper_uncertainty	upper uncertainty aka pluserror
+bgcolor	background color of the graph
+time	only show channels active at given point in time
+colormap	the colormap for color-coding the events as provided
+debug	enables a verbose debug log during parsing of seed file
+interpolation_samples	used only for method=1. it specifies
+taper_fraction	taper fraction of cosine taper to use
+long2	longitude of point 2 in degrees
+endtime	whether to use a fixed end time for the plot and
+label	specify a label to be included in file names and http
+receiver_longitude_in_deg	receiver location longitude in degrees
+location	location code e.g. '00', wildcards allowed
+ref_time	reference date and time of the data sample
+GMT_show_2FPs	flag if both faultplanes are to be shown
+lastpkttime	if true beginning time of last packet received
+starttime	only include networks/stations/channels active at or
+tau pcreate	the seismic travel time calculation method of [buland1983]_
+elevation	the elevation of the station in meter
+title	set the plot title
+nsta	length of short time average window in samples
+sacheader	sac header dictionary
+filename	pdas file to be read
+grid_linestyle	grid line style
+parent	the resource_id attribute of the parent will be
+channel	channel code e.g. 'ehe'
+installation_date	the installation date of the equipment
+receiver_longitude_in_deg	receiver longitude in degrees
+filename	filename to load from
+segybinary file header	parses the binary file header at the given starting position
+channel	channel name e.g. 'bhz' or 'h'
+n	length of window function
+h_2	height of the tem and tpm axes
+T	:class ~principalaxis
+server	report server url (default is "tests.obspy.org")
+number_of_ticks	the number of ticks on the x-axis
+streamlist	list of streams and selectors
+info_level	the info level (one of id stations streams gaps
+trace	source trace object
+filename	mchedr file to be read
+root	root node of result set returned by
+layer_num	the layer s in which the calculation should be done
+data	if specified a post request will be sent with the data in
+method	methodology to handle overlaps/gaps of traces. defaults
+data	sac data array
+tagname	name of tag to be extracted
+manufacturer	the manufacturer of the equipment
+metadata	response information of instrument. see notes in
+checksize	if true check that the theoretical file size from
+message	message for warnings or exceptions
+headonly	determines whether or not the actual data records will be
+channel	object representing a channel each time interval should end up in one
+slowness model	storage and methods for generating slowness-depth pairs
+height	the height of the generated plot. defaults to 600
+_ns	name space
+value	hours
+depth	the depth in km to use for the calculation. it must be
+stream	zne containing trace data
+station magnitude contribution	this class describes the weighting of magnitude values from several stationmagnitude objects for computing a network magnitude estimation
+plot	if true a plot of the operation happening will be shown
+offset	not used
+e	data of the east component of the seismogram
+segywriting error	raised if the trace header is not the required 240 byte long
+coordinate_converter	function to convert x y z
+value	arbitrary data type
+blockette012	blockette 012 volume time span index blockette
+top_depth	top depth to search in km
+maxfreq	the maximum frequency hz at which response will be
+folder	folder name
+start_stage	stage sequence number of first stage that will be
+firstval	first value to extract unused
+segycore writing error	raised if the writing of the stream object fails due to some reason
+filename	mini-seed/full seed file to be checked
+name	string that the line should start with
+parser	the xml-seed parser class parses dataless or full seed volumes
+blockette061	blockette 061 fir response blockette
+trace1	waveform data for pick1. add some time at front/back
+attach_response	specify whether the station web service should
+validate	if true the final sc3ml file will be validated against
+threads	limits the maximum number of threads for the client
+hf	sac float header array
+arrays	specify which arrays to initialize and the desired order
+expected_flags	every possible flag in this field with its offset
+npts	number of data points
+event_times	highlight given times (e.g. of events or phase
+width	the width of the generated plot. defaults to 800
+dt	time step between two samples in st1 and st2
+start_date	the start date of the resource
+fmin	frequency sample distance
+fig	give an existing figure instance to plot into. new figure if
+endian	the endianness of the file. if none autodetection will
+longitude	longitude coordinate of this channel's sensor
+network	potentially wildcarded network code. if not given
+buf	sac file to be checked
+freq	data below this frequency pass
+starttime	the start time
+data_3	data component 3
+fk	coefficients for calculating time derivatives
+longitude	longitude object
+response	response of the instrument
+external_references	uri of any type of external report such as
+overlap	overlap of segments passed to psd. overlap may take
+get_coordinates	fetch coordinate information and append to
+add_extension_suffix	numpy distutils adds a suffix to
+ax2d	matplotlib axes3d object
+w_2	width of the tfr/signal axes
+pick1	time of pick for trace1
+default_weight	default weight to use when pick has no timing
+url	complete url of resource
+overwrite	overwrite an existing s-file default=false
+tr2	trace 2 to correlate with trace 1
+principal axis	a principal axis
+sac header time error	raised if header has invalid "nz" times
+arrivals	list like object of arrivals returned by :class taupymodel methods
+convert_stnm	for station names with 6 letters write the last two
+axes	used to make beach balls circular on non-scaled axes. also
+marker	marker symbol (see :func matplotlib.pyplot.scatter)
+dest	full path or file-like object to sac binary file on disk
+value	precision value used by the rich comparison operators
+alternate_code	a code used for display or association
+phone_number	the phone number minus the country and area code
+skip	number of lines to be skipped from top of file. if defined
+blockette034	blockette 034 units abbreviations blockette
+dx	sample spacing usually in seconds
+window	the window used to taper the sinc function. one of
+frqhigh	higher frequency for pm
+level	the info level to retrieve (sent as info level)
+filename	name of the miniseed file to be changed
+delta	difference between two preview points. defaults to 60
+block	if true block call to showing plot. only works if the
+process	specifies which processing function is added
+network	network code e.g. 'uw'
+num	number of copies
+instrument_sensitivity	the total sensitivity for the given
+module_uri	this is the address of the query that generated the
+frequency	the frequency for which the response is valid
+cumulative	can be set to true to show a cumulative
+dt	time step between two samples in st
+starttime	specify the start time to read
+fs	sampling frequency in hz
+dataflag	controls whether data samples are unpacked defaults
+station	station code e.g. 'manz'. station code may contain
+stationcode	specify the station code for the synthetics
+samp_rate	sample rate of stream
+kwargs	additional keyword arguments passed to the underlying
+fillcolors	fill the inside of the lines wiggle plot
+outdir	path to directory to write to
+filename	a test file name to which the path should be returned
+network	select one or more network codes. can be seed network
+freq	the frequency above which signals are attenuated
+tr	an obspy :class ~obspy.core.trace.trace object
+libmseed wrapper	wrapper object around libmseed that tries to guarantee that all warnings and errors within libmseed are properly converted to their python
+y_labels_size	size of y labels in points or fontsize
+endtime	only include stations/channels active before or at
+width	width in number of sample points for tauc window
+endtime	specify the end time of all traces
+filename	seismic unix file to be checked
+headonly	determines whether or not to unpack the data or just
+statefile	path and name of statefile
+azimuth	azimuth of the sensor in degrees from north clockwise
+source	full path string for file-like object from a sac binary file
+mt	:class ~momenttensor
+global_max	if set to true, all traces are normalized with
+angle	azimuth or backazimuth value in degrees between 0 and 360
+label	events will be labelled based on the chosen property
+first_line	first line of an event block which contains
+station	filter result by given station id if given. defaults
+strict	parser will raise an exception if seed files does not
+apply_filter	apply filter (default is false)
+lines iterator	iterator to iterate file lines and count lines usefull for warning
+show	do not call plt.show() at end of routine. that way further
+data_encoding	the data sample format code as defined in the
+max_latitude	maximum latitude
+starttime	start time of the graph as a
+n	number of data windows
+complex uncertainty	complex class which can accept a python none as an argument and map it to a float value for storage
+verify_chksum	if true verify checksum and raise exception if
+format	the file format to use (e.g. "quakeml"). see
+client	the arclink/webdc client
+smoothie	factor for smoothing the result
+selectors_str	selectors for this net/station null if none
+format	format string
+skipnotdata	if true not zero any data chunks read that to do
+obs py deprecation warning	make a custom deprecation warning as deprecation warnings or hidden by default since python 2
+max_radius	maximum radius of the model km
+station	station code e.g. 'tuca', wildcards allowed
+ascii	if true file is a sac ascii/alphanumeric file
+outfile	string for the filename of output file if none
+station	station code e.g. 'anmo'
+depth	the depth to check in km
+nordic parsing error	internal general error for io operations in obspy core io nordic
+length	length to be read
+fsize	check if file size is consistent with theoretical size
+starttime	specify the start time of all traces
+filename	name of the mchedr file to be checked
+magnitude	describes a magnitude which can but does not need to be associated with an origin
+simulate_sensitivity	determines if data is multiplied with
+channel	channel code. see note on wildcards above
+basename	the base name of the files to be written. this export
+phase_mapping	mapping of phase hints to "p" or "s". cnv format only
+peak	peak value of integral of displacement seismogram
+obj	the object to be tested
+loop	a loop over multiple elements
+enum	enumerated type enum implementation for python
+t_before	time to start cross correlation window before pick times
+new_npts	the new number of samples
+nf	number of frequencies will be chosen with logarithmic spacing
+fm	focal mechanism that is either number of mechanisms nm by 3
+file	open file like object with the file pointer of the
+slowness_turn_layer	the number of the layer at which the ray
+period_step_octaves	step length on frequency axis in fraction
+other	stream object for comparison
+input_units	the units of the data as input from the
+colorbar_ticklabel_format	format string or formatter used to format
+variable string	variable length ascii string ending with a tilde ~ ascii 126
+hdrlines	list of the header lines of a a k-net/kik-net ascii file
+layer	the layer to use for the calculation
+selector	a valid seedlink selector e.g. ehz or eh?
+new_dt	the desired new time delta
+seed_id	seed or channel id e.g. "bw.rjob..ehz" or
+p	slowness aka ray parameter to find in s/km
+freq	given frequency
+data_directory	data directory where the corresponding qbn file can
+subplots_adjust_top	the top side of the subplots of the figure
+kind	a list of strings for a 1-row plot or a nested list of
+recend	date of the last sample of the current record
+existing_client_dl_helpers	instances of already existing
+userid	up to 4 character user id
+fmin	maximum frequency in signal
+is_p_wave	true if p wave or false for s wave
+catalog	this class serves as a container for event objects
+clim	limits of the colorbars
+waveform mapper client	interface to access the seishub waveform web service
+output_file	the output filename
+thr_off	threshold for switching trigger off
+frequency_range_end	end of the frequency range for which the
+encoding	encoding used for xml string
+split_stations	splits stations containing multiple channels
+f1	frequency of the lower bandpass window
+byteorder	must be either 0 or '<' for lsbf or
+source_depth_in_km	source depth in km
+byteorder	if omitted or none automatic byte-order checking is
+sample_rate_ratio_number_samples	the sample rate expressed as
+frqhigh	higher frequency for fk/capon
+format	the file format to use (e.g. "mseed"). see
+buf	alphanumeric sac file to be checked
+subarray	numpy array of subarray stations to use. i.e. if subarray
+layer	the number of the layer s to return
+is_spherical	is this a spherical model? defaults to true
+resource identifier	unique identifier of any resource so it can be referred to
+model	specify the model
+response	the root response object
+trigger_off_extension	extends search window for next trigger
+freqmin	low corner frequency
+filename	file name to read
+sourcedepthinmeters	specify the source depth in meters
+inventory	inventory used to retrieve network code location code
+samp_int	number of samples per second
+waveform file crawler	a waveform file crawler
+include_partial_windows	determines if windows that are
+file	open file like object
+headonly	if headonly is true only read the header arrays not
+fmt	format of image to save
+blockette043	blockette 043 response (poles & zeros) dictionary blockette
+event_templates	event templates to use in checking similarity of
+kind	a list of strings or nested list of strings see
+url	the url to download from
+catalog	limit to events from a specified catalog
+blockette062	blockette 062 response [polynomial] blockette
+streams_templates	list of streams with template events to check for
+fmt	see :py func struct.unpack
+method	either 'read' or 'write' to select plugins based on either
+names	self-explanatory. multiple names allowed
+options	necessary keyword arguments for the respective filter
+nfft	number of fft points to use
+xdata	the independent variable where the data is measured
+event	a single obspy event
+textual_header_encoding	the encoding of the textual header
+number	region id
+float with uncertainties fixed unit	float value that has lower and upper uncertainties and a fixed unit associated with it
+degrees	distance in great circle degrees
+country	the country
+catalog	the catalog to write
+lon1	longitude of point a in degrees (positive for eastern
+length_output	length of the output memory array
+comment	from the stationxml definition container for a comment or log entry
+stream	3 component input data
+mst	class that transforms a obspy trace object to a libmseed internal mstrace struct
+nfreq	number frequencies at which response will be evaluated
+method	by default all traces with more than 400 000 samples
+prop	the material property to evaluate. one of
+ba	if true return only the filter coefficients b a instead
+longitude	wgs84 longitude
+no_filter	deactivates automatic filtering if set to true
+receiver_depth_in_km	receiver depth in km
+numchan	channel to be converted
+norm_method	defines how the traces are normalized either
+endtime	whether to consider only a specific set of seed ids
+user_agent	the user agent for all requests
+filename	gcf file to be checked
+timeout	the socket timeout
+details	if set to true the output coincidence triggers contain
+site	from the stationxml definition description of a site location using name and optional geopolitical
+termination_date	date and time utc when the station was
+station magnitude	this class describes the magnitude derived from a single waveform stream
+fmax	maximum frequency in hz
+trace_list	list of :class ~obspy.core.trace.trace objects or
+verbose	print additional information to stdout
+client_name	the name of the client mainly used for logging
+normf	factor for normalization
+num	number of traces in returned stream. last trace may contain
+data	data to estimate central frequency from
+other	stream or trace object to add
+inverse	if true, the data arrays will be converted from zne to
+default_location_code	location code used if stations are
+colormap	the colormap for color-coding the events
+receiver_latitude_in_deg	receiver latitude in degrees
+legend	if boolean specify whether or not to show the legend
+code	code to convert
+stime	start time of the analysis
+top_critical_layer	top layer number to search
+slim	either a float to use symmetric limits for slowness
+sds_type	override sds data type identifier that was specified
+starttime	the start time of the whole time interval
+fig	figure instance to reuse
+channel	channel code e.g. 'ehe'. channel code may contain
+layer	the layer s to check
+filename	seisan file to be read
+time	only use channel active at given point in time
+zorder	specify the zorder of the plot. only of importance if other
+client	an active client instance
+smooth	variable that defines if the konno-ohmachi taper is used or
+data_type	the data type of the expected data. currently supported
+activity_flags	extract activity flag counts
+npts	number of samples to read
+method	the kind of interpolation to perform as a string. one of
+paz_simulate	dictionary containing keys 'poles',
+elem	float value to be converted
+channels	all channels belonging to this station
+timestamp	seedlink time stamp in a utcdatetime format
+icon_url	internet url of icon to use for events e.g. png image
+ppsd	class to compile probabilistic power spectral densities for one combination of network/station/location/channel/sampling_rate
+a	the width of the window in samples on either side
+blockette044	blockette 044 response coefficients dictionary blockette
+maxradius	limit to events within the specified maximum number
+obs py ndkexception	base exception class for this module
+eventid	specify an event identifier in the form
+x	signal to smooth
+endtime	limit results to time series samples on or before the
+val	list of values
+misalignment_threshold	threshold value for sub-sample
+paz	paz of the instrument [m/s] as a dictionary or response of
+networks	a list of networks part of this inventory
+filename	ah v1 file to be checked
+plot_args	list of plot arguments passed to the signal 1/2 and
+debug	verbose output to stdout. disabled by default
+time	only regard stations active at given point in time
+expected	the filename of the expected png file
+session	an existing database session object
+float	a float number with a fixed length and output mask
+start_time_string	start time in in seedlink string format
+location	location code e.g. '--', wildcards allowed
+client	iris web service request client
+filename	if given the downloaded data will be saved there
+iocb_depth	depth km of the iocb (inner core-outer core
+starttime	only include channels active at or after given point
+waveform plotting	class that provides several solutions for plotting large and small waveform data sets
+gain	nominal gain to convert input displacement trace to meters
+filename	name of the pickled obspy stream file to be read
+file_mode	mode to open file in if necessary
+textual_header_encoding	the encoding of the textual header. can be
+filename	win file to be read
+blockette048	blockette 048 channel sensitivity/gain dictionary blockette
+format	the format of the file to write. see
+complex with uncertainties	complex class which can store uncertainties
+lta_p	length of lta for the p arrival in seconds
+data	the data array
+evt bad data error	raised if bad data is encountered while reading an evt file
+paz	given poles and zeros
+etime	time to end
+channel	channel code supporting wildcard for component
+extended	this method will show only 20 traces by default
+nodal planes	this class describes the nodal planes of a double-couple moment-tensor solution
+dest	full path or file-like object from sac ascii file on disk
+win	window to multiply with given signal
+fft_zero_pad_fac	integer if > 0 the signal is zero padded to
+format	format string e.g. 'xml' or 'map'
+ydata	the dependent data - nominally f xdata ..
+waveform gaps	db table containing gaps
+analogue	list of analogue filter chain identifiers
+grid	enable/disable grid in histogram plot
+sensortype	limit streams to those using specific sensor types
+layer	the layer s in which to calculate the increments
+return_center	returns the center coordinates as extra tuple
+channel	channel code e.g. 'bhz'
+gse2bulletin syntax error	raised when the file is not a valid gse2 file
+filename	source file name or open file-like object
+lat1	latitude of point a in degrees (positive for northern
+name	the commonly used name of this station equivalent to the
+evt frame header	class to manage frame header in evt file
+base_url	base url of fdsn web service compatible server
+buffer_	ctypes c_void_p pointer to buffer
+description	a description of the resource
+date	date of interest
+resplen	if > 0 then read up to resplen response bytes after
+subgroup	subgroup name defaults to none
+data_availability	information about time series availability
+traveltimeonly	returns a space-separated list of travel
+a	z signal the data
+h_1	height of the signal axis
+station	the station id
+timing_quality	extract timing quality and corresponding statistics
+filename_or_object	evt file to be checked
+radius_of_planet_in_km	radius of the planet in km
+instruments	include instrument data (default is false)
+network	the 2 character network code or regular expression
+min_freq	lowest frequency to plot
+trace	an object containing data of a continuous series such as a seismic trace
+lats	latitudes of the data points
+filename	k-net/kik-net ascii file to be read
+numspaces	number of spaces prepended to each line (for indentation
+prewhiten	do prewhitening values 1 or 0
+method	resample method. available are 'fast' and
+filename	css file to be read
+slope	the slope (in (km/s)/km) for velocity versus depth
+over	overlap of windows to be averaged 0<over<1 defaults to 0
+filename	ah file to be read
+trace	trace object to be resampled
+header	string that contains the packed binary header values
+convert	intrinsic function e.g. int str float
+axis	this class describes an eigenvector of a moment tensor expressed in its principal-axes system
+dtype	convert data of all traces into given numpy.dtype
+endtime	only show channels active before or at given point in
+tr1	trace 1
+d_cb	distance of the colorbar axes to the other axes
+headonly	if set to true read only the headers. this is most useful
+filename	gse2 file to be checked
+cha_element	channel element to be parsed
+timeout	maximum time in seconds to wait for a single request
+encoding	should be set to one of the following supported mini-seed
+seed_id	seed id string of channel to get response for
+sampling_rate	the new sampling rate in hz
+ev_coord	event's coordinates as tuple
+agencies	self-explanatory. multiple agencies allowed
+validate	if true the final quakeml file will be validated against
+server_url	the seedlink server url
+fmin	minimal frequency to be analyzed
+a	first signal
+thr_on	threshold for switching single station trigger on
+maximum_error	maximum error
+buf	file to read
+headers	header information for request e.g
+comments	an arbitrary number of comments to the resource
+trigger_type	string that specifies which trigger is applied (e.g
+x	the x values at which to calculate the kernel
+stream	stream object to be merged
+location	only plot matching channels. accepts unix style
+writeln decorator	used to decorate file-like objects with a handy 'writeln' method
+debug	debug on/off
+area_code	the area code
+min max amplitude feature	generates statistics about the amplitude values
+format	format of the graph picture. if no format is given the
+azimuth_1	the azimuth of component 1
+inventory	station metadata to use in search for adequate
+blockette030	blockette 030 data format dictionary blockette
+time	time of interest
+cmap	colormap to use for the plot. to use the color map like in
+tdownmax	if dtime exceeds tdownmax the trigger is examined for
+dbscale	if true 10 * log10 of color values is taken if false the
+packets	array of data packets (packet_type 'dt') from which
+endafter	limit to metadata epochs ending after specified time
+label_size	label size
+type	specifies the kind of interpolation as a string (linear,
+ax2d	2d matplotlib axes
+filename	file or file-like object in text mode
+decimation_offset	the sample chosen for use. 0 denotes the
+cls	obspy.core.inventory class
+code	the seed network code
+depth	the depth in km at which to perform the calculation
+fhigh	upper frequency limit for analysis
+show_histogram	enable/disable plotting of histogram. this
+approximation_lower_bound	lower bound of approximation
+cha_element	channel element to be used
+path_or_file_object	file name or file like object. if this
+start	the starting date/time to get
+GMT_scaling	scale the beachball - default radius is 1.0
+ray_param	the slowness to check in s/km
+verbose	controls verbosity from 0 to 2. defaults to none 0
+global domain	domain spanning the whole globe
+f	open file pointer of gse2 file to write opened in binary
+slpacket	class to hold and decode a seedlink packet
+seqnum	seedlink sequence number of last packet received -1 to
+klim	either a float to use symmetric limits for wavenumber
+channel	from the stationxml definition equivalent to seed blockette 52 and parent element for the related
+new_start	the start of the interpolated array. must be greater
+latitude	the latitude of the station
+password	password of http digest authentication for access to
+colorbar	when left none, a colorbar is plotted if more than one
+recordstart	seconds to crop from the beginning
+orig_lat	latitude of reference origin
+stime	start time
+output	output format if parameter filename is used
+winlen	window length for filter in samples must be power of 2
+net_element	network element to be read
+window	the window used to multiply the sinc function with. one
+tr	an obspy trace object containing the calib and gse2 calper
+url	the url to get the data from
+offset_max	maximum offset in meters to plot
+line	line to parse
+endtime	only use records whose start time is smaller than this
+timespan	timespan of peak to peak amplitude [s] or list of the same
+filename	name of numpy .npz output file
+show	show figure or return
+fct	cross-correlation function e.g. returned by correlate
+filename	audio wav file to be read
+latitude	latitude coordinate of this channel's sensor
+t0	starting time for plotting
+networkcode	specify the network code for the synthetics
+format	the format in which to request station information
+h_2	height of the tfr/spectrum axis
+beach ball	class for generating a beachball projection for a provided moment tensor object
+byteorder	enforce byte order for data file. this is important for
+ts3	same as ts1 but for the x3 up or down component of motion
+lazy trace header attrib dict	this version of attribdict will unpack header values only if needed
+paz	poles and zeros response information
+fig	figure instance to reuse returned from a previous
+other	catalog or event object to add
+trace	:class ~obspy.core.stream.trace object
+website	the website
+startbefore	limit to metadata epochs starting before specified
+resolution	resolution of the boundary database to use. will be
+nfft	number of fft points of signal which needs correction
+options	necessary keyword arguments for the respective trigger
+width	symbol size of beach ball or tuple for elliptically
+tensor	the tensor class represents the six moment-tensor elements mrr mtt mpp mrt mrp mtp in the spherical coordinate system defined by local upward
+w	window function
+buf	file to write to
+seed link exception	seedlink error
+location	location code e.g. '01'. location code may
+period_smoothing_width_octaves	determines over what
+title	the title to display on top of the plot
+epicentral_distance	great-circle epicentral distance from station
+stop_on	a list of strings that indicate the end of the server
+type	the equipment type
+freqmax	high corner frequency
+semb_thres	threshold for semblance
+np1	:class ~nodalplane
+event client	base class for clients supporting catalog objects
+waveform channel	db table containing channels
+channel	only plot matching channels. accepts unix style
+unwrap_phase	set optional phase unwrapping using numpy
+evt	class to read evt kinemetrics formatted files
+tau ptime	calculate travel times for different branches using linear interpolation between known slowness samples
+frequency_upper_bound	upper frequency bound
+filename	absolute path of input file
+starttime	only include stations/channels active at or after
+wlen	window length for fft in seconds. if this parameter is too
+f	flattening of earth. uses the value for wgs84 by default
+filename	will download directly to the specified file. if
+st2_isref	true if st2 is a reference signal false if none is a
+obj	obspy object for kml output
+total_number_of_channels	total number of channels recorded at
+size	controls the number of interpolation points for the
+network	the network code
+default_network_code	default network code used if stations
+encoding	reftek data encoding as specified in event header eh
+arc link exception	raised by the arclink client for known exceptions
+value	seed id to use for setting self.stats.network,
+max_percentage	decimal percentage of taper at one end (ranging
+ned_mt	the 6 comp moment tensor in ned orientation
+filename	name of output file
+arrival	successful association of a pick with an origin qualifies this pick as an arrival
+npts	the new number of samples. will be set to the best
+orderby	order the result by time or magnitude with the
+group	plugin group to search (e.g. "waveform" or "event")
+filename	ah v2 file to be read
+linestyle	line style
+validate	if true the created document will be validated with the
+handle	whether or not to return the matplotlib figure instance
+param	parameter with milliseconds values in val
+format	format of the file to read (e.g. "stationxml")
+p	the spherical ray paramater to use for calculation in s/km
+value	the actual value of the coefficient
+maxlatitude	limit to events with a latitude smaller than the
+eventid	select a specific event by id event identifiers are
+number	number to indicate the position of the coefficient
+wav_names	list of waveform files in the sfile
+fig	figure instance to use
+coordsys	valid values 'lonlat' and 'xy', choose which coordinates
+is_spherical	whether the model is spherical. non-spherical models
+f	file pointer
+byteorder	determines the endianness of the file. either '>' for
+path_or_file_object	file name or file-like object to be written
+data	contains the data
+metadata	response information of instrument. see above notes
+phone number	a simple object representing a phone number
+confidence ellipsoid	this class represents a description of the location uncertainty as a confidence ellipsoid with arbitrary orientation in space
+default	class to create a "default" function for the :py func json
+bulk	information about the requested data. see above for
+inventory_root	root of the xml document
+wl	wavelet to use for now only 'morlet' is implemented
+filename	alphanumeric sac file to be checked
+station	potentially wildcarded station code. if not given
+source time function	source time function used in moment-tensor inversion
+equipment	other station equipment
+icon_url	internet url of icon to use for station e.g. png image
+save_data	whether or not to save the result to a file. if true two
+firresponse stage	from the stationxml definition response fir filter
+data	data to determine instantaneous frequency of
+client	client for a database created by obspy db
+color	color information of the individual data points to be
+flimit	sequence containing the 4 frequency limits
+longitudes	geographical longitude values ranging from -180 to 180
+file_name	name of colormap to load same as filename in
+radius_of_planet	the radius of the planet to use in km
+filename	name of the output file or a file-like object
+vault	type of vault e.g. wwssn tunnel transportable array
+filename	name of the quakeml file to be checked
+type	determines type of returned time array see above for
+f	open file pointer of gse2 file to read opened in binary mode
+verify_chksum	if true verify checksum and raise exception if not
+tr	compatible trace with data of one ppsd segment
+data	data in displacement to convolve with pendulum at freq
+code	a string to include in error messages for identification
+position	the trace will be inserted at position
+method	method to handle overlaps of traces. defaults to 0
+slnet station	class to hold a seedlink stream selectors for a network/station
+fs	sampling frequency
+starttime	specify the start time
+show	show the plot
+inventory_or_network	the object to convert
+type	string that specifies which filter is applied (e.g
+outfile	output file string. also used to automatically
+origintime	specify the source origin time. this must be
+read_traces	data traces will only be read if this is set to
+blockette_number	the blockette number to search for
+N	:class ~principalaxis
+slpacket	the packet containing a mini-seed record
+fields	dictionary of positions of input fields used if input file
+count	packet counter
+sourcemomenttensor	specify a source in moment tensor
+dip_2	the dip of component 2
+data	the data to integrate
+operator	an operating agency and associated contact persons if there are multiple
+threads_per_client	the number of download threads launched
+compressed	request compressed files from arclink server
+filename_or_buf	file to pass
+filename_or_buf	file to test
+cumulative_number_of_colors	number of discrete color shades to
+on_data	a function or callable that is called for every new trace
+channel	channel code e.g. 'bhz'. last character (i.e
+sourcename	only read data with matching seed id (can contain
+endtime	limit to events on or before the specified end time
+wavefile	wave-file to associate with this s-file the timing of the s-file will be taken from this file if evtime is not set
+x	number
+blockette059	blockette 059 channel comment blockette
+data	data to determine predominant period of
+p	the slowness to interpolate in s/km
+composite time	focal times differ significantly in their precision while focal times of
+stream	stream containing waveform data for all stations. these
+fir	list of fir filter chain identifiers
+station	the 5 character station code or regular expression
+includeallorigins	specify if all origins for the event should
+min_longitude	minimum longitude
+cache	an object to use to cache models split at source depths
+time	only include stations/channels active at given point in
+approximation_type	approximation type. currently restricted to
+root	xml document root element
+data	data to detrend type numpy.ndarray
+w_1	width of the spectrum axis
+type	string that specifies which trigger is applied (e.g
+output_units	the units of the data as output from the
+mintimeonly	returns only the first arrival of each phase for
+tests	list of submodules for which test suites should be run
+httpclient	mix-in class to add http capabilities
+ba	the back azimuth from station to source in degrees
+udiff	union for steim objects
+starttime	start of requested time window
+source	network id of the institution sending the message
+location	location code. see note on wildcards above
+delta	sampling interval
+clock_drift_in_seconds_per_sample	a tolerance value measured
+comparing object	simple base class that implements == and != based on self __dict__
+filename	name of the gse2.0 file to be checked
+location	filter result by given location id if given. defaults
+string	quakeml string to parse
+latitude	specify the latitude to be used for a radius search
+calib_file	file name of calibration file containing the paz of the
+time_shift	interpolation can also shift the data with
+nearest_sample	if set to true, the closest sample is
+overwrite	force to overwrite old files defaults to false
+origin quality	this type contains various attributes commonly used to describe the quality of an origin e
+subplots_adjust_right	the right side of the subplots of the
+inventory	the root object of the inventory->network->station->channel hierarchy
+starttime	start time may be used in conjunction with
+channels	a list containing channel names
+evtime	if given this will set the timing of the s-file
+rt memory	real time memory class
+timestamps	whether to add timestamp information to the event
+headonly	if set to true, read only the data header. this is
+source_longitude_in_deg	source longitude in degrees
+max_trigger_length	maximum single station trigger length (in
+fs	sampling rate
+stage_sequence_number	stage sequence number greater or equal
+pretty_print	indent for readability
+catalog	obspy catalog object
+includeallmagnitudes	specify if all magnitudes for the event
+recstart	date of the first sample of the current record
+description	any additional information
+sensor	the sensor
+fc1	center frequency of lowest half octave band
+reftime	when using a relative timing the time used as the
+thr_coincidence_sum	threshold for coincidence sum. the network
+data	the data being written or returned
+item	name of the attribute key
+custom complex	helper class to inherit from and which stores a complex number that is extendable
+trace2	waveform data for pick2. add some time at front/back
+v_layer	the velocity layer to convert
+clock drift	clockdrift object
+filename	name of the ascii file to be checked
+channel	channel id
+y	value [km] to calculate relative coordinate in degree
+print_gaps	whether to print information on all encountered gaps
+slm_x	slowness x max
+n1	starting index defaults to 0
+interval	this defines the interval length in minutes for one
+max_longitude	maximum longitude
+filename	css file to be checked
+service_mappings	for advanced use only. allows the direct
+with_uncertainties	appends non-standard columns for horizontal
+logger	the logger instance to use for logging
+nofill	do not fill the beach ball but only plot the planes
+show_y_UTC_label	whether or not to display the y utc vertical
+inplace	if true do compression not on a copy of the data but
+historical_code	a previously used code if different from the
+endtime	end time of the graph as a
+filename	the name of the file to read
+filename	nanometrics y file to be read
+client	fdsn web service request client
+p	the slowness to calculate in s/km
+element	xmltree element status is extracted from
+contributor	limit to events contributed by a specified
+projection	the map projection. currently supported are
+county	the county
+starttime	the start time or timestamp for the new
+version	specified version value to test
+cleanup	specifies whether perfectly aligned traces should be
+plot_dx	spacing of ticks on the spatial x-axis
+subplots_adjust_left	the left side of the subplots of the
+curstream	the description of the station to negotiate
+resource_name	name of the resource
+components	specify the orientation of the synthetic
+stream	the stream object to rotate. needs to have exactly three
+ax	axis object of a matplotlib figure
+phases	comma separated list of phases. the default is as
+endtime	end date and time. requires starttime parameter
+swapflag	swap bytes defaults to 0
+starttime	only use records whose end time is larger than this
+format	the format of the written file
+name	tag name of sub nodal plane
+location	the 2 character location code or regular expression
+obj	obspy object for shapefile output
+stalon	station longitude
+filename	nnsa kb core file to be read
+moment tensor	this class represents a moment tensor solution for an event it is an
+omit_nulls	don't include empty-valued attributes
+source_longitude_in_deg	source longitue in degrees
+ppsd_length	length of data segments passed to psd in seconds
+filename	su file to be read
+location	location code e.g. '00'
+filename	nnsa kb core file to be checked
+path	file or directory path relative or absolute to parse
+zero_mean	if true, the mean of the waveform data is
+flag_value	the flag value to check
+timestring	numpy.ndarray
+field	general seed field
+restricted_status	the restriction status
+waveform client	base class for clients supporting stream objects
+fh	open file pointer of gse1 file to read opened in binary mode
+filename	alphanumeric sac file to be read
+size	size of the individual points in the scatter plot
+resp_element	response element to be parsed
+integer	an integer field
+filename_or_buf	file to read
+blockette051	blockette 051 station comment blockette
+flattening_of_planet	flattening of planet 0 for a sphere
+ned_mt	moment tensor in ned convention
+l_p	length of variance window for the p arrival in seconds
+waveform path	db table containing file directories
+included_headers	if set to a list only these header entries will
+filename	gse1 file to be checked
+value	gps status
+channel	channel code e.g. 'bhz', wildcards allowed
+right_vertical_labels	whether or not to display labels on the
+town	the town or city closest to the station
+filename	name of the pickled obspy stream file to be checked
+is_p_wave	whether to look at the p (true) or s (false)
+get_paz	fetch paz information and append to
+endtime	end of time span
+location	location code e.g. '01'
+endian	if given the byte order will be enforced. can be either "<"
+tohz	change to hertz
+hdrlist	which header fields to you want to list. choose one of
+w_cb	width of the colorbar axes
+phase	the value for the phase response at this frequency
+lut	specifies the number of discrete color values in the
+framerate	sample rate of wav file to use. this this will squeeze
+filename	gcf file to be read
+minradius	limit to events within the specified minimum number
+one_tick_per_line	whether or not to display one tick per line
+sll_y	slowness y min lower
+bo2	byte order string. can be one of {'l', 'little', 'l', '<',
+station	select one or more seed station codes. multiple codes
+evt tag	class to read the tags of evt files
+time interval	simple object representing a time interval of a channel
+automerge	if automerge is true traces with the same id will be
+stats	stats of the station/instrument to process
+dataz	data of z component. see description of datax
+annotate	can be either true or false. defaults
+station	object representing a seismic station within the download helper classes
+backend	name of matplotlib backend to switch to
+timestamp	valid values 'julsec' and 'mlabday'; 'julsec' returns
+depth	the depth to find in km
+lat	latitude of interest
+blockette047	blockette 047 decimation dictionary blockette
+custom_format	parameter for number formatting of samples defaults
+output_units_description	the units of the data as output from
+dtype	numpy dtype for returned data chunk
+blockette057	blockette 057 decimation blockette
+count	sequential numbering of poles/zeros
+sds_type	sds data type identifier one single character. types
+param	sampling rate sample size block time channels
+longestonly	limit results to the longest continuous segment per
+max_gap	all gaps larger than this value will be omitted. the
+byteorder	desired output byte order. if omitted arrays are
+yield_each_trace	if true it will yield each trace after it
+n	data of the north component of the seismogram
+frqlow	lower frequency for fk/capon
+response list response stage	this response type gives a list of frequency amplitude and phase value pairs
+logger	an active logger instance
+inventories	station metadata to use in search for response for
+filename_or_buffer	the filename_or_buffer or file-like object to
+data	the data to detrend. will be modified in-place
+debug	debug flag
+sufile	convenience class that internally handles seismic unix data files it
+sourcelatitude	specify the source latitude
+a	radius of earth in m. uses the value for wgs84 by default
+seedname	the 12 character seedname or 12 character regexp
+keys	list containing the values according to which the traces
+event mapper client	interface to access the seishub event web service
+input_file	the input filename
+sen_element	sensor element to be used
+station	station code. no wildcards supported by obspy
+headonly	if headonly is true return the header arrays not the
+instrument polynomial	from the stationxml definition the total sensitivity for a channel representing the complete
+frequency_range_db_variation	variation in decibels within the
+filename	name of a output file. if this parameter is given
+rayparamonly	returns a space-separated list of ray parameters
+P	:class ~principalaxis
+time_offset	only used if type='dayplot'. the difference
+value	seconds
+fmin	minimum frequency in hz
+nearest_sample	only applied if starttime or endtime is given
+filesize	filesize of the file. if not given it will be
+min_radius	minimum radius of the model km
+w0	parameter for the wavelet tradeoff between time and frequency
+dip_1	the dip of component 1
+quality	select a specific seed quality indicator handling is
+location	select one or more seed location identifiers. multiple
+plot_degrees	if true plot bode in degrees
+scale	specify an amplitude scaling factor. the default
+chunk_size	the chunk size in bytes
+pick	a pick is the observation of an amplitude anomaly in a seismogram at a specific point in time
+bottom	plot distance from the bottom of the figure
+smoothie	window length for moving average
+frequencies	discrete frequencies to calculate response for
+ms	_msstruct (actually consists of a lp_msrecord
+user	the user name used for identification with the web
+locationcode	specify the location code for the synthetics
+filename	name of file to write
+weight_mapping	mapping of pick uncertainties to integer weights
+show	whether to show the figure after plotting or not. can be
+ifx_list	list of events for which the 'ifx' flag should be set
+base_url	seishub connection string. defaults to
+reftime	the reference time to which the time scale will refer
+is_p_wave	whether to return the p layer (true) or the s
+sl_s	slowness step
+channels	the channels. each channel is a tuple of two strings
+stream	zne sorted trace data
+data	sac data array optional
+equip_element	element to be parsed
+sigmau	standard deviation not variance of ground noise
+stream	the obspy stream object to write
+msg	reason for unconditionally skipping the test
+filename	filename with nonlinloc scatter
+min_gap	all gaps smaller than this value will be omitted. the
+start_stage	sequence number of first stage that will be used
+samp_rate	samplerate in hz
+endtime	end of requested time window
+f	file open in read mode
+append	if filename exists append all data to file default false
+reverse	reverts sorting order to descending
+ray_param	the ray parameter s to use for calculation in s/km
+nlta	length of long time average window in samples
+recordlength	length of the record section in seconds
+nodal plane	this class describes a nodal plane using the attributes strike dip and rake
+filename	filename to save to
+unpickler	de-serializes a quakeml string into an obspy catalog object
+slpack	packet to process
+blockette length exception	wrong blockette length detected
+channel	channel code of requested data (e.g. "hhz")
+removal_date	the removal data of the equipment
+dip	dip of the instrument in degrees down from horizontal
+location	potentially wildcarded location code. if not given
+max_length	length of taper at one end in seconds
+paz_element	string of poles or zeros e.g. 12320 23020
+color_per_network	if set to true, each network will be
+filename	filename complete path to save kml to
+clip	adjust colormap to clip at lower and/or upper end. the given
+nphi	number of longitudinal grid points (default = 100)
+netto	the network timeout in seconds
+channel_prefix	channel band and instrument codes
+period_limits	set custom lower and upper end of period range
+user_agent	the user agent sent along the http request
+slclient	basic class to create and use a connection to a seedlink server using a seedlinkconnection object
+pre_filt	apply a bandpass filter in frequency domain to the
+method	http method of request e.g. "put"
+base node	from the stationxml definition a base node type for derivation of network station and channel
+size	size tuple in pixel for the output file. this corresponds
+outfile	name of outfile addressing w.r.t. current directory
+spec	spectrum as returned by :func numpy.fft.rfft
+response	the response of the channel
+components	list of components to use in cross-correlation defaults
+client	client for the iris syngine service
+nulls	if true return all header values including nulls else
+starttime	only read data samples after or at the start time
+layers	the layers of the model
+agencies	the agencies of the operator
+fdsnmass downloader exception	base exception raised by the download helpers
+module_name	name of the module of which the tests should be added
+datetime	time to get response for
+end_effective_time	the effective end date
+lon2	longitude of point b in degrees (positive for eastern
+ax3d	matplotlib axes3d object
+filename	the filename to download to
+selected_number_of_stations	the total number of stations in
+window_length	the length of each window in seconds
+capability	the capability to check for
+p_dur	p_dur defines the time interval for which the maximum
+thr_on	threshold for switching trigger on
+seed_id	seed id string of channel to get coordinates for
+stime	start time of interest
+nlat	number of nodes in lat direction. the number of
+chksum error	exception type for mismatching checksums
+charfct	characteristic function of e.g. sta/lta trigger
+projection	the map projection
+filename	name of the output file or open file like object
+evtlat	event latitude
+vp	p wave speed in the soil under the array (km/s)
+model	the model of the equipment
+filename	sac file to be checked
+lat1	latitude of point 1 in degrees
+k	spline order. 1 is linear 2 quadratic 3 cubic must be
+show	enable/disable immediately showing the plot
+headonly	if true read only head of gse2 file
+param	a list with the size of the list the dimension of the
+details	if true read additional information timing quality
+inc	the inclination of the ray at the station in degrees
+p0	initial guess for the parameters. if none, then the initial
+db_bins	specify the lower and upper boundary and the width of
+named temporary file	weak replacement for the python's tempfile temporaryfile
+starttime	specify the start time of slice
+sanity_checks	enables some sanity checks before merging traces
+sourcedoublecouple	specify a source as a double couple. the
+starttime	start date and time
+lon	longitude to calculate relative coordinate in km
+line	string containing moment tensor information
+client	request client for seiscomp data structure archive on local filesystem
+value	seconds or utcdatetime object to subtract. subtracting an
+res_id_prefix	prefix used
+inventory	input station metadata
+sladdr	the host port of the seedlink server
+gap_overlap_check	action to take when there is a gap or overlap
+x_labels_size	size of x labels in points or fontsize
+recursive	override for value of option recursive set at
+sampling_rate	the sampling rate in hz
+freqs	frequency vector to use
+st2	stream 2 containing one trace for z n e component (other
+mseed_storage	where to store the waveform files. see
+norm	if not none, trace is normalized by dividing by
+evt virtual	class for parameters reading
+waveform features	db table containing optional features created during indexing
+rtp_mt	moment tensor in rtp convention
+noise_tres	variance of the noise sphere data points are excluded
+left	plot distance from the left of the figure
+data_log_element	datalogger element to be used
+bulk	an already prepared bulk download list for all channels and
+fk	coefficients of polynomial used to calculate the time
+xml_string	xml string to process
+decimals	number of decimals for seconds after which to cut off
+data	filename url or xseed/seed string as file pointer or
+data_logger	the data-logger
+blockette050	blockette 050 station identifier blockette
+trace	the trace received from the server
+catalog	event data to add as a new layer
+selectors	selectors for this net/station null if none
+station	specify a station code combined with network to
+route	enables arclink routing (default is true)
+blockette010	blockette 010 volume identifier blockette
+month	if set restricts the data that is included in the stack
+picks	original picks used to generate the nonlinloc location
+minimumlength	limit results to continuous data segments of a
+filename	string or file like object. will download directly
+show_mean	enable/disable plotting of mean psd values
+blockette055	blockette 055 response list blockette
+sloppy	if true, only uses
+data used	the dataused class describes the type of data that has been used for a moment-tensor inversion
+user_flags	user defined flags and its value
+side	specify if both sides should be tapered (default "both")
+show	whether to show the figure after plotting or not. can be used
+compact	seed volume will contain compact data strings. missing
+float with uncertainties and unit	float value that has lower and upper uncertainties and a unit associated with it
+show_mode	enable/disable plotting of mode psd values
+maxdepth	limit to events with depth in kilometers smaller
+filename	path/filename of a local file to be checked
+cmap	colormap for tfem/tfpm either a string or
+debug_headers	include _all_ sac headers into the
+fmin	minimum frequency in signal
+buf	alphanumeric sac file to be read
+threads_per_client	threads to launch per client. 3 seems to
+base_url	the base url of the service
+tau ppierce	the methods here allow using tauptime to calculate the pierce points relating to the different arrivals
+stalat	station latitude
+sta_p	length of sta for the p arrival in seconds
+merge	specifies which merge operation should be performed
+poles zeros response stage	from the stationxml definition response complex poles and zeros
+seg2base error	base class for all seg-2 specific errors
+angle	angle object
+vertical_scaling_range	determines how each line is scaled in
+filename	reftek130 file to be checked
+starttime	if set data before the specified time is excluded
+limit	limit the results to the specified number of events
+plot_gaps	whether to plot filled rectangles at data gaps red
+width	dtype to write 1 for '<u1', 2 for '<i2' or 4 for '<i4'
+verbose	print error log if true
+filename	reftek130 file to be read
+filename	name of the ascii tspair file to be checked
+packet_handler	custom packet handler funtion to override
+factor	scale factor default is 1.0
+thres1	value above which trigger of characteristic function
+field_length	length of the wanted field in bytes
+format	output format. one of "mseed", "gse2",
+stationxml_storage	where to store the stationxml files. see
+sac ioerror	raised if the given sac file can't be read
+obj	the obspy event-type object to write
+endtime	limit to metadata epochs ending on or before the
+response list element	describes the amplitude and phase response value for a discrete frequency value
+preset_len	no of points taken for the estimation of variance of
+filename	name of numpy .npz file s with stored ppsd data
+data	sac data array optional. if omitted or none it is assumed
+blockette058	blockette 058 channel sensitivity/gain blockette
+df	sampling rate in hz
+description	description of the equipment
+hs	sac string header array
+depth range	convenience class for storing a depth range it has a top and a bottom and
+points	3d vector array with shape [3 npts] x y z or [2 npts]
+dt	time step between two samples in st in seconds
+net	network code
+network	network code of requested data (e.g. "iu")
+print_all	if true all events will be printed otherwise a
+slm_y	slowness y max
+t_samp	time resolution inverse frequency resolution
+tupevent	min nr of samples for itrm to be accepted as a pick
+maxmagnitude	limit to events with a magnitude smaller than the
+time_down	flip the plot horizontally time goes down
+filename	the filename to delete
+custom redirect handler	custom redirection handler to also do it for post requests which the standard library does not do by default
+arrival	convenience class for storing parameters associated with a phase arrival
+units	specify either displacement, velocity or
+group	group name
+blockette	general blockette handling
+is_p_wave	whether to split based on p (true) or s
+contacts	one or more contact persons
+water_level	water level for deconvolution
+description	a longer description of the location of this
+is_p_wave	whether to search the p (true) or s (false)
+endtime	end time of requested time window
+time	only plot stations available at given point in time
+title_size	size of the title in points or fontsize
+ylim	limits in misfit for tem/tpm/fem/fpm
+mt	focal mechanism nm x 6 (mxx myy mzz mxy mxz myz - the
+ts2	same as ts1 but for the x2 component of motion
+ignore_links	override for value of option ignore_links set
+operator	an operating agency and associated contact persons. if
+pathname_or_url	string containing a file name or a url or a open
+continent_fill_color	color of the continents. defaults to
+args	main method arguments
+route	enables arclink routing. default is true
+first_line	first line of header
+overlap_frac	fraction of overlap defaults to fifty percent 0.5
+tau ppath	calculate the ray paths for each phase using tauppierce and tauptime
+value	a date time string
+show	if true show the plot interactively after plotting. this
+iztype	one of the following strings
+smart polar text	automatically align text on polar plots to be away from axes
+endtime	specify the end time
+seqnum	seedlink sequence number of last packet received
+w_2	width of the tfem tfpm signal etc. axes
+rectangular domain	a rectangular domain defined by latitude and longitude bounds
+no_win	number of data windows
+sampletype	type of sample on of "a", "i", "f", "d"
+scale_fac	gain factor
+client	a earthworm wave server client
+starttime	only regard stations active at or after given point
+starttime	start of time span
+data	the data to write
+headonly	if set to true read only the header and omit the waveform
+data	sac data array. if omitted or none it is assumed that the
+stream	stream object the trace.stats dict like class must
+top_depth	the depth in km for the top of the layer
+stream	list like object of multiple obspy trace objects
+time	time around which is checked for a similarity. cross
+mseed_file_desc	a file descriptor to the current miniseed file
+units	output unit. defaults to 'def'
+geology	type of rock and/or geologic formation
+download_chunk_size_in_mb	miniseed data will be downloaded
+paz	paz of the instrument [m/s] or list of the same
+calibration_units	name of units e.g. "m/s", "m", ..
+output	output options. defaults to 'plot'
+callback	custom user defined callback function that can be used
+offset	offset default is 0.0
+metadata_timecheck	for get_paz and get_coordinates
+sphinx	internal flag used for api doc generation default false
+filename	name of the ascii slist file to be checked
+depth	the depth at which attempt a split in km
+includerestricted	specify if results should include information
+segytrace on the fly data unpacking error	raised if attempting to unpack trace data but no unpack_data() function exists
+vred	perform velocity reduction in m/s
+waveform stream id	reference to a stream description in an inventory
+grid_color	color of the grid
+str_or_fct	the string or function to be evaluated
+headonly	if headonly is true only read the header arrays not the
+distance	distance object
+segytrace reading error	raised if there is not enough data left in the file to unpack the data according to the values read from the header
+nlat	number of latitudinal grid points (default = 100)
+segyfile	class that internally handles seg y files
+trace	trace object to be removed from stream
+location	location code of requested data (e.g. "")
+binary	whether to write the data as binary or text. defaults to
+module	name of the software module that generated this
+msstruct	class for handling msrecord and msfileparam
+noise_thres	variance of the noise sphere data points are excluded
+offset	used
+event	event of the origin
+coefficient with uncertainties	a coefficient with optional uncertainties
+decimation_factor	integer decimation factor
+client download helper	:type client :class obspy fdsn client client
+decimation_input_sample_rate	the sampling rate before the
+color	color of the graph as a matplotlib color string as
+xml_string	controls whether to remove 'creationtime' tags or not
+sfile	path to the sfile
+resource_id2	this field contains a string that should serve as
+byteorder	desired byte order of initialized arrays
+storage_format	the storage format of the recorded data (e.g
+sourcelongitude	specify the source longitude
+bulk	specify the receivers to download in bulk
+approximation_upper_bound	upper bound of approximation
+freq	frequency in hz
+client	neic cwb queryserver request client for waveform data
+evdepth	the depth of the event in kilometers. default is 0
+t_after	time to end cross correlation window after pick times in
+debug	passed on to the :class baseclient constructor
+azimuth_3	the azimuth of component 3
+depth	the depth to search for in km
+timezone	defines the name of the user defined time scale. will
+sac error	raised if the sac file is corrupt or if necessary information in the sac file is missing
+sll_x	slowness x min lower
+fileborder_samples	similar to fileborder_seconds. the given
+bot_depth	bottom depth to search in km
+end_stage	stage sequence number of last stage that will be
+sampling_rate	manually specify sampling rate of time series
+sequence_number	must be an integer ranging between 1 and 999999
+nc	number of cepstral coefficients
+file_or_file_object	miniseed file name or open file-like object
+arg_kwarg_name	name of the arg/kwarg that should be tried to map
+output_initial_value	initialization value for the output
+name	a name given to the filter stage
+velocity	the velocity to convert in km/s
+network	specify a network code combined with station to
+coefficients type response stage	this response type can describe coefficients for fir filters laplace
+wlev	the water level
+userid	4-character seisan user id
+time	date and time
+water_fill_color	color of all water bodies
+receiverlongitude	specify the receiver longitude in degrees
+maxdepth	limit to events with depth less than the specified
+plot_all	by default all rays even those travelling in the
+route	enables arclink routing (default is false)
+lat2	latitude of point 2 in degrees
+format	output format. currently only dataless seed ('seed')
+debug_strings	by default non-ascii and null-termination
+mindepth	limit to events with depth more than the specified
+ts1	array of x1-component seismograms dimension nt x na
+catalog	a catalog of obspy events
+filename_or_buf	filename or file-like object to write to
+sendbytes	bytes to send
+level	specify level of detail using 'network', 'station' or
+instrument_polynomial	the total sensitivity for the given
+inventory	inventory data to add as a new layer
+step	the step between the start times of two successive
+filename	name of file to be checked
+etime	end time of interest
+longitude	the longitude of the station
+filename	filename to write or open file-like object
+data_source	ogr data source the layer is added to
+fc	corner frequency
+label	whether to label stations with "network.station" or not
+duration	the duration in seconds to get
+size	marker size (see :func matplotlib.pyplot.scatter)
+show_noise_models	enable/disable plotting of noise models
+endbefore	limit to metadata epochs ending before specified
+headonly	if true read only head of gcf file
+cmb_depth	depth km of the cmb core mantle boundary . it can
+margin_in_seconds	allowance in seconds that has to be exceeded by
+password	a password used for authentication with the web
+vs	s wave speed in the soil under the array note - vp and vs may be
+azimuth	azimuth object
+moho_depth	depth km of the moho. it can be input from
+debug	enables verbose output
+linewidth	float value in points of the line width
+site	these fields describe the location of the station using
+tick_format	the way the time axis is formatted
+restrictions	class storing non-domain restrictions for a query this is best explained
+value	year
+receiver_latitude_in_deg	receiver location latitude in degrees
+record analyser	analyses a mini-seed file on a per record basis
+a	maximum value of goodness-of-fit for perfect agreement
+frequency_range_start	start of the frequency range for which
+etime	end time
+data_type	desired array data-type
+magnitudetype	specify a magnitude type to use for testing the
+tau py model	representation of a seismic model and methods for ray paths through it
+filename	file or object being written to. if none a string
+mopad_basis	the basis system. defaults to 'use'. see the
+filename	name of the q file to be checked
+percentile	percentile for which to return approximate psd
+percentiles	percentiles to show if plotting of percentiles is
+seg2invalid file error	will be raised if something is not correct with the seg-2 file
+headonly	if true read only header of gse1 file
+l	length of windows to be averaged defaults to 0
+array_coords	array of dimension na x 3 where na is the number of
+top_velocity	the velocity (in km/s) at the top of the layer
+quantity error	uncertainty information for a physical quantity
+offset	the offset of the first window in seconds relative to
+params	additional url parameters
+focal mechanism	this class describes the focal mechanism of an event it includes different
+r	the response object resulting in the error
+timespans	whether to add timespan information to the single station
+win_frac	fraction of sliding window to use for step
+gseuti error	exception type for other errors in gse_uti
+model_name	name of the velocity model
+time_of_weekday	if set restricts the data that is included
+lons	longitudes of the data points
+win_len	sliding window length in seconds
+p	the slowness value to add in s/km
+show	do not call plt.show() at end of routine. that way
+damping	corner frequency
+back_azimuth	depends on the chosen method
+check	check that the calculated results are not invalid. this
+model	name of 1-d earth velocity model to be used. available
+tau model	provides storage of all the taubranches comprising a model
+win	window length in seconds for the kurtosis default is 3.0 s
+amplitude	peak to peak amplitude [counts] or list of the same
+axes	list/tuple of two axes instances on which to plot the
+index	index of the trace object to be returned and removed
+blockette parser exception	general blockette parser exception
+filename	zmap string name of the file to be checked or open
+data_quality_flags	extract data quality flag counts
+is_p_wave	whether to check the p wave (true) or the s wave
+st1	stream 1 containing one trace for z n e component (other
+response_stages	a list of the response stages. covers seed
+grdpts_x	number of grid points in y direction
+logs	include log messages (default is true)
+endtime	the end time of the whole time interval
+century	win stores year as 2 numbers need century to
+headonly	determines whether or not the actual data records
+filename	the name of the file to write
+stream	stream or trace with data that should be added to the
+n2	ending index defaults to 0
+domain	the download domain
+dt	obspy.util.utcdatetime object
+record_number	number of the record to be read. the first record
+method	the method to use. one of "pm", "flinn" or
+m_p	number of ar coefficients for the p arrival
+keepalive	the interval to send keepalive/heartbeat in seconds
+rate	stage sample rate
+location	location code e.g. '--'
+grdpts_x	number of grid points in x direction
+dpi	dots per inch of the output file. this also affects the
+region	the state province or region of this site
+data	channel list as returned by availability web service
+ax	axes to plot to. if not given a new figure with an axes
+data	data to make spectrum of
+evt eoferror	raised if an unexpected eof is encountered
+evtype	event type letter code e.g. l r d
+flags	the flags to update in the miniseed file
+flow	lower frequency limit for analysis
+z	data of the z component of the seismogram
+stage_number	response stage number
+paz_file	path to pazfile or file pointer
+c	e signal of the data
+h_3	height of the tfem and tfpm axes
+blockette033	blockette 033 generic abbreviation blockette
+legend	location string for legend if networks are plotted in
+length	if skip is used length defines the number of values
+metadata	fetch paz and coordinate information and append to
+output_units	string
+filename	path to write to
+object	single trace object or list of trace objects
+level	specify level of detail using one of 'network',
+filename	gse2 file to be read
+datetime	timestamp of requested paz values
+outages	include list of outages (default is true)
+data	array to interpolate
+k	sensitivity of goodness-of-fit to the misfit
+facecolor	color to use for quadrants of tension can be a string
+time	only regard networks/stations/channels active at given
+station	station code e.g. 'manz'
+datetime	time for which the paz is requested
+name	name of the library to load (e.g. 'mseed')
+qc_metrics	the quality metrics to be validated
+network	only plot matching networks. accepts unix style
+frqlow	lower frequency for pm
+ratio	as ratio gets smaller carl_sta_trig gets more sensitive
+filename	name of the ascii file to write
+scale	scale the traces width with this factor
+m_s	number of ar coefficients for the s arrival
+endian	endian type in datafile
+fmax	maximal frequency to be analyzed
+data	data to make normalized envelope of
+planet_flattening	flattening parameter for the planet's
+offset_min	minimum offset in meters to plot
+keep_sac_header	if keep_sac_header is true old stats.sac
+thr2	threshold for updating sigma c.f. paper
+filter	filter list. list order matters because each filter
+plot	if true, a plot window illustrating the alignment of the two
+tovel	change a displacement transfer function to a velocity
+path_or_file_object	file name or file like object
+reset_fp	if true the file pointer will be set to the initial
+f	file pointer of opened file in binary format
+filename	name of numpy .npz file with stored ppsd data
+st1	stream or trace object known
+event description	free-form string with additional event description this can be a
+buf	object to write to
+blockette011	blockette 011 volume station header index blockette
+creation info	creationinfo is used to describe creation metadata author version and creation time of a resource
+debug_headers	extracts also the sac headers 'nzyear', 'nzjday',
+endian	string that determines the endianness of the file. either
+person	from the stationxml definition representation of a person's contact information
+dt	python datetime object
+min_latitude	minimum latitude
+layer	the layer number
+sample rate	samplerate object
+orientation	axis of the north-pole of the sphere
+end_date	the end date of the resource
+transparent	make all backgrounds transparent (true/false). this
+decimation_correction	the time shift applied to correct for the
+plot_args	list of plot arguments passed to the signal and spectrum
+data	data to make envelope of
+modified_after	returns only data modified after given date
+stream	a stream object
+buf	file to check
+format	format of the file to read (e.g. "quakeml"). see the
+plot_x	whether to plot "x" markers at start of all parsed
+poles	the poles of the transfer function
+filename_or_object	evt file to be read
+version	gse version either 1 or 2 defaults to 2
+format	the file format to use (e.g. "quakeml"). see the
+force_redirect	by default the client will follow all http
+st	signal type numpy.ndarray with shape (number of components
+client_name	the name of the client instance used for logging
+msg	reason for unconditionally skipping the tests
+source	full path or file-like object from a sac ascii file on disk
+station	station code e.g. 'tuca'
+compact	delivers a compact seed date string if enabled. default
+data	input data
+channel	select one or more seed channel codes. multiple codes
+reclen	if reclen is 0 the length of the first record is auto-
+date_string	date and time string
+f	file open in read-mode
+endtime	only include networks/stations/channels active before
+inventory_root	base inventory element of document
+verbosity	run tests in verbose mode (0=quiet 1=normal
+segytrace header	convenience class that handles reading and writing of the trace headers
+file_p	file pointer
+paz_remove	dictionary containing keys 'poles', 'zeros',
+minlongitude	limit to events with a longitude larger than the
+cc_maxlag	maximum lag/shift time tested during cross correlation in
+waveform file	db table containing waveform files
+filename	filename to write to. according to esri shapefile
+evt bad header error	raised if an error occured while parsing an evt header
+filename	zmap string name of zmap file to be read or open
+bot_critical_layer	bottom layer number to search
+tag	name of tag to be read
+equipments	equipment used by all channels at a station
+event_point_separator	true if events are separated by
+b	n signal of the data
+headers	header information for request
+headonly	if set to true read only the head. this is most useful
+inclination	inclination of the ray at the station in degrees
+stage	response stage element
+domain	abstract base class defining a domain - subclass it to define a new domain
+permanent	requesting only permanent or temporary networks
+units	units to return response in. can be either dis vel or acc
+file_p	file descriptor of evt file
+end_time_string	start time in in seedlink string format
+time window	describes a time window for amplitude measurements given by a central point in time and points in time before and after this central point
+retries	number of retries for failing requests
+includearrivals	specify if phase arrivals should be included
+period_lim	period limits to show in histogram. when setting
+order	the order/degree of the smoothing spline to fit
+distance_in_degree	epicentral distance in degrees
+mode	'absolute' for absolute value of tfr 'power' for |tfr|^2
+level	specify the level of detail for the results ("network",
+path_or_object	file name or file like object. can also be an etree
+filename	name of the audio wav file to be checked
+starttime	limit to metadata epochs starting on or after the
+trace	the obspy trace object to write
+h_1	height of the signal axes
+sampling_rate	the sampling rate of the resampled signal
+input_units	string

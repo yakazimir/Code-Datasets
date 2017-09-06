@@ -1,0 +1,817 @@
+core	BaseDatabaseManager	__init__	config factory	:param config the connections configuration
+core	BaseDatabaseManager	connection	name	get a database connection instance
+core	BaseDatabaseManager	_parse_connection_name	name	parse the connection into a tuple of the name and read / write type
+core	BaseDatabaseManager	purge	name	disconnect from the given database and remove from local cache
+orm	FactoryBuilder	__init__	klass name definitions faker	:param klass the class
+orm	FactoryBuilder	times	amount	set the amount of models to create / make
+orm	FactoryBuilder	create		create a collection of models and persist them to the database
+orm	FactoryBuilder	make		create a collection of models
+orm	FactoryBuilder	_make_instance		make an instance of the model with the given attributes
+orm	Factory	__init__	faker resolver	:param faker a faker generator instance :type faker faker
+orm	Factory	construct	cls faker path_to_factories	create a new factory container
+orm	Factory	define_as	klass name	define a class with the given short name
+orm	Factory	define	klass name	define a class with a given set of attributes
+orm	Factory	register	klass callback name	register a class with a function
+orm	Factory	register_as	klass name callback	register a class with a function
+orm	Factory	create	klass	create an instance of the given model and persist it to the database
+orm	Factory	create_as	klass name	create an instance of the given model and type and persist it to the database
+orm	Factory	make	klass	create an instance of the given model
+orm	Factory	make_as	klass name	create an instance of the given model and type
+orm	Factory	raw_of	klass name	get the raw attribute dict for a given named model
+orm	Factory	raw	klass _name	get the raw attribute dict for a given named model
+orm	Factory	of	klass name	create a builder for the given model
+orm	Factory	build	klass name amount	makes a factory builder with a specified amount
+orm	Factory	_resolve	cls path factory_file	resolve a migration instance from a file
+orm	Factory	__call__	klass name amount	makes a factory builder with a specified amount
+orm	Builder	with_global_scope	identifier scope	register a new global scope
+orm	Builder	without_global_scope	scope	remove a registered global scope
+orm	Builder	without_global_scopes		remove all registered global scopes
+orm	Builder	find	id columns	find a model by its primary key
+orm	Builder	find_many	id columns	find a model by its primary key
+orm	Builder	find_or_fail	id columns	find a model by its primary key or raise an exception
+orm	Builder	first	columns	execute the query and get the first result
+orm	Builder	first_or_fail	columns	execute the query and get the first result or raise an exception
+orm	Builder	get	columns	execute the query as a "select" statement
+orm	Builder	pluck	column	pluck a single column from the database
+orm	Builder	chunk	count	chunk the results of the query
+orm	Builder	lists	column key	get a list with the values of a given column
+orm	Builder	paginate	per_page current_page columns	paginate the given query
+orm	Builder	simple_paginate	per_page current_page columns	paginate the given query
+orm	Builder	update	_values	update a record in the database
+orm	Builder	increment	column amount extras	increment a column's value by a given amount
+orm	Builder	decrement	column amount extras	decrement a column's value by a given amount
+orm	Builder	_add_updated_at_column	values	add the "updated_at" column to a dictionary of values
+orm	Builder	delete		delete a record from the database
+orm	Builder	force_delete		run the default delete function on the builder
+orm	Builder	on_delete	callback	register a replacement for the default delete function
+orm	Builder	get_models	columns	get the hydrated models without eager loading
+orm	Builder	eager_load_relations	models	eager load the relationship of the models
+orm	Builder	_load_relation	models name constraints	eagerly load the relationship on a set of models
+orm	Builder	get_relation	relation	get the relation instance for the given relation name
+orm	Builder	_nested_relations	relation	get the deeply nested relations for a given top-level relation
+orm	Builder	_is_nested	name relation	determine if the relationship is nested
+orm	Builder	where	column operator value boolean	add a where clause to the query
+orm	Builder	or_where	column operator value	add an "or where" clause to the query
+orm	Builder	where_exists	query boolean negate	add an exists clause to the query
+orm	Builder	or_where_exists	query negate	add an or exists clause to the query
+orm	Builder	where_not_exists	query boolean	add a where not exists clause to the query
+orm	Builder	or_where_not_exists	query	add a or where not exists clause to the query
+orm	Builder	has	relation operator count boolean	add a relationship count condition to the query
+orm	Builder	_has_nested	relations operator count boolean	add nested relationship count conditions to the query
+orm	Builder	doesnt_have	relation boolean extra	add a relationship count to the query
+orm	Builder	where_has	relation extra operator count	add a relationship count condition to the query with where clauses
+orm	Builder	where_doesnt_have	relation extra	add a relationship count condition to the query with where clauses
+orm	Builder	or_has	relation operator count	add a relationship count condition to the query with an "or"
+orm	Builder	or_where_has	relation extra operator count	add a relationship count condition to the query with where clauses and an "or"
+orm	Builder	_add_has_where	has_query relation operator count	add the "has" condition where clause to the query
+orm	Builder	_merge_model_defined_relation_wheres_to_has_query	has_query relation	merge the "wheres" from a relation query to a has query
+orm	Builder	_get_has_relation_query	relation	get the "has" relation base query
+orm	Builder	with_		set the relationships that should be eager loaded
+orm	Builder	_parse_with_relations	relations	parse a list of relations into individuals
+orm	Builder	_parse_nested_with	name results	parse the nested relationship in a relation
+orm	Builder	_call_scope	scope	call the given model scope
+orm	Builder	apply_scopes		get the underlying query builder instance with applied global scopes
+orm	Builder	_apply_scope	scope builder	apply a single scope on the given builder instance
+orm	Builder	_should_nest_wheres_for_scope	query original_where_count	determine if the scope added after the given offset should be nested
+orm	Builder	_nest_wheres_for_scope	query where_counts	nest where conditions of the builder and each global scope
+orm	Builder	_slice_where_conditions	wheres offset length	create a where list with sliced where conditions
+orm	Builder	get_query		get the underlying query instance
+orm	Builder	to_base		get a base query builder instance
+orm	Builder	set_query	query	set the underlying query instance
+orm	Builder	get_eager_loads		get the relationships being eager loaded
+orm	Builder	set_eager_loads	eager_load	sets the relationships to eager load
+orm	Builder	get_model		get the model instance of the model being queried :rtype orator
+orm	Builder	set_model	model	set a model instance for the model being queried
+orm	Builder	macro	name callback	extend the builder with the given callback
+orm	Builder	get_macro	name	get the given macro by name
+orm	Model	__init__	_attributes	:param attributes the instance attributes
+orm	Model	_boot_if_not_booted		check if the model needs to be booted and if so do it
+orm	Model	_boot	cls	the booting method of the model
+orm	Model	_boot_mixins	cls	boot the mixins
+orm	Model	add_global_scope	cls scope implementation	register a new global scope on the model
+orm	Model	has_global_scope	cls scope	determine if a model has a global scope
+orm	Model	get_global_scope	cls scope	get a global scope registered with the model
+orm	Model	get_global_scopes		get the global scopes for this class instance
+orm	Model	observe	cls observer	register an observer with the model
+orm	Model	fill	_attributes	fill the model with attributes
+orm	Model	force_fill	_attributes	fill the model with attributes force mass assignment
+orm	Model	_fillable_from_dict	attributes	get the fillable attributes from a given dictionary
+orm	Model	new_instance	attributes exists	create a new instance for the given model
+orm	Model	new_from_builder	attributes connection	create a new model instance that is existing
+orm	Model	hydrate	cls items connection	create a collection of models from plain lists
+orm	Model	hydrate_raw	cls query bindings connection	create a collection of models from a raw query
+orm	Model	create	cls _attributes	save a new model an return the instance
+orm	Model	force_create	cls	save a new model an return the instance allow mass assignment
+orm	Model	first_or_create	cls	get the first record matching the attributes or create it
+orm	Model	first_or_new	cls	get the first record matching the attributes or instantiate it
+orm	Model	update_or_create	cls attributes values	create or update a record matching the attributes and fill it with values
+orm	Model	query	cls	begin querying the model
+orm	Model	on	cls connection	begin querying the model on a given connection
+orm	Model	on_write_connection	cls	begin querying the model on the write connection
+orm	Model	all	cls columns	get all og the models from the database
+orm	Model	find	cls id columns	find a model by its primary key
+orm	Model	find_or_new	cls id columns	find a model by its primary key or return new instance
+orm	Model	fresh	with_	reload a fresh instance from the database
+orm	Model	load		eager load relations on the model
+orm	Model	with_	cls	begin querying a model with eager loading
+orm	Model	has_one	related foreign_key local_key relation	define a one to one relationship
+orm	Model	morph_one	related name type_column id_column	define a polymorphic one to one relationship
+orm	Model	belongs_to	related foreign_key other_key relation	define an inverse one to one or many relationship
+orm	Model	morph_to	name type_column id_column _wrapped	define a polymorphic inverse one-to-one or many relationship
+orm	Model	get_actual_class_for_morph	slug	retrieve the class from a slug
+orm	Model	has_many	related foreign_key local_key relation	define a one to many relationship
+orm	Model	has_many_through	related through first_key second_key	define a has-many-through relationship
+orm	Model	morph_many	related name type_column id_column	define a polymorphic one to many relationship
+orm	Model	belongs_to_many	related table foreign_key other_key	define a many-to-many relationship
+orm	Model	morph_to_many	related name table foreign_key	define a polymorphic many-to-many relationship
+orm	Model	morphed_by_many	related name table foreign_key	define a polymorphic many-to-many relationship
+orm	Model	_get_related	related as_instance	get the related class
+orm	Model	joining_table	related	get the joining table name for a many-to-many relation
+orm	Model	destroy	cls	destroy the models for the given ids
+orm	Model	delete		delete the model from the database
+orm	Model	force_delete		force a hard delete on a soft deleted model
+orm	Model	_perform_delete_on_model		perform the actual delete query on this model instance
+orm	Model	saving	cls callback	register a saving model event with the dispatcher
+orm	Model	saved	cls callback	register a saved model event with the dispatcher
+orm	Model	updating	cls callback	register a updating model event with the dispatcher
+orm	Model	updated	cls callback	register a updated model event with the dispatcher
+orm	Model	creating	cls callback	register a creating model event with the dispatcher
+orm	Model	created	cls callback	register a created model event with the dispatcher
+orm	Model	deleting	cls callback	register a deleting model event with the dispatcher
+orm	Model	deleted	cls callback	register a deleted model event with the dispatcher
+orm	Model	flush_event_listeners	cls	remove all of the event listeners for the model
+orm	Model	_register_model_event	cls event callback	register a model event with the dispatcher
+orm	Model	get_observable_events	cls	get the observable event names
+orm	Model	_increment	column amount	increment a column's value
+orm	Model	_decrement	column amount	decrement a column's value
+orm	Model	_increment_or_decrement	column amount method	runthe increment or decrement method on the model
+orm	Model	_increment_or_decrement_attribute_value	column amount method	increment the underlying attribute value and sync with original
+orm	Model	update	_attributes	update the model in the database
+orm	Model	push		save the model and all of its relationship
+orm	Model	save	options	save the model to the database
+orm	Model	_finish_save	options	finish processing on a successful save operation
+orm	Model	_perform_update	query options	perform a model update operation
+orm	Model	_perform_insert	query options	perform a model update operation
+orm	Model	_insert_and_set_id	query attributes	insert the given attributes and set the id on the model
+orm	Model	touch_owners		touch the owning relations of the model
+orm	Model	touches	relation	determine if a model touches a given relation
+orm	Model	_fire_model_event	event	fire the given event for the model
+orm	Model	_set_keys_for_save_query	query	set the keys for a save update query
+orm	Model	_get_key_for_save_query		get the primary key value for a save query
+orm	Model	touch		update the model's timestamps
+orm	Model	_update_timestamps		update the model's timestamps
+orm	Model	_should_set_timestamp	timestamp	determine if a timestamp should be set
+orm	Model	set_created_at	value	set the value of the "created at" attribute
+orm	Model	set_updated_at	value	set the value of the "updated at" attribute
+orm	Model	get_created_at_column		get the name of the "created at" column
+orm	Model	get_updated_at_column		get the name of the "updated at" column
+orm	Model	fresh_timestamp		get a fresh timestamp for the model
+orm	Model	new_query		get a new query builder for the model's table
+orm	Model	new_query_without_scope	scope	get a new query builder for the model's table without a given scope
+orm	Model	new_query_without_scopes		get a new query builder without any scopes
+orm	Model	new_orm_builder	query	create a new orm query builder for the model
+orm	Model	_new_base_query_builder		get a new query builder instance for the connection
+orm	Model	new_collection	models	create a new collection instance
+orm	Model	new_pivot	parent attributes table exists	create a new pivot model instance
+orm	Model	get_table		get the table associated with the model
+orm	Model	set_table	table	set the table associated with the model
+orm	Model	get_key		get the value of the model's primary key
+orm	Model	get_key_name		get the primary key for the model
+orm	Model	set_key_name	name	set the primary key for the model
+orm	Model	get_qualified_key_name		get the table qualified key name
+orm	Model	uses_timestamps		determine if the model uses timestamps
+orm	Model	get_morphs	name type id	get the polymorphic relationship columns
+orm	Model	get_morph_name	cls	get the name for polymorphic relations
+orm	Model	get_per_page		get the number of models to return per page
+orm	Model	get_foreign_key		get the default foreign key name for the model
+orm	Model	get_hidden		get the hidden attributes for the model
+orm	Model	set_hidden	hidden	set the hidden attributes for the model
+orm	Model	add_hidden		add hidden attributes to the model
+orm	Model	get_visible		get the visible attributes for the model
+orm	Model	set_visible	visible	set the visible attributes for the model
+orm	Model	add_visible		add visible attributes to the model
+orm	Model	get_fillable		get the fillable attributes for the model
+orm	Model	fillable	fillable	set the fillable attributes for the model
+orm	Model	get_guarded		get the guarded attributes
+orm	Model	guard	guarded	set the guarded attributes
+orm	Model	unguard	cls	disable the mass assigment restrictions
+orm	Model	reguard	cls	enable the mass assignment restrictions
+orm	Model	is_fillable	key	determine if the given attribute can be mass assigned
+orm	Model	is_guarded	key	determine if the given attribute is guarded
+orm	Model	totally_guarded		determine if the model is totally guarded
+orm	Model	_remove_table_from_key	key	remove the table name from a given key
+orm	Model	to_json		convert the model instance to json
+orm	Model	serialize		convert the model instance to a dictionary
+orm	Model	to_dict		convert the model instance to a dictionary
+orm	Model	attributes_to_dict		convert the model's attributes to a dictionary
+orm	Model	_get_dictable_attributes		get an attribute dictionary of all dictable attributes
+orm	Model	_get_dictable_appends		get all the appendable values that are dictable
+orm	Model	relations_to_dict		get the model's relationships in dictionary form
+orm	Model	_get_dictable_relations		get an attribute dict of all dictable relations
+orm	Model	_get_dictable_items	values	get an attribute dictionary of all dictable values
+orm	Model	get_attribute	key original	get an attribute from the model
+orm	Model	get_raw_attribute	key	get the raw underlying attribute
+orm	Model	_get_attribute_value	key	get a plain attribute
+orm	Model	_get_relationship_from_method	method relations	get a relationship value from a method
+orm	Model	has_get_mutator	key	determine if a get mutator exists for an attribute
+orm	Model	_mutate_attribute_for_dict	key	get the value of an attribute using its mutator for dict conversion
+orm	Model	_has_cast	key	determine whether an attribute should be casted to a native type
+orm	Model	_has_set_mutator	key	determine whether an attribute has a set mutator
+orm	Model	_is_json_castable	key	determine whether a value is json castable
+orm	Model	_get_cast_type	key	get the type of the cast for a model attribute
+orm	Model	_cast_attribute	key value	cast an attribute to a native python type
+orm	Model	get_dates		get the attributes that should be converted to dates
+orm	Model	from_datetime	value	convert datetime to a storable string
+orm	Model	as_datetime	value	return a timestamp as a datetime
+orm	Model	get_date_format		get the format to use for timestamps and dates
+orm	Model	_format_date	date	format a date or timestamp
+orm	Model	set_attribute	key value	set a given attribute on the model
+orm	Model	replicate	except_	clone the model into a new non-existing instance
+orm	Model	get_attributes		get all of the current attributes on the model
+orm	Model	set_raw_attributes	attributes sync	set the dictionary of model attributes no checking is done
+orm	Model	set_raw_attribute	key value sync	set an attribute no checking is done
+orm	Model	get_original	key default	get the original values
+orm	Model	sync_original		sync the original attributes with the current
+orm	Model	sync_original_attribute	attribute	sync a single original attribute with its current value
+orm	Model	is_dirty		determine if the model or given attributes have been modified
+orm	Model	get_dirty		get the attribute that have been change since last sync
+orm	Model	set_appends	appends	sets the appendable attributes
+orm	Model	get_relations		get all the loaded relations for the instance
+orm	Model	get_relation	relation	get a specific relation
+orm	Model	set_relation	relation value	set the specific relation in the model
+orm	Model	get_connection		get the database connection for the model :rtype orator
+orm	Model	get_connection_name		get the database connection name for the model
+orm	Model	set_connection	name	set the connection associated with the model
+orm	Model	resolve_connection	cls connection	resolve a connection instance
+orm	Model	get_connection_resolver	cls	get the connection resolver instance
+orm	Model	set_connection_resolver	cls resolver	set the connection resolver instance
+orm	Model	unset_connection_resolver	cls	unset the connection resolver instance
+orm	Model	_get_mutated_attributes		get the mutated attributes
+orm	Collection	load		load a set of relationships onto the collection
+orm	Collection	lists	value key	get a list with the values of a given key
+orm	Collection	model_keys		get the list of primary keys
+orm.scopes	SoftDeletingScope	apply	builder model	apply the scope to a given query builder
+orm.scopes	SoftDeletingScope	extend	builder	extend the query builder with the needed functions
+orm.scopes	SoftDeletingScope	_on_delete	builder	the delete replacement function
+orm.scopes	SoftDeletingScope	_get_deleted_at_column	builder	get the "deleted at" column for the builder
+orm.scopes	SoftDeletingScope	_add_force_delete	builder	add the force delete extension to the builder
+orm.scopes	SoftDeletingScope	_force_delete	builder	the forece delete extension
+orm.scopes	SoftDeletingScope	_add_restore	builder	add the restore extension to the builder
+orm.scopes	SoftDeletingScope	_restore	builder	the restore extension
+orm.scopes	SoftDeletingScope	_add_with_trashed	builder	add the with-trashed extension to the builder
+orm.scopes	SoftDeletingScope	_with_trashed	builder	the with-trashed extension
+orm.scopes	SoftDeletingScope	_add_only_trashed	builder	add the only-trashed extension to the builder
+orm.scopes	SoftDeletingScope	_only_trashed	builder	the only-trashed extension
+orm.scopes	Scope	apply	builder model	apply the scope to a given query builder
+orm.mixins	SoftDeletes	boot_soft_deletes	cls klass	boot the soft deleting mixin for a model
+orm.mixins	SoftDeletes	force_delete		force a hard delete on a soft deleted model
+orm.mixins	SoftDeletes	_perform_delete_on_model		perform the actual delete query on this model instance
+orm.mixins	SoftDeletes	_do_perform_delete_on_model		perform the actual delete query on this model instance
+orm.mixins	SoftDeletes	_run_soft_delete		perform the actual delete query on this model instance
+orm.mixins	SoftDeletes	restore		restore a soft-deleted model instance
+orm.mixins	SoftDeletes	trashed		determine if the model instance has been soft-deleted
+orm.mixins	SoftDeletes	with_trashed	cls	get a new query builder that includes soft deletes
+orm.mixins	SoftDeletes	only_trashed	cls	get a new query builder that only includes soft deletes :type cls orator
+orm.mixins	SoftDeletes	restoring	cls callback	register a restoring model event with the dispatcher
+orm.mixins	SoftDeletes	restored	cls callback	register a restored model event with the dispatcher
+orm.mixins	SoftDeletes	get_deleted_at_column		get the name of the "deleted at" column
+orm.mixins	SoftDeletes	get_qualified_deleted_at_column		get the fully qualified "deleted at" column
+orm.relations	Result	__init__	result relation parent	:param query a builder instance :type query orm
+orm.relations	Pivot	__init__	parent attributes table exists	:param parent the parent model
+orm.relations	Pivot	_set_keys_for_save_query	query	set the keys for a save update query
+orm.relations	Pivot	delete		delete the pivot model record from the database
+orm.relations	Pivot	_get_delete_query		get the query builder for a delete operation on the pivot
+orm.relations	Pivot	has_timestamps_attributes		determine if the pivot has timestamps attributes
+orm.relations	Pivot	set_pivot_keys	foreign_key other_key	set the key names for the pivot model instance
+orm.relations	Pivot	set_table	table	set the table associated with the model
+orm.relations	Pivot	get_table		get the table associated with the model
+orm.relations	MorphPivot	_set_keys_for_save_query	query	set the keys for a save update query
+orm.relations	MorphPivot	delete		delete the pivot model record from the database
+orm.relations	MorphOne	get_results		get the results of the relationship
+orm.relations	MorphOne	init_relation	models relation	initialize the relation on a set of models
+orm.relations	MorphOne	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	BelongsTo	__init__	query parent foreign_key other_key	:param query a builder instance
+orm.relations	BelongsTo	get_results		get the results of the relationship
+orm.relations	BelongsTo	add_constraints		set the base constraints on the relation query
+orm.relations	BelongsTo	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	BelongsTo	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	BelongsTo	_get_eager_model_keys	models	gather the keys from a list of related models
+orm.relations	BelongsTo	init_relation	models relation	initialize the relation on a set of models
+orm.relations	BelongsTo	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	BelongsTo	associate	model	associate the model instance to the given parent
+orm.relations	BelongsTo	dissociate		dissociate previously associated model from the given parent
+orm.relations	BelongsTo	update	_attributes	update the parent model on the relationship
+orm.relations	Relation	__init__	query parent	:param query a builder instance :type query orm
+orm.relations	Relation	add_constraints		set the base constraints on the relation query
+orm.relations	Relation	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	Relation	init_relation	models relation	initialize the relation on a set of models
+orm.relations	Relation	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	Relation	get_results		get the results of the relationship
+orm.relations	Relation	get_eager		get the relationship for eager loading
+orm.relations	Relation	touch		touch all of the related models for the relationship
+orm.relations	Relation	raw_update	attributes	run a raw update against the base query
+orm.relations	Relation	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	Relation	no_constraints	cls with_subclasses	runs a callback with constraints disabled on the relation
+orm.relations	Relation	get_keys	models key	get all the primary keys for an array of models
+orm.relations	Relation	created_at		get the name of the "created at" column
+orm.relations	Relation	updated_at		get the name of the "updated at" column
+orm.relations	Relation	get_related_updated_at		get the name of the related model's "updated at" column
+orm.relations	Relation	wrap	value	wrap the given value with the parent's query grammar
+orm.relations	HasOne	get_results		get the results of the relationship
+orm.relations	HasOne	init_relation	models relation	initialize the relation on a set of models
+orm.relations	HasOne	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	HasOneOrMany	__init__	query parent foreign_key local_key	:type query orator orm builder
+orm.relations	HasOneOrMany	add_constraints		set the base constraints of the relation query
+orm.relations	HasOneOrMany	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	HasOneOrMany	match_one	models results relation	match the eargerly loaded resuls to their single parents
+orm.relations	HasOneOrMany	match_many	models results relation	match the eargerly loaded resuls to their single parents
+orm.relations	HasOneOrMany	_match_one_or_many	models results relation type_	match the eargerly loaded resuls to their single parents
+orm.relations	HasOneOrMany	_get_relation_value	dictionary key type	get the value of the relationship by one or many type
+orm.relations	HasOneOrMany	_build_dictionary	results	build model dictionary keyed by the relation's foreign key
+orm.relations	HasOneOrMany	save	model	attach a model instance to the parent models
+orm.relations	HasOneOrMany	save_many	models	attach a list of models to the parent instance
+orm.relations	HasOneOrMany	find_or_new	id columns	find a model by its primary key or return new instance of the related model
+orm.relations	HasOneOrMany	first_or_new	_attributes	get the first related model record matching the attributes or instantiate it
+orm.relations	HasOneOrMany	first_or_create	_attributes	get the first related record matching the attributes or create it
+orm.relations	HasOneOrMany	update_or_create	attributes values	create or update a related record matching the attributes and fill it with values
+orm.relations	HasOneOrMany	create	_attributes	create a new instance of the related model
+orm.relations	HasOneOrMany	create_many	records	create a list of new instances of the related model
+orm.relations	HasOneOrMany	update	_attributes	perform an update on all the related models
+orm.relations	MorphMany	get_results		get the results of the relationship
+orm.relations	MorphMany	init_relation	models relation	initialize the relation on a set of models
+orm.relations	MorphMany	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	HasManyThrough	__init__	query far_parent parent first_key	:param query a builder instance
+orm.relations	HasManyThrough	add_constraints		set the base constraints on the relation query
+orm.relations	HasManyThrough	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	HasManyThrough	_set_join	query	set the join clause for the query
+orm.relations	HasManyThrough	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	HasManyThrough	init_relation	models relation	initialize the relation on a set of models
+orm.relations	HasManyThrough	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	HasManyThrough	_build_dictionary	results	build model dictionary keyed by the relation's foreign key
+orm.relations	HasManyThrough	get_results		get the results of the relationship
+orm.relations	HasManyThrough	get	columns	execute the query as a "select" statement
+orm.relations	HasManyThrough	_get_select_columns	columns	set the select clause for the relation query
+orm.relations	MorphToMany	__init__	query parent name table	:param query a builder instance :type query elquent
+orm.relations	MorphToMany	_set_where		set the where clause for the relation query
+orm.relations	MorphToMany	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	MorphToMany	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	MorphToMany	_create_attach_record	id timed	create a new pivot attachement record
+orm.relations	MorphToMany	_new_pivot_query		create a new query builder for the pivot table
+orm.relations	MorphToMany	new_pivot	attributes exists	create a new pivot model instance
+orm.relations	MorphOneOrMany	__init__	query parent morph_type foreign_key	:type query orator orm builder
+orm.relations	MorphOneOrMany	add_constraints		set the base constraints of the relation query
+orm.relations	MorphOneOrMany	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	MorphOneOrMany	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	MorphOneOrMany	save	model	attach a model instance to the parent models
+orm.relations	MorphOneOrMany	find_or_new	id columns	find a model by its primary key or return new instance of the related model
+orm.relations	MorphOneOrMany	first_or_new	_attributes	get the first related model record matching the attributes or instantiate it
+orm.relations	MorphOneOrMany	first_or_create	_attributes	get the first related record matching the attributes or create it
+orm.relations	MorphOneOrMany	update_or_create	attributes values	create or update a related record matching the attributes and fill it with values
+orm.relations	MorphOneOrMany	create	_attributes	create a new instance of the related model
+orm.relations	MorphOneOrMany	_set_foreign_attributes_for_create	model	set the foreign id and type for creation a related model
+orm.relations	HasMany	get_results		get the results of the relationship
+orm.relations	HasMany	init_relation	models relation	initialize the relation on a set of models
+orm.relations	HasMany	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	MorphTo	__init__	query parent foreign_key other_key	:type query orator orm builder
+orm.relations	MorphTo	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	MorphTo	_build_dictionary	models	build a dictionary with the models
+orm.relations	MorphTo	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	MorphTo	associate	model	associate the model instance to the given parent
+orm.relations	MorphTo	get_eager		get the relationship for eager loading
+orm.relations	MorphTo	_match_to_morph_parents	type results	match the results for a given type to their parent
+orm.relations	MorphTo	_get_results_by_type	type	get all the relation results for a type
+orm.relations	MorphTo	_gather_keys_by_type	type	gather all of the foreign keys for a given type
+orm.relations	MorphTo	_create_model_by_type	type	create a new model instance by type
+orm.relations	Wrapper	__init__	relation	:param relation the underlying relation
+orm.relations	BelongsToMany	__init__	query parent table foreign_key	:param query a builder instance
+orm.relations	BelongsToMany	get_results		get the results of the relationship
+orm.relations	BelongsToMany	where_pivot	column operator value boolean	set a where clause for a pivot table column
+orm.relations	BelongsToMany	or_where_pivot	column operator value	set an or where clause for a pivot table column
+orm.relations	BelongsToMany	first	columns	execute the query and get the first result
+orm.relations	BelongsToMany	first_or_fail	columns	execute the query and get the first result or raise an exception
+orm.relations	BelongsToMany	get	columns	execute the query as a "select" statement
+orm.relations	BelongsToMany	_hydrate_pivot_relation	models	hydrate the pivot table relationship on the models
+orm.relations	BelongsToMany	_clean_pivot_attributes	model	get the pivot attributes from a model
+orm.relations	BelongsToMany	add_constraints		set the base constraints on the relation query
+orm.relations	BelongsToMany	get_relation_count_query	query parent	add the constraints for a relationship count query
+orm.relations	BelongsToMany	get_relation_count_query_for_self_join	query parent	add the constraints for a relationship count query on the same table
+orm.relations	BelongsToMany	get_relation_count_hash		get a relationship join table hash
+orm.relations	BelongsToMany	_get_select_columns	columns	set the select clause for the relation query
+orm.relations	BelongsToMany	_get_aliased_pivot_columns		get the pivot columns for the relation
+orm.relations	BelongsToMany	_has_pivot_column	column	determine whether the given column is defined as a pivot column
+orm.relations	BelongsToMany	_set_join	query	set the join clause for the relation query
+orm.relations	BelongsToMany	_set_where		set the where clause for the relation query
+orm.relations	BelongsToMany	add_eager_constraints	models	set the constraints for an eager load of the relation
+orm.relations	BelongsToMany	init_relation	models relation	initialize the relation on a set of models
+orm.relations	BelongsToMany	match	models results relation	match the eagerly loaded results to their parents
+orm.relations	BelongsToMany	_build_dictionary	results	build model dictionary keyed by the relation's foreign key
+orm.relations	BelongsToMany	touch		touch all of the related models of the relationship
+orm.relations	BelongsToMany	get_related_ids		get all of the ids for the related models
+orm.relations	BelongsToMany	save	model joining touch	save a new model and attach it to the parent model
+orm.relations	BelongsToMany	save_many	models joinings	save a list of new models and attach them to the parent model
+orm.relations	BelongsToMany	find_or_new	id columns	find a model by its primary key or return new instance of the related model
+orm.relations	BelongsToMany	first_or_new	_attributes	get the first related model record matching the attributes or instantiate it
+orm.relations	BelongsToMany	first_or_create	_attributes _joining _touch	get the first related model record matching the attributes or create it
+orm.relations	BelongsToMany	update_or_create	attributes values joining touch	create or update a related record matching the attributes and fill it with values
+orm.relations	BelongsToMany	create	_attributes _joining _touch	create a new instance of the related model
+orm.relations	BelongsToMany	create_many	records joinings	create a list of new instances of the related model
+orm.relations	BelongsToMany	sync	ids detaching	sync the intermediate tables with a list of ids or collection of models
+orm.relations	BelongsToMany	_format_sync_list	records	format the sync list so that it is keyed by id
+orm.relations	BelongsToMany	_attach_new	records current touch	attach all of the ids that aren't in the current dict
+orm.relations	BelongsToMany	update_existing_pivot	id attributes touch	update an existing pivot record on the table
+orm.relations	BelongsToMany	attach	id attributes touch	attach a model to the parent
+orm.relations	BelongsToMany	_create_attach_records	ids attributes	create a list of records to insert into the pivot table
+orm.relations	BelongsToMany	_attacher	key value attributes timed	create a full attachment record payload
+orm.relations	BelongsToMany	_get_attach_id	key value attributes	get the attach record id and extra attributes
+orm.relations	BelongsToMany	_create_attach_record	id timed	create a new pivot attachement record
+orm.relations	BelongsToMany	_set_timestamps_on_attach	record exists	set the creation an update timestamps on an attach record
+orm.relations	BelongsToMany	detach	ids touch	detach models from the relationship
+orm.relations	BelongsToMany	touch_if_touching		touch if the parent model is being touched
+orm.relations	BelongsToMany	_touching_parent		determine if we should touch the parent on sync
+orm.relations	BelongsToMany	_new_pivot_query		create a new query builder for the pivot table
+orm.relations	BelongsToMany	new_pivot_statement		get a new plain query builder for the pivot table
+orm.relations	BelongsToMany	new_pivot_statement_for_id	id	get a new pivot statement for a given "other" id
+orm.relations	BelongsToMany	new_pivot	attributes exists	create a new pivot model instance
+orm.relations	BelongsToMany	new_existing_pivot	attributes	create a new existing pivot model instance
+orm.relations	BelongsToMany	with_pivot		set the columns on the pivot table to retrieve
+orm.relations	BelongsToMany	with_timestamps	created_at updated_at	specify that the pivot table has creation and update columns
+orm.relations	BelongsToMany	get_related_fresh_update		get the related model's update at column at
+orm.relations	BelongsToMany	get_has_compare_key		get the key for comparing against the parent key in "has" query
+connectors	Connector	_detect_database_platform		detects and sets the database platform
+connectors	Connector	_get_database_platform_version		returns the version of the related platform if applicable
+dbal	Comparator	diff_table	table1 table2	returns the difference between the tables table1 and table2
+dbal	Comparator	detect_column_renamings	table_differences	try to find columns that only changed their names
+dbal	Comparator	detect_index_renamings	table_differences	try to find indexes that only changed their name rename operations maybe cheaper than add/drop
+dbal	Comparator	diff_foreign_key	key1 key2	:type key1 foreignkeyconstraint
+dbal	Comparator	diff_column	column1 column2	returns the difference between column1 and column2 :type column1 orator
+dbal	Comparator	diff_index	index1 index2	finds the difference between the indexes index1 and index2
+dbal	Index	_add_column	column	adds a new column
+dbal	Index	get_quoted_columns	platform	returns the quoted representation of the column names the constraint is associated with
+dbal	Index	is_simple_index		is the index neither unique nor primary key?
+dbal	Index	has_column_at_position	column_name pos	:type column_name str
+dbal	Index	spans_columns	column_names	checks if this index exactly spans the given column names in the correct order
+dbal	Index	is_fullfilled_by	other	checks if the other index already fulfills all the indexing and constraint needs of the current one
+dbal	Index	same_partial_index	other	return whether the two indexes have the same partial index
+dbal	Index	overrules	other	detects if the other index is a non-unique non primary index that can be overwritten by this one
+dbal	Index	get_flags		returns platform specific flags for indexes
+dbal	Index	add_flag	flag	adds flag for an index that translates to platform specific handling
+dbal	Index	has_flag	flag	does this index have a specific flag?
+dbal	Index	remove_flag	flag	removes a flag
+dbal	AbstractAsset	_set_name	name	sets the name of this asset
+dbal	AbstractAsset	_generate_identifier_name	columns prefix max_size	generates an identifier from a list of column names obeying a certain string length
+dbal	Table	set_primary_key	columns index_name	set the primary key
+dbal	Table	drop_primary_key		drop the primary key from this table
+dbal	Table	drop_index	name	drops an index from this table
+dbal	Table	rename_index	old_name new_name	renames an index
+dbal	Table	columns_are_indexed	columns	checks if an index begins in the order of the given columns
+dbal	Table	_create_index	columns name is_unique is_primary	creates an index instance
+dbal	Table	add_column	name type_name options	adds a new column
+dbal	Table	change_column	name options	changes column details
+dbal	Table	drop_column	name	drops a column from the table
+dbal	Table	add_foreign_key_constraint	foreign_table local_columns foreign_columns options	adds a foreign key constraint
+dbal	Table	add_named_foreign_key_constraint	name foreign_table local_columns foreign_columns	adds a foreign key constraint with a given name
+dbal	Table	_add_index	index	adds an index to the table
+dbal	Table	_add_foreign_key_constraint	constraint	adds a foreign key constraint
+dbal	Table	has_foreign_key	name	returns whether this table has a foreign key constraint with the given name
+dbal	Table	get_foreign_key	name	returns the foreign key constraint with the given name
+dbal	Table	remove_foreign_key	name	removes the foreign key constraint with the given name
+dbal	Table	get_primary_key		returns the primary key
+dbal	Table	get_primary_key_columns		returns the primary key columns
+dbal	Table	has_primary_key		returns whether this table has a primary key
+dbal	Table	has_index	name	returns whether this table has an index with the given name
+dbal	Table	get_index	name	returns the index with the given name
+dbal	Table	_normalize_identifier	identifier	normalizes a given identifier
+dbal	SchemaManager	__init__	connection platform	:param connection the connection to use :type connection orator
+dbal	ForeignKeyConstraint	get_local_table_name		returns the name of the referencing table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	set_local_table	table	sets the table instance of the referencing table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_local_columns		returns the names of the referencing table columns the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_quoted_local_columns	platform	returns the quoted representation of the referencing table column names the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_unquoted_local_columns		returns unquoted representation of local table column names for comparison with other fk
+dbal	ForeignKeyConstraint	get_quoted_columns	platform	returns the quoted representation of the referencing table column names the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_foreign_table_name		returns the name of the referenced table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_unqualified_foreign_table_name		returns the non-schema qualified foreign table name
+dbal	ForeignKeyConstraint	get_quoted_foreign_table_name	platform	returns the quoted representation of the referenced table name the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_foreign_columns		returns the names of the referenced table columns the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_quoted_foreign_columns	platform	returns the quoted representation of the referenced table column names the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	get_unquoted_foreign_columns		returns unquoted representation of foreign table column names for comparison with other fk
+dbal	ForeignKeyConstraint	on_update		returns the referential action for update operations on the referenced table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	on_delete		returns the referential action for delete operations on the referenced table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	_on_event	event	returns the referential action for a given database operation on the referenced table the foreign key constraint is associated with
+dbal	ForeignKeyConstraint	intersects_index_columns	index	checks whether this foreign key constraint intersects the given index columns
+dbal.platforms	MySQLPlatform	get_alter_table_sql	diff	get the alter table sql statement
+dbal.platforms	Platform	get_check_declaration_sql	definition	obtains dbms specific sql code portion needed to set a check constraint declaration to be used in statements like create table
+dbal.platforms	Platform	get_unique_constraint_declaration_sql	name index	obtains dbms specific sql code portion needed to set a unique constraint declaration to be used in statements like create table
+dbal.platforms	Platform	get_index_declaration_sql	name index	obtains dbms specific sql code portion needed to set an index declaration to be used in statements like create table
+dbal.platforms	Platform	get_foreign_key_declaration_sql	foreign_key	obtain dbms specific sql code portion needed to set the foreign key constraint of a field declaration to be used in statements like create table
+dbal.platforms	Platform	get_advanced_foreign_key_options_sql	foreign_key	returns the foreign key query section dealing with non-standard options as match initially deferred on update
+dbal.platforms	Platform	get_foreign_key_referential_action_sql	action	returns the given referential action in uppercase if valid otherwise throws an exception
+dbal.platforms	Platform	get_foreign_key_base_declaration_sql	foreign_key	obtains dbms specific sql code portion needed to set the foreign key constraint of a field declaration to be used in statements like create table
+dbal.platforms	Platform	get_column_declaration_list_sql	fields	gets declaration of a number of fields in bulk
+dbal.platforms	Platform	get_index_field_declaration_list_sql	fields	obtains dbms specific sql code portion needed to set an index declaration to be used in statements like create table
+dbal.platforms	Platform	get_create_index_sql	index table	returns the sql to create an index on a table on this platform
+dbal.platforms	Platform	get_partial_index_sql	index	adds condition for partial index
+dbal.platforms	Platform	get_create_index_sql_flags	index	adds additional flags for index generation
+dbal.platforms	Platform	get_create_primary_key_sql	index table	returns the sql to create an unnamed primary key constraint
+dbal.platforms	Platform	get_create_foreign_key_sql	foreign_key table	returns the sql to create a new foreign key
+dbal.platforms	Platform	get_drop_table_sql	table	returns the sql snippet to drop an existing table
+dbal.platforms	Platform	get_drop_index_sql	index table	returns the sql to drop an index from a table
+dbal.platforms	Platform	get_create_table_sql	table create_flags	returns the sql statement s to create a table with the specified name columns and constraints
+dbal.platforms	Platform	_get_create_table_sql	table_name columns options	returns the sql used to create a table
+dbal.platforms	Platform	quote_identifier	string	quotes a string so that it can be safely used as a table or column name even if it is a reserved word of the platform
+dbal.platforms	Platform	quote_single_identifier	string	quotes a single identifier no dot chain separation
+dbal.platforms	SQLitePlatform	get_pre_alter_table_index_foreign_key_sql	diff	:param diff the table diff :type diff orator
+dbal.platforms	SQLitePlatform	get_post_alter_table_index_foreign_key_sql	diff	:param diff the table diff :type diff orator
+dbal.platforms	SQLitePlatform	get_alter_table_sql	diff	get the alter table sql statement
+dbal.platforms	SQLitePlatform	_get_indexes_in_altered_table	diff	:param diff the table diff :type diff orator
+dbal.platforms	SQLitePlatform	_get_column_names_in_altered_table	diff	:param diff the table diff :type diff orator
+dbal.platforms	SQLitePlatform	_get_foreign_keys_in_altered_table	diff	:param diff the table diff :type diff orator
+dbal.platforms	SQLitePlatform	_get_primary_index_in_altered_table	diff	:param diff the table diff :type diff orator
+dbal.platforms	PostgresPlatform	get_alter_table_sql	diff	get the alter table sql statement
+seeds	Seeder	run		run the database seeds
+seeds	Seeder	call	klass	seed the given connection from the given class
+seeds	Seeder	_resolve	klass	resolve an instance of the given seeder klass
+seeds	Seeder	set_command	command	set the console command instance
+query	QueryBuilder	select		set the columns to be selected
+query	QueryBuilder	select_raw	expression bindings	add a new raw select expression to the query
+query	QueryBuilder	select_sub	query as_	add a subselect expression to the query
+query	QueryBuilder	add_select		add a new select column to query
+query	QueryBuilder	distinct		force the query to return only distinct result
+query	QueryBuilder	from_	table	set the query target table
+query	QueryBuilder	join	table one operator two	add a join clause to the query
+query	QueryBuilder	join_where	table one operator two	add a "join where" clause to the query
+query	QueryBuilder	left_join	table one operator two	add a left join to the query
+query	QueryBuilder	left_join_where	table one operator two	add a "left join where" clause to the query
+query	QueryBuilder	right_join	table one operator two	add a right join to the query
+query	QueryBuilder	right_join_where	table one operator two	add a "right join where" clause to the query
+query	QueryBuilder	where	column operator value boolean	add a where clause to the query
+query	QueryBuilder	for_nested_where		create a new query instance for nested where condition
+query	QueryBuilder	where_exists	query boolean negate	add an exists clause to the query
+query	QueryBuilder	or_where_exists	query negate	add an or exists clause to the query
+query	QueryBuilder	where_not_exists	query boolean	add a where not exists clause to the query
+query	QueryBuilder	or_where_not_exists	query	add a or where not exists clause to the query
+query	QueryBuilder	_where_in_sub	column query boolean negate	add a where in with a sub select to the query
+query	QueryBuilder	group_by		add a "group by" clause to the query
+query	QueryBuilder	having	column operator value boolean	add a "having" clause to the query
+query	QueryBuilder	or_having	column operator value	add a "having" clause to the query
+query	QueryBuilder	having_raw	sql bindings boolean	add a raw having clause to the query
+query	QueryBuilder	or_having_raw	sql bindings	add a raw having clause to the query
+query	QueryBuilder	order_by	column direction	add a "order by" clause to the query
+query	QueryBuilder	latest	column	add an "order by" clause for a timestamp to the query
+query	QueryBuilder	oldest	column	add an "order by" clause for a timestamp to the query
+query	QueryBuilder	order_by_raw	sql bindings	add a raw "order by" clause to the query
+query	QueryBuilder	union	query all	add a union statement to the query
+query	QueryBuilder	union_all	query	add a union all statement to the query
+query	QueryBuilder	lock	value	lock the selected rows in the table
+query	QueryBuilder	lock_for_update		lock the selected rows in the table for updating
+query	QueryBuilder	shared_lock		share lock the selected rows in the table
+query	QueryBuilder	to_sql		get the sql representation of the query
+query	QueryBuilder	find	id columns	execute a query for a single record by id
+query	QueryBuilder	pluck	column	pluck a single column's value from the first results of a query
+query	QueryBuilder	first	limit columns	execute the query and get the first results
+query	QueryBuilder	get	columns	execute the query as a "select" statement
+query	QueryBuilder	_run_select		run the query as a "select" statement against the connection
+query	QueryBuilder	paginate	per_page current_page columns	paginate the given query
+query	QueryBuilder	simple_paginate	per_page current_page columns	paginate the given query
+query	QueryBuilder	chunk	count	chunk the results of the query
+query	QueryBuilder	lists	column key	get a list with the values of a given column
+query	QueryBuilder	_get_list_select	column key	get the columns that should be used in a list
+query	QueryBuilder	implode	column glue	concatenate values of a given column as a string
+query	QueryBuilder	exists		determine if any rows exist for the current query
+query	QueryBuilder	count		retrieve the "count" result of the query
+query	QueryBuilder	min	column	retrieve the "min" result of the query
+query	QueryBuilder	max	column	retrieve the "max" result of the query
+query	QueryBuilder	sum	column	retrieve the "sum" result of the query
+query	QueryBuilder	avg	column	retrieve the "avg" result of the query
+query	QueryBuilder	aggregate	func	execute an aggregate function against the database
+query	QueryBuilder	insert	_values	insert a new record into the database
+query	QueryBuilder	insert_get_id	values sequence	insert a new record and get the value of the primary key
+query	QueryBuilder	update	_values	update a record in the database
+query	QueryBuilder	increment	column amount extras	increment a column's value by a given amount
+query	QueryBuilder	decrement	column amount extras	decrement a column's value by a given amount
+query	QueryBuilder	delete	id	delete a record from the database
+query	QueryBuilder	truncate		run a truncate statement on the table
+query	QueryBuilder	new_query		get a new instance of the query builder
+query	QueryBuilder	merge_wheres	wheres bindings	merge a list of where clauses and bindings
+query	QueryBuilder	_clean_bindings	bindings	remove all of the expressions from bindings
+query	QueryBuilder	raw	value	create a raw database expression
+query	QueryBuilder	merge	query	merge current query with another
+query	QueryBuilder	get_connection		get the query connection :return the current connection instance
+query	QueryBuilder	get_processor		get the builder processor
+query	QueryBuilder	get_grammar		get the builder query grammar
+query.processors	MySQLQueryProcessor	process_insert_get_id	query sql values sequence	process an "insert get id" query
+query.processors	MySQLQueryProcessor	process_column_listing	results	process the results of a column listing query
+query.processors	PostgresQueryProcessor	process_insert_get_id	query sql values sequence	process an "insert get id" query
+query.processors	PostgresQueryProcessor	process_column_listing	results	process the results of a column listing query
+query.processors	SQLiteQueryProcessor	process_column_listing	results	process the results of a column listing query
+query.processors	QueryProcessor	process_select	query results	process the results of a "select" query
+query.processors	QueryProcessor	process_insert_get_id	query sql values sequence	process an "insert get id" query
+query.processors	QueryProcessor	process_column_listing	results	process the results of a column listing query
+query.grammars	PostgresQueryGrammar	_compile_lock	query value	compile the lock into sql
+query.grammars	PostgresQueryGrammar	compile_update	query values	compile an update statement into sql
+query.grammars	PostgresQueryGrammar	_compile_update_columns	values	compile the columns for the update statement
+query.grammars	PostgresQueryGrammar	_compile_update_from	query	compile the "from" clause for an update with a join
+query.grammars	PostgresQueryGrammar	_compile_update_wheres	query	compile the additional where clauses for updates with joins
+query.grammars	PostgresQueryGrammar	_compile_update_join_wheres	query	compile the "join" clauses for an update
+query.grammars	PostgresQueryGrammar	compile_insert_get_id	query values sequence	compile an insert and get id statement into sql
+query.grammars	PostgresQueryGrammar	compile_truncate	query	compile a truncate table statement into sql
+query.grammars	QueryGrammar	compile_insert	query values	compile an insert sql statement
+query.grammars	MySQLQueryGrammar	compile_select	query	compile a select query into sql
+query.grammars	MySQLQueryGrammar	_compile_union	union	compile a single union statement
+query.grammars	MySQLQueryGrammar	_compile_lock	query value	compile the lock into sql
+query.grammars	MySQLQueryGrammar	compile_update	query values	compile an update statement into sql
+query.grammars	MySQLQueryGrammar	compile_delete	query	compile a delete statement into sql
+query.grammars	MySQLQueryGrammar	_wrap_value	value	wrap a single string in keyword identifers
+query.grammars	SQLiteQueryGrammar	compile_insert	query values	compile insert statement into sql
+query.grammars	SQLiteQueryGrammar	compile_truncate	query	compile a truncate statement into sql
+query.grammars	SQLiteQueryGrammar	_where_day	query where	compile a "where day" clause
+query.grammars	SQLiteQueryGrammar	_where_month	query where	compile a "where month" clause
+query.grammars	SQLiteQueryGrammar	_where_year	query where	compile a "where year" clause
+query.grammars	SQLiteQueryGrammar	_date_based_where	type query where	compiled a date where based clause
+schema	Schema	__init__	manager	:param manager the database manager :type manager orator
+schema	Schema	connection	connection	get a schema builder instance for a connection
+schema	SchemaBuilder	__init__	connection	:param connection the schema connection :type connection orator
+schema	SchemaBuilder	has_table	table	determine if the given table exists
+schema	SchemaBuilder	has_column	table column	determine if the given table has a given column
+schema	SchemaBuilder	get_column_listing	table	get the column listing for a given table
+schema	SchemaBuilder	table	table	modify a table on the schema
+schema	SchemaBuilder	create	table	create a new table on the schema
+schema	SchemaBuilder	drop	table	drop a table from the schema
+schema	SchemaBuilder	drop_if_exists	table	drop a table from the schema
+schema	SchemaBuilder	rename	from_ to	rename a table on the schema
+schema	SchemaBuilder	_build	blueprint	execute the blueprint to build / modify the table
+schema	Blueprint	__init__	table	:param table the table to operate on
+schema	Blueprint	build	connection grammar	execute the blueprint against the database
+schema	Blueprint	to_sql	connection grammar	get the raw sql statements for the blueprint
+schema	Blueprint	_add_implied_commands		add the commands that are implied by the blueprint
+schema	Blueprint	_add_fluent_indexes		add the index commands fluently specified on columns
+schema	Blueprint	_creating		determine if the blueprint has a create command
+schema	Blueprint	create		indicates that the table needs to be created
+schema	Blueprint	drop		indicates that the table needs to be dropped
+schema	Blueprint	drop_if_exists		indicates that the table should be dropped if it exists
+schema	Blueprint	drop_column		indicates that the given columns should be dropped
+schema	Blueprint	rename_column	from_ to	indicates that the given columns should be renamed
+schema	Blueprint	drop_primary	index	indicate that the given primary key should be dropped
+schema	Blueprint	drop_unique	index	indicate that the given unique key should be dropped
+schema	Blueprint	drop_index	index	indicate that the given index should be dropped
+schema	Blueprint	drop_foreign	index	indicate that the given foreign key should be dropped
+schema	Blueprint	drop_timestamps		indicate that the timestamp columns should be dropped
+schema	Blueprint	drop_soft_deletes		indicate that the soft delete column should be dropped
+schema	Blueprint	rename	to	rename the table to a given name
+schema	Blueprint	primary	columns name	specify the primary key s for the table
+schema	Blueprint	unique	columns name	specify a unique index on the table
+schema	Blueprint	index	columns name	specify an index on the table
+schema	Blueprint	foreign	columns name	specify an foreign key on the table
+schema	Blueprint	increments	column	create a new auto-incrementing integer column on the table
+schema	Blueprint	big_increments	column	create a new auto-incrementing big integer column on the table
+schema	Blueprint	char	column length	create a new char column on the table
+schema	Blueprint	string	column length	create a new string column on the table
+schema	Blueprint	text	column	create a new text column on the table
+schema	Blueprint	medium_text	column	create a new medium text column on the table
+schema	Blueprint	long_text	column	create a new long text column on the table
+schema	Blueprint	integer	column auto_increment unsigned	create a new integer column on the table
+schema	Blueprint	big_integer	column auto_increment unsigned	create a new big integer column on the table
+schema	Blueprint	medium_integer	column auto_increment unsigned	create a new medium integer column on the table
+schema	Blueprint	tiny_integer	column auto_increment unsigned	create a new tiny integer column on the table
+schema	Blueprint	small_integer	column auto_increment unsigned	create a new small integer column on the table
+schema	Blueprint	unsigned_integer	column auto_increment	create a new unisgned integer column on the table
+schema	Blueprint	unsigned_big_integer	column auto_increment	create a new unsigned big integer column on the table
+schema	Blueprint	float	column total places	create a new float column on the table
+schema	Blueprint	double	column total places	create a new double column on the table
+schema	Blueprint	decimal	column total places	create a new decimal column on the table
+schema	Blueprint	boolean	column	create a new decimal column on the table
+schema	Blueprint	enum	column allowed	create a new enum column on the table
+schema	Blueprint	json	column	create a new json column on the table
+schema	Blueprint	date	column	create a new date column on the table
+schema	Blueprint	datetime	column	create a new datetime column on the table
+schema	Blueprint	time	column	create a new time column on the table
+schema	Blueprint	timestamp	column	create a new timestamp column on the table
+schema	Blueprint	nullable_timestamps		create nullable creation and update timestamps to the table
+schema	Blueprint	timestamps	use_current	create creation and update timestamps to the table
+schema	Blueprint	soft_deletes		add a "deleted at" timestamp to the table
+schema	Blueprint	binary	column	create a new binary column on the table
+schema	Blueprint	morphs	name index_name	add the proper columns for a polymorphic table
+schema	Blueprint	_drop_index_command	command type index	create a new drop index command on the blueprint
+schema	Blueprint	_index_command	type columns index	add a new index command to the blueprint
+schema	Blueprint	_add_column	type name	add a new column to the blueprint
+schema	Blueprint	_remove_column	name	removes a column from the blueprint
+schema	Blueprint	_add_command	name	add a new command to the blueprint
+schema	Blueprint	_create_command	name	create a new command
+schema	MySQLSchemaBuilder	has_table	table	determine if the given table exists
+schema	MySQLSchemaBuilder	get_column_listing	table	get the column listing for a given table
+schema.grammars	PostgresSchemaGrammar	compile_rename_column	blueprint command connection	compile a rename column command
+schema.grammars	PostgresSchemaGrammar	compile_table_exists		compile the query to determine if a table exists
+schema.grammars	PostgresSchemaGrammar	compile_column_exists	table	compile the query to determine the list of columns
+schema.grammars	PostgresSchemaGrammar	compile_create	blueprint command _	compile a create table command
+schema.grammars	PostgresSchemaGrammar	_get_dbal_column_type	type_	get the dbal column type
+schema.grammars	SchemaGrammar	compile_rename_column	blueprint command connection	compile a rename column command
+schema.grammars	SchemaGrammar	_get_renamed_diff	blueprint command column schema	get a new column instance with the new column name
+schema.grammars	SchemaGrammar	_set_renamed_columns	table_diff command column	set the renamed columns on the table diff
+schema.grammars	SchemaGrammar	compile_foreign	blueprint command _	compile a foreign key command
+schema.grammars	SchemaGrammar	_get_columns	blueprint	get the blueprint's columns definitions
+schema.grammars	SchemaGrammar	_add_modifiers	sql blueprint column	add the column modifiers to the deifinition
+schema.grammars	SchemaGrammar	_get_command_by_name	blueprint name	get the primary key command it it exists
+schema.grammars	SchemaGrammar	_get_commands_by_name	blueprint name	get all of the commands with a given name
+schema.grammars	SchemaGrammar	_get_type	column	get the sql for the column data type
+schema.grammars	SchemaGrammar	prefix_list	prefix values	add a prefix to a list of values
+schema.grammars	SchemaGrammar	_get_default_value	value	format a value so that it can be used in "default" clauses
+schema.grammars	SchemaGrammar	compile_change	blueprint command connection	compile a change column command into a series of sql statement
+schema.grammars	SchemaGrammar	_get_changed_diff	blueprint schema	get the table diffrence for the given changes
+schema.grammars	SchemaGrammar	_get_table_with_column_changes	blueprint table	get a copy of the given table after making the column changes
+schema.grammars	SchemaGrammar	_get_column_for_change	table fluent	get the column instance for a column change
+schema.grammars	SchemaGrammar	_get_column_change_options	fluent	get the column change options
+schema.grammars	SchemaGrammar	_get_dbal_column_type	type_	get the dbal column type
+schema.grammars	SchemaGrammar	platform		returns the dbal database platform
+schema.grammars	MySQLSchemaGrammar	compile_table_exists		compile the query to determine if a table exists
+schema.grammars	MySQLSchemaGrammar	compile_column_exists		compile the query to determine the list of columns
+schema.grammars	MySQLSchemaGrammar	compile_create	blueprint command connection	compile a create table command
+schema.grammars	MySQLSchemaGrammar	_compile_create_encoding	sql connection blueprint	append the character set specifications to a command
+schema.grammars	MySQLSchemaGrammar	_get_column_change_options	fluent	get the column change options
+schema.grammars	SQLiteSchemaGrammar	compile_rename_column	blueprint command connection	compile a rename column command
+schema.grammars	SQLiteSchemaGrammar	compile_change	blueprint command connection	compile a change column command into a series of sql statement
+schema.grammars	SQLiteSchemaGrammar	compile_table_exists		compile the query to determine if a table exists
+schema.grammars	SQLiteSchemaGrammar	compile_column_exists	table	compile the query to determine the list of columns
+schema.grammars	SQLiteSchemaGrammar	compile_create	blueprint command _	compile a create table command
+schema.grammars	SQLiteSchemaGrammar	_get_dbal_column_type	type_	get the dbal column type
+utils	Qmarker	qmark	cls query	convert a "qmark" query into "format" style
+utils		deprecated	func	this is a decorator which can be used to mark functions as deprecated
+utils	URL	get_dialect		return the sqlalchemy database dialect class corresponding to this url's driver name
+utils	URL	translate_connect_args	names	translate url attributes into a dictionary of connection arguments
+utils		make_url	name_or_url	given a string or unicode instance produce a new url instance
+pagination	LengthAwarePaginator	_set_current_page	current_page last_page	get the current page for the request
+pagination	LengthAwarePaginator	has_more_pages		determine if there are more items in the data source
+pagination	LengthAwarePaginator	to_dict		alias for serialize
+pagination	LengthAwarePaginator	serialize		convert the object into something json serializable
+pagination	BasePaginator	_is_valid_page_number	page	determine if the given value is a valid page number
+pagination	BasePaginator	items		get the slice of items being paginated
+pagination	BasePaginator	first_item		get the number of the first item in the slice
+pagination	BasePaginator	last_item		get the number of the last item in the slice
+pagination	BasePaginator	has_pages		determine if there are enough items to split into multiple pages
+pagination	BasePaginator	is_empty		determine if the list of items is empty or not
+pagination	BasePaginator	count		get the number of items for the current page
+pagination	Paginator	_set_current_page	current_page	get the current page for the request
+pagination	Paginator	_check_for_more_pages		check for more pages the last item will be sliced off
+pagination	Paginator	has_more_pages		determine if there are more items in the data source
+pagination	Paginator	to_dict		alias for serialize
+pagination	Paginator	serialize		convert the object into something json serializable
+commands	Command	execute	i o	executes the command
+commands	Command	_check_config		check presence of default config files
+commands	Command	_handle_config	config_file	check and handle a config file
+commands	Command	_get_config	path	get the config
+commands.seeds	SeedersMakeCommand	handle		executes the command
+commands.seeds	SeedersMakeCommand	_get_path	name	get the destination class path
+commands.seeds	SeedCommand	handle		executes the command
+commands.seeds	SeedCommand	_get_path	name	get the destination class path
+commands.models	ModelMakeCommand	_get_stub		get the model stub template
+commands.models	ModelMakeCommand	_populate_stub	name stub	populate the placeholders in the migration stub
+commands.migrations	MigrateMakeCommand	handle		executes the command
+commands.migrations	MigrateMakeCommand	_write_migration	creator name table create	write the migration file to disk
+commands.migrations	RollbackCommand	handle		executes the command
+commands.migrations	ResetCommand	handle		executes the command
+commands.migrations	RefreshCommand	handle		executes the command
+commands.migrations	InstallCommand	handle		executes the command
+commands.migrations	StatusCommand	handle		executes the command
+migrations	MigrationCreator	create	name path table create	create a new migration at the given path
+migrations	MigrationCreator	_get_stub	table create	get the migration stub template
+migrations	MigrationCreator	_populate_stub	name stub table	populate the placeholders in the migration stub
+migrations	Migrator	__init__	repository resolver	:type repository databasemigrationrepository :type resolver orator
+migrations	Migrator	run	path pretend	run the outstanding migrations for a given path
+migrations	Migrator	run_migration_list	path migrations pretend	run a list of migrations
+migrations	Migrator	_run_up	path migration_file batch pretend	run "up" a migration instance
+migrations	Migrator	rollback	path pretend	rollback the last migration operation
+migrations	Migrator	reset	path pretend	rolls all of the currently applied migrations back
+migrations	Migrator	_run_down	path migration pretend	run "down" a migration instance
+migrations	Migrator	_get_migration_files	path	get all of the migration files in a given path
+migrations	Migrator	_pretend_to_run	migration method	pretend to run the migration
+migrations	Migrator	_get_queries	migration method	get all of the queries that would be run for a migration
+migrations	Migrator	_resolve	path migration_file	resolve a migration instance from a file
+migrations	Migrator	_note	message	add a note to the migrator
+migrations	DatabaseMigrationRepository	__init__	resolver table	:type resolver orator database_manager databasemanager
+migrations	DatabaseMigrationRepository	get_ran		get the ran migrations
+migrations	DatabaseMigrationRepository	get_last		get the last migration batch
+migrations	DatabaseMigrationRepository	log	file batch	log that a migration was run
+migrations	DatabaseMigrationRepository	delete	migration	remove a migration from the log
+migrations	DatabaseMigrationRepository	get_next_batch_number		get the next migration batch number
+migrations	DatabaseMigrationRepository	get_last_batch_number		get the last migration batch number
+migrations	DatabaseMigrationRepository	create_repository		create the migration repository data store
+migrations	DatabaseMigrationRepository	repository_exists		determine if the repository exists
+migrations	DatabaseMigrationRepository	table		get a query builder for the migration table
+connections	ConnectionInterface	table	table	begin a fluent query against a database table
+connections	ConnectionInterface	query		begin a fluent query
+connections	ConnectionInterface	raw	value	get a new raw query expression
+connections	ConnectionInterface	select_one	query bindings	run a select statement and return a single result
+connections	ConnectionInterface	select	query bindings	run a select statement against the database
+connections	ConnectionInterface	insert	query bindings	run an insert statement against the database
+connections	ConnectionInterface	update	query bindings	run an update statement against the database
+connections	ConnectionInterface	delete	query bindings	run a delete statement against the database
+connections	ConnectionInterface	statement	query bindings	run an sql statement and return the boolean result
+connections	ConnectionInterface	affecting_statement	query bindings	run an sql statement and return the number of affected rows
+connections	ConnectionInterface	unprepared	query	run a raw unprepared query against the dbapi connection
+connections	ConnectionInterface	prepare_bindings	bindings	prepare the query bindings for execution
+connections		run	wrapped	special decorator encapsulating query method
+connections	Connection	__init__	connection database table_prefix config	:param connection a dbapi connection instance
+connections	Connection	get_schema_builder		retturn the underlying schema builder
+connections	Connection	table	table	begin a fluent query against a database table
+connections	Connection	query		begin a fluent query
+connections	Connection	get_post_processor		get the query post processor used by the connection
+connections	Connection	set_post_processor	processor	set the query post processor used by the connection
+connections	MySQLConnection	get_schema_builder		return the underlying schema builder

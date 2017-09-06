@@ -1,0 +1,1019 @@
+<tt style='background-color:#E8E8E8;'> core. <a href=' /paths.py#L16'>get_ipython_dir</a>()</tt>	Get the ipython directory for this platform and user.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /paths.py#L75'>get_ipython_cache_dir</a>()</tt>	Get the cache directory it is created if it does not exist.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /paths.py#L89'>get_ipython_package_dir</a>()</tt>	Get the base directory where ipython itself is installed.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /paths.py#L95'>get_ipython_module_path</a>(module_str)</tt>	Find the path to an ipython module in this version of ipython.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /paths.py#L109'>locate_profile</a>(profile)</tt>	Find the path to the folder associated with a given profile.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L62'>embed_kernel</a>(module,local_ns)</tt>	Embed and start an ipython kernel in a given scope.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L93'>start_ipython</a>(argv)</tt>	Launch a normal ipython instance as opposed to embedded ipython.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /__init__.py#L121'>start_kernel</a>(argv)</tt>	Launch a normal ipython kernel instance as opposed to embedded ipython.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L72'>check_for_underscore</a>()</tt>	Check if the user has set the '_' variable by hand.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L83'>quiet</a>()</tt>	Should we silence the display hook because of ';'?.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L104'>start_displayhook</a>()</tt>	Start the displayhook initializing resources.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L108'>write_output_prompt</a>()</tt>	Write the output prompt.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L120'>compute_format_data</a>(result)</tt>	Compute format data of the object to be displayed.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L155'>write_format_data</a>(format_dict,md_dict)</tt>	Write the format data dict to the frontend.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L191'>update_user_ns</a>(result)</tt>	Update user_ns with various things like _, __, _1 etc.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L221'>log_output</a>(format_dict)</tt>	Log the output.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L231'>finish_displayhook</a>()</tt>	Finish up all displayhook activities.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L236'>__call__</a>(result)</tt>	Printing with history cache management.
+<tt style='background-color:#E8E8E8;'> core.DisplayHook <a href=' /core/displayhook.py#L254'>cull_cache</a>()</tt>	Output cache is full cull the oldest entries.
+<tt style='background-color:#E8E8E8;'> core.DisplayTrap <a href=' /core/display_trap.py#L61'>set</a>()</tt>	Set the hook.
+<tt style='background-color:#E8E8E8;'> core.DisplayTrap <a href=' /core/display_trap.py#L67'>unset</a>()</tt>	Unset the hook.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/compilerop.py#L54'>code_name</a>(code,number)</tt>	Compute a probably unique name for code for caching.
+<tt style='background-color:#E8E8E8;'> core.CachingCompiler <a href=' /core/compilerop.py#L95'>ast_parse</a>(source,filename,symbol)</tt>	Parse code to an ast with the current compiler flags active.
+<tt style='background-color:#E8E8E8;'> core.CachingCompiler <a href=' /core/compilerop.py#L102'>reset_compiler_flags</a>()</tt>	Reset compiler flags to default state.
+<tt style='background-color:#E8E8E8;'> core.CachingCompiler <a href=' /core/compilerop.py#L108'>compiler_flags</a>()</tt>	Flags currently active in the compilation process.
+<tt style='background-color:#E8E8E8;'> core.CachingCompiler <a href=' /core/compilerop.py#L114'>cache</a>(code,number)</tt>	Make a name for a block of code and cache the code.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/compilerop.py#L137'>check_linecache_ipython</a>()</tt>	Call linecache checkcache() safely protecting our cached values.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/debugger.py#L52'>make_arrow</a>(pad)</tt>	Generate the leading arrow in front of traceback or debugger.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/debugger.py#L61'>BdbQuit_excepthook</a>(et,ev,tb,excepthook)</tt>	Exception hook which handles bdbquit exceptions.
+<tt style='background-color:#E8E8E8;'> core.Tracer <a href=' /core/debugger.py#L101'>__init__</a>(colors)</tt>	Deprecated create a local debugger instance.
+<tt style='background-color:#E8E8E8;'> core.Tracer <a href=' /core/debugger.py#L169'>__call__</a>()</tt>	Starts an interactive debugger at the point where called.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/debugger.py#L178'>decorate_fn_with_doc</a>(new_fn,old_fn,additional_text)</tt>	Make new_fn have old_fn's doc string this is particularly useful.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/debugger.py#L190'>_file_lines</a>(fname)</tt>	Return the contents of a named file as a list of lines.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L282'>set_colors</a>(scheme)</tt>	Shorthand access to the color table scheme selector method.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L313'>new_do_restart</a>(arg)</tt>	Restart command in the context of ipython this is exactly the same.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L457'>print_list_lines</a>(filename,first,last)</tt>	The printing (as opposed to the parsing part of a 'list' command.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L541'>do_pdef</a>(arg)</tt>	Print the call signature for any callable object.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L549'>do_pdoc</a>(arg)</tt>	Print the docstring for an object.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L557'>do_pfile</a>(arg)</tt>	Print or run through pager the file where an object is defined.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L566'>do_pinfo</a>(arg)</tt>	Provide detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L574'>do_pinfo2</a>(arg)</tt>	Provide extra detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.Pdb <a href=' /core/debugger.py#L582'>do_psource</a>(arg)</tt>	Print or run through pager the source code for an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/debugger.py#L606'>set_trace</a>(frame)</tt>	Start debugging from frame.
+<tt style='background-color:#E8E8E8;'> core.PayloadManager <a href=' /core/payload.py#L32'>write_payload</a>(data,single)</tt>	Include or update the specified data payload in the payloadmanager.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L56'>on_off</a>(tag)</tt>	Return an on/off string for a 1/0 input simple utility function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L61'>compress_dhist</a>(dh)</tt>	Compress a directory history into a new one with at most 20 entries.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L80'>needs_local_scope</a>(func)</tt>	Decorator to mark magic functions which need to local scope to run.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L89'>magics_class</a>(cls)</tt>	Class decorator for all subclasses of the main magics class.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L115'>record_magic</a>(dct,magic_kind,magic_name,func)</tt>	Utility function to store a function as a magic of a specific kind.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L138'>validate_type</a>(magic_kind)</tt>	Ensure that the given magic_kind is valid.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L179'>_method_magic_marker</a>(magic_kind)</tt>	Decorator factory for methods in magics subclasses.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic.py#L213'>_function_magic_marker</a>(magic_kind)</tt>	Decorator factory for standalone functions.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L323'>auto_status</a>()</tt>	Return descriptive string with automagic status.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L327'>lsmagic</a>()</tt>	Return a dict of currently available magic functions.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L335'>lsmagic_docs</a>(brief,missing)</tt>	Return dict of documentation of magic functions.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L359'>register</a>()</tt>	Register one or more instances of magics.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L395'>register_function</a>(func,magic_kind,magic_name)</tt>	Expose a standalone function as magic function for ipython.
+<tt style='background-color:#E8E8E8;'> core.MagicsManager <a href=' /core/magic.py#L429'>register_alias</a>(alias_name,magic_name,magic_kind)</tt>	Register an alias to a magic function.
+<tt style='background-color:#E8E8E8;'> core.Magics <a href=' /core/magic.py#L525'>arg_err</a>(func)</tt>	Print docstring if incorrect arguments were passed.
+<tt style='background-color:#E8E8E8;'> core.Magics <a href=' /core/magic.py#L530'>format_latex</a>(strng)</tt>	Format a string for latex inclusion.
+<tt style='background-color:#E8E8E8;'> core.Magics <a href=' /core/magic.py#L557'>parse_options</a>(arg_str,opt_str)</tt>	Parse options passed to an argument string.
+<tt style='background-color:#E8E8E8;'> core.Magics <a href=' /core/magic.py#L638'>default_option</a>(fn,optstr)</tt>	Make an entry in the options_table for fn with value optstr.
+<tt style='background-color:#E8E8E8;'> core.MagicAlias <a href=' /core/magic.py#L666'>__call__</a>()</tt>	Call the magic alias.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L147'>inspect_error</a>()</tt>	Print a message about internal inspect errors.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L160'>findsource</a>(object)</tt>	Return the entire source file and starting line number for an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L241'>getargs</a>(co)</tt>	Get information about the arguments accepted by a code object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L304'>with_patch_inspect</a>(f)</tt>	Decorator for monkeypatching inspect findsource.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L331'>fix_frame_records_filenames</a>(records)</tt>	Try to fix the filenames in each record from inspect getinnerframes().
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L444'>find_recursion</a>(etype,value,records)</tt>	Identify the repeating stack frames from a recursionerror traceback 'records' is a list as returned by verbosetb.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L516'>_get_ostream</a>()</tt>	Output stream that exceptions are written to.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L535'>set_colors</a>()</tt>	Shorthand access to the color table scheme selector method.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L546'>color_toggle</a>()</tt>	Toggle between the currently active color scheme and nocolor.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L557'>stb2text</a>(stb)</tt>	Convert a structured traceback a list to a string.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L561'>text</a>(etype,value,tb,tb_offset)</tt>	Return formatted traceback.
+<tt style='background-color:#E8E8E8;'> core.TBTools <a href=' /core/ultratb.py#L570'>structured_traceback</a>(etype,evalue,tb,tb_offset)</tt>	Return a list of traceback frames.
+<tt style='background-color:#E8E8E8;'> core.ListTB <a href=' /core/ultratb.py#L608'>structured_traceback</a>(etype,value,elist,tb_offset)</tt>	Return a color formatted string with the traceback info.
+<tt style='background-color:#E8E8E8;'> core.ListTB <a href=' /core/ultratb.py#L661'>_format_list</a>(extracted_list)</tt>	Format a list of traceback entry tuples for printing.
+<tt style='background-color:#E8E8E8;'> core.ListTB <a href=' /core/ultratb.py#L698'>_format_exception_only</a>(etype,value)</tt>	Format the exception part of a traceback.
+<tt style='background-color:#E8E8E8;'> core.ListTB <a href=' /core/ultratb.py#L770'>get_exception_only</a>(etype,value)</tt>	Only print the exception type and message without a traceback.
+<tt style='background-color:#E8E8E8;'> core.ListTB <a href=' /core/ultratb.py#L780'>show_exception_only</a>(etype,evalue)</tt>	Only print the exception type and message without a traceback.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L812'>__init__</a>(color_scheme,call_pdb,ostream,tb_offset)</tt>	Specify traceback offset headers and color scheme.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L837'>format_records</a>(records,last_unique,recursion_repeat)</tt>	Format the stack frames of the traceback.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L850'>format_record</a>(frame,file,lnum,func)</tt>	Format a single stack frame.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L1093'>format_exception_as_a_whole</a>(etype,evalue,etb,number_of_lines_of_context)</tt>	Formats the header traceback and exception message for a single exception.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L1165'>structured_traceback</a>(etype,evalue,etb,tb_offset)</tt>	Return a nice text document describing the traceback.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L1208'>debugger</a>(force)</tt>	Call up the pdb debugger if desired always clean up the tb reference.
+<tt style='background-color:#E8E8E8;'> core.VerboseTB <a href=' /core/ultratb.py#L1263'>__call__</a>(etype,evalue,etb)</tt>	This hook can replace sys excepthook for python 2 1 or higher.
+<tt style='background-color:#E8E8E8;'> core.FormattedTB <a href=' /core/ultratb.py#L1332'>stb2text</a>(stb)</tt>	Convert a structured traceback a list to a string.
+<tt style='background-color:#E8E8E8;'> core.FormattedTB <a href=' /core/ultratb.py#L1337'>set_mode</a>(mode)</tt>	Switch to the desired mode.
+<tt style='background-color:#E8E8E8;'> core.AutoFormattedTB <a href=' /core/ultratb.py#L1382'>__call__</a>(etype,evalue,etb,out)</tt>	Print out a formatted exception traceback.
+<tt style='background-color:#E8E8E8;'> core.SyntaxTB <a href=' /core/ultratb.py#L1454'>clear_err_state</a>()</tt>	Return the current error state and clear it.
+<tt style='background-color:#E8E8E8;'> core.SyntaxTB <a href=' /core/ultratb.py#L1460'>stb2text</a>(stb)</tt>	Convert a structured traceback a list to a string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/ultratb.py#L1466'>text_repr</a>(value)</tt>	Hopefully pretty robust repr equivalent.
+<tt style='background-color:#E8E8E8;'> core.InputTransformer <a href=' /core/inputtransformer.py#L49'>push</a>(line)</tt>	Send a line of input to the transformer returning the transformed input or none if the transformer is waiting for more input.
+<tt style='background-color:#E8E8E8;'> core.InputTransformer <a href=' /core/inputtransformer.py#L61'>reset</a>()</tt>	Return transformed any lines that the transformer has accumulated and reset its internal state.
+<tt style='background-color:#E8E8E8;'> core.InputTransformer <a href=' /core/inputtransformer.py#L70'>wrap</a>(cls,func)</tt>	Can be used by subclasses as a decorator to return a factory that will allow instantiation with the decorated object.
+<tt style='background-color:#E8E8E8;'> core.StatelessInputTransformer <a href=' /core/inputtransformer.py#L89'>push</a>(line)</tt>	Send a line of input to the transformer returning the transformed input.
+<tt style='background-color:#E8E8E8;'> core.StatelessInputTransformer <a href=' /core/inputtransformer.py#L94'>reset</a>()</tt>	No-op - exists for compatibility.
+<tt style='background-color:#E8E8E8;'> core.CoroutineInputTransformer <a href=' /core/inputtransformer.py#L108'>push</a>(line)</tt>	Send a line of input to the transformer returning the transformed input or none if the transformer is waiting for more.
+<tt style='background-color:#E8E8E8;'> core.CoroutineInputTransformer <a href=' /core/inputtransformer.py#L115'>reset</a>()</tt>	Return transformed any lines that the transformer has accumulated and reset its internal state.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L179'>assemble_logical_lines</a>()</tt>	Join lines following explicit line continuations (\).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L201'>_make_help_call</a>(target,esc,lspace,next_input)</tt>	Prepares a pinfo 2 /psearch call from a target name and the escape (i.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L215'>_tr_system</a>(line_info)</tt>	Translate lines escaped with !.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L220'>_tr_system2</a>(line_info)</tt>	Translate lines escaped with !!.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L225'>_tr_help</a>(line_info)</tt>	Translate lines escaped with ?/??.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L233'>_tr_magic</a>(line_info)</tt>	Translate lines escaped with %.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L241'>_tr_quote</a>(line_info)</tt>	Translate lines escaped with.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L246'>_tr_quote2</a>(line_info)</tt>	Translate lines escaped with ;.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L251'>_tr_paren</a>(line_info)</tt>	Translate lines escaped with /.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L265'>escaped_commands</a>(line)</tt>	Transform escaped commands - %magic !system ?help + various autocalls.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L291'>_line_tokens</a>(line)</tt>	Helper for has_comment and ends_in_comment_or_string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L306'>has_comment</a>(src)</tt>	Indicate whether an input line has i e ends in or is a comment.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L323'>ends_in_comment_or_string</a>(src)</tt>	Indicates whether or not an input line ends in a comment or within a multiline string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L341'>help_end</a>(line)</tt>	Translate lines with ?/?? at the end.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L357'>cellmagic</a>(end_on_blank_line)</tt>	Captures & transforms cell magics.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L397'>_strip_prompts</a>(prompt_re,initial_re,turnoff_re)</tt>	Remove matching input prompts from a block of input.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L454'>classic_prompt</a>()</tt>	Strip the >>>/ prompts of the python interactive shell.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L464'>ipy_prompt</a>()</tt>	Strip ipython's in [1]:/ : prompts.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L474'>leading_indent</a>()</tt>	Remove leading indentation.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L502'>strip_encoding_cookie</a>()</tt>	Remove encoding comment if found in first two lines if the first or second line has the # coding utf-8 comment.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L537'>assign_from_system</a>(line)</tt>	Transform assignment from system commands (e g files = !ls).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputtransformer.py#L548'>assign_from_magic</a>(line)</tt>	Transform assignment from magic commands (e g a = %who_ls).
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputsplitter.py#L70'>num_ini_spaces</a>(s)</tt>	Return the number of initial spaces in a string.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputsplitter.py#L91'>last_blank</a>(src)</tt>	Determine if the input source ends in a blank.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputsplitter.py#L109'>last_two_blanks</a>(src)</tt>	Determine if the input source ends in two blanks.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputsplitter.py#L132'>remove_comments</a>(src)</tt>	Remove all comments from input source.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/inputsplitter.py#L150'>get_input_encoding</a>()</tt>	Return the default standard input encoding.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L215'>__init__</a>()</tt>	Create a new inputsplitter instance.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L222'>reset</a>()</tt>	Reset the input buffer and associated state.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L232'>source_reset</a>()</tt>	Return the input source and perform a full reset.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L239'>check_complete</a>(source)</tt>	Return whether a block of code is ready to execute or should be continued this is a non-stateful api and will reset the state of this inputsplitter.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L275'>push</a>(lines)</tt>	Push one or more lines of input.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L331'>push_accepts_more</a>()</tt>	Return whether a block of interactive input can accept more input.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L390'>_find_indent</a>(line)</tt>	Compute the new indentation level for a single line.
+<tt style='background-color:#E8E8E8;'> core.InputSplitter <a href=' /core/inputsplitter.py#L436'>_store</a>(lines,buffer,store)</tt>	Store one or more lines of input.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L509'>transforms</a>()</tt>	Quick access to all transformers.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L516'>transforms_in_use</a>()</tt>	Transformers excluding logical line transformers if we're in a python line.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L525'>reset</a>()</tt>	Reset the input buffer and associated state.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L572'>raw_reset</a>()</tt>	Return raw input only and perform a full reset.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L592'>transform_cell</a>(cell)</tt>	Process and translate a cell of input.
+<tt style='background-color:#E8E8E8;'> core.IPythonInputSplitter <a href=' /core/inputsplitter.py#L603'>push</a>(lines)</tt>	Push one or more lines of ipython input.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L251'>page</a>(strng,start,screen_lines,pager_cmd)</tt>	Print a string piping through a pager.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/payloadpage.py#L43'>install_payload_page</a>()</tt>	Deprecated use show_in_pager hook install this version of page as ipython.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/getipython.py#L17'>get_ipython</a>()</tt>	Get the global interactiveshell instance.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/excolors.py#L18'>exception_colors</a>()</tt>	Return a color table with fields for exception reporting.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L185'>init_path</a>()</tt>	Add current working directory '', to sys path.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L193'>init_gui_pylab</a>()</tt>	Enable gui event loop integration taking pylab into account.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L232'>init_extensions</a>()</tt>	Load all ipython extensions in ipythonapp extensions.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L261'>init_code</a>()</tt>	Run the pre-flight code specified via exec_lines.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L280'>_run_exec_lines</a>()</tt>	Run lines of code in ipythonapp exec_lines in the user's namespace.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L332'>_run_startup_files</a>()</tt>	Run files from profile startup directory.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L360'>_run_exec_files</a>()</tt>	Run files from ipythonapp exec_files.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L373'>_run_cmd_line_code</a>()</tt>	Run code or file specified at the command-line.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShellApp <a href=' /core/shellapp.py#L400'>_run_module</a>()</tt>	Run module specified at the command-line.
+<tt style='background-color:#E8E8E8;'> core.EventManager <a href=' /core/events.py#L27'>__init__</a>(shell,available_events)</tt>	Initialise the :class callbackmanager.
+<tt style='background-color:#E8E8E8;'> core.EventManager <a href=' /core/events.py#L40'>register</a>(event,function)</tt>	Register a new event callback parameters.
+<tt style='background-color:#E8E8E8;'> core.EventManager <a href=' /core/events.py#L62'>unregister</a>(event,function)</tt>	Remove a callback from the given event.
+<tt style='background-color:#E8E8E8;'> core.EventManager <a href=' /core/events.py#L66'>trigger</a>(event)</tt>	Call callbacks for event.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/events.py#L93'>pre_execute</a>()</tt>	Fires before code is executed in response to user/frontend action.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/events.py#L101'>pre_run_cell</a>()</tt>	Fires before user-entered code runs.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/events.py#L106'>post_execute</a>()</tt>	Fires after code is executed in response to user/frontend action.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/events.py#L114'>post_run_cell</a>()</tt>	Fires after user-entered code runs.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/events.py#L119'>shell_initialized</a>(ip)</tt>	Fires after initialisation of :class ~ipython core interactiveshell interactiveshell.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L51'>has_open_quotes</a>(s)</tt>	Return whether a string has open quotes.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L72'>protect_filename</a>(s)</tt>	Escape a string to protect certain characters.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L83'>expand_user</a>(path)</tt>	Expand '~'-style usernames in strings.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L123'>compress_user</a>(path,tilde_expand,tilde_val)</tt>	Does the opposite of expand_user with its outputs.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L132'>completions_sorting_key</a>(word)</tt>	Key for sorting completions.
+<tt style='background-color:#E8E8E8;'> core.CompletionSplitter <a href=' /core/completer.py#L217'>delims</a>()</tt>	Return the string of delimiter characters.
+<tt style='background-color:#E8E8E8;'> core.CompletionSplitter <a href=' /core/completer.py#L217'>delims</a>(delims)</tt>	Set the delimiters for line splitting.
+<tt style='background-color:#E8E8E8;'> core.CompletionSplitter <a href=' /core/completer.py#L225'>split_line</a>(line,cursor_pos)</tt>	Split a line of text with a cursor at the given position.
+<tt style='background-color:#E8E8E8;'> core.Completer <a href=' /core/completer.py#L244'>__init__</a>(namespace,global_namespace)</tt>	Create a new completer for the command line.
+<tt style='background-color:#E8E8E8;'> core.Completer <a href=' /core/completer.py#L280'>complete</a>(text,state)</tt>	Return the next possible completion for 'text'.
+<tt style='background-color:#E8E8E8;'> core.Completer <a href=' /core/completer.py#L300'>global_matches</a>(text)</tt>	Compute matches when text is a simple name.
+<tt style='background-color:#E8E8E8;'> core.Completer <a href=' /core/completer.py#L319'>attr_matches</a>(text)</tt>	Compute matches when text contains a dot.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L372'>get__all__entries</a>(obj)</tt>	Returns the strings in the __all__ attribute.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L382'>match_dict_keys</a>(keys,prefix,delims)</tt>	Used by dict_key_matches matching the prefix to a list of keys.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L433'>_safe_isinstance</a>(obj,module,class_name)</tt>	Checks if obj is an instance of module class_name if loaded.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L440'>back_unicode_name_matches</a>(text)</tt>	Match unicode characters back to unicode name this does ☃ -> \snowman.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completer.py#L470'>back_latex_name_matches</a>(text)</tt>	Match latex characters back to unicode name this does ->\sqrt.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L501'>_greedy_changed</a>(change)</tt>	Update the splitter and readline delims when greedy is changed.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L552'>__init__</a>(shell,namespace,global_namespace,use_readline)</tt>	Ipcompleter() -> completer return a completer object suitable for use by the readline library.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L628'>all_completions</a>(text)</tt>	Wrapper around the complete method for the benefit of emacs.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L641'>file_matches</a>(text)</tt>	Match filenames expanding ~user type strings.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L744'>python_matches</a>(text)</tt>	Match attributes or global python names.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L766'>_default_arguments_from_docstring</a>(doc)</tt>	Parse the first line of docstring for call signature.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L792'>_default_arguments</a>(obj)</tt>	Return the list of default arguments of obj if it is callable or empty list otherwise.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L833'>python_func_kw_matches</a>(text)</tt>	Match named parameters kwargs of the last open function.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L895'>dict_key_matches</a>(text)</tt>	Match string keys in a dictionary after e g 'foo['.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L1003'>unicode_name_matches</a>(text)</tt>	Match latex-like syntax for unicode characters base on the name of the character.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L1029'>latex_matches</a>(text)</tt>	Match latex syntax for unicode characters.
+<tt style='background-color:#E8E8E8;'> core.IPCompleter <a href=' /core/completer.py#L1092'>complete</a>(text,line_buffer,cursor_pos)</tt>	Find completions for the given text and line context.
+<tt style='background-color:#E8E8E8;'> core.CrashHandler <a href=' /core/crashhandler.py#L86'>__init__</a>(app,contact_name,contact_email,bug_tracker)</tt>	Create a new crash handler parameters.
+<tt style='background-color:#E8E8E8;'> core.CrashHandler <a href=' /core/crashhandler.py#L127'>__call__</a>(etype,evalue,etb)</tt>	Handle an exception call for compatible with sys excepthook.
+<tt style='background-color:#E8E8E8;'> core.CrashHandler <a href=' /core/crashhandler.py#L182'>make_report</a>(traceback)</tt>	Return a string containing a crash report.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/crashhandler.py#L204'>crash_handler_lite</a>(etype,evalue,tb)</tt>	A light excepthook adding a small message to the usual traceback.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/interactiveshell.py#L119'>softspace</a>(file,newvalue)</tt>	Copied from code py to remove the dependency.
+<tt style='background-color:#E8E8E8;'> core.ExecutionResult <a href=' /core/interactiveshell.py#L182'>raise_error</a>()</tt>	Reraises error if success is false, otherwise does nothing.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L517'>get_ipython</a>()</tt>	Return the currently running ipython instance.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L528'>set_autoindent</a>(value)</tt>	Set the autoindent flag.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L582'>init_environment</a>()</tt>	Any changes we need to make to the user's environment.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L614'>init_logstart</a>()</tt>	Initialize logging in case it was requested at the command line.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L624'>init_deprecation_warnings</a>()</tt>	Register default filter for deprecation warning.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L695'>init_virtualenv</a>()</tt>	Add a virtualenv to sys path so the user can import modules from it.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L740'>save_sys_module_state</a>()</tt>	Save the state of hooks in the sys module.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L752'>restore_sys_module_state</a>()</tt>	Restore the state of the sys module.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L801'>set_hook</a>(name,hook,priority,str_key)</tt>	Set_hook name hook -> sets an internal ipython hook.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L856'>register_post_execute</a>(func)</tt>	Deprecated use ip events register('post_run_cell', func).
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L876'>new_main_mod</a>(filename,modname)</tt>	Return a new 'main' module object for user code execution.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L914'>clear_main_mod_cache</a>()</tt>	Clear the cache of main modules.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L962'>debugger</a>(force)</tt>	Call the pdb debugger.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1069'>prepare_user_module</a>(user_module,user_ns)</tt>	Prepare the module and namespace in which user code will be run.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1133'>init_user_ns</a>()</tt>	Initialize all user-visible namespaces to their minimum defaults.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1193'>all_ns_refs</a>()</tt>	Get a list of references to all the namespace dictionaries in which ipython might store a user-created object.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1203'>reset</a>(new_session)</tt>	Clear all internal namespaces and attempt to release references to user objects.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1245'>del_var</a>(varname,by_name)</tt>	Delete a variable from the various namespaces so that as far as possible we're not keeping any hidden references to it.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1286'>reset_selective</a>(regex)</tt>	Clear selective variables from internal namespaces based on a specified regular expression.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1308'>push</a>(variables,interactive)</tt>	Inject a group of variables into the ipython user namespace.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1356'>drop_by_id</a>(variables)</tt>	Remove a dict of variables from the user namespace if they are the same as the values in the dictionary.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1378'>_ofind</a>(oname,namespaces)</tt>	Find an object in the available namespaces.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1475'>_getattr_property</a>(obj,attrname)</tt>	Property-aware getattr to use in object finding.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1514'>_object_find</a>(oname,namespaces)</tt>	Find an object and return a struct with info about it.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1518'>_inspect</a>(meth,oname,namespaces)</tt>	Generic interface to the inspector system.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1541'>object_inspect</a>(oname,detail_level)</tt>	Get object info about oname.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1552'>object_inspect_text</a>(oname,detail_level)</tt>	Get object info as formatted text.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1556'>object_inspect_mime</a>(oname,detail_level)</tt>	Get object info as a mimebundle of formatted representations.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1575'>init_history</a>()</tt>	Sets up the command history and starts regular autosaves.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1610'>set_custom_exc</a>(exc_tuple,handler)</tt>	Set_custom_exc(exc_tuple handler) set a custom exception handler which will be called if any of the.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1712'>excepthook</a>(etype,value,tb)</tt>	One more defense for gui apps that call sys excepthook.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1736'>_get_exc_info</a>(exc_tuple)</tt>	Get exc_info from a given tuple sys exc_info() or sys last_type etc.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1768'>show_usage_error</a>(exc)</tt>	Show a short message for usageerrors these are special exceptions that shouldn't show a traceback.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1775'>get_exception_only</a>(exc_tuple)</tt>	Return as a string ending with a newline the exception that just occurred without any traceback.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1784'>showtraceback</a>(exc_tuple,filename,tb_offset,exception_only)</tt>	Display the exception that just occurred.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1838'>_showtraceback</a>(etype,evalue,stb)</tt>	Actually show a traceback.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1846'>showsyntaxerror</a>(filename)</tt>	Display the syntax error that just occurred.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1869'>showindentationerror</a>()</tt>	Called by run_cell when there's an indentationerror in code entered at the prompt.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1881'>init_readline</a>()</tt>	Deprecated moved to terminal subclass here only to simplify the init logic.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1890'>set_next_input</a>(s,replace)</tt>	Sets the 'default' input string for the next command line.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1901'>_indent_current_str</a>()</tt>	Return the current level of indentation as a string.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1909'>init_completer</a>()</tt>	Initialize the completion machinery.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1942'>complete</a>(text,line,cursor_pos)</tt>	Return the completed text and a list of completions.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1988'>set_custom_completer</a>(completer,pos)</tt>	Adds a new custom completer function.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L1997'>set_completer_frame</a>(frame)</tt>	Set the frame of the completer.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2048'>run_line_magic</a>(magic_name,line)</tt>	Execute the given line magic.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2082'>run_cell_magic</a>(magic_name,line,cell)</tt>	Execute the given cell magic.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2118'>find_line_magic</a>(magic_name)</tt>	Find and return a line magic by name.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2124'>find_cell_magic</a>(magic_name)</tt>	Find and return a cell magic by name.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2130'>find_magic</a>(magic_name,magic_kind)</tt>	Find and return a magic of the given type by name.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2136'>magic</a>(arg_s)</tt>	Deprecated use run_line_magic() instead.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2164'>define_macro</a>(name,themacro)</tt>	Define a new macro parameters.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2188'>system_piped</a>(cmd)</tt>	Call the given cmd in a subprocess piping stdout/err parameters.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2211'>system_raw</a>(cmd)</tt>	Call the given cmd in a subprocess using os system on windows or.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2265'>getoutput</a>(cmd,split,depth)</tt>	Get output possibly including stderr from a subprocess.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2330'>auto_rewrite_input</a>(cmd)</tt>	Print to the screen the rewritten form of the user's command.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2355'>_user_obj_error</a>()</tt>	Return simple exception dict.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2373'>_format_user_obj</a>(obj)</tt>	Format a user object to display dict.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2387'>user_expressions</a>(expressions)</tt>	Evaluate a dict of expressions in the user's namespace.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2418'>ex</a>(cmd)</tt>	Execute a normal python statement in user namespace.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2423'>ev</a>(expr)</tt>	Evaluate python expression expr in user namespace.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2431'>safe_execfile</a>(fname)</tt>	A safe version of the builtin execfile().
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2503'>safe_execfile_ipy</a>(fname,shell_futures,raise_exceptions)</tt>	Like safe_execfile but for ipy or ipynb files with ipython syntax.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2563'>safe_run_module</a>(mod_name,where)</tt>	A safe version of runpy run_module().
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2591'>run_cell</a>(raw_cell,store_history,silent,shell_futures)</tt>	Run a complete ipython cell.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2738'>transform_ast</a>(node)</tt>	Apply the ast transformations from self ast_transformers.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2770'>run_ast_nodes</a>(nodelist,cell_name,interactivity,compiler)</tt>	Run a sequence of ast nodes the execution mode depends on the.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2851'>run_code</a>(code_obj,result)</tt>	Execute a code object.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2915'>enable_matplotlib</a>(gui)</tt>	Enable interactive matplotlib and inline figure support.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L2960'>enable_pylab</a>(gui,import_all,welcome_message)</tt>	Activate pylab support at runtime.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3008'>var_expand</a>(cmd,depth,formatter)</tt>	Expand python variables in a string.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3037'>mktempfile</a>(data,prefix)</tt>	Make a new tempfile and return its filename.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3062'>write</a>(data)</tt>	Deprecated write a string to the default output.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3069'>write_err</a>(data)</tt>	Deprecated write a string to the default error output.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3081'>show_usage</a>()</tt>	Show a usage message.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3085'>extract_input_lines</a>(range_str,raw)</tt>	Return as a string a set of input history slices.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3111'>find_user_code</a>(target,raw,py_only,skip_encoding_cookie)</tt>	Get a code string from history file url or a string or macro.
+<tt style='background-color:#E8E8E8;'> core.InteractiveShell <a href=' /core/interactiveshell.py#L3200'>atexit_operations</a>()</tt>	This will be executed at the time of exit.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L34'>display_page</a>(strng,start,screen_lines)</tt>	Just display no paging screen_lines is ignored.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L45'>as_hook</a>(page_func)</tt>	Wrap a pager func to strip the self arg so it can be called as a hook.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L55'>page_dumb</a>(strng,start,screen_lines)</tt>	Very dumb 'pager' in python for when nothing else works.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L79'>_detect_screen_size</a>(screen_lines_def)</tt>	Attempt to work out the number of lines on the screen.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L144'>pager_page</a>(strng,start,screen_lines,pager_cmd)</tt>	Display a string piping through a pager after a certain length.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L251'>page</a>(data,start,screen_lines,pager_cmd)</tt>	Display content in a pager piping through a pager after a certain length.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L277'>page_file</a>(fname,start,pager_cmd)</tt>	Page a file using an optional pager command and starting line.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L297'>get_pager_cmd</a>(pager_cmd)</tt>	Return a pager command.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L319'>get_pager_start</a>(pager,start)</tt>	Return the string for paging files with an offset.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/page.py#L360'>snip_print</a>(str,width,print_full,header)</tt>	Print a string snipping the midsection to fit in width.
+<tt style='background-color:#E8E8E8;'> core.MagicArgumentParser <a href=' /core/magic_arguments.py#L127'>error</a>(message)</tt>	Raise a catchable error instead of exiting.
+<tt style='background-color:#E8E8E8;'> core.MagicArgumentParser <a href=' /core/magic_arguments.py#L132'>parse_argstring</a>(argstring)</tt>	Split a string into an argument list and parse that argument list.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic_arguments.py#L139'>construct_parser</a>(magic_func)</tt>	Construct an argument parser using the function decorations.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic_arguments.py#L161'>parse_argstring</a>(magic_func,argstring)</tt>	Parse the string of arguments for the given magic function.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/magic_arguments.py#L167'>real_name</a>(magic_func)</tt>	Find the real name of the magic.
+<tt style='background-color:#E8E8E8;'> core.ArgDecorator <a href=' /core/magic_arguments.py#L187'>add_to_parser</a>(parser,group)</tt>	Add this object's information to the parser if necessary.
+<tt style='background-color:#E8E8E8;'> core.ArgMethodWrapper <a href=' /core/magic_arguments.py#L228'>add_to_parser</a>(parser,group)</tt>	Add this object's information to the parser.
+<tt style='background-color:#E8E8E8;'> core.argument_group <a href=' /core/magic_arguments.py#L259'>add_to_parser</a>(parser,group)</tt>	Add this object's information to the parser.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L72'>_mkdir</a>(path,mode)</tt>	Ensure a directory exists at a given path this is a version of os.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L137'>copy_config_file</a>(config_file,path,overwrite)</tt>	Copy a default config file into the active profile directory.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L153'>create_profile_dir</a>(cls,profile_dir,config)</tt>	Create a new profile directory given a full path.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L165'>create_profile_dir_by_name</a>(cls,path,name,config)</tt>	Create a profile dir by profile name and path.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L182'>find_profile_dir_by_name</a>(cls,ipython_dir,name,config)</tt>	Find an existing profile dir by profile name return its profiledir.
+<tt style='background-color:#E8E8E8;'> core.ProfileDir <a href=' /core/profiledir.py#L210'>find_profile_dir</a>(cls,profile_dir,config)</tt>	Find/create a profile dir and return its profiledir.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L71'>module_list</a>(path)</tt>	Return the list containing the names of the modules available in the given folder.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L111'>get_root_modules</a>()</tt>	Returns a list containing the names of all the modules available in the folders of the pythonpath.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L190'>quick_completer</a>(cmd,completions)</tt>	Easily create a trivial completer for a command.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L213'>module_completion</a>(line)</tt>	Returns a list containing the completion possibilities for an import line.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L250'>module_completer</a>(event)</tt>	Give completions after user has typed 'import ' or 'from '.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L264'>magic_run_completer</a>(event)</tt>	Complete files that end in py or ipy or ipynb for the %run command.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L301'>cd_completer</a>(event)</tt>	Completer function for cd which only returns directories.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/completerlib.py#L355'>reset_completer</a>(event)</tt>	A completer for %reset magic.
+<tt style='background-color:#E8E8E8;'> core.ExtensionManager <a href=' /core/extensions.py#L68'>load_extension</a>(module_str)</tt>	Load an ipython extension by its module name.
+<tt style='background-color:#E8E8E8;'> core.ExtensionManager <a href=' /core/extensions.py#L90'>unload_extension</a>(module_str)</tt>	Unload an ipython extension by its module name.
+<tt style='background-color:#E8E8E8;'> core.ExtensionManager <a href=' /core/extensions.py#L110'>reload_extension</a>(module_str)</tt>	Reload an ipython extension by calling reload.
+<tt style='background-color:#E8E8E8;'> core.ExtensionManager <a href=' /core/extensions.py#L140'>install_extension</a>(url,filename)</tt>	Download and install an ipython extension.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/splitinput.py#L53'>split_user_input</a>(line,pattern)</tt>	Split user input into initial whitespace escape character function part and the rest.
+<tt style='background-color:#E8E8E8;'> core.LineInfo <a href=' /core/splitinput.py#L121'>ofind</a>(ip)</tt>	Do a full attribute-walking lookup of the ifun in the various namespaces for the given ipython interactiveshell instance.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/alias.py#L41'>default_aliases</a>()</tt>	Return list of shell aliases to auto-define.
+<tt style='background-color:#E8E8E8;'> core.Alias <a href=' /core/alias.py#L137'>validate</a>()</tt>	Validate the alias and return the number of arguments.
+<tt style='background-color:#E8E8E8;'> core.AliasManager <a href=' /core/alias.py#L215'>soft_define_alias</a>(name,cmd)</tt>	Define an alias but don't raise on an aliaserror.
+<tt style='background-color:#E8E8E8;'> core.AliasManager <a href=' /core/alias.py#L222'>define_alias</a>(name,cmd)</tt>	Define a new alias after validating it.
+<tt style='background-color:#E8E8E8;'> core.AliasManager <a href=' /core/alias.py#L232'>get_alias</a>(name)</tt>	Return an alias or none if no alias by that name exists.
+<tt style='background-color:#E8E8E8;'> core.AliasManager <a href=' /core/alias.py#L237'>is_alias</a>(name)</tt>	Return whether or not a given name has been defined as an alias.
+<tt style='background-color:#E8E8E8;'> core.AliasManager <a href=' /core/alias.py#L251'>retrieve_alias</a>(name)</tt>	Retrieve the command to which an alias expands.
+<tt style='background-color:#E8E8E8;'> core.BuiltinTrap <a href=' /core/builtin_trap.py#L81'>add_builtin</a>(key,value)</tt>	Add a builtin and save the original.
+<tt style='background-color:#E8E8E8;'> core.BuiltinTrap <a href=' /core/builtin_trap.py#L93'>remove_builtin</a>(key,orig)</tt>	Remove an added builtin and re-set the original.
+<tt style='background-color:#E8E8E8;'> core.BuiltinTrap <a href=' /core/builtin_trap.py#L100'>activate</a>()</tt>	Store ipython references in the __builtin__ namespace.
+<tt style='background-color:#E8E8E8;'> core.BuiltinTrap <a href=' /core/builtin_trap.py#L107'>deactivate</a>()</tt>	Remove any builtins which might have been added by add_builtins or restore overwritten ones to their previous values.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L66'>logstart</a>(logfname,loghead,logmode,log_output)</tt>	Generate a new log-file with a default header.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L131'>switch_log</a>(val)</tt>	Switch logging on/off val should be only a boolean.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L156'>logstate</a>()</tt>	Print a status message about the logger.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L169'>log</a>(line_mod,line_ori)</tt>	Write the sources to a log.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L189'>log_write</a>(data,kind)</tt>	Write data to the log file if active.
+<tt style='background-color:#E8E8E8;'> core.Logger <a href=' /core/logger.py#L206'>logstop</a>()</tt>	Fully stop logging and close log file.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L58'>editor</a>(filename,linenum,wait)</tt>	Open the default editor at the given filename and linenumber.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L86'>fix_error_editor</a>(filename,linenum,column,msg)</tt>	Deprecated open the editor at the given filename linenumber column and.
+<tt style='background-color:#E8E8E8;'> core.CommandChainDispatcher <a href=' /core/hooks.py#L139'>__call__</a>()</tt>	Command chain is called just like normal func.
+<tt style='background-color:#E8E8E8;'> core.CommandChainDispatcher <a href=' /core/hooks.py#L158'>add</a>(func,priority)</tt>	Add a func to the cmd chain with given priority.
+<tt style='background-color:#E8E8E8;'> core.CommandChainDispatcher <a href=' /core/hooks.py#L163'>__iter__</a>()</tt>	Return all objects in chain.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L171'>shutdown_hook</a>()</tt>	Default shutdown hook.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L181'>late_startup_hook</a>()</tt>	Executed after ipython has been constructed and configured.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L188'>show_in_pager</a>(data,start,screen_lines)</tt>	Run a string through pager.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L194'>pre_prompt_hook</a>()</tt>	Run before displaying the next prompt use this e.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L204'>pre_run_code_hook</a>()</tt>	Executed before running the prefiltered code in ipython.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/hooks.py#L209'>clipboard_get</a>()</tt>	Get text from the clipboard.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L238'>init_crash_handler</a>()</tt>	Create a crash handler typically setting sys excepthook to it.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L246'>excepthook</a>(etype,evalue,tb)</tt>	This is sys excepthook after init_crashhandler.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L286'>load_config_file</a>(suppress_errors)</tt>	Load the config file.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L350'>init_profile_dir</a>()</tt>	Initialize the profile dir.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L404'>init_config_files</a>()</tt>	[optionally] copy default config files into profile dir.
+<tt style='background-color:#E8E8E8;'> core.BaseIPythonApplication <a href=' /core/application.py#L434'>stage_default_config_file</a>()</tt>	Auto generate default config file and stage it into the profile.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L86'>object_info</a>()</tt>	Make an object info dict with all fields present.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L93'>get_encoding</a>(obj)</tt>	Get encoding for python source file defining obj returns none if obj is not defined in a sourcefile.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L116'>getdoc</a>(obj)</tt>	Stable wrapper around inspect getdoc.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L145'>getsource</a>(obj,oname)</tt>	Wrapper around inspect getsource.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L208'>is_simple_callable</a>(obj)</tt>	True if obj is a function ().
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L214'>getargspec</a>(obj)</tt>	Wrapper around :func inspect getfullargspec on python 3 and.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L227'>format_argspec</a>(argspec)</tt>	Format argspect convenience wrapper around inspect's.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L237'>call_tip</a>(oinfo,format_call)</tt>	Extract call tip data from an oinfo dict.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L290'>_get_wrapped</a>(obj)</tt>	Get the original object if wrapped in one or more @decorators some objects automatically construct similar objects on any unrecognised.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L308'>find_file</a>(obj)</tt>	Find the absolute path to the file where an object was defined.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/oinspect.py#L343'>find_source_lines</a>(obj)</tt>	Find the line number in a file where an object was defined.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L389'>_getdef</a>(obj,oname)</tt>	Return the call signature for any callable object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L400'>__head</a>(h)</tt>	Return a header string with proper colors.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L409'>noinfo</a>(msg,oname)</tt>	Generic message when no information is found.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L417'>pdef</a>(obj,oname)</tt>	Print the call signature for any callable object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L440'>pdoc</a>(obj,oname,formatter)</tt>	Print the docstring for any object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L499'>psource</a>(obj,oname)</tt>	Print the source code for an object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L514'>pfile</a>(obj,oname)</tt>	Show the whole file where an object was defined.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L536'>_format_fields</a>(fields,title_width)</tt>	Formats a list of fields for display.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L558'>_mime_format</a>(text,formatter)</tt>	Return a mime bundle representation of the input text.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L613'>_get_info</a>(obj,oname,formatter,info)</tt>	Retrieve an info dict and format it.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L693'>pinfo</a>(obj,oname,formatter,info)</tt>	Show detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L720'>info</a>(obj,oname,formatter,info)</tt>	Deprecated compute a dict with detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L729'>_info</a>(obj,oname,info,detail_level)</tt>	Compute a dict with detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.Inspector <a href=' /core/oinspect.py#L954'>psearch</a>(pattern,ns_table,ns_search,ignore_case)</tt>	Search namespaces with wildcards for objects.
+<tt style='background-color:#E8E8E8;'> core.DisplayPublisher <a href=' /core/displaypub.py#L39'>_validate_data</a>(data,metadata)</tt>	Validate the display data.
+<tt style='background-color:#E8E8E8;'> core.DisplayPublisher <a href=' /core/displaypub.py#L56'>publish</a>(data,metadata,source)</tt>	Publish data and metadata to all frontends.
+<tt style='background-color:#E8E8E8;'> core.DisplayPublisher <a href=' /core/displaypub.py#L98'>clear_output</a>(wait)</tt>	Clear the output of the cell receiving output.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/prefilter.py#L62'>is_shadowed</a>(identifier,ip)</tt>	Is the given identifier defined in one of the namespaces which shadow the alias and magic namespaces? note that an identifier is different.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L131'>init_transformers</a>()</tt>	Create the default transformers.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L139'>sort_transformers</a>()</tt>	Sort the transformers by priority.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L147'>transformers</a>()</tt>	Return a list of checkers sorted by priority.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L152'>register_transformer</a>(transformer)</tt>	Register a transformer instance.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L158'>unregister_transformer</a>(transformer)</tt>	Unregister a transformer instance.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L167'>init_checkers</a>()</tt>	Create the default checkers.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L175'>sort_checkers</a>()</tt>	Sort the checkers by priority.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L183'>checkers</a>()</tt>	Return a list of checkers sorted by priority.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L188'>register_checker</a>(checker)</tt>	Register a checker instance.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L194'>unregister_checker</a>(checker)</tt>	Unregister a checker instance.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L203'>init_handlers</a>()</tt>	Create the default handlers.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L212'>handlers</a>()</tt>	Return a dict of all the handlers.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L217'>register_handler</a>(name,handler,esc_strings)</tt>	Register a handler instance by name with esc_strings.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L223'>unregister_handler</a>(name,handler,esc_strings)</tt>	Unregister a handler instance by name with esc_strings.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L234'>get_handler_by_name</a>(name)</tt>	Get a handler by its name.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L238'>get_handler_by_esc</a>(esc_str)</tt>	Get a handler by its escape string.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L246'>prefilter_line_info</a>(line_info)</tt>	Prefilter a line that has been converted to a lineinfo object.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L255'>find_handler</a>(line_info)</tt>	Find a handler for the line_info by trying checkers.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L264'>transform_line</a>(line,continue_prompt)</tt>	Calls the enabled transformers in order of increasing priority.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L271'>prefilter_line</a>(line,continue_prompt)</tt>	Prefilter a single input line as text.
+<tt style='background-color:#E8E8E8;'> core.PrefilterManager <a href=' /core/prefilter.py#L314'>prefilter_lines</a>(lines,continue_prompt)</tt>	Prefilter multiple input lines of text.
+<tt style='background-color:#E8E8E8;'> core.PrefilterTransformer <a href=' /core/prefilter.py#L360'>transform</a>(line,continue_prompt)</tt>	Transform a line returning the new one.
+<tt style='background-color:#E8E8E8;'> core.PrefilterChecker <a href=' /core/prefilter.py#L388'>check</a>(line_info)</tt>	Inspect line_info and return a handler instance or none.
+<tt style='background-color:#E8E8E8;'> core.EmacsChecker <a href=' /core/prefilter.py#L402'>check</a>(line_info)</tt>	Emacs ipython-mode tags certain input lines.
+<tt style='background-color:#E8E8E8;'> core.IPyAutocallChecker <a href=' /core/prefilter.py#L426'>check</a>(line_info)</tt>	Instances of ipyautocall in user_ns get autocalled immediately.
+<tt style='background-color:#E8E8E8;'> core.AssignmentChecker <a href=' /core/prefilter.py#L440'>check</a>(line_info)</tt>	Check to see if user is assigning to a var for the first time in which case we want to avoid any sort of automagic / autocall games.
+<tt style='background-color:#E8E8E8;'> core.AutoMagicChecker <a href=' /core/prefilter.py#L458'>check</a>(line_info)</tt>	If the ifun is magic and automagic is on run it note normal.
+<tt style='background-color:#E8E8E8;'> core.PythonOpsChecker <a href=' /core/prefilter.py#L482'>check</a>(line_info)</tt>	If the 'rest' of the line begins with a function call or pretty much any python operator we should simply execute the line (regardless of.
+<tt style='background-color:#E8E8E8;'> core.AutocallChecker <a href=' /core/prefilter.py#L504'>check</a>(line_info)</tt>	Check if the initial word/function is callable and autocall is on.
+<tt style='background-color:#E8E8E8;'> core.PrefilterHandler <a href=' /core/prefilter.py#L543'>handle</a>(line_info)</tt>	Handle normal input lines use as a template for handlers.
+<tt style='background-color:#E8E8E8;'> core.MagicHandler <a href=' /core/prefilter.py#L582'>handle</a>(line_info)</tt>	Execute magic functions.
+<tt style='background-color:#E8E8E8;'> core.AutoHandler <a href=' /core/prefilter.py#L596'>handle</a>(line_info)</tt>	Handle lines which can be auto-executed quoting if requested.
+<tt style='background-color:#E8E8E8;'> core.EmacsHandler <a href=' /core/prefilter.py#L666'>handle</a>(line_info)</tt>	Handle input lines marked by python-mode.
+<tt style='background-color:#E8E8E8;'> core.DisplayFormatter <a href=' /core/formatters.py#L65'>_formatters_default</a>()</tt>	Activate the default formatters.
+<tt style='background-color:#E8E8E8;'> core.DisplayFormatter <a href=' /core/formatters.py#L86'>format</a>(obj,include,exclude)</tt>	Return a format data dict for an object.
+<tt style='background-color:#E8E8E8;'> core.DisplayFormatter <a href=' /core/formatters.py#L161'>format_types</a>()</tt>	Return the format types mime types of the active formatters.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/formatters.py#L172'>_safe_repr</a>(obj)</tt>	Try to return a repr of an object always returns a string at least.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/formatters.py#L186'>catch_format_error</a>(method)</tt>	Show traceback on failed format call.
+<tt style='background-color:#E8E8E8;'> core.FormatterABC <a href=' /core/formatters.py#L220'>__call__</a>(obj)</tt>	Return a json'able representation of the object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/formatters.py#L230'>_mod_name_key</a>(typ)</tt>	Return a (__module__, __name__) tuple for a type.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/formatters.py#L240'>_get_type</a>(obj)</tt>	Return the type of an instance old and new-style.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L297'>__call__</a>(obj)</tt>	Compute the format for an object.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L316'>__contains__</a>(typ)</tt>	Map in to lookup_by_type.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L325'>_check_return</a>(r,obj)</tt>	Check that a return value is appropriate return the value if so none otherwise warning if invalid.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L340'>lookup</a>(obj)</tt>	Look up the formatter for a given instance.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L363'>lookup_by_type</a>(typ)</tt>	Look up the registered formatter for a type.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L397'>for_type</a>(typ,func)</tt>	Add a format function for a given type.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L436'>for_type_by_name</a>(type_module,type_name,func)</tt>	Add a format function for a type specified by the full dotted module and name of the type rather than the type of the object.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L475'>pop</a>(typ,default)</tt>	Pop a formatter for the given type.
+<tt style='background-color:#E8E8E8;'> core.BaseFormatter <a href=' /core/formatters.py#L516'>_in_deferred_types</a>(cls)</tt>	Check if the given class is specified in the deferred type registry.
+<tt style='background-color:#E8E8E8;'> core.PlainTextFormatter <a href=' /core/formatters.py#L591'>_float_precision_changed</a>(change)</tt>	Float_precision changed set float_format accordingly.
+<tt style='background-color:#E8E8E8;'> core.PlainTextFormatter <a href=' /core/formatters.py#L655'>__call__</a>(obj)</tt>	Compute the pretty representation of the object.
+<tt style='background-color:#E8E8E8;'> core.JSONFormatter <a href=' /core/formatters.py#L794'>_check_return</a>(r,obj)</tt>	Check that a return value is appropriate return the value if so none otherwise warning if invalid.
+<tt style='background-color:#E8E8E8;'> core.IPythonDisplayFormatter <a href=' /core/formatters.py#L867'>__call__</a>(obj)</tt>	Compute the format for an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/formatters.py#L900'>format_display_data</a>(obj,include,exclude)</tt>	Return a format data dict for an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/profileapp.py#L99'>list_profiles_in</a>(path)</tt>	List profiles in a given root directory.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/profileapp.py#L113'>list_bundled_profiles</a>()</tt>	List profiles that are bundled with ipython.
+<tt style='background-color:#E8E8E8;'> core.ProfileList <a href=' /core/profileapp.py#L162'>_print_profiles</a>(profiles)</tt>	Print list of profiles indented.
+<tt style='background-color:#E8E8E8;'> core.ProfileCreate <a href=' /core/profileapp.py#L249'>_import_app</a>(app_path)</tt>	Import an app class.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L54'>getfigs</a>()</tt>	Get a list of matplotlib figures by figure numbers.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L81'>figsize</a>(sizex,sizey)</tt>	Set the default figure size to be [sizex sizey].
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L92'>print_figure</a>(fig,fmt,bbox_inches)</tt>	Print a figure to an image and return the resulting file data returned data will be bytes unless fmt='svg',.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L130'>retina_figure</a>(fig)</tt>	Format a figure as a pixel-doubled retina png.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L143'>mpl_runner</a>(safe_execfile)</tt>	Factory to return a matplotlib-enabled runner for %run.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L191'>_reshow_nbagg_figure</a>(fig)</tt>	Reshow an nbagg figure.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L201'>select_figure_formats</a>(shell,formats)</tt>	Select figure formats for the inline backend.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L255'>find_gui_and_backend</a>(gui,gui_select)</tt>	Given a gui string return the gui and mpl backend.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L296'>activate_matplotlib</a>(backend)</tt>	Activate the given backend and set interactive to true.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L320'>import_pylab</a>(user_ns,import_all)</tt>	Populate the namespace with pylab-related values.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/pylabtools.py#L353'>configure_inline_support</a>(shell,backend)</tt>	Configure an ipython shell object for matplotlib use.
+<tt style='background-color:#E8E8E8;'> core.IPyAutocall <a href=' /core/autocall.py#L42'>set_ip</a>(ip)</tt>	Will be used to set _ip point to current ipython instance b/f call override this method if you don't want this to happen.
+<tt style='background-color:#E8E8E8;'> core.Macro <a href=' /core/macro.py#L24'>__init__</a>(code)</tt>	Store the macro value as a single string which can be executed.
+<tt style='background-color:#E8E8E8;'> core.Macro <a href=' /core/macro.py#L48'>__getstate__</a>()</tt>	Needed for safe pickling via %store.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L36'>_safe_exists</a>(path)</tt>	Check path but don't let exceptions raise.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L43'>_merge</a>(d1,d2)</tt>	Like update but merges sub-dicts instead of clobbering at the top level.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L55'>_display_mimetype</a>(mimetype,objs,raw,metadata)</tt>	Internal implementation of all display_foo methods parameters.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L82'>publish_display_data</a>(data,metadata,source)</tt>	Publish data and metadata to all frontends.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L124'>display</a>()</tt>	Display a python object in all frontends.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L174'>display_pretty</a>()</tt>	Display the pretty default representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L191'>display_html</a>()</tt>	Display the html representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L211'>display_markdown</a>()</tt>	Displays the markdown representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L229'>display_svg</a>()</tt>	Display the svg representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L246'>display_png</a>()</tt>	Display the png representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L263'>display_jpeg</a>()</tt>	Display the jpeg representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L280'>display_latex</a>()</tt>	Display the latex representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L297'>display_json</a>()</tt>	Display the json representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L316'>display_javascript</a>()</tt>	Display the javascript representation of an object.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L333'>display_pdf</a>()</tt>	Display the pdf representation of an object.
+<tt style='background-color:#E8E8E8;'> core.DisplayObject <a href=' /core/display.py#L361'>__init__</a>(data,url,filename)</tt>	Create a display object given raw data.
+<tt style='background-color:#E8E8E8;'> core.DisplayObject <a href=' /core/display.py#L405'>_check_data</a>()</tt>	Override in subclasses if there's something to check.
+<tt style='background-color:#E8E8E8;'> core.DisplayObject <a href=' /core/display.py#L409'>reload</a>()</tt>	Reload the raw data from file or url.
+<tt style='background-color:#E8E8E8;'> core.HTML <a href=' /core/display.py#L452'>__html__</a>()</tt>	This method exists to inform other html-using modules (e g markupsafe.
+<tt style='background-color:#E8E8E8;'> core.Javascript <a href=' /core/display.py#L556'>__init__</a>(data,url,filename,lib)</tt>	Create a javascript display object given raw data.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L616'>_pngxy</a>(data)</tt>	Read the width height from a png header.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L623'>_jpegxy</a>(data)</tt>	Read the width height from a jpeg header.
+<tt style='background-color:#E8E8E8;'> core.Image <a href=' /core/display.py#L649'>__init__</a>(data,url,filename,format)</tt>	Create a png/jpeg image object given raw data.
+<tt style='background-color:#E8E8E8;'> core.Image <a href=' /core/display.py#L763'>_retina_shape</a>()</tt>	Load pixel-doubled width and height from image data.
+<tt style='background-color:#E8E8E8;'> core.Image <a href=' /core/display.py#L777'>reload</a>()</tt>	Reload the raw data from file or url.
+<tt style='background-color:#E8E8E8;'> core.Image <a href=' /core/display.py#L800'>_data_and_metadata</a>()</tt>	Shortcut for returning metadata with shape information if defined.
+<tt style='background-color:#E8E8E8;'> core.Video <a href=' /core/display.py#L829'>__init__</a>(data,url,filename,embed)</tt>	Create a video object given raw data or an url.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L932'>clear_output</a>(wait)</tt>	Clear the output of the current cell receiving output.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L949'>set_matplotlib_formats</a>()</tt>	Select figure formats for the inline backend optionally pass quality for jpeg.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/display.py#L980'>set_matplotlib_close</a>(close)</tt>	Set whether the inline backend closes all figures automatically or not.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/history.py#L54'>needs_sqlite</a>(f)</tt>	Decorator return an empty list in the absence of sqlite.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/history.py#L79'>catch_corrupt_db</a>(f)</tt>	A decorator which wraps historyaccessor method calls to catch errors from a corrupt sqlite database move the old database out of the way and create.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L190'>_db_changed</a>(change)</tt>	Validate the db since it can be an instance of two different types.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L202'>__init__</a>(profile,hist_file)</tt>	Create a new history accessor.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L233'>_get_hist_file_name</a>(profile)</tt>	Find the history file for the given profile name.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L246'>init_db</a>()</tt>	Connect to the database and create tables if necessary.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L272'>writeout_cache</a>()</tt>	Overridden by historymanager to dump the cache before certain database lookups.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L280'>_run_sql</a>(sql,params,raw,output)</tt>	Prepares and runs an sql query for the history database.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L307'>get_session_info</a>(session)</tt>	Get info about a session.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L335'>get_last_session_id</a>()</tt>	Get the last session id currently in the database.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L345'>get_tail</a>(n,raw,output,include_latest)</tt>	Get the last n lines from the history database.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L373'>search</a>(pattern,raw,search_raw,output)</tt>	Search the database using unix glob-style matching (wildcards * and ?).
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L415'>get_range</a>(session,start,stop,raw)</tt>	Retrieve input by session.
+<tt style='background-color:#E8E8E8;'> core.HistoryAccessor <a href=' /core/history.py#L453'>get_range_by_str</a>(rangestr,raw,output)</tt>	Get lines of history from a string of ranges as used by magic commands %hist %save %macro etc.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L537'>__init__</a>(shell,config)</tt>	Create a new history manager associated with a shell instance.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L558'>_get_hist_file_name</a>(profile)</tt>	Get default history file name based on the shell's profile.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L566'>new_session</a>(conn)</tt>	Get a new session number.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L577'>end_session</a>()</tt>	Close the database session filling in the end time and line count.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L586'>name_session</a>(name)</tt>	Give the current session a name in the history database.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L592'>reset</a>(new_session)</tt>	Clear the session history releasing all object references and optionally open a new session.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L609'>get_session_info</a>(session)</tt>	Get info about a session.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L638'>_get_range_session</a>(start,stop,raw,output)</tt>	Get input and output history from the current session called by.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L658'>get_range</a>(session,start,stop,raw)</tt>	Retrieve input by session.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L696'>store_inputs</a>(line_num,source,source_raw)</tt>	Store source and raw input in history and create input cache variables _i*.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L746'>store_output</a>(line_num)</tt>	If database output logging is enabled this saves all the outputs from the indicated prompt number to the database.
+<tt style='background-color:#E8E8E8;'> core.HistoryManager <a href=' /core/history.py#L777'>writeout_cache</a>(conn)</tt>	Write any entries in the cache to the database.
+<tt style='background-color:#E8E8E8;'> core.HistorySavingThread <a href=' /core/history.py#L844'>stop</a>()</tt>	This can be called from the main thread to safely stop this thread.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/history.py#L865'>extract_hist_ranges</a>(ranges_str)</tt>	Turn a string of history ranges into 3-tuples of session start stop.
+<tt style='background-color:#E8E8E8;'> core. <a href=' /core/history.py#L907'>_format_lineno</a>(session,line)</tt>	Helper function to format line numbers properly.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/script.py#L28'>script_args</a>(f)</tt>	Single decorator for adding script args.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L80'>_script_magics_default</a>()</tt>	Default to a common list of programs.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L124'>_make_script_magic</a>(name)</tt>	Make a named magic that calls %%script with a particular program.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L150'>shebang</a>(line,cell)</tt>	Run a cell via a shell command the %%script line is like the #! line of script.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L235'>_run_script</a>(p,cell)</tt>	Callback for running the script in the background.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L241'>killbgscripts</a>(_nouse_)</tt>	Kill all bg processes started by %%script and its family.
+<tt style='background-color:#E8E8E8;'> core.magics.ScriptMagics <a href=' /core/magics/script.py#L247'>kill_bg_processes</a>()</tt>	Kill all bg processes which are still running.
+<tt style='background-color:#E8E8E8;'> core.magics.MagicsDisplay <a href=' /core/magics/basic.py#L26'>_lsmagic</a>()</tt>	The main implementation of the %lsmagic.
+<tt style='background-color:#E8E8E8;'> core.magics.MagicsDisplay <a href=' /core/magics/basic.py#L47'>_jsonable</a>()</tt>	Turn magics dict into jsonable dict of the same structure.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L78'>alias_magic</a>(line)</tt>	Create an alias for an existing line or cell magic.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L163'>lsmagic</a>(parameter_s)</tt>	List currently available magic functions.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L168'>_magic_docs</a>(brief,rest)</tt>	Return docstrings from magic functions.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L188'>magic</a>(parameter_s)</tt>	Print information about the magic function system.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L263'>page</a>(parameter_s)</tt>	Pretty print the object and display it through a pager.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L289'>profile</a>(parameter_s)</tt>	Print your currently active ipython profile.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L305'>pprint</a>(parameter_s)</tt>	Toggle pretty printing on/off.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L313'>colors</a>(parameter_s)</tt>	Switch color scheme for prompts info system and exception handlers.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L362'>xmode</a>(parameter_s)</tt>	Switch modes for the exception handlers.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L382'>quickref</a>(arg)</tt>	Show a quick reference sheet.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L389'>doctest_mode</a>(parameter_s)</tt>	Toggle doctest mode on and off.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L468'>gui</a>(parameter_s)</tt>	Enable or disable ipython gui event loop integration.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L503'>precision</a>(s)</tt>	Set floating point precision for pretty printing.
+<tt style='background-color:#E8E8E8;'> core.magics.BasicMagics <a href=' /core/magics/basic.py#L549'>notebook</a>(s)</tt>	Export and convert ipython notebooks.
+<tt style='background-color:#E8E8E8;'> core.magics.PylabMagics <a href=' /core/magics/pylab.py#L42'>matplotlib</a>(line)</tt>	Set up matplotlib to work interactively.
+<tt style='background-color:#E8E8E8;'> core.magics.PylabMagics <a href=' /core/magics/pylab.py#L103'>pylab</a>(line)</tt>	Load numpy and matplotlib to work interactively.
+<tt style='background-color:#E8E8E8;'> core.magics.PylabMagics <a href=' /core/magics/pylab.py#L164'>_show_matplotlib_backend</a>(gui,backend)</tt>	Show matplotlib message backend message.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L50'>alias</a>(parameter_s)</tt>	Define an alias for a system command.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L129'>unalias</a>(parameter_s)</tt>	Remove an alias.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L146'>rehashx</a>(parameter_s)</tt>	Update the alias table with all executable files in $path.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L232'>pwd</a>(parameter_s)</tt>	Return the current working directory path.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L246'>cd</a>(parameter_s)</tt>	Change the current working directory.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L375'>env</a>(parameter_s)</tt>	Get set or list environment variables.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L401'>set_env</a>(parameter_s)</tt>	Set environment variables assumptions are that either "val" is a.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L431'>pushd</a>(parameter_s)</tt>	Place the current dir on stack and change directory.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L447'>popd</a>(parameter_s)</tt>	Change to directory popped off the top of the stack.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L457'>dirs</a>(parameter_s)</tt>	Return the current directory stack.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L463'>dhist</a>(parameter_s)</tt>	Print your history of visited directories.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L501'>sc</a>(parameter_s)</tt>	Shell capture - run shell command and capture output (deprecated use !).
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L617'>sx</a>(line,cell)</tt>	Shell execute - run shell command and capture output (!! is short-hand).
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L674'>bookmark</a>(parameter_s)</tt>	Manage ipython's bookmark system.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L734'>pycat</a>(parameter_s)</tt>	Show a syntax-highlighted file through a pager.
+<tt style='background-color:#E8E8E8;'> core.magics.OSMagics <a href=' /core/magics/osm.py#L761'>writefile</a>(line,cell)</tt>	Write the contents of the cell to a file.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L42'>pinfo</a>(parameter_s,namespaces)</tt>	Provide detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L63'>pinfo2</a>(parameter_s,namespaces)</tt>	Provide extra detailed information about an object.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L71'>pdef</a>(parameter_s,namespaces)</tt>	Print the call signature for any callable object.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L87'>pdoc</a>(parameter_s,namespaces)</tt>	Print the docstring for an object.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L95'>psource</a>(parameter_s,namespaces)</tt>	Print or run through pager the source code for an object.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L102'>pfile</a>(parameter_s,namespaces)</tt>	Print or run through pager the file where an object is defined.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L126'>psearch</a>(parameter_s)</tt>	Search for object in namespaces by wildcard.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L241'>who_ls</a>(parameter_s)</tt>	Return a sorted list of all interactive variables.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L283'>who</a>(parameter_s)</tt>	Print all interactive variables with some minimal formatting.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L347'>whos</a>(parameter_s)</tt>	Like %who but gives some extra information about each variable.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L474'>reset</a>(parameter_s)</tt>	Resets the namespace by removing all names defined by the user if called without arguments or by removing some types of objects such.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L600'>reset_selective</a>(parameter_s)</tt>	Resets the namespace by removing names defined by the user.
+<tt style='background-color:#E8E8E8;'> core.magics.NamespaceMagics <a href=' /core/magics/namespace.py#L688'>xdel</a>(parameter_s)</tt>	Delete a variable trying to clear it from anywhere that ipython's machinery has references to it.
+<tt style='background-color:#E8E8E8;'> core.magics.TimeitTemplateFiller <a href=' /core/magics/execution.py#L103'>visit_FunctionDef</a>(node)</tt>	Fill in the setup statement.
+<tt style='background-color:#E8E8E8;'> core.magics.TimeitTemplateFiller <a href=' /core/magics/execution.py#L111'>visit_For</a>(node)</tt>	Fill in the statement to be timed.
+<tt style='background-color:#E8E8E8;'> core.magics.Timer <a href=' /core/magics/execution.py#L125'>timeit</a>(number)</tt>	Time 'number' executions of the main statement.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L165'>prun</a>(parameter_s,cell)</tt>	Run a statement through the python code profiler.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L283'>_run_with_profiler</a>(code,opts,namespace)</tt>	Run code with profiler used by %prun and %run -p.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L356'>pdb</a>(parameter_s)</tt>	Control the automatic calling of the pdb interactive debugger.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L391'>debug</a>(line,cell)</tt>	Activate the interactive debugger.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L446'>tb</a>(s)</tt>	Print the last traceback with the currently active exception mode.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L453'>run</a>(parameter_s,runner,file_finder)</tt>	Run the named file inside ipython as a program.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L779'>_run_with_debugger</a>(code,code_ns,filename,bp_line)</tt>	Run code in debugger with a break point.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L869'>_run_with_timing</a>(run,nruns)</tt>	Run function run and print timing information.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L908'>timeit</a>(line,cell)</tt>	Time execution of a python statement or expression usage in line mode.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L1082'>time</a>(line,cell,local_ns)</tt>	Time execution of a python statement or expression.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L1205'>macro</a>(parameter_s)</tt>	Define a macro for future re-execution it accepts ranges of history.
+<tt style='background-color:#E8E8E8;'> core.magics.ExecutionMagics <a href=' /core/magics/execution.py#L1290'>capture</a>(line,cell)</tt>	Run the cell capturing stdout stderr and ipython's rich display() calls.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/execution.py#L1324'>parse_breakpoint</a>(text,current_file)</tt>	Returns file line for file line and (current_file line) for line.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/execution.py#L1332'>_format_time</a>(timespan,precision)</tt>	Formats the timespan in a human readable form.
+<tt style='background-color:#E8E8E8;'> core.magics.AutoMagics <a href=' /core/magics/auto.py#L35'>automagic</a>(parameter_s)</tt>	Make magic functions callable without having to type the initial %.
+<tt style='background-color:#E8E8E8;'> core.magics.AutoMagics <a href=' /core/magics/auto.py#L64'>autocall</a>(parameter_s)</tt>	Make functions callable without having to type parentheses.
+<tt style='background-color:#E8E8E8;'> core.magics.LoggingMagics <a href=' /core/magics/logging.py#L32'>logstart</a>(parameter_s)</tt>	Start logging anywhere in a session.
+<tt style='background-color:#E8E8E8;'> core.magics.LoggingMagics <a href=' /core/magics/logging.py#L153'>logstop</a>(parameter_s)</tt>	Fully stop logging and close log file.
+<tt style='background-color:#E8E8E8;'> core.magics.LoggingMagics <a href=' /core/magics/logging.py#L162'>logoff</a>(parameter_s)</tt>	Temporarily stop logging.
+<tt style='background-color:#E8E8E8;'> core.magics.LoggingMagics <a href=' /core/magics/logging.py#L180'>logstate</a>(parameter_s)</tt>	Print the status of the logging system.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/code.py#L57'>extract_code_ranges</a>(ranges_str)</tt>	Turn a string of range for %%load into 2-tuples of start stop ready to use as a slice of the content splitted by lines.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/code.py#L86'>extract_symbols</a>(code,symbols)</tt>	Return a tuple (blocks not_found) where blocks is a list of code fragments.
+<tt style='background-color:#E8E8E8;'> core.magics. <a href=' /core/magics/code.py#L141'>strip_initial_indent</a>(lines)</tt>	For %load strip indent from lines until finding an unindented line.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L186'>save</a>(parameter_s)</tt>	Save a set of lines or a macro to a given filename.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L251'>pastebin</a>(parameter_s)</tt>	Upload code to github's gist paste bin returning the url.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L294'>loadpy</a>(arg_s)</tt>	Alias of %load %loadpy has gained some flexibility and dropped the requirement of a.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L304'>load</a>(arg_s)</tt>	Load code into the current frontend.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L396'>_find_edit_target</a>(shell,args,opts,last_call)</tt>	Utility method used by magic_edit to find what to edit.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L526'>_edit_macro</a>(mname,macro)</tt>	Open an editor with the macro data in a file.
+<tt style='background-color:#E8E8E8;'> core.magics.CodeMagics <a href=' /core/magics/code.py#L536'>edit</a>(parameter_s,last_call)</tt>	Bring up an editor and execute the resulting code.
+<tt style='background-color:#E8E8E8;'> core.magics.ConfigMagics <a href=' /core/magics/config.py#L37'>config</a>(s)</tt>	Configure ipython %config class[.
+<tt style='background-color:#E8E8E8;'> core.magics.ExtensionMagics <a href=' /core/magics/extension.py#L32'>load_ext</a>(module_str)</tt>	Load an ipython extension by its module name.
+<tt style='background-color:#E8E8E8;'> core.magics.ExtensionMagics <a href=' /core/magics/extension.py#L45'>unload_ext</a>(module_str)</tt>	Unload an ipython extension by its module name.
+<tt style='background-color:#E8E8E8;'> core.magics.ExtensionMagics <a href=' /core/magics/extension.py#L62'>reload_ext</a>(module_str)</tt>	Reload an ipython extension by its module name.
+<tt style='background-color:#E8E8E8;'> core.magics.DisplayMagics <a href=' /core/magics/display.py#L33'>js</a>(line,cell)</tt>	Run the cell block of javascript code.
+<tt style='background-color:#E8E8E8;'> core.magics.DisplayMagics <a href=' /core/magics/display.py#L41'>javascript</a>(line,cell)</tt>	Run the cell block of javascript code.
+<tt style='background-color:#E8E8E8;'> core.magics.DisplayMagics <a href=' /core/magics/display.py#L47'>latex</a>(line,cell)</tt>	Render the cell as a block of latex the subset of latex which is support depends on the implementation in.
+<tt style='background-color:#E8E8E8;'> core.magics.DisplayMagics <a href=' /core/magics/display.py#L57'>svg</a>(line,cell)</tt>	Render the cell as an svg literal.
+<tt style='background-color:#E8E8E8;'> core.magics.DisplayMagics <a href=' /core/magics/display.py#L62'>html</a>(line,cell)</tt>	Render the cell as a block of html.
+<tt style='background-color:#E8E8E8;'> core.magics.HistoryMagics <a href=' /core/magics/history.py#L41'>history</a>(parameter_s)</tt>	Print input history (_i<n> variables), with most recent last.
+<tt style='background-color:#E8E8E8;'> core.magics.HistoryMagics <a href=' /core/magics/history.py#L223'>recall</a>(arg)</tt>	Repeat a command or get command to input line for editing.
+<tt style='background-color:#E8E8E8;'> core.magics.HistoryMagics <a href=' /core/magics/history.py#L281'>rerun</a>(parameter_s)</tt>	Re-run previous input by default you can specify ranges of input history to be repeated.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_for_kernel.py#L68'>get_options</a>()</tt>	Return a list of acceptable qt apis in decreasing order of.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L62'>commit_api</a>(api)</tt>	Commit to a particular api and trigger importerrors on subsequent.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L84'>loaded_api</a>()</tt>	Return which api is loaded if any if this returns anything besides none.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L108'>has_binding</a>(api)</tt>	Safely check for pyqt4/5 pyside or pyside2 without importing submodules supports python <= 3.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L147'>has_binding_new</a>(api)</tt>	Safely check for pyqt4/5 pyside or pyside2 without importing submodules supports python >= 3.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L190'>qtapi_version</a>()</tt>	Return which qstring api has been set if any.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L207'>can_import</a>(api)</tt>	Safely query whether an api is importable without importing it.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L219'>import_pyqt4</a>(version)</tt>	Import pyqt4 parameters.
+<tt style='background-color:#E8E8E8;'> external. <a href=' /external/qt_loaders.py#L305'>load_qt</a>(api_options)</tt>	Attempt to import qt given a preference list of permissible bindings.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_decorators.py#L31'>slow</a>(t)</tt>	Label a test as 'slow'.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_decorators.py#L66'>setastest</a>(tf)</tt>	Signals to nose that this function is or is not a test.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_decorators.py#L99'>skipif</a>(skip_condition,msg)</tt>	Make function raise skiptest exception if a given condition is true.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_decorators.py#L175'>knownfailureif</a>(fail_condition,msg)</tt>	Make function raise knownfailuretest exception if given condition is true.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_decorators.py#L227'>deprecated</a>(conditional)</tt>	Filter deprecation warnings while running the test suite.
+<tt style='background-color:#E8E8E8;'> external.decorators. <a href=' /external/decorators/_numpy_testing_utils.py#L94'>assert_warns</a>(warning_class,func)</tt>	Fail unless a warning of class warning_class is thrown by callable when invoked with arguments args and keyword arguments kwargs.
+<tt style='background-color:#E8E8E8;'> utils.NamedFileInTemporaryDirectory <a href=' /utils/tempdir.py#L100'>__init__</a>(filename,mode,bufsize)</tt>	Open a file named filename in a temporary directory.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_posix.py#L35'>_find_cmd</a>(cmd)</tt>	Find the full path to a command using which.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_win32.py#L94'>_system_body</a>(p)</tt>	Callback for _system.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_win32_controller.py#L550'>system</a>(cmd)</tt>	Win32 version of os system() that works with network shares.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L114'>getoutput</a>(cmd)</tt>	Run a command and return its stdout/stderr as a string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_cli.py#L65'>check_pid</a>(pid)</tt>	Check if a process with the given pid pid exists.
+<tt style='background-color:#E8E8E8;'> utils.CapturedIO <a href=' /utils/capture.py#L86'>stdout</a>()</tt>	Captured standard output.
+<tt style='background-color:#E8E8E8;'> utils.CapturedIO <a href=' /utils/capture.py#L93'>stderr</a>()</tt>	Captured standard error.
+<tt style='background-color:#E8E8E8;'> utils.CapturedIO <a href=' /utils/capture.py#L100'>outputs</a>()</tt>	A list of the captured rich display outputs if any.
+<tt style='background-color:#E8E8E8;'> utils.CapturedIO <a href=' /utils/capture.py#L113'>show</a>()</tt>	Write my output to sys stdout/err as appropriate.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L28'>_writable_dir</a>(path)</tt>	Whether path is a directory to which the user has write access.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L64'>get_long_path_name</a>(path)</tt>	Expand a path into its long form.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L73'>unquote_filename</a>(name,win32)</tt>	On windows remove leading and trailing quotes from filenames.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L87'>compress_user</a>(path)</tt>	Reverse of :func os path expanduser.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L96'>get_py_filename</a>(name,force_win32)</tt>	Return a valid python filename in the current directory.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L116'>filefind</a>(filename,path_dirs)</tt>	Find a file by looking through a sequence of paths.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L174'>get_home_dir</a>(require_writable)</tt>	Return the 'home' directory as a unicode string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L220'>get_xdg_dir</a>()</tt>	Return the xdg_config_home if it is defined and exists else none.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L238'>get_xdg_cache_dir</a>()</tt>	Return the xdg_cache_home if it is defined and exists else none.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L286'>expand_path</a>(s)</tt>	Expand $vars and ~names in a string like a shell :examples.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L309'>unescape_glob</a>(string)</tt>	Unescape glob pattern in string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L318'>shellglob</a>(args)</tt>	Do glob expansion for each element in args and return a flattened list.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L334'>target_outdated</a>(target,deps)</tt>	Determine whether a target is out of date.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L358'>target_update</a>(target,deps,cmd)</tt>	Update a target with a given command given a list of dependencies.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L369'>filehash</a>(path)</tt>	Make an md5 hash of a file ignoring any differences in line ending characters.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L379'>link</a>(src,dst)</tt>	Hard links src to dst, returning 0 or errno.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L396'>link_or_copy</a>(src,dst)</tt>	Attempts to hardlink src to dst, copying if the link fails.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/path.py#L432'>ensure_dir_exists</a>(path,mode)</tt>	Ensure that a directory exists if it doesn't exist try to create it and protect against a race condition.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/generics.py#L11'>inspect_object</a>(obj)</tt>	Called when you do obj?.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/generics.py#L17'>complete_object</a>(obj,prev_completions)</tt>	Custom completer dispatching for python objects.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/data.py#L14'>uniq_stable</a>(elems)</tt>	Uniq_stable elems -> list return from an iterable a list of all the unique elements in the input.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/data.py#L27'>flatten</a>(seq)</tt>	Flatten a list of lists not recursive only works for 2d lists.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/data.py#L33'>chop</a>(seq,size)</tt>	Chop a sequence into chunks of the given size.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/openpy.py#L125'>source_to_unicode</a>(txt,errors,skip_encoding_cookie)</tt>	Converts a bytes string with python source code to unicode.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/openpy.py#L151'>strip_encoding_cookie</a>(filelike)</tt>	Generator to pull lines from a text-mode file skipping the encoding cookie if it is found in the first two lines.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/openpy.py#L169'>read_py_file</a>(filename,skip_encoding_cookie)</tt>	Read a python file using the encoding declared inside the file.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/openpy.py#L191'>read_py_url</a>(url,errors,skip_encoding_cookie)</tt>	Read a python file from a url using the encoding declared inside the file.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/openpy.py#L219'>_list_readline</a>(x)</tt>	Given a list returns a readline() function that returns the next element with each call.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/warn.py#L16'>warn</a>(msg,level,exit_val)</tt>	Deprecated standard warning printer.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/warn.py#L44'>info</a>(msg)</tt>	Deprecated equivalent to warn(msg level=1).
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/warn.py#L52'>error</a>(msg)</tt>	Deprecated equivalent to warn(msg level=3).
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/warn.py#L60'>fatal</a>(msg,exit_val)</tt>	Deprecated equivalent to warn(msg exit_val=exit_val level=4).
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/terminal.py#L47'>toggle_set_term_title</a>(val)</tt>	Control whether set_term_title is active or not.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/terminal.py#L71'>_set_term_title_xterm</a>(title)</tt>	Change virtual terminal title in xterm-workalikes.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/terminal.py#L106'>set_term_title</a>(title)</tt>	Set terminal title using the necessary platform-dependent calls.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/timing.py#L72'>timings_out</a>(reps,func)</tt>	Timings_out(reps func *args **kw) -> (t_total t_per_call output) execute a function reps times return a tuple with the elapsed total.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/timing.py#L101'>timings</a>(reps,func)</tt>	Timings(reps func *args **kw) -> (t_total t_per_call) execute a function reps times return a tuple with the elapsed total cpu.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/timing.py#L111'>timing</a>(func)</tt>	Timing(func *args **kw) -> t_total execute a function once return the elapsed total cpu time in.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/coloransi.py#L48'>make_color_table</a>(in_class)</tt>	Build a set of color attributes in a class.
+<tt style='background-color:#E8E8E8;'> utils.ColorScheme <a href=' /utils/coloransi.py#L120'>copy</a>(name)</tt>	Return a full copy of the object optionally renaming it.
+<tt style='background-color:#E8E8E8;'> utils.ColorSchemeTable <a href=' /utils/coloransi.py#L135'>__init__</a>(scheme_list,default_scheme)</tt>	Create a table of color schemes.
+<tt style='background-color:#E8E8E8;'> utils.ColorSchemeTable <a href=' /utils/coloransi.py#L154'>copy</a>()</tt>	Return full copy of object.
+<tt style='background-color:#E8E8E8;'> utils.ColorSchemeTable <a href=' /utils/coloransi.py#L158'>add_scheme</a>(new_scheme)</tt>	Add a new color scheme to the table.
+<tt style='background-color:#E8E8E8;'> utils.ColorSchemeTable <a href=' /utils/coloransi.py#L164'>set_active_scheme</a>(scheme,case_sensitive)</tt>	Set the currently active scheme.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/encoding.py#L21'>get_stream_enc</a>(stream,default)</tt>	Return the given stream's encoding or a default.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/encoding.py#L38'>getdefaultencoding</a>(prefer_stream)</tt>	Return ipython's guess for the default encoding for bytes as text.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L28'>read_no_interrupt</a>(p)</tt>	Read from a pipe ignoring eintr errors.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L43'>process_handler</a>(cmd,callback,stderr)</tt>	Open a command in a shell subprocess and execute a callback.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L136'>getoutputerror</a>(cmd)</tt>	Return standard output standard error of executing cmd in a shell.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L153'>get_output_error_code</a>(cmd)</tt>	Return standard output standard error return code of executing cmd in a shell.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_process_common.py#L177'>arg_split</a>(s,posix,strict)</tt>	Split a command line's arguments in a shell-like manner.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/importstring.py#L10'>import_item</a>(name)</tt>	Import and return bar given the string foo bar.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py2.py#L258'>untokenize</a>(tokens)</tt>	Convert tokens an iterable back into python source code return.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py3.py#L292'>_get_normal_name</a>(orig_enc)</tt>	Imitates get_normal_name in tokenizer c.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py3.py#L303'>detect_encoding</a>(readline)</tt>	The detect_encoding() function is used to detect the encoding that should be used to decode a python source file.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py3.py#L378'>open</a>(filename)</tt>	Open a file in read only mode using the encoding detected by detect_encoding().
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py2.py#L168'>tokenize</a>(readline)</tt>	The tokenize() generator requires one argment readline which must be a callable object which provides the same interface as the.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py2.py#L168'>tokenize</a>(readline,tokeneater)</tt>	The tokenize() function accepts two parameters one representing the input stream and one providing an output mechanism for tokenize().
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_tokenize_py2.py#L258'>untokenize</a>(iterable)</tt>	Transform tokens back into python source code.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/tokenutil.py#L17'>generate_tokens</a>(readline)</tt>	Wrap generate_tokens to catch eof errors.
+<tt style='background-color:#E8E8E8;'> utils.StrDispatch <a href=' /utils/strdispatch.py#L28'>add_s</a>(s,obj,priority)</tt>	Adds a target 'string' for dispatching.
+<tt style='background-color:#E8E8E8;'> utils.StrDispatch <a href=' /utils/strdispatch.py#L35'>add_re</a>(regex,obj,priority)</tt>	Adds a target regexp for dispatching.
+<tt style='background-color:#E8E8E8;'> utils.StrDispatch <a href=' /utils/strdispatch.py#L42'>dispatch</a>(key)</tt>	Get a seq of commandchain objects that match key.
+<tt style='background-color:#E8E8E8;'> utils.StrDispatch <a href=' /utils/strdispatch.py#L63'>flat_matches</a>(key)</tt>	Yield all 'value' targets without priority.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/decorators.py#L24'>flag_calls</a>(func)</tt>	Wrap a function to detect and flag when it gets called.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/decorators.py#L51'>undoc</a>(func)</tt>	Mark a function or class as undocumented.
+<tt style='background-color:#E8E8E8;'> utils.Parser <a href=' /utils/PyColorize.py#L192'>__init__</a>(color_table,out,parent,style)</tt>	Create a parser with a specified color table and output channel.
+<tt style='background-color:#E8E8E8;'> utils.Parser <a href=' /utils/PyColorize.py#L206'>format2</a>(raw,out,scheme)</tt>	Parse and send the colored source.
+<tt style='background-color:#E8E8E8;'> utils.Parser <a href=' /utils/PyColorize.py#L280'>__call__</a>(toktype,toktext,start_pos,end_pos)</tt>	Token handler with syntax highlighting.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/PyColorize.py#L322'>main</a>(argv)</tt>	Run as a command-line script colorize a python file or stdin using ansi color escapes and print to stdout.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/process.py#L55'>is_cmd_found</a>(cmd)</tt>	Check whether executable cmd exists or not and return a bool.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/process.py#L64'>pycmd2argv</a>(cmd)</tt>	Take the path of a python command and return a list argv-style.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/process.py#L90'>abbrev_cwd</a>()</tt>	Return abbreviated version of cwd e g d mydir.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/py3compat.py#L35'>buffer_to_bytes</a>(buf)</tt>	Cast a buffer object to bytes.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/py3compat.py#L61'>safe_unicode</a>(e)</tt>	Unicode e with various fallbacks used for exceptions which may not be.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/py3compat.py#L83'>_shutil_which</a>(cmd,mode,path)</tt>	Given a command mode and a path string return the path which conforms to the given mode on the path or none if there is no such.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/py3compat.py#L299'>annotate</a>()</tt>	Python 3 compatible function annotation for python 2.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/py3compat.py#L334'>with_metaclass</a>(meta)</tt>	Create a base class with a metaclass.
+<tt style='background-color:#E8E8E8;'> utils.ShimImporter <a href=' /utils/shimmodule.py#L24'>_mirror_name</a>(fullname)</tt>	Get the name of the mirrored module.
+<tt style='background-color:#E8E8E8;'> utils.ShimImporter <a href=' /utils/shimmodule.py#L29'>find_module</a>(fullname,path)</tt>	Return self if we should be used to import the module.
+<tt style='background-color:#E8E8E8;'> utils.ShimImporter <a href=' /utils/shimmodule.py#L43'>load_module</a>(fullname)</tt>	Import the mirrored module and insert it into sys modules.
+<tt style='background-color:#E8E8E8;'> utils.ShimModule <a href=' /utils/shimmodule.py#L69'>__spec__</a>()</tt>	Don't produce __spec__ until requested.
+<tt style='background-color:#E8E8E8;'> utils.ShimModule <a href=' /utils/shimmodule.py#L77'>__all__</a>()</tt>	Ensure __all__ is always defined.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L221'>__init__</a>(cmd,mergeout)</tt>	Initializes the shell command controller.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L396'>run</a>(stdout_func,stdin_func,stderr_func)</tt>	Runs the process using the provided functions for i/o.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L447'>_stdin_raw_nonblock</a>()</tt>	Use the raw win32 handle of sys stdin to do non-blocking reads.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L478'>_stdin_raw_block</a>()</tt>	Use a blocking stdin read.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L495'>_stdout_raw</a>(s)</tt>	Writes the string to stdout.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L500'>_stderr_raw</a>(s)</tt>	Writes the string to stdout.
+<tt style='background-color:#E8E8E8;'> utils.Win32ShellCommandController <a href=' /utils/_process_win32_controller.py#L505'>_run_stdio</a>()</tt>	Runs the process using the system standard i/o.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/module_paths.py#L48'>find_module</a>(name,path)</tt>	Imp find_module variant that only return path of module.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/module_paths.py#L82'>get_init</a>(dirname)</tt>	Get __init__ file path for module directory.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/module_paths.py#L102'>find_mod</a>(module_name)</tt>	Find module module_name on sys path.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/version.py#L25'>check_version</a>(v,check)</tt>	Check version string v >= check if dev/prerelease tags result in typeerror for string-number comparison.
+<tt style='background-color:#E8E8E8;'> utils.SList <a href=' /utils/text.py#L138'>grep</a>(pattern,prune,field)</tt>	Return all strings matching 'pattern' a regex or callable this is case-insensitive.
+<tt style='background-color:#E8E8E8;'> utils.SList <a href=' /utils/text.py#L173'>fields</a>()</tt>	Collect whitespace-separated fields from string list allows quick awk-like usage of string lists.
+<tt style='background-color:#E8E8E8;'> utils.SList <a href=' /utils/text.py#L209'>sort</a>(field,nums)</tt>	Sort by specified fields (see fields()) example :.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L255'>indent</a>(instr,nspaces,ntabs,flatten)</tt>	Indent a string a given number of spaces or tabstops.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L294'>list_strings</a>(arg)</tt>	Always return a list of strings given a string or list of strings as input.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L316'>marquee</a>(txt,width,mark)</tt>	Return the input string centered in a 'marquee'.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L343'>num_ini_spaces</a>(strng)</tt>	Return the number of initial spaces in a string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L353'>format_screen</a>(strng)</tt>	Format a string for screen printing.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L363'>dedent</a>(text)</tt>	Equivalent of textwrap dedent that ignores unindented first line.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L390'>wrap_paragraphs</a>(text,ncols)</tt>	Wrap multiple paragraphs to fit a specified width.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L416'>long_substr</a>(data)</tt>	Return the longest common substring in a list of strings.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L432'>strip_email_quotes</a>(text)</tt>	Strip leading email quotation characters ('>').
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L479'>strip_ansi</a>(source)</tt>	Remove ansi escape codes from text.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L622'>_col_chunks</a>(l,max_rows,row_first)</tt>	Yield successive max_rows-sized column chunks from l.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L633'>_find_optimal</a>(rlist,row_first,separator_size,displaywidth)</tt>	Calculate optimal info to columnize a list of string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L648'>_get_or_default</a>(mylist,i,default)</tt>	Return list item number or default if don't exist.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L656'>compute_item_matrix</a>(items,row_first,empty)</tt>	Returns a nested list and info to columnize items parameters.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L721'>columnize</a>(items,row_first,separator,displaywidth)</tt>	Transform a list of strings into a single string with columns.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/text.py#L753'>get_text_list</a>(list_,last_sep,sep,wrap_item_with)</tt>	Return a string with a natural enumeration of items.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/frame.py#L25'>extract_vars</a>()</tt>	Extract a set of variables by name from another frame.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/frame.py#L59'>extract_vars_above</a>()</tt>	Extract a set of variables by name from another frame.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/frame.py#L73'>debugx</a>(expr,pre_msg)</tt>	Print the value of an expression from the caller's frame.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/frame.py#L92'>extract_module_locals</a>(depth)</tt>	Returns module locals of the function depth frames away from the caller.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/tokenutil.py#L26'>line_at_cursor</a>(cell,cursor_pos)</tt>	Return the line in a cell at a given cursor position used for calling line-based apis that don't support multi-line input yet.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/tokenutil.py#L56'>token_at_cursor</a>(cell,cursor_pos)</tt>	Get the token at a given cursor used for introspection.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/_signatures.py#L68'>signature</a>(obj)</tt>	Get a signature object for the passed callable.
+<tt style='background-color:#E8E8E8;'> utils.Parameter <a href=' /utils/_signatures.py#L286'>replace</a>(name,kind,annotation,default)</tt>	Creates a customized copy of the parameter.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L472'>__init__</a>(parameters,return_annotation,__validate_parameters__)</tt>	Constructs signature from the given list of parameter objects and 'return_annotation'.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L510'>from_function</a>(cls,func)</tt>	Constructs signature for the given python function.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L594'>replace</a>(parameters,return_annotation)</tt>	Creates a customized copy of the signature.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L646'>_bind</a>(args,kwargs,partial)</tt>	Private method don't use directly.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L774'>bind</a>()</tt>	Get a :class boundarguments object that maps the passed args and kwargs to the function's signature.
+<tt style='background-color:#E8E8E8;'> utils.Signature <a href=' /utils/_signatures.py#L781'>bind_partial</a>()</tt>	Get a :class boundarguments object that partially maps the passed args and kwargs to the function's signature.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L23'>create_typestr2type_dicts</a>(dont_include_in_type2typestr)</tt>	Return dictionaries mapping lower case typename (e g 'tuple') to type.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L39'>is_type</a>(obj,typestr_or_type)</tt>	Is_type(obj typestr_or_type) verifies if obj is of a certain type it.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L55'>show_hidden</a>(str,show_all)</tt>	Return true for strings starting with single _ if show_all is true.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L59'>dict_dir</a>(obj)</tt>	Produce a dictionary of an object's attributes builds on dir2 by.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L76'>filter_ns</a>(ns,name_pattern,type_pattern,ignore_case)</tt>	Filter a namespace dictionary by name pattern and item type.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/wildcard.py#L90'>list_namespace</a>(namespace,type_pattern,filter,ignore_case)</tt>	Return dictionary of all objects in a namespace dictionary that match type_pattern and filter.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L41'>__init__</a>()</tt>	Initialize with a dictionary another struct or data.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L66'>__setitem__</a>(key,value)</tt>	Set an item with check for allownew.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L90'>__setattr__</a>(key,value)</tt>	Set an attr with protection of class members.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L125'>__getattr__</a>(key)</tt>	Get an attr by calling :meth dict __getitem__.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L153'>__iadd__</a>(other)</tt>	S += s2 is a shorthand for s merge s2.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L168'>__add__</a>(other)</tt>	S + s2 -> new struct made from s merge s2.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L184'>__sub__</a>(other)</tt>	S1 - s2 -> remove keys in s2 from s1.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L200'>__isub__</a>(other)</tt>	Inplace remove keys from self that are in other.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L217'>__dict_invert</a>(data)</tt>	Helper function for merge.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L234'>copy</a>()</tt>	Return a copy as a struct.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L247'>hasattr</a>(key)</tt>	Hasattr function available as a method.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L265'>allow_new_attr</a>(allow)</tt>	Set whether new attributes can be created in this struct.
+<tt style='background-color:#E8E8E8;'> utils.Struct <a href=' /utils/ipstruct.py#L273'>merge</a>(__loc_data__,__conflict_solve)</tt>	Merge two structs with customizable conflict resolution.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L30'>pkg_commit_hash</a>(pkg_path)</tt>	Get short form of commit hash given directory pkg_path we get the commit hash from in order of preference :.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L68'>pkg_info</a>(pkg_path)</tt>	Return dict describing the context of this package parameters.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L95'>get_sys_info</a>()</tt>	Return useful information about ipython and the system as a dict.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L101'>sys_info</a>()</tt>	Return useful information about ipython and the system as a string.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L122'>_num_cpus_unix</a>()</tt>	Return the number of active cpus on a unix system.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L127'>_num_cpus_darwin</a>()</tt>	Return the number of active cpus on a darwin system.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L133'>_num_cpus_windows</a>()</tt>	Return the number of active cpus on a windows system.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/sysinfo.py#L138'>num_cpus</a>()</tt>	Return the effective number of cpus in the system as an integer.
+<tt style='background-color:#E8E8E8;'> utils.Tee <a href=' /utils/io.py#L112'>__init__</a>(file_or_name,mode,channel)</tt>	Construct a new tee object.
+<tt style='background-color:#E8E8E8;'> utils.Tee <a href=' /utils/io.py#L137'>close</a>()</tt>	Close the file and restore the channel.
+<tt style='background-color:#E8E8E8;'> utils.Tee <a href=' /utils/io.py#L144'>write</a>(data)</tt>	Write data to both channels.
+<tt style='background-color:#E8E8E8;'> utils.Tee <a href=' /utils/io.py#L150'>flush</a>()</tt>	Flush both channels.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L160'>ask_yes_no</a>(prompt,default,interrupt)</tt>	Asks a question and returns a boolean (y/n) answer.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L193'>temp_pyfile</a>(src,ext)</tt>	Make a temporary python file return filename and filehandle.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L215'>atomic_writing</a>()</tt>	Deprecated moved to notebook services contents fileio.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L221'>raw_print</a>()</tt>	Raw print to sys __stdout__, otherwise identical interface to print().
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L229'>raw_print_err</a>()</tt>	Raw print to sys __stderr__, otherwise identical interface to print().
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/io.py#L242'>unicode_std_stream</a>(stream)</tt>	Deprecated moved to nbconvert utils io.
+<tt style='background-color:#E8E8E8;'> utils.ProcessHandler <a href=' /utils/_process_posix.py#L70'>__init__</a>(logfile,read_timeout,terminate_timeout)</tt>	Arguments are used for pexpect calls.
+<tt style='background-color:#E8E8E8;'> utils.ProcessHandler <a href=' /utils/_process_posix.py#L79'>getoutput</a>(cmd)</tt>	Run a command and return its stdout/stderr as a string.
+<tt style='background-color:#E8E8E8;'> utils.ProcessHandler <a href=' /utils/_process_posix.py#L100'>getoutput_pexpect</a>(cmd)</tt>	Run a command and return its stdout/stderr as a string.
+<tt style='background-color:#E8E8E8;'> utils.ProcessHandler <a href=' /utils/_process_posix.py#L121'>system</a>(cmd)</tt>	Execute a command in a subshell.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/tz.py#L38'>utc_aware</a>(unaware)</tt>	Decorator for adding utc tzinfo to datetime's utcfoo methods.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/dir2.py#L12'>safe_hasattr</a>(obj,attr)</tt>	In recent versions of python hasattr() only catches attributeerror.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/dir2.py#L23'>dir2</a>(obj)</tt>	Dir2 obj -> list of strings extended version of the python builtin dir(), which does a few extra.
+<tt style='background-color:#E8E8E8;'> utils. <a href=' /utils/dir2.py#L51'>get_real_method</a>(obj,name)</tt>	Like getattr but with a few extra sanity checks - if obj is a class ignore its methods.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalPdb <a href=' /terminal/debugger.py#L70'>cmdloop</a>(intro)</tt>	Repeatedly issue a prompt accept input parse an initial prefix off the received input and dispatch to action methods passing them.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/debugger.py#L106'>set_trace</a>(frame)</tt>	Start debugging from frame.
+<tt style='background-color:#E8E8E8;'> terminal.EmbeddedMagics <a href=' /terminal/embed.py#L30'>kill_embedded</a>(parameter_s)</tt>	%kill_embedded : deactivate for good the current embedded ipython this function after asking for confirmation sets an internal flag so.
+<tt style='background-color:#E8E8E8;'> terminal.EmbeddedMagics <a href=' /terminal/embed.py#L95'>exit_raise</a>(parameter_s)</tt>	%exit_raise make the current embedded kernel exit and raise and exception.
+<tt style='background-color:#E8E8E8;'> terminal.InteractiveShellEmbed <a href=' /terminal/embed.py#L132'>_disable_init_location</a>()</tt>	Disable the current instance creation location.
+<tt style='background-color:#E8E8E8;'> terminal.InteractiveShellEmbed <a href=' /terminal/embed.py#L166'>init_sys_modules</a>()</tt>	Explicitly overwrite :mod ipython core interactiveshell to do nothing.
+<tt style='background-color:#E8E8E8;'> terminal.InteractiveShellEmbed <a href=' /terminal/embed.py#L176'>__call__</a>(header,local_ns,module,dummy)</tt>	Activate the interactive interpreter.
+<tt style='background-color:#E8E8E8;'> terminal.InteractiveShellEmbed <a href=' /terminal/embed.py#L239'>mainloop</a>(local_ns,module,stack_depth,display_banner)</tt>	Embeds ipython into a running python program.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/embed.py#L336'>embed</a>()</tt>	Call this to embed ipython at the current point in your program.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalInteractiveShell <a href=' /terminal/interactiveshell.py#L269'>_make_style_from_name_or_cls</a>(name_or_cls)</tt>	Small wrapper that make an ipython compatible style from a style name we need that to add style for prompt.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalInteractiveShell <a href=' /terminal/interactiveshell.py#L333'>_layout_options</a>()</tt>	Return the current layout option for the current terminal interactiveshell.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalInteractiveShell <a href=' /terminal/interactiveshell.py#L353'>_update_layout</a>()</tt>	Ask for a re computation of the application layout if for example some configuration options have changed.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalInteractiveShell <a href=' /terminal/interactiveshell.py#L515'>auto_rewrite_input</a>(cmd)</tt>	Overridden from the parent class to use fancy rewriting prompt.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalInteractiveShell <a href=' /terminal/interactiveshell.py#L529'>switch_doctest_mode</a>(mode)</tt>	Switch prompts to classic for %doctest_mode.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/magics.py#L19'>get_pasted_lines</a>(sentinel,l_input,quiet)</tt>	Yield pasted lines until the user enters the given sentinel value.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalMagics <a href=' /terminal/magics.py#L46'>store_or_execute</a>(block,name)</tt>	Execute a block or store it in a variable per the user's request.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalMagics <a href=' /terminal/magics.py#L68'>rerun_pasted</a>(name)</tt>	Rerun a previously pasted command.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalMagics <a href=' /terminal/magics.py#L83'>autoindent</a>(parameter_s)</tt>	Toggle autoindent on/off deprecated.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalMagics <a href=' /terminal/magics.py#L91'>cpaste</a>(parameter_s)</tt>	Paste & execute a pre-formatted code block from clipboard.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalMagics <a href=' /terminal/magics.py#L145'>paste</a>(parameter_s)</tt>	Paste & execute a pre-formatted code block from clipboard.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/shortcuts.py#L18'>register_ipython_shortcuts</a>(registry,shell)</tt>	Set up the prompt_toolkit keyboard shortcuts for ipython.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/shortcuts.py#L115'>previous_history_or_previous_completion</a>(event)</tt>	Control-p in vi edit mode on readline is history next unlike default prompt toolkit.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/shortcuts.py#L124'>next_history_or_next_completion</a>(event)</tt>	Control-n in vi edit mode on readline is history previous unlike default prompt toolkit.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/shortcuts.py#L156'>force_exit</a>(event)</tt>	Force exit with a non-zero return value.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/shortcuts.py#L165'>newline_with_copy_margin</a>(event)</tt>	Preserve margin and cursor position when using.
+<tt style='background-color:#E8E8E8;'> terminal.IPAppCrashHandler <a href=' /terminal/ipapp.py#L74'>make_report</a>(traceback)</tt>	Return a string containing a crash report.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L188'>_classes_default</a>()</tt>	This has to be in a method for terminalipythonapp to be available.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L281'>parse_command_line</a>(argv)</tt>	Override to allow old '-pylab' flag with deprecation warning.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L297'>initialize</a>(argv)</tt>	Do actions after construct but before starting the app.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L317'>init_shell</a>()</tt>	Initialize the interactiveshell instance.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L328'>init_banner</a>()</tt>	Optionally display the banner.
+<tt style='background-color:#E8E8E8;'> terminal.TerminalIPythonApp <a href=' /terminal/ipapp.py#L335'>_pylab_changed</a>(name,old,new)</tt>	Replace --pylab='inline' with --pylab='auto'.
+<tt style='background-color:#E8E8E8;'> terminal. <a href=' /terminal/ipapp.py#L352'>load_default_config</a>(ipython_dir)</tt>	Load the default config file from the default ipython_dir.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L127'>inputhook</a>(inputhook_context)</tt>	Inputhook for tk.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L127'>inputhook</a>(context)</tt>	Inputhook for cocoa nsapp.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/__init__.py#L20'>register</a>(name,inputhook)</tt>	Register the function *inputhook* as an event loop integration.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L23'>_utf8</a>(s)</tt>	Ensure utf8 bytes.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L29'>n</a>(name)</tt>	Create a selector name for objc methods.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L33'>C</a>(classname)</tt>	Get an objc class by name.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L78'>_NSApp</a>()</tt>	Return the global nsapplication instance nsapp.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L83'>_wake</a>(NSApp)</tt>	Wake the application.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L103'>_input_callback</a>(fdref,flags,info)</tt>	Callback to fire when there's input to be read.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/osx.py#L116'>_stop_on_read</a>(fd)</tt>	Register callback to stop eventloop when there's data on fd.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/wx.py#L12'>inputhook_wx1</a>(context)</tt>	Run the wx event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/wx.py#L59'>inputhook_wx2</a>(context)</tt>	Run the wx event loop polling for stdin.
+<tt style='background-color:#E8E8E8;'> terminal.pt_inputhooks. <a href=' /terminal/pt_inputhooks/wx.py#L86'>inputhook_wx3</a>(context)</tt>	Run the wx event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookpyglet.py#L68'>inputhook_pyglet</a>()</tt>	Run the pyglet event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L49'>_stdin_ready_posix</a>()</tt>	Return true if there's something to read on stdin posix version.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L54'>_stdin_ready_nt</a>()</tt>	Return true if there's something to read on stdin nt version.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L58'>_stdin_ready_other</a>()</tt>	Return true assuming there's something to read on stdin.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L62'>_use_appnope</a>()</tt>	Should we use appnope for dealing with os x app nap? checks if we are on os x 10.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L69'>_ignore_CTRL_C_posix</a>()</tt>	Ignore ctrl+c sigint.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L73'>_allow_CTRL_C_posix</a>()</tt>	Take ctrl+c into account sigint.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L77'>_ignore_CTRL_C_other</a>()</tt>	Ignore ctrl+c not implemented.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhook.py#L81'>_allow_CTRL_C_other</a>()</tt>	Take ctrl+c into account not implemented.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L132'>get_pyos_inputhook</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L140'>get_pyos_inputhook_as_func</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L148'>set_inputhook</a>(callback)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L166'>clear_inputhook</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L188'>clear_app_refs</a>(gui)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L212'>register</a>(toolkitname)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L239'>current_gui</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L247'>enable_gui</a>(gui,app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.InputHookManager <a href=' /lib/inputhook.py#L295'>disable_gui</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.WxInputHook <a href=' /lib/inputhook.py#L338'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.WxInputHook <a href=' /lib/inputhook.py#L385'>disable</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.Qt4InputHook <a href=' /lib/inputhook.py#L400'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.Qt4InputHook <a href=' /lib/inputhook.py#L435'>disable_qt4</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.GtkInputHook <a href=' /lib/inputhook.py#L460'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.TkInputHook <a href=' /lib/inputhook.py#L491'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.GlutInputHook <a href=' /lib/inputhook.py#L524'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.GlutInputHook <a href=' /lib/inputhook.py#L578'>disable</a>()</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.PygletInputHook <a href=' /lib/inputhook.py#L598'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.Gtk3InputHook <a href=' /lib/inputhook.py#L626'>enable</a>(app)</tt>	Deprecated since ipython 5 0.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L204'>__init__</a>(src,title,arg_str,auto_all)</tt>	Make a new demo object to run the demo simply call the object.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L264'>fload</a>()</tt>	Load file object.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L276'>reload</a>()</tt>	Reload source from disk and initialize state.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L312'>reset</a>()</tt>	Reset the namespace and seek pointer to restart the demo.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L322'>_get_index</a>(index)</tt>	Get the current block index validating and checking status.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L336'>seek</a>(index)</tt>	Move the current seek pointer to the given block.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L347'>back</a>(num)</tt>	Move the seek pointer back num blocks default is 1.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L351'>jump</a>(num)</tt>	Jump a given number of blocks relative to the current one.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L357'>again</a>()</tt>	Move the seek pointer back one block and re-execute.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L362'>edit</a>(index)</tt>	Edit a block.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L392'>show</a>(index)</tt>	Show a single block on screen.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L404'>show_all</a>()</tt>	Show entire demo on screen block by block.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L422'>run_cell</a>(source)</tt>	Execute a string with one or more lines of code.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L427'>__call__</a>(index)</tt>	Run a block of the demo.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L481'>marquee</a>(txt,width,mark)</tt>	Return the input string centered in a 'marquee'.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L485'>pre_cmd</a>()</tt>	Method called before executing each block.
+<tt style='background-color:#E8E8E8;'> lib.Demo <a href=' /lib/demo.py#L489'>post_cmd</a>()</tt>	Method called after executing each block.
+<tt style='background-color:#E8E8E8;'> lib.IPythonDemo <a href=' /lib/demo.py#L507'>run_cell</a>(source)</tt>	Execute a string with one or more lines of code.
+<tt style='background-color:#E8E8E8;'> lib.LineDemo <a href=' /lib/demo.py#L526'>reload</a>()</tt>	Reload source from disk and initialize state.
+<tt style='background-color:#E8E8E8;'> lib.ClearMixin <a href=' /lib/demo.py#L567'>marquee</a>(txt,width,mark)</tt>	Blank marquee that returns '' no matter what the input.
+<tt style='background-color:#E8E8E8;'> lib.ClearMixin <a href=' /lib/demo.py#L571'>pre_cmd</a>()</tt>	Method called before executing each block.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/latextools.py#L62'>latex_to_png</a>(s,encode,backend,wrap)</tt>	Render a latex string to png.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/latextools.py#L151'>kpsewhich</a>(filename)</tt>	Invoke kpsewhich command with an argument filename.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/latextools.py#L164'>genelatex</a>(body,wrap)</tt>	Generate latex document for dvipng backend.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/latextools.py#L191'>latex_to_html</a>(s,alt)</tt>	Render latex to html with embedded png data using data uris.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookglut.py#L126'>inputhook_glut</a>()</tt>	Run the pyglet event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L107'>new</a>(func_or_exp)</tt>	Add a new background job and start it in a separate thread.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L203'>__call__</a>()</tt>	An alias to self status(),.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L211'>_update_status</a>()</tt>	Update the status of the job lists.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L244'>_group_report</a>(group,name)</tt>	Report summary for a given job group.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L256'>_group_flush</a>(group,name)</tt>	Flush a given job group return true if the group had any elements.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L268'>_status_new</a>()</tt>	Print the status of newly finished jobs.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L284'>status</a>(verbose)</tt>	Print a status of all jobs currently being managed.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L295'>remove</a>(num)</tt>	Remove a finished completed or dead job.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L312'>flush</a>()</tt>	Flush all finished jobs completed and dead from lists.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobManager <a href=' /lib/backgroundjobs.py#L332'>result</a>(num)</tt>	Result n -> return the result of job n.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobBase <a href=' /lib/backgroundjobs.py#L388'>_init</a>()</tt>	Common initialization for all backgroundjob objects.
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobExpr <a href=' /lib/backgroundjobs.py#L448'>__init__</a>(expression,glob,loc)</tt>	Create a new job from a string which can be fed to eval().
+<tt style='background-color:#E8E8E8;'> lib.BackgroundJobFunc <a href=' /lib/backgroundjobs.py#L471'>__init__</a>(func)</tt>	Create a new job from a callable object.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L56'>get_parent</a>(globals,level)</tt>	Parent name = get_parent globals level return the package that an import is being performed in.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L129'>load_next</a>(mod,altmod,name,buf)</tt>	Mod name buf = load_next mod altmod name buf.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L170'>import_submodule</a>(mod,subname,fullname)</tt>	M = import_submodule mod subname fullname.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L215'>add_submodule</a>(mod,submod,fullname,subname)</tt>	Mod {subname} = submod.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L227'>ensure_fromlist</a>(mod,fromlist,buf,recursive)</tt>	Handle 'from module import a b c' imports.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L248'>deep_import_hook</a>(name,globals,locals,fromlist)</tt>	Replacement for __import__().
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L272'>deep_reload_hook</a>(m)</tt>	Replacement for reload().
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L330'>reload</a>(module,exclude)</tt>	Recursively reload all modules used in the given module optionally.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/deepreload.py#L347'>_dreload</a>(module)</tt>	**deprecated** import reload explicitly from ipython.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L69'>get_app_wx</a>()</tt>	Create a new wx app or return an exiting one.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L79'>is_event_loop_running_wx</a>(app)</tt>	Is the wx event loop running.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L97'>start_event_loop_wx</a>(app)</tt>	Start the wx event loop in a consistent manner.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L112'>get_app_qt4</a>()</tt>	Create a new qt4 app or return an existing one.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L122'>is_event_loop_running_qt4</a>(app)</tt>	Is the qt4 event loop running.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/guisupport.py#L138'>start_event_loop_qt4</a>(app)</tt>	Start the qt4 event loop in a consistent manner.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookwx.py#L33'>inputhook_wx1</a>()</tt>	Run the wx event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookwx.py#L79'>inputhook_wx2</a>()</tt>	Run the wx event loop polling for stdin.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookwx.py#L105'>inputhook_wx3</a>()</tt>	Run the wx event loop by processing pending events only.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/lexers.py#L68'>build_ipy_lexer</a>(python3)</tt>	Builds ipython lexers depending on the value of python3.
+<tt style='background-color:#E8E8E8;'> lib.IPythonConsoleLexer <a href=' /lib/lexers.py#L247'>__init__</a>()</tt>	Initialize the ipython console lexer.
+<tt style='background-color:#E8E8E8;'> lib.IPythonConsoleLexer <a href=' /lib/lexers.py#L318'>buffered_tokens</a>()</tt>	Generator of unprocessed tokens after doing insertions and before changing to a new state.
+<tt style='background-color:#E8E8E8;'> lib.IPythonConsoleLexer <a href=' /lib/lexers.py#L340'>get_mci</a>(line)</tt>	Parses the line and returns a 3-tuple mode code insertion.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L101'>_safe_getattr</a>(obj,attr,default)</tt>	Safe version of getattr.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L122'>pretty</a>(obj,verbose,max_width,newline)</tt>	Pretty print the object's representation.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L133'>pprint</a>(obj,verbose,max_width,newline)</tt>	Like pretty but print to stdout.
+<tt style='background-color:#E8E8E8;'> lib._PrettyPrinterBase <a href=' /lib/pretty.py#L145'>indent</a>(indent)</tt>	With statement support for indenting/dedenting.
+<tt style='background-color:#E8E8E8;'> lib._PrettyPrinterBase <a href=' /lib/pretty.py#L154'>group</a>(indent,open,close)</tt>	Like begin_group / end_group but for the with statement.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L199'>text</a>(obj)</tt>	Add literal text to the output.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L214'>breakable</a>(sep)</tt>	Add a breakable separator to the output this does not mean that it.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L233'>break_</a>()</tt>	Explicitly insert a newline into the output maintaining correct indentation.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L244'>begin_group</a>(indent,open)</tt>	Begin a group if you want support for python < 2 5 which doesn't has.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L269'>_enumerate</a>(seq)</tt>	Like enumerate but with an upper limit on the number of items.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L279'>end_group</a>(dedent,close)</tt>	End a group see begin_group for more details.
+<tt style='background-color:#E8E8E8;'> lib.PrettyPrinter <a href=' /lib/pretty.py#L288'>flush</a>()</tt>	Flush data that is left in the buffer.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L296'>_get_mro</a>(obj_class)</tt>	Get a reasonable method resolution order of a class and its superclasses for both old-style and new-style classes.
+<tt style='background-color:#E8E8E8;'> lib.RepresentationPrinter <a href=' /lib/pretty.py#L347'>pretty</a>(obj)</tt>	Pretty print the given object.
+<tt style='background-color:#E8E8E8;'> lib.RepresentationPrinter <a href=' /lib/pretty.py#L388'>_in_deferred_types</a>(cls)</tt>	Check if the given class is specified in the deferred type registry.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L495'>_default_pprint</a>(obj,p,cycle)</tt>	The default print function used if an object does not provide one and.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L533'>_seq_pprinter_factory</a>(start,end,basetype)</tt>	Factory that returns a pprint function useful for sequences used by.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L560'>_set_pprinter_factory</a>(start,end,basetype)</tt>	Factory that returns a pprint function useful for sets and frozensets.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L595'>_dict_pprinter_factory</a>(start,end,basetype)</tt>	Factory that returns a pprint function used by the default pprint of dicts and dict proxies.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L629'>_super_pprint</a>(obj,p,cycle)</tt>	The pprint for the super type.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L643'>_re_pattern_pprint</a>(obj,p,cycle)</tt>	The pprint function for regular expression patterns.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L668'>_type_pprint</a>(obj,p,cycle)</tt>	The pprint for classes and types.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L698'>_repr_pprint</a>(obj,p,cycle)</tt>	A pprint that just redirects to the normal repr function.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L708'>_function_pprint</a>(obj,p,cycle)</tt>	Base pprint for all functions and builtin functions.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L717'>_exception_pprint</a>(obj,p,cycle)</tt>	Base pprint for all exceptions.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L786'>for_type</a>(typ,func)</tt>	Add a pretty printer for a given type.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/pretty.py#L796'>for_type_by_name</a>(type_module,type_name,func)</tt>	Add a pretty printer for a type specified by the module and name of a type rather than the type object itself.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/security.py#L28'>passwd</a>(passphrase,algorithm)</tt>	Generate hashed password and salt for use in notebook configuration.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/security.py#L73'>passwd_check</a>(hashed_passphrase,passphrase)</tt>	Verify that a given passphrase matches its hashed version.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/inputhookqt4.py#L38'>create_inputhook_qt4</a>(mgr,app)</tt>	Create an input hook for running the qt4 application event loop.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/clipboard.py#L12'>win32_clipboard_get</a>()</tt>	Get the current clipboard's text on windows.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/clipboard.py#L35'>osx_clipboard_get</a>()</tt>	Get the clipboard's text on os x.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/clipboard.py#L46'>tkinter_clipboard_get</a>()</tt>	Get the clipboard's text using tkinter.
+<tt style='background-color:#E8E8E8;'> lib.Audio <a href=' /lib/display.py#L101'>reload</a>()</tt>	Reload the raw data from file or url.
+<tt style='background-color:#E8E8E8;'> lib.Audio <a href=' /lib/display.py#L114'>_make_wav</a>(data,rate)</tt>	Transform a numpy array to a pcm bytestring.
+<tt style='background-color:#E8E8E8;'> lib.Audio <a href=' /lib/display.py#L162'>_data_and_metadata</a>()</tt>	Shortcut for returning metadata with url information if defined.
+<tt style='background-color:#E8E8E8;'> lib.IFrame <a href=' /lib/display.py#L219'>_repr_html_</a>()</tt>	Return the embed iframe.
+<tt style='background-color:#E8E8E8;'> lib.FileLink <a href=' /lib/display.py#L349'>_repr_html_</a>()</tt>	Return html link to file.
+<tt style='background-color:#E8E8E8;'> lib.FileLink <a href=' /lib/display.py#L360'>__repr__</a>()</tt>	Return absolute path to file.
+<tt style='background-color:#E8E8E8;'> lib.FileLinks <a href=' /lib/display.py#L378'>__init__</a>(path,url_prefix,included_suffixes,result_html_prefix)</tt>	See :class filelink for the path, url_prefix, result_html_prefix and result_html_suffix parameters.
+<tt style='background-color:#E8E8E8;'> lib.FileLinks <a href=' /lib/display.py#L443'>_get_display_formatter</a>(dirname_output_format,fname_output_format,fp_format,fp_cleaner)</tt>	Generate built-in formatter function.
+<tt style='background-color:#E8E8E8;'> lib.FileLinks <a href=' /lib/display.py#L499'>_get_notebook_display_formatter</a>(spacer)</tt>	Generate function to use for notebook formatting.
+<tt style='background-color:#E8E8E8;'> lib.FileLinks <a href=' /lib/display.py#L524'>_get_terminal_display_formatter</a>(spacer)</tt>	Generate function to use for terminal formatting.
+<tt style='background-color:#E8E8E8;'> lib.FileLinks <a href=' /lib/display.py#L547'>__repr__</a>()</tt>	Return newline-separated absolute paths.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L20'>install_editor</a>(template,wait)</tt>	Installs the editor that is called by ipython for the %edit magic.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L68'>komodo</a>(exe)</tt>	Activestate komodo [edit].
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L73'>scite</a>(exe)</tt>	Scite or sc1.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L78'>notepadplusplus</a>(exe)</tt>	Notepad++ http //notepad-plus sourceforge net.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L83'>jed</a>(exe)</tt>	Jed the lightweight emacsish editor.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L88'>idle</a>(exe)</tt>	Idle the editor bundled with python parameters.
+<tt style='background-color:#E8E8E8;'> lib. <a href=' /lib/editorhooks.py#L105'>mate</a>(exe)</tt>	Textmate the missing editor.
+<tt style='background-color:#E8E8E8;'> sphinxext. <a href=' /sphinxext/custom_doctests.py#L51'>str_to_array</a>(s)</tt>	Simplistic converter of strings from repr to float numpy arrays.
+<tt style='background-color:#E8E8E8;'> sphinxext. <a href=' /sphinxext/custom_doctests.py#L85'>float_doctest</a>(sphinx_shell,args,input_lines,found)</tt>	Doctest which allow the submitted output to vary slightly from the input.
+<tt style='background-color:#E8E8E8;'> sphinxext. <a href=' /sphinxext/ipython_directive.py#L166'>block_parser</a>(part,rgxin,rgxout,fmtin)</tt>	Part is a string of ipython text comprised of at most one input one output comments and blank lines.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L341'>process_input_line</a>(line,store_history)</tt>	Process the input capturing stdout.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L356'>process_image</a>(decorator)</tt>	# build out an image directive like #.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L386'>process_input</a>(data,input_prompt,lineno)</tt>	Process data block for input token.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L541'>process_output</a>(data,output_prompt,input_lines,output)</tt>	Process data block for output token.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L621'>process_comment</a>(data)</tt>	Process data fpblock for comment token.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L626'>save_image</a>(image_file)</tt>	Saves the image file to disk.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L640'>process_block</a>(block)</tt>	Process block from the block_parser and return a list of processed lines.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L710'>ensure_pyplot</a>()</tt>	Ensures that pyplot has been imported into the embedded ipython shell.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L736'>process_pure_python</a>(content)</tt>	Content is a list of strings it is unedited directive content.
+<tt style='background-color:#E8E8E8;'> sphinxext.EmbeddedSphinxShell <a href=' /sphinxext/ipython_directive.py#L814'>custom_doctest</a>(decorator,input_lines,found,submitted)</tt>	Perform a specialized doctest.
+<tt style='background-color:#E8E8E8;'> sphinxext. <a href=' /sphinxext/ipython_console_highlighting.py#L9'>setup</a>(app)</tt>	Setup as a sphinx extension.
+<tt style='background-color:#E8E8E8;'> extensions.ModuleReloader <a href=' /extensions/autoreload.py#L151'>mark_module_skipped</a>(module_name)</tt>	Skip reloading the named module in the future.
+<tt style='background-color:#E8E8E8;'> extensions.ModuleReloader <a href=' /extensions/autoreload.py#L159'>mark_module_reloadable</a>(module_name)</tt>	Reload the named module in the future if it is imported.
+<tt style='background-color:#E8E8E8;'> extensions.ModuleReloader <a href=' /extensions/autoreload.py#L167'>aimport_module</a>(module_name)</tt>	Import a module and mark it reloadable.
+<tt style='background-color:#E8E8E8;'> extensions.ModuleReloader <a href=' /extensions/autoreload.py#L211'>check</a>(check_all,do_reload)</tt>	Check whether some modules need to be reloaded.
+<tt style='background-color:#E8E8E8;'> extensions. <a href=' /extensions/autoreload.py#L267'>update_function</a>(old,new)</tt>	Upgrade the code object of a function.
+<tt style='background-color:#E8E8E8;'> extensions. <a href=' /extensions/autoreload.py#L276'>update_class</a>(old,new)</tt>	Replace stuff in the __dict__ of a class and upgrade.
+<tt style='background-color:#E8E8E8;'> extensions. <a href=' /extensions/autoreload.py#L300'>update_property</a>(old,new)</tt>	Replace get/set/del functions of a property.
+<tt style='background-color:#E8E8E8;'> extensions. <a href=' /extensions/autoreload.py#L348'>superreload</a>(module,reload,old_objects)</tt>	Enhanced version of the builtin reload function.
+<tt style='background-color:#E8E8E8;'> extensions.AutoreloadMagics <a href=' /extensions/autoreload.py#L423'>autoreload</a>(parameter_s)</tt>	%autoreload => reload modules automatically %autoreload.
+<tt style='background-color:#E8E8E8;'> extensions.AutoreloadMagics <a href=' /extensions/autoreload.py#L479'>aimport</a>(parameter_s,stream)</tt>	%aimport => import modules for automatic reloading.
+<tt style='background-color:#E8E8E8;'> extensions.AutoreloadMagics <a href=' /extensions/autoreload.py#L519'>post_execute_hook</a>()</tt>	Cache the modification times of any modules imported in this execution.
+<tt style='background-color:#E8E8E8;'> extensions. <a href=' /extensions/rmagic.py#L9'>load_ipython_extension</a>(ip)</tt>	Load the extension in ipython.
+<tt style='background-color:#E8E8E8;'> extensions.StoreMagics <a href=' /extensions/storemagic.py#L76'>store</a>(parameter_s)</tt>	Lightweight persistence for python variables.

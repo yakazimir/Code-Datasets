@@ -1,0 +1,1969 @@
+core		str_cat	arr others sep na_rep	concatenate strings in the series/index with given separator
+core		str_count	arr pat flags	count occurrences of pattern in each string of the series/index
+core		str_contains	arr pat case flags	return boolean series/array whether given pattern/regex is contained in each string in the series/index
+core		str_startswith	arr pat na	return boolean series/array indicating whether each string in the series/index starts with passed pattern
+core		str_endswith	arr pat na	return boolean series indicating whether each string in the series/index ends with passed pattern
+core		str_replace	arr pat repl n	replace occurrences of pattern/regex in the series/index with some other string
+core		str_repeat	arr repeats	duplicate each string in the series/index by indicated number of times
+core		str_match	arr pat case flags	determine if each string matches a regular expression
+core		_groups_or_na_fun	regex	used in both extract_noexpand and extract_frame
+core		_str_extract_noexpand	arr pat flags	find groups in each string in the series using passed regular expression
+core		_str_extract_frame	arr pat flags	for each subject string in the series extract groups from the first match of regular expression pat
+core		str_extract	arr pat flags expand	for each subject string in the series extract groups from the first match of regular expression pat
+core		str_extractall	arr pat flags	for each subject string in the series extract groups from all matches of regular expression pat
+core		str_get_dummies	arr sep	split each string in the series by sep and return a frame of dummy/indicator variables
+core		str_join	arr sep	join lists contained as elements in the series/index with passed delimiter
+core		str_findall	arr pat flags	find all occurrences of pattern or regular expression in the series/index
+core		str_find	arr sub start end	return indexes in each strings in the series/index where the substring is fully contained between [start end]
+core		str_pad	arr width side fillchar	pad strings in the series/index with an additional character to specified side
+core		str_split	arr pat n	split each string a la re split in the series/index by given
+core		str_rsplit	arr pat n	split each string in the series/index by the given delimiter string starting at the end of the string and working to the front
+core		str_slice	arr start stop step	slice substrings from each element in the series/index
+core		str_slice_replace	arr start stop repl	replace a slice of each string in the series/index with another string
+core		str_strip	arr to_strip side	strip whitespace including newlines from each string in the series/index
+core		str_wrap	arr width	wrap long strings in the series/index to be formatted in paragraphs with length less than a given width
+core		str_translate	arr table deletechars	map all characters in the string through the given mapping table
+core		str_get	arr i	extract element from lists tuples or strings in each element in the series/index
+core		str_decode	arr encoding errors	decode character string in the series/index using indicated encoding
+core		str_encode	arr encoding errors	encode character string in the series/index using indicated encoding
+core		copy	source	copy a docstring from another source function if present
+core	StringMethods	zfill	width	filling left side of strings in the series/index with 0
+core	StringMethods	normalize	form	return the unicode normal form for the strings in the series/index
+core	_NDFrameIndexer	_has_valid_tuple	key	check the key for valid keys across my indexer
+core	_NDFrameIndexer	_should_validate_iterable	axis	return a boolean whether this axes needs validation for a passed
+core	_NDFrameIndexer	_convert_range	key is_setter	convert a range argument
+core	_NDFrameIndexer	_has_valid_positional_setitem_indexer	indexer	validate that an positional indexer cannot enlarge its target
+core	_NDFrameIndexer	_multi_take	tup	create the reindex map for our objects raise the _exception if we
+core	_NDFrameIndexer	_convert_to_indexer	obj axis is_setter	convert indexing key into something we can use to do actual fancy indexing on an ndarray
+core	_LocationIndexer	_get_slice_axis	slice_obj axis	this is pretty simple as we just have to deal with labels
+core	_LocIndexer	_get_partial_string_timestamp_match_key	key labels	translate any partial string timestamp matches in key returning the
+core	_iLocIndexer	_get_list_axis	key axis	return series values by list or array of integers
+core	_iLocIndexer	_convert_to_indexer	obj axis is_setter	much simpler as we only have to deal with our valid types
+core	_AtIndexer	_convert_key	key is_setter	require they keys to be the same type as the index (so we don't
+core	_iAtIndexer	_convert_key	key is_setter	require integer args and convert to label arguments
+core		length_of_indexer	indexer target	return the length of a single non-tuple indexer which could be a slice
+core		convert_to_index_sliceable	obj key	if we are index sliceable then return my slicer otherwise return none
+core		convert_missing_indexer	indexer	reverse convert a missing indexer which is a dict
+core		convert_from_missing_indexer_tuple	indexer axes	create a filtered indexer that doesn't have any missing indexers
+core		maybe_convert_indices	indices n	if we have negative indicies translate to postive here
+core		maybe_convert_ix		we likely want to take the cross-product
+core		_non_reducing_slice	slice_	ensurse that a slice doesn't reduce to a series or scalar
+core		_maybe_numeric_slice	df slice_ include_bool	want nice defaults for background_gradient that don't break with non-numeric data
+core	NDFrame	_repr_table_schema_		not a real jupyter special repr method but we use the same naming convention
+core	NDFrame	_validate_dtype	dtype	validate the passed dtype
+core	NDFrame	_init_mgr	mgr axes dtype copy	passed a manager and a axes dict
+core	NDFrame	_constructor		used when a manipulation result has the same dimensions as the original
+core	NDFrame	_dir_additions		add the string-like attributes from the info_axis
+core	NDFrame	_constructor_sliced		used when a manipulation result has one lower dimension s as the original such as dataframe single columns slicing
+core	NDFrame	_constructor_expanddim		used when a manipulation result has one higher dimension as the original such as series
+core	NDFrame	_setup_axes	cls axes info_axis stat_axis	provide axes setup for the major pandasobjects
+core	NDFrame	_construct_axes_dict	axes	return an axes dictionary for myself
+core	NDFrame	_construct_axes_dict_from	axes	return an axes dictionary for the passed axes
+core	NDFrame	_construct_axes_dict_for_slice	axes	return an axes dictionary for myself
+core	NDFrame	_construct_axes_from_arguments	args kwargs require_all	construct and returns axes if supplied in args/kwargs
+core	NDFrame	_get_block_manager_axis	axis	map the axis to the block_manager axis
+core	NDFrame	shape		return a tuple of axis dimensions
+core	NDFrame	axes		return index label s of the internal ndframe
+core	NDFrame	ndim		number of axes / array dimensions
+core	NDFrame	size		number of elements in the ndframe
+core	NDFrame	_selected_obj		internal compat with selectionmixin
+core	NDFrame	_obj_with_exclusions		internal compat with selectionmixin
+core	NDFrame	set_axis	axis labels	public verson of axis assignment
+core	NDFrame	swapaxes	axis1 axis2 copy	interchange axes and swap values axes appropriately
+core	NDFrame	pop	item	return item and drop from frame raise keyerror if not found
+core	NDFrame	squeeze	axis	squeeze length 1 dimensions
+core	NDFrame	swaplevel	i j axis	swap levels i and j in a multiindex on a particular axis parameters
+core	NDFrame	rename_axis	mapper axis copy inplace	alter index and / or columns using input function or functions
+core	NDFrame	_set_axis_name	name axis	alter the name or names of the axis returning self
+core	NDFrame	equals	other	determines if two ndframe objects contain the same elements nans in
+core	NDFrame	__iter__		iterate over infor axis
+core	NDFrame	keys		get the 'info axis' see indexing for more this is index for series columns for dataframe and major_axis for
+core	NDFrame	iteritems		iterate over label values on info axis this is index for series columns for dataframe major_axis for panel
+core	NDFrame	__len__		returns length of info axis
+core	NDFrame	__contains__	key	true if the key is in the info axis
+core	NDFrame	empty		true if ndframe is entirely empty [no items], meaning any of the axes are of length 0
+core	NDFrame	bool		return the bool of a single element pandasobject
+core	NDFrame	to_dense		return dense representation of ndframe as opposed to sparse
+core	NDFrame	to_json	path_or_buf orient date_format double_precision	convert the object to a json string
+core	NDFrame	to_hdf	path_or_buf key	write the contained data to an hdf5 file using hdfstore
+core	NDFrame	to_msgpack	path_or_buf encoding	msgpack serialize object to input file path this is an experimental library and the storage format
+core	NDFrame	to_sql	name con flavor schema	write records stored in a dataframe to a sql database
+core	NDFrame	to_pickle	path compression	pickle serialize object to input file path
+core	NDFrame	to_clipboard	excel sep	attempt to write text representation of object to the system clipboard this can be pasted into excel for example
+core	NDFrame	to_xarray		return an xarray object from the pandas object
+core	NDFrame	_create_indexer	cls name indexer	create an indexer like _name in the class
+core	NDFrame	get	key default	get item from object for given key (dataframe column panel slice etc
+core	NDFrame	_get_item_cache	item	return the cached item item represents a label indexer
+core	NDFrame	_set_as_cached	item cacher	set the _cacher attribute on the calling object with a weakref to cacher
+core	NDFrame	_reset_cacher		reset the cacher
+core	NDFrame	_iget_item_cache	item	return the cached item item represents a positional indexer
+core	NDFrame	_maybe_cache_changed	item value	the object has called back to us saying maybe it has changed
+core	NDFrame	_is_cached		return boolean indicating if self is cached or not
+core	NDFrame	_get_cacher		return my cacher or none
+core	NDFrame	_is_view		return boolean indicating if self is view of another array
+core	NDFrame	_maybe_update_cacher	clear verify_is_copy	see if we need to update our parent cacher if clear then clear our cache
+core	NDFrame	_slice	slobj axis kind	construct a slice of this container
+core	NDFrame	_check_is_chained_assignment_possible		check if we are a view have a cacher and are of mixed type
+core	NDFrame	take	indices axis convert is_copy	analogous to ndarray take
+core	NDFrame	xs	key axis level drop_level	returns a cross-section (row s or column s from the series/dataframe
+core	NDFrame	select	crit axis	return data corresponding to axis labels matching criteria parameters
+core	NDFrame	reindex_like	other method copy limit	return an object with matching indices to myself
+core	NDFrame	drop	labels axis level inplace	return new object with labels in requested axis removed
+core	NDFrame	_update_inplace	result verify_is_copy	replace self internals with result
+core	NDFrame	add_prefix	prefix	concatenate prefix string with panel items names
+core	NDFrame	add_suffix	suffix	concatenate suffix string with panel items names
+core	NDFrame	_reindex_axes	axes level limit tolerance	perform the reindex for all the axes
+core	NDFrame	_needs_reindex_multi	axes method level	check if we do need a multi reindex
+core	NDFrame	_reindex_with_indexers	reindexers fill_value copy allow_dups	allow_dups indicates an internal call here
+core	NDFrame	filter	items like regex axis	subset rows or columns of dataframe according to labels in the specified index
+core	NDFrame	head	n	returns first n rows
+core	NDFrame	tail	n	returns last n rows
+core	NDFrame	sample	n frac replace weights	returns a random sample of items from an axis of object
+core	NDFrame	__finalize__	other method	propagate metadata from other to self
+core	NDFrame	__getattr__	name	after regular attribute access try looking up the name this allows simpler access to columns for interactive use
+core	NDFrame	__setattr__	name value	after regular attribute access try setting the name this allows simpler access to columns for interactive use
+core	NDFrame	_protect_consolidate	f	consolidate _data -- if the blocks have changed then clear the
+core	NDFrame	_consolidate_inplace		consolidate data in place and return none
+core	NDFrame	_consolidate	inplace	compute ndframe with "consolidated" internals data of each dtype grouped together in a single ndarray
+core	NDFrame	consolidate	inplace	deprecated consolidate will be an internal implementation only
+core	NDFrame	_check_inplace_setting	value	check whether we allow in-place setting with this type of value
+core	NDFrame	as_matrix	columns	convert the frame to its numpy-array representation
+core	NDFrame	values		numpy representation of ndframe notes
+core	NDFrame	get_values		same as values but handles sparseness conversions
+core	NDFrame	get_dtype_counts		return the counts of dtypes in this object
+core	NDFrame	get_ftype_counts		return the counts of ftypes in this object
+core	NDFrame	dtypes		return the dtypes in this object
+core	NDFrame	ftypes		return the ftypes (indication of sparse/dense and dtype) in this object
+core	NDFrame	as_blocks	copy	convert the frame to a dict of dtype -> constructor types that each has a homogeneous dtype
+core	NDFrame	blocks		internal property property synonym for as_blocks()
+core	NDFrame	astype	dtype copy errors	cast object to input numpy dtype
+core	NDFrame	copy	deep	make a copy of this objects data
+core	NDFrame	_convert	datetime numeric timedelta coerce	attempt to infer better dtype for object columns parameters
+core	NDFrame	ffill	axis inplace limit downcast	synonym for :meth dataframe fillna(method='ffill') <dataframe fillna>
+core	NDFrame	bfill	axis inplace limit downcast	synonym for :meth dataframe fillna(method='bfill') <dataframe fillna>
+core	NDFrame	replace	to_replace value inplace limit	replace values given in 'to_replace' with 'value'
+core	NDFrame	interpolate	method axis limit inplace	interpolate values according to different methods
+core	NDFrame	asof	where subset	the last row without any nan is taken or the last row without nan considering only the subset of columns in the case of a dataframe
+core	NDFrame	clip	lower upper axis	trim values at input threshold s
+core	NDFrame	clip_upper	threshold axis	return copy of input with values above given value s truncated
+core	NDFrame	clip_lower	threshold axis	return copy of the input with values below given value s truncated
+core	NDFrame	groupby	by axis level as_index	group series using mapper dict or key function apply given function to group return result as series or by a series of columns
+core	NDFrame	asfreq	freq method how normalize	convert timeseries to specified frequency
+core	NDFrame	at_time	time asof	select values at particular time of day e g 9 30am
+core	NDFrame	between_time	start_time end_time include_start include_end	select values between particular times of the day (e g 9 00-9 30 am)
+core	NDFrame	resample	rule how axis fill_method	convenience method for frequency conversion and resampling of time series
+core	NDFrame	first	offset	convenience method for subsetting initial periods of time series data based on a date offset
+core	NDFrame	last	offset	convenience method for subsetting final periods of time series data based on a date offset
+core	NDFrame	rank	axis method numeric_only na_option	compute numerical data ranks 1 through n along axis equal values are
+core	NDFrame	_where	cond other inplace axis	equivalent to public method where, except that other is not applied as a function even if callable
+core	NDFrame	slice_shift	periods axis	equivalent to shift without copying data the shifted data will
+core	NDFrame	tshift	periods freq axis	shift the time index using the index's frequency if available
+core	NDFrame	truncate	before after axis copy	truncates a sorted ndframe before and/or after some particular index value
+core	NDFrame	tz_convert	tz axis level copy	convert tz-aware axis to target time zone
+core	NDFrame	tz_localize	tz axis level copy	localize tz-naive timeseries to target time zone
+core	NDFrame	abs		return an object with absolute value taken--only applicable to objects that are all numeric
+core	NDFrame	describe	percentiles include exclude	generates descriptive statistics that summarize the central tendency dispersion and shape of a dataset's distribution excluding
+core	NDFrame	_check_percentile	q	validate percentiles used by describe and quantile
+core	NDFrame	_add_numeric_operations	cls	add the operations to the cls evaluate the doc strings again
+core	NDFrame	_add_series_only_operations	cls	add the series only operations to the cls evaluate the doc strings again
+core	NDFrame	_add_series_or_dataframe_operations	cls	add the series or dataframe only operations to the cls evaluate the doc strings again
+core		_doc_parms	cls	return a tuple of the doc parms
+core		add_special_arithmetic_methods	cls arith_method comp_method bool_method	adds the full suite of special arithmetic methods (__add__, __sub__, etc
+core		add_flex_arithmetic_methods	cls flex_arith_method flex_comp_method flex_bool_method	adds the full suite of flex arithmetic methods (pow, mul, add) to the class
+core	_Op	get_op	cls left right name	get op dispatcher returns _op or _timeop
+core	_TimeOp	_convert_to_array	values name other	converts values to ndarray
+core	_TimeOp	_is_offset	arr_or_obj	check if obj or all elements of list-like is dateoffset
+core		_align_method_SERIES	left right align_asobject	align lhs and rhs series
+core		_construct_divmod_result	left result index name	divmod returns a tuple of like indexed series instead of a single series
+core		_arith_method_SERIES	op name str_rep fill_zeros	wrapper function for series arithmetic operations to avoid code duplication
+core		_comp_method_SERIES	op name str_rep masker	wrapper function for series arithmetic operations to avoid code duplication
+core		_bool_method_SERIES	op name str_rep	wrapper function for series arithmetic operations to avoid code duplication
+core		_align_method_FRAME	left right axis	convert rhs to meet lhs dims if input is list tuple or np ndarray
+core	Block	is_view		return a boolean if i am possibly a view
+core	Block	is_datelike		return true if i am a non-datelike
+core	Block	is_categorical_astype	dtype	validate that we have a astypeable to categorical
+core	Block	external_values	dtype	return an outside world format currently just the ndarray
+core	Block	internal_values	dtype	return an internal format currently just the ndarray
+core	Block	get_values	dtype	return an internal format currently just the ndarray
+core	Block	to_object_block	mgr	return myself as an object block
+core	Block	array_dtype		the dtype to return if i want to construct this block as an
+core	Block	make_block	values placement ndim	create a new block with type inference propagate any values that are
+core	Block	make_block_scalar	values	create a scalarblock
+core	Block	make_block_same_class	values placement fastpath	wrap given values in a block of same type as self
+core	Block	_slice	slicer	return a slice of my values
+core	Block	getitem_block	slicer new_mgr_locs	perform __getitem__-like return result as block
+core	Block	reindex_axis	indexer method axis fill_value	reindex using pre-computed indexer information
+core	Block	set	locs values check	modify block in-place with new item value
+core	Block	delete	loc	delete given loc -s from block in-place
+core	Block	apply	func mgr	apply the function to my values return a block if we are not
+core	Block	fillna	value limit inplace downcast	fillna on the block with the value if we fail then convert to
+core	Block	downcast	dtypes mgr	try to downcast each item to the dict of dtypes if present
+core	Block	_astype	dtype copy errors values	coerce to the new type (if copy=true return a new copy)
+core	Block	convert	copy	attempt to coerce any object types to better types return a copy
+core	Block	_try_cast_result	result dtype	try to cast the result to our original type we may have
+core	Block	_try_operate	values	return a version to operate on as the input
+core	Block	_try_coerce_args	values other	provide coercion to our input arguments
+core	Block	_try_coerce_result	result	reverse of try_coerce_args
+core	Block	to_native_types	slicer na_rep quoting	convert to our native types format slicing if desired
+core	Block	replace	to_replace value inplace filter	replace the to_replace value with value possible to create new blocks here this is just a call to putmask
+core	Block	_replace_single		no-op on a non-objectblock
+core	Block	setitem	indexer value mgr	set the value inplace return a new block (of a possibly different
+core	Block	putmask	mask new align inplace	putmask the data to the block it is possible that we may create a
+core	Block	_interpolate_with_fill	method axis inplace limit	fillna but using the interpolate machinery
+core	Block	_interpolate	method index values fill_value	interpolate using scipy wrappers
+core	Block	take_nd	indexer axis new_mgr_locs fill_tuple	take values according to indexer and return them as a block bb
+core	Block	diff	n axis mgr	return block for the diff of the values
+core	Block	shift	periods axis mgr	shift the block by periods possibly upcast
+core	Block	eval	func other raise_on_error try_cast	evaluate the block return result block from the result
+core	Block	where	other cond align raise_on_error	evaluate the block return result block s from the result
+core	Block	quantile	qs interpolation axis mgr	compute the quantiles of the
+core	NonConsolidatableMixIn	get_values	dtype	need to to_dense myself and always return a ndim sized object
+core	NonConsolidatableMixIn	putmask	mask new align inplace	putmask the data to the block we must be a single block and not
+core	NonConsolidatableMixIn	_slice	slicer	return a slice of my values but densify first
+core	FloatBlock	to_native_types	slicer na_rep float_format decimal	convert to our native types format slicing if desired
+core	DatetimeLikeBlockMixin	_try_operate	values	return a version to operate on
+core	DatetimeLikeBlockMixin	get_values	dtype	return object dtype as boxed values such as timestamps/timedelta
+core	TimeDeltaBlock	_try_coerce_args	values other	coerce values and other to int64 with null values converted to inat
+core	TimeDeltaBlock	_try_coerce_result	result	reverse of try_coerce_args / try_operate
+core	TimeDeltaBlock	to_native_types	slicer na_rep quoting	convert to our native types format slicing if desired
+core	ObjectBlock	is_bool		we can be a bool if we have only bool values but are of type
+core	ObjectBlock	convert		attempt to coerce any object types to better types return a copy of
+core	ObjectBlock	set	locs values check	modify block in-place with new item value
+core	CategoricalBlock	is_view		i am never a view
+core	CategoricalBlock	array_dtype		the dtype to return if i want to construct this block as an
+core	CategoricalBlock	_slice	slicer	return a slice of my values
+core	CategoricalBlock	_try_coerce_result	result	reverse of try_coerce_args
+core	CategoricalBlock	take_nd	indexer axis new_mgr_locs fill_tuple	take values according to indexer and return them as a block bb
+core	CategoricalBlock	_astype	dtype copy errors values	coerce to the new type (if copy=true return a new copy)
+core	CategoricalBlock	to_native_types	slicer na_rep quoting	convert to our native types format slicing if desired
+core	DatetimeBlock	_astype	dtype mgr	these automatically copy so copy=true has no effect
+core	DatetimeBlock	_try_coerce_args	values other	coerce values and other to dtype 'i8' nan and nat convert to
+core	DatetimeBlock	_try_coerce_result	result	reverse of try_coerce_args
+core	DatetimeBlock	to_native_types	slicer na_rep date_format quoting	convert to our native types format slicing if desired
+core	DatetimeBlock	set	locs values check	modify block in-place with new item value
+core	DatetimeTZBlock	external_values		we internally represent the data as a datetimeindex but for
+core	DatetimeTZBlock	to_object_block	mgr	return myself as an object block
+core	DatetimeTZBlock	_slice	slicer	return a slice of my values
+core	DatetimeTZBlock	_try_coerce_args	values other	localize and return i8 for the values
+core	DatetimeTZBlock	_try_coerce_result	result	reverse of try_coerce_args
+core	DatetimeTZBlock	shift	periods axis mgr	shift the block by periods
+core	SparseBlock	make_block_same_class	values placement sparse_index kind	return a new block
+core	SparseBlock	shift	periods axis mgr	shift the block by periods
+core	SparseBlock	reindex_axis	indexer method axis fill_value	reindex using pre-computed indexer information
+core	SparseBlock	sparse_reindex	new_index	sparse reindex and return a new block
+core	BlockManager	make_empty	axes	return an empty blockmanager with the items axis of len 0
+core	BlockManager	rename_axis	mapper axis copy level	rename one of axes
+core	BlockManager	_rebuild_blknos_and_blklocs		update mgr _blknos / mgr _blklocs
+core	BlockManager	_get_counts	f	return a dict of the counts of the function in blockmanager
+core	BlockManager	apply	f axes filter do_integrity_check	iterate over the blocks collect and create a new block manager parameters
+core	BlockManager	reduction	f axis consolidate transposed	iterate over the blocks collect and create a new block manager
+core	BlockManager	replace_list	src_list dest_list inplace regex	do a list replace
+core	BlockManager	reshape_nd	axes	a 2d-nd reshape operation on a blockmanager
+core	BlockManager	is_consolidated		return true if more than one block with the same dtype
+core	BlockManager	is_view		return a boolean if we are a single block and are a view
+core	BlockManager	combine	blocks copy	return a new manager with the blocks
+core	BlockManager	copy	deep mgr	make deep or shallow copy of blockmanager
+core	BlockManager	_interleave		return ndarray from blocks with specified item order
+core	BlockManager	fast_xs	loc	get a cross sectional for a given location in the
+core	BlockManager	consolidate		join together blocks having same dtype
+core	BlockManager	get	item fastpath	return values for selected item ndarray or blockmanager
+core	BlockManager	iget	i fastpath	return the data as a singleblockmanager if fastpath=true and possible
+core	BlockManager	get_scalar	tup	retrieve single item
+core	BlockManager	delete	item	delete selected item items if non-unique in-place
+core	BlockManager	set	item value check	set new item in-place does not consolidate adds new block if not
+core	BlockManager	insert	loc item value allow_duplicates	insert item at selected position
+core	BlockManager	reindex_axis	new_index axis method limit	conform block manager to new index
+core	BlockManager	_slice_take_blocks_ax0	slice_or_indexer fill_tuple	slice/take blocks along axis=0
+core	BlockManager	take	indexer axis verify convert	take items along any axis
+core	BlockManager	_is_indexed_like	other	check all axes except items
+core	SingleBlockManager	_blknos		compat with blockmanager
+core	SingleBlockManager	_blklocs		compat with blockmanager
+core	SingleBlockManager	convert		convert the whole block as one
+core	SingleBlockManager	get_values		return a dense type view
+core	SingleBlockManager	asobject		return a object dtype array datetime/timedelta like values are boxed
+core	SingleBlockManager	delete	item	delete single item from singleblockmanager
+core	SingleBlockManager	fast_xs	loc	fast path for getting a cross-section
+core		construction_error	tot_items block_shape axes e	raise a helpful message about our construction
+core		_simple_blockify	tuples dtype	return a single array of a block that has a single dtype if dtype is
+core		_multi_blockify	tuples dtype	return an array of blocks that potentially have different dtypes
+core		_sparse_blockify	tuples dtype	return an array of blocks that potentially have different dtypes (and
+core		_consolidate	blocks	merge blocks having same dtype exclude non-consolidating blocks
+core		_extend_blocks	result blocks	return a new extended blocks givin the result
+core		_block_shape	values ndim shape	guarantee the shape of the values to be at least 1 d
+core		_block2d_to_blocknd	values placement shape labels	pivot to the labels shape
+core		_factor_indexer	shape labels	given a tuple of shape and a list of categorical labels return the
+core		items_overlap_with_suffix	left lsuffix right rsuffix	if two indices overlap add suffixes to overlapping entries
+core		_safe_reshape	arr new_shape	if possible reshape arr to have shape new_shape, with a couple of exceptions see gh-13012 :
+core		_transform_index	index func level	apply function to all values found in index
+core		_putmask_smart	v m n	return a new block try to preserve dtype if possible
+core		concatenate_block_managers	mgrs_indexers axes concat_axis copy	concatenate block managers into one
+core		get_empty_dtype_and_na	join_units	return dtype and n/a values to use when concatenating specified units
+core		concatenate_join_units	join_units concat_axis copy	concatenate values from several join units along selected axis
+core		get_mgr_concatenation_plan	mgr indexers	construct concatenation plan for given block manager and indexers
+core		combine_concat_plans	plans concat_axis	combine multiple concatenation plans into one
+core		trim_join_unit	join_unit length	reduce join_unit's shape along item axis to length
+core		_fast_count_smallints	arr	faster version of set arr for sequences of small numbers
+core		get_group_index	labels shape sort xnull	for the particular label_list gets the offsets into the hypothetical list representing the totally ordered cartesian product of all possible label
+core		get_compressed_ids	labels sizes	group_index is offsets into cartesian product of all possible labels this
+core		decons_obs_group_ids	comp_ids obs_ids shape labels	reconstruct labels from observed group ids parameters
+core		nargsort	items kind ascending na_position	this is intended to be a drop-in replacement for np argsort which
+core		get_indexer_dict	label_list keys	return a diction of {labels} -> {indexers}
+core		get_group_index_sorter	group_index ngroups	algos groupsort_indexer implements counting sort and it is at least
+core		compress_group_index	group_index sort	group_index is offsets into cartesian product of all possible labels this
+core		flatten	l	flatten an arbitrarily nested sequence
+core		_get_info_slice	obj indexer	slice the info axis of obj with indexer
+core		split_ranges	mask	generates tuples of ranges which cover all true value in mask
+core		map_indices_py	arr	returns a dictionary with element index pairs for each element in the
+core		is_null_slice	obj	we have a null slice
+core		is_full_slice	obj l	we have a full length slice
+core		_apply_if_callable	maybe_callable obj	evaluate possibly callable input using obj and kwargs if it is callable
+core		_dict_compat	d	helper function to convert datetimelike-keyed dicts to timestamp-keyed dict
+core		in_interactive_session		check if we're running in an interactive shell
+core		in_qtconsole		check if we're inside an ipython qtconsole deprecated this is no longer needed or working in ipython 3 and above
+core		in_ipnb		check if we're inside an ipython notebook deprecated this is no longer used in pandas and won't work in ipython 3
+core		in_ipython_frontend		check if we're inside an an ipython zmq frontend
+core		_random_state	state	helper function for processing random_state arguments
+core		_ensure_data	values dtype	routine to ensure that our data is of the correct
+core		_reconstruct_data	values dtype original	reverse of _ensure_data
+core		_ensure_arraylike	values	ensure that we are arraylike if not already
+core		match	to_match values na_sentinel	compute locations of to_match into values
+core		unique	values	hash table-based unique uniques are returned in order
+core		isin	comps values	compute the isin boolean array
+core		safe_sort	values labels na_sentinel assume_unique	sort values and reorder corresponding labels
+core		factorize	values sort order na_sentinel	encode input values as an enumerated type or categorical variable parameters
+core		value_counts	values sort ascending normalize	compute a histogram of the counts of non-null values
+core		duplicated	values keep	return boolean ndarray denoting duplicate values
+core		mode	values	returns the mode s of an array
+core		rank	values axis method na_option	rank the values along a given axis
+core		checked_add_with_arr	arr b arr_mask b_mask	perform array addition that checks for underflow and overflow
+core		quantile	x q interpolation_method	compute sample quantile or quantiles of the input array for example q=0 5
+core	SelectN	is_valid_dtype_n_method	dtype	helper function to determine if dtype is valid for
+core		take_nd	arr indexer axis out	specialized cython take which sets nan values in one pass parameters
+core		take_2d_multi	arr indexer out fill_value	specialized cython take which sets nan values in one pass
+core		diff	arr n axis	difference of n between self analagoust to s-s
+core	StringMixin	__str__		return a string representation for a particular object invoked by str df in both py2/py3
+core	StringMixin	__bytes__		return a string representation for a particular object
+core	StringMixin	__repr__		return a string representation for a particular object
+core	PandasObject	_constructor		class constructor (for this class it's just __class__
+core	PandasObject	__unicode__		return a string representation for a particular object
+core	PandasObject	_dir_additions		add addtional __dir__ for this object
+core	PandasObject	_dir_deletions		delete unwanted __dir__ for this object
+core	PandasObject	__dir__		provide method name lookup and completion
+core	PandasObject	_reset_cache	key	reset cached properties if key is passed only clears that key
+core	PandasObject	__sizeof__		generates the total memory usage for a object that returns
+core	NoNewAttributesMixin	_freeze		prevents setting additional attributes
+core	PandasDelegate	_add_delegate_accessors	cls delegate accessors typ	add accessors to cls from the delegate class
+core	SelectionMixin	_selection_name		return a name for myself this would ideally be called the 'name' property but we cannot conflict with the
+core	SelectionMixin	_gotitem	key ndim subset	sub-classes to define
+core	SelectionMixin	_try_aggregate_string_function	arg	if arg is a string then try to operate on it
+core	SelectionMixin	_aggregate	arg	provide an implementation for the aggregators
+core	SelectionMixin	_shallow_copy	obj obj_type	return a new object with the replacement attributes
+core	SelectionMixin	_is_cython_func	arg	if we define an internal function for this argument return it
+core	SelectionMixin	_is_builtin_func	arg	if we define an builtin function for this argument return it
+core	GroupByMixin	_dispatch	name	dispatch to apply
+core	GroupByMixin	_gotitem	key ndim subset	sub-classes to define
+core	IndexOpsMixin	transpose		return the transpose which is by definition self
+core	IndexOpsMixin	shape		return a tuple of the shape of the underlying data
+core	IndexOpsMixin	ndim		return the number of dimensions of the underlying data
+core	IndexOpsMixin	item		return the first element of the underlying data as a python
+core	IndexOpsMixin	data		return the data pointer of the underlying data
+core	IndexOpsMixin	itemsize		return the size of the dtype of the item of the underlying data
+core	IndexOpsMixin	nbytes		return the number of bytes in the underlying data
+core	IndexOpsMixin	strides		return the strides of the underlying data
+core	IndexOpsMixin	size		return the number of elements in the underlying data
+core	IndexOpsMixin	flags		return the ndarray flags for the underlying data
+core	IndexOpsMixin	base		return the base object if the memory of the underlying data is
+core	IndexOpsMixin	_values		the internal implementation
+core	IndexOpsMixin	max		the maximum value of the object
+core	IndexOpsMixin	argmax	axis	return a ndarray of the maximum argument indexer see also
+core	IndexOpsMixin	min		the minimum value of the object
+core	IndexOpsMixin	argmin	axis	return a ndarray of the minimum argument indexer see also
+core	IndexOpsMixin	hasnans		return if i have any nans enables various perf speedups
+core	IndexOpsMixin	_reduce	op name axis skipna	perform the reduction type operation if we can
+core	IndexOpsMixin	value_counts	normalize sort ascending bins	returns object containing counts of unique values
+core	IndexOpsMixin	nunique	dropna	return number of unique elements in the object
+core	IndexOpsMixin	is_unique		return boolean if values in the object are unique
+core	IndexOpsMixin	is_monotonic		return boolean if values in the object are monotonic_increasing
+core	IndexOpsMixin	is_monotonic_decreasing		return boolean if values in the object are monotonic_decreasing
+core	IndexOpsMixin	memory_usage	deep	memory usage of my values parameters
+core	IndexOpsMixin	factorize	sort na_sentinel	encode the object as an enumerated type or categorical variable
+core		_ensure_like_indices	time panels	makes sure that time and panels are conformable
+core		panel_index	time panels names	returns a multi-index suitable for a panel-like dataframe parameters
+core	Panel	_init_data	data copy dtype	generate nd initialization axes are passed
+core	Panel	from_dict	cls data intersect orient	construct panel from dict of dataframe objects parameters
+core	Panel	__unicode__		return a string representation for a particular panel invoked by unicode df in py2 only
+core	Panel	_get_plane_axes_index	axis	get my plane axes indexes these are already
+core	Panel	_get_plane_axes	axis	get my plane axes indexes these are already
+core	Panel	to_sparse		not implemented do not call this method as sparsifying is not supported for panel objects and will raise an error
+core	Panel	to_excel	path na_rep engine	write each dataframe in panel to a separate excel sheet parameters
+core	Panel	get_value		quickly retrieve single value at item major minor location
+core	Panel	set_value		quickly set single value at item major minor location
+core	Panel	_unpickle_panel_compat	state	unpickle the panel
+core	Panel	conform	frame axis	conform input dataframe to align with chosen axis pair
+core	Panel	round	decimals	round each value in panel to a specified number of decimal places
+core	Panel	_needs_reindex_multi	axes method level	don't allow a multi reindex on panel or above ndim
+core	Panel	dropna	axis how inplace	drop 2d from panel holding passed axis constant parameters
+core	Panel	major_xs	key	return slice of panel along major axis parameters
+core	Panel	minor_xs	key	return slice of panel along minor axis parameters
+core	Panel	xs	key axis	return slice of panel along selected axis parameters
+core	Panel	_ixs	i axis	i : int slice or sequence of integers
+core	Panel	groupby	function axis	group data on given axis returning groupby object
+core	Panel	to_frame	filter_observations	transform wide format into long stacked format as dataframe whose columns are the panel's items and whose index is a multiindex formed
+core	Panel	apply	func axis	applies function along axis or axes of the panel parameters
+core	Panel	_apply_2d	func axis	handle 2-d slices equiv to iterating over the other axis
+core	Panel	_construct_return_type	result axes	return the type for the ndim of the result
+core	Panel	count	axis	return number of observations over requested axis
+core	Panel	shift	periods freq axis	shift index by desired number of periods with an optional time freq
+core	Panel	join	other how lsuffix rsuffix	join items with other panel either on major and minor axes column parameters
+core	Panel	update	other join overwrite filter_func	modify panel in place using non-na values from passed panel or object coercible to panel
+core	Panel	_extract_axes	data axes	return a list of the axis indicies
+core	Panel	_extract_axes_for_slice	axes	return the slice dictionary for these axes
+core	Panel	_homogenize_dict	frames intersect dtype	conform set of _constructor_sliced-like objects to either an intersection of indices / columns or a union
+core	Panel	_add_aggregate_operations	cls use_numexpr	add the operations to the cls evaluate the doc strings again
+core	_Window	_convert_freq	how	resample according to the how return a new object
+core	_Window	_create_blocks	how	split data into blocks & return conformed data
+core	_Window	_gotitem	key ndim subset	sub-classes to define
+core	_Window	__unicode__		provide a nice str repr of our rolling object
+core	_Window	_get_index	index	return index as ndarrays
+core	_Window	_wrap_result	result block obj	wrap a single result
+core	_Window	_wrap_results	results blocks obj	wrap the results
+core	_Window	_center_window	result window	center the result in the window
+core	Window	_prep_window		provide validation for our window type return the window
+core	Window	_apply_window	mean how	applies a moving window of type window_type on the data
+core	_GroupByMixin	_apply	func name window center	dispatch to apply we are stripping all of the _apply kwargs and
+core	_Rolling	_apply	func name window center	rolling statistical measure using supplied function designed to be
+core	Rolling	_validate_monotonic		validate on is monotonic
+core	Rolling	_validate_freq		validate & return our freq
+core	RollingGroupby	_validate_monotonic		validate that on is monotonic we don't care for groupby
+core	EWM	_apply	func how	rolling statistical measure using supplied function designed to be
+core	EWM	mean		exponential weighted moving average
+core	EWM	std	bias	exponential weighted moving stddev
+core	EWM	var	bias	exponential weighted moving variance
+core	EWM	cov	other pairwise bias	exponential weighted sample covariance
+core	EWM	corr	other pairwise	exponential weighted sample correlation
+core		maybe_to_categorical	array	coerce to a categorical if a series is given
+core	Categorical	astype	dtype copy	coerce this type to another dtype parameters
+core	Categorical	ndim		number of dimensions of the categorical
+core	Categorical	size		return the len of myself
+core	Categorical	itemsize		return the size of a single category
+core	Categorical	reshape	new_shape	deprecated calling this method will raise an error in a future release
+core	Categorical	base		compat we are always our own object
+core	Categorical	from_array	cls data	deprecated use categorical instead
+core	Categorical	from_codes	cls codes categories ordered	make a categorical type from codes and categories arrays
+core	Categorical	_get_codes		get the codes
+core	Categorical	_set_codes	codes	not settable by the user directly
+core	Categorical	_get_labels		get the category labels deprecated
+core	Categorical	_validate_ordered	cls ordered	validates that we have a valid ordered parameter if
+core	Categorical	_validate_categories	cls categories fastpath	validates that we have good categories
+core	Categorical	_set_categories	categories fastpath	sets new categories
+core	Categorical	_get_categories		gets the categories
+core	Categorical	_codes_for_groupby	sort	if sort=false return a copy of self coded with categories as returned by
+core	Categorical	set_ordered	value inplace	sets the ordered attribute to the boolean value
+core	Categorical	as_ordered	inplace	sets the categorical to be ordered
+core	Categorical	as_unordered	inplace	sets the categorical to be unordered
+core	Categorical	_get_ordered		gets the ordered attribute
+core	Categorical	set_categories	new_categories ordered rename inplace	sets the categories to the specified new_categories
+core	Categorical	reorder_categories	new_categories ordered inplace	reorders categories as specified in new_categories
+core	Categorical	add_categories	new_categories inplace	add new categories
+core	Categorical	remove_categories	removals inplace	removes the specified categories
+core	Categorical	remove_unused_categories	inplace	removes categories which are not used
+core	Categorical	map	mapper	apply mapper function to its categories not codes
+core	Categorical	shape		shape of the categorical
+core	Categorical	shift	periods	shift categorical by desired number of periods
+core	Categorical	__array__	dtype	the numpy array interface
+core	Categorical	__setstate__	state	necessary for making this object picklable
+core	Categorical	memory_usage	deep	memory usage of my values parameters
+core	Categorical	isnull		detect missing values both missing values (-1 in
+core	Categorical	notnull		reverse of isnull both missing values (-1 in
+core	Categorical	put		replace specific elements in the categorical with given values
+core	Categorical	dropna		return the categorical without null values
+core	Categorical	value_counts	dropna	returns a series containing counts of each category
+core	Categorical	get_values		return the values
+core	Categorical	check_for_ordered	op	assert that we are ordered
+core	Categorical	argsort	ascending	returns the indices that would sort the categorical instance if 'sort_values' was called
+core	Categorical	sort_values	inplace ascending na_position	sorts the categorical by category value returning a new categorical by default
+core	Categorical	_values_for_rank		for correctly ranking ordered categorical data see gh#15420
+core	Categorical	order	inplace ascending na_position	deprecated use :meth categorical sort_values that function
+core	Categorical	sort	inplace ascending na_position	deprecated use :meth categorical sort_values that function
+core	Categorical	ravel	order	return a flattened numpy array
+core	Categorical	view		return a view of myself
+core	Categorical	to_dense		return my 'dense' representation for internal compatibility with numpy arrays
+core	Categorical	fillna	value method limit	fill na/nan values using the specified method
+core	Categorical	take_nd	indexer allow_fill fill_value	take the codes by the indexer fill with the fill_value
+core	Categorical	_slice	slicer	return a slice of myself
+core	Categorical	__len__		the length of this categorical
+core	Categorical	__iter__		returns an iterator over the values of this categorical
+core	Categorical	_tidy_repr	max_vals footer	a short repr displaying only max_vals and an optional (but default
+core	Categorical	_repr_categories		return the base repr for the categories
+core	Categorical	_repr_categories_info		returns a string representation of the footer
+core	Categorical	_maybe_coerce_indexer	indexer	return an indexer coerced to the codes dtype
+core	Categorical	__getitem__	key	return an item
+core	Categorical	_reverse_indexer		compute the inverse of a categorical returning a dict of categories -> indexers
+core	Categorical	_reduce	op name axis skipna	perform the reduction type operation
+core	Categorical	min	numeric_only	the minimum value of the object
+core	Categorical	max	numeric_only	the maximum value of the object
+core	Categorical	mode		returns the mode s of the categorical
+core	Categorical	unique		return the categorical which categories and codes are unique
+core	Categorical	equals	other	returns true if categorical arrays are equal
+core	Categorical	is_dtype_equal	other	returns true if categoricals are the same dtype
+core	Categorical	describe		describes this categorical returns
+core	Categorical	repeat	repeats	repeat elements of a categorical
+core		_get_codes_for_values	values categories	utility routine to turn values into codes given the specified categories
+core		_factorize_from_iterable	values	factorize an input values into categories and codes preserves
+core		_factorize_from_iterables	iterables	a higher-level wrapper over _factorize_from_iterable
+core		_get_fill_value	dtype fill_value fill_value_typ	return the correct fill value for the dtype of the values
+core		_get_values	values skipna fill_value fill_value_typ	utility to get the values view mask dtype
+core		_wrap_results	result dtype	wrap our results if needed
+core		nanargmax	values axis skipna	returns -1 in the na case
+core		nanargmin	values axis skipna	returns -1 in the na case
+core		nanskew	values axis skipna	compute the sample skewness
+core		nankurt	values axis skipna	compute the sample skewness
+core		nancorr	a b method min_periods	a b ndarrays
+core	DataFrame	_init_dict	data index columns dtype	segregate series based on type and coerce into matrices
+core	DataFrame	axes		return a list with the row axis labels and column axis labels as the only members
+core	DataFrame	shape		return a tuple representing the dimensionality of the dataframe
+core	DataFrame	_repr_fits_vertical_		check length against max_rows
+core	DataFrame	_repr_fits_horizontal_	ignore_width	check if full repr fits in horizontal boundaries imposed by the display options width and max_columns
+core	DataFrame	_info_repr		true if the repr should show the info view
+core	DataFrame	__unicode__		return a string representation for a particular dataframe invoked by unicode df in py2 only
+core	DataFrame	_repr_html_		return a html representation for a particular dataframe
+core	DataFrame	_repr_latex_		returns a latex representation for a particular dataframe
+core	DataFrame	style		property returning a styler object containing methods for building a styled html representation fo the dataframe
+core	DataFrame	iteritems		iterator over column name series pairs
+core	DataFrame	iterrows		iterate over dataframe rows as index series pairs
+core	DataFrame	itertuples	index name	iterate over dataframe rows as namedtuples with index value as first element of the tuple
+core	DataFrame	__len__		returns length of info axis but here we use the index
+core	DataFrame	dot	other	matrix multiplication with dataframe or series objects
+core	DataFrame	from_dict	cls data orient dtype	construct dataframe from dict of array-like or dicts parameters
+core	DataFrame	to_dict	orient	convert dataframe to dictionary
+core	DataFrame	to_gbq	destination_table project_id chunksize verbose	write a dataframe to a google bigquery table
+core	DataFrame	from_records	cls data index exclude	convert structured or record ndarray to dataframe parameters
+core	DataFrame	to_records	index convert_datetime64	convert dataframe to record array index will be put in the
+core	DataFrame	from_items	cls items columns orient	convert key value pairs to dataframe the keys will be the axis
+core	DataFrame	from_csv	cls path header sep	read csv file (discouraged please use :func pandas read_csv
+core	DataFrame	to_sparse	fill_value kind	convert to sparsedataframe
+core	DataFrame	to_panel		transform long stacked format dataframe into wide 3d panel format
+core	DataFrame	to_csv	path_or_buf sep na_rep float_format	write dataframe to a comma-separated values csv file parameters
+core	DataFrame	to_stata	fname convert_dates write_index encoding	a class for writing stata binary dta files from array-like objects parameters
+core	DataFrame	to_feather	fname	write out the binary feather-format for dataframes
+core	DataFrame	to_string	buf columns col_space header	render a dataframe to a console-friendly tabular output
+core	DataFrame	to_html	buf columns col_space header	render a dataframe as an html table
+core	DataFrame	to_latex	buf columns col_space header	render a dataframe to a tabular environment table you can splice
+core	DataFrame	info	verbose buf max_cols memory_usage	concise summary of a dataframe
+core	DataFrame	memory_usage	index deep	memory usage of dataframe columns
+core	DataFrame	transpose		transpose index and columns
+core	DataFrame	get_value	index col takeable	quickly retrieve single value at passed column and index
+core	DataFrame	set_value	index col value takeable	put single value at passed column and index
+core	DataFrame	_ixs	i axis	i : int slice or sequence of integers
+core	DataFrame	_getitem_column	key	return the actual column
+core	DataFrame	query	expr inplace	query the columns of a frame with a boolean expression
+core	DataFrame	eval	expr inplace	evaluate an expression in the context of the calling dataframe instance
+core	DataFrame	select_dtypes	include exclude	return a subset of a dataframe including/excluding columns based on their dtype
+core	DataFrame	_box_col_values	values items	provide boxed values for a column
+core	DataFrame	_ensure_valid_index	value	ensure that if we don't have an index that we can create one from the
+core	DataFrame	_set_item	key value	add series to dataframe in specified column
+core	DataFrame	insert	loc column value allow_duplicates	insert column into dataframe at specified location
+core	DataFrame	assign		assign new columns to a dataframe returning a new object a copy with all the original columns in addition to the new ones
+core	DataFrame	_sanitize_column	key value broadcast	ensures new columns which go into the blockmanager as new blocks are always copied and converted into an array
+core	DataFrame	lookup	row_labels col_labels	label-based "fancy indexing" function for dataframe
+core	DataFrame	_reindex_multi	axes copy fill_value	we are guaranteed non-nones in the axes!
+core	DataFrame	set_index	keys drop append inplace	set the dataframe index row labels using one or more existing columns
+core	DataFrame	reset_index	level drop inplace col_level	for dataframe with multi-level index return new dataframe with labeling information in the columns under the index names defaulting
+core	DataFrame	dropna	axis how thresh subset	return object with labels on given axis omitted where alternately any or all of the data are missing
+core	DataFrame	drop_duplicates	subset keep inplace	return dataframe with duplicate rows removed optionally only considering certain columns
+core	DataFrame	duplicated	subset keep	return boolean series denoting duplicate rows optionally only considering certain columns
+core	DataFrame	sortlevel	level axis ascending inplace	deprecated use :meth dataframe sort_index
+core	DataFrame	nlargest	n columns keep	get the rows of a dataframe sorted by the n largest values of columns
+core	DataFrame	nsmallest	n columns keep	get the rows of a dataframe sorted by the n smallest values of columns
+core	DataFrame	swaplevel	i j axis	swap levels i and j in a multiindex on a particular axis parameters
+core	DataFrame	reorder_levels	order axis	rearrange index levels using input order
+core	DataFrame	combine	other func fill_value overwrite	add two dataframe objects and do not propagate nan values so if for a
+core	DataFrame	combine_first	other	combine two dataframe objects and default to non-null values in frame calling the method
+core	DataFrame	update	other join overwrite filter_func	modify dataframe in place using non-na values from passed dataframe
+core	DataFrame	first_valid_index		return label for first non-na/null value
+core	DataFrame	last_valid_index		return label for last non-na/null value
+core	DataFrame	pivot	index columns values	reshape data (produce a "pivot" table) based on column values uses
+core	DataFrame	stack	level dropna	pivot a level of the possibly hierarchical column labels returning a dataframe (or series in the case of an object with a single level of
+core	DataFrame	unstack	level fill_value	pivot a level of the necessarily hierarchical index labels returning a dataframe having a new level of column labels whose inner-most level
+core	DataFrame	diff	periods axis	1st discrete difference of object parameters
+core	DataFrame	_gotitem	key ndim subset	sub-classes to define
+core	DataFrame	apply	func axis broadcast raw	applies function along input axis of dataframe
+core	DataFrame	applymap	func	apply a function to a dataframe that is intended to operate elementwise i
+core	DataFrame	append	other ignore_index verify_integrity	append rows of other to the end of this frame returning a new object
+core	DataFrame	join	other on how lsuffix	join columns with other dataframe either on index or on a key column
+core	DataFrame	round	decimals	round a dataframe to a variable number of decimal places
+core	DataFrame	corr	method min_periods	compute pairwise correlation of columns excluding na/null values parameters
+core	DataFrame	cov	min_periods	compute pairwise covariance of columns excluding na/null values parameters
+core	DataFrame	corrwith	other axis drop	compute pairwise correlation between rows or columns of two dataframe objects
+core	DataFrame	count	axis level numeric_only	return series with number of non-na/null observations over requested axis
+core	DataFrame	nunique	axis dropna	return series with number of distinct observations over requested axis
+core	DataFrame	idxmin	axis skipna	return index of first occurrence of minimum over requested axis
+core	DataFrame	idxmax	axis skipna	return index of first occurrence of maximum over requested axis
+core	DataFrame	_get_agg_axis	axis_num	let's be explict about this
+core	DataFrame	mode	axis numeric_only	gets the mode s of each element along the axis selected adds a row
+core	DataFrame	quantile	q axis numeric_only interpolation	return values at the given quantile over requested axis a la numpy
+core	DataFrame	to_timestamp	freq how axis copy	cast to datetimeindex of timestamps at *beginning* of period parameters
+core	DataFrame	to_period	freq axis copy	convert dataframe from datetimeindex to periodindex with desired
+core	DataFrame	isin	values	return boolean dataframe showing whether each element in the dataframe is contained in values
+core		_arrays_to_mgr	arrays arr_names index columns	segregate series based on type and coerce into matrices
+core		_to_arrays	data columns coerce_float dtype	return list of arrays columns
+core		_masked_rec_array_to_mgr	data index columns dtype	extract from a masked rec array and create the manager
+core		register_option	key defval doc validator	register an option in the package-wide pandas config object parameters
+core		deprecate_option	key msg rkey removal_ver	mark option key as deprecated if code attempts to access this option a warning will be produced using msg if given or a default message
+core		_select_options	pat	returns a list of keys matching pat
+core		_is_deprecated	key	returns true if the given option has been deprecated
+core		_get_deprecated_option	key	retrieves the metadata for a deprecated option if key is deprecated
+core		_get_registered_option	key	retrieves the option metadata if key is a registered option
+core		_translate_key	key	if key id deprecated and a replacement key defined will return the
+core		_warn_if_deprecated	key	checks if key is a deprecated option and if so prints a warning
+core		_build_option_description	k	builds a formatted description of a registered option and prints it
+core		pp_options_list	keys width _print	builds a concise listing of available options grouped by prefix
+core		config_prefix	prefix	contextmanager for multiple invocations of api with a common prefix supported api functions (register / get / set )__option
+core		create_nd_panel_factory	klass_name orders slices slicer	manufacture a n-d class deprecated
+core		mask_missing	arr values_to_mask	return a masking array of same size/shape as arr
+core		interpolate_1d	xvalues yvalues method limit	logic for the 1-d interpolation the result should be 1-d inputs
+core		_interpolate_scipy_wrapper	x y new_x method	passed off to scipy interpolate interp1d method is scipy's kind
+core		_from_derivatives	xi yi x order	convenience function for interpolate bpoly from_derivatives
+core		_akima_interpolate	xi yi x der	convenience function for akima interpolation
+core		interpolate_2d	values method axis limit	perform an actual interpolation of values values will be make 2-d if
+core		fill_zeros	result x y name	if this is a reversed op then flip x y
+core	Grouper	_set_grouper	obj sort	given an object and the specifications setup the internal grouper
+core	Grouper	_get_binner_for_grouping	obj	default to the standard binner here
+core	_GroupBy	_assure_grouper		we create the grouper on instantiation
+core	_GroupBy	groups		dict {group name -> group labels}
+core	_GroupBy	indices		dict {group name -> group indices}
+core	_GroupBy	_get_indices	names	safe get multiple indices translate keys for
+core	_GroupBy	_get_index	name	safe get index translate keys for datelike to underlying repr
+core	_GroupBy	_reset_group_selection		clear group based selection used for methods needing to return info on
+core	_GroupBy	_set_group_selection		create group based selection used when selection is not passed
+core	_GroupBy	get_group	name obj	constructs ndframe from group with provided name parameters
+core	_GroupBy	apply	func	apply function and combine results together in an intelligent way the
+core	_GroupBy	_index_with_as_index	b	take boolean mask of index to be returned from apply if as_index=true
+core	_GroupBy	_try_cast	result obj numeric_only	try to cast the result to our obj original type
+core	GroupBy	count		compute count of group excluding missing values
+core	GroupBy	mean		compute mean of groups excluding missing values
+core	GroupBy	median		compute median of groups excluding missing values
+core	GroupBy	std	ddof	compute standard deviation of groups excluding missing values
+core	GroupBy	var	ddof	compute variance of groups excluding missing values
+core	GroupBy	sem	ddof	compute standard error of the mean of groups excluding missing values
+core	GroupBy	size		compute group sizes
+core	GroupBy	_add_numeric_operations	cls	add numeric operations to the groupby generically
+core	GroupBy	ohlc		compute sum of values excluding missing values
+core	GroupBy	resample	rule	provide resampling when using a timegrouper
+core	GroupBy	rolling		return a rolling grouper providing rolling
+core	GroupBy	expanding		return an expanding grouper providing expanding
+core	GroupBy	pad	limit	forward fill the values parameters
+core	GroupBy	backfill	limit	backward fill the values parameters
+core	GroupBy	nth	n dropna	take the nth row from each group if n is an int or a subset of rows if n is a list of ints
+core	GroupBy	cumcount	ascending	number each item in each group from 0 to the length of that group - 1
+core	GroupBy	cumprod	axis	cumulative product for each group
+core	GroupBy	cumsum	axis	cumulative sum for each group
+core	GroupBy	cummin	axis	cumulative min for each group
+core	GroupBy	cummax	axis	cumulative max for each group
+core	GroupBy	shift	periods freq axis	shift each group by periods observations
+core	GroupBy	head	n	returns first n rows of each group
+core	GroupBy	tail	n	returns last n rows of each group essentially equivalent to
+core	BaseGrouper	indices		dict {group name -> group indices}
+core	BaseGrouper	size		compute group sizes
+core	BaseGrouper	_max_groupsize		compute size of largest group
+core	BaseGrouper	groups		dict {group name -> group labels}
+core	BaseGrouper	_is_builtin_func	arg	if we define an builtin function for this argument return it
+core		generate_bins_generic	values binner closed	generate bin edge offsets and bin labels for one array using another array which has bin edge values
+core	BinGrouper	groups		dict {group name -> group labels}
+core		_get_grouper	obj key axis level	create and return a basegrouper which is an internal mapping of how to create the grouper indexers
+core		_whitelist_method_generator	klass whitelist	yields all groupby member defs for dataframe/series names in _whitelist
+core	SeriesGroupBy	_selection_name		since we are a series we by definition only have
+core	SeriesGroupBy	aggregate	func_or_funcs	apply aggregation function or functions to groups yielding most likely series but in some cases dataframe depending on the output of the
+core	SeriesGroupBy	_wrap_output	output index names	common agg/transform wrapping logic
+core	SeriesGroupBy	_transform_fast	func	fast version of transform only applicable to
+core	SeriesGroupBy	filter	func dropna	return a copy of a series excluding elements from groups that do not satisfy the boolean criterion specified by func
+core	SeriesGroupBy	nunique	dropna	returns number of unique elements in the group
+core	SeriesGroupBy	count		compute count of group excluding missing values
+core	SeriesGroupBy	_apply_to_column_groupbys	func	return a pass thru
+core	NDFrameGroupBy	_transform_fast	result obj	fast transform path for aggregations
+core	NDFrameGroupBy	filter	func dropna	return a copy of a dataframe excluding elements from groups that do not satisfy the boolean criterion specified by func
+core	DataFrameGroupBy	_gotitem	key ndim subset	sub-classes to define
+core	DataFrameGroupBy	_reindex_output	result	if we have categorical groupers then we want to make sure that we have a fully reindex-output to the levels
+core	DataFrameGroupBy	count		compute count of group excluding missing values
+core	DataFrameGroupBy	nunique	dropna	return dataframe with number of distinct observations per group for each column
+core	PanelGroupBy	aggregate	arg	aggregate using input function or dict of {column -> function} parameters
+core		_coerce_method	converter	install the scalar coercion methods
+core	Series	_set_axis	axis labels fastpath	override generic we want to set the _typ here
+core	Series	dtype		return the dtype object of the underlying data
+core	Series	dtypes		return the dtype object of the underlying data
+core	Series	ftype		return if the data is sparse|dense
+core	Series	ftypes		return if the data is sparse|dense
+core	Series	values		return series as ndarray or ndarray-like depending on the dtype
+core	Series	_values		return the internal repr of this data
+core	Series	get_values		same as values but handles sparseness conversions ; is a view
+core	Series	asobject		return object series which contains boxed values
+core	Series	ravel	order	return the flattened underlying data as an ndarray see also
+core	Series	compress	condition	return selected slices of an array along given axis as a series see also
+core	Series	nonzero		return the indices of the elements that are non-zero this method is equivalent to calling numpy
+core	Series	put		applies the put method to its values attribute if it has one
+core	Series	__len__		return the length of the series
+core	Series	__array__	result	the array interface return my values
+core	Series	__array_wrap__	result context	gets called after a ufunc
+core	Series	__array_prepare__	result context	gets called prior to a ufunc
+core	Series	axes		return a list of the row axis labels
+core	Series	_ixs	i axis	return the i-th value or values in the series by location
+core	Series	repeat	repeats	repeat elements of an series refer to numpy ndarray repeat
+core	Series	reshape		deprecated calling this method will raise an error in a future release
+core	Series	get_value	label takeable	quickly retrieve single value at passed index label
+core	Series	set_value	label value takeable	quickly set single value at passed label if label is not contained a
+core	Series	reset_index	level drop name inplace	analogous to the :meth pandas dataframe reset_index function see
+core	Series	__unicode__		return a string representation for a particular dataframe invoked by unicode df in py2 only
+core	Series	to_string	buf na_rep float_format header	render a string representation of the series parameters
+core	Series	__iter__		provide iteration over the values of the series
+core	Series	iteritems		lazily iterate over index value tuples
+core	Series	keys		alias for index
+core	Series	tolist		convert series to a nested list
+core	Series	to_dict		convert series to {label -> value} dict
+core	Series	to_frame	name	convert series to dataframe parameters
+core	Series	to_sparse	kind fill_value	convert series to sparseseries
+core	Series	_set_name	name inplace	set the series name
+core	Series	count	level	return number of non-na/null observations in the series
+core	Series	mode		return the mode s of the dataset
+core	Series	idxmin	axis skipna	index of first occurrence of minimum of values
+core	Series	idxmax	axis skipna	index of first occurrence of maximum of values
+core	Series	round	decimals	round each value in a series to the given number of decimals
+core	Series	quantile	q interpolation	return value at the given quantile a la numpy percentile
+core	Series	corr	other method min_periods	compute correlation with other series excluding missing values
+core	Series	cov	other min_periods	compute covariance with series excluding missing values parameters
+core	Series	diff	periods	1st discrete difference of object
+core	Series	autocorr	lag	lag-n autocorrelation parameters
+core	Series	dot	other	matrix multiplication with dataframe or inner-product with series
+core	Series	append	to_append ignore_index verify_integrity	concatenate two or more series
+core	Series	_binop	other func level fill_value	perform generic binary operation with optional fill value parameters
+core	Series	combine	other func fill_value	perform elementwise binary operation on two series using given function
+core	Series	combine_first	other	combine series values choosing the calling series's values first
+core	Series	update	other	modify series in place using non-na values from passed series
+core	Series	argsort	axis kind order	overrides ndarray argsort argsorts the value omitting na/null values
+core	Series	nlargest	n keep	return the largest n elements
+core	Series	nsmallest	n keep	return the smallest n elements
+core	Series	sortlevel	level ascending sort_remaining	deprecated use :meth series sort_index
+core	Series	swaplevel	i j copy	swap levels i and j in a multiindex parameters
+core	Series	reorder_levels	order	rearrange index levels using input order may not drop or duplicate
+core	Series	unstack	level fill_value	unstack a k a pivot series with multiindex to produce dataframe
+core	Series	map	arg na_action	map values of series using input correspondence which can be a dict series or function
+core	Series	_gotitem	key ndim subset	sub-classes to define
+core	Series	apply	func convert_dtype args	invoke function on values of series can be ufunc (a numpy function
+core	Series	_reduce	op name axis skipna	perform a reduction operation
+core	Series	_needs_reindex_multi	axes method level	check if we do need a multi reindex this is for compat with
+core	Series	reindex_axis	labels axis	for compatibility with higher dims
+core	Series	memory_usage	index deep	memory usage of the series parameters
+core	Series	take	indices axis convert is_copy	return series corresponding to requested indices parameters
+core	Series	isin	values	return a boolean :class ~pandas series showing whether each element
+core	Series	between	left right inclusive	return boolean series equivalent to left <= series <= right na values
+core	Series	from_csv	cls path sep parse_dates	read csv file (discouraged please use :func pandas read_csv
+core	Series	to_csv	path index sep na_rep	write series to a comma-separated values csv file parameters
+core	Series	dropna	axis inplace	return series without null values returns
+core	Series	first_valid_index		return label for first non-na/null value
+core	Series	last_valid_index		return label for last non-na/null value
+core	Series	to_timestamp	freq how copy	cast to datetimeindex of timestamps at *beginning* of period parameters
+core	Series	to_period	freq copy	convert series from datetimeindex to periodindex with desired
+core		remove_na	series	return series containing only true/non-nan values possibly empty
+core		_sanitize_index	data index copy	sanitize an index type to return an ndarray of the underlying pass
+core		_sanitize_array	data index dtype copy	sanitize input data to an ndarray copy if specified coerce to the
+core	Resampler	__unicode__		provide a nice str repr of our rolling object
+core	Resampler	_typ		masquerade for compat as a series or a dataframe
+core	Resampler	_from_selection		is the resampling from a dataframe column or multiindex level
+core	Resampler	_convert_obj	obj	provide any conversions for the object in order to correctly handle
+core	Resampler	_set_binner		setup our binners
+core	Resampler	_get_binner		create the bingrouper assume that self set_grouper obj
+core	Resampler	_assure_grouper		make sure that we are creating our binner & grouper
+core	Resampler	aggregate	arg	apply aggregation function or functions to resampled groups yielding most likely series but in some cases dataframe depending on the output
+core	Resampler	transform	arg	call function producing a like-indexed series on each group and return a series with the transformed values
+core	Resampler	_gotitem	key ndim subset	sub-classes to define
+core	Resampler	_groupby_and_aggregate	how grouper	re-evaluate the obj with a groupby aggregation
+core	Resampler	_apply_loffset	result	if loffset is set offset the result index this is not an idempotent routine it will be applied
+core	Resampler	_get_resampler_for_grouping	groupby	return the correct class for resampling with groupby
+core	Resampler	_wrap_result	result	potentially wrap any results
+core	Resampler	pad	limit	forward fill the values parameters
+core	Resampler	backfill	limit	backward fill the values parameters
+core	Resampler	fillna	method limit	fill missing values parameters
+core	Resampler	interpolate	method axis limit inplace	interpolate values according to different methods
+core	Resampler	asfreq	fill_value	return the values at the new freq essentially a reindex
+core	Resampler	std	ddof	compute standard deviation of groups excluding missing values
+core	Resampler	var	ddof	compute variance of groups excluding missing values
+core		_maybe_process_deprecations	r how fill_method limit	potentially we might have a deprecation warning show it
+core	_GroupByMixin	_apply	f	dispatch to _upsample we are stripping all of the _upsample kwargs and
+core	DatetimeIndexResampler	_downsample	how	downsample the cython defined function
+core	DatetimeIndexResampler	_adjust_binner_for_upsample	binner	adjust our binner when upsampling
+core	DatetimeIndexResampler	_upsample	method limit fill_value	method : string {'backfill', 'bfill', 'pad', 'ffill', 'asfreq'} method for upsampling
+core	PeriodIndexResampler	_get_new_index		return our new index
+core	PeriodIndexResampler	_downsample	how	downsample the cython defined function
+core	PeriodIndexResampler	_upsample	method limit fill_value	method : string {'backfill', 'bfill', 'pad', 'ffill'} method for upsampling
+core	TimedeltaIndexResampler	_adjust_binner_for_upsample	binner	adjust our binner when upsampling
+core		resample	obj kind	create a timegrouper and return our resampler
+core		get_resampler_for_grouping	groupby rule how fill_method	return our appropriate resampler when grouping as well
+core	TimeGrouper	_get_resampler	obj kind	return my resampler or raise if we have an invalid axis
+core		asfreq	obj freq method how	utility frequency conversion method for series/dataframe
+core.tools		_guess_datetime_format	dt_str dayfirst dt_str_parse dt_str_split	guess the datetime format of a given datetime string
+core.tools		to_datetime	arg errors dayfirst yearfirst	convert argument to datetime
+core.tools		_assemble_from_unit_mappings	arg errors	assemble the unit specifed fields from the arg dataframe
+core.tools		_attempt_YYYYMMDD	arg errors	try to parse the yyyymmdd/%y%m%d format try to deal with nat-like arg is a passed in as an object dtype but could really be ints/strings
+core.tools		_format_is_iso	f	does format match the iso8601 set that can be handled by the c parser? generally of form yyyy-mm-ddthh mm ss - date separator can be different
+core.tools		parse_time_string	arg freq dayfirst yearfirst	try hard to parse datetime string leveraging dateutil plus some extra goodies like quarter recognition
+core.tools		to_time	arg format infer_time_format errors	parse time strings to time objects using fixed strptime formats ("%h %m", "%h%m", "%i %m%p", "%i%m%p", "%h %m %s", "%h%m%s", "%i %m %s%p",
+core.tools		format	dt	returns date in yyyymmdd format
+core.tools		ole2datetime	oledt	function for converting excel date to normal date format
+core.tools		to_numeric	arg errors downcast	convert argument to a numeric type
+core.tools		to_timedelta	arg unit box errors	convert argument to timedelta parameters
+core.tools		_validate_timedelta_unit	arg	provide validation / translation for timedelta short units
+core.tools		_coerce_scalar_to_timedelta_type	r unit box errors	convert string 'r' to a timedelta object
+core.tools		_convert_listlike	arg unit box errors	convert a list of objects to a timedelta index object
+core.dtypes		_ensure_float	arr	ensure that an array object has a float dtype if possible
+core.dtypes		_ensure_categorical	arr	ensure that an array-like object is a categorical if not already
+core.dtypes		is_sparse	array	return if we are a sparse array
+core.dtypes		is_scipy_sparse	array	return if we are a scipy sparse spmatrix
+core.dtypes		is_categorical	array	return if we are a categorical possibility
+core.dtypes		is_datetimetz	array	return if we are a datetime with tz array
+core.dtypes		is_period	array	return if we are a period array
+core.dtypes		is_string_dtype	arr_or_dtype	check whether the provided array or dtype is of the string dtype
+core.dtypes		is_period_arraylike	arr	return if we are period arraylike / periodindex
+core.dtypes		is_datetime_arraylike	arr	return if we are datetime arraylike / datetimeindex
+core.dtypes		is_dtype_equal	source target	return a boolean if the dtypes are equal
+core.dtypes		is_timedelta64_ns_dtype	arr_or_dtype	check whether the provided array or dtype is of the timedelta64[ns] dtype
+core.dtypes		_is_unorderable_exception	e	check if the exception raised is an unorderable exception
+core.dtypes		is_numeric_v_string_like	a b	numpy doesn't like to compare numeric arrays vs scalar string-likes
+core.dtypes		is_string_like_dtype	arr_or_dtype	check whether the provided array or dtype is of a string-like dtype
+core.dtypes		is_extension_type	value	if we are a klass that is preserved by the internals these are internal klasses that we represent (and don't use a np
+core.dtypes		_coerce_to_dtype	dtype	coerce a string or np dtype to a pandas or numpy
+core.dtypes		_get_dtype	arr_or_dtype	get the dtype instance associated with an array or dtype object
+core.dtypes		_get_dtype_type	arr_or_dtype	get the type not dtype instance associated with an array or dtype object
+core.dtypes		_get_dtype_from_object	dtype	get a numpy dtype type-style object for a dtype object
+core.dtypes		_validate_date_like_dtype	dtype	check whether the dtype is a date-like dtype raises an error if invalid
+core.dtypes		pandas_dtype	dtype	converts input into a pandas only dtype object or a numpy dtype object
+core.dtypes	ExtensionDtype	__str__		return a string representation for a particular object invoked by str df in both py2/py3
+core.dtypes	ExtensionDtype	__bytes__		return a string representation for a particular object
+core.dtypes	ExtensionDtype	__repr__		return a string representation for a particular object
+core.dtypes	ExtensionDtype	is_dtype	cls dtype	return a boolean if the passed type is an actual dtype that
+core.dtypes	CategoricalDtype	construct_from_string	cls string	attempt to construct this type from a string raise a typeerror if
+core.dtypes	DatetimeTZDtype	__new__	cls unit tz	create a new unit if needed otherwise return from the cache
+core.dtypes	DatetimeTZDtype	construct_from_string	cls string	attempt to construct this type from a string raise a typeerror if
+core.dtypes	PeriodDtype	construct_from_string	cls string	attempt to construct this type from a string raise a typeerror
+core.dtypes	PeriodDtype	is_dtype	cls dtype	return a boolean if we if the passed type is an actual dtype that we
+core.dtypes	IntervalDtype	construct_from_string	cls string	attempt to construct this type from a string raise a typeerror
+core.dtypes	IntervalDtype	is_dtype	cls dtype	return a boolean if we if the passed type is an actual dtype that we
+core.dtypes		maybe_convert_platform	values	try to do platform conversion allow ndarray or list here
+core.dtypes		is_nested_object	obj	return a boolean if we have a nested object e g a series with 1 or
+core.dtypes		maybe_downcast_to_dtype	result dtype	try to cast to the specified dtype (e g convert back to bool/int
+core.dtypes		maybe_upcast_putmask	result mask other	a safe version of putmask that potentially upcasts the result parameters
+core.dtypes		infer_dtype_from_scalar	val pandas_dtype	interpret the dtype from a scalar parameters
+core.dtypes		infer_dtype_from_array	arr	infer the dtype from a scalar or array parameters
+core.dtypes		maybe_upcast	values fill_value dtype copy	provide explict type promotion and coercion
+core.dtypes		invalidate_string_dtypes	dtype_set	change string like dtypes to object for dataframe
+core.dtypes		maybe_convert_string_to_object	values	convert string-like and string-like array to convert object dtype
+core.dtypes		maybe_convert_scalar	values	convert a python scalar to the appropriate numpy dtype if possible
+core.dtypes		coerce_indexer_dtype	indexer categories	coerce the indexer input array to the smallest dtype possible
+core.dtypes		coerce_to_dtypes	result dtypes	given a dtypes and a result set coerce the result elements to the
+core.dtypes		astype_nansafe	arr dtype copy	return a view if copy is false but
+core.dtypes		maybe_convert_objects	values convert_dates convert_numeric convert_timedeltas	if we have an object dtype try to coerce dates and/or numbers
+core.dtypes		soft_convert_objects	values datetime numeric timedelta	if we have an object dtype try to coerce dates and/or numbers
+core.dtypes		maybe_infer_to_datetimelike	value convert_dates	we might have a array or single object that is datetime like and no dtype is passed don't change the value unless we find a
+core.dtypes		maybe_cast_to_datetime	value dtype errors	try to cast the array/value to a datetimelike dtype converting float
+core.dtypes		find_common_type	types	find a common data type among the given dtypes
+core.dtypes		_get_series_result_type	result	return appropriate class of series concat
+core.dtypes		_get_frame_result_type	result objs	return appropriate class of dataframe-like concat
+core.dtypes		_concat_compat	to_concat axis	provide concatenation of an array of arrays each of which is a single
+core.dtypes		_concat_categorical	to_concat axis	concatenate an object/categorical array of arrays each of which is a single dtype
+core.dtypes		union_categoricals	to_union sort_categories ignore_order	combine list-like of categorical-like unioning categories all
+core.dtypes		_concat_datetime	to_concat axis typs	provide concatenation of an datetimelike array of arrays each of which is a
+core.dtypes		_concat_datetimetz	to_concat name	concat datetimeindex with the same tz all inputs must be datetimeindex
+core.dtypes		_concat_index_asobject	to_concat name	concat all inputs as object datetimeindex timedeltaindex and
+core.dtypes		_concat_sparse	to_concat axis typs	provide concatenation of an sparse/dense array of arrays each of which is a
+core.dtypes		is_number	obj	check if the object is a number
+core.dtypes		is_string_like	obj	check if the object is a string
+core.dtypes		_iterable_not_string	obj	check if the object is an iterable but not a string
+core.dtypes		is_iterator	obj	check if the object is an iterator
+core.dtypes		is_file_like	obj	check if the object is a file-like object
+core.dtypes		is_re	obj	check if the object is a regex pattern instance
+core.dtypes		is_re_compilable	obj	check if the object can be compiled into a regex pattern instance
+core.dtypes		is_list_like	obj	check if the object is list-like
+core.dtypes		is_nested_list_like	obj	check if the object is list-like and that all of its elements are also list-like
+core.dtypes		is_dict_like	obj	check if the object is dict-like
+core.dtypes		is_named_tuple	obj	check if the object is a named tuple
+core.dtypes		is_hashable	obj	return true if hash obj will succeed false otherwise
+core.dtypes		is_sequence	obj	check if the object is a sequence of objects
+core.dtypes		isnull	obj	detect missing values (nan in numeric arrays none/nan in object arrays) parameters
+core.dtypes		_isnull_old	obj	detect missing values treat none nan inf -inf as null
+core.dtypes		_use_inf_as_null	key	option change callback for null/inf behaviour choose which replacement for numpy
+core.dtypes		notnull	obj	replacement for numpy isfinite / -numpy isnan which is suitable for use
+core.dtypes		is_null_datelike_scalar	other	test whether the object is a null datelike e g nat
+core.dtypes		array_equivalent	left right strict_nan	true if two arrays left and right have equal non-nan elements and nans in corresponding locations
+core.dtypes		_infer_fill_value	val	infer the fill value for the nan/nat from the provided
+core.dtypes		_maybe_fill	arr fill_value	if we have a compatiable fill_value and arr dtype then fill
+core.dtypes		na_value_for_dtype	dtype	return a dtype compat na value parameters
+core.indexes		is_datetimelike	data	return a boolean if we can be successfully converted to a datetimelike
+core.indexes		maybe_to_datetimelike	data copy	return a delegatedclass of a series that is datetimelike (e
+core.indexes	TimedeltaProperties	components		return a dataframe of the components days hours minutes seconds milliseconds microseconds nanoseconds of the timedeltas
+core.indexes		_dt_index_cmp	opname nat_result	wrap comparison operations to convert datetime-like to datetime64
+core.indexes		_new_DatetimeIndex	cls d	this is called upon unpickling rather than the default which doesn't
+core.indexes	DatetimeIndex	_convert_for_op	value	convert value to be insertable to ndarray
+core.indexes	DatetimeIndex	_simple_new	cls values name freq	we require the we have a dtype compat for the values
+core.indexes	DatetimeIndex	tzinfo		alias for tz attribute
+core.indexes	DatetimeIndex	_timezone		comparable timezone both for pytz / dateutil
+core.indexes	DatetimeIndex	__setstate__	state	necessary for making this object picklable
+core.indexes	DatetimeIndex	_sub_datelike_dti	other	subtraction of two datetimeindexes
+core.indexes	DatetimeIndex	_maybe_update_attributes	attrs	update index attributes e g freq depending on op
+core.indexes	DatetimeIndex	to_series	keep_tz	create a series with both index and values equal to the index keys useful with map for returning an indexer based on an index
+core.indexes	DatetimeIndex	_to_embed	keep_tz	return an array repr of this object potentially casting to object
+core.indexes	DatetimeIndex	to_pydatetime		return datetimeindex as object ndarray of datetime datetime objects
+core.indexes	DatetimeIndex	to_period	freq	cast to periodindex at a particular frequency
+core.indexes	DatetimeIndex	snap	freq	snap time stamps to nearest occurring frequency
+core.indexes	DatetimeIndex	union	other	specialized union for datetimeindex objects if combine
+core.indexes	DatetimeIndex	to_perioddelta	freq	calcuates timedeltaindex of difference between index values and index converted to periodindex at specified
+core.indexes	DatetimeIndex	union_many	others	a bit of a hack to accelerate unioning a collection of indexes
+core.indexes	DatetimeIndex	join	other how level return_indexers	see index join
+core.indexes	DatetimeIndex	__iter__		return an iterator over the boxed values
+core.indexes	DatetimeIndex	intersection	other	specialized intersection for datetimeindex objects may be much faster
+core.indexes	DatetimeIndex	_parsed_string_to_bounds	reso parsed	calculate datetime bounds for parsed time string and its resolution
+core.indexes	DatetimeIndex	get_value	series key	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	DatetimeIndex	get_loc	key method tolerance	get integer location for requested label
+core.indexes	DatetimeIndex	_maybe_cast_slice_bound	label side kind	if label is a string cast it to datetime according to resolution
+core.indexes	DatetimeIndex	slice_indexer	start end step kind	return indexer for specified label slice
+core.indexes	DatetimeIndex	time		returns numpy array of datetime time the time part of the timestamps
+core.indexes	DatetimeIndex	date		returns numpy array of python datetime date objects (namely the date
+core.indexes	DatetimeIndex	normalize		return datetimeindex with times to midnight length is unaltered
+core.indexes	DatetimeIndex	is_normalized		returns true if all of the dates are at midnight ("no time")
+core.indexes	DatetimeIndex	insert	loc item	make new index inserting new item at location parameters
+core.indexes	DatetimeIndex	delete	loc	make a new datetimeindex with passed location s deleted
+core.indexes	DatetimeIndex	tz_convert	tz	convert tz-aware datetimeindex from one time zone to another (using pytz/dateutil)
+core.indexes	DatetimeIndex	tz_localize	tz ambiguous errors	localize tz-naive datetimeindex to given time zone (using pytz/dateutil), or remove timezone from tz-aware datetimeindex
+core.indexes	DatetimeIndex	indexer_at_time	time asof	select values at particular time of day e g 9 30am
+core.indexes	DatetimeIndex	indexer_between_time	start_time end_time include_start include_end	select values between particular times of day (e g 9 00-9 30am)
+core.indexes	DatetimeIndex	to_julian_date		convert datetimeindex to float64index of julian dates
+core.indexes		date_range	start end periods freq	return a fixed frequency datetime index with day calendar as the default frequency
+core.indexes		bdate_range	start end periods freq	return a fixed frequency datetime index with business day as the default frequency
+core.indexes		cdate_range	start end periods freq	**experimental** return a fixed frequency datetime index with custombusinessday as the default frequency
+core.indexes		_to_m8	key tz	timestamp-like => dt64
+core.indexes	FrozenList	_disabled		this method will not function because object is immutable
+core.indexes	FrozenNDArray	_disabled		this method will not function because object is immutable
+core.indexes	FrozenNDArray	values		returns *copy* of underlying array
+core.indexes	FrozenNDArray	__unicode__		return a string representation for this object
+core.indexes	FrozenNDArray	searchsorted	v side sorter	find indices where elements of v should be inserted in a to maintain order
+core.indexes		_period_index_cmp	opname nat_result	wrap comparison operations to convert datetime-like to datetime64
+core.indexes	PeriodIndex	_simple_new	cls values name freq	values can be any type that can be coerced to periods
+core.indexes	PeriodIndex	_from_ordinals	cls values name freq	values should be int ordinals
+core.indexes	PeriodIndex	_shallow_copy_with_infer	values	we always want to return a periodindex
+core.indexes	PeriodIndex	_coerce_scalar_to_index	item	we need to coerce a scalar to a compat for our index type
+core.indexes	PeriodIndex	__array_wrap__	result context	gets called after a ufunc needs additional handling as
+core.indexes	PeriodIndex	_to_embed	keep_tz	return an array repr of this object potentially casting to object
+core.indexes	PeriodIndex	asof_locs	where mask	where : array of timestamps
+core.indexes	PeriodIndex	is_full		returns true if there are any missing periods from start to end
+core.indexes	PeriodIndex	asfreq	freq how	convert the periodindex to the specified frequency freq
+core.indexes	PeriodIndex	to_datetime	dayfirst	deprecated use :meth to_timestamp instead
+core.indexes	PeriodIndex	is_leap_year		logical indicating if the date belongs to a leap year
+core.indexes	PeriodIndex	to_timestamp	freq how	cast to datetimeindex
+core.indexes	PeriodIndex	shift	n	specialized shift which produces an periodindex
+core.indexes	PeriodIndex	get_value	series key	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	PeriodIndex	_get_unique_index	dropna	wrap index _get_unique_index to handle nat
+core.indexes	PeriodIndex	get_loc	key method tolerance	get integer location for requested label
+core.indexes	PeriodIndex	_maybe_cast_slice_bound	label side kind	if label is a string or a datetime cast it to period ordinal according
+core.indexes	PeriodIndex	join	other how level return_indexers	see index join
+core.indexes	PeriodIndex	__setstate__	state	necessary for making this object picklable
+core.indexes	PeriodIndex	tz_convert	tz	convert tz-aware datetimeindex from one time zone to another (using pytz/dateutil)
+core.indexes	PeriodIndex	tz_localize	tz infer_dst	localize tz-naive datetimeindex to given time zone (using pytz/dateutil), or remove timezone from tz-aware datetimeindex
+core.indexes		period_range	start end periods freq	return a fixed frequency datetime index with day calendar as the default
+core.indexes		_get_interval_closed_bounds	interval	given an interval or intervalindex return the corresponding interval with closed bounds
+core.indexes		_new_IntervalIndex	cls d	this is called upon unpickling
+core.indexes	IntervalIndex	_validate		verify that the intervalindex is valid
+core.indexes	IntervalIndex	hasnans		return if i have any nans enables various perf speedups
+core.indexes	IntervalIndex	_isnan		return if each value is nan
+core.indexes	IntervalIndex	__contains__	key	return a boolean if this key is in the index
+core.indexes	IntervalIndex	contains	key	return a boolean if this key is in the index we accept / allow keys to be not *just* actual
+core.indexes	IntervalIndex	from_breaks	cls breaks closed name	construct an intervalindex from an array of splits parameters
+core.indexes	IntervalIndex	from_arrays	cls left right closed	construct an intervalindex from a a left and right array parameters
+core.indexes	IntervalIndex	from_intervals	cls data name copy	construct an intervalindex from a 1d array of interval objects parameters
+core.indexes	IntervalIndex	from_tuples	cls data closed name	construct an intervalindex from a list/array of tuples parameters
+core.indexes	IntervalIndex	values		returns the intervalindex's data as a numpy array of interval
+core.indexes	IntervalIndex	__array__	result	the array interface return my values
+core.indexes	IntervalIndex	mid		returns the mid-point of each interval in the index as an array
+core.indexes	IntervalIndex	_convert_list_indexer	keyarr kind	we are passed a list-like indexer return the
+core.indexes	IntervalIndex	_maybe_cast_indexed	key	we need to cast the key which could be a scalar
+core.indexes	IntervalIndex	_get_reindexer	target	return an indexer for a target intervalindex with self
+core.indexes	IntervalIndex	_append_same_dtype	to_concat name	assert that we all have the same closed
+core.indexes	IntervalIndex	_format_native_types	na_rep quoting	actually format my specific types
+core.indexes		interval_range	start end freq periods	return a fixed frequency intervalindex
+core.indexes		_new_Index	cls d	this is called upon unpickling rather than the default which doesn't
+core.indexes	Index	_simple_new	cls values name dtype	we require the we have a dtype compat for the values if we are passed a non-dtype compat then coerce using the constructor
+core.indexes	Index	_shallow_copy_with_infer	values	create a new index inferring the class with passed value don't copy
+core.indexes	Index	_deepcopy_if_needed	orig copy	versionadded : 0 19 0
+core.indexes	Index	_sort_levels_monotonic		compat with multiindex
+core.indexes	Index	is_	other	more flexible faster check like is but that works through views note this is *not* the same as index
+core.indexes	Index	_reset_identity		initializes or resets _id attribute with new object
+core.indexes	Index	__len__		return the length of the index
+core.indexes	Index	__array__	dtype	the array interface return my values
+core.indexes	Index	__array_wrap__	result context	gets called after a ufunc
+core.indexes	Index	dtype		return the dtype object of the underlying data
+core.indexes	Index	dtype_str		return the dtype str of the underlying data
+core.indexes	Index	values		return the underlying data as an ndarray
+core.indexes	Index	get_values		return the underlying data as an ndarray
+core.indexes	Index	tolist		return a list of the index values
+core.indexes	Index	repeat	repeats	repeat elements of an index refer to numpy ndarray repeat
+core.indexes	Index	ravel	order	return an ndarray of the flattened values of the underlying data see also
+core.indexes	Index	_try_convert_to_int_index	cls data copy name	attempt to convert an array of data into an integer index
+core.indexes	Index	_coerce_to_ndarray	cls data	coerces data to ndarray raises on scalar data converts other
+core.indexes	Index	_get_attributes_dict		return an attributes dict for my class
+core.indexes	Index	_coerce_scalar_to_index	item	we need to coerce a scalar to a compat for our index type
+core.indexes	Index	_validate_names	name names deep	handles the quirks of having a singular 'name' parameter for general index and plural 'names' parameter for multiindex
+core.indexes	Index	__unicode__		return a string representation for this object
+core.indexes	Index	_formatter_func		return the formatted data as a unicode string
+core.indexes	Index	_format_data		return the formatted data as a unicode string
+core.indexes	Index	_format_attrs		return a list of tuples of the (attr formatted_value)
+core.indexes	Index	to_series		create a series with both index and values equal to the index keys useful with map for returning an indexer based on an index
+core.indexes	Index	_to_embed	keep_tz	*this is an internal non-public method*
+core.indexes	Index	_to_safe_for_reshape		convert to object if we are a categorical
+core.indexes	Index	to_datetime	dayfirst	deprecated use :meth pandas to_datetime instead
+core.indexes	Index	_convert_for_op	value	convert value to be insertable to ndarray
+core.indexes	Index	_assert_can_do_op	value	check value is valid for scalar op
+core.indexes	Index	set_names	names level inplace	set new names on index defaults to returning new index
+core.indexes	Index	rename	name inplace	set new names on index defaults to returning new index
+core.indexes	Index	reshape		not implemented do not call this method as reshaping is not supported for index objects and will raise an error
+core.indexes	Index	is_monotonic		alias for is_monotonic_increasing deprecated
+core.indexes	Index	is_monotonic_increasing		return if the index is monotonic increasing only equal or increasing values
+core.indexes	Index	is_monotonic_decreasing		return if the index is monotonic decreasing only equal or decreasing values
+core.indexes	Index	is_unique		return if the index has unique values
+core.indexes	Index	_invalid_indexer	form key	consistent invalid indexer message
+core.indexes	Index	_validate_index_level	level	validate index level
+core.indexes	Index	inferred_type		return a string of the type inferred from the values
+core.indexes	Index	_is_memory_usage_qualified		return a boolean if we need a qualified info display
+core.indexes	Index	__setstate__	state	necessary for making this object picklable
+core.indexes	Index	__getitem__	key	override numpy ndarray's __getitem__ method to work as desired
+core.indexes	Index	append	other	append a collection of index options together
+core.indexes	Index	_append_same_dtype	to_concat name	concatenate to_concat which has the same class
+core.indexes	Index	_assert_take_fillable	values indices allow_fill fill_value	internal method to handle na filling of take
+core.indexes	Index	_isnan		return if each value is nan
+core.indexes	Index	hasnans		return if i have any nans enables various perf speedups
+core.indexes	Index	isnull		detect missing values
+core.indexes	Index	notnull		reverse of isnull
+core.indexes	Index	putmask	mask value	return a new index of the values set with the mask see also
+core.indexes	Index	format	name formatter	render a string representation of the index
+core.indexes	Index	to_native_types	slicer	format specified values of self and return them
+core.indexes	Index	_format_native_types	na_rep quoting	actually format my specific types
+core.indexes	Index	equals	other	determines if two index objects contain the same elements
+core.indexes	Index	identical	other	similar to equals but check that other comparable attributes are
+core.indexes	Index	asof	label	for a sorted index return the most recent label up to and including the passed label
+core.indexes	Index	asof_locs	where mask	where : array of timestamps
+core.indexes	Index	sort_values	return_indexer ascending	return sorted copy of index
+core.indexes	Index	sortlevel	level ascending sort_remaining	for internal compatibility with with the index api sort the index
+core.indexes	Index	shift	periods freq	shift index containing datetime objects by input number of periods and
+core.indexes	Index	argsort		returns the indices that would sort the index and its underlying data
+core.indexes	Index	_get_consensus_name	other	given 2 indexes give a consensus name meaning we take the not none one or none if the names differ
+core.indexes	Index	union	other	form the union of two index objects and sorts if possible
+core.indexes	Index	intersection	other	form the intersection of two index objects
+core.indexes	Index	difference	other	return a new index with elements from the index that are not in other
+core.indexes	Index	symmetric_difference	other result_name	compute the symmetric difference of two index objects
+core.indexes	Index	_get_unique_index	dropna	returns an index containing unique values
+core.indexes	Index	get_value	series key	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	Index	set_value	arr key value	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	Index	_get_level_values	level	return an index of values for requested level equal to the length
+core.indexes	Index	_get_fill_indexer_searchsorted	target method limit	fallback pad/backfill get_indexer that works for monotonic decreasing
+core.indexes	Index	_get_nearest_indexer	target limit tolerance	get the indexer for the nearest index labels requires an index with values that can be subtracted from each other (e
+core.indexes	Index	get_indexer_for	target	guaranteed return of an indexer even when non-unique
+core.indexes	Index	groupby	values	group the index labels by a given array of values
+core.indexes	Index	map	mapper	apply mapper function to an index
+core.indexes	Index	isin	values level	compute boolean array of whether each index value is found in the passed set of values
+core.indexes	Index	_can_reindex	indexer	*this is an internal non-public method*
+core.indexes	Index	reindex	target method level limit	create index with target's values (move/add/delete values as necessary) parameters
+core.indexes	Index	_reindex_non_unique	target	*this is an internal non-public method* create a new index with target's values (move/add/delete values as
+core.indexes	Index	_join_level	other level how return_indexers	the join method *only* affects the level of the resulting multiindex
+core.indexes	Index	slice_indexer	start end step kind	for an ordered index compute the slice indexer for input labels and
+core.indexes	Index	_maybe_cast_indexer	key	if we have a float key and are not a floating index
+core.indexes	Index	_validate_indexer	form key kind	if we are positional indexer
+core.indexes	Index	_get_loc_only_exact_matches	key	this is overriden on subclasses namely intervalindex to control get_slice_bound
+core.indexes	Index	get_slice_bound	label side kind	calculate slice bound that corresponds to given label
+core.indexes	Index	slice_locs	start end step kind	compute slice locations for input labels
+core.indexes	Index	delete	loc	make new index with passed location -s deleted
+core.indexes	Index	insert	loc item	make new index inserting new item at location follows
+core.indexes	Index	drop	labels errors	make new index with passed list of labels deleted parameters
+core.indexes	Index	_add_comparison_methods	cls	add in comparison methods
+core.indexes	Index	_add_numeric_methods_add_sub_disabled	cls	add in the numeric add/sub methods to disable
+core.indexes	Index	_add_numeric_methods_disabled	cls	add in numeric methods to disable other than add/sub
+core.indexes	Index	_maybe_update_attributes	attrs	update index attributes e g freq depending on op
+core.indexes	Index	_validate_for_numeric_unaryop	op opstr	validate if we can perform a numeric unary operation
+core.indexes	Index	_validate_for_numeric_binop	other op opstr	return valid other evaluate or raise typeerror
+core.indexes	Index	_add_numeric_methods_binary	cls	add in numeric methods
+core.indexes	Index	_add_numeric_methods_unary	cls	add in numeric unary methods
+core.indexes	Index	_add_logical_methods	cls	add in logical methods
+core.indexes	Index	_add_logical_methods_disabled	cls	add in logical methods to disable
+core.indexes		_ensure_has_len	seq	if seq is an iterator put its values into a list
+core.indexes		_trim_front	strings	trims zeros and decimal points
+core.indexes	RangeIndex	from_range	cls data name dtype	create rangeindex from a range py3 or xrange py2 object
+core.indexes	RangeIndex	_validate_dtype	dtype	require dtype to be none or int64
+core.indexes	RangeIndex	_constructor		return the class to use for construction
+core.indexes	RangeIndex	_get_data_as_items		return a list of tuples of start stop step
+core.indexes	RangeIndex	_format_attrs		return a list of tuples of the (attr formatted_value)
+core.indexes	RangeIndex	nbytes		return the number of bytes in the underlying data
+core.indexes	RangeIndex	memory_usage	deep	memory usage of my values parameters
+core.indexes	RangeIndex	is_unique		return if the index has unique values
+core.indexes	RangeIndex	argsort		returns the indices that would sort the index and its underlying data
+core.indexes	RangeIndex	equals	other	determines if two index objects contain the same elements
+core.indexes	RangeIndex	intersection	other	form the intersection of two index objects sortedness of the result is
+core.indexes	RangeIndex	_min_fitting_element	lower_limit	returns the smallest element greater than or equal to the limit
+core.indexes	RangeIndex	_max_fitting_element	upper_limit	returns the largest element smaller than or equal to the limit
+core.indexes	RangeIndex	_extended_gcd	a b	extended euclidean algorithms to solve bezout's identity
+core.indexes	RangeIndex	union	other	form the union of two index objects and sorts if possible
+core.indexes	RangeIndex	__len__		return the length of the rangeindex
+core.indexes	RangeIndex	__getitem__	key	conserve rangeindex type for scalar and slice keys
+core.indexes	RangeIndex	_add_numeric_methods_binary	cls	add in numeric methods specialized to rangeindex
+core.indexes	NumericIndex	_assert_safe_casting	cls data subarr	subclasses need to override this only if the process of casting data from some accepted dtype to the internal dtype s bears the risk of
+core.indexes	NumericIndex	is_all_dates		checks that all the labels are datetime objects
+core.indexes	Int64Index	_assert_safe_casting	cls data subarr	ensure incoming data can be represented as ints
+core.indexes	UInt64Index	_assert_safe_casting	cls data subarr	ensure incoming data can be represented as uints
+core.indexes	Float64Index	get_value	series key	we always want to get an index value never a value
+core.indexes	Float64Index	equals	other	determines if two index objects contain the same elements
+core.indexes		_td_index_cmp	opname nat_result	wrap comparison operations to convert timedelta-like to timedelta64
+core.indexes	TimedeltaIndex	__setstate__	state	necessary for making this object picklable
+core.indexes	TimedeltaIndex	_maybe_update_attributes	attrs	update index attributes e g freq depending on op
+core.indexes	TimedeltaIndex	days		number of days for each element
+core.indexes	TimedeltaIndex	seconds		number of seconds (>= 0 and less than 1 day) for each element
+core.indexes	TimedeltaIndex	microseconds		number of microseconds (>= 0 and less than 1 second) for each element
+core.indexes	TimedeltaIndex	nanoseconds		number of nanoseconds (>= 0 and less than 1 microsecond) for each element
+core.indexes	TimedeltaIndex	components		return a dataframe of the components days hours minutes seconds milliseconds microseconds nanoseconds of the timedeltas
+core.indexes	TimedeltaIndex	total_seconds		total duration of each element expressed in seconds
+core.indexes	TimedeltaIndex	to_pytimedelta		return timedeltaindex as object ndarray of datetime timedelta objects
+core.indexes	TimedeltaIndex	union	other	specialized union for timedeltaindex objects if combine
+core.indexes	TimedeltaIndex	join	other how level return_indexers	see index join
+core.indexes	TimedeltaIndex	intersection	other	specialized intersection for timedeltaindex objects may be much faster
+core.indexes	TimedeltaIndex	get_value	series key	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	TimedeltaIndex	get_loc	key method tolerance	get integer location for requested label
+core.indexes	TimedeltaIndex	_maybe_cast_slice_bound	label side kind	if label is a string cast it to timedelta according to resolution
+core.indexes	TimedeltaIndex	insert	loc item	make new index inserting new item at location parameters
+core.indexes	TimedeltaIndex	delete	loc	make a new datetimeindex with passed location s deleted
+core.indexes		_is_convertible_to_index	other	return a boolean whether i can attempt conversion to a timedeltaindex
+core.indexes		_to_m8	key	timedelta-like => dt64
+core.indexes		timedelta_range	start end periods freq	return a fixed frequency timedelta index with day as the default frequency
+core.indexes	CategoricalIndex	_create_from_codes	codes categories ordered name	*this is an internal non-public method*
+core.indexes	CategoricalIndex	_create_categorical	data categories ordered	*this is an internal non-public method*
+core.indexes	CategoricalIndex	_is_dtype_compat	other	*this is an internal non-public method*
+core.indexes	CategoricalIndex	equals	other	determines if two categorialindex objects contain the same elements
+core.indexes	CategoricalIndex	_format_attrs		return a list of tuples of the (attr formatted_value)
+core.indexes	CategoricalIndex	values		return the underlying data which is a categorical
+core.indexes	CategoricalIndex	get_values		return the underlying data as an ndarray
+core.indexes	CategoricalIndex	__array__	dtype	the array interface return my values
+core.indexes	CategoricalIndex	_isnan		return if each value is nan
+core.indexes	CategoricalIndex	_to_safe_for_reshape		convert to object if we are a categorical
+core.indexes	CategoricalIndex	get_loc	key method	get integer location for requested label parameters
+core.indexes	CategoricalIndex	get_value	series key	fast lookup of value from 1-dimensional ndarray only use this if you
+core.indexes	CategoricalIndex	_can_reindex	indexer	always allow reindexing
+core.indexes	CategoricalIndex	reindex	target method level limit	create index with target's values (move/add/delete values as necessary) returns
+core.indexes	CategoricalIndex	_reindex_non_unique	target	reindex from a non-unique which categoricalindex's are almost
+core.indexes	CategoricalIndex	map	mapper	apply mapper function to its categories not codes
+core.indexes	CategoricalIndex	delete	loc	make new index with passed location -s deleted
+core.indexes	CategoricalIndex	insert	loc item	make new index inserting new item at location follows
+core.indexes	CategoricalIndex	_append_same_dtype	to_concat name	concatenate to_concat which has the same class
+core.indexes	CategoricalIndex	_codes_for_groupby	sort	return a categorical adjusted for groupby
+core.indexes	CategoricalIndex	_add_comparison_methods	cls	add in comparison methods
+core.indexes	CategoricalIndex	_delegate_method	name	method delegation to the _values
+core.indexes	CategoricalIndex	_add_accessors	cls	add in categorical accessor methods
+core.indexes	MultiIndex	set_levels	levels level inplace verify_integrity	set new levels on multiindex defaults to returning
+core.indexes	MultiIndex	set_labels	labels level inplace verify_integrity	set new labels on multiindex defaults to returning
+core.indexes	MultiIndex	copy	names dtype levels labels	make a copy of this object names dtype levels and labels can be
+core.indexes	MultiIndex	__array__	dtype	the array interface return my values
+core.indexes	MultiIndex	view	cls	this is defined as a copy with the same identity
+core.indexes	MultiIndex	_is_memory_usage_qualified		return a boolean if we need a qualified info display
+core.indexes	MultiIndex	nbytes		return the number of bytes in the underlying data
+core.indexes	MultiIndex	_nbytes	deep	return the number of bytes in the underlying data
+core.indexes	MultiIndex	_format_attrs		return a list of tuples of the (attr formatted_value)
+core.indexes	MultiIndex	_set_names	names level validate	sets names on levels warning mutates!
+core.indexes	MultiIndex	_reference_duplicate_name	name	returns true if the name refered to in self names is duplicated
+core.indexes	MultiIndex	is_monotonic		return if the index is monotonic increasing only equal or increasing values
+core.indexes	MultiIndex	is_monotonic_increasing		return if the index is monotonic increasing only equal or increasing values
+core.indexes	MultiIndex	is_monotonic_decreasing		return if the index is monotonic decreasing only equal or decreasing values
+core.indexes	MultiIndex	_have_mixed_levels		return a boolean list indicated if we have mixed levels
+core.indexes	MultiIndex	_inferred_type_levels		return a list of the inferred types one for each level
+core.indexes	MultiIndex	_hashed_values		return a uint64 ndarray of my hashed values
+core.indexes	MultiIndex	_hashed_indexing_key	key	validate and return the hash for the provided key *this is internal for use for the cython routines*
+core.indexes	MultiIndex	_get_level_values	level	return vector of label values for requested level
+core.indexes	MultiIndex	get_level_values	level	return vector of label values for requested level
+core.indexes	MultiIndex	_to_safe_for_reshape		convert to object if we are a categorical
+core.indexes	MultiIndex	to_frame	index	create a dataframe with the columns the levels of the multiindex
+core.indexes	MultiIndex	to_hierarchical	n_repeat n_shuffle	return a multiindex reshaped to conform to the shapes given by n_repeat and n_shuffle
+core.indexes	MultiIndex	is_lexsorted		return true if the labels are lexicographically sorted
+core.indexes	MultiIndex	is_lexsorted_for_tuple	tup	return true if we are correctly lexsorted given the passed tuple
+core.indexes	MultiIndex	from_arrays	cls arrays sortorder names	convert arrays to multiindex parameters
+core.indexes	MultiIndex	from_tuples	cls tuples sortorder names	convert list of tuples to multiindex parameters
+core.indexes	MultiIndex	from_product	cls iterables sortorder names	make a multiindex from the cartesian product of multiple iterables parameters
+core.indexes	MultiIndex	_sort_levels_monotonic		versionadded : 0 20 0
+core.indexes	MultiIndex	remove_unused_levels		create a new multiindex from the current that removing unused levels meaning that they are not expressed in the labels
+core.indexes	MultiIndex	__reduce__		necessary for making this object picklable
+core.indexes	MultiIndex	__setstate__	state	necessary for making this object picklable
+core.indexes	MultiIndex	_assert_take_fillable	values indices allow_fill fill_value	internal method to handle na filling of take
+core.indexes	MultiIndex	append	other	append a collection of index options together
+core.indexes	MultiIndex	drop	labels level errors	make new multiindex with passed list of labels deleted
+core.indexes	MultiIndex	droplevel	level	return index with requested level removed if multiindex has only 2
+core.indexes	MultiIndex	swaplevel	i j	swap level i with level j do not change the ordering of anything
+core.indexes	MultiIndex	reorder_levels	order	rearrange levels using input order may not drop or duplicate levels
+core.indexes	MultiIndex	_get_labels_for_sorting		we categorizing our labels by using the
+core.indexes	MultiIndex	sortlevel	level ascending sort_remaining	sort multiindex at the requested level the result will respect the
+core.indexes	MultiIndex	reindex	target method level limit	create index with target's values (move/add/delete values as necessary) returns
+core.indexes	MultiIndex	slice_locs	start end step kind	for an ordered multiindex compute the slice locations for input labels
+core.indexes	MultiIndex	get_loc	key method	get integer location slice or boolean mask for requested label or tuple
+core.indexes	MultiIndex	get_loc_level	key level drop_level	get integer location slice for requested label or tuple
+core.indexes	MultiIndex	get_locs	tup	given a tuple of slices/lists/labels/boolean indexer to a level-wise
+core.indexes	MultiIndex	truncate	before after	slice index between two labels / tuples return new multiindex parameters
+core.indexes	MultiIndex	equals	other	determines if two multiindex objects have the same labeling information
+core.indexes	MultiIndex	equal_levels	other	return true if the levels of both multiindex objects are the same
+core.indexes	MultiIndex	union	other	form the union of two multiindex objects sorting if possible parameters
+core.indexes	MultiIndex	intersection	other	form the intersection of two multiindex objects sorting if possible
+core.indexes	MultiIndex	difference	other	compute sorted set difference of two multiindex objects
+core.indexes	MultiIndex	insert	loc item	make new multiindex inserting new item at location
+core.indexes	MultiIndex	delete	loc	make new index with passed location deleted
+core.indexes	MultiIndex	_bounds		return or compute and return slice points for level 0 assuming
+core.indexes	DatetimeIndexOpsMixin	equals	other	determines if two index objects contain the same elements
+core.indexes	DatetimeIndexOpsMixin	_join_i8_wrapper	joinf dtype with_indexers	create the join wrapper methods
+core.indexes	DatetimeIndexOpsMixin	_evaluate_compare	other op	we have been called because a comparison between 8 aware arrays
+core.indexes	DatetimeIndexOpsMixin	_ensure_localized	result	ensure that we are re-localized
+core.indexes	DatetimeIndexOpsMixin	_box_func		box function to get object from internal representation
+core.indexes	DatetimeIndexOpsMixin	_box_values	values	apply box func to passed values
+core.indexes	DatetimeIndexOpsMixin	__getitem__	key	this getitem defers to the underlying array which by-definition can
+core.indexes	DatetimeIndexOpsMixin	freqstr		return the frequency object as a string if its set otherwise none
+core.indexes	DatetimeIndexOpsMixin	inferred_freq		trys to return a string representing a frequency guess generated by infer_freq
+core.indexes	DatetimeIndexOpsMixin	_nat_new	box	return index or ndarray filled with nat which has the same length as the caller
+core.indexes	DatetimeIndexOpsMixin	sort_values	return_indexer ascending	return sorted copy of index
+core.indexes	DatetimeIndexOpsMixin	_isnan		return if each value is nan
+core.indexes	DatetimeIndexOpsMixin	asobject		return object index which contains boxed values
+core.indexes	DatetimeIndexOpsMixin	tolist		return a list of the underlying data
+core.indexes	DatetimeIndexOpsMixin	min	axis	return the minimum value of the index or minimum along an axis
+core.indexes	DatetimeIndexOpsMixin	argmin	axis	returns the indices of the minimum values along an axis
+core.indexes	DatetimeIndexOpsMixin	max	axis	return the maximum value of the index or maximum along an axis
+core.indexes	DatetimeIndexOpsMixin	argmax	axis	returns the indices of the maximum values along an axis
+core.indexes	DatetimeIndexOpsMixin	_format_attrs		return a list of tuples of the (attr formatted_value)
+core.indexes	DatetimeIndexOpsMixin	resolution		returns day hour minute second millisecond or microsecond
+core.indexes	DatetimeIndexOpsMixin	_convert_scalar_indexer	key kind	we don't allow integer or float indexing on datetime-like when using
+core.indexes	DatetimeIndexOpsMixin	_add_datetimelike_methods	cls	add in the datetimelike methods (as we may have to override the
+core.indexes	DatetimeIndexOpsMixin	isin	values	compute boolean array of whether each index value is found in the
+core.indexes	DatetimeIndexOpsMixin	shift	n freq	specialized shift which produces a datetimeindex
+core.indexes	DatetimeIndexOpsMixin	repeat	repeats	analogous to ndarray repeat
+core.indexes	DatetimeIndexOpsMixin	summary	name	return a summarized representation
+core.indexes	DatetimeIndexOpsMixin	_append_same_dtype	to_concat name	concatenate to_concat which has the same class
+core.indexes		_ensure_datetimelike_to_i8	other	helper for coercing an input scalar or array to i8
+core.sparse		_to_ijv	ss row_levels column_levels sort_labels	for arbitrary multiindexed sparseseries return v i j ilabels jlabels where (v i j is suitable for
+core.sparse		_sparse_series_to_coo	ss row_levels column_levels sort_labels	convert a sparseseries to a scipy sparse coo_matrix using index
+core.sparse		_coo_to_sparse_series	A dense_index	convert a scipy sparse coo_matrix to a sparseseries
+core.sparse		_arith_method	op name str_rep default_axis	wrapper function for series arithmetic operations to avoid code duplication
+core.sparse		_wrap_result	name data sparse_index fill_value	wrap op result to have correct dtype
+core.sparse	SparseArray	__array_wrap__	out_arr context	numpy calls this method when ufunc is applied parameters
+core.sparse	SparseArray	__array_finalize__	obj	gets called after any ufunc or other array operations necessary to pass on the index
+core.sparse	SparseArray	__reduce__		necessary for making this object picklable
+core.sparse	SparseArray	__setstate__	state	necessary for making this object picklable
+core.sparse	SparseArray	get_values	fill	return a dense representation
+core.sparse	SparseArray	to_dense	fill	convert sparsearray to a numpy array
+core.sparse	SparseArray	take	indices axis allow_fill fill_value	sparse-compatible version of ndarray take
+core.sparse	SparseArray	copy	deep	make a copy of the sparsearray only the actual sparse values need to
+core.sparse	SparseArray	count		compute sum of non-na/null observations in sparsearray if the
+core.sparse	SparseArray	sum	axis	sum of non-na/null values
+core.sparse	SparseArray	cumsum	axis	cumulative sum of non-na/null values
+core.sparse	SparseArray	mean	axis	mean of non-na/null values
+core.sparse	SparseArray	value_counts	dropna	returns a series containing counts of unique values
+core.sparse		_maybe_to_dense	obj	try to convert to dense
+core.sparse		_maybe_to_sparse	array	array must be sparseseries or sparsearray
+core.sparse		_sanitize_values	arr	return an ndarray for our input
+core.sparse		make_sparse	arr kind fill_value	convert ndarray to sparse format
+core.sparse	SparseList	consolidate	inplace	internally consolidate chunks of data
+core.sparse	SparseList	copy		return copy of the list
+core.sparse	SparseList	to_array		return sparsearray from data stored in the sparselist
+core.sparse	SparseList	append	value	append element or array-like chunk of data to the sparselist
+core.sparse	SparseDataFrame	_init_matrix	data index columns dtype	init self from ndarray or list of lists
+core.sparse	SparseDataFrame	_init_spmatrix	data index columns dtype	init self from scipy sparse matrix
+core.sparse	SparseDataFrame	to_coo		return the contents of the frame as a sparse scipy coo matrix
+core.sparse	SparseDataFrame	_unpickle_sparse_frame_compat	state	original pickle format
+core.sparse	SparseDataFrame	to_dense		convert to dense dataframe
+core.sparse	SparseDataFrame	_apply_columns	func	get new sparsedataframe applying func to each columns
+core.sparse	SparseDataFrame	copy	deep	make a copy of this sparsedataframe
+core.sparse	SparseDataFrame	density		ratio of non-sparse points to total dense data points
+core.sparse	SparseDataFrame	_sanitize_column	key value	creates a new sparsearray from the input value
+core.sparse	SparseDataFrame	__getitem__	key	retrieve column or slice from dataframe
+core.sparse	SparseDataFrame	set_value	index col value takeable	put single value at passed column and index parameters
+core.sparse	SparseDataFrame	xs	key axis copy	returns a row cross-section from the sparsedataframe as a series object
+core.sparse	SparseDataFrame	transpose		returns a dataframe with the rows/columns switched
+core.sparse	SparseDataFrame	cumsum	axis	return sparsedataframe of cumulative sums over requested axis
+core.sparse	SparseDataFrame	apply	func axis broadcast reduce	analogous to dataframe apply for sparsedataframe
+core.sparse	SparseDataFrame	applymap	func	apply a function to a dataframe that is intended to operate elementwise i
+core.sparse		to_manager	sdf columns index	create and return the block manager from a dataframe of series
+core.sparse		stack_sparse_frame	frame	only makes sense when fill_value is nan
+core.sparse		homogenize	series_dict	conform a set of sparseseries (with nan fill_value) to a common sparseindex corresponding to the locations where they all have data
+core.sparse		_arith_method	op name str_rep default_axis	wrapper function for series arithmetic operations to avoid code duplication
+core.sparse	SparseSeries	values		return the array
+core.sparse	SparseSeries	__array__	result	the array interface return my values
+core.sparse	SparseSeries	get_values		same as values
+core.sparse	SparseSeries	from_array	cls arr index name	simplified alternate constructor
+core.sparse	SparseSeries	as_sparse_array	kind fill_value copy	return my self as a sparse array do not copy by default
+core.sparse	SparseSeries	__array_wrap__	result context	gets called prior to a ufunc and after see sparsearray
+core.sparse	SparseSeries	__array_finalize__	obj	gets called after any ufunc or other array operations necessary to pass on the index
+core.sparse	SparseSeries	_reduce	op name axis skipna	perform a reduction operation
+core.sparse	SparseSeries	__iter__		forward to the array
+core.sparse	SparseSeries	_ixs	i axis	return the i-th value or values in the sparseseries by location
+core.sparse	SparseSeries	_get_val_at	loc	forward to the array
+core.sparse	SparseSeries	abs		return an object with absolute value taken only applicable to objects
+core.sparse	SparseSeries	get	label default	returns value occupying requested label default to specified missing value if not present
+core.sparse	SparseSeries	get_value	label takeable	retrieve single value at passed index label
+core.sparse	SparseSeries	set_value	label value takeable	quickly set single value at passed label if label is not contained a
+core.sparse	SparseSeries	to_dense	sparse_only	convert sparseseries to a series
+core.sparse	SparseSeries	copy	deep	make a copy of the sparseseries only the actual sparse values need to
+core.sparse	SparseSeries	sparse_reindex	new_index	conform sparse values to new sparseindex
+core.sparse	SparseSeries	take	indices axis convert	sparse-compatible version of ndarray take
+core.sparse	SparseSeries	cumsum	axis	cumulative sum of non-na/null values
+core.sparse	SparseSeries	dropna	axis inplace	analogous to series dropna if fill_value=nan returns a dense series
+core.sparse	SparseSeries	combine_first	other	combine series values choosing the calling series's values first
+core.sparse	SparseSeries	to_coo	row_levels column_levels sort_labels	create a scipy sparse coo_matrix from a sparseseries with multiindex
+core.sparse	SparseSeries	from_coo	cls A dense_index	create a sparseseries from a scipy sparse coo_matrix
+core.computation	BinOp	conform	rhs	inplace conform rhs
+core.computation	BinOp	is_valid		return true if this is a valid field
+core.computation	BinOp	is_in_table		return true if this is a valid column name for generation (e g an
+core.computation	BinOp	kind		the kind of my field
+core.computation	BinOp	meta		the meta of my field
+core.computation	BinOp	metadata		the metadata of my field
+core.computation	BinOp	generate	v	create and return the op string for this termvalue
+core.computation	BinOp	convert_value	v	convert the expression that is in the term to something that is
+core.computation	FilterBinOp	invert		invert the filter
+core.computation	FilterBinOp	format		return the actual filter format
+core.computation	ConditionBinOp	invert		invert the condition
+core.computation	ConditionBinOp	format		return the actual ne format
+core.computation		_validate_where	w	validate that the where statement is of the right type
+core.computation	Expr	evaluate		create and return the numexpr condition and filter
+core.computation	TermValue	tostring	encoding	quote the string if not encoded
+core.computation		maybe_expression	s	loose checking if s is a pytables-acceptable expression
+core.computation	Term	update	value	search order for local (i e @variable) variables
+core.computation	Op	__unicode__		print a generic n-ary operator and its operands using infix
+core.computation		_in	x y	compute the vectorized membership of x in y if possible otherwise use python
+core.computation		_not_in	x y	compute the vectorized membership of x not in y if possible otherwise use python
+core.computation		_cast_inplace	terms acceptable_dtypes dtype	cast an expression inplace
+core.computation	BinOp	__call__	env	recursively evaluate an expression in python space
+core.computation	BinOp	evaluate	env engine parser term_type	evaluate a binary operation *before* being passed to the engine
+core.computation	BinOp	convert_values		convert datetimes to a comparable value in an expression
+core.computation		_can_use_numexpr	op op_str a b	return a boolean if we will be using numexpr
+core.computation		evaluate	op op_str a b	evaluate and return the expression of the op on a and b
+core.computation		where	cond a b raise_on_error	evaluate the where condition cond on a and b
+core.computation		set_test_mode	v	keeps track of whether numexpr was used stores an additional true
+core.computation		get_test_result		get test result and reset test_results
+core.computation		_ensure_decoded	s	if we have bytes decode them to unicode
+core.computation		_result_type_many		wrapper around numpy result_type which overcomes the npy_maxargs 32
+core.computation		_any_pandas_objects	terms	check a sequence of terms for instances of pandasobject
+core.computation		_align	terms	align a set of terms
+core.computation		_reconstruct_object	typ obj axes dtype	reconstruct an object given its type raw value and possibly empty none axes
+core.computation		_check_ne_builtin_clash	expr	attempt to prevent foot-shooting in a helpful way
+core.computation	AbstractEngine	convert		convert an expression for evaluation
+core.computation	AbstractEngine	evaluate		run the engine on the expression this method performs alignment which is necessary no matter what engine
+core.computation	AbstractEngine	_evaluate		return an evaluated expression
+core.computation		_check_engine	engine	make sure a valid engine is passed
+core.computation		_check_parser	parser	make sure a valid parser is passed
+core.computation		_check_expression	expr	make sure an expression is not an empty string
+core.computation		_convert_expression	expr	convert an object to an expression
+core.computation		eval	expr parser engine truediv	evaluate a python expression as a string using various backends
+core.computation		tokenize_string	source	tokenize a python source code string
+core.computation		_rewrite_assign	tok	rewrite the assignment operator for pytables expressions that use = as a substitute for ==
+core.computation		_replace_booleans	tok	replace & with and and | with or so that bitwise precedence is changed to boolean precedence
+core.computation		_replace_locals	tok	replace local variables with a syntactically valid name
+core.computation		_preparse	source f	compose a collection of tokenization functions parameters
+core.computation		_is_type	t	factory for a type checking function of type t or tuple of types
+core.computation		_filter_nodes	superclass all_nodes	filter out ast nodes that are subclasses of superclass
+core.computation		_node_not_implemented	node_name cls	return a function that raises a notimplementederror with a passed node name
+core.computation		disallow	nodes	decorator to disallow certain nodes from parsing raises a
+core.computation		_op_maker	op_class op_symbol	return a function to create an op class with its symbol already passed
+core.computation		add_ops	op_classes	decorator to add default implementation of ops
+core.computation	BaseExprVisitor	visit_Slice	node	df index[slice 4 6 ]
+core.computation	BaseExprVisitor	visit_Assign	node	support a single assignment node like
+core.computation	BaseExprVisitor	visit_Call_35	node side	in 3 5 the starargs attribute was changed to be more flexible
+core.computation	Expr	parse		parse an expression
+core.computation	Expr	names		get the names in an expression
+core.computation		_ensure_scope	level global_dict local_dict resolvers	ensure that we are grabbing the correct scope
+core.computation		_replacer	x	replace a number with its hexadecimal representation used to tag
+core.computation		_raw_hex_id	obj	return the padded hexadecimal id of obj
+core.computation		_get_pretty_string	obj	return a prettier version of obj
+core.computation	Scope	has_resolvers		return whether we have any extra scope
+core.computation	Scope	resolve	key is_local	resolve a variable name in a possibly local context
+core.computation	Scope	swapkey	old_key new_key new_value	replace a variable name with a potentially new value
+core.computation	Scope	_get_vars	stack scopes	get specifically scoped variables from a list of stack frames
+core.computation	Scope	update	level	update the current scope by going back level levels
+core.computation	Scope	add_tmp	value	add a temporary variable to the scope
+core.computation	Scope	ntemps		the number of temporary variables in this scope
+core.computation	Scope	full_scope		return the full scope for use with passing to engines transparently as a mapping
+core.reshape		pivot_table	data values index columns	create a spreadsheet-style pivot table as a dataframe the levels in the
+core.reshape		crosstab	index columns values rownames	compute a simple cross-tabulation of two or more factors by default
+core.reshape		cut	x bins right labels	return indices of half-open bins to which each value of x belongs
+core.reshape		qcut	x q labels retbins	quantile-based discretization function discretize variable into
+core.reshape		_coerce_to_type	x	if the passed data is of datetime/timedelta type
+core.reshape		_convert_bin_to_numeric_type	bins dtype	if the passed bin is of datetime/timedelta type
+core.reshape		_format_labels	bins precision right include_lowest	based on the dtype return our labels
+core.reshape		_preprocess_for_cut	x	handles preprocessing for cut where we convert passed
+core.reshape		_postprocess_for_cut	fac bins retbins x_is_series	handles post processing for the cut method where
+core.reshape		_round_frac	x precision	round the fractional part of the given number
+core.reshape		_infer_precision	base_precision bins	infer an appropriate precision for _round_frac
+core.reshape		cartesian_product	X	numpy version of itertools product or pandas compat product
+core.reshape		_compose2	f g	compose 2 callables
+core.reshape		compose		compose 2 or more callables
+core.reshape		_groupby_and_merge	by on left right	groupby & merge we are always performing a left-by type operation
+core.reshape		merge_ordered	left right on left_on	perform merge with optional filling/interpolation designed for ordered data like time series data
+core.reshape		merge_asof	left right on left_on	perform an asof merge this is similar to a left-join except that we
+core.reshape	_MergeOperation	_get_join_indexers		return the join indexers
+core.reshape	_MergeOperation	_get_merge_keys		note has side effects (copy/delete key columns)
+core.reshape		_get_cython_type	dtype	given a dtype return a c name like 'int64_t' or 'double'
+core.reshape		_get_cython_type_upcast	dtype	upcast a dtype to 'int64_t', 'double', or 'object'
+core.reshape	_AsOfMerge	_asof_key		this is our asof key the 'on'
+core.reshape	_AsOfMerge	_get_join_indexers		return the join indexers
+core.reshape		concat	objs axis join join_axes	concatenate pandas objects along a particular axis with optional set logic along the other axes
+core.reshape	_Concatenator	_get_concat_axis		return index to be used along concatenation axis
+core.reshape		pivot	index columns values	see dataframe pivot
+core.reshape		pivot_simple	index columns values	produce 'pivot' table based on 3 columns of this dataframe
+core.reshape		_slow_pivot	index columns values	produce 'pivot' table based on 3 columns of this dataframe
+core.reshape		stack	frame level dropna	convert dataframe to series with multi-level index columns become the
+core.reshape		lreshape	data groups dropna label	reshape long-format data to wide generalized inverse of dataframe pivot
+core.reshape		wide_to_long	df stubnames i j	wide panel to long format less flexible but more user-friendly than melt
+core.reshape		get_dummies	data prefix prefix_sep dummy_na	convert categorical variable into dummy/indicator variables parameters
+core.reshape		make_axis_dummies	frame axis transform	construct 1-0 dummy variables corresponding to designated axis labels
+tseries		pivot_annual	series freq	deprecated use pivot_table instead
+tseries		isleapyear	year	returns true if year is a leap year
+tseries	Resolution	get_str	cls reso	return resolution str against resolution code
+tseries	Resolution	get_reso	cls resostr	return resolution str against resolution code
+tseries	Resolution	get_freq_group	cls resostr	return frequency str against resolution str
+tseries	Resolution	get_freq	cls resostr	return frequency str against resolution str
+tseries	Resolution	get_str_from_freq	cls freq	return resolution str against frequency str
+tseries	Resolution	get_reso_from_freq	cls freq	return resolution code against frequency str
+tseries	Resolution	get_stride_from_decimal	cls value freq	convert freq with decimal stride into a higher freq with integer stride parameters
+tseries		get_to_timestamp_base	base	return frequency code group used for base of to_timestamp against frequency code
+tseries		get_freq_group	freq	return frequency code group of given frequency str or offset
+tseries		get_freq	freq	return frequency code of given frequency str
+tseries		get_freq_code	freqstr	return freq str or tuple to freq code and stride mult
+tseries		get_period_alias	offset_str	alias to closest period strings bq->q etc
+tseries		to_offset	freq	return dateoffset object from string or tuple representation or datetime
+tseries		_base_and_stride	freqstr	return base freq and stride info from string representation
+tseries		get_base_alias	freqstr	returns the base frequency alias e g '5d' -> 'd'
+tseries		get_offset	name	return dateoffset object associated with rule name
+tseries		get_offset_name	offset	return rule name associated with a dateoffset object
+tseries		get_standard_freq	freq	return the standardized frequency string
+tseries		infer_freq	index warn	infer the most likely frequency given the input index if the frequency is
+tseries		_maybe_coerce_freq	code	we might need to coerce a code to a rule_code
+tseries		is_subperiod	source target	returns true if downsampling is possible between source and target
+tseries		is_superperiod	source target	returns true if upsampling is possible between source and target
+tseries	DateOffset	apply_index	i	vectorized apply of dateoffset to datetimeindex raises notimplentederror for offsets without a
+tseries	DateOffset	rollback	dt	roll provided date backward to next offset only if not on offset
+tseries	DateOffset	rollforward	dt	roll provided date forward to next offset only if not on offset
+tseries	DateOffset	_beg_apply_index	i freq	offsets index to beginning of period frequency
+tseries	DateOffset	_end_apply_index	i freq	offsets index to end of period frequency
+tseries	BusinessMixin	__getstate__		return a pickleable state
+tseries	BusinessMixin	__setstate__	state	reconstruct an instance from a pickled state
+tseries	BusinessHourMixin	_next_opening_time	other	if n is positive return tomorrow's business day opening time
+tseries	BusinessHourMixin	_prev_opening_time	other	if n is positive return yesterday's business day opening time
+tseries	BusinessHourMixin	_get_business_hours_by_sec		return business hours in a day by seconds
+tseries	BusinessHourMixin	rollback	dt	roll provided date backward to next offset only if not on offset
+tseries	BusinessHourMixin	rollforward	dt	roll provided date forward to next offset only if not on offset
+tseries	BusinessHourMixin	_onOffset	dt businesshours	slight speedups using calcurated values
+tseries	SemiMonthOffset	_apply	n other	handle specific apply logic for child classes
+tseries	SemiMonthOffset	_get_roll	i before_day_of_month after_day_of_month	return an array with the correct n for each date in i
+tseries	SemiMonthOffset	_apply_index_days	i roll	apply the correct day for each date in i
+tseries		_get_firstbday	wkday	wkday is the result of monthrange year month
+tseries		generate_range	start end periods offset	generates a sequence of dates corresponding to the specified time offset
+tseries		next_monday	dt	if holiday falls on saturday use following monday instead
+tseries		next_monday_or_tuesday	dt	for second holiday of two adjacent ones!
+tseries		previous_friday	dt	if holiday falls on saturday or sunday use previous friday instead
+tseries		sunday_to_monday	dt	if holiday falls on sunday use day thereafter monday instead
+tseries		weekend_to_monday	dt	if holiday falls on sunday or saturday use day thereafter monday instead
+tseries		nearest_workday	dt	if holiday falls on saturday use day before friday instead if holiday falls on sunday use day thereafter monday instead
+tseries		next_workday	dt	returns next weekday used for observances
+tseries		previous_workday	dt	returns previous weekday used for observances
+tseries		before_nearest_workday	dt	returns previous workday after nearest workday
+tseries		after_nearest_workday	dt	returns next workday after nearest workday
+tseries	Holiday	dates	start_date end_date return_name	calculate holidays observed between start date and end date parameters
+tseries	Holiday	_reference_dates	start_date end_date	get reference dates for the holiday
+tseries	Holiday	_apply_rule	dates	apply the given offset/observance to a datetimeindex of dates
+tseries		get_calendar	name	return an instance of a calendar based on its name
+tseries	AbstractHolidayCalendar	__init__	name rules	initializes holiday object with a given set a rules normally
+tseries	AbstractHolidayCalendar	holidays	start end return_name	returns a curve with holidays between start_date and end_date parameters
+tseries	AbstractHolidayCalendar	merge_class	base other	merge holiday calendars together the base calendar
+tseries	AbstractHolidayCalendar	merge	other inplace	merge holiday calendars together the caller's class
+util		reset_display_options		reset the display options for printing and representing objects
+util		round_trip_pickle	obj path	pickle an object and then read it again
+util		assert_almost_equal	left right check_exact check_dtype	check that left and right index are equal
+util		_check_isinstance	left right cls	helper method for our assert_* methods that ensures that the two objects being compared have the right type before
+util		rands_array	nchars size dtype	generate an array of byte strings
+util		randu_array	nchars size dtype	generate an array of unicode strings
+util		rands	nchars	generate one random byte string
+util		randu	nchars	generate one random unicode string
+util		mplskip	cls	skip a testcase instance if matplotlib isn't installed
+util		_incompat_bottleneck_version	method	skip if we have bottleneck installed and its >= 1
+util		check_output		run command with arguments and return its output as a byte string
+util		get_locales	prefix normalize locale_getter	get all the locales that are available on the system
+util		set_locale	new_locale lc_var	context manager for temporarily setting a locale
+util		_can_set_locale	lc	check to see if we can set a locale without throwing an exception
+util		_valid_locales	locales normalize	return a list of normalized locales that do not throw an exception when set
+util		capture_stdout	f	decorator to capture stdout in a buffer so that it can be checked or suppressed during testing
+util		capture_stderr	f	decorator to capture stderr in a buffer so that it can be checked or suppressed during testing
+util		ensure_clean	filename return_filelike	gets a temporary path and agrees to remove on close
+util		get_data_path	f	return the path of a data file these are relative to the current test directory
+util		equalContents	arr1 arr2	checks if the set of unique elements of arr1 and arr2 are equivalent
+util		assert_index_equal	left right exact check_names	check that left and right index are equal
+util		assert_class_equal	left right exact obj	checks classes are equal
+util		assert_attr_equal	attr left right obj	checks attributes are equal both objects must have attribute
+util		assert_categorical_equal	left right check_dtype obj	test that categoricals are equivalent
+util		assert_numpy_array_equal	left right strict_nan check_dtype	checks that 'np ndarray' is equivalent
+util		assert_series_equal	left right check_dtype check_index_type	check that left and right series are equal
+util		assert_frame_equal	left right check_dtype check_index_type	check that left and right dataframe are equal
+util		assert_panelnd_equal	left right check_dtype check_panel_type	check that left and right panels are equal
+util		assert_sp_array_equal	left right check_dtype	check that the left and right sparsearray are equal
+util		assert_sp_series_equal	left right check_dtype exact_indices	check that the left and right sparseseries are equal
+util		assert_sp_frame_equal	left right check_dtype exact_indices	check that the left and right sparsedataframe are equal
+util		assert_copy	iter1 iter2	iter1 iter2 iterables that produce elements comparable with assert_almost_equal
+util		makeCategoricalIndex	k n name	make a length k index or n categories
+util		makeIntervalIndex	k name	make a length k intervalindex
+util		all_index_generator	k	generator which can be iterated over to get instances of all the various index classes
+util		all_timeseries_index_generator	k	generator which can be iterated over to get instances of all the classes which represent time-seires
+util		makeCustomIndex	nentries nlevels prefix names	create an index/multindex with given dimensions levels names etc' nentries - number of entries in index
+util		makeCustomDataframe	nrows ncols c_idx_names r_idx_names	nrows ncols - number of data rows/cols c_idx_names idx_names - false/true/list of strings yields no names
+util		skip_if_no_package	pkg_name min_version max_version app	check that the min/max version of the required package is installed
+util		optional_args	decorator	allows a decorator to take optional positional and keyword arguments
+util		can_connect	url error_classes	try to connect to the given url true if succeeds false if ioerror
+util		network	t url raise_on_error check_before_test	label a test as requiring network connection and if an error is encountered only raise if it does not find a network connection
+util		stdin_encoding	encoding	context manager for running bits of code while emulating an arbitrary stdin encoding
+util		assert_raises_regex	_exception _regexp _callable	check that the specified exception is raised and that the error message matches a given regular expression pattern
+util	_AssertRaisesContextmanager	__init__	exception regexp	initialize an _assertraisescontextmanager instance
+util	_AssertRaisesContextmanager	exception_matches	exc_type exc_value trace_back	check that the exception raised matches the expected exception and expected error message regular expression
+util		assert_produces_warning	expected_warning filter_level clear check_stacklevel	context manager for running code that expects to raise or not raise warnings
+util		test_parallel	num_threads kwargs_list	decorator to run the same function multiple times in parallel
+util		patch	ob attr value	temporarily patch an attribute of an object
+util		set_timezone	tz	context manager for temporarily setting a timezone
+util		get_terminal_size		detect terminal size and return tuple = width height
+util		get_sys_info		returns system information as a dict
+util	TablePlotter	_shape	df	calcurate table chape considering index levels
+util	TablePlotter	_get_cells	left right vertical	calcurate appropriate figure size based on left and right data
+util	TablePlotter	plot	left right labels vertical	plot left / right dataframes in specified layout
+util	TablePlotter	_conv	data	convert each input to appropriate for table outplot
+util		deprecate_kwarg	old_arg_name new_arg_name mapping stacklevel	decorator to deprecate a keyword argument of a function parameters
+util	Substitution	update		assume self params is a dict and update it with supplied args
+util	Substitution	from_params	cls params	in the case where the params is a mutable sequence list or dictionary and it may change before this class is called one may explicitly use a
+util		make_signature	func	returns a string repr of the arg list of a func call with any defaults
+util		_check_arg_length	fname args max_fname_arg_count compat_args	checks whether 'args' has length of at most 'compat_args' raises
+util		_check_for_default_values	fname arg_val_dict compat_args	check that the keys in arg_val_dict are mapped to their default values as specified in compat_args
+util		validate_args	fname args max_fname_arg_count compat_args	checks whether the length of the *args argument passed into a function has at most len(compat_args) arguments and whether or not all of these
+util		_check_for_invalid_keys	fname kwargs compat_args	checks whether 'kwargs' contains any keys that are not in 'compat_args' and raises a typeerror if there is one
+util		validate_kwargs	fname kwargs compat_args	checks whether parameters passed to the **kwargs argument in a function fname are valid parameters as specified in *compat_args
+util		validate_args_and_kwargs	fname args kwargs max_fname_arg_count	checks whether parameters passed to the *args and **kwargs argument in a function fname are valid parameters as specified in *compat_args
+util		validate_bool_kwarg	value arg_name	ensures that argument passed in arg_name is of type bool
+util		hash_pandas_object	obj index encoding hash_key	return a data hash of the index/series/dataframe
+util		hash_tuples	vals encoding hash_key	hash an multiindex / list-of-tuples efficiently
+util		_hash_categorical	c encoding hash_key	hash a categorical by hashing its categories and then mapping the codes
+util		hash_array	vals encoding hash_key categorize	given a 1d array return an array of deterministic integers
+io		_ensure_decoded	s	if we have bytes decode them to unicode
+io		_ensure_term	where scope_level	ensure that the where is a term or a list of term
+io		to_hdf	path_or_buf key value mode	store this object close it if we opened it
+io		read_hdf	path_or_buf key	read from the store close it if we opened it retrieve pandas object stored in file optionally based on where
+io		_is_metadata_of	group parent_group	check if a given group is a metadata group for a given parent_group
+io	HDFStore	root		return the root node
+io	HDFStore	__getattr__	name	allow attribute access to get stores
+io	HDFStore	__contains__	key	check for existance of this key
+io	HDFStore	keys		return a potentially unordered list of the keys corresponding to the objects stored in the hdfstore
+io	HDFStore	items		iterate on key->group
+io	HDFStore	open	mode	open the file in the specified mode parameters
+io	HDFStore	close		close the pytables file handle
+io	HDFStore	is_open		return a boolean indicating whether the file is open
+io	HDFStore	flush	fsync	force all buffered modifications to be written to disk
+io	HDFStore	get	key	retrieve pandas object stored in file
+io	HDFStore	select	key where start stop	retrieve pandas object stored in file optionally based on where
+io	HDFStore	select_as_coordinates	key where start stop	return the selection as an index
+io	HDFStore	select_column	key column	return a single column from the table this is generally only useful to
+io	HDFStore	select_as_multiple	keys where selector columns	retrieve pandas objects from multiple tables
+io	HDFStore	put	key value format append	store object in hdfstore parameters
+io	HDFStore	remove	key where start stop	remove pandas object partially by specifying the where condition
+io	HDFStore	append	key value format append	append to table in file node must already exist and be table
+io	HDFStore	append_to_multiple	d value selector data_columns	append to multiple tables parameters
+io	HDFStore	create_table_index	key	create a pytables index on the table
+io	HDFStore	groups		return a list of all the top-level nodes (that are not themselves a
+io	HDFStore	get_node	key	return the node with the key or none if it does not exist
+io	HDFStore	get_storer	key	return the storer object for a key raise if not in the file
+io	HDFStore	copy	file mode propindexes keys	copy the existing store to a new file upgrading in place parameters
+io	HDFStore	_validate_format	format kwargs	validate / deprecate formats return the new kwargs
+io	HDFStore	_create_storer	group format value append	return a suitable class to operate
+io		get_store	path	backwards compatible alias for hdfstore
+io	IndexCol	set_name	name kind_attr	set the name of this indexer
+io	IndexCol	set_axis	axis	set the axis over which i index
+io	IndexCol	set_pos	pos	set the position of this column in the table
+io	IndexCol	__eq__	other	compare 2 col items
+io	IndexCol	is_indexed		return whether i am an indexed column
+io	IndexCol	infer	handler	infer this column from the table create and return a new object
+io	IndexCol	convert	values nan_rep encoding	set the values from this selection take = take ownership
+io	IndexCol	take_data		return the values & release the memory
+io	IndexCol	col		return my current col description
+io	IndexCol	cvalues		return my cython values
+io	IndexCol	maybe_set_size	min_itemsize	maybe set a string col itemsize
+io	IndexCol	validate_col	itemsize	validate this column return the compared against itemsize
+io	IndexCol	update_info	info	set/update the info for this indexable with the key/value
+io	IndexCol	set_info	info	set my state from the passed info
+io	IndexCol	get_attr		set the kind for this colummn
+io	IndexCol	set_attr		set the kind for this colummn
+io	IndexCol	read_metadata	handler	retrieve the metadata for this columns
+io	IndexCol	validate_metadata	handler	validate that kind=category does not change the categories
+io	IndexCol	write_metadata	handler	set the meta data
+io	GenericIndexCol	convert	values nan_rep encoding	set the values from this selection take = take ownership
+io	DataCol	create_for_block	cls i name cname	return a new datacol with the block i
+io	DataCol	__eq__	other	compare 2 col items
+io	DataCol	take_data		return the data & release the memory
+io	DataCol	set_metadata	metadata	record the metadata
+io	DataCol	set_atom	block block_items existing_col min_itemsize	create and setup my atom from the block b
+io	DataCol	get_atom_coltype	kind	return the pytables column class for this column
+io	DataCol	cvalues		return my cython values
+io	DataCol	validate_attr	append	validate that we have the same order as the existing & same dtype
+io	DataCol	convert	values nan_rep encoding	set the data from this selection (and convert to the correct dtype
+io	DataCol	get_attr		get the data for this colummn
+io	DataCol	set_attr		set the data for this colummn
+io	Fixed	set_version		compute and set our version
+io	Fixed	__unicode__		return a pretty representation of myself
+io	Fixed	set_object_info		set my pandas type & version
+io	Fixed	set_attrs		set our object attributes
+io	Fixed	get_attrs		get our object attributes
+io	Fixed	storable		return my storable
+io	Fixed	validate	other	validate against an existing storable
+io	Fixed	validate_version	where	are we trying to operate on an old version?
+io	Fixed	infer_axes		infer the axes of my storer
+io	Fixed	delete	where start stop	support fully deleting the node in its entirety only - where
+io	GenericFixed	validate_read	kwargs	remove table keywords from kwargs and return
+io	GenericFixed	set_attrs		set our object attributes
+io	GenericFixed	get_attrs		retrieve our attributes
+io	GenericFixed	read_array	key start stop	read an array for the specified node (off of group
+io	GenericFixed	write_array_empty	key value	write a 0-len array
+io	GenericFixed	_is_empty_array	shape	returns true if any axis is zero length
+io	SparseFixed	validate_read	kwargs	we don't support start stop kwds in sparse
+io	SparseFrameFixed	write	obj	write it as a collection of individual sparse series
+io	Table	__unicode__		return a pretty representatgion of myself
+io	Table	__getitem__	c	return the axis for c
+io	Table	validate	other	validate against an existing table
+io	Table	is_multi_index		the levels attribute is 1 or a list in the case of a multi-index
+io	Table	validate_metadata	existing	create / validate metadata
+io	Table	validate_multiindex	obj	validate that we can store the multi-index reset and return the
+io	Table	nrows_expected		based on our axes compute the expected nrows
+io	Table	is_exists		has this table been created
+io	Table	table		return the table group this is my storable
+io	Table	ncols		the number of total columns in the values axes
+io	Table	data_orientation		return a tuple of my permutated axes non_indexable at the front
+io	Table	queryables		return a dict of the kinds allowable columns for this object
+io	Table	index_cols		return a list of my index cols
+io	Table	values_cols		return a list of my values cols
+io	Table	_get_metadata_path	key	return the metadata pathname for this key
+io	Table	write_metadata	key values	write out a meta data array to the key as a fixed-format series
+io	Table	read_metadata	key	return the meta data array for this key
+io	Table	set_info		update our table index info
+io	Table	set_attrs		set our table type & indexables
+io	Table	get_attrs		retrieve our attributes
+io	Table	validate_version	where	are we trying to operate on an old version?
+io	Table	validate_min_itemsize	min_itemsize	validate the min_itemisze doesn't contain items that are not in the
+io	Table	indexables		create/cache the indexables if they don't exist
+io	Table	create_index	columns optlevel kind	create a pytables index on the specified columns note cannot index time64col() or complexcol currently
+io	Table	read_axes	where	create and return the axes sniffed from the table return boolean
+io	Table	get_object	obj	return the data for this obj
+io	Table	validate_data_columns	data_columns min_itemsize	take the input data_columns and min_itemize and create a data
+io	Table	create_axes	axes obj validate nan_rep	create and return the axes
+io	Table	process_axes	obj columns	process axes filters
+io	Table	create_description	complib complevel fletcher32 expectedrows	create the description of the table from the axes & values
+io	Table	read_coordinates	where start stop	select coordinates row numbers from a table return the
+io	Table	read_column	column where start stop	return a single column from the table generally only indexables
+io	WORMTable	read		read the indicies and the indexing array calculate offset rows and
+io	WORMTable	write		write in a format that we can search later on but cannot append to : write out the indicies and the values using _write_array
+io	LegacyTable	read	where columns	we have n indexable columns with an arbitrary number of data
+io	AppendableTable	write_data	chunksize dropna	we form the data into a 2-d including indexes values mask
+io	AppendableFrameTable	get_object	obj	these are written transposed
+io	AppendableSeriesTable	write	obj data_columns	we are going to write this as a frame table
+io	AppendableMultiSeriesTable	write	obj	we are going to write this as a frame table
+io	GenericTable	get_attrs		retrieve our attributes
+io	GenericTable	indexables		create the indexables from the table description
+io	AppendablePanelTable	get_object	obj	these are written transposed
+io		_get_info	info name	get/create the info for this name
+io		_get_tz	tz	for a tz-aware type return an encoded zone
+io		_set_tz	values tz preserve_UTC coerce	coerce the values to a datetimeindex if tz is set
+io		_convert_string_array	data encoding itemsize	we take a string-like that is object dtype and coerce to a fixed size
+io		_unconvert_string_array	data nan_rep encoding	inverse of _convert_string_array
+io	Selection	generate	where	where can be a : dict list tuple string
+io	Selection	select		generate the selection
+io	Selection	select_coords		generate the selection
+io		to_msgpack	path_or_buf	msgpack serialize object to input file path this is an experimental library and the storage format
+io		read_msgpack	path_or_buf encoding iterator	load msgpack pandas object from the specified file path
+io		dtype_for	t	return my dtype mapping whether number or name
+io		c2f	r i ctype_name	convert strings to complex number instance with specified numpy type
+io		convert	values	convert the numpy values to a list
+io		decode	obj	decoder for deserializing numpy data types
+io		pack	o default encoding unicode_errors	pack an object and return the packed bytes
+io		unpack	packed object_hook list_hook use_list	unpack a packed object return an iterator
+io		_stata_elapsed_date_to_datetime_vec	dates fmt	convert from sif to datetime http //www stata com/help cgi?datetime
+io		_datetime_to_stata_elapsed_vec	dates fmt	convert from datetime to sif http //www stata com/help cgi?datetime
+io		_cast_to_stata_types	data	checks the dtypes of the columns of a pandas dataframe for compatibility with the data types and ranges supported by stata and
+io	StataValueLabel	_encode	s	python 3 compatability shim
+io	StataReader	__enter__		enter context manager
+io	StataReader	__exit__	exc_type exc_value traceback	exit context manager
+io	StataReader	close		close the handle if its open
+io	StataReader	get_chunk	size	reads lines from stata file and returns as dataframe parameters
+io	StataReader	_do_convert_categoricals	data value_label_dict lbllist order_categoricals	converts categorical columns to categorical type
+io	StataReader	data_label		returns data label of stata file
+io	StataReader	variable_labels		returns variable labels as a dict associating each variable name
+io	StataReader	value_labels		returns a dict associating each variable name a dict associating
+io		_pad_bytes	name length	takes a char string and pads it with null bytes until it's length chars
+io		_convert_datetime_to_stata_type	fmt	converts from one of the stata date formats to a type in type_map
+io		_dtype_to_stata_type	dtype column	converts dtype types to stata types returns the byte of the given ordinal
+io		_dtype_to_default_stata_fmt	dtype column	maps numpy dtype to stata's default format for this type not terribly
+io	StataWriter	_write	to_write	helper to call encode before writing to file for python 3 compat
+io	StataWriter	_prepare_categoricals	data	check for categorical columns retain categorical information for
+io	StataWriter	_replace_nans	data	checks floating point data columns for nans and replaces these with the generic stata for missing value
+io	StataWriter	_check_column_names	data	checks column names to ensure that they are valid stata column names
+io		_is_url	url	check to see if a url has a valid protocol
+io		_is_s3_url	url	check for an s3 s3n or s3a url
+io		_expand_user	filepath_or_buffer	return the argument with an initial component of ~ or ~user replaced by that user's home directory
+io		_stringify_path	filepath_or_buffer	return the argument coerced to a string if it was a pathlib path
+io		get_filepath_or_buffer	filepath_or_buffer encoding compression	if the filepath_or_buffer is a url translate and return the buffer
+io		file_path_to_url	path	converts an absolute native path to a file url
+io		_infer_compression	filepath_or_buffer compression	get the compression method for filepath_or_buffer if compression='infer',
+io		_get_handle	path_or_buf mode encoding compression	get file handle for given path/buffer and mode
+io		_remove_whitespace	s regex	replace extra whitespace inside of a string with a single space
+io		_get_skiprows	skiprows	get an iterator given an integer slice or container
+io		_read	obj	try to read from a url file or string
+io	_HtmlFrameParser	_parse_raw_data	rows	parse the raw data into a list of lists
+io	_HtmlFrameParser	_text_getter	obj	return the text of an individual dom node
+io	_HtmlFrameParser	_parse_td	obj	return the td elements from a row element
+io	_HtmlFrameParser	_parse_tables	doc match attrs	return all tables from the parsed dom
+io	_HtmlFrameParser	_parse_tr	table	return the list of row elements from the parsed table element
+io	_HtmlFrameParser	_parse_thead	table	return the header of a table
+io	_HtmlFrameParser	_parse_tbody	table	return the body of the table
+io	_HtmlFrameParser	_parse_tfoot	table	return the footer of the table if any
+io	_HtmlFrameParser	_build_doc		return a tree-like object that can be used to iterate over the dom
+io		_build_xpath_expr	attrs	build an xpath expression to simulate bs4's ability to pass in kwargs to search for attributes when using the lxml parser
+io		_parser_dispatch	flavor	choose the parser based on the input flavor
+io		read_html	io match flavor header	read html tables into a list of dataframe objects
+io		register_writer	klass	adds engine to the excel writer registry you must use this method to
+io	ExcelFile	parse	sheetname header skiprows skip_footer	parse specified sheet s into a dataframe equivalent to read_excel(excelfile
+io	ExcelFile	close		close io if necessary
+io		_fill_mi_header	row control_row	forward fills blank entries in row but only inside the same parent index used for creating headers in multiindex
+io		_pop_header_name	row index_col	(header new_data) for header rows in multiindex parsing
+io	ExcelWriter	supported_extensions		extensions that writer engine supports
+io	ExcelWriter	engine		name of engine
+io	ExcelWriter	write_cells	cells sheet_name startrow startcol	write given formated cells into excel an excel sheet parameters
+io	ExcelWriter	save		save workbook to disk
+io	ExcelWriter	check_extension	cls ext	checks that path's extension against the writer's supported extensions
+io	ExcelWriter	close		synonym for save to make it more file-like
+io	_Openpyxl1Writer	save		save workbook to disk
+io	_Openpyxl1Writer	_convert_to_style	cls style_dict	converts a style_dict to an openpyxl style object
+io	_Openpyxl20Writer	_convert_to_style_kwargs	cls style_dict	convert a style_dict to a set of kwargs suitable for initializing or updating-on-copy an openpyxl v2 style object
+io	_Openpyxl20Writer	_convert_to_color	cls color_spec	convert color_spec to an openpyxl v2 color object parameters
+io	_Openpyxl20Writer	_convert_to_font	cls font_dict	convert font_dict to an openpyxl v2 font object parameters
+io	_Openpyxl20Writer	_convert_to_stop	cls stop_seq	convert stop_seq to a list of openpyxl v2 color objects suitable for initializing the gradientfill stop parameter
+io	_Openpyxl20Writer	_convert_to_fill	cls fill_dict	convert fill_dict to an openpyxl v2 fill object parameters
+io	_Openpyxl20Writer	_convert_to_side	cls side_spec	convert side_spec to an openpyxl v2 side object parameters
+io	_Openpyxl20Writer	_convert_to_border	cls border_dict	convert border_dict to an openpyxl v2 border object parameters
+io	_Openpyxl20Writer	_convert_to_alignment	cls alignment_dict	convert alignment_dict to an openpyxl v2 alignment object parameters
+io	_Openpyxl20Writer	_convert_to_number_format	cls number_format_dict	convert number_format_dict to an openpyxl v2 1 0 number format
+io	_Openpyxl20Writer	_convert_to_protection	cls protection_dict	convert protection_dict to an openpyxl v2 protection object
+io	_XlwtWriter	save		save workbook to disk
+io	_XlwtWriter	_style_to_xlwt	cls item firstlevel field_sep	helper which recursively generate an xlwt easy style string
+io	_XlwtWriter	_convert_to_style	cls style_dict num_format_str	converts a style_dict to an xlwt style object
+io	_XlsxWriter	save		save workbook to disk
+io	_XlsxWriter	_convert_to_style	style_dict num_format_str	converts a style_dict to an xlsxwriter format object
+io		read_gbq	query project_id index_col col_order	load data from google bigquery
+io		read_clipboard	sep	read text from clipboard and pass to read_table see read_table for the
+io		to_clipboard	obj excel sep	attempt to write text representation of object to the system clipboard the clipboard can be then pasted into excel for example
+io		_strip_schema	url	returns the url without the s3 // part
+io		_validate_flavor_parameter	flavor	checks whether a database 'flavor' was specified
+io		_convert_params	sql params	convert sql and params args to dbapi2 0 compliant format
+io		_parse_date_columns	data_frame parse_dates	force non-datetime columns to be read as such
+io		_wrap_result	data columns index_col coerce_float	wrap result set of query in a dataframe
+io		execute	sql con cur params	execute the given sql query using the provided connection object
+io		read_sql_table	table_name con schema index_col	read sql database table into a dataframe
+io		read_sql_query	sql con index_col coerce_float	read sql query into a dataframe
+io		read_sql	sql con index_col coerce_float	read sql query or database table into a dataframe
+io		to_sql	frame name con flavor	write records stored in a dataframe to a sql database
+io		has_table	table_name con flavor schema	check if database has named table
+io		_engine_builder	con	returns a sqlalchemy engine from a uri if con is a string
+io		pandasSQL_builder	con flavor schema meta	convenience function to return the correct pandassql subclass based on the
+io	SQLTable	_query_iterator	result chunksize columns coerce_float	return generator through chunked result set
+io	SQLTable	_harmonize_columns	parse_dates	make the dataframe's column types align with the sql table column types
+io	SQLTable	_get_notnull_col_dtype	col	infer datatype of the series col in case the dtype of col is 'object'
+io	SQLDatabase	execute		simple passthrough to sqlalchemy connectable
+io	SQLDatabase	read_table	table_name index_col coerce_float parse_dates	read sql database table into a dataframe
+io	SQLDatabase	_query_iterator	result chunksize columns index_col	return generator through chunked result set
+io	SQLDatabase	read_query	sql index_col coerce_float parse_dates	read sql query into a dataframe
+io	SQLDatabase	to_sql	frame name if_exists index	write records stored in a dataframe to a sql database
+io	SQLiteTable	_create_table_setup		return a list of sql statement that create a table reflecting the structure of a dataframe
+io	SQLiteDatabase	_query_iterator	cursor chunksize columns index_col	return generator through chunked result set
+io	SQLiteDatabase	to_sql	frame name if_exists index	write records stored in a dataframe to a sql database
+io		get_schema	frame name flavor keys	get the sql db table schema for the given frame
+io		to_feather	df path	write a dataframe to the feather-format
+io		read_feather	path	load a feather-format object from the file path
+io		to_pickle	obj path compression	pickle serialize object to input file path parameters
+io		read_pickle	path compression	load pickled pandas object or any other pickled object from the specified file path
+io		_validate_integer	name val min_val	checks whether the 'name' parameter for parsing is either an integer or float that can safely be cast to an integer
+io		_read	filepath_or_buffer kwds	generic reader of line files
+io		_evaluate_usecols	usecols names	check whether or not the 'usecols' parameter is a callable
+io		_validate_skipfooter_arg	skipfooter	validate the 'skipfooter' parameter
+io		_validate_usecols_arg	usecols	validate the 'usecols' parameter
+io		_validate_parse_dates_arg	parse_dates	check whether or not the 'parse_dates' parameter is a non-boolean scalar
+io	ParserBase	_extract_multi_indexer_columns	header index_names col_names passed_names	extract and return the names index_names col_names
+io	ParserBase	_infer_types	values na_values try_num_bool	infer types of values possibly casting
+io	ParserBase	_cast_types	values cast_type column	cast values to specified type parameters
+io	CParserWrapper	_set_noconvert_columns		set the columns that should not undergo dtype conversions
+io		TextParser		converts lists of lists/tuples into dataframes with proper type inference and optional (e
+io	PythonParser	__init__	f	workhorse function for processing nested list into dataframe should be replaced by np
+io	PythonParser	_handle_usecols	columns usecols_key	sets self _col_indices
+io	PythonParser	_buffered_line		return a line from buffer filling buffer if required
+io	PythonParser	_check_for_bom	first_row	checks whether the file begins with the bom character
+io	PythonParser	_is_line_empty	line	check if a line is empty or not
+io	PythonParser	_alert_malformed	msg row_num	alert a user about a malformed row
+io	PythonParser	_next_iter_line	row_num	wrapper around iterating through self data csv source
+io	PythonParser	_remove_empty_lines	lines	iterate through the lines and remove any that are either empty or contain only one whitespace value
+io	PythonParser	_get_index_name	columns	try several cases to get lines 0) there are headers on row 0 and row 1 and their
+io		_stringify_na_values	na_values	return a stringified and numeric for these values
+io	FixedWidthReader	get_rows	n skiprows	read rows from self f skipping as specified
+io.formats		adjoin	space	glues together two sets of strings using the amount of space requested
+io.formats		justify	texts max_len mode	perform ljust center rjust against string or list-like
+io.formats		_pprint_seq	seq _nest_lvl max_seq_items	internal pprinter for iterables you should probably use pprint_thing()
+io.formats		_pprint_dict	seq _nest_lvl max_seq_items	internal pprinter for iterables you should probably use pprint_thing()
+io.formats		pprint_thing	thing _nest_lvl escape_chars default_escapes	this function is the sanctioned way of converting objects to a unicode representation
+io.formats		detect_console_encoding		try to find the most capable encoding supported by the console
+io.formats		get_console_size		return console size as tuple = width height
+io.formats		get_level_lengths	levels sentinel	for each index in each level the function returns lengths of indexes
+io.formats	CSSToExcelConverter	__call__	declarations_str	convert css declarations to excelwriter style parameters
+io.formats	ExcelFormatter	write	writer sheet_name startrow startcol	writer : string or excelwriter object file path or existing excelwriter
+io.formats	CSSResolver	__call__	declarations_str inherited	the given declarations to atomic properties parameters
+io.formats	CSSResolver	parse	declarations_str	generates prop value pairs from declarations
+io.formats	DataFrameFormatter	_chk_truncate		checks whether the frame should be truncated if so slices
+io.formats	DataFrameFormatter	_to_str_columns		render a dataframe to a list of columns as lists of strings
+io.formats	DataFrameFormatter	to_string		render a dataframe to a console-friendly tabular output
+io.formats	DataFrameFormatter	to_latex	column_format longtable encoding multicolumn	render a dataframe to a latex tabular/longtable environment output
+io.formats	DataFrameFormatter	to_html	classes notebook border	render a dataframe to a html table
+io.formats	LatexFormatter	write_result	buf	render a dataframe to a latex tabular/longtable environment output
+io.formats	LatexFormatter	_format_multicolumn	row ilevels	combine columns belonging to a group to a single multicolumn entry according to self
+io.formats	LatexFormatter	_format_multirow	row ilevels i rows	check following rows whether row should be a multirow e
+io.formats	LatexFormatter	_print_cline	buf i icol	print clines after multirow-blocks are finished
+io.formats	FloatArrayFormatter	_value_formatter	float_format threshold	returns a function to be applied on each value to format it
+io.formats	FloatArrayFormatter	get_result_as_array		returns the float values converted into strings using
+io.formats	Datetime64Formatter	_format_strings		we by definition have do not have a tz
+io.formats		format_percentiles	percentiles	outputs rounded and formatted percentiles
+io.formats		_get_format_datetime64_from_values	values date_format	given values and a date_format return a string format
+io.formats	Datetime64TZFormatter	_format_strings		we by definition have a tz
+io.formats		_get_format_timedelta64	values nat_rep box	return a formatter function for a range of timedeltas
+io.formats		_trim_zeros	str_floats na_rep	trims zeros leaving just one before the decimal points if need be
+io.formats	EngFormatter	__call__	num	formats a number in engineering notation appending a letter representing the power of 1000 of the original number
+io.formats		set_eng_float_format	accuracy use_eng_prefix	alter default behavior on how float is formatted in dataframe
+io.formats	Styler	_repr_html_		hooks into jupyter notebook rich display system
+io.formats	Styler	_translate		convert the dataframe in self data and the attrs from _build_styles
+io.formats	Styler	format	formatter subset	format the text display value of cells
+io.formats	Styler	render		render the built up styles to html
+io.formats	Styler	_update_ctx	attrs	update the state of the styler collects a mapping
+io.formats	Styler	__copy__		deep copy by default
+io.formats	Styler	clear		"reset" the styler removing any previously applied styles
+io.formats	Styler	_compute		execute the style functions built up in self _todo
+io.formats	Styler	apply	func axis subset	apply a function column-wise row-wise or table-wase updating the html representation with the result
+io.formats	Styler	applymap	func subset	apply a function elementwise updating the html representation with the result
+io.formats	Styler	set_precision	precision	set the precision used to render
+io.formats	Styler	set_table_attributes	attributes	set the table attributes these are the items
+io.formats	Styler	export		export the styles to applied to the current styler
+io.formats	Styler	use	styles	set the styles on the current styler possibly using styles from styler
+io.formats	Styler	set_uuid	uuid	set the uuid for a styler
+io.formats	Styler	set_caption	caption	se the caption on a styler
+io.formats	Styler	set_table_styles	table_styles	set the table styles on a styler these are placed in a
+io.formats	Styler	highlight_null	null_color	shade the background null_color for missing values
+io.formats	Styler	background_gradient	cmap low high axis	color the background in a gradient according to the data in each column optionally row
+io.formats	Styler	_background_gradient	s cmap low high	color background in a range according to the data
+io.formats	Styler	set_properties	subset	convience method for setting one or more non-data dependent properties or each cell
+io.formats	Styler	bar	subset axis color width	color the background color proptional to the values in each column
+io.formats	Styler	highlight_max	subset color axis	highlight the maximum by shading the background
+io.formats	Styler	highlight_min	subset color axis	highlight the minimum by shading the background
+io.formats	Styler	_highlight_extrema	data color max_	highlight the min or max in a series or dataframe
+io.formats	Styler	from_custom_template	cls searchpath name	factory function for creating a subclass of styler with a custom template and jinja environment
+io.formats		_is_visible	idx_row idx_col lengths	index -> {(idx_row idx_col): bool})
+io.formats		_get_level_lengths	index	given an index find the level lenght for each element
+io.msgpack		pack	o stream	pack object o and write it to stream see :class packer for options
+io.msgpack		packb	o	pack object o and return packed bytes see :class packer for options
+io.sas		_parse_date	datestr	given a date in xport format return python date
+io.sas		_parse_float_vec	vec	parse a vector of float values representing ibm 8 byte floats into native 8 byte floats
+io.sas	XportReader	_record_count		get number of records in file
+io.sas	XportReader	get_chunk	size	reads lines from xport file and returns as dataframe parameters
+io.sas		read_sas	filepath_or_buffer format index encoding	read sas files stored as either xport or sas7bdat format files
+io.json	FrameWriter	_format_axes		try to axes if they are datelike
+io.json	JSONTableWriter	__init__	obj orient date_format double_precision	adds a schema attribut with the table schema resets the index (can't do in caller because the schema inference needs
+io.json		read_json	path_or_buf orient typ dtype	convert a json string to pandas object parameters
+io.json	Parser	check_keys_split	decoded	checks that dict has only the appropriate keys for orient='split'
+io.json	Parser	_convert_axes		try to convert axes
+io.json	Parser	_try_convert_data	name data use_dtypes convert_dates	try to parse a ndarray like into a column by inferring dtype
+io.json	Parser	_try_convert_to_date	data	try to parse a ndarray like into a date column
+io.json	FrameParser	_process_converter	f filt	take a conversion function and possibly recreate the frame
+io.json		as_json_table_type	x	convert a numpy / pandas type to its corresponding json_table
+io.json		set_default_names	data	sets index names to 'index' for regular or 'level_x' for multi
+io.json		build_table_schema	data index primary_key version	create a table schema from data
+io.json		_convert_to_line_delimits	s	helper function that converts json lists to line delimited json
+io.json		nested_to_record	ds prefix sep level	a simplified json_normalize converts a nested dict into a flat dict ("record"), unlike json_normalize
+io.json		json_normalize	data record_path meta meta_prefix	"normalize" semi-structured json data into a flat table parameters
+compat		load	fh encoding compat is_verbose	load a pickle with a provided encoding
+compat		is_compat	major_ver	detect whether the installed version of openpyxl is supported parameters
+compat		recursive_repr	fillvalue	decorator to make a repr function return fillvalue for a recursive call
+compat	ChainMap	__init__		initialize a chainmap by setting *maps* to the given mappings
+compat	ChainMap	fromkeys	cls iterable	create a chainmap with a single dict created from the iterable
+compat	ChainMap	copy		new chainmap or subclass with a new copy of maps[0] and refs to
+compat	ChainMap	new_child	m	new chainmap with a new map followed by all previous maps if no
+compat	ChainMap	parents		new chainmap from maps[1 ]
+compat	ChainMap	popitem		remove and return an item pair from maps[0] raise keyerror is maps[0]
+compat	ChainMap	pop	key	remove *key* from maps[0] and return its value raise keyerror if
+compat	ChainMap	clear		clear maps[0], leaving maps[1 ] intact
+compat		bind_method	cls name func	bind a method to class python 2 and python 3 compatible
+compat		add_metaclass	metaclass	class decorator for creating a class with a metaclass
+compat		is_platform_little_endian		am i little endian
+compat.numpy		np_datetime64_compat	s	provide compat for construction of strings to numpy datetime64's with tz-changes in 1
+compat.numpy		np_array_datetime64_compat	arr	provide compat for construction of an array of strings to a np
+compat.numpy		validate_argmin_with_skipna	skipna args kwargs	if 'series argmin' is called via the 'numpy' library
+compat.numpy		validate_argmax_with_skipna	skipna args kwargs	if 'series argmax' is called via the 'numpy' library
+compat.numpy		validate_argsort_with_ascending	ascending args kwargs	if 'categorical argsort' is called via the 'numpy' library the
+compat.numpy		validate_clip_with_axis	axis args kwargs	if 'ndframe clip' is called via the numpy library the third
+compat.numpy		validate_cum_func_with_skipna	skipna args kwargs name	if this function is called via the 'numpy' library the third
+compat.numpy		validate_take_with_convert	convert args kwargs	if this function is called via the 'numpy' library the third
+compat.numpy		validate_groupby_func	name args kwargs allowed	'args' and 'kwargs' should be empty except for allowed
+compat.numpy		validate_resampler_func	method args kwargs	'args' and 'kwargs' should be empty because all of
+stats		ensure_compat	dispatch name arg func_kw	wrapper function to dispatch to the appropriate window functions
+stats		rolling_count	arg window	rolling count of number of non-nan observations inside provided window
+stats		rolling_apply	arg window func min_periods	generic moving function application
+stats		rolling_window	arg window win_type min_periods	applies a moving window of type window_type and size window on the data
+stats		expanding_count	arg freq	expanding count of number of non-nan observations
+stats		expanding_apply	arg func min_periods freq	generic expanding function application
+plotting	_Options	reset		reset the option store to its initial state
+plotting	_Options	use	key value	temporarily set a parameter value using the with statement
+plotting		table	ax data rowLabels colLabels	helper function to convert dataframe and series to matplotlib table
+plotting		_subplots	naxes sharex sharey squeeze	create a figure with a set of subplots already made
+plotting		scatter_matrix	frame alpha figsize ax	draw a matrix of scatter plots
+plotting		radviz	frame class_column ax color	radviz - a multivariate data visualization algorithm parameters
+plotting		andrews_curves	frame class_column ax samples	generates a matplotlib plot of andrews curves for visualising clusters of multivariate data
+plotting		parallel_coordinates	frame class_column cols ax	parallel coordinates plotting
+plotting		lag_plot	series lag ax	lag plot for time series
+plotting		autocorrelation_plot	series ax	autocorrelation plot for time series
+plotting		tsplot	series plotf ax	plots a series on the given matplotlib axes or the current axes parameters
+plotting		_decorate_axes	ax freq kwargs	initialize axes for time-series plotting
+plotting		_get_ax_freq	ax	get the freq attribute of the ax object if set
+plotting		format_timedelta_ticks	x pos n_decimals	convert seconds to 'd days hh mm ss f'
+plotting		format_dateaxis	subplot freq index	pretty-formats the date axis x-axis
+plotting	MPLPlot	_kind		specify kind str must be overridden in child class
+plotting	MPLPlot	_has_plotted_object	ax	check whether ax has data
+plotting	MPLPlot	result		return result axes
+plotting	MPLPlot	_post_plot_logic_common	ax data	common post process for each axes
+plotting	MPLPlot	_post_plot_logic	ax data	post process for each axes overridden in child classes
+plotting	MPLPlot	_adorn_subplots		common post process unrelated to data
+plotting	MPLPlot	_get_ax_layer	cls ax primary	get left primary or right secondary axes
+plotting	MPLPlot	_apply_style_colors	colors kwds col_num label	manage style and color based on column number and its label
+plotting	MPLPlot	_parse_errorbars	label err	look for error keyword arguments and return the actual errorbar data or return the error dataframe/dict
+plotting	HistPlot	_make_plot_keywords	kwds y	merge boxplot/kdeplot properties to passed kwds
+plotting		scatter_plot	data x y by	make a scatter plot from two dataframe columns parameters
+plotting		hist_frame	data column by grid	draw histogram of the dataframe's series using matplotlib / pylab
+plotting		hist_series	by ax grid xlabelsize	draw histogram of the input series using matplotlib
+plotting		grouped_hist	data column by ax	grouped histogram parameters
+plotting		boxplot_frame_groupby	grouped subplots column fontsize	make box plots from dataframegroupby data
+plotting	SeriesPlotMethods	bar		vertical bar plot
+plotting	SeriesPlotMethods	barh		horizontal bar plot
+plotting	SeriesPlotMethods	kde		kernel density estimate plot
+plotting	FramePlotMethods	bar	x y	vertical bar plot
+plotting	FramePlotMethods	barh	x y	horizontal bar plot
+plotting	FramePlotMethods	kde		kernel density estimate plot
+plotting		_dt_to_float_ordinal	dt	convert :mod datetime to the gregorian date as utc float days preserving hours minutes seconds and microseconds
+plotting	DatetimeConverter	axisinfo	unit axis	return the :class ~matplotlib units axisinfo for *unit*
+plotting	PandasAutoDateLocator	get_locator	dmin dmax	pick the best locator based on a distance
+plotting	MilliSecondLocator	autoscale		set the view limits to include the data range
+plotting		_get_default_annual_spacing	nyears	returns a default spacing between consecutive ticks for annual data
+plotting		period_break	dates period	returns the indices where the given period changes
+plotting		has_level_label	label_flags vmin	returns true if the label_flags indicate there is at least one label for this level
+plotting	TimeSeries_DateLocator	_get_default_locs	vmin vmax	returns the default locations of ticks
+plotting	TimeSeries_DateLocator	__call__		return the locations of the ticks
+plotting	TimeSeries_DateLocator	autoscale		sets the view limits to the nearest multiples of base that contain the data
+plotting	TimeSeries_DateFormatter	_set_default_format	vmin vmax	returns the default ticks spacing
+plotting	TimeSeries_DateFormatter	set_locs	locs	sets the locations of the ticks
+plotting	TimeSeries_TimedeltaFormatter	format_timedelta_ticks	x pos n_decimals	convert seconds to 'd days hh mm ss f'
