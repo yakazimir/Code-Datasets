@@ -2,13 +2,15 @@ Code-to-Text Datasets
 ========================
 
 This directory contains the data and resources for the code-to-text
-experiments of Richardson and Kuhn ACL 2017 (see citation below,more data and the full code coming soon). 
+experiments of Richardson and Kuhn ACL 2017, and EMNLP 2017 (see citation below). 
 
 What's included 
 --------------------------
 
-All of the current data is included in data/. The data consists of
-textual descriptions of source code representations (mostly function
+All of the current ACL data is included in data/. The EMNLP data is
+included in other_data/py27.
+
+The data consists of textual descriptions of source code representations (mostly function
 signatures) across several natural and programming languages. The
 experiments in the paper above look at learning to translate these
 text descriptions to code descriptions, or more simply text -> code. 
