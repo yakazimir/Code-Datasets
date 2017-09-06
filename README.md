@@ -55,7 +55,8 @@ generation using these resources, more information can be found here:
 References
 ---------------------------
 
-If you use any of these resources, please cite the following: 
+If you use  these resources, please cite the following (the
+second one if you use the Py27 dataset): 
 
 ```
 @inproceedings{richardson-kuhn:2017:Long,
