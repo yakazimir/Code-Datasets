@@ -59,11 +59,15 @@ We are also working on organizing a shared task on data-to-text
 generation using these resources, more information can be found here:
 [generation paper](https://arxiv.org/abs/1708.00098)
 
+More information about our ``Function Assistant`` tool can be found
+here: https://github.com/yakazimir/zubr_public
+
+
 References
 ---------------------------
 
 If you use  these resources, please cite the following (the
-second one if you use the Py27 dataset): 
+second one if you use the Py27 dataset or our extractor tool): 
 
 ```
 @inproceedings{richardson-kuhn:2017:Long,
