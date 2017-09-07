@@ -39,7 +39,11 @@ name ``name``:
 ``Warning:`` The data is relatively noisy. These particular files are directly from our model, other users
 of the data might decide to make different decision about how the code
 is representated. If you need more information, please write the
-email address below. 
+email address below.
+
+The directory pipeline/ includes zipped files used for reproducing
+previous experiments using the ``Zubr`` toolkit, which you can find
+out more about here: https://github.com/yakazimir/zubr_public
 
 Code retrieval and Question Answering, Text Generation
 --------------------------
