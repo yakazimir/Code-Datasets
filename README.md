@@ -41,9 +41,9 @@ of the data might decide to make different decision about how the code
 is representated. If you need more information, please write the
 email address below.
 
-The directory pipeline/ includes zipped files used for reproducing
-previous experiments using the ``Zubr`` toolkit, which you can find
-out more about here: https://github.com/yakazimir/zubr_public
+The zipped files in the uppder directory (``acl_emnlp.zip``) includes files used for reproducing
+previous experiments using the ``Zubr`` toolkit. Please see the
+following to learn more: https://github.com/yakazimir/zubr_public
 
 Code retrieval and Question Answering, Text Generation
 --------------------------
