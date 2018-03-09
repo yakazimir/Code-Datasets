@@ -18,3 +18,7 @@ Please keep track of any changes to the data or to this repository so that such 
  - Added the acl_emnlp pipeline data for rerunning experiments with ``Zubr``
  - added orig_data to each of the py27 datasets, since this is needed
    for ``zubr`` experiments
+
+## 2018-9-3
+## Added 
+ - added the multingual lua and japanese python datasets
