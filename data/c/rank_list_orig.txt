@@ -1,0 +1,1165 @@
+c	algorithm	core	UNK	qsort	UNK=ptr UNK=count UNK=size UNK=comp UNK=context
+c	algorithm	core	UNK	bsearch	UNK=key UNK=ptr UNK=count UNK=size UNK=comp UNK=context
+c	atomic	core	UNK	memory_order	void
+c	atomic	core	UNK	atomic_flag	void
+c	atomic	core	UNK	atomic_lock_free_consts	void
+c	atomic	core	UNK	atomic_flag_init	void
+c	atomic	core	UNK	atomic_var_init	void
+c	atomic	core	UNK	kill_dependency	UNK=y
+c	atomic	core	UNK	atomic_flag_test_and_set	UNK=obj UNK=order
+c	atomic	core	UNK	atomic_flag_clear	UNK=obj UNK=order
+c	atomic	core	UNK	atomic_init	UNK=obj UNK=desired
+c	atomic	core	UNK	atomic_is_lock_free	UNK=obj
+c	atomic	core	UNK	atomic_store	UNK=obj UNK=order
+c	atomic	core	UNK	atomic_load	UNK=obj UNK=order
+c	atomic	core	UNK	atomic_exchange	UNK=obj UNK=desired UNK=order
+c	atomic	core	UNK	atomic_compare_exchange	UNK=obj UNK=expected UNK=desired UNK=succ UNK=fail
+c	atomic	core	UNK	atomic_fetch_add	UNK=obj UNK=arg UNK=order
+c	atomic	core	UNK	atomic_fetch_sub	UNK=obj UNK=arg UNK=order
+c	atomic	core	UNK	atomic_fetch_or	UNK=obj UNK=arg UNK=order
+c	atomic	core	UNK	atomic_fetch_xor	UNK=obj UNK=arg UNK=order
+c	atomic	core	UNK	atomic_fetch_and	UNK=obj UNK=arg UNK=order
+c	atomic	core	UNK	atomic_thread_fence	UNK=order
+c	atomic	core	UNK	atomic_signal_fence	UNK=order
+c	chrono	core	UNK	difftime	UNK=time_beg UNK=time_end
+c	chrono	core	UNK	time	UNK=arg
+c	chrono	core	UNK	clock	void
+c	chrono	core	UNK	timespec_get	UNK=ts UNK=base
+c	chrono	core	UNK	asctime	UNK=time_ptr UNK=buf UNK=bufsz
+c	chrono	core	UNK	ctime	UNK=time UNK=buffer UNK=bufsz
+c	chrono	core	UNK	strftime	UNK=str UNK=count UNK=format UNK=time
+c	chrono	core	UNK	wcsftime	UNK=str UNK=count UNK=format
+c	chrono	core	UNK	gmtime	UNK=time UNK=result
+c	chrono	core	UNK	localtime	UNK=time UNK=result
+c	chrono	core	UNK	mktime	UNK=time
+c	chrono	core	UNK	clocks_per_sec	void
+c	chrono	core	UNK	tm	void
+c	chrono	core	UNK	timespec	void
+c	error	core	UNK	errno	void
+c	error	core	UNK	errno_macros	void
+c	error	core	UNK	assert	UNK=condition
+c	error	core	UNK	static_assert	void
+c	error	core	UNK	set_constraint_handler_s	UNK=handler
+c	error	core	UNK	abort_handler_s	UNK=msg UNK=ptr UNK=error
+c	error	core	UNK	ignore_handler_s	UNK=msg UNK=ptr UNK=error
+c	error	core	UNK	math_errhandling	void
+c	io	core	UNK	fopen	UNK=filename UNK=mode UNK=streamptr
+c	io	core	UNK	freopen	UNK=filename UNK=mode UNK=stream UNK=newstreamptr
+c	io	core	UNK	fclose	UNK=stream
+c	io	core	UNK	fflush	UNK=stream
+c	io	core	UNK	setbuf	UNK=stream UNK=buffer
+c	io	core	UNK	setvbuf	UNK=stream UNK=buffer UNK=mode UNK=size
+c	io	core	UNK	fwide	UNK=stream UNK=mode
+c	io	core	UNK	fread	UNK=buffer UNK=size UNK=count UNK=stream
+c	io	core	UNK	fwrite	UNK=buffer UNK=size UNK=count UNK=stream
+c	io	core	UNK	fgetc	UNK=stream
+c	io	core	UNK	fgets	UNK=str UNK=count UNK=stream
+c	io	core	UNK	fputc	UNK=ch UNK=stream
+c	io	core	UNK	fputs	UNK=str UNK=stream
+c	io	core	UNK	getchar	void
+c	io	core	UNK	gets	UNK=str
+c	io	core	UNK	putchar	UNK=ch
+c	io	core	UNK	puts	UNK=str
+c	io	core	UNK	ungetc	UNK=ch UNK=stream
+c	io	core	UNK	fgetwc	UNK=stream
+c	io	core	UNK	fgetws	UNK=str UNK=count UNK=stream
+c	io	core	UNK	fputwc	UNK=ch UNK=stream
+c	io	core	UNK	fputws	UNK=str UNK=stream
+c	io	core	UNK	getwchar	void
+c	io	core	UNK	putwchar	UNK=ch
+c	io	core	UNK	ungetwc	UNK=ch UNK=stream
+c	io	core	UNK	fscanf	UNK=stream UNK=buffer UNK=format
+c	io	core	UNK	vfscanf	UNK=stream UNK=buffer UNK=format UNK=vlist
+c	io	core	UNK	fprintf	UNK=stream UNK=buffer UNK=bufsz UNK=format
+c	io	core	UNK	vfprintf	UNK=stream UNK=buffer UNK=bufsz UNK=format UNK=vlist
+c	io	core	UNK	fwscanf	UNK=stream UNK=buffer UNK=format
+c	io	core	UNK	vfwscanf	UNK=stream UNK=buffer UNK=format UNK=vlist
+c	io	core	UNK	fwprintf	UNK=stream UNK=buffer UNK=bufsz UNK=format
+c	io	core	UNK	vfwprintf	UNK=stream UNK=buffer UNK=bufsz UNK=format UNK=vlist
+c	io	core	UNK	ftell	UNK=stream
+c	io	core	UNK	fgetpos	UNK=stream UNK=pos
+c	io	core	UNK	fseek	UNK=stream UNK=offset UNK=origin
+c	io	core	UNK	fsetpos	UNK=stream UNK=pos
+c	io	core	UNK	rewind	UNK=stream
+c	io	core	UNK	clearerr	UNK=stream
+c	io	core	UNK	feof	UNK=stream
+c	io	core	UNK	ferror	UNK=stream
+c	io	core	UNK	perror	UNK=s
+c	io	core	UNK	remove	UNK=fname
+c	io	core	UNK	rename	UNK=old_filename UNK=new_filename
+c	io	core	UNK	tmpfile	void
+c	io	core	UNK	tmpnam	UNK=filename UNK=filename_s UNK=maxsize
+c	locale	core	UNK	setlocale	UNK=category UNK=locale
+c	locale	core	UNK	localeconv	void
+c	locale	core	UNK	lconv	void
+c	locale	core	UNK	lc_categories	void
+c	memory	core	UNK	malloc	UNK=size
+c	memory	core	UNK	calloc	UNK=num UNK=size
+c	memory	core	UNK	realloc	UNK=ptr UNK=new_size
+c	memory	core	UNK	free	UNK=ptr
+c	memory	core	UNK	aligned_alloc	UNK=alignment UNK=size
+c	program	core	UNK	abort	void
+c	program	core	UNK	exit	UNK=exit_code
+c	program	core	UNK	quick_exit	UNK=exit_code
+c	program	core	UNK	_exit	UNK=exit_code
+c	program	core	UNK	atexit	UNK=func
+c	program	core	UNK	at_quick_exit	UNK=func
+c	program	core	UNK	exit_status	void
+c	program	core	UNK	system	UNK=command
+c	program	core	UNK	getenv	UNK=name UNK=len UNK=value UNK=valuesz
+c	program	core	UNK	signal	UNK=sig UNK=handler
+c	program	core	UNK	raise	UNK=sig
+c	program	core	UNK	sig_strategies	void
+c	program	core	UNK	sig_err	void
+c	program	core	UNK	sig_types	void
+c	program	core	UNK	setjmp	UNK=env
+c	program	core	UNK	longjmp	UNK=env UNK=status
+c	thread	core	UNK	thrd_create	UNK=thr UNK=func UNK=arg
+c	thread	core	UNK	thrd_equal	UNK=lhs UNK=rhs
+c	thread	core	UNK	thrd_current	void
+c	thread	core	UNK	thrd_sleep	UNK=time_point UNK=remaining
+c	thread	core	UNK	thrd_yield	void
+c	thread	core	UNK	thrd_exit	UNK=res
+c	thread	core	UNK	thrd_detach	UNK=thr
+c	thread	core	UNK	thrd_join	UNK=thr UNK=res
+c	thread	core	UNK	thrd_errors	void
+c	thread	core	UNK	mtx_init	UNK=mutex UNK=type
+c	thread	core	UNK	mtx_lock	UNK=mutex
+c	thread	core	UNK	mtx_timedlock	UNK=mutex UNK=time_point
+c	thread	core	UNK	mtx_trylock	UNK=mutex
+c	thread	core	UNK	mtx_unlock	UNK=mutex
+c	thread	core	UNK	mtx_destroy	UNK=mutex
+c	thread	core	UNK	mtx_types	void
+c	thread	core	UNK	once_flag_init	UNK=flag UNK=func
+c	thread	core	UNK	cnd_init	UNK=cond
+c	thread	core	UNK	cnd_signal	UNK=cond
+c	thread	core	UNK	cnd_broadcast	UNK=cond
+c	thread	core	UNK	cnd_wait	UNK=cond UNK=mutex
+c	thread	core	UNK	cnd_timedwait	UNK=cond UNK=mutex UNK=duration
+c	thread	core	UNK	cnd_destroy	UNK=cond
+c	thread	core	UNK	thread_local	void
+c	thread	core	UNK	tss_dtor_iterations	void
+c	thread	core	UNK	tss_create	UNK=tss_key UNK=destructor
+c	thread	core	UNK	tss_get	UNK=tss_key
+c	thread	core	UNK	tss_set	UNK=tss_id UNK=val
+c	thread	core	UNK	tss_delete	UNK=tss_id
+c	types	core	UNK	null	void
+c	types	core	UNK	offsetof	void
+c	types	core	UNK	_alignas	void
+c	types	core	UNK	_alignof	void
+c	types	core	UNK	_noreturn	void
+c	variadic	core	UNK	va_start	UNK=ap UNK=parmn
+c	variadic	core	UNK	va_arg	UNK=ap UNK=t
+c	variadic	core	UNK	va_copy	UNK=dest UNK=src
+c	variadic	core	UNK	va_end	UNK=ap
+c	experimental.dynamic	core	UNK	getline	UNK=lineptr UNK=n UNK=delimiter UNK=stream
+c	experimental.dynamic	core	UNK	strdup	UNK=str1
+c	experimental.dynamic	core	UNK	strndup	UNK=str UNK=size
+c	numeric.complex	core	UNK	imaginary	void
+c	numeric.complex	core	UNK	complex	void
+c	numeric.complex	core	UNK	imaginary_i	void
+c	numeric.complex	core	UNK	complex_i	void
+c	numeric.complex	core	UNK	i	void
+c	numeric.complex	core	UNK	cmplx	UNK=real UNK=imag
+c	numeric.complex	core	UNK	creal	UNK=z
+c	numeric.complex	core	UNK	cimag	UNK=z
+c	numeric.complex	core	UNK	cabs	UNK=z
+c	numeric.complex	core	UNK	carg	UNK=z
+c	numeric.complex	core	UNK	conj	UNK=z
+c	numeric.complex	core	UNK	cproj	UNK=z
+c	numeric.complex	core	UNK	cexp	UNK=z
+c	numeric.complex	core	UNK	clog	UNK=z
+c	numeric.complex	core	UNK	cpow	UNK=x UNK=y
+c	numeric.complex	core	UNK	csqrt	UNK=z
+c	numeric.complex	core	UNK	csin	UNK=z
+c	numeric.complex	core	UNK	ccos	UNK=z
+c	numeric.complex	core	UNK	ctan	UNK=z
+c	numeric.complex	core	UNK	casin	UNK=z
+c	numeric.complex	core	UNK	cacos	UNK=z
+c	numeric.complex	core	UNK	catan	UNK=z
+c	numeric.complex	core	UNK	csinh	UNK=z
+c	numeric.complex	core	UNK	ccosh	UNK=z
+c	numeric.complex	core	UNK	ctanh	UNK=z
+c	numeric.complex	core	UNK	casinh	UNK=z
+c	numeric.complex	core	UNK	cacosh	UNK=z
+c	numeric.complex	core	UNK	catanh	UNK=z
+c	numeric.fenv	core	UNK	feclearexcept	UNK=excepts
+c	numeric.fenv	core	UNK	fetestexcept	UNK=excepts
+c	numeric.fenv	core	UNK	feraiseexcept	UNK=excepts
+c	numeric.fenv	core	UNK	feexceptflag	UNK=flagp UNK=excepts
+c	numeric.fenv	core	UNK	feround	UNK=round
+c	numeric.fenv	core	UNK	feenv	UNK=envp
+c	numeric.fenv	core	UNK	feholdexcept	UNK=envp
+c	numeric.fenv	core	UNK	feupdateenv	UNK=envp
+c	numeric.fenv	core	UNK	fe_exceptions	void
+c	numeric.fenv	core	UNK	fe_round	void
+c	numeric.fenv	core	UNK	fe_dfl_env	void
+c	numeric.math	core	UNK	abs	UNK=n
+c	numeric.math	core	UNK	div	UNK=x UNK=y
+c	numeric.math	core	UNK	fabs	UNK=arg
+c	numeric.math	core	UNK	fmod	UNK=x UNK=y
+c	numeric.math	core	UNK	remainder	UNK=x UNK=y
+c	numeric.math	core	UNK	remquo	UNK=x UNK=y UNK=quo
+c	numeric.math	core	UNK	fma	UNK=x UNK=y UNK=z
+c	numeric.math	core	UNK	fmax	UNK=x UNK=y
+c	numeric.math	core	UNK	fmin	UNK=x UNK=y
+c	numeric.math	core	UNK	fdim	UNK=x UNK=y
+c	numeric.math	core	UNK	nan	UNK=arg
+c	numeric.math	core	UNK	exp	UNK=arg
+c	numeric.math	core	UNK	exp2	UNK=n
+c	numeric.math	core	UNK	expm1	UNK=arg
+c	numeric.math	core	UNK	log	UNK=arg
+c	numeric.math	core	UNK	log10	UNK=arg
+c	numeric.math	core	UNK	log2	UNK=arg
+c	numeric.math	core	UNK	log1p	UNK=arg
+c	numeric.math	core	UNK	pow	UNK=base UNK=exponent
+c	numeric.math	core	UNK	sqrt	UNK=arg
+c	numeric.math	core	UNK	cbrt	UNK=arg
+c	numeric.math	core	UNK	hypot	UNK=x UNK=y
+c	numeric.math	core	UNK	sin	UNK=arg
+c	numeric.math	core	UNK	cos	UNK=arg
+c	numeric.math	core	UNK	tan	UNK=arg
+c	numeric.math	core	UNK	asin	UNK=arg
+c	numeric.math	core	UNK	acos	UNK=arg
+c	numeric.math	core	UNK	atan	UNK=arg
+c	numeric.math	core	UNK	atan2	UNK=x UNK=y
+c	numeric.math	core	UNK	sinh	UNK=arg
+c	numeric.math	core	UNK	cosh	UNK=arg
+c	numeric.math	core	UNK	tanh	UNK=arg
+c	numeric.math	core	UNK	asinh	UNK=arg
+c	numeric.math	core	UNK	acosh	UNK=arg
+c	numeric.math	core	UNK	atanh	UNK=arg
+c	numeric.math	core	UNK	erf	UNK=arg
+c	numeric.math	core	UNK	erfc	UNK=arg
+c	numeric.math	core	UNK	tgamma	UNK=arg
+c	numeric.math	core	UNK	lgamma	UNK=arg
+c	numeric.math	core	UNK	ceil	UNK=arg
+c	numeric.math	core	UNK	floor	UNK=arg
+c	numeric.math	core	UNK	trunc	UNK=arg
+c	numeric.math	core	UNK	round	UNK=arg
+c	numeric.math	core	UNK	nearbyint	UNK=arg
+c	numeric.math	core	UNK	rint	UNK=arg
+c	numeric.math	core	UNK	frexp	UNK=arg UNK=exp
+c	numeric.math	core	UNK	ldexp	UNK=arg UNK=exp
+c	numeric.math	core	UNK	modf	UNK=arg UNK=iptr
+c	numeric.math	core	UNK	scalbn	UNK=arg UNK=exp
+c	numeric.math	core	UNK	ilogb	UNK=arg
+c	numeric.math	core	UNK	logb	UNK=arg
+c	numeric.math	core	UNK	nextafter	UNK=from UNK=to
+c	numeric.math	core	UNK	copysign	UNK=x UNK=y
+c	numeric.math	core	UNK	fpclassify	UNK=arg
+c	numeric.math	core	UNK	isfinite	UNK=arg
+c	numeric.math	core	UNK	isinf	UNK=arg
+c	numeric.math	core	UNK	isnan	UNK=arg
+c	numeric.math	core	UNK	isnormal	UNK=arg
+c	numeric.math	core	UNK	signbit	UNK=arg
+c	numeric.math	core	UNK	isgreater	UNK=x UNK=y
+c	numeric.math	core	UNK	isgreaterequal	UNK=x UNK=y
+c	numeric.math	core	UNK	isless	UNK=x UNK=y
+c	numeric.math	core	UNK	islessequal	UNK=x UNK=y
+c	numeric.math	core	UNK	islessgreater	UNK=x UNK=y
+c	numeric.math	core	UNK	isunordered	UNK=x UNK=y
+c	numeric.math	core	UNK	huge_val	void
+c	numeric.math	core	UNK	infinity	void
+c	numeric.math	core	UNK	nan	void
+c	numeric.math	core	UNK	math_errhandling	void
+c	numeric.math	core	UNK	fp_categories	void
+c	numeric.random	core	UNK	rand	void
+c	numeric.random	core	UNK	srand	UNK=seed
+c	numeric.random	core	UNK	rand_max	void
+c	string.byte	core	UNK	isalnum	UNK=ch
+c	string.byte	core	UNK	isalpha	UNK=ch
+c	string.byte	core	UNK	islower	UNK=ch
+c	string.byte	core	UNK	isupper	UNK=ch
+c	string.byte	core	UNK	isdigit	UNK=ch
+c	string.byte	core	UNK	isxdigit	UNK=ch
+c	string.byte	core	UNK	iscntrl	UNK=ch
+c	string.byte	core	UNK	isgraph	UNK=ch
+c	string.byte	core	UNK	isspace	UNK=ch
+c	string.byte	core	UNK	isblank	UNK=ch
+c	string.byte	core	UNK	isprint	UNK=ch
+c	string.byte	core	UNK	ispunct	UNK=ch
+c	string.byte	core	UNK	tolower	UNK=ch
+c	string.byte	core	UNK	toupper	UNK=ch
+c	string.byte	core	UNK	atof	UNK=str
+c	string.byte	core	UNK	atoi	UNK=str
+c	string.byte	core	UNK	strtol	UNK=str UNK=str_end UNK=base
+c	string.byte	core	UNK	strtoul	UNK=str UNK=str_end UNK=base
+c	string.byte	core	UNK	strtof	UNK=str UNK=str_end
+c	string.byte	core	UNK	strtoimax	UNK=nptr UNK=endptr UNK=base
+c	string.byte	core	UNK	strcpy	UNK=dest UNK=src UNK=destsz
+c	string.byte	core	UNK	strncpy	UNK=dest UNK=src UNK=count UNK=destsz
+c	string.byte	core	UNK	strcat	UNK=dest UNK=src UNK=destsz
+c	string.byte	core	UNK	strncat	UNK=dest UNK=src UNK=count UNK=destsz
+c	string.byte	core	UNK	strxfrm	UNK=dest UNK=src UNK=count
+c	string.byte	core	UNK	strlen	UNK=str UNK=strsz
+c	string.byte	core	UNK	strcmp	UNK=lhs UNK=rhs
+c	string.byte	core	UNK	strncmp	UNK=lhs UNK=rhs UNK=count
+c	string.byte	core	UNK	strcoll	UNK=lhs UNK=rhs
+c	string.byte	core	UNK	strchr	UNK=str UNK=ch
+c	string.byte	core	UNK	strrchr	UNK=str UNK=ch
+c	string.byte	core	UNK	strspn	UNK=dest UNK=src
+c	string.byte	core	UNK	strcspn	UNK=dest UNK=src
+c	string.byte	core	UNK	strpbrk	UNK=dest UNK=breakset
+c	string.byte	core	UNK	strstr	UNK=str UNK=substr
+c	string.byte	core	UNK	strtok	UNK=str UNK=delim UNK=strmax UNK=ptr
+c	string.byte	core	UNK	memchr	UNK=ptr UNK=ch UNK=count
+c	string.byte	core	UNK	memcmp	UNK=lhs UNK=rhs UNK=count
+c	string.byte	core	UNK	memset	UNK=dest UNK=ch UNK=count UNK=destsz
+c	string.byte	core	UNK	memcpy	UNK=dest UNK=destsz UNK=src UNK=count
+c	string.byte	core	UNK	memmove	UNK=dest UNK=destsz UNK=src UNK=count
+c	string.byte	core	UNK	strerror	UNK=errnum UNK=buf UNK=bufsz
+c	string.multibyte	core	UNK	mblen	UNK=s UNK=n
+c	string.multibyte	core	UNK	mbtowc	UNK=pwc UNK=s UNK=n
+c	string.multibyte	core	UNK	wctomb	UNK=s UNK=wc UNK=ssz UNK=status
+c	string.multibyte	core	UNK	mbstowcs	UNK=dst UNK=src UNK=len UNK=dstsz UNK=retval
+c	string.multibyte	core	UNK	wcstombs	UNK=dst UNK=src UNK=len UNK=dstsz UNK=retval
+c	string.multibyte	core	UNK	mbsinit	UNK=ps
+c	string.multibyte	core	UNK	btowc	UNK=c
+c	string.multibyte	core	UNK	wctob	UNK=c
+c	string.multibyte	core	UNK	mbrlen	UNK=s UNK=n UNK=ps
+c	string.multibyte	core	UNK	mbrtowc	UNK=pwc UNK=s UNK=n UNK=ps
+c	string.multibyte	core	UNK	wcrtomb	UNK=s UNK=wc UNK=ps UNK=ssz UNK=retval
+c	string.multibyte	core	UNK	mbsrtowcs	UNK=dst UNK=src UNK=len UNK=ps UNK=dstsz UNK=retval
+c	string.multibyte	core	UNK	wcsrtombs	UNK=dst UNK=src UNK=len UNK=ps UNK=dstsz UNK=retval
+c	string.multibyte	core	UNK	mbrtoc16	UNK=pc16 UNK=s UNK=n UNK=ps
+c	string.multibyte	core	UNK	c16rtomb	UNK=s UNK=c16 UNK=ps
+c	string.multibyte	core	UNK	mbrtoc32	UNK=pc32 UNK=s UNK=n UNK=ps
+c	string.multibyte	core	UNK	c32rtomb	UNK=s UNK=c32 UNK=ps
+c	string.multibyte	core	UNK	mbstate_t	void
+c	string.wide	core	UNK	iswalnum	UNK=ch
+c	string.wide	core	UNK	iswalpha	UNK=ch
+c	string.wide	core	UNK	iswlower	UNK=ch
+c	string.wide	core	UNK	iswupper	UNK=ch
+c	string.wide	core	UNK	iswdigit	UNK=ch
+c	string.wide	core	UNK	iswxdigit	UNK=ch
+c	string.wide	core	UNK	iswcntrl	UNK=ch
+c	string.wide	core	UNK	iswgraph	UNK=ch
+c	string.wide	core	UNK	iswspace	UNK=ch
+c	string.wide	core	UNK	iswblank	UNK=ch
+c	string.wide	core	UNK	iswprint	UNK=ch
+c	string.wide	core	UNK	iswpunct	UNK=ch
+c	string.wide	core	UNK	iswctype	UNK=wc UNK=desc
+c	string.wide	core	UNK	wctype	UNK=str
+c	string.wide	core	UNK	towlower	UNK=wc
+c	string.wide	core	UNK	towupper	UNK=wc
+c	string.wide	core	UNK	towctrans	UNK=wc UNK=desc
+c	string.wide	core	UNK	wctrans	UNK=str
+c	string.wide	core	UNK	wcstol	UNK=str UNK=str_end UNK=base
+c	string.wide	core	UNK	wcstoul	UNK=str UNK=str_end UNK=base
+c	string.wide	core	UNK	wcstof	UNK=str UNK=str_end
+c	string.wide	core	UNK	wcstoimax	UNK=nptr UNK=endptr UNK=base
+c	string.wide	core	UNK	wcscpy	UNK=dest UNK=src UNK=destsz
+c	string.wide	core	UNK	wcsncpy	UNK=dest UNK=src UNK=count UNK=destsz
+c	string.wide	core	UNK	wcscat	UNK=dest UNK=src UNK=destsz
+c	string.wide	core	UNK	wcsncat	UNK=dest UNK=src UNK=count UNK=destsz
+c	string.wide	core	UNK	wcsxfrm	UNK=dest UNK=src UNK=count
+c	string.wide	core	UNK	wcslen	UNK=str UNK=strsz
+c	string.wide	core	UNK	wcscmp	UNK=lhs UNK=rhs
+c	string.wide	core	UNK	wcsncmp	UNK=lhs UNK=rhs UNK=count
+c	string.wide	core	UNK	wcscoll	UNK=lhs UNK=rhs
+c	string.wide	core	UNK	wcschr	UNK=str UNK=ch
+c	string.wide	core	UNK	wcsrchr	UNK=str UNK=ch
+c	string.wide	core	UNK	wcsspn	UNK=dest UNK=src
+c	string.wide	core	UNK	wcscspn	UNK=dest UNK=src
+c	string.wide	core	UNK	wcspbrk	UNK=dest UNK=src
+c	string.wide	core	UNK	wcsstr	UNK=dest UNK=src
+c	string.wide	core	UNK	wcstok	UNK=str UNK=delim UNK=ptr UNK=strmax
+c	string.wide	core	UNK	wmemcpy	UNK=dest UNK=src UNK=count UNK=destsz
+c	string.wide	core	UNK	wmemmove	UNK=dest UNK=src UNK=destsz UNK=count
+c	string.wide	core	UNK	wmemcmp	UNK=lhs UNK=rhs UNK=count
+c	string.wide	core	UNK	wmemchr	UNK=ptr UNK=ch UNK=count
+c	string.wide	core	UNK	wmemset	UNK=dest UNK=ch UNK=count
+c	core	core	UNK	accept	int=socket sockaddr=addr socklen_t=length_ptr
+c	core	core	UNK	addseverity	int=severity char=string
+c	core	core	UNK	ngettext	char=msgid1 char=msgid2 int=n
+c	core	core	UNK	dngettext	char=domain char=msgid1 char=msgid2 int=n
+c	core	core	UNK	dcngettext	char=domain char=msgid1 char=msgid2 int=n int=category
+c	core	core	UNK	sigaction	int=signum sigaction=action sigaction=old-action
+c	core	core	UNK	memalign	size_t=boundary size_t=size
+c	core	core	UNK	posix_memalign	UNK=memptr size_t=alignment size_t=size
+c	memory	core	UNK	valloc	size_t=size
+c	core	core	UNK	obstack_alloc	obstack=obstack-ptr int=size
+c	core	core	UNK	obstack_copy	obstack=obstack-ptr UNK=address int=size
+c	core	core	UNK	obstack_copy0	obstack=obstack-ptr UNK=address int=size
+c	core	core	UNK	getpt	UNK=void
+c	core	core	UNK	grantpt	int=filedes
+c	core	core	UNK	unlockpt	int=filedes
+c	core	core	UNK	ptsname	int=filedes
+c	core	core	UNK	ptsname_r	int=filedes char=buf size_t=len
+c	core	core	UNK	argp_help	argp=argp file=stream =flags char=name
+c	core	core	UNK	argp_usage	argp_state=state
+c	core	core	UNK	argp_error	argp_state=state char=fmt
+c	core	core	UNK	argp_failure	argp_state=state int=status int=errnum char=fmt
+c	core	core	UNK	argp_state_help	argp_state=state file=stream =flags
+c	core	core	UNK	argp_parse	argp=argp int=argc char=argv =flags int=arg_index UNK=input
+c	core	core	UNK	argz_create	char=argv[] char=argz size_t=argz_len
+c	core	core	UNK	argz_create_sep	char=string int=sep char=argz size_t=argz_len
+c	core	core	UNK	argz_count	char=argz size_t=arg_len
+c	core	core	UNK	argz_extract	char=argz size_t=argz_len char=argv
+c	core	core	UNK	argz_stringify	char=argz size_t=len int=sep
+c	core	core	UNK	argz_add	char=argz size_t=argz_len char=str
+c	core	core	UNK	argz_add_sep	char=argz size_t=argz_len char=str int=delim
+c	core	core	UNK	argz_append	char=argz size_t=argz_len char=buf size_t=buf_len
+c	core	core	UNK	argz_delete	char=argz size_t=argz_len char=entry
+c	core	core	UNK	argz_insert	char=argz size_t=argz_len char=before char=entry
+c	core	core	UNK	argz_next	char=argz size_t=argz_len char=entry
+c	core	core	UNK	lfind	UNK=key UNK=base size_t=nmemb size_t=size comparison_fn_t=compar
+c	core	core	UNK	lsearch	UNK=key UNK=base size_t=nmemb size_t=size comparison_fn_t=compar
+c	core	core	UNK	aio_read	aiocb=aiocbp
+c	core	core	UNK	aio_read64	aiocb64=aiocbp
+c	core	core	UNK	aio_write	aiocb=aiocbp
+c	core	core	UNK	aio_write64	aiocb64=aiocbp
+c	core	core	UNK	lio_listio	int=mode aiocb=list[] int=nent sigevent=sig
+c	core	core	UNK	lio_listio64	int=mode aiocb64=list[] int=nent sigevent=sig
+c	core	core	UNK	getauxval	int=type
+c	core	core	UNK	backtrace	UNK=buffer int=size
+c	core	core	UNK	backtrace_symbols	UNK=buffer int=size
+c	core	core	UNK	backtrace_symbols_fd	UNK=buffer int=size int=fd
+c	core	core	UNK	sched_setscheduler	pid_t=pid int=policy sched_param=param
+c	core	core	UNK	sched_getscheduler	pid_t=pid
+c	core	core	UNK	sched_setparam	pid_t=pid sched_param=param
+c	core	core	UNK	sched_getparam	pid_t=pid sched_param=param
+c	core	core	UNK	sched_get_priority_min	int=policy
+c	core	core	UNK	sched_get_priority_max	int=policy
+c	core	core	UNK	sched_rr_get_interval	pid_t=pid timespec=interval
+c	core	core	UNK	sched_yield	UNK=void
+c	core	core	UNK	sysv_signal	int=signum sighandler_t=action
+c	program	core	UNK	ssignal	int=signum sighandler_t=action
+c	io	core	UNK	fread_unlocked	UNK=data size_t=size size_t=count file=stream
+c	core	core	UNK	fwrite_unlocked	UNK=data size_t=size size_t=count file=stream
+c	core	core	UNK	localtime_r	time_t=time tm=resultp
+c	chrono	core	UNK	gmtime_r	time_t=time tm=resultp
+c	chrono	core	UNK	timelocal	tm=brokentime
+c	chrono	core	UNK	timegm	tm=brokentime
+c	core	core	UNK	random	UNK=void
+c	core	core	UNK	srandom	int=seed
+c	core	core	UNK	initstate	int=seed char=state size_t=size
+c	core	core	UNK	setstate	char=state
+c	core	core	UNK	random_r	random_data=buf int32_t=result
+c	core	core	UNK	srandom_r	int=seed random_data=buf
+c	core	core	UNK	initstate_r	int=seed char=statebuf size_t=statelen random_data=buf
+c	core	core	UNK	setstate_r	char=statebuf random_data=buf
+c	core	core	UNK	siginterrupt	int=signum int=failflag
+c	core	core	UNK	sigmask	int=signum
+c	core	core	UNK	sigblock	int=mask
+c	core	core	UNK	sigsetmask	int=mask
+c	core	core	UNK	sigpause	int=mask
+c	core	core	UNK	gtty	int=filedes sgttyb=attributes
+c	core	core	UNK	stty	int=filedes sgttyb=attributes
+c	core	core	UNK	wait3	wait=status-ptr int=options rusage=usage
+c	core	core	UNK	htons	uint16_t=hostshort
+c	core	core	UNK	ntohs	uint16_t=netshort
+c	core	core	UNK	htonl	uint32_t=hostlong
+c	core	core	UNK	ntohl	uint32_t=netlong
+c	core	core	UNK	glob	char=pattern int=flags int=error-code) glob_t=vector-ptr
+c	core	core	UNK	glob64	char=pattern int=flags int=error-code) glob64_t=vector-ptr
+c	core	core	UNK	wordexp	char=words wordexp_t=word-vector-ptr int=flags
+c	core	core	UNK	wordfree	wordexp_t=word-vector-ptr
+c	core	core	UNK	aio_cancel	int=fildes aiocb=aiocbp
+c	core	core	UNK	aio_cancel64	int=fildes aiocb64=aiocbp
+c	core	core	UNK	toascii	int=c
+c	string.byte	core	UNK	_tolower	int=c
+c	string.byte	core	UNK	_toupper	int=c
+c	core	core	UNK	fgetc_unlocked	file=stream
+c	core	core	UNK	fgetwc_unlocked	file=stream
+c	io	core	UNK	getc	file=stream
+c	io	core	UNK	getwc	file=stream
+c	core	core	UNK	getc_unlocked	file=stream
+c	core	core	UNK	getwc_unlocked	file=stream
+c	core	core	UNK	getchar_unlocked	UNK=void
+c	core	core	UNK	getwchar_unlocked	UNK=void
+c	core	core	UNK	getw	file=stream
+c	core	core	UNK	bind_textdomain_codeset	char=domainname char=codeset
+c	core	core	UNK	sigpending	sigset_t=set
+c	string.byte	core	UNK	isascii	int=c
+c	core	core	UNK	on_exit	void (*var=function)(int=status UNK=arg) UNK=arg
+c	core	core	UNK	closelog	UNK=void
+c	io	core	UNK	shutdown	int=socket int=how
+c	io	core	UNK	fcloseall	UNK=void
+c	core	core	UNK	aio_init	aioinit=init
+c	core	core	UNK	connect	int=socket sockaddr=addr socklen_t=length
+c	error	core	UNK	assert_perror	int=errnum
+c	numeric.fenv	core	UNK	fegetenv	fenv_t=envp
+c	numeric.fenv	core	UNK	fesetenv	fenv_t=envp
+c	core	core	UNK	feenableexcept	int=excepts
+c	core	core	UNK	fedisableexcept	int=excepts
+c	core	core	UNK	fegetexcept	UNK=void
+c	core	core	UNK	fcntl	int=filedes int=command
+c	io	core	UNK	setbuffer	file=stream char=buf size_t=size
+c	io	core	UNK	setlinebuf	file=stream
+c	core	core	UNK	__flbf	file=stream
+c	core	core	UNK	__fbufsize	file=stream
+c	core	core	UNK	__fpending	file=stream
+c	core	core	UNK	mbsnrtowcs	wchar_t=dst char=src size_t=nmc size_t=len mbstate_t=ps
+c	core	core	UNK	wcsnrtombs	char=dst wchar_t=src size_t=nwc size_t=len mbstate_t=ps
+c	core	core	UNK	mempcpy	UNK=to UNK=from size_t=size
+c	core	core	UNK	wmempcpy	wchar_t=wto wchar_t=wfrom size_t=size
+c	core	core	UNK	memccpy	UNK=to UNK=from int=c size_t=size
+c	core	core	UNK	wcsdup	wchar_t=ws
+c	core	core	UNK	stpcpy	char=to char=from
+c	core	core	UNK	wcpcpy	wchar_t=wto wchar_t=wfrom
+c	core	core	UNK	strdupa	char=s
+c	core	core	UNK	bcopy	UNK=from UNK=to size_t=size
+c	core	core	UNK	bzero	UNK=block size_t=size
+c	core	core	UNK	cpu_zero	cpu_set_t=set
+c	core	core	UNK	cpu_set	int=cpu cpu_set_t=set
+c	core	core	UNK	cpu_clr	int=cpu cpu_set_t=set
+c	core	core	UNK	cpu_isset	int=cpu cpu_set_t=set
+c	core	core	UNK	sched_getaffinity	pid_t=pid size_t=cpusetsize cpu_set_t=cpuset
+c	core	core	UNK	sched_setaffinity	pid_t=pid size_t=cpusetsize cpu_set_t=cpuset
+c	core	core	UNK	pipe	int=filedes
+c	core	core	UNK	fork	UNK=void
+c	core	core	UNK	vfork	UNK=void
+c	core	core	UNK	socket	int=namespace int=style int=protocol
+c	io	core	UNK	mkdir	char=filename mode_t=mode
+c	core	core	UNK	crypt	char=key char=salt
+c	core	core	UNK	crypt_r	char=key char=salt crypt_data \*var=data
+c	core	core	UNK	pthread_getattr_default_np	pthread_attr_t=attr
+c	core	core	UNK	pthread_setattr_default_np	pthread_attr_t=attr
+c	io	core	UNK	unlink	char=filename
+c	io	core	UNK	rmdir	char=filename
+c	core	core	UNK	setkey	char=key
+c	core	core	UNK	encrypt	char=block int=edflag
+c	core	core	UNK	setkey_r	char=key crypt_data \*var=data
+c	core	core	UNK	ecb_crypt	char=key char=blocks =len =mode
+c	core	core	UNK	des_failed	int=err
+c	core	core	UNK	cbc_crypt	char=key char=blocks =len =mode char=ivec
+c	core	core	UNK	des_setparity	char=key
+c	core	core	UNK	fdopen	int=filedes char=opentype
+c	core	core	UNK	fileno	file=stream
+c	core	core	UNK	fileno_unlocked	file=stream
+c	core	core	UNK	iftodt	mode_t=mode
+c	core	core	UNK	dttoif	int=dtype
+c	core	core	UNK	dup	int=old
+c	core	core	UNK	dup2	int=old int=new
+c	core	core	UNK	asprintf	char=ptr char=template
+c	core	core	UNK	obstack_printf	obstack=obstack char=template
+c	core	core	UNK	l64a	int=n
+c	core	core	UNK	a64l	char=string
+c	core	core	UNK	secure_getenv	char=name
+c	core	core	UNK	putenv	char=string
+c	core	core	UNK	setenv	char=name char=value int=replace
+c	core	core	UNK	unsetenv	char=name
+c	core	core	UNK	clearenv	UNK=void
+c	core	core	UNK	envz_entry	char=envz size_t=envz_len char=name
+c	core	core	UNK	envz_get	char=envz size_t=envz_len char=name
+c	core	core	UNK	envz_add	char=envz size_t=envz_len char=name char=value
+c	core	core	UNK	envz_merge	char=envz size_t=envz_len char=envz2 size_t=envz2_len int=override
+c	core	core	UNK	envz_strip	char=envz size_t=envz_len
+c	core	core	UNK	envz_remove	char=envz size_t=envz_len char=name
+c	core	core	UNK	feof_unlocked	file=stream
+c	core	core	UNK	ferror_unlocked	file=stream
+c	core	core	UNK	strerror_r	int=errnum char=buf size_t=n
+c	core	core	UNK	error	int=status int=errnum char=format
+c	core	core	UNK	error_at_line	int=status int=errnum char=fname int=lineno char=format
+c	core	core	UNK	warn	char=format
+c	core	core	UNK	vwarn	char=format va_list=ap
+c	core	core	UNK	warnx	char=format
+c	core	core	UNK	vwarnx	char=format va_list=ap
+c	core	core	UNK	err	int=status char=format
+c	core	core	UNK	verr	int=status char=format va_list=ap
+c	core	core	UNK	errx	int=status char=format
+c	core	core	UNK	verrx	int=status char=format va_list=ap
+c	io	core	UNK	clearerr_unlocked	file=stream
+c	core	core	UNK	execv	char=filename char=argv
+c	core	core	UNK	execl	char=filename char=arg0
+c	core	core	UNK	execve	char=filename char=argv char=env
+c	core	core	UNK	execle	char=filename char=arg0 char=env
+c	core	core	UNK	execvp	char=filename char=argv
+c	core	core	UNK	execlp	char=filename char=arg0
+c	numeric.math	core	UNK	exp10	double=x
+c	numeric.complex	core	UNK	clog10	double=z
+c	core	core	UNK	obstack_room	obstack=obstack-ptr
+c	core	core	UNK	obstack_1grow_fast	obstack=obstack-ptr char=c
+c	core	core	UNK	obstack_ptr_grow_fast	obstack=obstack-ptr UNK=data
+c	core	core	UNK	obstack_int_grow_fast	obstack=obstack-ptr int=data
+c	core	core	UNK	obstack_blank_fast	obstack=obstack-ptr int=size
+c	core	core	UNK	mkfifo	char=filename mode_t=mode
+c	core	core	UNK	chown	char=filename uid_t=owner gid_t=group
+c	core	core	UNK	fchown	int=filedes uid_t=owner gid_t=group
+c	core	core	UNK	lseek	int=filedes off_t=offset int=whence
+c	core	core	UNK	lseek64	int=filedes off64_t=offset int=whence
+c	core	core	UNK	ftello	file=stream
+c	core	core	UNK	ftello64	file=stream
+c	core	core	UNK	fseeko	file=stream off_t=offset int=whence
+c	core	core	UNK	fseeko64	file=stream off64_t=offset int=whence
+c	core	core	UNK	truncate	char=filename off_t=length
+c	core	core	UNK	truncate64	char=name off64_t=length
+c	core	core	UNK	ftruncate	int=fd off_t=length
+c	core	core	UNK	ftruncate64	int=id off64_t=length
+c	core	core	UNK	utime	char=filename utimbuf=times
+c	core	core	UNK	utimes	char=filename timeval=tvp
+c	core	core	UNK	lutimes	char=filename timeval=tvp
+c	core	core	UNK	futimes	int=fd timeval=tvp
+c	core	core	UNK	strtok_r	char=newstring char=delimiters char=save_ptr
+c	core	core	UNK	strsep	char=string_ptr char=delimiter
+c	core	core	UNK	basename	char=filename
+c	core	core	UNK	basename	char=path
+c	core	core	UNK	dirname	char=path
+c	core	core	UNK	finite	double=x
+c	core	core	UNK	fflush_unlocked	file=stream
+c	core	core	UNK	_flushlbf	UNK=void
+c	core	core	UNK	__fpurge	file=stream
+c	io	core	UNK	scanf	char=template
+c	io	core	UNK	wscanf	wchar_t=template
+c	io	core	UNK	sscanf	char=s char=template
+c	io	core	UNK	swscanf	wchar_t=ws wchar_t=template
+c	io	core	UNK	printf	char=template
+c	io	core	UNK	wprintf	wchar_t=template
+c	io	core	UNK	sprintf	char=s char=template
+c	io	core	UNK	swprintf	wchar_t=s size_t=size wchar_t=template
+c	io	core	UNK	snprintf	char=s size_t=size char=template
+c	core	core	UNK	asctime_r	tm=brokentime char=buffer
+c	core	core	UNK	ctime_r	time_t=time char=buffer
+c	core	core	UNK	strfmon	char=s size_t=maxsize char=format
+c	numeric.math	core	UNK	nexttoward	double=x double=y
+c	core	core	UNK	cfree	UNK=ptr
+c	core	core	UNK	obstack_free	obstack=obstack-ptr UNK=object
+c	core	core	UNK	setfsent	UNK=void
+c	core	core	UNK	endfsent	UNK=void
+c	core	core	UNK	getfsent	UNK=void
+c	core	core	UNK	getfsspec	char=name
+c	core	core	UNK	getfsfile	char=name
+c	core	core	UNK	getdate	char=string
+c	core	core	UNK	getdate_r	char=string tm=tp
+c	core	core	UNK	iconv_open	char=tocode char=fromcode
+c	core	core	UNK	iconv_close	iconv_t=cd
+c	core	core	UNK	iconv	iconv_t=cd char=inbuf size_t=inbytesleft char=outbuf size_t=outbytesleft
+c	core	core	UNK	getopt_long	int=argc char=argv char=shortopts option=longopts int=indexptr
+c	core	core	UNK	getopt_long_only	int=argc char=argv char=shortopts option=longopts int=indexptr
+c	core	core	UNK	getpass	char=prompt
+c	core	core	UNK	obstack_blank	obstack=obstack-ptr int=size
+c	core	core	UNK	obstack_grow	obstack=obstack-ptr UNK=data int=size
+c	core	core	UNK	obstack_grow0	obstack=obstack-ptr UNK=data int=size
+c	core	core	UNK	obstack_1grow	obstack=obstack-ptr char=c
+c	core	core	UNK	obstack_ptr_grow	obstack=obstack-ptr UNK=data
+c	core	core	UNK	obstack_int_grow	obstack=obstack-ptr int=data
+c	core	core	UNK	obstack_finish	obstack=obstack-ptr
+c	core	core	UNK	obstack_object_size	obstack=obstack-ptr
+c	core	core	UNK	link	char=oldname char=newname
+c	core	core	UNK	hcreate	size_t=nel
+c	core	core	UNK	hdestroy	UNK=void
+c	core	core	UNK	hsearch	entry=item action=action
+c	core	core	UNK	hcreate_r	size_t=nel hsearch_data=htab
+c	core	core	UNK	hdestroy_r	hsearch_data=htab
+c	core	core	UNK	hsearch_r	entry=item action=action entry=retval hsearch_data=htab
+c	core	core	UNK	mcheck	void
+c	core	core	UNK	mprobe	UNK=pointer
+c	core	core	UNK	ntp_gettime	ntptimeval=tptr
+c	core	core	UNK	ntp_adjtime	timex=tptr
+c	core	core	UNK	gettimeofday	timeval=tp timezone=tzp
+c	core	core	UNK	settimeofday	timeval=tp timezone=tzp
+c	core	core	UNK	adjtime	timeval=delta timeval=olddelta
+c	core	core	UNK	adjtimex	timex=timex
+c	core	core	UNK	inet_aton	char=name in_addr=addr
+c	core	core	UNK	inet_addr	char=name
+c	core	core	UNK	inet_network	char=name
+c	core	core	UNK	inet_ntoa	in_addr=addr
+c	core	core	UNK	inet_makeaddr	uint32_t=net uint32_t=local
+c	core	core	UNK	inet_lnaof	in_addr=addr
+c	core	core	UNK	inet_netof	in_addr=addr
+c	core	core	UNK	inet_pton	int=af char=cp UNK=buf
+c	core	core	UNK	inet_ntop	int=af UNK=cp char=buf socklen_t=len
+c	core	core	UNK	gethostname	char=name size_t=size
+c	core	core	UNK	sethostname	char=name size_t=length
+c	core	core	UNK	getdomainnname	char=name size_t=length
+c	core	core	UNK	setdomainname	char=name size_t=length
+c	core	core	UNK	gethostid	UNK=void
+c	core	core	UNK	sethostid	int=id
+c	core	core	UNK	gethostbyname	char=name
+c	core	core	UNK	gethostbyname2	char=name int=af
+c	core	core	UNK	gethostbyaddr	UNK=addr socklen_t=length int=format
+c	core	core	UNK	gethostbyname_r	char=name hostent=result_buf char=buf size_t=buflen hostent=result int=h_errnop
+c	core	core	UNK	gethostbyname2_r	char=name int=af hostent=result_buf char=buf size_t=buflen hostent=result int=h_errnop
+c	core	core	UNK	gethostbyaddr_r	UNK=addr socklen_t=length int=format hostent=result_buf char=buf size_t=buflen hostent=result int=h_errnop
+c	core	core	UNK	sethostent	int=stayopen
+c	core	core	UNK	gethostent	UNK=void
+c	core	core	UNK	endhostent	UNK=void
+c	core	core	UNK	read	int=filedes UNK=buffer size_t=size
+c	core	core	UNK	pread	int=filedes UNK=buffer size_t=size off_t=offset
+c	core	core	UNK	pread64	int=filedes UNK=buffer size_t=size off64_t=offset
+c	core	core	UNK	write	int=filedes UNK=buffer size_t=size
+c	core	core	UNK	pwrite	int=filedes UNK=buffer size_t=size off_t=offset
+c	core	core	UNK	pwrite64	int=filedes UNK=buffer size_t=size off64_t=offset
+c	core	core	UNK	ctermid	char=string
+c	numeric.math	core	UNK	ldiv	int=numerator int=denominator
+c	numeric.math	core	UNK	lldiv	long int=numerator long int=denominator
+c	numeric.math	core	UNK	imaxdiv	intmax_t=numerator intmax_t=denominator
+c	core	core	UNK	if_nametoindex	char=ifname
+c	core	core	UNK	if_indextoname	int=ifindex char=ifname
+c	core	core	UNK	if_nameindex	UNK=void
+c	core	core	UNK	if_freenameindex	if_nameindex=ptr
+c	core	core	UNK	ioctl	int=filedes int=command
+c	core	core	UNK	isatty	int=filedes
+c	core	core	UNK	ttyname	int=filedes
+c	core	core	UNK	ttyname_r	int=filedes char=buf size_t=len
+c	core	core	UNK	rand_r	int=seed
+c	core	core	UNK	getrlimit	int=resource rlimit=rlp
+c	core	core	UNK	getrlimit64	int=resource rlimit64=rlp
+c	core	core	UNK	setrlimit	int=resource rlimit=rlp
+c	core	core	UNK	setrlimit64	int=resource rlimit64=rlp
+c	core	core	UNK	ulimit	int=cmd
+c	core	core	UNK	vlimit	int=resource int=limit
+c	core	core	UNK	tcsendbreak	int=filedes int=duration
+c	core	core	UNK	tcdrain	int=filedes
+c	core	core	UNK	tcflush	int=filedes int=queue
+c	core	core	UNK	tcflow	int=filedes int=action
+c	core	core	UNK	getdelim	char=lineptr size_t=n int=delimiter file=stream
+c	core	core	UNK	fgets_unlocked	char=s int=count file=stream
+c	core	core	UNK	fgetws_unlocked	wchar_t=ws int=count file=stream
+c	core	core	UNK	cfgetospeed	termios=termios-p
+c	core	core	UNK	cfgetispeed	termios=termios-p
+c	core	core	UNK	cfsetospeed	termios=termios-p speed_t=speed
+c	core	core	UNK	cfsetispeed	termios=termios-p speed_t=speed
+c	core	core	UNK	cfsetspeed	termios=termios-p speed_t=speed
+c	core	core	UNK	listen	int=socket int=n
+c	core	core	UNK	textdomain	char=domainname
+c	core	core	UNK	bindtextdomain	char=domainname char=dirname
+c	core	core	UNK	login_tty	int=filedes
+c	core	core	UNK	login	utmp=entry
+c	core	core	UNK	logout	char=ut_line
+c	core	core	UNK	logwtmp	char=ut_line char=ut_name char=ut_host
+c	core	core	UNK	getgrgid	gid_t=gid
+c	core	core	UNK	getgrgid_r	gid_t=gid group=result_buf char=buffer size_t=buflen group=result
+c	core	core	UNK	getgrnam	char=name
+c	core	core	UNK	getgrnam_r	char=name group=result_buf char=buffer size_t=buflen group=result
+c	core	core	UNK	setnetgrent	char=netgroup
+c	core	core	UNK	getnetgrent	char=hostp char=userp char=domainp
+c	core	core	UNK	getnetgrent_r	char=hostp char=userp char=domainp char=buffer size_t=buflen
+c	core	core	UNK	endnetgrent	UNK=void
+c	core	core	UNK	getpwuid	uid_t=uid
+c	core	core	UNK	getpwuid_r	uid_t=uid passwd=result_buf char=buffer size_t=buflen passwd=result
+c	core	core	UNK	getpwnam	char=name
+c	core	core	UNK	getpwnam_r	char=name passwd=result_buf char=buffer size_t=buflen passwd=result
+c	core	core	UNK	strptime	char=s char=fmt tm=tp
+c	core	core	UNK	mknod	char=filename mode_t=mode dev_t=dev
+c	core	core	UNK	mallopt	int=param int=value
+c	core	core	UNK	setutent	UNK=void
+c	core	core	UNK	getutent	UNK=void
+c	core	core	UNK	endutent	UNK=void
+c	core	core	UNK	getutid	utmp=id
+c	core	core	UNK	getutline	utmp=line
+c	core	core	UNK	pututline	utmp=utmp
+c	core	core	UNK	getutent_r	utmp=buffer utmp=result
+c	core	core	UNK	getutid_r	utmp=id utmp=buffer utmp=result
+c	core	core	UNK	getutline_r	utmp=line utmp=buffer utmp=result
+c	core	core	UNK	utmpname	char=file
+c	core	core	UNK	updwtmp	char=wtmp_file utmp=utmp
+c	core	core	UNK	regexec	regex_t=compiled char=string size_t=nmatch regmatch_t=matchptr[restrict] int=eflags
+c	core	core	UNK	mmap	UNK=address size_t=length int=protect int=flags int=filedes off_t=offset
+c	core	core	UNK	mmap64	UNK=address size_t=length int=protect int=flags int=filedes off64_t=offset
+c	core	core	UNK	munmap	UNK=addr size_t=length
+c	core	core	UNK	msync	UNK=address size_t=length int=flags
+c	core	core	UNK	mremap	UNK=address size_t=length size_t=new_length int=flag
+c	core	core	UNK	madvise	UNK=addr size_t=length int=advice
+c	core	core	UNK	shm_open	char=name int=oflag mode_t=mode
+c	core	core	UNK	shm_unlink	char=name
+c	core	core	UNK	tcgetattr	int=filedes termios=termios-p
+c	core	core	UNK	tcsetattr	int=filedes int=when termios=termios-p
+c	core	core	UNK	globfree	glob_t=pglob
+c	core	core	UNK	globfree64	glob64_t=pglob
+c	core	core	UNK	mount	char=special_file char=dir char=fstype int=options UNK=data
+c	core	core	UNK	umount2	char=file int=flags
+c	core	core	UNK	umount	char=file
+c	core	core	UNK	setmntent	char=file char=mode
+c	core	core	UNK	endmntent	file=stream
+c	core	core	UNK	getmntent	file=stream
+c	core	core	UNK	getmntent_r	file=stream mntent=result char=buffer int=bufsize
+c	core	core	UNK	addmntent	file=stream mntent=mnt
+c	core	core	UNK	hasmntopt	mntent=mnt char=opt
+c	core	core	UNK	innetgr	char=netgroup char=host char=user char=domain
+c	core	core	UNK	getnetbyname	char=name
+c	core	core	UNK	getnetbyaddr	uint32_t=net int=type
+c	core	core	UNK	setnetent	int=stayopen
+c	core	core	UNK	getnetent	UNK=void
+c	core	core	UNK	endnetent	UNK=void
+c	core	core	UNK	sigsetjmp	sigjmp_buf=state int=savesigs
+c	core	core	UNK	siglongjmp	sigjmp_buf=state int=value
+c	core	core	UNK	cfmakeraw	termios=termios-p
+c	core	core	UNK	scalb	double=value double=exponent
+c	numeric.math	core	UNK	scalbln	double=x int=n
+c	core	core	UNK	significand	double=x
+c	core	core	UNK	obstack_chunk_size	obstack=obstack-ptr
+c	core	core	UNK	obstack_alignment_mask	obstack=obstack-ptr
+c	core	core	UNK	opendir	char=dirname
+c	core	core	UNK	fdopendir	int=fd
+c	core	core	UNK	dirfd	dir=dirstream
+c	core	core	UNK	open	char=filename int=flags[ mode_t=mode]
+c	core	core	UNK	open64	char=filename int=flags[ mode_t=mode]
+c	core	core	UNK	close	int=filedes
+c	core	core	UNK	fopen64	char=filename char=opentype
+c	core	core	UNK	freopen64	char=filename char=opentype file=stream
+c	core	core	UNK	__freadable	file=stream
+c	core	core	UNK	__fwritable	file=stream
+c	core	core	UNK	__freading	file=stream
+c	core	core	UNK	__fwriting	file=stream
+c	core	core	UNK	openlog	char=ident int=option int=facility
+c	core	core	UNK	mlock	UNK=addr size_t=len
+c	core	core	UNK	munlock	UNK=addr size_t=len
+c	core	core	UNK	mlockall	int=flags
+c	core	core	UNK	munlockall	UNK=void
+c	core	core	UNK	parse_printf_format	char=template size_t=n int=argtypes
+c	string.byte	core	UNK	strtod	char=string char=tailptr
+c	string.wide	core	UNK	wcstod	wchar_t=string wchar_t=tailptr
+c	string.byte	core	UNK	strtoll	char=string char=tailptr int=base
+c	string.wide	core	UNK	wcstoll	wchar_t=string wchar_t=tailptr int=base
+c	core	core	UNK	strtoq	char=string char=tailptr int=base
+c	core	core	UNK	wcstoq	wchar_t=string wchar_t=tailptr int=base
+c	string.byte	core	UNK	strtoull	char=string char=tailptr int=base
+c	string.wide	core	UNK	wcstoull	wchar_t=string wchar_t=tailptr int=base
+c	core	core	UNK	strtouq	char=string char=tailptr int=base
+c	core	core	UNK	wcstouq	wchar_t=string wchar_t=tailptr int=base
+c	string.byte	core	UNK	strtoumax	char=string char=tailptr int=base
+c	string.wide	core	UNK	wcstoumax	wchar_t=string wchar_t=tailptr int=base
+c	string.byte	core	UNK	atol	char=string
+c	string.byte	core	UNK	atoll	char=string
+c	core	core	UNK	pathconf	char=filename int=parameter
+c	core	core	UNK	fpathconf	int=filedes int=parameter
+c	core	core	UNK	popen	char=command char=mode
+c	core	core	UNK	pclose	file=stream
+c	core	core	UNK	uname	utsname=info
+c	io	core	UNK	fgetpos64	file=stream fpos64_t=position
+c	io	core	UNK	fsetpos64	file=stream fpos64_t=position
+c	core	core	UNK	regcomp	regex_t=compiled char=pattern int=cflags
+c	core	core	UNK	__ppc_get_timebase	UNK=void
+c	core	core	UNK	__ppc_get_timebase_freq	UNK=void
+c	core	core	UNK	__ppc_yield	UNK=void
+c	core	core	UNK	__ppc_mdoio	UNK=void
+c	core	core	UNK	__ppc_mdoom	UNK=void
+c	core	core	UNK	__ppc_set_ppr_med	UNK=void
+c	core	core	UNK	__ppc_set_ppr_low	UNK=void
+c	core	core	UNK	__ppc_set_ppr_med_low	UNK=void
+c	core	core	UNK	__ppc_set_ppr_very_low	UNK=void
+c	core	core	UNK	__ppc_set_ppr_med_high	UNK=void
+c	core	core	UNK	printf_size	file=fp printf_info=info UNK=args
+c	core	core	UNK	printf_size_info	printf_info=info size_t=n int=argtypes
+c	core	core	UNK	obstack_init	obstack=obstack-ptr
+c	core	core	UNK	fmtmsg	int=classification char=label int=severity char=text char=action char=tag
+c	core	core	UNK	wifexited	int=status
+c	core	core	UNK	wexitstatus	int=status
+c	core	core	UNK	wifsignaled	int=status
+c	core	core	UNK	wtermsig	int=status
+c	core	core	UNK	wcoredump	int=status
+c	core	core	UNK	wifstopped	int=status
+c	core	core	UNK	wstopsig	int=status
+c	core	core	UNK	waitpid	pid_t=pid int=status-ptr int=options
+c	core	core	UNK	wait	int=status-ptr
+c	core	core	UNK	wait4	pid_t=pid int=status-ptr int=options rusage=usage
+c	core	core	UNK	setsid	UNK=void
+c	core	core	UNK	getsid	pid_t=pid
+c	core	core	UNK	getpgrp	UNK=void
+c	core	core	UNK	getpgid	pid_t=pid
+c	core	core	UNK	setpgid	pid_t=pid pid_t=pgid
+c	core	core	UNK	setpgrp	pid_t=pid pid_t=pgid
+c	core	core	UNK	getpid	UNK=void
+c	core	core	UNK	getppid	UNK=void
+c	core	core	UNK	sigprocmask	int=how sigset_t=set sigset_t=oldset
+c	core	core	UNK	get_nprocs_conf	UNK=void
+c	core	core	UNK	get_nprocs	UNK=void
+c	core	core	UNK	getloadavg	double=loadavg[] int=nelem
+c	core	core	UNK	times	tms=buffer
+c	core	core	UNK	getprotobyname	char=name
+c	core	core	UNK	getprotobynumber	int=protocol
+c	core	core	UNK	setprotoent	int=stayopen
+c	core	core	UNK	getprotoent	UNK=void
+c	core	core	UNK	endprotoent	UNK=void
+c	core	core	UNK	openpty	int=amaster int=aslave char=name termios=termp winsize=winp
+c	core	core	UNK	forkpty	int=amaster char=name termios=termp winsize=winp
+c	core	core	UNK	getpagesize	UNK=void
+c	core	core	UNK	get_phys_pages	UNK=void
+c	core	core	UNK	get_avphys_pages	UNK=void
+c	core	core	UNK	rewinddir	dir=dirstream
+c	core	core	UNK	telldir	dir=dirstream
+c	core	core	UNK	seekdir	dir=dirstream int=pos
+c	core	core	UNK	getsockname	int=socket sockaddr=addr socklen_t=length-ptr
+c	core	core	UNK	stat	char=filename stat=buf
+c	core	core	UNK	stat64	char=filename stat64=buf
+c	core	core	UNK	fstat	int=filedes stat=buf
+c	core	core	UNK	fstat64	int=filedes stat64=buf
+c	core	core	UNK	lstat	char=filename stat=buf
+c	core	core	UNK	lstat64	char=filename stat64=buf
+c	core	core	UNK	getuid	UNK=void
+c	core	core	UNK	getgid	UNK=void
+c	core	core	UNK	geteuid	UNK=void
+c	core	core	UNK	getegid	UNK=void
+c	core	core	UNK	getgroups	int=count gid_t=groups
+c	core	core	UNK	readdir	dir=dirstream
+c	core	core	UNK	readdir_r	dir=dirstream dirent=entry dirent=result
+c	core	core	UNK	readdir64	dir=dirstream
+c	core	core	UNK	readdir64_r	dir=dirstream dirent64=entry dirent64=result
+c	core	core	UNK	closedir	dir=dirstream
+c	core	core	UNK	recv	int=socket UNK=buffer size_t=size int=flags
+c	core	core	UNK	recvfrom	int=socket UNK=buffer size_t=size int=flags sockaddr=addr socklen_t=length-ptr
+c	core	core	UNK	regfree	regex_t=compiled
+c	core	core	UNK	regerror	int=errcode regex_t=compiled char=buffer size_t=length
+c	core	core	UNK	register_printf_function	int=spec printf_function=handler-function printf_arginfo_function=arginfo-function
+c	core	core	UNK	drem	double=numerator double=denominator
+c	core	core	UNK	brk	UNK=addr
+c	core	core	UNK	*sbrk	ptrdiff_t=delta
+c	core	core	UNK	getrusage	int=processes rusage=rusage
+c	core	core	UNK	vtimes	vtimes=current vtimes=child
+c	numeric.math	core	UNK	lrint	double=x
+c	numeric.math	core	UNK	llrint	double=x
+c	numeric.math	core	UNK	lround	double=x
+c	numeric.math	core	UNK	llround	double=x
+c	numeric.fenv	core	UNK	fegetround	UNK=void
+c	numeric.fenv	core	UNK	fesetround	int=round
+c	core	core	UNK	fgetgrent	file=stream
+c	core	core	UNK	fgetgrent_r	file=stream group=result_buf char=buffer size_t=buflen group=result
+c	core	core	UNK	setgrent	UNK=void
+c	core	core	UNK	getgrent	UNK=void
+c	core	core	UNK	getgrent_r	group=result_buf char=buffer size_t=buflen group=result
+c	core	core	UNK	endgrent	UNK=void
+c	core	core	UNK	fgetpwent	file=stream
+c	core	core	UNK	fgetpwent_r	file=stream passwd=result_buf char=buffer size_t=buflen passwd=result
+c	core	core	UNK	setpwent	UNK=void
+c	core	core	UNK	getpwent	UNK=void
+c	core	core	UNK	getpwent_r	passwd=result_buf char=buffer size_t=buflen passwd=result
+c	core	core	UNK	endpwent	UNK=void
+c	core	core	UNK	scandir	char=dir dirent=namelist UNK=dirent **)
+c	core	core	UNK	alphasort	dirent=a dirent=b
+c	core	core	UNK	versionsort	dirent=a dirent=b
+c	core	core	UNK	scandir64	char=dir dirent64=namelist UNK=dirent64 **)
+c	core	core	UNK	alphasort64	dirent64=a dirent=b
+c	core	core	UNK	versionsort64	dirent64=a dirent64=b
+c	core	core	UNK	readv	int=filedes iovec=vector int=count
+c	core	core	UNK	writev	int=filedes iovec=vector int=count
+c	core	core	UNK	rawmemchr	UNK=block int=c
+c	core	core	UNK	memrchr	UNK=block int=c size_t=size
+c	core	core	UNK	strchrnul	char=string int=c
+c	core	core	UNK	wcschrnul	wchar_t=wstring wchar_t=wc
+c	core	core	UNK	wcswcs	wchar_t=haystack wchar_t=needle
+c	core	core	UNK	strcasestr	char=haystack char=needle
+c	core	core	UNK	memmem	UNK=haystack size_t=haystack-len UNK=needle size_t=needle-len
+c	core	core	UNK	index	char=string int=c
+c	core	core	UNK	rindex	char=string int=c
+c	core	core	UNK	send	int=socket UNK=buffer size_t=size int=flags
+c	core	core	UNK	sendto	int=socket UNK=buffer size_t=size int=flags sockaddr=addr socklen_t=length
+c	core	core	UNK	getservbyname	char=name char=proto
+c	core	core	UNK	getservbyport	int=port char=proto
+c	core	core	UNK	setservent	int=stayopen
+c	core	core	UNK	getservent	UNK=void
+c	core	core	UNK	endservent	UNK=void
+c	core	core	UNK	setlogmask	int=mask
+c	core	core	UNK	bind	int=socket sockaddr=addr socklen_t=length
+c	core	core	UNK	setitimer	int=which itimerval=new itimerval=old
+c	core	core	UNK	getitimer	int=which itimerval=old
+c	core	core	UNK	alarm	int=seconds
+c	core	core	UNK	setegid	gid_t=newgid
+c	core	core	UNK	setgid	gid_t=newgid
+c	core	core	UNK	setregid	gid_t=rgid gid_t=egid
+c	core	core	UNK	setgroups	size_t=count gid_t=groups
+c	core	core	UNK	initgroups	char=user gid_t=group
+c	core	core	UNK	getgrouplist	char=user gid_t=group gid_t=groups int=ngroups
+c	core	core	UNK	umask	mode_t=mask
+c	core	core	UNK	getumask	UNK=void
+c	core	core	UNK	chmod	char=filename mode_t=mode
+c	core	core	UNK	fchmod	int=filedes mode_t=mode
+c	core	core	UNK	seteuid	uid_t=neweuid
+c	core	core	UNK	setuid	uid_t=newuid
+c	core	core	UNK	setreuid	uid_t=ruid uid_t=euid
+c	core	core	UNK	strsignal	int=signum
+c	core	core	UNK	psignal	int=signum char=message
+c	core	core	UNK	sigemptyset	sigset_t=set
+c	core	core	UNK	sigfillset	sigset_t=set
+c	core	core	UNK	sigaddset	sigset_t=set int=signum
+c	core	core	UNK	sigdelset	sigset_t=set int=signum
+c	core	core	UNK	sigismember	sigset_t=set int=signum
+c	core	core	UNK	sigaltstack	stack_t=stack stack_t=oldstack
+c	core	core	UNK	sigstack	sigstack=stack sigstack=oldstack
+c	core	core	UNK	kill	pid_t=pid int=signum
+c	core	core	UNK	killpg	int=pgid int=signum
+c	core	core	UNK	gsignal	int=signum
+c	core	core	UNK	sigsuspend	sigset_t=set
+c	core	core	UNK	stime	time_t=newtime
+c	core	core	UNK	fputc_unlocked	int=c file=stream
+c	core	core	UNK	fputwc_unlocked	wchar_t=wc file=stream
+c	io	core	UNK	putc	int=c file=stream
+c	io	core	UNK	putwc	wchar_t=wc file=stream
+c	core	core	UNK	putc_unlocked	int=c file=stream
+c	core	core	UNK	putwc_unlocked	wchar_t=wc file=stream
+c	core	core	UNK	putchar_unlocked	int=c
+c	core	core	UNK	putwchar_unlocked	wchar_t=wc
+c	core	core	UNK	fputs_unlocked	char=s file=stream
+c	core	core	UNK	fputws_unlocked	wchar_t=ws file=stream
+c	core	core	UNK	putw	int=w file=stream
+c	core	core	UNK	sleep	int=seconds
+c	core	core	UNK	nanosleep	timespec=requested_time timespec=remaining
+c	core	core	UNK	getsockopt	int=socket int=level int=optname UNK=optval socklen_t=optlen-ptr
+c	core	core	UNK	setsockopt	int=socket int=level int=optname UNK=optval socklen_t=optlen
+c	core	core	UNK	socketpair	int=namespace int=style int=protocol int=filedes
+c	numeric.math	core	UNK	lgamma_r	double=x int=signp
+c	numeric.math	core	UNK	gamma	double=x
+c	core	core	UNK	j0	double=x
+c	core	core	UNK	j1	double=x
+c	core	core	UNK	jn	int=n double=x
+c	core	core	UNK	y0	double=x
+c	core	core	UNK	y1	double=x
+c	core	core	UNK	yn	int=n double=x
+c	core	core	UNK	mallinfo	UNK=void
+c	numeric.fenv	core	UNK	fegetexceptflag	fexcept_t=flagp int=excepts
+c	numeric.fenv	core	UNK	fesetexceptflag	fexcept_t=flagp int=excepts
+c	core	core	UNK	aio_error	aiocb=aiocbp
+c	core	core	UNK	aio_error64	aiocb64=aiocbp
+c	core	core	UNK	aio_return	aiocb=aiocbp
+c	core	core	UNK	aio_return64	aiocb64=aiocbp
+c	core	core	UNK	obstack_base	obstack=obstack-ptr
+c	core	core	UNK	obstack_next_free	obstack=obstack-ptr
+c	core	core	UNK	posix_fallocate	int=fd off_t=offset off_t=length
+c	core	core	UNK	posix_fallocate64	int=fd off64_t=offset off64_t=length
+c	core	core	UNK	fopencookie	UNK=cookie char=opentype cookie_io_functions_t=io-functions
+c	core	core	UNK	flockfile	file=stream
+c	core	core	UNK	ftrylockfile	file=stream
+c	core	core	UNK	funlockfile	file=stream
+c	core	core	UNK	__fsetlocking	file=stream int=type
+c	core	core	UNK	strfry	char=string
+c	core	core	UNK	strnlen	char=s size_t=maxlen
+c	core	core	UNK	wcsnlen	wchar_t=ws size_t=maxlen
+c	core	core	UNK	confstr	int=parameter char=buf size_t=len
+c	core	core	UNK	fmemopen	UNK=buf size_t=size char=opentype
+c	core	core	UNK	open_memstream	char=ptr size_t=sizeloc
+c	core	core	UNK	strcasecmp	char=s1 char=s2
+c	core	core	UNK	wcscasecmp	wchar_t=ws1 wchar_t=ws2
+c	core	core	UNK	strncasecmp	char=s1 char=s2 size_t=n
+c	core	core	UNK	wcsncasecmp	wchar_t=ws1 wchar_t=s2 size_t=n
+c	core	core	UNK	strverscmp	char=s1 char=s2
+c	core	core	UNK	bcmp	UNK=a1 UNK=a2 size_t=size
+c	core	core	UNK	getsubopt	char=optionp char=tokens char=valuep
+c	core	core	UNK	drand48	UNK=void
+c	core	core	UNK	erand48	int=xsubi[3]
+c	core	core	UNK	lrand48	UNK=void
+c	core	core	UNK	nrand48	int=xsubi[3]
+c	core	core	UNK	mrand48	UNK=void
+c	core	core	UNK	jrand48	int=xsubi[3]
+c	core	core	UNK	srand48	int=seedval
+c	core	core	UNK	seed48	int=seed16v[3]
+c	core	core	UNK	lcong48	int=param[7]
+c	core	core	UNK	drand48_r	drand48_data=buffer double=result
+c	core	core	UNK	erand48_r	int=xsubi[3] drand48_data=buffer double=result
+c	core	core	UNK	lrand48_r	drand48_data=buffer int=result
+c	core	core	UNK	nrand48_r	int=xsubi[3] drand48_data=buffer int=result
+c	core	core	UNK	mrand48_r	drand48_data=buffer int=result
+c	core	core	UNK	jrand48_r	int=xsubi[3] drand48_data=buffer int=result
+c	core	core	UNK	srand48_r	int=seedval drand48_data=buffer
+c	core	core	UNK	seed48_r	int=seed16v[3] drand48_data=buffer
+c	core	core	UNK	lcong48_r	int=param[7] drand48_data=buffer
+c	core	core	UNK	symlink	char=oldname char=newname
+c	core	core	UNK	readlink	char=filename char=buffer size_t=size
+c	core	core	UNK	canonicalize_file_name	char=name
+c	core	core	UNK	realpath	char=name char=resolved
+c	core	core	UNK	aio_fsync	int=op aiocb=aiocbp
+c	core	core	UNK	aio_fsync64	int=op aiocb64=aiocbp
+c	core	core	UNK	aio_suspend	aiocb=list[] int=nent timespec=timeout
+c	core	core	UNK	aio_suspend64	aiocb64=list[] int=nent timespec=timeout
+c	core	core	UNK	sync	UNK=void
+c	core	core	UNK	fsync	int=fildes
+c	core	core	UNK	fdatasync	int=fildes
+c	core	core	UNK	sysconf	int=parameter
+c	core	core	UNK	syslog	int=facility_priority char=format
+c	core	core	UNK	vsyslog	int=facility_priority char=format va_list=arglist
+c	core	core	UNK	syscall	int=sysno
+c	core	core	UNK	sysctl	int=names int=nlen UNK=oldval size_t=oldlenp UNK=newval size_t=newlen
+c	core	core	UNK	getcontext	ucontext_t=ucp
+c	core	core	UNK	makecontext	ucontext_t=ucp int=argc
+c	core	core	UNK	setcontext	ucontext_t=ucp
+c	core	core	UNK	swapcontext	ucontext_t=oucp ucontext_t=ucp
+c	core	core	UNK	ecvt	double=value int=ndigit int=decpt int=neg
+c	core	core	UNK	fcvt	double=value int=ndigit int=decpt int=neg
+c	core	core	UNK	gcvt	double=value int=ndigit char=buf
+c	core	core	UNK	qecvt	double=value int=ndigit int=decpt int=neg
+c	core	core	UNK	qfcvt	double=value int=ndigit int=decpt int=neg
+c	core	core	UNK	qgcvt	double=value int=ndigit char=buf
+c	core	core	UNK	ecvt_r	double=value int=ndigit int=decpt int=neg char=buf size_t=len
+c	core	core	UNK	fcvt_r	double=value int=ndigit int=decpt int=neg char=buf size_t=len
+c	core	core	UNK	qecvt_r	double=value int=ndigit int=decpt int=neg char=buf size_t=len
+c	core	core	UNK	qfcvt_r	double=value int=ndigit int=decpt int=neg char=buf size_t=len
+c	core	core	UNK	tmpfile64	UNK=void
+c	core	core	UNK	tmpnam_r	char=result
+c	core	core	UNK	tempnam	char=dir char=prefix
+c	core	core	UNK	mktemp	char=template
+c	core	core	UNK	mkstemp	char=template
+c	core	core	UNK	mkdtemp	char=template
+c	core	core	UNK	tcgetpgrp	int=filedes
+c	core	core	UNK	tcsetpgrp	int=filedes pid_t=pgid
+c	core	core	UNK	tcgetsid	int=fildes
+c	core	core	UNK	access	char=filename int=how
+c	core	core	UNK	s_isdir	mode_t=m
+c	core	core	UNK	s_ischr	mode_t=m
+c	core	core	UNK	s_isblk	mode_t=m
+c	core	core	UNK	s_isreg	mode_t=m
+c	core	core	UNK	s_isfifo	mode_t=m
+c	core	core	UNK	s_islnk	mode_t=m
+c	core	core	UNK	s_issock	mode_t=m
+c	core	core	UNK	s_typeismq	stat=s
+c	core	core	UNK	s_typeissem	stat=s
+c	core	core	UNK	s_typeisshm	stat=s
+c	core	core	UNK	catopen	char=cat_name int=flag
+c	core	core	UNK	catgets	nl_catd=catalog_desc int=set int=message char=string
+c	core	core	UNK	catclose	nl_catd=catalog_desc
+c	core	core	UNK	nl_langinfo	nl_item=item
+c	core	core	UNK	pthread_key_create	pthread_key_t=key void (*var=destructor)(void*)
+c	core	core	UNK	pthread_key_delete	pthread_key_t=key
+c	core	core	UNK	*pthread_getspecific	pthread_key_t=key
+c	core	core	UNK	pthread_setspecific	pthread_key_t=key UNK=value
+c	core	core	UNK	tzset	UNK=void
+c	core	core	UNK	mtrace	UNK=void
+c	core	core	UNK	muntrace	UNK=void
+c	core	core	UNK	getpriority	int=class int=id
+c	core	core	UNK	setpriority	int=class int=id int=niceval
+c	core	core	UNK	nice	int=increment
+c	core	core	UNK	gettext	char=msgid
+c	core	core	UNK	dgettext	char=domainname char=msgid
+c	core	core	UNK	dcgettext	char=domainname char=msgid int=category
+c	core	core	UNK	tsearch	UNK=key UNK=rootp comparison_fn_t=compar
+c	core	core	UNK	tfind	UNK=key UNK=rootp comparison_fn_t=compar
+c	core	core	UNK	tdelete	UNK=key UNK=rootp comparison_fn_t=compar
+c	core	core	UNK	tdestroy	UNK=vroot __free_fn_t=freefct
+c	core	core	UNK	twalk	UNK=root __action_fn_t=action
+c	core	core	UNK	sincos	double=x double=sinx double=cosx
+c	core	core	UNK	memfrob	UNK=mem size_t=length
+c	core	core	UNK	strndupa	char=s size_t=size
+c	core	core	UNK	stpncpy	char=to char=from size_t=size
+c	core	core	UNK	wcpncpy	wchar_t=wto wchar_t=wfrom size_t=size
+c	core	core	UNK	getopt	int=argc char=argv char=options
+c	core	core	UNK	pause	UNK=void
+c	io	core	UNK	vscanf	char=template va_list=ap
+c	io	core	UNK	vwscanf	wchar_t=template va_list=ap
+c	io	core	UNK	vsscanf	char=s char=template va_list=ap
+c	io	core	UNK	vswscanf	wchar_t=s wchar_t=template va_list=ap
+c	io	core	UNK	vprintf	char=template va_list=ap
+c	io	core	UNK	vwprintf	wchar_t=template va_list=ap
+c	io	core	UNK	vsprintf	char=s char=template va_list=ap
+c	io	core	UNK	vswprintf	wchar_t=s size_t=size wchar_t=template va_list=ap
+c	io	core	UNK	vsnprintf	char=s size_t=size char=template va_list=ap
+c	io	core	UNK	vasprintf	char=ptr char=template va_list=ap
+c	io	core	UNK	obstack_vprintf	obstack=obstack char=template va_list=ap
+c	core	core	UNK	alloca	size_t=size
+c	core	core	UNK	fd_zero	fd_set=set
+c	core	core	UNK	fd_set	int=filedes fd_set=set
+c	core	core	UNK	fd_clr	int=filedes fd_set=set
+c	core	core	UNK	fd_isset	int=filedes fd_set=set
+c	core	core	UNK	select	int=nfds fd_set=read-fds fd_set=write-fds fd_set=except-fds timeval=timeout
+c	core	core	UNK	getpeername	int=socket sockaddr=addr socklen_t=length-ptr
+c	core	core	UNK	getlogin	UNK=void
+c	core	core	UNK	cuserid	char=string
+c	core	core	UNK	fnmatch	char=pattern char=string int=flags
+c	core	core	UNK	getcwd	char=buffer size_t=size
+c	core	core	UNK	get_current_dir_name	UNK=void
+c	core	core	UNK	chdir	char=filename
+c	core	core	UNK	fchdir	int=filedes
+c	core	core	UNK	ftw	char=filename __ftw_func_t=func int=descriptors
+c	core	core	UNK	ftw64	char=filename __ftw64_func_t=func int=descriptors
+c	core	core	UNK	nftw	char=filename __nftw_func_t=func int=descriptors int=flag
+c	core	core	UNK	nftw64	char=filename __nftw64_func_t=func int=descriptors int=flag
+c	core	core	UNK	putpwent	passwd=p file=stream
+c	core	core	UNK	setutxent	UNK=void
+c	core	core	UNK	getutxent	UNK=void
+c	core	core	UNK	endutxent	UNK=void
+c	core	core	UNK	getutxid	utmpx=id
+c	core	core	UNK	getutxline	utmpx=line
+c	core	core	UNK	pututxline	utmpx=utmp
+c	core	core	UNK	utmpxname	char=file
+c	core	core	UNK	getutmp	utmpx=utmpx utmp=utmp
+c	core	core	UNK	getutmpx	utmp=utmp utmpx=utmpx
+c	core	core	UNK	rpmatch	char=response
