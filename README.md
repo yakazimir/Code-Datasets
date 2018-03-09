@@ -26,7 +26,7 @@ name ``name``:
 | name\_valid.{e,f} | Validation split |
 | name\_test.{e,f} | Test split |
 | rank\_list.txt | Output representations tokenized |
-| rank\_list_orig.txt | Original Output representations |
+| rank\_list_orig.txt | Original Output representations, without preprocessing (camel case, hyphens, uppcase, etc.. preserved) |
 | rank\_list\_class.txt | Abstract class sequences for output |
 | rank\_list\_tree.txt | Syntax information about reps |
 | descriptions.txt | Output symbols with associated words |
