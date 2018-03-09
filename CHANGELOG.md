@@ -22,3 +22,4 @@ Please keep track of any changes to the data or to this repository so that such 
 ## 2018-9-3
 ## Added 
  - added the multingual lua and japanese python datasets
+ - modified the rank_list_orig files for the stdlib datasets to follow global pattern
