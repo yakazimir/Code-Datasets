@@ -1,1633 +1,1633 @@
-Unsafe.Coerce.unsafeCoerce a b
-Data.Tuple.fst $tuple_2$ a b a
-Data.Tuple.snd $tuple_2$ a b b
-Data.Tuple.curry $f_2$ $tuple_2$ a b c a b c
-Data.Tuple.uncurry $f_3$ a b c $f_2$ $tuple_2$ a b c
-Data.Tuple.swap $tuple_2$ a b $tuple_2$ b a
-Data.Maybe.Nothing  Maybe a
-Data.Maybe.maybe b $f_2$ a b Maybe a b
-Data.Maybe.isJust Maybe a Bool
-Data.Maybe.isNothing Maybe a Bool
-Data.Maybe.fromJust Maybe a a
-Data.Maybe.fromMaybe a Maybe a a
-Data.Maybe.listToMaybe $list$ a Maybe a
-Data.Maybe.maybeToList Maybe a $list$ a
-Data.Maybe.catMaybes $list$ Maybe a $list$ a
-Data.Maybe.mapMaybe $f_2$ a Maybe b $list$ a $list$ b
-Text.Show.showsPrec Int Show ShowS
-Text.Show.show Show String
-Text.Show.showList $list$ Show ShowS
-Text.Show.shows Show ShowS
-Text.Show.showChar Char ShowS
-Text.Show.showString String ShowS
-Text.Show.showParen Bool ShowS ShowS
-Text.Show.showListWith $f_2$ a ShowS $list$ a ShowS
-Data.Eq.(==) Eq Eq Bool
-Data.Functor.fmap $f_2$ a b Functor a Functor b
-Data.Functor.(<$) a Functor b Functor a
-Data.Functor.($>) Functor a b Functor b
-Data.Functor.(<$>) $f_2$ a b Functor a Functor b
-Data.Functor.void Functor a Functor
-Data.Function.id a a
-Data.Function.const a b a
-Data.Function.(DOT) $f_2$ b c $f_2$ a b a c
-Data.Function.flip $f_3$ a b c b a c
-Data.Function.($) $f_2$ a b a b
-Data.Function.(&) a $f_2$ a b b
-Data.Function.fix $f_2$ a a a
-Data.Function.on $f_3$ b b c $f_2$ a b a a c
-Data.Bool.False  Bool
-Data.Bool.(&&) Bool Bool Bool
-Data.Bool.(||) Bool Bool Bool
-Data.Bool.not Bool Bool
-Data.Bool.otherwise  Bool
-Data.Bool.bool a a Bool a
-GHC.Char.chr Int Char
-Data.Bits.(.&.) Bits Bits Bits
-Data.Bits.(.|.) Bits Bits Bits
-Data.Bits.xor Bits Bits Bits
-Data.Bits.complement Bits Bits
-Data.Bits.shift Bits Int Bits
-Data.Bits.rotate Bits Int Bits
-Data.Bits.zeroBits  Bits
-Data.Bits.bit Int Bits
-Data.Bits.setBit Bits Int Bits
-Data.Bits.clearBit Bits Int Bits
-Data.Bits.complementBit Bits Int Bits
-Data.Bits.testBit Bits Int Bool
-Data.Bits.bitSizeMaybe Bits Maybe Int
-Data.Bits.isSigned Bits Bool
-Data.Bits.shiftL Bits Int Bits
-Data.Bits.unsafeShiftL Bits Int Bits
-Data.Bits.shiftR Bits Int Bits
-Data.Bits.unsafeShiftR Bits Int Bits
-Data.Bits.rotateL Bits Int Bits
-Data.Bits.rotateR Bits Int Bits
-Data.Bits.popCount Bits Int
-Data.Bits.finiteBitSize FiniteBits Int
-Data.Bits.countLeadingZeros FiniteBits Int
-Data.Bits.countTrailingZeros FiniteBits Int
-Data.Bits.bitDefault Int Bits/Num
-Data.Bits.testBitDefault Bits/Num Int Bool
-Data.Bits.popCountDefault Bits/Num Int
-Data.Bits.toIntegralSized Integral/Bits Maybe Integral/Bits
-Data.Coerce.coerce Coercible Coercible
-Text.ParserCombinators.ReadP.get  ReadP Char
-Text.ParserCombinators.ReadP.look  ReadP String
-Text.ParserCombinators.ReadP.(+++) ReadP a ReadP a ReadP a
-Text.ParserCombinators.ReadP.(<++) ReadP a ReadP a ReadP a
-Text.ParserCombinators.ReadP.gather ReadP a ReadP $tuple_2$ String a
-Text.ParserCombinators.ReadP.pfail  ReadP a
-Text.ParserCombinators.ReadP.eof  ReadP
-Text.ParserCombinators.ReadP.satisfy $f_2$ Char Bool ReadP Char
-Text.ParserCombinators.ReadP.char Char ReadP Char
-Text.ParserCombinators.ReadP.string String ReadP String
-Text.ParserCombinators.ReadP.munch $f_2$ Char Bool ReadP String
-Text.ParserCombinators.ReadP.munch1 $f_2$ Char Bool ReadP String
-Text.ParserCombinators.ReadP.skipSpaces  ReadP
-Text.ParserCombinators.ReadP.choice $list$ ReadP a ReadP a
-Text.ParserCombinators.ReadP.count Int ReadP a ReadP $list$ a
-Text.ParserCombinators.ReadP.between ReadP open ReadP close ReadP a ReadP a
-Text.ParserCombinators.ReadP.option a ReadP a ReadP a
-Text.ParserCombinators.ReadP.optional ReadP a ReadP
-Text.ParserCombinators.ReadP.many ReadP a ReadP $list$ a
-Text.ParserCombinators.ReadP.many1 ReadP a ReadP $list$ a
-Text.ParserCombinators.ReadP.skipMany ReadP a ReadP
-Text.ParserCombinators.ReadP.skipMany1 ReadP a ReadP
-Text.ParserCombinators.ReadP.sepBy ReadP a ReadP sep ReadP $list$ a
-Text.ParserCombinators.ReadP.sepBy1 ReadP a ReadP sep ReadP $list$ a
-Text.ParserCombinators.ReadP.endBy ReadP a ReadP sep ReadP $list$ a
-Text.ParserCombinators.ReadP.endBy1 ReadP a ReadP sep ReadP $list$ a
-Text.ParserCombinators.ReadP.chainr ReadP a ReadP $f_3$ a a a a ReadP a
-Text.ParserCombinators.ReadP.chainl ReadP a ReadP $f_3$ a a a a ReadP a
-Text.ParserCombinators.ReadP.chainl1 ReadP a ReadP $f_3$ a a a ReadP a
-Text.ParserCombinators.ReadP.chainr1 ReadP a ReadP $f_3$ a a a ReadP a
-Text.ParserCombinators.ReadP.manyTill ReadP a ReadP end ReadP $list$ a
-Text.ParserCombinators.ReadP.readP_to_S ReadP a ReadS a
-Text.ParserCombinators.ReadP.readS_to_P ReadS a ReadP a
-Text.ParserCombinators.ReadPrec.minPrec  Prec
-Text.ParserCombinators.ReadPrec.lift ReadP a ReadPrec a
-Text.ParserCombinators.ReadPrec.prec Prec ReadPrec a ReadPrec a
-Text.ParserCombinators.ReadPrec.step ReadPrec a ReadPrec a
-Text.ParserCombinators.ReadPrec.reset ReadPrec a ReadPrec a
-Text.ParserCombinators.ReadPrec.get  ReadPrec Char
-Text.ParserCombinators.ReadPrec.look  ReadPrec String
-Text.ParserCombinators.ReadPrec.(+++) ReadPrec a ReadPrec a ReadPrec a
-Text.ParserCombinators.ReadPrec.(<++) ReadPrec a ReadPrec a ReadPrec a
-Text.ParserCombinators.ReadPrec.pfail  ReadPrec a
-Text.ParserCombinators.ReadPrec.choice $list$ ReadPrec a ReadPrec a
-Text.Read.Lex.Char Char Lexeme
-Text.Read.Lex.String String Lexeme
-Text.Read.Lex.Punc String Lexeme
-Text.Read.Lex.Ident String Lexeme
-Text.Read.Lex.Symbol String Lexeme
-Text.Read.Lex.hsLex  ReadP String
-Data.Word.byteSwap16 Word16 Word16
-Data.Word.byteSwap32 Word32 Word32
-Data.Word.byteSwap64 Word64 Word64
-Data.Ord.compare Ord Ord Ordering
-Data.Ord.Down a Down a
-Data.Ord.comparing $f_2$ b Ord b b Ordering
-Data.Type.Coercion.Coercion  Coercion a b
-Data.Type.Coercion.coerceWith Coercion a b a b
-Data.Type.Coercion.sym Coercion a b Coercion b a
-Data.Type.Coercion.trans Coercion a b Coercion b c Coercion a c
-Data.Type.Coercion.testCoercion TestCoercion a TestCoercion b Maybe Coercion a b
-Control.Category.id  Category a a
-Control.Category.(DOT) Category b c Category a b Category a c
-Control.Category.(<<<) Category b c Category a b Category a c
-Control.Category.(>>>) Category a b Category b c Category a c
-Data.Char.isControl Char Bool
-Data.Char.isSpace Char Bool
-Data.Char.isLower Char Bool
-Data.Char.isUpper Char Bool
-Data.Char.isAlpha Char Bool
-Data.Char.isAlphaNum Char Bool
-Data.Char.isPrint Char Bool
-Data.Char.isDigit Char Bool
-Data.Char.isOctDigit Char Bool
-Data.Char.isHexDigit Char Bool
-Data.Char.isLetter Char Bool
-Data.Char.isMark Char Bool
-Data.Char.isNumber Char Bool
-Data.Char.isPunctuation Char Bool
-Data.Char.isSymbol Char Bool
-Data.Char.isSeparator Char Bool
-Data.Char.isAscii Char Bool
-Data.Char.isLatin1 Char Bool
-Data.Char.isAsciiUpper Char Bool
-Data.Char.isAsciiLower Char Bool
-Data.Char.UppercaseLetter  GeneralCategory
-Data.Char.LowercaseLetter  GeneralCategory
-Data.Char.TitlecaseLetter  GeneralCategory
-Data.Char.ModifierLetter  GeneralCategory
-Data.Char.OtherLetter  GeneralCategory
-Data.Char.NonSpacingMark  GeneralCategory
-Data.Char.SpacingCombiningMark  GeneralCategory
-Data.Char.EnclosingMark  GeneralCategory
-Data.Char.DecimalNumber  GeneralCategory
-Data.Char.LetterNumber  GeneralCategory
-Data.Char.OtherNumber  GeneralCategory
-Data.Char.ConnectorPunctuation  GeneralCategory
-Data.Char.DashPunctuation  GeneralCategory
-Data.Char.OpenPunctuation  GeneralCategory
-Data.Char.ClosePunctuation  GeneralCategory
-Data.Char.InitialQuote  GeneralCategory
-Data.Char.FinalQuote  GeneralCategory
-Data.Char.OtherPunctuation  GeneralCategory
-Data.Char.MathSymbol  GeneralCategory
-Data.Char.CurrencySymbol  GeneralCategory
-Data.Char.ModifierSymbol  GeneralCategory
-Data.Char.OtherSymbol  GeneralCategory
-Data.Char.Space  GeneralCategory
-Data.Char.LineSeparator  GeneralCategory
-Data.Char.ParagraphSeparator  GeneralCategory
-Data.Char.Control  GeneralCategory
-Data.Char.Format  GeneralCategory
-Data.Char.Surrogate  GeneralCategory
-Data.Char.PrivateUse  GeneralCategory
-Data.Char.NotAssigned  GeneralCategory
-Data.Char.generalCategory Char GeneralCategory
-Data.Char.toUpper Char Char
-Data.Char.toLower Char Char
-Data.Char.toTitle Char Char
-Data.Char.digitToInt Char Int
-Data.Char.intToDigit Int Char
-Data.Char.ord Char Int
-Data.Char.chr Int Char
-Data.Char.showLitChar Char ShowS
-Data.Char.lexLitChar  ReadS String
-Data.Char.readLitChar  ReadS Char
-GHC.OldList.null $list$ a Bool
-GHC.OldList.length $list$ a Int
-GHC.OldList.foldl $f_3$ b a b b $list$ a b
-GHC.OldList.foldl' $f_3$ b a b b $list$ a b
-GHC.OldList.foldl1 $f_3$ a a a $list$ a a
-GHC.OldList.foldr $f_3$ a b b b $list$ a b
-GHC.OldList.foldr1 $f_3$ a a a $list$ a a
-GHC.OldList.concat $list$ $list$ a $list$ a
-GHC.OldList.concatMap $f_2$ a $list$ b $list$ a $list$ b
-GHC.OldList.and $list$ Bool Bool
-GHC.OldList.or $list$ Bool Bool
-GHC.OldList.any $f_2$ a Bool $list$ a Bool
-GHC.OldList.all $f_2$ a Bool $list$ a Bool
-GHC.OldList.sum $list$ Num Num
-GHC.OldList.product $list$ Num Num
-GHC.OldList.maximum $list$ Ord Ord
-GHC.OldList.minimum $list$ Ord Ord
-GHC.OldList.mapAccumL $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
-GHC.OldList.mapAccumR $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
-GHC.OldList.elem Eq $list$ Eq Bool
-GHC.OldList.find $f_2$ a Bool $list$ a Maybe a
-GHC.OldList.maximumBy $f_3$ a a Ordering $list$ a a
-GHC.OldList.minimumBy $f_3$ a a Ordering $list$ a a
-Data.Proxy.Proxy  Proxy t
-Data.Proxy.asProxyTypeOf a Proxy a a
-Data.Proxy.KProxy  KProxy
-Numeric.showSigned $f_2$ Real ShowS Int Real ShowS
-Numeric.showIntAtBase Integral/Show $f_2$ Int Char Integral/Show ShowS
-Numeric.showInt Integral ShowS
-Numeric.showHex Integral/Show ShowS
-Numeric.showOct Integral/Show ShowS
-Numeric.showEFloat Maybe Int RealFloat ShowS
-Numeric.showFFloat Maybe Int RealFloat ShowS
-Numeric.showGFloat Maybe Int RealFloat ShowS
-Numeric.showFFloatAlt Maybe Int RealFloat ShowS
-Numeric.showGFloatAlt Maybe Int RealFloat ShowS
-Numeric.showFloat RealFloat ShowS
-Numeric.floatToDigits Integer RealFloat $tuple_2$ $list$ Int Int
-Numeric.readSigned ReadS Real ReadS Real
-Numeric.readInt Num $f_2$ Char Bool $f_2$ Char Int ReadS Num
-Numeric.readDec  ReadS Eq/Num
-Numeric.readOct  ReadS Eq/Num
-Numeric.readHex  ReadS Eq/Num
-Numeric.readFloat  ReadS RealFrac
-Numeric.lexDigits  ReadS String
-Numeric.fromRat Rational RealFloat
-Data.Typeable.Internal.Proxy  Proxy t
-Data.Typeable.Internal.typeRep proxy Typeable TypeRep
-Data.Typeable.Internal.mkTyCon3 String String String TyCon
-Data.Typeable.Internal.mkTyConApp TyCon $list$ TypeRep TypeRep
-Data.Typeable.Internal.mkPolyTyConApp TyCon $list$ KindRep $list$ TypeRep TypeRep
-Data.Typeable.Internal.mkAppTy TypeRep TypeRep TypeRep
-Data.Typeable.Internal.typeRepTyCon TypeRep TyCon
-Data.Typeable.Internal.typeRep# Proxy# Typeable TypeRep
-Data.Typeable.Internal.mkFunTy TypeRep TypeRep TypeRep
-Data.Typeable.Internal.splitTyConApp TypeRep $tuple_2$ TyCon $list$ TypeRep
-Data.Typeable.Internal.splitPolyTyConApp TypeRep $tuple_3$ TyCon $list$ KindRep $list$ TypeRep
-Data.Typeable.Internal.funResultTy TypeRep TypeRep Maybe TypeRep
-Data.Typeable.Internal.typeRepArgs TypeRep $list$ TypeRep
-Data.Typeable.Internal.typeRepFingerprint TypeRep Fingerprint
-Data.Typeable.Internal.rnfTypeRep  TypeRep
-Data.Typeable.Internal.tyConString TyCon String
-Data.Typeable.Internal.rnfTyCon  TyCon
-Data.Typeable.Internal.typeRepKinds TypeRep $list$ KindRep
-Data.Typeable.Internal.typeLitTypeRep String TypeRep
-Foreign.StablePtr.newStablePtr a IO StablePtr a
-Foreign.StablePtr.deRefStablePtr StablePtr a IO a
-Foreign.StablePtr.freeStablePtr StablePtr a IO
-Foreign.StablePtr.castStablePtrToPtr StablePtr a Ptr
-Foreign.StablePtr.castPtrToStablePtr Ptr StablePtr a
-Data.Typeable.typeRep proxy Typeable TypeRep
-Data.Typeable.cast Typeable Maybe Typeable
-Data.Typeable.gcast c Typeable Maybe c Typeable
-Data.Typeable.gcast1 c Typeable a Maybe c Typeable a
-Data.Typeable.gcast2 c Typeable a b Maybe c Typeable a b
-Data.Typeable.Proxy  Proxy t
-Data.Typeable.typeRepFingerprint TypeRep Fingerprint
-Data.Typeable.rnfTypeRep  TypeRep
-Data.Typeable.tyConString TyCon String
-Data.Typeable.rnfTyCon  TyCon
-Data.Typeable.mkTyCon3 String String String TyCon
-Data.Typeable.mkTyConApp TyCon $list$ TypeRep TypeRep
-Data.Typeable.mkAppTy TypeRep TypeRep TypeRep
-Data.Typeable.mkFunTy TypeRep TypeRep TypeRep
-Data.Typeable.splitTyConApp TypeRep $tuple_2$ TyCon $list$ TypeRep
-Data.Typeable.funResultTy TypeRep TypeRep Maybe TypeRep
-Data.Typeable.typeRepTyCon TypeRep TyCon
-Data.Typeable.typeRepArgs TypeRep $list$ TypeRep
-Data.Either.Left a Either a b
-Data.Either.either $f_2$ a c $f_2$ b c Either a b c
-Data.Either.lefts $list$ Either a b $list$ a
-Data.Either.rights $list$ Either a b $list$ b
-Data.Either.isLeft Either a b Bool
-Data.Either.isRight Either a b Bool
-Data.Either.partitionEithers $list$ Either a b $tuple_2$ $list$ a $list$ b
-GHC.Generics.U1  U1 p
-GHC.Generics.Par1 p Par1 p
-GHC.Generics.Rec1 f p Rec1 f p
-GHC.Generics.K1 c K1 i c p
-GHC.Generics.M1 f p M1 i c f p
-GHC.Generics.L1 f p :+: f g p
-GHC.Generics.(:*:) f p g p :*: f g p
-GHC.Generics.Comp1 f g p :.: f g p
-GHC.Generics.Prefix  Fixity
-GHC.Generics.LeftAssociative  Associativity
-GHC.Generics.NoArity  Arity
-GHC.Generics.prec Fixity Int
-GHC.Generics.from Generic Rep Generic x
-GHC.Generics.to Rep Generic x Generic
-GHC.Generics.from1 Generic1 a Rep1 Generic1 a
-GHC.Generics.to1 Rep1 Generic1 a Generic1 a
-Data.Monoid.mempty  Monoid
-Data.Monoid.mappend Monoid Monoid Monoid
-Data.Monoid.mconcat $list$ Monoid Monoid
-Data.Monoid.(<>) Monoid Monoid Monoid
-Data.Monoid.Dual a Dual a
-Data.Monoid.Endo $f_2$ a a Endo a
-Data.Monoid.All Bool All
-Data.Monoid.Any Bool Any
-Data.Monoid.Sum a Sum a
-Data.Monoid.Product a Product a
-Data.Monoid.First Maybe a First a
-Data.Monoid.Last Maybe a Last a
-Data.Monoid.Alt f a Alt f a
-Data.Foldable.fold Foldable Monoid Monoid
-Data.Foldable.foldMap $f_2$ a Monoid Foldable a Monoid
-Data.Foldable.foldr $f_3$ a b b b Foldable a b
-Data.Foldable.foldr' $f_3$ a b b b Foldable a b
-Data.Foldable.foldl $f_3$ b a b b Foldable a b
-Data.Foldable.foldl' $f_3$ b a b b Foldable a b
-Data.Foldable.foldr1 $f_3$ a a a Foldable a a
-Data.Foldable.foldl1 $f_3$ a a a Foldable a a
-Data.Foldable.toList Foldable a $list$ a
-Data.Foldable.null Foldable a Bool
-Data.Foldable.length Foldable a Int
-Data.Foldable.elem Eq Foldable Eq Bool
-Data.Foldable.maximum Foldable Ord Ord
-Data.Foldable.minimum Foldable Ord Ord
-Data.Foldable.sum Foldable Num Num
-Data.Foldable.product Foldable Num Num
-Data.Foldable.foldrM $f_3$ a b Monad b b Foldable a Monad b
-Data.Foldable.foldlM $f_3$ b a Monad b b Foldable a Monad b
-Data.Foldable.traverse_ $f_2$ a Applicative b Foldable a Applicative
-Data.Foldable.for_ Foldable a $f_2$ a Applicative b Applicative
-Data.Foldable.sequenceA_ Foldable Applicative a Applicative
-Data.Foldable.asum Foldable Alternative a Alternative a
-Data.Foldable.mapM_ $f_2$ a Monad b Foldable a Monad
-Data.Foldable.forM_ Foldable a $f_2$ a Monad b Monad
-Data.Foldable.sequence_ Foldable Monad a Monad
-Data.Foldable.msum Foldable MonadPlus a MonadPlus a
-Data.Foldable.concat Foldable $list$ a $list$ a
-Data.Foldable.concatMap $f_2$ a $list$ b Foldable a $list$ b
-Data.Foldable.and Foldable Bool Bool
-Data.Foldable.or Foldable Bool Bool
-Data.Foldable.any $f_2$ a Bool Foldable a Bool
-Data.Foldable.all $f_2$ a Bool Foldable a Bool
-Data.Foldable.maximumBy $f_3$ a a Ordering Foldable a a
-Data.Foldable.minimumBy $f_3$ a a Ordering Foldable a a
-Data.Foldable.notElem Eq Foldable Eq Bool
-Data.Foldable.find $f_2$ a Bool Foldable a Maybe a
-Text.Read.readsPrec Int ReadS Read
-Text.Read.readList  ReadS $list$ Read
-Text.Read.readPrec  ReadPrec Read
-Text.Read.readListPrec  ReadPrec $list$ Read
-Text.Read.reads  ReadS Read
-Text.Read.read String Read
-Text.Read.readParen Bool ReadS a ReadS a
-Text.Read.lex  ReadS String
-Text.Read.Char Char Lexeme
-Text.Read.String String Lexeme
-Text.Read.Punc String Lexeme
-Text.Read.Ident String Lexeme
-Text.Read.Symbol String Lexeme
-Text.Read.lexP  ReadPrec Lexeme
-Text.Read.parens ReadPrec a ReadPrec a
-Text.Read.readListDefault  ReadS $list$ Read
-Text.Read.readListPrecDefault  ReadPrec $list$ Read
-Text.Read.readEither String Either String Read
-Text.Read.readMaybe String Maybe Read
-Data.IORef.newIORef a IO IORef a
-Data.IORef.readIORef IORef a IO a
-Data.IORef.writeIORef IORef a a IO
-Data.IORef.modifyIORef IORef a $f_2$ a a IO
-Data.IORef.modifyIORef' IORef a $f_2$ a a IO
-Data.IORef.atomicModifyIORef IORef a $f_2$ a $tuple_2$ a b IO b
-Data.IORef.atomicModifyIORef' IORef a $f_2$ a $tuple_2$ a b IO b
-Data.IORef.atomicWriteIORef IORef a a IO
-Data.IORef.mkWeakIORef IORef a IO IO Weak IORef a
-Foreign.Marshal.Unsafe.unsafeLocalState IO a a
-Data.Dynamic.toDyn Typeable Dynamic
-Data.Dynamic.fromDyn Dynamic Typeable Typeable
-Data.Dynamic.fromDynamic Dynamic Maybe Typeable
-Foreign.Storable.sizeOf Storable Int
-Foreign.Storable.alignment Storable Int
-Foreign.Storable.peekElemOff Ptr Storable Int IO Storable
-Foreign.Storable.pokeElemOff Ptr Storable Int Storable IO
-Foreign.Storable.peekByteOff Ptr b Int IO Storable
-Foreign.Storable.pokeByteOff Ptr b Int Storable IO
-Foreign.Storable.peek Ptr Storable IO Storable
-Foreign.Storable.poke Ptr Storable Storable IO
-Foreign.C.Types.CChar Int8 CChar
-Foreign.C.Types.CSChar Int8 CSChar
-Foreign.C.Types.CUChar Word8 CUChar
-Foreign.C.Types.CShort Int16 CShort
-Foreign.C.Types.CUShort Word16 CUShort
-Foreign.C.Types.CInt Int32 CInt
-Foreign.C.Types.CUInt Word32 CUInt
-Foreign.C.Types.CLong Int64 CLong
-Foreign.C.Types.CULong Word64 CULong
-Foreign.C.Types.CPtrdiff Int64 CPtrdiff
-Foreign.C.Types.CSize Word64 CSize
-Foreign.C.Types.CWchar Int32 CWchar
-Foreign.C.Types.CSigAtomic Int32 CSigAtomic
-Foreign.C.Types.CLLong Int64 CLLong
-Foreign.C.Types.CULLong Word64 CULLong
-Foreign.C.Types.CClock Int64 CClock
-Foreign.C.Types.CTime Int64 CTime
-Foreign.C.Types.CUSeconds Word32 CUSeconds
-Foreign.C.Types.CSUSeconds Int64 CSUSeconds
-Foreign.C.Types.CFloat Float CFloat
-Foreign.C.Types.CDouble Double CDouble
-Foreign.Concurrent.newForeignPtr Ptr a IO IO ForeignPtr a
-Foreign.Concurrent.addForeignPtrFinalizer ForeignPtr a IO IO
-Foreign.Ptr.nullPtr  Ptr a
-Foreign.Ptr.castPtr Ptr a Ptr b
-Foreign.Ptr.plusPtr Ptr a Int Ptr b
-Foreign.Ptr.alignPtr Ptr a Int Ptr a
-Foreign.Ptr.minusPtr Ptr a Ptr b Int
-Foreign.Ptr.nullFunPtr  FunPtr a
-Foreign.Ptr.castFunPtr FunPtr a FunPtr b
-Foreign.Ptr.castFunPtrToPtr FunPtr a Ptr b
-Foreign.Ptr.castPtrToFunPtr Ptr a FunPtr b
-Foreign.Ptr.freeHaskellFunPtr FunPtr a IO
-Foreign.Ptr.ptrToIntPtr Ptr a IntPtr
-Foreign.Ptr.intPtrToPtr IntPtr Ptr a
-Foreign.Ptr.ptrToWordPtr Ptr a WordPtr
-Foreign.Ptr.wordPtrToPtr WordPtr Ptr a
-Foreign.ForeignPtr.newForeignPtr FinalizerPtr a Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.newForeignPtr_ Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.addForeignPtrFinalizer FinalizerPtr a ForeignPtr a IO
-Foreign.ForeignPtr.newForeignPtrEnv FinalizerEnvPtr env a Ptr env Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.addForeignPtrFinalizerEnv FinalizerEnvPtr env a Ptr env ForeignPtr a IO
-Foreign.ForeignPtr.withForeignPtr ForeignPtr a $f_2$ Ptr a IO b IO b
-Foreign.ForeignPtr.finalizeForeignPtr ForeignPtr a IO
-Foreign.ForeignPtr.touchForeignPtr ForeignPtr a IO
-Foreign.ForeignPtr.castForeignPtr ForeignPtr a ForeignPtr b
-Foreign.ForeignPtr.mallocForeignPtr  IO ForeignPtr Storable
-Foreign.ForeignPtr.mallocForeignPtrBytes Int IO ForeignPtr a
-Foreign.ForeignPtr.mallocForeignPtrArray Int IO ForeignPtr Storable
-Foreign.ForeignPtr.mallocForeignPtrArray0 Int IO ForeignPtr Storable
-Foreign.ForeignPtr.Safe.newForeignPtr FinalizerPtr a Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.Safe.newForeignPtr_ Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.Safe.addForeignPtrFinalizer FinalizerPtr a ForeignPtr a IO
-Foreign.ForeignPtr.Safe.newForeignPtrEnv FinalizerEnvPtr env a Ptr env Ptr a IO ForeignPtr a
-Foreign.ForeignPtr.Safe.addForeignPtrFinalizerEnv FinalizerEnvPtr env a Ptr env ForeignPtr a IO
-Foreign.ForeignPtr.Safe.withForeignPtr ForeignPtr a $f_2$ Ptr a IO b IO b
-Foreign.ForeignPtr.Safe.finalizeForeignPtr ForeignPtr a IO
-Foreign.ForeignPtr.Safe.touchForeignPtr ForeignPtr a IO
-Foreign.ForeignPtr.Safe.castForeignPtr ForeignPtr a ForeignPtr b
-Foreign.ForeignPtr.Safe.mallocForeignPtr  IO ForeignPtr Storable
-Foreign.ForeignPtr.Safe.mallocForeignPtrBytes Int IO ForeignPtr a
-Foreign.ForeignPtr.Safe.mallocForeignPtrArray Int IO ForeignPtr Storable
-Foreign.ForeignPtr.Safe.mallocForeignPtrArray0 Int IO ForeignPtr Storable
-Foreign.ForeignPtr.Unsafe.unsafeForeignPtrToPtr ForeignPtr a Ptr a
-GHC.IO.Buffer.Buffer ! RawBuffer e BufferState !Int !Int !Int Buffer e
-GHC.IO.Buffer.slideContents Buffer Word8 IO Buffer Word8
-GHC.IO.Encoding.Types.BufferCodec CodeBuffer from to $f_2$ Buffer from IO $tuple_2$ Buffer from Buffer to Buffer to IO IO state $f_2$ state IO BufferCodec from to state
-GHC.IO.Encoding.Types.[encode] BufferCodec from to state CodeBuffer from to
-GHC.IO.Encoding.Types.[recover] BufferCodec from to state Buffer from Buffer to IO $tuple_2$ Buffer from Buffer to
-GHC.IO.Encoding.Types.[close] BufferCodec from to state IO
-GHC.IO.Encoding.Types.[getState] BufferCodec from to state IO state
-GHC.IO.Encoding.Types.TextEncoding String IO TextDecoder dstate IO TextEncoder estate TextEncoding
-GHC.IO.Encoding.Types.[textEncodingName] TextEncoding String
-GHC.IO.Encoding.Types.[mkTextDecoder] TextEncoding IO TextDecoder dstate
-GHC.IO.Encoding.Types.[mkTextEncoder] TextEncoding IO TextEncoder estate
-GHC.IO.Encoding.Types.InputUnderflow  CodingProgress
-GHC.IO.Encoding.Types.OutputUnderflow  CodingProgress
-GHC.IO.Encoding.Types.InvalidSequence  CodingProgress
-GHC.IO.Device.read RawIO Ptr Word8 Int IO Int
-GHC.IO.Device.readNonBlocking RawIO Ptr Word8 Int IO Maybe Int
-GHC.IO.Device.write RawIO Ptr Word8 Int IO
-GHC.IO.Device.writeNonBlocking RawIO Ptr Word8 Int IO Int
-GHC.IO.Device.ready IODevice Bool Int IO Bool
-GHC.IO.Device.close IODevice IO
-GHC.IO.Device.isTerminal IODevice IO Bool
-GHC.IO.Device.isSeekable IODevice IO Bool
-GHC.IO.Device.seek IODevice SeekMode Integer IO
-GHC.IO.Device.tell IODevice IO Integer
-GHC.IO.Device.getSize IODevice IO Integer
-GHC.IO.Device.setSize IODevice Integer IO
-GHC.IO.Device.setEcho IODevice Bool IO
-GHC.IO.Device.getEcho IODevice IO Bool
-GHC.IO.Device.setRaw IODevice Bool IO
-GHC.IO.Device.devType IODevice IO IODeviceType
-GHC.IO.Device.dup IODevice IO IODevice
-GHC.IO.Device.dup2 IODevice IODevice IO IODevice
-GHC.IO.Device.Directory  IODeviceType
-GHC.IO.Device.Stream  IODeviceType
-GHC.IO.Device.RegularFile  IODeviceType
-GHC.IO.Device.RawDevice  IODeviceType
-GHC.IO.Device.AbsoluteSeek  SeekMode
-GHC.IO.Device.RelativeSeek  SeekMode
-GHC.IO.Device.SeekFromEnd  SeekMode
-GHC.IO.BufferedIO.newBuffer BufferedIO BufferState IO Buffer Word8
-GHC.IO.BufferedIO.fillReadBuffer BufferedIO Buffer Word8 IO $tuple_2$ Int Buffer Word8
-GHC.IO.BufferedIO.fillReadBuffer0 BufferedIO Buffer Word8 IO $tuple_2$ Maybe Int Buffer Word8
-GHC.IO.BufferedIO.emptyWriteBuffer BufferedIO Buffer Word8 IO Buffer Word8
-GHC.IO.BufferedIO.flushWriteBuffer BufferedIO Buffer Word8 IO Buffer Word8
-GHC.IO.BufferedIO.flushWriteBuffer0 BufferedIO Buffer Word8 IO $tuple_2$ Int Buffer Word8
-Foreign.Marshal.Alloc.alloca $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Alloc.allocaBytes Int $f_2$ Ptr a IO b IO b
-Foreign.Marshal.Alloc.malloc  IO Ptr Storable
-Foreign.Marshal.Alloc.mallocBytes Int IO Ptr a
-Foreign.Marshal.Alloc.calloc  IO Ptr Storable
-Foreign.Marshal.Alloc.callocBytes Int IO Ptr a
-Foreign.Marshal.Alloc.realloc Ptr a IO Ptr Storable
-Foreign.Marshal.Alloc.reallocBytes Ptr a Int IO Ptr a
-Foreign.Marshal.Alloc.free Ptr a IO
-Foreign.Marshal.Alloc.finalizerFree  FinalizerPtr a
-Foreign.Marshal.Utils.with Storable $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Utils.new Storable IO Ptr Storable
-Foreign.Marshal.Utils.fromBool Bool Num
-Foreign.Marshal.Utils.toBool Eq/Num Bool
-Foreign.Marshal.Utils.maybePeek $f_2$ Ptr a IO b Ptr a IO Maybe b
-Foreign.Marshal.Utils.withMany $f_2$ a res $f_2$ b res $list$ a $f_2$ $list$ b res res
-Foreign.Marshal.Utils.copyBytes Ptr a Ptr a Int IO
-Foreign.Marshal.Utils.moveBytes Ptr a Ptr a Int IO
-Foreign.Marshal.Utils.fillBytes Ptr a Word8 Int IO
-Foreign.Marshal.Array.mallocArray Int IO Ptr Storable
-Foreign.Marshal.Array.mallocArray0 Int IO Ptr Storable
-Foreign.Marshal.Array.allocaArray Int $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Array.allocaArray0 Int $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Array.reallocArray Ptr Storable Int IO Ptr Storable
-Foreign.Marshal.Array.reallocArray0 Ptr Storable Int IO Ptr Storable
-Foreign.Marshal.Array.callocArray Int IO Ptr Storable
-Foreign.Marshal.Array.callocArray0 Int IO Ptr Storable
-Foreign.Marshal.Array.peekArray Int Ptr Storable IO $list$ Storable
-Foreign.Marshal.Array.peekArray0 Storable/Eq Ptr Storable/Eq IO $list$ Storable/Eq
-Foreign.Marshal.Array.pokeArray Ptr Storable $list$ Storable IO
-Foreign.Marshal.Array.pokeArray0 Storable Ptr Storable $list$ Storable IO
-Foreign.Marshal.Array.newArray $list$ Storable IO Ptr Storable
-Foreign.Marshal.Array.newArray0 Storable $list$ Storable IO Ptr Storable
-Foreign.Marshal.Array.withArray $list$ Storable $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Array.withArray0 Storable $list$ Storable $f_2$ Ptr Storable IO b IO b
-Foreign.Marshal.Array.withArrayLen $list$ Storable $f_3$ Int Ptr Storable IO b IO b
-Foreign.Marshal.Array.withArrayLen0 Storable $list$ Storable $f_3$ Int Ptr Storable IO b IO b
-Foreign.Marshal.Array.copyArray Ptr Storable Ptr Storable Int IO
-Foreign.Marshal.Array.moveArray Ptr Storable Ptr Storable Int IO
-Foreign.Marshal.Array.lengthArray0 Storable/Eq Ptr Storable/Eq IO Int
-Foreign.Marshal.Array.advancePtr Ptr Storable Int Ptr Storable
-GHC.Foreign.peekCString TextEncoding CString IO String
-GHC.Foreign.peekCStringLen TextEncoding CStringLen IO String
-GHC.Foreign.newCString TextEncoding String IO CString
-GHC.Foreign.newCStringLen TextEncoding String IO CStringLen
-GHC.Foreign.withCString TextEncoding String $f_2$ CString IO a IO a
-GHC.Foreign.withCStringLen TextEncoding String $f_2$ CStringLen IO a IO a
-GHC.Foreign.charIsRepresentable TextEncoding Char IO Bool
-Foreign.C.String.peekCString CString IO String
-Foreign.C.String.peekCStringLen CStringLen IO String
-Foreign.C.String.newCString String IO CString
-Foreign.C.String.newCStringLen String IO CStringLen
-Foreign.C.String.withCString String $f_2$ CString IO a IO a
-Foreign.C.String.withCStringLen String $f_2$ CStringLen IO a IO a
-Foreign.C.String.castCharToCChar Char CChar
-Foreign.C.String.castCCharToChar CChar Char
-Foreign.C.String.castCharToCUChar Char CUChar
-Foreign.C.String.castCUCharToChar CUChar Char
-Foreign.C.String.castCharToCSChar Char CSChar
-Foreign.C.String.castCSCharToChar CSChar Char
-Foreign.C.String.peekCAString CString IO String
-Foreign.C.String.peekCAStringLen CStringLen IO String
-Foreign.C.String.newCAString String IO CString
-Foreign.C.String.newCAStringLen String IO CStringLen
-Foreign.C.String.withCAString String $f_2$ CString IO a IO a
-Foreign.C.String.withCAStringLen String $f_2$ CStringLen IO a IO a
-Foreign.C.String.peekCWString CWString IO String
-Foreign.C.String.peekCWStringLen CWStringLen IO String
-Foreign.C.String.newCWString String IO CWString
-Foreign.C.String.newCWStringLen String IO CWStringLen
-Foreign.C.String.withCWString String $f_2$ CWString IO a IO a
-Foreign.C.String.withCWStringLen String $f_2$ CWStringLen IO a IO a
-Foreign.Marshal.Error.throwIf $f_2$ a Bool $f_2$ a String IO a IO a
-Foreign.Marshal.Error.throwIf_ $f_2$ a Bool $f_2$ a String IO a IO
-Foreign.Marshal.Error.throwIfNeg $f_2$ Ord/Num String IO Ord/Num IO Ord/Num
-Foreign.Marshal.Error.throwIfNeg_ $f_2$ Ord/Num String IO Ord/Num IO
-Foreign.Marshal.Error.throwIfNull String IO Ptr a IO Ptr a
-Foreign.Marshal.Error.void IO a IO
-Foreign.Marshal.Pool.newPool  IO Pool
-Foreign.Marshal.Pool.freePool Pool IO
-Foreign.Marshal.Pool.withPool $f_2$ Pool IO b IO b
-Foreign.Marshal.Pool.pooledMalloc Pool IO Ptr Storable
-Foreign.Marshal.Pool.pooledMallocBytes Pool Int IO Ptr a
-Foreign.Marshal.Pool.pooledRealloc Pool Ptr Storable IO Ptr Storable
-Foreign.Marshal.Pool.pooledReallocBytes Pool Ptr a Int IO Ptr a
-Foreign.Marshal.Pool.pooledMallocArray Pool Int IO Ptr Storable
-Foreign.Marshal.Pool.pooledMallocArray0 Pool Int IO Ptr Storable
-Foreign.Marshal.Pool.pooledReallocArray Pool Ptr Storable Int IO Ptr Storable
-Foreign.Marshal.Pool.pooledReallocArray0 Pool Ptr Storable Int IO Ptr Storable
-Foreign.Marshal.Pool.pooledNew Pool Storable IO Ptr Storable
-Foreign.Marshal.Pool.pooledNewArray Pool $list$ Storable IO Ptr Storable
-Foreign.Marshal.Pool.pooledNewArray0 Pool Storable $list$ Storable IO Ptr Storable
-Foreign.C.Error.Errno CInt Errno
-Foreign.C.Error.isValidErrno Errno Bool
-Foreign.C.Error.getErrno  IO Errno
-Foreign.C.Error.resetErrno  IO
-Foreign.C.Error.errnoToIOError String Errno Maybe Handle Maybe String IOError
-Foreign.C.Error.throwErrno String IO a
-Foreign.C.Error.throwErrnoIf $f_2$ a Bool String IO a IO a
-Foreign.C.Error.throwErrnoIf_ $f_2$ a Bool String IO a IO
-Foreign.C.Error.throwErrnoIfRetry $f_2$ a Bool String IO a IO a
-Foreign.C.Error.throwErrnoIfRetry_ $f_2$ a Bool String IO a IO
-Foreign.C.Error.throwErrnoIfMinus1 String IO Eq/Num IO Eq/Num
-Foreign.C.Error.throwErrnoIfMinus1_ String IO Eq/Num IO
-Foreign.C.Error.throwErrnoIfMinus1Retry String IO Eq/Num IO Eq/Num
-Foreign.C.Error.throwErrnoIfMinus1Retry_ String IO Eq/Num IO
-Foreign.C.Error.throwErrnoIfNull String IO Ptr a IO Ptr a
-Foreign.C.Error.throwErrnoIfNullRetry String IO Ptr a IO Ptr a
-Foreign.C.Error.throwErrnoIfRetryMayBlock $f_2$ a Bool String IO a IO b IO a
-Foreign.C.Error.throwErrnoIfRetryMayBlock_ $f_2$ a Bool String IO a IO b IO
-Foreign.C.Error.throwErrnoIfMinus1RetryMayBlock String IO Eq/Num IO b IO Eq/Num
-Foreign.C.Error.throwErrnoIfMinus1RetryMayBlock_ String IO Eq/Num IO b IO
-Foreign.C.Error.throwErrnoIfNullRetryMayBlock String IO Ptr a IO b IO Ptr a
-Foreign.C.Error.throwErrnoPath String FilePath IO a
-Foreign.C.Error.throwErrnoPathIf $f_2$ a Bool String FilePath IO a IO a
-Foreign.C.Error.throwErrnoPathIf_ $f_2$ a Bool String FilePath IO a IO
-Foreign.C.Error.throwErrnoPathIfNull String FilePath IO Ptr a IO Ptr a
-Foreign.C.Error.throwErrnoPathIfMinus1 String FilePath IO Eq/Num IO Eq/Num
-Foreign.C.Error.throwErrnoPathIfMinus1_ String FilePath IO Eq/Num IO
-System.Posix.Types.CDev Word64 CDev
-GHC.IO.Encoding.Failure.ErrorOnCodingFailure  CodingFailureMode
-GHC.IO.Encoding.Failure.IgnoreCodingFailure  CodingFailureMode
-GHC.IO.Encoding.Failure.TransliterateCodingFailure  CodingFailureMode
-GHC.IO.Encoding.Failure.RoundtripFailure  CodingFailureMode
-GHC.IO.Encoding.Failure.isSurrogate Char Bool
-GHC.IO.Encoding.UTF8.utf8  TextEncoding
-GHC.Conc.Sync.ThreadId ThreadId# ThreadId
-GHC.Conc.Sync.forkIO IO IO ThreadId
-GHC.Conc.Sync.forkOn Int IO IO ThreadId
-GHC.Conc.Sync.numCapabilities  Int
-GHC.Conc.Sync.getNumCapabilities  IO Int
-GHC.Conc.Sync.setNumCapabilities Int IO
-GHC.Conc.Sync.getNumProcessors  IO Int
-GHC.Conc.Sync.numSparks  IO Int
-GHC.Conc.Sync.myThreadId  IO ThreadId
-GHC.Conc.Sync.killThread ThreadId IO
-GHC.Conc.Sync.throwTo ThreadId Exception IO
-GHC.Conc.Sync.runSparks  IO
-GHC.Conc.Sync.yield  IO
-GHC.Conc.Sync.labelThread ThreadId String IO
-GHC.Conc.Sync.mkWeakThreadId ThreadId IO Weak ThreadId
-GHC.Conc.Sync.ThreadRunning  ThreadStatus
-GHC.Conc.Sync.ThreadFinished  ThreadStatus
-GHC.Conc.Sync.ThreadBlocked BlockReason ThreadStatus
-GHC.Conc.Sync.ThreadDied  ThreadStatus
-GHC.Conc.Sync.BlockedOnMVar  BlockReason
-GHC.Conc.Sync.BlockedOnBlackHole  BlockReason
-GHC.Conc.Sync.BlockedOnException  BlockReason
-GHC.Conc.Sync.BlockedOnSTM  BlockReason
-GHC.Conc.Sync.BlockedOnForeignCall  BlockReason
-GHC.Conc.Sync.BlockedOnOther  BlockReason
-GHC.Conc.Sync.threadCapability ThreadId IO $tuple_2$ Int Bool
-GHC.Conc.Sync.setAllocationCounter Int64 IO
-GHC.Conc.Sync.getAllocationCounter  IO Int64
-GHC.Conc.Sync.enableAllocationLimit  IO
-GHC.Conc.Sync.disableAllocationLimit  IO
-GHC.Conc.Sync.STM $f_2$ State# RealWorld $tuple_2$ # State# RealWorld a # STM a
-GHC.Conc.Sync.atomically STM a IO a
-GHC.Conc.Sync.retry  STM a
-GHC.Conc.Sync.orElse STM a STM a STM a
-GHC.Conc.Sync.throwSTM Exception STM a
-GHC.Conc.Sync.catchSTM STM a $f_2$ Exception STM a STM a
-GHC.Conc.Sync.alwaysSucceeds STM a STM
-GHC.Conc.Sync.always STM Bool STM
-GHC.Conc.Sync.TVar TVar# RealWorld a TVar a
-GHC.Conc.Sync.newTVar a STM TVar a
-GHC.Conc.Sync.newTVarIO a IO TVar a
-GHC.Conc.Sync.readTVar TVar a STM a
-GHC.Conc.Sync.readTVarIO TVar a IO a
-GHC.Conc.Sync.writeTVar TVar a a STM
-GHC.Conc.Sync.unsafeIOToSTM IO a STM a
-Control.Exception.Base.SomeException e SomeException
-Control.Exception.Base.toException Exception SomeException
-Control.Exception.Base.displayException Exception String
-Control.Exception.Base.Overflow  ArithException
-Control.Exception.Base.IndexOutOfBounds String ArrayException
-Control.Exception.Base.UndefinedElement String ArrayException
-Control.Exception.Base.AssertionFailed String AssertionFailed
-Control.Exception.Base.SomeAsyncException e SomeAsyncException
-Control.Exception.Base.StackOverflow  AsyncException
-Control.Exception.Base.HeapOverflow  AsyncException
-Control.Exception.Base.ThreadKilled  AsyncException
-Control.Exception.Base.UserInterrupt  AsyncException
-Control.Exception.Base.NonTermination  NonTermination
-Control.Exception.Base.NestedAtomically  NestedAtomically
-Control.Exception.Base.BlockedIndefinitelyOnMVar  BlockedIndefinitelyOnMVar
-Control.Exception.Base.BlockedIndefinitelyOnSTM  BlockedIndefinitelyOnSTM
-Control.Exception.Base.AllocationLimitExceeded  AllocationLimitExceeded
-Control.Exception.Base.Deadlock  Deadlock
-Control.Exception.Base.NoMethodError String NoMethodError
-Control.Exception.Base.PatternMatchFail String PatternMatchFail
-Control.Exception.Base.RecConError String RecConError
-Control.Exception.Base.RecSelError String RecSelError
-Control.Exception.Base.RecUpdError String RecUpdError
-Control.Exception.Base.ErrorCall String ErrorCall
-Control.Exception.Base.throwIO Exception IO a
-Control.Exception.Base.throw Exception a
-Control.Exception.Base.ioError IOError IO a
-Control.Exception.Base.throwTo ThreadId Exception IO
-Control.Exception.Base.catch IO a $f_2$ Exception IO a IO a
-Control.Exception.Base.catchJust $f_2$ Exception Maybe b IO a $f_2$ b IO a IO a
-Control.Exception.Base.handle $f_2$ Exception IO a IO a IO a
-Control.Exception.Base.handleJust $f_2$ Exception Maybe b $f_2$ b IO a IO a IO a
-Control.Exception.Base.try IO a IO Either Exception a
-Control.Exception.Base.tryJust $f_2$ Exception Maybe b IO a IO Either b a
-Control.Exception.Base.onException IO a IO b IO a
-Control.Exception.Base.evaluate a IO a
-Control.Exception.Base.mapException $f_2$ Exception Exception a a
-Control.Exception.Base.mask_ IO a IO a
-Control.Exception.Base.uninterruptibleMask_ IO a IO a
-Control.Exception.Base.Unmasked  MaskingState
-Control.Exception.Base.MaskedInterruptible  MaskingState
-Control.Exception.Base.MaskedUninterruptible  MaskingState
-Control.Exception.Base.getMaskingState  IO MaskingState
-Control.Exception.Base.assert Bool a a
-Control.Exception.Base.bracket IO a $f_2$ a IO b $f_2$ a IO c IO c
-Control.Exception.Base.bracket_ IO a IO b IO c IO c
-Control.Exception.Base.bracketOnError IO a $f_2$ a IO b $f_2$ a IO c IO c
-Control.Exception.Base.finally IO a IO b IO a
-Control.Concurrent.MVar.newEmptyMVar  IO MVar a
-Control.Concurrent.MVar.newMVar a IO MVar a
-Control.Concurrent.MVar.takeMVar MVar a IO a
-Control.Concurrent.MVar.putMVar MVar a a IO
-Control.Concurrent.MVar.readMVar MVar a IO a
-Control.Concurrent.MVar.swapMVar MVar a a IO a
-Control.Concurrent.MVar.tryTakeMVar MVar a IO Maybe a
-Control.Concurrent.MVar.tryPutMVar MVar a a IO Bool
-Control.Concurrent.MVar.isEmptyMVar MVar a IO Bool
-Control.Concurrent.MVar.withMVar MVar a $f_2$ a IO b IO b
-Control.Concurrent.MVar.withMVarMasked MVar a $f_2$ a IO b IO b
-Control.Concurrent.MVar.modifyMVar_ MVar a $f_2$ a IO a IO
-Control.Concurrent.MVar.modifyMVar MVar a $f_2$ a IO $tuple_2$ a b IO b
-Control.Concurrent.MVar.modifyMVarMasked_ MVar a $f_2$ a IO a IO
-Control.Concurrent.MVar.modifyMVarMasked MVar a $f_2$ a IO $tuple_2$ a b IO b
-Control.Concurrent.MVar.tryReadMVar MVar a IO Maybe a
-Control.Concurrent.MVar.mkWeakMVar MVar a IO IO Weak MVar a
-Control.Concurrent.MVar.addMVarFinalizer MVar a IO IO
-Control.Exception.SomeException e SomeException
-Control.Exception.toException Exception SomeException
-Control.Exception.displayException Exception String
-Control.Exception.Overflow  ArithException
-Control.Exception.IndexOutOfBounds String ArrayException
-Control.Exception.UndefinedElement String ArrayException
-Control.Exception.AssertionFailed String AssertionFailed
-Control.Exception.SomeAsyncException e SomeAsyncException
-Control.Exception.StackOverflow  AsyncException
-Control.Exception.HeapOverflow  AsyncException
-Control.Exception.ThreadKilled  AsyncException
-Control.Exception.UserInterrupt  AsyncException
-Control.Exception.NonTermination  NonTermination
-Control.Exception.NestedAtomically  NestedAtomically
-Control.Exception.BlockedIndefinitelyOnMVar  BlockedIndefinitelyOnMVar
-Control.Exception.BlockedIndefinitelyOnSTM  BlockedIndefinitelyOnSTM
-Control.Exception.AllocationLimitExceeded  AllocationLimitExceeded
-Control.Exception.Deadlock  Deadlock
-Control.Exception.NoMethodError String NoMethodError
-Control.Exception.PatternMatchFail String PatternMatchFail
-Control.Exception.RecConError String RecConError
-Control.Exception.RecSelError String RecSelError
-Control.Exception.RecUpdError String RecUpdError
-Control.Exception.ErrorCall String ErrorCall
-Control.Exception.throw Exception a
-Control.Exception.throwIO Exception IO a
-Control.Exception.ioError IOError IO a
-Control.Exception.throwTo ThreadId Exception IO
-Control.Exception.catch IO a $f_2$ Exception IO a IO a
-Control.Exception.catches IO a $list$ Handler a IO a
-Control.Exception.Handler $f_2$ e IO a Handler a
-Control.Exception.catchJust $f_2$ Exception Maybe b IO a $f_2$ b IO a IO a
-Control.Exception.handle $f_2$ Exception IO a IO a IO a
-Control.Exception.handleJust $f_2$ Exception Maybe b $f_2$ b IO a IO a IO a
-Control.Exception.try IO a IO Either Exception a
-Control.Exception.tryJust $f_2$ Exception Maybe b IO a IO Either b a
-Control.Exception.evaluate a IO a
-Control.Exception.mapException $f_2$ Exception Exception a a
-Control.Exception.mask_ IO a IO a
-Control.Exception.uninterruptibleMask_ IO a IO a
-Control.Exception.Unmasked  MaskingState
-Control.Exception.MaskedInterruptible  MaskingState
-Control.Exception.MaskedUninterruptible  MaskingState
-Control.Exception.getMaskingState  IO MaskingState
-Control.Exception.allowInterrupt  IO
-Control.Exception.assert Bool a a
-Control.Exception.bracket IO a $f_2$ a IO b $f_2$ a IO c IO c
-Control.Exception.bracket_ IO a IO b IO c IO c
-Control.Exception.bracketOnError IO a $f_2$ a IO b $f_2$ a IO c IO c
-Control.Exception.finally IO a IO b IO a
-Control.Exception.onException IO a IO b IO a
-System.IO.Unsafe.unsafePerformIO IO a a
-System.IO.Unsafe.unsafeDupablePerformIO IO a a
-System.IO.Unsafe.unsafeInterleaveIO IO a IO a
-System.IO.Unsafe.unsafeFixIO $f_2$ a IO a IO a
-GHC.IO.Encoding.Latin1.latin1  TextEncoding
-GHC.IO.Encoding.UTF16.utf16  TextEncoding
-GHC.IO.Encoding.UTF32.utf32  TextEncoding
-GHC.IO.Encoding.BufferCodec CodeBuffer from to $f_2$ Buffer from IO $tuple_2$ Buffer from Buffer to Buffer to IO IO state $f_2$ state IO BufferCodec from to state
-GHC.IO.Encoding.[encode] BufferCodec from to state CodeBuffer from to
-GHC.IO.Encoding.[recover] BufferCodec from to state Buffer from Buffer to IO $tuple_2$ Buffer from Buffer to
-GHC.IO.Encoding.[close] BufferCodec from to state IO
-GHC.IO.Encoding.[getState] BufferCodec from to state IO state
-GHC.IO.Encoding.TextEncoding String IO TextDecoder dstate IO TextEncoder estate TextEncoding
-GHC.IO.Encoding.[textEncodingName] TextEncoding String
-GHC.IO.Encoding.[mkTextDecoder] TextEncoding IO TextDecoder dstate
-GHC.IO.Encoding.[mkTextEncoder] TextEncoding IO TextEncoder estate
-GHC.IO.Encoding.InputUnderflow  CodingProgress
-GHC.IO.Encoding.OutputUnderflow  CodingProgress
-GHC.IO.Encoding.InvalidSequence  CodingProgress
-GHC.IO.Encoding.latin1  TextEncoding
-GHC.IO.Encoding.utf8  TextEncoding
-GHC.IO.Encoding.utf8_bom  TextEncoding
-GHC.IO.Encoding.utf16  TextEncoding
-GHC.IO.Encoding.utf16le  TextEncoding
-GHC.IO.Encoding.utf16be  TextEncoding
-GHC.IO.Encoding.utf32  TextEncoding
-GHC.IO.Encoding.utf32le  TextEncoding
-GHC.IO.Encoding.utf32be  TextEncoding
-GHC.IO.Encoding.getLocaleEncoding  IO TextEncoding
-GHC.IO.Encoding.getFileSystemEncoding  IO TextEncoding
-GHC.IO.Encoding.getForeignEncoding  IO TextEncoding
-GHC.IO.Encoding.char8  TextEncoding
-GHC.IO.Encoding.mkTextEncoding String IO TextEncoding
-System.IO.Error.userError String IOError
-System.IO.Error.mkIOError IOErrorType String Maybe Handle Maybe FilePath IOError
-System.IO.Error.annotateIOError IOError String Maybe Handle Maybe FilePath IOError
-System.IO.Error.isAlreadyExistsError IOError Bool
-System.IO.Error.isDoesNotExistError IOError Bool
-System.IO.Error.isAlreadyInUseError IOError Bool
-System.IO.Error.isFullError IOError Bool
-System.IO.Error.isEOFError IOError Bool
-System.IO.Error.isIllegalOperation IOError Bool
-System.IO.Error.isPermissionError IOError Bool
-System.IO.Error.isUserError IOError Bool
-System.IO.Error.alreadyExistsErrorType  IOErrorType
-System.IO.Error.doesNotExistErrorType  IOErrorType
-System.IO.Error.alreadyInUseErrorType  IOErrorType
-System.IO.Error.fullErrorType  IOErrorType
-System.IO.Error.eofErrorType  IOErrorType
-System.IO.Error.illegalOperationErrorType  IOErrorType
-System.IO.Error.permissionErrorType  IOErrorType
-System.IO.Error.userErrorType  IOErrorType
-System.IO.Error.isAlreadyExistsErrorType IOErrorType Bool
-System.IO.Error.isDoesNotExistErrorType IOErrorType Bool
-System.IO.Error.isAlreadyInUseErrorType IOErrorType Bool
-System.IO.Error.isFullErrorType IOErrorType Bool
-System.IO.Error.isEOFErrorType IOErrorType Bool
-System.IO.Error.isIllegalOperationErrorType IOErrorType Bool
-System.IO.Error.isPermissionErrorType IOErrorType Bool
-System.IO.Error.isUserErrorType IOErrorType Bool
-System.IO.Error.ioError IOError IO a
-System.IO.Error.catchIOError IO a $f_2$ IOError IO a IO a
-System.IO.Error.tryIOError IO a IO Either IOError a
-System.IO.Error.modifyIOError $f_2$ IOError IOError IO a IO a
-GHC.Conc.IO.ensureIOManagerIsRunning  IO
-GHC.Conc.IO.threadDelay Int IO
-GHC.Conc.IO.registerDelay Int IO TVar Bool
-GHC.Conc.IO.threadWaitRead Fd IO
-GHC.Conc.IO.threadWaitWrite Fd IO
-GHC.Conc.IO.threadWaitReadSTM Fd IO $tuple_2$ STM IO
-GHC.Conc.IO.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
-GHC.Conc.IO.closeFdWith $f_2$ Fd IO Fd IO
-GHC.Conc.ThreadId ThreadId# ThreadId
-GHC.Conc.forkIO IO IO ThreadId
-GHC.Conc.forkOn Int IO IO ThreadId
-GHC.Conc.numCapabilities  Int
-GHC.Conc.getNumCapabilities  IO Int
-GHC.Conc.setNumCapabilities Int IO
-GHC.Conc.getNumProcessors  IO Int
-GHC.Conc.numSparks  IO Int
-GHC.Conc.myThreadId  IO ThreadId
-GHC.Conc.killThread ThreadId IO
-GHC.Conc.throwTo ThreadId Exception IO
-GHC.Conc.runSparks  IO
-GHC.Conc.yield  IO
-GHC.Conc.labelThread ThreadId String IO
-GHC.Conc.mkWeakThreadId ThreadId IO Weak ThreadId
-GHC.Conc.ThreadRunning  ThreadStatus
-GHC.Conc.ThreadFinished  ThreadStatus
-GHC.Conc.ThreadBlocked BlockReason ThreadStatus
-GHC.Conc.ThreadDied  ThreadStatus
-GHC.Conc.BlockedOnMVar  BlockReason
-GHC.Conc.BlockedOnBlackHole  BlockReason
-GHC.Conc.BlockedOnException  BlockReason
-GHC.Conc.BlockedOnSTM  BlockReason
-GHC.Conc.BlockedOnForeignCall  BlockReason
-GHC.Conc.BlockedOnOther  BlockReason
-GHC.Conc.threadCapability ThreadId IO $tuple_2$ Int Bool
-GHC.Conc.threadDelay Int IO
-GHC.Conc.registerDelay Int IO TVar Bool
-GHC.Conc.threadWaitRead Fd IO
-GHC.Conc.threadWaitWrite Fd IO
-GHC.Conc.threadWaitReadSTM Fd IO $tuple_2$ STM IO
-GHC.Conc.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
-GHC.Conc.closeFdWith $f_2$ Fd IO Fd IO
-GHC.Conc.setAllocationCounter Int64 IO
-GHC.Conc.getAllocationCounter  IO Int64
-GHC.Conc.enableAllocationLimit  IO
-GHC.Conc.disableAllocationLimit  IO
-GHC.Conc.STM $f_2$ State# RealWorld $tuple_2$ # State# RealWorld a # STM a
-GHC.Conc.atomically STM a IO a
-GHC.Conc.retry  STM a
-GHC.Conc.orElse STM a STM a STM a
-GHC.Conc.throwSTM Exception STM a
-GHC.Conc.catchSTM STM a $f_2$ Exception STM a STM a
-GHC.Conc.alwaysSucceeds STM a STM
-GHC.Conc.always STM Bool STM
-GHC.Conc.TVar TVar# RealWorld a TVar a
-GHC.Conc.newTVar a STM TVar a
-GHC.Conc.newTVarIO a IO TVar a
-GHC.Conc.readTVar TVar a STM a
-GHC.Conc.readTVarIO TVar a IO a
-GHC.Conc.writeTVar TVar a a STM
-GHC.Conc.unsafeIOToSTM IO a STM a
-GHC.IO.Handle.NoBuffering  BufferMode
-GHC.IO.Handle.LineBuffering  BufferMode
-GHC.IO.Handle.BlockBuffering Maybe Int BufferMode
-GHC.IO.Handle.mkFileHandle IODevice/BufferedIO/Typeable FilePath IOMode Maybe TextEncoding NewlineMode IO Handle
-GHC.IO.Handle.mkDuplexHandle IODevice/BufferedIO/Typeable FilePath Maybe TextEncoding NewlineMode IO Handle
-GHC.IO.Handle.hFileSize Handle IO Integer
-GHC.IO.Handle.hSetFileSize Handle Integer IO
-GHC.IO.Handle.hIsEOF Handle IO Bool
-GHC.IO.Handle.hLookAhead Handle IO Char
-GHC.IO.Handle.hSetBuffering Handle BufferMode IO
-GHC.IO.Handle.hSetBinaryMode Handle Bool IO
-GHC.IO.Handle.hSetEncoding Handle TextEncoding IO
-GHC.IO.Handle.hGetEncoding Handle IO Maybe TextEncoding
-GHC.IO.Handle.hFlush Handle IO
-GHC.IO.Handle.hFlushAll Handle IO
-GHC.IO.Handle.hDuplicate Handle IO Handle
-GHC.IO.Handle.hDuplicateTo Handle Handle IO
-GHC.IO.Handle.hClose Handle IO
-GHC.IO.Handle.hGetPosn Handle IO HandlePosn
-GHC.IO.Handle.hSetPosn HandlePosn IO
-GHC.IO.Handle.AbsoluteSeek  SeekMode
-GHC.IO.Handle.RelativeSeek  SeekMode
-GHC.IO.Handle.SeekFromEnd  SeekMode
-GHC.IO.Handle.hSeek Handle SeekMode Integer IO
-GHC.IO.Handle.hTell Handle IO Integer
-GHC.IO.Handle.hGetBuffering Handle IO BufferMode
-GHC.IO.Handle.hSetEcho Handle Bool IO
-GHC.IO.Handle.hGetEcho Handle IO Bool
-GHC.IO.Handle.hIsTerminalDevice Handle IO Bool
-GHC.IO.Handle.hSetNewlineMode Handle NewlineMode IO
-GHC.IO.Handle.NewlineMode Newline Newline NewlineMode
-GHC.IO.Handle.[inputNL] NewlineMode Newline
-GHC.IO.Handle.[outputNL] NewlineMode Newline
-GHC.IO.Handle.nativeNewline  Newline
-GHC.IO.Handle.noNewlineTranslation  NewlineMode
-GHC.IO.Handle.universalNewlineMode  NewlineMode
-GHC.IO.Handle.nativeNewlineMode  NewlineMode
-GHC.IO.Handle.hShow Handle IO String
-GHC.IO.Handle.hWaitForInput Handle Int IO Bool
-GHC.IO.Handle.hGetChar Handle IO Char
-GHC.IO.Handle.hGetLine Handle IO String
-GHC.IO.Handle.hGetContents Handle IO String
-GHC.IO.Handle.hPutChar Handle Char IO
-GHC.IO.Handle.hPutStr Handle String IO
-GHC.IO.Handle.hGetBuf Handle Ptr a Int IO Int
-GHC.IO.Handle.hGetBufNonBlocking Handle Ptr a Int IO Int
-GHC.IO.Handle.hPutBuf Handle Ptr a Int IO
-GHC.IO.Handle.FD.stdin  Handle
-GHC.IO.Handle.FD.stdout  Handle
-GHC.IO.Handle.FD.stderr  Handle
-GHC.IO.Handle.FD.openFile FilePath IOMode IO Handle
-GHC.IO.Handle.FD.openBinaryFile FilePath IOMode IO Handle
-GHC.IO.Handle.FD.openFileBlocking FilePath IOMode IO Handle
-GHC.IO.Handle.FD.fdToHandle FD IO Handle
-GHC.IO.Handle.FD.fdToHandle' CInt Maybe IODeviceType Bool FilePath IOMode Bool IO Handle
-GHC.IO.Handle.FD.isEOF  IO Bool
-System.IO.fixIO $f_2$ a IO a IO a
-System.IO.stdin  Handle
-System.IO.stdout  Handle
-System.IO.stderr  Handle
-System.IO.withFile FilePath IOMode $f_2$ Handle IO r IO r
-System.IO.openFile FilePath IOMode IO Handle
-System.IO.ReadMode  IOMode
-System.IO.hClose Handle IO
-System.IO.readFile FilePath IO String
-System.IO.writeFile FilePath String IO
-System.IO.appendFile FilePath String IO
-System.IO.hFileSize Handle IO Integer
-System.IO.hSetFileSize Handle Integer IO
-System.IO.hIsEOF Handle IO Bool
-System.IO.isEOF  IO Bool
-System.IO.NoBuffering  BufferMode
-System.IO.LineBuffering  BufferMode
-System.IO.BlockBuffering Maybe Int BufferMode
-System.IO.hSetBuffering Handle BufferMode IO
-System.IO.hGetBuffering Handle IO BufferMode
-System.IO.hFlush Handle IO
-System.IO.hGetPosn Handle IO HandlePosn
-System.IO.hSetPosn HandlePosn IO
-System.IO.hSeek Handle SeekMode Integer IO
-System.IO.AbsoluteSeek  SeekMode
-System.IO.RelativeSeek  SeekMode
-System.IO.SeekFromEnd  SeekMode
-System.IO.hTell Handle IO Integer
-System.IO.hIsTerminalDevice Handle IO Bool
-System.IO.hSetEcho Handle Bool IO
-System.IO.hGetEcho Handle IO Bool
-System.IO.hShow Handle IO String
-System.IO.hWaitForInput Handle Int IO Bool
-System.IO.hReady Handle IO Bool
-System.IO.hGetChar Handle IO Char
-System.IO.hGetLine Handle IO String
-System.IO.hLookAhead Handle IO Char
-System.IO.hGetContents Handle IO String
-System.IO.hPutChar Handle Char IO
-System.IO.hPutStr Handle String IO
-System.IO.hPutStrLn Handle String IO
-System.IO.hPrint Handle Show IO
-System.IO.interact $f_2$ String String IO
-System.IO.putChar Char IO
-System.IO.putStr String IO
-System.IO.putStrLn String IO
-System.IO.print Show IO
-System.IO.getChar  IO Char
-System.IO.getLine  IO String
-System.IO.getContents  IO String
-System.IO.readIO String IO Read
-System.IO.readLn  IO Read
-System.IO.withBinaryFile FilePath IOMode $f_2$ Handle IO r IO r
-System.IO.openBinaryFile FilePath IOMode IO Handle
-System.IO.hSetBinaryMode Handle Bool IO
-System.IO.hPutBuf Handle Ptr a Int IO
-System.IO.hGetBuf Handle Ptr a Int IO Int
-System.IO.hGetBufSome Handle Ptr a Int IO Int
-System.IO.hGetBufNonBlocking Handle Ptr a Int IO Int
-System.IO.openTempFile FilePath String IO $tuple_2$ FilePath Handle
-System.IO.openBinaryTempFile FilePath String IO $tuple_2$ FilePath Handle
-System.IO.openTempFileWithDefaultPermissions FilePath String IO $tuple_2$ FilePath Handle
-System.IO.openBinaryTempFileWithDefaultPermissions FilePath String IO $tuple_2$ FilePath Handle
-System.IO.hSetEncoding Handle TextEncoding IO
-System.IO.hGetEncoding Handle IO Maybe TextEncoding
-System.IO.latin1  TextEncoding
-System.IO.utf8  TextEncoding
-System.IO.utf8_bom  TextEncoding
-System.IO.utf16  TextEncoding
-System.IO.utf16le  TextEncoding
-System.IO.utf16be  TextEncoding
-System.IO.utf32  TextEncoding
-System.IO.utf32le  TextEncoding
-System.IO.utf32be  TextEncoding
-System.IO.localeEncoding  TextEncoding
-System.IO.char8  TextEncoding
-System.IO.mkTextEncoding String IO TextEncoding
-System.IO.hSetNewlineMode Handle NewlineMode IO
-System.IO.nativeNewline  Newline
-System.IO.NewlineMode Newline Newline NewlineMode
-System.IO.[inputNL] NewlineMode Newline
-System.IO.[outputNL] NewlineMode Newline
-System.IO.noNewlineTranslation  NewlineMode
-System.IO.universalNewlineMode  NewlineMode
-System.IO.nativeNewlineMode  NewlineMode
-Control.Monad.Fix.mfix $f_2$ a MonadFix a MonadFix a
-Control.Monad.Fix.fix $f_2$ a a a
-Control.Arrow.arr $f_2$ b c Arrow b c
-Control.Arrow.first Arrow b c Arrow $tuple_3$ b d c d
-Control.Arrow.second Arrow b c Arrow $tuple_3$ d b d c
-Control.Arrow.(***) Arrow b c Arrow b' c' Arrow $tuple_3$ b b' c c'
-Control.Arrow.(&&&) Arrow b c Arrow b c' Arrow b $tuple_2$ c c'
-Control.Arrow.Kleisli $f_2$ a m b Kleisli m a b
-Control.Arrow.returnA  Arrow b b
-Control.Arrow.(^>>) $f_2$ b c Arrow c d Arrow b d
-Control.Arrow.(>>^) Arrow b c $f_2$ c d Arrow b d
-Control.Arrow.(>>>) Category a b Category b c Category a c
-Control.Arrow.(<<<) Category b c Category a b Category a c
-Control.Arrow.(<<^) Arrow c d $f_2$ b c Arrow b d
-Control.Arrow.(^<<) $f_2$ c d Arrow b c Arrow b d
-Control.Arrow.(<+>) ArrowPlus b c ArrowPlus b c ArrowPlus b c
-Control.Arrow.left ArrowChoice b c ArrowChoice Either b d Either c d
-Control.Arrow.right ArrowChoice b c ArrowChoice Either d b Either d c
-Control.Arrow.(+++) ArrowChoice b c ArrowChoice b' c' ArrowChoice Either b b' Either c c'
-Control.Arrow.(|||) ArrowChoice b d ArrowChoice c d ArrowChoice Either b c d
-Control.Arrow.ArrowMonad a b ArrowMonad a b
-Control.Arrow.leftApp ArrowApply b c ArrowApply Either b d Either c d
-Control.Arrow.loop ArrowLoop $tuple_2$ b d $tuple_2$ c d ArrowLoop b c
-Control.Applicative.pure a Applicative a
-Control.Applicative.(<*>) Applicative $f_2$ a b Applicative a Applicative b
-Control.Applicative.(*>) Applicative a Applicative b Applicative b
-Control.Applicative.(<*) Applicative a Applicative b Applicative a
-Control.Applicative.empty  Alternative a
-Control.Applicative.(<|>) Alternative a Alternative a Alternative a
-Control.Applicative.some Alternative a Alternative $list$ a
-Control.Applicative.many Alternative a Alternative $list$ a
-Control.Applicative.ZipList $list$ a ZipList a
-Control.Applicative.(<$>) $f_2$ a b Functor a Functor b
-Control.Applicative.(<$) a Functor b Functor a
-Control.Applicative.(<**>) Applicative a Applicative $f_2$ a b Applicative b
-Control.Applicative.liftA $f_2$ a b Applicative a Applicative b
-Control.Applicative.liftA2 $f_3$ a b c Applicative a Applicative b Applicative c
-Control.Applicative.liftA3 $f_4$ a b c d Applicative a Applicative b Applicative c Applicative d
-Control.Applicative.optional Alternative a Alternative Maybe a
-Data.Traversable.traverse $f_2$ a Applicative b Traversable a Applicative Traversable b
-Data.Traversable.sequenceA Traversable Applicative a Applicative Traversable a
-Data.Traversable.mapM $f_2$ a Monad b Traversable a Monad Traversable b
-Data.Traversable.sequence Traversable Monad a Monad Traversable a
-Data.Traversable.for Traversable a $f_2$ a Applicative b Applicative Traversable b
-Data.Traversable.forM Traversable a $f_2$ a Monad b Monad Traversable b
-Data.Traversable.mapAccumL $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
-Data.Traversable.mapAccumR $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
-Data.Traversable.fmapDefault $f_2$ a b Traversable a Traversable b
-Data.Traversable.foldMapDefault $f_2$ a Monoid Traversable a Monoid
-Control.Monad.fmap $f_2$ a b Functor a Functor b
-Control.Monad.(>>=) Monad a $f_2$ a Monad b Monad b
-Control.Monad.(>>) Monad a Monad b Monad b
-Control.Monad.return a Monad a
-Control.Monad.fail String Monad a
-Control.Monad.mzero  MonadPlus a
-Control.Monad.mplus MonadPlus a MonadPlus a MonadPlus a
-Control.Monad.mapM $f_2$ a Monad b Traversable a Monad Traversable b
-Control.Monad.mapM_ $f_2$ a Monad b Foldable a Monad
-Control.Monad.forM Traversable a $f_2$ a Monad b Monad Traversable b
-Control.Monad.forM_ Foldable a $f_2$ a Monad b Monad
-Control.Monad.sequence Traversable Monad a Monad Traversable a
-Control.Monad.sequence_ Foldable Monad a Monad
-Control.Monad.(=<<) $f_2$ a Monad b Monad a Monad b
-Control.Monad.(>=>) $f_2$ a Monad b $f_2$ b Monad c $f_2$ a Monad c
-Control.Monad.(<=<) $f_2$ b Monad c $f_2$ a Monad b $f_2$ a Monad c
-Control.Monad.forever Monad a Monad b
-Control.Monad.void Functor a Functor
-Control.Monad.join Monad Monad a Monad a
-Control.Monad.msum Foldable MonadPlus a MonadPlus a
-Control.Monad.mfilter $f_2$ a Bool MonadPlus a MonadPlus a
-Control.Monad.filterM $f_2$ a Monad Bool $list$ a Monad $list$ a
-Control.Monad.mapAndUnzipM $f_2$ a Monad $tuple_2$ b c $list$ a Monad $tuple_2$ $list$ b $list$ c
-Control.Monad.zipWithM $f_3$ a b Monad c $list$ a $list$ b Monad $list$ c
-Control.Monad.zipWithM_ $f_3$ a b Monad c $list$ a $list$ b Monad
-Control.Monad.foldM $f_3$ b a Monad b b Foldable a Monad b
-Control.Monad.foldM_ $f_3$ b a Monad b b Foldable a Monad
-Control.Monad.replicateM Int Monad a Monad $list$ a
-Control.Monad.replicateM_ Int Monad a Monad
-Control.Monad.guard Bool Alternative
-Control.Monad.when Bool Applicative Applicative
-Control.Monad.unless Bool Applicative Applicative
-Control.Monad.liftM $f_2$ a1 r Monad a1 Monad r
-Control.Monad.liftM2 $f_3$ a1 a2 r Monad a1 Monad a2 Monad r
-Control.Monad.liftM3 $f_4$ a1 a2 a3 r Monad a1 Monad a2 Monad a3 Monad r
-Control.Monad.liftM4 $f_5$ a1 a2 a3 a4 r Monad a1 Monad a2 Monad a3 Monad a4 Monad r
-Control.Monad.liftM5 $f_6$ a1 a2 a3 a4 a5 r Monad a1 Monad a2 Monad a3 Monad a4 Monad a5 Monad r
-Control.Monad.ap Monad $f_2$ a b Monad a Monad b
-Control.Monad.(<$!>) $f_2$ a b Monad a Monad b
-GHC.Stats.[bytesAllocated] GCStats !Int64
-GHC.Stats.[numGcs] GCStats !Int64
-GHC.Stats.[maxBytesUsed] GCStats !Int64
-GHC.Stats.[numByteUsageSamples] GCStats !Int64
-GHC.Stats.[bytesCopied] GCStats !Int64
-GHC.Stats.[currentBytesUsed] GCStats !Int64
-GHC.Stats.[currentBytesSlop] GCStats !Int64
-GHC.Stats.[maxBytesSlop] GCStats !Int64
-GHC.Stats.[peakMegabytesAllocated] GCStats !Int64
-GHC.Stats.[mutatorWallSeconds] GCStats !Double
-GHC.Stats.[gcCpuSeconds] GCStats !Double
-GHC.Stats.[gcWallSeconds] GCStats !Double
-GHC.Stats.[cpuSeconds] GCStats !Double
-GHC.Stats.[wallSeconds] GCStats !Double
-GHC.Stats.[parMaxBytesCopied] GCStats !Int64
-GHC.Stats.getGCStats  IO GCStats
-GHC.Stats.getGCStatsEnabled  IO Bool
-Data.List.(++) $list$ a $list$ a $list$ a
-Data.List.head $list$ a a
-Data.List.last $list$ a a
-Data.List.tail $list$ a $list$ a
-Data.List.init $list$ a $list$ a
-Data.List.uncons $list$ a Maybe $tuple_2$ a $list$ a
-Data.List.null Foldable a Bool
-Data.List.length Foldable a Int
-Data.List.map $f_2$ a b $list$ a $list$ b
-Data.List.reverse $list$ a $list$ a
-Data.List.intersperse a $list$ a $list$ a
-Data.List.intercalate $list$ a $list$ $list$ a $list$ a
-Data.List.transpose $list$ $list$ a $list$ $list$ a
-Data.List.subsequences $list$ a $list$ $list$ a
-Data.List.permutations $list$ a $list$ $list$ a
-Data.List.foldl $f_3$ b a b b Foldable a b
-Data.List.foldl' $f_3$ b a b b Foldable a b
-Data.List.foldl1 $f_3$ a a a Foldable a a
-Data.List.foldl1' $f_3$ a a a $list$ a a
-Data.List.foldr $f_3$ a b b b Foldable a b
-Data.List.foldr1 $f_3$ a a a Foldable a a
-Data.List.concat Foldable $list$ a $list$ a
-Data.List.concatMap $f_2$ a $list$ b Foldable a $list$ b
-Data.List.and Foldable Bool Bool
-Data.List.or Foldable Bool Bool
-Data.List.any $f_2$ a Bool Foldable a Bool
-Data.List.all $f_2$ a Bool Foldable a Bool
-Data.List.sum Foldable Num Num
-Data.List.product Foldable Num Num
-Data.List.maximum Foldable Ord Ord
-Data.List.minimum Foldable Ord Ord
-Data.List.scanl $f_3$ b a b b $list$ a $list$ b
-Data.List.scanl' $f_3$ b a b b $list$ a $list$ b
-Data.List.scanl1 $f_3$ a a a $list$ a $list$ a
-Data.List.scanr $f_3$ a b b b $list$ a $list$ b
-Data.List.scanr1 $f_3$ a a a $list$ a $list$ a
-Data.List.mapAccumL $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
-Data.List.mapAccumR $f_2$ a $tuple_2$ a c b a Traversable b $tuple_2$ a Traversable c
-Data.List.iterate $f_2$ a a a $list$ a
-Data.List.repeat a $list$ a
-Data.List.replicate Int a $list$ a
-Data.List.cycle $list$ a $list$ a
-Data.List.unfoldr $f_2$ b Maybe $tuple_2$ a b b $list$ a
-Data.List.take Int $list$ a $list$ a
-Data.List.drop Int $list$ a $list$ a
-Data.List.splitAt Int $list$ a $tuple_2$ $list$ a $list$ a
-Data.List.takeWhile $f_2$ a Bool $list$ a $list$ a
-Data.List.dropWhile $f_2$ a Bool $list$ a $list$ a
-Data.List.dropWhileEnd $f_2$ a Bool $list$ a $list$ a
-Data.List.span $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
-Data.List.break $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
-Data.List.stripPrefix $list$ Eq $list$ Eq Maybe $list$ Eq
-Data.List.group $list$ Eq $list$ $list$ Eq
-Data.List.inits $list$ a $list$ $list$ a
-Data.List.tails $list$ a $list$ $list$ a
-Data.List.isPrefixOf $list$ Eq $list$ Eq Bool
-Data.List.isSuffixOf $list$ Eq $list$ Eq Bool
-Data.List.isInfixOf $list$ Eq $list$ Eq Bool
-Data.List.isSubsequenceOf $list$ Eq $list$ Eq Bool
-Data.List.elem Eq Foldable Eq Bool
-Data.List.notElem Eq Foldable Eq Bool
-Data.List.lookup Eq $list$ $tuple_2$ Eq b Maybe b
-Data.List.find $f_2$ a Bool Foldable a Maybe a
-Data.List.filter $f_2$ a Bool $list$ a $list$ a
-Data.List.partition $f_2$ a Bool $list$ a $tuple_2$ $list$ a $list$ a
-Data.List.(!!) $list$ a Int a
-Data.List.elemIndex Eq $list$ Eq Maybe Int
-Data.List.elemIndices Eq $list$ Eq $list$ Int
-Data.List.findIndex $f_2$ a Bool $list$ a Maybe Int
-Data.List.findIndices $f_2$ a Bool $list$ a $list$ Int
-Data.List.zip $list$ a $list$ b $list$ $tuple_2$ a b
-Data.List.zip3 $list$ a $list$ b $list$ c $list$ $tuple_3$ a b c
-Data.List.zip4 $list$ a $list$ b $list$ c $list$ d $list$ $tuple_4$ a b c d
-Data.List.zip5 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ $tuple_5$ a b c d e
-Data.List.zip6 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ $tuple_6$ a b c d e f
-Data.List.zip7 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ $tuple_7$ a b c d e f g
-Data.List.zipWith $f_3$ a b c $list$ a $list$ b $list$ c
-Data.List.zipWith3 $f_4$ a b c d $list$ a $list$ b $list$ c $list$ d
-Data.List.zipWith4 $f_5$ a b c d e $list$ a $list$ b $list$ c $list$ d $list$ e
-Data.List.zipWith5 $f_6$ a b c d e f $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
-Data.List.zipWith6 $f_7$ a b c d e f g $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
-Data.List.zipWith7 $f_8$ a b c d e f g h $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ h
-Data.List.unzip $list$ $tuple_2$ a b $tuple_2$ $list$ a $list$ b
-Data.List.unzip3 $list$ $tuple_3$ a b c $tuple_3$ $list$ a $list$ b $list$ c
-Data.List.unzip4 $list$ $tuple_4$ a b c d $tuple_4$ $list$ a $list$ b $list$ c $list$ d
-Data.List.unzip5 $list$ $tuple_5$ a b c d e $tuple_5$ $list$ a $list$ b $list$ c $list$ d $list$ e
-Data.List.unzip6 $list$ $tuple_6$ a b c d e f $tuple_6$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
-Data.List.unzip7 $list$ $tuple_7$ a b c d e f g $tuple_7$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
-Data.List.lines String $list$ String
-Data.List.words String $list$ String
-Data.List.unlines $list$ String String
-Data.List.unwords $list$ String String
-Data.List.nub $list$ Eq $list$ Eq
-Data.List.delete Eq $list$ Eq $list$ Eq
-Data.List.(\\) $list$ Eq $list$ Eq $list$ Eq
-Data.List.union $list$ Eq $list$ Eq $list$ Eq
-Data.List.intersect $list$ Eq $list$ Eq $list$ Eq
-Data.List.sort $list$ Ord $list$ Ord
-Data.List.sortOn $f_2$ a Ord $list$ a $list$ a
-Data.List.insert Ord $list$ Ord $list$ Ord
-Data.List.nubBy $f_3$ a a Bool $list$ a $list$ a
-Data.List.deleteBy $f_3$ a a Bool a $list$ a $list$ a
-Data.List.deleteFirstsBy $f_3$ a a Bool $list$ a $list$ a $list$ a
-Data.List.unionBy $f_3$ a a Bool $list$ a $list$ a $list$ a
-Data.List.intersectBy $f_3$ a a Bool $list$ a $list$ a $list$ a
-Data.List.groupBy $f_3$ a a Bool $list$ a $list$ $list$ a
-Data.List.sortBy $f_3$ a a Ordering $list$ a $list$ a
-Data.List.insertBy $f_3$ a a Ordering a $list$ a $list$ a
-Data.List.maximumBy $f_3$ a a Ordering Foldable a a
-Data.List.minimumBy $f_3$ a a Ordering Foldable a a
-Data.List.genericLength $list$ a Num
-Data.List.genericTake Integral $list$ a $list$ a
-Data.List.genericDrop Integral $list$ a $list$ a
-Data.List.genericSplitAt Integral $list$ a $tuple_2$ $list$ a $list$ a
-Data.List.genericIndex $list$ a Integral a
-Data.List.genericReplicate Integral a $list$ a
-Data.String.fromString String IsString
-Data.String.lines String $list$ String
-Data.String.words String $list$ String
-Data.String.unlines $list$ String String
-Data.String.unwords $list$ String String
-Data.Version.Version $list$ Int $list$ String Version
-Data.Version.[versionBranch] Version $list$ Int
-Data.Version.[versionTags] Version $list$ String
-Data.Version.showVersion Version String
-Data.Version.parseVersion  ReadP Version
-Data.Version.makeVersion $list$ Int Version
-Data.Data.toConstr Data Constr
-Data.Data.mkDataType String $list$ Constr DataType
-Data.Data.mkIntType String DataType
-Data.Data.mkFloatType String DataType
-Data.Data.mkCharType String DataType
-Data.Data.mkNoRepType String DataType
-Data.Data.AlgRep $list$ Constr DataRep
-Data.Data.repConstr DataType ConstrRep Constr
-Data.Data.isAlgType DataType Bool
-Data.Data.indexConstr DataType ConIndex Constr
-Data.Data.maxConstrIndex DataType ConIndex
-Data.Data.isNorepType DataType Bool
-Data.Data.Prefix  Fixity
-Data.Data.mkConstr DataType String $list$ String Fixity Constr
-Data.Data.mkCharConstr DataType Char Constr
-Data.Data.constrType Constr DataType
-Data.Data.AlgConstr ConIndex ConstrRep
-Data.Data.constrRep Constr ConstrRep
-Data.Data.constrFields Constr $list$ String
-Data.Data.constrFixity Constr Fixity
-Data.Data.constrIndex Constr ConIndex
-Data.Data.showConstr Constr String
-Data.Data.readConstr DataType String Maybe Constr
-Data.Data.tyconUQname String String
-Data.Data.tyconModule String String
-Data.Data.fromConstr Constr Data
-GHC.Natural.NatS# GmpLimb# Natural
-GHC.Natural.isValidNatural Natural Bool
-GHC.Natural.wordToNatural Word Natural
-GHC.Natural.naturalToWordMaybe Natural Maybe Word
-GHC.Natural.minusNaturalMaybe Natural Natural Maybe Natural
-GHC.Natural.powModNatural Natural Natural Natural Natural
-GHC.RTS.Flags.RTSFlags GCFlags ConcFlags MiscFlags DebugFlags CCFlags ProfFlags TraceFlags TickyFlags RTSFlags
-GHC.RTS.Flags.[compact] GCFlags Bool
-GHC.RTS.Flags.[sweep] GCFlags Bool
-GHC.RTS.Flags.[heapBase] GCFlags Word
-GHC.RTS.Flags.[linkerMemBase] MiscFlags Word
-GHC.RTS.Flags.[linker] DebugFlags Bool
-GHC.RTS.Flags.[squeeze] DebugFlags Bool
-GHC.RTS.Flags.[hpc] DebugFlags Bool
-GHC.RTS.Flags.[heapProfileInterval] ProfFlags Time
-GHC.RTS.Flags.[heapProfileIntervalTicks] ProfFlags Word
-GHC.RTS.Flags.[timestamp] TraceFlags Bool
-GHC.RTS.Flags.[traceScheduler] TraceFlags Bool
-GHC.RTS.Flags.[traceGc] TraceFlags Bool
-GHC.RTS.Flags.[sparksSampled] TraceFlags Bool
-GHC.RTS.Flags.[sparksFull] TraceFlags Bool
-GHC.RTS.Flags.[user] TraceFlags Bool
-GHC.Fingerprint.getFileHash FilePath IO Fingerprint
-GHC.Event.getSystemEventManager  IO Maybe EventManager
-GHC.Event.new  IO EventManager
-GHC.Event.evtRead  Event
-GHC.Event.evtWrite  Event
-GHC.Event.OneShot  Lifetime
-GHC.Event.MultiShot  Lifetime
-GHC.Event.registerFd EventManager IOCallback Fd Event Lifetime IO FdKey
-GHC.Event.unregisterFd EventManager FdKey IO
-GHC.Event.unregisterFd_ EventManager FdKey IO Bool
-GHC.Event.closeFd EventManager $f_2$ Fd IO Fd IO
-GHC.Event.registerTimeout TimerManager Int TimeoutCallback IO TimeoutKey
-GHC.Event.updateTimeout TimerManager TimeoutKey Int IO
-GHC.Event.unregisterTimeout TimerManager TimeoutKey IO
-GHC.TypeLits.someNatVal Integer Maybe SomeNat
-GHC.TypeLits.someSymbolVal String SomeSymbol
-GHC.IP.ip  IP
-Prelude.False  Bool
-Prelude.succ Enum Enum
-Prelude.pred Enum Enum
-Prelude.toEnum Int Enum
-Prelude.fromEnum Enum Int
-Prelude.enumFrom Enum $list$ Enum
-Prelude.enumFromTo Enum Enum $list$ Enum
-Prelude.minBound  Bounded
-Prelude.(+) Num Num Num
-Prelude.negate Num Num
-Prelude.abs Num Num
-Prelude.signum Num Num
-Prelude.fromInteger Integer Num
-Prelude.toRational Real Rational
-Prelude.quot Integral Integral Integral
-Prelude.rem Integral Integral Integral
-Prelude.div Integral Integral Integral
-Prelude.mod Integral Integral Integral
-Prelude.quotRem Integral Integral $tuple_2$ Integral Integral
-Prelude.divMod Integral Integral $tuple_2$ Integral Integral
-Prelude.toInteger Integral Integer
-Prelude.(/) Fractional Fractional Fractional
-Prelude.recip Fractional Fractional
-Prelude.fromRational Rational Fractional
-Prelude.pi  Floating
-Prelude.properFraction RealFrac $tuple_2$ Integral RealFrac
-Prelude.truncate RealFrac Integral
-Prelude.round RealFrac Integral
-Prelude.ceiling RealFrac Integral
-Prelude.floor RealFrac Integral
-Prelude.floatRadix RealFloat Integer
-Prelude.floatDigits RealFloat Int
-Prelude.floatRange RealFloat $tuple_2$ Int Int
-Prelude.decodeFloat RealFloat $tuple_2$ Integer Int
-Prelude.encodeFloat Integer Int RealFloat
-Prelude.exponent RealFloat Int
-Prelude.significand RealFloat RealFloat
-Prelude.scaleFloat Int RealFloat RealFloat
-Prelude.isNaN RealFloat Bool
-Prelude.isInfinite RealFloat Bool
-Prelude.isDenormalized RealFloat Bool
-Prelude.isNegativeZero RealFloat Bool
-Prelude.isIEEE RealFloat Bool
-Prelude.atan2 RealFloat RealFloat RealFloat
-Prelude.subtract Num Num Num
-Prelude.gcd Integral Integral Integral
-Prelude.lcm Integral Integral Integral
-Prelude.(^) Num Integral Num
-Prelude.(^^) Fractional Integral Fractional
-Prelude.fromIntegral Integral Num
-Prelude.realToFrac Real Fractional
-Prelude.until $f_2$ a Bool $f_2$ a a a a
-Prelude.asTypeOf a a a
-Prelude.error $list$ Char a
-Prelude.undefined  a
-Prelude.seq a b b
-Prelude.($!) $f_2$ a b a b
-GHC.SrcLoc.srcLocPackage SrcLoc String
-GHC.Stack.currentCallStack  IO $list$ String
-GHC.Stack.whoCreated a IO $list$ String
-GHC.Stack.errorWithStackTrace String a
-GHC.Stack.getCallStack CallStack $list$ $tuple_2$ String SrcLoc
-Debug.Trace.trace String a a
-Debug.Trace.traceId String String
-Debug.Trace.traceShow Show b b
-Debug.Trace.traceShowId Show Show
-Debug.Trace.traceStack String a a
-Debug.Trace.traceIO String IO
-Debug.Trace.traceM String Monad
-Debug.Trace.traceShowM Show Monad
-Debug.Trace.putTraceMsg String IO
-Debug.Trace.traceEvent String a a
-Debug.Trace.traceEventIO String IO
-Debug.Trace.traceMarker String a a
-Debug.Trace.traceMarkerIO String IO
-GHC.Exts.I# Int# Int
-GHC.Exts.W# Word# Word
-GHC.Exts.F# Float# Float
-GHC.Exts.D# Double# Double
-GHC.Exts.C# Char# Char
-GHC.Exts.Ptr Addr# Ptr a
-GHC.Exts.FunPtr Addr# FunPtr a
-GHC.Exts.shiftL# Word# Int# Word#
-GHC.Exts.shiftRL# Word# Int# Word#
-GHC.Exts.iShiftL# Int# Int# Int#
-GHC.Exts.iShiftRA# Int# Int# Int#
-GHC.Exts.iShiftRL# Int# Int# Int#
-GHC.Exts.isTrue# Int# Bool
-GHC.Exts.fromString String IsString
-GHC.Exts.lazy a a
-GHC.Exts.inline a a
-GHC.Exts.coerce Coercible Coercible
-GHC.Exts.Down a Down a
-GHC.Exts.groupWith $f_2$ a Ord $list$ a $list$ $list$ a
-GHC.Exts.sortWith $f_2$ a Ord $list$ a $list$ a
-GHC.Exts.the $list$ Eq Eq
-GHC.Exts.traceEvent String IO
-GHC.Exts.currentCallStack  IO $list$ String
-GHC.Exts.fromList $list$ Item IsList IsList
-GHC.Exts.fromListN Int $list$ Item IsList IsList
-GHC.Exts.toList IsList $list$ Item IsList
-Control.Monad.Zip.mzip MonadZip a MonadZip b MonadZip $tuple_2$ a b
-GHC.StaticPtr.deRefStaticPtr StaticPtr a a
-GHC.StaticPtr.staticKey StaticPtr a StaticKey
-GHC.StaticPtr.unsafeLookupStaticPtr StaticKey IO Maybe StaticPtr a
-GHC.StaticPtr.StaticPtrInfo String String String $tuple_2$ Int Int StaticPtrInfo
-GHC.StaticPtr.[spInfoPackageKey] StaticPtrInfo String
-GHC.StaticPtr.[spInfoModuleName] StaticPtrInfo String
-GHC.StaticPtr.[spInfoName] StaticPtrInfo String
-GHC.StaticPtr.[spInfoSrcLoc] StaticPtrInfo $tuple_2$ Int Int
-GHC.StaticPtr.staticPtrInfo StaticPtr a StaticPtrInfo
-GHC.StaticPtr.staticPtrKeys  IO $list$ StaticKey
-Control.Concurrent.Chan.newChan  IO Chan a
-Control.Concurrent.Chan.writeChan Chan a a IO
-Control.Concurrent.Chan.readChan Chan a IO a
-Control.Concurrent.Chan.dupChan Chan a IO Chan a
-Control.Concurrent.Chan.unGetChan Chan a a IO
-Control.Concurrent.Chan.isEmptyChan Chan a IO Bool
-Control.Concurrent.Chan.getChanContents Chan a IO $list$ a
-Control.Concurrent.Chan.writeList2Chan Chan a $list$ a IO
-Control.Concurrent.QSem.newQSem Int IO QSem
-Control.Concurrent.QSem.waitQSem QSem IO
-Control.Concurrent.QSem.signalQSem QSem IO
-Control.Concurrent.QSemN.newQSemN Int IO QSemN
-Control.Concurrent.QSemN.waitQSemN QSemN Int IO
-Control.Concurrent.QSemN.signalQSemN QSemN Int IO
-Control.Concurrent.myThreadId  IO ThreadId
-Control.Concurrent.forkIO IO IO ThreadId
-Control.Concurrent.forkFinally IO a $f_2$ Either SomeException a IO IO ThreadId
-Control.Concurrent.killThread ThreadId IO
-Control.Concurrent.throwTo ThreadId Exception IO
-Control.Concurrent.forkOn Int IO IO ThreadId
-Control.Concurrent.getNumCapabilities  IO Int
-Control.Concurrent.setNumCapabilities Int IO
-Control.Concurrent.threadCapability ThreadId IO $tuple_2$ Int Bool
-Control.Concurrent.yield  IO
-Control.Concurrent.threadDelay Int IO
-Control.Concurrent.threadWaitRead Fd IO
-Control.Concurrent.threadWaitWrite Fd IO
-Control.Concurrent.threadWaitReadSTM Fd IO $tuple_2$ STM IO
-Control.Concurrent.threadWaitWriteSTM Fd IO $tuple_2$ STM IO
-Control.Concurrent.rtsSupportsBoundThreads  Bool
-Control.Concurrent.forkOS IO IO ThreadId
-Control.Concurrent.isCurrentThreadBound  IO Bool
-Control.Concurrent.runInBoundThread IO a IO a
-Control.Concurrent.runInUnboundThread IO a IO a
-Control.Concurrent.mkWeakThreadId ThreadId IO Weak ThreadId
-Control.Monad.Instances.fmap $f_2$ a b Functor a Functor b
-Control.Monad.Instances.(<$) a Functor b Functor a
-Control.Monad.Instances.(>>=) Monad a $f_2$ a Monad b Monad b
-Control.Monad.Instances.(>>) Monad a Monad b Monad b
-Control.Monad.Instances.return a Monad a
-Control.Monad.Instances.fail String Monad a
-Control.Monad.ST.fixST $f_2$ a ST s a ST s a
-Control.Monad.ST.stToIO ST RealWorld a IO a
-Control.Monad.ST.Safe.fixST $f_2$ a ST s a ST s a
-Control.Monad.ST.Safe.stToIO ST RealWorld a IO a
-Control.Monad.ST.Unsafe.unsafeInterleaveST ST s a ST s a
-Control.Monad.ST.Lazy.fixST $f_2$ a ST s a ST s a
-Control.Monad.ST.Lazy.strictToLazyST ST s a ST s a
-Control.Monad.ST.Lazy.lazyToStrictST ST s a ST s a
-Control.Monad.ST.Lazy.stToIO ST RealWorld a IO a
-Control.Monad.ST.Lazy.Safe.fixST $f_2$ a ST s a ST s a
-Control.Monad.ST.Lazy.Safe.strictToLazyST ST s a ST s a
-Control.Monad.ST.Lazy.Safe.lazyToStrictST ST s a ST s a
-Control.Monad.ST.Lazy.Safe.stToIO ST RealWorld a IO a
-Control.Monad.ST.Lazy.Unsafe.unsafeInterleaveST ST s a ST s a
-Data.Bifunctor.bimap $f_2$ a b $f_2$ c d Bifunctor a c Bifunctor b d
-Data.Bifunctor.first $f_2$ a b Bifunctor a c Bifunctor b c
-Data.Bifunctor.second $f_2$ b c Bifunctor a b Bifunctor a c
-Data.Complex.(:+) !a !a Complex a
-Data.Complex.realPart Complex a a
-Data.Complex.imagPart Complex a a
-Data.Complex.mkPolar Floating Floating Complex Floating
-Data.Complex.cis Floating Complex Floating
-Data.Complex.polar Complex RealFloat $tuple_2$ RealFloat RealFloat
-Data.Complex.magnitude Complex RealFloat RealFloat
-Data.Complex.phase Complex RealFloat RealFloat
-Data.Complex.conjugate Complex Num Complex Num
-Data.Fixed.div' Real Real Integral
-Data.Fixed.mod' Real Real Real
-Data.Fixed.divMod' Real Real $tuple_2$ Integral Real
-Data.Fixed.showFixed Bool Fixed HasResolution String
-Data.Functor.Identity.Identity a Identity a
-Data.Ix.range $tuple_2$ Ix Ix $list$ Ix
-Data.Ix.index $tuple_2$ Ix Ix Ix Int
-Data.Ix.inRange $tuple_2$ Ix Ix Ix Bool
-Data.Ix.rangeSize $tuple_2$ Ix Ix Int
-Data.Ratio.(%) Integral Integral Ratio Integral
-Data.Ratio.numerator Ratio Integral Integral
-Data.Ratio.denominator Ratio Integral Integral
-Data.Ratio.approxRational RealFrac RealFrac Rational
-Data.STRef.newSTRef a ST s STRef s a
-Data.STRef.readSTRef STRef s a ST s a
-Data.STRef.writeSTRef STRef s a a ST s
-Data.STRef.modifySTRef STRef s a $f_2$ a a ST s
-Data.STRef.modifySTRef' STRef s a $f_2$ a a ST s
-Data.STRef.Lazy.newSTRef a ST s STRef s a
-Data.Unique.newUnique  IO Unique
-Data.Unique.hashUnique Unique Int
-Data.Void.absurd Void a
-Data.Void.vacuous Functor Void Functor a
-System.CPUTime.getCPUTime  IO Integer
-System.CPUTime.cpuTimePrecision  Integer
-System.Console.GetOpt.getOpt ArgOrder a $list$ OptDescr a $list$ String $tuple_3$ $list$ a $list$ String $list$ String
-System.Console.GetOpt.getOpt' ArgOrder a $list$ OptDescr a $list$ String $tuple_4$ $list$ a $list$ String $list$ String $list$ String
-System.Console.GetOpt.usageInfo String $list$ OptDescr a String
-System.Console.GetOpt.RequireOrder  ArgOrder a
-System.Console.GetOpt.Permute  ArgOrder a
-System.Console.GetOpt.ReturnInOrder $f_2$ String a ArgOrder a
-System.Console.GetOpt.Option $list$ Char $list$ String ArgDescr a String OptDescr a
-System.Console.GetOpt.NoArg a ArgDescr a
-System.Console.GetOpt.ReqArg $f_2$ String a String ArgDescr a
-System.Console.GetOpt.OptArg $f_2$ Maybe String a String ArgDescr a
-System.Environment.getArgs  IO $list$ String
-System.Environment.getProgName  IO String
-System.Environment.getExecutablePath  IO FilePath
-System.Environment.getEnv String IO String
-System.Environment.lookupEnv String IO Maybe String
-System.Environment.setEnv String String IO
-System.Environment.unsetEnv String IO
-System.Environment.withArgs $list$ String IO a IO a
-System.Environment.withProgName String IO a IO a
-System.Environment.getEnvironment  IO $list$ $tuple_2$ String String
-System.Exit.ExitSuccess  ExitCode
-System.Exit.ExitFailure Int ExitCode
-System.Exit.exitWith ExitCode IO a
-System.Exit.exitFailure  IO a
-System.Exit.exitSuccess  IO a
-System.Exit.die String IO a
-System.Info.os  String
-System.Info.arch  String
-System.Info.compilerName  String
-System.Info.compilerVersion  Version
-System.Mem.performGC  IO
-System.Mem.performMajorGC  IO
-System.Mem.performMinorGC  IO
-System.Mem.StableName.makeStableName a IO StableName a
-System.Mem.StableName.hashStableName StableName a Int
-System.Mem.StableName.eqStableName StableName a StableName b Bool
-System.Mem.Weak.mkWeak k v Maybe IO IO Weak v
-System.Mem.Weak.deRefWeak Weak v IO Maybe v
-System.Mem.Weak.finalize Weak v IO
-System.Mem.Weak.mkWeakPtr k Maybe IO IO Weak k
-System.Mem.Weak.addFinalizer key IO IO
-System.Mem.Weak.mkWeakPair k v Maybe IO IO $tuple_2$ Weak k v
-System.Timeout.timeout Int IO a IO Maybe a
-Text.Printf.printf String PrintfType
-Text.Printf.hPrintf Handle String HPrintfType
-Text.Printf.FieldFormat Maybe Int Maybe Int Maybe FormatAdjustment Maybe FormatSign Bool String Char FieldFormat
-Text.Printf.[fmtWidth] FieldFormat Maybe Int
-Text.Printf.[fmtPrecision] FieldFormat Maybe Int
-Text.Printf.[fmtAdjust] FieldFormat Maybe FormatAdjustment
-Text.Printf.[fmtSign] FieldFormat Maybe FormatSign
-Text.Printf.[fmtAlternate] FieldFormat Bool
-Text.Printf.[fmtModifiers] FieldFormat String
-Text.Printf.[fmtChar] FieldFormat Char
-Text.Printf.LeftAdjust  FormatAdjustment
-Text.Printf.SignPlus  FormatSign
-Text.Printf.vFmt Char FieldFormat FieldFormat
-Text.Printf.FormatParse String Char String FormatParse
-Text.Printf.[fpModifiers] FormatParse String
-Text.Printf.[fpChar] FormatParse Char
-Text.Printf.[fpRest] FormatParse String
-Text.Printf.formatString $list$ IsChar FieldFormatter
-Text.Printf.formatChar Char FieldFormatter
-Text.Printf.formatInt Integral/Bounded FieldFormatter
-Text.Printf.formatInteger Integer FieldFormatter
-Text.Printf.formatRealFloat RealFloat FieldFormatter
-Text.Printf.errorBadFormat Char a
-Text.Printf.errorShortFormat  a
-Text.Printf.errorMissingArgument  a
-Text.Printf.errorBadArgument  a
-Text.Printf.perror String a
+haskell	Unsafe	Coerce	b	unsafeCoerce	UNK=a
+haskell	Data	Tuple	a	fst	UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	Tuple	b	snd	UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	Tuple	c	curry	UNK=$f_2$ UNK=$tuple_2$ UNK=a UNK=b UNK=c UNK=a UNK=b
+haskell	Data	Tuple	UNK	uncurry	UNK=$f_3$ UNK=a UNK=b UNK=c
+haskell	Data	Tuple	UNK	swap	UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	Maybe	UNK	Nothing	void
+haskell	Data	Maybe	b	maybe	UNK=b UNK=$f_2$ UNK=a UNK=b UNK=Maybe UNK=a
+haskell	Data	Maybe	Bool	isJust	UNK=Maybe UNK=a
+haskell	Data	Maybe	Bool	isNothing	UNK=Maybe UNK=a
+haskell	Data	Maybe	a	fromJust	UNK=Maybe UNK=a
+haskell	Data	Maybe	a	fromMaybe	UNK=a UNK=Maybe UNK=a
+haskell	Data	Maybe	UNK	listToMaybe	UNK=$list$ UNK=a
+haskell	Data	Maybe	UNK	maybeToList	UNK=Maybe UNK=a
+haskell	Data	Maybe	UNK	catMaybes	UNK=$list$ UNK=Maybe UNK=a
+haskell	Data	Maybe	UNK	mapMaybe	UNK=$f_2$ UNK=a UNK=Maybe UNK=b UNK=$list$ UNK=a
+haskell	Text	Show	ShowS	showsPrec	UNK=Int Show=a
+haskell	Text	Show	String	show	Show=a
+haskell	Text	Show	ShowS	showList	UNK=$list$ Show=a
+haskell	Text	Show	ShowS	shows	Show=a
+haskell	Text	Show	ShowS	showChar	UNK=Char
+haskell	Text	Show	ShowS	showString	UNK=String
+haskell	Text	Show	ShowS	showParen	UNK=Bool UNK=ShowS
+haskell	Text	Show	ShowS	showListWith	UNK=$f_2$ UNK=a UNK=ShowS UNK=$list$ UNK=a
+haskell	Data	Eq	Bool	(==)	Eq=a Eq=a
+haskell	Data	Functor	UNK	fmap	UNK=$f_2$ UNK=a UNK=b Functor=f UNK=a
+haskell	Data	Functor	UNK	(<$)	UNK=a Functor=f UNK=b
+haskell	Data	Functor	UNK	($>)	Functor=f UNK=a UNK=b
+haskell	Data	Functor	UNK	(<$>)	UNK=$f_2$ UNK=a UNK=b Functor=f UNK=a
+haskell	Data	Functor	Functor	void	Functor=f UNK=a
+haskell	Data	Function	a	id	UNK=a
+haskell	Data	Function	a	const	UNK=a UNK=b
+haskell	Data	Function	c	(DOT)	UNK=$f_2$ UNK=b UNK=c UNK=$f_2$ UNK=a UNK=b UNK=a
+haskell	Data	Function	c	flip	UNK=$f_3$ UNK=a UNK=b UNK=c UNK=b UNK=a
+haskell	Data	Function	b	($)	UNK=$f_2$ UNK=a UNK=b UNK=a
+haskell	Data	Function	b	(&)	UNK=a UNK=$f_2$ UNK=a UNK=b
+haskell	Data	Function	a	fix	UNK=$f_2$ UNK=a UNK=a
+haskell	Data	Function	c	on	UNK=$f_3$ UNK=b UNK=b UNK=c UNK=$f_2$ UNK=a UNK=b UNK=a UNK=a
+haskell	Data	Bool	Bool	False	void
+haskell	Data	Bool	Bool	(&&)	UNK=Bool UNK=Bool
+haskell	Data	Bool	Bool	(||)	UNK=Bool UNK=Bool
+haskell	Data	Bool	Bool	not	UNK=Bool
+haskell	Data	Bool	Bool	otherwise	void
+haskell	Data	Bool	a	bool	UNK=a UNK=a UNK=Bool
+haskell	GHC	Char	Char	chr	UNK=Int
+haskell	Data.Bits.(	&	Bits	)	Bits=a Bits=a
+haskell	Data.Bits.(	|	Bits	)	Bits=a Bits=a
+haskell	Data	Bits	Bits	xor	Bits=a Bits=a
+haskell	Data	Bits	Bits	complement	Bits=a
+haskell	Data	Bits	Bits	shift	Bits=a UNK=Int
+haskell	Data	Bits	Bits	rotate	Bits=a UNK=Int
+haskell	Data	Bits	Bits	zeroBits	void
+haskell	Data	Bits	Bits	bit	UNK=Int
+haskell	Data	Bits	Bits	setBit	Bits=a UNK=Int
+haskell	Data	Bits	Bits	clearBit	Bits=a UNK=Int
+haskell	Data	Bits	Bits	complementBit	Bits=a UNK=Int
+haskell	Data	Bits	Bool	testBit	Bits=a UNK=Int
+haskell	Data	Bits	UNK	bitSizeMaybe	Bits=a
+haskell	Data	Bits	Bool	isSigned	Bits=a
+haskell	Data	Bits	Bits	shiftL	Bits=a UNK=Int
+haskell	Data	Bits	Bits	unsafeShiftL	Bits=a UNK=Int
+haskell	Data	Bits	Bits	shiftR	Bits=a UNK=Int
+haskell	Data	Bits	Bits	unsafeShiftR	Bits=a UNK=Int
+haskell	Data	Bits	Bits	rotateL	Bits=a UNK=Int
+haskell	Data	Bits	Bits	rotateR	Bits=a UNK=Int
+haskell	Data	Bits	Int	popCount	Bits=a
+haskell	Data	Bits	Int	finiteBitSize	FiniteBits=b
+haskell	Data	Bits	Int	countLeadingZeros	FiniteBits=b
+haskell	Data	Bits	Int	countTrailingZeros	FiniteBits=b
+haskell	Data	Bits	Bits/Num	bitDefault	UNK=Int
+haskell	Data	Bits	Bool	testBitDefault	Bits/Num=a UNK=Int
+haskell	Data	Bits	Int	popCountDefault	Bits/Num=a
+haskell	Data	Bits	UNK	toIntegralSized	Integral/Bits=a
+haskell	Data	Coerce	Coercible	coerce	Coercible=a
+haskell	Text.ParserCombinators	ReadP	UNK	get	void
+haskell	Text.ParserCombinators	ReadP	UNK	look	void
+haskell	Text.ParserCombinators	ReadP	UNK	(+++)	UNK=ReadP UNK=a UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	(<++)	UNK=ReadP UNK=a UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	gather	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	pfail	void
+haskell	Text.ParserCombinators	ReadP	ReadP	eof	void
+haskell	Text.ParserCombinators	ReadP	UNK	satisfy	UNK=$f_2$ UNK=Char UNK=Bool
+haskell	Text.ParserCombinators	ReadP	UNK	char	UNK=Char
+haskell	Text.ParserCombinators	ReadP	UNK	string	UNK=String
+haskell	Text.ParserCombinators	ReadP	UNK	munch	UNK=$f_2$ UNK=Char UNK=Bool
+haskell	Text.ParserCombinators	ReadP	UNK	munch1	UNK=$f_2$ UNK=Char UNK=Bool
+haskell	Text.ParserCombinators	ReadP	ReadP	skipSpaces	void
+haskell	Text.ParserCombinators	ReadP	UNK	choice	UNK=$list$ UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	count	UNK=Int UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	between	UNK=ReadP UNK=open UNK=ReadP UNK=close UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	option	UNK=a UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	ReadP	optional	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	many	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	many1	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	ReadP	skipMany	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	ReadP	skipMany1	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	sepBy	UNK=ReadP UNK=a UNK=ReadP UNK=sep
+haskell	Text.ParserCombinators	ReadP	UNK	sepBy1	UNK=ReadP UNK=a UNK=ReadP UNK=sep
+haskell	Text.ParserCombinators	ReadP	UNK	endBy	UNK=ReadP UNK=a UNK=ReadP UNK=sep
+haskell	Text.ParserCombinators	ReadP	UNK	endBy1	UNK=ReadP UNK=a UNK=ReadP UNK=sep
+haskell	Text.ParserCombinators	ReadP	UNK	chainr	UNK=ReadP UNK=a UNK=ReadP UNK=$f_3$ UNK=a UNK=a UNK=a UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	chainl	UNK=ReadP UNK=a UNK=ReadP UNK=$f_3$ UNK=a UNK=a UNK=a UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	chainl1	UNK=ReadP UNK=a UNK=ReadP UNK=$f_3$ UNK=a UNK=a UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	chainr1	UNK=ReadP UNK=a UNK=ReadP UNK=$f_3$ UNK=a UNK=a UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	manyTill	UNK=ReadP UNK=a UNK=ReadP UNK=end
+haskell	Text.ParserCombinators	ReadP	UNK	readP_to_S	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadP	UNK	readS_to_P	UNK=ReadS UNK=a
+haskell	Text.ParserCombinators	ReadPrec	Prec	minPrec	void
+haskell	Text.ParserCombinators	ReadPrec	UNK	lift	UNK=ReadP UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	prec	UNK=Prec UNK=ReadPrec UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	step	UNK=ReadPrec UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	reset	UNK=ReadPrec UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	get	void
+haskell	Text.ParserCombinators	ReadPrec	UNK	look	void
+haskell	Text.ParserCombinators	ReadPrec	UNK	(+++)	UNK=ReadPrec UNK=a UNK=ReadPrec UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	(<++)	UNK=ReadPrec UNK=a UNK=ReadPrec UNK=a
+haskell	Text.ParserCombinators	ReadPrec	UNK	pfail	void
+haskell	Text.ParserCombinators	ReadPrec	UNK	choice	UNK=$list$ UNK=ReadPrec UNK=a
+haskell	Text.Read	Lex	Lexeme	Char	UNK=Char
+haskell	Text.Read	Lex	Lexeme	String	UNK=String
+haskell	Text.Read	Lex	Lexeme	Punc	UNK=String
+haskell	Text.Read	Lex	Lexeme	Ident	UNK=String
+haskell	Text.Read	Lex	Lexeme	Symbol	UNK=String
+haskell	Text.Read	Lex	UNK	hsLex	void
+haskell	Data	Word	Word16	byteSwap16	UNK=Word16
+haskell	Data	Word	Word32	byteSwap32	UNK=Word32
+haskell	Data	Word	Word64	byteSwap64	UNK=Word64
+haskell	Data	Ord	Ordering	compare	Ord=a Ord=a
+haskell	Data	Ord	UNK	Down	UNK=a
+haskell	Data	Ord	Ordering	comparing	UNK=$f_2$ UNK=b Ord=a UNK=b UNK=b
+haskell	Data.Type	Coercion	UNK	Coercion	void
+haskell	Data.Type	Coercion	b	coerceWith	UNK=Coercion UNK=a UNK=b UNK=a
+haskell	Data.Type	Coercion	UNK	sym	UNK=Coercion UNK=a UNK=b
+haskell	Data.Type	Coercion	UNK	trans	UNK=Coercion UNK=a UNK=b UNK=Coercion UNK=b UNK=c
+haskell	Data.Type	Coercion	UNK	testCoercion	TestCoercion=f UNK=a TestCoercion=f UNK=b
+haskell	Control	Category	UNK	id	void
+haskell	Control	Category	UNK	(DOT)	Category=cat UNK=b UNK=c Category=cat UNK=a UNK=b
+haskell	Control	Category	UNK	(<<<)	Category=cat UNK=b UNK=c Category=cat UNK=a UNK=b
+haskell	Control	Category	UNK	(>>>)	Category=cat UNK=a UNK=b Category=cat UNK=b UNK=c
+haskell	Data	Char	Bool	isControl	UNK=Char
+haskell	Data	Char	Bool	isSpace	UNK=Char
+haskell	Data	Char	Bool	isLower	UNK=Char
+haskell	Data	Char	Bool	isUpper	UNK=Char
+haskell	Data	Char	Bool	isAlpha	UNK=Char
+haskell	Data	Char	Bool	isAlphaNum	UNK=Char
+haskell	Data	Char	Bool	isPrint	UNK=Char
+haskell	Data	Char	Bool	isDigit	UNK=Char
+haskell	Data	Char	Bool	isOctDigit	UNK=Char
+haskell	Data	Char	Bool	isHexDigit	UNK=Char
+haskell	Data	Char	Bool	isLetter	UNK=Char
+haskell	Data	Char	Bool	isMark	UNK=Char
+haskell	Data	Char	Bool	isNumber	UNK=Char
+haskell	Data	Char	Bool	isPunctuation	UNK=Char
+haskell	Data	Char	Bool	isSymbol	UNK=Char
+haskell	Data	Char	Bool	isSeparator	UNK=Char
+haskell	Data	Char	Bool	isAscii	UNK=Char
+haskell	Data	Char	Bool	isLatin1	UNK=Char
+haskell	Data	Char	Bool	isAsciiUpper	UNK=Char
+haskell	Data	Char	Bool	isAsciiLower	UNK=Char
+haskell	Data	Char	GeneralCategory	UppercaseLetter	void
+haskell	Data	Char	GeneralCategory	LowercaseLetter	void
+haskell	Data	Char	GeneralCategory	TitlecaseLetter	void
+haskell	Data	Char	GeneralCategory	ModifierLetter	void
+haskell	Data	Char	GeneralCategory	OtherLetter	void
+haskell	Data	Char	GeneralCategory	NonSpacingMark	void
+haskell	Data	Char	GeneralCategory	SpacingCombiningMark	void
+haskell	Data	Char	GeneralCategory	EnclosingMark	void
+haskell	Data	Char	GeneralCategory	DecimalNumber	void
+haskell	Data	Char	GeneralCategory	LetterNumber	void
+haskell	Data	Char	GeneralCategory	OtherNumber	void
+haskell	Data	Char	GeneralCategory	ConnectorPunctuation	void
+haskell	Data	Char	GeneralCategory	DashPunctuation	void
+haskell	Data	Char	GeneralCategory	OpenPunctuation	void
+haskell	Data	Char	GeneralCategory	ClosePunctuation	void
+haskell	Data	Char	GeneralCategory	InitialQuote	void
+haskell	Data	Char	GeneralCategory	FinalQuote	void
+haskell	Data	Char	GeneralCategory	OtherPunctuation	void
+haskell	Data	Char	GeneralCategory	MathSymbol	void
+haskell	Data	Char	GeneralCategory	CurrencySymbol	void
+haskell	Data	Char	GeneralCategory	ModifierSymbol	void
+haskell	Data	Char	GeneralCategory	OtherSymbol	void
+haskell	Data	Char	GeneralCategory	Space	void
+haskell	Data	Char	GeneralCategory	LineSeparator	void
+haskell	Data	Char	GeneralCategory	ParagraphSeparator	void
+haskell	Data	Char	GeneralCategory	Control	void
+haskell	Data	Char	GeneralCategory	Format	void
+haskell	Data	Char	GeneralCategory	Surrogate	void
+haskell	Data	Char	GeneralCategory	PrivateUse	void
+haskell	Data	Char	GeneralCategory	NotAssigned	void
+haskell	Data	Char	GeneralCategory	generalCategory	UNK=Char
+haskell	Data	Char	Char	toUpper	UNK=Char
+haskell	Data	Char	Char	toLower	UNK=Char
+haskell	Data	Char	Char	toTitle	UNK=Char
+haskell	Data	Char	Int	digitToInt	UNK=Char
+haskell	Data	Char	Char	intToDigit	UNK=Int
+haskell	Data	Char	Int	ord	UNK=Char
+haskell	Data	Char	Char	chr	UNK=Int
+haskell	Data	Char	ShowS	showLitChar	UNK=Char
+haskell	Data	Char	UNK	lexLitChar	void
+haskell	Data	Char	UNK	readLitChar	void
+haskell	GHC	OldList	Bool	null	UNK=$list$ UNK=a
+haskell	GHC	OldList	Int	length	UNK=$list$ UNK=a
+haskell	GHC	OldList	b	foldl	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b UNK=$list$ UNK=a
+haskell	GHC	OldList	b	foldl'	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b UNK=$list$ UNK=a
+haskell	GHC	OldList	a	foldl1	UNK=$f_3$ UNK=a UNK=a UNK=a UNK=$list$ UNK=a
+haskell	GHC	OldList	b	foldr	UNK=$f_3$ UNK=a UNK=b UNK=b UNK=b UNK=$list$ UNK=a
+haskell	GHC	OldList	a	foldr1	UNK=$f_3$ UNK=a UNK=a UNK=a UNK=$list$ UNK=a
+haskell	GHC	OldList	UNK	concat	UNK=$list$ UNK=$list$ UNK=a
+haskell	GHC	OldList	UNK	concatMap	UNK=$f_2$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=a
+haskell	GHC	OldList	Bool	and	UNK=$list$ UNK=Bool
+haskell	GHC	OldList	Bool	or	UNK=$list$ UNK=Bool
+haskell	GHC	OldList	Bool	any	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	GHC	OldList	Bool	all	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	GHC	OldList	Num	sum	UNK=$list$ Num=a
+haskell	GHC	OldList	Num	product	UNK=$list$ Num=a
+haskell	GHC	OldList	Ord	maximum	UNK=$list$ Ord=a
+haskell	GHC	OldList	Ord	minimum	UNK=$list$ Ord=a
+haskell	GHC	OldList	UNK	mapAccumL	UNK=$f_2$ UNK=acc UNK=$tuple_2$ UNK=acc UNK=y UNK=x UNK=acc UNK=$list$ UNK=x
+haskell	GHC	OldList	UNK	mapAccumR	UNK=$f_2$ UNK=acc UNK=$tuple_2$ UNK=acc UNK=y UNK=x UNK=acc UNK=$list$ UNK=x
+haskell	GHC	OldList	Bool	elem	Eq=a UNK=$list$ Eq=a
+haskell	GHC	OldList	UNK	find	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	GHC	OldList	a	maximumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering UNK=$list$ UNK=a
+haskell	GHC	OldList	a	minimumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering UNK=$list$ UNK=a
+haskell	Data	Proxy	UNK	Proxy	void
+haskell	Data	Proxy	a	asProxyTypeOf	UNK=a UNK=Proxy UNK=a
+haskell	Data	Proxy	KProxy	KProxy	void
+haskell	Numeric	core	ShowS	showSigned	UNK=$f_2$ Real=a UNK=ShowS UNK=Int Real=a
+haskell	Numeric	core	ShowS	showIntAtBase	Integral/Show=a UNK=$f_2$ UNK=Int UNK=Char Integral/Show=a
+haskell	Numeric	core	ShowS	showInt	Integral=a
+haskell	Numeric	core	ShowS	showHex	Integral/Show=a
+haskell	Numeric	core	ShowS	showOct	Integral/Show=a
+haskell	Numeric	core	ShowS	showEFloat	UNK=Maybe UNK=Int RealFloat=a
+haskell	Numeric	core	ShowS	showFFloat	UNK=Maybe UNK=Int RealFloat=a
+haskell	Numeric	core	ShowS	showGFloat	UNK=Maybe UNK=Int RealFloat=a
+haskell	Numeric	core	ShowS	showFFloatAlt	UNK=Maybe UNK=Int RealFloat=a
+haskell	Numeric	core	ShowS	showGFloatAlt	UNK=Maybe UNK=Int RealFloat=a
+haskell	Numeric	core	ShowS	showFloat	RealFloat=a
+haskell	Numeric	core	UNK	floatToDigits	UNK=Integer RealFloat=a
+haskell	Numeric	core	UNK	readSigned	UNK=ReadS Real=a
+haskell	Numeric	core	UNK	readInt	Num=a UNK=$f_2$ UNK=Char UNK=Bool UNK=$f_2$ UNK=Char UNK=Int
+haskell	Numeric	core	UNK	readDec	void
+haskell	Numeric	core	UNK	readOct	void
+haskell	Numeric	core	UNK	readHex	void
+haskell	Numeric	core	UNK	readFloat	void
+haskell	Numeric	core	UNK	lexDigits	void
+haskell	Numeric	core	RealFloat	fromRat	UNK=Rational
+haskell	Data.Typeable	Internal	UNK	Proxy	void
+haskell	Data.Typeable	Internal	TypeRep	typeRep	UNK=proxy Typeable=a
+haskell	Data.Typeable	Internal	TyCon	mkTyCon3	UNK=String UNK=String UNK=String
+haskell	Data.Typeable	Internal	TypeRep	mkTyConApp	UNK=TyCon UNK=$list$ UNK=TypeRep
+haskell	Data.Typeable	Internal	TypeRep	mkPolyTyConApp	UNK=TyCon UNK=$list$ UNK=KindRep UNK=$list$ UNK=TypeRep
+haskell	Data.Typeable	Internal	TypeRep	mkAppTy	UNK=TypeRep UNK=TypeRep
+haskell	Data.Typeable	Internal	TyCon	typeRepTyCon	UNK=TypeRep
+haskell	Data.Typeable	Internal	TypeRep	typeRep#	UNK=Proxy# Typeable=a
+haskell	Data.Typeable	Internal	TypeRep	mkFunTy	UNK=TypeRep UNK=TypeRep
+haskell	Data.Typeable	Internal	UNK	splitTyConApp	UNK=TypeRep
+haskell	Data.Typeable	Internal	UNK	splitPolyTyConApp	UNK=TypeRep
+haskell	Data.Typeable	Internal	UNK	funResultTy	UNK=TypeRep UNK=TypeRep
+haskell	Data.Typeable	Internal	UNK	typeRepArgs	UNK=TypeRep
+haskell	Data.Typeable	Internal	Fingerprint	typeRepFingerprint	UNK=TypeRep
+haskell	Data.Typeable	Internal	TypeRep	rnfTypeRep	void
+haskell	Data.Typeable	Internal	String	tyConString	UNK=TyCon
+haskell	Data.Typeable	Internal	TyCon	rnfTyCon	void
+haskell	Data.Typeable	Internal	UNK	typeRepKinds	UNK=TypeRep
+haskell	Data.Typeable	Internal	TypeRep	typeLitTypeRep	UNK=String
+haskell	Foreign	StablePtr	UNK	newStablePtr	UNK=a
+haskell	Foreign	StablePtr	UNK	deRefStablePtr	UNK=StablePtr UNK=a
+haskell	Foreign	StablePtr	IO	freeStablePtr	UNK=StablePtr UNK=a
+haskell	Foreign	StablePtr	Ptr	castStablePtrToPtr	UNK=StablePtr UNK=a
+haskell	Foreign	StablePtr	UNK	castPtrToStablePtr	UNK=Ptr
+haskell	Data	Typeable	TypeRep	typeRep	UNK=proxy Typeable=a
+haskell	Data	Typeable	UNK	cast	Typeable=a
+haskell	Data	Typeable	UNK	gcast	UNK=c Typeable=a
+haskell	Data	Typeable	UNK	gcast1	UNK=c Typeable=t UNK=a
+haskell	Data	Typeable	UNK	gcast2	UNK=c Typeable=t UNK=a UNK=b
+haskell	Data	Typeable	UNK	Proxy	void
+haskell	Data	Typeable	Fingerprint	typeRepFingerprint	UNK=TypeRep
+haskell	Data	Typeable	TypeRep	rnfTypeRep	void
+haskell	Data	Typeable	String	tyConString	UNK=TyCon
+haskell	Data	Typeable	TyCon	rnfTyCon	void
+haskell	Data	Typeable	TyCon	mkTyCon3	UNK=String UNK=String UNK=String
+haskell	Data	Typeable	TypeRep	mkTyConApp	UNK=TyCon UNK=$list$ UNK=TypeRep
+haskell	Data	Typeable	TypeRep	mkAppTy	UNK=TypeRep UNK=TypeRep
+haskell	Data	Typeable	TypeRep	mkFunTy	UNK=TypeRep UNK=TypeRep
+haskell	Data	Typeable	UNK	splitTyConApp	UNK=TypeRep
+haskell	Data	Typeable	UNK	funResultTy	UNK=TypeRep UNK=TypeRep
+haskell	Data	Typeable	TyCon	typeRepTyCon	UNK=TypeRep
+haskell	Data	Typeable	UNK	typeRepArgs	UNK=TypeRep
+haskell	Data	Either	UNK	Left	UNK=a
+haskell	Data	Either	c	either	UNK=$f_2$ UNK=a UNK=c UNK=$f_2$ UNK=b UNK=c UNK=Either UNK=a UNK=b
+haskell	Data	Either	UNK	lefts	UNK=$list$ UNK=Either UNK=a UNK=b
+haskell	Data	Either	UNK	rights	UNK=$list$ UNK=Either UNK=a UNK=b
+haskell	Data	Either	Bool	isLeft	UNK=Either UNK=a UNK=b
+haskell	Data	Either	Bool	isRight	UNK=Either UNK=a UNK=b
+haskell	Data	Either	UNK	partitionEithers	UNK=$list$ UNK=Either UNK=a UNK=b
+haskell	GHC	Generics	UNK	U1	void
+haskell	GHC	Generics	UNK	Par1	UNK=p
+haskell	GHC	Generics	UNK	Rec1	UNK=f UNK=p
+haskell	GHC	Generics	UNK	K1	UNK=c
+haskell	GHC	Generics	UNK	M1	UNK=f UNK=p
+haskell	GHC	Generics	UNK	L1	UNK=f UNK=p
+haskell	GHC	Generics	UNK	(:*:)	UNK=f UNK=p UNK=g UNK=p
+haskell	GHC	Generics	UNK	Comp1	UNK=f UNK=g UNK=p
+haskell	GHC	Generics	Fixity	Prefix	void
+haskell	GHC	Generics	Associativity	LeftAssociative	void
+haskell	GHC	Generics	Arity	NoArity	void
+haskell	GHC	Generics	Int	prec	UNK=Fixity
+haskell	GHC	Generics	UNK	from	Generic=a
+haskell	GHC	Generics	Generic	to	UNK=Rep Generic=a UNK=x
+haskell	GHC	Generics	UNK	from1	Generic1=f UNK=a
+haskell	GHC	Generics	UNK	to1	UNK=Rep1 Generic1=f UNK=a
+haskell	Data	Monoid	Monoid	mempty	void
+haskell	Data	Monoid	Monoid	mappend	Monoid=a Monoid=a
+haskell	Data	Monoid	Monoid	mconcat	UNK=$list$ Monoid=a
+haskell	Data	Monoid	Monoid	(<>)	Monoid=m Monoid=m
+haskell	Data	Monoid	UNK	Dual	UNK=a
+haskell	Data	Monoid	UNK	Endo	UNK=$f_2$ UNK=a UNK=a
+haskell	Data	Monoid	All	All	UNK=Bool
+haskell	Data	Monoid	Any	Any	UNK=Bool
+haskell	Data	Monoid	UNK	Sum	UNK=a
+haskell	Data	Monoid	UNK	Product	UNK=a
+haskell	Data	Monoid	UNK	First	UNK=Maybe UNK=a
+haskell	Data	Monoid	UNK	Last	UNK=Maybe UNK=a
+haskell	Data	Monoid	UNK	Alt	UNK=f UNK=a
+haskell	Data	Foldable	Monoid	fold	Foldable=t Monoid=m
+haskell	Data	Foldable	Monoid	foldMap	UNK=$f_2$ UNK=a Monoid=m Foldable=t UNK=a
+haskell	Data	Foldable	b	foldr	UNK=$f_3$ UNK=a UNK=b UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	b	foldr'	UNK=$f_3$ UNK=a UNK=b UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	b	foldl	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	b	foldl'	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	a	foldr1	UNK=$f_3$ UNK=a UNK=a UNK=a Foldable=t UNK=a
+haskell	Data	Foldable	a	foldl1	UNK=$f_3$ UNK=a UNK=a UNK=a Foldable=t UNK=a
+haskell	Data	Foldable	UNK	toList	Foldable=t UNK=a
+haskell	Data	Foldable	Bool	null	Foldable=t UNK=a
+haskell	Data	Foldable	Int	length	Foldable=t UNK=a
+haskell	Data	Foldable	Bool	elem	Eq=a Foldable=t Eq=a
+haskell	Data	Foldable	Ord	maximum	Foldable=t Ord=a
+haskell	Data	Foldable	Ord	minimum	Foldable=t Ord=a
+haskell	Data	Foldable	Num	sum	Foldable=t Num=a
+haskell	Data	Foldable	Num	product	Foldable=t Num=a
+haskell	Data	Foldable	UNK	foldrM	UNK=$f_3$ UNK=a UNK=b Monad=m UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	UNK	foldlM	UNK=$f_3$ UNK=b UNK=a Monad=m UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	Applicative	traverse_	UNK=$f_2$ UNK=a Applicative=f UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	Applicative	for_	Foldable=t UNK=a UNK=$f_2$ UNK=a Applicative=f UNK=b
+haskell	Data	Foldable	Applicative	sequenceA_	Foldable=t Applicative=f UNK=a
+haskell	Data	Foldable	UNK	asum	Foldable=t Alternative=f UNK=a
+haskell	Data	Foldable	Monad	mapM_	UNK=$f_2$ UNK=a Monad=m UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	Monad	forM_	Foldable=t UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Data	Foldable	Monad	sequence_	Foldable=t Monad=m UNK=a
+haskell	Data	Foldable	UNK	msum	Foldable=t MonadPlus=m UNK=a
+haskell	Data	Foldable	UNK	concat	Foldable=t UNK=$list$ UNK=a
+haskell	Data	Foldable	UNK	concatMap	UNK=$f_2$ UNK=a UNK=$list$ UNK=b Foldable=t UNK=a
+haskell	Data	Foldable	Bool	and	Foldable=t UNK=Bool
+haskell	Data	Foldable	Bool	or	Foldable=t UNK=Bool
+haskell	Data	Foldable	Bool	any	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Data	Foldable	Bool	all	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Data	Foldable	a	maximumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering Foldable=t UNK=a
+haskell	Data	Foldable	a	minimumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering Foldable=t UNK=a
+haskell	Data	Foldable	Bool	notElem	Eq=a Foldable=t Eq=a
+haskell	Data	Foldable	UNK	find	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Text	Read	UNK	readsPrec	UNK=Int
+haskell	Text	Read	UNK	readList	void
+haskell	Text	Read	UNK	readPrec	void
+haskell	Text	Read	UNK	readListPrec	void
+haskell	Text	Read	UNK	reads	void
+haskell	Text	Read	Read	read	UNK=String
+haskell	Text	Read	UNK	readParen	UNK=Bool UNK=ReadS UNK=a
+haskell	Text	Read	UNK	lex	void
+haskell	Text	Read	Lexeme	Char	UNK=Char
+haskell	Text	Read	Lexeme	String	UNK=String
+haskell	Text	Read	Lexeme	Punc	UNK=String
+haskell	Text	Read	Lexeme	Ident	UNK=String
+haskell	Text	Read	Lexeme	Symbol	UNK=String
+haskell	Text	Read	UNK	lexP	void
+haskell	Text	Read	UNK	parens	UNK=ReadPrec UNK=a
+haskell	Text	Read	UNK	readListDefault	void
+haskell	Text	Read	UNK	readListPrecDefault	void
+haskell	Text	Read	UNK	readEither	UNK=String
+haskell	Text	Read	UNK	readMaybe	UNK=String
+haskell	Data	IORef	UNK	newIORef	UNK=a
+haskell	Data	IORef	UNK	readIORef	UNK=IORef UNK=a
+haskell	Data	IORef	IO	writeIORef	UNK=IORef UNK=a UNK=a
+haskell	Data	IORef	IO	modifyIORef	UNK=IORef UNK=a UNK=$f_2$ UNK=a UNK=a
+haskell	Data	IORef	IO	modifyIORef'	UNK=IORef UNK=a UNK=$f_2$ UNK=a UNK=a
+haskell	Data	IORef	UNK	atomicModifyIORef	UNK=IORef UNK=a UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	IORef	UNK	atomicModifyIORef'	UNK=IORef UNK=a UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	IORef	IO	atomicWriteIORef	UNK=IORef UNK=a UNK=a
+haskell	Data	IORef	UNK	mkWeakIORef	UNK=IORef UNK=a UNK=IO
+haskell	Foreign.Marshal	Unsafe	a	unsafeLocalState	UNK=IO UNK=a
+haskell	Data	Dynamic	Dynamic	toDyn	Typeable=a
+haskell	Data	Dynamic	Typeable	fromDyn	UNK=Dynamic Typeable=a
+haskell	Data	Dynamic	UNK	fromDynamic	UNK=Dynamic
+haskell	Foreign	Storable	Int	sizeOf	Storable=a
+haskell	Foreign	Storable	Int	alignment	Storable=a
+haskell	Foreign	Storable	UNK	peekElemOff	UNK=Ptr Storable=a UNK=Int
+haskell	Foreign	Storable	IO	pokeElemOff	UNK=Ptr Storable=a UNK=Int Storable=a
+haskell	Foreign	Storable	UNK	peekByteOff	UNK=Ptr UNK=b UNK=Int
+haskell	Foreign	Storable	IO	pokeByteOff	UNK=Ptr UNK=b UNK=Int Storable=a
+haskell	Foreign	Storable	UNK	peek	UNK=Ptr Storable=a
+haskell	Foreign	Storable	IO	poke	UNK=Ptr Storable=a Storable=a
+haskell	Foreign.C	Types	CChar	CChar	UNK=Int8
+haskell	Foreign.C	Types	CSChar	CSChar	UNK=Int8
+haskell	Foreign.C	Types	CUChar	CUChar	UNK=Word8
+haskell	Foreign.C	Types	CShort	CShort	UNK=Int16
+haskell	Foreign.C	Types	CUShort	CUShort	UNK=Word16
+haskell	Foreign.C	Types	CInt	CInt	UNK=Int32
+haskell	Foreign.C	Types	CUInt	CUInt	UNK=Word32
+haskell	Foreign.C	Types	CLong	CLong	UNK=Int64
+haskell	Foreign.C	Types	CULong	CULong	UNK=Word64
+haskell	Foreign.C	Types	CPtrdiff	CPtrdiff	UNK=Int64
+haskell	Foreign.C	Types	CSize	CSize	UNK=Word64
+haskell	Foreign.C	Types	CWchar	CWchar	UNK=Int32
+haskell	Foreign.C	Types	CSigAtomic	CSigAtomic	UNK=Int32
+haskell	Foreign.C	Types	CLLong	CLLong	UNK=Int64
+haskell	Foreign.C	Types	CULLong	CULLong	UNK=Word64
+haskell	Foreign.C	Types	CClock	CClock	UNK=Int64
+haskell	Foreign.C	Types	CTime	CTime	UNK=Int64
+haskell	Foreign.C	Types	CUSeconds	CUSeconds	UNK=Word32
+haskell	Foreign.C	Types	CSUSeconds	CSUSeconds	UNK=Int64
+haskell	Foreign.C	Types	CFloat	CFloat	UNK=Float
+haskell	Foreign.C	Types	CDouble	CDouble	UNK=Double
+haskell	Foreign	Concurrent	UNK	newForeignPtr	UNK=Ptr UNK=a UNK=IO
+haskell	Foreign	Concurrent	IO	addForeignPtrFinalizer	UNK=ForeignPtr UNK=a UNK=IO
+haskell	Foreign	Ptr	UNK	nullPtr	void
+haskell	Foreign	Ptr	UNK	castPtr	UNK=Ptr UNK=a
+haskell	Foreign	Ptr	UNK	plusPtr	UNK=Ptr UNK=a UNK=Int
+haskell	Foreign	Ptr	UNK	alignPtr	UNK=Ptr UNK=a UNK=Int
+haskell	Foreign	Ptr	Int	minusPtr	UNK=Ptr UNK=a UNK=Ptr UNK=b
+haskell	Foreign	Ptr	UNK	nullFunPtr	void
+haskell	Foreign	Ptr	UNK	castFunPtr	UNK=FunPtr UNK=a
+haskell	Foreign	Ptr	UNK	castFunPtrToPtr	UNK=FunPtr UNK=a
+haskell	Foreign	Ptr	UNK	castPtrToFunPtr	UNK=Ptr UNK=a
+haskell	Foreign	Ptr	IO	freeHaskellFunPtr	UNK=FunPtr UNK=a
+haskell	Foreign	Ptr	IntPtr	ptrToIntPtr	UNK=Ptr UNK=a
+haskell	Foreign	Ptr	UNK	intPtrToPtr	UNK=IntPtr
+haskell	Foreign	Ptr	WordPtr	ptrToWordPtr	UNK=Ptr UNK=a
+haskell	Foreign	Ptr	UNK	wordPtrToPtr	UNK=WordPtr
+haskell	Foreign	ForeignPtr	UNK	newForeignPtr	UNK=FinalizerPtr UNK=a UNK=Ptr UNK=a
+haskell	Foreign	ForeignPtr	UNK	newForeignPtr_	UNK=Ptr UNK=a
+haskell	Foreign	ForeignPtr	IO	addForeignPtrFinalizer	UNK=FinalizerPtr UNK=a UNK=ForeignPtr UNK=a
+haskell	Foreign	ForeignPtr	UNK	newForeignPtrEnv	UNK=FinalizerEnvPtr UNK=env UNK=a UNK=Ptr UNK=env UNK=Ptr UNK=a
+haskell	Foreign	ForeignPtr	IO	addForeignPtrFinalizerEnv	UNK=FinalizerEnvPtr UNK=env UNK=a UNK=Ptr UNK=env UNK=ForeignPtr UNK=a
+haskell	Foreign	ForeignPtr	UNK	withForeignPtr	UNK=ForeignPtr UNK=a UNK=$f_2$ UNK=Ptr UNK=a UNK=IO UNK=b
+haskell	Foreign	ForeignPtr	IO	finalizeForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign	ForeignPtr	IO	touchForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign	ForeignPtr	UNK	castForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign	ForeignPtr	UNK	mallocForeignPtr	void
+haskell	Foreign	ForeignPtr	UNK	mallocForeignPtrBytes	UNK=Int
+haskell	Foreign	ForeignPtr	UNK	mallocForeignPtrArray	UNK=Int
+haskell	Foreign	ForeignPtr	UNK	mallocForeignPtrArray0	UNK=Int
+haskell	Foreign.ForeignPtr	Safe	UNK	newForeignPtr	UNK=FinalizerPtr UNK=a UNK=Ptr UNK=a
+haskell	Foreign.ForeignPtr	Safe	UNK	newForeignPtr_	UNK=Ptr UNK=a
+haskell	Foreign.ForeignPtr	Safe	IO	addForeignPtrFinalizer	UNK=FinalizerPtr UNK=a UNK=ForeignPtr UNK=a
+haskell	Foreign.ForeignPtr	Safe	UNK	newForeignPtrEnv	UNK=FinalizerEnvPtr UNK=env UNK=a UNK=Ptr UNK=env UNK=Ptr UNK=a
+haskell	Foreign.ForeignPtr	Safe	IO	addForeignPtrFinalizerEnv	UNK=FinalizerEnvPtr UNK=env UNK=a UNK=Ptr UNK=env UNK=ForeignPtr UNK=a
+haskell	Foreign.ForeignPtr	Safe	UNK	withForeignPtr	UNK=ForeignPtr UNK=a UNK=$f_2$ UNK=Ptr UNK=a UNK=IO UNK=b
+haskell	Foreign.ForeignPtr	Safe	IO	finalizeForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign.ForeignPtr	Safe	IO	touchForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign.ForeignPtr	Safe	UNK	castForeignPtr	UNK=ForeignPtr UNK=a
+haskell	Foreign.ForeignPtr	Safe	UNK	mallocForeignPtr	void
+haskell	Foreign.ForeignPtr	Safe	UNK	mallocForeignPtrBytes	UNK=Int
+haskell	Foreign.ForeignPtr	Safe	UNK	mallocForeignPtrArray	UNK=Int
+haskell	Foreign.ForeignPtr	Safe	UNK	mallocForeignPtrArray0	UNK=Int
+haskell	Foreign.ForeignPtr	Unsafe	UNK	unsafeForeignPtrToPtr	UNK=ForeignPtr UNK=a
+haskell	GHC.IO	Buffer	UNK	Buffer	UNK=! UNK=RawBuffer UNK=e UNK=BufferState UNK=!Int UNK=!Int UNK=!Int
+haskell	GHC.IO	Buffer	UNK	slideContents	UNK=Buffer UNK=Word8
+haskell	GHC.IO.Encoding	Types	UNK	BufferCodec	UNK=CodeBuffer UNK=from UNK=to UNK=$f_2$ UNK=Buffer UNK=from UNK=IO UNK=$tuple_2$ UNK=Buffer UNK=from UNK=Buffer UNK=to UNK=Buffer UNK=to UNK=IO UNK=IO UNK=state UNK=$f_2$ UNK=state UNK=IO
+haskell	GHC.IO.Encoding	Types	UNK	[encode]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO.Encoding	Types	UNK	[recover]	UNK=BufferCodec UNK=from UNK=to UNK=state UNK=Buffer UNK=from UNK=Buffer UNK=to
+haskell	GHC.IO.Encoding	Types	IO	[close]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO.Encoding	Types	UNK	[getState]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO.Encoding	Types	TextEncoding	TextEncoding	UNK=String UNK=IO UNK=TextDecoder UNK=dstate UNK=IO UNK=TextEncoder UNK=estate
+haskell	GHC.IO.Encoding	Types	String	[textEncodingName]	UNK=TextEncoding
+haskell	GHC.IO.Encoding	Types	UNK	[mkTextDecoder]	UNK=TextEncoding
+haskell	GHC.IO.Encoding	Types	UNK	[mkTextEncoder]	UNK=TextEncoding
+haskell	GHC.IO.Encoding	Types	CodingProgress	InputUnderflow	void
+haskell	GHC.IO.Encoding	Types	CodingProgress	OutputUnderflow	void
+haskell	GHC.IO.Encoding	Types	CodingProgress	InvalidSequence	void
+haskell	GHC.IO	Device	UNK	read	RawIO=a UNK=Ptr UNK=Word8 UNK=Int
+haskell	GHC.IO	Device	UNK	readNonBlocking	RawIO=a UNK=Ptr UNK=Word8 UNK=Int
+haskell	GHC.IO	Device	IO	write	RawIO=a UNK=Ptr UNK=Word8 UNK=Int
+haskell	GHC.IO	Device	UNK	writeNonBlocking	RawIO=a UNK=Ptr UNK=Word8 UNK=Int
+haskell	GHC.IO	Device	UNK	ready	IODevice=a UNK=Bool UNK=Int
+haskell	GHC.IO	Device	IO	close	IODevice=a
+haskell	GHC.IO	Device	UNK	isTerminal	IODevice=a
+haskell	GHC.IO	Device	UNK	isSeekable	IODevice=a
+haskell	GHC.IO	Device	IO	seek	IODevice=a UNK=SeekMode UNK=Integer
+haskell	GHC.IO	Device	UNK	tell	IODevice=a
+haskell	GHC.IO	Device	UNK	getSize	IODevice=a
+haskell	GHC.IO	Device	IO	setSize	IODevice=a UNK=Integer
+haskell	GHC.IO	Device	IO	setEcho	IODevice=a UNK=Bool
+haskell	GHC.IO	Device	UNK	getEcho	IODevice=a
+haskell	GHC.IO	Device	IO	setRaw	IODevice=a UNK=Bool
+haskell	GHC.IO	Device	UNK	devType	IODevice=a
+haskell	GHC.IO	Device	UNK	dup	IODevice=a
+haskell	GHC.IO	Device	UNK	dup2	IODevice=a IODevice=a
+haskell	GHC.IO	Device	IODeviceType	Directory	void
+haskell	GHC.IO	Device	IODeviceType	Stream	void
+haskell	GHC.IO	Device	IODeviceType	RegularFile	void
+haskell	GHC.IO	Device	IODeviceType	RawDevice	void
+haskell	GHC.IO	Device	SeekMode	AbsoluteSeek	void
+haskell	GHC.IO	Device	SeekMode	RelativeSeek	void
+haskell	GHC.IO	Device	SeekMode	SeekFromEnd	void
+haskell	GHC.IO	BufferedIO	UNK	newBuffer	BufferedIO=dev UNK=BufferState
+haskell	GHC.IO	BufferedIO	UNK	fillReadBuffer	BufferedIO=dev UNK=Buffer UNK=Word8
+haskell	GHC.IO	BufferedIO	UNK	fillReadBuffer0	BufferedIO=dev UNK=Buffer UNK=Word8
+haskell	GHC.IO	BufferedIO	UNK	emptyWriteBuffer	BufferedIO=dev UNK=Buffer UNK=Word8
+haskell	GHC.IO	BufferedIO	UNK	flushWriteBuffer	BufferedIO=dev UNK=Buffer UNK=Word8
+haskell	GHC.IO	BufferedIO	UNK	flushWriteBuffer0	BufferedIO=dev UNK=Buffer UNK=Word8
+haskell	Foreign.Marshal	Alloc	UNK	alloca	UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Alloc	UNK	allocaBytes	UNK=Int UNK=$f_2$ UNK=Ptr UNK=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Alloc	UNK	malloc	void
+haskell	Foreign.Marshal	Alloc	UNK	mallocBytes	UNK=Int
+haskell	Foreign.Marshal	Alloc	UNK	calloc	void
+haskell	Foreign.Marshal	Alloc	UNK	callocBytes	UNK=Int
+haskell	Foreign.Marshal	Alloc	UNK	realloc	UNK=Ptr UNK=a
+haskell	Foreign.Marshal	Alloc	UNK	reallocBytes	UNK=Ptr UNK=a UNK=Int
+haskell	Foreign.Marshal	Alloc	IO	free	UNK=Ptr UNK=a
+haskell	Foreign.Marshal	Alloc	UNK	finalizerFree	void
+haskell	Foreign.Marshal	Utils	UNK	with	Storable=a UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Utils	UNK	new	Storable=a
+haskell	Foreign.Marshal	Utils	Num	fromBool	UNK=Bool
+haskell	Foreign.Marshal	Utils	Bool	toBool	Eq/Num=a
+haskell	Foreign.Marshal	Utils	UNK	maybePeek	UNK=$f_2$ UNK=Ptr UNK=a UNK=IO UNK=b UNK=Ptr UNK=a
+haskell	Foreign.Marshal	Utils	res	withMany	UNK=$f_2$ UNK=a UNK=res UNK=$f_2$ UNK=b UNK=res UNK=$list$ UNK=a UNK=$f_2$ UNK=$list$ UNK=b UNK=res
+haskell	Foreign.Marshal	Utils	IO	copyBytes	UNK=Ptr UNK=a UNK=Ptr UNK=a UNK=Int
+haskell	Foreign.Marshal	Utils	IO	moveBytes	UNK=Ptr UNK=a UNK=Ptr UNK=a UNK=Int
+haskell	Foreign.Marshal	Utils	IO	fillBytes	UNK=Ptr UNK=a UNK=Word8 UNK=Int
+haskell	Foreign.Marshal	Array	UNK	mallocArray	UNK=Int
+haskell	Foreign.Marshal	Array	UNK	mallocArray0	UNK=Int
+haskell	Foreign.Marshal	Array	UNK	allocaArray	UNK=Int UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	UNK	allocaArray0	UNK=Int UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	UNK	reallocArray	UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Array	UNK	reallocArray0	UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Array	UNK	callocArray	UNK=Int
+haskell	Foreign.Marshal	Array	UNK	callocArray0	UNK=Int
+haskell	Foreign.Marshal	Array	UNK	peekArray	UNK=Int UNK=Ptr Storable=a
+haskell	Foreign.Marshal	Array	UNK	peekArray0	Storable/Eq=a UNK=Ptr Storable/Eq=a
+haskell	Foreign.Marshal	Array	IO	pokeArray	UNK=Ptr Storable=a UNK=$list$ Storable=a
+haskell	Foreign.Marshal	Array	IO	pokeArray0	Storable=a UNK=Ptr Storable=a UNK=$list$ Storable=a
+haskell	Foreign.Marshal	Array	UNK	newArray	UNK=$list$ Storable=a
+haskell	Foreign.Marshal	Array	UNK	newArray0	Storable=a UNK=$list$ Storable=a
+haskell	Foreign.Marshal	Array	UNK	withArray	UNK=$list$ Storable=a UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	UNK	withArray0	Storable=a UNK=$list$ Storable=a UNK=$f_2$ UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	UNK	withArrayLen	UNK=$list$ Storable=a UNK=$f_3$ UNK=Int UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	UNK	withArrayLen0	Storable=a UNK=$list$ Storable=a UNK=$f_3$ UNK=Int UNK=Ptr Storable=a UNK=IO UNK=b
+haskell	Foreign.Marshal	Array	IO	copyArray	UNK=Ptr Storable=a UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Array	IO	moveArray	UNK=Ptr Storable=a UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Array	UNK	lengthArray0	Storable/Eq=a UNK=Ptr Storable/Eq=a
+haskell	Foreign.Marshal	Array	UNK	advancePtr	UNK=Ptr Storable=a UNK=Int
+haskell	GHC	Foreign	UNK	peekCString	UNK=TextEncoding UNK=CString
+haskell	GHC	Foreign	UNK	peekCStringLen	UNK=TextEncoding UNK=CStringLen
+haskell	GHC	Foreign	UNK	newCString	UNK=TextEncoding UNK=String
+haskell	GHC	Foreign	UNK	newCStringLen	UNK=TextEncoding UNK=String
+haskell	GHC	Foreign	UNK	withCString	UNK=TextEncoding UNK=String UNK=$f_2$ UNK=CString UNK=IO UNK=a
+haskell	GHC	Foreign	UNK	withCStringLen	UNK=TextEncoding UNK=String UNK=$f_2$ UNK=CStringLen UNK=IO UNK=a
+haskell	GHC	Foreign	UNK	charIsRepresentable	UNK=TextEncoding UNK=Char
+haskell	Foreign.C	String	UNK	peekCString	UNK=CString
+haskell	Foreign.C	String	UNK	peekCStringLen	UNK=CStringLen
+haskell	Foreign.C	String	UNK	newCString	UNK=String
+haskell	Foreign.C	String	UNK	newCStringLen	UNK=String
+haskell	Foreign.C	String	UNK	withCString	UNK=String UNK=$f_2$ UNK=CString UNK=IO UNK=a
+haskell	Foreign.C	String	UNK	withCStringLen	UNK=String UNK=$f_2$ UNK=CStringLen UNK=IO UNK=a
+haskell	Foreign.C	String	CChar	castCharToCChar	UNK=Char
+haskell	Foreign.C	String	Char	castCCharToChar	UNK=CChar
+haskell	Foreign.C	String	CUChar	castCharToCUChar	UNK=Char
+haskell	Foreign.C	String	Char	castCUCharToChar	UNK=CUChar
+haskell	Foreign.C	String	CSChar	castCharToCSChar	UNK=Char
+haskell	Foreign.C	String	Char	castCSCharToChar	UNK=CSChar
+haskell	Foreign.C	String	UNK	peekCAString	UNK=CString
+haskell	Foreign.C	String	UNK	peekCAStringLen	UNK=CStringLen
+haskell	Foreign.C	String	UNK	newCAString	UNK=String
+haskell	Foreign.C	String	UNK	newCAStringLen	UNK=String
+haskell	Foreign.C	String	UNK	withCAString	UNK=String UNK=$f_2$ UNK=CString UNK=IO UNK=a
+haskell	Foreign.C	String	UNK	withCAStringLen	UNK=String UNK=$f_2$ UNK=CStringLen UNK=IO UNK=a
+haskell	Foreign.C	String	UNK	peekCWString	UNK=CWString
+haskell	Foreign.C	String	UNK	peekCWStringLen	UNK=CWStringLen
+haskell	Foreign.C	String	UNK	newCWString	UNK=String
+haskell	Foreign.C	String	UNK	newCWStringLen	UNK=String
+haskell	Foreign.C	String	UNK	withCWString	UNK=String UNK=$f_2$ UNK=CWString UNK=IO UNK=a
+haskell	Foreign.C	String	UNK	withCWStringLen	UNK=String UNK=$f_2$ UNK=CWStringLen UNK=IO UNK=a
+haskell	Foreign.Marshal	Error	UNK	throwIf	UNK=$f_2$ UNK=a UNK=Bool UNK=$f_2$ UNK=a UNK=String UNK=IO UNK=a
+haskell	Foreign.Marshal	Error	IO	throwIf_	UNK=$f_2$ UNK=a UNK=Bool UNK=$f_2$ UNK=a UNK=String UNK=IO UNK=a
+haskell	Foreign.Marshal	Error	UNK	throwIfNeg	UNK=$f_2$ Ord/Num=a UNK=String UNK=IO Ord/Num=a
+haskell	Foreign.Marshal	Error	IO	throwIfNeg_	UNK=$f_2$ Ord/Num=a UNK=String UNK=IO Ord/Num=a
+haskell	Foreign.Marshal	Error	UNK	throwIfNull	UNK=String UNK=IO UNK=Ptr UNK=a
+haskell	Foreign.Marshal	Error	IO	void	UNK=IO UNK=a
+haskell	Foreign.Marshal	Pool	UNK	newPool	void
+haskell	Foreign.Marshal	Pool	IO	freePool	UNK=Pool
+haskell	Foreign.Marshal	Pool	UNK	withPool	UNK=$f_2$ UNK=Pool UNK=IO UNK=b
+haskell	Foreign.Marshal	Pool	UNK	pooledMalloc	UNK=Pool
+haskell	Foreign.Marshal	Pool	UNK	pooledMallocBytes	UNK=Pool UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledRealloc	UNK=Pool UNK=Ptr Storable=a
+haskell	Foreign.Marshal	Pool	UNK	pooledReallocBytes	UNK=Pool UNK=Ptr UNK=a UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledMallocArray	UNK=Pool UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledMallocArray0	UNK=Pool UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledReallocArray	UNK=Pool UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledReallocArray0	UNK=Pool UNK=Ptr Storable=a UNK=Int
+haskell	Foreign.Marshal	Pool	UNK	pooledNew	UNK=Pool Storable=a
+haskell	Foreign.Marshal	Pool	UNK	pooledNewArray	UNK=Pool UNK=$list$ Storable=a
+haskell	Foreign.Marshal	Pool	UNK	pooledNewArray0	UNK=Pool Storable=a UNK=$list$ Storable=a
+haskell	Foreign.C	Error	Errno	Errno	UNK=CInt
+haskell	Foreign.C	Error	Bool	isValidErrno	UNK=Errno
+haskell	Foreign.C	Error	UNK	getErrno	void
+haskell	Foreign.C	Error	IO	resetErrno	void
+haskell	Foreign.C	Error	IOError	errnoToIOError	UNK=String UNK=Errno UNK=Maybe UNK=Handle UNK=Maybe UNK=String
+haskell	Foreign.C	Error	UNK	throwErrno	UNK=String
+haskell	Foreign.C	Error	UNK	throwErrnoIf	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a
+haskell	Foreign.C	Error	IO	throwErrnoIf_	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfRetry	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a
+haskell	Foreign.C	Error	IO	throwErrnoIfRetry_	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfMinus1	UNK=String UNK=IO Eq/Num=a
+haskell	Foreign.C	Error	IO	throwErrnoIfMinus1_	UNK=String UNK=IO Eq/Num=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfMinus1Retry	UNK=String UNK=IO Eq/Num=a
+haskell	Foreign.C	Error	IO	throwErrnoIfMinus1Retry_	UNK=String UNK=IO Eq/Num=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfNull	UNK=String UNK=IO UNK=Ptr UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfNullRetry	UNK=String UNK=IO UNK=Ptr UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoIfRetryMayBlock	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a UNK=IO UNK=b
+haskell	Foreign.C	Error	IO	throwErrnoIfRetryMayBlock_	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=IO UNK=a UNK=IO UNK=b
+haskell	Foreign.C	Error	UNK	throwErrnoIfMinus1RetryMayBlock	UNK=String UNK=IO Eq/Num=a UNK=IO UNK=b
+haskell	Foreign.C	Error	IO	throwErrnoIfMinus1RetryMayBlock_	UNK=String UNK=IO Eq/Num=a UNK=IO UNK=b
+haskell	Foreign.C	Error	UNK	throwErrnoIfNullRetryMayBlock	UNK=String UNK=IO UNK=Ptr UNK=a UNK=IO UNK=b
+haskell	Foreign.C	Error	UNK	throwErrnoPath	UNK=String UNK=FilePath
+haskell	Foreign.C	Error	UNK	throwErrnoPathIf	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=FilePath UNK=IO UNK=a
+haskell	Foreign.C	Error	IO	throwErrnoPathIf_	UNK=$f_2$ UNK=a UNK=Bool UNK=String UNK=FilePath UNK=IO UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoPathIfNull	UNK=String UNK=FilePath UNK=IO UNK=Ptr UNK=a
+haskell	Foreign.C	Error	UNK	throwErrnoPathIfMinus1	UNK=String UNK=FilePath UNK=IO Eq/Num=a
+haskell	Foreign.C	Error	IO	throwErrnoPathIfMinus1_	UNK=String UNK=FilePath UNK=IO Eq/Num=a
+haskell	System.Posix	Types	CDev	CDev	UNK=Word64
+haskell	GHC.IO.Encoding	Failure	CodingFailureMode	ErrorOnCodingFailure	void
+haskell	GHC.IO.Encoding	Failure	CodingFailureMode	IgnoreCodingFailure	void
+haskell	GHC.IO.Encoding	Failure	CodingFailureMode	TransliterateCodingFailure	void
+haskell	GHC.IO.Encoding	Failure	CodingFailureMode	RoundtripFailure	void
+haskell	GHC.IO.Encoding	Failure	Bool	isSurrogate	UNK=Char
+haskell	GHC.IO.Encoding	UTF8	TextEncoding	utf8	void
+haskell	GHC.Conc	Sync	ThreadId	ThreadId	UNK=ThreadId#
+haskell	GHC.Conc	Sync	UNK	forkIO	UNK=IO
+haskell	GHC.Conc	Sync	UNK	forkOn	UNK=Int UNK=IO
+haskell	GHC.Conc	Sync	Int	numCapabilities	void
+haskell	GHC.Conc	Sync	UNK	getNumCapabilities	void
+haskell	GHC.Conc	Sync	IO	setNumCapabilities	UNK=Int
+haskell	GHC.Conc	Sync	UNK	getNumProcessors	void
+haskell	GHC.Conc	Sync	UNK	numSparks	void
+haskell	GHC.Conc	Sync	UNK	myThreadId	void
+haskell	GHC.Conc	Sync	IO	killThread	UNK=ThreadId
+haskell	GHC.Conc	Sync	IO	throwTo	UNK=ThreadId Exception=e
+haskell	GHC.Conc	Sync	IO	runSparks	void
+haskell	GHC.Conc	Sync	IO	yield	void
+haskell	GHC.Conc	Sync	IO	labelThread	UNK=ThreadId UNK=String
+haskell	GHC.Conc	Sync	UNK	mkWeakThreadId	UNK=ThreadId
+haskell	GHC.Conc	Sync	ThreadStatus	ThreadRunning	void
+haskell	GHC.Conc	Sync	ThreadStatus	ThreadFinished	void
+haskell	GHC.Conc	Sync	ThreadStatus	ThreadBlocked	UNK=BlockReason
+haskell	GHC.Conc	Sync	ThreadStatus	ThreadDied	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnMVar	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnBlackHole	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnException	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnSTM	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnForeignCall	void
+haskell	GHC.Conc	Sync	BlockReason	BlockedOnOther	void
+haskell	GHC.Conc	Sync	UNK	threadCapability	UNK=ThreadId
+haskell	GHC.Conc	Sync	IO	setAllocationCounter	UNK=Int64
+haskell	GHC.Conc	Sync	UNK	getAllocationCounter	void
+haskell	GHC.Conc	Sync	IO	enableAllocationLimit	void
+haskell	GHC.Conc	Sync	IO	disableAllocationLimit	void
+haskell	GHC.Conc	Sync	UNK	STM	UNK=$f_2$ UNK=State# UNK=RealWorld UNK=$tuple_2$ UNK=# UNK=State# UNK=RealWorld UNK=a UNK=#
+haskell	GHC.Conc	Sync	UNK	atomically	UNK=STM UNK=a
+haskell	GHC.Conc	Sync	UNK	retry	void
+haskell	GHC.Conc	Sync	UNK	orElse	UNK=STM UNK=a UNK=STM UNK=a
+haskell	GHC.Conc	Sync	UNK	throwSTM	Exception=e
+haskell	GHC.Conc	Sync	UNK	catchSTM	UNK=STM UNK=a UNK=$f_2$ Exception=e UNK=STM UNK=a
+haskell	GHC.Conc	Sync	STM	alwaysSucceeds	UNK=STM UNK=a
+haskell	GHC.Conc	Sync	STM	always	UNK=STM UNK=Bool
+haskell	GHC.Conc	Sync	UNK	TVar	UNK=TVar# UNK=RealWorld UNK=a
+haskell	GHC.Conc	Sync	UNK	newTVar	UNK=a
+haskell	GHC.Conc	Sync	UNK	newTVarIO	UNK=a
+haskell	GHC.Conc	Sync	UNK	readTVar	UNK=TVar UNK=a
+haskell	GHC.Conc	Sync	UNK	readTVarIO	UNK=TVar UNK=a
+haskell	GHC.Conc	Sync	STM	writeTVar	UNK=TVar UNK=a UNK=a
+haskell	GHC.Conc	Sync	UNK	unsafeIOToSTM	UNK=IO UNK=a
+haskell	Control.Exception	Base	SomeException	SomeException	UNK=e
+haskell	Control.Exception	Base	SomeException	toException	Exception=e
+haskell	Control.Exception	Base	String	displayException	Exception=e
+haskell	Control.Exception	Base	ArithException	Overflow	void
+haskell	Control.Exception	Base	ArrayException	IndexOutOfBounds	UNK=String
+haskell	Control.Exception	Base	ArrayException	UndefinedElement	UNK=String
+haskell	Control.Exception	Base	AssertionFailed	AssertionFailed	UNK=String
+haskell	Control.Exception	Base	SomeAsyncException	SomeAsyncException	UNK=e
+haskell	Control.Exception	Base	AsyncException	StackOverflow	void
+haskell	Control.Exception	Base	AsyncException	HeapOverflow	void
+haskell	Control.Exception	Base	AsyncException	ThreadKilled	void
+haskell	Control.Exception	Base	AsyncException	UserInterrupt	void
+haskell	Control.Exception	Base	NonTermination	NonTermination	void
+haskell	Control.Exception	Base	NestedAtomically	NestedAtomically	void
+haskell	Control.Exception	Base	BlockedIndefinitelyOnMVar	BlockedIndefinitelyOnMVar	void
+haskell	Control.Exception	Base	BlockedIndefinitelyOnSTM	BlockedIndefinitelyOnSTM	void
+haskell	Control.Exception	Base	AllocationLimitExceeded	AllocationLimitExceeded	void
+haskell	Control.Exception	Base	Deadlock	Deadlock	void
+haskell	Control.Exception	Base	NoMethodError	NoMethodError	UNK=String
+haskell	Control.Exception	Base	PatternMatchFail	PatternMatchFail	UNK=String
+haskell	Control.Exception	Base	RecConError	RecConError	UNK=String
+haskell	Control.Exception	Base	RecSelError	RecSelError	UNK=String
+haskell	Control.Exception	Base	RecUpdError	RecUpdError	UNK=String
+haskell	Control.Exception	Base	ErrorCall	ErrorCall	UNK=String
+haskell	Control.Exception	Base	UNK	throwIO	Exception=e
+haskell	Control.Exception	Base	a	throw	Exception=e
+haskell	Control.Exception	Base	UNK	ioError	UNK=IOError
+haskell	Control.Exception	Base	IO	throwTo	UNK=ThreadId Exception=e
+haskell	Control.Exception	Base	UNK	catch	UNK=IO UNK=a UNK=$f_2$ Exception=e UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	catchJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=IO UNK=a UNK=$f_2$ UNK=b UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	handle	UNK=$f_2$ Exception=e UNK=IO UNK=a UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	handleJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=$f_2$ UNK=b UNK=IO UNK=a UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	try	UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	tryJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	onException	UNK=IO UNK=a UNK=IO UNK=b
+haskell	Control.Exception	Base	UNK	evaluate	UNK=a
+haskell	Control.Exception	Base	a	mapException	UNK=$f_2$ Exception=e1 Exception=e2 UNK=a
+haskell	Control.Exception	Base	UNK	mask_	UNK=IO UNK=a
+haskell	Control.Exception	Base	UNK	uninterruptibleMask_	UNK=IO UNK=a
+haskell	Control.Exception	Base	MaskingState	Unmasked	void
+haskell	Control.Exception	Base	MaskingState	MaskedInterruptible	void
+haskell	Control.Exception	Base	MaskingState	MaskedUninterruptible	void
+haskell	Control.Exception	Base	UNK	getMaskingState	void
+haskell	Control.Exception	Base	a	assert	UNK=Bool UNK=a
+haskell	Control.Exception	Base	UNK	bracket	UNK=IO UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b UNK=$f_2$ UNK=a UNK=IO UNK=c
+haskell	Control.Exception	Base	UNK	bracket_	UNK=IO UNK=a UNK=IO UNK=b UNK=IO UNK=c
+haskell	Control.Exception	Base	UNK	bracketOnError	UNK=IO UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b UNK=$f_2$ UNK=a UNK=IO UNK=c
+haskell	Control.Exception	Base	UNK	finally	UNK=IO UNK=a UNK=IO UNK=b
+haskell	Control.Concurrent	MVar	UNK	newEmptyMVar	void
+haskell	Control.Concurrent	MVar	UNK	newMVar	UNK=a
+haskell	Control.Concurrent	MVar	UNK	takeMVar	UNK=MVar UNK=a
+haskell	Control.Concurrent	MVar	IO	putMVar	UNK=MVar UNK=a UNK=a
+haskell	Control.Concurrent	MVar	UNK	readMVar	UNK=MVar UNK=a
+haskell	Control.Concurrent	MVar	UNK	swapMVar	UNK=MVar UNK=a UNK=a
+haskell	Control.Concurrent	MVar	UNK	tryTakeMVar	UNK=MVar UNK=a
+haskell	Control.Concurrent	MVar	UNK	tryPutMVar	UNK=MVar UNK=a UNK=a
+haskell	Control.Concurrent	MVar	UNK	isEmptyMVar	UNK=MVar UNK=a
+haskell	Control.Concurrent	MVar	UNK	withMVar	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b
+haskell	Control.Concurrent	MVar	UNK	withMVarMasked	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b
+haskell	Control.Concurrent	MVar	IO	modifyMVar_	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=a
+haskell	Control.Concurrent	MVar	UNK	modifyMVar	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=$tuple_2$ UNK=a UNK=b
+haskell	Control.Concurrent	MVar	IO	modifyMVarMasked_	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=a
+haskell	Control.Concurrent	MVar	UNK	modifyMVarMasked	UNK=MVar UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=$tuple_2$ UNK=a UNK=b
+haskell	Control.Concurrent	MVar	UNK	tryReadMVar	UNK=MVar UNK=a
+haskell	Control.Concurrent	MVar	UNK	mkWeakMVar	UNK=MVar UNK=a UNK=IO
+haskell	Control.Concurrent	MVar	IO	addMVarFinalizer	UNK=MVar UNK=a UNK=IO
+haskell	Control	Exception	SomeException	SomeException	UNK=e
+haskell	Control	Exception	SomeException	toException	Exception=e
+haskell	Control	Exception	String	displayException	Exception=e
+haskell	Control	Exception	ArithException	Overflow	void
+haskell	Control	Exception	ArrayException	IndexOutOfBounds	UNK=String
+haskell	Control	Exception	ArrayException	UndefinedElement	UNK=String
+haskell	Control	Exception	AssertionFailed	AssertionFailed	UNK=String
+haskell	Control	Exception	SomeAsyncException	SomeAsyncException	UNK=e
+haskell	Control	Exception	AsyncException	StackOverflow	void
+haskell	Control	Exception	AsyncException	HeapOverflow	void
+haskell	Control	Exception	AsyncException	ThreadKilled	void
+haskell	Control	Exception	AsyncException	UserInterrupt	void
+haskell	Control	Exception	NonTermination	NonTermination	void
+haskell	Control	Exception	NestedAtomically	NestedAtomically	void
+haskell	Control	Exception	BlockedIndefinitelyOnMVar	BlockedIndefinitelyOnMVar	void
+haskell	Control	Exception	BlockedIndefinitelyOnSTM	BlockedIndefinitelyOnSTM	void
+haskell	Control	Exception	AllocationLimitExceeded	AllocationLimitExceeded	void
+haskell	Control	Exception	Deadlock	Deadlock	void
+haskell	Control	Exception	NoMethodError	NoMethodError	UNK=String
+haskell	Control	Exception	PatternMatchFail	PatternMatchFail	UNK=String
+haskell	Control	Exception	RecConError	RecConError	UNK=String
+haskell	Control	Exception	RecSelError	RecSelError	UNK=String
+haskell	Control	Exception	RecUpdError	RecUpdError	UNK=String
+haskell	Control	Exception	ErrorCall	ErrorCall	UNK=String
+haskell	Control	Exception	a	throw	Exception=e
+haskell	Control	Exception	UNK	throwIO	Exception=e
+haskell	Control	Exception	UNK	ioError	UNK=IOError
+haskell	Control	Exception	IO	throwTo	UNK=ThreadId Exception=e
+haskell	Control	Exception	UNK	catch	UNK=IO UNK=a UNK=$f_2$ Exception=e UNK=IO UNK=a
+haskell	Control	Exception	UNK	catches	UNK=IO UNK=a UNK=$list$ UNK=Handler UNK=a
+haskell	Control	Exception	UNK	Handler	UNK=$f_2$ UNK=e UNK=IO UNK=a
+haskell	Control	Exception	UNK	catchJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=IO UNK=a UNK=$f_2$ UNK=b UNK=IO UNK=a
+haskell	Control	Exception	UNK	handle	UNK=$f_2$ Exception=e UNK=IO UNK=a UNK=IO UNK=a
+haskell	Control	Exception	UNK	handleJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=$f_2$ UNK=b UNK=IO UNK=a UNK=IO UNK=a
+haskell	Control	Exception	UNK	try	UNK=IO UNK=a
+haskell	Control	Exception	UNK	tryJust	UNK=$f_2$ Exception=e UNK=Maybe UNK=b UNK=IO UNK=a
+haskell	Control	Exception	UNK	evaluate	UNK=a
+haskell	Control	Exception	a	mapException	UNK=$f_2$ Exception=e1 Exception=e2 UNK=a
+haskell	Control	Exception	UNK	mask_	UNK=IO UNK=a
+haskell	Control	Exception	UNK	uninterruptibleMask_	UNK=IO UNK=a
+haskell	Control	Exception	MaskingState	Unmasked	void
+haskell	Control	Exception	MaskingState	MaskedInterruptible	void
+haskell	Control	Exception	MaskingState	MaskedUninterruptible	void
+haskell	Control	Exception	UNK	getMaskingState	void
+haskell	Control	Exception	IO	allowInterrupt	void
+haskell	Control	Exception	a	assert	UNK=Bool UNK=a
+haskell	Control	Exception	UNK	bracket	UNK=IO UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b UNK=$f_2$ UNK=a UNK=IO UNK=c
+haskell	Control	Exception	UNK	bracket_	UNK=IO UNK=a UNK=IO UNK=b UNK=IO UNK=c
+haskell	Control	Exception	UNK	bracketOnError	UNK=IO UNK=a UNK=$f_2$ UNK=a UNK=IO UNK=b UNK=$f_2$ UNK=a UNK=IO UNK=c
+haskell	Control	Exception	UNK	finally	UNK=IO UNK=a UNK=IO UNK=b
+haskell	Control	Exception	UNK	onException	UNK=IO UNK=a UNK=IO UNK=b
+haskell	System.IO	Unsafe	a	unsafePerformIO	UNK=IO UNK=a
+haskell	System.IO	Unsafe	a	unsafeDupablePerformIO	UNK=IO UNK=a
+haskell	System.IO	Unsafe	UNK	unsafeInterleaveIO	UNK=IO UNK=a
+haskell	System.IO	Unsafe	UNK	unsafeFixIO	UNK=$f_2$ UNK=a UNK=IO UNK=a
+haskell	GHC.IO.Encoding	Latin1	TextEncoding	latin1	void
+haskell	GHC.IO.Encoding	UTF16	TextEncoding	utf16	void
+haskell	GHC.IO.Encoding	UTF32	TextEncoding	utf32	void
+haskell	GHC.IO	Encoding	UNK	BufferCodec	UNK=CodeBuffer UNK=from UNK=to UNK=$f_2$ UNK=Buffer UNK=from UNK=IO UNK=$tuple_2$ UNK=Buffer UNK=from UNK=Buffer UNK=to UNK=Buffer UNK=to UNK=IO UNK=IO UNK=state UNK=$f_2$ UNK=state UNK=IO
+haskell	GHC.IO	Encoding	UNK	[encode]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO	Encoding	UNK	[recover]	UNK=BufferCodec UNK=from UNK=to UNK=state UNK=Buffer UNK=from UNK=Buffer UNK=to
+haskell	GHC.IO	Encoding	IO	[close]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO	Encoding	UNK	[getState]	UNK=BufferCodec UNK=from UNK=to UNK=state
+haskell	GHC.IO	Encoding	TextEncoding	TextEncoding	UNK=String UNK=IO UNK=TextDecoder UNK=dstate UNK=IO UNK=TextEncoder UNK=estate
+haskell	GHC.IO	Encoding	String	[textEncodingName]	UNK=TextEncoding
+haskell	GHC.IO	Encoding	UNK	[mkTextDecoder]	UNK=TextEncoding
+haskell	GHC.IO	Encoding	UNK	[mkTextEncoder]	UNK=TextEncoding
+haskell	GHC.IO	Encoding	CodingProgress	InputUnderflow	void
+haskell	GHC.IO	Encoding	CodingProgress	OutputUnderflow	void
+haskell	GHC.IO	Encoding	CodingProgress	InvalidSequence	void
+haskell	GHC.IO	Encoding	TextEncoding	latin1	void
+haskell	GHC.IO	Encoding	TextEncoding	utf8	void
+haskell	GHC.IO	Encoding	TextEncoding	utf8_bom	void
+haskell	GHC.IO	Encoding	TextEncoding	utf16	void
+haskell	GHC.IO	Encoding	TextEncoding	utf16le	void
+haskell	GHC.IO	Encoding	TextEncoding	utf16be	void
+haskell	GHC.IO	Encoding	TextEncoding	utf32	void
+haskell	GHC.IO	Encoding	TextEncoding	utf32le	void
+haskell	GHC.IO	Encoding	TextEncoding	utf32be	void
+haskell	GHC.IO	Encoding	UNK	getLocaleEncoding	void
+haskell	GHC.IO	Encoding	UNK	getFileSystemEncoding	void
+haskell	GHC.IO	Encoding	UNK	getForeignEncoding	void
+haskell	GHC.IO	Encoding	TextEncoding	char8	void
+haskell	GHC.IO	Encoding	UNK	mkTextEncoding	UNK=String
+haskell	System.IO	Error	IOError	userError	UNK=String
+haskell	System.IO	Error	IOError	mkIOError	UNK=IOErrorType UNK=String UNK=Maybe UNK=Handle UNK=Maybe UNK=FilePath
+haskell	System.IO	Error	IOError	annotateIOError	UNK=IOError UNK=String UNK=Maybe UNK=Handle UNK=Maybe UNK=FilePath
+haskell	System.IO	Error	Bool	isAlreadyExistsError	UNK=IOError
+haskell	System.IO	Error	Bool	isDoesNotExistError	UNK=IOError
+haskell	System.IO	Error	Bool	isAlreadyInUseError	UNK=IOError
+haskell	System.IO	Error	Bool	isFullError	UNK=IOError
+haskell	System.IO	Error	Bool	isEOFError	UNK=IOError
+haskell	System.IO	Error	Bool	isIllegalOperation	UNK=IOError
+haskell	System.IO	Error	Bool	isPermissionError	UNK=IOError
+haskell	System.IO	Error	Bool	isUserError	UNK=IOError
+haskell	System.IO	Error	IOErrorType	alreadyExistsErrorType	void
+haskell	System.IO	Error	IOErrorType	doesNotExistErrorType	void
+haskell	System.IO	Error	IOErrorType	alreadyInUseErrorType	void
+haskell	System.IO	Error	IOErrorType	fullErrorType	void
+haskell	System.IO	Error	IOErrorType	eofErrorType	void
+haskell	System.IO	Error	IOErrorType	illegalOperationErrorType	void
+haskell	System.IO	Error	IOErrorType	permissionErrorType	void
+haskell	System.IO	Error	IOErrorType	userErrorType	void
+haskell	System.IO	Error	Bool	isAlreadyExistsErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isDoesNotExistErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isAlreadyInUseErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isFullErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isEOFErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isIllegalOperationErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isPermissionErrorType	UNK=IOErrorType
+haskell	System.IO	Error	Bool	isUserErrorType	UNK=IOErrorType
+haskell	System.IO	Error	UNK	ioError	UNK=IOError
+haskell	System.IO	Error	UNK	catchIOError	UNK=IO UNK=a UNK=$f_2$ UNK=IOError UNK=IO UNK=a
+haskell	System.IO	Error	UNK	tryIOError	UNK=IO UNK=a
+haskell	System.IO	Error	UNK	modifyIOError	UNK=$f_2$ UNK=IOError UNK=IOError UNK=IO UNK=a
+haskell	GHC.Conc	IO	IO	ensureIOManagerIsRunning	void
+haskell	GHC.Conc	IO	IO	threadDelay	UNK=Int
+haskell	GHC.Conc	IO	UNK	registerDelay	UNK=Int
+haskell	GHC.Conc	IO	IO	threadWaitRead	UNK=Fd
+haskell	GHC.Conc	IO	IO	threadWaitWrite	UNK=Fd
+haskell	GHC.Conc	IO	UNK	threadWaitReadSTM	UNK=Fd
+haskell	GHC.Conc	IO	UNK	threadWaitWriteSTM	UNK=Fd
+haskell	GHC.Conc	IO	IO	closeFdWith	UNK=$f_2$ UNK=Fd UNK=IO UNK=Fd
+haskell	GHC	Conc	ThreadId	ThreadId	UNK=ThreadId#
+haskell	GHC	Conc	UNK	forkIO	UNK=IO
+haskell	GHC	Conc	UNK	forkOn	UNK=Int UNK=IO
+haskell	GHC	Conc	Int	numCapabilities	void
+haskell	GHC	Conc	UNK	getNumCapabilities	void
+haskell	GHC	Conc	IO	setNumCapabilities	UNK=Int
+haskell	GHC	Conc	UNK	getNumProcessors	void
+haskell	GHC	Conc	UNK	numSparks	void
+haskell	GHC	Conc	UNK	myThreadId	void
+haskell	GHC	Conc	IO	killThread	UNK=ThreadId
+haskell	GHC	Conc	IO	throwTo	UNK=ThreadId Exception=e
+haskell	GHC	Conc	IO	runSparks	void
+haskell	GHC	Conc	IO	yield	void
+haskell	GHC	Conc	IO	labelThread	UNK=ThreadId UNK=String
+haskell	GHC	Conc	UNK	mkWeakThreadId	UNK=ThreadId
+haskell	GHC	Conc	ThreadStatus	ThreadRunning	void
+haskell	GHC	Conc	ThreadStatus	ThreadFinished	void
+haskell	GHC	Conc	ThreadStatus	ThreadBlocked	UNK=BlockReason
+haskell	GHC	Conc	ThreadStatus	ThreadDied	void
+haskell	GHC	Conc	BlockReason	BlockedOnMVar	void
+haskell	GHC	Conc	BlockReason	BlockedOnBlackHole	void
+haskell	GHC	Conc	BlockReason	BlockedOnException	void
+haskell	GHC	Conc	BlockReason	BlockedOnSTM	void
+haskell	GHC	Conc	BlockReason	BlockedOnForeignCall	void
+haskell	GHC	Conc	BlockReason	BlockedOnOther	void
+haskell	GHC	Conc	UNK	threadCapability	UNK=ThreadId
+haskell	GHC	Conc	IO	threadDelay	UNK=Int
+haskell	GHC	Conc	UNK	registerDelay	UNK=Int
+haskell	GHC	Conc	IO	threadWaitRead	UNK=Fd
+haskell	GHC	Conc	IO	threadWaitWrite	UNK=Fd
+haskell	GHC	Conc	UNK	threadWaitReadSTM	UNK=Fd
+haskell	GHC	Conc	UNK	threadWaitWriteSTM	UNK=Fd
+haskell	GHC	Conc	IO	closeFdWith	UNK=$f_2$ UNK=Fd UNK=IO UNK=Fd
+haskell	GHC	Conc	IO	setAllocationCounter	UNK=Int64
+haskell	GHC	Conc	UNK	getAllocationCounter	void
+haskell	GHC	Conc	IO	enableAllocationLimit	void
+haskell	GHC	Conc	IO	disableAllocationLimit	void
+haskell	GHC	Conc	UNK	STM	UNK=$f_2$ UNK=State# UNK=RealWorld UNK=$tuple_2$ UNK=# UNK=State# UNK=RealWorld UNK=a UNK=#
+haskell	GHC	Conc	UNK	atomically	UNK=STM UNK=a
+haskell	GHC	Conc	UNK	retry	void
+haskell	GHC	Conc	UNK	orElse	UNK=STM UNK=a UNK=STM UNK=a
+haskell	GHC	Conc	UNK	throwSTM	Exception=e
+haskell	GHC	Conc	UNK	catchSTM	UNK=STM UNK=a UNK=$f_2$ Exception=e UNK=STM UNK=a
+haskell	GHC	Conc	STM	alwaysSucceeds	UNK=STM UNK=a
+haskell	GHC	Conc	STM	always	UNK=STM UNK=Bool
+haskell	GHC	Conc	UNK	TVar	UNK=TVar# UNK=RealWorld UNK=a
+haskell	GHC	Conc	UNK	newTVar	UNK=a
+haskell	GHC	Conc	UNK	newTVarIO	UNK=a
+haskell	GHC	Conc	UNK	readTVar	UNK=TVar UNK=a
+haskell	GHC	Conc	UNK	readTVarIO	UNK=TVar UNK=a
+haskell	GHC	Conc	STM	writeTVar	UNK=TVar UNK=a UNK=a
+haskell	GHC	Conc	UNK	unsafeIOToSTM	UNK=IO UNK=a
+haskell	GHC.IO	Handle	BufferMode	NoBuffering	void
+haskell	GHC.IO	Handle	BufferMode	LineBuffering	void
+haskell	GHC.IO	Handle	BufferMode	BlockBuffering	UNK=Maybe UNK=Int
+haskell	GHC.IO	Handle	UNK	mkFileHandle	IODevice/BufferedIO/Typeable=dev UNK=FilePath UNK=IOMode UNK=Maybe UNK=TextEncoding UNK=NewlineMode
+haskell	GHC.IO	Handle	UNK	mkDuplexHandle	IODevice/BufferedIO/Typeable=dev UNK=FilePath UNK=Maybe UNK=TextEncoding UNK=NewlineMode
+haskell	GHC.IO	Handle	UNK	hFileSize	UNK=Handle
+haskell	GHC.IO	Handle	IO	hSetFileSize	UNK=Handle UNK=Integer
+haskell	GHC.IO	Handle	UNK	hIsEOF	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hLookAhead	UNK=Handle
+haskell	GHC.IO	Handle	IO	hSetBuffering	UNK=Handle UNK=BufferMode
+haskell	GHC.IO	Handle	IO	hSetBinaryMode	UNK=Handle UNK=Bool
+haskell	GHC.IO	Handle	IO	hSetEncoding	UNK=Handle UNK=TextEncoding
+haskell	GHC.IO	Handle	UNK	hGetEncoding	UNK=Handle
+haskell	GHC.IO	Handle	IO	hFlush	UNK=Handle
+haskell	GHC.IO	Handle	IO	hFlushAll	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hDuplicate	UNK=Handle
+haskell	GHC.IO	Handle	IO	hDuplicateTo	UNK=Handle UNK=Handle
+haskell	GHC.IO	Handle	IO	hClose	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hGetPosn	UNK=Handle
+haskell	GHC.IO	Handle	IO	hSetPosn	UNK=HandlePosn
+haskell	GHC.IO	Handle	SeekMode	AbsoluteSeek	void
+haskell	GHC.IO	Handle	SeekMode	RelativeSeek	void
+haskell	GHC.IO	Handle	SeekMode	SeekFromEnd	void
+haskell	GHC.IO	Handle	IO	hSeek	UNK=Handle UNK=SeekMode UNK=Integer
+haskell	GHC.IO	Handle	UNK	hTell	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hGetBuffering	UNK=Handle
+haskell	GHC.IO	Handle	IO	hSetEcho	UNK=Handle UNK=Bool
+haskell	GHC.IO	Handle	UNK	hGetEcho	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hIsTerminalDevice	UNK=Handle
+haskell	GHC.IO	Handle	IO	hSetNewlineMode	UNK=Handle UNK=NewlineMode
+haskell	GHC.IO	Handle	NewlineMode	NewlineMode	UNK=Newline UNK=Newline
+haskell	GHC.IO	Handle	Newline	[inputNL]	UNK=NewlineMode
+haskell	GHC.IO	Handle	Newline	[outputNL]	UNK=NewlineMode
+haskell	GHC.IO	Handle	Newline	nativeNewline	void
+haskell	GHC.IO	Handle	NewlineMode	noNewlineTranslation	void
+haskell	GHC.IO	Handle	NewlineMode	universalNewlineMode	void
+haskell	GHC.IO	Handle	NewlineMode	nativeNewlineMode	void
+haskell	GHC.IO	Handle	UNK	hShow	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hWaitForInput	UNK=Handle UNK=Int
+haskell	GHC.IO	Handle	UNK	hGetChar	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hGetLine	UNK=Handle
+haskell	GHC.IO	Handle	UNK	hGetContents	UNK=Handle
+haskell	GHC.IO	Handle	IO	hPutChar	UNK=Handle UNK=Char
+haskell	GHC.IO	Handle	IO	hPutStr	UNK=Handle UNK=String
+haskell	GHC.IO	Handle	UNK	hGetBuf	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	GHC.IO	Handle	UNK	hGetBufNonBlocking	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	GHC.IO	Handle	IO	hPutBuf	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	GHC.IO.Handle	FD	Handle	stdin	void
+haskell	GHC.IO.Handle	FD	Handle	stdout	void
+haskell	GHC.IO.Handle	FD	Handle	stderr	void
+haskell	GHC.IO.Handle	FD	UNK	openFile	UNK=FilePath UNK=IOMode
+haskell	GHC.IO.Handle	FD	UNK	openBinaryFile	UNK=FilePath UNK=IOMode
+haskell	GHC.IO.Handle	FD	UNK	openFileBlocking	UNK=FilePath UNK=IOMode
+haskell	GHC.IO.Handle	FD	UNK	fdToHandle	UNK=FD
+haskell	GHC.IO.Handle	FD	UNK	fdToHandle'	UNK=CInt UNK=Maybe UNK=IODeviceType UNK=Bool UNK=FilePath UNK=IOMode UNK=Bool
+haskell	GHC.IO.Handle	FD	UNK	isEOF	void
+haskell	System	IO	UNK	fixIO	UNK=$f_2$ UNK=a UNK=IO UNK=a
+haskell	System	IO	Handle	stdin	void
+haskell	System	IO	Handle	stdout	void
+haskell	System	IO	Handle	stderr	void
+haskell	System	IO	UNK	withFile	UNK=FilePath UNK=IOMode UNK=$f_2$ UNK=Handle UNK=IO UNK=r
+haskell	System	IO	UNK	openFile	UNK=FilePath UNK=IOMode
+haskell	System	IO	IOMode	ReadMode	void
+haskell	System	IO	IO	hClose	UNK=Handle
+haskell	System	IO	UNK	readFile	UNK=FilePath
+haskell	System	IO	IO	writeFile	UNK=FilePath UNK=String
+haskell	System	IO	IO	appendFile	UNK=FilePath UNK=String
+haskell	System	IO	UNK	hFileSize	UNK=Handle
+haskell	System	IO	IO	hSetFileSize	UNK=Handle UNK=Integer
+haskell	System	IO	UNK	hIsEOF	UNK=Handle
+haskell	System	IO	UNK	isEOF	void
+haskell	System	IO	BufferMode	NoBuffering	void
+haskell	System	IO	BufferMode	LineBuffering	void
+haskell	System	IO	BufferMode	BlockBuffering	UNK=Maybe UNK=Int
+haskell	System	IO	IO	hSetBuffering	UNK=Handle UNK=BufferMode
+haskell	System	IO	UNK	hGetBuffering	UNK=Handle
+haskell	System	IO	IO	hFlush	UNK=Handle
+haskell	System	IO	UNK	hGetPosn	UNK=Handle
+haskell	System	IO	IO	hSetPosn	UNK=HandlePosn
+haskell	System	IO	IO	hSeek	UNK=Handle UNK=SeekMode UNK=Integer
+haskell	System	IO	SeekMode	AbsoluteSeek	void
+haskell	System	IO	SeekMode	RelativeSeek	void
+haskell	System	IO	SeekMode	SeekFromEnd	void
+haskell	System	IO	UNK	hTell	UNK=Handle
+haskell	System	IO	UNK	hIsTerminalDevice	UNK=Handle
+haskell	System	IO	IO	hSetEcho	UNK=Handle UNK=Bool
+haskell	System	IO	UNK	hGetEcho	UNK=Handle
+haskell	System	IO	UNK	hShow	UNK=Handle
+haskell	System	IO	UNK	hWaitForInput	UNK=Handle UNK=Int
+haskell	System	IO	UNK	hReady	UNK=Handle
+haskell	System	IO	UNK	hGetChar	UNK=Handle
+haskell	System	IO	UNK	hGetLine	UNK=Handle
+haskell	System	IO	UNK	hLookAhead	UNK=Handle
+haskell	System	IO	UNK	hGetContents	UNK=Handle
+haskell	System	IO	IO	hPutChar	UNK=Handle UNK=Char
+haskell	System	IO	IO	hPutStr	UNK=Handle UNK=String
+haskell	System	IO	IO	hPutStrLn	UNK=Handle UNK=String
+haskell	System	IO	IO	hPrint	UNK=Handle Show=a
+haskell	System	IO	IO	interact	UNK=$f_2$ UNK=String UNK=String
+haskell	System	IO	IO	putChar	UNK=Char
+haskell	System	IO	IO	putStr	UNK=String
+haskell	System	IO	IO	putStrLn	UNK=String
+haskell	System	IO	IO	print	Show=a
+haskell	System	IO	UNK	getChar	void
+haskell	System	IO	UNK	getLine	void
+haskell	System	IO	UNK	getContents	void
+haskell	System	IO	UNK	readIO	UNK=String
+haskell	System	IO	UNK	readLn	void
+haskell	System	IO	UNK	withBinaryFile	UNK=FilePath UNK=IOMode UNK=$f_2$ UNK=Handle UNK=IO UNK=r
+haskell	System	IO	UNK	openBinaryFile	UNK=FilePath UNK=IOMode
+haskell	System	IO	IO	hSetBinaryMode	UNK=Handle UNK=Bool
+haskell	System	IO	IO	hPutBuf	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	System	IO	UNK	hGetBuf	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	System	IO	UNK	hGetBufSome	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	System	IO	UNK	hGetBufNonBlocking	UNK=Handle UNK=Ptr UNK=a UNK=Int
+haskell	System	IO	UNK	openTempFile	UNK=FilePath UNK=String
+haskell	System	IO	UNK	openBinaryTempFile	UNK=FilePath UNK=String
+haskell	System	IO	UNK	openTempFileWithDefaultPermissions	UNK=FilePath UNK=String
+haskell	System	IO	UNK	openBinaryTempFileWithDefaultPermissions	UNK=FilePath UNK=String
+haskell	System	IO	IO	hSetEncoding	UNK=Handle UNK=TextEncoding
+haskell	System	IO	UNK	hGetEncoding	UNK=Handle
+haskell	System	IO	TextEncoding	latin1	void
+haskell	System	IO	TextEncoding	utf8	void
+haskell	System	IO	TextEncoding	utf8_bom	void
+haskell	System	IO	TextEncoding	utf16	void
+haskell	System	IO	TextEncoding	utf16le	void
+haskell	System	IO	TextEncoding	utf16be	void
+haskell	System	IO	TextEncoding	utf32	void
+haskell	System	IO	TextEncoding	utf32le	void
+haskell	System	IO	TextEncoding	utf32be	void
+haskell	System	IO	TextEncoding	localeEncoding	void
+haskell	System	IO	TextEncoding	char8	void
+haskell	System	IO	UNK	mkTextEncoding	UNK=String
+haskell	System	IO	IO	hSetNewlineMode	UNK=Handle UNK=NewlineMode
+haskell	System	IO	Newline	nativeNewline	void
+haskell	System	IO	NewlineMode	NewlineMode	UNK=Newline UNK=Newline
+haskell	System	IO	Newline	[inputNL]	UNK=NewlineMode
+haskell	System	IO	Newline	[outputNL]	UNK=NewlineMode
+haskell	System	IO	NewlineMode	noNewlineTranslation	void
+haskell	System	IO	NewlineMode	universalNewlineMode	void
+haskell	System	IO	NewlineMode	nativeNewlineMode	void
+haskell	Control.Monad	Fix	UNK	mfix	UNK=$f_2$ UNK=a MonadFix=m UNK=a
+haskell	Control.Monad	Fix	a	fix	UNK=$f_2$ UNK=a UNK=a
+haskell	Control	Arrow	UNK	arr	UNK=$f_2$ UNK=b UNK=c
+haskell	Control	Arrow	UNK	first	Arrow=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	second	Arrow=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	(***)	Arrow=a UNK=b UNK=c Arrow=a UNK=b' UNK=c'
+haskell	Control	Arrow	UNK	(&&&)	Arrow=a UNK=b UNK=c Arrow=a UNK=b UNK=c'
+haskell	Control	Arrow	UNK	Kleisli	UNK=$f_2$ UNK=a UNK=m UNK=b
+haskell	Control	Arrow	UNK	returnA	void
+haskell	Control	Arrow	UNK	(^>>)	UNK=$f_2$ UNK=b UNK=c Arrow=a UNK=c UNK=d
+haskell	Control	Arrow	UNK	(>>^)	Arrow=a UNK=b UNK=c UNK=$f_2$ UNK=c UNK=d
+haskell	Control	Arrow	UNK	(>>>)	Category=cat UNK=a UNK=b Category=cat UNK=b UNK=c
+haskell	Control	Arrow	UNK	(<<<)	Category=cat UNK=b UNK=c Category=cat UNK=a UNK=b
+haskell	Control	Arrow	UNK	(<<^)	Arrow=a UNK=c UNK=d UNK=$f_2$ UNK=b UNK=c
+haskell	Control	Arrow	UNK	(^<<)	UNK=$f_2$ UNK=c UNK=d Arrow=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	(<+>)	ArrowPlus=a UNK=b UNK=c ArrowPlus=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	left	ArrowChoice=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	right	ArrowChoice=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	(+++)	ArrowChoice=a UNK=b UNK=c ArrowChoice=a UNK=b' UNK=c'
+haskell	Control	Arrow	UNK	(|||)	ArrowChoice=a UNK=b UNK=d ArrowChoice=a UNK=c UNK=d
+haskell	Control	Arrow	UNK	ArrowMonad	UNK=a UNK=b
+haskell	Control	Arrow	UNK	leftApp	ArrowApply=a UNK=b UNK=c
+haskell	Control	Arrow	UNK	loop	ArrowLoop=a UNK=$tuple_2$ UNK=b UNK=d UNK=$tuple_2$ UNK=c UNK=d
+haskell	Control	Applicative	UNK	pure	UNK=a
+haskell	Control	Applicative	UNK	(<*>)	Applicative=f UNK=$f_2$ UNK=a UNK=b Applicative=f UNK=a
+haskell	Control	Applicative	UNK	(*>)	Applicative=f UNK=a Applicative=f UNK=b
+haskell	Control	Applicative	UNK	(<*)	Applicative=f UNK=a Applicative=f UNK=b
+haskell	Control	Applicative	UNK	empty	void
+haskell	Control	Applicative	UNK	(<|>)	Alternative=f UNK=a Alternative=f UNK=a
+haskell	Control	Applicative	UNK	some	Alternative=f UNK=a
+haskell	Control	Applicative	UNK	many	Alternative=f UNK=a
+haskell	Control	Applicative	UNK	ZipList	UNK=$list$ UNK=a
+haskell	Control	Applicative	UNK	(<$>)	UNK=$f_2$ UNK=a UNK=b Functor=f UNK=a
+haskell	Control	Applicative	UNK	(<$)	UNK=a Functor=f UNK=b
+haskell	Control	Applicative	UNK	(<**>)	Applicative=f UNK=a Applicative=f UNK=$f_2$ UNK=a UNK=b
+haskell	Control	Applicative	UNK	liftA	UNK=$f_2$ UNK=a UNK=b Applicative=f UNK=a
+haskell	Control	Applicative	UNK	liftA2	UNK=$f_3$ UNK=a UNK=b UNK=c Applicative=f UNK=a Applicative=f UNK=b
+haskell	Control	Applicative	UNK	liftA3	UNK=$f_4$ UNK=a UNK=b UNK=c UNK=d Applicative=f UNK=a Applicative=f UNK=b Applicative=f UNK=c
+haskell	Control	Applicative	UNK	optional	Alternative=f UNK=a
+haskell	Data	Traversable	UNK	traverse	UNK=$f_2$ UNK=a Applicative=f UNK=b Traversable=t UNK=a
+haskell	Data	Traversable	UNK	sequenceA	Traversable=t Applicative=f UNK=a
+haskell	Data	Traversable	UNK	mapM	UNK=$f_2$ UNK=a Monad=m UNK=b Traversable=t UNK=a
+haskell	Data	Traversable	UNK	sequence	Traversable=t Monad=m UNK=a
+haskell	Data	Traversable	UNK	for	Traversable=t UNK=a UNK=$f_2$ UNK=a Applicative=f UNK=b
+haskell	Data	Traversable	UNK	forM	Traversable=t UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Data	Traversable	UNK	mapAccumL	UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=c UNK=b UNK=a Traversable=t UNK=b
+haskell	Data	Traversable	UNK	mapAccumR	UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=c UNK=b UNK=a Traversable=t UNK=b
+haskell	Data	Traversable	UNK	fmapDefault	UNK=$f_2$ UNK=a UNK=b Traversable=t UNK=a
+haskell	Data	Traversable	Monoid	foldMapDefault	UNK=$f_2$ UNK=a Monoid=m Traversable=t UNK=a
+haskell	Control	Monad	UNK	fmap	UNK=$f_2$ UNK=a UNK=b Functor=f UNK=a
+haskell	Control	Monad	UNK	(>>=)	Monad=m UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Control	Monad	UNK	(>>)	Monad=m UNK=a Monad=m UNK=b
+haskell	Control	Monad	UNK	return	UNK=a
+haskell	Control	Monad	UNK	fail	UNK=String
+haskell	Control	Monad	UNK	mzero	void
+haskell	Control	Monad	UNK	mplus	MonadPlus=m UNK=a MonadPlus=m UNK=a
+haskell	Control	Monad	UNK	mapM	UNK=$f_2$ UNK=a Monad=m UNK=b Traversable=t UNK=a
+haskell	Control	Monad	Monad	mapM_	UNK=$f_2$ UNK=a Monad=m UNK=b Foldable=t UNK=a
+haskell	Control	Monad	UNK	forM	Traversable=t UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Control	Monad	Monad	forM_	Foldable=t UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Control	Monad	UNK	sequence	Traversable=t Monad=m UNK=a
+haskell	Control	Monad	Monad	sequence_	Foldable=t Monad=m UNK=a
+haskell	Control	Monad	UNK	(=<<)	UNK=$f_2$ UNK=a Monad=m UNK=b Monad=m UNK=a
+haskell	Control	Monad	UNK	(>=>)	UNK=$f_2$ UNK=a Monad=m UNK=b UNK=$f_2$ UNK=b Monad=m UNK=c
+haskell	Control	Monad	UNK	(<=<)	UNK=$f_2$ UNK=b Monad=m UNK=c UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Control	Monad	UNK	forever	Monad=m UNK=a
+haskell	Control	Monad	Functor	void	Functor=f UNK=a
+haskell	Control	Monad	UNK	join	Monad=m Monad=m UNK=a
+haskell	Control	Monad	UNK	msum	Foldable=t MonadPlus=m UNK=a
+haskell	Control	Monad	UNK	mfilter	UNK=$f_2$ UNK=a UNK=Bool MonadPlus=m UNK=a
+haskell	Control	Monad	UNK	filterM	UNK=$f_2$ UNK=a Monad=m UNK=Bool UNK=$list$ UNK=a
+haskell	Control	Monad	UNK	mapAndUnzipM	UNK=$f_2$ UNK=a Monad=m UNK=$tuple_2$ UNK=b UNK=c UNK=$list$ UNK=a
+haskell	Control	Monad	UNK	zipWithM	UNK=$f_3$ UNK=a UNK=b Monad=m UNK=c UNK=$list$ UNK=a UNK=$list$ UNK=b
+haskell	Control	Monad	Monad	zipWithM_	UNK=$f_3$ UNK=a UNK=b Monad=m UNK=c UNK=$list$ UNK=a UNK=$list$ UNK=b
+haskell	Control	Monad	UNK	foldM	UNK=$f_3$ UNK=b UNK=a Monad=m UNK=b UNK=b Foldable=t UNK=a
+haskell	Control	Monad	Monad	foldM_	UNK=$f_3$ UNK=b UNK=a Monad=m UNK=b UNK=b Foldable=t UNK=a
+haskell	Control	Monad	UNK	replicateM	UNK=Int Monad=m UNK=a
+haskell	Control	Monad	Monad	replicateM_	UNK=Int Monad=m UNK=a
+haskell	Control	Monad	Alternative	guard	UNK=Bool
+haskell	Control	Monad	Applicative	when	UNK=Bool Applicative=f
+haskell	Control	Monad	Applicative	unless	UNK=Bool Applicative=f
+haskell	Control	Monad	UNK	liftM	UNK=$f_2$ UNK=a1 UNK=r Monad=m UNK=a1
+haskell	Control	Monad	UNK	liftM2	UNK=$f_3$ UNK=a1 UNK=a2 UNK=r Monad=m UNK=a1 Monad=m UNK=a2
+haskell	Control	Monad	UNK	liftM3	UNK=$f_4$ UNK=a1 UNK=a2 UNK=a3 UNK=r Monad=m UNK=a1 Monad=m UNK=a2 Monad=m UNK=a3
+haskell	Control	Monad	UNK	liftM4	UNK=$f_5$ UNK=a1 UNK=a2 UNK=a3 UNK=a4 UNK=r Monad=m UNK=a1 Monad=m UNK=a2 Monad=m UNK=a3 Monad=m UNK=a4
+haskell	Control	Monad	UNK	liftM5	UNK=$f_6$ UNK=a1 UNK=a2 UNK=a3 UNK=a4 UNK=a5 UNK=r Monad=m UNK=a1 Monad=m UNK=a2 Monad=m UNK=a3 Monad=m UNK=a4 Monad=m UNK=a5
+haskell	Control	Monad	UNK	ap	Monad=m UNK=$f_2$ UNK=a UNK=b Monad=m UNK=a
+haskell	Control	Monad	UNK	(<$!>)	UNK=$f_2$ UNK=a UNK=b Monad=m UNK=a
+haskell	GHC	Stats	!Int64	[bytesAllocated]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[numGcs]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[maxBytesUsed]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[numByteUsageSamples]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[bytesCopied]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[currentBytesUsed]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[currentBytesSlop]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[maxBytesSlop]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[peakMegabytesAllocated]	UNK=GCStats
+haskell	GHC	Stats	!Double	[mutatorWallSeconds]	UNK=GCStats
+haskell	GHC	Stats	!Double	[gcCpuSeconds]	UNK=GCStats
+haskell	GHC	Stats	!Double	[gcWallSeconds]	UNK=GCStats
+haskell	GHC	Stats	!Double	[cpuSeconds]	UNK=GCStats
+haskell	GHC	Stats	!Double	[wallSeconds]	UNK=GCStats
+haskell	GHC	Stats	!Int64	[parMaxBytesCopied]	UNK=GCStats
+haskell	GHC	Stats	UNK	getGCStats	void
+haskell	GHC	Stats	UNK	getGCStatsEnabled	void
+haskell	Data	List	UNK	(++)	UNK=$list$ UNK=a UNK=$list$ UNK=a
+haskell	Data	List	a	head	UNK=$list$ UNK=a
+haskell	Data	List	a	last	UNK=$list$ UNK=a
+haskell	Data	List	UNK	tail	UNK=$list$ UNK=a
+haskell	Data	List	UNK	init	UNK=$list$ UNK=a
+haskell	Data	List	UNK	uncons	UNK=$list$ UNK=a
+haskell	Data	List	Bool	null	Foldable=t UNK=a
+haskell	Data	List	Int	length	Foldable=t UNK=a
+haskell	Data	List	UNK	map	UNK=$f_2$ UNK=a UNK=b UNK=$list$ UNK=a
+haskell	Data	List	UNK	reverse	UNK=$list$ UNK=a
+haskell	Data	List	UNK	intersperse	UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	intercalate	UNK=$list$ UNK=a UNK=$list$ UNK=$list$ UNK=a
+haskell	Data	List	UNK	transpose	UNK=$list$ UNK=$list$ UNK=a
+haskell	Data	List	UNK	subsequences	UNK=$list$ UNK=a
+haskell	Data	List	UNK	permutations	UNK=$list$ UNK=a
+haskell	Data	List	b	foldl	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	List	b	foldl'	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	List	a	foldl1	UNK=$f_3$ UNK=a UNK=a UNK=a Foldable=t UNK=a
+haskell	Data	List	a	foldl1'	UNK=$f_3$ UNK=a UNK=a UNK=a UNK=$list$ UNK=a
+haskell	Data	List	b	foldr	UNK=$f_3$ UNK=a UNK=b UNK=b UNK=b Foldable=t UNK=a
+haskell	Data	List	a	foldr1	UNK=$f_3$ UNK=a UNK=a UNK=a Foldable=t UNK=a
+haskell	Data	List	UNK	concat	Foldable=t UNK=$list$ UNK=a
+haskell	Data	List	UNK	concatMap	UNK=$f_2$ UNK=a UNK=$list$ UNK=b Foldable=t UNK=a
+haskell	Data	List	Bool	and	Foldable=t UNK=Bool
+haskell	Data	List	Bool	or	Foldable=t UNK=Bool
+haskell	Data	List	Bool	any	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Data	List	Bool	all	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Data	List	Num	sum	Foldable=t Num=a
+haskell	Data	List	Num	product	Foldable=t Num=a
+haskell	Data	List	Ord	maximum	Foldable=t Ord=a
+haskell	Data	List	Ord	minimum	Foldable=t Ord=a
+haskell	Data	List	UNK	scanl	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b UNK=$list$ UNK=a
+haskell	Data	List	UNK	scanl'	UNK=$f_3$ UNK=b UNK=a UNK=b UNK=b UNK=$list$ UNK=a
+haskell	Data	List	UNK	scanl1	UNK=$f_3$ UNK=a UNK=a UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	scanr	UNK=$f_3$ UNK=a UNK=b UNK=b UNK=b UNK=$list$ UNK=a
+haskell	Data	List	UNK	scanr1	UNK=$f_3$ UNK=a UNK=a UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	mapAccumL	UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=c UNK=b UNK=a Traversable=t UNK=b
+haskell	Data	List	UNK	mapAccumR	UNK=$f_2$ UNK=a UNK=$tuple_2$ UNK=a UNK=c UNK=b UNK=a Traversable=t UNK=b
+haskell	Data	List	UNK	iterate	UNK=$f_2$ UNK=a UNK=a UNK=a
+haskell	Data	List	UNK	repeat	UNK=a
+haskell	Data	List	UNK	replicate	UNK=Int UNK=a
+haskell	Data	List	UNK	cycle	UNK=$list$ UNK=a
+haskell	Data	List	UNK	unfoldr	UNK=$f_2$ UNK=b UNK=Maybe UNK=$tuple_2$ UNK=a UNK=b UNK=b
+haskell	Data	List	UNK	take	UNK=Int UNK=$list$ UNK=a
+haskell	Data	List	UNK	drop	UNK=Int UNK=$list$ UNK=a
+haskell	Data	List	UNK	splitAt	UNK=Int UNK=$list$ UNK=a
+haskell	Data	List	UNK	takeWhile	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	dropWhile	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	dropWhileEnd	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	span	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	break	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	stripPrefix	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	group	UNK=$list$ Eq=a
+haskell	Data	List	UNK	inits	UNK=$list$ UNK=a
+haskell	Data	List	UNK	tails	UNK=$list$ UNK=a
+haskell	Data	List	Bool	isPrefixOf	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	Bool	isSuffixOf	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	Bool	isInfixOf	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	Bool	isSubsequenceOf	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	Bool	elem	Eq=a Foldable=t Eq=a
+haskell	Data	List	Bool	notElem	Eq=a Foldable=t Eq=a
+haskell	Data	List	UNK	lookup	Eq=a UNK=$list$ UNK=$tuple_2$ Eq=a UNK=b
+haskell	Data	List	UNK	find	UNK=$f_2$ UNK=a UNK=Bool Foldable=t UNK=a
+haskell	Data	List	UNK	filter	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	partition	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	a	(!!)	UNK=$list$ UNK=a UNK=Int
+haskell	Data	List	UNK	elemIndex	Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	elemIndices	Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	findIndex	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	findIndices	UNK=$f_2$ UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	zip	UNK=$list$ UNK=a UNK=$list$ UNK=b
+haskell	Data	List	UNK	zip3	UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c
+haskell	Data	List	UNK	zip4	UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d
+haskell	Data	List	UNK	zip5	UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e
+haskell	Data	List	UNK	zip6	UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e UNK=$list$ UNK=f
+haskell	Data	List	UNK	zip7	UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e UNK=$list$ UNK=f UNK=$list$ UNK=g
+haskell	Data	List	UNK	zipWith	UNK=$f_3$ UNK=a UNK=b UNK=c UNK=$list$ UNK=a UNK=$list$ UNK=b
+haskell	Data	List	UNK	zipWith3	UNK=$f_4$ UNK=a UNK=b UNK=c UNK=d UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c
+haskell	Data	List	UNK	zipWith4	UNK=$f_5$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d
+haskell	Data	List	UNK	zipWith5	UNK=$f_6$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e
+haskell	Data	List	UNK	zipWith6	UNK=$f_7$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f UNK=g UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e UNK=$list$ UNK=f
+haskell	Data	List	UNK	zipWith7	UNK=$f_8$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f UNK=g UNK=h UNK=$list$ UNK=a UNK=$list$ UNK=b UNK=$list$ UNK=c UNK=$list$ UNK=d UNK=$list$ UNK=e UNK=$list$ UNK=f UNK=$list$ UNK=g
+haskell	Data	List	UNK	unzip	UNK=$list$ UNK=$tuple_2$ UNK=a UNK=b
+haskell	Data	List	UNK	unzip3	UNK=$list$ UNK=$tuple_3$ UNK=a UNK=b UNK=c
+haskell	Data	List	UNK	unzip4	UNK=$list$ UNK=$tuple_4$ UNK=a UNK=b UNK=c UNK=d
+haskell	Data	List	UNK	unzip5	UNK=$list$ UNK=$tuple_5$ UNK=a UNK=b UNK=c UNK=d UNK=e
+haskell	Data	List	UNK	unzip6	UNK=$list$ UNK=$tuple_6$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f
+haskell	Data	List	UNK	unzip7	UNK=$list$ UNK=$tuple_7$ UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f UNK=g
+haskell	Data	List	UNK	lines	UNK=String
+haskell	Data	List	UNK	words	UNK=String
+haskell	Data	List	String	unlines	UNK=$list$ UNK=String
+haskell	Data	List	String	unwords	UNK=$list$ UNK=String
+haskell	Data	List	UNK	nub	UNK=$list$ Eq=a
+haskell	Data	List	UNK	delete	Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	(\\)	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	union	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	intersect	UNK=$list$ Eq=a UNK=$list$ Eq=a
+haskell	Data	List	UNK	sort	UNK=$list$ Ord=a
+haskell	Data	List	UNK	sortOn	UNK=$f_2$ UNK=a Ord=b UNK=$list$ UNK=a
+haskell	Data	List	UNK	insert	Ord=a UNK=$list$ Ord=a
+haskell	Data	List	UNK	nubBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	deleteBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	deleteFirstsBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=$list$ UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	unionBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=$list$ UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	intersectBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=$list$ UNK=a UNK=$list$ UNK=a
+haskell	Data	List	UNK	groupBy	UNK=$f_3$ UNK=a UNK=a UNK=Bool UNK=$list$ UNK=a
+haskell	Data	List	UNK	sortBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering UNK=$list$ UNK=a
+haskell	Data	List	UNK	insertBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering UNK=a UNK=$list$ UNK=a
+haskell	Data	List	a	maximumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering Foldable=t UNK=a
+haskell	Data	List	a	minimumBy	UNK=$f_3$ UNK=a UNK=a UNK=Ordering Foldable=t UNK=a
+haskell	Data	List	Num	genericLength	UNK=$list$ UNK=a
+haskell	Data	List	UNK	genericTake	Integral=i UNK=$list$ UNK=a
+haskell	Data	List	UNK	genericDrop	Integral=i UNK=$list$ UNK=a
+haskell	Data	List	UNK	genericSplitAt	Integral=i UNK=$list$ UNK=a
+haskell	Data	List	a	genericIndex	UNK=$list$ UNK=a Integral=i
+haskell	Data	List	UNK	genericReplicate	Integral=i UNK=a
+haskell	Data	String	IsString	fromString	UNK=String
+haskell	Data	String	UNK	lines	UNK=String
+haskell	Data	String	UNK	words	UNK=String
+haskell	Data	String	String	unlines	UNK=$list$ UNK=String
+haskell	Data	String	String	unwords	UNK=$list$ UNK=String
+haskell	Data	Version	Version	Version	UNK=$list$ UNK=Int UNK=$list$ UNK=String
+haskell	Data	Version	UNK	[versionBranch]	UNK=Version
+haskell	Data	Version	UNK	[versionTags]	UNK=Version
+haskell	Data	Version	String	showVersion	UNK=Version
+haskell	Data	Version	UNK	parseVersion	void
+haskell	Data	Version	Version	makeVersion	UNK=$list$ UNK=Int
+haskell	Data	Data	Constr	toConstr	Data=a
+haskell	Data	Data	DataType	mkDataType	UNK=String UNK=$list$ UNK=Constr
+haskell	Data	Data	DataType	mkIntType	UNK=String
+haskell	Data	Data	DataType	mkFloatType	UNK=String
+haskell	Data	Data	DataType	mkCharType	UNK=String
+haskell	Data	Data	DataType	mkNoRepType	UNK=String
+haskell	Data	Data	DataRep	AlgRep	UNK=$list$ UNK=Constr
+haskell	Data	Data	Constr	repConstr	UNK=DataType UNK=ConstrRep
+haskell	Data	Data	Bool	isAlgType	UNK=DataType
+haskell	Data	Data	Constr	indexConstr	UNK=DataType UNK=ConIndex
+haskell	Data	Data	ConIndex	maxConstrIndex	UNK=DataType
+haskell	Data	Data	Bool	isNorepType	UNK=DataType
+haskell	Data	Data	Fixity	Prefix	void
+haskell	Data	Data	Constr	mkConstr	UNK=DataType UNK=String UNK=$list$ UNK=String UNK=Fixity
+haskell	Data	Data	Constr	mkCharConstr	UNK=DataType UNK=Char
+haskell	Data	Data	DataType	constrType	UNK=Constr
+haskell	Data	Data	ConstrRep	AlgConstr	UNK=ConIndex
+haskell	Data	Data	ConstrRep	constrRep	UNK=Constr
+haskell	Data	Data	UNK	constrFields	UNK=Constr
+haskell	Data	Data	Fixity	constrFixity	UNK=Constr
+haskell	Data	Data	ConIndex	constrIndex	UNK=Constr
+haskell	Data	Data	String	showConstr	UNK=Constr
+haskell	Data	Data	UNK	readConstr	UNK=DataType UNK=String
+haskell	Data	Data	String	tyconUQname	UNK=String
+haskell	Data	Data	String	tyconModule	UNK=String
+haskell	Data	Data	Data	fromConstr	UNK=Constr
+haskell	GHC	Natural	Natural	NatS#	UNK=GmpLimb#
+haskell	GHC	Natural	Bool	isValidNatural	UNK=Natural
+haskell	GHC	Natural	Natural	wordToNatural	UNK=Word
+haskell	GHC	Natural	UNK	naturalToWordMaybe	UNK=Natural
+haskell	GHC	Natural	UNK	minusNaturalMaybe	UNK=Natural UNK=Natural
+haskell	GHC	Natural	Natural	powModNatural	UNK=Natural UNK=Natural UNK=Natural
+haskell	GHC.RTS	Flags	RTSFlags	RTSFlags	UNK=GCFlags UNK=ConcFlags UNK=MiscFlags UNK=DebugFlags UNK=CCFlags UNK=ProfFlags UNK=TraceFlags UNK=TickyFlags
+haskell	GHC.RTS	Flags	Bool	[compact]	UNK=GCFlags
+haskell	GHC.RTS	Flags	Bool	[sweep]	UNK=GCFlags
+haskell	GHC.RTS	Flags	Word	[heapBase]	UNK=GCFlags
+haskell	GHC.RTS	Flags	Word	[linkerMemBase]	UNK=MiscFlags
+haskell	GHC.RTS	Flags	Bool	[linker]	UNK=DebugFlags
+haskell	GHC.RTS	Flags	Bool	[squeeze]	UNK=DebugFlags
+haskell	GHC.RTS	Flags	Bool	[hpc]	UNK=DebugFlags
+haskell	GHC.RTS	Flags	Time	[heapProfileInterval]	UNK=ProfFlags
+haskell	GHC.RTS	Flags	Word	[heapProfileIntervalTicks]	UNK=ProfFlags
+haskell	GHC.RTS	Flags	Bool	[timestamp]	UNK=TraceFlags
+haskell	GHC.RTS	Flags	Bool	[traceScheduler]	UNK=TraceFlags
+haskell	GHC.RTS	Flags	Bool	[traceGc]	UNK=TraceFlags
+haskell	GHC.RTS	Flags	Bool	[sparksSampled]	UNK=TraceFlags
+haskell	GHC.RTS	Flags	Bool	[sparksFull]	UNK=TraceFlags
+haskell	GHC.RTS	Flags	Bool	[user]	UNK=TraceFlags
+haskell	GHC	Fingerprint	UNK	getFileHash	UNK=FilePath
+haskell	GHC	Event	UNK	getSystemEventManager	void
+haskell	GHC	Event	UNK	new	void
+haskell	GHC	Event	Event	evtRead	void
+haskell	GHC	Event	Event	evtWrite	void
+haskell	GHC	Event	Lifetime	OneShot	void
+haskell	GHC	Event	Lifetime	MultiShot	void
+haskell	GHC	Event	UNK	registerFd	UNK=EventManager UNK=IOCallback UNK=Fd UNK=Event UNK=Lifetime
+haskell	GHC	Event	IO	unregisterFd	UNK=EventManager UNK=FdKey
+haskell	GHC	Event	UNK	unregisterFd_	UNK=EventManager UNK=FdKey
+haskell	GHC	Event	IO	closeFd	UNK=EventManager UNK=$f_2$ UNK=Fd UNK=IO UNK=Fd
+haskell	GHC	Event	UNK	registerTimeout	UNK=TimerManager UNK=Int UNK=TimeoutCallback
+haskell	GHC	Event	IO	updateTimeout	UNK=TimerManager UNK=TimeoutKey UNK=Int
+haskell	GHC	Event	IO	unregisterTimeout	UNK=TimerManager UNK=TimeoutKey
+haskell	GHC	TypeLits	UNK	someNatVal	UNK=Integer
+haskell	GHC	TypeLits	SomeSymbol	someSymbolVal	UNK=String
+haskell	GHC	IP	IP	ip	void
+haskell	Prelude	core	Bool	False	void
+haskell	Prelude	core	Enum	succ	Enum=a
+haskell	Prelude	core	Enum	pred	Enum=a
+haskell	Prelude	core	Enum	toEnum	UNK=Int
+haskell	Prelude	core	Int	fromEnum	Enum=a
+haskell	Prelude	core	UNK	enumFrom	Enum=a
+haskell	Prelude	core	UNK	enumFromTo	Enum=a Enum=a
+haskell	Prelude	core	Bounded	minBound	void
+haskell	Prelude	core	Num	(+)	Num=a Num=a
+haskell	Prelude	core	Num	negate	Num=a
+haskell	Prelude	core	Num	abs	Num=a
+haskell	Prelude	core	Num	signum	Num=a
+haskell	Prelude	core	Num	fromInteger	UNK=Integer
+haskell	Prelude	core	Rational	toRational	Real=a
+haskell	Prelude	core	Integral	quot	Integral=a Integral=a
+haskell	Prelude	core	Integral	rem	Integral=a Integral=a
+haskell	Prelude	core	Integral	div	Integral=a Integral=a
+haskell	Prelude	core	Integral	mod	Integral=a Integral=a
+haskell	Prelude	core	UNK	quotRem	Integral=a Integral=a
+haskell	Prelude	core	UNK	divMod	Integral=a Integral=a
+haskell	Prelude	core	Integer	toInteger	Integral=a
+haskell	Prelude	core	Fractional	(/)	Fractional=a Fractional=a
+haskell	Prelude	core	Fractional	recip	Fractional=a
+haskell	Prelude	core	Fractional	fromRational	UNK=Rational
+haskell	Prelude	core	Floating	pi	void
+haskell	Prelude	core	UNK	properFraction	RealFrac=a
+haskell	Prelude	core	Integral	truncate	RealFrac=a
+haskell	Prelude	core	Integral	round	RealFrac=a
+haskell	Prelude	core	Integral	ceiling	RealFrac=a
+haskell	Prelude	core	Integral	floor	RealFrac=a
+haskell	Prelude	core	Integer	floatRadix	RealFloat=a
+haskell	Prelude	core	Int	floatDigits	RealFloat=a
+haskell	Prelude	core	UNK	floatRange	RealFloat=a
+haskell	Prelude	core	UNK	decodeFloat	RealFloat=a
+haskell	Prelude	core	RealFloat	encodeFloat	UNK=Integer UNK=Int
+haskell	Prelude	core	Int	exponent	RealFloat=a
+haskell	Prelude	core	RealFloat	significand	RealFloat=a
+haskell	Prelude	core	RealFloat	scaleFloat	UNK=Int RealFloat=a
+haskell	Prelude	core	Bool	isNaN	RealFloat=a
+haskell	Prelude	core	Bool	isInfinite	RealFloat=a
+haskell	Prelude	core	Bool	isDenormalized	RealFloat=a
+haskell	Prelude	core	Bool	isNegativeZero	RealFloat=a
+haskell	Prelude	core	Bool	isIEEE	RealFloat=a
+haskell	Prelude	core	RealFloat	atan2	RealFloat=a RealFloat=a
+haskell	Prelude	core	Num	subtract	Num=a Num=a
+haskell	Prelude	core	Integral	gcd	Integral=a Integral=a
+haskell	Prelude	core	Integral	lcm	Integral=a Integral=a
+haskell	Prelude	core	Num	(^)	Num=a Integral=b
+haskell	Prelude	core	Fractional	(^^)	Fractional=a Integral=b
+haskell	Prelude	core	Num	fromIntegral	Integral=a
+haskell	Prelude	core	Fractional	realToFrac	Real=a
+haskell	Prelude	core	a	until	UNK=$f_2$ UNK=a UNK=Bool UNK=$f_2$ UNK=a UNK=a UNK=a
+haskell	Prelude	core	a	asTypeOf	UNK=a UNK=a
+haskell	Prelude	core	a	error	UNK=$list$ UNK=Char
+haskell	Prelude	core	a	undefined	void
+haskell	Prelude	core	b	seq	UNK=a UNK=b
+haskell	Prelude	core	b	($!)	UNK=$f_2$ UNK=a UNK=b UNK=a
+haskell	GHC	SrcLoc	String	srcLocPackage	UNK=SrcLoc
+haskell	GHC	Stack	UNK	currentCallStack	void
+haskell	GHC	Stack	UNK	whoCreated	UNK=a
+haskell	GHC	Stack	a	errorWithStackTrace	UNK=String
+haskell	GHC	Stack	UNK	getCallStack	UNK=CallStack
+haskell	Debug	Trace	a	trace	UNK=String UNK=a
+haskell	Debug	Trace	String	traceId	UNK=String
+haskell	Debug	Trace	b	traceShow	Show=a UNK=b
+haskell	Debug	Trace	Show	traceShowId	Show=a
+haskell	Debug	Trace	a	traceStack	UNK=String UNK=a
+haskell	Debug	Trace	IO	traceIO	UNK=String
+haskell	Debug	Trace	Monad	traceM	UNK=String
+haskell	Debug	Trace	Monad	traceShowM	Show=a
+haskell	Debug	Trace	IO	putTraceMsg	UNK=String
+haskell	Debug	Trace	a	traceEvent	UNK=String UNK=a
+haskell	Debug	Trace	IO	traceEventIO	UNK=String
+haskell	Debug	Trace	a	traceMarker	UNK=String UNK=a
+haskell	Debug	Trace	IO	traceMarkerIO	UNK=String
+haskell	GHC	Exts	Int	I#	UNK=Int#
+haskell	GHC	Exts	Word	W#	UNK=Word#
+haskell	GHC	Exts	Float	F#	UNK=Float#
+haskell	GHC	Exts	Double	D#	UNK=Double#
+haskell	GHC	Exts	Char	C#	UNK=Char#
+haskell	GHC	Exts	UNK	Ptr	UNK=Addr#
+haskell	GHC	Exts	UNK	FunPtr	UNK=Addr#
+haskell	GHC	Exts	Word#	shiftL#	UNK=Word# UNK=Int#
+haskell	GHC	Exts	Word#	shiftRL#	UNK=Word# UNK=Int#
+haskell	GHC	Exts	Int#	iShiftL#	UNK=Int# UNK=Int#
+haskell	GHC	Exts	Int#	iShiftRA#	UNK=Int# UNK=Int#
+haskell	GHC	Exts	Int#	iShiftRL#	UNK=Int# UNK=Int#
+haskell	GHC	Exts	Bool	isTrue#	UNK=Int#
+haskell	GHC	Exts	IsString	fromString	UNK=String
+haskell	GHC	Exts	a	lazy	UNK=a
+haskell	GHC	Exts	a	inline	UNK=a
+haskell	GHC	Exts	Coercible	coerce	Coercible=a
+haskell	GHC	Exts	UNK	Down	UNK=a
+haskell	GHC	Exts	UNK	groupWith	UNK=$f_2$ UNK=a Ord=b UNK=$list$ UNK=a
+haskell	GHC	Exts	UNK	sortWith	UNK=$f_2$ UNK=a Ord=b UNK=$list$ UNK=a
+haskell	GHC	Exts	Eq	the	UNK=$list$ Eq=a
+haskell	GHC	Exts	IO	traceEvent	UNK=String
+haskell	GHC	Exts	UNK	currentCallStack	void
+haskell	GHC	Exts	IsList	fromList	UNK=$list$ UNK=Item IsList=l
+haskell	GHC	Exts	IsList	fromListN	UNK=Int UNK=$list$ UNK=Item IsList=l
+haskell	GHC	Exts	UNK	toList	IsList=l
+haskell	Control.Monad	Zip	UNK	mzip	MonadZip=m UNK=a MonadZip=m UNK=b
+haskell	GHC	StaticPtr	a	deRefStaticPtr	UNK=StaticPtr UNK=a
+haskell	GHC	StaticPtr	StaticKey	staticKey	UNK=StaticPtr UNK=a
+haskell	GHC	StaticPtr	UNK	unsafeLookupStaticPtr	UNK=StaticKey
+haskell	GHC	StaticPtr	StaticPtrInfo	StaticPtrInfo	UNK=String UNK=String UNK=String UNK=$tuple_2$ UNK=Int UNK=Int
+haskell	GHC	StaticPtr	String	[spInfoPackageKey]	UNK=StaticPtrInfo
+haskell	GHC	StaticPtr	String	[spInfoModuleName]	UNK=StaticPtrInfo
+haskell	GHC	StaticPtr	String	[spInfoName]	UNK=StaticPtrInfo
+haskell	GHC	StaticPtr	UNK	[spInfoSrcLoc]	UNK=StaticPtrInfo
+haskell	GHC	StaticPtr	StaticPtrInfo	staticPtrInfo	UNK=StaticPtr UNK=a
+haskell	GHC	StaticPtr	UNK	staticPtrKeys	void
+haskell	Control.Concurrent	Chan	UNK	newChan	void
+haskell	Control.Concurrent	Chan	IO	writeChan	UNK=Chan UNK=a UNK=a
+haskell	Control.Concurrent	Chan	UNK	readChan	UNK=Chan UNK=a
+haskell	Control.Concurrent	Chan	UNK	dupChan	UNK=Chan UNK=a
+haskell	Control.Concurrent	Chan	IO	unGetChan	UNK=Chan UNK=a UNK=a
+haskell	Control.Concurrent	Chan	UNK	isEmptyChan	UNK=Chan UNK=a
+haskell	Control.Concurrent	Chan	UNK	getChanContents	UNK=Chan UNK=a
+haskell	Control.Concurrent	Chan	IO	writeList2Chan	UNK=Chan UNK=a UNK=$list$ UNK=a
+haskell	Control.Concurrent	QSem	UNK	newQSem	UNK=Int
+haskell	Control.Concurrent	QSem	IO	waitQSem	UNK=QSem
+haskell	Control.Concurrent	QSem	IO	signalQSem	UNK=QSem
+haskell	Control.Concurrent	QSemN	UNK	newQSemN	UNK=Int
+haskell	Control.Concurrent	QSemN	IO	waitQSemN	UNK=QSemN UNK=Int
+haskell	Control.Concurrent	QSemN	IO	signalQSemN	UNK=QSemN UNK=Int
+haskell	Control	Concurrent	UNK	myThreadId	void
+haskell	Control	Concurrent	UNK	forkIO	UNK=IO
+haskell	Control	Concurrent	UNK	forkFinally	UNK=IO UNK=a UNK=$f_2$ UNK=Either UNK=SomeException UNK=a UNK=IO
+haskell	Control	Concurrent	IO	killThread	UNK=ThreadId
+haskell	Control	Concurrent	IO	throwTo	UNK=ThreadId Exception=e
+haskell	Control	Concurrent	UNK	forkOn	UNK=Int UNK=IO
+haskell	Control	Concurrent	UNK	getNumCapabilities	void
+haskell	Control	Concurrent	IO	setNumCapabilities	UNK=Int
+haskell	Control	Concurrent	UNK	threadCapability	UNK=ThreadId
+haskell	Control	Concurrent	IO	yield	void
+haskell	Control	Concurrent	IO	threadDelay	UNK=Int
+haskell	Control	Concurrent	IO	threadWaitRead	UNK=Fd
+haskell	Control	Concurrent	IO	threadWaitWrite	UNK=Fd
+haskell	Control	Concurrent	UNK	threadWaitReadSTM	UNK=Fd
+haskell	Control	Concurrent	UNK	threadWaitWriteSTM	UNK=Fd
+haskell	Control	Concurrent	Bool	rtsSupportsBoundThreads	void
+haskell	Control	Concurrent	UNK	forkOS	UNK=IO
+haskell	Control	Concurrent	UNK	isCurrentThreadBound	void
+haskell	Control	Concurrent	UNK	runInBoundThread	UNK=IO UNK=a
+haskell	Control	Concurrent	UNK	runInUnboundThread	UNK=IO UNK=a
+haskell	Control	Concurrent	UNK	mkWeakThreadId	UNK=ThreadId
+haskell	Control.Monad	Instances	UNK	fmap	UNK=$f_2$ UNK=a UNK=b Functor=f UNK=a
+haskell	Control.Monad	Instances	UNK	(<$)	UNK=a Functor=f UNK=b
+haskell	Control.Monad	Instances	UNK	(>>=)	Monad=m UNK=a UNK=$f_2$ UNK=a Monad=m UNK=b
+haskell	Control.Monad	Instances	UNK	(>>)	Monad=m UNK=a Monad=m UNK=b
+haskell	Control.Monad	Instances	UNK	return	UNK=a
+haskell	Control.Monad	Instances	UNK	fail	UNK=String
+haskell	Control.Monad	ST	UNK	fixST	UNK=$f_2$ UNK=a UNK=ST UNK=s UNK=a
+haskell	Control.Monad	ST	UNK	stToIO	UNK=ST UNK=RealWorld UNK=a
+haskell	Control.Monad.ST	Safe	UNK	fixST	UNK=$f_2$ UNK=a UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST	Safe	UNK	stToIO	UNK=ST UNK=RealWorld UNK=a
+haskell	Control.Monad.ST	Unsafe	UNK	unsafeInterleaveST	UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST	Lazy	UNK	fixST	UNK=$f_2$ UNK=a UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST	Lazy	UNK	strictToLazyST	UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST	Lazy	UNK	lazyToStrictST	UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST	Lazy	UNK	stToIO	UNK=ST UNK=RealWorld UNK=a
+haskell	Control.Monad.ST.Lazy	Safe	UNK	fixST	UNK=$f_2$ UNK=a UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST.Lazy	Safe	UNK	strictToLazyST	UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST.Lazy	Safe	UNK	lazyToStrictST	UNK=ST UNK=s UNK=a
+haskell	Control.Monad.ST.Lazy	Safe	UNK	stToIO	UNK=ST UNK=RealWorld UNK=a
+haskell	Control.Monad.ST.Lazy	Unsafe	UNK	unsafeInterleaveST	UNK=ST UNK=s UNK=a
+haskell	Data	Bifunctor	UNK	bimap	UNK=$f_2$ UNK=a UNK=b UNK=$f_2$ UNK=c UNK=d Bifunctor=p UNK=a UNK=c
+haskell	Data	Bifunctor	UNK	first	UNK=$f_2$ UNK=a UNK=b Bifunctor=p UNK=a UNK=c
+haskell	Data	Bifunctor	UNK	second	UNK=$f_2$ UNK=b UNK=c Bifunctor=p UNK=a UNK=b
+haskell	Data	Complex	UNK	(:+)	UNK=!a UNK=!a
+haskell	Data	Complex	a	realPart	UNK=Complex UNK=a
+haskell	Data	Complex	a	imagPart	UNK=Complex UNK=a
+haskell	Data	Complex	UNK	mkPolar	Floating=a Floating=a
+haskell	Data	Complex	UNK	cis	Floating=a
+haskell	Data	Complex	UNK	polar	UNK=Complex RealFloat=a
+haskell	Data	Complex	RealFloat	magnitude	UNK=Complex RealFloat=a
+haskell	Data	Complex	RealFloat	phase	UNK=Complex RealFloat=a
+haskell	Data	Complex	UNK	conjugate	UNK=Complex Num=a
+haskell	Data	Fixed	Integral	div'	Real=a Real=a
+haskell	Data	Fixed	Real	mod'	Real=a Real=a
+haskell	Data	Fixed	UNK	divMod'	Real=a Real=a
+haskell	Data	Fixed	String	showFixed	UNK=Bool UNK=Fixed HasResolution=a
+haskell	Data.Functor	Identity	UNK	Identity	UNK=a
+haskell	Data	Ix	UNK	range	UNK=$tuple_2$ Ix=a Ix=a
+haskell	Data	Ix	Int	index	UNK=$tuple_2$ Ix=a Ix=a Ix=a
+haskell	Data	Ix	Bool	inRange	UNK=$tuple_2$ Ix=a Ix=a Ix=a
+haskell	Data	Ix	Int	rangeSize	UNK=$tuple_2$ Ix=a Ix=a
+haskell	Data	Ratio	UNK	(%)	Integral=a Integral=a
+haskell	Data	Ratio	Integral	numerator	UNK=Ratio Integral=a
+haskell	Data	Ratio	Integral	denominator	UNK=Ratio Integral=a
+haskell	Data	Ratio	Rational	approxRational	RealFrac=a RealFrac=a
+haskell	Data	STRef	UNK	newSTRef	UNK=a
+haskell	Data	STRef	UNK	readSTRef	UNK=STRef UNK=s UNK=a
+haskell	Data	STRef	UNK	writeSTRef	UNK=STRef UNK=s UNK=a UNK=a
+haskell	Data	STRef	UNK	modifySTRef	UNK=STRef UNK=s UNK=a UNK=$f_2$ UNK=a UNK=a
+haskell	Data	STRef	UNK	modifySTRef'	UNK=STRef UNK=s UNK=a UNK=$f_2$ UNK=a UNK=a
+haskell	Data.STRef	Lazy	UNK	newSTRef	UNK=a
+haskell	Data	Unique	UNK	newUnique	void
+haskell	Data	Unique	Int	hashUnique	UNK=Unique
+haskell	Data	Void	a	absurd	UNK=Void
+haskell	Data	Void	UNK	vacuous	Functor=f UNK=Void
+haskell	System	CPUTime	UNK	getCPUTime	void
+haskell	System	CPUTime	Integer	cpuTimePrecision	void
+haskell	System.Console	GetOpt	UNK	getOpt	UNK=ArgOrder UNK=a UNK=$list$ UNK=OptDescr UNK=a UNK=$list$ UNK=String
+haskell	System.Console	GetOpt	UNK	getOpt'	UNK=ArgOrder UNK=a UNK=$list$ UNK=OptDescr UNK=a UNK=$list$ UNK=String
+haskell	System.Console	GetOpt	String	usageInfo	UNK=String UNK=$list$ UNK=OptDescr UNK=a
+haskell	System.Console	GetOpt	UNK	RequireOrder	void
+haskell	System.Console	GetOpt	UNK	Permute	void
+haskell	System.Console	GetOpt	UNK	ReturnInOrder	UNK=$f_2$ UNK=String UNK=a
+haskell	System.Console	GetOpt	UNK	Option	UNK=$list$ UNK=Char UNK=$list$ UNK=String UNK=ArgDescr UNK=a UNK=String
+haskell	System.Console	GetOpt	UNK	NoArg	UNK=a
+haskell	System.Console	GetOpt	UNK	ReqArg	UNK=$f_2$ UNK=String UNK=a UNK=String
+haskell	System.Console	GetOpt	UNK	OptArg	UNK=$f_2$ UNK=Maybe UNK=String UNK=a UNK=String
+haskell	System	Environment	UNK	getArgs	void
+haskell	System	Environment	UNK	getProgName	void
+haskell	System	Environment	UNK	getExecutablePath	void
+haskell	System	Environment	UNK	getEnv	UNK=String
+haskell	System	Environment	UNK	lookupEnv	UNK=String
+haskell	System	Environment	IO	setEnv	UNK=String UNK=String
+haskell	System	Environment	IO	unsetEnv	UNK=String
+haskell	System	Environment	UNK	withArgs	UNK=$list$ UNK=String UNK=IO UNK=a
+haskell	System	Environment	UNK	withProgName	UNK=String UNK=IO UNK=a
+haskell	System	Environment	UNK	getEnvironment	void
+haskell	System	Exit	ExitCode	ExitSuccess	void
+haskell	System	Exit	ExitCode	ExitFailure	UNK=Int
+haskell	System	Exit	UNK	exitWith	UNK=ExitCode
+haskell	System	Exit	UNK	exitFailure	void
+haskell	System	Exit	UNK	exitSuccess	void
+haskell	System	Exit	UNK	die	UNK=String
+haskell	System	Info	String	os	void
+haskell	System	Info	String	arch	void
+haskell	System	Info	String	compilerName	void
+haskell	System	Info	Version	compilerVersion	void
+haskell	System	Mem	IO	performGC	void
+haskell	System	Mem	IO	performMajorGC	void
+haskell	System	Mem	IO	performMinorGC	void
+haskell	System.Mem	StableName	UNK	makeStableName	UNK=a
+haskell	System.Mem	StableName	Int	hashStableName	UNK=StableName UNK=a
+haskell	System.Mem	StableName	Bool	eqStableName	UNK=StableName UNK=a UNK=StableName UNK=b
+haskell	System.Mem	Weak	UNK	mkWeak	UNK=k UNK=v UNK=Maybe UNK=IO
+haskell	System.Mem	Weak	UNK	deRefWeak	UNK=Weak UNK=v
+haskell	System.Mem	Weak	IO	finalize	UNK=Weak UNK=v
+haskell	System.Mem	Weak	UNK	mkWeakPtr	UNK=k UNK=Maybe UNK=IO
+haskell	System.Mem	Weak	IO	addFinalizer	UNK=key UNK=IO
+haskell	System.Mem	Weak	UNK	mkWeakPair	UNK=k UNK=v UNK=Maybe UNK=IO
+haskell	System	Timeout	UNK	timeout	UNK=Int UNK=IO UNK=a
+haskell	Text	Printf	PrintfType	printf	UNK=String
+haskell	Text	Printf	HPrintfType	hPrintf	UNK=Handle UNK=String
+haskell	Text	Printf	FieldFormat	FieldFormat	UNK=Maybe UNK=Int UNK=Maybe UNK=Int UNK=Maybe UNK=FormatAdjustment UNK=Maybe UNK=FormatSign UNK=Bool UNK=String UNK=Char
+haskell	Text	Printf	UNK	[fmtWidth]	UNK=FieldFormat
+haskell	Text	Printf	UNK	[fmtPrecision]	UNK=FieldFormat
+haskell	Text	Printf	UNK	[fmtAdjust]	UNK=FieldFormat
+haskell	Text	Printf	UNK	[fmtSign]	UNK=FieldFormat
+haskell	Text	Printf	Bool	[fmtAlternate]	UNK=FieldFormat
+haskell	Text	Printf	String	[fmtModifiers]	UNK=FieldFormat
+haskell	Text	Printf	Char	[fmtChar]	UNK=FieldFormat
+haskell	Text	Printf	FormatAdjustment	LeftAdjust	void
+haskell	Text	Printf	FormatSign	SignPlus	void
+haskell	Text	Printf	FieldFormat	vFmt	UNK=Char UNK=FieldFormat
+haskell	Text	Printf	FormatParse	FormatParse	UNK=String UNK=Char UNK=String
+haskell	Text	Printf	String	[fpModifiers]	UNK=FormatParse
+haskell	Text	Printf	Char	[fpChar]	UNK=FormatParse
+haskell	Text	Printf	String	[fpRest]	UNK=FormatParse
+haskell	Text	Printf	FieldFormatter	formatString	UNK=$list$ IsChar=a
+haskell	Text	Printf	FieldFormatter	formatChar	UNK=Char
+haskell	Text	Printf	FieldFormatter	formatInt	Integral/Bounded=a
+haskell	Text	Printf	FieldFormatter	formatInteger	UNK=Integer
+haskell	Text	Printf	FieldFormatter	formatRealFloat	RealFloat=a
+haskell	Text	Printf	a	errorBadFormat	UNK=Char
+haskell	Text	Printf	a	errorShortFormat	void
+haskell	Text	Printf	a	errorMissingArgument	void
+haskell	Text	Printf	a	errorBadArgument	void
+haskell	Text	Printf	a	perror	UNK=String

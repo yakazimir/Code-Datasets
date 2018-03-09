@@ -1,1734 +1,1734 @@
-clojure.core (* x y &amp; more)
-clojure.core (*' x y &amp; more)
-clojure.core (+ x y &amp; more)
-clojure.core (+' x y &amp; more)
-clojure.core (- x y &amp; more)
-clojure.core (-' x y &amp; more)
-clojure.core (-&gt; x &amp; forms)
-clojure.core (-&gt;&gt; x &amp; forms)
-clojure.core (-&gt;ArrayChunk am arr off end)
-clojure.core (-&gt;Eduction xform coll)
-clojure.core (-&gt;Vec am cnt shift root tail _meta)
-clojure.core (-&gt;VecNode edit arr)
-clojure.core (-&gt;VecSeq am vec anode i offset)
-clojure.core (.. x form &amp; more)
-clojure.core (/ x y &amp; more)
-clojure.core (&lt; x y &amp; more)
-clojure.core (&lt;= x y &amp; more)
-clojure.core (== x y &amp; more)
-clojure.core (&gt; x y &amp; more)
-clojure.core (&gt;= x y &amp; more)
-clojure.core (Throwable-&gt;map o)
-clojure.core (accessor s key)
-clojure.core (aclone array)
-clojure.core (add-classpath url)
-clojure.core (add-watch reference key fn)
-clojure.core (agent state &amp; options)
-clojure.core (agent-error a)
-clojure.core (aget array idx &amp; idxs)
-clojure.core (alength array)
-clojure.core (alias alias namespace-sym)
-clojure.core (all-ns)
-clojure.core (alter ref fun &amp; args)
-clojure.core (alter-meta! iref f &amp; args)
-clojure.core (alter-var-root v f &amp; args)
-clojure.core (amap a idx ret expr)
-clojure.core (ancestors h tag)
-clojure.core (and x &amp; next)
-clojure.core (apply f a b c d &amp; args)
-clojure.core (areduce a idx ret init expr)
-clojure.core (array-map &amp; keyvals)
-clojure.core (as-&gt; expr name &amp; forms)
-clojure.core (aset array idx idx2 &amp; idxv)
-clojure.core (aset-boolean array idx idx2 &amp; idxv)
-clojure.core (aset-byte array idx idx2 &amp; idxv)
-clojure.core (aset-char array idx idx2 &amp; idxv)
-clojure.core (aset-double array idx idx2 &amp; idxv)
-clojure.core (aset-float array idx idx2 &amp; idxv)
-clojure.core (aset-int array idx idx2 &amp; idxv)
-clojure.core (aset-long array idx idx2 &amp; idxv)
-clojure.core (aset-short array idx idx2 &amp; idxv)
-clojure.core (assert x message)
-clojure.core (assoc! coll key val &amp; kvs)
-clojure.core (assoc-in m [k &amp; ks] v)
-clojure.core (associative? coll)
-clojure.core (atom x &amp; options)
-clojure.core (await &amp; agents)
-clojure.core (await-for timeout-ms &amp; agents)
-clojure.core (bases c)
-clojure.core (bean x)
-clojure.core (bigdec x)
-clojure.core (bigint x)
-clojure.core (biginteger x)
-clojure.core (binding bindings &amp; body)
-clojure.core (bit-and x y &amp; more)
-clojure.core (bit-and-not x y &amp; more)
-clojure.core (bit-clear x n)
-clojure.core (bit-flip x n)
-clojure.core (bit-not x)
-clojure.core (bit-or x y &amp; more)
-clojure.core (bit-set x n)
-clojure.core (bit-shift-left x n)
-clojure.core (bit-shift-right x n)
-clojure.core (bit-test x n)
-clojure.core (bit-xor x y &amp; more)
-clojure.core (boolean x)
-clojure.core (boolean-array size init-val-or-seq)
-clojure.core (booleans xs)
-clojure.core (bound-fn &amp; fntail)
-clojure.core (bound-fn* f)
-clojure.core (bound? &amp; vars)
-clojure.core (butlast coll)
-clojure.core (byte x)
-clojure.core (byte-array size init-val-or-seq)
-clojure.core (bytes xs)
-clojure.core (case e &amp; clauses)
-clojure.core (cast c x)
-clojure.core (cat rf)
-clojure.core (char x)
-clojure.core (char-array size init-val-or-seq)
-clojure.core (char? x)
-clojure.core (chars xs)
-clojure.core (class x)
-clojure.core (class? x)
-clojure.core (clojure-version)
-clojure.core (coll? x)
-clojure.core (comment &amp; body)
-clojure.core (commute ref fun &amp; args)
-clojure.core (comp f g &amp; fs)
-clojure.core (comparator pred)
-clojure.core (compare-and-set! atom oldval newval)
-clojure.core (compile lib)
-clojure.core (complement f)
-clojure.core (completing f cf)
-clojure.core (concat x y &amp; zs)
-clojure.core (cond &amp; clauses)
-clojure.core (cond-&gt; expr &amp; clauses)
-clojure.core (cond-&gt;&gt; expr &amp; clauses)
-clojure.core (condp pred expr &amp; clauses)
-clojure.core (conj! coll x)
-clojure.core (cons x seq)
-clojure.core (constantly x)
-clojure.core (construct-proxy c &amp; ctor-args)
-clojure.core (contains? coll key)
-clojure.core (count coll)
-clojure.core (counted? coll)
-clojure.core (create-ns sym)
-clojure.core (create-struct &amp; keys)
-clojure.core (cycle coll)
-clojure.core (dec x)
-clojure.core (dec' x)
-clojure.core (decimal? n)
-clojure.core (declare &amp; names)
-clojure.core (dedupe coll)
-clojure.core (def symbol doc-string? init?)
-clojure.core (definterface name &amp; sigs)
-clojure.core (defmacro name doc-string? attr-map? ([params*] body) + attr-map?)
-clojure.core (defmethod multifn dispatch-val &amp; fn-tail)
-clojure.core (defmulti name docstring? attr-map? dispatch-fn &amp; options)
-clojure.core (defn- name &amp; decls)
-clojure.core (defonce name expr)
-clojure.core (defprotocol name &amp; opts+sigs)
-clojure.core (delay &amp; body)
-clojure.core (delay? x)
-clojure.core (deliver promise val)
-clojure.core (denominator r)
-clojure.core (deref ref timeout-ms timeout-val)
-clojure.core (derive h tag parent)
-clojure.core (descendants h tag)
-clojure.core (dissoc! map key &amp; ks)
-clojure.core (distinct coll)
-clojure.core (distinct? x y &amp; more)
-clojure.core (do exprs*)
-clojure.core (doall n coll)
-clojure.core (dorun n coll)
-clojure.core (doseq seq-exprs &amp; body)
-clojure.core (dosync &amp; exprs)
-clojure.core (dotimes bindings &amp; body)
-clojure.core (doto x &amp; forms)
-clojure.core (double x)
-clojure.core (double-array size init-val-or-seq)
-clojure.core (doubles xs)
-clojure.core (drop n coll)
-clojure.core (drop-last n s)
-clojure.core (drop-while pred coll)
-clojure.core (eduction xform* coll)
-clojure.core (empty coll)
-clojure.core (empty? coll)
-clojure.core (ensure ref)
-clojure.core (ensure-reduced x)
-clojure.core (enumeration-seq e)
-clojure.core (error-handler a)
-clojure.core (error-mode a)
-clojure.core (eval form)
-clojure.core (even? n)
-clojure.core (every-pred p1 p2 p3 &amp; ps)
-clojure.core (every? pred coll)
-clojure.core (ex-data ex)
-clojure.core (ex-info msg map cause)
-clojure.core (extend atype &amp; proto+mmaps)
-clojure.core (extend-protocol p &amp; specs)
-clojure.core (extend-type t &amp; specs)
-clojure.core (extenders protocol)
-clojure.core (extends? protocol atype)
-clojure.core (false? x)
-clojure.core (file-seq dir)
-clojure.core (filter pred coll)
-clojure.core (filterv pred coll)
-clojure.core (find map key)
-clojure.core (find-keyword ns name)
-clojure.core (find-ns sym)
-clojure.core (find-var sym)
-clojure.core (first coll)
-clojure.core (flatten x)
-clojure.core (float x)
-clojure.core (float-array size init-val-or-seq)
-clojure.core (float? n)
-clojure.core (floats xs)
-clojure.core (flush)
-clojure.core (fn name? ([params*] exprs*) +)
-clojure.core (fn? x)
-clojure.core (fnil f x y z)
-clojure.core (for seq-exprs body-expr)
-clojure.core (force x)
-clojure.core (format fmt &amp; args)
-clojure.core (frequencies coll)
-clojure.core (future &amp; body)
-clojure.core (future-call f)
-clojure.core (future-cancel f)
-clojure.core (future-cancelled? f)
-clojure.core (future-done? f)
-clojure.core (future? x)
-clojure.core (gen-class &amp; options)
-clojure.core (gen-interface &amp; options)
-clojure.core (gensym prefix-string)
-clojure.core (get map key not-found)
-clojure.core (get-in m ks not-found)
-clojure.core (get-method multifn dispatch-val)
-clojure.core (get-proxy-class &amp; bases)
-clojure.core (get-thread-bindings)
-clojure.core (get-validator iref)
-clojure.core (group-by f coll)
-clojure.core (hash x)
-clojure.core (hash-map &amp; keyvals)
-clojure.core (hash-ordered-coll coll)
-clojure.core (hash-set &amp; keys)
-clojure.core (hash-unordered-coll coll)
-clojure.core (identical? x y)
-clojure.core (identity x)
-clojure.core (if test then else?)
-clojure.core (if-let bindings then else &amp; oldform)
-clojure.core (if-not test then else)
-clojure.core (if-some bindings then else &amp; oldform)
-clojure.core (ifn? x)
-clojure.core (import &amp; import-symbols-or-lists)
-clojure.core (in-ns name)
-clojure.core (inc x)
-clojure.core (inc' x)
-clojure.core (init-proxy proxy mappings)
-clojure.core (instance? c x)
-clojure.core (int x)
-clojure.core (int-array size init-val-or-seq)
-clojure.core (integer? n)
-clojure.core (interleave c1 c2 &amp; colls)
-clojure.core (intern ns name val)
-clojure.core (interpose sep coll)
-clojure.core (into to xform from)
-clojure.core (into-array type aseq)
-clojure.core (ints xs)
-clojure.core (io! &amp; body)
-clojure.core (isa? h child parent)
-clojure.core (iterate f x)
-clojure.core (iterator-seq iter)
-clojure.core (juxt f g h &amp; fs)
-clojure.core (keep f coll)
-clojure.core (keep-indexed f coll)
-clojure.core (key e)
-clojure.core (keys map)
-clojure.core (keyword ns name)
-clojure.core (keyword? x)
-clojure.core (last coll)
-clojure.core (lazy-cat &amp; colls)
-clojure.core (lazy-seq &amp; body)
-clojure.core (let [bindings*] exprs*)
-clojure.core (letfn [fnspecs*] exprs*)
-clojure.core (line-seq rdr)
-clojure.core (list &amp; items)
-clojure.core (list* a b c d &amp; more)
-clojure.core (list? x)
-clojure.core (load &amp; paths)
-clojure.core (load-file name)
-clojure.core (load-reader rdr)
-clojure.core (load-string s)
-clojure.core (loaded-libs)
-clojure.core (locking x &amp; body)
-clojure.core (long x)
-clojure.core (long-array size init-val-or-seq)
-clojure.core (longs xs)
-clojure.core (loop [bindings*] exprs*)
-clojure.core (macroexpand form)
-clojure.core (macroexpand-1 form)
-clojure.core (make-array type dim &amp; more-dims)
-clojure.core (make-hierarchy)
-clojure.core (map f c1 c2 c3 &amp; colls)
-clojure.core (map-entry? x)
-clojure.core (map-indexed f coll)
-clojure.core (map? x)
-clojure.core (mapcat f &amp; colls)
-clojure.core (mapv f c1 c2 c3 &amp; colls)
-clojure.core (max x y &amp; more)
-clojure.core (max-key k x y &amp; more)
-clojure.core (memfn name &amp; args)
-clojure.core (memoize f)
-clojure.core (merge &amp; maps)
-clojure.core (merge-with f &amp; maps)
-clojure.core (meta obj)
-clojure.core (methods multifn)
-clojure.core (min x y &amp; more)
-clojure.core (min-key k x y &amp; more)
-clojure.core (mix-collection-hash hash-basis count)
-clojure.core (mod num div)
-clojure.core (monitor-enter x)
-clojure.core (monitor-exit x)
-clojure.core (name x)
-clojure.core (namespace x)
-clojure.core (namespace-munge ns)
-clojure.core (neg? x)
-clojure.core (new Classname args*)
-clojure.core (newline)
-clojure.core (next coll)
-clojure.core (nil? x)
-clojure.core (not x)
-clojure.core (not-any? pred coll)
-clojure.core (not-empty coll)
-clojure.core (not-every? pred coll)
-clojure.core (ns name docstring? attr-map? references*)
-clojure.core (ns-aliases ns)
-clojure.core (ns-imports ns)
-clojure.core (ns-interns ns)
-clojure.core (ns-map ns)
-clojure.core (ns-name ns)
-clojure.core (ns-publics ns)
-clojure.core (ns-refers ns)
-clojure.core (ns-resolve ns env sym)
-clojure.core (ns-unalias ns sym)
-clojure.core (ns-unmap ns sym)
-clojure.core (nth coll index not-found)
-clojure.core (nthnext coll n)
-clojure.core (nthrest coll n)
-clojure.core (num x)
-clojure.core (number? x)
-clojure.core (numerator r)
-clojure.core (object-array size-or-seq)
-clojure.core (odd? n)
-clojure.core (or x &amp; next)
-clojure.core (parents h tag)
-clojure.core (partial f arg1 arg2 arg3 &amp; more)
-clojure.core (partition n step pad coll)
-clojure.core (partition-all n step coll)
-clojure.core (partition-by f coll)
-clojure.core (pcalls &amp; fns)
-clojure.core (peek coll)
-clojure.core (persistent! coll)
-clojure.core (pmap f coll &amp; colls)
-clojure.core (pop coll)
-clojure.core (pop! coll)
-clojure.core (pop-thread-bindings)
-clojure.core (pos? x)
-clojure.core (pr x &amp; more)
-clojure.core (pr-str &amp; xs)
-clojure.core (prefer-method multifn dispatch-val-x dispatch-val-y)
-clojure.core (prefers multifn)
-clojure.core (print &amp; more)
-clojure.core (print-str &amp; xs)
-clojure.core (printf fmt &amp; args)
-clojure.core (println-str &amp; xs)
-clojure.core (prn-str &amp; xs)
-clojure.core (promise)
-clojure.core (proxy class-and-interfaces args &amp; fs)
-clojure.core (proxy-mappings proxy)
-clojure.core (proxy-super meth &amp; args)
-clojure.core (push-thread-bindings bindings)
-clojure.core (pvalues &amp; exprs)
-clojure.core (quot num div)
-clojure.core (quote form)
-clojure.core (rand n)
-clojure.core (rand-int n)
-clojure.core (rand-nth coll)
-clojure.core (random-sample prob coll)
-clojure.core (range start end step)
-clojure.core (ratio? n)
-clojure.core (rational? n)
-clojure.core (rationalize num)
-clojure.core (re-find re s)
-clojure.core (re-groups m)
-clojure.core (re-matcher re s)
-clojure.core (re-matches re s)
-clojure.core (re-pattern s)
-clojure.core (re-seq re s)
-clojure.core (read opts stream)
-clojure.core (read-line)
-clojure.core (read-string opts s)
-clojure.core (reader-conditional form splicing?)
-clojure.core (reader-conditional? value)
-clojure.core (realized? x)
-clojure.core (record? x)
-clojure.core (recur exprs*)
-clojure.core (reduce f val coll)
-clojure.core (reduce-kv f init coll)
-clojure.core (reduced x)
-clojure.core (reduced? x)
-clojure.core (reductions f init coll)
-clojure.core (ref x &amp; options)
-clojure.core (ref-history-count ref)
-clojure.core (ref-max-history ref n)
-clojure.core (ref-min-history ref n)
-clojure.core (ref-set ref val)
-clojure.core (refer ns-sym &amp; filters)
-clojure.core (reify &amp; opts+specs)
-clojure.core (release-pending-sends)
-clojure.core (rem num div)
-clojure.core (remove pred coll)
-clojure.core (remove-all-methods multifn)
-clojure.core (remove-method multifn dispatch-val)
-clojure.core (remove-ns sym)
-clojure.core (remove-watch reference key)
-clojure.core (repeat n x)
-clojure.core (repeatedly n f)
-clojure.core (replace smap coll)
-clojure.core (require &amp; args)
-clojure.core (reset! atom newval)
-clojure.core (reset-meta! iref metadata-map)
-clojure.core (resolve env sym)
-clojure.core (rest coll)
-clojure.core (restart-agent a new-state &amp; options)
-clojure.core (resultset-seq rs)
-clojure.core (reverse coll)
-clojure.core (reversible? coll)
-clojure.core (rseq rev)
-clojure.core (rsubseq sc start-test start-key end-test end-key)
-clojure.core (run! proc coll)
-clojure.core (satisfies? protocol x)
-clojure.core (select-keys map keyseq)
-clojure.core (send a f &amp; args)
-clojure.core (send-off a f &amp; args)
-clojure.core (send-via executor a f &amp; args)
-clojure.core (seq coll)
-clojure.core (seq? x)
-clojure.core (seque n-or-q s)
-clojure.core (sequence xform coll &amp; colls)
-clojure.core (sequential? coll)
-clojure.core (set coll)
-clojure.core (set! (. Classname-symbol staticFieldName-symbol) expr)
-clojure.core (set-agent-send-executor! executor)
-clojure.core (set-agent-send-off-executor! executor)
-clojure.core (set-error-handler! a handler-fn)
-clojure.core (set-error-mode! a mode-keyword)
-clojure.core (set-validator! iref validator-fn)
-clojure.core (set? x)
-clojure.core (short x)
-clojure.core (short-array size init-val-or-seq)
-clojure.core (shorts xs)
-clojure.core (shuffle coll)
-clojure.core (shutdown-agents)
-clojure.core (slurp f &amp; opts)
-clojure.core (some pred coll)
-clojure.core (some-&gt; expr &amp; forms)
-clojure.core (some-&gt;&gt; expr &amp; forms)
-clojure.core (some-fn p1 p2 p3 &amp; ps)
-clojure.core (some? x)
-clojure.core (sort comp coll)
-clojure.core (sort-by keyfn comp coll)
-clojure.core (sorted-map &amp; keyvals)
-clojure.core (sorted-map-by comparator &amp; keyvals)
-clojure.core (sorted-set &amp; keys)
-clojure.core (sorted-set-by comparator &amp; keys)
-clojure.core (sorted? coll)
-clojure.core (special-symbol? s)
-clojure.core (spit f content &amp; options)
-clojure.core (split-at n coll)
-clojure.core (split-with pred coll)
-clojure.core (str x &amp; ys)
-clojure.core (string? x)
-clojure.core (struct s &amp; vals)
-clojure.core (struct-map s &amp; inits)
-clojure.core (subs s start end)
-clojure.core (subseq sc start-test start-key end-test end-key)
-clojure.core (subvec v start end)
-clojure.core (supers class)
-clojure.core (swap! atom f x y &amp; args)
-clojure.core (symbol ns name)
-clojure.core (symbol? x)
-clojure.core (sync flags-ignored-for-now &amp; body)
-clojure.core (tagged-literal tag form)
-clojure.core (tagged-literal? value)
-clojure.core (take n coll)
-clojure.core (take-last n coll)
-clojure.core (take-nth n coll)
-clojure.core (take-while pred coll)
-clojure.core (test v)
-clojure.core (the-ns x)
-clojure.core (thread-bound? &amp; vars)
-clojure.core (throw expr)
-clojure.core (time expr)
-clojure.core (to-array coll)
-clojure.core (to-array-2d coll)
-clojure.core (trampoline f &amp; args)
-clojure.core (transduce xform f init coll)
-clojure.core (transient coll)
-clojure.core (tree-seq branch? children root)
-clojure.core (true? x)
-clojure.core (try expr* catch-clause* finally-clause?)
-clojure.core (type x)
-clojure.core (unchecked-add x y)
-clojure.core (unchecked-add-int x y)
-clojure.core (unchecked-byte x)
-clojure.core (unchecked-char x)
-clojure.core (unchecked-dec x)
-clojure.core (unchecked-dec-int x)
-clojure.core (unchecked-divide-int x y)
-clojure.core (unchecked-double x)
-clojure.core (unchecked-float x)
-clojure.core (unchecked-inc x)
-clojure.core (unchecked-inc-int x)
-clojure.core (unchecked-int x)
-clojure.core (unchecked-long x)
-clojure.core (unchecked-multiply x y)
-clojure.core (unchecked-multiply-int x y)
-clojure.core (unchecked-negate x)
-clojure.core (unchecked-negate-int x)
-clojure.core (unchecked-remainder-int x y)
-clojure.core (unchecked-short x)
-clojure.core (unchecked-subtract x y)
-clojure.core (unchecked-subtract-int x y)
-clojure.core (underive h tag parent)
-clojure.core (unreduced x)
-clojure.core (unsigned-bit-shift-right x n)
-clojure.core (update m k f x y z &amp; more)
-clojure.core (update-in m [k &amp; ks] f &amp; args)
-clojure.core (update-proxy proxy mappings)
-clojure.core (use &amp; args)
-clojure.core (val e)
-clojure.core (vals map)
-clojure.core (var symbol)
-clojure.core (var-get x)
-clojure.core (var-set x val)
-clojure.core (var? v)
-clojure.core (vary-meta obj f &amp; args)
-clojure.core (vec coll)
-clojure.core (vector a b c d e f &amp; args)
-clojure.core (vector-of t &amp; elements)
-clojure.core (vector? x)
-clojure.core (volatile! val)
-clojure.core (volatile? x)
-clojure.core (vreset! vol newval)
-clojure.core (vswap! vol f &amp; args)
-clojure.core (when test &amp; body)
-clojure.core (when-first bindings &amp; body)
-clojure.core (when-let bindings &amp; body)
-clojure.core (when-not test &amp; body)
-clojure.core (when-some bindings &amp; body)
-clojure.core (while test &amp; body)
-clojure.core (with-bindings binding-map &amp; body)
-clojure.core (with-bindings* binding-map f &amp; args)
-clojure.core (with-in-str s &amp; body)
-clojure.core (with-local-vars name-vals-vec &amp; body)
-clojure.core (with-meta obj m)
-clojure.core (with-open bindings &amp; body)
-clojure.core (with-out-str &amp; body)
-clojure.core (with-precision precision &amp; exprs)
-clojure.core (with-redefs bindings &amp; body)
-clojure.core (with-redefs-fn binding-map func)
-clojure.core (xml-seq root)
-clojure.core (zero? x)
-clojure.core (zipmap keys vals)
-clojure.data (diff a b)
-clojure.edn (read opts stream)
-clojure.edn (read-string opts s)
-clojure.inspector (inspect x)
-clojure.inspector (inspect-table data)
-clojure.inspector (inspect-tree data)
-clojure.instant (validated new-instance)
-clojure.java.browse (browse-url url)
-clojure.java.io (as-relative-path x)
-clojure.java.io (copy input output &amp; opts)
-clojure.java.io (delete-file f &amp; [silently])
-clojure.java.io (file parent child &amp; more)
-clojure.java.io (input-stream x &amp; opts)
-clojure.java.io (make-parents f &amp; more)
-clojure.java.io (output-stream x &amp; opts)
-clojure.java.io (reader x &amp; opts)
-clojure.java.io (resource n loader)
-clojure.java.io (writer x &amp; opts)
-clojure.java.javadoc (add-local-javadoc path)
-clojure.java.javadoc (add-remote-javadoc package-prefix url)
-clojure.java.javadoc (javadoc class-or-object)
-clojure.java.shell (sh &amp; args)
-clojure.java.shell (with-sh-dir dir &amp; forms)
-clojure.java.shell (with-sh-env env &amp; forms)
-clojure.main (demunge fn-name)
-clojure.main (load-script path)
-clojure.main (repl &amp; options)
-clojure.main (repl-caught e)
-clojure.main (repl-exception throwable)
-clojure.main (repl-prompt)
-clojure.main (repl-read request-prompt request-exit)
-clojure.main (root-cause t)
-clojure.main (skip-if-eol s)
-clojure.main (skip-whitespace s)
-clojure.main (stack-element-str el)
-clojure.main (with-bindings &amp; body)
-clojure.main (with-read-known &amp; body)
-clojure.pprint (cl-format writer format-in &amp; args)
-clojure.pprint (code-dispatch object)
-clojure.pprint (formatter format-in)
-clojure.pprint (formatter-out format-in)
-clojure.pprint (fresh-line)
-clojure.pprint (get-pretty-writer writer)
-clojure.pprint (pp)
-clojure.pprint (pprint object writer)
-clojure.pprint (pprint-indent relative-to n)
-clojure.pprint (pprint-logical-block options* body)
-clojure.pprint (pprint-newline kind)
-clojure.pprint (pprint-tab kind colnum colinc)
-clojure.pprint (print-length-loop bindings &amp; body)
-clojure.pprint (print-table rows)
-clojure.pprint (set-pprint-dispatch function)
-clojure.pprint (simple-dispatch object)
-clojure.pprint (with-pprint-dispatch function &amp; body)
-clojure.pprint (write object &amp; kw-args)
-clojure.pprint (write-out object)
-clojure.reflect (-&gt;AsmReflector class-resolver)
-clojure.reflect (-&gt;Constructor name declaring-class parameter-types exception-types flags)
-clojure.reflect (-&gt;Field name type declaring-class flags)
-clojure.reflect (-&gt;JavaReflector classloader)
-clojure.reflect (-&gt;Method name return-type declaring-class parameter-types exception-types flags)
-clojure.reflect (map-&gt;Constructor m#)
-clojure.reflect (map-&gt;Field m#)
-clojure.reflect (map-&gt;Method m#)
-clojure.repl (apropos str-or-pattern)
-clojure.repl (demunge fn-name)
-clojure.repl (dir nsname)
-clojure.repl (dir-fn ns)
-clojure.repl (doc name)
-clojure.repl (find-doc re-string-or-pattern)
-clojure.repl (pst e depth)
-clojure.repl (root-cause t)
-clojure.repl (set-break-handler! f)
-clojure.repl (source n)
-clojure.repl (source-fn x)
-clojure.repl (stack-element-str el)
-clojure.repl (thread-stopper thread)
-clojure.set (difference s1 s2 &amp; sets)
-clojure.set (index xrel ks)
-clojure.set (intersection s1 s2 &amp; sets)
-clojure.set (join xrel yrel km)
-clojure.set (map-invert m)
-clojure.set (project xrel ks)
-clojure.set (rename xrel kmap)
-clojure.set (rename-keys map kmap)
-clojure.set (select pred xset)
-clojure.set (subset? set1 set2)
-clojure.set (superset? set1 set2)
-clojure.set (union s1 s2 &amp; sets)
-clojure.stacktrace (e)
-clojure.stacktrace (print-cause-trace tr n)
-clojure.stacktrace (print-stack-trace tr n)
-clojure.stacktrace (print-throwable tr)
-clojure.stacktrace (print-trace-element e)
-clojure.stacktrace (root-cause tr)
-clojure.string (blank? s)
-clojure.string (capitalize s)
-clojure.string (ends-with? s substr)
-clojure.string (escape s cmap)
-clojure.string (includes? s substr)
-clojure.string (index-of s value from-index)
-clojure.string (join separator coll)
-clojure.string (last-index-of s value from-index)
-clojure.string (lower-case s)
-clojure.string (re-quote-replacement replacement)
-clojure.string (replace s match replacement)
-clojure.string (replace-first s match replacement)
-clojure.string (reverse s)
-clojure.string (split s re limit)
-clojure.string (split-lines s)
-clojure.string (starts-with? s substr)
-clojure.string (trim s)
-clojure.string (trim-newline s)
-clojure.string (triml s)
-clojure.string (trimr s)
-clojure.string (upper-case s)
-clojure.template (apply-template argv expr values)
-clojure.template (do-template argv expr &amp; values)
-clojure.test (are argv expr &amp; args)
-clojure.test (assert-any msg form)
-clojure.test (assert-predicate msg form)
-clojure.test (compose-fixtures f1 f2)
-clojure.test (deftest- name &amp; body)
-clojure.test (do-report m)
-clojure.test (file-position n)
-clojure.test (function? x)
-clojure.test (get-possibly-unbound-var v)
-clojure.test (inc-report-counter name)
-clojure.test (is form msg)
-clojure.test (join-fixtures fixtures)
-clojure.test (run-all-tests re)
-clojure.test (run-tests &amp; namespaces)
-clojure.test (successful? summary)
-clojure.test (test-all-vars ns)
-clojure.test (test-ns ns)
-clojure.test (test-var v)
-clojure.test (test-vars vars)
-clojure.test (testing string &amp; body)
-clojure.test (testing-contexts-str)
-clojure.test (testing-vars-str m)
-clojure.test (try-expr msg form)
-clojure.test (with-test definition &amp; body)
-clojure.test (with-test-out &amp; body)
-clojure.walk (keywordize-keys m)
-clojure.walk (macroexpand-all form)
-clojure.walk (postwalk f form)
-clojure.walk (postwalk-demo form)
-clojure.walk (postwalk-replace smap form)
-clojure.walk (prewalk f form)
-clojure.walk (prewalk-demo form)
-clojure.walk (prewalk-replace smap form)
-clojure.walk (stringify-keys m)
-clojure.walk (walk inner outer form)
-clojure.xml (parse s startparse)
-clojure.zip (append-child loc item)
-clojure.zip (branch? loc)
-clojure.zip (children loc)
-clojure.zip (down loc)
-clojure.zip (edit loc f &amp; args)
-clojure.zip (end? loc)
-clojure.zip (insert-child loc item)
-clojure.zip (insert-left loc item)
-clojure.zip (insert-right loc item)
-clojure.zip (left loc)
-clojure.zip (leftmost loc)
-clojure.zip (lefts loc)
-clojure.zip (make-node loc node children)
-clojure.zip (next loc)
-clojure.zip (node loc)
-clojure.zip (path loc)
-clojure.zip (prev loc)
-clojure.zip (remove loc)
-clojure.zip (replace loc node)
-clojure.zip (right loc)
-clojure.zip (rightmost loc)
-clojure.zip (rights loc)
-clojure.zip (root loc)
-clojure.zip (seq-zip root)
-clojure.zip (up loc)
-clojure.zip (vector-zip root)
-clojure.zip (xml-zip root)
-clojure.zip (zipper branch? children make-node root)
-clojure.algo.generic.arithmetic (* x y &amp; more)
-clojure.algo.generic.arithmetic (+ x y &amp; more)
-clojure.algo.generic.arithmetic (- x y &amp; more)
-clojure.algo.generic.arithmetic (-&gt;one-type)
-clojure.algo.generic.arithmetic (-&gt;zero-type)
-clojure.algo.generic.arithmetic (/ x y &amp; more)
-clojure.algo.generic.arithmetic (defmethod* ns name &amp; args)
-clojure.algo.generic.arithmetic (map-&gt;one-type m#)
-clojure.algo.generic.arithmetic (map-&gt;zero-type m#)
-clojure.algo.generic.arithmetic (qsym ns sym)
-clojure.algo.generic.collection (assoc coll &amp; key-val-pairs)
-clojure.algo.generic.collection (conj coll &amp; xs)
-clojure.algo.generic.collection (dissoc coll &amp; keys)
-clojure.algo.generic.collection (empty coll)
-clojure.algo.generic.collection (get coll key not-found)
-clojure.algo.generic.collection (into to from)
-clojure.algo.generic.collection (seq s)
-clojure.algo.generic.functor (fmap f s)
-clojure.algo.generic.math-functions (abs x math-context)
-clojure.algo.generic.math-functions (acos x)
-clojure.algo.generic.math-functions (approx= x y eps)
-clojure.algo.generic.math-functions (asin x)
-clojure.algo.generic.math-functions (atan x)
-clojure.algo.generic.math-functions (atan2 x y)
-clojure.algo.generic.math-functions (ceil x)
-clojure.algo.generic.math-functions (conjugate x)
-clojure.algo.generic.math-functions (cos x)
-clojure.algo.generic.math-functions (exp x)
-clojure.algo.generic.math-functions (floor x)
-clojure.algo.generic.math-functions (log x)
-clojure.algo.generic.math-functions (pow x y)
-clojure.algo.generic.math-functions (rint x)
-clojure.algo.generic.math-functions (sgn x)
-clojure.algo.generic.math-functions (sin x)
-clojure.algo.generic.math-functions (sqr x)
-clojure.algo.generic.math-functions (sqrt x)
-clojure.algo.generic.math-functions (tan x)
-clojure.algo.graph (add-loops g)
-clojure.algo.graph (component-graph g sccs)
-clojure.algo.graph (dependency-list g)
-clojure.algo.graph (fixed-point data fun max equal)
-clojure.algo.graph (get-neighbors g n)
-clojure.algo.graph (lazy-walk g ns v)
-clojure.algo.graph (post-ordered-nodes g)
-clojure.algo.graph (recursive-component? g ns)
-clojure.algo.graph (remove-loops g)
-clojure.algo.graph (reverse-graph g)
-clojure.algo.graph (scc g)
-clojure.algo.graph (self-recursive-sets g)
-clojure.algo.graph (stratification-list g1 g2)
-clojure.algo.graph (transitive-closure g)
-clojure.algo.generic.comparison (&lt; x y &amp; more)
-clojure.algo.generic.comparison (&lt;= x y &amp; more)
-clojure.algo.generic.comparison (= x y &amp; more)
-clojure.algo.generic.comparison (&gt; x y &amp; more)
-clojure.algo.generic.comparison (&gt;= x y &amp; more)
-clojure.algo.generic.comparison (max x y &amp; more)
-clojure.algo.generic.comparison (min x y &amp; more)
-clojure.algo.generic.comparison (neg? x)
-clojure.algo.generic.comparison (not= &amp; args)
-clojure.algo.generic.comparison (pos? x)
-clojure.algo.generic.comparison (zero? x)
-clojure.algo.monads (ask)
-clojure.algo.monads (asks f)
-clojure.algo.monads (call-cc f)
-clojure.algo.monads (cond-statement expr mexpr continuation)
-clojure.algo.monads (defmonad name operations)
-clojure.algo.monads (defmonadfn name docstring? attr-map? (args expr) ...)
-clojure.algo.monads (fetch-state)
-clojure.algo.monads (fetch-val key)
-clojure.algo.monads (local f g)
-clojure.algo.monads (m-lift n f)
-clojure.algo.monads (m-when test m-expr)
-clojure.algo.monads (m-when-not test m-expr)
-clojure.algo.monads (maybe-t m nothing which-m-plus)
-clojure.algo.monads (monad operations)
-clojure.algo.monads (monad-transformer base which-m-plus operations)
-clojure.algo.monads (run-cont c)
-clojure.algo.monads (sequence-t m which-m-plus)
-clojure.algo.monads (set-state s)
-clojure.algo.monads (set-val key val)
-clojure.algo.monads (state-m-until p f x)
-clojure.algo.monads (state-t m)
-clojure.algo.monads (update-state f)
-clojure.algo.monads (update-val key f)
-clojure.algo.monads (with-monad monad &amp; exprs)
-clojure.algo.monads (with-state-field key statement)
-clojure.algo.monads (writer-m empty-accumulator)
-clojure.core.async (&lt;! port)
-clojure.core.async (&lt;!! port)
-clojure.core.async (&gt;! port val)
-clojure.core.async (&gt;!! port val)
-clojure.core.async (admix mix ch)
-clojure.core.async (alt! &amp; clauses)
-clojure.core.async (alt!! &amp; clauses)
-clojure.core.async (buffer n)
-clojure.core.async (chan buf-or-n xform ex-handler)
-clojure.core.async (close! chan)
-clojure.core.async (do-alts fret ports opts)
-clojure.core.async (dropping-buffer n)
-clojure.core.async (go &amp; body)
-clojure.core.async (go-loop bindings &amp; body)
-clojure.core.async (into coll ch)
-clojure.core.async (map f chs buf-or-n)
-clojure.core.async (merge chs buf-or-n)
-clojure.core.async (mix out)
-clojure.core.async (mult ch)
-clojure.core.async (offer! port val)
-clojure.core.async (onto-chan ch coll close?)
-clojure.core.async (pipe from to close?)
-clojure.core.async (pipeline n to xf from close? ex-handler)
-clojure.core.async (pipeline-async n to af from close?)
-clojure.core.async (pipeline-blocking n to xf from close? ex-handler)
-clojure.core.async (poll! port)
-clojure.core.async (promise-chan xform ex-handler)
-clojure.core.async (pub ch topic-fn buf-fn)
-clojure.core.async (put! port val fn1 on-caller?)
-clojure.core.async (reduce f init ch)
-clojure.core.async (sliding-buffer n)
-clojure.core.async (solo-mode mix mode)
-clojure.core.async (split p ch t-buf-or-n f-buf-or-n)
-clojure.core.async (sub p topic ch close?)
-clojure.core.async (take n ch buf-or-n)
-clojure.core.async (take! port fn1 on-caller?)
-clojure.core.async (tap mult ch close?)
-clojure.core.async (thread &amp; body)
-clojure.core.async (thread-call f)
-clojure.core.async (timeout msecs)
-clojure.core.async (to-chan coll)
-clojure.core.async (toggle mix state-map)
-clojure.core.async (unblocking-buffer? buff)
-clojure.core.async (unmix mix ch)
-clojure.core.async (unmix-all mix)
-clojure.core.async (unsub p topic ch)
-clojure.core.async (unsub-all p topic)
-clojure.core.async (untap mult ch)
-clojure.core.async (untap-all mult)
-clojure.core.cache (-&gt;BasicCache cache)
-clojure.core.cache (-&gt;FIFOCache cache q limit)
-clojure.core.cache (-&gt;FnCache cache f)
-clojure.core.cache (-&gt;LIRSCache cache lruS lruQ tick limitS limitQ)
-clojure.core.cache (-&gt;LRUCache cache lru tick limit)
-clojure.core.cache (-&gt;LUCache cache lu limit)
-clojure.core.cache (-&gt;SoftCache cache rcache rq)
-clojure.core.cache (-&gt;TTLCache cache ttl ttl-ms)
-clojure.core.cache (basic-cache-factory base)
-clojure.core.cache (soft-cache-factory base)
-clojure.core.cache (through wrap-fn value-fn cache item)
-clojure.core.contracts (provide &amp; kontracts)
-clojure.core.contracts (with-constraints f c &amp; more)
-clojure.core.incubator (dissoc-in m [k &amp; ks :as keys])
-clojure.core.incubator (new-by-name class-name &amp; args)
-clojure.core.incubator (seqable? x)
-clojure.core.logic (-&gt;AnswerCache ansl anss _meta)
-clojure.core.logic (-&gt;Choice a f)
-clojure.core.logic (-&gt;ConstraintStore km cm cid running)
-clojure.core.logic (-&gt;LCons a d cache meta)
-clojure.core.logic (-&gt;LVar id unique name oname hash meta)
-clojure.core.logic (-&gt;PMap)
-clojure.core.logic (-&gt;Pair lhs rhs)
-clojure.core.logic (-&gt;SubstValue v doms eset)
-clojure.core.logic (-&gt;Substitutions s vs ts cs cq cqs oc _meta)
-clojure.core.logic (-&gt;SuspendedStream cache ansv* f)
-clojure.core.logic (== u v)
-clojure.core.logic (all &amp; goals)
-clojure.core.logic (and* goals)
-clojure.core.logic (appendo x y z)
-clojure.core.logic (conde &amp; clauses)
-clojure.core.logic (conjo coll &amp; args)
-clojure.core.logic (conso a d l)
-clojure.core.logic (copy-term u v)
-clojure.core.logic (defna &amp; rest)
-clojure.core.logic (defne &amp; rest)
-clojure.core.logic (defnu &amp; rest)
-clojure.core.logic (distincto l)
-clojure.core.logic (emptyo a)
-clojure.core.logic (everyg g coll)
-clojure.core.logic (fail a)
-clojure.core.logic (featurec x fs)
-clojure.core.logic (firsto l a)
-clojure.core.logic (fix-constraints a)
-clojure.core.logic (fna &amp; rest)
-clojure.core.logic (fnc args &amp; body)
-clojure.core.logic (fne &amp; rest)
-clojure.core.logic (fnu &amp; rest)
-clojure.core.logic (fresh [&amp; lvars] &amp; goals)
-clojure.core.logic (is u v op)
-clojure.core.logic (lcons a d)
-clojure.core.logic (llist f s &amp; rest)
-clojure.core.logic (log &amp; s)
-clojure.core.logic (lvaro v)
-clojure.core.logic (map-&gt;PMap m#)
-clojure.core.logic (map-&gt;SubstValue m#)
-clojure.core.logic (map-&gt;SuspendedStream m#)
-clojure.core.logic (master argv cache)
-clojure.core.logic (matcha xs &amp; cs)
-clojure.core.logic (matche xs &amp; cs)
-clojure.core.logic (matchu xs &amp; cs)
-clojure.core.logic (member1o x l)
-clojure.core.logic (membero x l)
-clojure.core.logic (nafc c &amp; args)
-clojure.core.logic (nilo a)
-clojure.core.logic (nonlvaro v)
-clojure.core.logic (or* goals)
-clojure.core.logic (partial-map m)
-clojure.core.logic (permuteo xl yl)
-clojure.core.logic (pred v f)
-clojure.core.logic (project [&amp; vars] &amp; goals)
-clojure.core.logic (rembero x l o)
-clojure.core.logic (resto l d)
-clojure.core.logic (run n bindings &amp; goals)
-clojure.core.logic (run* bindings &amp; goals)
-clojure.core.logic (run-db n db bindings &amp; goals)
-clojure.core.logic (run-db* db bindings &amp; goals)
-clojure.core.logic (run-nc n bindings &amp; goals)
-clojure.core.logic (run-nc* &amp; goals)
-clojure.core.logic (succeed a)
-clojure.core.logic (tabled args &amp; grest)
-clojure.core.logic (trace-lvars title &amp; lvars)
-clojure.core.logic (trace-s)
-clojure.core.logic (waiting-stream-check w success-cont failure-cont)
-clojure.core.match (-&gt;AppPattern p form _meta)
-clojure.core.match (-&gt;BindNode bindings node)
-clojure.core.match (-&gt;FailNode)
-clojure.core.match (-&gt;GuardPattern p gs _meta)
-clojure.core.match (-&gt;LeafNode value bindings)
-clojure.core.match (-&gt;LiteralPattern l _meta)
-clojure.core.match (-&gt;MapKeyPattern p)
-clojure.core.match (-&gt;MapPattern m _meta)
-clojure.core.match (-&gt;OrPattern ps _meta)
-clojure.core.match (-&gt;PatternMatrix rows ocrs)
-clojure.core.match (-&gt;PatternRow ps action bindings)
-clojure.core.match (-&gt;PredicatePattern p gs _meta)
-clojure.core.match (-&gt;RestPattern p)
-clojure.core.match (-&gt;SeqPattern s _meta)
-clojure.core.match (-&gt;SwitchNode occurrence cases default)
-clojure.core.match (-&gt;VectorPattern v t size offset rest? _meta)
-clojure.core.match (-&gt;WildcardPattern sym named _meta)
-clojure.core.match (emit-matrix vars clauses default)
-clojure.core.match (empty-rows-case)
-clojure.core.match (first-column-chosen-case matrix col ocrs)
-clojure.core.match (first-row-empty-case rows ocr)
-clojure.core.match (first-row-wildcards-case rows ocrs)
-clojure.core.match (group-keywords pattern)
-clojure.core.match (map-&gt;BindNode m#)
-clojure.core.match (map-&gt;FailNode m#)
-clojure.core.match (map-&gt;LeafNode m#)
-clojure.core.match (map-&gt;MapKeyPattern m#)
-clojure.core.match (map-&gt;PatternMatrix m#)
-clojure.core.match (map-&gt;RestPattern m#)
-clojure.core.match (map-&gt;SwitchNode m#)
-clojure.core.match (match vars &amp; clauses)
-clojure.core.match (other-column-chosen-case matrix col)
-clojure.core.match (process-vars vars)
-clojure.core.match (to-pattern-row pat action)
-clojure.core.match (wildcards-and-duplicates patterns)
-clojure.core.memoize (-&gt;PluggableMemoization f cache)
-clojure.core.memoize (-&gt;RetryingDelay fun available? value)
-clojure.core.memoize (build-memoizer cache-factory f &amp; args)
-clojure.core.memoize (fifo f base key threshold)
-clojure.core.memoize (lru f base key threshold)
-clojure.core.memoize (lu f base key threshold)
-clojure.core.memoize (memo f seed)
-clojure.core.memoize (memo-clear! f args)
-clojure.core.memoize (memo-swap! f base)
-clojure.core.memoize (memoized? f)
-clojure.core.memoize (snapshot memoized-fn)
-clojure.core.memoize (ttl f base key threshold)
-clojure.core.rrb-vector (catvec v1 v2 v3 v4 &amp; vn)
-clojure.core.rrb-vector (subvec v start end)
-clojure.core.rrb-vector (vec coll)
-clojure.core.rrb-vector (vector x1 x2 x3 x4 &amp; xn)
-clojure.core.rrb-vector (vector-of t x1 x2 x3 x4 &amp; xn)
-clojure.core.typed (ASeq t)
-clojure.core.typed (AVec t)
-clojure.core.typed (Agent1 t)
-clojure.core.typed (Agent2 t t)
-clojure.core.typed (All binder type)
-clojure.core.typed (Assoc type type-pairs*)
-clojure.core.typed (Atom1 t)
-clojure.core.typed (Atom2 t)
-clojure.core.typed (BlockingDeref t)
-clojure.core.typed (Coll t)
-clojure.core.typed (CountRange Integer Integer)
-clojure.core.typed (Delay t)
-clojure.core.typed (Deref t)
-clojure.core.typed (Difference type type type*)
-clojure.core.typed (Dissoc type type*)
-clojure.core.typed (EmptySeqable t)
-clojure.core.typed (ExactCount Integer)
-clojure.core.typed (Future t)
-clojure.core.typed (Get type type type)
-clojure.core.typed (HSeq [fixed* drest ... bound] :filter-sets [FS*] :objects [obj*])
-clojure.core.typed (HSequential [fixed* drest ... bound] :filter-sets [FS*] :objects [obj*])
-clojure.core.typed (quote [fixed* type ... bound])
-clojure.core.typed (I type*)
-clojure.core.typed (IFn ArityVec+)
-clojure.core.typed (List t)
-clojure.core.typed (Map t t)
-clojure.core.typed (Nilable t)
-clojure.core.typed (NilableNonEmptyASeq t)
-clojure.core.typed (NilableNonEmptySeq t)
-clojure.core.typed (NonEmptyASeq t)
-clojure.core.typed (NonEmptyAVec t)
-clojure.core.typed (NonEmptyColl t)
-clojure.core.typed (NonEmptyLazySeq t)
-clojure.core.typed (NonEmptySeq t)
-clojure.core.typed (NonEmptySeqable t)
-clojure.core.typed (NonEmptyVec t)
-clojure.core.typed (Option t)
-clojure.core.typed (Pred type)
-clojure.core.typed (Promise t)
-clojure.core.typed (Rec binder type)
-clojure.core.typed (Ref1 t)
-clojure.core.typed (Ref2 w r)
-clojure.core.typed (Reversible t)
-clojure.core.typed (Seq t)
-clojure.core.typed (Seqable t)
-clojure.core.typed (SequentialSeq t)
-clojure.core.typed (SequentialSeqable t)
-clojure.core.typed (Set t)
-clojure.core.typed (SortedSet t)
-clojure.core.typed (Stack t)
-clojure.core.typed (TFn binder type)
-clojure.core.typed (U type*)
-clojure.core.typed (quote Constant)
-clojure.core.typed (Var1 t)
-clojure.core.typed (Var2 w r)
-clojure.core.typed (Vec t)
-clojure.core.typed (ann varsym typesyn)
-clojure.core.typed (ann-datatype binder dname [field :- type*] opts*)
-clojure.core.typed (ann-form form ty)
-clojure.core.typed (ann-interface varsym &amp; methods)
-clojure.core.typed (ann-many t &amp; vs)
-clojure.core.typed (ann-protocol varsym &amp; methods)
-clojure.core.typed (ann-record binder dname [field :- type*] opts*)
-clojure.core.typed (atom &amp; args)
-clojure.core.typed (cast t x opt)
-clojure.core.typed (cf form expected)
-clojure.core.typed (check-form* form expected type-provided?)
-clojure.core.typed (check-form-info form &amp; opt)
-clojure.core.typed (check-ns ns-or-syms &amp; opt)
-clojure.core.typed (declare-alias-kind sym ty)
-clojure.core.typed (declare-datatypes &amp; syms)
-clojure.core.typed (declare-names &amp; syms)
-clojure.core.typed (declare-protocols &amp; syms)
-clojure.core.typed (def name docstring? :- type? expr)
-clojure.core.typed (defalias sym t)
-clojure.core.typed (defn kw-args? name docstring? attr-map? [param :- type *] :- type exprs*)
-clojure.core.typed (defprotocol &amp; body)
-clojure.core.typed (doseq seq-exprs &amp; body)
-clojure.core.typed (dotimes bindings &amp; body)
-clojure.core.typed (envs)
-clojure.core.typed (fn name? [param :- type* &amp; param :- type * ?] :- type? exprs*)
-clojure.core.typed (for seq-exprs &amp; maybe-ann-body-expr)
-clojure.core.typed (inst inst-of &amp; types)
-clojure.core.typed (inst-ctor inst-of &amp; types)
-clojure.core.typed (install features)
-clojure.core.typed (into-array&gt; into-array-syn javat cljt coll)
-clojure.core.typed (let [binding :- type? init*] exprs*)
-clojure.core.typed (letfn&gt; [fn-spec-or-annotation*] expr*)
-clojure.core.typed (load-if-needed)
-clojure.core.typed (loop [binding :- type? init*] exprs*)
-clojure.core.typed (method-type mname)
-clojure.core.typed (nilable-param msym mmap)
-clojure.core.typed (non-nil-return msym arities)
-clojure.core.typed (override-constructor ctorsym typesyn)
-clojure.core.typed (override-method methodsym typesyn)
-clojure.core.typed (pfn&gt; &amp; forms)
-clojure.core.typed (pred t)
-clojure.core.typed (print-env debug-str)
-clojure.core.typed (print-filterset debug-string frm)
-clojure.core.typed (ref &amp; args)
-clojure.core.typed (reset-caches)
-clojure.core.typed (statistics nsyms)
-clojure.core.typed (tc-ignore &amp; body)
-clojure.core.typed (typed-deps &amp; args)
-clojure.core.typed (untyped-var varsym typesyn)
-clojure.core.typed (var-coverage nsyms-or-nsym)
-clojure.core.typed (var&gt; sym)
-clojure.core.typed (warn-on-unannotated-vars)
-clojure.core.typed (when-let-fail b &amp; body)
-clojure.core.unify (extract-lvars lv-fn form)
-clojure.core.unify (flatten-bindings variable? binds)
-clojure.core.unify (make-occurs-subst-fn variable-fn)
-clojure.core.unify (make-occurs-unifier-fn variable-fn)
-clojure.core.unify (make-occurs-unify-fn variable-fn)
-clojure.core.unify (make-subst-fn variable-fn)
-clojure.core.unify (make-unifier-fn variable-fn)
-clojure.core.unify (make-unify-fn variable-fn)
-clojure.core.unify (subst expression bindings)
-clojure.core.unify (unifier- expression1 expression2)
-clojure.core.unify (unify- expression1 expression2)
-clojure.data.avl (merge m1 m2 m3 &amp; more)
-clojure.data.avl (merge-with f m1 m2 m3 &amp; more)
-clojure.data.avl (nearest coll test x)
-clojure.data.avl (rank-of coll x)
-clojure.data.avl (sorted-map &amp; keyvals)
-clojure.data.avl (sorted-map-by comparator &amp; keyvals)
-clojure.data.avl (sorted-set &amp; keys)
-clojure.data.avl (sorted-set-by comparator &amp; keys)
-clojure.data.avl (split-key k coll)
-clojure.data.avl (subrange coll start-test start end-test end)
-clojure.data.avl (union s1 s2 s3 &amp; more)
-clojure.data.avl (unsafe-join coll1 coll2 coll3 &amp; more)
-clojure.data.codec.base64 (dec-length in-length pad-length)
-clojure.data.codec.base64 (decode input offset length)
-clojure.data.codec.base64 (decode! input offset length output)
-clojure.data.codec.base64 (decoding-transfer input-stream output-stream &amp; opts)
-clojure.data.codec.base64 (enc-length n)
-clojure.data.codec.base64 (encode input offset length)
-clojure.data.codec.base64 (encode! input offset length output)
-clojure.data.codec.base64 (encoding-transfer input-stream output-stream &amp; opts)
-clojure.data.codec.base64 (pad-length input offset length)
-clojure.data.csv (read-csv input &amp; options)
-clojure.data.csv (write-csv writer data &amp; options)
-clojure.data.finger-tree (-&gt;CountedDoubleList tree mdata)
-clojure.data.finger-tree (-&gt;CountedSortedSet cmpr tree mdata)
-clojure.data.finger-tree (-&gt;DeepTree meter-obj pre mid suf mval)
-clojure.data.finger-tree (-&gt;DelayedTree tree-ref mval)
-clojure.data.finger-tree (-&gt;Digit1 a meter-obj measure-ref)
-clojure.data.finger-tree (-&gt;Digit2 a b meter-obj measure-ref)
-clojure.data.finger-tree (-&gt;Digit3 a b c meter-obj measure-ref)
-clojure.data.finger-tree (-&gt;Digit4 a b c d meter-obj measure-ref)
-clojure.data.finger-tree (-&gt;DoubleList tree mdata)
-clojure.data.finger-tree (-&gt;EmptyTree meter-obj)
-clojure.data.finger-tree (-&gt;Len-Right-Meter len right)
-clojure.data.finger-tree (-&gt;SingleTree meter-obj x)
-clojure.data.finger-tree (map-&gt;Len-Right-Meter m#)
-clojure.data.fressian (associative-lookup o)
-clojure.data.fressian (begin-closed-list writer)
-clojure.data.fressian (end-list writer)
-clojure.data.fressian (field-caching-writer cache-pred)
-clojure.data.fressian (inheritance-lookup lookup)
-clojure.data.fressian (read readable &amp; options)
-clojure.data.fressian (read-object rdr)
-clojure.data.fressian (tag obj)
-clojure.data.fressian (tagged-object? o)
-clojure.data.fressian (tagged-value obj)
-clojure.data.fressian (write obj &amp; options)
-clojure.data.fressian (write-object writer obj)
-clojure.data.generators (anything)
-clojure.data.generators (boolean)
-clojure.data.generators (boolean-array f sizer)
-clojure.data.generators (byte)
-clojure.data.generators (byte-array f sizer)
-clojure.data.generators (char)
-clojure.data.generators (char-array f sizer)
-clojure.data.generators (collection)
-clojure.data.generators (date base)
-clojure.data.generators (default-sizer)
-clojure.data.generators (double)
-clojure.data.generators (double-array f sizer)
-clojure.data.generators (float)
-clojure.data.generators (float-array f sizer)
-clojure.data.generators (geometric p)
-clojure.data.generators (hash-map fk fv sizer)
-clojure.data.generators (int)
-clojure.data.generators (int-array f sizer)
-clojure.data.generators (keyword sizer)
-clojure.data.generators (list f sizer)
-clojure.data.generators (long-array f sizer)
-clojure.data.generators (one-of &amp; specs)
-clojure.data.generators (printable-ascii-char)
-clojure.data.generators (rand-nth coll)
-clojure.data.generators (ratio num-gen denom-gen)
-clojure.data.generators (reps sizer f)
-clojure.data.generators (reservoir-sample ct coll)
-clojure.data.generators (scalar)
-clojure.data.generators (set f sizer)
-clojure.data.generators (short)
-clojure.data.generators (short-array f sizer)
-clojure.data.generators (shuffle coll)
-clojure.data.generators (string f sizer)
-clojure.data.generators (symbol sizer)
-clojure.data.generators (tuple &amp; generators)
-clojure.data.generators (uniform lo hi)
-clojure.data.generators (uuid)
-clojure.data.generators (vec f sizer)
-clojure.data.generators (weighted m)
-clojure.data.json (json-str x &amp; options)
-clojure.data.json (pprint x &amp; options)
-clojure.data.json (pprint-json x &amp; options)
-clojure.data.json (print-json x &amp; options)
-clojure.data.json (read reader &amp; options)
-clojure.data.json (read-json input keywordize? eof-error? eof-value)
-clojure.data.json (read-str string &amp; options)
-clojure.data.json (write x writer &amp; options)
-clojure.data.json (write-json x out escape-unicode?)
-clojure.data.json (write-str x &amp; options)
-clojure.data.priority-map (-&gt;PersistentPriorityMap priority-&gt;set-of-items item-&gt;priority _meta keyfn)
-clojure.data.priority-map (priority-map &amp; keyvals)
-clojure.data.priority-map (priority-map-by comparator &amp; keyvals)
-clojure.data.priority-map (priority-map-keyfn keyfn &amp; keyvals)
-clojure.data.priority-map (priority-map-keyfn-by keyfn comparator &amp; keyvals)
-clojure.data.zip (ancestors loc)
-clojure.data.zip (children loc)
-clojure.data.zip (children-auto loc)
-clojure.data.zip (descendants loc)
-clojure.data.zip (left-locs loc)
-clojure.data.zip (leftmost? loc)
-clojure.data.zip (right-locs loc)
-clojure.data.zip (rightmost? loc)
-clojure.java.classpath (classpath)
-clojure.java.classpath (classpath-directories)
-clojure.java.classpath (classpath-jarfiles)
-clojure.java.classpath (filenames-in-jar jar-file)
-clojure.java.classpath (get-urls loader)
-clojure.java.classpath (jar-file? f)
-clojure.java.classpath (loader-classpath loader)
-clojure.java.classpath (system-classpath)
-clojure.java.jdbc (as-sql-name f x)
-clojure.java.jdbc (create-table-ddl table &amp; specs)
-clojure.java.jdbc (db-connection db)
-clojure.java.jdbc (db-do-commands db-spec transaction? sql-command &amp; sql-commands)
-clojure.java.jdbc (db-do-prepared db-spec transaction? sql &amp; param-groups)
-clojure.java.jdbc (db-do-prepared-return-keys db transaction? sql param-group)
-clojure.java.jdbc (db-find-connection db)
-clojure.java.jdbc (db-is-rollback-only db)
-clojure.java.jdbc (db-query-with-resultset db-spec [options-map sql-string &amp; params] func)
-clojure.java.jdbc (db-set-rollback-only! db)
-clojure.java.jdbc (db-transaction binding &amp; body)
-clojure.java.jdbc (db-unset-rollback-only! db)
-clojure.java.jdbc (execute! db-spec [sql &amp; param-groups] :multi? true :transaction? true)
-clojure.java.jdbc (insert! db-spec table row-map :transaction? true :entities identity)
-clojure.java.jdbc (metadata-query meta-query &amp; opt-args)
-clojure.java.jdbc (print-sql-exception exception)
-clojure.java.jdbc (print-sql-exception-chain exception)
-clojure.java.jdbc (print-update-counts exception)
-clojure.java.jdbc (query db-spec [option-map sql-string &amp; params])
-clojure.java.jdbc (quoted q x)
-clojure.java.jdbc (with-db-connection binding &amp; body)
-clojure.java.jdbc (with-db-metadata binding &amp; body)
-clojure.java.jdbc (with-db-transaction binding &amp; body)
-clojure.java.jmx (-&gt;Bean state-ref)
-clojure.java.jmx (attribute-names n)
-clojure.java.jmx (create-bean state-ref)
-clojure.java.jmx (invoke n op &amp; args)
-clojure.java.jmx (invoke-signature n op signature &amp; args)
-clojure.java.jmx (mbean n)
-clojure.java.jmx (mbean-names n)
-clojure.java.jmx (operation-names n)
-clojure.java.jmx (readable? n attr)
-clojure.java.jmx (register-mbean mbean mbean-name)
-clojure.java.jmx (unregister-mbean mbean-name)
-clojure.java.jmx (with-connection opts &amp; body)
-clojure.java.jmx (write! n attr value)
-clojure.math.combinatorics (assert-with-message x message)
-clojure.math.combinatorics (cartesian-product &amp; seqs)
-clojure.math.combinatorics (combinations items t)
-clojure.math.combinatorics (count-combinations items t)
-clojure.math.combinatorics (count-permutations l)
-clojure.math.combinatorics (count-subsets items)
-clojure.math.combinatorics (drop-permutations items n)
-clojure.math.combinatorics (nth-combination items t n)
-clojure.math.combinatorics (nth-permutation items n)
-clojure.math.combinatorics (partitions items &amp; args)
-clojure.math.combinatorics (permutation-index items)
-clojure.math.combinatorics (permutations items)
-clojure.math.combinatorics (selections items n)
-clojure.math.combinatorics (subsets items)
-clojure.math.numeric-tower (abs n)
-clojure.math.numeric-tower (expt base pow)
-clojure.math.numeric-tower (gcd a b)
-clojure.math.numeric-tower (lcm a b)
-clojure.test.generative (defspec name fn-to-test args &amp; validator-body)
-clojure.tools.logging (debug throwable message &amp; more)
-clojure.tools.logging (debugf throwable fmt &amp; fmt-args)
-clojure.tools.logging (enabled? level logger-ns)
-clojure.tools.logging (error throwable message &amp; more)
-clojure.tools.logging (errorf throwable fmt &amp; fmt-args)
-clojure.tools.logging (fatal throwable message &amp; more)
-clojure.tools.logging (fatalf throwable fmt &amp; fmt-args)
-clojure.tools.logging (info throwable message &amp; more)
-clojure.tools.logging (infof throwable fmt &amp; fmt-args)
-clojure.tools.logging (log logger-factory logger-ns level throwable message)
-clojure.tools.logging (log* logger level throwable message)
-clojure.tools.logging (log-capture! logger-ns out-level err-level)
-clojure.tools.logging (log-stream level logger-ns)
-clojure.tools.logging (log-uncapture!)
-clojure.tools.logging (logf level throwable fmt &amp; fmt-args)
-clojure.tools.logging (logp level throwable message &amp; more)
-clojure.tools.logging (spy level expr)
-clojure.tools.logging (spyf level fmt expr)
-clojure.tools.logging (trace throwable message &amp; more)
-clojure.tools.logging (tracef throwable fmt &amp; fmt-args)
-clojure.tools.logging (warn throwable message &amp; more)
-clojure.tools.logging (warnf throwable fmt &amp; fmt-args)
-clojure.tools.logging (with-logs [logger-ns out-level err-level] &amp; body)
-clojure.tools.analyzer (-&gt;Const literal? val meta type op form env children)
-clojure.tools.analyzer (-&gt;Local assignable? name op form env)
-clojure.tools.analyzer (-&gt;Map keys vals op form env children)
-clojure.tools.analyzer (-&gt;MaybeClass class op form env)
-clojure.tools.analyzer (-&gt;MaybeHostForm class field op form env)
-clojure.tools.analyzer (-&gt;Set items op form env children)
-clojure.tools.analyzer (-&gt;TransientConst literal? val meta type op form env children extmap)
-clojure.tools.analyzer (-&gt;TransientLocal assignable? name op form env extmap)
-clojure.tools.analyzer (-&gt;TransientMap keys vals op form env children extmap)
-clojure.tools.analyzer (-&gt;TransientMaybeClass class op form env extmap)
-clojure.tools.analyzer (-&gt;TransientMaybeHostForm class field op form env extmap)
-clojure.tools.analyzer (-&gt;TransientSet items op form env children extmap)
-clojure.tools.analyzer (-&gt;TransientVar assignable? var meta op form env extmap)
-clojure.tools.analyzer (-&gt;TransientVector items op form env children extmap)
-clojure.tools.analyzer (-&gt;TransientWithMeta meta expr op form env children extmap)
-clojure.tools.analyzer (-&gt;Var assignable? var meta op form env)
-clojure.tools.analyzer (-&gt;Vector items op form env children)
-clojure.tools.analyzer (-&gt;WithMeta meta expr op form env children)
-clojure.tools.analyzer (analyze form env)
-clojure.tools.analyzer (analyze-in-env env)
-clojure.tools.analyzer (create-var sym env)
-clojure.tools.analyzer (empty-env)
-clojure.tools.analyzer (macroexpand form env)
-clojure.tools.analyzer (macroexpand-1 form env)
-clojure.tools.analyzer (map-&gt;Const m#)
-clojure.tools.analyzer (map-&gt;Local m#)
-clojure.tools.analyzer (map-&gt;Map m#)
-clojure.tools.analyzer (map-&gt;MaybeClass m#)
-clojure.tools.analyzer (map-&gt;MaybeHostForm m#)
-clojure.tools.analyzer (map-&gt;Set m#)
-clojure.tools.analyzer (map-&gt;Var m#)
-clojure.tools.analyzer (map-&gt;Vector m#)
-clojure.tools.analyzer (map-&gt;WithMeta m#)
-clojure.tools.analyzer (parse [op &amp; args] env)
-clojure.tools.analyzer (var? obj)
-clojure.tools.analyzer.jvm (-&gt;ExceptionThrown e)
-clojure.tools.analyzer.jvm (analyze form env opts)
-clojure.tools.analyzer.jvm (analyze+eval form env opts)
-clojure.tools.analyzer.jvm (analyze-ns ns env opts)
-clojure.tools.analyzer.jvm (empty-env)
-clojure.tools.analyzer.jvm (macroexpand-1 form env)
-clojure.tools.analyzer.jvm (macroexpand-all form env opts)
-clojure.tools.analyzer.jvm (parse form env)
-clojure.tools.analyzer.jvm (run-passes ast)
-clojure.tools.cli (get-default-options option-specs)
-clojure.tools.cli (parse-opts args option-specs &amp; options)
-clojure.tools.cli (summarize specs)
-clojure.tools.emitter.jvm (eval form)
-clojure.tools.emitter.jvm (load res)
-clojure.tools.macro (defsymbolmacro symbol expansion)
-clojure.tools.macro (deftemplate name params &amp; forms)
-clojure.tools.macro (macrolet fn-bindings &amp; exprs)
-clojure.tools.macro (mexpand form)
-clojure.tools.macro (mexpand-1 form)
-clojure.tools.macro (mexpand-all form)
-clojure.tools.macro (name-with-attributes name macro-args)
-clojure.tools.macro (symbol-macrolet symbol-bindings &amp; exprs)
-clojure.tools.macro (with-symbol-macros &amp; exprs)
-clojure.tools.namespace (clojure-source-file? file)
-clojure.tools.namespace (clojure-sources-in-jar jar-file)
-clojure.tools.namespace (comment? form)
-clojure.tools.namespace (find-clojure-sources-in-dir dir)
-clojure.tools.namespace (find-namespaces-in-dir dir)
-clojure.tools.namespace (find-namespaces-in-jarfile jarfile)
-clojure.tools.namespace (find-namespaces-on-classpath)
-clojure.tools.namespace (find-ns-decls-in-dir dir)
-clojure.tools.namespace (find-ns-decls-in-jarfile jarfile)
-clojure.tools.namespace (find-ns-decls-on-classpath)
-clojure.tools.namespace (ns-decl? form)
-clojure.tools.namespace (read-file-ns-decl file)
-clojure.tools.namespace (read-ns-decl rdr)
-clojure.tools.namespace (read-ns-decl-from-jarfile-entry jarfile entry-name)
-clojure.tools.nrepl (client transport response-timeout)
-clojure.tools.nrepl (code &amp; body)
-clojure.tools.nrepl (code* &amp; expressions)
-clojure.tools.nrepl (combine-responses responses)
-clojure.tools.nrepl (response-seq transport timeout)
-clojure.tools.nrepl (response-values responses)
-clojure.tools.reader (map-func coll)
-clojure.tools.reader (read reader eof-error? eof-value)
-clojure.tools.reader (read-string opts s)
-clojure.tools.reader (resolve-symbol s)
-clojure.tools.reader (syntax-quote form)
-clojure.tools.trace (deftrace name &amp; definition)
-clojure.tools.trace (dotrace fnames &amp; exprs)
-clojure.tools.trace (trace name value)
-clojure.tools.trace (trace-forms &amp; body)
-clojure.tools.trace (trace-ns n)
-clojure.tools.trace (trace-vars &amp; vs)
-clojure.tools.trace (traceable? v)
-clojure.tools.trace (traced? v)
-clojure.tools.trace (untrace-ns n)
-clojure.tools.trace (untrace-vars &amp; vs)
-clojure.tools.analyzer.passes.js.annotate-tag (annotate-tag ast)
-clojure.tools.analyzer.passes.js.collect-keywords (collect-keywords ast)
-clojure.tools.analyzer.passes.js.emit-form (emit-form ast opts)
-clojure.tools.analyzer.passes.js.emit-form (emit-hygienic-form ast)
-clojure.tools.analyzer.passes.js.validate (validate ast)
-clojure.tools.analyzer.passes.jvm.constant-lifter (constant-lift ast)
-clojure.tools.analyzer.passes.jvm.emit-form (emit-form ast opts)
-clojure.tools.analyzer.passes.jvm.emit-form (emit-hygienic-form ast)
-clojure.tools.analyzer.passes.jvm.fix-case-test (fix-case-test ast)
-clojure.tools.analyzer.passes.jvm.validate-loop-locals (validate-loop-locals analyze)
-gloss (bit-map & args)
-gloss (bit-seq & bit-lengths)
-gloss (byte-count b)
-gloss (compile-frame frame)(compile-frame frame pre-encoder post-decoder)
-gloss (defcodec- name frame & coders)
-gloss (delimited-block delimiters strip-delimiters?)
-gloss (delimited-frame delimiters frame)
-gloss (enum primitive-type & map-or-seq)
-gloss (finite-block prefix-or-len)
-gloss (finite-frame prefix-or-len frame)
-gloss (header frame header->body body->header)
-gloss (ordered-map & key-value-pairs)
-gloss (prefix primitive)(prefix signature to-count from-count)
-gloss (repeated frame & {:as options})
-gloss (sizeof this)
-gloss (string charset & {:as options})
-gloss.io (contiguous buf-seq)
-gloss.io (decode frame bytes)(decode frame bytes no-remainder?)
-gloss.io (decode-all frame bytes)
-gloss.io (decode-stream src frame)
-gloss.io (decode-stream-headers src & frames)
-gloss.io (encode frame val)
-gloss.io (encode-all frame vals)
-gloss.io (encode-to-buffer frame buf vals)
-gloss.io (encode-to-stream frame output-stream vals)
-gloss.io (lazy-decode-all frame bytes)
-gloss.io (to-buf-seq x)
-gloss.io (to-byte-buffer x)
-medley (abs x)
-medley (assoc-some m k v)(assoc-some m k v & kvs)
-medley (boolean? x)
-medley (deref-reset! atom newval)
-medley (deref-swap! atom f & args)
-medley (dissoc-in m ks)
-medley (distinct-by f)(distinct-by f coll)
-medley (drop-upto pred)(drop-upto pred coll)
-medley (ex-cause ex)
-medley (ex-message ex)
-medley (filter-keys pred coll)
-medley (filter-kv pred coll)
-medley (filter-vals pred coll)
-medley (find-first pred coll)
-medley (greatest & xs)
-medley (indexed coll)
-medley (interleave-all & colls)
-medley (least & xs)
-medley (map-entry k v)
-medley (map-keys f coll)
-medley (map-kv f coll)
-medley (map-vals f coll)
-medley (mapply f & args)
-medley (queue)(queue coll)
-medley (queue? x)
-medley (random-uuid)
-medley (remove-keys pred coll)
-medley (remove-kv pred coll)
-medley (remove-vals pred coll)
-medley (take-upto pred)(take-upto pred coll)
-medley (uuid s)
-medley (uuid? x)
-fs.compression (bunzip2 source target)
-fs.compression (gunzip source target)
-fs.compression (make-zip-stream & filename-content-pairs)
-fs.compression (untar source target)
-fs.compression (unxz source target)
-fs.compression (unzip source target-dir)
-fs.compression (zip filename & filename-content-pairs)
-fs (absolute path)
-fs (absolute? path)
-fs (base-name path trim-ext)
-fs (chdir path)
-fs (child-of? p c)
-fs (chmod mode path)
-fs (copy from to)
-fs (copy+ src dest)
-fs (copy-dir from to)
-fs (create f)
-fs (delete path)
-fs (delete-dir root)
-fs (directory? path)
-fs (exec & body)
-fs (executable? path)
-fs (exists? path)
-fs (expand-home path)
-fs (extension path)
-fs (file path & paths)
-fs (file? path)
-fs (find-files path pattern)
-fs (find-files* path pred)
-fs (glob root pattern)
-fs (hidden? path)
-fs (home user)
-fs (iterate-dir path)
-fs (link path target)
-fs (link? path)
-fs (list-dir path)
-fs (mkdir path)
-fs (mkdirs path)
-fs (mod-time path)
-fs (name path)
-fs (normalized path)
-fs (ns-path n)
-fs (parent path)
-fs (parents f)
-fs (path-ns path)
-fs (read-sym-link path)
-fs (readable? path)
-fs (rename old-path new-path)
-fs (size path)
-fs (split path)
-fs (split-ext path)
-fs (sym-link path target)
-fs (temp-dir prefix suffix tries)
-fs (temp-file prefix suffix tries)
-fs (temp-name prefix suffix)
-fs (tmpdir)
-fs (touch path & [time])
-fs (walk func path)
-fs (with-cwd cwd & body)
-fs (with-mutable-cwd & body)
-fs (writeable? path)
-plumbing (-unless-update body)
-plumbing (<- & body)
-plumbing (?> arg do-it? & rest)
-plumbing (?>> do-it? & args)
-plumbing (aconcat s)
-plumbing (as->> name & forms-and-expr)
-plumbing (assoc-when m & kvs)
-plumbing (conj-when coll x & xs)
-plumbing (cons-when x s)
-plumbing (count-when pred xs)
-plumbing (dissoc-in m [k & ks])
-plumbing (distinct-by f xs)
-plumbing (distinct-id xs)
-plumbing (fnk & args)
-plumbing (for-map m-sym seq-exprs key-expr val-expr)
-plumbing (get-and-set! a new-val)
-plumbing (grouped-map key-fn map-fn coll)
-plumbing (if-letk bindings then else)
-plumbing (indexed s)
-plumbing (keywordize-map x)
-plumbing (lazy-get m k d)
-plumbing (letk bindings & body)
-plumbing (map-from-keys f ks)
-plumbing (map-from-vals f vs)
-plumbing (map-keys f m)
-plumbing (map-vals f m)
-plumbing (mapply f arg & args)
-plumbing (memoized-fn name args & body)
-plumbing (positions f s)
-plumbing (safe-get m k)
-plumbing (safe-get-in m ks)
-plumbing (singleton xs)
-plumbing (sum xs)
-plumbing (swap-pair! a f & args)
-plumbing (unchunk s)
-plumbing (update m k f x1 x2 & xs)
-plumbing (update-in-when m key-seq f & args)
-plumbing (when-letk bindings & body)
-plumbing.fnk.impl (efficient-call-forms fnk arg-form-map)
-plumbing.fnk.impl (fnk-form env name? bind body)
-plumbing.fnk.impl (letk-arg-bind-sym-and-body-form env map-sym binding key-path body-form)
-plumbing.fnk.impl (letk-input-schema-and-body-form env binding-form key-path body-form)
-plumbing.fnk.impl (name-sym x)
-plumbing.fnk.impl (positional-arg-bind-sym-and-body env binding body-form)
-plumbing.fnk.impl (positional-arg-bind-syms-and-body env bind body-form)
-plumbing.fnk.impl (positional-fn fnk arg-ks)
-plumbing.fnk.impl (positional-fnk-form fn-name external-input-schema ordered-ks->opt arg-sym-map body)
-plumbing.fnk.impl (positional-info fnk)
-plumbing.fnk.impl (qualified-sym x)
-plumbing.fnk.pfnk (fn->fnk f [input-schema output-schema :as io])
-plumbing.fnk.pfnk (io-schemata this)
-plumbing.fnk.schema (assert-distinct things)
-plumbing.fnk.schema (assert-iae form & format-args)
-plumbing.fnk.schema (guess-expr-output-schema expr)
-plumbing.fnk.schema (non-map-diff s1 s2)
-plumbing.fnk.schema (safe-get m k key-path)
-plumbing.fnk.schema (schema-diff input-schema output-schema)
-plumbing.graph-async (asyncify f)
-plumbing.graph (->graph graph-nodes)
-plumbing.graph (check-comp-partial! g instance-fn)
-plumbing.graph (comp-partial-fn f other)
-plumbing.graph (compile g)
-plumbing.graph (eager-compile g)
-plumbing.graph (graph & nodes)
-plumbing.graph (interpreted-eager-compile g)
-plumbing.graph (lazy-compile g)
-plumbing.graph (positional-eager-compile g arg-ks)
-plumbing.graph (profiled profile-key g)
-plumbing.graph (restricted-call f in-m)
-plumbing.graph (run g input)
-plumbing.graph (simple-flat-compile g check-input? make-map assoc-f)
-plumbing.graph (simple-hierarchical-compile g check-input? make-map assoc-f)
-plumbing.graph (working-array-map & args)
-plumbing.graph.positional (def-graph-record g record-type-name)
-plumbing.graph.positional (eval-bound form bindings)
-plumbing.graph.positional (graph-form g arg-keywords)
-plumbing.graph.positional (graph-let-bindings g g-value-syms)
-plumbing.graph.positional (positional-flat-compile g)
-plumbing.map (collate flat-counts)
-plumbing.map (deep-collate nested-counts)
-plumbing.map (flatten m)
-plumbing.map (get! m k default-expr)
-plumbing.map (inc-key! m k d)
-plumbing.map (inc-key-in! m ks d)
-plumbing.map (keep-leaves f m)
-plumbing.map (keep-leaves-and-path f ks m)
-plumbing.map (keyword-map & syms)
-plumbing.map (map-leaves f m)
-plumbing.map (map-leaves-and-path f ks m)
-plumbing.map (merge-disjoint m1 m2 & maps)
-plumbing.map (merge-with-key f & maps)
-plumbing.map (safe-select-keys m ks)
-plumbing.map (topological-sort child-map & [include-leaves?])
-plumbing.map (unflatten s)
-plumbing.map (update-key! m k f & args)
-clj-time (abuts? i-a i-b)
-clj-time (ago period)
-clj-time (date-midnight year month day)
-clj-time (date-time year month day hour minute second millis)
-clj-time (after? this that)
-clj-time (before? this that)
-clj-time (day this)
-clj-time (day-of-week this)
-clj-time (hour this)
-clj-time (milli this)
-clj-time (minus- this period)
-clj-time (minute this)
-clj-time (month this)
-clj-time (plus- this period)
-clj-time (sec this)
-clj-time (second this)
-clj-time (year this)
-clj-time (days n)
-clj-time (days? val)
-clj-time (default-time-zone)
-clj-time (earliest dts)
-clj-time (end in)
-clj-time (epoch)
-clj-time (extend in & by)
-clj-time (from-now period)
-clj-time (from-time-zone dt tz)
-clj-time (hours n)
-clj-time (hours? val)
-clj-time (in-days in)
-clj-time (in-hours in)
-clj-time (in-millis in)
-clj-time (in-minutes in)
-clj-time (in-months in)
-clj-time (in-msecs in)
-clj-time (in-seconds in)
-clj-time (in-secs in)
-clj-time (in-weeks in)
-clj-time (in-years in)
-clj-time (interval dt-a dt-b)
-clj-time (latest dts)
-clj-time (local-date year month day)
-clj-time (local-date-time year month day hour minute second millis)
-clj-time (millis n)
-clj-time (minus dt p & ps)
-clj-time (minutes n)
-clj-time (minutes? val)
-clj-time (months n)
-clj-time (months? val)
-clj-time (now)
-clj-time (overlaps? start-a end-a start-b end-b)
-clj-time (plus dt p & ps)
-clj-time (seconds n)
-clj-time (seconds? val)
-clj-time (start in)
-clj-time (time-zone-for-id id)
-clj-time (time-zone-for-offset hours minutes)
-clj-time (to-time-zone dt tz)
-clj-time (today)
-clj-time (today-at-midnight tz)
-clj-time (weeks n)
-clj-time (weeks? val)
-clj-time (within? start end test)
-clj-time (year-month year month)
-clj-time (years n)
-clj-time (years? val)
-clj-time (yesterday)
-clj-time.coerce (from-date date)
-clj-time.coerce (from-long millis)
-clj-time.coerce (from-sql-date sql-date)
-clj-time.coerce (from-sql-time sql-time)
-clj-time.coerce (from-string s)
-clj-time.coerce (to-date-time obj)
-clj-time.coerce (to-date obj)
-clj-time.coerce (to-epoch obj)
-clj-time.coerce (to-local-date obj)
-clj-time.coerce (to-local-date-time obj)
-clj-time.coerce (to-long obj)
-clj-time.coerce (to-sql-date obj)
-clj-time.coerce (to-sql-time obj)
-clj-time.coerce (to-string obj)
-clj-time.coerce (to-timestamp obj)
-clj-time.format (formatter dtz fmts & more)
-clj-time.format (formatter-local fmt)
-clj-time.format (instant->map instant)
-clj-time.format (parse s)
-clj-time.format (parse-local s)
-clj-time.format (parse-local-date s)
-clj-time.format (show-formatters dt)
-clj-time.format (unparse fmt dt)
-clj-time.format (unparse-local fmt dt)
-clj-time.format (unparse-local-date fmt ld)
-clj-time.format (with-chronology f c)
-clj-time.format (with-locale f l)
-clj-time.format (with-pivot-year f pivot-year)
-clj-time.format (with-zone f dtz)
-clj-time.local (format-local-time obj format-key)
-clj-time.local (to-local-date-time obj)
-clj-time.local (local-now)
-clj-time.predicates (same-date? this-date-time that-date-time)
-clj-time.periodic (periodic-seq start period-like)
+clojure	clojure.core	core	UNK	*	UNK=x UNK=y
+clojure	clojure.core	core	UNK	*'	UNK=x UNK=y
+clojure	clojure.core	core	UNK	+	UNK=x UNK=y
+clojure	clojure.core	core	UNK	+'	UNK=x UNK=y
+clojure	clojure.core	core	UNK	-	UNK=x UNK=y
+clojure	clojure.core	core	UNK	-'	UNK=x UNK=y
+clojure	clojure.core	core	UNK	-&gt;	UNK=x UNK=forms
+clojure	clojure.core	core	UNK	-&gt;&gt;	UNK=x UNK=forms
+clojure	clojure.core	core	UNK	-&gt;arraychunk	UNK=am UNK=arr UNK=off UNK=end
+clojure	clojure.core	core	UNK	-&gt;eduction	UNK=xform UNK=coll
+clojure	clojure.core	core	UNK	-&gt;vec	UNK=am UNK=cnt UNK=shift UNK=root UNK=tail UNK=_meta
+clojure	clojure.core	core	UNK	-&gt;vecnode	UNK=edit UNK=arr
+clojure	clojure.core	core	UNK	-&gt;vecseq	UNK=am UNK=vec UNK=anode UNK=i UNK=offset
+clojure	clojure.core	core	UNK	..	UNK=x UNK=form
+clojure	clojure.core	core	UNK	/	UNK=x UNK=y
+clojure	clojure.core	core	UNK	&lt;	UNK=x UNK=y
+clojure	clojure.core	core	UNK	&lt;=	UNK=x UNK=y
+clojure	clojure.core	core	UNK	==	UNK=x UNK=y
+clojure	clojure.core	core	UNK	&gt;	UNK=x UNK=y
+clojure	clojure.core	core	UNK	&gt;=	UNK=x UNK=y
+clojure	clojure.core	core	UNK	throwable-&gt;map	UNK=o
+clojure	clojure.core	core	UNK	accessor	UNK=s UNK=key
+clojure	clojure.core	core	UNK	aclone	UNK=array
+clojure	clojure.core	core	UNK	add-classpath	UNK=url
+clojure	clojure.core	core	UNK	add-watch	UNK=reference UNK=key UNK=fn
+clojure	clojure.core	core	UNK	agent	UNK=state UNK=options
+clojure	clojure.core	core	UNK	agent-error	UNK=a
+clojure	clojure.core	core	UNK	aget	UNK=array UNK=idx UNK=idxs
+clojure	clojure.core	core	UNK	alength	UNK=array
+clojure	clojure.core	core	UNK	alias	UNK=alias UNK=namespace UNK=sym
+clojure	clojure.core	core	UNK	all-ns	void
+clojure	clojure.core	core	UNK	alter	UNK=ref UNK=fun UNK=args
+clojure	clojure.core	core	UNK	alter-meta!	UNK=iref UNK=f UNK=args
+clojure	clojure.core	core	UNK	alter-var-root	UNK=v UNK=f UNK=args
+clojure	clojure.core	core	UNK	amap	UNK=a UNK=idx UNK=ret UNK=expr
+clojure	clojure.core	core	UNK	ancestors	UNK=h UNK=tag
+clojure	clojure.core	core	UNK	and	UNK=x UNK=next
+clojure	clojure.core	core	UNK	apply	UNK=f UNK=a UNK=b UNK=c UNK=d UNK=args
+clojure	clojure.core	core	UNK	areduce	UNK=a UNK=idx UNK=ret UNK=init UNK=expr
+clojure	clojure.core	core	UNK	array-map	UNK=keyvals
+clojure	clojure.core	core	UNK	as-&gt;	UNK=expr UNK=name UNK=forms
+clojure	clojure.core	core	UNK	aset	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-boolean	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-byte	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-char	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-double	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-float	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-int	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-long	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	aset-short	UNK=array UNK=idx UNK=idx2
+clojure	clojure.core	core	UNK	assert	UNK=x UNK=message
+clojure	clojure.core	core	UNK	assoc!	UNK=coll UNK=key UNK=val UNK=kvs
+clojure	clojure.core	core	UNK	assoc-in	UNK=m UNK=k UNK=ks UNK=v
+clojure	clojure.core	core	UNK	associative?	UNK=coll
+clojure	clojure.core	core	UNK	atom	UNK=x UNK=options
+clojure	clojure.core	core	UNK	await	UNK=agents
+clojure	clojure.core	core	UNK	await-for	UNK=timeout UNK=ms UNK=agents
+clojure	clojure.core	core	UNK	bases	UNK=c
+clojure	clojure.core	core	UNK	bean	UNK=x
+clojure	clojure.core	core	UNK	bigdec	UNK=x
+clojure	clojure.core	core	UNK	bigint	UNK=x
+clojure	clojure.core	core	UNK	biginteger	UNK=x
+clojure	clojure.core	core	UNK	binding	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	bit-and	UNK=x UNK=y
+clojure	clojure.core	core	UNK	bit-and-not	UNK=x UNK=y
+clojure	clojure.core	core	UNK	bit-clear	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-flip	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-not	UNK=x
+clojure	clojure.core	core	UNK	bit-or	UNK=x UNK=y
+clojure	clojure.core	core	UNK	bit-set	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-shift-left	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-shift-right	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-test	UNK=x UNK=n
+clojure	clojure.core	core	UNK	bit-xor	UNK=x UNK=y
+clojure	clojure.core	core	UNK	boolean	UNK=x
+clojure	clojure.core	core	UNK	boolean-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	booleans	UNK=xs
+clojure	clojure.core	core	UNK	bound-fn	UNK=fntail
+clojure	clojure.core	core	UNK	bound-fn*	UNK=f
+clojure	clojure.core	core	UNK	bound?	UNK=vars
+clojure	clojure.core	core	UNK	butlast	UNK=coll
+clojure	clojure.core	core	UNK	byte	UNK=x
+clojure	clojure.core	core	UNK	byte-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	bytes	UNK=xs
+clojure	clojure.core	core	UNK	case	UNK=e UNK=clauses
+clojure	clojure.core	core	UNK	cast	UNK=c UNK=x
+clojure	clojure.core	core	UNK	cat	UNK=rf
+clojure	clojure.core	core	UNK	char	UNK=x
+clojure	clojure.core	core	UNK	char-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	char?	UNK=x
+clojure	clojure.core	core	UNK	chars	UNK=xs
+clojure	clojure.core	core	UNK	class	UNK=x
+clojure	clojure.core	core	UNK	class?	UNK=x
+clojure	clojure.core	core	UNK	clojure-version	void
+clojure	clojure.core	core	UNK	coll?	UNK=x
+clojure	clojure.core	core	UNK	comment	UNK=body
+clojure	clojure.core	core	UNK	commute	UNK=ref UNK=fun UNK=args
+clojure	clojure.core	core	UNK	comp	UNK=f UNK=g UNK=fs
+clojure	clojure.core	core	UNK	comparator	UNK=pred
+clojure	clojure.core	core	UNK	compare-and-set!	UNK=atom UNK=oldval UNK=newval
+clojure	clojure.core	core	UNK	compile	UNK=lib
+clojure	clojure.core	core	UNK	complement	UNK=f
+clojure	clojure.core	core	UNK	completing	UNK=f UNK=cf
+clojure	clojure.core	core	UNK	concat	UNK=x UNK=y UNK=zs
+clojure	clojure.core	core	UNK	cond	UNK=clauses
+clojure	clojure.core	core	UNK	cond-&gt;	UNK=expr UNK=clauses
+clojure	clojure.core	core	UNK	cond-&gt;&gt;	UNK=expr UNK=clauses
+clojure	clojure.core	core	UNK	condp	UNK=pred UNK=expr UNK=clauses
+clojure	clojure.core	core	UNK	conj!	UNK=coll UNK=x
+clojure	clojure.core	core	UNK	cons	UNK=x UNK=seq
+clojure	clojure.core	core	UNK	constantly	UNK=x
+clojure	clojure.core	core	UNK	construct-proxy	UNK=c UNK=ctor UNK=args
+clojure	clojure.core	core	UNK	contains?	UNK=coll UNK=key
+clojure	clojure.core	core	UNK	count	UNK=coll
+clojure	clojure.core	core	UNK	counted?	UNK=coll
+clojure	clojure.core	core	UNK	create-ns	UNK=sym
+clojure	clojure.core	core	UNK	create-struct	UNK=keys
+clojure	clojure.core	core	UNK	cycle	UNK=coll
+clojure	clojure.core	core	UNK	dec	UNK=x
+clojure	clojure.core	core	UNK	dec'	UNK=x
+clojure	clojure.core	core	UNK	decimal?	UNK=n
+clojure	clojure.core	core	UNK	declare	UNK=names
+clojure	clojure.core	core	UNK	dedupe	UNK=coll
+clojure	clojure.core	core	UNK	def	UNK=symbol UNK=doc UNK=string UNK=? UNK=init UNK=?
+clojure	clojure.core	core	UNK	definterface	UNK=name UNK=sigs
+clojure	clojure.core	core	UNK	defmacro	UNK=name UNK=doc UNK=string UNK=? UNK=attr UNK=map UNK=? UNK=params* UNK=body UNK=+ UNK=attr UNK=map UNK=?
+clojure	clojure.core	core	UNK	defmethod	UNK=multifn UNK=dispatch UNK=val UNK=fn UNK=tail
+clojure	clojure.core	core	UNK	defmulti	UNK=name UNK=docstring UNK=? UNK=attr UNK=map UNK=? UNK=dispatch UNK=fn UNK=options
+clojure	clojure.core	core	UNK	defn-	UNK=name UNK=decls
+clojure	clojure.core	core	UNK	defonce	UNK=name UNK=expr
+clojure	clojure.core	core	UNK	defprotocol	UNK=name UNK=opts+sigs
+clojure	clojure.core	core	UNK	delay	UNK=body
+clojure	clojure.core	core	UNK	delay?	UNK=x
+clojure	clojure.core	core	UNK	deliver	UNK=promise UNK=val
+clojure	clojure.core	core	UNK	denominator	UNK=r
+clojure	clojure.core	core	UNK	deref	UNK=ref UNK=timeout UNK=ms UNK=timeout UNK=val
+clojure	clojure.core	core	UNK	derive	UNK=h UNK=tag UNK=parent
+clojure	clojure.core	core	UNK	descendants	UNK=h UNK=tag
+clojure	clojure.core	core	UNK	dissoc!	UNK=map UNK=key UNK=ks
+clojure	clojure.core	core	UNK	distinct	UNK=coll
+clojure	clojure.core	core	UNK	distinct?	UNK=x UNK=y
+clojure	clojure.core	core	UNK	do	UNK=exprs*
+clojure	clojure.core	core	UNK	doall	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	dorun	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	doseq	UNK=seq UNK=exprs UNK=body
+clojure	clojure.core	core	UNK	dosync	UNK=exprs
+clojure	clojure.core	core	UNK	dotimes	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	doto	UNK=x UNK=forms
+clojure	clojure.core	core	UNK	double	UNK=x
+clojure	clojure.core	core	UNK	double-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	doubles	UNK=xs
+clojure	clojure.core	core	UNK	drop	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	drop-last	UNK=n UNK=s
+clojure	clojure.core	core	UNK	drop-while	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	eduction	UNK=xform* UNK=coll
+clojure	clojure.core	core	UNK	empty	UNK=coll
+clojure	clojure.core	core	UNK	empty?	UNK=coll
+clojure	clojure.core	core	UNK	ensure	UNK=ref
+clojure	clojure.core	core	UNK	ensure-reduced	UNK=x
+clojure	clojure.core	core	UNK	enumeration-seq	UNK=e
+clojure	clojure.core	core	UNK	error-handler	UNK=a
+clojure	clojure.core	core	UNK	error-mode	UNK=a
+clojure	clojure.core	core	UNK	eval	UNK=form
+clojure	clojure.core	core	UNK	even?	UNK=n
+clojure	clojure.core	core	UNK	every-pred	UNK=p1 UNK=p2 UNK=p3 UNK=ps
+clojure	clojure.core	core	UNK	every?	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	ex-data	UNK=ex
+clojure	clojure.core	core	UNK	ex-info	UNK=msg UNK=map UNK=cause
+clojure	clojure.core	core	UNK	extend	UNK=atype UNK=proto+mmaps
+clojure	clojure.core	core	UNK	extend-protocol	UNK=p UNK=specs
+clojure	clojure.core	core	UNK	extend-type	UNK=t UNK=specs
+clojure	clojure.core	core	UNK	extenders	UNK=protocol
+clojure	clojure.core	core	UNK	extends?	UNK=protocol UNK=atype
+clojure	clojure.core	core	UNK	false?	UNK=x
+clojure	clojure.core	core	UNK	file-seq	UNK=dir
+clojure	clojure.core	core	UNK	filter	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	filterv	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	find	UNK=map UNK=key
+clojure	clojure.core	core	UNK	find-keyword	UNK=ns UNK=name
+clojure	clojure.core	core	UNK	find-ns	UNK=sym
+clojure	clojure.core	core	UNK	find-var	UNK=sym
+clojure	clojure.core	core	UNK	first	UNK=coll
+clojure	clojure.core	core	UNK	flatten	UNK=x
+clojure	clojure.core	core	UNK	float	UNK=x
+clojure	clojure.core	core	UNK	float-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	float?	UNK=n
+clojure	clojure.core	core	UNK	floats	UNK=xs
+clojure	clojure.core	core	UNK	flush	void
+clojure	clojure.core	core	UNK	fn	UNK=name UNK=? UNK=params* UNK=exprs* UNK=+
+clojure	clojure.core	core	UNK	fn?	UNK=x
+clojure	clojure.core	core	UNK	fnil	UNK=f UNK=x UNK=y UNK=z
+clojure	clojure.core	core	UNK	for	UNK=seq UNK=exprs UNK=body UNK=expr
+clojure	clojure.core	core	UNK	force	UNK=x
+clojure	clojure.core	core	UNK	format	UNK=fmt UNK=args
+clojure	clojure.core	core	UNK	frequencies	UNK=coll
+clojure	clojure.core	core	UNK	future	UNK=body
+clojure	clojure.core	core	UNK	future-call	UNK=f
+clojure	clojure.core	core	UNK	future-cancel	UNK=f
+clojure	clojure.core	core	UNK	future-cancelled?	UNK=f
+clojure	clojure.core	core	UNK	future-done?	UNK=f
+clojure	clojure.core	core	UNK	future?	UNK=x
+clojure	clojure.core	core	UNK	gen-class	UNK=options
+clojure	clojure.core	core	UNK	gen-interface	UNK=options
+clojure	clojure.core	core	UNK	gensym	UNK=prefix UNK=string
+clojure	clojure.core	core	UNK	get	UNK=map UNK=key UNK=not UNK=found
+clojure	clojure.core	core	UNK	get-in	UNK=m UNK=ks UNK=not UNK=found
+clojure	clojure.core	core	UNK	get-method	UNK=multifn UNK=dispatch UNK=val
+clojure	clojure.core	core	UNK	get-proxy-class	UNK=bases
+clojure	clojure.core	core	UNK	get-thread-bindings	void
+clojure	clojure.core	core	UNK	get-validator	UNK=iref
+clojure	clojure.core	core	UNK	group-by	UNK=f UNK=coll
+clojure	clojure.core	core	UNK	hash	UNK=x
+clojure	clojure.core	core	UNK	hash-map	UNK=keyvals
+clojure	clojure.core	core	UNK	hash-ordered-coll	UNK=coll
+clojure	clojure.core	core	UNK	hash-set	UNK=keys
+clojure	clojure.core	core	UNK	hash-unordered-coll	UNK=coll
+clojure	clojure.core	core	UNK	identical?	UNK=x UNK=y
+clojure	clojure.core	core	UNK	identity	UNK=x
+clojure	clojure.core	core	UNK	if	UNK=test UNK=then UNK=else UNK=?
+clojure	clojure.core	core	UNK	if-let	UNK=bindings UNK=then UNK=else UNK=oldform
+clojure	clojure.core	core	UNK	if-not	UNK=test UNK=then UNK=else
+clojure	clojure.core	core	UNK	if-some	UNK=bindings UNK=then UNK=else UNK=oldform
+clojure	clojure.core	core	UNK	ifn?	UNK=x
+clojure	clojure.core	core	UNK	import	UNK=import UNK=symbols UNK=or UNK=lists
+clojure	clojure.core	core	UNK	in-ns	UNK=name
+clojure	clojure.core	core	UNK	inc	UNK=x
+clojure	clojure.core	core	UNK	inc'	UNK=x
+clojure	clojure.core	core	UNK	init-proxy	UNK=proxy UNK=mappings
+clojure	clojure.core	core	UNK	instance?	UNK=c UNK=x
+clojure	clojure.core	core	UNK	int	UNK=x
+clojure	clojure.core	core	UNK	int-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	integer?	UNK=n
+clojure	clojure.core	core	UNK	interleave	UNK=c1 UNK=c2 UNK=colls
+clojure	clojure.core	core	UNK	intern	UNK=ns UNK=name UNK=val
+clojure	clojure.core	core	UNK	interpose	UNK=sep UNK=coll
+clojure	clojure.core	core	UNK	into	UNK=to UNK=xform UNK=from
+clojure	clojure.core	core	UNK	into-array	UNK=type UNK=aseq
+clojure	clojure.core	core	UNK	ints	UNK=xs
+clojure	clojure.core	core	UNK	io!	UNK=body
+clojure	clojure.core	core	UNK	isa?	UNK=h UNK=child UNK=parent
+clojure	clojure.core	core	UNK	iterate	UNK=f UNK=x
+clojure	clojure.core	core	UNK	iterator-seq	UNK=iter
+clojure	clojure.core	core	UNK	juxt	UNK=f UNK=g UNK=h UNK=fs
+clojure	clojure.core	core	UNK	keep	UNK=f UNK=coll
+clojure	clojure.core	core	UNK	keep-indexed	UNK=f UNK=coll
+clojure	clojure.core	core	UNK	key	UNK=e
+clojure	clojure.core	core	UNK	keys	UNK=map
+clojure	clojure.core	core	UNK	keyword	UNK=ns UNK=name
+clojure	clojure.core	core	UNK	keyword?	UNK=x
+clojure	clojure.core	core	UNK	last	UNK=coll
+clojure	clojure.core	core	UNK	lazy-cat	UNK=colls
+clojure	clojure.core	core	UNK	lazy-seq	UNK=body
+clojure	clojure.core	core	UNK	let	UNK=bindings* UNK=exprs*
+clojure	clojure.core	core	UNK	letfn	UNK=fnspecs* UNK=exprs*
+clojure	clojure.core	core	UNK	line-seq	UNK=rdr
+clojure	clojure.core	core	UNK	list	UNK=items
+clojure	clojure.core	core	UNK	list*	UNK=a UNK=b UNK=c UNK=d
+clojure	clojure.core	core	UNK	list?	UNK=x
+clojure	clojure.core	core	UNK	load	UNK=paths
+clojure	clojure.core	core	UNK	load-file	UNK=name
+clojure	clojure.core	core	UNK	load-reader	UNK=rdr
+clojure	clojure.core	core	UNK	load-string	UNK=s
+clojure	clojure.core	core	UNK	loaded-libs	void
+clojure	clojure.core	core	UNK	locking	UNK=x UNK=body
+clojure	clojure.core	core	UNK	long	UNK=x
+clojure	clojure.core	core	UNK	long-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	longs	UNK=xs
+clojure	clojure.core	core	UNK	loop	UNK=bindings* UNK=exprs*
+clojure	clojure.core	core	UNK	macroexpand	UNK=form
+clojure	clojure.core	core	UNK	macroexpand-1	UNK=form
+clojure	clojure.core	core	UNK	make-array	UNK=type UNK=dim UNK=dims
+clojure	clojure.core	core	UNK	make-hierarchy	void
+clojure	clojure.core	core	UNK	map	UNK=f UNK=c1 UNK=c2 UNK=c3 UNK=colls
+clojure	clojure.core	core	UNK	map-entry?	UNK=x
+clojure	clojure.core	core	UNK	map-indexed	UNK=f UNK=coll
+clojure	clojure.core	core	UNK	map?	UNK=x
+clojure	clojure.core	core	UNK	mapcat	UNK=f UNK=colls
+clojure	clojure.core	core	UNK	mapv	UNK=f UNK=c1 UNK=c2 UNK=c3 UNK=colls
+clojure	clojure.core	core	UNK	max	UNK=x UNK=y
+clojure	clojure.core	core	UNK	max-key	UNK=k UNK=x UNK=y
+clojure	clojure.core	core	UNK	memfn	UNK=name UNK=args
+clojure	clojure.core	core	UNK	memoize	UNK=f
+clojure	clojure.core	core	UNK	merge	UNK=maps
+clojure	clojure.core	core	UNK	merge-with	UNK=f UNK=maps
+clojure	clojure.core	core	UNK	meta	UNK=obj
+clojure	clojure.core	core	UNK	methods	UNK=multifn
+clojure	clojure.core	core	UNK	min	UNK=x UNK=y
+clojure	clojure.core	core	UNK	min-key	UNK=k UNK=x UNK=y
+clojure	clojure.core	core	UNK	mix-collection-hash	UNK=hash UNK=basis UNK=count
+clojure	clojure.core	core	UNK	mod	UNK=num UNK=div
+clojure	clojure.core	core	UNK	monitor-enter	UNK=x
+clojure	clojure.core	core	UNK	monitor-exit	UNK=x
+clojure	clojure.core	core	UNK	name	UNK=x
+clojure	clojure.core	core	UNK	namespace	UNK=x
+clojure	clojure.core	core	UNK	namespace-munge	UNK=ns
+clojure	clojure.core	core	UNK	neg?	UNK=x
+clojure	clojure.core	core	UNK	new	UNK=Classname UNK=args*
+clojure	clojure.core	core	UNK	newline	void
+clojure	clojure.core	core	UNK	next	UNK=coll
+clojure	clojure.core	core	UNK	nil?	UNK=x
+clojure	clojure.core	core	UNK	not	UNK=x
+clojure	clojure.core	core	UNK	not-any?	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	not-empty	UNK=coll
+clojure	clojure.core	core	UNK	not-every?	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	ns	UNK=name UNK=docstring UNK=? UNK=attr UNK=map UNK=? UNK=references*
+clojure	clojure.core	core	UNK	ns-aliases	UNK=ns
+clojure	clojure.core	core	UNK	ns-imports	UNK=ns
+clojure	clojure.core	core	UNK	ns-interns	UNK=ns
+clojure	clojure.core	core	UNK	ns-map	UNK=ns
+clojure	clojure.core	core	UNK	ns-name	UNK=ns
+clojure	clojure.core	core	UNK	ns-publics	UNK=ns
+clojure	clojure.core	core	UNK	ns-refers	UNK=ns
+clojure	clojure.core	core	UNK	ns-resolve	UNK=ns UNK=env UNK=sym
+clojure	clojure.core	core	UNK	ns-unalias	UNK=ns UNK=sym
+clojure	clojure.core	core	UNK	ns-unmap	UNK=ns UNK=sym
+clojure	clojure.core	core	UNK	nth	UNK=coll UNK=index UNK=not UNK=found
+clojure	clojure.core	core	UNK	nthnext	UNK=coll UNK=n
+clojure	clojure.core	core	UNK	nthrest	UNK=coll UNK=n
+clojure	clojure.core	core	UNK	num	UNK=x
+clojure	clojure.core	core	UNK	number?	UNK=x
+clojure	clojure.core	core	UNK	numerator	UNK=r
+clojure	clojure.core	core	UNK	object-array	UNK=size UNK=or UNK=seq
+clojure	clojure.core	core	UNK	odd?	UNK=n
+clojure	clojure.core	core	UNK	or	UNK=x UNK=next
+clojure	clojure.core	core	UNK	parents	UNK=h UNK=tag
+clojure	clojure.core	core	UNK	partial	UNK=f UNK=arg1 UNK=arg2 UNK=arg3
+clojure	clojure.core	core	UNK	partition	UNK=n UNK=step UNK=pad UNK=coll
+clojure	clojure.core	core	UNK	partition-all	UNK=n UNK=step UNK=coll
+clojure	clojure.core	core	UNK	partition-by	UNK=f UNK=coll
+clojure	clojure.core	core	UNK	pcalls	UNK=fns
+clojure	clojure.core	core	UNK	peek	UNK=coll
+clojure	clojure.core	core	UNK	persistent!	UNK=coll
+clojure	clojure.core	core	UNK	pmap	UNK=f UNK=coll UNK=colls
+clojure	clojure.core	core	UNK	pop	UNK=coll
+clojure	clojure.core	core	UNK	pop!	UNK=coll
+clojure	clojure.core	core	UNK	pop-thread-bindings	void
+clojure	clojure.core	core	UNK	pos?	UNK=x
+clojure	clojure.core	core	UNK	pr	UNK=x
+clojure	clojure.core	core	UNK	pr-str	UNK=xs
+clojure	clojure.core	core	UNK	prefer-method	UNK=multifn UNK=dispatch UNK=val UNK=x UNK=dispatch UNK=val UNK=y
+clojure	clojure.core	core	UNK	prefers	UNK=multifn
+clojure	clojure.core	core	UNK	print	void
+clojure	clojure.core	core	UNK	print-str	UNK=xs
+clojure	clojure.core	core	UNK	printf	UNK=fmt UNK=args
+clojure	clojure.core	core	UNK	println-str	UNK=xs
+clojure	clojure.core	core	UNK	prn-str	UNK=xs
+clojure	clojure.core	core	UNK	promise	void
+clojure	clojure.core	core	UNK	proxy	UNK=class UNK=and UNK=interfaces UNK=args UNK=fs
+clojure	clojure.core	core	UNK	proxy-mappings	UNK=proxy
+clojure	clojure.core	core	UNK	proxy-super	UNK=meth UNK=args
+clojure	clojure.core	core	UNK	push-thread-bindings	UNK=bindings
+clojure	clojure.core	core	UNK	pvalues	UNK=exprs
+clojure	clojure.core	core	UNK	quot	UNK=num UNK=div
+clojure	clojure.core	core	UNK	quote	UNK=form
+clojure	clojure.core	core	UNK	rand	UNK=n
+clojure	clojure.core	core	UNK	rand-int	UNK=n
+clojure	clojure.core	core	UNK	rand-nth	UNK=coll
+clojure	clojure.core	core	UNK	random-sample	UNK=prob UNK=coll
+clojure	clojure.core	core	UNK	range	UNK=start UNK=end UNK=step
+clojure	clojure.core	core	UNK	ratio?	UNK=n
+clojure	clojure.core	core	UNK	rational?	UNK=n
+clojure	clojure.core	core	UNK	rationalize	UNK=num
+clojure	clojure.core	core	UNK	re-find	UNK=re UNK=s
+clojure	clojure.core	core	UNK	re-groups	UNK=m
+clojure	clojure.core	core	UNK	re-matcher	UNK=re UNK=s
+clojure	clojure.core	core	UNK	re-matches	UNK=re UNK=s
+clojure	clojure.core	core	UNK	re-pattern	UNK=s
+clojure	clojure.core	core	UNK	re-seq	UNK=re UNK=s
+clojure	clojure.core	core	UNK	read	UNK=opts UNK=stream
+clojure	clojure.core	core	UNK	read-line	void
+clojure	clojure.core	core	UNK	read-string	UNK=opts UNK=s
+clojure	clojure.core	core	UNK	reader-conditional	UNK=form UNK=splicing UNK=?
+clojure	clojure.core	core	UNK	reader-conditional?	UNK=value
+clojure	clojure.core	core	UNK	realized?	UNK=x
+clojure	clojure.core	core	UNK	record?	UNK=x
+clojure	clojure.core	core	UNK	recur	UNK=exprs*
+clojure	clojure.core	core	UNK	reduce	UNK=f UNK=val UNK=coll
+clojure	clojure.core	core	UNK	reduce-kv	UNK=f UNK=init UNK=coll
+clojure	clojure.core	core	UNK	reduced	UNK=x
+clojure	clojure.core	core	UNK	reduced?	UNK=x
+clojure	clojure.core	core	UNK	reductions	UNK=f UNK=init UNK=coll
+clojure	clojure.core	core	UNK	ref	UNK=x UNK=options
+clojure	clojure.core	core	UNK	ref-history-count	UNK=ref
+clojure	clojure.core	core	UNK	ref-max-history	UNK=ref UNK=n
+clojure	clojure.core	core	UNK	ref-min-history	UNK=ref UNK=n
+clojure	clojure.core	core	UNK	ref-set	UNK=ref UNK=val
+clojure	clojure.core	core	UNK	refer	UNK=ns UNK=sym UNK=filters
+clojure	clojure.core	core	UNK	reify	UNK=opts+specs
+clojure	clojure.core	core	UNK	release-pending-sends	void
+clojure	clojure.core	core	UNK	rem	UNK=num UNK=div
+clojure	clojure.core	core	UNK	remove	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	remove-all-methods	UNK=multifn
+clojure	clojure.core	core	UNK	remove-method	UNK=multifn UNK=dispatch UNK=val
+clojure	clojure.core	core	UNK	remove-ns	UNK=sym
+clojure	clojure.core	core	UNK	remove-watch	UNK=reference UNK=key
+clojure	clojure.core	core	UNK	repeat	UNK=n UNK=x
+clojure	clojure.core	core	UNK	repeatedly	UNK=n UNK=f
+clojure	clojure.core	core	UNK	replace	UNK=smap UNK=coll
+clojure	clojure.core	core	UNK	require	UNK=args
+clojure	clojure.core	core	UNK	reset!	UNK=atom UNK=newval
+clojure	clojure.core	core	UNK	reset-meta!	UNK=iref UNK=metadata UNK=map
+clojure	clojure.core	core	UNK	resolve	UNK=env UNK=sym
+clojure	clojure.core	core	UNK	rest	UNK=coll
+clojure	clojure.core	core	UNK	restart-agent	UNK=a UNK=new UNK=state UNK=options
+clojure	clojure.core	core	UNK	resultset-seq	UNK=rs
+clojure	clojure.core	core	UNK	reverse	UNK=coll
+clojure	clojure.core	core	UNK	reversible?	UNK=coll
+clojure	clojure.core	core	UNK	rseq	UNK=rev
+clojure	clojure.core	core	UNK	rsubseq	UNK=sc UNK=start UNK=test UNK=start UNK=key UNK=end UNK=test UNK=end UNK=key
+clojure	clojure.core	core	UNK	run!	UNK=proc UNK=coll
+clojure	clojure.core	core	UNK	satisfies?	UNK=protocol UNK=x
+clojure	clojure.core	core	UNK	select-keys	UNK=map UNK=keyseq
+clojure	clojure.core	core	UNK	send	UNK=a UNK=f UNK=args
+clojure	clojure.core	core	UNK	send-off	UNK=a UNK=f UNK=args
+clojure	clojure.core	core	UNK	send-via	UNK=executor UNK=a UNK=f UNK=args
+clojure	clojure.core	core	UNK	seq	UNK=coll
+clojure	clojure.core	core	UNK	seq?	UNK=x
+clojure	clojure.core	core	UNK	seque	UNK=n UNK=or UNK=q UNK=s
+clojure	clojure.core	core	UNK	sequence	UNK=xform UNK=coll UNK=colls
+clojure	clojure.core	core	UNK	sequential?	UNK=coll
+clojure	clojure.core	core	UNK	set	UNK=coll
+clojure	clojure.core	core	UNK	set!	UNK=. UNK=Classname UNK=symbol UNK=staticFieldName UNK=symbol UNK=expr
+clojure	clojure.core	core	UNK	set-agent-send-executor!	UNK=executor
+clojure	clojure.core	core	UNK	set-agent-send-off-executor!	UNK=executor
+clojure	clojure.core	core	UNK	set-error-handler!	UNK=a UNK=handler UNK=fn
+clojure	clojure.core	core	UNK	set-error-mode!	UNK=a UNK=mode UNK=keyword
+clojure	clojure.core	core	UNK	set-validator!	UNK=iref UNK=validator UNK=fn
+clojure	clojure.core	core	UNK	set?	UNK=x
+clojure	clojure.core	core	UNK	short	UNK=x
+clojure	clojure.core	core	UNK	short-array	UNK=size UNK=init UNK=val UNK=or UNK=seq
+clojure	clojure.core	core	UNK	shorts	UNK=xs
+clojure	clojure.core	core	UNK	shuffle	UNK=coll
+clojure	clojure.core	core	UNK	shutdown-agents	void
+clojure	clojure.core	core	UNK	slurp	UNK=f UNK=opts
+clojure	clojure.core	core	UNK	some	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	some-&gt;	UNK=expr UNK=forms
+clojure	clojure.core	core	UNK	some-&gt;&gt;	UNK=expr UNK=forms
+clojure	clojure.core	core	UNK	some-fn	UNK=p1 UNK=p2 UNK=p3 UNK=ps
+clojure	clojure.core	core	UNK	some?	UNK=x
+clojure	clojure.core	core	UNK	sort	UNK=comp UNK=coll
+clojure	clojure.core	core	UNK	sort-by	UNK=keyfn UNK=comp UNK=coll
+clojure	clojure.core	core	UNK	sorted-map	UNK=keyvals
+clojure	clojure.core	core	UNK	sorted-map-by	UNK=comparator UNK=keyvals
+clojure	clojure.core	core	UNK	sorted-set	UNK=keys
+clojure	clojure.core	core	UNK	sorted-set-by	UNK=comparator UNK=keys
+clojure	clojure.core	core	UNK	sorted?	UNK=coll
+clojure	clojure.core	core	UNK	special-symbol?	UNK=s
+clojure	clojure.core	core	UNK	spit	UNK=f UNK=content UNK=options
+clojure	clojure.core	core	UNK	split-at	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	split-with	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	str	UNK=x UNK=ys
+clojure	clojure.core	core	UNK	string?	UNK=x
+clojure	clojure.core	core	UNK	struct	UNK=s UNK=vals
+clojure	clojure.core	core	UNK	struct-map	UNK=s UNK=inits
+clojure	clojure.core	core	UNK	subs	UNK=s UNK=start UNK=end
+clojure	clojure.core	core	UNK	subseq	UNK=sc UNK=start UNK=test UNK=start UNK=key UNK=end UNK=test UNK=end UNK=key
+clojure	clojure.core	core	UNK	subvec	UNK=v UNK=start UNK=end
+clojure	clojure.core	core	UNK	supers	UNK=class
+clojure	clojure.core	core	UNK	swap!	UNK=atom UNK=f UNK=x UNK=y UNK=args
+clojure	clojure.core	core	UNK	symbol	UNK=ns UNK=name
+clojure	clojure.core	core	UNK	symbol?	UNK=x
+clojure	clojure.core	core	UNK	sync	UNK=flags UNK=ignored UNK=for UNK=now UNK=body
+clojure	clojure.core	core	UNK	tagged-literal	UNK=tag UNK=form
+clojure	clojure.core	core	UNK	tagged-literal?	UNK=value
+clojure	clojure.core	core	UNK	take	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	take-last	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	take-nth	UNK=n UNK=coll
+clojure	clojure.core	core	UNK	take-while	UNK=pred UNK=coll
+clojure	clojure.core	core	UNK	test	UNK=v
+clojure	clojure.core	core	UNK	the-ns	UNK=x
+clojure	clojure.core	core	UNK	thread-bound?	UNK=vars
+clojure	clojure.core	core	UNK	throw	UNK=expr
+clojure	clojure.core	core	UNK	time	UNK=expr
+clojure	clojure.core	core	UNK	to-array	UNK=coll
+clojure	clojure.core	core	UNK	to-array-2d	UNK=coll
+clojure	clojure.core	core	UNK	trampoline	UNK=f UNK=args
+clojure	clojure.core	core	UNK	transduce	UNK=xform UNK=f UNK=init UNK=coll
+clojure	clojure.core	core	UNK	transient	UNK=coll
+clojure	clojure.core	core	UNK	tree-seq	UNK=branch UNK=? UNK=children UNK=root
+clojure	clojure.core	core	UNK	true?	UNK=x
+clojure	clojure.core	core	UNK	try	UNK=expr* UNK=catch UNK=clause* UNK=finally UNK=clause UNK=?
+clojure	clojure.core	core	UNK	type	UNK=x
+clojure	clojure.core	core	UNK	unchecked-add	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-add-int	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-byte	UNK=x
+clojure	clojure.core	core	UNK	unchecked-char	UNK=x
+clojure	clojure.core	core	UNK	unchecked-dec	UNK=x
+clojure	clojure.core	core	UNK	unchecked-dec-int	UNK=x
+clojure	clojure.core	core	UNK	unchecked-divide-int	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-double	UNK=x
+clojure	clojure.core	core	UNK	unchecked-float	UNK=x
+clojure	clojure.core	core	UNK	unchecked-inc	UNK=x
+clojure	clojure.core	core	UNK	unchecked-inc-int	UNK=x
+clojure	clojure.core	core	UNK	unchecked-int	UNK=x
+clojure	clojure.core	core	UNK	unchecked-long	UNK=x
+clojure	clojure.core	core	UNK	unchecked-multiply	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-multiply-int	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-negate	UNK=x
+clojure	clojure.core	core	UNK	unchecked-negate-int	UNK=x
+clojure	clojure.core	core	UNK	unchecked-remainder-int	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-short	UNK=x
+clojure	clojure.core	core	UNK	unchecked-subtract	UNK=x UNK=y
+clojure	clojure.core	core	UNK	unchecked-subtract-int	UNK=x UNK=y
+clojure	clojure.core	core	UNK	underive	UNK=h UNK=tag UNK=parent
+clojure	clojure.core	core	UNK	unreduced	UNK=x
+clojure	clojure.core	core	UNK	unsigned-bit-shift-right	UNK=x UNK=n
+clojure	clojure.core	core	UNK	update	UNK=m UNK=k UNK=f UNK=x UNK=y UNK=z
+clojure	clojure.core	core	UNK	update-in	UNK=m UNK=k UNK=ks UNK=f UNK=args
+clojure	clojure.core	core	UNK	update-proxy	UNK=proxy UNK=mappings
+clojure	clojure.core	core	UNK	use	UNK=args
+clojure	clojure.core	core	UNK	val	UNK=e
+clojure	clojure.core	core	UNK	vals	UNK=map
+clojure	clojure.core	core	UNK	var	UNK=symbol
+clojure	clojure.core	core	UNK	var-get	UNK=x
+clojure	clojure.core	core	UNK	var-set	UNK=x UNK=val
+clojure	clojure.core	core	UNK	var?	UNK=v
+clojure	clojure.core	core	UNK	vary-meta	UNK=obj UNK=f UNK=args
+clojure	clojure.core	core	UNK	vec	UNK=coll
+clojure	clojure.core	core	UNK	vector	UNK=a UNK=b UNK=c UNK=d UNK=e UNK=f UNK=args
+clojure	clojure.core	core	UNK	vector-of	UNK=t UNK=elements
+clojure	clojure.core	core	UNK	vector?	UNK=x
+clojure	clojure.core	core	UNK	volatile!	UNK=val
+clojure	clojure.core	core	UNK	volatile?	UNK=x
+clojure	clojure.core	core	UNK	vreset!	UNK=vol UNK=newval
+clojure	clojure.core	core	UNK	vswap!	UNK=vol UNK=f UNK=args
+clojure	clojure.core	core	UNK	when	UNK=test UNK=body
+clojure	clojure.core	core	UNK	when-first	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	when-let	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	when-not	UNK=test UNK=body
+clojure	clojure.core	core	UNK	when-some	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	while	UNK=test UNK=body
+clojure	clojure.core	core	UNK	with-bindings	UNK=binding UNK=map UNK=body
+clojure	clojure.core	core	UNK	with-bindings*	UNK=binding UNK=map UNK=f UNK=args
+clojure	clojure.core	core	UNK	with-in-str	UNK=s UNK=body
+clojure	clojure.core	core	UNK	with-local-vars	UNK=name UNK=vals UNK=vec UNK=body
+clojure	clojure.core	core	UNK	with-meta	UNK=obj UNK=m
+clojure	clojure.core	core	UNK	with-open	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	with-out-str	UNK=body
+clojure	clojure.core	core	UNK	with-precision	UNK=precision UNK=exprs
+clojure	clojure.core	core	UNK	with-redefs	UNK=bindings UNK=body
+clojure	clojure.core	core	UNK	with-redefs-fn	UNK=binding UNK=map UNK=func
+clojure	clojure.core	core	UNK	xml-seq	UNK=root
+clojure	clojure.core	core	UNK	zero?	UNK=x
+clojure	clojure.core	core	UNK	zipmap	UNK=keys UNK=vals
+clojure	clojure.data	core	UNK	diff	UNK=a UNK=b
+clojure	clojure.edn	core	UNK	read	UNK=opts UNK=stream
+clojure	clojure.edn	core	UNK	read-string	UNK=opts UNK=s
+clojure	clojure.inspector	core	UNK	inspect	UNK=x
+clojure	clojure.inspector	core	UNK	inspect-table	UNK=data
+clojure	clojure.inspector	core	UNK	inspect-tree	UNK=data
+clojure	clojure.instant	core	UNK	validated	UNK=new UNK=instance
+clojure	clojure.java.browse	core	UNK	browse-url	UNK=url
+clojure	clojure.java.io	core	UNK	as-relative-path	UNK=x
+clojure	clojure.java.io	core	UNK	copy	UNK=input UNK=output UNK=opts
+clojure	clojure.java.io	core	UNK	delete-file	UNK=f UNK=silently
+clojure	clojure.java.io	core	UNK	file	UNK=parent UNK=child
+clojure	clojure.java.io	core	UNK	input-stream	UNK=x UNK=opts
+clojure	clojure.java.io	core	UNK	make-parents	UNK=f
+clojure	clojure.java.io	core	UNK	output-stream	UNK=x UNK=opts
+clojure	clojure.java.io	core	UNK	reader	UNK=x UNK=opts
+clojure	clojure.java.io	core	UNK	resource	UNK=n UNK=loader
+clojure	clojure.java.io	core	UNK	writer	UNK=x UNK=opts
+clojure	clojure.java.javadoc	core	UNK	add-local-javadoc	UNK=path
+clojure	clojure.java.javadoc	core	UNK	add-remote-javadoc	UNK=package UNK=prefix UNK=url
+clojure	clojure.java.javadoc	core	UNK	javadoc	UNK=class UNK=or UNK=object
+clojure	clojure.java.shell	core	UNK	sh	UNK=args
+clojure	clojure.java.shell	core	UNK	with-sh-dir	UNK=dir UNK=forms
+clojure	clojure.java.shell	core	UNK	with-sh-env	UNK=env UNK=forms
+clojure	clojure.main	core	UNK	demunge	UNK=fn UNK=name
+clojure	clojure.main	core	UNK	load-script	UNK=path
+clojure	clojure.main	core	UNK	repl	UNK=options
+clojure	clojure.main	core	UNK	repl-caught	UNK=e
+clojure	clojure.main	core	UNK	repl-exception	UNK=throwable
+clojure	clojure.main	core	UNK	repl-prompt	void
+clojure	clojure.main	core	UNK	repl-read	UNK=request UNK=prompt UNK=request UNK=exit
+clojure	clojure.main	core	UNK	root-cause	UNK=t
+clojure	clojure.main	core	UNK	skip-if-eol	UNK=s
+clojure	clojure.main	core	UNK	skip-whitespace	UNK=s
+clojure	clojure.main	core	UNK	stack-element-str	UNK=el
+clojure	clojure.main	core	UNK	with-bindings	UNK=body
+clojure	clojure.main	core	UNK	with-read-known	UNK=body
+clojure	clojure.pprint	core	UNK	cl-format	UNK=writer UNK=format UNK=in UNK=args
+clojure	clojure.pprint	core	UNK	code-dispatch	UNK=object
+clojure	clojure.pprint	core	UNK	formatter	UNK=format UNK=in
+clojure	clojure.pprint	core	UNK	formatter-out	UNK=format UNK=in
+clojure	clojure.pprint	core	UNK	fresh-line	void
+clojure	clojure.pprint	core	UNK	get-pretty-writer	UNK=writer
+clojure	clojure.pprint	core	UNK	pp	void
+clojure	clojure.pprint	core	UNK	pprint	UNK=object UNK=writer
+clojure	clojure.pprint	core	UNK	pprint-indent	UNK=relative UNK=to UNK=n
+clojure	clojure.pprint	core	UNK	pprint-logical-block	UNK=options* UNK=body
+clojure	clojure.pprint	core	UNK	pprint-newline	UNK=kind
+clojure	clojure.pprint	core	UNK	pprint-tab	UNK=kind UNK=colnum UNK=colinc
+clojure	clojure.pprint	core	UNK	print-length-loop	UNK=bindings UNK=body
+clojure	clojure.pprint	core	UNK	print-table	UNK=rows
+clojure	clojure.pprint	core	UNK	set-pprint-dispatch	UNK=function
+clojure	clojure.pprint	core	UNK	simple-dispatch	UNK=object
+clojure	clojure.pprint	core	UNK	with-pprint-dispatch	UNK=function UNK=body
+clojure	clojure.pprint	core	UNK	write	UNK=object UNK=kw UNK=args
+clojure	clojure.pprint	core	UNK	write-out	UNK=object
+clojure	clojure.reflect	core	UNK	-&gt;asmreflector	UNK=class UNK=resolver
+clojure	clojure.reflect	core	UNK	-&gt;constructor	UNK=name UNK=declaring UNK=class UNK=parameter UNK=types UNK=exception UNK=types UNK=flags
+clojure	clojure.reflect	core	UNK	-&gt;field	UNK=name UNK=type UNK=declaring UNK=class UNK=flags
+clojure	clojure.reflect	core	UNK	-&gt;javareflector	UNK=classloader
+clojure	clojure.reflect	core	UNK	-&gt;method	UNK=name UNK=return UNK=type UNK=declaring UNK=class UNK=parameter UNK=types UNK=exception UNK=types UNK=flags
+clojure	clojure.reflect	core	UNK	map-&gt;constructor	UNK=m#
+clojure	clojure.reflect	core	UNK	map-&gt;field	UNK=m#
+clojure	clojure.reflect	core	UNK	map-&gt;method	UNK=m#
+clojure	clojure.repl	core	UNK	apropos	UNK=str UNK=or UNK=pattern
+clojure	clojure.repl	core	UNK	demunge	UNK=fn UNK=name
+clojure	clojure.repl	core	UNK	dir	UNK=nsname
+clojure	clojure.repl	core	UNK	dir-fn	UNK=ns
+clojure	clojure.repl	core	UNK	doc	UNK=name
+clojure	clojure.repl	core	UNK	find-doc	UNK=re UNK=string UNK=or UNK=pattern
+clojure	clojure.repl	core	UNK	pst	UNK=e UNK=depth
+clojure	clojure.repl	core	UNK	root-cause	UNK=t
+clojure	clojure.repl	core	UNK	set-break-handler!	UNK=f
+clojure	clojure.repl	core	UNK	source	UNK=n
+clojure	clojure.repl	core	UNK	source-fn	UNK=x
+clojure	clojure.repl	core	UNK	stack-element-str	UNK=el
+clojure	clojure.repl	core	UNK	thread-stopper	UNK=thread
+clojure	clojure.set	core	UNK	difference	UNK=s1 UNK=s2 UNK=sets
+clojure	clojure.set	core	UNK	index	UNK=xrel UNK=ks
+clojure	clojure.set	core	UNK	intersection	UNK=s1 UNK=s2 UNK=sets
+clojure	clojure.set	core	UNK	join	UNK=xrel UNK=yrel UNK=km
+clojure	clojure.set	core	UNK	map-invert	UNK=m
+clojure	clojure.set	core	UNK	project	UNK=xrel UNK=ks
+clojure	clojure.set	core	UNK	rename	UNK=xrel UNK=kmap
+clojure	clojure.set	core	UNK	rename-keys	UNK=map UNK=kmap
+clojure	clojure.set	core	UNK	select	UNK=pred UNK=xset
+clojure	clojure.set	core	UNK	subset?	UNK=set1 UNK=set2
+clojure	clojure.set	core	UNK	superset?	UNK=set1 UNK=set2
+clojure	clojure.set	core	UNK	union	UNK=s1 UNK=s2 UNK=sets
+clojure	clojure.stacktrace	core	UNK	e	void
+clojure	clojure.stacktrace	core	UNK	print-cause-trace	UNK=tr UNK=n
+clojure	clojure.stacktrace	core	UNK	print-stack-trace	UNK=tr UNK=n
+clojure	clojure.stacktrace	core	UNK	print-throwable	UNK=tr
+clojure	clojure.stacktrace	core	UNK	print-trace-element	UNK=e
+clojure	clojure.stacktrace	core	UNK	root-cause	UNK=tr
+clojure	clojure.string	core	UNK	blank?	UNK=s
+clojure	clojure.string	core	UNK	capitalize	UNK=s
+clojure	clojure.string	core	UNK	ends-with?	UNK=s UNK=substr
+clojure	clojure.string	core	UNK	escape	UNK=s UNK=cmap
+clojure	clojure.string	core	UNK	includes?	UNK=s UNK=substr
+clojure	clojure.string	core	UNK	index-of	UNK=s UNK=value UNK=from UNK=index
+clojure	clojure.string	core	UNK	join	UNK=separator UNK=coll
+clojure	clojure.string	core	UNK	last-index-of	UNK=s UNK=value UNK=from UNK=index
+clojure	clojure.string	core	UNK	lower-case	UNK=s
+clojure	clojure.string	core	UNK	re-quote-replacement	UNK=replacement
+clojure	clojure.string	core	UNK	replace	UNK=s UNK=match UNK=replacement
+clojure	clojure.string	core	UNK	replace-first	UNK=s UNK=match UNK=replacement
+clojure	clojure.string	core	UNK	reverse	UNK=s
+clojure	clojure.string	core	UNK	split	UNK=s UNK=re UNK=limit
+clojure	clojure.string	core	UNK	split-lines	UNK=s
+clojure	clojure.string	core	UNK	starts-with?	UNK=s UNK=substr
+clojure	clojure.string	core	UNK	trim	UNK=s
+clojure	clojure.string	core	UNK	trim-newline	UNK=s
+clojure	clojure.string	core	UNK	triml	UNK=s
+clojure	clojure.string	core	UNK	trimr	UNK=s
+clojure	clojure.string	core	UNK	upper-case	UNK=s
+clojure	clojure.template	core	UNK	apply-template	UNK=argv UNK=expr UNK=values
+clojure	clojure.template	core	UNK	do-template	UNK=argv UNK=expr UNK=values
+clojure	clojure.test	core	UNK	are	UNK=argv UNK=expr UNK=args
+clojure	clojure.test	core	UNK	assert-any	UNK=msg UNK=form
+clojure	clojure.test	core	UNK	assert-predicate	UNK=msg UNK=form
+clojure	clojure.test	core	UNK	compose-fixtures	UNK=f1 UNK=f2
+clojure	clojure.test	core	UNK	deftest-	UNK=name UNK=body
+clojure	clojure.test	core	UNK	do-report	UNK=m
+clojure	clojure.test	core	UNK	file-position	UNK=n
+clojure	clojure.test	core	UNK	function?	UNK=x
+clojure	clojure.test	core	UNK	get-possibly-unbound-var	UNK=v
+clojure	clojure.test	core	UNK	inc-report-counter	UNK=name
+clojure	clojure.test	core	UNK	is	UNK=form UNK=msg
+clojure	clojure.test	core	UNK	join-fixtures	UNK=fixtures
+clojure	clojure.test	core	UNK	run-all-tests	UNK=re
+clojure	clojure.test	core	UNK	run-tests	UNK=namespaces
+clojure	clojure.test	core	UNK	successful?	UNK=summary
+clojure	clojure.test	core	UNK	test-all-vars	UNK=ns
+clojure	clojure.test	core	UNK	test-ns	UNK=ns
+clojure	clojure.test	core	UNK	test-var	UNK=v
+clojure	clojure.test	core	UNK	test-vars	UNK=vars
+clojure	clojure.test	core	UNK	testing	UNK=string UNK=body
+clojure	clojure.test	core	UNK	testing-contexts-str	void
+clojure	clojure.test	core	UNK	testing-vars-str	UNK=m
+clojure	clojure.test	core	UNK	try-expr	UNK=msg UNK=form
+clojure	clojure.test	core	UNK	with-test	UNK=definition UNK=body
+clojure	clojure.test	core	UNK	with-test-out	UNK=body
+clojure	clojure.walk	core	UNK	keywordize-keys	UNK=m
+clojure	clojure.walk	core	UNK	macroexpand-all	UNK=form
+clojure	clojure.walk	core	UNK	postwalk	UNK=f UNK=form
+clojure	clojure.walk	core	UNK	postwalk-demo	UNK=form
+clojure	clojure.walk	core	UNK	postwalk-replace	UNK=smap UNK=form
+clojure	clojure.walk	core	UNK	prewalk	UNK=f UNK=form
+clojure	clojure.walk	core	UNK	prewalk-demo	UNK=form
+clojure	clojure.walk	core	UNK	prewalk-replace	UNK=smap UNK=form
+clojure	clojure.walk	core	UNK	stringify-keys	UNK=m
+clojure	clojure.walk	core	UNK	walk	UNK=inner UNK=outer UNK=form
+clojure	clojure.xml	core	UNK	parse	UNK=s UNK=startparse
+clojure	clojure.zip	core	UNK	append-child	UNK=loc UNK=item
+clojure	clojure.zip	core	UNK	branch?	UNK=loc
+clojure	clojure.zip	core	UNK	children	UNK=loc
+clojure	clojure.zip	core	UNK	down	UNK=loc
+clojure	clojure.zip	core	UNK	edit	UNK=loc UNK=f UNK=args
+clojure	clojure.zip	core	UNK	end?	UNK=loc
+clojure	clojure.zip	core	UNK	insert-child	UNK=loc UNK=item
+clojure	clojure.zip	core	UNK	insert-left	UNK=loc UNK=item
+clojure	clojure.zip	core	UNK	insert-right	UNK=loc UNK=item
+clojure	clojure.zip	core	UNK	left	UNK=loc
+clojure	clojure.zip	core	UNK	leftmost	UNK=loc
+clojure	clojure.zip	core	UNK	lefts	UNK=loc
+clojure	clojure.zip	core	UNK	make-node	UNK=loc UNK=node UNK=children
+clojure	clojure.zip	core	UNK	next	UNK=loc
+clojure	clojure.zip	core	UNK	node	UNK=loc
+clojure	clojure.zip	core	UNK	path	UNK=loc
+clojure	clojure.zip	core	UNK	prev	UNK=loc
+clojure	clojure.zip	core	UNK	remove	UNK=loc
+clojure	clojure.zip	core	UNK	replace	UNK=loc UNK=node
+clojure	clojure.zip	core	UNK	right	UNK=loc
+clojure	clojure.zip	core	UNK	rightmost	UNK=loc
+clojure	clojure.zip	core	UNK	rights	UNK=loc
+clojure	clojure.zip	core	UNK	root	UNK=loc
+clojure	clojure.zip	core	UNK	seq-zip	UNK=root
+clojure	clojure.zip	core	UNK	up	UNK=loc
+clojure	clojure.zip	core	UNK	vector-zip	UNK=root
+clojure	clojure.zip	core	UNK	xml-zip	UNK=root
+clojure	clojure.zip	core	UNK	zipper	UNK=branch UNK=? UNK=children UNK=make UNK=node UNK=root
+clojure	clojure.algo.generic.arithmetic	core	UNK	*	UNK=x UNK=y
+clojure	clojure.algo.generic.arithmetic	core	UNK	+	UNK=x UNK=y
+clojure	clojure.algo.generic.arithmetic	core	UNK	-	UNK=x UNK=y
+clojure	clojure.algo.generic.arithmetic	core	UNK	-&gt;one-type	void
+clojure	clojure.algo.generic.arithmetic	core	UNK	-&gt;zero-type	void
+clojure	clojure.algo.generic.arithmetic	core	UNK	/	UNK=x UNK=y
+clojure	clojure.algo.generic.arithmetic	core	UNK	defmethod*	UNK=ns UNK=name UNK=args
+clojure	clojure.algo.generic.arithmetic	core	UNK	map-&gt;one-type	UNK=m#
+clojure	clojure.algo.generic.arithmetic	core	UNK	map-&gt;zero-type	UNK=m#
+clojure	clojure.algo.generic.arithmetic	core	UNK	qsym	UNK=ns UNK=sym
+clojure	clojure.algo.generic.collection	core	UNK	assoc	UNK=coll UNK=key UNK=val UNK=pairs
+clojure	clojure.algo.generic.collection	core	UNK	conj	UNK=coll UNK=xs
+clojure	clojure.algo.generic.collection	core	UNK	dissoc	UNK=coll UNK=keys
+clojure	clojure.algo.generic.collection	core	UNK	empty	UNK=coll
+clojure	clojure.algo.generic.collection	core	UNK	get	UNK=coll UNK=key UNK=not UNK=found
+clojure	clojure.algo.generic.collection	core	UNK	into	UNK=to UNK=from
+clojure	clojure.algo.generic.collection	core	UNK	seq	UNK=s
+clojure	clojure.algo.generic.functor	core	UNK	fmap	UNK=f UNK=s
+clojure	clojure.algo.generic.math-functions	core	UNK	abs	UNK=x UNK=math UNK=context
+clojure	clojure.algo.generic.math-functions	core	UNK	acos	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	approx=	UNK=x UNK=y UNK=eps
+clojure	clojure.algo.generic.math-functions	core	UNK	asin	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	atan	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	atan2	UNK=x UNK=y
+clojure	clojure.algo.generic.math-functions	core	UNK	ceil	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	conjugate	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	cos	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	exp	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	floor	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	log	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	pow	UNK=x UNK=y
+clojure	clojure.algo.generic.math-functions	core	UNK	rint	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	sgn	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	sin	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	sqr	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	sqrt	UNK=x
+clojure	clojure.algo.generic.math-functions	core	UNK	tan	UNK=x
+clojure	clojure.algo.graph	core	UNK	add-loops	UNK=g
+clojure	clojure.algo.graph	core	UNK	component-graph	UNK=g UNK=sccs
+clojure	clojure.algo.graph	core	UNK	dependency-list	UNK=g
+clojure	clojure.algo.graph	core	UNK	fixed-point	UNK=data UNK=fun UNK=max UNK=equal
+clojure	clojure.algo.graph	core	UNK	get-neighbors	UNK=g UNK=n
+clojure	clojure.algo.graph	core	UNK	lazy-walk	UNK=g UNK=ns UNK=v
+clojure	clojure.algo.graph	core	UNK	post-ordered-nodes	UNK=g
+clojure	clojure.algo.graph	core	UNK	recursive-component?	UNK=g UNK=ns
+clojure	clojure.algo.graph	core	UNK	remove-loops	UNK=g
+clojure	clojure.algo.graph	core	UNK	reverse-graph	UNK=g
+clojure	clojure.algo.graph	core	UNK	scc	UNK=g
+clojure	clojure.algo.graph	core	UNK	self-recursive-sets	UNK=g
+clojure	clojure.algo.graph	core	UNK	stratification-list	UNK=g1 UNK=g2
+clojure	clojure.algo.graph	core	UNK	transitive-closure	UNK=g
+clojure	clojure.algo.generic.comparison	core	UNK	&lt;	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	&lt;=	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	=	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	&gt;	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	&gt;=	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	max	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	min	UNK=x UNK=y
+clojure	clojure.algo.generic.comparison	core	UNK	neg?	UNK=x
+clojure	clojure.algo.generic.comparison	core	UNK	not=	UNK=args
+clojure	clojure.algo.generic.comparison	core	UNK	pos?	UNK=x
+clojure	clojure.algo.generic.comparison	core	UNK	zero?	UNK=x
+clojure	clojure.algo.monads	core	UNK	ask	void
+clojure	clojure.algo.monads	core	UNK	asks	UNK=f
+clojure	clojure.algo.monads	core	UNK	call-cc	UNK=f
+clojure	clojure.algo.monads	core	UNK	cond-statement	UNK=expr UNK=mexpr UNK=continuation
+clojure	clojure.algo.monads	core	UNK	defmonad	UNK=name UNK=operations
+clojure	clojure.algo.monads	core	UNK	defmonadfn	UNK=name UNK=docstring UNK=? UNK=attr UNK=map UNK=? UNK=args UNK=expr UNK=...
+clojure	clojure.algo.monads	core	UNK	fetch-state	void
+clojure	clojure.algo.monads	core	UNK	fetch-val	UNK=key
+clojure	clojure.algo.monads	core	UNK	local	UNK=f UNK=g
+clojure	clojure.algo.monads	core	UNK	m-lift	UNK=n UNK=f
+clojure	clojure.algo.monads	core	UNK	m-when	UNK=test UNK=m UNK=expr
+clojure	clojure.algo.monads	core	UNK	m-when-not	UNK=test UNK=m UNK=expr
+clojure	clojure.algo.monads	core	UNK	maybe-t	UNK=m UNK=nothing UNK=which UNK=m UNK=plus
+clojure	clojure.algo.monads	core	UNK	monad	UNK=operations
+clojure	clojure.algo.monads	core	UNK	monad-transformer	UNK=base UNK=which UNK=m UNK=plus UNK=operations
+clojure	clojure.algo.monads	core	UNK	run-cont	UNK=c
+clojure	clojure.algo.monads	core	UNK	sequence-t	UNK=m UNK=which UNK=m UNK=plus
+clojure	clojure.algo.monads	core	UNK	set-state	UNK=s
+clojure	clojure.algo.monads	core	UNK	set-val	UNK=key UNK=val
+clojure	clojure.algo.monads	core	UNK	state-m-until	UNK=p UNK=f UNK=x
+clojure	clojure.algo.monads	core	UNK	state-t	UNK=m
+clojure	clojure.algo.monads	core	UNK	update-state	UNK=f
+clojure	clojure.algo.monads	core	UNK	update-val	UNK=key UNK=f
+clojure	clojure.algo.monads	core	UNK	with-monad	UNK=monad UNK=exprs
+clojure	clojure.algo.monads	core	UNK	with-state-field	UNK=key UNK=statement
+clojure	clojure.algo.monads	core	UNK	writer-m	UNK=empty UNK=accumulator
+clojure	clojure.core.async	core	UNK	&lt;!	UNK=port
+clojure	clojure.core.async	core	UNK	&lt;!!	UNK=port
+clojure	clojure.core.async	core	UNK	&gt;!	UNK=port UNK=val
+clojure	clojure.core.async	core	UNK	&gt;!!	UNK=port UNK=val
+clojure	clojure.core.async	core	UNK	admix	UNK=mix UNK=ch
+clojure	clojure.core.async	core	UNK	alt!	UNK=clauses
+clojure	clojure.core.async	core	UNK	alt!!	UNK=clauses
+clojure	clojure.core.async	core	UNK	buffer	UNK=n
+clojure	clojure.core.async	core	UNK	chan	UNK=buf UNK=or UNK=n UNK=xform UNK=ex UNK=handler
+clojure	clojure.core.async	core	UNK	close!	UNK=chan
+clojure	clojure.core.async	core	UNK	do-alts	UNK=fret UNK=ports UNK=opts
+clojure	clojure.core.async	core	UNK	dropping-buffer	UNK=n
+clojure	clojure.core.async	core	UNK	go	UNK=body
+clojure	clojure.core.async	core	UNK	go-loop	UNK=bindings UNK=body
+clojure	clojure.core.async	core	UNK	into	UNK=coll UNK=ch
+clojure	clojure.core.async	core	UNK	map	UNK=f UNK=chs UNK=buf UNK=or UNK=n
+clojure	clojure.core.async	core	UNK	merge	UNK=chs UNK=buf UNK=or UNK=n
+clojure	clojure.core.async	core	UNK	mix	UNK=out
+clojure	clojure.core.async	core	UNK	mult	UNK=ch
+clojure	clojure.core.async	core	UNK	offer!	UNK=port UNK=val
+clojure	clojure.core.async	core	UNK	onto-chan	UNK=ch UNK=coll UNK=close UNK=?
+clojure	clojure.core.async	core	UNK	pipe	UNK=from UNK=to UNK=close UNK=?
+clojure	clojure.core.async	core	UNK	pipeline	UNK=n UNK=to UNK=xf UNK=from UNK=close UNK=? UNK=ex UNK=handler
+clojure	clojure.core.async	core	UNK	pipeline-async	UNK=n UNK=to UNK=af UNK=from UNK=close UNK=?
+clojure	clojure.core.async	core	UNK	pipeline-blocking	UNK=n UNK=to UNK=xf UNK=from UNK=close UNK=? UNK=ex UNK=handler
+clojure	clojure.core.async	core	UNK	poll!	UNK=port
+clojure	clojure.core.async	core	UNK	promise-chan	UNK=xform UNK=ex UNK=handler
+clojure	clojure.core.async	core	UNK	pub	UNK=ch UNK=topic UNK=fn UNK=buf UNK=fn
+clojure	clojure.core.async	core	UNK	put!	UNK=port UNK=val UNK=fn1 UNK=on UNK=caller UNK=?
+clojure	clojure.core.async	core	UNK	reduce	UNK=f UNK=init UNK=ch
+clojure	clojure.core.async	core	UNK	sliding-buffer	UNK=n
+clojure	clojure.core.async	core	UNK	solo-mode	UNK=mix UNK=mode
+clojure	clojure.core.async	core	UNK	split	UNK=p UNK=ch UNK=t UNK=buf UNK=or UNK=n UNK=f UNK=buf UNK=or UNK=n
+clojure	clojure.core.async	core	UNK	sub	UNK=p UNK=topic UNK=ch UNK=close UNK=?
+clojure	clojure.core.async	core	UNK	take	UNK=n UNK=ch UNK=buf UNK=or UNK=n
+clojure	clojure.core.async	core	UNK	take!	UNK=port UNK=fn1 UNK=on UNK=caller UNK=?
+clojure	clojure.core.async	core	UNK	tap	UNK=mult UNK=ch UNK=close UNK=?
+clojure	clojure.core.async	core	UNK	thread	UNK=body
+clojure	clojure.core.async	core	UNK	thread-call	UNK=f
+clojure	clojure.core.async	core	UNK	timeout	UNK=msecs
+clojure	clojure.core.async	core	UNK	to-chan	UNK=coll
+clojure	clojure.core.async	core	UNK	toggle	UNK=mix UNK=state UNK=map
+clojure	clojure.core.async	core	UNK	unblocking-buffer?	UNK=buff
+clojure	clojure.core.async	core	UNK	unmix	UNK=mix UNK=ch
+clojure	clojure.core.async	core	UNK	unmix-all	UNK=mix
+clojure	clojure.core.async	core	UNK	unsub	UNK=p UNK=topic UNK=ch
+clojure	clojure.core.async	core	UNK	unsub-all	UNK=p UNK=topic
+clojure	clojure.core.async	core	UNK	untap	UNK=mult UNK=ch
+clojure	clojure.core.async	core	UNK	untap-all	UNK=mult
+clojure	clojure.core.cache	core	UNK	-&gt;basiccache	UNK=cache
+clojure	clojure.core.cache	core	UNK	-&gt;fifocache	UNK=cache UNK=q UNK=limit
+clojure	clojure.core.cache	core	UNK	-&gt;fncache	UNK=cache UNK=f
+clojure	clojure.core.cache	core	UNK	-&gt;lirscache	UNK=cache UNK=lruS UNK=lruQ UNK=tick UNK=limitS UNK=limitQ
+clojure	clojure.core.cache	core	UNK	-&gt;lrucache	UNK=cache UNK=lru UNK=tick UNK=limit
+clojure	clojure.core.cache	core	UNK	-&gt;lucache	UNK=cache UNK=lu UNK=limit
+clojure	clojure.core.cache	core	UNK	-&gt;softcache	UNK=cache UNK=rcache UNK=rq
+clojure	clojure.core.cache	core	UNK	-&gt;ttlcache	UNK=cache UNK=ttl UNK=ttl UNK=ms
+clojure	clojure.core.cache	core	UNK	basic-cache-factory	UNK=base
+clojure	clojure.core.cache	core	UNK	soft-cache-factory	UNK=base
+clojure	clojure.core.cache	core	UNK	through	UNK=wrap UNK=fn UNK=value UNK=fn UNK=cache UNK=item
+clojure	clojure.core.contracts	core	UNK	provide	UNK=kontracts
+clojure	clojure.core.contracts	core	UNK	with-constraints	UNK=f UNK=c
+clojure	clojure.core.incubator	core	UNK	dissoc-in	UNK=m UNK=k UNK=ks UNK=:as UNK=keys
+clojure	clojure.core.incubator	core	UNK	new-by-name	UNK=class UNK=name UNK=args
+clojure	clojure.core.incubator	core	UNK	seqable?	UNK=x
+clojure	clojure.core.logic	core	UNK	-&gt;answercache	UNK=ansl UNK=anss UNK=_meta
+clojure	clojure.core.logic	core	UNK	-&gt;choice	UNK=a UNK=f
+clojure	clojure.core.logic	core	UNK	-&gt;constraintstore	UNK=km UNK=cm UNK=cid UNK=running
+clojure	clojure.core.logic	core	UNK	-&gt;lcons	UNK=a UNK=d UNK=cache UNK=meta
+clojure	clojure.core.logic	core	UNK	-&gt;lvar	UNK=id UNK=unique UNK=name UNK=oname UNK=hash UNK=meta
+clojure	clojure.core.logic	core	UNK	-&gt;pmap	void
+clojure	clojure.core.logic	core	UNK	-&gt;pair	UNK=lhs UNK=rhs
+clojure	clojure.core.logic	core	UNK	-&gt;substvalue	UNK=v UNK=doms UNK=eset
+clojure	clojure.core.logic	core	UNK	-&gt;substitutions	UNK=s UNK=vs UNK=ts UNK=cs UNK=cq UNK=cqs UNK=oc UNK=_meta
+clojure	clojure.core.logic	core	UNK	-&gt;suspendedstream	UNK=cache UNK=ansv* UNK=f
+clojure	clojure.core.logic	core	UNK	==	UNK=u UNK=v
+clojure	clojure.core.logic	core	UNK	all	UNK=goals
+clojure	clojure.core.logic	core	UNK	and*	UNK=goals
+clojure	clojure.core.logic	core	UNK	appendo	UNK=x UNK=y UNK=z
+clojure	clojure.core.logic	core	UNK	conde	UNK=clauses
+clojure	clojure.core.logic	core	UNK	conjo	UNK=coll UNK=args
+clojure	clojure.core.logic	core	UNK	conso	UNK=a UNK=d UNK=l
+clojure	clojure.core.logic	core	UNK	copy-term	UNK=u UNK=v
+clojure	clojure.core.logic	core	UNK	defna	UNK=rest
+clojure	clojure.core.logic	core	UNK	defne	UNK=rest
+clojure	clojure.core.logic	core	UNK	defnu	UNK=rest
+clojure	clojure.core.logic	core	UNK	distincto	UNK=l
+clojure	clojure.core.logic	core	UNK	emptyo	UNK=a
+clojure	clojure.core.logic	core	UNK	everyg	UNK=g UNK=coll
+clojure	clojure.core.logic	core	UNK	fail	UNK=a
+clojure	clojure.core.logic	core	UNK	featurec	UNK=x UNK=fs
+clojure	clojure.core.logic	core	UNK	firsto	UNK=l UNK=a
+clojure	clojure.core.logic	core	UNK	fix-constraints	UNK=a
+clojure	clojure.core.logic	core	UNK	fna	UNK=rest
+clojure	clojure.core.logic	core	UNK	fnc	UNK=args UNK=body
+clojure	clojure.core.logic	core	UNK	fne	UNK=rest
+clojure	clojure.core.logic	core	UNK	fnu	UNK=rest
+clojure	clojure.core.logic	core	UNK	fresh	UNK=lvars UNK=goals
+clojure	clojure.core.logic	core	UNK	is	UNK=u UNK=v UNK=op
+clojure	clojure.core.logic	core	UNK	lcons	UNK=a UNK=d
+clojure	clojure.core.logic	core	UNK	llist	UNK=f UNK=s UNK=rest
+clojure	clojure.core.logic	core	UNK	log	UNK=s
+clojure	clojure.core.logic	core	UNK	lvaro	UNK=v
+clojure	clojure.core.logic	core	UNK	map-&gt;pmap	UNK=m#
+clojure	clojure.core.logic	core	UNK	map-&gt;substvalue	UNK=m#
+clojure	clojure.core.logic	core	UNK	map-&gt;suspendedstream	UNK=m#
+clojure	clojure.core.logic	core	UNK	master	UNK=argv UNK=cache
+clojure	clojure.core.logic	core	UNK	matcha	UNK=xs UNK=cs
+clojure	clojure.core.logic	core	UNK	matche	UNK=xs UNK=cs
+clojure	clojure.core.logic	core	UNK	matchu	UNK=xs UNK=cs
+clojure	clojure.core.logic	core	UNK	member1o	UNK=x UNK=l
+clojure	clojure.core.logic	core	UNK	membero	UNK=x UNK=l
+clojure	clojure.core.logic	core	UNK	nafc	UNK=c UNK=args
+clojure	clojure.core.logic	core	UNK	nilo	UNK=a
+clojure	clojure.core.logic	core	UNK	nonlvaro	UNK=v
+clojure	clojure.core.logic	core	UNK	or*	UNK=goals
+clojure	clojure.core.logic	core	UNK	partial-map	UNK=m
+clojure	clojure.core.logic	core	UNK	permuteo	UNK=xl UNK=yl
+clojure	clojure.core.logic	core	UNK	pred	UNK=v UNK=f
+clojure	clojure.core.logic	core	UNK	project	UNK=vars UNK=goals
+clojure	clojure.core.logic	core	UNK	rembero	UNK=x UNK=l UNK=o
+clojure	clojure.core.logic	core	UNK	resto	UNK=l UNK=d
+clojure	clojure.core.logic	core	UNK	run	UNK=n UNK=bindings UNK=goals
+clojure	clojure.core.logic	core	UNK	run*	UNK=bindings UNK=goals
+clojure	clojure.core.logic	core	UNK	run-db	UNK=n UNK=db UNK=bindings UNK=goals
+clojure	clojure.core.logic	core	UNK	run-db*	UNK=db UNK=bindings UNK=goals
+clojure	clojure.core.logic	core	UNK	run-nc	UNK=n UNK=bindings UNK=goals
+clojure	clojure.core.logic	core	UNK	run-nc*	UNK=goals
+clojure	clojure.core.logic	core	UNK	succeed	UNK=a
+clojure	clojure.core.logic	core	UNK	tabled	UNK=args UNK=grest
+clojure	clojure.core.logic	core	UNK	trace-lvars	UNK=title UNK=lvars
+clojure	clojure.core.logic	core	UNK	trace-s	void
+clojure	clojure.core.logic	core	UNK	waiting-stream-check	UNK=w UNK=success UNK=cont UNK=failure UNK=cont
+clojure	clojure.core.match	core	UNK	-&gt;apppattern	UNK=p UNK=form UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;bindnode	UNK=bindings UNK=node
+clojure	clojure.core.match	core	UNK	-&gt;failnode	void
+clojure	clojure.core.match	core	UNK	-&gt;guardpattern	UNK=p UNK=gs UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;leafnode	UNK=value UNK=bindings
+clojure	clojure.core.match	core	UNK	-&gt;literalpattern	UNK=l UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;mapkeypattern	UNK=p
+clojure	clojure.core.match	core	UNK	-&gt;mappattern	UNK=m UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;orpattern	UNK=ps UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;patternmatrix	UNK=rows UNK=ocrs
+clojure	clojure.core.match	core	UNK	-&gt;patternrow	UNK=ps UNK=action UNK=bindings
+clojure	clojure.core.match	core	UNK	-&gt;predicatepattern	UNK=p UNK=gs UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;restpattern	UNK=p
+clojure	clojure.core.match	core	UNK	-&gt;seqpattern	UNK=s UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;switchnode	UNK=occurrence UNK=cases UNK=default
+clojure	clojure.core.match	core	UNK	-&gt;vectorpattern	UNK=v UNK=t UNK=size UNK=offset UNK=rest UNK=? UNK=_meta
+clojure	clojure.core.match	core	UNK	-&gt;wildcardpattern	UNK=sym UNK=named UNK=_meta
+clojure	clojure.core.match	core	UNK	emit-matrix	UNK=vars UNK=clauses UNK=default
+clojure	clojure.core.match	core	UNK	empty-rows-case	void
+clojure	clojure.core.match	core	UNK	first-column-chosen-case	UNK=matrix UNK=col UNK=ocrs
+clojure	clojure.core.match	core	UNK	first-row-empty-case	UNK=rows UNK=ocr
+clojure	clojure.core.match	core	UNK	first-row-wildcards-case	UNK=rows UNK=ocrs
+clojure	clojure.core.match	core	UNK	group-keywords	UNK=pattern
+clojure	clojure.core.match	core	UNK	map-&gt;bindnode	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;failnode	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;leafnode	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;mapkeypattern	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;patternmatrix	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;restpattern	UNK=m#
+clojure	clojure.core.match	core	UNK	map-&gt;switchnode	UNK=m#
+clojure	clojure.core.match	core	UNK	match	UNK=vars UNK=clauses
+clojure	clojure.core.match	core	UNK	other-column-chosen-case	UNK=matrix UNK=col
+clojure	clojure.core.match	core	UNK	process-vars	UNK=vars
+clojure	clojure.core.match	core	UNK	to-pattern-row	UNK=pat UNK=action
+clojure	clojure.core.match	core	UNK	wildcards-and-duplicates	UNK=patterns
+clojure	clojure.core.memoize	core	UNK	-&gt;pluggablememoization	UNK=f UNK=cache
+clojure	clojure.core.memoize	core	UNK	-&gt;retryingdelay	UNK=fun UNK=available UNK=? UNK=value
+clojure	clojure.core.memoize	core	UNK	build-memoizer	UNK=cache UNK=factory UNK=f UNK=args
+clojure	clojure.core.memoize	core	UNK	fifo	UNK=f UNK=base UNK=key UNK=threshold
+clojure	clojure.core.memoize	core	UNK	lru	UNK=f UNK=base UNK=key UNK=threshold
+clojure	clojure.core.memoize	core	UNK	lu	UNK=f UNK=base UNK=key UNK=threshold
+clojure	clojure.core.memoize	core	UNK	memo	UNK=f UNK=seed
+clojure	clojure.core.memoize	core	UNK	memo-clear!	UNK=f UNK=args
+clojure	clojure.core.memoize	core	UNK	memo-swap!	UNK=f UNK=base
+clojure	clojure.core.memoize	core	UNK	memoized?	UNK=f
+clojure	clojure.core.memoize	core	UNK	snapshot	UNK=memoized UNK=fn
+clojure	clojure.core.memoize	core	UNK	ttl	UNK=f UNK=base UNK=key UNK=threshold
+clojure	clojure.core.rrb-vector	core	UNK	catvec	UNK=v1 UNK=v2 UNK=v3 UNK=v4 UNK=vn
+clojure	clojure.core.rrb-vector	core	UNK	subvec	UNK=v UNK=start UNK=end
+clojure	clojure.core.rrb-vector	core	UNK	vec	UNK=coll
+clojure	clojure.core.rrb-vector	core	UNK	vector	UNK=x1 UNK=x2 UNK=x3 UNK=x4 UNK=xn
+clojure	clojure.core.rrb-vector	core	UNK	vector-of	UNK=t UNK=x1 UNK=x2 UNK=x3 UNK=x4 UNK=xn
+clojure	clojure.core.typed	core	UNK	aseq	UNK=t
+clojure	clojure.core.typed	core	UNK	avec	UNK=t
+clojure	clojure.core.typed	core	UNK	agent1	UNK=t
+clojure	clojure.core.typed	core	UNK	agent2	UNK=t UNK=t
+clojure	clojure.core.typed	core	UNK	all	UNK=binder UNK=type
+clojure	clojure.core.typed	core	UNK	assoc	UNK=type UNK=type UNK=pairs*
+clojure	clojure.core.typed	core	UNK	atom1	UNK=t
+clojure	clojure.core.typed	core	UNK	atom2	UNK=t
+clojure	clojure.core.typed	core	UNK	blockingderef	UNK=t
+clojure	clojure.core.typed	core	UNK	coll	UNK=t
+clojure	clojure.core.typed	core	UNK	countrange	UNK=Integer UNK=Integer
+clojure	clojure.core.typed	core	UNK	delay	UNK=t
+clojure	clojure.core.typed	core	UNK	deref	UNK=t
+clojure	clojure.core.typed	core	UNK	difference	UNK=type UNK=type UNK=type*
+clojure	clojure.core.typed	core	UNK	dissoc	UNK=type UNK=type*
+clojure	clojure.core.typed	core	UNK	emptyseqable	UNK=t
+clojure	clojure.core.typed	core	UNK	exactcount	UNK=Integer
+clojure	clojure.core.typed	core	UNK	future	UNK=t
+clojure	clojure.core.typed	core	UNK	get	UNK=type UNK=type UNK=type
+clojure	clojure.core.typed	core	UNK	hseq	UNK=fixed* UNK=drest UNK=... UNK=bound UNK=:filter UNK=sets UNK=FS* UNK=:objects UNK=obj*
+clojure	clojure.core.typed	core	UNK	hsequential	UNK=fixed* UNK=drest UNK=... UNK=bound UNK=:filter UNK=sets UNK=FS* UNK=:objects UNK=obj*
+clojure	clojure.core.typed	core	UNK	quote	UNK=fixed* UNK=type UNK=... UNK=bound
+clojure	clojure.core.typed	core	UNK	i	UNK=type*
+clojure	clojure.core.typed	core	UNK	ifn	UNK=ArityVec+
+clojure	clojure.core.typed	core	UNK	list	UNK=t
+clojure	clojure.core.typed	core	UNK	map	UNK=t UNK=t
+clojure	clojure.core.typed	core	UNK	nilable	UNK=t
+clojure	clojure.core.typed	core	UNK	nilablenonemptyaseq	UNK=t
+clojure	clojure.core.typed	core	UNK	nilablenonemptyseq	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptyaseq	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptyavec	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptycoll	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptylazyseq	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptyseq	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptyseqable	UNK=t
+clojure	clojure.core.typed	core	UNK	nonemptyvec	UNK=t
+clojure	clojure.core.typed	core	UNK	option	UNK=t
+clojure	clojure.core.typed	core	UNK	pred	UNK=type
+clojure	clojure.core.typed	core	UNK	promise	UNK=t
+clojure	clojure.core.typed	core	UNK	rec	UNK=binder UNK=type
+clojure	clojure.core.typed	core	UNK	ref1	UNK=t
+clojure	clojure.core.typed	core	UNK	ref2	UNK=w UNK=r
+clojure	clojure.core.typed	core	UNK	reversible	UNK=t
+clojure	clojure.core.typed	core	UNK	seq	UNK=t
+clojure	clojure.core.typed	core	UNK	seqable	UNK=t
+clojure	clojure.core.typed	core	UNK	sequentialseq	UNK=t
+clojure	clojure.core.typed	core	UNK	sequentialseqable	UNK=t
+clojure	clojure.core.typed	core	UNK	set	UNK=t
+clojure	clojure.core.typed	core	UNK	sortedset	UNK=t
+clojure	clojure.core.typed	core	UNK	stack	UNK=t
+clojure	clojure.core.typed	core	UNK	tfn	UNK=binder UNK=type
+clojure	clojure.core.typed	core	UNK	u	UNK=type*
+clojure	clojure.core.typed	core	UNK	quote	UNK=Constant
+clojure	clojure.core.typed	core	UNK	var1	UNK=t
+clojure	clojure.core.typed	core	UNK	var2	UNK=w UNK=r
+clojure	clojure.core.typed	core	UNK	vec	UNK=t
+clojure	clojure.core.typed	core	UNK	ann	UNK=varsym UNK=typesyn
+clojure	clojure.core.typed	core	UNK	ann-datatype	UNK=binder UNK=dname UNK=field UNK=: UNK=type* UNK=opts*
+clojure	clojure.core.typed	core	UNK	ann-form	UNK=form UNK=ty
+clojure	clojure.core.typed	core	UNK	ann-interface	UNK=varsym UNK=methods
+clojure	clojure.core.typed	core	UNK	ann-many	UNK=t UNK=vs
+clojure	clojure.core.typed	core	UNK	ann-protocol	UNK=varsym UNK=methods
+clojure	clojure.core.typed	core	UNK	ann-record	UNK=binder UNK=dname UNK=field UNK=: UNK=type* UNK=opts*
+clojure	clojure.core.typed	core	UNK	atom	UNK=args
+clojure	clojure.core.typed	core	UNK	cast	UNK=t UNK=x UNK=opt
+clojure	clojure.core.typed	core	UNK	cf	UNK=form UNK=expected
+clojure	clojure.core.typed	core	UNK	check-form*	UNK=form UNK=expected UNK=type UNK=provided UNK=?
+clojure	clojure.core.typed	core	UNK	check-form-info	UNK=form UNK=opt
+clojure	clojure.core.typed	core	UNK	check-ns	UNK=ns UNK=or UNK=syms UNK=opt
+clojure	clojure.core.typed	core	UNK	declare-alias-kind	UNK=sym UNK=ty
+clojure	clojure.core.typed	core	UNK	declare-datatypes	UNK=syms
+clojure	clojure.core.typed	core	UNK	declare-names	UNK=syms
+clojure	clojure.core.typed	core	UNK	declare-protocols	UNK=syms
+clojure	clojure.core.typed	core	UNK	def	UNK=name UNK=docstring UNK=? UNK=: UNK=type UNK=? UNK=expr
+clojure	clojure.core.typed	core	UNK	defalias	UNK=sym UNK=t
+clojure	clojure.core.typed	core	UNK	defn	UNK=kw UNK=args UNK=? UNK=name UNK=docstring UNK=? UNK=attr UNK=map UNK=? UNK=param UNK=: UNK=type UNK=* UNK=: UNK=type UNK=exprs*
+clojure	clojure.core.typed	core	UNK	defprotocol	UNK=body
+clojure	clojure.core.typed	core	UNK	doseq	UNK=seq UNK=exprs UNK=body
+clojure	clojure.core.typed	core	UNK	dotimes	UNK=bindings UNK=body
+clojure	clojure.core.typed	core	UNK	envs	void
+clojure	clojure.core.typed	core	UNK	fn	UNK=name UNK=? UNK=param UNK=: UNK=type* UNK=param UNK=: UNK=type UNK=* UNK=? UNK=? UNK=: UNK=type UNK=? UNK=exprs*
+clojure	clojure.core.typed	core	UNK	for	UNK=seq UNK=exprs UNK=maybe UNK=ann UNK=body UNK=expr
+clojure	clojure.core.typed	core	UNK	inst	UNK=inst UNK=of UNK=types
+clojure	clojure.core.typed	core	UNK	inst-ctor	UNK=inst UNK=of UNK=types
+clojure	clojure.core.typed	core	UNK	install	UNK=features
+clojure	clojure.core.typed	core	UNK	into-array&gt;	UNK=into UNK=array UNK=syn UNK=javat UNK=cljt UNK=coll
+clojure	clojure.core.typed	core	UNK	let	UNK=binding UNK=: UNK=type UNK=? UNK=init* UNK=exprs*
+clojure	clojure.core.typed	core	UNK	letfn&gt;	UNK=fn UNK=spec UNK=or UNK=annotation* UNK=expr*
+clojure	clojure.core.typed	core	UNK	load-if-needed	void
+clojure	clojure.core.typed	core	UNK	loop	UNK=binding UNK=: UNK=type UNK=? UNK=init* UNK=exprs*
+clojure	clojure.core.typed	core	UNK	method-type	UNK=mname
+clojure	clojure.core.typed	core	UNK	nilable-param	UNK=msym UNK=mmap
+clojure	clojure.core.typed	core	UNK	non-nil-return	UNK=msym UNK=arities
+clojure	clojure.core.typed	core	UNK	override-constructor	UNK=ctorsym UNK=typesyn
+clojure	clojure.core.typed	core	UNK	override-method	UNK=methodsym UNK=typesyn
+clojure	clojure.core.typed	core	UNK	pfn&gt;	UNK=forms
+clojure	clojure.core.typed	core	UNK	pred	UNK=t
+clojure	clojure.core.typed	core	UNK	print-env	UNK=debug UNK=str
+clojure	clojure.core.typed	core	UNK	print-filterset	UNK=debug UNK=string UNK=frm
+clojure	clojure.core.typed	core	UNK	ref	UNK=args
+clojure	clojure.core.typed	core	UNK	reset-caches	void
+clojure	clojure.core.typed	core	UNK	statistics	UNK=nsyms
+clojure	clojure.core.typed	core	UNK	tc-ignore	UNK=body
+clojure	clojure.core.typed	core	UNK	typed-deps	UNK=args
+clojure	clojure.core.typed	core	UNK	untyped-var	UNK=varsym UNK=typesyn
+clojure	clojure.core.typed	core	UNK	var-coverage	UNK=nsyms UNK=or UNK=nsym
+clojure	clojure.core.typed	core	UNK	var&gt;	UNK=sym
+clojure	clojure.core.typed	core	UNK	warn-on-unannotated-vars	void
+clojure	clojure.core.typed	core	UNK	when-let-fail	UNK=b UNK=body
+clojure	clojure.core.unify	core	UNK	extract-lvars	UNK=lv UNK=fn UNK=form
+clojure	clojure.core.unify	core	UNK	flatten-bindings	UNK=variable UNK=? UNK=binds
+clojure	clojure.core.unify	core	UNK	make-occurs-subst-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	make-occurs-unifier-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	make-occurs-unify-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	make-subst-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	make-unifier-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	make-unify-fn	UNK=variable UNK=fn
+clojure	clojure.core.unify	core	UNK	subst	UNK=expression UNK=bindings
+clojure	clojure.core.unify	core	UNK	unifier-	UNK=expression1 UNK=expression2
+clojure	clojure.core.unify	core	UNK	unify-	UNK=expression1 UNK=expression2
+clojure	clojure.data.avl	core	UNK	merge	UNK=m1 UNK=m2 UNK=m3
+clojure	clojure.data.avl	core	UNK	merge-with	UNK=f UNK=m1 UNK=m2 UNK=m3
+clojure	clojure.data.avl	core	UNK	nearest	UNK=coll UNK=test UNK=x
+clojure	clojure.data.avl	core	UNK	rank-of	UNK=coll UNK=x
+clojure	clojure.data.avl	core	UNK	sorted-map	UNK=keyvals
+clojure	clojure.data.avl	core	UNK	sorted-map-by	UNK=comparator UNK=keyvals
+clojure	clojure.data.avl	core	UNK	sorted-set	UNK=keys
+clojure	clojure.data.avl	core	UNK	sorted-set-by	UNK=comparator UNK=keys
+clojure	clojure.data.avl	core	UNK	split-key	UNK=k UNK=coll
+clojure	clojure.data.avl	core	UNK	subrange	UNK=coll UNK=start UNK=test UNK=start UNK=end UNK=test UNK=end
+clojure	clojure.data.avl	core	UNK	union	UNK=s1 UNK=s2 UNK=s3
+clojure	clojure.data.avl	core	UNK	unsafe-join	UNK=coll1 UNK=coll2 UNK=coll3
+clojure	clojure.data.codec.base64	core	UNK	dec-length	UNK=in UNK=length UNK=pad UNK=length
+clojure	clojure.data.codec.base64	core	UNK	decode	UNK=input UNK=offset UNK=length
+clojure	clojure.data.codec.base64	core	UNK	decode!	UNK=input UNK=offset UNK=length UNK=output
+clojure	clojure.data.codec.base64	core	UNK	decoding-transfer	UNK=input UNK=stream UNK=output UNK=stream UNK=opts
+clojure	clojure.data.codec.base64	core	UNK	enc-length	UNK=n
+clojure	clojure.data.codec.base64	core	UNK	encode	UNK=input UNK=offset UNK=length
+clojure	clojure.data.codec.base64	core	UNK	encode!	UNK=input UNK=offset UNK=length UNK=output
+clojure	clojure.data.codec.base64	core	UNK	encoding-transfer	UNK=input UNK=stream UNK=output UNK=stream UNK=opts
+clojure	clojure.data.codec.base64	core	UNK	pad-length	UNK=input UNK=offset UNK=length
+clojure	clojure.data.csv	core	UNK	read-csv	UNK=input UNK=options
+clojure	clojure.data.csv	core	UNK	write-csv	UNK=writer UNK=data UNK=options
+clojure	clojure.data.finger-tree	core	UNK	-&gt;counteddoublelist	UNK=tree UNK=mdata
+clojure	clojure.data.finger-tree	core	UNK	-&gt;countedsortedset	UNK=cmpr UNK=tree UNK=mdata
+clojure	clojure.data.finger-tree	core	UNK	-&gt;deeptree	UNK=meter UNK=obj UNK=pre UNK=mid UNK=suf UNK=mval
+clojure	clojure.data.finger-tree	core	UNK	-&gt;delayedtree	UNK=tree UNK=ref UNK=mval
+clojure	clojure.data.finger-tree	core	UNK	-&gt;digit1	UNK=a UNK=meter UNK=obj UNK=measure UNK=ref
+clojure	clojure.data.finger-tree	core	UNK	-&gt;digit2	UNK=a UNK=b UNK=meter UNK=obj UNK=measure UNK=ref
+clojure	clojure.data.finger-tree	core	UNK	-&gt;digit3	UNK=a UNK=b UNK=c UNK=meter UNK=obj UNK=measure UNK=ref
+clojure	clojure.data.finger-tree	core	UNK	-&gt;digit4	UNK=a UNK=b UNK=c UNK=d UNK=meter UNK=obj UNK=measure UNK=ref
+clojure	clojure.data.finger-tree	core	UNK	-&gt;doublelist	UNK=tree UNK=mdata
+clojure	clojure.data.finger-tree	core	UNK	-&gt;emptytree	UNK=meter UNK=obj
+clojure	clojure.data.finger-tree	core	UNK	-&gt;len-right-meter	UNK=len UNK=right
+clojure	clojure.data.finger-tree	core	UNK	-&gt;singletree	UNK=meter UNK=obj UNK=x
+clojure	clojure.data.finger-tree	core	UNK	map-&gt;len-right-meter	UNK=m#
+clojure	clojure.data.fressian	core	UNK	associative-lookup	UNK=o
+clojure	clojure.data.fressian	core	UNK	begin-closed-list	UNK=writer
+clojure	clojure.data.fressian	core	UNK	end-list	UNK=writer
+clojure	clojure.data.fressian	core	UNK	field-caching-writer	UNK=cache UNK=pred
+clojure	clojure.data.fressian	core	UNK	inheritance-lookup	UNK=lookup
+clojure	clojure.data.fressian	core	UNK	read	UNK=readable UNK=options
+clojure	clojure.data.fressian	core	UNK	read-object	UNK=rdr
+clojure	clojure.data.fressian	core	UNK	tag	UNK=obj
+clojure	clojure.data.fressian	core	UNK	tagged-object?	UNK=o
+clojure	clojure.data.fressian	core	UNK	tagged-value	UNK=obj
+clojure	clojure.data.fressian	core	UNK	write	UNK=obj UNK=options
+clojure	clojure.data.fressian	core	UNK	write-object	UNK=writer UNK=obj
+clojure	clojure.data.generators	core	UNK	anything	void
+clojure	clojure.data.generators	core	UNK	boolean	void
+clojure	clojure.data.generators	core	UNK	boolean-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	byte	void
+clojure	clojure.data.generators	core	UNK	byte-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	char	void
+clojure	clojure.data.generators	core	UNK	char-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	collection	void
+clojure	clojure.data.generators	core	UNK	date	UNK=base
+clojure	clojure.data.generators	core	UNK	default-sizer	void
+clojure	clojure.data.generators	core	UNK	double	void
+clojure	clojure.data.generators	core	UNK	double-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	float	void
+clojure	clojure.data.generators	core	UNK	float-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	geometric	UNK=p
+clojure	clojure.data.generators	core	UNK	hash-map	UNK=fk UNK=fv UNK=sizer
+clojure	clojure.data.generators	core	UNK	int	void
+clojure	clojure.data.generators	core	UNK	int-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	keyword	UNK=sizer
+clojure	clojure.data.generators	core	UNK	list	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	long-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	one-of	UNK=specs
+clojure	clojure.data.generators	core	UNK	printable-ascii-char	void
+clojure	clojure.data.generators	core	UNK	rand-nth	UNK=coll
+clojure	clojure.data.generators	core	UNK	ratio	UNK=num UNK=gen UNK=denom UNK=gen
+clojure	clojure.data.generators	core	UNK	reps	UNK=sizer UNK=f
+clojure	clojure.data.generators	core	UNK	reservoir-sample	UNK=ct UNK=coll
+clojure	clojure.data.generators	core	UNK	scalar	void
+clojure	clojure.data.generators	core	UNK	set	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	short	void
+clojure	clojure.data.generators	core	UNK	short-array	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	shuffle	UNK=coll
+clojure	clojure.data.generators	core	UNK	string	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	symbol	UNK=sizer
+clojure	clojure.data.generators	core	UNK	tuple	UNK=generators
+clojure	clojure.data.generators	core	UNK	uniform	UNK=lo UNK=hi
+clojure	clojure.data.generators	core	UNK	uuid	void
+clojure	clojure.data.generators	core	UNK	vec	UNK=f UNK=sizer
+clojure	clojure.data.generators	core	UNK	weighted	UNK=m
+clojure	clojure.data.json	core	UNK	json-str	UNK=x UNK=options
+clojure	clojure.data.json	core	UNK	pprint	UNK=x UNK=options
+clojure	clojure.data.json	core	UNK	pprint-json	UNK=x UNK=options
+clojure	clojure.data.json	core	UNK	print-json	UNK=x UNK=options
+clojure	clojure.data.json	core	UNK	read	UNK=reader UNK=options
+clojure	clojure.data.json	core	UNK	read-json	UNK=input UNK=keywordize UNK=? UNK=eof UNK=error UNK=? UNK=eof UNK=value
+clojure	clojure.data.json	core	UNK	read-str	UNK=string UNK=options
+clojure	clojure.data.json	core	UNK	write	UNK=x UNK=writer UNK=options
+clojure	clojure.data.json	core	UNK	write-json	UNK=x UNK=out UNK=escape UNK=unicode UNK=?
+clojure	clojure.data.json	core	UNK	write-str	UNK=x UNK=options
+clojure	clojure.data.priority-map	core	UNK	-&gt;persistentprioritymap	UNK=priority UNK=&gt;set UNK=of UNK=items UNK=item UNK=&gt;priority UNK=_meta UNK=keyfn
+clojure	clojure.data.priority-map	core	UNK	priority-map	UNK=keyvals
+clojure	clojure.data.priority-map	core	UNK	priority-map-by	UNK=comparator UNK=keyvals
+clojure	clojure.data.priority-map	core	UNK	priority-map-keyfn	UNK=keyfn UNK=keyvals
+clojure	clojure.data.priority-map	core	UNK	priority-map-keyfn-by	UNK=keyfn UNK=comparator UNK=keyvals
+clojure	clojure.data.zip	core	UNK	ancestors	UNK=loc
+clojure	clojure.data.zip	core	UNK	children	UNK=loc
+clojure	clojure.data.zip	core	UNK	children-auto	UNK=loc
+clojure	clojure.data.zip	core	UNK	descendants	UNK=loc
+clojure	clojure.data.zip	core	UNK	left-locs	UNK=loc
+clojure	clojure.data.zip	core	UNK	leftmost?	UNK=loc
+clojure	clojure.data.zip	core	UNK	right-locs	UNK=loc
+clojure	clojure.data.zip	core	UNK	rightmost?	UNK=loc
+clojure	clojure.java.classpath	core	UNK	classpath	void
+clojure	clojure.java.classpath	core	UNK	classpath-directories	void
+clojure	clojure.java.classpath	core	UNK	classpath-jarfiles	void
+clojure	clojure.java.classpath	core	UNK	filenames-in-jar	UNK=jar UNK=file
+clojure	clojure.java.classpath	core	UNK	get-urls	UNK=loader
+clojure	clojure.java.classpath	core	UNK	jar-file?	UNK=f
+clojure	clojure.java.classpath	core	UNK	loader-classpath	UNK=loader
+clojure	clojure.java.classpath	core	UNK	system-classpath	void
+clojure	clojure.java.jdbc	core	UNK	as-sql-name	UNK=f UNK=x
+clojure	clojure.java.jdbc	core	UNK	create-table-ddl	UNK=table UNK=specs
+clojure	clojure.java.jdbc	core	UNK	db-connection	UNK=db
+clojure	clojure.java.jdbc	core	UNK	db-do-commands	UNK=db UNK=spec UNK=transaction UNK=? UNK=sql UNK=command UNK=sql UNK=commands
+clojure	clojure.java.jdbc	core	UNK	db-do-prepared	UNK=db UNK=spec UNK=transaction UNK=? UNK=sql UNK=param UNK=groups
+clojure	clojure.java.jdbc	core	UNK	db-do-prepared-return-keys	UNK=db UNK=transaction UNK=? UNK=sql UNK=param UNK=group
+clojure	clojure.java.jdbc	core	UNK	db-find-connection	UNK=db
+clojure	clojure.java.jdbc	core	UNK	db-is-rollback-only	UNK=db
+clojure	clojure.java.jdbc	core	UNK	db-query-with-resultset	UNK=db UNK=spec UNK=options UNK=map UNK=sql UNK=string UNK=params UNK=func
+clojure	clojure.java.jdbc	core	UNK	db-set-rollback-only!	UNK=db
+clojure	clojure.java.jdbc	core	UNK	db-transaction	UNK=binding UNK=body
+clojure	clojure.java.jdbc	core	UNK	db-unset-rollback-only!	UNK=db
+clojure	clojure.java.jdbc	core	UNK	execute!	UNK=db UNK=spec UNK=sql UNK=param UNK=groups UNK=:multi UNK=? UNK=true UNK=:transaction UNK=? UNK=true
+clojure	clojure.java.jdbc	core	UNK	insert!	UNK=db UNK=spec UNK=table UNK=row UNK=map UNK=:transaction UNK=? UNK=true UNK=:entities UNK=identity
+clojure	clojure.java.jdbc	core	UNK	metadata-query	UNK=meta UNK=query UNK=opt UNK=args
+clojure	clojure.java.jdbc	core	UNK	print-sql-exception	UNK=exception
+clojure	clojure.java.jdbc	core	UNK	print-sql-exception-chain	UNK=exception
+clojure	clojure.java.jdbc	core	UNK	print-update-counts	UNK=exception
+clojure	clojure.java.jdbc	core	UNK	query	UNK=db UNK=spec UNK=option UNK=map UNK=sql UNK=string UNK=params
+clojure	clojure.java.jdbc	core	UNK	quoted	UNK=q UNK=x
+clojure	clojure.java.jdbc	core	UNK	with-db-connection	UNK=binding UNK=body
+clojure	clojure.java.jdbc	core	UNK	with-db-metadata	UNK=binding UNK=body
+clojure	clojure.java.jdbc	core	UNK	with-db-transaction	UNK=binding UNK=body
+clojure	clojure.java.jmx	core	UNK	-&gt;bean	UNK=state UNK=ref
+clojure	clojure.java.jmx	core	UNK	attribute-names	UNK=n
+clojure	clojure.java.jmx	core	UNK	create-bean	UNK=state UNK=ref
+clojure	clojure.java.jmx	core	UNK	invoke	UNK=n UNK=op UNK=args
+clojure	clojure.java.jmx	core	UNK	invoke-signature	UNK=n UNK=op UNK=signature UNK=args
+clojure	clojure.java.jmx	core	UNK	mbean	UNK=n
+clojure	clojure.java.jmx	core	UNK	mbean-names	UNK=n
+clojure	clojure.java.jmx	core	UNK	operation-names	UNK=n
+clojure	clojure.java.jmx	core	UNK	readable?	UNK=n UNK=attr
+clojure	clojure.java.jmx	core	UNK	register-mbean	UNK=mbean UNK=mbean UNK=name
+clojure	clojure.java.jmx	core	UNK	unregister-mbean	UNK=mbean UNK=name
+clojure	clojure.java.jmx	core	UNK	with-connection	UNK=opts UNK=body
+clojure	clojure.java.jmx	core	UNK	write!	UNK=n UNK=attr UNK=value
+clojure	clojure.math.combinatorics	core	UNK	assert-with-message	UNK=x UNK=message
+clojure	clojure.math.combinatorics	core	UNK	cartesian-product	UNK=seqs
+clojure	clojure.math.combinatorics	core	UNK	combinations	UNK=items UNK=t
+clojure	clojure.math.combinatorics	core	UNK	count-combinations	UNK=items UNK=t
+clojure	clojure.math.combinatorics	core	UNK	count-permutations	UNK=l
+clojure	clojure.math.combinatorics	core	UNK	count-subsets	UNK=items
+clojure	clojure.math.combinatorics	core	UNK	drop-permutations	UNK=items UNK=n
+clojure	clojure.math.combinatorics	core	UNK	nth-combination	UNK=items UNK=t UNK=n
+clojure	clojure.math.combinatorics	core	UNK	nth-permutation	UNK=items UNK=n
+clojure	clojure.math.combinatorics	core	UNK	partitions	UNK=items UNK=args
+clojure	clojure.math.combinatorics	core	UNK	permutation-index	UNK=items
+clojure	clojure.math.combinatorics	core	UNK	permutations	UNK=items
+clojure	clojure.math.combinatorics	core	UNK	selections	UNK=items UNK=n
+clojure	clojure.math.combinatorics	core	UNK	subsets	UNK=items
+clojure	clojure.math.numeric-tower	core	UNK	abs	UNK=n
+clojure	clojure.math.numeric-tower	core	UNK	expt	UNK=base UNK=pow
+clojure	clojure.math.numeric-tower	core	UNK	gcd	UNK=a UNK=b
+clojure	clojure.math.numeric-tower	core	UNK	lcm	UNK=a UNK=b
+clojure	clojure.test.generative	core	UNK	defspec	UNK=name UNK=fn UNK=to UNK=test UNK=args UNK=validator UNK=body
+clojure	clojure.tools.logging	core	UNK	debug	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	debugf	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	enabled?	UNK=level UNK=logger UNK=ns
+clojure	clojure.tools.logging	core	UNK	error	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	errorf	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	fatal	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	fatalf	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	info	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	infof	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	log	UNK=logger UNK=factory UNK=logger UNK=ns UNK=level UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	log*	UNK=logger UNK=level UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	log-capture!	UNK=logger UNK=ns UNK=out UNK=level UNK=err UNK=level
+clojure	clojure.tools.logging	core	UNK	log-stream	UNK=level UNK=logger UNK=ns
+clojure	clojure.tools.logging	core	UNK	log-uncapture!	void
+clojure	clojure.tools.logging	core	UNK	logf	UNK=level UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	logp	UNK=level UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	spy	UNK=level UNK=expr
+clojure	clojure.tools.logging	core	UNK	spyf	UNK=level UNK=fmt UNK=expr
+clojure	clojure.tools.logging	core	UNK	trace	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	tracef	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	warn	UNK=throwable UNK=message
+clojure	clojure.tools.logging	core	UNK	warnf	UNK=throwable UNK=fmt UNK=fmt UNK=args
+clojure	clojure.tools.logging	core	UNK	with-logs	UNK=logger UNK=ns UNK=out UNK=level UNK=err UNK=level UNK=body
+clojure	clojure.tools.analyzer	core	UNK	-&gt;const	UNK=literal UNK=? UNK=val UNK=meta UNK=type UNK=op UNK=form UNK=env UNK=children
+clojure	clojure.tools.analyzer	core	UNK	-&gt;local	UNK=assignable UNK=? UNK=name UNK=op UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	-&gt;map	UNK=keys UNK=vals UNK=op UNK=form UNK=env UNK=children
+clojure	clojure.tools.analyzer	core	UNK	-&gt;maybeclass	UNK=class UNK=op UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	-&gt;maybehostform	UNK=class UNK=field UNK=op UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	-&gt;set	UNK=items UNK=op UNK=form UNK=env UNK=children
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientconst	UNK=literal UNK=? UNK=val UNK=meta UNK=type UNK=op UNK=form UNK=env UNK=children UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientlocal	UNK=assignable UNK=? UNK=name UNK=op UNK=form UNK=env UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientmap	UNK=keys UNK=vals UNK=op UNK=form UNK=env UNK=children UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientmaybeclass	UNK=class UNK=op UNK=form UNK=env UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientmaybehostform	UNK=class UNK=field UNK=op UNK=form UNK=env UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientset	UNK=items UNK=op UNK=form UNK=env UNK=children UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientvar	UNK=assignable UNK=? UNK=var UNK=meta UNK=op UNK=form UNK=env UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientvector	UNK=items UNK=op UNK=form UNK=env UNK=children UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;transientwithmeta	UNK=meta UNK=expr UNK=op UNK=form UNK=env UNK=children UNK=extmap
+clojure	clojure.tools.analyzer	core	UNK	-&gt;var	UNK=assignable UNK=? UNK=var UNK=meta UNK=op UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	-&gt;vector	UNK=items UNK=op UNK=form UNK=env UNK=children
+clojure	clojure.tools.analyzer	core	UNK	-&gt;withmeta	UNK=meta UNK=expr UNK=op UNK=form UNK=env UNK=children
+clojure	clojure.tools.analyzer	core	UNK	analyze	UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	analyze-in-env	UNK=env
+clojure	clojure.tools.analyzer	core	UNK	create-var	UNK=sym UNK=env
+clojure	clojure.tools.analyzer	core	UNK	empty-env	void
+clojure	clojure.tools.analyzer	core	UNK	macroexpand	UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	macroexpand-1	UNK=form UNK=env
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;const	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;local	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;map	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;maybeclass	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;maybehostform	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;set	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;var	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;vector	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	map-&gt;withmeta	UNK=m#
+clojure	clojure.tools.analyzer	core	UNK	parse	UNK=op UNK=args UNK=env
+clojure	clojure.tools.analyzer	core	UNK	var?	UNK=obj
+clojure	clojure.tools.analyzer.jvm	core	UNK	-&gt;exceptionthrown	UNK=e
+clojure	clojure.tools.analyzer.jvm	core	UNK	analyze	UNK=form UNK=env UNK=opts
+clojure	clojure.tools.analyzer.jvm	core	UNK	analyze+eval	UNK=form UNK=env UNK=opts
+clojure	clojure.tools.analyzer.jvm	core	UNK	analyze-ns	UNK=ns UNK=env UNK=opts
+clojure	clojure.tools.analyzer.jvm	core	UNK	empty-env	void
+clojure	clojure.tools.analyzer.jvm	core	UNK	macroexpand-1	UNK=form UNK=env
+clojure	clojure.tools.analyzer.jvm	core	UNK	macroexpand-all	UNK=form UNK=env UNK=opts
+clojure	clojure.tools.analyzer.jvm	core	UNK	parse	UNK=form UNK=env
+clojure	clojure.tools.analyzer.jvm	core	UNK	run-passes	UNK=ast
+clojure	clojure.tools.cli	core	UNK	get-default-options	UNK=option UNK=specs
+clojure	clojure.tools.cli	core	UNK	parse-opts	UNK=args UNK=option UNK=specs UNK=options
+clojure	clojure.tools.cli	core	UNK	summarize	UNK=specs
+clojure	clojure.tools.emitter.jvm	core	UNK	eval	UNK=form
+clojure	clojure.tools.emitter.jvm	core	UNK	load	UNK=res
+clojure	clojure.tools.macro	core	UNK	defsymbolmacro	UNK=symbol UNK=expansion
+clojure	clojure.tools.macro	core	UNK	deftemplate	UNK=name UNK=params UNK=forms
+clojure	clojure.tools.macro	core	UNK	macrolet	UNK=fn UNK=bindings UNK=exprs
+clojure	clojure.tools.macro	core	UNK	mexpand	UNK=form
+clojure	clojure.tools.macro	core	UNK	mexpand-1	UNK=form
+clojure	clojure.tools.macro	core	UNK	mexpand-all	UNK=form
+clojure	clojure.tools.macro	core	UNK	name-with-attributes	UNK=name UNK=macro UNK=args
+clojure	clojure.tools.macro	core	UNK	symbol-macrolet	UNK=symbol UNK=bindings UNK=exprs
+clojure	clojure.tools.macro	core	UNK	with-symbol-macros	UNK=exprs
+clojure	clojure.tools.namespace	core	UNK	clojure-source-file?	UNK=file
+clojure	clojure.tools.namespace	core	UNK	clojure-sources-in-jar	UNK=jar UNK=file
+clojure	clojure.tools.namespace	core	UNK	comment?	UNK=form
+clojure	clojure.tools.namespace	core	UNK	find-clojure-sources-in-dir	UNK=dir
+clojure	clojure.tools.namespace	core	UNK	find-namespaces-in-dir	UNK=dir
+clojure	clojure.tools.namespace	core	UNK	find-namespaces-in-jarfile	UNK=jarfile
+clojure	clojure.tools.namespace	core	UNK	find-namespaces-on-classpath	void
+clojure	clojure.tools.namespace	core	UNK	find-ns-decls-in-dir	UNK=dir
+clojure	clojure.tools.namespace	core	UNK	find-ns-decls-in-jarfile	UNK=jarfile
+clojure	clojure.tools.namespace	core	UNK	find-ns-decls-on-classpath	void
+clojure	clojure.tools.namespace	core	UNK	ns-decl?	UNK=form
+clojure	clojure.tools.namespace	core	UNK	read-file-ns-decl	UNK=file
+clojure	clojure.tools.namespace	core	UNK	read-ns-decl	UNK=rdr
+clojure	clojure.tools.namespace	core	UNK	read-ns-decl-from-jarfile-entry	UNK=jarfile UNK=entry UNK=name
+clojure	clojure.tools.nrepl	core	UNK	client	UNK=transport UNK=response UNK=timeout
+clojure	clojure.tools.nrepl	core	UNK	code	UNK=body
+clojure	clojure.tools.nrepl	core	UNK	code*	UNK=expressions
+clojure	clojure.tools.nrepl	core	UNK	combine-responses	UNK=responses
+clojure	clojure.tools.nrepl	core	UNK	response-seq	UNK=transport UNK=timeout
+clojure	clojure.tools.nrepl	core	UNK	response-values	UNK=responses
+clojure	clojure.tools.reader	core	UNK	map-func	UNK=coll
+clojure	clojure.tools.reader	core	UNK	read	UNK=reader UNK=eof UNK=error UNK=? UNK=eof UNK=value
+clojure	clojure.tools.reader	core	UNK	read-string	UNK=opts UNK=s
+clojure	clojure.tools.reader	core	UNK	resolve-symbol	UNK=s
+clojure	clojure.tools.reader	core	UNK	syntax-quote	UNK=form
+clojure	clojure.tools.trace	core	UNK	deftrace	UNK=name UNK=definition
+clojure	clojure.tools.trace	core	UNK	dotrace	UNK=fnames UNK=exprs
+clojure	clojure.tools.trace	core	UNK	trace	UNK=name UNK=value
+clojure	clojure.tools.trace	core	UNK	trace-forms	UNK=body
+clojure	clojure.tools.trace	core	UNK	trace-ns	UNK=n
+clojure	clojure.tools.trace	core	UNK	trace-vars	UNK=vs
+clojure	clojure.tools.trace	core	UNK	traceable?	UNK=v
+clojure	clojure.tools.trace	core	UNK	traced?	UNK=v
+clojure	clojure.tools.trace	core	UNK	untrace-ns	UNK=n
+clojure	clojure.tools.trace	core	UNK	untrace-vars	UNK=vs
+clojure	clojure.tools.analyzer.passes.js.annotate-tag	core	UNK	annotate-tag	UNK=ast
+clojure	clojure.tools.analyzer.passes.js.collect-keywords	core	UNK	collect-keywords	UNK=ast
+clojure	clojure.tools.analyzer.passes.js.emit-form	core	UNK	emit-form	UNK=ast UNK=opts
+clojure	clojure.tools.analyzer.passes.js.emit-form	core	UNK	emit-hygienic-form	UNK=ast
+clojure	clojure.tools.analyzer.passes.js.validate	core	UNK	validate	UNK=ast
+clojure	clojure.tools.analyzer.passes.jvm.constant-lifter	core	UNK	constant-lift	UNK=ast
+clojure	clojure.tools.analyzer.passes.jvm.emit-form	core	UNK	emit-form	UNK=ast UNK=opts
+clojure	clojure.tools.analyzer.passes.jvm.emit-form	core	UNK	emit-hygienic-form	UNK=ast
+clojure	clojure.tools.analyzer.passes.jvm.fix-case-test	core	UNK	fix-case-test	UNK=ast
+clojure	clojure.tools.analyzer.passes.jvm.validate-loop-locals	core	UNK	validate-loop-locals	UNK=analyze
+clojure	gloss	core	UNK	bit-map	UNK=args
+clojure	gloss	core	UNK	bit-seq	UNK=bit UNK=lengths
+clojure	gloss	core	UNK	byte-count	UNK=b
+clojure	gloss	core	UNK	compile-frame	UNK=framecompile UNK=frame UNK=frame UNK=pre UNK=encoder UNK=post UNK=decoder
+clojure	gloss	core	UNK	defcodec-	UNK=name UNK=frame UNK=coders
+clojure	gloss	core	UNK	delimited-block	UNK=delimiters UNK=strip UNK=delimiters UNK=?
+clojure	gloss	core	UNK	delimited-frame	UNK=delimiters UNK=frame
+clojure	gloss	core	UNK	enum	UNK=primitive UNK=type UNK=map UNK=or UNK=seq
+clojure	gloss	core	UNK	finite-block	UNK=prefix UNK=or UNK=len
+clojure	gloss	core	UNK	finite-frame	UNK=prefix UNK=or UNK=len UNK=frame
+clojure	gloss	core	UNK	header	UNK=frame UNK=header UNK=>body UNK=body UNK=>header
+clojure	gloss	core	UNK	ordered-map	UNK=key UNK=value UNK=pairs
+clojure	gloss	core	UNK	prefix	UNK=primitiveprefix UNK=signature UNK=to UNK=count UNK=from UNK=count
+clojure	gloss	core	UNK	repeated	UNK=frame
+clojure	gloss	core	UNK	sizeof	UNK=this
+clojure	gloss	core	UNK	string	UNK=charset
+clojure	gloss.io	core	UNK	contiguous	UNK=buf UNK=seq
+clojure	gloss.io	core	UNK	decode	UNK=frame UNK=bytesdecode UNK=frame UNK=bytes UNK=no UNK=remainder UNK=?
+clojure	gloss.io	core	UNK	decode-all	UNK=frame UNK=bytes
+clojure	gloss.io	core	UNK	decode-stream	UNK=src UNK=frame
+clojure	gloss.io	core	UNK	decode-stream-headers	UNK=src UNK=frames
+clojure	gloss.io	core	UNK	encode	UNK=frame UNK=val
+clojure	gloss.io	core	UNK	encode-all	UNK=frame UNK=vals
+clojure	gloss.io	core	UNK	encode-to-buffer	UNK=frame UNK=buf UNK=vals
+clojure	gloss.io	core	UNK	encode-to-stream	UNK=frame UNK=output UNK=stream UNK=vals
+clojure	gloss.io	core	UNK	lazy-decode-all	UNK=frame UNK=bytes
+clojure	gloss.io	core	UNK	to-buf-seq	UNK=x
+clojure	gloss.io	core	UNK	to-byte-buffer	UNK=x
+clojure	medley	core	UNK	abs	UNK=x
+clojure	medley	core	UNK	assoc-some	UNK=m UNK=k UNK=vassoc UNK=some UNK=m UNK=k UNK=v UNK=kvs
+clojure	medley	core	UNK	boolean?	UNK=x
+clojure	medley	core	UNK	deref-reset!	UNK=atom UNK=newval
+clojure	medley	core	UNK	deref-swap!	UNK=atom UNK=f UNK=args
+clojure	medley	core	UNK	dissoc-in	UNK=m UNK=ks
+clojure	medley	core	UNK	distinct-by	UNK=fdistinct UNK=by UNK=f UNK=coll
+clojure	medley	core	UNK	drop-upto	UNK=preddrop UNK=upto UNK=pred UNK=coll
+clojure	medley	core	UNK	ex-cause	UNK=ex
+clojure	medley	core	UNK	ex-message	UNK=ex
+clojure	medley	core	UNK	filter-keys	UNK=pred UNK=coll
+clojure	medley	core	UNK	filter-kv	UNK=pred UNK=coll
+clojure	medley	core	UNK	filter-vals	UNK=pred UNK=coll
+clojure	medley	core	UNK	find-first	UNK=pred UNK=coll
+clojure	medley	core	UNK	greatest	UNK=xs
+clojure	medley	core	UNK	indexed	UNK=coll
+clojure	medley	core	UNK	interleave-all	UNK=colls
+clojure	medley	core	UNK	least	UNK=xs
+clojure	medley	core	UNK	map-entry	UNK=k UNK=v
+clojure	medley	core	UNK	map-keys	UNK=f UNK=coll
+clojure	medley	core	UNK	map-kv	UNK=f UNK=coll
+clojure	medley	core	UNK	map-vals	UNK=f UNK=coll
+clojure	medley	core	UNK	mapply	UNK=f UNK=args
+clojure	medley	core	UNK	queuequeue	UNK=coll
+clojure	medley	core	UNK	queue?	UNK=x
+clojure	medley	core	UNK	random-uuid	void
+clojure	medley	core	UNK	remove-keys	UNK=pred UNK=coll
+clojure	medley	core	UNK	remove-kv	UNK=pred UNK=coll
+clojure	medley	core	UNK	remove-vals	UNK=pred UNK=coll
+clojure	medley	core	UNK	take-upto	UNK=predtake UNK=upto UNK=pred UNK=coll
+clojure	medley	core	UNK	uuid	UNK=s
+clojure	medley	core	UNK	uuid?	UNK=x
+clojure	fs.compression	core	UNK	bunzip2	UNK=source UNK=target
+clojure	fs.compression	core	UNK	gunzip	UNK=source UNK=target
+clojure	fs.compression	core	UNK	make-zip-stream	UNK=filename UNK=content UNK=pairs
+clojure	fs.compression	core	UNK	untar	UNK=source UNK=target
+clojure	fs.compression	core	UNK	unxz	UNK=source UNK=target
+clojure	fs.compression	core	UNK	unzip	UNK=source UNK=target UNK=dir
+clojure	fs.compression	core	UNK	zip	UNK=filename UNK=filename UNK=content UNK=pairs
+clojure	fs	core	UNK	absolute	UNK=path
+clojure	fs	core	UNK	absolute?	UNK=path
+clojure	fs	core	UNK	base-name	UNK=path UNK=trim UNK=ext
+clojure	fs	core	UNK	chdir	UNK=path
+clojure	fs	core	UNK	child-of?	UNK=p UNK=c
+clojure	fs	core	UNK	chmod	UNK=mode UNK=path
+clojure	fs	core	UNK	copy	UNK=from UNK=to
+clojure	fs	core	UNK	copy+	UNK=src UNK=dest
+clojure	fs	core	UNK	copy-dir	UNK=from UNK=to
+clojure	fs	core	UNK	create	UNK=f
+clojure	fs	core	UNK	delete	UNK=path
+clojure	fs	core	UNK	delete-dir	UNK=root
+clojure	fs	core	UNK	directory?	UNK=path
+clojure	fs	core	UNK	exec	UNK=body
+clojure	fs	core	UNK	executable?	UNK=path
+clojure	fs	core	UNK	exists?	UNK=path
+clojure	fs	core	UNK	expand-home	UNK=path
+clojure	fs	core	UNK	extension	UNK=path
+clojure	fs	core	UNK	file	UNK=path UNK=paths
+clojure	fs	core	UNK	file?	UNK=path
+clojure	fs	core	UNK	find-files	UNK=path UNK=pattern
+clojure	fs	core	UNK	find-files*	UNK=path UNK=pred
+clojure	fs	core	UNK	glob	UNK=root UNK=pattern
+clojure	fs	core	UNK	hidden?	UNK=path
+clojure	fs	core	UNK	home	UNK=user
+clojure	fs	core	UNK	iterate-dir	UNK=path
+clojure	fs	core	UNK	link	UNK=path UNK=target
+clojure	fs	core	UNK	link?	UNK=path
+clojure	fs	core	UNK	list-dir	UNK=path
+clojure	fs	core	UNK	mkdir	UNK=path
+clojure	fs	core	UNK	mkdirs	UNK=path
+clojure	fs	core	UNK	mod-time	UNK=path
+clojure	fs	core	UNK	name	UNK=path
+clojure	fs	core	UNK	normalized	UNK=path
+clojure	fs	core	UNK	ns-path	UNK=n
+clojure	fs	core	UNK	parent	UNK=path
+clojure	fs	core	UNK	parents	UNK=f
+clojure	fs	core	UNK	path-ns	UNK=path
+clojure	fs	core	UNK	read-sym-link	UNK=path
+clojure	fs	core	UNK	readable?	UNK=path
+clojure	fs	core	UNK	rename	UNK=old UNK=path UNK=new UNK=path
+clojure	fs	core	UNK	size	UNK=path
+clojure	fs	core	UNK	split	UNK=path
+clojure	fs	core	UNK	split-ext	UNK=path
+clojure	fs	core	UNK	sym-link	UNK=path UNK=target
+clojure	fs	core	UNK	temp-dir	UNK=prefix UNK=suffix UNK=tries
+clojure	fs	core	UNK	temp-file	UNK=prefix UNK=suffix UNK=tries
+clojure	fs	core	UNK	temp-name	UNK=prefix UNK=suffix
+clojure	fs	core	UNK	tmpdir	void
+clojure	fs	core	UNK	touch	UNK=path UNK=time
+clojure	fs	core	UNK	walk	UNK=func UNK=path
+clojure	fs	core	UNK	with-cwd	UNK=cwd UNK=body
+clojure	fs	core	UNK	with-mutable-cwd	UNK=body
+clojure	fs	core	UNK	writeable?	UNK=path
+clojure	plumbing	core	UNK	-unless-update	UNK=body
+clojure	plumbing	core	UNK	<-	UNK=body
+clojure	plumbing	core	UNK	?>	UNK=arg UNK=do UNK=it UNK=? UNK=rest
+clojure	plumbing	core	UNK	?>>	UNK=do UNK=it UNK=? UNK=args
+clojure	plumbing	core	UNK	aconcat	UNK=s
+clojure	plumbing	core	UNK	as->>	UNK=name UNK=forms UNK=and UNK=expr
+clojure	plumbing	core	UNK	assoc-when	UNK=m UNK=kvs
+clojure	plumbing	core	UNK	conj-when	UNK=coll UNK=x UNK=xs
+clojure	plumbing	core	UNK	cons-when	UNK=x UNK=s
+clojure	plumbing	core	UNK	count-when	UNK=pred UNK=xs
+clojure	plumbing	core	UNK	dissoc-in	UNK=m UNK=k UNK=ks
+clojure	plumbing	core	UNK	distinct-by	UNK=f UNK=xs
+clojure	plumbing	core	UNK	distinct-id	UNK=xs
+clojure	plumbing	core	UNK	fnk	UNK=args
+clojure	plumbing	core	UNK	for-map	UNK=m UNK=sym UNK=seq UNK=exprs UNK=key UNK=expr UNK=val UNK=expr
+clojure	plumbing	core	UNK	get-and-set!	UNK=a UNK=new UNK=val
+clojure	plumbing	core	UNK	grouped-map	UNK=key UNK=fn UNK=map UNK=fn UNK=coll
+clojure	plumbing	core	UNK	if-letk	UNK=bindings UNK=then UNK=else
+clojure	plumbing	core	UNK	indexed	UNK=s
+clojure	plumbing	core	UNK	keywordize-map	UNK=x
+clojure	plumbing	core	UNK	lazy-get	UNK=m UNK=k UNK=d
+clojure	plumbing	core	UNK	letk	UNK=bindings UNK=body
+clojure	plumbing	core	UNK	map-from-keys	UNK=f UNK=ks
+clojure	plumbing	core	UNK	map-from-vals	UNK=f UNK=vs
+clojure	plumbing	core	UNK	map-keys	UNK=f UNK=m
+clojure	plumbing	core	UNK	map-vals	UNK=f UNK=m
+clojure	plumbing	core	UNK	mapply	UNK=f UNK=arg UNK=args
+clojure	plumbing	core	UNK	memoized-fn	UNK=name UNK=args UNK=body
+clojure	plumbing	core	UNK	positions	UNK=f UNK=s
+clojure	plumbing	core	UNK	safe-get	UNK=m UNK=k
+clojure	plumbing	core	UNK	safe-get-in	UNK=m UNK=ks
+clojure	plumbing	core	UNK	singleton	UNK=xs
+clojure	plumbing	core	UNK	sum	UNK=xs
+clojure	plumbing	core	UNK	swap-pair!	UNK=a UNK=f UNK=args
+clojure	plumbing	core	UNK	unchunk	UNK=s
+clojure	plumbing	core	UNK	update	UNK=m UNK=k UNK=f UNK=x1 UNK=x2 UNK=xs
+clojure	plumbing	core	UNK	update-in-when	UNK=m UNK=key UNK=seq UNK=f UNK=args
+clojure	plumbing	core	UNK	when-letk	UNK=bindings UNK=body
+clojure	plumbing.fnk.impl	core	UNK	efficient-call-forms	UNK=fnk UNK=arg UNK=form UNK=map
+clojure	plumbing.fnk.impl	core	UNK	fnk-form	UNK=env UNK=name UNK=? UNK=bind UNK=body
+clojure	plumbing.fnk.impl	core	UNK	letk-arg-bind-sym-and-body-form	UNK=env UNK=map UNK=sym UNK=binding UNK=key UNK=path UNK=body UNK=form
+clojure	plumbing.fnk.impl	core	UNK	letk-input-schema-and-body-form	UNK=env UNK=binding UNK=form UNK=key UNK=path UNK=body UNK=form
+clojure	plumbing.fnk.impl	core	UNK	name-sym	UNK=x
+clojure	plumbing.fnk.impl	core	UNK	positional-arg-bind-sym-and-body	UNK=env UNK=binding UNK=body UNK=form
+clojure	plumbing.fnk.impl	core	UNK	positional-arg-bind-syms-and-body	UNK=env UNK=bind UNK=body UNK=form
+clojure	plumbing.fnk.impl	core	UNK	positional-fn	UNK=fnk UNK=arg UNK=ks
+clojure	plumbing.fnk.impl	core	UNK	positional-fnk-form	UNK=fn UNK=name UNK=external UNK=input UNK=schema UNK=ordered UNK=ks UNK=>opt UNK=arg UNK=sym UNK=map UNK=body
+clojure	plumbing.fnk.impl	core	UNK	positional-info	UNK=fnk
+clojure	plumbing.fnk.impl	core	UNK	qualified-sym	UNK=x
+clojure	plumbing.fnk.pfnk	core	UNK	fn->fnk	UNK=f UNK=input UNK=schema UNK=output UNK=schema UNK=:as UNK=io
+clojure	plumbing.fnk.pfnk	core	UNK	io-schemata	UNK=this
+clojure	plumbing.fnk.schema	core	UNK	assert-distinct	UNK=things
+clojure	plumbing.fnk.schema	core	UNK	assert-iae	UNK=form UNK=format UNK=args
+clojure	plumbing.fnk.schema	core	UNK	guess-expr-output-schema	UNK=expr
+clojure	plumbing.fnk.schema	core	UNK	non-map-diff	UNK=s1 UNK=s2
+clojure	plumbing.fnk.schema	core	UNK	safe-get	UNK=m UNK=k UNK=key UNK=path
+clojure	plumbing.fnk.schema	core	UNK	schema-diff	UNK=input UNK=schema UNK=output UNK=schema
+clojure	plumbing.graph-async	core	UNK	asyncify	UNK=f
+clojure	plumbing.graph	core	UNK	->graph	UNK=graph UNK=nodes
+clojure	plumbing.graph	core	UNK	check-comp-partial!	UNK=g UNK=instance UNK=fn
+clojure	plumbing.graph	core	UNK	comp-partial-fn	UNK=f UNK=other
+clojure	plumbing.graph	core	UNK	compile	UNK=g
+clojure	plumbing.graph	core	UNK	eager-compile	UNK=g
+clojure	plumbing.graph	core	UNK	graph	UNK=nodes
+clojure	plumbing.graph	core	UNK	interpreted-eager-compile	UNK=g
+clojure	plumbing.graph	core	UNK	lazy-compile	UNK=g
+clojure	plumbing.graph	core	UNK	positional-eager-compile	UNK=g UNK=arg UNK=ks
+clojure	plumbing.graph	core	UNK	profiled	UNK=profile UNK=key UNK=g
+clojure	plumbing.graph	core	UNK	restricted-call	UNK=f UNK=in UNK=m
+clojure	plumbing.graph	core	UNK	run	UNK=g UNK=input
+clojure	plumbing.graph	core	UNK	simple-flat-compile	UNK=g UNK=check UNK=input UNK=? UNK=make UNK=map UNK=assoc UNK=f
+clojure	plumbing.graph	core	UNK	simple-hierarchical-compile	UNK=g UNK=check UNK=input UNK=? UNK=make UNK=map UNK=assoc UNK=f
+clojure	plumbing.graph	core	UNK	working-array-map	UNK=args
+clojure	plumbing.graph.positional	core	UNK	def-graph-record	UNK=g UNK=record UNK=type UNK=name
+clojure	plumbing.graph.positional	core	UNK	eval-bound	UNK=form UNK=bindings
+clojure	plumbing.graph.positional	core	UNK	graph-form	UNK=g UNK=arg UNK=keywords
+clojure	plumbing.graph.positional	core	UNK	graph-let-bindings	UNK=g UNK=g UNK=value UNK=syms
+clojure	plumbing.graph.positional	core	UNK	positional-flat-compile	UNK=g
+clojure	plumbing.map	core	UNK	collate	UNK=flat UNK=counts
+clojure	plumbing.map	core	UNK	deep-collate	UNK=nested UNK=counts
+clojure	plumbing.map	core	UNK	flatten	UNK=m
+clojure	plumbing.map	core	UNK	get!	UNK=m UNK=k UNK=default UNK=expr
+clojure	plumbing.map	core	UNK	inc-key!	UNK=m UNK=k UNK=d
+clojure	plumbing.map	core	UNK	inc-key-in!	UNK=m UNK=ks UNK=d
+clojure	plumbing.map	core	UNK	keep-leaves	UNK=f UNK=m
+clojure	plumbing.map	core	UNK	keep-leaves-and-path	UNK=f UNK=ks UNK=m
+clojure	plumbing.map	core	UNK	keyword-map	UNK=syms
+clojure	plumbing.map	core	UNK	map-leaves	UNK=f UNK=m
+clojure	plumbing.map	core	UNK	map-leaves-and-path	UNK=f UNK=ks UNK=m
+clojure	plumbing.map	core	UNK	merge-disjoint	UNK=m1 UNK=m2 UNK=maps
+clojure	plumbing.map	core	UNK	merge-with-key	UNK=f UNK=maps
+clojure	plumbing.map	core	UNK	safe-select-keys	UNK=m UNK=ks
+clojure	plumbing.map	core	UNK	topological-sort	UNK=child UNK=map UNK=include UNK=leaves UNK=?
+clojure	plumbing.map	core	UNK	unflatten	UNK=s
+clojure	plumbing.map	core	UNK	update-key!	UNK=m UNK=k UNK=f UNK=args
+clojure	clj-time	core	UNK	abuts?	UNK=i UNK=a UNK=i UNK=b
+clojure	clj-time	core	UNK	ago	UNK=period
+clojure	clj-time	core	UNK	date-midnight	UNK=year UNK=month UNK=day
+clojure	clj-time	core	UNK	date-time	UNK=year UNK=month UNK=day UNK=hour UNK=minute UNK=second UNK=millis
+clojure	clj-time	core	UNK	after?	UNK=this UNK=that
+clojure	clj-time	core	UNK	before?	UNK=this UNK=that
+clojure	clj-time	core	UNK	day	UNK=this
+clojure	clj-time	core	UNK	day-of-week	UNK=this
+clojure	clj-time	core	UNK	hour	UNK=this
+clojure	clj-time	core	UNK	milli	UNK=this
+clojure	clj-time	core	UNK	minus-	UNK=this UNK=period
+clojure	clj-time	core	UNK	minute	UNK=this
+clojure	clj-time	core	UNK	month	UNK=this
+clojure	clj-time	core	UNK	plus-	UNK=this UNK=period
+clojure	clj-time	core	UNK	sec	UNK=this
+clojure	clj-time	core	UNK	second	UNK=this
+clojure	clj-time	core	UNK	year	UNK=this
+clojure	clj-time	core	UNK	days	UNK=n
+clojure	clj-time	core	UNK	days?	UNK=val
+clojure	clj-time	core	UNK	default-time-zone	void
+clojure	clj-time	core	UNK	earliest	UNK=dts
+clojure	clj-time	core	UNK	end	UNK=in
+clojure	clj-time	core	UNK	epoch	void
+clojure	clj-time	core	UNK	extend	UNK=in UNK=by
+clojure	clj-time	core	UNK	from-now	UNK=period
+clojure	clj-time	core	UNK	from-time-zone	UNK=dt UNK=tz
+clojure	clj-time	core	UNK	hours	UNK=n
+clojure	clj-time	core	UNK	hours?	UNK=val
+clojure	clj-time	core	UNK	in-days	UNK=in
+clojure	clj-time	core	UNK	in-hours	UNK=in
+clojure	clj-time	core	UNK	in-millis	UNK=in
+clojure	clj-time	core	UNK	in-minutes	UNK=in
+clojure	clj-time	core	UNK	in-months	UNK=in
+clojure	clj-time	core	UNK	in-msecs	UNK=in
+clojure	clj-time	core	UNK	in-seconds	UNK=in
+clojure	clj-time	core	UNK	in-secs	UNK=in
+clojure	clj-time	core	UNK	in-weeks	UNK=in
+clojure	clj-time	core	UNK	in-years	UNK=in
+clojure	clj-time	core	UNK	interval	UNK=dt UNK=a UNK=dt UNK=b
+clojure	clj-time	core	UNK	latest	UNK=dts
+clojure	clj-time	core	UNK	local-date	UNK=year UNK=month UNK=day
+clojure	clj-time	core	UNK	local-date-time	UNK=year UNK=month UNK=day UNK=hour UNK=minute UNK=second UNK=millis
+clojure	clj-time	core	UNK	millis	UNK=n
+clojure	clj-time	core	UNK	minus	UNK=dt UNK=p UNK=ps
+clojure	clj-time	core	UNK	minutes	UNK=n
+clojure	clj-time	core	UNK	minutes?	UNK=val
+clojure	clj-time	core	UNK	months	UNK=n
+clojure	clj-time	core	UNK	months?	UNK=val
+clojure	clj-time	core	UNK	now	void
+clojure	clj-time	core	UNK	overlaps?	UNK=start UNK=a UNK=end UNK=a UNK=start UNK=b UNK=end UNK=b
+clojure	clj-time	core	UNK	plus	UNK=dt UNK=p UNK=ps
+clojure	clj-time	core	UNK	seconds	UNK=n
+clojure	clj-time	core	UNK	seconds?	UNK=val
+clojure	clj-time	core	UNK	start	UNK=in
+clojure	clj-time	core	UNK	time-zone-for-id	UNK=id
+clojure	clj-time	core	UNK	time-zone-for-offset	UNK=hours UNK=minutes
+clojure	clj-time	core	UNK	to-time-zone	UNK=dt UNK=tz
+clojure	clj-time	core	UNK	today	void
+clojure	clj-time	core	UNK	today-at-midnight	UNK=tz
+clojure	clj-time	core	UNK	weeks	UNK=n
+clojure	clj-time	core	UNK	weeks?	UNK=val
+clojure	clj-time	core	UNK	within?	UNK=start UNK=end UNK=test
+clojure	clj-time	core	UNK	year-month	UNK=year UNK=month
+clojure	clj-time	core	UNK	years	UNK=n
+clojure	clj-time	core	UNK	years?	UNK=val
+clojure	clj-time	core	UNK	yesterday	void
+clojure	clj-time.coerce	core	UNK	from-date	UNK=date
+clojure	clj-time.coerce	core	UNK	from-long	UNK=millis
+clojure	clj-time.coerce	core	UNK	from-sql-date	UNK=sql UNK=date
+clojure	clj-time.coerce	core	UNK	from-sql-time	UNK=sql UNK=time
+clojure	clj-time.coerce	core	UNK	from-string	UNK=s
+clojure	clj-time.coerce	core	UNK	to-date-time	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-date	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-epoch	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-local-date	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-local-date-time	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-long	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-sql-date	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-sql-time	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-string	UNK=obj
+clojure	clj-time.coerce	core	UNK	to-timestamp	UNK=obj
+clojure	clj-time.format	core	UNK	formatter	UNK=dtz UNK=fmts
+clojure	clj-time.format	core	UNK	formatter-local	UNK=fmt
+clojure	clj-time.format	core	UNK	instant->map	UNK=instant
+clojure	clj-time.format	core	UNK	parse	UNK=s
+clojure	clj-time.format	core	UNK	parse-local	UNK=s
+clojure	clj-time.format	core	UNK	parse-local-date	UNK=s
+clojure	clj-time.format	core	UNK	show-formatters	UNK=dt
+clojure	clj-time.format	core	UNK	unparse	UNK=fmt UNK=dt
+clojure	clj-time.format	core	UNK	unparse-local	UNK=fmt UNK=dt
+clojure	clj-time.format	core	UNK	unparse-local-date	UNK=fmt UNK=ld
+clojure	clj-time.format	core	UNK	with-chronology	UNK=f UNK=c
+clojure	clj-time.format	core	UNK	with-locale	UNK=f UNK=l
+clojure	clj-time.format	core	UNK	with-pivot-year	UNK=f UNK=pivot UNK=year
+clojure	clj-time.format	core	UNK	with-zone	UNK=f UNK=dtz
+clojure	clj-time.local	core	UNK	format-local-time	UNK=obj UNK=format UNK=key
+clojure	clj-time.local	core	UNK	to-local-date-time	UNK=obj
+clojure	clj-time.local	core	UNK	local-now	void
+clojure	clj-time.predicates	core	UNK	same-date?	UNK=this UNK=date UNK=time UNK=that UNK=date UNK=time
+clojure	clj-time.periodic	core	UNK	periodic-seq	UNK=start UNK=period UNK=like
