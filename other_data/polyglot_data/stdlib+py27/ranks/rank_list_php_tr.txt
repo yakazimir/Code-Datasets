@@ -1,0 +1,1822 @@
+arrayaccess boolean offset exists mixed $konum
+arrayaccess mixed offset get mixed $konum
+arrayaccess void offset set mixed $konum mixed $değer
+arrayaccess void offset unset mixed $konum
+dateinterval dateinterval create from date string string $zaman
+dateinterval string format string $biçem
+domattr string construct string $isim string $değer
+domattr bool is id
+domcharacterdata void append data string $veri
+domcharacterdata void delete data int $başlangıç int $uzunluk
+domcharacterdata void insert data int $başlangıç string $veri
+domcharacterdata void replace data int $başlangıç int $uzunluk string $veri
+domcharacterdata string substring data int $başlangıç int $uzunluk
+domdocument string construct string $sürüm string $kodlama
+domdocument domattr create attribute string $isim
+domdocument domattr create attribute ns string $uri string $önekliad
+domdocument domcdatasection create cdatasection string $veri
+domdocument domcomment create comment string $veri
+domdocument domdocumentfragment create document fragment
+domdocument domelement create element string $isim string $değer
+domdocument domelement create element ns string $uri string $önekliad string $değer
+domdocument domentityreference create entity reference string $isim
+domdocument domprocessinginstruction create processing instruction string $hedef string $veri
+domdocument domtext create text node string $içerik
+domdocument domelement get element by id string $id
+domdocument domnodelist get elements by tag name string $isim
+domdocument domnodelist get elements by tag name ns string $uri string $isim
+domdocument domnode import node domnode $düğüm bool $içiçe
+domdocument mixed load string $dosya int $seçenekler
+domdocument bool load html string $dizge
+domdocument bool load htmlfile string $dosya
+domdocument mixed load xml string $dizge int $seçenekler
+domdocument void normalize document
+domdocument bool register node class string $temelsınıf string $türetilensınıf
+domdocument bool relax ngvalidate string $dosya
+domdocument bool relax ngvalidate source string $rng
+domdocument int save string $dosya int $seçenekler
+domdocument string save html
+domdocument int save htmlfile string $dosya
+domdocument string save xml domnode $düğüm int $seçenekler
+domdocument bool schema validate string $dosya
+domdocument bool schema validate source string $şema
+domdocument bool validate
+domdocument int xinclude int $seçenekler
+domelement string get attribute string $isim
+domelement domattr get attribute node string $isim
+domelement domattr get attribute node ns string $uri string $isim
+domelement string get attribute ns string $uri string $isim
+domelement domnodelist get elements by tag name string $isim
+domelement domnodelist get elements by tag name ns string $uri string $önekli_isim
+domelement bool has attribute string $isim
+domelement bool has attribute ns string $uri string $önekli_isim
+domelement bool remove attribute string $isim
+domelement bool remove attribute node domattr $öznitelik
+domelement bool remove attribute ns string $uri string $isim
+domelement domattr set attribute string $isim string $değer
+domelement domattr set attribute node domattr $öznitelik
+domelement domattr set attribute node ns domattr $öznitelik
+domelement void set attribute ns string $uri string $önekli_isim string $değer
+domelement void set id attribute string $isim bool $id_olarak
+domelement void set id attribute node domattr $öznitelik bool $id_olarak
+domelement void set id attribute ns string $uri string $isim bool $id_olarak
+domimplementation domdocument create document string $uri string $önekliad domdocumenttype $belgetürü
+domimplementation domdocumenttype create document type string $belgeadı string $publicid string $systemid
+domimplementation bool has feature string $özellik string $sürüm
+domnamednodemap domnode get named item string $isim
+domnamednodemap domnode get named item ns string $uri string $önekli_isim
+domnamednodemap domnode item int $indis
+domnode domnode append child domnode $yeni
+domnode domnode clone node bool $torunlar_dahil
+domnode bool has attributes
+domnode bool has child nodes
+domnode domnode insert before domnode $yeni domnode $mevcut
+domnode bool is default namespace string $uri
+domnode bool is same node domnode $düğüm
+domnode bool is supported string $özellik string $sürüm
+domnode string lookup namespace uri string $önek
+domnode string lookup prefix string $uri
+domnode void normalize
+domnode domnode remove child domnode $eski
+domnode domnode replace child domnode $yeni domnode $eski
+domnodelist domnode item int $indis
+domtext bool is whitespace in element content
+domtext domtext split text int $konum
+domxpath mixed evaluate string $ifade domnode $bağlamsal_düğüm
+domxpath domnodelist query string $ifade domnode $bağlamsal_düğüm
+domxpath bool register namespace string $önek string $uri
+errorexception int get severity
+exception void clone
+exception int get code
+exception string get file
+exception int get line
+exception string get message
+exception exception get previous
+exception array get trace
+exception string get trace as string
+exception string to string
+function string addcslashes string $dizge string $karakterler
+function string addslashes string $dizge
+function bool apache child terminate
+function array apache get modules
+function string apache get version
+function string apache getenv string $değişken bool $tepe_seviye
+function object apache lookup uri string $dosya_adı
+function string apache note string $not_adı string $not_değeri
+function array apache request headers
+function bool apache reset timeout
+function array apache response headers
+function bool apache setenv string $değişken string $değer bool $tepe_seviye
+function bool apc add string $anahtar mixed $değişken int $yaşam_süresi
+function array apc cache info string $önbellek_türü bool $sınırlı
+function bool apc clear cache string $önbellek_türü
+function bool apc compile file string $dosyaadi
+function bool apc define constants string $anahtar array $sabitler bool $buyukluk_duyarli
+function bool apc delete string $anahtar
+function mixed apc fetch string $anahtar bool $durum
+function bool apc load constants string $anahtar bool $buyukluk_duyarli
+function array apc sma info bool $sınırlı
+function bool apc store string $anahtar mixed $degisken int $yasam_suresi
+function bool apd breakpoint int $hata_ayıklama_seviyesi
+function array apd callstack
+function void apd clunk string $uyarı string $delimiter
+function bool apd continue int $hata_ayıklama_seviyesi
+function void apd croak string $hata_iletisi string $ayraç
+function void apd dump function table
+function array apd dump persistent resources
+function array apd dump regular resources
+function bool apd echo string $çıktı
+function array apd get active symbols
+function string apd set pprof trace string $döküm_dizini string $önek
+function bool apd set session trace socket string $tcp_sunucusu int $soket_türü int $port int $hata_ayıklama_seviyesi
+function void apd set session trace int $hata_ayıklama_seviyesi string $döküm_dizini
+function void apd set session int $hata_ayıklama_seviyesi
+function array array change key case array $dizi int $büyüklük
+function array array chunk array $dizi int $boyut bool $anahtarları_koru
+function array array combine array $anahtarlar array $değerler
+function array array count values array $dizi
+function array array diff assoc array $dizi1 array $dizi2
+function array array diff key array $dizi1 array $dizi2
+function array array diff uassoc array $dizi1 array $dizi2 callable $anh_karş_işlevi
+function array array diff ukey array $dizi1 array $dizi2 callable $anh_karş_işlevi
+function array array diff array $dizi1 array $dizi2
+function array array fill keys array $anahtarlar mixed $dolgu
+function array array fill int $başlangıç int $miktar mixed $dolgu
+function array array filter array $dizi callable $işlev int $seçenek
+function array array flip array $dizi
+function array array intersect key array $dizi1 array $dizi2
+function array array intersect uassoc array $dizi1 array $dizi2 callable $anh_karş_işlevi
+function array array intersect ukey array $dizi1 array $dizi2 callable $anh_karş_işlevi
+function array array intersect array $dizi1 array $dizi2
+function bool array key exists mixed $anahtar array $dizi
+function array array keys array $dizi mixed $arama_değeri bool $aynısı
+function array array map callable $işlev array $dizi1
+function array array merge recursive array $dizi1
+function array array merge array $dizi1
+function bool array multisort array $dizi mixed $arg mixed $arg
+function array array pad array $girdi int $yeni_boyut mixed $dolgu
+function mixed array pop array $dizi
+function number array product array $dizi
+function int array push array $dizi mixed $değişken
+function mixed array rand array $girdi int $istek_sayısı
+function mixed array reduce array $girdi callback $işlev int $ilk_değer
+function array array replace recursive array $disi array $dizi1 array $dizi2
+function array array replace array $dizi array $dizi1 array $dizi2
+function array array reverse array $dizi bool $anahtarları_koru
+function mixed array search mixed $iğne array $samanlık bool $türüne_bak
+function mixed array shift array $deste
+function array array slice array $girdi int $başlangıç int $uzunluk bool $indisleri_koru
+function array array splice array $girdi int $başlangıç int $uzunluk mixed $yenisi
+function number array sum array $dizi
+function array array udiff assoc array $dizi1 array $dizi2 callback $veri_karş_işlevi
+function array array udiff uassoc array $dizi1 array $dizi2 callback $veri_karş_işlevi callback $anh_karş_işlevi
+function array array udiff array $dizi1 array $dizi2 callback $veri_karş_işlevi
+function array array uintersect assoc array $dizi1 array $dizi2 callback $veri_karş_işlevi
+function array array uintersect uassoc array $dizi1 array $dizi2 callback $veri_karş_işlevi callback $anh_karş_işlevi
+function array array uintersect array $dizi1 array $dizi2 callback $işlev
+function array array unique array $dizi int $seçenekler
+function int array unshift array $dizi mixed $dğş
+function array array values array $dizi
+function bool array walk recursive array $dizi callback $işlev mixed $veri
+function array array
+function bool arsort array $dizi int $seçenekler
+function bool asort array $dizi int $seçenekler
+function mixed assert options int $seçenek mixed $değer
+function string base64 decode string $veri bool $titiz
+function string base64 encode string $veri
+function string basename string $yol string $uzantı
+function bool bbcode add element resource $bbcode_havuzu string $etiket_adi array $etiket_kurallari
+function bool bbcode add smiley resource $bbcode_havuzu string $kaynak string $hedef
+function resource bbcode create array $bbcode_baslangic_etiketleri
+function bool bbcode destroy resource $bbcode_havuzu
+function string bbcode parse resource $bbcode_havuzu string $cozumlenecek_dizge
+function bool bbcode set arg parser resource $bbcode_havuzu resource $bbcode_degistirge_havuzu
+function bool bbcode set flags resource $bbcode_havuzu int $secenekler int $durum
+function string bcadd string $sol_terim string $sag_terim int $olcek
+function int bccomp string $sol_terim string $sag_terim int $olcek
+function string bcdiv string $sol_terim string $sag_terim int $olcek
+function string bcmod string $sol_terim string $modul
+function string bcmul string $sol_terim string $sag_terim int $olcek
+function bool bcompiler load exe string $dosyaadi
+function bool bcompiler load string $dosyaadi
+function bool bcompiler parse class string $sinif string $gericagirim
+function bool bcompiler read resource $dosyatanitici
+function bool bcompiler write class resource $dosyatanitici string $sinifadi string $genisletme
+function bool bcompiler write constant resource $dosyatanitici string $sabitadi
+function bool bcompiler write exe footer resource $dosyatanitici int $baslangickonum
+function bool bcompiler write file resource $dosyatanitici string $dosyaadi
+function bool bcompiler write footer resource $dosyatanitici
+function bool bcompiler write function resource $dosyatanitici string $islevadi
+function bool bcompiler write functions from file resource $dosyatanitici string $dosyaadi
+function bool bcompiler write header resource $dosyatanitici string $surum
+function string bcpow string $sol_terim string $sag_terim int $olcek
+function string bcpowmod string $sol_terim string $sag_terim string $modul int $olcek
+function bool bcscale int $olcek
+function string bcsqrt string $terim int $olcek
+function string bcsub string $sol_terim string $sag_terim int $olcek
+function string bin2hex string $dizge
+function string bind textdomain codeset string $uygulama_adı string $karküm
+function string bindtextdomain string $uygulama_adı string $dizin
+function int bzclose resource $bz
+function mixed bzcompress string $kaynak int $blokboyu int $katsayı
+function mixed bzdecompress string $kaynak int $ufak
+function int bzerrno resource $bz
+function array bzerror resource $bz
+function string bzerrstr resource $bz
+function int bzflush resource $bz
+function resource bzopen string $dosyaadı string $kip
+function string bzread resource $bz int $uzunluk
+function int bzwrite resource $bz string $veri int $uzunluk
+function int cal days in month int $takvim int $ay int $yil
+function array cal from jd int $jg int $takvim
+function array cal info int $takvim
+function int cal to jd int $takvim int $ay int $gun int $yil
+function mixed call user func array callback $işlev array $değiştirge_dizisi
+function mixed call user func callback $işlev mixed $değiştirge
+function bool chdir string $dizin
+function bool checkdate int $ay int $gün int $yıl
+function bool checkdnsrr string $konak string $tür
+function bool chgrp string $dosyaismi mixed $grup
+function bool chmod string $dosyaismi int $kip
+function bool chown string $dosyaismi mixed $kullanıcı
+function string chr int $ascii
+function bool chroot string $dizin
+function bool class exists string $sınıf bool $özdevinimli_yükle
+function void clearstatcache bool $gerçek_yol_belleğini_temizle string $dosyaismi
+function void closedir resource $dizin_tanıtıcısı
+function bool closelog
+function string com create guid
+function bool com event sink variant $comnesne object $alicinesne mixed $aliciarayuz
+function variant com get active object string $progid int $kodsayfasi
+function bool com load typelib string $turkutuphaneadi bool $buyuklukduyarsiz
+function bool com message pump int $zaman_asimi
+function bool com print typeinfo object $comnesne string $arayuz bool $baglama
+function array compact mixed $değişken
+function int connection aborted
+function int connection status
+function string convert cyr string string $dizge string $kaynak string $hedef
+function string convert uudecode string $veri
+function string convert uuencode string $veri
+function bool copy string $kaynak string $hedef resource $bağlam
+function mixed count chars string $dizge int $kip
+function int count mixed $girdi int $kip
+function bool crack check resource $sözlük string $parola
+function bool crack closedict resource $sözlük
+function string crack getlastmessage
+function resource crack opendict string $sözlük
+function int crc32 string $dizge
+function string create function string $değiştirgeler string $kod
+function string crypt string $dizge string $tuz
+function bool ctype alnum string $metin
+function bool ctype alpha string $metin
+function bool ctype cntrl string $metin
+function bool ctype digit string $metin
+function bool ctype graph string $metin
+function bool ctype lower string $metin
+function bool ctype print string $metin
+function bool ctype punct string $metin
+function bool ctype space string $metin
+function bool ctype upper string $metin
+function bool ctype xdigit string $metin
+function void curl close resource $ct
+function resource curl copy handle resource $ct
+function int curl errno resource $ct
+function string curl error resource $ct
+function mixed curl exec resource $ct
+function mixed curl getinfo resource $ct int $seçenek
+function resource curl init string $url
+function int curl multi add handle resource $cct resource $ct
+function void curl multi close resource $cct
+function int curl multi exec resource $cct int $hala_çalışıyor
+function string curl multi getcontent resource $ct
+function array curl multi info read resource $cct int $iletiler
+function resource curl multi init
+function int curl multi remove handle resource $cct resource $ct
+function int curl multi select resource $cct float $zamanaşımı
+function bool curl setopt array resource $ct array $seçenekler
+function bool curl setopt resource $ct int $seçenek mixed $değer
+function array curl version int $dönem
+function mixed current array $dizi
+function string date default timezone get
+function bool date default timezone set string $zamandilimi_belirteci
+function mixed date sunrise int $zamandamgası int $biçim float $enlem float $boylam float $başucu float $gmt_farkı
+function mixed date sunset int $zamandamgası int $biçim float $enlem float $boylam float $başucu float $gmt_farkı
+function string date string $biçim int $zaman_damgası
+function string dcgettext string $uygulama_adı string $ileti int $yerel
+function string dcngettext string $uygulama_adı string $msgid1 string $msgid2 int $n int $yerel
+function array debug backtrace bool $nesne_sağla
+function void debug zval dump mixed $değişken
+function void define syslog variables
+function bool define string $isim mixed $değer bool $harf_büyüklüğüne_duyarsız
+function bool defined string $isim
+function void delete
+function string dgettext string $uygulama_adı string $ileti
+function void dio close resource $dt
+function mixed dio fcntl resource $dt int $komut mixed $değiştirgeler
+function resource dio open string $dosyaismi int $seçenekler int $kip
+function string dio read resource $dt int $uzunluk
+function int dio seek resource $dt int $nereye int $nereden
+function array dio stat resource $dt
+function bool dio tcsetattr resource $dt array $seçenekler
+function bool dio truncate resource $dt int $uzunluk
+function int dio write resource $dt string $veri int $uzunluk
+function string dirname string $yol
+function float disk free space string $dizin
+function float disk total space string $dizin
+function int dl string $kütüphane
+function string dngettext string $uygulama_adı string $msgid1 string $msgid2 int $n
+function array dns get record string $konakadı int $tür array $yetkili_enesler array $ek_kayıtlar
+function domelement dom import simplexml simplexmlelement $düğüm
+function array each array $dizi
+function int easter date int $yil
+function int easter days int $yil int $yontem
+function bool empty mixed $değişken
+function mixed end array $dizi
+function string eregi replace string $şablon string $yenisi string $dizge
+function int eregi string $şablon string $dizge array $gruplar
+function array error get last
+function bool error log string $ileti int $günlük_türü string $hedef string $ek_başlıklar
+function int error reporting int $seviye
+function string escapeshellarg string $değiştirge
+function string escapeshellcmd string $komut
+function string exec string $komut array $çıktı int $dönüş_değeri
+function int exif imagetype string $dosya
+function array exif read data string $dosya string $bölümler bool $diziler bool $küçük_örnek
+function string exif thumbnail string $dosya int $genişlik int $yükseklik int $resim_türü
+function void exit string $durum
+function array explode string $ayraç string $dizge int $sınır
+function bool extension loaded string $eklenti
+function int extract array $dizi int $çıkarım_türü string $önek
+function bool fclose resource $dt
+function bool feof resource $dt
+function bool fflush resource $dt
+function string fgetc resource $dt
+function array fgetcsv resource $dt int $uzunluk string $ayraç string $sınırlayıcı string $öncelem
+function string fgets resource $dt int $uzunluk
+function string fgetss resource $dt int $uzunluk string $etiketler
+function bool file exists string $dosyaismi
+function string file get contents string $dosyaismi int $seçenekler resource $bağlam int $başlangıç int $uzunluk
+function int file put contents string $dosyaismi mixed $veri int $seçenekler resource $bağlam
+function array file string $dosyaismi int $seçenekler resource $bağlam
+function int filectime string $dosyaismi
+function int filegroup string $dosyaismi
+function int fileinode string $dosyaismi
+function int filemtime string $dosyaismi
+function int fileowner string $dosyaismi
+function int fileperms string $dosyaismi
+function int filesize string $dosyaismi
+function string filetype string $dosyaismi
+function bool flock resource $dt int $işlem int $engellensin
+function bool fnmatch string $kalıp string $dizge int $seçenekler
+function resource fopen string $dosyaismi string $kip bool $include_path_kullan resource $bağlam
+function int fpassthru resource $dt
+function int fprintf resource $dt string $biçem mixed $değiştirgeler
+function int fputcsv resource $dt array $alanlar string $ayraç string $sınırlayıcı
+function string fread resource $dt int $uzunluk
+function int frenchtojd int $ay int $gun int $yil
+function mixed fscanf resource $dt string $biçem
+function int fseek resource $dt int $nereye int $nereden
+function resource fsockopen string $konakadı int $port int $hatanum string $hata_iletisi float $zaman_aşımı
+function array fstat resource $dt
+function int ftell resource $dt
+function bool ftp alloc resource $ftp_akımı int $dosyaboyu string $sonuç
+function bool ftp cdup resource $ftp_akımı
+function bool ftp chdir resource $ftp_akımı string $dizin
+function int ftp chmod resource $ftp_akımı int $kip string $dosya
+function bool ftp close resource $ftp_akımı
+function resource ftp connect string $adres int $port int $zamanaşımı
+function bool ftp delete resource $ftp_akımı string $dosya
+function bool ftp exec resource $ftp_akımı string $komut
+function bool ftp fget resource $ftp_akımı resource $dt string $uzak_dosya int $kip int $devam_yeri
+function bool ftp fput resource $ftp_akımı string $uzak_dosa resource $dt int $mode int $başlama_yeri
+function mixed ftp get option resource $ftp_akımı int $seçenek
+function bool ftp login resource $ftp_akımı string $kullanıcı string $parola
+function int ftp mdtm resource $ftp_akımı string $uzak_dosya
+function string ftp mkdir resource $ftp_akımı string $dizin
+function int ftp nb continue resource $ftp_akımı
+function int ftp nb fget resource $ftp_akımı resource $dt string $uzak_dosya int $kip int $devam_yeri
+function int ftp nb fput resource $ftp_akımı string $uzak_dosya resource $dt int $kip int $başlama_yeri
+function int ftp nb get resource $ftp_akımı string $yerel_dosya string $uzak_dosya int $kip int $devam_yeri
+function int ftp nb put resource $ftp_akımı string $uzak_dosya string $yerel_dosya int $kip int $başlama_yeri
+function bool ftp pasv resource $ftp_akımı bool $edilgen
+function bool ftp put resource $ftp_akımı string $uzak_dosya string $yerel_dosya int $kip int $başlama_yeri
+function array ftp raw resource $ftp_akımı string $komut
+function array ftp rawlist resource $ftp_akımı string $dizin bool $ardışık
+function bool ftp rename resource $ftp_akımı string $eskisi string $yenisi
+function bool ftp set option resource $ftp_akımı int $seçenek mixed $değer
+function bool ftp site resource $ftp_stream string $komut
+function int ftp size resource $ftp_akımı string $uzak_dosya
+function resource ftp ssl connect string $adres int $port int $zamanaşımı
+function string ftp systype resource $ftp_akımı
+function bool ftruncate resource $dt int $boyut
+function mixed func get arg int $dğş_num
+function array func get args
+function int func num args
+function bool function exists string $işlev_ismi
+function array gd info
+function mixed get browser string $tarayıcı bool $dizi_döndür
+function string get called class
+function string get cfg var string $yönerge
+function array get class methods mixed $sınıf
+function array get class vars string $sınıf
+function string get class object $nesne
+function array get declared classes
+function array get declared interfaces
+function array get defined constants bool $sınıfla
+function array get defined functions
+function array get defined vars
+function array get extension funcs string $modül_ismi
+function array get headers string $url int $biçemle
+function array get html translation table int $tablo int $öncelem_türü
+function array get included files
+function array get loaded extensions bool $zend_eklentileri
+function int get magic quotes gpc
+function array get meta tags string $dosya bool $include_path_kullan
+function array get object vars object $nesne
+function string get parent class mixed $nesne
+function string get resource type resource $tanıtıcı
+function array getallheaders
+function string getcwd
+function array getdate int $zaman_damgası
+function string getenv string $değişken
+function string gethostbyaddr string $ip_adresi
+function string gethostbyname string $konakadı
+function array gethostbynamel string $konakadı
+function string gethostname
+function array getimagesize string $dosyaismi array $ekbilgi
+function int getlastmod
+function bool getmxrr string $konakadı array $emiksler array $önem
+function int getmyinode
+function int getmypid
+function array getopt string $kısa_seçenekler array $uzun_seçenekler
+function int getprotobyname string $ad
+function string getprotobynumber int $numara
+function array getrusage int $kim
+function int getservbyname string $hizmet string $protokol
+function string getservbyport int $port string $protokol
+function string gettext string $ileti
+function mixed gettimeofday bool $sayı_döndür
+function string gettype mixed $var
+function array glob string $kalıp int $seçenekler
+function string gmdate string $biçem int $zaman_damgası
+function int gmmktime int $saat int $dakika int $saniye int $ay int $gün int $yıl int $ysu_var
+function string gmstrftime string $biçem int $zaman_damgası
+function string grapheme extract string $samanlık int $boyut int $birim int $başlangıç int $sonraki
+function int grapheme stripos string $samanlık string $iğne int $başlangıç
+function string grapheme stristr string $samanlık string $iğne bool $ilk_parça
+function int grapheme strlen string $dizge
+function int grapheme strripos string $samanlık string $iğne int $konum
+function string grapheme strstr string $samanlık string $iğne bool $ilk_parça
+function int grapheme substr string $dizge int $başlangıç int $uzunluk
+function int gregoriantojd int $ay int $gun int $yil
+function bool gzclose resource $dt
+function string gzcompress string $veri int $seviye int $kodlama
+function string gzdecode string $veri int $uzunluk
+function string gzdeflate string $veri int $seviye int $kodlama
+function string gzencode string $veri int $seviye int $kodlama_kipi
+function int gzeof resource $dt
+function array gzfile string $dosyaismi int $include_path_kullan
+function string gzgetc resource $dt
+function string gzgets resource $dt int $uzunluk
+function string gzgetss resource $dt int $uzunluk string $izinli_etiketler
+function string gzinflate string $veri int $uzunluk
+function resource gzopen string $dosyaismi string $kip int $include_path_kullan
+function int gzpassthru resource $dt
+function string gzread resource $dt int $uzunluk
+function bool gzrewind resource $dt
+function int gzseek resource $dt int $konum int $nereye
+function int gztell resource $dt
+function string gzuncompress string $veri int $uzunluk
+function int gzwrite resource $dt string $dizge int $uzunluk
+function void halt compiler
+function array hash algos
+function resource hash copy resource $bağlam
+function string hash file string $algo string $dosya bool $ham_çıktı
+function string hash final resource $bağlam bool $ham_çıktı
+function string hash hmac file string $algo string $dosya string $anahtar bool $ham_çıktı
+function string hash hmac string $algo string $veri string $anahtar bool $ham_çıktı
+function resource hash init string $algo int $seçenekler string $anahtar
+function bool hash update file resource $bağlam string $dosya resource $akım
+function int hash update stream resource $bağlam resource $dt int $uzunluk
+function bool hash update resource $bağlam string $veri
+function string hash string $algo string $veri bool $ham_çıktı
+function void header string $dizge bool $değiştir int $http_yanıt_kodu
+function array headers list
+function bool headers sent string $dosya int $satır
+function string hebrev string $ibranice_metin int $satırdaki_azami_krk_sayısı
+function string hebrevc string $ibranice_metin int $satırdaki_azami_krk_sayısı
+function mixed highlight file string $dosya bool $döndür
+function string html entity decode string $dizge int $öncelem_türü string $karküm
+function string htmlentities string $dizge int $öncelem_türü string $karküm bool $çifte_kodlama
+function string htmlspecialchars decode string $dizge int $öncelem_türü
+function string htmlspecialchars string $dizge int $öncelem_türü string $karküm bool $çifte_kodlama
+function string http build query array $form_verisi string $sayısal_önek string $ayraç
+function mixed iconv get encoding string $tür
+function array iconv mime decode headers string $kodlanmış_başlıklar int $kip string $karküm
+function string iconv mime decode string $kodlanmış_başlık int $kip string $karküm
+function string iconv mime encode string $alan_adı string $alan_değeri array $tercihler
+function bool iconv set encoding string $türü string $karküm
+function int iconv strlen string $dizge string $karküm
+function int iconv strpos string $samanlık string $iğne int $başlangıç string $karküm
+function int iconv strrpos string $samanlık string $iğne string $karküm
+function string iconv substr string $dizge int $başlangıç int $uzunluk string $karküm
+function string iconv string $kodlamadan string $kodlamaya string $dizge
+function int idate string $biçem int $zaman_damgası
+function string idn to ascii string $alan int $seçenekler
+function string idn to utf8 string $alan int $seçenekler
+function int ignore user abort string $değer
+function string image type to extension int $resimtürü bool $noktalı
+function string image type to mime type int $resimtürü
+function bool image2wbmp resource $resim string $dosyaismi int $eşik
+function bool imagealphablending resource $resim bool $etkin
+function bool imageantialias resource $resim bool $etkin
+function bool imagearc resource $resim int $mx int $my int $genişlik int $yükseklik int $baş int $son int $renk
+function bool imagechar resource $resim int $yazıtipi int $x int $y string $karakter int $renk
+function bool imagecharup resource $image int $font int $x int $y string $c int $color
+function int imagecolorallocate resource $resim int $kırmızı int $yeşil int $mavi
+function int imagecolorallocatealpha resource $resim int $kırmızı int $yeşil int $mavi int $alfa
+function int imagecolorat resource $resim int $x int $y
+function int imagecolorclosest resource $resim int $kırmızı int $yeşil int $mavi
+function int imagecolorclosestalpha resource $resim int $kırmızı int $yeşil int $mavi int $alfa
+function int imagecolorclosesthwb resource $resim int $kırmızı int $yeşil int $mavi
+function bool imagecolordeallocate resource $resim int $renk
+function int imagecolorexact resource $resim int $kırmızı int $yeşil int $mavi
+function int imagecolorexactalpha resource $resim int $kırmızı int $yeşil int $mavi int $alfa
+function bool imagecolormatch resource $resim1 resource $resim2
+function int imagecolorresolve resource $resim int $kırmızı int $yeşil int $mavi
+function int imagecolorresolvealpha resource $resim int $kırmızı int $yeşil int $mavi int $alfa
+function void imagecolorset resource $resim int $indis int $kırmızı int $yeşil int $mavi
+function array imagecolorsforindex resource $resim int $indis
+function int imagecolorstotal resource $resim
+function int imagecolortransparent resource $resim int $renk
+function bool imageconvolution resource $resim array $matris float $katsayı float $konum
+function bool imagecopy resource $hedef resource $kaynak int $hdf_x int $hdf_y int $kyn_x int $kyn_y int $kyn_gnş int $kyn_yks
+function resource imagecreate int $genişlik int $yükseklik
+function resource imagecreatefromgd string $dosyaismi
+function resource imagecreatefromgd2 string $dosyaismi
+function resource imagecreatefromgd2part string $dosyaismi int $x int $y int $genişlik int $yükseklik
+function resource imagecreatefromgif string $dosyaismi
+function resource imagecreatefromjpeg string $dosyaismi
+function resource imagecreatefrompng string $dosyaismi
+function resource imagecreatefromstring string $veri
+function resource imagecreatefromwbmp string $dosyaismi
+function resource imagecreatefromxbm string $dosyaismi
+function resource imagecreatefromxpm string $dosyaismi
+function resource imagecreatetruecolor int $genişlik int $yükseklik
+function bool imagedashedline resource $resim int $x1 int $y1 int $x2 int $y2 int $renk
+function bool imagedestroy resource $resim
+function bool imageellipse resource $resim int $mx int $my int $genişlik int $yükseklik int $renk
+function bool imagefill resource $resim int $x int $y int $renk
+function bool imagefilledellipse resource $resim int $mx int $my int $genişlik int $yükseklik int $renk
+function bool imagefilledpolygon resource $resim array $noktalar int $nokta_sayısı int $renk
+function bool imagefilledrectangle resource $resim int $x1 int $y1 int $x2 int $y2 int $renk
+function bool imagefilltoborder resource $resim int $x int $y int $kenar int $dolgu
+function bool imagefilter resource $resim int $süzgeç int $d1 int $d2 int $d3 int $d4
+function int imagefontheight int $yazıtipi
+function int imagefontwidth int $yazıtipi
+function array imageftbbox float $boyut float $açı string $yazıtipi string $metin array $ekbilgi
+function bool imagegammacorrect resource $resim float $girdigamma float $çıktıgamma
+function bool imagegd resource $resim string $dosyaismi
+function bool imagegd2 resource $resim string $dosyaismi int $parça_boyutu int $tür
+function bool imagegif resource $resim string $dosyaismi
+function resource imagegrabscreen
+function resource imagegrabwindow int $pencere int $istemci_alanı
+function int imageinterlace resource $resim int $geçişim
+function bool imageistruecolor resource $resim
+function bool imagejpeg resource $resim string $dosyaismi int $kalite
+function bool imagelayereffect resource $image int $etki
+function bool imageline resource $resim int $x1 int $y1 int $x2 int $y2 int $renk
+function int imageloadfont string $dosya
+function void imagepalettecopy resource $hedef resource $kaynak
+function bool imagepng resource $resim string $dosyaismi int $kalite int $süzgeçler
+function bool imagepolygon resource $resim array $noktalar int $nokta_sayısı int $renk
+function array imagepsbbox string $metin resource $yazıtipi int $boyut
+function bool imagepsencodefont resource $yazıtipi string $kodlama_dosyası
+function bool imagepsextendfont resource $yazıtipi float $katsayı
+function bool imagepsfreefont resource $font_index
+function resource imagepsloadfont string $dosyaismi
+function bool imagepsslantfont resource $yazıtipi float $eğim
+function bool imagerectangle resource $resim int $x1 int $y1 int $x2 int $y2 int $renk
+function resource imagerotate resource $resim float $açı int $artalan int $şeffaflığı_yoksay
+function bool imagesavealpha resource $resim bool $alfa_kaydet
+function bool imagesetbrush resource $resim resource $fırça
+function bool imagesetpixel resource $resim int $x int $y int $renk
+function bool imagesetstyle resource $resim array $tarz
+function bool imagesetthickness resource $resim int $kalınlık
+function bool imagesettile resource $image resource $karo
+function bool imagestring resource $resim int $yazıtipi int $x int $y string $dizge int $renk
+function bool imagestringup resource $resim int $yazıtipi int $x int $y string $dizge int $renk
+function int imagesx resource $resim
+function int imagesy resource $resim
+function bool imagetruecolortopalette resource $resim bool $titrek int $renk_sayısı
+function array imagettfbbox float $boyut float $açı string $yazıtipi string $metin
+function array imagettftext resource $resim float $boyut float $açı int $x int $y int $renk string $yazıtipi string $metin
+function int imagetypes
+function bool imagewbmp resource $resim string $dosyaismi int $artalan
+function bool imagexbm resource $resim string $dosyaismi int $artalan
+imagick bool adaptive blur image float $yarıçap float $sapma int $kanal
+imagick bool adaptive resize image int $genişlik int $yükseklik bool $sığdır
+imagick bool adaptive sharpen image float $yarıçap float $sapma int $kanal
+imagick bool adaptive threshold image int $genişlik int $yükseklik int $başlangıç
+imagick bool animate images string $x_sunucusu
+imagick imagick append images bool $yığıt
+imagick bool chop image int $genişlik int $yükseklik int $x int $y
+imagick bool clut image imagick $renk_tablosu float $kanal
+imagick bool comment image string $açıklama
+imagick imagick compare image layers int $yöntem
+imagick bool contrast stretch image float $siyah_nokta float $beyaz_nokta int $kanal
+imagick bool decipher image string $parola
+imagick bool distort image int $yöntem array $değiştirgeler bool $sığdır
+imagick bool encipher image string $parola
+imagick bool extent image int $genişlik int $yükseklik int $x int $y
+imagick int get compression
+imagick int get compression quality
+imagick string get font
+imagick int get image channel depth int $kanal
+imagick imagick get image clip mask
+imagick int get image compression
+imagick int get image interpolate method
+imagick int get image length
+imagick int get image matte
+imagick int get image orientation
+imagick array get image profiles string $şablon bool $sadece_isimler
+imagick array get image properties string $şablon bool $sadece_isimler
+imagick string get image property string $isim
+imagick int get iterator index
+imagick string get point size
+imagick int get size offset
+imagick bool linear stretch image float $siyah_nokta float $beyaz_nokta
+imagick bool liquid rescale image int $genişlik int $yükseklik float $delta_x float $diklik
+imagick bool merge image layers int $katman_yöntemi
+imagick bool opaque paint image mixed $hedef mixed $renk float $benzerlik bool $ters int $kanal
+imagick bool optimize image layers
+imagick bool ordered posterize image string $eşik_eşlemi int $kanal
+imagick bool paint floodfill image mixed $dolgu float $benzerlik mixed $çerçeve_rengi int $x int $y int $kanal
+imagick bool ping image blob string $resim
+imagick bool ping image file resource $dt string $dosya
+imagick bool polaroid image imagickdraw $nesne float $açı
+imagick bool random threshold image float $düşük float $yüksek int $kanal
+imagick bool reset image page string $sayfa
+imagick bool set font string $yazıtipi
+imagick bool set image alpha channel int $kip
+imagick bool set image clip mask imagick $kırpıcı_resim
+imagick bool set image compression int $sıkıştırma
+imagick bool set image compression quality int $seviye
+imagick bool set image interpolate method int $yöntem
+imagick bool set image matte bool $matlık
+imagick bool set image opacity float $matlık
+imagick bool set image orientation int $baskı_yönü
+imagick bool set image property string $isim string $değer
+imagick bool set point size float $punto
+imagick bool shade image bool $gri float $başucu float $yükseliş
+imagick bool sketch image float $yarıçap float $sapma float $açı
+imagick imagick transform image string $budama string $geometri
+imagick bool transparent paint image mixed $hedef float $şeffaflık float $benzerlik bool $ters
+imagick bool transpose image
+imagick bool transverse image
+imagick bool trim image float $benzerlik
+imagick bool unique image colors
+imagick bool vignette image float $siyahnokta float $beyaznokta int $x int $y
+imagick bool wave image float $genlik float $dalga_boyu
+imagick bool write image file resource $dt
+imagick bool write images file resource $dt
+function array imap alerts
+function string imap base64 string $dizge
+function string imap body resource $imap_akımı int $iletinum int $seçenekler
+function object imap bodystruct resource $imap_akımı int $iletinum string $bölüm
+function object imap check resource $imap_akımı
+function bool imap clearflag full resource $imap_akımı string $aralık string $imler int $seçenekler
+function bool imap close resource $imap_akımı int $seçenek
+function bool imap createmailbox resource $imap_akımı string $pk
+function bool imap delete resource $imap_akımı int $iletinum int $seçenekler
+function array imap errors
+function bool imap expunge resource $imap_akımı
+function array imap fetch overview resource $imap_akımı string $aralık int $seçenekler
+function string imap fetchbody resource $imap_akımı int $iletinum string $bölüm int $seçenekler
+function string imap fetchheader resource $imap_akımı int $iletinum int $seçenekler
+function object imap fetchstructure resource $imap_akımı int $iletinum int $seçenekler
+function string imap gc resource $imap_akımı int $önbellek_türü
+function array imap get quota resource $imap_akımı string $kullanıcı
+function array imap get quotaroot resource $imap_akımı string $pk
+function array imap getacl resource $imap_akımı string $pk
+function array imap getmailboxes resource $imap_akımı string $hedef string $kalıp
+function array imap getsubscribed resource $imap_akımı string $hedef string $kalıp
+function object imap headerinfo resource $imap_akımı int $iletinum int $uzunluk int $konu_uzunluğu string $öntanımlı_konak
+function array imap headers resource $imap_akımı
+function string imap last error
+function array imap listscan resource $imap_akımı string $hedef string $kalıp string $içerik
+function array imap lsub resource $imap_akımı string $hedef string $kalıp
+function string imap mail compose array $zarf array $gövde
+function bool imap mail copy resource $imap_akımı string $iletiler string $pk int $seçenekler
+function bool imap mail move resource $imap_akımı string $iletiler string $pk int $seçenekler
+function bool imap mail string $kime string $konu string $ileti string $ek_başlıklar string $cc string $bcc string $dönüş_yolu
+function array imap mime header decode string $dizge
+function int imap msgno resource $imap_akımı int $uid
+function int imap num msg resource $imap_akımı
+function int imap num recent resource $imap_akımı
+function resource imap open string $pk string $kullanıcı string $parola int $seçenekler int $dnm_sayısı
+function bool imap ping resource $imap_akımı
+function string imap qprint string $dizge
+function bool imap renamemailbox resource $imap_akımı string $eskisi string $yenisi
+function bool imap reopen resource $imap_akımı string $pk int $seçenekler int $dnm_sayısı
+function array imap rfc822 parse adrlist string $adres string $konak_adı
+function object imap rfc822 parse headers string $başlıklar string $konakadı
+function string imap rfc822 write address string $posta_kutusu string $alan_adı string $adı_soyadı
+function bool imap savebody resource $imap_akımı mixed $dosya int $iletinum string $parçanum int $seçenekler
+function array imap search resource $imap_akımı string $kural int $seçenekler string $karküm
+function bool imap set quota resource $imap_akımı string $posta_kutusu int $kota_sınırı
+function bool imap setacl resource $imap_akımı string $posta_kutusu string $kullanıcı string $izinler
+function bool imap setflag full resource $imap_akımı string $aralık string $im int $seçenekler
+function array imap sort resource $imap_akımı int $kural int $tersine int $seçenekler string $arama_kuralı string $karküm
+function object imap status resource $imap_akımı string $posta_kutusu int $seçenekler
+function bool imap subscribe resource $imap_akımı string $posta_kutusu
+function array imap thread resource $imap_akımı int $seçenekler
+function mixed imap timeout int $türü int $süre
+function int imap uid resource $imap_akımı int $iletinum
+function bool imap undelete resource $imap_akımı int $iletinum int $seçenekler
+function bool imap unsubscribe resource $imap_akımı string $posta_kutusu
+function string imap utf7 decode string $metin
+function string imap utf7 encode string $veri
+function string imap utf8 string $mimeli_metin
+function string implode string $yapıştırıcı array $parçalar
+function bool import request variables string $türler string $önek
+function bool in array mixed $iğne array $samanlık bool $strict
+function string inet pton string $ip_adresi
+function array ini get all string $eklenti bool $ayrıntılı
+function string ini get string $yönerge
+function void ini restore string $yönerge
+function string ini set string $yönerge string $değer
+function bool interface exists string $arayüz bool $özdevinimli_yükle
+function string intl error name int $error_code
+function int intl get error code
+function string intl get error message
+function int intval mixed $değişken int $taban
+function int ip2long string $ip_adresi
+function mixed iptcembed string $iptcverisi string $jpeg_dosya_ismi int $kuyruk
+function array iptcparse string $iptcbloğu
+function bool is a object $nesne string $sınıf
+function bool is array mixed $değişken
+function bool is bool mixed $değişken
+function bool is callable callback $işlev bool $sözdizimsel string $isim
+function bool is dir string $dosyaismi
+function bool is executable string $dosyaismi
+function bool is file string $dosyaismi
+function bool is float mixed $değişken
+function bool is int mixed $değişken
+function bool is link string $filename
+function bool is null mixed $değişken
+function bool is numeric mixed $değişken
+function bool is object mixed $değişken
+function bool is readable string $dosyaismi
+function bool is resource mixed $değişken
+function bool is scalar mixed $değişken
+function bool is string mixed $değişken
+function bool is subclass of mixed $nesne string $sınıf
+function bool is uploaded file string $dosyaismi
+function bool is writable string $dosyaismi
+function bool isset mixed $değişken mixed $değişken
+function mixed jddayofweek int $julyengunu int $yontem
+function string jdmonthname int $julyengunu int $takvim
+function string jdtofrench int $julyengunu
+function string jdtogregorian int $julyengunu
+function string jdtojewish int $julyengunu bool $ibrani int $bicim
+function string jdtojulian int $julyengunu
+function int jdtounix int $julyengunu
+function int jewishtojd int $ay int $gun int $yil
+function bool jpeg2wbmp string $jpegdosya string $wbmpdosya int $hdf_yüks int $hdf_genş int $eşik
+function mixed json decode string $json bool $assoc int $depth
+function string json encode mixed $deger int $secenekler
+function int json last error
+function int juliantojd int $ay int $gun int $yil
+function mixed key array $dizi
+function bool krsort array $dizi int $seçenekler
+function bool ksort array $dizi int $seçenekler
+function string lcfirst string $dizge
+function bool lchgrp string $dosyaismi mixed $grup
+function bool lchown string $dosyaismi mixed $kullanıcı
+function int levenshtein string $d1 string $d2
+function array libxml get errors
+function libxmlerror libxml get last error
+function void libxml set streams context resource $akım_bağlamı
+function bool libxml use internal errors bool $hatalar_etkin
+function bool link string $bağ string $hedef
+function int linkinfo string $yol
+function array list mixed $değişken
+function array localeconv
+function array localtime int $zamandamgası bool $ilişkisel_mi
+function string long2ip string $özel_adres
+function array lstat string $dosyaismi
+function string ltrim string $dizge string $karakterler
+function string lzf compress string $veri
+function string lzf decompress string $veri
+function int lzf optimized for
+function bool mb check encoding string $dizge string $kodlama
+function string mb convert case string $dizge int $kip string $kodlama
+function string mb convert encoding string $dizge string $kodlamaya mixed $kodlamadan
+function string mb convert kana string $dizge string $seçenek string $kodlama
+function string mb convert variables string $kodlamaya mixed $kodlamadan mixed $değişkenler
+function string mb decode mimeheader string $dizge
+function string mb decode numericentity string $dizge array $bölge string $kodlama
+function string mb detect encoding string $dizge mixed $kodlama_listesi bool $kesin
+function mixed mb detect order mixed $kodlama_listesi
+function string mb encode mimeheader string $dizge string $karküm string $aktarım_kodlaması string $satırsonu int $girinti
+function string mb encode numericentity string $dizge array $bölge string $kodlama
+function bool mb ereg match string $şablon string $dizge string $seçenek
+function bool mb ereg search init string $dizge string $şablon string $seçenek
+function array mb ereg search pos string $şablon string $seçenek
+function array mb ereg search regs string $şablon string $seçenek
+function bool mb ereg search string $şablon string $seçenek
+function mixed mb http output string $kodlama
+function mixed mb internal encoding string $kodlama
+function mixed mb language string $dil
+function array mb list encodings
+function string mb output handler string $içerik int $durum
+function bool mb parse str string $kodlu_dizge array $sonuç
+function string mb preferred mime name string $kodlama
+function mixed mb regex encoding string $kodlama
+function bool mb send mail string $kime string $konu string $ileti string $ek_başlıklar string $ek_değiştirge
+function string mb strcut string $dizge int $başlangıç int $uzunluk string $kodlama
+function string mb strimwidth string $dizge int $başlangıç int $genişlik string $kırpıcı string $kodlama
+function int mb stripos string $samanlık string $iğne int $konum string $kodlama
+function string mb stristr string $samanlık string $iğne bool $ilk_parça string $kodlama
+function int mb strlen string $dizge string $kodlama
+function int mb strpos string $samanlık string $iğne int $konum string $kodlama
+function string mb strrchr string $samanlık string $iğne bool $ilk_parça string $kodlama
+function string mb strrichr string $samanlık string $iğne bool $ilk_parça string $kodlama
+function int mb strripos string $samanlık string $iğne int $konum string $kodlama
+function int mb strrpos string $samanlık string $iğne int $konum string $kodlama
+function string mb strstr string $samanlık string $iğne bool $ilk_parça string $kodlama
+function string mb strtolower string $dizge string $kodlama
+function string mb strtoupper string $dizge string $kodlama
+function int mb strwidth string $dizge string $kodlama
+function mixed mb substitute character mixed $ikamekrk
+function int mb substr count string $samanlık string $iğne string $kodlama
+function string mb substr string $dizge int $başlangıç int $uzunluk string $kodlama
+function string mcrypt cbc int $şifre string $tuz string $veri int $kip string $iv
+function string mcrypt cfb int $şifre string $tuz string $veri int $kip string $iv
+function string mcrypt create iv int $boy int $kaynak
+function string mcrypt decrypt string $şifre string $anahtar string $veri string $kip string $iv
+function string mcrypt ecb int $şifre string $tuz string $veri int $kip
+function string mcrypt enc get algorithms name resource $şt
+function int mcrypt enc get block size resource $şt
+function int mcrypt enc get iv size resource $şt
+function int mcrypt enc get key size resource $şt
+function string mcrypt enc get modes name resource $şt
+function array mcrypt enc get supported key sizes resource $şt
+function bool mcrypt enc is block algorithm mode resource $şt
+function bool mcrypt enc is block algorithm resource $şt
+function bool mcrypt enc is block mode resource $şt
+function int mcrypt enc self test resource $şt
+function string mcrypt encrypt string $şifre string $anahtar string $veri string $kip string $iv
+function bool mcrypt generic deinit resource $şt
+function bool mcrypt generic end resource $şt
+function int mcrypt generic init resource $şt string $anahtar string $iv
+function string mcrypt generic resource $şt string $veri
+function int mcrypt get block size int $şifre
+function string mcrypt get cipher name int $şifre
+function int mcrypt get iv size string $şifre string $kip
+function int mcrypt get key size int $şifre
+function array mcrypt list algorithms string $lib_dir
+function array mcrypt list modes string $lib_dir
+function bool mcrypt module close resource $şt
+function int mcrypt module get algo block size string $algoritma string $lib_dir
+function int mcrypt module get algo key size string $algoritma string $lib_dir
+function array mcrypt module get supported key sizes string $algoritma string $lib_dir
+function bool mcrypt module is block algorithm mode string $kip string $lib_dir
+function bool mcrypt module is block algorithm string $algoritma string $lib_dir
+function bool mcrypt module is block mode string $kip string $lib_dir
+function resource mcrypt module open string $algoritma string $algoritma_dizini string $kip string $kip_dizini
+function bool mcrypt module self test string $algoritma string $lib_dir
+function string mcrypt ofb int $şifre string $tuz string $veri int $kip string $iv
+function string md5 file string $dosya bool $ham_çıktı
+function string md5 string $dizge bool $ham_çıktı
+function string mdecrypt generic resource $şt string $veri
+function int memory get peak usage bool $gerçek_kullanım
+function int memory get usage bool $gerçek_kullanım
+function string metaphone string $dizge int $sesler
+function bool method exists mixed $sınıf string $yöntem
+function int mhash count
+function int mhash get block size int $algoritma
+function string mhash get hash name int $algoritma
+function string mhash keygen s2k int $özet string $parola string $tuz int $uzunluk
+function string mhash int $algoritma string $veri string $anahtar
+function mixed microtime bool $gerçek_sayı
+function bool mkdir string $yol int $kip bool $ardışık resource $bağlam
+function int mktime int $saat int $dakika int $saniye int $ay int $gün int $yıl int $ysu_var
+function string money format string $biçem float $sayı
+function bool move uploaded file string $dosyaismi string $hedef
+function int mysql affected rows resource $bağlantı_belirteci
+function string mysql client encoding resource $bağlantı_belirteci
+function bool mysql close resource $bağlantı_belirteci
+function resource mysql connect string $sunucu string $kullanıcı_adı string $parola bool $yeni_bağlantı int $istemci_seçenekleri
+function bool mysql create db string $veritabanı_adı resource $bağlantı_belirteci
+function string mysql db name resource $sonuç int $satır mixed $alan
+function resource mysql db query string $veritabanı string $sorgu resource $bağlantı_belirteci
+function array mysql fetch lengths resource $sonuç
+function int mysql field len resource $result int $alan_konumu
+function bool mysql field seek resource $sonuç int $alan_konumu
+function string mysql field table resource $sonuç int $alan_konumu
+function bool mysql free result resource $sonuç
+function string mysql get client info
+function string mysql get host info resource $bağlantı_belirteci
+function int mysql get proto info resource $bağlantı_belirteci
+function string mysql get server info resource $bağlantı_belirteci
+function string mysql info resource $bağlantı_belirteci
+function resource mysql list dbs resource $bağlantı_belirteci
+function resource mysql list fields string $veritabanı_adı string $tablo_adı resource $bağlantı_belirteci
+function resource mysql list processes resource $bağlantı_belirteci
+function resource mysql list tables string $veritabanı resource $bağlantı_belirteci
+function int mysql num fields resource $sonuç
+function int mysql num rows resource $sonuç
+function bool mysql ping resource $bağlantı_belirteci
+function bool mysql select db string $veritabanı_adı resource $bağlantı_belirteci
+function string mysql stat resource $bağlantı_belirteci
+function string mysql tablename resource $sonuç int $i
+function int mysql thread id resource $bağlantı_belirteci
+function resource mysql unbuffered query string $sorgu resource $bağlantı_belirteci
+function bool natcasesort array $dizi
+function bool natsort array $array
+function mixed next array $dizi
+function string ngettext string $msgid1 string $msgid2 int $n
+function string nl langinfo int $eleman
+function string nl2br string $string bool $xhtml
+function string number format float $sayı int $ondalık_hane
+function void ob clean
+function bool ob end clean
+function bool ob end flush
+function void ob flush
+function string ob get clean
+function string ob get contents
+function string ob get flush
+function int ob get length
+function int ob get level
+function array ob get status bool $tam_durum
+function string ob gzhandler string $tampon int $kip
+function string ob iconv handler string $içerik int $durum
+function void ob implicit flush int $seçenek
+function array ob list handlers
+function bool ob start callable $çıktı_geriçağırıcı int $parça_boyu int $seçenekler
+function string ob tidyhandler string $tampon int $kip
+function mixed odbc autocommit resource $bağlantı_kimliği bool $açkapa
+function bool odbc binmode resource $sonuç_kimliği int $kip
+function void odbc close all
+function void odbc close resource $bağlantı_kimliği
+function resource odbc columnprivileges resource $bağlantı_kimliği string $niteleyici string $sahibi string $tablo_ismi string $sütun_ismi
+function resource odbc columns resource $bağlantı_kimliği string $niteleyici string $şema string $tablo_ismi string $sütun_ismi
+function bool odbc commit resource $bağlantı_kimliği
+function string odbc cursor resource $sonuç_kimliği
+function array odbc data source resource $bağlantı_kimliği int $alım_türü
+function resource odbc exec resource $bağlantı_kimliği string $sorgu_dizgesi int $seçenekler
+function bool odbc execute resource $sonuç_kimliği array $değiştirgeler
+function array odbc fetch array resource $sonuç int $satırnum
+function int odbc fetch into resource $sonuç_kimliği array $sonuç_dizisi int $satırnum
+function object odbc fetch object resource $sonuç_kimliği int $satırnum
+function bool odbc fetch row resource $sonuç_kimliği int $satırnum
+function int odbc field len resource $sonuç_kimliği int $alannum
+function string odbc alan adı resource $sonuç_kimliği int $alannum
+function int odbc field num resource $sonuç_kimliği string $alan_adı
+function int odbc field scale resource $sonuç_kimliği int $alannum
+function string odbc field type resource $sonuç_kimliği int $alannum
+function resource odbc foreignkeys resource $bağlantı_kimliği string $ba_niteleyici string $ba_sahibi string $ba_tablo string $ya_niteleyici string $ya_sahibi string $ya_tablo
+function bool odbc free result resource $sonuç_kimliği
+function resource odbc gettypeinfo resource $bağlantı_kimliği int $veri_türü
+function bool odbc longreadlen resource $sonuç_kimliği int $uzunluk
+function bool odbc next result resource $sonuç_kimliği
+function int odbc num fields resource $sonuç_kimliği
+function int odbc num rows resource $sonuç_kimliği
+function resource odbc pconnect string $dsn string $kullanıcı string $parola int $imleç_türü
+function resource odbc prepare resource $bağlantı_kimliği string $sorgu_dizgesi
+function resource odbc primarykeys resource $bağlantı_kimliği string $niteleyici string $sahibi string $tablo
+function resource odbc procedurecolumns resource $bağlantı_kimliği
+function resource odbc procedures resource $bağlantı_kimliği
+function int odbc result all resource $sonuç_kimliği string $biçem
+function mixed odbc result resource $sonuç_kimliği mixed $alan
+function bool odbc rollback resource $bağlantı_kimliği
+function bool odbc setoption resource $kimlik int $işlev int $seçenek int $değer
+function resource odbc specialcolumns resource $bağlantı_kimliği int $türü string $niteleyici string $sahibi string $tablo int $kapsam int $boş
+function resource odbc statistics resource $bağlantı_kimliği string $niteleyici string $sahibi string $tablo_ismi int $eşsiz int $doğruluk
+function resource odbc tableprivileges resource $bağlantı_kimliği string $niteleyici string $sahibi string $isim
+function resource odbc tables resource $bağlantı_kimliği string $niteleyici string $sahibi string $isim string $tablo_türü
+function resource opendir string $dizin resource $bağlam
+function bool openlog string $kimlik int $seçenek int $oluşum
+function bool openssl csr export to file resource $csr string $dosya bool $metinsiz
+function bool openssl csr export resource $csr string $çıktı bool $metinsiz
+function mixed openssl csr new array $dn resource $gizanh array $ayarlar array $ek_seçenekler
+function resource openssl csr sign mixed $csr mixed $ca_sert mixed $gizanh int $gün array $ayarlar int $sıranum
+function string openssl decrypt string $veri string $yöntem string $parola string $ham_girdi
+function string openssl digest string $veri string $yöntem bool $ham_çıktı
+function string openssl encrypt string $veri string $yöntem string $parola bool $ham_çıktı
+function string openssl error string
+function void openssl free key resource $ankim
+function array openssl get cipher methods bool $rumuzlar
+function array openssl get md methods bool $rumuzlar
+function bool openssl open string $mühürlü_veri string $veri string $zarf_anahtarı mixed $gizankim
+function bool openssl pkcs12 export to file mixed $x509 string $dosya mixed $gizli_anh string $parola array $değiştirgeler
+function bool openssl pkcs12 export mixed $x509 string $çıktı mixed $gizli_anahtar string $parola array $değiştirgeler
+function bool openssl pkcs12 read string $pkcs12 array $sertifikalar string $parola
+function bool openssl pkcs7 decrypt string $girdi_dosyası string $çıktı_dosyası mixed $alıcı_sertifikaları mixed $alıcı_anahtarı
+function bool openssl pkcs7 encrypt string $girdi_dosyası string $çıktı_dosyası mixed $alıcı_sertifikaları array $başlıklar int $seçenekler int $şifre
+function bool openssl pkcs7 sign string $girdi_dosyası string $çıktı_dosyası mixed $imza_sertifikası mixed $gizli_anahtar array $başlıklar int $seçenekler string $ek_sertifikalar
+function mixed openssl pkcs7 verify string $dosya int $seçenekler string $sertifikalar array $ca_bilgisi string $ek_sertifikalar string $çıktı_dosyası
+function bool openssl pkey export to file mixed $anahtar string $dosya string $parolası array $ayarlar
+function bool openssl pkey export mixed $anahtar string $çıktı string $parolası array $ayarlar
+function void openssl pkey free resource $anahtar
+function array openssl pkey get details resource $anahtar
+function resource openssl pkey get private mixed $anahtar string $parolası
+function resource openssl pkey get public mixed $sertifika
+function resource openssl pkey new array $ayarlar
+function bool openssl private decrypt string $şifreli_veri string $veri mixed $anahtar int $dolgu
+function bool openssl private encrypt string $veri string $şifreli_veri mixed $anahtar int $dolgu
+function bool openssl public decrypt string $şifreli_veri string $veri mixed $anahtar int $dolgu
+function bool openssl public encrypt string $veri string $şifreli_veri mixed $anahtar int $dolgu
+function bool openssl random pseudo bytes string $uzunluk string $güçlü
+function int openssl seal string $veri string $mühürlü_veri array $zarf_mühürleri array $genankim_dizisi
+function bool openssl sign string $veri string $imza mixed $gizankim int $algoritma
+function int openssl verify string $veri string $imza mixed $genankim int $algoritma
+function bool openssl x509 check private key mixed $x509sert mixed $anahtar
+function int openssl x509 checkpurpose mixed $x509sert int $amaç array $ca_bilgisi string $güvencesiz_dosya
+function bool openssl x509 export to file mixed $x509sert string $dosya bool $metinsiz
+function bool openssl x509 export mixed $x509sert string $çıktı bool $metinsiz
+function void openssl x509 free resource $x509sert
+function array openssl x509 parse mixed $x509sert bool $kısa_adlar
+function resource openssl x509 read mixed $x509srtfk_verisi
+function int ord string $dizge
+function bool output add rewrite var string $isim string $değer
+function bool output reset rewrite vars
+function bool override function string $işlev_ismi string $işlev_değiştirgeleri string $işlev_kodu
+function string pack string $biçem mixed $değiştirgeler
+function array parse ini file string $dosyaismi bool $bölümleri_işle int $tarama_kipi
+function array parse ini string string $ini bool $bölümleri_işle int $tarama_kipi
+function void parse str string $dizge array $dizi
+function mixed parse url string $url int $bileşen
+function void passthru string $komut int $dönüş_değeri
+function mixed pathinfo string $yol int $seçenekler
+function int pclose resource $dt
+function int pcntl alarm int $saniye
+function void pcntl exec string $yol array $değiştirgeler array $ortam
+function int pcntl fork
+function int pcntl getpriority int $pid int $süreç_türü
+function bool pcntl setpriority int $öncelik int $pid int $süreç_türü
+function bool pcntl signal dispatch
+function bool pcntl signal int $sinyal callback $eylemci bool $yeniden_syscalls
+function bool pcntl sigprocmask int $nasıl array $sinyaller array $eskiler
+function int pcntl sigtimedwait array $sinyaller array $bilgi int $saniye int $nanosaniye
+function int pcntl sigwaitinfo array $sinyaller array $bilgi
+function int pcntl wait int $durum int $seçenekler
+function int pcntl waitpid int $pid int $durum int $seçenekler
+function int pcntl wexitstatus int $durum
+function bool pcntl wifexited int $durum
+function bool pcntl wifsignaled int $status
+function bool pcntl wifstopped int $durum
+function int pcntl wstopsig int $status
+function int pcntl wtermsig int $durum
+function bool pdf setmiterlimit resource $pdfdoc float $miter
+function resource pfsockopen string $konakadı int $port int $hatanum string $hata_iletisi float $zaman_aşımı
+function bool php check syntax string $betik string $hata_iletisi
+function string php ini loaded file
+function string php ini scanned files
+function string php logo guid
+function string php strip whitespace string $dosya
+function string php uname string $kip
+function bool phpcredits int $seçenek
+function bool phpinfo int $ne
+function string phpversion string $eklenti
+function bool png2wbmp string $pngdosya string $wbmpdosya int $hdf_yüks int $hdf_genş int $eşik
+function resource popen string $komut string $kip
+function bool posix access string $dosya int $kip
+function string posix ctermid
+function int posix get last error
+function string posix getcwd
+function int posix getegid
+function int posix geteuid
+function int posix getgid
+function array posix getgrgid int $gid
+function array posix getgrnam string $isim
+function array posix getgroups
+function string posix getlogin
+function int posix getpgid int $pid
+function int posix getpgrp
+function int posix getpid
+function int posix getppid
+function array posix getpwnam string $isim
+function array posix getpwuid int $uid
+function array posix getrlimit
+function int posix getsid int $pid
+function int posix getuid
+function bool posix initgroups string $isim int $ana_gid
+function bool posix isatty int $dt
+function bool posix kill int $pid int $sinyal
+function bool posix mkfifo string $dosya int $kip
+function bool posix mknod string $yol int $kip int $büyük int $küçük
+function bool posix setegid int $gid
+function bool posix seteuid int $uid
+function bool posix setgid int $gid
+function bool posix setpgid int $pid int $pgid
+function int posix setsid
+function bool posix setuid int $uid
+function string posix strerror int $hatanum
+function array posix times
+function string posix ttyname int $dt
+function array posix uname
+function mixed preg filter mixed $şablon mixed $yenisi mixed $konu int $sınır int $sayı
+function array preg grep string $şablon array $girdi int $seçenekler
+function int preg last error
+function int preg match all string $şablon string $konu array $eşleşmeler int $seçenekler int $başlangıç
+function int preg match string $şablon string $konu array $eşleşenler int $seçenekler int $başlangıç
+function string preg quote string $dizge string $im
+function mixed preg replace callback mixed $şablon callback $geriçağırım mixed $konu int $sınır int $sayı
+function mixed preg replace mixed $şablon mixed $yenisi mixed $konu int $sınır int $sayı
+function array preg split string $şablon string $konu int $sınır int $seçenekler
+function mixed prev array $dizi
+function mixed print r mixed $ifade bool $döndür
+function int print string $dizge
+function int proc close resource $süreç
+function array proc get status resource $süreç
+function bool proc nice int $fark
+function resource proc open string $komut array $tanıtıcılar array $borular string $dizin array $ortam array $seçenekler
+function bool proc terminate resource $süreç int $sinyal
+function bool property exists mixed $sınıf string $özellik
+function bool putenv string $atama_dizgesi
+function string quoted printable decode string $dizge
+function string quoted printable encode string $dizge
+function string quotemeta string $dizge
+function array range mixed $düşük mixed $yüksek number $adım
+function string rawurldecode string $dizge
+function string rawurlencode string $dizge
+function string readdir resource $dizin_tanıtıcısı
+function int readfile string $dosyaismi bool $include_path_kullan resource $bağlan
+function int readgzfile string $dosyaismi int $include_path_kullan
+function string readlink string $yol
+function string realpath string $yol
+function bool recode file string $istek resource $girdi resource $çıktı
+function string recode string string $istek string $dizge
+function void register shutdown function callback $işlev mixed $değiştirge
+function bool rename function string $özgün_isim string $yeni_isim
+function bool rename string $eski_isim string $yeni_isim resource $bağlam
+function mixed reset array $dizi
+function bool restore error handler
+function bool restore exception handler
+function bool rewind resource $dt
+function void rewinddir resource $dizin_tanıtıcısı
+function bool rmdir string $dizinismi resource $bağlam
+function bool rsort array $dizi int $seçenekler
+function string rtrim string $dizge string $karakterler
+function array scandir string $dizin int $sıralama_türü resource $bağlam
+function string serialize mixed $değer
+function int session cache expire string $yeni_önbellek_ömrü
+function string session cache limiter string $sınırlayıcı
+function bool session decode string $veri
+function string session encode
+function array session get cookie params
+function string session id string $id
+function bool session is registered string $isim
+function string session module name string $modül
+function string session name string $isim
+function bool session regenerate id bool $eski_oturumu_sil
+function bool session register mixed $isim
+function string session save path string $yol
+function void session set cookie params int $lifetime string $path string $domain bool $secure bool $httponly
+function bool session set save handler callback $aç callback $kapa callback $oku callback $yaz callback $yoket callback $çöpçü
+function bool session start
+function bool session unregister string $isim
+function void session unset
+function void session write close
+function mixed set error handler callback $hata_eylemci int $hata_türü
+function callback set exception handler callback $istisna_eylemcisi
+function string set include path string $yeni_değer
+function bool set magic quotes runtime bool $yeni_değer
+function void set time limit int $saniye
+function bool setcookie string $isim string $değer int $zaman_aşımı string $yol string $alan bool $güvenli bool $sadece_http
+function bool setrawcookie string $isim string $değer int $zaman_aşımı string $yol string $alan bool $güvenli bool $sadece_http
+function bool settype mixed $değişken string $tür
+function string shell exec string $komut
+function bool shuffle array $dizi
+function int similar text string $d1 string $d2 float $oran
+function simplexmlelement simplexml import dom domnode $düğüm string $sınıfadı
+function object simplexml load file string $dosya string $sınıfadı int $seçenekler string $isimalanı bool $önek_var
+function object simplexml load string string $veri string $sınıfadı int $seçenekler string $isimalanı bool $önek_var
+function void snmp set oid numeric print int $oid_format
+function resource socket accept resource $soket
+function bool socket bind resource $soket string $adres int $port
+function void socket clear error resource $soket
+function void socket close resource $socket
+function bool socket connect resource $soket string $adres int $port
+function resource socket create listen int $port int $kuyruk
+function bool socket create pair int $aile int $tür int $protokol array $dt
+function resource socket create int $aile int $tür int $protokol
+function mixed socket get option resource $soket int $seviye int $seçenek
+function bool socket getpeername resource $soket string $adres int $port
+function int socket last error resource $soket
+function bool socket listen resource $soket int $kuyruk
+function string socket read resource $soket int $uzunluk int $tür
+function int socket recv resource $soket string $tampon int $uzunluk int $seçenekler
+function int socket recvfrom resource $soket string $tmmpon int $uzunluk int $seçenekler string $isim int $port
+function int socket select array $oku array $yaz array $diğer int $tv_sec int $tv_usec
+function int socket send resource $soket string $tampon int $uzunluk int $seçenekler
+function int socket sendto resource $soket string $tampon int $uzunluk int $seçenekler string $adres int $port
+function bool socket set block resource $soket
+function bool socket set nonblock resource $soket
+function bool socket set option resource $soket int $seviye int $seçenek mixed $değer
+function bool socket shutdown resource $scket int $kip
+function string socket strerror int $hatanum
+function bool sort array $dizi int $seçenekler
+function string soundex string $dizge
+function array split string $şablon string $dizge int $sınır
+function array spliti string $şablon string $dizge int $sınır
+function string sprintf string $biçem mixed $değiştirgeler
+function string sql regcase string $dizge
+function void sqlite close resource $db
+function string sqlite error string int $hata_kodu
+function string sqlite escape string string $öğe
+function sqlitedatabase sqlite factory string $dosya int $kip string $hata_iletisi
+function bool sqlite has more resource $sonuç
+function string sqlite libencoding
+function string sqlite libversion
+function string sqlite udf decode binary string $veri
+function string sqlite udf encode binary string $veri
+function mixed sscanf string $dizge string $biçem
+function mixed ssh2 auth none resource $oturum string $kullanıcı
+function bool ssh2 auth password resource $oturum string $kullanıcı string $parola
+function bool ssh2 auth pubkey file resource $oturum string $kullanıcı string $genel_anh_dosyası string $gizli_anh_dosyası string $anh_parolası
+function resource ssh2 connect string $konak int $port array $yöntemler array $geriçağırımlar
+function resource ssh2 exec resource $oturum string $komut string $pty array $ortam int $genişlik int $yükseklik int $enboy_türü
+function resource ssh2 fetch stream resource $kanal int $dt
+function string ssh2 fingerprint resource $oturum int $seçenekler
+function array ssh2 methods negotiated resource $oturum
+function resource ssh2 publickey init resource $oturum
+function array ssh2 publickey list resource $özkaynak
+function bool ssh2 scp recv resource $oturum string $uzak_dosya string $yerel_dosya
+function bool ssh2 scp send resource $oturum string $yerel_dosya string $uzak_dosya int $kip
+function array ssh2 sftp lstat resource $sftp string $bağ
+function bool ssh2 sftp mkdir resource $sftp string $dizin int $kip bool $ardışık
+function string ssh2 sftp readlink resource $sftp string $bağ
+function string ssh2 sftp realpath resource $sftp string $yol
+function bool ssh2 sftp rename resource $sftp string $eskisi string $yenisi
+function array ssh2 sftp stat resource $sftp string $dosya
+function bool ssh2 sftp symlink resource $sftp string $hedef string $bağ
+function bool ssh2 sftp unlink resource $sftp string $dosya
+function resource ssh2 sftp resource $oturum
+function resource ssh2 shell resource $oturum string $uçbirim_türü array $ortam int $genişlik int $yükseklik int $enboy_türü
+function resource ssh2 tunnel resource $oturum string $konak int $port
+function array stat string $dosyaismi
+function array str getcsv string $girdi string $ayraç string $sarmalayıcı string $öncelem
+function mixed str ireplace mixed $eski mixed $yeni mixed $konu int $sayı
+function string str pad string $girdi int $dolgulu_uzunluk string $dolgu_dizgesi int $dolgu_türü
+function string str repeat string $girdi int $çarpan
+function mixed str replace mixed $eski mixed $yeni mixed $konu int $sayı
+function string str rot13 string $dizge
+function array str split string $dizge int $parça_uzunluğu
+function mixed str word count string $dizge int $biçem string $karakterler
+function int strcasecmp string $d1 string $d2
+function int strcoll string $d1 string $d2
+function int strcspn string $dizge string $maske int $başlangıç int $uzunluk
+function resource stream context create array $seçenekler array $değiştirgeler
+function array stream context get params resource $akım_veya_bağlam
+function bool stream context set params resource $akım_veya_bağlam array $değiştirgeler
+function int stream copy to stream resource $kaynak resource $hedef int $uzunluk int $başlangıç
+function resource stream filter append resource $akım string $süzgeç int $oku_yaz mixed $değiştirgeler
+function resource stream filter prepend resource $akım string $süzgeç int $oku_yaz mixed $değiştirgeler
+function bool stream filter register string $süzgeç string $sınıf
+function bool stream filter remove resource $süzgeç
+function string stream get contents resource $akım int $uzunluk int $konum
+function string stream get line resource $akım int $uzunluk string $ayraç
+function array stream get meta data resource $akım
+function array stream get wrappers
+function bool stream is local mixed $akım_veya_url
+function void stream notification callback int $bildirim_kodu int $önem string $ileti int $ileti_kodu int $bayt_sayısı int $azami_bayt_sayısı
+function int stream select array $oku array $yaz array $dış int $saniye int $mikrosaniye
+function bool stream set blocking resource $akım int $kip
+function bool stream set timeout resource $akım int $saniye int $mikrosaniye
+function int stream set write buffer resource $akım int $tampon
+function resource stream socket accept resource $sunucu_soketi float $süre string $hedef
+function resource stream socket client string $uzak_soket int $hatanum string $ileti float $süre int $seçenekler resource $bağlam
+function string stream socket get name resource $soket bool $uzak
+function array stream socket pair int $alan int $tür int $protokol
+function string stream socket recvfrom resource $soket int $uzunluk int $seçenekler string $adres
+function int stream socket sendto resource $soket string $veri int $seçenekler string $adres
+function resource stream socket server string $yerel_soket int $hatanum string $ileti int $seçenekler resource $bağlam
+function bool stream socket shutdown resource $akım int $nasıl
+function bool stream supports lock resource $akım
+function bool stream wrapper register string $protokol string $sınıf int $seçenekler
+function bool stream wrapper restore string $protokol
+function bool stream wrapper unregister string $protokol
+function string strip tags string $dizge string $ayıklanmayacaklar
+function string stripcslashes string $dizge
+function int stripos string $samanlık mixed $iğne int $başlangıç
+function string stripslashes string $str
+function string stristr string $samanlık mixed $iğne bool $iğne_öncesi
+function int strlen string $dizge
+function int strnatcasecmp string $d1 string $d2
+function int strnatcmp string $d1 string $d2
+function int strncasecmp string $d1 string $d2 int $uzunluk
+function int strncmp string $d1 string $d2 int $uzunluk
+function string strpbrk string $dizge string $karakterler
+function int strpos string $samanlık mixed $iğne int $başlangıç
+function array strptime string $tarih string $biçim
+function string strrchr string $samanlık mixed $iğne
+function string strrev string $dizge
+function int strripos string $samanlık string $iğne int $başlangıç
+function int strrpos string $samanlık string $iğne int $başlangıç
+function int strspn string $dizge string $maske int $başlangıç int $uzunluk
+function string strstr string $samanlık mixed $iğne bool $iğne_öncesi
+function string strtok string $dizge string $ayraçlar
+function string strtolower string $dizge
+function string strtoupper string $dizge
+function string strtr string $dizge string $eski string $yeni
+function int substr compare string $ana_dizge string $dizge int $başlangıç int $uzunluk bool $büyüklük_duyarsız
+function int substr count string $samanlık string $iğne int $başlangıç int $uzunluk
+function mixed substr replace mixed $dizge string $yenisi int $başlangıç int $uzunluk
+function string substr string $dizge int $başlangıç integer $uzunluk
+function bool symlink string $hedef string $bağ
+function string sys get temp dir
+function bool syslog int $öncelik string $ileti
+function string system string $komut int $dönüş_değeri
+function bool tcpwrap check string $süreç_adı string $adres string $kullanıcı bool $dns_yok
+function string tempnam string $dizin string $önek
+function string textdomain string $uygulama_adı
+function int tidy access count tidy $nesne
+function int tidy config count tidy $object
+function int tidy error count tidy $nesne
+function string tidy get output tidy $object
+function void tidy load config string $dosya string $kodlama
+function bool tidy reset config
+function bool tidy save config string $dosya
+function bool tidy set encoding string $encoding
+function bool tidy setopt string $seçenek mixed $değer
+function int tidy warning count tidy $nesne
+function mixed time nanosleep int $süre int $nanosüre
+function bool time sleep until float $zaman_damgası
+function int time
+function resource tmpfile
+function array token get all string $kaynak
+function string token name int $dizgecik
+function bool touch string $dosyaismi int $zaman int $ezamanı
+function bool trigger error string $ileti int $tür
+function string trim string $dizge string $karakterler
+function bool uasort array $dizi callback $karş_işlevi
+function string ucfirst string $dizge
+function string ucwords string $dizge
+function bool uksort array $dizi callback $karş_işlevi
+function int umask int $maske
+function string uniqid string $önek bool $döküntü_üret
+function int unixtojd int $zamandamgasi
+function bool unlink string $dosyaismi resource $bağlam
+function array unpack string $biçem string $veri
+function void unset mixed $değişken mixed $değişken
+function string urldecode string $dizge
+function string urlencode string $dizge
+function void usleep int $süre
+function bool usort array $array callback $karş_işlevi
+function string utf8 decode string $veri
+function string utf8 encode string $veri
+function mixed variant abs mixed $val
+function mixed variant add mixed $sol mixed $sag
+function mixed variant and mixed $sol mixed $sag
+function variant variant cast variant $varyant int $tur
+function mixed variant cat mixed $sol mixed $sag
+function int variant cmp mixed $sol mixed $sag int $yerel int $secenekler
+function variant variant date from timestamp int $zamandamgasi
+function int variant date to timestamp variant $varyant
+function mixed variant div mixed $sol mixed $sag
+function mixed variant eqv mixed $sol mixed $sag
+function mixed variant fix mixed $varyant
+function int variant get type variant $varyant
+function mixed variant idiv mixed $sol mixed $sag
+function mixed variant imp mixed $sol mixed $sag
+function mixed variant int mixed $varyant
+function mixed variant mod mixed $sol mixed $sag
+function mixed variant mul mixed $sol mixed $sag
+function mixed variant neg mixed $varyant
+function mixed variant not mixed $varyant
+function mixed variant or mixed $sol mixed $sag
+function mixed variant pow mixed $sol mixed $sag
+function mixed variant round mixed $varyant int $ondalik
+function void variant set type variant $varyant int $tur
+function void variant set variant $varyant mixed $deger
+function mixed variant sub mixed $sol mixed $sag
+function mixed variant xor mixed $sol mixed $sag
+function mixed version compare string $sürüm1 string $sürüm2 string $işleç
+function int vfprintf resource $dt string $biçem array $değiştirgeler
+function bool virtual string $dosya_adı
+function int vprintf string $biçem array $değiştirgeler
+function string vsprintf string $biçem array $değiştirgeler
+function bool wddx add vars resource $pt mixed $değişken
+function string wddx packet end resource $pt
+function resource wddx packet start string $azıklama
+function string wddx serialize value mixed $değer string $açıkama
+function string wddx serialize vars mixed $değişken
+function mixed win32 create service array $ayrıntılar string $makine
+function int win32 delete service string $hizmet string $makine
+function int win32 get last control message
+function array win32 ps list procs
+function array win32 ps stat mem
+function array win32 ps stat proc int $pid
+function mixed win32 query service status string $hizmet string $makine
+function bool win32 set service status int $durum
+function mixed win32 start service ctrl dispatcher string $isim
+function int win32 start service string $hizmet string $makine
+function int win32 stop service string $hizmet string $makine
+function string wordwrap string $dizge int $genişlik string $satırsonu bool $kes
+function string xattr get string $dosya string $isim int $seçenekler
+function array xattr list string $dosya int $seçenekler
+function bool xattr remove string $dosya string $isim int $seçenekler
+function bool xattr set string $dosya string $isim string $değer int $seçenekler
+function bool xattr supported string $dosya int $seçenekler
+function int xdiff file bdiff size string $dosya
+function bool xdiff file bdiff string $eski_dosya string $yeni_dosya string $hedef
+function bool xdiff file bpatch string $dosya string $yama string $hedef
+function bool xdiff file diff binary string $eski_dosya string $yeni_dosya string $hedef
+function bool xdiff file diff string $eski_dosya string $yeni_dosya string $hedef int $bağlam bool $küçült
+function mixed xdiff file merge3 string $eski_dosya string $yeni_dosya1 string $yeni_dosya2 string $hedef
+function bool xdiff file patch binary string $dosya string $yama string $hedef
+function mixed xdiff file patch string $dosya string $yama string $hedef int $seçenekler
+function bool xdiff file rabdiff string $eski_dosya string $yeni_dosya string $hedef
+function int xdiff string bdiff size string $yama
+function string xdiff string diff string $eski_veri string $yeni_veri int $bağlam bool $küçült
+function mixed xdiff string merge3 string $eski_veri string $yeni_veri1 string $yeni_veri2 string $hatalar
+function string xdiff string patch string $dizge string $yama int $seçenekler string $hata
+function string xdiff string bdiff string $eski_veri string $yeni_veri
+function string xml error string int $hatanum
+function int xml get current byte index resource $çözümleyici
+function int xml get current column number resource $parser
+function int xml get current line number resource $parser
+function int xml get error code resource $çözümleyici
+function int xml parse into struct resource $çözümleyici string $veri array $değerler array $indis
+function int xml parse resource $çözümleyici string $veri bool $son
+function resource xml parser create ns string $kodlama string $ayraç
+function resource xml parser create string $kodlama
+function bool xml parser free resource $çözümleyici
+function mixed xml parser get option resource $çözümleyici int $seçenek
+function bool xml parser set option resource $çözümleyici int $seçenek mixed $değer
+function bool xml set character data handler resource $çözümleyici callback $eylemci
+function bool xml set default handler resource $çözümleyici callback $eylemci
+function bool xml set element handler resource $çözümleyici callback $açılış_etiketi_eylemcisi callback $kapanış_etiketi_eylemcisi
+function bool xml set end namespace decl handler resource $çözümleyici callback $eylemci
+function bool xml set external entity ref handler resource $çözümleyici callback $eylemci
+function bool xml set notation decl handler resource $çözümleyici callback $eylemci
+function bool xml set object resource $çözümleyici object $nesne
+function bool xml set processing instruction handler resource $çözümleyici callback $eylemci
+function bool xml set start namespace decl handler resource $çözümleyici callback $eylemcisini
+function bool xml set unparsed entity decl handler resource $çözümleyici callback $eylemci
+function bool xmlrpc set type string $değer string $tür
+function bool end attribute
+function bool end cdata
+function bool end comment
+function bool end document
+function bool end dtdattlist
+function bool end dtdelement
+function bool end dtdentity
+function bool end dtd
+function bool end element
+function bool end pi
+function mixed flush bool $boş
+function bool full end element
+function bool open memory
+function bool open uri string $uri
+function string output memory bool $boşalt
+function bool set indent string string $girintidizgesi
+function bool set indent bool $girinti
+function bool start attribute ns string $önek string $isim string $uri
+function bool start attribute string $isim
+function bool start cdata
+function bool start comment
+function bool start dtdattlist string $isim
+function bool start dtdelement string $isim
+function bool start dtdentity string $isim bool $değiş_var
+function bool start dtd string $kök_eleman string $publicid string $systemid
+function bool start element ns string $önek string $isim string $uri
+function bool start element string $isim
+function bool start pi string $hedef
+function bool write attribute ns string $önek string $isim string $uri string $değer
+function bool write attribute string $isim string $değer
+function bool write cdata string $içerik
+function bool write comment string $içerik
+function bool write dtdattlist string $isim string $içerik
+function bool write dtdelement string $isim string $içerik
+function bool write dtdentity string $isim string $içerik bool $pe string $pubid string $sysid string $ndataid
+function bool write element ns string $önek string $eleman string $uri string $içerik
+function bool write element string $eleman string $içerik
+function bool write pi string $hedef string $içerik
+function string yaz addinfo resource $id
+function void yaz ccl conf resource $id array $ayarlar
+function bool yaz ccl parse resource $id string $sorgu array $sonuç
+function bool yaz close resource $id
+function mixed yaz connect string $zurl mixed $seçenekler
+function bool yaz database resource $id string $veritabanları
+function bool yaz element resource $id string $eleman_kümesi
+function int yaz errno resource $id
+function string yaz error resource $id
+function array yaz es result resource $id
+function void yaz es resource $id string $tür array $değiştirgeler
+function string yaz get option resource $id string $isim
+function int yaz hits resource $id array $sonuçlar
+function void yaz itemorder resource $id array $değiştirgeler
+function bool yaz present resource $id
+function void yaz range resource $id int $başlangıç int $sayı
+function string yaz record resource $id int $konum string $tür
+function array yaz scan result resource $id array $sonuç
+function void yaz scan resource $id string $tür string $başlangıç array $seçenekler
+function void yaz schema resource $id string $şema
+function bool yaz search resource $id string $tür string $sorgu
+function void yaz set option resource $id string $isim string $değer
+function void yaz sort resource $id string $kural
+function void yaz syntax resource $id string $sözdizimi
+function mixed yaz wait array $seçenekler
+function string zend logo guid
+function int zend thread id
+function string zend version
+function void zip close resource $zip
+function bool zip entry close resource $zip_girdisi
+function int zip entry compressedsize resource $zip_girdisi
+function string zip entry compressionmethod resource $zip_girdisi
+function int zip entry filesize resource $zip_girdisi
+function string zip entry name resource $zip_girdisi
+function bool zip entry open resource $zip resource $zip_girdisi string $kip
+function string zip entry read resource $zip_girdisi int $uzunluk
+function mixed zip open string $dosya_adı
+function mixed zip read resource $zip
+ziparchive bool add empty dir string $dizin
+ziparchive bool add file string $dosya string $yerel_isim
+ziparchive bool add from string string $isim string $içerik
+ziparchive bool close
+ziparchive bool delete index int $indis
+ziparchive bool delete name string $isim
+ziparchive bool extract to string $hedef mixed $girdiler
+ziparchive string get archive comment
+ziparchive string get comment index int $indis int $seçenekler
+ziparchive string get comment name string $isim int $seçenekler
+ziparchive mixed get from index int $indis int $seçenekler
+ziparchive mixed get from name string $isim int $seçenekler
+ziparchive string get name index int $indis
+ziparchive string get status string
+ziparchive resource get stream string $name
+ziparchive mixed locate name string $isim int $seçenekler
+ziparchive mixed open string $dosya int $seçenekler
+ziparchive bool rename index int $indis string $yeni_isim
+ziparchive bool rename name string $isim string $yenisi
+ziparchive mixed set archive comment string $açıklama
+ziparchive mixed set comment index int $indis string $açıklama
+ziparchive mixed set comment name string $isim string $açıklama
+ziparchive mixed stat index int $indis int $seçenekler
+ziparchive mixed stat name name $isim int $seçenekler
+ziparchive mixed unchange all
+ziparchive mixed unchange archive
+ziparchive mixed unchange index int $indis
+ziparchive mixed unchange name string $isim
+function string zlib get coding type
+imagick float get image channel distortions imagick $reference int $metric int $channel
+iterator mixed current
+iterator scalar key
+iterator void rewind
+iterator boolean valid
+iteratoraggregate traversable get iterator
+pdo bool begin transaction
+pdo bool commit
+pdo array error info
+pdo int exec string $deyim
+pdo mixed get attribute int $öznitelik
+pdo array get available drivers
+pdo string last insert id string $isim
+pdo pdostatement prepare string $deyim array $seçenekler
+pdo pdostatement query string $deyim
+pdo string quote string $dizge int $değiştirge_türü
+pdo bool roll back
+pdo bool set attribute int $öznitelik mixed $değer
+pdostatement bool bind column mixed $sütun mixed $değişken int $veri_türü int $uzunluk mixed $seçenekler
+pdostatement bool bind param mixed $değiştirge mixed $değişken int $veri_türü int $uzunluk mixed $seçenekler
+pdostatement bool bind value mixed $değiştirge mixed $değer int $veri_türü
+pdostatement bool close cursor
+pdostatement int column count
+pdostatement bool debug dump params
+pdostatement bool execute array $girdiler
+pdostatement mixed fetch int $alım_tarzı int $göst_yönü int $göst_başlangıcı
+pdostatement string fetch column int $sütunnum
+pdostatement mixed fetch object string $sınıfadı array $değiştirgeler
+pdostatement mixed get attribute int $öznitelik
+pdostatement bool next rowset
+pdostatement int row count
+pdostatement bool set attribute int $öznitelik mixed $değer
+reflection void export reflector $yansıtıcı string $ihracet
+reflection array get modifier names int $değiştiriciler
+reflectionclass string construct string $değiştirge
+reflectionclass string export mixed $değiştirge bool $ihracet
+reflectionclass mixed get constant string $isim
+reflectionclass array get constants
+reflectionclass object get constructor
+reflectionclass array get default properties
+reflectionclass string get doc comment
+reflectionclass int get end line
+reflectionclass reflectionextension get extension
+reflectionclass string get extension name
+reflectionclass string get file name
+reflectionclass array get interface names
+reflectionclass array get interfaces
+reflectionclass object get method string $isim
+reflectionclass array get methods string $süzgeç
+reflectionclass string get name
+reflectionclass string get namespace name
+reflectionclass object get parent class
+reflectionclass array get properties int $süzgeç
+reflectionclass reflectionproperty get property string $isim
+reflectionclass string get short name
+reflectionclass int get start line
+reflectionclass array get static properties
+reflectionclass mixed get static property value string $isim string $öntanımlı
+reflectionclass bool has constant string $isim
+reflectionclass bool has method string $isim
+reflectionclass bool has property string $isim
+reflectionclass bool implements interface string $arayüz
+reflectionclass bool in namespace
+reflectionclass bool is abstract
+reflectionclass bool is final
+reflectionclass bool is instance string $nesne
+reflectionclass bool is instantiable
+reflectionclass bool is interface
+reflectionclass bool is internal
+reflectionclass bool is iterateable
+reflectionclass bool is subclass of string $sınıf
+reflectionclass bool is user defined
+reflectionclass object new instance mixed $değiştirgeler
+reflectionclass object new instance args array $değiştirgeler
+reflectionclass void set static property value string $isim string $değer
+reflectionclass string to string
+reflectionextension void clone
+reflectionextension string construct string $isim
+reflectionextension string export string $isim string $ihracet
+reflectionextension array get classes
+reflectionextension array get class names
+reflectionextension array get constants
+reflectionextension array get dependencies
+reflectionextension array get functions
+reflectionextension array get inientries
+reflectionextension string get name
+reflectionextension string get version
+reflectionextension string info
+reflectionextension string to string
+reflectionfunction string construct string $isim
+reflectionfunction string export string $isim string $ihracet
+reflectionfunction mixed invoke string $değiştirgeler
+reflectionfunction mixed invoke args array $değiştirgeler
+reflectionfunction bool is disabled
+reflectionfunction string to string
+reflectionfunctionabstract void clone
+reflectionfunctionabstract string get doc comment
+reflectionfunctionabstract int get end line
+reflectionfunctionabstract reflectionextension get extension
+reflectionfunctionabstract string get extension name
+reflectionfunctionabstract string get file name
+reflectionfunctionabstract string get name
+reflectionfunctionabstract string get namespace name
+reflectionfunctionabstract int get number of parameters
+reflectionfunctionabstract int get number of required parameters
+reflectionfunctionabstract array get parameters
+reflectionfunctionabstract string get short name
+reflectionfunctionabstract int get start line
+reflectionfunctionabstract array get static variables
+reflectionfunctionabstract bool in namespace
+reflectionfunctionabstract bool is closure
+reflectionfunctionabstract bool is deprecated
+reflectionfunctionabstract bool is internal
+reflectionfunctionabstract bool is user defined
+reflectionfunctionabstract bool returns reference
+reflectionfunctionabstract void to string
+reflectionmethod string construct string $sınıf_veya_yöntem string $isim
+reflectionmethod string export string $sınıf string $isim bool $return
+reflectionmethod reflectionclass get declaring class
+reflectionmethod int get modifiers
+reflectionmethod void get prototype
+reflectionmethod mixed invoke object $nesne string $değiştirgeler
+reflectionmethod mixed invoke args string $nesne array $değiştirgeler
+reflectionmethod bool is abstract
+reflectionmethod bool is constructor
+reflectionmethod bool is destructor
+reflectionmethod bool is final
+reflectionmethod bool is private
+reflectionmethod bool is protected
+reflectionmethod bool is public
+reflectionmethod bool is static
+reflectionmethod string to string
+reflectionobject object construct object $değiştirge
+reflectionobject string export string $değiştirge bool $ihracet
+reflectionparameter bool allows null
+reflectionparameter string construct string $işlev string $değiştirge
+reflectionparameter string export string $işlev string $değiştirge bool $ihracet
+reflectionparameter reflectionclass get class
+reflectionparameter reflectionclass get declaring class
+reflectionparameter reflectionfunction get declaring function
+reflectionparameter mixed get default value
+reflectionparameter string get name
+reflectionparameter int get position
+reflectionparameter bool is array
+reflectionparameter bool is default value available
+reflectionparameter bool is optional
+reflectionparameter bool is passed by reference
+reflectionparameter string to string
+reflectionproperty void clone
+reflectionproperty string export mixed $sınıf string $isim bool $ihracet
+reflectionproperty reflectionclass get declaring class
+reflectionproperty string get doc comment
+reflectionproperty int get modifiers
+reflectionproperty string get name
+reflectionproperty mixed get value string $özellik
+reflectionproperty bool is default
+reflectionproperty bool is private
+reflectionproperty bool is protected
+reflectionproperty bool is public
+reflectionproperty bool is static
+reflectionproperty void set accessible bool $erişilebilir
+reflectionproperty void set value object $nesne mixed $değer
+reflectionproperty string to string
+reflector string export
+reflector string to string
+serializable string serialize
+serializable mixed unserialize string $dizgeleşmiş
+soapclient mixed soap client mixed $wsdl array $options
+soapfault string construct string $faultcode string $faultstring string $faultactor string $detail string $faultname string $headerfault
+soapheader string construct string $namespace string $name mixed $data bool $mustunderstand string $actor
+soapparam mixed construct mixed $data string $name
+soapserver mixed construct mixed $wsdl array $options
+soapvar string construct string $data string $encoding string $type_name string $type_namespace string $node_name string $node_namespace
+sqlite3 int changes
+sqlite3 bool close
+sqlite3 string construct string $dosya int $seçenekler string $anahtar
+sqlite3 bool create aggregate string $isim mixed $sekme_işlevi mixed $son_işlev int $değ_sayısı
+sqlite3 bool create function string $isim mixed $işlev int $değ_sayısı
+sqlite3 string escape string string $veri
+sqlite3 bool exec string $sorgu
+sqlite3 int last error code
+sqlite3 string last error msg
+sqlite3 int last insert row id
+sqlite3 bool load extension string $kütüphane
+sqlite3 bool open string $dosya int $seçenekler string $anahtar
+sqlite3 sqlite3stmt prepare string $sorgu
+sqlite3 sqlite3result query string $sorgu
+sqlite3 mixed query single string $sorgu bool $tüm_satır
+sqlite3 array version
+sqlite3result string column name int $sütunnum
+sqlite3result int column type int $sütunnum
+sqlite3result array fetch array int $kip
+sqlite3result bool finalize
+sqlite3result int num columns
+sqlite3result bool reset
+sqlite3stmt bool bind param string $değişken mixed $değiştirge int $tür
+sqlite3stmt bool bind value string $değişken mixed $değer int $tür
+sqlite3stmt bool clear
+sqlite3stmt bool close
+sqlite3stmt sqlite3result execute
+sqlite3stmt int param count
+sqlite3stmt bool reset
+streamwrapper construct
+streamwrapper bool dir closedir
+streamwrapper bool dir opendir string $url int $seçenekler
+streamwrapper string dir readdir
+streamwrapper bool dir rewinddir
+streamwrapper bool mkdir string $url int $kip int $seçenekler
+streamwrapper bool rename string $eskisi string $yenisi
+streamwrapper bool rmdir string $url int $seçenekler
+streamwrapper resource stream cast int $cast_as
+streamwrapper void stream close
+streamwrapper bool stream eof
+streamwrapper bool stream flush
+streamwrapper bool stream lock mode $işlem
+streamwrapper bool stream open string $url string $kip int $seçenekler string $açık_yol
+streamwrapper string stream read int $sayı
+streamwrapper bool stream seek int $başlangıç int $nereden
+streamwrapper bool stream set option int $seçenek int $arg1 int $arg2
+streamwrapper array stream stat
+streamwrapper int stream tell
+streamwrapper int stream write string $veri
+streamwrapper bool unlink string $dosya
+tidy tidy construct string $dosya mixed $ayarlar string $kodlama bool $include_path_kullan
+tidynode tidynode get parent
+tidynode bool has children
+tidynode bool has siblings
+tidynode bool is asp
+tidynode bool is comment
+tidynode bool is html
+tidynode bool is jste
+tidynode bool is php
+tidynode bool is text
+xmlreader bool close
+xmlreader domnode expand
+xmlreader string get attribute string $isim
+xmlreader string get attribute no int $index
+xmlreader string get attribute ns string $isim string $isimalanı
+xmlreader bool get parser property int $özellik
+xmlreader bool is valid
+xmlreader bool lookup namespace string $önek
+xmlreader bool move to attribute string $isim
+xmlreader bool move to element
+xmlreader bool move to first attribute
+xmlreader bool move to next attribute
+xmlreader bool next string $isim
+xmlreader bool open string $uri string $kodlama int $seçenekler
+xmlreader bool read
+xmlreader string read inner xml
+xmlreader string read outer xml
+xmlreader string read string
+xmlreader bool set parser property int $seçenek bool $etkin
+xmlreader bool set relax ngschema string $dosya
+xmlreader bool set relax ngschema source string $kaynak
+xmlreader bool set schema string $dosya
+xmlreader bool xml string $kaynak string $kodlama int $seçenekler

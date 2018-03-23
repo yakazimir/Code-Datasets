@@ -1,0 +1,1300 @@
+5.4 trace entry procedure
+5.4 trace exit procedure
+5.4 untrace entry procedure
+5.4 untrace exit procedure
+5.4 untrace procedure
+5.4 break entry procedure
+5.4 break exit procedure
+5.4 break procedure
+5.4 unbreak procedure
+5.4 unbreak entry procedure
+5.4 unbreak exit procedure
+5.4 *proc*
+5.4 *args*
+5.4 *result*
+5.4 advise entry procedure advice
+5.4 advise exit procedure advice
+5.4 advice procedure
+5.4 unadvise entry procedure
+5.4 unadvise exit procedure
+5.4 unadvise procedure
+2.4 command line
+4.1 cf filename
+4.1 *save uncompressed files?*
+4.1 *uncompressed file lifetime*
+4.1 load debugging info on demand?
+4.1 sf filename
+2.5 simple command line parser keyword thunk
+2.5 argument command line parser keyword multiple? procedure
+2.5 set command line parser! keyword procedure
+5.3 bkpt datum argument
+5.3 pp object
+5.3 pa procedure
+5.3 where obj
+5.3 apropos string
+4.3.5 flo:vector cons n
+4.3.5 flo:vector ref flonum-vector index
+3.4 gc flip safety-margin
+3.4 purify object
+3.4 flush purification queue!
+3.4 print gc statistics
+3.4 set gc notification! on?
+3.4 toggle gc notification!
+4.3.2 ignore reference traps variables
+4.3.2 ignore assignment traps variables
+4.3.2 set name
+4.3.2 all
+4.3.2 none
+4.3.2 free
+4.3.2 bound
+4.3.2 assigned
+4.2.2 integrate name
+4.2.2 integrate operator name
+4.2.2 integrate external filename
+8.7 save editor files
+8.7 reset editor
+8.7 reset editor windows
+3.2 load filename
+3.2 load noisily?
+3.2 load option symbol
+3.2 define load option symbol thunk
+6 with stack sampling interval procedure
+6 stack sampler:show expressions?
+6 stack sampler:debug internal errors?
+4.2.4 reduce operator name
+4.2.3 replace operator name
+3.1.3 restart k
+8.1 edwin
+8.1 inhibit editor init file?
+8.1 create editor arg
+8.1 create editor args
+3.1.4 ge environment
+3.1.4 pe
+4.3.3 no type checks
+4.3.3 no range checks
+3.3 disk save filename
+5.3 make chained method specializers procedure
+5.3 chained method? object
+1.1 make class name direct-superclasses direct-slots
+1.1 define class name direct-superclasses direct-slot
+1.1 make trivial subclass superclass1 superclass2
+1.1 class? object
+1.1 subclass? class specializer
+1.1 object class object
+1.1 class name class
+1.1 class direct superclasses class
+1.1 class direct slot names class
+1.1 class precedence list class
+5.4 make computed method specializers procedure
+5.4 computed method? object
+5.4 make computed emp key specializers procedure
+5.4 computed emp? object
+5.4 computed emp key computed-emp
+4.3 compute effective method procedure generic-procedure classes
+4.3 compute method generic-procedure classes
+4.1 make generic procedure arity
+4.1 define generic name lambda-list
+4.1 generic procedure? object
+4.1 generic procedure arity generic-procedure
+4.1 generic procedure name generic-procedure
+2 instance constructor class slot-names
+2 instance? object
+2 instance class instance
+2 instance of? object specializer
+2 instance predicate specializer
+5.1 make method specializers procedure
+5.1 method? object
+5.1 method specializers method
+5.1 method procedure method
+5.1 method applicable? method classes
+4.2 add method generic-procedure method
+4.2 delete method generic-procedure method
+4.2 add methods generic-procedure methods
+4.2 generic procedure methods generic-procedure
+5.2 define method generic-procedure lambda-list body
+1.2 <object>
+1.2 <instance>
+1.2 <generic procedure>
+1.2 <method>
+1.2 <chained method>
+1.2 <number>
+1.2 <exact>
+1.2 <inexact>
+6 write instance instance port
+6 write instance helper name instance port thunk
+1.3 record type class record-type
+1.3 record class record
+3.3 slot accessor class name
+3.3 slot modifier class name
+3.3 slot initpred class name
+3.2 slot accessor method class name
+3.2 slot modifier method class name
+3.2 slot initpred method class name
+3.4 slot value instance name
+3.4 set slot value! instance name object
+3.4 slot initialized? instance name
+3.1 class slots class
+3.1 class slot class name error?
+3.1 slot descriptor? object
+3.1 slot name slot
+3.1 slot class slot
+3.1 slot properties slot
+3.1 slot property slot name default
+3.1 slot initial value? slot
+3.1 slot initial value slot
+3.1 slot initializer slot
+1.4 specializer? object
+1.4 specializer classes specializer
+1.4 specializer=? specializer1 specializer2
+1.4 union specializer specializer
+1.4 union specializer? object
+1.4 specializers? object
+1.4 specializers=? specializers1 specializers2
+11.2 make 1d table
+11.2 1d table? object
+11.2 1d table put! 1d-table key datum
+11.2 1d table remove! 1d-table key
+11.2 1d table get 1d-table key default
+11.2 1d table lookup 1d-table key if-found if-not-found
+11.2 1d table alist 1d-table
+14.11.1 *matcher mexp
+14.11.1 char expression
+14.11.1 string expression
+14.11.1 char set expression
+14.11.1 end of input
+14.11.1 discard matched
+14.11.1 seq mexp
+14.11.1 alt mexp
+14.11.1 * mexp
+14.11.1 + mexp
+14.11.1 ? mexp
+14.11.1 sexp expression
+14.11.1 with pointer identifier mexp
+14.11.2 *parser pexp
+14.11.2 match mexp
+14.11.2 noise mexp
+14.11.2 values expression
+14.11.2 discard matched
+14.11.2 seq pexp
+14.11.2 alt pexp
+14.11.2 * pexp
+14.11.2 + pexp
+14.11.2 ? pexp
+14.11.2 transform expression pexp
+14.11.2 encapsulate expression pexp
+14.11.2 map expression pexp
+14.11.2 sexp expression
+14.11.2 with pointer identifier pexp
+11.4.4 eq hash object
+11.4.4 eq hash mod object modulus
+11.4.4 eqv hash mod object modulus
+11.4.4 equal hash mod object modulus
+11.7.3 wt tree split< wt-tree bound
+11.7.3 wt tree split> wt-tree bound
+11.7.3 wt tree union wt-tree-1 wt-tree-2
+11.7.3 wt tree intersection wt-tree-1 wt-tree-2
+11.7.3 wt tree difference wt-tree-1 wt-tree-2
+11.7.3 wt tree subset? wt-tree-1 wt-tree-2
+11.7.3 wt tree set equal? wt-tree-1 wt-tree-2
+11.7.3 wt tree fold combiner initial wt-tree
+11.7.3 wt tree for each action wt-tree
+11.7.3 wt tree union merge wt-tree-1 wt-tree-2 merge
+6.4 string capitalized? string
+6.4 string upper case? string
+6.4 substring lower case? string start end
+6.4 string capitalize string
+6.4 string downcase string
+6.4 string upcase string
+2.12.3 and let* clause
+12.5 make apply hook procedure object
+12.5 apply hook? object
+12.5 apply hook procedure apply-hook
+12.5 set apply hook procedure! apply-hook procedure
+12.5 apply hook extra apply-hook
+12.5 set apply hook extra! apply-hook object
+12.5 make entity procedure object
+12.5 entity? object
+12.5 entity procedure entity
+12.5 set entity procedure! entity procedure
+12.5 entity extra entity
+12.5 set entity extra! entity object
+12.2 make procedure arity min
+12.2 procedure arity? object
+12.2 guarantee procedure arity object caller
+12.2 procedure arity min arity
+12.2 procedure arity max arity
+12.2 procedure arity procedure
+12.2 procedure arity valid? procedure arity
+12.2 procedure of arity? object arity
+12.2 guarantee procedure of arity object arity caller
+12.2 thunk? object
+12.2 guarantee thunk object caller
+2.5 set! variable
+11.1 alist? object
+11.1 assq object alist
+11.1 association procedure predicate selector
+11.1 del assq object alist
+11.1 del assq! object alist
+11.1 delete association procedure deletor predicate selector
+11.1 alist copy alist
+11.4.2 hash table? object
+11.4.2 hash table put! hash-table key datum
+11.4.2 hash table get hash-table key default
+11.4.2 hash table remove! hash-table key
+11.4.2 hash table clear! hash-table
+11.4.2 hash table count hash-table
+11.4.2 hash table >alist hash-table
+11.4.2 hash table key list hash-table
+11.4.2 hash table datum list hash-table
+11.4.2 hash table for each hash-table procedure
+11.4.2 hash table lookup hash-table key if-found if-not-found
+11.4.2 hash table modify! hash-table key default procedure
+11.4.2 hash table intern! hash-table key get-default
+11.7.2 wt tree? object
+11.7.2 wt tree empty? wt-tree
+11.7.2 wt tree size wt-tree
+11.7.2 wt tree add wt-tree key datum
+11.7.2 wt tree add! wt-tree key datum
+11.7.2 wt tree member? key wt-tree
+11.7.2 wt tree lookup wt-tree key default
+11.7.2 wt tree delete wt-tree key
+11.7.2 wt tree delete! wt-tree key
+9.4 bit string zero? bit-string
+9.4 bit string=? bit-string-1 bit-string-2
+9.4 bit string not bit-string
+9.4 bit string movec! target-bit-string bit-string
+9.4 bit string and bit-string-1 bit-string-2
+9.4 bit string andc bit-string-1 bit-string-2
+9.4 bit string or bit-string-1 bit-string-2
+9.4 bit string xor bit-string-1 bit-string-2
+9.4 bit string and! target-bit-string bit-string
+9.4 bit string or! target-bit-string bit-string
+9.4 bit string xor! target-bit-string bit-string
+9.4 bit string andc! target-bit-string bit-string
+14.9.5 port input blocking mode port
+14.9.5 port set input blocking mode port mode
+14.9.5 port with input blocking mode port mode thunk
+14.9.5 port output blocking mode port
+14.9.5 port set output blocking mode port mode
+14.9.5 port with output blocking mode port mode thunk
+10.1 boolean? object
+10.1 boolean=? obj1 obj2
+10.1 boolean and object
+10.1 boolean or object
+17.5 graphics enable buffering graphics-device
+17.5 graphics disable buffering graphics-device
+17.5 graphics flush graphics-device
+6.11 vector 8b ref string k
+6.11 vector 8b set! string k code
+6.11 vector 8b fill! string start end code
+6.11 vector 8b find next char string start end code
+6.11 vector 8b find previous char string start end code
+10.3 cell? object
+10.3 make cell object
+10.3 cell contents cell
+10.3 set cell contents! cell object
+10.3 bind cell contents! cell object thunk
+5.6 char set? object
+5.6 char set member? char-set char
+5.6 char set=? char-set-1 char-set-2
+5.6 char set char
+5.6 chars >char set chars
+5.6 string >char set string
+5.6 scalar values >char set items
+5.6 char set >scalar values char-set
+5.6 well formed scalar values list? object
+5.6 char set invert char-set
+5.6 char set difference char-set1 char-set
+5.6 char set intersection char-set
+5.6 char set union char-set
+5.6 8 bit char set? char-set
+5.6 ascii range >char set lower upper
+5.6 char set members char-set
+17.4 graphics bind drawing mode graphics-device drawing-mode thunk
+17.4 graphics set drawing mode graphics-device drawing-mode
+17.6 graphics set clip rectangle graphics-device x-left y-bottom x-right y-top
+17.6 graphics reset clip rectangle graphics-device
+6.3 string=? string1 string2
+6.3 string<? string1 string2
+6.3 string hash string
+15.1.2 make pathname host device directory name type version
+15.1.2 pathname host pathname
+15.1.2 pathname device pathname
+15.1.2 pathname new device pathname device
+2.12.1 cond expand clause clause dots
+16.3 ignore errors thunk
+16.3 bind condition handler condition-types handler thunk
+16.3 bind default condition handler condition-types handler
+16.3 break on signals condition-types
+16.3 standard error handler condition
+16.3 standard error hook
+16.3 standard warning handler condition
+16.3 standard warning hook
+16.1 error reason argument
+16.1 warn reason argument
+16.1 signal condition condition
+16.5.2 condition? object
+16.5.2 condition type condition
+16.5.2 condition error? condition
+16.5.2 condition restarts condition
+16.5.2 condition continuation condition
+16.5.2 write condition report condition port
+16.6 make condition type name generalization field-names reporter
+16.6 condition type error? condition-type
+16.6 condition type field names condition-type
+16.6 condition type generalizations condition-type
+16.6 condition type? object
+2.7 if predicate consequent
+2.7 cond clause clause
+2.7 case key clause clause
+2.7 and expression
+2.7 or expression
+9.1 make bit string k initialization
+9.1 bit string allocate k
+9.1 bit string copy bit-string
+11.4.1 make strong eq hash table initial-size
+11.4.1 make key weak eq hash table initial-size
+11.4.1 make key ephemeral eq hash table initial-size
+11.4.1 make strong eqv hash table initial-size
+11.4.1 make key weak eqv hash table initial-size
+11.4.1 make key ephemeral eqv hash table initial-size
+11.4.1 make equal hash table initial-size
+11.4.1 make string hash table initial-size
+11.4.1 hash table constructor key-hash key=? rehash-after-gc? entry-type
+11.4.1 hash table entry type:strong
+11.4.1 hash table entry type:key weak
+11.4.1 hash table entry type:datum weak
+11.4.1 hash table entry type:key datum weak
+11.4.1 hash table entry type:key ephemeral
+11.4.1 hash table entry type:datum ephemeral
+11.4.1 hash table entry type:key&datum ephemeral
+11.4.1 hash table clean! hash-table
+11.4.1 strong hash table constructor key-hash key=?
+11.4.1 weak hash table constructor key-hash key=?
+7.2 list object
+7.2 make list k
+7.2 cons* object object
+7.2 list tabulate k init-proc
+7.2 list copy list
+7.2 iota count
+7.2 vector >list vector
+7.2 subvector >list vector start end
+7.2 string >list string
+7.2 substring >list string start end
+6.1 make string k
+6.1 string char
+6.1 list >string char-list
+6.1 string copy string
+8.1 make vector k
+8.1 vector object
+8.1 vector copy vector
+8.1 list >vector list
+8.1 make initialized vector k initialization
+8.1 vector grow vector k
+8.1 vector map procedure vector
+11.7.1 make wt tree type key<?
+11.7.1 number wt type
+11.7.1 string wt type
+11.7.1 make wt tree wt-tree-type
+11.7.1 singleton wt tree wt-tree-type key datum
+11.7.1 alist >wt tree tree-type alist
+14.9.2 make port port-type state
+14.9.2 port type port
+14.9.2 port state port
+14.9.2 set port state! port object
+14.9.2 port operation port symbol
+14.9.2 port operation names port
+14.9.2 make eof object input-port
+12.4 call with current continuation procedure
+12.4 continuation? object
+12.4 within continuation continuation thunk
+12.4 dynamic wind before thunk after
+12.4 call with values thunk procedure
+12.4 values object
+17.2 graphics device coordinate limits graphics-device
+17.2 graphics coordinate limits graphics-device
+17.2 graphics set coordinate limits graphics-device x-left y-bottom x-right y-top
+17.7 graphics operation graphics-device name object
+17.10.2 set background color color-name
+17.10.2 define color name spec
+17.10.2 find color name
+17.10.2 draw ellipse left top right bottom
+17.10.2 fill polygon points
+17.10.2 load bitmap pathname
+17.10.2 save bitmap pathname
+17.10.2 move window x y
+17.10.2 resize window width height
+17.10.2 set line width width
+17.10.2 set window name name
+17.10.2 set font handle
+17.10.2 copy area source-x-left source-y-top width height destination-x-left destination-y-top
+17.9.3 draw arc x y radius-x radius-y angle-start angle-sweep fill?
+17.9.3 draw circle x y radius
+17.9.3 set border width width
+17.9.3 set font font-name
+17.9.3 set mouse shape shape-number
+17.9.3 map window
+17.9.3 resize window width height
+17.9.3 move window x y
+17.9.3 get default resource property
+17.9.3 copy area source-x-left source-y-top width height destination-x-left destination-y-top
+17.9.3 font structure font-name
+14.7 set record type unparser method! record-type unparser-method
+14.7 unparser set tagged vector method! tag unparser-method
+14.7 unparser set tagged pair method! tag unparser-method
+14.7 standard unparser method name procedure
+14.7 with current unparser state unparser-state procedure
+9.3 bit string append bit-string-1 bit-string-2
+9.3 bit substring bit-string start end
+7.4 sublist list start end
+7.4 list head list k
+7.4 list tail list k
+7.4 append list
+7.4 append! list
+7.4 last pair list
+7.4 except last pair list
+6.5 string append string
+6.5 substring string start end
+6.5 string head string end
+6.5 string tail string start
+6.5 string pad left string k
+6.5 string trim string
+8.3 subvector vector start end
+8.3 vector head vector end
+8.3 vector tail vector start
+15.5.2 local decoded time
+15.5.2 global decoded time
+15.5.2 make decoded time second minute hour day month year
+15.5.2 decoded time second decoded-time
+15.5.2 decoded time day of week decoded-time
+15.5.2 decoded time daylight savings time? decoded-time
+15.5.2 decoded time zone decoded-time
+15.5.2 time zone? object
+15.5.2 month max days month
+2.12.4 define record type type-name
+18.3 dib
+18.3.1 open dib filename string
+18.3.1 write dib filename string
+18.3.1 bitmap from dib dib dib
+18.3.1 dib from bitmap bitmap hbitmap
+18.3.1 dib blt dest hdc
+18.3.1 delete dib dib dib
+18.3.1 dib height dib dib
+18.3.1 dib width dib dib
+18.3.1 copy bitmap bm hbitmap
+18.3.1 create dib width int
+18.3.1 crop bitmap bm hbitmap
+18.3.1 dib set pixels unaligned dib
+15.4 directory read directory
+12.6.3 dispatch tag object
+12.6.3 built in dispatch tag name
+12.6.3 built in dispatch tags
+12.6.3 record type dispatch tag record-type
+12.6.3 dispatch tag? object
+12.6.3 guarantee dispatch tag object caller
+17.3 graphics clear graphics-device
+17.3 graphics draw point graphics-device x y
+17.3 graphics erase point graphics-device x y
+17.3 graphics draw line graphics-device x-start y-start x-end y-end
+17.3 graphics draw text graphics-device x y string
+17.3 graphics move cursor graphics-device x y
+17.3 graphics drag cursor graphics-device x y
+2.3 fluid let variable init
+13.1 environment? object
+13.1 environment has parent? environment
+13.1 environment parent environment
+13.1 environment bound names environment
+13.1 environment macro names environment
+13.1 environment bindings environment
+13.1 environment reference type environment symbol
+13.1 environment bound? environment symbol
+13.1 environment assigned? environment symbol
+13.1 environment lookup environment symbol
+13.1 environment lookup macro environment symbol
+13.1 environment assignable? environment symbol
+13.1 environment assign! environment symbol object
+13.1 environment definable? environment symbol
+13.1 environment define environment symbol object
+13.1 environment define macro environment symbol transformer
+13.1 eval expression environment
+13.2 system global environment
+13.2 user initial environment
+10.7.2 ephemeron? object
+10.7.2 make ephemeron key datum
+10.7.2 ephemeron broken? ephemeron
+10.7.2 ephemeron key ephemeron
+10.7.2 ephemeron datum ephemeron
+3 eqv? obj1 obj2
+3 eq? obj1 obj2
+3 equal? obj1 obj2
+16.2 format error message message irritants port
+16.2 error irritant noise value
+16.4.1 with simple restart name reporter thunk
+16.4.1 with restart name reporter effector interactor thunk
+2.11.4 er macro transformer expression
+5.1 char >name char
+5.1 name >char string
+15.5.5 decoded time date string decoded-time
+15.5.5 decoded time time string decoded-time
+15.5.5 day of week long string day-of-week
+15.5.5 month long string month
+15.5.5 time zone >string
+15.3 file exists? filename
+15.3 copy file source-filename target-filename
+15.3 rename file source-filename target-filename
+15.3 delete file filename
+15.3 delete file no errors filename
+15.3 hard link file source-filename target-filename
+15.3 soft link file source-filename target-filename
+15.3 make directory filename
+15.3 delete directory filename
+15.3 >truename filename
+15.3 call with temporary file pathname procedure
+15.3 temporary file pathname directory
+15.3 temporary directory pathname
+15.3 file directory? filename
+15.3 file regular? filename
+15.3 file symbolic link? filename
+15.3 file type direct filename
+15.3 file readable? filename
+15.3 file writeable? filename
+15.3 file executable? filename
+15.3 file access filename mode
+15.3 file eq? filename1 filename2
+15.3 file modes filename
+15.3 set file modes! filename modes
+15.3 file modification time filename
+15.3 file access time filename
+15.3 set file times! filename access-time modification-time
+15.3 current file time
+15.3 file touch filename
+15.3 file length filename
+15.3 file attributes filename
+15.3 file attributes type attributes
+15.3 file attributes access time attributes
+15.3 file attributes modification time attributes
+15.3 file attributes change time attributes
+15.3 file attributes length attributes
+15.3 file attributes mode string attributes
+15.3 file attributes n links attributes
+15.3 file attributes uid attributes
+15.3 file attributes gid attributes
+15.3 file attributes inode number attributes
+15.3 file attributes modes attributes
+14.2 open input file filename
+14.2 open output file filename
+14.2 open i o file filename
+14.2 open binary input file filename
+14.2 close all open files
+14.2 call with input file filename procedure
+14.2 call with output file filename procedure
+14.2 call with binary input file filename procedure
+15.1.1 >pathname object
+15.1.1 parse namestring thing
+15.1.1 >namestring pathname
+15.1.1 pathname simplify pathname
+7.5 filter predicate list
+7.5 remove predicate list
+7.5 partition predicate list
+7.5 delete element list
+7.5 delete! element list
+7.5 delete member procedure deletor predicate
+7.5 list deletor predicate
+16.4.3 bound restarts
+16.4.3 find restart name
+16.4.3 invoke restart restart argument
+16.4.3 invoke restart interactively restart
+4.7.1 fix:fixnum? object
+4.7.1 fix:= fixnum fixnum
+4.7.1 fix:zero? fixnum
+4.7.1 fix:+ fixnum fixnum
+4.7.1 fix:divide fixnum fixnum
+4.7.1 fix:not fixnum
+4.7.1 fix:and fixnum fixnum
+4.7.1 fix:andc fixnum fixnum
+4.7.1 fix:or fixnum fixnum
+4.7.1 fix:xor fixnum fixnum
+4.7.1 fix:lsh fixnum1 fixnum2
+4.7.2 flo:flonum? object
+4.7.2 flo:= flonum1 flonum2
+4.7.2 flo:zero? flonum
+4.7.2 flo:finite? flonum
+4.7.2 flo:negate flonum
+4.7.2 flo:atan2 flonum1 flonum2
+14.6 format destination control-string argument
+16.5.1 condition constructor condition-type field-names
+16.5.1 condition accessor condition-type field-name
+16.5.1 condition predicate condition-type
+16.5.1 condition signaller condition-type field-names default-handler
+12.6.1 make generic procedure arity
+12.6.1 generic procedure? object
+12.6.1 guarantee generic procedure object caller
+12.6.1 generic procedure arity generic
+12.6.1 generic procedure name generic
+12.6.1 generic procedure applicable? generic operands
+12.6.1 condition type:no applicable methods operator operands
+12.6.1 condition type:extra applicable methods operator operands
+17.8 create image width height
+17.8 draw image x y image
+17.8 draw subimage x y image im-x im-y w h
+17.8 image? object
+17.8 image destroy image
+17.8 image height image
+17.8 image width image
+17.8 image fill from byte vector image bytes
+11.7.4 wt tree index wt-tree index
+11.7.4 wt tree rank wt-tree key
+11.7.4 wt tree min wt-tree
+11.7.4 wt tree delete min wt-tree
+11.7.4 wt tree delete min! wt-tree
+14.9.3 read char input-port
+14.9.3 peek char input-port
+14.9.3 char ready? input-port k
+14.9.3 read substring input-port string start end
+14.9.3 eof? input-port
+14.9.3 chars remaining input-port
+14.9.3 buffered input chars input-port
+14.9.3 input buffer size input-port
+14.9.3 set input buffer size input-port size
+14.4 read char input-port
+14.4 peek char input-port
+14.4 char ready? input-port
+14.4 read input-port
+14.4 eof object? object
+14.4 read char no hang input-port
+14.4 read string char-set
+14.4 read line input-port
+14.4 *parser radix*
+14.4 *parser canonicalize symbols?*
+9.6 unsigned integer >bit string length integer
+9.6 signed integer >bit string length integer
+9.6 bit string >unsigned integer bit-string
+5.4 make char code bucky-bits
+5.4 char bits char
+5.4 char code char
+5.4 char code limit
+5.4 char bits limit
+5.4 char >integer char
+5.4 char integer limit
+16.4.2 abort restarts
+16.4.2 continue restarts
+16.4.2 muffle warning restarts
+16.4.2 retry restarts
+16.4.2 store value new-value
+16.4.2 use value new-value
+5.5 char ascii? char
+5.5 char >ascii char
+5.5 ascii >char code
+2.9 let name
+2.9 do variable init step
+2.1 lambda formals expression expression
+2.1 named lambda formals expression expression
+2.2 let variable init
+2.2 let* variable init
+2.2 letrec variable init
+15.6 process time clock
+15.6 real time clock
+15.6 internal time ticks >seconds ticks
+15.6 internal time seconds >ticks seconds
+15.6 system clock
+15.6 runtime
+15.6 with timings thunk receiver
+15.6 measure interval runtime? procedure
+7.7 map procedure list list
+7.7 map* initial-value procedure list1 list2
+7.7 for each procedure list list
+6.7 string match forward string1 string2
+6.7 string match backward string1 string2
+6.7 string prefix? string1 string2
+6.7 string suffix? string1 string2
+12.6.2 add generic procedure generator generic generator
+12.6.2 remove generic procedure generator generic generator
+12.6.2 remove generic procedure generators generic tags
+12.6.2 generic procedure generator list generic
+12.6.2 generic procedure default generator generic
+12.6.2 set generic procedure default generator! generic generator
+5.3 char? object
+5.3 char upcase char
+5.3 char downcase char
+5.3 char >digit char
+5.3 digit >char digit
+7.9 reverse list
+7.9 reverse! list
+7.9 sort sequence procedure
+15.9 microcode id operating system
+15.9 microcode id operating system name
+15.9 microcode id operating system variant
+15.9 get host by name host-name
+15.9 get host by address ip-address
+15.9 canonical host name host-name
+15.9 get host name
+15.9 os hostname
+15.9 allocate host address
+15.9 host address any
+15.9 host address loopback
+15.1.4 local host
+15.1.4 host? object
+15.1.4 host=? host1 host2
+15.1.4 init file pathname host
+15.1.4 user homedir pathname host
+15.1.4 system library pathname pathname
+15.1.4 system library directory pathname pathname
+9.5 bit string fill! bit-string initialization
+9.5 bit string move! target-bit-string bit-string
+9.5 bit substring move right! bit-string-1 start1 end1 bit-string-2 start2
+6.9 string replace string char1 char2
+6.9 string fill! string char
+6.9 substring fill! string start end char
+6.9 substring move left! string1 start1 end1 string2 start2
+6.9 reverse string string
+8.4 vector fill! vector object
+8.4 subvector move left! vector1 start1 end1 vector2 start2
+4.6 number >string number
+4.6 flonum parser fast?
+4.6 flonum unparser cutoff
+4.6 string >number string
+4.5 exact? z
+4.5 = z1 z2 z3
+4.5 < x1 x2 x3
+4.5 > x1 x2 x3
+4.5 <= x1 x2 x3
+4.5 >= x1 x2 x3
+4.5 max x1 x2
+4.5 min x1 x2
+4.5 + z1
+4.5 * z1
+4.5 - z1 z2
+4.5 / z1 z2
+4.5 abs x
+4.5 quotient n1 n2
+4.5 integer floor n1 n2
+4.5 integer divide n1 n2
+4.5 gcd n1
+4.5 lcm n1
+4.5 numerator q
+4.5 denominator q
+4.5 floor x
+4.5 ceiling x
+4.5 truncate x
+4.5 round x
+4.5 rationalize x y
+4.5 simplest rational x y
+4.5 log z
+4.5 asin z
+4.5 acos z
+4.5 atan z
+4.5 atan y x
+4.5 sqrt z
+4.5 expt z1 z2
+4.5 exact >inexact z
+11.5 hash object
+11.5 unhash k
+11.5 object hashed? object
+11.5 valid hash number? k
+11.5 object hash object
+11.5 object unhash k
+11.5 hash table make
+17.1 graphics type available? graphics-device-type
+17.1 enumerate graphics types
+17.1 make graphics device graphics-device-type object
+17.1 graphics close graphics-device
+15.1.3 pathname? object
+15.1.3 pathname=? pathname1 pathname2
+15.1.3 pathname absolute? pathname
+15.1.3 directory pathname? pathname
+15.1.3 pathname wild? pathname
+15.1.3 merge pathnames pathname
+15.1.3 *default pathname defaults*
+15.1.3 pathname default pathname device directory name type version
+15.1.3 file namestring pathname
+15.1.3 directory pathname pathname
+15.1.3 directory pathname as file pathname
+15.1.3 pathname as directory pathname
+14.9.4 write char output-port char
+14.9.4 write substring output-port string start end
+14.9.4 fresh line output-port
+14.9.4 flush output output-port
+14.9.4 discretionary flush output output-port
+14.9.4 output port write char output-port char
+14.9.4 output port write substring output-port string start end
+14.9.4 output port fresh line output-port
+14.9.4 output port flush output output-port
+14.9.4 output port write string output-port string
+14.9.4 buffered output chars output-port
+14.9.4 output buffer size output-port
+14.9.4 set output buffer size output-port size
+14.9.4 x size output-port
+14.9.4 y size output-port
+14.9.4 output port x size output-port
+14.9.4 output port y size output-port
+14.5 write char char
+14.5 write string string
+14.5 write substring string start end
+14.5 write object
+14.5 display object
+14.5 newline output-port
+14.5 fresh line output-port
+14.5 write line object
+14.5 flush output output-port
+14.5 beep output-port
+14.5 clear output-port
+14.5 pp object
+14.5 *unparser radix*
+14.5 *unparser list breadth limit*
+14.5 *unparser list depth limit*
+14.5 *unparser string length limit*
+14.5 *unparse with maximum readability?*
+7.1 pair? object
+7.1 cons obj1 obj2
+7.1 xcons obj1 obj2
+7.1 car pair
+7.1 cdr pair
+7.1 car+cdr pair
+7.1 set car! pair object
+7.1 set cdr! pair object
+7.1 caar pair
+7.1 cadr pair
+7.1 general car cdr object path
+7.1 tree copy tree
+14.10 input port >parser buffer port
+14.10 substring >parser buffer string start end
+14.10 string >parser buffer string
+14.10 source >parser buffer source
+14.10 parser buffer? object
+14.10 parser buffer pointer? object
+14.10 read parser buffer char buffer
+14.10 peek parser buffer char buffer
+14.10 parser buffer ref buffer index
+14.10 get parser buffer pointer buffer
+14.10 set parser buffer pointer! buffer pointer
+14.10 get parser buffer tail buffer pointer
+14.10 discard parser buffer head! buffer
+14.10 match parser buffer char buffer char
+14.10 match parser buffer char in set buffer char-set
+14.10 match parser buffer string buffer string
+14.10 parser buffer position string pointer
+14.10 parser buffer pointer index pointer
+14.10 parser buffer pointer line pointer
+14.11.3 make parser macros parent-table
+14.11.3 parser macros? object
+14.11.3 global parser macros
+14.11.3 current parser macros
+14.11.3 set current parser macros! table
+14.11.3 with current parser macros table thunk
+2.11.2 syntax rules literals syntax-rule
+14.9.1 make port type operations port-type
+14.9.1 port type? object
+14.9.1 input port type? object
+14.9.1 output port type? object
+14.9.1 i o port type? object
+14.9.1 port type operations port-type
+14.9.1 port type operation names port-type
+14.9.1 port type operation port-type symbol
+14.1 port? object
+14.1 input port? object
+14.1 output port? object
+14.1 i o port? object
+14.1 guarantee port object
+14.1 current input port
+14.1 current output port
+14.1 notification output port
+14.1 trace output port
+14.1 interaction i o port
+14.1 set current input port! input-port
+14.1 console i o port
+14.1 close port port
+14.1 close input port port
+14.1 close output port port
+12.3 make primitive procedure name
+12.3 primitive procedure name primitive-procedure
+12.3 implemented primitive procedure? primitive-procedure
+12.1 apply procedure object object
+12.1 procedure? object
+12.1 compiled procedure? object
+12.1 compound procedure? object
+12.1 primitive procedure? object
+12.1 procedure environment procedure
+10.5 delay expression
+10.5 force promise
+10.5 promise? object
+10.5 promise forced? promise
+10.5 promise value promise
+14.8 prompt for command expression prompt
+14.8 prompt for command char prompt
+14.8 prompt for expression prompt
+14.8 prompt for evaluated expression prompt
+14.8 prompt for confirmation prompt
+2.6 quote datum
+2.6 quasiquote template
+4.8 random modulus
+4.8 flo:random unit state
+4.8 *random state*
+4.8 make random state state
+4.8 random state? object
+2.12.2 receive formals expression body
+10.4 make record type type-name field-names
+10.4 record constructor record-type
+10.4 record keyword constructor record-type
+10.4 record predicate record-type
+10.4 record accessor record-type field-name
+10.4 record modifier record-type field-name
+10.4 record? object
+10.4 record type descriptor record
+10.4 record type? object
+10.4 record type name record-type
+10.4 record type field names record-type
+11.6 make rb tree key=? key<?
+11.6 rb tree? object
+11.6 rb tree insert! rb-tree key datum
+11.6 rb tree lookup rb-tree key default
+11.6 rb tree delete! rb-tree key
+11.6 rb tree >alist rb-tree
+11.6 rb tree key list rb-tree
+11.6 rb tree datum list rb-tree
+11.6 rb tree equal? rb-tree-1 rb-tree-2 datum=?
+11.6 rb tree empty? rb-tree
+11.6 rb tree size rb-tree
+11.6 rb tree height rb-tree
+11.6 rb tree copy rb-tree
+11.6 alist >rb tree alist key=? key<?
+11.6 rb tree min rb-tree default
+11.6 rb tree min datum rb-tree default
+11.6 rb tree min pair rb-tree
+11.6 rb tree max rb-tree default
+11.6 rb tree max datum rb-tree default
+11.6 rb tree max pair rb-tree
+7.8 reduce left procedure initial list
+7.8 reduce right procedure initial list
+7.8 fold right procedure initial list
+7.8 fold left procedure initial list
+7.8 any predicate list list
+7.8 every predicate list list
+6.8.1 re string match regexp string
+6.8.1 re string search forward regexp string
+6.8.1 re string search backward regexp string
+6.8.1 re match extract string registers n
+6.8.1 regexp group alternative
+6.8.1 re compile pattern regexp-string
+13.3 nearest repl environment
+13.3 ge environment
+11.4.3 hash table size hash-table
+11.4.3 hash table rehash size hash-table
+11.4.3 set hash table rehash size! hash-table x
+11.4.3 hash table rehash threshold hash-table
+11.4.3 set hash table rehash threshold! hash-table x
+6.8.2 rexp? object
+6.8.2 rexp >regexp rexp
+6.8.2 rexp compile rexp
+6.8.2 rexp any char
+6.8.2 rexp line start
+6.8.2 rexp line end
+6.8.2 rexp string start
+6.8.2 rexp string end
+6.8.2 rexp word edge
+6.8.2 rexp not word edge
+6.8.2 rexp word start
+6.8.2 rexp word end
+6.8.2 rexp word char
+6.8.2 rexp not word char
+6.8.2 rexp syntax char syntax-type
+6.8.2 rexp not syntax char syntax-type
+6.8.2 rexp sequence rexp
+6.8.2 rexp alternatives rexp
+6.8.2 rexp group rexp
+6.8.2 rexp* rexp
+6.8.2 rexp+ rexp
+6.8.2 rexp optional rexp
+6.8.2 rexp case fold rexp
+-1 identifier? object
+-1 identifier=? environment1 identifier1 environment2 identifier2
+-1 make synthetic identifier identifier
+-1 sc macro transformer expression
+-1 rsc macro transformer expression
+-1 make syntactic closure environment free-names form
+-1 close syntax form environment
+-1 capture syntactic environment procedure
+7.6 find predicate list
+7.6 find tail predicate list
+7.6 member object list
+7.6 member procedure predicate
+6.6 string search forward pattern string
+6.6 string search backward pattern string
+6.6 string search all pattern string
+6.6 substring? pattern string
+6.6 string find next char string char
+6.6 string find previous char string char
+6.6 string find previous char in set string char-set
+9.2 bit string? object
+9.2 bit string length bit-string
+9.2 bit string ref bit-string k
+9.2 bit string set! bit-string k
+9.2 bit string clear! bit-string k
+9.2 bit substring find next set bit bit-string start end
+7.3 list? object
+7.3 circular list? object
+7.3 dotted list? object
+7.3 length list
+7.3 length+ clist
+7.3 null? object
+7.3 list ref list k
+7.3 first list
+7.3 second list
+7.3 third list
+7.3 fourth list
+7.3 fifth list
+7.3 sixth list
+7.3 seventh list
+7.3 eighth list
+7.3 ninth list
+7.3 tenth list
+6.2 string? object
+6.2 string length string
+6.2 string null? string
+6.2 string ref string k
+6.2 string set! string k char
+8.2 vector? object
+8.2 vector length vector
+8.2 vector ref vector k
+8.2 vector set! vector k object
+8.2 vector first vector
+8.2 vector second vector
+8.2 vector third vector
+8.2 vector fourth vector
+8.2 vector fifth vector
+8.2 vector sixth vector
+8.2 vector seventh vector
+8.2 vector eighth vector
+8.2 vector binary search vector key<? unwrap-key key
+2.8 begin expression expression
+16.5.3 make condition condition-type continuation restarts field-plist
+16.5.3 access condition condition field-name
+16.5.3 condition report string condition
+10.6 stream object
+10.6 list >stream list
+10.6 stream >list stream
+10.6 cons stream object expression
+10.6 stream pair? object
+10.6 stream car stream
+10.6 stream first stream
+10.6 stream cdr stream
+10.6 stream rest stream
+10.6 stream null? stream
+10.6 stream length stream
+10.6 stream ref stream k
+10.6 stream head stream k
+10.6 stream tail stream k
+10.6 stream map procedure stream stream
+14.3 open input string string
+14.3 with input from string string thunk
+14.3 open output string
+14.3 call with output string procedure
+14.3 with output to string thunk
+14.3 with output to truncated string k thunk
+14.3 write to string object
+2.10 define structure name structure-option
+2.10 read only value
+2.10 type type-descriptor
+2.10 predicate name
+2.10 copier name
+2.10 print procedure expression
+2.10 constructor name
+2.10 keyword constructor name
+2.10 type descriptor name
+2.10 conc name name
+2.10 type representation-type
+2.10 named expression
+2.10 safe accessors boolean
+2.10 initial offset offset
+15.7.2 condition type:subprocess signalled subprocess reason
+15.7.2 condition type:subprocess stopped subprocess reason
+15.7.2 condition type:subprocess abnormal termination subprocess reason
+15.7.3 input port
+15.7.3 input line translation line-ending
+15.7.3 input buffer size n
+15.7.3 output port
+15.7.3 output line translation line-ending
+15.7.3 output buffer size n
+15.7.3 redisplay hook thunk
+15.7.3 environment environment
+15.7.3 working directory pathname
+15.7.3 use pty? boolean
+15.7.3 shell file name pathname
+15.7.1 run shell command command option
+15.7.1 run synchronous subprocess program arguments option
+10.2 symbol? object
+10.2 symbol >string symbol
+10.2 intern string
+10.2 intern soft string
+10.2 string >symbol string
+10.2 string >uninterned symbol string
+10.2 generate uninterned symbol object
+10.2 symbol append symbol
+10.2 symbol hash symbol
+10.2 symbol hash mod symbol modulus
+10.2 symbol<? symbol1 symbol2
+2.11.1 let syntax bindings expression expression
+2.11.1 letrec syntax bindings expression expression
+2.11.1 let* syntax bindings expression expression
+2.11.1 define syntax keyword transformer-spec
+16.7 condition type:serious condition
+16.7 condition type:error
+16.7 condition type:simple error message irritants
+16.7 condition type:illegal datum datum
+16.7 condition type:wrong type datum datum type
+16.7 error:wrong type datum datum type
+16.7 condition type:wrong type argument datum type operator operand
+16.7 error:wrong type argument datum type operator
+16.7 condition type:wrong number of arguments datum type operands
+16.7 error:wrong number of arguments datum type operands
+16.7 condition type:datum out of range datum
+16.7 error:datum out of range datum
+16.7 condition type:bad range argument datum operator operand
+16.7 error:bad range argument datum operator
+16.7 condition type:inapplicable object datum operands
+16.7 condition type:file error filename
+16.7 condition type:file operation error filename verb noun reason operator operands
+16.7 error:file operation error filename verb noun reason operator operands
+16.7 condition type:derived file error filename condition
+16.7 error:derived file filename condition
+16.7 condition type:port error port
+16.7 condition type:derived port error port condition
+16.7 error:derived port port condition
+16.7 condition type:variable error location environment
+16.7 condition type:unbound variable location environment
+16.7 condition type:unassigned variable location environment
+16.7 condition type:arithmetic error operator operands
+16.7 condition type:divide by zero operator operands
+16.7 error:divide by zero operator operands
+16.7 condition type:floating point overflow operator operands
+16.7 condition type:floating point underflow operator operands
+16.7 condition type:primitive procedure error operator operands
+16.7 condition type:system call error operator operands system-call error-type
+16.7 condition type:control error
+16.7 condition type:no such restart name
+16.7 error:no such restart name
+16.7 condition type:not loading
+16.7 condition type:warning
+16.7 condition type:simple warning message irritants
+16.7 condition type:simple condition message irritants
+16.7 condition type:breakpoint environment message prompt
+15.8 open tcp stream socket host-name service
+15.8 open tcp server socket service
+15.8 tcp server connection accept server-socket block? peer-address
+15.8 close tcp server socket server-socket
+14.9.6 port input terminal mode port
+14.9.6 port set input terminal mode port mode
+14.9.6 port with input terminal mode port mode thunk
+14.9.6 port output terminal mode port
+14.9.6 port set output terminal mode port mode
+14.9.6 port with output terminal mode port mode thunk
+11.3 2d put! x-key y-key datum
+11.3 2d remove! x-key y-key
+11.3 2d get x-key y-key
+11.3 2d get alist x x-key
+11.3 2d get alist y y-key
+16.4.4 restart? object
+16.4.4 restart name restart
+16.4.4 restart effector restart
+16.4.4 restart interactor restart
+16.4.4 write restart report restart port
+15.5.4 universal time >local decoded time universal-time
+15.5.4 universal time >file time universal-time
+15.5.4 decoded time >universal time decoded-time
+15.5.4 decoded time >file time decoded-time
+15.5.4 decoded time >string decoded-time
+15.5.4 file time >universal time file-time
+15.5.4 file time >local decoded time file-time
+15.5.4 string >universal time time-string
+15.5.4 string >decoded time time-string
+15.5.4 string >file time time-string
+13.4 the environment
+13.4 top level environment? object
+13.4 extend top level environment environment
+13.4 link variables environment1 symbol1 environment2 symbol2
+13.4 unbind variable environment symbol
+5.7.2 utf8 string >wide string string
+5.7.2 utf8 string length string
+5.7.2 wide string >utf8 string string
+5.7 unicode scalar value? object
+5.7 unicode char? object
+15.5.1 get universal time
+15.5.1 epoch
+17.9.2 x graphics open display display-name
+17.9.2 x graphics close display display
+17.9.2 x close all displays
+17.9.2 x geometry string x y width height
+6.10 string maximum length string
+6.10 set string length! string k
+10.7.1 weak pair? object
+10.7.1 weak cons car cdr
+10.7.1 weak pair car? weak-pair
+10.7.1 weak car weak-pair
+10.7.1 weak set car! weak-pair object
+10.7.1 weak cdr weak-pair
+10.7.1 weak set cdr! weak-pair object
+5.7.1 wide string? object
+5.7.1 make wide string k
+5.7.1 wide string unicode-char
+5.7.1 wide string length wide-string
+5.7.1 wide string ref wide-string k
+5.7.1 wide string set! wide-string k unicode-char
+5.7.1 string >wide string string
+5.7.1 wide string >string wide-string
+5.7.1 open wide input string wide-string
+5.7.1 open wide output string
+5.7.1 call with wide output string procedure
+18.2.2 find module name
+18.2.2 gdi32.dll
+18.2.2 kernel32.dll
+18.2.2 user32.dll
+18.2.2 windows procedure name
+18.2.1 define windows type name check convert return revert
+18.2.1 unchecked
+18.2.1 bool
+18.2.1 char
+18.2.1 string
+18.2.1 char*
+18.2.1 handle
+18.2.1 resource id
+15.2 working directory pathname
+15.2 pwd
+15.2 set working directory pathname! filename
+15.2 cd filename
+15.2 with working directory pathname filename thunk
+14.12.1 read xml port
+14.12.1 read xml file pathname
+14.12.1 string >xml string
+14.12.3 make xml name qname uri
+14.12.3 xml name? object
+14.12.3 xml name >symbol xml-name
+14.12.3 xml name uri xml-name
+14.12.3 xml name string xml-name
+14.12.3 xml name prefix xml-name
+14.12.3 xml name local xml-name
+14.12.3 xml name=? xml-name-1 xml-name-2
+14.12.3 make xml qname string
+14.12.3 xml qname? object
+14.12.3 xml qname prefix qname
+14.12.3 xml qname local qname
+14.12.3 null xml name prefix
+14.12.3 null xml name prefix? object
+14.12.3 null xml namespace uri
+14.12.3 null xml namespace uri? object
+14.12.3 xml uri
+14.12.3 xmlns uri
+14.12.2 write xml xml port
+14.12.2 write xml file xml pathname
+14.12.2 xml >wide string xml
+14.12.2 xml >string xml
+14.12.4 xml document declaration misc-1 dtd misc-2 root misc-3
+14.12.4 xml declaration version encoding standalone
+14.12.4 xml element name attributes contents
+14.12.4 xml processing instructions name text
+14.12.4 xml dtd root external internal
+14.12.4 xml !element name content-type
+14.12.4 xml !attlist name definitions
+14.12.4 xml !entity name value
+14.12.4 xml parameter !entity name value
+14.12.4 xml unparsed !entity name id notation
+14.12.4 xml !notation name id
+14.12.4 xml external id id uri

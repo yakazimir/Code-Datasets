@@ -1,0 +1,907 @@
+core collapse stmts stmts
+core script init
+core script scan script files
+core script load string filename filedata linenumber
+core script finish load stmts initcode check_names filename
+core script write rpyc header f
+core script write rpyc data f slot data
+core script write rpyc md5 f digest
+core script read rpyc data f slot
+core script static transforms stmts
+core script init bytecode
+core script update bytecode
+core script lookup label
+core script has label label
+core script analyze
+core interact type roll_forward
+core child or fixed
+core at transform
+core detached
+core layer name
+core close d
+core combine style style_prefix style_suffix
+core prefixed style style_suffix
+core implicit add d
+core screen id id_ d
+core formatter parse s
+core substitute s scope force translate
+core displayable d scope
+core dynamic image d scope prefix
+core split properties properties
+core get path fn
+core index archives
+core cleardirfiles
+core scandirfiles
+core listdirfiles common
+core load core name
+core get prefixes
+core loadable core name
+core transfn name
+core get hash name
+core auto mtime fn
+core add auto fn force
+core auto thread function
+core auto init
+core auto quit
+core alpha blend control old new alpha
+core at d
+core const name
+core not const name
+core pure fn
+core delta set init base copy
+core analysis imagemap
+core analysis exit loop
+core analysis at fixed point
+core analysis mark constant name
+core analysis mark not constant name
+core analysis is constant node
+core analysis is constant expr expr
+core analysis python code
+core analysis parameters parameters
+core compiler cache ast eval literal expr
+core compiler cache ast exec code
+core run restart
+core image exists imprecise name
+core image exists precise name
+core image exists name expression tag precise
+core check filename encodings
+core common n
+core lint
+core renpy pure fn
+core public api
+core roll forward info
+core roll forward core value
+core in rollback
+core can rollback
+core in fixed rollback
+core checkpoint data keep_rollback
+core block rollback
+core suspend rollback flag
+core fix rollback
+core retain after load
+core count displayables in layer layer
+core image name d
+core copy images old new
+core default layer layer tag expression
+core can show name layer tag
+core showing name layer
+core predict show name layer what tag
+core show name at_list layer what
+core hide name layer
+core scene layer
+core input prompt default allow exclude
+core menu items set_expr
+core choice for skipping
+core predict menu
+core display menu items window_style interact with_none
+core predict say who what
+core scry say who scry
+core say who what interact
+core imagemap ground selected hotspots unselected
+core pause delay music with_none hard
+core movie cutscene filename delay loops stop_music
+core with statement trans always paired clear
+core rollback force checkpoints defer greedy
+core toggle fullscreen
+core toggle music
+core has label name
+core get all labels
+core take screenshot scale background
+core full restart transition label target
+core utter restart
+core reload script
+core quit relaunch status
+core jump label
+core jump out of context label
+core call label
+core return statement
+core screenshot filename
+core version tuple
+core transition trans layer always force
+core get transition layer
+core clear game runtime
+core get game runtime
+core loadable filename
+core exists filename
+core restart interaction
+core context
+core context nesting level
+core music start filename loops fadeout fadein
+core music stop fadeout
+core get filename line
+core log msg
+core force full redraw
+core dynamic
+core context dynamic
+core seen label label
+core seen audio filename
+core seen image name
+core file fn
+core image size im
+core get at list name layer
+core show layer at at_list layer
+core free memory
+core quit event
+core iconify
+core timeout seconds
+core end interaction value
+core scry
+core load module name
+core load string s filename
+core pop call
+core call stack depth
+core game menu screen
+core shown window
+core get placement d
+core get image bounds tag width height layer
+core cache pin
+core cache unpin
+core start predict
+core stop predict
+core start predict screen _screen_name
+core stop predict screen name
+core call screen _screen_name
+core list files common
+core get renderer info
+core display reset
+core mode mode
+core get mode
+core notify message
+core variant name
+core vibrate duration
+core get say attributes
+core get side image prefix_tag image_tag not_showing layer
+core get physical size
+core set physical size size
+core reset physical size
+core fsencode s
+core fsdecode s
+core get image load log age
+core end replay
+core save persistent
+core is seen ever
+core get mouse pos
+core set mouse pos x y duration
+core set autoreload autoreload
+core get autoreload
+core count dialogue blocks
+core count seen dialogue blocks
+core count newly seen dialogue blocks
+core substitute s scope translate
+core munge name filename
+core get return stack
+core set return stack stack
+core invoke in thread fn
+core cancel gesture
+core execute default statement start
+core write log s
+core predicting
+core get line log
+core clear line log
+core add layer layer above below menu_clear
+core maximum framerate t
+core is start interact
+core play filename channel
+core get editable input value
+core set editable input value input_value editable
+core get refresh rate precision
+core get identifier checkpoints identifier
+core get adjustment bar_value
+core get skipping
+core color normalize
+core color interpolate other fraction
+core color interpolate hsv other fraction
+core color interpolate hls other fraction
+core color tint fraction
+core color shade fraction
+core color opacity opacity
+core color rotate hue rotation
+core color replace hue hue
+core color multiply hls saturation saturation
+core color multiply hsv saturation saturation
+core color multiply value value
+core color replace hls saturation saturation
+core color replace hsv saturation saturation
+core color replace value value
+core color replace lightness lightness
+core color replace opacity opacity
+core warp
+core parser add i
+core parser parse eval expr lineno
+core parser parse exec code lineno
+core parser parse l name
+core screen lang screen define location
+core parse screen l
+core not infinite loop delay
+core context init rollback context clear
+core context make dynamic names context
+core context pop dynamic
+core context pop all dynamic
+core context goto label node_name
+core context check stacks
+core context report coverage node
+core context run node
+core context mark seen
+core context call label return_site
+core context pop call
+core context lookup return pop
+core context rollback copy
+core context predict call label return_site
+core context predict return
+core context predict
+core context seen current ever
+core context do deferred rollback
+core run context top
+core correct type v b ty
+core interpolate t a b type
+core compile all
+core atltransform base get block
+core atltransform base take execution state t
+core atltransform base compile
+core raw statement mark constant
+core s
+core file location filename slotname
+core file location scan
+core file location save slotname record
+core file location list
+core file location mtime slotname
+core file location json slotname
+core file location screenshot slotname
+core file location load slotname
+core file location unlink slotname
+core file location rename old new
+core file location copy old new
+core file location load persistent
+core file location save persistent data
+core multi location newest slotname
+core multi location add location
+core context index
+core invoke in new context callable
+core call in new context label
+core call replay label scope
+core store dict reset
+core store dict begin
+core store dict get changes
+core create store name
+core make clean stores
+core clean stores
+core clean store name
+core reached obj reachable wait
+core reached vars store reachable wait
+core set filename filename offset tree
+core unicode sub m
+core py compile source mode filename lineno
+core revertable list clean
+core revertable list compress clean
+core revertable list rollback compressed
+core det random pushback l
+core det random reset
+core det random random seed
+core rollback purge unreachable reachable wait
+core rollback rollback
+core rollback rollback control
+core rollback log begin
+core rollback log complete
+core rollback log get roots
+core rollback log purge unreachable roots wait
+core rollback log forward info
+core rollback log checkpoint data keep_rollback hard
+core rollback log suspend checkpointing flag
+core rollback log block
+core rollback log retain after load
+core rollback log can rollback
+core rollback log rollback checkpoints force label greedy
+core rollback log freeze wait
+core rollback log discard freeze
+core rollback log unfreeze roots label
+core raise at location e loc
+core register name parse lint execute
+core argument parser init second_pass description require_command
+core run
+core compile
+core quit
+core rmpersistent
+core register command name function
+core bootstrap
+core pre init
+core post init
+core takes no arguments description
+core write utf8 traceback list out l
+core traceback list tb
+core filter traceback list tl
+core open error file fn mode
+core report exception e editor
+core get line text filename linenumber
+core adjust line locations filename linenumber char_offset line_offset
+core insert line before code filename linenumber
+core remove line filename linenumber
+core get full text filename linenumber
+core nodes on line filename linenumber
+core first and last nodes nodes
+core adjust ast linenumbers filename linenumber offset
+core add to ast before code filename linenumber
+core remove from ast filename linenumber
+core curry fn
+core partial function
+core editor begin new_window
+core editor end
+core editor open filename line
+core init
+core launch editor filenames line transient
+core walk memory roots seen
+core profile memory common packages
+core profile memory fraction minimum
+core diff memory update
+core profile rollback
+core find parents cls
+core save dump roots log
+core safe rename old new
+core save record write file filename
+core save slotname extra_info mutate_flag
+core force autosave take_screenshot
+core list saved games regexp fast
+core list slots regexp
+core newest slot regexp
+core slot mtime slotname
+core slot json slotname
+core slot screenshot slotname
+core can load filename test
+core load filename
+core unlink save filename
+core rename save old new
+core copy save old new
+core cycle saves name count
+core clear slot slotname
+core clear cache
+core persistent clear progress
+core persistent update
+core safe deepcopy o
+core find changes
+core register persistent field func
+core merge other
+core check update
+core update force_save
+core save
+core dump error
+core report missing target filename position
+core generate label target
+core process file fn
+core get windows version
+core backup backup module mod
+core backup restore
+core update path package
+core post import
+core reload all
+core setup modulefinder modulefinder
+core import cython
+core log file init name append developer flush
+core log file write s
+core log file exception
+core statement name name
+core next node n
+core parameter info apply args kwargs ignore_errors
+core argument info evaluate scope
+core chain block block next
+core node init loc
+core node diff info
+core node get children f
+core node get init
+core node chain next
+core node replace next old new
+core node execute
+core node early execute
+core node predict
+core node scry
+core node restructure callback
+core node get code dialogue_filter
+core node analyze
+core say menu with expression callback
+core eval who who fast
+core label init loc name block parameters
+core python init loc python_code hide store
+core early python init loc python_code hide store
+core image init loc name expr atl
+core predict imspec imspec scene atl
+core show init loc imspec atl
+core scene init loc imgspec layer atl
+core hide init loc imgspec
+core with init loc expr paired
+core if init loc entries
+core get namespace store
+core screen init loc screen
+core translate python init loc language python_code
+core style init loc name
+core unicode filename fn
+core elide filename fn
+core list logical lines filename filedata linenumber
+core group logical lines lines
+core lexer advance
+core lexer match regexp regexp
+core lexer skip whitespace
+core lexer match regexp
+core lexer keyword word
+core lexer error msg
+core lexer eol
+core lexer expect eol
+core lexer expect noblock stmt
+core lexer expect block stmt
+core lexer subblock lexer init
+core lexer string
+core lexer integer
+core lexer float
+core lexer hash
+core lexer word
+core lexer name
+core lexer set global label label
+core lexer label name declare
+core lexer image name component
+core lexer python string
+core lexer dotted name
+core lexer delimited python delim
+core lexer python expression
+core lexer parenthesised python
+core lexer simple expression comma
+core lexer comma expression
+core lexer checkpoint
+core lexer revert state
+core lexer get location
+core lexer require thing name
+core lexer rest
+core lexer python block
+core parse image name l string nodash
+core parse simple expression list l
+core parse image specifier l
+core parse with l node
+core parse arguments l
+core statement keywords
+core parse statement l
+core parse block l
+core parse fn filedata linenumber
+core predict show display say who what who_args what_args
+core compute widget properties who_args what_args window_args variant
+core show display say who what who_args what_args
+core advcharacter resolve say attributes predict wanted remove
+core advcharacter add history kind who what
+core advcharacter pop history
+core character name kind
+styledata expand anchor v
+sl2 sl2viewport context
+sl2 sl2vpgrid context
+sl2 parser add i
+sl2 parser parse loc l parent
+sl2 parser parse contents l target layout_mode can_has
+sl2 register sl displayable
+sl2 displayable parser init name displayable style nchildren
+sl2 if parser init name node_type parent_contents
+sl2 for parser name or tuple pattern l
+sl2 parse screen l loc
+sl2 compile expr node
+sl2 slnode instantiate transclude
+sl2 slnode copy transclude
+sl2 slnode analyze analysis
+sl2 slnode prepare analysis
+sl2 slnode execute context
+sl2 slnode keywords context
+sl2 slnode copy on change cache
+sl2 slnode debug line
+sl2 slnode used screens callback
+sl2 slnode has transclude
+sl2 sldisplayable init loc displayable scope child_or_fixed
+sl2 sldisplayable wrap in showif d context cache
+sl2 slif init loc
+sl2 slshow if init loc
+sl2 slscreen define location
+audio android video channel get context
+audio android video channel start
+audio android video channel dequeue even_tight
+audio android video channel interact
+audio android video channel fadeout secs
+audio play filenames channel loop fadeout
+audio queue filenames channel loop clear_queue
+audio playable filename channel
+audio stop channel fadeout
+audio set music channel flag default
+audio is music channel
+audio get delay time channel
+audio get pos channel
+audio get duration channel
+audio get playing channel
+audio is playing channel
+audio set volume volume delay channel
+audio set pan pan delay channel
+audio set queue empty callback callback channel
+audio set pause value channel
+audio get pause channel
+audio set mixer channel mixer default
+audio get all mixers
+audio channel defined channel
+audio iosvideo channel get context
+audio iosvideo channel start
+audio iosvideo channel dequeue even_tight
+audio iosvideo channel interact
+audio iosvideo channel fadeout secs
+audio get serial
+audio load fn
+audio music context copy
+audio channel get number
+audio channel get context
+audio channel split filename filename looped
+audio channel periodic
+audio channel dequeue even_tight
+audio channel interact
+audio channel fadeout secs
+audio register channel name mixer loop stop_on_mute
+audio periodic
+audio interact
+audio rollback
+audio pause all
+audio unpause all
+translation dialogue file init filename output tdf strings
+translation dialogue file write dialogue
+translation dialogue file get strings
+translation dialogue command
+translation scan strings filename
+translation shorten filename filename
+translation write strings language filter min_priority max_priority
+translation translate list files
+translation count missing language min_priority max_priority common_only
+translation translate command
+translation extract strings
+translation script translator count translates
+translation script translator take translates nodes
+translation script translator chain translates
+translation encode say string s
+translation restructurer create translate block
+translation restructurer callback children
+translation translate string s language
+translation load rpt fn
+translation load all rpts
+translation init translation
+translation change language language
+translation check language
+translation known languages
+translation merge strings
+translation scan min_priority max_priority common_only
+display set rgba masks
+display copy surface surf alpha
+display edgescroll proportional n
+display viewport update offsets cw ch st
+display cartesian to polar x y xaround yaround
+display polar to cartesian angle radius xaround yaround
+display first not none
+display transform take state t
+display transform take execution state t
+display transform copy
+display transform update state
+display transform update
+display real smoothscale src size dest
+display cache init
+display cache cleanout
+display cache preload texture im
+display cache start prediction
+display free memory
+display image base load
+display image base predict files
+display image init filename
+display rotozoom init im angle zoom
+display ramp start end
+display matrix identity
+display matrix saturation level desat
+display matrix desaturate
+display matrix tint r g b
+display matrix invert
+display matrix brightness b
+display matrix opacity o
+display matrix contrast c
+display matrix hue h
+display matrix colorize black_color white_color
+display grayscale im desat
+display sepia im tint desat
+display color im color
+display alpha image alpha
+display image arg loose
+display load image im
+display load surface im
+display sprite set child d
+display sprite destroy
+display sprite manager init update event predict ignore_time
+display sprite manager create d
+display sprite manager redraw delay
+display particles init factory
+display snow blossom d count border xspeed
+display scale num base
+display container add d
+display container remove d
+display container update
+display live composite size
+display position init child style
+display grid init cols rows padding transpose
+display condition switch
+display showing switch
+display live crop rect child
+display displayable d
+display screen _screen_name
+display prediction coroutine root_widget
+display default tts function s
+display tts s
+display speak s translate force
+display displayable by tag layer tag
+display place width height sw sh
+display displayable arguments copy
+display displayable copy args
+display displayable duplicate args
+display displayable in current store
+display displayable unique
+display displayable parameterize name parameters
+display displayable equals o
+display displayable focus default
+display displayable unfocus default
+display displayable set style prefix prefix root
+display displayable render width height st at
+display displayable event ev x y st
+display displayable get placement
+display displayable visit all callback
+display displayable visit
+display displayable per interact
+display displayable predict one
+display displayable predict one action
+display displayable place dest x y width
+display displayable set transform event event
+display displayable hide st at kind
+display displayable show
+display displayable target
+display displayable change transform child child
+display displayable clear
+display displayable tts
+display displayable tts all
+display scene lists replace transient
+display scene lists transient is empty
+display scene lists transform state old_thing new_thing
+display scene lists find index layer tag zorder behind
+display scene lists add layer thing key zorder
+display scene lists hide or replace layer index prefix
+display scene lists get all displayables
+display scene lists remove above layer thing
+display scene lists remove layer thing
+display scene lists clear layer hide
+display scene lists set times time
+display scene lists showing layer name
+display scene lists make layer layer properties
+display scene lists remove hide replaced layer tag
+display scene lists remove hidden
+display scene lists remove all hidden
+display scene lists get displayable by tag layer tag
+display scene lists get displayable by name layer name
+display scene lists get image bounds layer tag width height
+display scene lists index
+display mouse move perform
+display get safe mode
+display interface start
+display interface post init
+display interface set icon
+display interface get draw constructors
+display interface kill textures and surfaces
+display interface set mode physical_size
+display interface take screenshot scale background
+display interface check background screenshot
+display interface get screenshot
+display interface lose screenshot
+display interface save screenshot filename
+display interface with none overlay
+display interface set transition transition layer force
+display interface event peek
+display interface event poll
+display interface event wait
+display interface compute scene scene_lists
+display interface quit event
+display interface set mouse pos x y duration
+display interface drawn since seconds_ago
+display interface check suspend ev
+display interface iconified
+display interface restored
+display interface enter context
+display interface post time event
+display interface after longpress
+display interface text event in queue
+display interface update text rect
+display interface maximum framerate t
+display interface interact clear suppress_window trans_pause
+display interface interact core show_mouse trans_pause suppress_overlay suppress_underlay
+display interface finish pending
+display old move transition delay old_widget new_widget factory
+display move transition delay old_widget new_widget enter
+display dispatch gesture gesture
+display init
+display make event name
+display exists
+display quit index
+display start index
+display event ev
+display motion init function period child new_widget
+display pan startpos endpos time child
+display move startpos endpos time child
+display zoom render crend x y w
+display zoom common init time child end_identity after_child
+display run event thread
+display start basedir gamedir
+display end
+display sleep
+display init display
+display error dump
+display report exception short full traceback_fn
+display report parse errors errors error_fn
+display clipper compute full_redraw
+display surface w h alpha
+display draw special what dest x y
+display draw dest clip what xo
+display do draw screen screen_render full_redraw swdraw
+display swdraw show mouse pos info
+display swdraw hide mouse
+display swdraw draw mouse show_mouse
+display swdraw update mouse
+display swdraw screenshot surftree fullscreen_video
+display swdraw should redraw needs_redraw first_pass
+display swdraw draw screen surftree fullscreen_video
+display swdraw mutated surface surf
+display swdraw load texture surf transient
+display swdraw solid texture w h color
+display swdraw free memory
+display swdraw deinit
+display swdraw quit
+display swdraw event peek sleep
+display swdraw get physical size
+display convert and call function src dst
+display pixellate src dst avgwidth avgheight
+display scale s size
+display byte offset src
+display linmap src dst rmap gmap
+display map src dst rmap gmap
+display twomap src dst white black
+display alpha munge src dst amap
+display movie stop clear only_fullscreen
+display movie start filename size loops
+display early interact
+display interact
+display update playing
+display frequent
+display state init name image
+display edge init old delay new trans
+display smanimation init initial
+display smanimation pick edge state
+display smanimation update cache
+display smanimation call child new_widget old_widget
+display transition animation init
+display blink init image on off rise
+display filmstrip image framesize gridsize delay
+display fade out_time hold_time in_time old_widget
+display compose transition trans before after new_widget
+display sub transition rect trans old_widget new_widget
+display default drag group
+display drag snap x y delay
+display drag set child d
+display drag top
+display drag group add child
+display drag group remove child
+display drag group raise children l
+display drag group get best drop joined
+display drag group get children
+display drag group get child by name name
+display rect overlap area r1 r2
+display focus coordinates
+display before interact roots
+display clear focus
+display mouse handler ev x y default
+display screen profile init name predict show update
+display get profile name
+display cache get screen args kwargs
+display get screen variant name candidates
+display get all screen variants name
+display sort screens
+display sorted variants
+display analyze screens
+display prepare screens
+display define screen
+display get screen layer name
+display get screen name layer
+display has screen name
+display show screen _screen_name
+display predict screen _screen_name
+display hide screen tag layer
+display get widget screen id layer
+display get widget properties id screen layer
+display before restart
+display show overlay screens suppress_overlay
+display get available image tags
+display get available image attributes tag attributes
+display get tag method tag method
+display check image attributes tag attributes
+display get ordered image attributes tag attributes sort
+display register image name d
+display image exists name exact
+display image reference init name
+display shown image info init old
+display shown image info get attributes layer tag
+display shown image info showing layer name exact
+display shown image info get showing tags layer
+display shown image info predict scene layer
+display shown image info predict show layer name show
+display shown image info apply attributes layer tag name wanted
+display compile event key keydown
+display clear keymap cache
+display queue event name up
+display map event ev keysym
+display map keyup ev name
+display skipping ev
+display predict action var
+display run action
+display run unhovered var
+display is selected action
+display is sensitive action
+display adjustment init range value step page
+display adjustment update
+display on event init event action
+display null emulator ev x y
+display touch emulator ev x y
+display tv emulator ev x y
+display init emulator
+display image map cache image file hash
+text register sfont name size bold italics
+text register mudgefont name size bold italics
+text register bmfont name size bold italics
+text free memory
+text font group add font start end
+text font group segment s
+text outline blits blits outline
+text text segment init source
+text text segment take style style layout
+text text segment glyphs s layout
+text text segment draw glyphs di xo yo
+text text segment assign times gt glyphs
+text text segment subsegment s
+text text segment bounds glyphs bounds layout
+text space segment init ts width height
+text displayable segment init ts d renders
+text layout init text width height renders
+text layout segment tokens style renders text_displayable
+text layout rtl paragraph p
+text layout figure outlines style
+text layout blits typewriter st
+text layout redraw typewriter st
+text layout cache clear
+text layout cache tick
+text text scope scope update
+text text update
+text text kill layout
+text text get layout
+text text get virtual layout
+text text focus default
+text text unfocus default
+text text call slow done st
+text text event ev x y st
+text text size width height st at
+text text get time
+text text tokenize text
+text text apply custom tags tokens
+text text get displayables tokens
+text check text tags s
+text textwrap s width asian

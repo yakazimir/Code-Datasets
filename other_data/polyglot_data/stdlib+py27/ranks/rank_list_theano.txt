@@ -1,0 +1,1219 @@
+core debugprint obj depth print_type file
+core pydotprint fct outfile compact format
+core min informative str obj indent_level _prev_obs _tag_generator
+core var descriptor obj _prev_obs _tag_generator
+core hex digest x
+core raise init msg exc
+core parse config string config_string issue_warnings
+core fetch val for key key delete_key
+core get config md5
+core add config var name doc configparam root
+core config param init default filter allow_override
+core safe no dnn workmem workmem
+core safe no dnn workmem bwd workmem
+core safe no dnn algo bwd algo
+core warn cxx val
+core warn default version
+core local bitwidth
+core python int bitwidth
+core short platform r p
+core get home dir
+core ifelse condition then_branch else_branch name
+core ifelse lift single if through acceptable ops main_node
+core dot l r
+core get scalar constant value v
+core sparse grad var
+core format as use_list use_tuple outputs
+core grad not implemented op x_pos x comment
+core grad undefined op x_pos x comment
+core rop f wrt eval_points
+core lop f wrt eval_points consider_constant
+core grad cost wrt consider_constant disconnected_inputs
+core subgraph grad wrt end start cost
+core node to pattern node
+core populate var to app to idx outputs wrt consider_constant
+core populate grad dict var_to_app_to_idx grad_dict wrt cost_name
+core float zeros like x
+core float ones like x
+core numeric grad init f pt eps out_type
+core numeric grad abs rel err a b
+core numeric grad abs rel errors g_pt
+core numeric grad max err g_pt abs_tol rel_tol
+core verify grad fun pt n_tests rng
+core jacobian expression wrt consider_constant disconnected_inputs
+core hessian cost wrt consider_constant disconnected_inputs
+core is zero x
+core consider constant x
+core zero grad x
+core undefined grad x
+core disconnected grad x
+core grad clip x lower_bound upper_bound
+core grad scale x multiplier
+misc asarray a dtype order
+misc post gist content description filename auth
+misc get pull request project num github_api
+misc get pulls list project github_api
+misc execute execute verbose m n
+misc subprocess popen command
+misc call subprocess popen command
+misc output subprocess popen command
+misc render string string sub
+misc persistent ndarray id resolve name obj
+misc dump obj file_handler protocol persistent_id
+misc load f persistent_load
+misc zipadd func zip_file name
+misc cpu count
+misc hooks rstrip line junk
+misc hooks get parse error code
+misc hooks get correct indentation diff code filename
+scalar as common dtype
+scalar get scalar type dtype
+scalar convert x dtype
+scalar upgrade to float
+scalar upgrade to float64
+scalar upgrade to float no complex
+scalar scalar op c code contiguous node name inp out
+scalar int or true div x_discrete y_discrete
+scalar div proxy x y
+scalar mod c code node name inputs outputs
+scalar cast make new inplace output_types_preference name
+scalar cast x dtype
+scalar composite make new inplace output_types_preference name
+scalar composite init c code
+scalar composite init py impls
+scalar composite init name
+scalar shared value name strict allow_downcast
+compat maybe add to os environ pathlist var newpath
+compat add doc func doc
+compat import module name
+compat six meta path importer is package fullname
+compat add move move
+compat remove move name
+compat with metaclass meta
+compat add metaclass metaclass
+compat python 2 unicode compatible klass
+gpuarray gpu svd a full_matrices compute_uv
+gpuarray gpu matrix inverse a
+gpuarray version raises
+gpuarray gpu dnn conv get out shape ishape kshape border_mode subsample
+gpuarray dnn conv img kerns border_mode subsample
+gpuarray dnn conv3d img kerns border_mode subsample
+gpuarray dnn gradweight img topgrad kerns_shp border_mode
+gpuarray dnn gradweight3d img topgrad kerns_shp border_mode
+gpuarray dnn gradinput kerns topgrad img_shp border_mode
+gpuarray dnn gradinput3d kerns topgrad img_shp border_mode
+gpuarray dnn pool img ws stride mode
+gpuarray dnn batch normalization train inputs gamma beta mode
+gpuarray dnn batch normalization test inputs gamma beta mean
+gpuarray no cu dnnraise apply fgraph
+gpuarray as gpuarray variable x context_name
+gpuarray infer context name
+gpuarray gpu kernel base gpu kernels node name
+gpuarray gpu kernel base kernel version node
+gpuarray base gpu corr mm flops inp outp
+gpuarray base gpu corr mm c code helper bottom weights top direction
+gpuarray base gpu corr3d mm flops inp outp
+gpuarray base gpu corr3d mm c code helper bottom weights top direction
+gpuarray gpu inc subtensor do type checking node
+gpuarray gpu inc subtensor get helper c code args
+gpuarray gpu advanced inc subtensor1 dev20 make node x y ilist
+gpuarray curfft inp norm
+gpuarray cuirfft inp norm is_odd
+gpuarray work dtype dtype
+gpuarray load w dtype
+gpuarray write w dtype
+gpuarray nvcc kernel name params body
+gpuarray code version version
+gpuarray inline reduce n buf pos count
+gpuarray inline softmax n buf buf2 threadpos
+gpuarray inline reduce fixed shared n buf x stride_x
+gpuarray inline softmax fixed shared n buf x stride_x
+gpuarray gpu supported data
+gpuarray move to gpu data
+gpuarray reg context name ctx
+gpuarray get context name
+gpuarray list contexts
+gpuarray gpu array type context
+gpuarray gpu array type dtype specs
+gpuarray gpuarray shared constructor value name strict allow_downcast
+gpuarray grab cpu scalar v nd
+gpuarray find node v cls ignore_clients
+gpuarray is equal var val
+gpuarray alpha merge cls alpha_in beta_in
+gpuarray output merge cls alpha_in beta_in out_in
+gpuarray inplace allocempty op idx
+gpuarray pad dims input leftdims rightdims
+gpuarray unpad dims output input leftdims rightdims
+gpuarray use device force default_to_move_computation_to_gpu move_shared_to_gpu
+gpuarray register opt2 tracks
+gpuarray op lifter op cuda_only
+gpuarray local gpua alloc2 node
+gpuarray local gpu contiguous gpu contiguous node
+gpuarray split huge add or mul node
+gpuarray local conv gpu conv node
+gpuarray local gpu elemwise careduce node
+gpuarray gpu safe new x tag
+gpuarray gpu reconstruct graph inputs outputs tag
+gpuarray max inputs to gpu elemwise node_or_outputs
+gpuarray gpu careduce cuda supports c code inputs
+gpuarray gpu careduce cuda makecall node name x z
+gpuarray gpu careduce cuda k decl node nodename pattern ndim
+gpuarray gpu careduce cuda assign init first_item
+scan_module safe new x tag dtype
+scan_module traverse out x x_copy d
+scan_module clone output replace strict share_inputs
+scan_module map variables replacer graphs additional_inputs
+scan_module get updates and outputs ls
+scan_module expand empty tensor_var size
+scan_module equal computations xs ys in_xs in_ys
+scan_module infer shape outs inputs input_shapes
+scan_module validator check out
+scan_module scan can remove outs op out_idxs
+scan_module compress outs op not_required inputs
+scan_module reconstruct graph inputs outputs tag
+scan_module forced replace out x y
+scan_module map fn sequences non_sequences truncate_gradient
+scan_module reduce fn sequences outputs_info non_sequences
+scan_module foldl fn sequences outputs_info non_sequences
+scan_module foldr fn sequences outputs_info non_sequences
+scan_module scan checkpoints fn sequences outputs_info non_sequences
+scan_module remove constants and unused inputs scan node
+scan_module push out non seq scan process node fgraph node
+scan_module push out seq scan process node fgraph node
+scan_module push out scan output inner sitsot only last step used var scan_args
+scan_module scan inplace optimizer attempt scan inplace fgraph node output_indices alloc_ops
+scan_module scan merge belongs to set node set_nodes
+scan_module has duplicates l
+scan_module make equiv lo li
+scan_module scan validate inner graph
+scan_module scan make node
+scan_module scan execute node args outs
+scan_module scan get oinp iinp iout oout mappings
+scan_module scan fn sequences outputs_info non_sequences
+gof unification merge new_best
+gof unification getitem v
+gof unify walk a b u
+gof unify walk fv o u
+gof unify walk bv o u
+gof unify walk ov o u
+gof unify walk nv o u
+gof unify walk fv v u
+gof unify walk bv v u
+gof unify walk o n u
+gof unify walk vil l u
+gof unify walk l1 l2 u
+gof unify walk d1 d2 u
+gof unify walk v o u
+gof unify merge v o u
+gof clinker object c headers
+gof clinker object c header dirs
+gof clinker object c libraries
+gof clinker object c lib dirs
+gof clinker object c support code
+gof clinker object c code cache version
+gof clinker object c compile args
+gof clinker object c no compile args
+gof clinker object c init code
+gof clinker op c code node name inputs outputs
+gof clinker op c code cache version apply node
+gof clinker op c code cleanup node name inputs outputs
+gof clinker op c support code apply node name
+gof clinker op c init code apply node name
+gof clinker op c init code struct node name sub
+gof clinker op c support code struct node name
+gof clinker op c cleanup code struct node name
+gof pure op make node
+gof pure op get test value cls v
+gof pure op call
+gof pure op r op inputs eval_points
+gof pure op perform node inputs output_storage params
+gof pure op do constant folding node
+gof op prepare node node storage_map compute_map impl
+gof op make c thunk node storage_map compute_map no_recycling
+gof op make py thunk node storage_map compute_map no_recycling
+gof op make thunk node storage_map compute_map no_recycling
+gof op make node
+gof get test value v
+gof missing test message msg
+gof debug error message msg
+gof debug assert condition msg
+gof get debug values
+gof open mpop c compile args
+gof open mpop c headers
+gof open mpop test gxx support
+gof open mpop update self openmp
+gof cop get path cls f
+gof cop init func_files func_name
+gof cop load c code func_files
+gof cop get op params
+gof cop c init code
+gof cop c init code struct node name sub
+gof cop c code cleanup node name inputs outputs
+gof failure code sub use_goto
+gof failure code init sub
+gof code gen blocks
+gof struct gen args struct_builders blocks sub
+gof get c declare r name sub
+gof get c init r name sub
+gof get c extract r name sub
+gof get c extract out r name sub
+gof get c cleanup r name sub
+gof get c sync r name sub
+gof apply policy policy r name sub
+gof struct variable codeblocks variable policies id symbol_table
+gof clinker accept fgraph no_recycling profile
+gof clinker fetch variables
+gof clinker code gen
+gof clinker support code
+gof clinker compile args
+gof clinker headers
+gof clinker init code
+gof clinker header dirs
+gof clinker libraries
+gof clinker lib dirs
+gof clinker compile input_storage output_storage storage_map keep_lock
+gof clinker make thunk input_storage output_storage storage_map keep_lock
+gof clinker cmodule key
+gof clinker cmodule key fgraph no_recycling compile_args libraries
+gof clinker compile cmodule location
+gof clinker get dynamic module
+gof clinker cthunk factory error_storage in_storage out_storage storage_map
+gof cthunk find task failure_code
+gof op wise clinker accept fgraph no_recycling profile
+gof default checker x y
+gof dual linker init checker schedule
+gof dual linker accept fgraph no_recycling profile
+gof dual linker make thunk
+gof force unlock
+gof get lock lock_dir
+gof release lock
+gof set lock status use_lock
+gof lock tmp_dir timeout min_wait max_wait
+gof refresh lock lock_file
+gof unlocker unlock force
+gof params type has type theano_type
+gof params type get field theano_type
+gof params type get enum key
+gof params type enum from alias alias
+gof params type get params
+gof clinker type c element type
+gof clinker type c is simple
+gof clinker type c literal data
+gof clinker type c declare name sub check_input
+gof clinker type c init name sub
+gof clinker type c extract name sub check_input
+gof clinker type c extract out name sub check_input
+gof clinker type c cleanup name sub
+gof clinker type c sync name sub
+gof clinker type c code cache version
+gof pure type filter data strict allow_downcast
+gof pure type filter variable other allow_convert
+gof pure type convert variable var
+gof pure type is valid value a
+gof pure type value validity msg a
+gof pure type make variable name
+gof pure type call name
+gof pure type values eq a b
+gof pure type values eq approx a b
+gof cdata type get func
+gof cdata type make value ptr
+gof enum type fromalias alias
+gof enum type has alias alias
+gof cleanup
+gof print compiledir content
+gof basecompiledir ls
+gof call cache persist filename
+gof call cache call fn args key
+gof node get parents
+gof apply run params
+gof apply default output
+gof apply clone
+gof apply clone with new inputs inputs strict
+gof variable str
+gof variable repr test value
+gof variable repr firstpass
+gof variable clone
+gof variable eval inputs_to_values
+gof constant clone
+gof stack search start expand mode build_inv
+gof ancestors variable_list blockers
+gof inputs variable_list blockers
+gof variables and orphans i o
+gof ops i o
+gof variables i o
+gof orphans i o
+gof clone i o copy_inputs
+gof clone get equiv inputs outputs copy_inputs_and_orphans memo
+gof io toposort inputs outputs orderings clients
+gof io connection pattern inputs outputs
+gof is same graph var1 var2 givens debug
+gof op as string i op leaf_formatter node_formatter
+gof as string i o leaf_formatter node_formatter
+gof view roots r
+gof list of nodes inputs outputs
+gof is in ancestors l_node f_node
+gof contains cycle fgraph orderings
+gof fast inplace check inputs
+gof destroy handler on attach fgraph
+gof destroy handler refresh droot impact
+gof destroy handler on import fgraph app reason
+gof destroy handler on prune fgraph app reason
+gof destroy handler on change input fgraph app i old_r
+gof destroy handler orderings fgraph
+gof bad optimization str diagnostic
+gof feature on attach function_graph
+gof feature on detach function_graph
+gof feature on import function_graph node reason
+gof feature on prune function_graph node reason
+gof feature on change input function_graph node i r
+gof feature orderings function_graph
+gof bookkeeper on attach fgraph
+gof bookkeeper on detach fgraph
+gof history on detach fgraph
+gof history revert fgraph checkpoint
+gof validator on detach fgraph
+gof validator validate fgraph
+gof replace validate on detach fgraph
+gof replace validate replace all validate remove fgraph replacements remove reason
+gof node finder on detach fgraph
+gof print listener on detach fgraph
+gof debug counter name every
+gof ext function method decl
+gof dynamic module list code ofile
+gof dlimport fullpath suffix
+gof dlimport workdir basedir
+gof last access time path
+gof module name from dir dirname err files
+gof is same entry entry_1 entry_2
+gof get module hash src_code key
+gof get safe part key
+gof key data add key key save_pkl
+gof key data remove key key save_pkl
+gof key data save pkl
+gof key data get entry
+gof key data delete keys from entry_from_key do_manual_check
+gof module cache get module name
+gof module cache refresh age_thresh_use delete_if_problem cleanup
+gof module cache get from key key key_data
+gof module cache add to cache module key module_hash
+gof module cache module from key key lnk keep_lock
+gof module cache check key key key_pkl
+gof module cache clear old age_thresh_del delete_if_problem
+gof module cache clear unversioned_min_age clear_base_files delete_if_problem
+gof module cache clear base files
+gof module cache clear unversioned min_age
+gof rmtree parent ignore_nocleanup msg level
+gof get module cache dirname init_args
+gof get lib extension
+gof get gcc shared library arg
+gof gcc llvm
+gof compiler try compile tmp cls src_code tmp_prefix flags
+gof compiler try flags cls flag_list preambule body
+gof try march flag flags
+gof calculate reallocate info order fgraph storage_map compute_map_re
+gof vm call
+gof vm clear storage
+gof vm update profile profile
+gof stack run thunk of node node
+gof vm linker accept fgraph no_recycling profile
+gof vm linker compute gc dependencies variables
+gof log thunk trace value f
+gof thunk hook type value trace
+gof raise with op node thunk exc_info storage_map
+gof linker make thunk
+gof linker make function unpack_single
+gof map storage fgraph order input_storage output_storage
+gof gc helper node_list
+gof perform linker make all input_storage output_storage storage_map
+gof wrap linker copy
+gof wrap linker many linkers wrappers
+gof optimizer apply fgraph
+gof optimizer optimize fgraph
+gof optimizer call fgraph
+gof optimizer add requirements fgraph
+gof optimizer f
+gof inplace optimizer f
+gof seq optimizer warn exc optimizer
+gof seq optimizer apply fgraph
+gof seq optimizer merge profile prof1 prof2
+gof merge feature process constant fgraph c
+gof merge feature process node fgraph node
+gof is same graph with merge var1 var2 givens
+gof pre constant merge vars
+gof local optimizer tracks
+gof local optimizer transform node
+gof local optimizer add requirements fgraph
+gof local meta optimizer provide inputs node inputs
+gof pattern sub transform node get_nodes
+gof navigator optimizer warn exc nav repl_pairs local_opt
+gof navigator optimizer warn inplace exc nav repl_pairs local_opt
+gof navigator optimizer warn ignore exc nav repl_pairs local_opt
+gof navigator optimizer attach updater fgraph importer pruner chin
+gof navigator optimizer detach updater fgraph u
+gof navigator optimizer process node fgraph node lopt
+gof out2in
+gof in2out
+gof op key optimizer add requirements fgraph
+gof merge dict d1 d2
+gof pre greedy local optimizer list_optimizations out
+gof copy stack trace from_var to_var
+gof check stack trace f_or_fgraph ops_to_check bug_print
+gof simple extract stack f limit skips
+gof add tag trace thing user_line
+gof memoize f
+gof deprecated filename msg
+gof uniq seq
+gof difference seq1 seq2
+gof toposort prereqs_d
+gof flatten a
+gof give variables names variables
+gof remove predicate coll
+gof hash from file file_path
+gof function graph init inputs outputs features clone
+gof function graph disown
+gof function graph clients r
+gof function graph add client r new_client
+gof function graph remove client r client_to_remove reason
+gof function graph import r variable reason
+gof function graph import apply_node check reason
+gof function graph change input node i new_r reason
+gof function graph replace r new_r reason verbose
+gof function graph replace all pairs reason
+gof function graph attach feature feature
+gof function graph remove feature feature
+gof function graph execute callbacks name
+gof function graph collect callbacks name
+gof function graph toposort
+gof function graph orderings
+gof function graph check integrity
+gof function graph clone check_integrity
+gof function graph clone get equiv check_integrity attach_feature
+gof function graph getstate
+gof memodict f
+gof make dependence cmp
+gof reverse dict d
+gof toposort edges
+gof posort l
+gof sort apply nodes inputs outputs cmps
+gof sort schedule fn
+gof key to cmp key
+gof compile cutils
+compile register view op c code type code version
+compile register deep copy op c code typ code version
+compile register shape c code type code version
+compile shape i var i fgraph
+compile register shape i c code typ code check_input version
+compile as op itypes otypes infer_shape
+compile register rebroadcast c code typ code version
+compile register specify shape c code typ code version c_support_code_apply
+compile shared variable get value borrow return_internal_type
+compile shared variable set value new_value borrow
+compile shared variable zero borrow
+compile shared value name strict allow_downcast
+compile atexit print fn
+compile print global stats
+compile profile stats reset
+compile profile stats class time
+compile profile stats class callcount
+compile profile stats class nodes
+compile profile stats class impl
+compile profile stats op time
+compile profile stats fill node total time node total_times
+compile profile stats compute total times
+compile profile stats op callcount
+compile profile stats op nodes
+compile profile stats op impl
+compile alias root v
+compile view tree set v treeset
+compile infer reuse pattern fgraph outputs_to_disown
+compile fgraph updated vars fgraph expanded_inputs
+compile std fgraph input_specs output_specs accept_inplace
+compile function copy
+compile function copy share_memory swap delete_updates name
+compile function call
+compile function free
+compile function get shared
+compile insert deepcopy fgraph wrapped_inputs wrapped_outputs
+compile function maker create input_storage trustme storage_map
+compile orig function inputs outputs mode accept_inplace
+compile convert function input input
+compile get info on inputs named_inputs n_unnamed_inputs
+compile monitor mode eval i node fn
+compile monitor mode clone link_kwargs optimizer
+compile rebuild collect shared outputs inputs replace updates
+compile pfunc params outputs mode updates
+compile iter over pairs pairs
+compile is numeric value arr var
+compile flatten l
+compile contains nan arr node var
+compile contains inf arr node var
+compile bad thunk output offending op
+compile bad thunk output str diagnostic
+compile char from number number
+compile debugprint r prefix depth done
+compile optcheck fgraph input_specs output_specs accept_inplace
+compile check inputs node storage_map r_vals dr_vals
+compile check viewmap node storage_map
+compile find bad optimizations0 order reasons r_vals
+compile find bad optimizations2 order reasons r_vals
+compile get preallocated maps node thunk prealloc_modes def_val
+compile check preallocated output node thunk prealloc_modes def_val
+compile maker create defaults trustme storage_map
+compile debug mode function maker i o m
+compile debug mode init optimizer stability_patience check_c_code check_py_code
+compile register linker name linker
+compile register optimizer name opt
+compile mode register
+compile mode clone link_kwargs optimizer
+compile register mode name mode
+compile op from graph recompute grad op
+compile op from graph recompute rop op
+compile op from graph get grad op
+compile op from graph get rop op
+compile op from graph set grad overrides grad_overrides
+compile op from graph set rop overrides rop_overrides
+compile op from graph connection pattern node
+compile inline ofg expansion node
+compile function dump filename inputs outputs mode
+compile function inputs outputs mode updates
+tensor check equal numpy x y
+tensor constructor f
+tensor as tensor variable x name ndim
+tensor constant x name ndim dtype
+tensor numpy scalar data
+tensor get scalar constant value orig_v elemwise only_process_constants max_recur
+tensor scalar name dtype
+tensor vector name dtype
+tensor matrix name dtype
+tensor row name dtype
+tensor col name dtype
+tensor tensor3 name dtype
+tensor tensor4 name dtype
+tensor tensor5 name dtype
+tensor scal elemwise with nfunc nfunc nin nout
+tensor pack x
+tensor cast x dtype
+tensor make keep dims x y axis
+tensor max and argmax a axis keepdims
+tensor max x axis keepdims
+tensor argmax x axis keepdims
+tensor min x axis keepdims
+tensor argmin x axis keepdims
+tensor smallest
+tensor largest
+tensor lt a b
+tensor gt a b
+tensor le a b
+tensor ge a b
+tensor eq a b
+tensor neq a b
+tensor allclose a b rtol atol
+tensor isclose a b rtol atol
+tensor switch cond ift iff
+tensor and a b
+tensor or a b
+tensor xor a b
+tensor abs a
+tensor expm1 a
+tensor log a
+tensor log2 a
+tensor log10 a
+tensor sgn a
+tensor ceil a
+tensor floor a
+tensor trunc a
+tensor iround a mode
+tensor round a mode
+tensor sqr a
+tensor sqrt a
+tensor deg2rad a
+tensor rad2deg a
+tensor cos a
+tensor arccos a
+tensor sin a
+tensor arcsin a
+tensor tan a
+tensor arctan a
+tensor arctan2 a b
+tensor cosh a
+tensor arccosh a
+tensor sinh a
+tensor arcsinh a
+tensor tanh a
+tensor arctanh a
+tensor erfc a
+tensor erfcx a
+tensor erfinv a
+tensor erfcinv a
+tensor gammaln a
+tensor psi a
+tensor chi2sf x k
+tensor j0 x
+tensor j1 x
+tensor jv v x
+tensor i0 x
+tensor i1 x
+tensor iv v x
+tensor real z
+tensor imag z
+tensor angle z
+tensor complex real imag
+tensor conj z
+tensor complex from polar abs angle
+tensor second a b
+tensor ones like model dtype opt
+tensor zeros like model dtype opt
+tensor zeros shape dtype
+tensor ones shape dtype
+tensor nonzero a return_matrix
+tensor flatnonzero a
+tensor nonzero values a
+tensor tri n m k dtype
+tensor tril m k
+tensor triu m k
+tensor eye n m k dtype
+tensor alloc call val
+tensor transfer var target
+tensor register transfer fn
+tensor sum input axis dtype keepdims
+tensor prod input axis dtype keepdims
+tensor mean input axis dtype op
+tensor var input axis ddof keepdims
+tensor std input axis ddof keepdims
+tensor maximum x y
+tensor minimum x y
+tensor div proxy x y
+tensor divmod x y
+tensor true div a b
+tensor int div a b
+tensor ceil intdiv a b
+tensor mod check x y
+tensor clip x min max
+tensor extract constant x elemwise only_process_constants
+tensor transpose x axes
+tensor batched dot a b
+tensor batched tensordot x y axes
+tensor split grad inputs g_outputs
+tensor addbroadcast x
+tensor unbroadcast x
+tensor patternbroadcast x broadcastable
+tensor join grad axis_and_tensors grads
+tensor join axis
+tensor roll x shift axis
+tensor shape padleft t n_ones
+tensor shape padright t n_ones
+tensor shape padaxis t axis
+tensor stack
+tensor concatenate tensor_list axis
+tensor get vector length v
+tensor horizontal stack
+tensor is flat var outdim
+tensor flatten x ndim outdim
+tensor tile x reps ndim
+tensor permute row elements rec perform node x y inverse
+tensor inverse permutation perm
+tensor dot a b
+tensor tensordot as dot a b axes dot
+tensor tensordot a b axes
+tensor outer x y
+tensor diagonal a offset axis1 axis2
+tensor diag v k
+tensor stacklists arg
+tensor ptp a axis
+tensor swapaxes y axis1 axis2
+tensor choose a choices out mode
+tensor detect macos sdot bug
+tensor cblas header text
+tensor blas header text
+tensor mkl threads text
+tensor openblas threads text
+tensor ldflags libs flags libs_dir include_dir
+tensor ldflags ldflags_str libs flags libs_dir
+tensor as scalar res dtype
+tensor gemm from factored list lst
+tensor gemm from node2 node
+tensor local gemm to gemv node
+tensor local gemm to ger node
+tensor local dot22 to ger or gemv node
+tensor tensor py operators reshape shape ndim
+tensor tensor py operators dimshuffle
+tensor tensor py operators transfer target
+tensor tensor py operators copy name
+tensor tensor py operators sum axis dtype keepdims acc_dtype
+tensor tensor py operators prod axis dtype keepdims acc_dtype
+tensor tensor py operators mean axis dtype keepdims acc_dtype
+tensor tensor py operators var axis ddof keepdims corrected
+tensor tensor py operators std axis ddof keepdims corrected
+tensor tensor py operators min axis keepdims
+tensor tensor py operators max axis keepdims
+tensor tensor py operators argmin axis keepdims
+tensor tensor py operators argmax axis keepdims
+tensor tensor py operators nonzero return_matrix
+tensor tensor py operators nonzero values
+tensor tensor py operators sort axis kind order
+tensor tensor py operators argsort axis kind order
+tensor tensor py operators clip a_min a_max
+tensor tensor py operators conj
+tensor tensor py operators repeat repeats axis
+tensor tensor py operators round mode
+tensor tensor py operators ptp axis
+tensor tensor py operators swapaxes axis1 axis2
+tensor tensor py operators fill value
+tensor tensor py operators choose a choices out mode
+tensor tensor py operators squeeze
+tensor tensor py operators compress a axis
+tensor tensor constant signature get sum
+tensor make declare loop_orders dtypes sub
+tensor make alloc loop_orders dtype sub fortran
+tensor make loop loop_orders dtypes loop_tasks sub
+tensor make reordered loop init_loop_orders olv_index dtypes inner_task
+tensor make loop careduce loop_orders dtypes loop_tasks sub
+tensor searchsorted x v side sorter
+tensor cumsum x axis
+tensor cumprod x axis
+tensor diff x n axis
+tensor bincount x weights minlength assert_nonneg
+tensor squeeze x
+tensor compress condition x axis
+tensor repeat x repeats axis
+tensor bartlett m
+tensor fill diagonal a val
+tensor fill diagonal offset a val offset
+tensor to one hot y nb_class dtype
+tensor sort op get argsort indices a axis
+tensor argsort a axis kind order
+tensor make constant args
+tensor get idx list inputs idx_list get_count
+tensor get canonical form slice theslice length
+tensor subtensor convert entry slice_ok
+tensor subtensor get constant idx inputs allow_partial only_process_constants elemwise
+tensor subtensor default helper c code args
+tensor subtensor helper c code node name inputs outputs
+tensor set subtensor x y inplace tolerate_inplace_aliasing
+tensor inc subtensor x y inplace set_instead_of_inc
+tensor inc subtensor do type checking node
+tensor inc subtensor get helper c code args
+tensor inc subtensor add to zview name x fail
+tensor sum grad over bcasted dims x gx
+tensor adv index broadcastable pattern a idx
+tensor scal inplace symbol
+tensor lt inplace a b
+tensor gt inplace a b
+tensor le inplace a b
+tensor ge inplace a b
+tensor eq inplace a b
+tensor neq inplace a b
+tensor and inplace a b
+tensor or inplace a b
+tensor xor inplace a b
+tensor invert inplace a
+tensor abs inplace a
+tensor exp inplace a
+tensor exp2 inplace a
+tensor expm1 inplace a
+tensor neg inplace a
+tensor inv inplace a
+tensor log inplace a
+tensor log2 inplace a
+tensor log10 inplace a
+tensor sgn inplace a
+tensor ceil inplace a
+tensor floor inplace a
+tensor trunc inplace a
+tensor round half to even inplace a
+tensor round half away from zero inplace a
+tensor sqr inplace a
+tensor sqrt inplace a
+tensor deg2rad inplace a
+tensor rad2deg inplace a
+tensor cos inplace a
+tensor arccos inplace a
+tensor sin inplace a
+tensor arcsin inplace a
+tensor tan inplace a
+tensor arctan inplace a
+tensor arctan2 inplace a b
+tensor cosh inplace a
+tensor arccosh inplace a
+tensor sinh inplace a
+tensor arcsinh inplace a
+tensor tanh inplace a
+tensor arctanh inplace a
+tensor erfc inplace a
+tensor erfcx inplace a
+tensor gammaln inplace a
+tensor psi inplace a
+tensor chi2sf inplace x k
+tensor j0 inplace x
+tensor j1 inplace x
+tensor jv inplace v x
+tensor i0 inplace x
+tensor i1 inplace x
+tensor iv inplace v x
+tensor second inplace a
+tensor maximum inplace a b
+tensor minimum inplace a b
+tensor add inplace a b
+tensor sub inplace a b
+tensor mul inplace a b
+tensor true div inplace a b
+tensor int div inplace a b
+tensor mod inplace a b
+tensor pow inplace a b
+tensor conj inplace a
+tensor transpose inplace x
+tensor rfft inp norm
+tensor irfft inp norm is_odd
+tensor cholesky grad inputs gradients
+tensor cholesky grad perform node inputs outputs
+tensor solve grad inputs output_gradients
+tensor randomstate constructor value name strict allow_downcast
+tensor random streams seed seed
+tensor random streams getitem item
+tensor random streams setitem item val
+tensor random streams gen op
+tensor local max and argmax node
+tensor local max to min node
+tensor local alloc dimshuffle node
+tensor local reshape dimshuffle node
+tensor local dimshuffle alloc node
+tensor local dimshuffle subtensor node
+tensor tensor type clone dtype broadcastable
+tensor tensor type filter data strict allow_downcast
+tensor tensor type filter variable other allow_convert
+tensor tensor type dtype specs
+tensor tensor type eq other
+tensor tensor type hash
+tensor tensor type make variable name
+tensor tensor type c declare name sub check_input
+tensor tensor type c init name sub
+tensor tensor type c extract name sub check_input
+tensor tensor type c cleanup name sub
+tensor tensor type c sync name sub
+tensor tensor type c headers c_compiler
+tensor tensor type c support code
+tensor tensor type value zeros shape
+tensor tensor type get shape info obj
+tensor tensor type get size shape_info
+tensor gemv c code y a x z
+tensor fourier grad inputs cost_grad
+tensor scalarconsts rest inputs elemwise only_process_constants
+tensor broadcast like value template fgraph dtype
+tensor inplace elemwise optimizer apply fgraph
+tensor local dimshuffle lift node
+tensor local useless dimshuffle in reshape node
+tensor local lift transpose through dot node
+tensor local tensor scalar tensor node
+tensor local scalar tensor scalar node
+tensor shape feature get shape var idx
+tensor shape feature shape ir i r
+tensor shape feature shape tuple r
+tensor shape feature default infer shape node i_shapes
+tensor shape feature unpack s_i var
+tensor shape feature set shape r s override
+tensor shape feature update shape r other_r
+tensor shape feature set shape i r i s_i
+tensor shape feature init r r
+tensor shape feature same shape x y dim_x dim_y
+tensor local fill sink node
+tensor local fill to alloc node
+tensor local useless fill node
+tensor local useless alloc node
+tensor local canonicalize alloc node
+tensor local alloc empty to zeros node
+tensor local subtensor inc subtensor node
+tensor local subtensor remove broadcastable index node
+tensor local subtensor make vector node
+tensor local useless elemwise node
+tensor local alloc unary node
+tensor local cast cast node
+tensor is an upcast type1 type2
+tensor local func inv node
+tensor is inverse pair node_op prev_op inv_pair
+tensor local remove all assert node
+tensor local upcast elemwise constant inputs node
+tensor local useless inc subtensor node
+tensor local set to inc subtensor node
+tensor local useless slice node
+tensor local useless subtensor node
+tensor local subtensor lift node
+tensor merge two slices slice1 len1 slice2 len2
+tensor local subtensor merge node
+tensor local subtensor of alloc node
+tensor local subtensor of dot node
+tensor local inc subtensor serialize node
+tensor local inplace setsubtensor node
+tensor local inplace incsubtensor1 node
+tensor local incsubtensor of zeros node
+tensor local incsubtensor of zeros to setsubtensor node
+tensor local setsubtensor of constants node
+tensor local adv sub1 adv inc sub1 node
+tensor local useless inc subtensor alloc node
+tensor local useless rebroadcast node
+tensor local rebroadcast lift node
+tensor apply rebroadcast opt rval
+tensor local join 1 node
+tensor local join empty node
+tensor local join make vector node
+tensor local sumsqr2dot node
+tensor local expm1 node
+tensor local useless switch node
+tensor local mul switch sink node
+tensor local div switch sink node
+tensor local useless tile node
+tensor local useless split node
+tensor local flatten lift node
+tensor local useless reshape node
+tensor local reshape to dimshuffle node
+tensor local reshape lift node
+tensor canonizer get num denum input
+tensor canonizer merge num denum num denum
+tensor canonizer simplify factors num denum
+tensor canonizer simplify constants orig_num orig_denum out_type
+tensor local sum prod mul by scalar node
+tensor local elemwise sub zeros node
+tensor local sum prod div dimshuffle node
+tensor local sum prod all to none node
+tensor local op of op node
+tensor local reduce join node
+tensor local useless reduce node
+tensor local reduce broadcastable node
+tensor local opt alloc node
+tensor local neg div neg node
+tensor local mul zero node
+tensor local mul to sqr node
+tensor local intdiv by one node
+tensor local zero div node
+tensor local pow specialize device node
+tensor local mul specialize node
+tensor check for x over abs x numerators denominators
+tensor local abs lift node
+tensor local abs merge node
+tensor local greedy distributor node
+tensor get clients node
+tensor get clients2 node
+tensor local elemwise fusion op op max_input_fct maker
+tensor local add mul fusion node
+tensor local useless composite node
+tensor hash from ndarray data
+tensor shape of variables fgraph input_shapes
+tensor elemwise get output info dim_shuffle
+tensor elemwise make node
+tensor elemwise python constant folding node
+tensor prod l op inp out grads
+tensor load path dtype broadcastable mmap_mode
+tensor isend var dest tag
+tensor mpi send wait key a
+tensor mpi tag key a
+tensor load shared variable val
+tensor tensor constructor value name strict allow_downcast
+tensor scalar constructor value name strict allow_downcast
+tensor matrix inverse grad inputs g_outputs
+tensor matrix inverse r op inputs eval_points
+tensor matrix dot
+tensor extract diag perform node ins outs
+tensor diag x
+tensor trace x
+tensor eigh grad inputs g_outputs
+tensor eigh grad perform node inputs outputs
+tensor qr a mode
+tensor svd a full_matrices compute_uv
+tensor matrix power m n
+tensor tensorinv a ind
+tensor tensorsolve a b axes
+tensor infer ndim bcast ndim shape
+tensor generate broadcasting indices out_shape
+tensor uniform random_state size low high
+tensor normal random_state size avg std
+tensor binomial random_state size n p
+tensor random integers helper random_state low high size
+tensor random integers random_state size low high
+tensor choice helper random_state a replace p
+tensor choice random_state size a replace
+tensor poisson random_state size lam ndim
+tensor permutation helper random_state n shape
+tensor permutation random_state size n ndim
+tensor multinomial helper random_state n pvals size
+tensor multinomial random_state size n pvals
+tensor random streams base binomial size n p ndim
+tensor random streams base uniform size low high ndim
+tensor random streams base normal size avg std ndim
+tensor random streams base random integers size low high ndim
+tensor random streams base choice size a replace p
+tensor random streams base poisson size lam ndim dtype
+tensor random streams base permutation size n ndim dtype
+tensor random streams base multinomial size n pvals ndim
+tensor random streams base shuffle row elements input
+tensor nnet base corr3d mm as common dtype in1 in2
+tensor nnet base corr3d mm c code helper bottom weights top direction
+tensor nnet get diagonal subtensor view x i0 i1
+tensor nnet conv3d signals filters signals_shape filters_shape
+tensor nnet local inplace diagonal subtensor node
+tensor nnet get conv output shape image_shape kernel_shape border_mode subsample
+tensor nnet get conv shape 1axis image_shape kernel_shape border_mode subsample
+tensor nnet get conv gradweights shape image_shape top_shape border_mode subsample
+tensor nnet get conv gradweights shape 1axis image_shape top_shape border_mode subsample
+tensor nnet get conv gradinputs shape kernel_shape top_shape border_mode subsample
+tensor nnet get conv gradinputs shape 1axis kernel_shape top_shape border_mode subsample
+tensor nnet check conv gradinputs shape image_shape kernel_shape output_shape border_mode
+tensor nnet assert conv shape shape
+tensor nnet assert shape x expected_shape msg
+tensor nnet conv2d input filters input_shape filter_shape
+tensor nnet conv3d input filters input_shape filter_shape
+tensor nnet conv2d grad wrt inputs output_grad filters input_shape filter_shape
+tensor nnet conv3d grad wrt inputs output_grad filters input_shape filter_shape
+tensor nnet conv2d grad wrt weights input output_grad filter_shape input_shape
+tensor nnet conv3d grad wrt weights input output_grad filter_shape input_shape
+tensor nnet bilinear kernel 2d ratio normalize
+tensor nnet bilinear kernel 1d ratio normalize
+tensor nnet bilinear upsampling input ratio batch_size num_input_channels
+tensor nnet base abstract conv flops inp outp
+tensor nnet base abstract conv conv img kern mode dilation
+tensor nnet sparse block gemv make node o w h inputidx
+tensor nnet sparse block outer make node o x y xidx
+tensor nnet sparse block dot w h inputidx b
+tensor nnet local logsoftmax node
+tensor nnet local logsoftmax grad node
+tensor nnet local softmax with bias node
+tensor nnet crossentropy softmax argmax1hot with bias perform node input_storage output_storage
+tensor nnet crossentropy to crossentropy with softmax with bias fgraph
+tensor nnet crossentropy to crossentropy with softmax fgraph
+tensor nnet check rows is arange len labels rows labels
+tensor nnet local useless crossentropy softmax 1hot with bias dx alloc node
+tensor nnet binary crossentropy output target
+tensor nnet sigmoid binary crossentropy output target
+tensor nnet categorical crossentropy coding_dist true_dist
+tensor nnet relu x alpha
+tensor nnet h softmax x batch_size n_outputs n_classes
+tensor nnet elu x alpha
+tensor nnet confusion matrix actual pred
+tensor nnet conv3d v w b d
+tensor nnet base corr mm as common dtype in1 in2
+tensor nnet base corr mm c code helper bottom weights top direction
+tensor nnet scalar sigmoid gen graph
+tensor nnet local ultra fast sigmoid node
+tensor nnet hard sigmoid x
+tensor nnet is exp var
+tensor nnet is mul var
+tensor nnet is neg var
+tensor nnet local exp over 1 plus exp node
+tensor nnet parse mul tree root
+tensor nnet replace leaf arg leaves new_leaves op
+tensor nnet simplify mul tree
+tensor nnet compute mul tree
+tensor nnet perform sigm times exp tree exp_x exp_minus_x sigm_x
+tensor nnet local sigm times exp node
+tensor nnet local inv 1 plus exp node
+tensor nnet local 1msigmoid node
+tensor nnet conv2d transpose input filters output_shape filter_shape
+tensor nnet local inplace sparse block gemv node
+tensor nnet local inplace sparse block outer node
+tensor nnet images2neibs ten4 neib_shape neib_step mode
+tensor nnet neibs2images neibs neib_shape original_shape mode
+tensor nnet conv2d input filters image_shape filter_shape
+tensor nnet conv op get output shape inshp kshp stride mode
+tensor nnet conv op flops inputs outputs
+tensor nnet conv op perform node inp out
+tensor nnet conv op use blas
+tensor nnet gen conv code unroll batch kern d unroll_bsize unroll_ksize
+tensor nnet batch normalization inputs gamma beta mean
+tensor nnet batch normalization train inputs gamma beta axes
+tensor nnet batch normalization test inputs gamma beta mean
+tensor signal max pool 2d same size input patch_size
+tensor signal pool 2d input ws ignore_border stride
+tensor signal pool 3d input ws ignore_border stride
+tensor signal pool out shape imgshape ws ignore_border stride
+tensor signal pool grad out shape imgshape ws ignore_border stride
+tensor signal conv2d input filters image_shape filter_shape
+sparse as sparse variable x name
+sparse as sparse or tensor variable x name
+sparse sp ones like x
+sparse sp zeros like x
+sparse csm data csm
+sparse csm indices csm
+sparse csm indptr csm
+sparse csm shape csm
+sparse cast variable dtype
+sparse col scale x s
+sparse row scale x s
+sparse sp sum x axis sparse_grad
+sparse clean x
+sparse add x y
+sparse sub x y
+sparse mul x y
+sparse hstack blocks format dtype
+sparse vstack blocks format dtype
+sparse structured sigmoid x
+sparse structured exp x
+sparse structured log x
+sparse structured pow x y
+sparse structured minimum x y
+sparse structured maximum x y
+sparse structured add x
+sparse sin x
+sparse tan x
+sparse arcsin x
+sparse arctan x
+sparse sinh x
+sparse arcsinh x
+sparse tanh x
+sparse arctanh x
+sparse rint x
+sparse sgn x
+sparse ceil x
+sparse floor x
+sparse log1p x
+sparse expm1 x
+sparse deg2rad x
+sparse rad2deg x
+sparse sqr x
+sparse sqrt x
+sparse conj x
+sparse true dot x y grad_preserves_dense
+sparse structured dot x y
+sparse dot x y
+sparse local csm properties csm node
+sparse local inplace remove0 node
+sparse local inplace addsd ccode node
+sparse local addsd ccode node
+sparse structured dot csr c code node name inputs outputs
+sparse local usmm csx node
+sparse local csm grad c node
+sparse sparse constructor value name strict allow_downcast
+sparse sandbox convolution indices evaluate inshp kshp strides nkern
+sparse sandbox convolve kerns kshp nkern images
+sparse sandbox max pool images imgshp maxpoolshp
+d3viz py dot formatter init compact
+d3viz py dot formatter add node node
+d3viz py dot formatter node id node
+d3viz py dot formatter call fct graph
+d3viz var label var precision
+d3viz var tag var
+d3viz apply label node
+d3viz apply profile node profile
+d3viz broadcastable to str b
+d3viz dtype to char dtype
+d3viz type to str t
+d3viz dict to pdnode d
+d3viz replace patterns x replace
+d3viz safe json obj
+d3viz d3viz fct outfile copy_deps
+d3viz d3write fct path
+sandbox fft make node frames n axis
+sandbox dct matrix rows cols unitary
+sandbox mult mat vect v a m1 b
+sandbox guess n streams size warn
+sandbox mrg random streams seed seed
+sandbox mrg random streams inc rstate
+sandbox mrg random streams get substream rstates n_streams dtype inc_rstate
+sandbox mrg random streams uniform size low high ndim
+sandbox mrg random streams multinomial size n pvals ndim
+sandbox mrg random streams choice size a replace p
+sandbox linalg psd v
+sandbox linalg tag solve triangular node
+sandbox linalg local det chol node
+sandbox linalg spectral radius bound x log2_exponent
+typed_list index perform node inputs outputs
+typed_list count perform node inputs outputs
+typed_list typed list type eq other
+typed_list typed list type get depth

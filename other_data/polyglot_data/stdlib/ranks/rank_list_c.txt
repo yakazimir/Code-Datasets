@@ -1,0 +1,1165 @@
+algorithm qsort ptr count size comp context
+algorithm bsearch key ptr count size comp context
+atomic memory order
+atomic atomic flag
+atomic atomic lock free consts
+atomic atomic flag init
+atomic atomic var init
+atomic kill dependency y
+atomic atomic flag test and set obj order
+atomic atomic flag clear obj order
+atomic atomic init obj desired
+atomic atomic is lock free obj
+atomic atomic store obj order
+atomic atomic load obj order
+atomic atomic exchange obj desired order
+atomic atomic compare exchange obj expected desired succ fail
+atomic atomic fetch add obj arg order
+atomic atomic fetch sub obj arg order
+atomic atomic fetch or obj arg order
+atomic atomic fetch xor obj arg order
+atomic atomic fetch and obj arg order
+atomic atomic thread fence order
+atomic atomic signal fence order
+chrono difftime time_beg time_end
+chrono time arg
+chrono clock
+chrono timespec get ts base
+chrono asctime time_ptr buf bufsz
+chrono ctime time buffer bufsz
+chrono strftime str count format time
+chrono wcsftime str count format
+chrono gmtime time result
+chrono localtime time result
+chrono mktime time
+chrono clocks per sec
+chrono tm
+chrono timespec
+error errno
+error errno macros
+error assert condition
+error static assert
+error set constraint handler s handler
+error abort handler s msg ptr error
+error ignore handler s msg ptr error
+error math errhandling
+io fopen filename mode streamptr
+io freopen filename mode stream newstreamptr
+io fclose stream
+io fflush stream
+io setbuf stream buffer
+io setvbuf stream buffer mode size
+io fwide stream mode
+io fread buffer size count stream
+io fwrite buffer size count stream
+io fgetc stream
+io fgets str count stream
+io fputc ch stream
+io fputs str stream
+io getchar
+io gets str
+io putchar ch
+io puts str
+io ungetc ch stream
+io fgetwc stream
+io fgetws str count stream
+io fputwc ch stream
+io fputws str stream
+io getwchar
+io putwchar ch
+io ungetwc ch stream
+io fscanf stream buffer format
+io vfscanf stream buffer format vlist
+io fprintf stream buffer bufsz format
+io vfprintf stream buffer bufsz format vlist
+io fwscanf stream buffer format
+io vfwscanf stream buffer format vlist
+io fwprintf stream buffer bufsz format
+io vfwprintf stream buffer bufsz format vlist
+io ftell stream
+io fgetpos stream pos
+io fseek stream offset origin
+io fsetpos stream pos
+io rewind stream
+io clearerr stream
+io feof stream
+io ferror stream
+io perror s
+io remove fname
+io rename old_filename new_filename
+io tmpfile
+io tmpnam filename filename_s maxsize
+locale setlocale category locale
+locale localeconv
+locale lconv
+locale lc categories
+memory malloc size
+memory calloc num size
+memory realloc ptr new_size
+memory free ptr
+memory aligned alloc alignment size
+program abort
+program exit exit_code
+program quick exit exit_code
+program _exit exit_code
+program atexit func
+program at quick exit func
+program exit status
+program system command
+program getenv name len value valuesz
+program signal sig handler
+program raise sig
+program sig strategies
+program sig err
+program sig types
+program setjmp env
+program longjmp env status
+thread thrd create thr func arg
+thread thrd equal lhs rhs
+thread thrd current
+thread thrd sleep time_point remaining
+thread thrd yield
+thread thrd exit res
+thread thrd detach thr
+thread thrd join thr res
+thread thrd errors
+thread mtx init mutex type
+thread mtx lock mutex
+thread mtx timedlock mutex time_point
+thread mtx trylock mutex
+thread mtx unlock mutex
+thread mtx destroy mutex
+thread mtx types
+thread once flag init flag func
+thread cnd init cond
+thread cnd signal cond
+thread cnd broadcast cond
+thread cnd wait cond mutex
+thread cnd timedwait cond mutex duration
+thread cnd destroy cond
+thread thread local
+thread tss dtor iterations
+thread tss create tss_key destructor
+thread tss get tss_key
+thread tss set tss_id val
+thread tss delete tss_id
+types null
+types offsetof
+types _alignas
+types _alignof
+types _noreturn
+variadic va start ap parmn
+variadic va arg ap t
+variadic va copy dest src
+variadic va end ap
+experimental dynamic getline lineptr n delimiter stream
+experimental dynamic strdup str1
+experimental dynamic strndup str size
+numeric complex imaginary
+numeric complex complex
+numeric complex imaginary i
+numeric complex complex i
+numeric complex i
+numeric complex cmplx real imag
+numeric complex creal z
+numeric complex cimag z
+numeric complex cabs z
+numeric complex carg z
+numeric complex conj z
+numeric complex cproj z
+numeric complex cexp z
+numeric complex clog z
+numeric complex cpow x y
+numeric complex csqrt z
+numeric complex csin z
+numeric complex ccos z
+numeric complex ctan z
+numeric complex casin z
+numeric complex cacos z
+numeric complex catan z
+numeric complex csinh z
+numeric complex ccosh z
+numeric complex ctanh z
+numeric complex casinh z
+numeric complex cacosh z
+numeric complex catanh z
+numeric fenv feclearexcept excepts
+numeric fenv fetestexcept excepts
+numeric fenv feraiseexcept excepts
+numeric fenv feexceptflag flagp excepts
+numeric fenv feround round
+numeric fenv feenv envp
+numeric fenv feholdexcept envp
+numeric fenv feupdateenv envp
+numeric fenv fe exceptions
+numeric fenv fe round
+numeric fenv fe dfl env
+numeric math abs n
+numeric math div x y
+numeric math fabs arg
+numeric math fmod x y
+numeric math remainder x y
+numeric math remquo x y quo
+numeric math fma x y z
+numeric math fmax x y
+numeric math fmin x y
+numeric math fdim x y
+numeric math nan arg
+numeric math exp arg
+numeric math exp2 n
+numeric math expm1 arg
+numeric math log arg
+numeric math log10 arg
+numeric math log2 arg
+numeric math log1p arg
+numeric math pow base exponent
+numeric math sqrt arg
+numeric math cbrt arg
+numeric math hypot x y
+numeric math sin arg
+numeric math cos arg
+numeric math tan arg
+numeric math asin arg
+numeric math acos arg
+numeric math atan arg
+numeric math atan2 x y
+numeric math sinh arg
+numeric math cosh arg
+numeric math tanh arg
+numeric math asinh arg
+numeric math acosh arg
+numeric math atanh arg
+numeric math erf arg
+numeric math erfc arg
+numeric math tgamma arg
+numeric math lgamma arg
+numeric math ceil arg
+numeric math floor arg
+numeric math trunc arg
+numeric math round arg
+numeric math nearbyint arg
+numeric math rint arg
+numeric math frexp arg exp
+numeric math ldexp arg exp
+numeric math modf arg iptr
+numeric math scalbn arg exp
+numeric math ilogb arg
+numeric math logb arg
+numeric math nextafter from to
+numeric math copysign x y
+numeric math fpclassify arg
+numeric math is finite arg
+numeric math is inf arg
+numeric math is nan arg
+numeric math is normal arg
+numeric math signbit arg
+numeric math is greater x y
+numeric math is greaterequal x y
+numeric math is less x y
+numeric math is lessequal x y
+numeric math is lessgreater x y
+numeric math is unordered x y
+numeric math huge val
+numeric math infinity
+numeric math nan
+numeric math math errhandling
+numeric math fp categories
+numeric random rand
+numeric random srand seed
+numeric random rand max
+string byte is alnum ch
+string byte is alpha ch
+string byte is lower ch
+string byte is upper ch
+string byte is digit ch
+string byte is xdigit ch
+string byte is cntrl ch
+string byte is graph ch
+string byte is space ch
+string byte is blank ch
+string byte is print ch
+string byte is punct ch
+string byte to lower ch
+string byte to upper ch
+string byte atof str
+string byte atoi str
+string byte strtol str str_end base
+string byte strtoul str str_end base
+string byte strtof str str_end
+string byte strtoimax nptr endptr base
+string byte strcpy dest src destsz
+string byte strncpy dest src count destsz
+string byte strcat dest src destsz
+string byte strncat dest src count destsz
+string byte strxfrm dest src count
+string byte strlen str strsz
+string byte strcmp lhs rhs
+string byte strncmp lhs rhs count
+string byte strcoll lhs rhs
+string byte strchr str ch
+string byte strrchr str ch
+string byte strspn dest src
+string byte strcspn dest src
+string byte strpbrk dest breakset
+string byte strstr str substr
+string byte strtok str delim strmax ptr
+string byte memchr ptr ch count
+string byte memcmp lhs rhs count
+string byte memset dest ch count destsz
+string byte memcpy dest destsz src count
+string byte memmove dest destsz src count
+string byte strerror errnum buf bufsz
+string multibyte mblen s n
+string multibyte mbtowc pwc s n
+string multibyte wctomb s wc ssz status
+string multibyte mbstowcs dst src len dstsz retval
+string multibyte wcstombs dst src len dstsz retval
+string multibyte mbsinit ps
+string multibyte btowc c
+string multibyte wctob c
+string multibyte mbrlen s n ps
+string multibyte mbrtowc pwc s n ps
+string multibyte wcrtomb s wc ps ssz retval
+string multibyte mbsrtowcs dst src len ps dstsz retval
+string multibyte wcsrtombs dst src len ps dstsz retval
+string multibyte mbrtoc16 pc16 s n ps
+string multibyte c16rtomb s c16 ps
+string multibyte mbrtoc32 pc32 s n ps
+string multibyte c32rtomb s c32 ps
+string multibyte mbstate t
+string wide is walnum ch
+string wide is walpha ch
+string wide is wlower ch
+string wide is wupper ch
+string wide is wdigit ch
+string wide is wxdigit ch
+string wide is wcntrl ch
+string wide is wgraph ch
+string wide is wspace ch
+string wide is wblank ch
+string wide is wprint ch
+string wide is wpunct ch
+string wide is wctype wc desc
+string wide wctype str
+string wide to wlower wc
+string wide to wupper wc
+string wide to wctrans wc desc
+string wide wctrans str
+string wide wcstol str str_end base
+string wide wcstoul str str_end base
+string wide wcstof str str_end
+string wide wcstoimax nptr endptr base
+string wide wcscpy dest src destsz
+string wide wcsncpy dest src count destsz
+string wide wcscat dest src destsz
+string wide wcsncat dest src count destsz
+string wide wcsxfrm dest src count
+string wide wcslen str strsz
+string wide wcscmp lhs rhs
+string wide wcsncmp lhs rhs count
+string wide wcscoll lhs rhs
+string wide wcschr str ch
+string wide wcsrchr str ch
+string wide wcsspn dest src
+string wide wcscspn dest src
+string wide wcspbrk dest src
+string wide wcsstr dest src
+string wide wcstok str delim ptr strmax
+string wide wmemcpy dest src count destsz
+string wide wmemmove dest src destsz count
+string wide wmemcmp lhs rhs count
+string wide wmemchr ptr ch count
+string wide wmemset dest ch count
+core accept socket addr length_ptr
+core addseverity severity string
+core ngettext msgid1 msgid2 n
+core dngettext domain msgid1 msgid2 n
+core dcngettext domain msgid1 msgid2 n category
+core sigaction signum action old-action
+core memalign boundary size
+core posix memalign memptr alignment size
+memory valloc size
+core obstack alloc obstack-ptr size
+core obstack copy obstack-ptr address size
+core obstack copy0 obstack-ptr address size
+core getpt
+core grantpt filedes
+core unlockpt filedes
+core ptsname filedes
+core ptsname r filedes buf len
+core argp help argp stream flags name
+core argp usage state
+core argp error state fmt
+core argp failure state status errnum fmt
+core argp state help state stream flags
+core argp parse argp argc argv flags arg_index input
+core argz create argv[] argz argz_len
+core argz create sep string sep argz argz_len
+core argz count argz arg_len
+core argz extract argz argz_len argv
+core argz stringify argz len sep
+core argz add argz argz_len str
+core argz add sep argz argz_len str delim
+core argz append argz argz_len buf buf_len
+core argz delete argz argz_len entry
+core argz insert argz argz_len before entry
+core argz next argz argz_len entry
+core lfind key base nmemb size compar
+core lsearch key base nmemb size compar
+core aio read aiocbp
+core aio read 64 aiocbp
+core aio write aiocbp
+core aio write 64 aiocbp
+core lio listio mode list[] nent sig
+core lio listio 64 mode list[] nent sig
+core getauxval type
+core backtrace buffer size
+core backtrace symbols buffer size
+core backtrace symbols fd buffer size fd
+core sched setscheduler pid policy param
+core sched getscheduler pid
+core sched setparam pid param
+core sched getparam pid param
+core sched get priority min policy
+core sched get priority max policy
+core sched rr get interval pid interval
+core sched yield
+core sysv signal signum action
+program ssignal signum action
+io fread unlocked data size count stream
+core fwrite unlocked data size count stream
+core localtime r time resultp
+chrono gmtime r time resultp
+chrono timelocal brokentime
+chrono timegm brokentime
+core random
+core srandom seed
+core initstate seed state size
+core setstate state
+core random r buf result
+core srandom r seed buf
+core initstate r seed statebuf statelen buf
+core setstate r statebuf buf
+core siginterrupt signum failflag
+core sigmask signum
+core sigblock mask
+core sigsetmask mask
+core sigpause mask
+core gtty filedes attributes
+core stty filedes attributes
+core wait3 status-ptr options usage
+core htons hostshort
+core ntohs netshort
+core htonl hostlong
+core ntohl netlong
+core glob pattern flags error-code) vector-ptr
+core glob 64 pattern flags error-code) vector-ptr
+core wordexp words word-vector-ptr flags
+core wordfree word-vector-ptr
+core aio cancel fildes aiocbp
+core aio cancel 64 fildes aiocbp
+core to ascii c
+string byte _tolower c
+string byte _toupper c
+core fgetc unlocked stream
+core fgetwc unlocked stream
+io getc stream
+io getwc stream
+core getc unlocked stream
+core getwc unlocked stream
+core getchar unlocked
+core getwchar unlocked
+core getw stream
+core bind textdomain codeset domainname codeset
+core sigpending set
+string byte is ascii c
+core on exit status arg) arg
+core closelog
+io shutdown socket how
+io fcloseall
+core aio init init
+core connect socket addr length
+error assert perror errnum
+numeric fenv fegetenv envp
+numeric fenv fesetenv envp
+core feenableexcept excepts
+core fedisableexcept excepts
+core fegetexcept
+core fcntl filedes command
+io setbuffer stream buf size
+io setlinebuf stream
+core _ flbf stream
+core _ fbufsize stream
+core _ fpending stream
+core mbsnrtowcs dst src nmc len ps
+core wcsnrtombs dst src nwc len ps
+core mempcpy to from size
+core wmempcpy wto wfrom size
+core memccpy to from c size
+core wcsdup ws
+core stpcpy to from
+core wcpcpy wto wfrom
+core strdupa s
+core bcopy from to size
+core bzero block size
+core cpu zero set
+core cpu set cpu set
+core cpu clr cpu set
+core cpu isset cpu set
+core sched getaffinity pid cpusetsize cpuset
+core sched setaffinity pid cpusetsize cpuset
+core pipe filedes
+core fork
+core vfork
+core socket namespace style protocol
+io mkdir filename mode
+core crypt key salt
+core crypt r key salt data
+core pthread getattr default np attr
+core pthread setattr default np attr
+io unlink filename
+io rmdir filename
+core setkey key
+core encrypt block edflag
+core setkey r key data
+core ecb crypt key blocks len mode
+core des failed err
+core cbc crypt key blocks len mode ivec
+core des setparity key
+core fdopen filedes opentype
+core fileno stream
+core fileno unlocked stream
+core iftodt mode
+core dttoif dtype
+core dup old
+core dup2 old new
+core asprintf ptr template
+core obstack printf obstack template
+core l64a n
+core a64l string
+core secure getenv name
+core putenv string
+core setenv name value replace
+core unsetenv name
+core clearenv
+core envz entry envz envz_len name
+core envz get envz envz_len name
+core envz add envz envz_len name value
+core envz merge envz envz_len envz2 envz2_len override
+core envz strip envz envz_len
+core envz remove envz envz_len name
+core feof unlocked stream
+core ferror unlocked stream
+core strerror r errnum buf n
+core error status errnum format
+core error at line status errnum fname lineno format
+core warn format
+core vwarn format ap
+core warnx format
+core vwarnx format ap
+core err status format
+core verr status format ap
+core errx status format
+core verrx status format ap
+io clearerr unlocked stream
+core execv filename argv
+core execl filename arg0
+core execve filename argv env
+core execle filename arg0 env
+core execvp filename argv
+core execlp filename arg0
+numeric math exp10 x
+numeric complex clog10 z
+core obstack room obstack-ptr
+core obstack 1grow fast obstack-ptr c
+core obstack ptr grow fast obstack-ptr data
+core obstack int grow fast obstack-ptr data
+core obstack blank fast obstack-ptr size
+core mkfifo filename mode
+core chown filename owner group
+core fchown filedes owner group
+core lseek filedes offset whence
+core lseek 64 filedes offset whence
+core ftello stream
+core ftello 64 stream
+core fseeko stream offset whence
+core fseeko 64 stream offset whence
+core truncate filename length
+core truncate 64 name length
+core ftruncate fd length
+core ftruncate 64 id length
+core utime filename times
+core utimes filename tvp
+core lutimes filename tvp
+core futimes fd tvp
+core strtok r newstring delimiters save_ptr
+core strsep string_ptr delimiter
+core basename filename
+core basename path
+core dirname path
+core finite x
+core fflush unlocked stream
+core _flushlbf
+core _ fpurge stream
+io scanf template
+io wscanf template
+io sscanf s template
+io swscanf ws template
+io printf template
+io wprintf template
+io sprintf s template
+io swprintf s size template
+io snprintf s size template
+core asctime r brokentime buffer
+core ctime r time buffer
+core strfmon s maxsize format
+numeric math nexttoward x y
+core cfree ptr
+core obstack free obstack-ptr object
+core setfsent
+core endfsent
+core getfsent
+core getfsspec name
+core getfsfile name
+core getdate string
+core getdate r string tp
+core iconv open tocode fromcode
+core iconv close cd
+core iconv cd inbuf inbytesleft outbuf outbytesleft
+core getopt long argc argv shortopts longopts indexptr
+core getopt long only argc argv shortopts longopts indexptr
+core getpass prompt
+core obstack blank obstack-ptr size
+core obstack grow obstack-ptr data size
+core obstack grow0 obstack-ptr data size
+core obstack 1grow obstack-ptr c
+core obstack ptr grow obstack-ptr data
+core obstack int grow obstack-ptr data
+core obstack finish obstack-ptr
+core obstack object size obstack-ptr
+core link oldname newname
+core hcreate nel
+core hdestroy
+core hsearch item action
+core hcreate r nel htab
+core hdestroy r htab
+core hsearch r item action retval htab
+core mcheck
+core mprobe pointer
+core ntp gettime tptr
+core ntp adjtime tptr
+core gettimeofday tp tzp
+core settimeofday tp tzp
+core adjtime delta olddelta
+core adjtimex timex
+core inet aton name addr
+core inet addr name
+core inet network name
+core inet ntoa addr
+core inet makeaddr net local
+core inet lnaof addr
+core inet netof addr
+core inet pton af cp buf
+core inet ntop af cp buf len
+core gethostname name size
+core sethostname name length
+core getdomainnname name length
+core setdomainname name length
+core gethostid
+core sethostid id
+core gethostbyname name
+core gethostbyname2 name af
+core gethostbyaddr addr length format
+core gethostbyname r name result_buf buf buflen result h_errnop
+core gethostbyname2 r name af result_buf buf buflen result h_errnop
+core gethostbyaddr r addr length format result_buf buf buflen result h_errnop
+core sethostent stayopen
+core gethostent
+core endhostent
+core read filedes buffer size
+core pread filedes buffer size offset
+core pread 64 filedes buffer size offset
+core write filedes buffer size
+core pwrite filedes buffer size offset
+core pwrite 64 filedes buffer size offset
+core ctermid string
+numeric math ldiv numerator denominator
+numeric math lldiv numerator denominator
+numeric math imaxdiv numerator denominator
+core if nametoindex ifname
+core if indextoname ifindex ifname
+core if nameindex
+core if freenameindex ptr
+core ioctl filedes command
+core is atty filedes
+core ttyname filedes
+core ttyname r filedes buf len
+core rand r seed
+core getrlimit resource rlp
+core getrlimit 64 resource rlp
+core setrlimit resource rlp
+core setrlimit 64 resource rlp
+core ulimit cmd
+core vlimit resource limit
+core tcsendbreak filedes duration
+core tcdrain filedes
+core tcflush filedes queue
+core tcflow filedes action
+core getdelim lineptr n delimiter stream
+core fgets unlocked s count stream
+core fgetws unlocked ws count stream
+core cfgetospeed termios-p
+core cfgetispeed termios-p
+core cfsetospeed termios-p speed
+core cfsetispeed termios-p speed
+core cfsetspeed termios-p speed
+core listen socket n
+core textdomain domainname
+core bindtextdomain domainname dirname
+core login tty filedes
+core login entry
+core logout ut_line
+core logwtmp ut_line ut_name ut_host
+core getgrgid gid
+core getgrgid r gid result_buf buffer buflen result
+core getgrnam name
+core getgrnam r name result_buf buffer buflen result
+core setnetgrent netgroup
+core getnetgrent hostp userp domainp
+core getnetgrent r hostp userp domainp buffer buflen
+core endnetgrent
+core getpwuid uid
+core getpwuid r uid result_buf buffer buflen result
+core getpwnam name
+core getpwnam r name result_buf buffer buflen result
+core strptime s fmt tp
+core mknod filename mode dev
+core mallopt param value
+core setutent
+core getutent
+core endutent
+core getutid id
+core getutline line
+core pututline utmp
+core getutent r buffer result
+core getutid r id buffer result
+core getutline r line buffer result
+core utmpname file
+core updwtmp wtmp_file utmp
+core regexec compiled string nmatch matchptr[restrict] eflags
+core mmap address length protect flags filedes offset
+core mmap 64 address length protect flags filedes offset
+core munmap addr length
+core msync address length flags
+core mremap address length new_length flag
+core madvise addr length advice
+core shm open name oflag mode
+core shm unlink name
+core tcgetattr filedes termios-p
+core tcsetattr filedes when termios-p
+core globfree pglob
+core globfree 64 pglob
+core mount special_file dir fstype options data
+core umount2 file flags
+core umount file
+core setmntent file mode
+core endmntent stream
+core getmntent stream
+core getmntent r stream result buffer bufsize
+core addmntent stream mnt
+core hasmntopt mnt opt
+core innetgr netgroup host user domain
+core getnetbyname name
+core getnetbyaddr net type
+core setnetent stayopen
+core getnetent
+core endnetent
+core sigsetjmp state savesigs
+core siglongjmp state value
+core cfmakeraw termios-p
+core scalb value exponent
+numeric math scalbln x n
+core significand x
+core obstack chunk size obstack-ptr
+core obstack alignment mask obstack-ptr
+core opendir dirname
+core fdopendir fd
+core dirfd dirstream
+core open filename flags[ mode]
+core open 64 filename flags[ mode]
+core close filedes
+core fopen 64 filename opentype
+core freopen 64 filename opentype stream
+core _ freadable stream
+core _ fwritable stream
+core _ freading stream
+core _ fwriting stream
+core openlog ident option facility
+core mlock addr len
+core munlock addr len
+core mlockall flags
+core munlockall
+core parse printf format template n argtypes
+string byte strtod string tailptr
+string wide wcstod string tailptr
+string byte strtoll string tailptr base
+string wide wcstoll string tailptr base
+core strtoq string tailptr base
+core wcstoq string tailptr base
+string byte strtoull string tailptr base
+string wide wcstoull string tailptr base
+core strtouq string tailptr base
+core wcstouq string tailptr base
+string byte strtoumax string tailptr base
+string wide wcstoumax string tailptr base
+string byte atol string
+string byte atoll string
+core pathconf filename parameter
+core fpathconf filedes parameter
+core popen command mode
+core pclose stream
+core uname info
+io fgetpos 64 stream position
+io fsetpos 64 stream position
+core regcomp compiled pattern cflags
+core _ ppc get timebase
+core _ ppc get timebase freq
+core _ ppc yield
+core _ ppc mdoio
+core _ ppc mdoom
+core _ ppc set ppr med
+core _ ppc set ppr low
+core _ ppc set ppr med low
+core _ ppc set ppr very low
+core _ ppc set ppr med high
+core printf size fp info args
+core printf size info info n argtypes
+core obstack init obstack-ptr
+core fmtmsg classification label severity text action tag
+core wifexited status
+core wexitstatus status
+core wifsignaled status
+core wtermsig status
+core wcoredump status
+core wifstopped status
+core wstopsig status
+core waitpid pid status-ptr options
+core wait status-ptr
+core wait4 pid status-ptr options usage
+core setsid
+core getsid pid
+core getpgrp
+core getpgid pid
+core setpgid pid pgid
+core setpgrp pid pgid
+core getpid
+core getppid
+core sigprocmask how set oldset
+core get nprocs conf
+core get nprocs
+core getloadavg loadavg[] nelem
+core times buffer
+core getprotobyname name
+core getprotobynumber protocol
+core setprotoent stayopen
+core getprotoent
+core endprotoent
+core openpty amaster aslave name termp winp
+core forkpty amaster name termp winp
+core getpagesize
+core get phys pages
+core get avphys pages
+core rewinddir dirstream
+core telldir dirstream
+core seekdir dirstream pos
+core getsockname socket addr length-ptr
+core stat filename buf
+core stat 64 filename buf
+core fstat filedes buf
+core fstat 64 filedes buf
+core lstat filename buf
+core lstat 64 filename buf
+core getuid
+core getgid
+core geteuid
+core getegid
+core getgroups count groups
+core readdir dirstream
+core readdir r dirstream entry result
+core readdir 64 dirstream
+core readdir64 r dirstream entry result
+core closedir dirstream
+core recv socket buffer size flags
+core recvfrom socket buffer size flags addr length-ptr
+core regfree compiled
+core regerror errcode compiled buffer length
+core register printf function spec handler-function arginfo-function
+core drem numerator denominator
+core brk addr
+core *sbrk delta
+core getrusage processes rusage
+core vtimes current child
+numeric math lrint x
+numeric math llrint x
+numeric math lround x
+numeric math llround x
+numeric fenv fegetround
+numeric fenv fesetround round
+core fgetgrent stream
+core fgetgrent r stream result_buf buffer buflen result
+core setgrent
+core getgrent
+core getgrent r result_buf buffer buflen result
+core endgrent
+core fgetpwent stream
+core fgetpwent r stream result_buf buffer buflen result
+core setpwent
+core getpwent
+core getpwent r result_buf buffer buflen result
+core endpwent
+core scandir dir namelist dirent **)
+core alphasort a b
+core versionsort a b
+core scandir 64 dir namelist dirent64 **)
+core alphasort 64 a b
+core versionsort 64 a b
+core readv filedes vector count
+core writev filedes vector count
+core rawmemchr block c
+core memrchr block c size
+core strchrnul string c
+core wcschrnul wstring wc
+core wcswcs haystack needle
+core strcasestr haystack needle
+core memmem haystack haystack-len needle needle-len
+core index string c
+core rindex string c
+core send socket buffer size flags
+core sendto socket buffer size flags addr length
+core getservbyname name proto
+core getservbyport port proto
+core setservent stayopen
+core getservent
+core endservent
+core setlogmask mask
+core bind socket addr length
+core setitimer which new old
+core getitimer which old
+core alarm seconds
+core setegid newgid
+core setgid newgid
+core setregid rgid egid
+core setgroups count groups
+core initgroups user group
+core getgrouplist user group groups ngroups
+core umask mask
+core getumask
+core chmod filename mode
+core fchmod filedes mode
+core seteuid neweuid
+core setuid newuid
+core setreuid ruid euid
+core strsignal signum
+core psignal signum message
+core sigemptyset set
+core sigfillset set
+core sigaddset set signum
+core sigdelset set signum
+core sigismember set signum
+core sigaltstack stack oldstack
+core sigstack stack oldstack
+core kill pid signum
+core killpg pgid signum
+core gsignal signum
+core sigsuspend set
+core stime newtime
+core fputc unlocked c stream
+core fputwc unlocked wc stream
+io putc c stream
+io putwc wc stream
+core putc unlocked c stream
+core putwc unlocked wc stream
+core putchar unlocked c
+core putwchar unlocked wc
+core fputs unlocked s stream
+core fputws unlocked ws stream
+core putw w stream
+core sleep seconds
+core nanosleep requested_time remaining
+core getsockopt socket level optname optval optlen-ptr
+core setsockopt socket level optname optval optlen
+core socketpair namespace style protocol filedes
+numeric math lgamma r x signp
+numeric math gamma x
+core j0 x
+core j1 x
+core jn n x
+core y0 x
+core y1 x
+core yn n x
+core mallinfo
+numeric fenv fegetexceptflag flagp excepts
+numeric fenv fesetexceptflag flagp excepts
+core aio error aiocbp
+core aio error 64 aiocbp
+core aio return aiocbp
+core aio return 64 aiocbp
+core obstack base obstack-ptr
+core obstack next free obstack-ptr
+core posix fallocate fd offset length
+core posix fallocate 64 fd offset length
+core fopencookie cookie opentype io-functions
+core flockfile stream
+core ftrylockfile stream
+core funlockfile stream
+core _ fsetlocking stream type
+core strfry string
+core strnlen s maxlen
+core wcsnlen ws maxlen
+core confstr parameter buf len
+core fmemopen buf size opentype
+core open memstream ptr sizeloc
+core strcasecmp s1 s2
+core wcscasecmp ws1 ws2
+core strncasecmp s1 s2 n
+core wcsncasecmp ws1 s2 n
+core strverscmp s1 s2
+core bcmp a1 a2 size
+core getsubopt optionp tokens valuep
+core drand48
+core erand48 xsubi[3]
+core lrand48
+core nrand48 xsubi[3]
+core mrand48
+core jrand48 xsubi[3]
+core srand48 seedval
+core seed48 seed16v[3]
+core lcong48 param[7]
+core drand48 r buffer result
+core erand48 r xsubi[3] buffer result
+core lrand48 r buffer result
+core nrand48 r xsubi[3] buffer result
+core mrand48 r buffer result
+core jrand48 r xsubi[3] buffer result
+core srand48 r seedval buffer
+core seed48 r seed16v[3] buffer
+core lcong48 r param[7] buffer
+core symlink oldname newname
+core readlink filename buffer size
+core canonicalize file name name
+core realpath name resolved
+core aio fsync op aiocbp
+core aio fsync 64 op aiocbp
+core aio suspend list[] nent timeout
+core aio suspend 64 list[] nent timeout
+core sync
+core fsync fildes
+core fdatasync fildes
+core sysconf parameter
+core syslog facility_priority format
+core vsyslog facility_priority format arglist
+core syscall sysno
+core sysctl names nlen oldval oldlenp newval newlen
+core getcontext ucp
+core makecontext ucp argc
+core setcontext ucp
+core swapcontext oucp ucp
+core ecvt value ndigit decpt neg
+core fcvt value ndigit decpt neg
+core gcvt value ndigit buf
+core qecvt value ndigit decpt neg
+core qfcvt value ndigit decpt neg
+core qgcvt value ndigit buf
+core ecvt r value ndigit decpt neg buf len
+core fcvt r value ndigit decpt neg buf len
+core qecvt r value ndigit decpt neg buf len
+core qfcvt r value ndigit decpt neg buf len
+core tmpfile 64
+core tmpnam r result
+core tempnam dir prefix
+core mktemp template
+core mkstemp template
+core mkdtemp template
+core tcgetpgrp filedes
+core tcsetpgrp filedes pgid
+core tcgetsid fildes
+core access filename how
+core s isdir m
+core s ischr m
+core s isblk m
+core s isreg m
+core s isfifo m
+core s islnk m
+core s issock m
+core s typeismq s
+core s typeissem s
+core s typeisshm s
+core catopen cat_name flag
+core catgets catalog_desc set message string
+core catclose catalog_desc
+core nl langinfo item
+core pthread key create key destructor)(void*)
+core pthread key delete key
+core *pthread getspecific key
+core pthread setspecific key value
+core tzset
+core mtrace
+core muntrace
+core getpriority class id
+core setpriority class id niceval
+core nice increment
+core gettext msgid
+core dgettext domainname msgid
+core dcgettext domainname msgid category
+core tsearch key rootp compar
+core tfind key rootp compar
+core tdelete key rootp compar
+core tdestroy vroot freefct
+core twalk root action
+core sincos x sinx cosx
+core memfrob mem length
+core strndupa s size
+core stpncpy to from size
+core wcpncpy wto wfrom size
+core getopt argc argv options
+core pause
+io vscanf template ap
+io vwscanf template ap
+io vsscanf s template ap
+io vswscanf s template ap
+io vprintf template ap
+io vwprintf template ap
+io vsprintf s template ap
+io vswprintf s size template ap
+io vsnprintf s size template ap
+io vasprintf ptr template ap
+io obstack vprintf obstack template ap
+core alloca size
+core fd zero set
+core fd set filedes set
+core fd clr filedes set
+core fd isset filedes set
+core select nfds read-fds write-fds except-fds timeout
+core getpeername socket addr length-ptr
+core getlogin
+core cuserid string
+core fnmatch pattern string flags
+core getcwd buffer size
+core get current dir name
+core chdir filename
+core fchdir filedes
+core ftw filename func descriptors
+core ftw 64 filename func descriptors
+core nftw filename func descriptors flag
+core nftw 64 filename func descriptors flag
+core putpwent p stream
+core setutxent
+core getutxent
+core endutxent
+core getutxid id
+core getutxline line
+core pututxline utmp
+core utmpxname file
+core getutmp utmpx utmp
+core getutmpx utmp utmpx
+core rpmatch response

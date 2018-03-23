@@ -1,0 +1,745 @@
+core main extension strict_extensions default_extension
+core extract option object option
+core ipython only option
+core run ctx algofile algotext define
+core zipline magic line cell
+core ingest bundle assets_version show_progress
+core clean bundle before after keep_last
+core bundles
+core deprecated getitem method name attrs
+core trading algorithm init
+core trading algorithm init engine get_loader
+core trading algorithm initialize
+core trading algorithm repr
+core trading algorithm create clock
+core trading algorithm get generator
+core trading algorithm run data overwrite_sim_params
+core trading algorithm calculate capital changes dt emission_rate is_interday portfolio_value_adjustment
+core trading algorithm get environment field
+core trading algorithm fetch csv url pre_func post_func date_column
+core trading algorithm add event rule callback
+core trading algorithm schedule function func date_rule time_rule half_days
+core trading algorithm record
+core trading algorithm set benchmark benchmark
+core trading algorithm symbol symbol_str
+core trading algorithm continuous future root_symbol_str offset roll adjustment
+core trading algorithm symbols
+core trading algorithm sid sid
+core trading algorithm future symbol symbol
+core trading algorithm calculate order value amount asset value
+core trading algorithm order asset amount limit_price stop_price
+core trading algorithm round order amount
+core trading algorithm validate order params asset amount limit_price stop_price
+core trading algorithm convert order params for blotter limit_price stop_price style
+core trading algorithm order value asset value limit_price stop_price
+core trading algorithm on dt changed dt
+core trading algorithm get datetime tz
+core trading algorithm set slippage us_equities us_futures
+core trading algorithm set commission us_equities us_futures
+core trading algorithm set cancel policy cancel_policy
+core trading algorithm set symbol lookup date dt
+core trading algorithm order percent asset percent limit_price stop_price
+core trading algorithm order target asset target limit_price stop_price
+core trading algorithm order target value asset target limit_price stop_price
+core trading algorithm order target percent asset target limit_price stop_price
+core trading algorithm batch order target percent weights
+core trading algorithm get open orders asset
+core trading algorithm get order order_id
+core trading algorithm cancel order order_param
+core trading algorithm history bar_count frequency field ffill
+core trading algorithm register account control control
+core trading algorithm set max leverage max_leverage
+core trading algorithm register trading control control
+core trading algorithm set max position size asset max_shares max_notional on_error
+core trading algorithm set max order size asset max_shares max_notional on_error
+core trading algorithm set max order count max_count on_error
+core trading algorithm set do not order list restricted_list on_error
+core trading algorithm set asset restrictions restrictions on_error
+core trading algorithm set long only on_error
+core trading algorithm attach pipeline pipeline name chunks
+core trading algorithm pipeline output name
+core trading algorithm pipeline output pipeline chunks
+core trading algorithm run pipeline pipeline start_session chunksize
+core trading algorithm all api methods cls
+testing to utc time_str
+testing str to seconds s
+testing all pairs matching predicate values pred
+testing product upper triangle values include_diagonal
+testing all subindices index
+testing chrange start stop
+testing make trade data for asset info dates asset_info price_start price_step_by_date
+testing check allclose actual desired rtol atol
+testing check arrays x y err_msg verbose
+testing empty assets db
+testing empty asset finder
+testing subtest iterator
+testing assert timestamp equal left right compare_nat_equal msg
+testing powerset values
+testing to series knowledge_dates earning_dates
+testing gen calendars start stop critical_dates
+testing temp pipeline engine calendar sids random_seed symbols
+testing parameter space __fail_fast
+testing make alternating boolean array shape first_value
+testing make cascading boolean array shape first_value
+testing permute rows seed array
+testing make test handler testcase
+testing write compressed path content
+testing read compressed path
+testing patch os environment remove
+testing patch read csv url_map module strict
+testing ensure doctest f name
+testing zipline test case init class fixtures cls
+testing zipline test case enter class context cls context_manager
+testing zipline test case add class callback cls callback
+testing zipline test case enter instance context context_manager
+testing zipline test case add instance callback callback
+testing alias attr_name
+testing with asset finder make asset finder cls
+testing with seeded random pipeline engine raw expected values column start_date end_date
+testing with seeded random pipeline engine run pipeline pipeline start_date end_date
+testing keywords func
+testing filter kwargs f kwargs
+testing s word seq suffix
+testing fmt path path
+testing fmt msg msg
+testing assert is subclass subcls cls msg
+testing assert regex result expected msg
+testing assert raises regex exc pattern msg
+testing assert equal result expected path msg
+testing check sets result expected msg path
+testing register assert equal wrapper type_ assert_eq
+testing assert timestamp and datetime equal result expected path msg
+gens date sorted sources
+gens algorithm simulator transform
+gens algorithm simulator cleanup expired assets dt position_assets
+gens algorithm simulator get daily message dt algo perf_tracker
+gens algorithm simulator get minute message dt algo perf_tracker
+gens hash args
+gens assert datasource protocol event
+gens assert trade protocol event
+gens assert datasource unframe protocol event
+data continuous future session bar reader trading calendar
+data continuous future session bar reader get value continuous_future dt field
+data continuous future session bar reader get last traded dt asset dt
+data continuous future minute bar reader trading calendar
+data continuous future minute bar reader get value continuous_future dt field
+data continuous future minute bar reader get last traded dt asset dt
+data data portal handle extra source source_df sim_params
+data data portal get last traded dt asset dt data_frequency
+data data portal is extra source asset field map
+data data portal get spot value assets field dt data_frequency
+data data portal get adjustments assets field dt perspective_dt
+data data portal get adjusted value asset field dt perspective_dt
+data data portal get history daily window assets end_dt bar_count field_to_use
+data data portal get history minute window assets end_dt bar_count field_to_use
+data data portal get history window assets end_dt bar_count frequency
+data data portal get minute window data assets field minutes_for_window
+data data portal get daily window data assets field days_in_window extra_slot
+data data portal get adjustment list asset adjustments_dict table_name
+data data portal get splits assets dt
+data data portal get stock dividends sid trading_days
+data data portal get fetcher assets dt
+data data portal get current future chain continuous_future dt
+data last modified time path
+data get data filepath name
+data has data for dates series_or_df first_date last_date
+data load market data trading_day trading_days bm_symbol
+data ensure benchmark data symbol first_date last_date now
+data ensure treasury data symbol first_date last_date now
+data load raw yahoo data indexes stocks start end
+data load from yahoo indexes stocks start end
+data load bars from yahoo indexes stocks start end
+data format yahoo index url symbol start_date end_date
+data get benchmark returns symbol start_date end_date
+data history compatible usequity adjustment reader get adjustments in range asset dts field
+data history loader ensure sliding windows assets dts field is_perspective_after
+data history loader history assets dts field is_perspective_after
+data sid subdir path sid
+data convert cols cols scale_factor sid invalid_data_behavior
+data bcolz minute bar metadata write rootdir
+data bcolz minute bar writer open cls rootdir end_session
+data bcolz minute bar writer init ctable path
+data bcolz minute bar writer ensure ctable sid
+data bcolz minute bar writer pad sid date
+data bcolz minute bar writer set sid attrs sid
+data bcolz minute bar writer write data show_progress invalid_data_behavior
+data bcolz minute bar writer write sid sid df invalid_data_behavior
+data bcolz minute bar writer write cols sid dts cols invalid_data_behavior
+data bcolz minute bar writer data len for day day
+data bcolz minute bar writer truncate date
+data bcolz minute bar reader minutes to exclude
+data bcolz minute bar reader minute exclusion tree
+data bcolz minute bar reader table len sid
+data bcolz minute bar reader get value sid dt field
+data bcolz minute bar reader find position of minute minute_dt
+data minute bar update reader read dts sids
+data h5minute bar update writer write frames
+data parse treasury csv column column
+data earliest possible date
+data get daily 10yr treasury data
+data bar reader trading calendar
+data bar reader get value sid dt field
+data bar reader get last traded dt asset dt
+data format url instrument_type instrument_ids start_date end_date
+data load frame url skiprows
+data check known inconsistencies bill_data bond_data
+data winsorise uint32 df invalid_data_behavior column
+data bcolz daily bar writer write csvs asset_map show_progress invalid_data_behavior
+data bcolz daily bar writer write internal iterator assets
+data bcolz daily bar reader compute slices start_idx end_idx assets
+data bcolz daily bar reader spot col colname
+data sqlite adjustment writer write dividend payouts frame
+data sqlite adjustment writer calc dividend ratios dividends
+data sqlite adjustment writer write dividend data dividends stock_dividends
+data sqlite adjustment writer write splits mergers dividends stock_dividends
+data sqlite adjustment reader unpack db to component dfs convert_dates
+data minute frame to session frame minute_frame calendar
+data minute to session column close_locs data out
+data daily history aggregator opens assets dt
+data daily history aggregator highs assets dt
+data daily history aggregator lows assets dt
+data daily history aggregator closes assets dt
+data daily history aggregator volumes assets dt
+data bundles to bundle ingest dirname ts
+data bundles from bundle ingest dirname cs
+data bundles make bundle core
+data bundles fetch raw metadata api_key cache retries environ
+data bundles fetch symbol metadata frame api_key cache retries environ
+data bundles format metadata url api_key page_number
+data bundles format wiki url api_key symbol start_date end_date
+data bundles fetch single equity api_key symbol start_date end_date
+data bundles quandl bundle environ asset_db_writer minute_bar_writer daily_bar_writer
+data bundles download with progress url chunk_size
+data bundles download without progress url
+data bundles yahoo equities symbols start end
+assets make rotating equity info num_assets first_start frequency periods_between_starts
+assets make simple equity info sids start_date end_date symbols
+assets make jagged equity info num_assets start_date first_end frequency
+assets make future info first_sid root_symbols years notice_date_func
+assets make commodity future info first_sid root_symbols years month_codes
+assets downgrade engine desired_version
+assets pragma foreign keys connection on
+assets downgrades src
+assets downgrade v1 op
+assets downgrade v2 op
+assets downgrade v3 op
+assets downgrade v4 op
+assets roll finder get rolls root_symbol start end offset
+assets volume roll finder active contract oc front back dt
+assets merge ownership periods mappings
+assets build ownership map table key_from_row value_from_row
+assets filter kwargs names dict_
+assets convert asset timestamp fields dict_
+assets asset finder reset caches
+assets asset finder reload symbol maps
+assets asset finder lookup asset types sids
+assets asset finder group by type sids
+assets asset finder retrieve asset sid default_none
+assets asset finder retrieve all sids default_none
+assets asset finder retrieve equities sids
+assets asset finder retrieve futures contracts sids
+assets asset finder select most recent symbols chunk sid_group
+assets asset finder retrieve assets sids asset_tbl asset_type
+assets asset finder lookup symbol symbol as_of_date fuzzy
+assets asset finder lookup symbols symbols as_of_date fuzzy
+assets asset finder lookup future symbol symbol
+assets asset finder get supplementary field sid field_name as_of_date
+assets asset finder symbol lookups
+assets asset finder lookup generic scalar asset_convertible as_of_date matches missing
+assets asset finder lookup generic asset_convertible_or_iterable as_of_date
+assets asset finder map identifier index to sids index as_of_date
+assets asset finder compute asset lifetimes
+assets asset finder lifetimes dates include_start_date
+assets was active reference_date_value asset
+assets only active assets reference_date_value assets
+assets split delimited symbol symbol
+assets generate output dataframe data_subset defaults
+assets split symbol mappings df
+assets dt to epoch ns dt_series
+assets check version info conn version_table expected_version
+assets write version info conn version_table version_value
+assets asset dbwriter write equities futures exchanges root_symbols
+assets asset dbwriter all tables present txn
+assets asset dbwriter init db txn
+assets asset dbwriter load data equities futures exchanges root_symbols
+pipeline custom term mixin compute today assets out
+pipeline custom term mixin allocate output windows shape
+pipeline custom term mixin compute windows dates assets mask
+pipeline aliased mixin make aliased type cls other_base
+pipeline downsampled mixin compute extra rows all_dates start_date end_date min_extra_rows
+pipeline downsampled mixin compute inputs dates assets mask
+pipeline downsampled mixin make downsampled type cls other_base
+pipeline pipeline engine run pipeline pipeline start_date end_date
+pipeline default populate initial workspace initial_workspace root_mask_term execution_plan dates
+pipeline simple pipeline engine run pipeline pipeline start_date end_date
+pipeline simple pipeline engine compute root mask start_date end_date extra_rows
+pipeline simple pipeline engine inputs for term term workspace graph
+pipeline simple pipeline engine compute chunk graph dates assets initial_workspace
+pipeline simple pipeline engine to narrow terms data mask dates
+pipeline simple pipeline engine validate compute chunk params dates assets initial_workspace
+pipeline select sampling indices dates frequency
+pipeline ensure element tup elem
+pipeline method name for op op commute
+pipeline numerical expression validate
+pipeline numerical expression compute arrays dates assets mask
+pipeline numerical expression rebind variables new_inputs
+pipeline numerical expression merge expressions other
+pipeline numerical expression build binary op op other
+pipeline term new cls domain dtype missing_value
+pipeline term pop params cls kwargs
+pipeline term init
+pipeline term static identity cls domain dtype missing_value
+pipeline term validate
+pipeline term compute extra rows all_dates start_date end_date min_extra_rows
+pipeline term inputs
+pipeline term windowed
+pipeline term mask
+pipeline term dependencies
+pipeline computable term compute inputs dates assets mask
+pipeline computable term windowed
+pipeline computable term dependencies
+pipeline computable term postprocess data
+pipeline computable term to workspace value result assets
+pipeline computable term downsampled type
+pipeline computable term downsample frequency
+pipeline computable term aliased type
+pipeline computable term alias name
+pipeline validate dtype termname dtype missing_value
+pipeline assert valid categorical missing value value
+pipeline restrict to dtype dtype message_template
+pipeline delimit delimiters content
+pipeline roots g
+pipeline render g out format_ include_asset_exists
+pipeline display graph g format include_asset_exists
+pipeline format attrs attrs
+pipeline term graph add to graph term parents
+pipeline term graph outputs
+pipeline term graph execution order refcounts
+pipeline term graph initial refcounts initial_terms
+pipeline term graph decref depencies recursive term refcounts garbage
+pipeline term graph decref dependencies term refcounts
+pipeline execution plan set extra rows term all_dates start_date end_date
+pipeline execution plan offset
+pipeline execution plan extra rows
+pipeline execution plan ensure extra rows term n
+pipeline execution plan mask and dates for term term root_mask_term workspace all_dates
+pipeline engine from files daily_bar_path adjustments_path asset_db_path calendar
+pipeline pipeline columns
+pipeline pipeline screen
+pipeline pipeline add term name overwrite
+pipeline pipeline remove name
+pipeline pipeline set screen screen overwrite
+pipeline pipeline to execution plan screen_name default_screen all_dates start_date
+pipeline pipeline to simple graph screen_name default_screen
+pipeline pipeline prepare graph terms screen_name default_screen
+pipeline pipeline show graph format
+pipeline filters concat tuples
+pipeline filters binary operator op
+pipeline filters unary operator op
+pipeline filters num expr filter create cls expr binds
+pipeline filters num expr filter compute arrays dates assets mask
+pipeline filters percentile filter validate
+pipeline filters percentile filter compute arrays dates assets mask
+pipeline data column bind name
+pipeline data bound column descr get instance owner
+pipeline data bound column dataset
+pipeline data bound column name
+pipeline data bound column qualname
+pipeline classifiers classifier isnull
+pipeline classifiers classifier notnull
+pipeline classifiers classifier eq other
+pipeline classifiers classifier ne other
+pipeline classifiers classifier startswith prefix
+pipeline classifiers classifier endswith suffix
+pipeline classifiers classifier has substring substring
+pipeline classifiers classifier matches pattern
+pipeline classifiers classifier element of choices
+pipeline classifiers classifier to workspace value result assets
+pipeline classifiers custom classifier allocate output windows shape
+pipeline factors exponential weights length decay_rate
+pipeline factors exponential weighted factor from span cls inputs window_length span
+pipeline factors exponential weighted factor from halflife cls inputs window_length halflife
+pipeline factors exponential weighted factor from center of mass cls inputs window_length center_of_mass
+pipeline factors coerce numbers to my dtype f
+pipeline factors binop return dtype op left right
+pipeline factors binary operator op
+pipeline factors reflected binary operator op
+pipeline factors unary operator op
+pipeline factors function application func
+pipeline factors factor demean mask groupby
+pipeline factors factor zscore mask groupby
+pipeline factors factor rank method ascending mask groupby
+pipeline factors factor pearsonr target correlation_length mask
+pipeline factors factor spearmanr target correlation_length mask
+pipeline factors factor linear regression target regression_length mask
+pipeline factors factor winsorize min_percentile max_percentile mask groupby
+pipeline factors factor quantiles bins mask
+pipeline factors factor quartiles mask
+pipeline factors factor quintiles mask
+pipeline factors factor deciles mask
+pipeline factors factor top n mask groupby
+pipeline factors factor bottom n mask groupby
+pipeline factors factor percentile between min_percentile max_percentile mask
+pipeline factors factor isnull
+pipeline factors factor notnull
+pipeline factors factor isnan
+pipeline factors factor notnan
+pipeline factors factor isfinite
+pipeline factors rank validate
+pipeline factors rank compute arrays dates assets mask
+pipeline factors winsorize row min_percentile max_percentile
+pipeline loaders make eye loader dates sids
+pipeline loaders make seeded random loader seed dates sids
+pipeline loaders required estimates fields columns
+pipeline loaders validate column specs events columns
+pipeline loaders earnings estimates loader get requested quarter data zero_qtr_data zeroth_quarter_idx stacked_last_per_qtr num_announcements
+pipeline loaders earnings estimates loader get split adjusted asof idx dates
+pipeline loaders earnings estimates loader collect overwrites for sid group dates requested_qtr_data last_per_qtr
+pipeline loaders earnings estimates loader merge into adjustments for all sids all_adjustments_for_sid col_to_all_adjustments
+pipeline loaders earnings estimates loader get adjustments zero_qtr_data requested_qtr_data last_per_qtr dates
+pipeline loaders earnings estimates loader create overwrites for quarter col_to_overwrites next_qtr_start_idx last_per_qtr quarters_with_estimates_for_sid
+pipeline loaders earnings estimates loader get last data per qtr assets_with_data columns dates
+pipeline loaders next earnings estimates loader get zeroth quarter idx stacked_last_per_qtr
+pipeline loaders previous earnings estimates loader get zeroth quarter idx stacked_last_per_qtr
+pipeline loaders split adjusted estimates loader get adjustments for sid group dates requested_qtr_data last_per_qtr
+pipeline loaders split adjusted estimates loader get adjustments zero_qtr_data requested_qtr_data last_per_qtr dates
+pipeline loaders split adjusted estimates loader determine end idx for adjustment adjustment_ts dates upper_bound requested_quarter
+pipeline loaders split adjusted estimates loader collect pre split asof date adjustments split_adjusted_asof_date_idx sid_idx pre_adjustments requested_split_adjusted_columns
+pipeline loaders split adjusted estimates loader collect post asof split adjustments post_adjustments requested_qtr_data sid sid_idx
+pipeline loaders split adjusted estimates loader retrieve split adjustment data for sid dates sid split_adjusted_asof_idx
+pipeline loaders split adjusted estimates loader merge split adjustments with overwrites pre post overwrites requested_split_adjusted_columns
+pipeline loaders previous split adjusted earnings estimates loader collect split adjustments adjustments_for_sid requested_qtr_data dates sid
+pipeline loaders next split adjusted earnings estimates loader collect split adjustments adjustments_for_sid requested_qtr_data dates sid
+pipeline loaders precomputed loader load adjusted array columns dates assets mask
+pipeline loaders seeded random loader values dtype dates sids
+pipeline loaders seeded random loader state
+pipeline loaders seeded random loader float values shape
+pipeline loaders seeded random loader int values shape
+pipeline loaders seeded random loader datetime values shape
+pipeline loaders seeded random loader bool values shape
+pipeline loaders make bar data asset_info calendar
+pipeline loaders expected bar value asset_id date colname
+pipeline loaders expected bar values 2d dates asset_info colname
+pipeline loaders required event fields next_value_columns previous_value_columns
+pipeline loaders validate column specs events next_value_columns previous_value_columns
+pipeline loaders events loader split next and previous event columns requested_columns
+pipeline loaders usequity pricing loader from files cls pricing_path adjustments_path
+pipeline loaders data frame loader format adjustments dates assets
+pipeline loaders data frame loader load adjusted array columns dates assets mask
+pipeline loaders is sorted ascending a
+pipeline loaders next event indexer all_dates all_sids event_dates event_timestamps
+pipeline loaders previous event indexer all_dates all_sids event_dates event_timestamps
+pipeline loaders normalize data query time dt time tz
+pipeline loaders normalize data query bounds lower upper time tz
+pipeline loaders normalize timestamp to query time df time tz inplace
+pipeline loaders check data query args data_query_time data_query_tz
+pipeline loaders last in date group df dates assets reindex
+pipeline loaders ffill across cols df columns name_map
+pipeline loaders blaze datashape type to numpy type_
+pipeline loaders blaze new dataset expr deltas missing_values
+pipeline loaders blaze check resources name expr resources
+pipeline loaders blaze check datetime field name measure
+pipeline loaders blaze get metadata field expr metadata_expr no_metadata_rule
+pipeline loaders blaze ad as ts expr
+pipeline loaders blaze ensure timestamp field dataset_expr deltas checkpoints
+pipeline loaders blaze from blaze expr deltas checkpoints loader
+pipeline loaders blaze overwrite novel deltas baseline deltas dates
+pipeline loaders blaze overwrite from dates asof dense_dates sparse_dates asset_idx
+pipeline loaders blaze adjustments from deltas no sids dense_dates sparse_dates column_idx column_name
+pipeline loaders blaze adjustments from deltas with sids dense_dates sparse_dates column_idx column_name
+pipeline loaders blaze bind expression to resources expr resources
+pipeline loaders blaze get materialized checkpoints checkpoints colnames lower_dt odo_kwargs
+pipeline loaders blaze ffill query in range expr lower upper checkpoints
+pipeline loaders blaze load raw data assets dates data_query_time data_query_tz
+sources date gen start end trading_calendar delta
+sources pandas csv parse date str series format_str tz date_str_series data_frequency
+sources pandas csv lookup unconflicted symbol symbol
+sources benchmark source initialize precalculated series asset trading_calendar trading_days data_portal
+utils explode df
+utils time to micros time
+utils mask between time dts start end include_start
+utils find in sorted index dts dt
+utils nearest unequal elements dts dt
+utils timedelta to integral seconds delta
+utils timedelta to integral minutes delta
+utils clear dataframe indexer caches df
+utils weak lru cache maxsize
+utils weak args ordered dict move to end key
+utils tolerant equals a b atol rtol
+utils round if near integer a epsilon
+utils pad lines after first prefix s
+utils format docstring owner_name docstring formatters
+utils templated docstring
+utils argument parse argspec callable_
+utils expect extra expected present exc_unexpected exc_missing
+utils verify callable argspec callable_ expected_args expect_starargs expect_kwargs
+utils dumps with persistent ids obj protocol
+utils loads with persistent ids str env
+utils rolling panel oldest frame raw
+utils rolling panel extend back missing_dts
+utils rolling panel get current item raw start end
+utils rolling panel set current panel
+utils rolling panel roll data
+utils mutable index rolling panel oldest frame raw
+utils mutable index rolling panel get current
+utils mutable index rolling panel set current panel
+utils mutable index rolling panel roll data
+utils hidden path
+utils ensure directory path
+utils ensure directory containing path
+utils ensure file path
+utils last modified time path
+utils modified since path dt
+utils zipline root environ
+utils zipline path paths environ
+utils default extension environ
+utils data root environ
+utils ensure data root environ
+utils data path paths environ
+utils cache root environ
+utils ensure cache root environ
+utils cache path paths environ
+utils create daily trade source sids sim_params env trading_calendar
+utils preprocess
+utils call f
+utils build preprocessed function func processors args_defaults varargs
+utils verify indices all unique obj
+utils optionally preprocessor
+utils ensure dtype func argname arg
+utils ensure timezone func argname arg
+utils ensure timestamp func argname arg
+utils expect dtypes __funcname
+utils expect kinds
+utils expect types __funcname
+utils make check exc_type template pred actual
+utils optional type_
+utils expect element __funcname
+utils expect bounded __funcname
+utils expect strictly bounded __funcname
+utils expect dimensions __funcname
+utils coerce from_ to
+utils coerce types
+utils create test zipline
+utils naive to utc ts
+utils ensure utc time tz
+utils build offset offset kwargs default
+utils build date date kwargs
+utils build time time kwargs
+utils lossless float to int funcname func argname arg
+utils event manager add event event prepend
+utils event handle data context data dt
+utils event rule should trigger dt
+utils stateless rule and rule
+utils composed rule should trigger dt
+utils composed rule lazy and first_should_trigger second_should_trigger dt
+utils always always trigger dt
+utils never never trigger dt
+utils after open calculate dates dt
+utils before close calculate dates dt
+utils stateful rule new should trigger callable_
+utils make eventrule date_rule time_rule cal half_days
+utils na t for dtype dtype
+utils make kind check python_types numpy_kind
+utils coerce to dtype dtype value
+utils default missing value for dtype dtype
+utils repeat first axis array count
+utils repeat last axis array count
+utils rolling window array length
+utils isnat obj
+utils is missing data missing_value
+utils busday count mask na t begindates enddates out
+utils ignore nanwarnings
+utils vectorized is element array choices
+utils as column a
+utils changed locations a include_first
+utils run handle_data initialize before_trading_start analyze
+utils load extensions default extensions strict environ
+utils run algorithm start end initialize capital_base
+utils bases mro bases
+utils is final name mro
+utils final meta setattr name value
+utils final set instance value
+utils invert d
+utils invert unique d check
+utils compose types a
+utils with metaclasses metaclasses
+utils maybe show progress it show_progress
+utils from tuple tup
+utils maybe from tuple tup_or_range
+utils check steps a b
+utils overlap a b
+utils merge a b
+utils combine n rs
+utils group ranges ranges
+utils intersecting ranges ranges
+utils security list init data current_date_func asset_finder
+utils load from directory list_name
+utils zipline api enter
+utils zipline api exit _type _value _tb
+utils require not initialized exception
+utils require initialized exception
+utils disallowed in before trading start exception
+utils apply async result successful
+utils apply async result get
+utils apply async result ready
+utils apply async result wait
+utils sequential pool apply async f args kwargs callback
+utils sequential pool apply f args kwargs
+utils cached object unwrap dt
+utils cached object unsafe get value
+utils expiring cache get key dt
+utils expiring cache set key value expiration_dt
+utils working file path
+utils working file commit
+utils working dir ensure dir
+utils working dir getpath
+utils working dir commit
+utils apply f
+utils same
+utils gen unzip it elem_len
+utils unzip seq elem_len
+utils getattrs value attrs default
+utils set attribute name value
+utils foldr f seq default
+utils deprecated msg stacklevel
+utils enum option
+utils calendars trading calendar dispatcher get calendar name
+utils calendars trading calendar dispatcher has calendar name
+utils calendars trading calendar dispatcher register calendar name calendar force
+utils calendars trading calendar dispatcher register calendar type name calendar_type force
+utils calendars trading calendar dispatcher register calendar alias alias real_name force
+utils calendars trading calendar dispatcher resolve alias name
+utils calendars trading calendar dispatcher deregister calendar name
+utils calendars trading calendar dispatcher clear calendars
+utils calendars trading calendar special opens
+utils calendars trading calendar special closes
+utils calendars trading calendar is session dt
+utils calendars trading calendar is open on minute dt
+utils calendars trading calendar next open dt
+utils calendars trading calendar next close dt
+utils calendars trading calendar previous open dt
+utils calendars trading calendar previous close dt
+utils calendars trading calendar next minute dt
+utils calendars trading calendar previous minute dt
+utils calendars trading calendar next session label session_label
+utils calendars trading calendar previous session label session_label
+utils calendars trading calendar minutes for session session_label
+utils calendars trading calendar sessions in range start_session_label end_session_label
+utils calendars trading calendar sessions window session_label count
+utils calendars trading calendar session distance start_session_label end_session_label
+utils calendars trading calendar minutes in range start_minute end_minute
+utils calendars trading calendar minutes for sessions in range start_session_label end_session_label
+utils calendars trading calendar open and close for session session_label
+utils calendars trading calendar all minutes
+utils calendars trading calendar minute to session label dt direction
+utils calendars trading calendar minute index to session labels index
+utils calendars trading calendar special dates calendars ad_hoc_dates start_date end_date
+utils calendars days at time days t tz day_offset
+utils calendars overwrite special dates midnight_utcs opens_or_closes special_opens_or_closes
+lib quantiles data nbins_or_partition_bounds
+lib compare arrays left right
+lib label array from codes and metadata cls codes categories reverse_categories
+lib label array from categorical cls categorical missing_value
+lib label array array finalize obj
+lib label array as int array
+lib label array as string array
+lib label array as categorical name
+lib label array as categorical frame index columns name
+lib label array setslice i j sequence
+lib label array is missing
+lib label array not missing
+lib label array equality check op
+lib label array empty like shape
+lib label array map predicate f
+lib label array matches pattern
+lib label array element of container
+lib naive grouped rowwise apply data group_labels func func_args
+lib can represent dtype dtype
+lib is categorical dtype
+lib normalize array data missing_value
+lib adjusted array data
+lib adjusted array dtype
+lib adjusted array iterator type
+lib adjusted array traverse window_length offset perspective_offset
+lib adjusted array inspect
+lib ensure ndarray ndarray_or_adjusted_array
+lib check window params data window_length
+examples test args
+examples simplex projection v b
+examples run example example_name environ
+finance restrictions is restricted assets dt
+finance restrictions or other_restriction
+finance union restrictions or other_restriction
+finance static restrictions is restricted assets dt
+finance historical restrictions is restricted assets dt
+finance trading control init on_error
+finance trading control validate asset amount portfolio algo_datetime
+finance trading control handle violation asset amount datetime metadata
+finance max order count validate asset amount portfolio algo_datetime
+finance restricted list order validate asset amount portfolio algo_datetime
+finance max order size validate asset amount portfolio algo_datetime
+finance max position size validate asset amount portfolio algo_datetime
+finance long only validate asset amount portfolio algo_datetime
+finance asset date bounds validate asset amount portfolio algo_datetime
+finance account control init
+finance account control validate _portfolio _account _algo_datetime _algo_current_data
+finance account control fail
+finance max leverage init max_leverage
+finance max leverage validate _portfolio _account _algo_datetime _algo_current_data
+finance trading environment write data
+finance noop load
+finance execution style get limit price is_buy
+finance execution style get stop price is_buy
+finance execution style exchange
+finance limit order init limit_price exchange
+finance stop order init stop_price exchange
+finance stop limit order init limit_price stop_price exchange
+finance asymmetric round price to penny price prefer_round_down diff
+finance check stoplimit prices price label
+finance cancel policy should cancel event
+finance fill price worse than limit price fill_price order
+finance slippage model process order data order
+finance market impact base get txn volume data order
+finance market impact base simulated impact order current_price current_volume txn_volume
+finance market impact base get window data data asset window_length
+finance commission model calculate order transaction
+finance calculate per unit commission order transaction cost_per_unit initial_commission
+finance per equity trade init cost
+finance per equity trade calculate order transaction
+finance per dollar init cost
+finance per dollar calculate order transaction
+finance order init dt asset amount stop
+finance order check triggers price dt
+finance order check order triggers current_price
+finance order triggered
+finance order repr
+finance order unicode
+finance blotter order asset amount style order_id
+finance blotter batch order order_arg_lists
+finance blotter cancel all orders for asset asset warn relay_status
+finance blotter reject order_id reason
+finance blotter hold order_id reason
+finance blotter process splits splits
+finance blotter get transactions bar_data
+finance blotter prune orders closed_orders
+finance risk choose treasury select_treasury treasury_curves start_session end_session
+finance risk risk metrics period to dict
+finance risk risk metrics cumulative to dict
+finance risk risk report init algorithm_returns sim_params trading_calendar treasury_curves
+finance risk risk report to dict
+finance performance performance tracker to dict emission_type
+finance performance performance tracker check upcoming dividends next_session adjustment_reader
+finance performance performance tracker handle minute close dt data_portal
+finance performance performance tracker handle market close dt data_portal
+finance performance performance tracker handle simulation end
+finance performance position earn dividend dividend
+finance performance position earn stock dividend stock_dividend
+finance performance position handle split asset ratio
+finance performance position adjust commission cost basis asset cost
+finance performance position to dict
+finance performance performance period calculate execution cash flow txn
+finance performance performance period to dict dt
+finance performance performance period as portfolio
+finance performance position tracker handle splits splits
+finance performance position tracker earn dividends dividends stock_dividends
+finance performance position tracker pay dividends next_trading_day

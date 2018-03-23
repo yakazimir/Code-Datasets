@@ -1,0 +1,1633 @@
+unsafe coerce unsafe coerce a b
+data tuple fst $tuple_2$ a b a
+data tuple snd $tuple_2$ a b b
+data tuple curry $f_2$ $tuple_2$ a b c a b c
+data tuple uncurry $f_3$ a b c $f_2$ $tuple_2$ a b c
+data tuple swap $tuple_2$ a b $tuple_2$ b a
+data maybe nothing maybe a
+data maybe maybe b $f_2$ a b maybe a b
+data maybe is just maybe a bool
+data maybe is nothing maybe a bool
+data maybe from just maybe a a
+data maybe from maybe a maybe a a
+data maybe list to maybe $list$ a maybe a
+data maybe maybe to list maybe a $list$ a
+data maybe cat maybes $list$ maybe a $list$ a
+data maybe map maybe $f_2$ a maybe b $list$ a $list$ b
+text show shows prec int show shows
+text show show show string
+text show show list $list$ show shows
+text show shows show shows
+text show show char char shows
+text show show string string shows
+text show show paren bool shows shows
+text show show list with $f_2$ a shows $list$ a shows
+data eq (==) eq eq bool
+data functor fmap $f_2$ a b functor a functor b
+data functor (<$) a functor b functor a
+data functor ($>) functor a b functor b
+data functor (<$>) $f_2$ a b functor a functor b
+data functor void functor a functor
+data function id a a
+data function const a b a
+data function (dot) $f_2$ b c $f_2$ a b a c
+data function flip $f_3$ a b c b a c
+data function ($) $f_2$ a b a b
+data function (&) a $f_2$ a b b
+data function fix $f_2$ a a a
+data function on $f_3$ b b c $f_2$ a b a a c
+data bool false bool
+data bool (&&) bool bool bool
+data bool (||) bool bool bool
+data bool not bool bool
+data bool otherwise bool
+data bool bool a a bool a
+ghc char chr int char
+data bits ( & ) bits bits bits
+data bits ( | ) bits bits bits
+data bits xor bits bits bits
+data bits complement bits bits
+data bits shift bits int bits
+data bits rotate bits int bits
+data bits zero bits bits
+data bits bit int bits
+data bits set bit bits int bits
+data bits clear bit bits int bits
+data bits complement bit bits int bits
+data bits test bit bits int bool
+data bits bit size maybe bits maybe int
+data bits is signed bits bool
+data bits shift l bits int bits
+data bits unsafe shift l bits int bits
+data bits shift r bits int bits
+data bits unsafe shift r bits int bits
+data bits rotate l bits int bits
+data bits rotate r bits int bits
+data bits pop count bits int
+data bits finite bit size finitebits int
+data bits count leading zeros finitebits int
+data bits count trailing zeros finitebits int
+data bits bit default int bits/num
+data bits test bit default bits/num int bool
+data bits pop count default bits/num int
+data bits to integral sized integral/bits maybe integral/bits
+data coerce coerce coercible coercible
+text parsercombinators readp get readp char
+text parsercombinators readp look readp string
+text parsercombinators readp (+++) readp a readp a readp a
+text parsercombinators readp (<++) readp a readp a readp a
+text parsercombinators readp gather readp a readp $tuple_2$ string a
+text parsercombinators readp pfail readp a
+text parsercombinators readp eof readp
+text parsercombinators readp satisfy $f_2$ char bool readp char
+text parsercombinators readp char char readp char
+text parsercombinators readp string string readp string
+text parsercombinators readp munch $f_2$ char bool readp string
+text parsercombinators readp munch1 $f_2$ char bool readp string
+text parsercombinators readp skip spaces readp
+text parsercombinators readp choice $list$ readp a readp a
+text parsercombinators readp count int readp a readp $list$ a
+text parsercombinators readp between readp open readp close readp a readp a
+text parsercombinators readp option a readp a readp a
+text parsercombinators readp optional readp a readp
+text parsercombinators readp many readp a readp $list$ a
+text parsercombinators readp many1 readp a readp $list$ a
+text parsercombinators readp skip many readp a readp
+text parsercombinators readp skip many1 readp a readp
+text parsercombinators readp sep by readp a readp sep readp $list$ a
+text parsercombinators readp sep by1 readp a readp sep readp $list$ a
+text parsercombinators readp end by readp a readp sep readp $list$ a
+text parsercombinators readp end by1 readp a readp sep readp $list$ a
+text parsercombinators readp chainr readp a readp $f_3$ a a a a readp a
+text parsercombinators readp chainl readp a readp $f_3$ a a a a readp a
+text parsercombinators readp chainl1 readp a readp $f_3$ a a a readp a
+text parsercombinators readp chainr1 readp a readp $f_3$ a a a readp a
+text parsercombinators readp many till readp a readp end readp $list$ a
+text parsercombinators readp read p_to_s readp a reads a
+text parsercombinators readp read s_to_p reads a readp a
+text parsercombinators readprec min prec prec
+text parsercombinators readprec lift readp a readprec a
+text parsercombinators readprec prec prec readprec a readprec a
+text parsercombinators readprec step readprec a readprec a
+text parsercombinators readprec reset readprec a readprec a
+text parsercombinators readprec get readprec char
+text parsercombinators readprec look readprec string
+text parsercombinators readprec (+++) readprec a readprec a readprec a
+text parsercombinators readprec (<++) readprec a readprec a readprec a
+text parsercombinators readprec pfail readprec a
+text parsercombinators readprec choice $list$ readprec a readprec a
+text read lex char char lexeme
+text read lex string string lexeme
+text read lex punc string lexeme
+text read lex ident string lexeme
+text read lex symbol string lexeme
+text read lex hs lex readp string
+data word byte swap16 word16 word16
+data word byte swap32 word32 word32
+data word byte swap64 word64 word64
+data ord compare ord ord ordering
+data ord down a down a
+data ord comparing $f_2$ b ord b b ordering
+data type coercion coercion coercion a b
+data type coercion coerce with coercion a b a b
+data type coercion sym coercion a b coercion b a
+data type coercion trans coercion a b coercion b c coercion a c
+data type coercion test coercion testcoercion a testcoercion b maybe coercion a b
+control category id category a a
+control category (dot) category b c category a b category a c
+control category (<<<) category b c category a b category a c
+control category (>>>) category a b category b c category a c
+data char is control char bool
+data char is space char bool
+data char is lower char bool
+data char is upper char bool
+data char is alpha char bool
+data char is alpha num char bool
+data char is print char bool
+data char is digit char bool
+data char is oct digit char bool
+data char is hex digit char bool
+data char is letter char bool
+data char is mark char bool
+data char is number char bool
+data char is punctuation char bool
+data char is symbol char bool
+data char is separator char bool
+data char is ascii char bool
+data char is latin1 char bool
+data char is ascii upper char bool
+data char is ascii lower char bool
+data char uppercase letter generalcategory
+data char lowercase letter generalcategory
+data char titlecase letter generalcategory
+data char modifier letter generalcategory
+data char other letter generalcategory
+data char non spacing mark generalcategory
+data char spacing combining mark generalcategory
+data char enclosing mark generalcategory
+data char decimal number generalcategory
+data char letter number generalcategory
+data char other number generalcategory
+data char connector punctuation generalcategory
+data char dash punctuation generalcategory
+data char open punctuation generalcategory
+data char close punctuation generalcategory
+data char initial quote generalcategory
+data char final quote generalcategory
+data char other punctuation generalcategory
+data char math symbol generalcategory
+data char currency symbol generalcategory
+data char modifier symbol generalcategory
+data char other symbol generalcategory
+data char space generalcategory
+data char line separator generalcategory
+data char paragraph separator generalcategory
+data char control generalcategory
+data char format generalcategory
+data char surrogate generalcategory
+data char private use generalcategory
+data char not assigned generalcategory
+data char general category char generalcategory
+data char to upper char char
+data char to lower char char
+data char to title char char
+data char digit to int char int
+data char int to digit int char
+data char ord char int
+data char chr int char
+data char show lit char char shows
+data char lex lit char reads string
+data char read lit char reads char
+ghc oldlist null $list$ a bool
+ghc oldlist length $list$ a int
+ghc oldlist foldl $f_3$ b a b b $list$ a b
+ghc oldlist foldl' $f_3$ b a b b $list$ a b
+ghc oldlist foldl1 $f_3$ a a a $list$ a a
+ghc oldlist foldr $f_3$ a b b b $list$ a b
+ghc oldlist foldr1 $f_3$ a a a $list$ a a
+ghc oldlist concat $list$ $list$ a $list$ a
+ghc oldlist concat map $f_2$ a $list$ b $list$ a $list$ b
+ghc oldlist and $list$ bool bool
+ghc oldlist or $list$ bool bool
+ghc oldlist any $f_2$ a bool $list$ a bool
+ghc oldlist all $f_2$ a bool $list$ a bool
+ghc oldlist sum $list$ num num
+ghc oldlist product $list$ num num
+ghc oldlist maximum $list$ ord ord
+ghc oldlist minimum $list$ ord ord
+ghc oldlist map accum l $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
+ghc oldlist map accum r $f_2$ acc $tuple_2$ acc y x acc $list$ x $tuple_2$ acc $list$ y
+ghc oldlist elem eq $list$ eq bool
+ghc oldlist find $f_2$ a bool $list$ a maybe a
+ghc oldlist maximum by $f_3$ a a ordering $list$ a a
+ghc oldlist minimum by $f_3$ a a ordering $list$ a a
+data proxy proxy proxy t
+data proxy as proxy type of a proxy a a
+data proxy kproxy kproxy
+numeric show signed $f_2$ real shows int real shows
+numeric show int at base integral/show $f_2$ int char integral/show shows
+numeric show int integral shows
+numeric show hex integral/show shows
+numeric show oct integral/show shows
+numeric show efloat maybe int realfloat shows
+numeric show ffloat maybe int realfloat shows
+numeric show gfloat maybe int realfloat shows
+numeric show ffloat alt maybe int realfloat shows
+numeric show gfloat alt maybe int realfloat shows
+numeric show float realfloat shows
+numeric float to digits integer realfloat $tuple_2$ $list$ int int
+numeric read signed reads real reads real
+numeric read int num $f_2$ char bool $f_2$ char int reads num
+numeric read dec reads eq/num
+numeric read oct reads eq/num
+numeric read hex reads eq/num
+numeric read float reads realfrac
+numeric lex digits reads string
+numeric from rat rational realfloat
+data typeable internal proxy proxy t
+data typeable internal type rep proxy typeable typerep
+data typeable internal mk ty con3 string string string tycon
+data typeable internal mk ty con app tycon $list$ typerep typerep
+data typeable internal mk poly ty con app tycon $list$ kindrep $list$ typerep typerep
+data typeable internal mk app ty typerep typerep typerep
+data typeable internal type rep ty con typerep tycon
+data typeable internal type rep# proxy# typeable typerep
+data typeable internal mk fun ty typerep typerep typerep
+data typeable internal split ty con app typerep $tuple_2$ tycon $list$ typerep
+data typeable internal split poly ty con app typerep $tuple_3$ tycon $list$ kindrep $list$ typerep
+data typeable internal fun result ty typerep typerep maybe typerep
+data typeable internal type rep args typerep $list$ typerep
+data typeable internal type rep fingerprint typerep fingerprint
+data typeable internal rnf type rep typerep
+data typeable internal ty con string tycon string
+data typeable internal rnf ty con tycon
+data typeable internal type rep kinds typerep $list$ kindrep
+data typeable internal type lit type rep string typerep
+foreign stableptr new stable ptr a io stableptr a
+foreign stableptr de ref stable ptr stableptr a io a
+foreign stableptr free stable ptr stableptr a io
+foreign stableptr cast stable ptr to ptr stableptr a ptr
+foreign stableptr cast ptr to stable ptr ptr stableptr a
+data typeable type rep proxy typeable typerep
+data typeable cast typeable maybe typeable
+data typeable gcast c typeable maybe c typeable
+data typeable gcast1 c typeable a maybe c typeable a
+data typeable gcast2 c typeable a b maybe c typeable a b
+data typeable proxy proxy t
+data typeable type rep fingerprint typerep fingerprint
+data typeable rnf type rep typerep
+data typeable ty con string tycon string
+data typeable rnf ty con tycon
+data typeable mk ty con3 string string string tycon
+data typeable mk ty con app tycon $list$ typerep typerep
+data typeable mk app ty typerep typerep typerep
+data typeable mk fun ty typerep typerep typerep
+data typeable split ty con app typerep $tuple_2$ tycon $list$ typerep
+data typeable fun result ty typerep typerep maybe typerep
+data typeable type rep ty con typerep tycon
+data typeable type rep args typerep $list$ typerep
+data either left a either a b
+data either either $f_2$ a c $f_2$ b c either a b c
+data either lefts $list$ either a b $list$ a
+data either rights $list$ either a b $list$ b
+data either is left either a b bool
+data either is right either a b bool
+data either partition eithers $list$ either a b $tuple_2$ $list$ a $list$ b
+ghc generics u1 u1 p
+ghc generics par1 p par1 p
+ghc generics rec1 f p rec1 f p
+ghc generics k1 c k1 i c p
+ghc generics m1 f p m1 i c f p
+ghc generics l1 f p :+: f g p
+ghc generics (:*:) f p g p :*: f g p
+ghc generics comp1 f g p :.: f g p
+ghc generics prefix fixity
+ghc generics left associative associativity
+ghc generics no arity arity
+ghc generics prec fixity int
+ghc generics from generic rep generic x
+ghc generics to rep generic x generic
+ghc generics from1 generic1 a rep1 generic1 a
+ghc generics to1 rep1 generic1 a generic1 a
+data monoid mempty monoid
+data monoid mappend monoid monoid monoid
+data monoid mconcat $list$ monoid monoid
+data monoid (<>) monoid monoid monoid
+data monoid dual a dual a
+data monoid endo $f_2$ a a endo a
+data monoid all bool all
+data monoid any bool any
+data monoid sum a sum a
+data monoid product a product a
+data monoid first maybe a first a
+data monoid last maybe a last a
+data monoid alt f a alt f a
+data foldable fold foldable monoid monoid
+data foldable fold map $f_2$ a monoid foldable a monoid
+data foldable foldr $f_3$ a b b b foldable a b
+data foldable foldr' $f_3$ a b b b foldable a b
+data foldable foldl $f_3$ b a b b foldable a b
+data foldable foldl' $f_3$ b a b b foldable a b
+data foldable foldr1 $f_3$ a a a foldable a a
+data foldable foldl1 $f_3$ a a a foldable a a
+data foldable to list foldable a $list$ a
+data foldable null foldable a bool
+data foldable length foldable a int
+data foldable elem eq foldable eq bool
+data foldable maximum foldable ord ord
+data foldable minimum foldable ord ord
+data foldable sum foldable num num
+data foldable product foldable num num
+data foldable foldr m $f_3$ a b monad b b foldable a monad b
+data foldable foldl m $f_3$ b a monad b b foldable a monad b
+data foldable traverse_ $f_2$ a applicative b foldable a applicative
+data foldable for_ foldable a $f_2$ a applicative b applicative
+data foldable sequence a_ foldable applicative a applicative
+data foldable asum foldable alternative a alternative a
+data foldable map m_ $f_2$ a monad b foldable a monad
+data foldable for m_ foldable a $f_2$ a monad b monad
+data foldable sequence_ foldable monad a monad
+data foldable msum foldable monadplus a monadplus a
+data foldable concat foldable $list$ a $list$ a
+data foldable concat map $f_2$ a $list$ b foldable a $list$ b
+data foldable and foldable bool bool
+data foldable or foldable bool bool
+data foldable any $f_2$ a bool foldable a bool
+data foldable all $f_2$ a bool foldable a bool
+data foldable maximum by $f_3$ a a ordering foldable a a
+data foldable minimum by $f_3$ a a ordering foldable a a
+data foldable not elem eq foldable eq bool
+data foldable find $f_2$ a bool foldable a maybe a
+text read reads prec int reads read
+text read read list reads $list$ read
+text read read prec readprec read
+text read read list prec readprec $list$ read
+text read reads reads read
+text read read string read
+text read read paren bool reads a reads a
+text read lex reads string
+text read char char lexeme
+text read string string lexeme
+text read punc string lexeme
+text read ident string lexeme
+text read symbol string lexeme
+text read lex p readprec lexeme
+text read parens readprec a readprec a
+text read read list default reads $list$ read
+text read read list prec default readprec $list$ read
+text read read either string either string read
+text read read maybe string maybe read
+data ioref new ioref a io ioref a
+data ioref read ioref ioref a io a
+data ioref write ioref ioref a a io
+data ioref modify ioref ioref a $f_2$ a a io
+data ioref modify ioref' ioref a $f_2$ a a io
+data ioref atomic modify ioref ioref a $f_2$ a $tuple_2$ a b io b
+data ioref atomic modify ioref' ioref a $f_2$ a $tuple_2$ a b io b
+data ioref atomic write ioref ioref a a io
+data ioref mk weak ioref ioref a io io weak ioref a
+foreign marshal unsafe unsafe local state io a a
+data dynamic to dyn typeable dynamic
+data dynamic from dyn dynamic typeable typeable
+data dynamic from dynamic dynamic maybe typeable
+foreign storable size of storable int
+foreign storable alignment storable int
+foreign storable peek elem off ptr storable int io storable
+foreign storable poke elem off ptr storable int storable io
+foreign storable peek byte off ptr b int io storable
+foreign storable poke byte off ptr b int storable io
+foreign storable peek ptr storable io storable
+foreign storable poke ptr storable storable io
+foreign c types cchar int8 cchar
+foreign c types cschar int8 cschar
+foreign c types cuchar word8 cuchar
+foreign c types cshort int16 cshort
+foreign c types cushort word16 cushort
+foreign c types cint int32 cint
+foreign c types cuint word32 cuint
+foreign c types clong int64 clong
+foreign c types culong word64 culong
+foreign c types cptrdiff int64 cptrdiff
+foreign c types csize word64 csize
+foreign c types cwchar int32 cwchar
+foreign c types csig atomic int32 csigatomic
+foreign c types cllong int64 cllong
+foreign c types cullong word64 cullong
+foreign c types cclock int64 cclock
+foreign c types ctime int64 ctime
+foreign c types cuseconds word32 cuseconds
+foreign c types csuseconds int64 csuseconds
+foreign c types cfloat float cfloat
+foreign c types cdouble double cdouble
+foreign concurrent new foreign ptr ptr a io io foreignptr a
+foreign concurrent add foreign ptr finalizer foreignptr a io io
+foreign ptr null ptr ptr a
+foreign ptr cast ptr ptr a ptr b
+foreign ptr plus ptr ptr a int ptr b
+foreign ptr align ptr ptr a int ptr a
+foreign ptr minus ptr ptr a ptr b int
+foreign ptr null fun ptr funptr a
+foreign ptr cast fun ptr funptr a funptr b
+foreign ptr cast fun ptr to ptr funptr a ptr b
+foreign ptr cast ptr to fun ptr ptr a funptr b
+foreign ptr free haskell fun ptr funptr a io
+foreign ptr ptr to int ptr ptr a intptr
+foreign ptr int ptr to ptr intptr ptr a
+foreign ptr ptr to word ptr ptr a wordptr
+foreign ptr word ptr to ptr wordptr ptr a
+foreign foreignptr new foreign ptr finalizerptr a ptr a io foreignptr a
+foreign foreignptr new foreign ptr_ ptr a io foreignptr a
+foreign foreignptr add foreign ptr finalizer finalizerptr a foreignptr a io
+foreign foreignptr new foreign ptr env finalizerenvptr env a ptr env ptr a io foreignptr a
+foreign foreignptr add foreign ptr finalizer env finalizerenvptr env a ptr env foreignptr a io
+foreign foreignptr with foreign ptr foreignptr a $f_2$ ptr a io b io b
+foreign foreignptr finalize foreign ptr foreignptr a io
+foreign foreignptr touch foreign ptr foreignptr a io
+foreign foreignptr cast foreign ptr foreignptr a foreignptr b
+foreign foreignptr malloc foreign ptr io foreignptr storable
+foreign foreignptr malloc foreign ptr bytes int io foreignptr a
+foreign foreignptr malloc foreign ptr array int io foreignptr storable
+foreign foreignptr malloc foreign ptr array0 int io foreignptr storable
+foreign foreignptr safe new foreign ptr finalizerptr a ptr a io foreignptr a
+foreign foreignptr safe new foreign ptr_ ptr a io foreignptr a
+foreign foreignptr safe add foreign ptr finalizer finalizerptr a foreignptr a io
+foreign foreignptr safe new foreign ptr env finalizerenvptr env a ptr env ptr a io foreignptr a
+foreign foreignptr safe add foreign ptr finalizer env finalizerenvptr env a ptr env foreignptr a io
+foreign foreignptr safe with foreign ptr foreignptr a $f_2$ ptr a io b io b
+foreign foreignptr safe finalize foreign ptr foreignptr a io
+foreign foreignptr safe touch foreign ptr foreignptr a io
+foreign foreignptr safe cast foreign ptr foreignptr a foreignptr b
+foreign foreignptr safe malloc foreign ptr io foreignptr storable
+foreign foreignptr safe malloc foreign ptr bytes int io foreignptr a
+foreign foreignptr safe malloc foreign ptr array int io foreignptr storable
+foreign foreignptr safe malloc foreign ptr array0 int io foreignptr storable
+foreign foreignptr unsafe unsafe foreign ptr to ptr foreignptr a ptr a
+ghc io buffer buffer ! rawbuffer e bufferstate !int !int !int buffer e
+ghc io buffer slide contents buffer word8 io buffer word8
+ghc io encoding types buffer codec codebuffer from to $f_2$ buffer from io $tuple_2$ buffer from buffer to buffer to io io state $f_2$ state io buffercodec from to state
+ghc io encoding types encode buffercodec from to state codebuffer from to
+ghc io encoding types recover buffercodec from to state buffer from buffer to io $tuple_2$ buffer from buffer to
+ghc io encoding types close buffercodec from to state io
+ghc io encoding types get state buffercodec from to state io state
+ghc io encoding types text encoding string io textdecoder dstate io textencoder estate textencoding
+ghc io encoding types text encoding name textencoding string
+ghc io encoding types mk text decoder textencoding io textdecoder dstate
+ghc io encoding types mk text encoder textencoding io textencoder estate
+ghc io encoding types input underflow codingprogress
+ghc io encoding types output underflow codingprogress
+ghc io encoding types invalid sequence codingprogress
+ghc io device read rawio ptr word8 int io int
+ghc io device read non blocking rawio ptr word8 int io maybe int
+ghc io device write rawio ptr word8 int io
+ghc io device write non blocking rawio ptr word8 int io int
+ghc io device ready iodevice bool int io bool
+ghc io device close iodevice io
+ghc io device is terminal iodevice io bool
+ghc io device is seekable iodevice io bool
+ghc io device seek iodevice seekmode integer io
+ghc io device tell iodevice io integer
+ghc io device get size iodevice io integer
+ghc io device set size iodevice integer io
+ghc io device set echo iodevice bool io
+ghc io device get echo iodevice io bool
+ghc io device set raw iodevice bool io
+ghc io device dev type iodevice io iodevicetype
+ghc io device dup iodevice io iodevice
+ghc io device dup2 iodevice iodevice io iodevice
+ghc io device directory iodevicetype
+ghc io device stream iodevicetype
+ghc io device regular file iodevicetype
+ghc io device raw device iodevicetype
+ghc io device absolute seek seekmode
+ghc io device relative seek seekmode
+ghc io device seek from end seekmode
+ghc io bufferedio new buffer bufferedio bufferstate io buffer word8
+ghc io bufferedio fill read buffer bufferedio buffer word8 io $tuple_2$ int buffer word8
+ghc io bufferedio fill read buffer0 bufferedio buffer word8 io $tuple_2$ maybe int buffer word8
+ghc io bufferedio empty write buffer bufferedio buffer word8 io buffer word8
+ghc io bufferedio flush write buffer bufferedio buffer word8 io buffer word8
+ghc io bufferedio flush write buffer0 bufferedio buffer word8 io $tuple_2$ int buffer word8
+foreign marshal alloc alloca $f_2$ ptr storable io b io b
+foreign marshal alloc alloca bytes int $f_2$ ptr a io b io b
+foreign marshal alloc malloc io ptr storable
+foreign marshal alloc malloc bytes int io ptr a
+foreign marshal alloc calloc io ptr storable
+foreign marshal alloc calloc bytes int io ptr a
+foreign marshal alloc realloc ptr a io ptr storable
+foreign marshal alloc realloc bytes ptr a int io ptr a
+foreign marshal alloc free ptr a io
+foreign marshal alloc finalizer free finalizerptr a
+foreign marshal utils with storable $f_2$ ptr storable io b io b
+foreign marshal utils new storable io ptr storable
+foreign marshal utils from bool bool num
+foreign marshal utils to bool eq/num bool
+foreign marshal utils maybe peek $f_2$ ptr a io b ptr a io maybe b
+foreign marshal utils with many $f_2$ a res $f_2$ b res $list$ a $f_2$ $list$ b res res
+foreign marshal utils copy bytes ptr a ptr a int io
+foreign marshal utils move bytes ptr a ptr a int io
+foreign marshal utils fill bytes ptr a word8 int io
+foreign marshal array malloc array int io ptr storable
+foreign marshal array malloc array0 int io ptr storable
+foreign marshal array alloca array int $f_2$ ptr storable io b io b
+foreign marshal array alloca array0 int $f_2$ ptr storable io b io b
+foreign marshal array realloc array ptr storable int io ptr storable
+foreign marshal array realloc array0 ptr storable int io ptr storable
+foreign marshal array calloc array int io ptr storable
+foreign marshal array calloc array0 int io ptr storable
+foreign marshal array peek array int ptr storable io $list$ storable
+foreign marshal array peek array0 storable/eq ptr storable/eq io $list$ storable/eq
+foreign marshal array poke array ptr storable $list$ storable io
+foreign marshal array poke array0 storable ptr storable $list$ storable io
+foreign marshal array new array $list$ storable io ptr storable
+foreign marshal array new array0 storable $list$ storable io ptr storable
+foreign marshal array with array $list$ storable $f_2$ ptr storable io b io b
+foreign marshal array with array0 storable $list$ storable $f_2$ ptr storable io b io b
+foreign marshal array with array len $list$ storable $f_3$ int ptr storable io b io b
+foreign marshal array with array len0 storable $list$ storable $f_3$ int ptr storable io b io b
+foreign marshal array copy array ptr storable ptr storable int io
+foreign marshal array move array ptr storable ptr storable int io
+foreign marshal array length array0 storable/eq ptr storable/eq io int
+foreign marshal array advance ptr ptr storable int ptr storable
+ghc foreign peek cstring textencoding cstring io string
+ghc foreign peek cstring len textencoding cstringlen io string
+ghc foreign new cstring textencoding string io cstring
+ghc foreign new cstring len textencoding string io cstringlen
+ghc foreign with cstring textencoding string $f_2$ cstring io a io a
+ghc foreign with cstring len textencoding string $f_2$ cstringlen io a io a
+ghc foreign char is representable textencoding char io bool
+foreign c string peek cstring cstring io string
+foreign c string peek cstring len cstringlen io string
+foreign c string new cstring string io cstring
+foreign c string new cstring len string io cstringlen
+foreign c string with cstring string $f_2$ cstring io a io a
+foreign c string with cstring len string $f_2$ cstringlen io a io a
+foreign c string cast char to cchar char cchar
+foreign c string cast cchar to char cchar char
+foreign c string cast char to cuchar char cuchar
+foreign c string cast cuchar to char cuchar char
+foreign c string cast char to cschar char cschar
+foreign c string cast cschar to char cschar char
+foreign c string peek castring cstring io string
+foreign c string peek castring len cstringlen io string
+foreign c string new castring string io cstring
+foreign c string new castring len string io cstringlen
+foreign c string with castring string $f_2$ cstring io a io a
+foreign c string with castring len string $f_2$ cstringlen io a io a
+foreign c string peek cwstring cwstring io string
+foreign c string peek cwstring len cwstringlen io string
+foreign c string new cwstring string io cwstring
+foreign c string new cwstring len string io cwstringlen
+foreign c string with cwstring string $f_2$ cwstring io a io a
+foreign c string with cwstring len string $f_2$ cwstringlen io a io a
+foreign marshal error throw if $f_2$ a bool $f_2$ a string io a io a
+foreign marshal error throw if_ $f_2$ a bool $f_2$ a string io a io
+foreign marshal error throw if neg $f_2$ ord/num string io ord/num io ord/num
+foreign marshal error throw if neg_ $f_2$ ord/num string io ord/num io
+foreign marshal error throw if null string io ptr a io ptr a
+foreign marshal error void io a io
+foreign marshal pool new pool io pool
+foreign marshal pool free pool pool io
+foreign marshal pool with pool $f_2$ pool io b io b
+foreign marshal pool pooled malloc pool io ptr storable
+foreign marshal pool pooled malloc bytes pool int io ptr a
+foreign marshal pool pooled realloc pool ptr storable io ptr storable
+foreign marshal pool pooled realloc bytes pool ptr a int io ptr a
+foreign marshal pool pooled malloc array pool int io ptr storable
+foreign marshal pool pooled malloc array0 pool int io ptr storable
+foreign marshal pool pooled realloc array pool ptr storable int io ptr storable
+foreign marshal pool pooled realloc array0 pool ptr storable int io ptr storable
+foreign marshal pool pooled new pool storable io ptr storable
+foreign marshal pool pooled new array pool $list$ storable io ptr storable
+foreign marshal pool pooled new array0 pool storable $list$ storable io ptr storable
+foreign c error errno cint errno
+foreign c error is valid errno errno bool
+foreign c error get errno io errno
+foreign c error reset errno io
+foreign c error errno to ioerror string errno maybe handle maybe string ioerror
+foreign c error throw errno string io a
+foreign c error throw errno if $f_2$ a bool string io a io a
+foreign c error throw errno if_ $f_2$ a bool string io a io
+foreign c error throw errno if retry $f_2$ a bool string io a io a
+foreign c error throw errno if retry_ $f_2$ a bool string io a io
+foreign c error throw errno if minus1 string io eq/num io eq/num
+foreign c error throw errno if minus1_ string io eq/num io
+foreign c error throw errno if minus1retry string io eq/num io eq/num
+foreign c error throw errno if minus1retry_ string io eq/num io
+foreign c error throw errno if null string io ptr a io ptr a
+foreign c error throw errno if null retry string io ptr a io ptr a
+foreign c error throw errno if retry may block $f_2$ a bool string io a io b io a
+foreign c error throw errno if retry may block_ $f_2$ a bool string io a io b io
+foreign c error throw errno if minus1retry may block string io eq/num io b io eq/num
+foreign c error throw errno if minus1retry may block_ string io eq/num io b io
+foreign c error throw errno if null retry may block string io ptr a io b io ptr a
+foreign c error throw errno path string filepath io a
+foreign c error throw errno path if $f_2$ a bool string filepath io a io a
+foreign c error throw errno path if_ $f_2$ a bool string filepath io a io
+foreign c error throw errno path if null string filepath io ptr a io ptr a
+foreign c error throw errno path if minus1 string filepath io eq/num io eq/num
+foreign c error throw errno path if minus1_ string filepath io eq/num io
+system posix types cdev word64 cdev
+ghc io encoding failure error on coding failure codingfailuremode
+ghc io encoding failure ignore coding failure codingfailuremode
+ghc io encoding failure transliterate coding failure codingfailuremode
+ghc io encoding failure roundtrip failure codingfailuremode
+ghc io encoding failure is surrogate char bool
+ghc io encoding utf8 utf8 textencoding
+ghc conc sync thread id threadid# threadid
+ghc conc sync fork io io io threadid
+ghc conc sync fork on int io io threadid
+ghc conc sync num capabilities int
+ghc conc sync get num capabilities io int
+ghc conc sync set num capabilities int io
+ghc conc sync get num processors io int
+ghc conc sync num sparks io int
+ghc conc sync my thread id io threadid
+ghc conc sync kill thread threadid io
+ghc conc sync throw to threadid exception io
+ghc conc sync run sparks io
+ghc conc sync yield io
+ghc conc sync label thread threadid string io
+ghc conc sync mk weak thread id threadid io weak threadid
+ghc conc sync thread running threadstatus
+ghc conc sync thread finished threadstatus
+ghc conc sync thread blocked blockreason threadstatus
+ghc conc sync thread died threadstatus
+ghc conc sync blocked on mvar blockreason
+ghc conc sync blocked on black hole blockreason
+ghc conc sync blocked on exception blockreason
+ghc conc sync blocked on stm blockreason
+ghc conc sync blocked on foreign call blockreason
+ghc conc sync blocked on other blockreason
+ghc conc sync thread capability threadid io $tuple_2$ int bool
+ghc conc sync set allocation counter int64 io
+ghc conc sync get allocation counter io int64
+ghc conc sync enable allocation limit io
+ghc conc sync disable allocation limit io
+ghc conc sync stm $f_2$ state# realworld $tuple_2$ # state# realworld a # stm a
+ghc conc sync atomically stm a io a
+ghc conc sync retry stm a
+ghc conc sync or else stm a stm a stm a
+ghc conc sync throw stm exception stm a
+ghc conc sync catch stm stm a $f_2$ exception stm a stm a
+ghc conc sync always succeeds stm a stm
+ghc conc sync always stm bool stm
+ghc conc sync tvar tvar# realworld a tvar a
+ghc conc sync new tvar a stm tvar a
+ghc conc sync new tvar io a io tvar a
+ghc conc sync read tvar tvar a stm a
+ghc conc sync read tvar io tvar a io a
+ghc conc sync write tvar tvar a a stm
+ghc conc sync unsafe ioto stm io a stm a
+control exception base some exception e someexception
+control exception base to exception exception someexception
+control exception base display exception exception string
+control exception base overflow arithexception
+control exception base index out of bounds string arrayexception
+control exception base undefined element string arrayexception
+control exception base assertion failed string assertionfailed
+control exception base some async exception e someasyncexception
+control exception base stack overflow asyncexception
+control exception base heap overflow asyncexception
+control exception base thread killed asyncexception
+control exception base user interrupt asyncexception
+control exception base non termination nontermination
+control exception base nested atomically nestedatomically
+control exception base blocked indefinitely on mvar blockedindefinitelyonmvar
+control exception base blocked indefinitely on stm blockedindefinitelyonstm
+control exception base allocation limit exceeded allocationlimitexceeded
+control exception base deadlock deadlock
+control exception base no method error string nomethoderror
+control exception base pattern match fail string patternmatchfail
+control exception base rec con error string recconerror
+control exception base rec sel error string recselerror
+control exception base rec upd error string recupderror
+control exception base error call string errorcall
+control exception base throw io exception io a
+control exception base throw exception a
+control exception base io error ioerror io a
+control exception base throw to threadid exception io
+control exception base catch io a $f_2$ exception io a io a
+control exception base catch just $f_2$ exception maybe b io a $f_2$ b io a io a
+control exception base handle $f_2$ exception io a io a io a
+control exception base handle just $f_2$ exception maybe b $f_2$ b io a io a io a
+control exception base try io a io either exception a
+control exception base try just $f_2$ exception maybe b io a io either b a
+control exception base on exception io a io b io a
+control exception base evaluate a io a
+control exception base map exception $f_2$ exception exception a a
+control exception base mask_ io a io a
+control exception base uninterruptible mask_ io a io a
+control exception base unmasked maskingstate
+control exception base masked interruptible maskingstate
+control exception base masked uninterruptible maskingstate
+control exception base get masking state io maskingstate
+control exception base assert bool a a
+control exception base bracket io a $f_2$ a io b $f_2$ a io c io c
+control exception base bracket_ io a io b io c io c
+control exception base bracket on error io a $f_2$ a io b $f_2$ a io c io c
+control exception base finally io a io b io a
+control concurrent mvar new empty mvar io mvar a
+control concurrent mvar new mvar a io mvar a
+control concurrent mvar take mvar mvar a io a
+control concurrent mvar put mvar mvar a a io
+control concurrent mvar read mvar mvar a io a
+control concurrent mvar swap mvar mvar a a io a
+control concurrent mvar try take mvar mvar a io maybe a
+control concurrent mvar try put mvar mvar a a io bool
+control concurrent mvar is empty mvar mvar a io bool
+control concurrent mvar with mvar mvar a $f_2$ a io b io b
+control concurrent mvar with mvar masked mvar a $f_2$ a io b io b
+control concurrent mvar modify mvar_ mvar a $f_2$ a io a io
+control concurrent mvar modify mvar mvar a $f_2$ a io $tuple_2$ a b io b
+control concurrent mvar modify mvar masked_ mvar a $f_2$ a io a io
+control concurrent mvar modify mvar masked mvar a $f_2$ a io $tuple_2$ a b io b
+control concurrent mvar try read mvar mvar a io maybe a
+control concurrent mvar mk weak mvar mvar a io io weak mvar a
+control concurrent mvar add mvar finalizer mvar a io io
+control exception some exception e someexception
+control exception to exception exception someexception
+control exception display exception exception string
+control exception overflow arithexception
+control exception index out of bounds string arrayexception
+control exception undefined element string arrayexception
+control exception assertion failed string assertionfailed
+control exception some async exception e someasyncexception
+control exception stack overflow asyncexception
+control exception heap overflow asyncexception
+control exception thread killed asyncexception
+control exception user interrupt asyncexception
+control exception non termination nontermination
+control exception nested atomically nestedatomically
+control exception blocked indefinitely on mvar blockedindefinitelyonmvar
+control exception blocked indefinitely on stm blockedindefinitelyonstm
+control exception allocation limit exceeded allocationlimitexceeded
+control exception deadlock deadlock
+control exception no method error string nomethoderror
+control exception pattern match fail string patternmatchfail
+control exception rec con error string recconerror
+control exception rec sel error string recselerror
+control exception rec upd error string recupderror
+control exception error call string errorcall
+control exception throw exception a
+control exception throw io exception io a
+control exception io error ioerror io a
+control exception throw to threadid exception io
+control exception catch io a $f_2$ exception io a io a
+control exception catches io a $list$ handler a io a
+control exception handler $f_2$ e io a handler a
+control exception catch just $f_2$ exception maybe b io a $f_2$ b io a io a
+control exception handle $f_2$ exception io a io a io a
+control exception handle just $f_2$ exception maybe b $f_2$ b io a io a io a
+control exception try io a io either exception a
+control exception try just $f_2$ exception maybe b io a io either b a
+control exception evaluate a io a
+control exception map exception $f_2$ exception exception a a
+control exception mask_ io a io a
+control exception uninterruptible mask_ io a io a
+control exception unmasked maskingstate
+control exception masked interruptible maskingstate
+control exception masked uninterruptible maskingstate
+control exception get masking state io maskingstate
+control exception allow interrupt io
+control exception assert bool a a
+control exception bracket io a $f_2$ a io b $f_2$ a io c io c
+control exception bracket_ io a io b io c io c
+control exception bracket on error io a $f_2$ a io b $f_2$ a io c io c
+control exception finally io a io b io a
+control exception on exception io a io b io a
+system io unsafe unsafe perform io io a a
+system io unsafe unsafe dupable perform io io a a
+system io unsafe unsafe interleave io io a io a
+system io unsafe unsafe fix io $f_2$ a io a io a
+ghc io encoding latin1 latin1 textencoding
+ghc io encoding utf16 utf16 textencoding
+ghc io encoding utf32 utf32 textencoding
+ghc io encoding buffer codec codebuffer from to $f_2$ buffer from io $tuple_2$ buffer from buffer to buffer to io io state $f_2$ state io buffercodec from to state
+ghc io encoding encode buffercodec from to state codebuffer from to
+ghc io encoding recover buffercodec from to state buffer from buffer to io $tuple_2$ buffer from buffer to
+ghc io encoding close buffercodec from to state io
+ghc io encoding get state buffercodec from to state io state
+ghc io encoding text encoding string io textdecoder dstate io textencoder estate textencoding
+ghc io encoding text encoding name textencoding string
+ghc io encoding mk text decoder textencoding io textdecoder dstate
+ghc io encoding mk text encoder textencoding io textencoder estate
+ghc io encoding input underflow codingprogress
+ghc io encoding output underflow codingprogress
+ghc io encoding invalid sequence codingprogress
+ghc io encoding latin1 textencoding
+ghc io encoding utf8 textencoding
+ghc io encoding utf8_bom textencoding
+ghc io encoding utf16 textencoding
+ghc io encoding utf16le textencoding
+ghc io encoding utf16be textencoding
+ghc io encoding utf32 textencoding
+ghc io encoding utf32le textencoding
+ghc io encoding utf32be textencoding
+ghc io encoding get locale encoding io textencoding
+ghc io encoding get file system encoding io textencoding
+ghc io encoding get foreign encoding io textencoding
+ghc io encoding char8 textencoding
+ghc io encoding mk text encoding string io textencoding
+system io error user error string ioerror
+system io error mk ioerror ioerrortype string maybe handle maybe filepath ioerror
+system io error annotate ioerror ioerror string maybe handle maybe filepath ioerror
+system io error is already exists error ioerror bool
+system io error is does not exist error ioerror bool
+system io error is already in use error ioerror bool
+system io error is full error ioerror bool
+system io error is eoferror ioerror bool
+system io error is illegal operation ioerror bool
+system io error is permission error ioerror bool
+system io error is user error ioerror bool
+system io error already exists error type ioerrortype
+system io error does not exist error type ioerrortype
+system io error already in use error type ioerrortype
+system io error full error type ioerrortype
+system io error eof error type ioerrortype
+system io error illegal operation error type ioerrortype
+system io error permission error type ioerrortype
+system io error user error type ioerrortype
+system io error is already exists error type ioerrortype bool
+system io error is does not exist error type ioerrortype bool
+system io error is already in use error type ioerrortype bool
+system io error is full error type ioerrortype bool
+system io error is eoferror type ioerrortype bool
+system io error is illegal operation error type ioerrortype bool
+system io error is permission error type ioerrortype bool
+system io error is user error type ioerrortype bool
+system io error io error ioerror io a
+system io error catch ioerror io a $f_2$ ioerror io a io a
+system io error try ioerror io a io either ioerror a
+system io error modify ioerror $f_2$ ioerror ioerror io a io a
+ghc conc io ensure iomanager is running io
+ghc conc io thread delay int io
+ghc conc io register delay int io tvar bool
+ghc conc io thread wait read fd io
+ghc conc io thread wait write fd io
+ghc conc io thread wait read stm fd io $tuple_2$ stm io
+ghc conc io thread wait write stm fd io $tuple_2$ stm io
+ghc conc io close fd with $f_2$ fd io fd io
+ghc conc thread id threadid# threadid
+ghc conc fork io io io threadid
+ghc conc fork on int io io threadid
+ghc conc num capabilities int
+ghc conc get num capabilities io int
+ghc conc set num capabilities int io
+ghc conc get num processors io int
+ghc conc num sparks io int
+ghc conc my thread id io threadid
+ghc conc kill thread threadid io
+ghc conc throw to threadid exception io
+ghc conc run sparks io
+ghc conc yield io
+ghc conc label thread threadid string io
+ghc conc mk weak thread id threadid io weak threadid
+ghc conc thread running threadstatus
+ghc conc thread finished threadstatus
+ghc conc thread blocked blockreason threadstatus
+ghc conc thread died threadstatus
+ghc conc blocked on mvar blockreason
+ghc conc blocked on black hole blockreason
+ghc conc blocked on exception blockreason
+ghc conc blocked on stm blockreason
+ghc conc blocked on foreign call blockreason
+ghc conc blocked on other blockreason
+ghc conc thread capability threadid io $tuple_2$ int bool
+ghc conc thread delay int io
+ghc conc register delay int io tvar bool
+ghc conc thread wait read fd io
+ghc conc thread wait write fd io
+ghc conc thread wait read stm fd io $tuple_2$ stm io
+ghc conc thread wait write stm fd io $tuple_2$ stm io
+ghc conc close fd with $f_2$ fd io fd io
+ghc conc set allocation counter int64 io
+ghc conc get allocation counter io int64
+ghc conc enable allocation limit io
+ghc conc disable allocation limit io
+ghc conc stm $f_2$ state# realworld $tuple_2$ # state# realworld a # stm a
+ghc conc atomically stm a io a
+ghc conc retry stm a
+ghc conc or else stm a stm a stm a
+ghc conc throw stm exception stm a
+ghc conc catch stm stm a $f_2$ exception stm a stm a
+ghc conc always succeeds stm a stm
+ghc conc always stm bool stm
+ghc conc tvar tvar# realworld a tvar a
+ghc conc new tvar a stm tvar a
+ghc conc new tvar io a io tvar a
+ghc conc read tvar tvar a stm a
+ghc conc read tvar io tvar a io a
+ghc conc write tvar tvar a a stm
+ghc conc unsafe ioto stm io a stm a
+ghc io handle no buffering buffermode
+ghc io handle line buffering buffermode
+ghc io handle block buffering maybe int buffermode
+ghc io handle mk file handle iodevice/bufferedio/typeable filepath iomode maybe textencoding newlinemode io handle
+ghc io handle mk duplex handle iodevice/bufferedio/typeable filepath maybe textencoding newlinemode io handle
+ghc io handle h file size handle io integer
+ghc io handle h set file size handle integer io
+ghc io handle h is eof handle io bool
+ghc io handle h look ahead handle io char
+ghc io handle h set buffering handle buffermode io
+ghc io handle h set binary mode handle bool io
+ghc io handle h set encoding handle textencoding io
+ghc io handle h get encoding handle io maybe textencoding
+ghc io handle h flush handle io
+ghc io handle h flush all handle io
+ghc io handle h duplicate handle io handle
+ghc io handle h duplicate to handle handle io
+ghc io handle h close handle io
+ghc io handle h get posn handle io handleposn
+ghc io handle h set posn handleposn io
+ghc io handle absolute seek seekmode
+ghc io handle relative seek seekmode
+ghc io handle seek from end seekmode
+ghc io handle h seek handle seekmode integer io
+ghc io handle h tell handle io integer
+ghc io handle h get buffering handle io buffermode
+ghc io handle h set echo handle bool io
+ghc io handle h get echo handle io bool
+ghc io handle h is terminal device handle io bool
+ghc io handle h set newline mode handle newlinemode io
+ghc io handle newline mode newline newline newlinemode
+ghc io handle input nl newlinemode newline
+ghc io handle output nl newlinemode newline
+ghc io handle native newline newline
+ghc io handle no newline translation newlinemode
+ghc io handle universal newline mode newlinemode
+ghc io handle native newline mode newlinemode
+ghc io handle h show handle io string
+ghc io handle h wait for input handle int io bool
+ghc io handle h get char handle io char
+ghc io handle h get line handle io string
+ghc io handle h get contents handle io string
+ghc io handle h put char handle char io
+ghc io handle h put str handle string io
+ghc io handle h get buf handle ptr a int io int
+ghc io handle h get buf non blocking handle ptr a int io int
+ghc io handle h put buf handle ptr a int io
+ghc io handle fd stdin handle
+ghc io handle fd stdout handle
+ghc io handle fd stderr handle
+ghc io handle fd open file filepath iomode io handle
+ghc io handle fd open binary file filepath iomode io handle
+ghc io handle fd open file blocking filepath iomode io handle
+ghc io handle fd fd to handle fd io handle
+ghc io handle fd fd to handle' cint maybe iodevicetype bool filepath iomode bool io handle
+ghc io handle fd is eof io bool
+system io fix io $f_2$ a io a io a
+system io stdin handle
+system io stdout handle
+system io stderr handle
+system io with file filepath iomode $f_2$ handle io r io r
+system io open file filepath iomode io handle
+system io read mode iomode
+system io h close handle io
+system io read file filepath io string
+system io write file filepath string io
+system io append file filepath string io
+system io h file size handle io integer
+system io h set file size handle integer io
+system io h is eof handle io bool
+system io is eof io bool
+system io no buffering buffermode
+system io line buffering buffermode
+system io block buffering maybe int buffermode
+system io h set buffering handle buffermode io
+system io h get buffering handle io buffermode
+system io h flush handle io
+system io h get posn handle io handleposn
+system io h set posn handleposn io
+system io h seek handle seekmode integer io
+system io absolute seek seekmode
+system io relative seek seekmode
+system io seek from end seekmode
+system io h tell handle io integer
+system io h is terminal device handle io bool
+system io h set echo handle bool io
+system io h get echo handle io bool
+system io h show handle io string
+system io h wait for input handle int io bool
+system io h ready handle io bool
+system io h get char handle io char
+system io h get line handle io string
+system io h look ahead handle io char
+system io h get contents handle io string
+system io h put char handle char io
+system io h put str handle string io
+system io h put str ln handle string io
+system io h print handle show io
+system io interact $f_2$ string string io
+system io put char char io
+system io put str string io
+system io put str ln string io
+system io print show io
+system io get char io char
+system io get line io string
+system io get contents io string
+system io read io string io read
+system io read ln io read
+system io with binary file filepath iomode $f_2$ handle io r io r
+system io open binary file filepath iomode io handle
+system io h set binary mode handle bool io
+system io h put buf handle ptr a int io
+system io h get buf handle ptr a int io int
+system io h get buf some handle ptr a int io int
+system io h get buf non blocking handle ptr a int io int
+system io open temp file filepath string io $tuple_2$ filepath handle
+system io open binary temp file filepath string io $tuple_2$ filepath handle
+system io open temp file with default permissions filepath string io $tuple_2$ filepath handle
+system io open binary temp file with default permissions filepath string io $tuple_2$ filepath handle
+system io h set encoding handle textencoding io
+system io h get encoding handle io maybe textencoding
+system io latin1 textencoding
+system io utf8 textencoding
+system io utf8_bom textencoding
+system io utf16 textencoding
+system io utf16le textencoding
+system io utf16be textencoding
+system io utf32 textencoding
+system io utf32le textencoding
+system io utf32be textencoding
+system io locale encoding textencoding
+system io char8 textencoding
+system io mk text encoding string io textencoding
+system io h set newline mode handle newlinemode io
+system io native newline newline
+system io newline mode newline newline newlinemode
+system io input nl newlinemode newline
+system io output nl newlinemode newline
+system io no newline translation newlinemode
+system io universal newline mode newlinemode
+system io native newline mode newlinemode
+control monad fix mfix $f_2$ a monadfix a monadfix a
+control monad fix fix $f_2$ a a a
+control arrow arr $f_2$ b c arrow b c
+control arrow first arrow b c arrow $tuple_3$ b d c d
+control arrow second arrow b c arrow $tuple_3$ d b d c
+control arrow (***) arrow b c arrow b' c' arrow $tuple_3$ b b' c c'
+control arrow (&&&) arrow b c arrow b c' arrow b $tuple_2$ c c'
+control arrow kleisli $f_2$ a m b kleisli m a b
+control arrow return a arrow b b
+control arrow (^>>) $f_2$ b c arrow c d arrow b d
+control arrow (>>^) arrow b c $f_2$ c d arrow b d
+control arrow (>>>) category a b category b c category a c
+control arrow (<<<) category b c category a b category a c
+control arrow (<<^) arrow c d $f_2$ b c arrow b d
+control arrow (^<<) $f_2$ c d arrow b c arrow b d
+control arrow (<+>) arrowplus b c arrowplus b c arrowplus b c
+control arrow left arrowchoice b c arrowchoice either b d either c d
+control arrow right arrowchoice b c arrowchoice either d b either d c
+control arrow (+++) arrowchoice b c arrowchoice b' c' arrowchoice either b b' either c c'
+control arrow (|||) arrowchoice b d arrowchoice c d arrowchoice either b c d
+control arrow arrow monad a b arrowmonad a b
+control arrow left app arrowapply b c arrowapply either b d either c d
+control arrow loop arrowloop $tuple_2$ b d $tuple_2$ c d arrowloop b c
+control applicative pure a applicative a
+control applicative (<*>) applicative $f_2$ a b applicative a applicative b
+control applicative (*>) applicative a applicative b applicative b
+control applicative (<*) applicative a applicative b applicative a
+control applicative empty alternative a
+control applicative (<|>) alternative a alternative a alternative a
+control applicative some alternative a alternative $list$ a
+control applicative many alternative a alternative $list$ a
+control applicative zip list $list$ a ziplist a
+control applicative (<$>) $f_2$ a b functor a functor b
+control applicative (<$) a functor b functor a
+control applicative (<**>) applicative a applicative $f_2$ a b applicative b
+control applicative lift a $f_2$ a b applicative a applicative b
+control applicative lift a2 $f_3$ a b c applicative a applicative b applicative c
+control applicative lift a3 $f_4$ a b c d applicative a applicative b applicative c applicative d
+control applicative optional alternative a alternative maybe a
+data traversable traverse $f_2$ a applicative b traversable a applicative traversable b
+data traversable sequence a traversable applicative a applicative traversable a
+data traversable map m $f_2$ a monad b traversable a monad traversable b
+data traversable sequence traversable monad a monad traversable a
+data traversable for traversable a $f_2$ a applicative b applicative traversable b
+data traversable for m traversable a $f_2$ a monad b monad traversable b
+data traversable map accum l $f_2$ a $tuple_2$ a c b a traversable b $tuple_2$ a traversable c
+data traversable map accum r $f_2$ a $tuple_2$ a c b a traversable b $tuple_2$ a traversable c
+data traversable fmap default $f_2$ a b traversable a traversable b
+data traversable fold map default $f_2$ a monoid traversable a monoid
+control monad fmap $f_2$ a b functor a functor b
+control monad (>>=) monad a $f_2$ a monad b monad b
+control monad (>>) monad a monad b monad b
+control monad return a monad a
+control monad fail string monad a
+control monad mzero monadplus a
+control monad mplus monadplus a monadplus a monadplus a
+control monad map m $f_2$ a monad b traversable a monad traversable b
+control monad map m_ $f_2$ a monad b foldable a monad
+control monad for m traversable a $f_2$ a monad b monad traversable b
+control monad for m_ foldable a $f_2$ a monad b monad
+control monad sequence traversable monad a monad traversable a
+control monad sequence_ foldable monad a monad
+control monad (=<<) $f_2$ a monad b monad a monad b
+control monad (>=>) $f_2$ a monad b $f_2$ b monad c $f_2$ a monad c
+control monad (<=<) $f_2$ b monad c $f_2$ a monad b $f_2$ a monad c
+control monad forever monad a monad b
+control monad void functor a functor
+control monad join monad monad a monad a
+control monad msum foldable monadplus a monadplus a
+control monad mfilter $f_2$ a bool monadplus a monadplus a
+control monad filter m $f_2$ a monad bool $list$ a monad $list$ a
+control monad map and unzip m $f_2$ a monad $tuple_2$ b c $list$ a monad $tuple_2$ $list$ b $list$ c
+control monad zip with m $f_3$ a b monad c $list$ a $list$ b monad $list$ c
+control monad zip with m_ $f_3$ a b monad c $list$ a $list$ b monad
+control monad fold m $f_3$ b a monad b b foldable a monad b
+control monad fold m_ $f_3$ b a monad b b foldable a monad
+control monad replicate m int monad a monad $list$ a
+control monad replicate m_ int monad a monad
+control monad guard bool alternative
+control monad when bool applicative applicative
+control monad unless bool applicative applicative
+control monad lift m $f_2$ a1 r monad a1 monad r
+control monad lift m2 $f_3$ a1 a2 r monad a1 monad a2 monad r
+control monad lift m3 $f_4$ a1 a2 a3 r monad a1 monad a2 monad a3 monad r
+control monad lift m4 $f_5$ a1 a2 a3 a4 r monad a1 monad a2 monad a3 monad a4 monad r
+control monad lift m5 $f_6$ a1 a2 a3 a4 a5 r monad a1 monad a2 monad a3 monad a4 monad a5 monad r
+control monad ap monad $f_2$ a b monad a monad b
+control monad (<$!>) $f_2$ a b monad a monad b
+ghc stats bytes allocated gcstats !int64
+ghc stats num gcs gcstats !int64
+ghc stats max bytes used gcstats !int64
+ghc stats num byte usage samples gcstats !int64
+ghc stats bytes copied gcstats !int64
+ghc stats current bytes used gcstats !int64
+ghc stats current bytes slop gcstats !int64
+ghc stats max bytes slop gcstats !int64
+ghc stats peak megabytes allocated gcstats !int64
+ghc stats mutator wall seconds gcstats !double
+ghc stats gc cpu seconds gcstats !double
+ghc stats gc wall seconds gcstats !double
+ghc stats cpu seconds gcstats !double
+ghc stats wall seconds gcstats !double
+ghc stats par max bytes copied gcstats !int64
+ghc stats get gcstats io gcstats
+ghc stats get gcstats enabled io bool
+data list (++) $list$ a $list$ a $list$ a
+data list head $list$ a a
+data list last $list$ a a
+data list tail $list$ a $list$ a
+data list init $list$ a $list$ a
+data list uncons $list$ a maybe $tuple_2$ a $list$ a
+data list null foldable a bool
+data list length foldable a int
+data list map $f_2$ a b $list$ a $list$ b
+data list reverse $list$ a $list$ a
+data list intersperse a $list$ a $list$ a
+data list intercalate $list$ a $list$ $list$ a $list$ a
+data list transpose $list$ $list$ a $list$ $list$ a
+data list subsequences $list$ a $list$ $list$ a
+data list permutations $list$ a $list$ $list$ a
+data list foldl $f_3$ b a b b foldable a b
+data list foldl' $f_3$ b a b b foldable a b
+data list foldl1 $f_3$ a a a foldable a a
+data list foldl1' $f_3$ a a a $list$ a a
+data list foldr $f_3$ a b b b foldable a b
+data list foldr1 $f_3$ a a a foldable a a
+data list concat foldable $list$ a $list$ a
+data list concat map $f_2$ a $list$ b foldable a $list$ b
+data list and foldable bool bool
+data list or foldable bool bool
+data list any $f_2$ a bool foldable a bool
+data list all $f_2$ a bool foldable a bool
+data list sum foldable num num
+data list product foldable num num
+data list maximum foldable ord ord
+data list minimum foldable ord ord
+data list scanl $f_3$ b a b b $list$ a $list$ b
+data list scanl' $f_3$ b a b b $list$ a $list$ b
+data list scanl1 $f_3$ a a a $list$ a $list$ a
+data list scanr $f_3$ a b b b $list$ a $list$ b
+data list scanr1 $f_3$ a a a $list$ a $list$ a
+data list map accum l $f_2$ a $tuple_2$ a c b a traversable b $tuple_2$ a traversable c
+data list map accum r $f_2$ a $tuple_2$ a c b a traversable b $tuple_2$ a traversable c
+data list iterate $f_2$ a a a $list$ a
+data list repeat a $list$ a
+data list replicate int a $list$ a
+data list cycle $list$ a $list$ a
+data list unfoldr $f_2$ b maybe $tuple_2$ a b b $list$ a
+data list take int $list$ a $list$ a
+data list drop int $list$ a $list$ a
+data list split at int $list$ a $tuple_2$ $list$ a $list$ a
+data list take while $f_2$ a bool $list$ a $list$ a
+data list drop while $f_2$ a bool $list$ a $list$ a
+data list drop while end $f_2$ a bool $list$ a $list$ a
+data list span $f_2$ a bool $list$ a $tuple_2$ $list$ a $list$ a
+data list break $f_2$ a bool $list$ a $tuple_2$ $list$ a $list$ a
+data list strip prefix $list$ eq $list$ eq maybe $list$ eq
+data list group $list$ eq $list$ $list$ eq
+data list inits $list$ a $list$ $list$ a
+data list tails $list$ a $list$ $list$ a
+data list is prefix of $list$ eq $list$ eq bool
+data list is suffix of $list$ eq $list$ eq bool
+data list is infix of $list$ eq $list$ eq bool
+data list is subsequence of $list$ eq $list$ eq bool
+data list elem eq foldable eq bool
+data list not elem eq foldable eq bool
+data list lookup eq $list$ $tuple_2$ eq b maybe b
+data list find $f_2$ a bool foldable a maybe a
+data list filter $f_2$ a bool $list$ a $list$ a
+data list partition $f_2$ a bool $list$ a $tuple_2$ $list$ a $list$ a
+data list (!!) $list$ a int a
+data list elem index eq $list$ eq maybe int
+data list elem indices eq $list$ eq $list$ int
+data list find index $f_2$ a bool $list$ a maybe int
+data list find indices $f_2$ a bool $list$ a $list$ int
+data list zip $list$ a $list$ b $list$ $tuple_2$ a b
+data list zip3 $list$ a $list$ b $list$ c $list$ $tuple_3$ a b c
+data list zip4 $list$ a $list$ b $list$ c $list$ d $list$ $tuple_4$ a b c d
+data list zip5 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ $tuple_5$ a b c d e
+data list zip6 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ $tuple_6$ a b c d e f
+data list zip7 $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ $tuple_7$ a b c d e f g
+data list zip with $f_3$ a b c $list$ a $list$ b $list$ c
+data list zip with3 $f_4$ a b c d $list$ a $list$ b $list$ c $list$ d
+data list zip with4 $f_5$ a b c d e $list$ a $list$ b $list$ c $list$ d $list$ e
+data list zip with5 $f_6$ a b c d e f $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
+data list zip with6 $f_7$ a b c d e f g $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
+data list zip with7 $f_8$ a b c d e f g h $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g $list$ h
+data list unzip $list$ $tuple_2$ a b $tuple_2$ $list$ a $list$ b
+data list unzip3 $list$ $tuple_3$ a b c $tuple_3$ $list$ a $list$ b $list$ c
+data list unzip4 $list$ $tuple_4$ a b c d $tuple_4$ $list$ a $list$ b $list$ c $list$ d
+data list unzip5 $list$ $tuple_5$ a b c d e $tuple_5$ $list$ a $list$ b $list$ c $list$ d $list$ e
+data list unzip6 $list$ $tuple_6$ a b c d e f $tuple_6$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f
+data list unzip7 $list$ $tuple_7$ a b c d e f g $tuple_7$ $list$ a $list$ b $list$ c $list$ d $list$ e $list$ f $list$ g
+data list lines string $list$ string
+data list words string $list$ string
+data list unlines $list$ string string
+data list unwords $list$ string string
+data list nub $list$ eq $list$ eq
+data list delete eq $list$ eq $list$ eq
+data list (\\) $list$ eq $list$ eq $list$ eq
+data list union $list$ eq $list$ eq $list$ eq
+data list intersect $list$ eq $list$ eq $list$ eq
+data list sort $list$ ord $list$ ord
+data list sort on $f_2$ a ord $list$ a $list$ a
+data list insert ord $list$ ord $list$ ord
+data list nub by $f_3$ a a bool $list$ a $list$ a
+data list delete by $f_3$ a a bool a $list$ a $list$ a
+data list delete firsts by $f_3$ a a bool $list$ a $list$ a $list$ a
+data list union by $f_3$ a a bool $list$ a $list$ a $list$ a
+data list intersect by $f_3$ a a bool $list$ a $list$ a $list$ a
+data list group by $f_3$ a a bool $list$ a $list$ $list$ a
+data list sort by $f_3$ a a ordering $list$ a $list$ a
+data list insert by $f_3$ a a ordering a $list$ a $list$ a
+data list maximum by $f_3$ a a ordering foldable a a
+data list minimum by $f_3$ a a ordering foldable a a
+data list generic length $list$ a num
+data list generic take integral $list$ a $list$ a
+data list generic drop integral $list$ a $list$ a
+data list generic split at integral $list$ a $tuple_2$ $list$ a $list$ a
+data list generic index $list$ a integral a
+data list generic replicate integral a $list$ a
+data string from string string isstring
+data string lines string $list$ string
+data string words string $list$ string
+data string unlines $list$ string string
+data string unwords $list$ string string
+data version version $list$ int $list$ string version
+data version version branch version $list$ int
+data version version tags version $list$ string
+data version show version version string
+data version parse version readp version
+data version make version $list$ int version
+data data to constr data constr
+data data mk data type string $list$ constr datatype
+data data mk int type string datatype
+data data mk float type string datatype
+data data mk char type string datatype
+data data mk no rep type string datatype
+data data alg rep $list$ constr datarep
+data data rep constr datatype constrrep constr
+data data is alg type datatype bool
+data data index constr datatype conindex constr
+data data max constr index datatype conindex
+data data is norep type datatype bool
+data data prefix fixity
+data data mk constr datatype string $list$ string fixity constr
+data data mk char constr datatype char constr
+data data constr type constr datatype
+data data alg constr conindex constrrep
+data data constr rep constr constrrep
+data data constr fields constr $list$ string
+data data constr fixity constr fixity
+data data constr index constr conindex
+data data show constr constr string
+data data read constr datatype string maybe constr
+data data tycon uqname string string
+data data tycon module string string
+data data from constr constr data
+ghc natural nat s# gmplimb# natural
+ghc natural is valid natural natural bool
+ghc natural word to natural word natural
+ghc natural natural to word maybe natural maybe word
+ghc natural minus natural maybe natural natural maybe natural
+ghc natural pow mod natural natural natural natural natural
+ghc rts flags rtsflags gcflags concflags miscflags debugflags ccflags profflags traceflags tickyflags rtsflags
+ghc rts flags compact gcflags bool
+ghc rts flags sweep gcflags bool
+ghc rts flags heap base gcflags word
+ghc rts flags linker mem base miscflags word
+ghc rts flags linker debugflags bool
+ghc rts flags squeeze debugflags bool
+ghc rts flags hpc debugflags bool
+ghc rts flags heap profile interval profflags time
+ghc rts flags heap profile interval ticks profflags word
+ghc rts flags timestamp traceflags bool
+ghc rts flags trace scheduler traceflags bool
+ghc rts flags trace gc traceflags bool
+ghc rts flags sparks sampled traceflags bool
+ghc rts flags sparks full traceflags bool
+ghc rts flags user traceflags bool
+ghc fingerprint get file hash filepath io fingerprint
+ghc event get system event manager io maybe eventmanager
+ghc event new io eventmanager
+ghc event evt read event
+ghc event evt write event
+ghc event one shot lifetime
+ghc event multi shot lifetime
+ghc event register fd eventmanager iocallback fd event lifetime io fdkey
+ghc event unregister fd eventmanager fdkey io
+ghc event unregister fd_ eventmanager fdkey io bool
+ghc event close fd eventmanager $f_2$ fd io fd io
+ghc event register timeout timermanager int timeoutcallback io timeoutkey
+ghc event update timeout timermanager timeoutkey int io
+ghc event unregister timeout timermanager timeoutkey io
+ghc typelits some nat val integer maybe somenat
+ghc typelits some symbol val string somesymbol
+ghc ip ip ip
+prelude false bool
+prelude succ enum enum
+prelude pred enum enum
+prelude to enum int enum
+prelude from enum enum int
+prelude enum from enum $list$ enum
+prelude enum from to enum enum $list$ enum
+prelude min bound bounded
+prelude (+) num num num
+prelude negate num num
+prelude abs num num
+prelude signum num num
+prelude from integer integer num
+prelude to rational real rational
+prelude quot integral integral integral
+prelude rem integral integral integral
+prelude div integral integral integral
+prelude mod integral integral integral
+prelude quot rem integral integral $tuple_2$ integral integral
+prelude div mod integral integral $tuple_2$ integral integral
+prelude to integer integral integer
+prelude (/) fractional fractional fractional
+prelude recip fractional fractional
+prelude from rational rational fractional
+prelude pi floating
+prelude proper fraction realfrac $tuple_2$ integral realfrac
+prelude truncate realfrac integral
+prelude round realfrac integral
+prelude ceiling realfrac integral
+prelude floor realfrac integral
+prelude float radix realfloat integer
+prelude float digits realfloat int
+prelude float range realfloat $tuple_2$ int int
+prelude decode float realfloat $tuple_2$ integer int
+prelude encode float integer int realfloat
+prelude exponent realfloat int
+prelude significand realfloat realfloat
+prelude scale float int realfloat realfloat
+prelude is na n realfloat bool
+prelude is infinite realfloat bool
+prelude is denormalized realfloat bool
+prelude is negative zero realfloat bool
+prelude is ieee realfloat bool
+prelude atan2 realfloat realfloat realfloat
+prelude subtract num num num
+prelude gcd integral integral integral
+prelude lcm integral integral integral
+prelude (^) num integral num
+prelude (^^) fractional integral fractional
+prelude from integral integral num
+prelude real to frac real fractional
+prelude until $f_2$ a bool $f_2$ a a a a
+prelude as type of a a a
+prelude error $list$ char a
+prelude undefined a
+prelude seq a b b
+prelude ($!) $f_2$ a b a b
+ghc srcloc src loc package srcloc string
+ghc stack current call stack io $list$ string
+ghc stack who created a io $list$ string
+ghc stack error with stack trace string a
+ghc stack get call stack callstack $list$ $tuple_2$ string srcloc
+debug trace trace string a a
+debug trace trace id string string
+debug trace trace show show b b
+debug trace trace show id show show
+debug trace trace stack string a a
+debug trace trace io string io
+debug trace trace m string monad
+debug trace trace show m show monad
+debug trace put trace msg string io
+debug trace trace event string a a
+debug trace trace event io string io
+debug trace trace marker string a a
+debug trace trace marker io string io
+ghc exts i# int# int
+ghc exts w# word# word
+ghc exts f# float# float
+ghc exts d# double# double
+ghc exts c# char# char
+ghc exts ptr addr# ptr a
+ghc exts fun ptr addr# funptr a
+ghc exts shift l# word# int# word#
+ghc exts shift rl# word# int# word#
+ghc exts i shift l# int# int# int#
+ghc exts i shift ra# int# int# int#
+ghc exts i shift rl# int# int# int#
+ghc exts is true# int# bool
+ghc exts from string string isstring
+ghc exts lazy a a
+ghc exts inline a a
+ghc exts coerce coercible coercible
+ghc exts down a down a
+ghc exts group with $f_2$ a ord $list$ a $list$ $list$ a
+ghc exts sort with $f_2$ a ord $list$ a $list$ a
+ghc exts the $list$ eq eq
+ghc exts trace event string io
+ghc exts current call stack io $list$ string
+ghc exts from list $list$ item islist islist
+ghc exts from list n int $list$ item islist islist
+ghc exts to list islist $list$ item islist
+control monad zip mzip monadzip a monadzip b monadzip $tuple_2$ a b
+ghc staticptr de ref static ptr staticptr a a
+ghc staticptr static key staticptr a statickey
+ghc staticptr unsafe lookup static ptr statickey io maybe staticptr a
+ghc staticptr static ptr info string string string $tuple_2$ int int staticptrinfo
+ghc staticptr sp info package key staticptrinfo string
+ghc staticptr sp info module name staticptrinfo string
+ghc staticptr sp info name staticptrinfo string
+ghc staticptr sp info src loc staticptrinfo $tuple_2$ int int
+ghc staticptr static ptr info staticptr a staticptrinfo
+ghc staticptr static ptr keys io $list$ statickey
+control concurrent chan new chan io chan a
+control concurrent chan write chan chan a a io
+control concurrent chan read chan chan a io a
+control concurrent chan dup chan chan a io chan a
+control concurrent chan un get chan chan a a io
+control concurrent chan is empty chan chan a io bool
+control concurrent chan get chan contents chan a io $list$ a
+control concurrent chan write list2chan chan a $list$ a io
+control concurrent qsem new qsem int io qsem
+control concurrent qsem wait qsem qsem io
+control concurrent qsem signal qsem qsem io
+control concurrent qsemn new qsem n int io qsemn
+control concurrent qsemn wait qsem n qsemn int io
+control concurrent qsemn signal qsem n qsemn int io
+control concurrent my thread id io threadid
+control concurrent fork io io io threadid
+control concurrent fork finally io a $f_2$ either someexception a io io threadid
+control concurrent kill thread threadid io
+control concurrent throw to threadid exception io
+control concurrent fork on int io io threadid
+control concurrent get num capabilities io int
+control concurrent set num capabilities int io
+control concurrent thread capability threadid io $tuple_2$ int bool
+control concurrent yield io
+control concurrent thread delay int io
+control concurrent thread wait read fd io
+control concurrent thread wait write fd io
+control concurrent thread wait read stm fd io $tuple_2$ stm io
+control concurrent thread wait write stm fd io $tuple_2$ stm io
+control concurrent rts supports bound threads bool
+control concurrent fork os io io threadid
+control concurrent is current thread bound io bool
+control concurrent run in bound thread io a io a
+control concurrent run in unbound thread io a io a
+control concurrent mk weak thread id threadid io weak threadid
+control monad instances fmap $f_2$ a b functor a functor b
+control monad instances (<$) a functor b functor a
+control monad instances (>>=) monad a $f_2$ a monad b monad b
+control monad instances (>>) monad a monad b monad b
+control monad instances return a monad a
+control monad instances fail string monad a
+control monad st fix st $f_2$ a st s a st s a
+control monad st st to io st realworld a io a
+control monad st safe fix st $f_2$ a st s a st s a
+control monad st safe st to io st realworld a io a
+control monad st unsafe unsafe interleave st st s a st s a
+control monad st lazy fix st $f_2$ a st s a st s a
+control monad st lazy strict to lazy st st s a st s a
+control monad st lazy lazy to strict st st s a st s a
+control monad st lazy st to io st realworld a io a
+control monad st lazy safe fix st $f_2$ a st s a st s a
+control monad st lazy safe strict to lazy st st s a st s a
+control monad st lazy safe lazy to strict st st s a st s a
+control monad st lazy safe st to io st realworld a io a
+control monad st lazy unsafe unsafe interleave st st s a st s a
+data bifunctor bimap $f_2$ a b $f_2$ c d bifunctor a c bifunctor b d
+data bifunctor first $f_2$ a b bifunctor a c bifunctor b c
+data bifunctor second $f_2$ b c bifunctor a b bifunctor a c
+data complex (:+) !a !a complex a
+data complex real part complex a a
+data complex imag part complex a a
+data complex mk polar floating floating complex floating
+data complex cis floating complex floating
+data complex polar complex realfloat $tuple_2$ realfloat realfloat
+data complex magnitude complex realfloat realfloat
+data complex phase complex realfloat realfloat
+data complex conjugate complex num complex num
+data fixed div' real real integral
+data fixed mod' real real real
+data fixed div mod' real real $tuple_2$ integral real
+data fixed show fixed bool fixed hasresolution string
+data functor identity identity a identity a
+data ix range $tuple_2$ ix ix $list$ ix
+data ix index $tuple_2$ ix ix ix int
+data ix in range $tuple_2$ ix ix ix bool
+data ix range size $tuple_2$ ix ix int
+data ratio (%) integral integral ratio integral
+data ratio numerator ratio integral integral
+data ratio denominator ratio integral integral
+data ratio approx rational realfrac realfrac rational
+data stref new stref a st s stref s a
+data stref read stref stref s a st s a
+data stref write stref stref s a a st s
+data stref modify stref stref s a $f_2$ a a st s
+data stref modify stref' stref s a $f_2$ a a st s
+data stref lazy new stref a st s stref s a
+data unique new unique io unique
+data unique hash unique unique int
+data void absurd void a
+data void vacuous functor void functor a
+system cputime get cputime io integer
+system cputime cpu time precision integer
+system console getopt get opt argorder a $list$ optdescr a $list$ string $tuple_3$ $list$ a $list$ string $list$ string
+system console getopt get opt' argorder a $list$ optdescr a $list$ string $tuple_4$ $list$ a $list$ string $list$ string $list$ string
+system console getopt usage info string $list$ optdescr a string
+system console getopt require order argorder a
+system console getopt permute argorder a
+system console getopt return in order $f_2$ string a argorder a
+system console getopt option $list$ char $list$ string argdescr a string optdescr a
+system console getopt no arg a argdescr a
+system console getopt req arg $f_2$ string a string argdescr a
+system console getopt opt arg $f_2$ maybe string a string argdescr a
+system environment get args io $list$ string
+system environment get prog name io string
+system environment get executable path io filepath
+system environment get env string io string
+system environment lookup env string io maybe string
+system environment set env string string io
+system environment unset env string io
+system environment with args $list$ string io a io a
+system environment with prog name string io a io a
+system environment get environment io $list$ $tuple_2$ string string
+system exit exit success exitcode
+system exit exit failure int exitcode
+system exit exit with exitcode io a
+system exit exit failure io a
+system exit exit success io a
+system exit die string io a
+system info os string
+system info arch string
+system info compiler name string
+system info compiler version version
+system mem perform gc io
+system mem perform major gc io
+system mem perform minor gc io
+system mem stablename make stable name a io stablename a
+system mem stablename hash stable name stablename a int
+system mem stablename eq stable name stablename a stablename b bool
+system mem weak mk weak k v maybe io io weak v
+system mem weak de ref weak weak v io maybe v
+system mem weak finalize weak v io
+system mem weak mk weak ptr k maybe io io weak k
+system mem weak add finalizer key io io
+system mem weak mk weak pair k v maybe io io $tuple_2$ weak k v
+system timeout timeout int io a io maybe a
+text printf printf string printftype
+text printf h printf handle string hprintftype
+text printf field format maybe int maybe int maybe formatadjustment maybe formatsign bool string char fieldformat
+text printf fmt width fieldformat maybe int
+text printf fmt precision fieldformat maybe int
+text printf fmt adjust fieldformat maybe formatadjustment
+text printf fmt sign fieldformat maybe formatsign
+text printf fmt alternate fieldformat bool
+text printf fmt modifiers fieldformat string
+text printf fmt char fieldformat char
+text printf left adjust formatadjustment
+text printf sign plus formatsign
+text printf v fmt char fieldformat fieldformat
+text printf format parse string char string formatparse
+text printf fp modifiers formatparse string
+text printf fp char formatparse char
+text printf fp rest formatparse string
+text printf format string $list$ ischar fieldformatter
+text printf format char char fieldformatter
+text printf format int integral/bounded fieldformatter
+text printf format integer integer fieldformatter
+text printf format real float realfloat fieldformatter
+text printf error bad format char a
+text printf error short format a
+text printf error missing argument a
+text printf error bad argument a
+text printf perror string a

@@ -1,0 +1,1653 @@
+core moving average init windowsize existinghistoricalvalues
+core moving average compute slidingwindow total newval windowsize
+core moving average next newvalue
+core moving average get current avg
+core moving average setstate state
+core serializable get schema cls
+core serializable read cls proto
+core serializable write proto
+regions region identity policy base initialize testregionobj
+regions region identity policy base compute inputs outputs
+regions region identity policy base get output element count name
+regions region identity policy base get name
+regions test region construct ephemeral instance vars
+regions test region initialize
+regions test region compute inputs outputs
+regions test region get spec cls
+regions test region get parameter parametername index
+regions test region set parameter parametername index parametervalue
+regions test region set identity policy instance identitypolicyobj
+regions test region get identity policy instance
+regions test region getstate
+regions test region setstate state
+regions whois callers caller
+regions claclassifier region get algorithm instance
+regions claclassifier region get parameter name index
+regions claclassifier region set parameter name index value
+regions claclassifier region get proto type
+regions claclassifier region write to proto proto
+regions claclassifier region read from proto cls proto
+regions claclassifier region compute inputs outputs
+regions claclassifier region custom compute recordnum patternnz classification
+regions claclassifier region get output values outputname
+regions claclassifier region get output element count outputname
+regions get tpclass temporalimp
+regions build args f kwargs
+regions get additional specs temporalimp kwargs
+regions tmregion initialize
+regions tmregion compute inputs outputs
+regions tmregion get base spec cls
+regions tmregion get spec cls
+regions tmregion get algorithm instance
+regions tmregion get parameter parametername index
+regions tmregion set parameter parametername index parametervalue
+regions tmregion reset sequence states
+regions tmregion finish learning
+regions tmregion getstate
+regions tmregion serialize extra data filepath
+regions tmregion de serialize extra data filepath
+regions tmregion setstate state
+regions tmregion init ephemerals
+regions tmregion get ephemeral members
+regions tmregion get ephemeral members base
+regions tmregion get ephemeral members all
+regions knnanomaly classifier region get parameter name index
+regions knnanomaly classifier region set parameter name index value
+regions knnanomaly classifier region compute inputs outputs
+regions knnanomaly classifier region get label results
+regions knnanomaly classifier region classify states
+regions knnanomaly classifier region classify state state
+regions knnanomaly classifier region construct classification record inputs
+regions knnanomaly classifier region add record to knn record
+regions knnanomaly classifier region delete records from knn recordstodelete
+regions knnanomaly classifier region delete range from knn start end
+regions knnanomaly classifier region recompute record from knn record
+regions knnanomaly classifier region label to category number label
+regions knnanomaly classifier region label list to category number labellist
+regions knnanomaly classifier region category to label list category
+regions knnanomaly classifier region get state anomaly vector state
+regions knnanomaly classifier region get labels start end
+regions knnanomaly classifier region add label start end labelname
+regions knnanomaly classifier region remove labels start end labelfilter
+regions knnanomaly classifier region getstate
+regions knnanomaly classifier region setstate state
+regions record sensor init verbosity numcategories
+regions record sensor rewind
+regions record sensor get next record
+regions record sensor apply filters data
+regions record sensor populate categories out categories output
+regions record sensor compute inputs outputs
+regions record sensor convert non numeric data spatialoutput temporaloutput output
+regions record sensor get output values outputname
+regions record sensor get output element count name
+regions record sensor set parameter parametername index parametervalue
+regions record sensor get proto type
+regions record sensor write to proto proto
+regions record sensor read from proto cls proto
+regions spec invariant
+regions spec to dict
+regions get default spimp
+regions get spclass spatialimp
+regions get additional specs spatialimp kwargs
+regions spregion initialize ephemeral members
+regions spregion allocate spatial fdr rfinput
+regions spregion compute inputs outputs
+regions spregion do bottom up compute rfinput resetsignal
+regions spregion do top down infer topdowninput
+regions spregion get base spec cls
+regions spregion get spec cls
+regions spregion get algorithm instance
+regions spregion get parameter parametername index
+regions spregion set parameter parametername index parametervalue
+regions spregion get proto type
+regions spregion write to proto proto
+regions spregion read from proto cls proto
+regions spregion getstate
+regions spregion setstate state
+regions spregion init ephemerals
+regions spregion get ephemeral members
+regions spregion get ephemeral members base
+regions spregion get ephemeral members all
+regions svmclassifier node init categoriesout minc maxc mingamma
+regions svmclassifier node clear
+regions svmclassifier node init random
+regions svmclassifier node compute nodeinfo inputs outputs
+regions svmclassifier node scan inputs
+regions svmclassifier node get node spec
+regions svmclassifier node cat index to id catindex
+regions svmclassifier node get hyperplanes
+regions svmclassifier node simulate training sample inputwidth category partitionid
+regions svmclassifier node get parameter parametername nodeset
+regions svmclassifier node set parameter parametername parametervalue nodeset
+regions svmclassifier node setstate state
+regions svmclassifier node getstate
+regions svmclassifier node get ephemeral members
+regions svmclassifier node init data structures inputwidth
+regions svmclassifier node init svm n_dims
+regions svmclassifier node learn inputvector truecatindex partitionid
+regions svmclassifier node store sample truecatindex inputvector partitionid
+regions svmclassifier node infer sample
+regions svmclassifier node finish sphering
+regions svmclassifier node finish learning
+regions svmclassifier node do recursion samples validationsets paramrange recursionindex
+regions svmclassifier node validate svm c gamma progressstart progressend
+regions svmclassifier node build svm c gamma
+regions svmclassifier node get all distances
+regions svmclassifier node get latest distances
+regions svmclassifier node get category list
+regions svmclassifier node calculate distances inputvector
+regions svmclassifier node calculate and store distances inputvector
+regions svmclassifier node set upcoming partition ids partitionids
+regions svmclassifier node remap categories mapping
+regions svmclassifier node change partition id oldpartitionid newpartitionid
+regions svmclassifier node change categories of partition ids partitionids categoryindices
+regions svmclassifier node switch to learning
+regions knnclassifier region get ephemeral attributes
+regions knnclassifier region init ephemerals
+regions knnclassifier region setstate state
+regions knnclassifier region getstate
+regions knnclassifier region get algorithm instance
+regions knnclassifier region get parameter name index
+regions knnclassifier region set parameter name index value
+regions knnclassifier region do inference activeinput
+regions knnclassifier region enable tap tappath
+regions knnclassifier region disable tap
+regions knnclassifier region handle log input inputs
+regions knnclassifier region handle log output output
+regions knnclassifier region store sample inputvector truecatindex partition
+regions knnclassifier region compute inputs outputs
+regions knnclassifier region get category list
+regions knnclassifier region get latest distances
+regions knnclassifier region get all distances
+regions knnclassifier region finish learning
+regions knnclassifier region finish sphering
+regions knnclassifier region get output element count name
+regions sdrclassifier region initialize
+regions sdrclassifier region get algorithm instance
+regions sdrclassifier region get parameter name index
+regions sdrclassifier region set parameter name index value
+regions sdrclassifier region get proto type
+regions sdrclassifier region write to proto proto
+regions sdrclassifier region read from proto cls proto
+regions sdrclassifier region compute inputs outputs
+regions sdrclassifier region custom compute recordnum patternnz classification
+regions sdrclassifier region get output element count outputname
+regions pluggable encoder sensor set sensed value value
+regions recordsensorfilters add noise init noise seed
+regions recordsensorfilters add noise process encoder data
+regions recordsensorfilters modify fields init fields operation seed
+regions recordsensorfilters modify fields process encoder data
+algorithms claclassifier factory read proto
+algorithms compute raw anomaly score activecolumns prevpredictedcolumns
+algorithms anomaly compute activecolumns predictedcolumns inputvalue timestamp
+algorithms extract calling method args
+algorithms backtracking tmcpp setstate state
+algorithms backtracking tmcpp get ephemeral members
+algorithms backtracking tmcpp init ephemerals
+algorithms backtracking tmcpp save to file filepath
+algorithms backtracking tmcpp load from file filepath
+algorithms backtracking tmcpp getattr name
+algorithms backtracking tmcpp compute bottomupinput enablelearn computeinfoutput
+algorithms backtracking tmcpp infer phase2
+algorithms backtracking tmcpp copy allocated states
+algorithms backtracking tmcpp set state pointers
+algorithms backtracking tmcpp reset
+algorithms backtracking tmcpp finish learning
+algorithms backtracking tmcpp trim segments minpermanence minnumsyns
+algorithms backtracking tmcpp slow is segment active seg timestep
+algorithms backtracking tmcpp get avg learned seq length
+algorithms backtracking tmcpp get col cell idx idx
+algorithms backtracking tmcpp get segment on cell c i segidx
+algorithms backtracking tmcpp get num segments
+algorithms backtracking tmcpp get num synapses
+algorithms backtracking tmcpp get num segments in cell c i
+algorithms backtracking tmcpp get segment info collectactivedata
+algorithms backtracking tmcpp get active segment c i timestep
+algorithms backtracking tmcpp get best matching cell c timestep learnstate
+algorithms backtracking tmcpp get least allocated cell c
+algorithms backtracking tm init numberofcols cellspercolumn initialperm connectedperm
+algorithms backtracking tm get ephemeral members
+algorithms backtracking tm init ephemerals
+algorithms backtracking tm getstate
+algorithms backtracking tm setstate state
+algorithms backtracking tm getattr name
+algorithms backtracking tm save to file filepath
+algorithms backtracking tm load from file filepath
+algorithms backtracking tm set random seed seed
+algorithms backtracking tm get random state
+algorithms backtracking tm set random state state
+algorithms backtracking tm reset
+algorithms backtracking tm reset stats
+algorithms backtracking tm get stats
+algorithms backtracking tm update stats infer end stats bottomupnz predictedstate colconfidence
+algorithms backtracking tm print state astate
+algorithms backtracking tm print confidence astate maxcols
+algorithms backtracking tm print col confidence astate maxcols
+algorithms backtracking tm print parameters
+algorithms backtracking tm print active indices state andvalues
+algorithms backtracking tm print compute end output learn
+algorithms backtracking tm get num segments in cell c i
+algorithms backtracking tm get num synapses
+algorithms backtracking tm get num strong synapses
+algorithms backtracking tm get num strong synapses per time slot
+algorithms backtracking tm get num synapses per segment max
+algorithms backtracking tm get num synapses per segment avg
+algorithms backtracking tm get num segments
+algorithms backtracking tm get num cells
+algorithms backtracking tm get segment on cell c i segidx
+algorithms backtracking tm add to segment updates c i segupdate
+algorithms backtracking tm remove segment update updateinfo
+algorithms backtracking tm compute output
+algorithms backtracking tm get active state
+algorithms backtracking tm get predicted state
+algorithms backtracking tm predict nsteps
+algorithms backtracking tm get tpdynamic state variable names
+algorithms backtracking tm set tpdynamic state tpdynamicstate
+algorithms backtracking tm update avg learned seq length prevseqlength
+algorithms backtracking tm get avg learned seq length
+algorithms backtracking tm infer backtrack activecolumns
+algorithms backtracking tm infer phase1 activecolumns usestartcells
+algorithms backtracking tm infer phase2
+algorithms backtracking tm update inference state activecolumns
+algorithms backtracking tm learn backtrack from startoffset readonly
+algorithms backtracking tm learn backtrack
+algorithms backtracking tm learn phase1 activecolumns readonly
+algorithms backtracking tm learn phase2 readonly
+algorithms backtracking tm update learning state activecolumns
+algorithms backtracking tm compute bottomupinput enablelearn computeinfoutput
+algorithms backtracking tm update segment duty cycles
+algorithms backtracking tm column confidences cellconfidences
+algorithms backtracking tm top down compute topdownin
+algorithms backtracking tm trim segments in cell colidx cellidx seglist minpermanence
+algorithms backtracking tm trim segments minpermanence minnumsyns
+algorithms backtracking tm clean updates list col cellidx seg
+algorithms backtracking tm finish learning
+algorithms backtracking tm check prediction2 patternnzs output colconfidence details
+algorithms backtracking tm is segment active seg activestate
+algorithms backtracking tm get segment activity level seg activestate connectedsynapsesonly
+algorithms backtracking tm get best matching cell c activestate minthreshold
+algorithms backtracking tm get best matching segment c i activestate
+algorithms backtracking tm get cell for new segment colidx
+algorithms backtracking tm get segment active synapses c i s activestate
+algorithms backtracking tm choose cells to learn from c i s n
+algorithms backtracking tm process segment updates activecolumns
+algorithms backtracking tm adapt segment segupdate
+algorithms backtracking tm get segment info collectactivedata
+algorithms segment duty cycle active readonly
+algorithms segment debug print
+algorithms segment free nsynapses numtofree inactivesynapseindices verbosity
+algorithms segment add synapse srccellcol srccellidx perm
+algorithms segment update synapses synapses delta
+algorithms labeled input activeinputs cellspercol
+algorithms knnclassifier clear
+algorithms knnclassifier prototype set category idtocategorize newcategory
+algorithms knnclassifier remove ids idstoremove
+algorithms knnclassifier remove category categorytoremove
+algorithms knnclassifier remove rows rowstoremove
+algorithms knnclassifier do iteration
+algorithms knnclassifier learn inputpattern inputcategory partitionid issparse
+algorithms knnclassifier get overlaps inputpattern
+algorithms knnclassifier get distances inputpattern
+algorithms knnclassifier infer inputpattern computescores overcategories partitionid
+algorithms knnclassifier get closest inputpattern topkcategories
+algorithms knnclassifier closest training pattern inputpattern cat
+algorithms knnclassifier closest other training pattern inputpattern cat
+algorithms knnclassifier get pattern idx sparsebinaryform cat
+algorithms knnclassifier get partition id i
+algorithms knnclassifier get partition id list
+algorithms knnclassifier get num partition ids
+algorithms knnclassifier get partition id keys
+algorithms knnclassifier get pattern indices with partition id partitionid
+algorithms knnclassifier add partition id index partitionid
+algorithms knnclassifier rebuild partition id map partitionidlist
+algorithms knnclassifier calc distance inputpattern distancenorm
+algorithms knnclassifier get distances inputpattern partitionid
+algorithms knnclassifier finish learning
+algorithms knnclassifier compute svd numsvdsamples finalize
+algorithms knnclassifier get adaptive svddims singularvalues fractionofmax
+algorithms knnclassifier finalize svd numsvddims
+algorithms knnclassifier remap categories mapping
+algorithms knnclassifier set category of vectors vectorindices categoryindices
+algorithms knnclassifier getstate
+algorithms knnclassifier setstate state
+algorithms sparse matrix cortical column adapter getitem columnindex
+algorithms spatial pooler get column dimensions
+algorithms spatial pooler get input dimensions
+algorithms spatial pooler get num columns
+algorithms spatial pooler get num inputs
+algorithms spatial pooler get potential radius
+algorithms spatial pooler set potential radius potentialradius
+algorithms spatial pooler get potential pct
+algorithms spatial pooler set potential pct potentialpct
+algorithms spatial pooler get global inhibition
+algorithms spatial pooler set global inhibition globalinhibition
+algorithms spatial pooler get num active columns per inh area
+algorithms spatial pooler set num active columns per inh area numactivecolumnsperinharea
+algorithms spatial pooler get local area density
+algorithms spatial pooler set local area density localareadensity
+algorithms spatial pooler get stimulus threshold
+algorithms spatial pooler set stimulus threshold stimulusthreshold
+algorithms spatial pooler get inhibition radius
+algorithms spatial pooler set inhibition radius inhibitionradius
+algorithms spatial pooler get duty cycle period
+algorithms spatial pooler set duty cycle period dutycycleperiod
+algorithms spatial pooler get boost strength
+algorithms spatial pooler set boost strength booststrength
+algorithms spatial pooler get iteration num
+algorithms spatial pooler set iteration num iterationnum
+algorithms spatial pooler get iteration learn num
+algorithms spatial pooler set iteration learn num iterationlearnnum
+algorithms spatial pooler get sp verbosity
+algorithms spatial pooler set sp verbosity spverbosity
+algorithms spatial pooler get update period
+algorithms spatial pooler set update period updateperiod
+algorithms spatial pooler get syn perm trim threshold
+algorithms spatial pooler set syn perm trim threshold synpermtrimthreshold
+algorithms spatial pooler get syn perm active inc
+algorithms spatial pooler set syn perm active inc synpermactiveinc
+algorithms spatial pooler get syn perm inactive dec
+algorithms spatial pooler set syn perm inactive dec synperminactivedec
+algorithms spatial pooler get syn perm below stimulus inc
+algorithms spatial pooler set syn perm below stimulus inc synpermbelowstimulusinc
+algorithms spatial pooler get syn perm connected
+algorithms spatial pooler set syn perm connected synpermconnected
+algorithms spatial pooler get min pct overlap duty cycles
+algorithms spatial pooler set min pct overlap duty cycles minpctoverlapdutycycles
+algorithms spatial pooler get boost factors boostfactors
+algorithms spatial pooler set boost factors boostfactors
+algorithms spatial pooler get overlap duty cycles overlapdutycycles
+algorithms spatial pooler set overlap duty cycles overlapdutycycles
+algorithms spatial pooler get active duty cycles activedutycycles
+algorithms spatial pooler set active duty cycles activedutycycles
+algorithms spatial pooler get min overlap duty cycles minoverlapdutycycles
+algorithms spatial pooler set min overlap duty cycles minoverlapdutycycles
+algorithms spatial pooler get potential columnindex potential
+algorithms spatial pooler set potential columnindex potential
+algorithms spatial pooler get permanence columnindex permanence
+algorithms spatial pooler set permanence columnindex permanence
+algorithms spatial pooler get connected synapses columnindex connectedsynapses
+algorithms spatial pooler get connected counts connectedcounts
+algorithms spatial pooler get overlaps
+algorithms spatial pooler get boosted overlaps
+algorithms spatial pooler compute inputvector learn activearray
+algorithms spatial pooler strip unlearned columns activearray
+algorithms spatial pooler update min duty cycles
+algorithms spatial pooler update min duty cycles global
+algorithms spatial pooler update min duty cycles local
+algorithms spatial pooler update duty cycles overlaps activecolumns
+algorithms spatial pooler update inhibition radius
+algorithms spatial pooler avg columns per input
+algorithms spatial pooler avg connected span for column1d columnindex
+algorithms spatial pooler avg connected span for column2d columnindex
+algorithms spatial pooler avg connected span for column nd columnindex
+algorithms spatial pooler adapt synapses inputvector activecolumns
+algorithms spatial pooler bump up weak columns
+algorithms spatial pooler raise permanence to threshold perm mask
+algorithms spatial pooler update permanences for column perm columnindex raiseperm
+algorithms spatial pooler init perm connected
+algorithms spatial pooler init perm non connected
+algorithms spatial pooler init permanence potential connectedpct
+algorithms spatial pooler map column index
+algorithms spatial pooler map potential index
+algorithms spatial pooler update duty cycles helper dutycycles newinput period
+algorithms spatial pooler update boost factors
+algorithms spatial pooler update boost factors global
+algorithms spatial pooler update boost factors local
+algorithms spatial pooler update bookeeping vars learn
+algorithms spatial pooler calculate overlap inputvector
+algorithms spatial pooler inhibit columns overlaps
+algorithms spatial pooler inhibit columns global overlaps density
+algorithms spatial pooler inhibit columns local overlaps density
+algorithms spatial pooler is update round
+algorithms spatial pooler get column neighborhood centercolumn
+algorithms spatial pooler get input neighborhood centerinput
+algorithms spatial pooler seed seed
+algorithms spatial pooler setstate state
+algorithms spatial pooler print parameters
+algorithms tmshim mixin init numberofcols cellspercolumn initialperm connectedperm
+algorithms tmshim mixin compute bottomupinput enablelearn computeinfoutput
+algorithms tmshim mixin top down compute topdownin
+algorithms monitored tmshim init numberofcols cellspercolumn initialperm connectedperm
+algorithms monitored tmshim compute bottomupinput enablelearn computeinfoutput
+algorithms monitored tmshim top down compute topdownin
+algorithms p format array array_ fmt
+algorithms bit history init classifier bitnum nsteps
+algorithms bit history store iteration bucketidx
+algorithms bit history infer votes
+algorithms claclassifier init steps alpha actvaluealpha verbosity
+algorithms claclassifier compute recordnum patternnz classification learn
+algorithms claclassifier infer patternnz classification
+algorithms sdrclassifier compute recordnum patternnz classification learn
+algorithms sdrclassifier infer patternnz classification
+algorithms sdrclassifier infer single step patternnz weightmatrix
+algorithms sdrclassifier calculate error recordnum classification
+algorithms segment init cell flatidx lastusediteration ordinal
+algorithms segment eq other
+algorithms synapse init segment presynapticcell permanence ordinal
+algorithms synapse eq other
+algorithms bin search arr val
+algorithms connections init numcells maxsegmentspercell maxsynapsespersegment
+algorithms connections segments for cell cell
+algorithms connections synapses for segment segment
+algorithms connections data for synapse synapse
+algorithms connections data for segment segment
+algorithms connections get segment cell idx
+algorithms connections least recently used segment cell
+algorithms connections min permanence synapse segment
+algorithms connections segment for flat idx flatidx
+algorithms connections segment flat list length
+algorithms connections synapses for presynaptic cell presynapticcell
+algorithms connections create segment cell
+algorithms connections destroy segment segment
+algorithms connections create synapse segment presynapticcell permanence
+algorithms connections destroy synapse synapse
+algorithms connections update synapse permanence synapse permanence
+algorithms connections compute activity activepresynapticcells connectedpermanence
+algorithms connections record segment activity segment
+algorithms connections start new iteration
+algorithms connections num segments cell
+algorithms connections num synapses segment
+algorithms connections segment position sort key segment
+algorithms connections write proto
+algorithms connections read cls proto
+algorithms connections eq other
+algorithms connections ne other
+algorithms set random seed seed
+algorithms add noise input noise doforeground dobackground
+algorithms generate coinc matrix ncoinc length activity
+algorithms generate vectors numvectors length activity
+algorithms generate simple sequences ncoinc seqlength nseq
+algorithms generate hub sequences ncoinc hubs seqlength nseq
+algorithms gen test seqs for lookback npatterns patternlen patternactivity seqlength
+algorithms generate simple coinc matrix ncoinc length activity
+algorithms generate sequences npatterns patternlen patternactivity hubs
+algorithms generate l2sequences nl1patterns l1hubs l1seqlength nl1simplesequences
+algorithms vectors from seq list seqlist patternmatrix
+algorithms same tmparams tp1 tp2
+algorithms same synapse syn synapses
+algorithms same segment seg1 seg2
+algorithms tm diff tm1 tm2 verbosity relaxsegmenttests
+algorithms tm diff2 tm1 tm2 verbosity relaxsegmenttests
+algorithms sp diff sp1 sp2
+algorithms remove seq starts vectors resets numsteps
+algorithms accumulate frequency counts values freqcounts
+algorithms list of on times in vec vector
+algorithms fill in on times vector durations
+algorithms average on time per timestep vectors numsamples
+algorithms average on time vectors numsamples
+algorithms plot outputs over time vectors buvectors title
+algorithms plot histogram freqcounts title xlabel
+algorithms population stability vectors numsamples
+algorithms percent outputs stable over ntime steps vectors numsamples
+algorithms compute saturation levels outputs outputsshape sparseform
+algorithms check match input prediction sparse verbosity
+algorithms prediction extent inputs resets outputs minoverlappct
+algorithms get centre and spread offsets spaceshape spreadshape stepsize
+algorithms make clone map columnsshape outputcloningwidth outputcloningheight
+algorithms numpy str array format includeindices includezeros
+algorithms import and run function path modulename funcname
+algorithms get locked handle runtimeelement expression
+algorithms transfer coincidences network fromelementname toelementname
+algorithms sdrclassifier factory create
+algorithms sdrclassifier factory read proto
+algorithms temporal memory shim init columndimensions cellspercolumn activationthreshold initialpermanence
+algorithms temporal memory shim compute activecolumns learn
+algorithms temporal memory init columndimensions cellspercolumn activationthreshold initialpermanence
+algorithms temporal memory connections factory
+algorithms temporal memory compute activecolumns learn
+algorithms temporal memory activate cells activecolumns learn
+algorithms temporal memory activate dendrites learn
+algorithms temporal memory reset
+algorithms temporal memory activate predicted column column columnactivesegments columnmatchingsegments prevactivecells
+algorithms temporal memory burst column column columnmatchingsegments prevactivecells prevwinnercells
+algorithms temporal memory punish predicted column column columnactivesegments columnmatchingsegments prevactivecells
+algorithms temporal memory activate predicted column cls connections random columnactivesegments
+algorithms temporal memory burst column cls connections random column
+algorithms temporal memory punish predicted column cls connections columnmatchingsegments prevactivecells
+algorithms temporal memory least used cell cls random cells connections
+algorithms temporal memory grow synapses cls connections random segment
+algorithms temporal memory adapt segment cls connections segment prevactivecells
+algorithms temporal memory column for cell cell
+algorithms temporal memory cells for column column
+algorithms temporal memory number of columns
+algorithms temporal memory number of cells
+algorithms temporal memory map cells to columns cells
+algorithms temporal memory get active cells
+algorithms temporal memory get predictive cells
+algorithms temporal memory get winner cells
+algorithms temporal memory get active segments
+algorithms temporal memory get matching segments
+algorithms temporal memory get cells per column
+algorithms temporal memory get column dimensions
+algorithms temporal memory get activation threshold
+algorithms temporal memory set activation threshold activationthreshold
+algorithms temporal memory get initial permanence
+algorithms temporal memory set initial permanence initialpermanence
+algorithms temporal memory get min threshold
+algorithms temporal memory set min threshold minthreshold
+algorithms temporal memory get max new synapse count
+algorithms temporal memory set max new synapse count maxnewsynapsecount
+algorithms temporal memory get permanence increment
+algorithms temporal memory set permanence increment permanenceincrement
+algorithms temporal memory get permanence decrement
+algorithms temporal memory set permanence decrement permanencedecrement
+algorithms temporal memory get predicted segment decrement
+algorithms temporal memory set predicted segment decrement predictedsegmentdecrement
+algorithms temporal memory get connected permanence
+algorithms temporal memory set connected permanence connectedpermanence
+algorithms temporal memory get max segments per cell
+algorithms temporal memory get max synapses per segment
+algorithms temporal memory write proto
+algorithms temporal memory read cls proto
+algorithms temporal memory eq other
+algorithms temporal memory ne other
+algorithms temporal memory validate column column
+algorithms temporal memory validate cell cell
+algorithms temporal memory get cell indices cls cells
+algorithms temporal memory get cell index cell
+algorithms anomaly likelihood init clalearningperiod learningperiod estimationsamples historicwindowsize
+algorithms anomaly likelihood compute log likelihood likelihood
+algorithms anomaly likelihood calc skip records numingested windowsize learningperiod
+algorithms anomaly likelihood read cls proto
+algorithms anomaly likelihood write proto
+algorithms anomaly likelihood anomaly probability value anomalyscore timestamp
+algorithms estimate anomaly likelihoods anomalyscores averagingwindow skiprecords verbosity
+algorithms update anomaly likelihoods anomalyscores params verbosity
+algorithms filter likelihoods likelihoods redthreshold yellowthreshold
+algorithms anomaly score moving average anomalyscores windowsize verbosity
+algorithms estimate normal sampledata performlowerboundcheck
+algorithms null distribution verbosity
+algorithms tail probability x distributionparams
+algorithms is valid estimator params p
+algorithms monitor_mixin monitor mixin base init
+algorithms monitor_mixin monitor mixin base mm clear history
+algorithms monitor_mixin monitor mixin base mm pretty print traces traces breakonresets
+algorithms monitor_mixin monitor mixin base mm pretty print metrics metrics sigfigs
+algorithms monitor_mixin monitor mixin base mm get default traces verbosity
+algorithms monitor_mixin monitor mixin base mm get default metrics verbosity
+algorithms monitor_mixin monitor mixin base mm get cell trace plot celltrace cellcount activitytype title
+algorithms monitor_mixin temporal memory monitor mixin mm get trace active columns
+algorithms monitor_mixin temporal memory monitor mixin mm get trace predictive cells
+algorithms monitor_mixin temporal memory monitor mixin mm get trace num segments
+algorithms monitor_mixin temporal memory monitor mixin mm get trace num synapses
+algorithms monitor_mixin temporal memory monitor mixin mm get trace sequence labels
+algorithms monitor_mixin temporal memory monitor mixin mm get trace resets
+algorithms monitor_mixin temporal memory monitor mixin mm get trace predicted active cells
+algorithms monitor_mixin temporal memory monitor mixin mm get trace predicted inactive cells
+algorithms monitor_mixin temporal memory monitor mixin mm get trace predicted active columns
+algorithms monitor_mixin temporal memory monitor mixin mm get trace predicted inactive columns
+algorithms monitor_mixin temporal memory monitor mixin mm get trace unpredicted active columns
+algorithms monitor_mixin temporal memory monitor mixin mm get metric from trace trace
+algorithms monitor_mixin temporal memory monitor mixin mm get metric sequences predicted active cells per column
+algorithms monitor_mixin temporal memory monitor mixin mm get metric sequences predicted active cells shared
+algorithms monitor_mixin temporal memory monitor mixin mm pretty print connections
+algorithms monitor_mixin temporal memory monitor mixin mm pretty print sequence cell representations sortby
+algorithms monitor_mixin temporal memory monitor mixin mm compute transition traces
+algorithms monitor_mixin temporal memory monitor mixin mm get cell activity plot title showreset resetshading activitytype
+algorithms monitor_mixin metric init monitor title data
+algorithms monitor_mixin plot init monitor title show
+algorithms monitor_mixin plot add graph data position xlabel ylabel
+algorithms monitor_mixin plot add histogram data position xlabel ylabel
+algorithms monitor_mixin plot add2darray data position xlabel ylabel
+algorithms monitor_mixin plot add base position xlabel ylabel
+algorithms monitor_mixin trace init monitor title
+algorithms monitor_mixin trace pretty print datum datum
+algorithms monitor_mixin indices trace make counts trace
+algorithms monitor_mixin indices trace make cum counts trace
+datafiles extra secondorder generate model0 numcategories
+datafiles extra secondorder generate model1 numcategories
+datafiles extra secondorder generate model2 numcategories alpha
+datafiles extra secondorder generate file filename numrecords categorylist initprob
+datafiles extra gym raw process club attendance f clubs
+datafiles extra gym raw process club consumption f clubs
+datafiles extra generated write simple test1 filepath numrecords testnumber
+engine dimensions init
+engine array dtype size ref
+engine region init region network
+engine region get spec from type nodetype
+engine region compute
+engine region get input data inputname
+engine region get output data outputname
+engine region get input names
+engine region get output names
+engine region execute command args
+engine region get spec
+engine region get dimensions
+engine region get network
+engine region hash
+engine region get parameter methods paramname
+engine region get parameter paramname
+engine region set parameter paramname value
+engine region get method
+engine network init
+engine network get regions
+engine network add region name nodetype nodeparams
+engine network add region from bundle name nodetype dimensions bundlepath
+engine network set phases name phases
+engine network run n
+engine network disable profiling
+engine network enable profiling
+engine network get callbacks
+engine network initialize
+engine network link
+engine network remove link
+engine network remove region
+engine network reset profiling
+engine network save
+engine network get regions by type regionclass
+engine network register region regionclass
+engine network unregister region regionname
+database enable concurrency checks maxconcurrency raiseexception
+database connection factory get cls
+database connection factory close cls
+database connection factory set connection policy provider cls provider
+database connection factory create default policy cls
+database connection wrapper enter
+database connection wrapper exit exc_type exc_val exc_tb
+database connection wrapper release
+database connection wrapper track instance and check for concurrency violation
+database database connection policy iface close
+database database connection policy iface acquire connection
+database single shared connection policy init
+database single shared connection policy close
+database single shared connection policy acquire connection
+database single shared connection policy release connection dbconn cursor
+database pooled connection policy init
+database pooled connection policy close
+database pooled connection policy acquire connection
+database pooled connection policy release connection dbconn cursor
+database per transaction connection policy init
+database per transaction connection policy close
+database per transaction connection policy acquire connection
+database per transaction connection policy release connection dbconn cursor
+database get common steady dbargs dict
+database get logger cls loglevel
+database abbreviate text threshold
+database client jobs dao db name prefix cls
+database client jobs dao get dbname prefix for version cls dbversion
+database client jobs dao get dbname cls
+database client jobs dao get dbname for version cls dbversion
+database client jobs dao get
+database client jobs dao init
+database client jobs dao column name dbto public dbname
+database client jobs dao connect deleteoldversions recreate
+database client jobs dao init tables cursor deleteoldversions recreate
+database client jobs dao get matching rows no retries tableinfo conn fieldstomatch selectfieldnames
+database client jobs dao get matching rows with retries tableinfo fieldstomatch selectfieldnames maxrows
+database client jobs dao get one matching row no retries tableinfo conn fieldstomatch selectfieldnames
+database client jobs dao get one matching row with retries tableinfo fieldstomatch selectfieldnames
+database client jobs dao insert or get unique job no retries conn client cmdline jobhash
+database client jobs dao resume job no retries conn jobid alreadyrunning
+database client jobs dao get connection id
+database client jobs dao job suspend jobid
+database client jobs dao job resume jobid alreadyrunning
+database client jobs dao job insert client cmdline clientinfo clientkey
+database client jobs dao job insert unique client cmdline jobhash clientinfo
+database client jobs dao start job with retries jobid
+database client jobs dao job start next
+database client jobs dao job reactivate running jobs
+database client jobs dao job get demand
+database client jobs dao job cancel all running jobs
+database client jobs dao job count cancelling jobs
+database client jobs dao job get cancelling jobs
+database client jobs dao partition at intervals data intervals
+database client jobs dao combine results result
+database client jobs dao job info with models jobid
+database client jobs dao job info jobid
+database client jobs dao job set status jobid status useconnectionid
+database client jobs dao job set completed jobid completionreason completionmsg useconnectionid
+database client jobs dao job cancel jobid
+database client jobs dao job get model ids jobid
+database client jobs dao get active job count for client info clientinfo
+database client jobs dao get active job count for client key clientkey
+database client jobs dao get active jobs for client info clientinfo fields
+database client jobs dao get active jobs for client key clientkey fields
+database client jobs dao get jobs fields
+database client jobs dao get fields for active jobs of type jobtype fields
+database client jobs dao job get fields jobid fields
+database client jobs dao jobs get fields jobids fields requireall
+database client jobs dao job set fields jobid fields useconnectionid ignoreunchanged
+database client jobs dao job set field if equal jobid fieldname newvalue curvalue
+database client jobs dao job increment int field jobid fieldname increment useconnectionid
+database client jobs dao job update results jobid results
+database client jobs dao models clear all
+database client jobs dao model insert and start jobid params paramshash particlehash
+database client jobs dao models info modelids
+database client jobs dao models get fields modelids fields
+database client jobs dao models get fields for job jobid fields ignorekilled
+database client jobs dao models get fields for checkpointed jobid fields
+database client jobs dao model set fields modelid fields ignoreunchanged
+database client jobs dao models get params modelids
+database client jobs dao models get result and status modelids
+database client jobs dao models get update counters jobid
+database client jobs dao model update results modelid results metricvalue numrecords
+database client jobs dao model set completed modelid completionreason completionmsg cputime
+database client jobs dao model adopt next orphan jobid maxupdateinterval
+frameworks opf model factory get logger cls
+frameworks opf model factory create modelconfig loglevel
+frameworks opf model factory load from checkpoint savedmodeldir newserialization
+frameworks opf value getter base call topcontainer
+frameworks opf value getter base handle get value topcontainer
+frameworks opf dict value getter init referencedict
+frameworks opf dict value getter handle get value topcontainer
+frameworks opf deferred dict lookup init
+frameworks opf htm prediction model control enable splearning cb htmpredictionmodel
+frameworks opf htm prediction model control disable splearning cb htmpredictionmodel
+frameworks opf htm prediction model control enable tplearning cb htmpredictionmodel
+frameworks opf htm prediction model control disable tplearning cb htmpredictionmodel
+frameworks opf htmprediction model pickle spinit args init filepath
+frameworks opf htmprediction model pickle tpinit args init filepath
+frameworks opf model run inputrecord
+frameworks opf model finish learning
+frameworks opf model reset sequence states
+frameworks opf model get field info includeclassifieronlyfield
+frameworks opf model set field statistics fieldstats
+frameworks opf model get runtime stats
+frameworks opf model get logger
+frameworks opf model get inference type
+frameworks opf model enable learning
+frameworks opf model disable learning
+frameworks opf model is learning enabled
+frameworks opf model enable inference inferenceargs
+frameworks opf model get inference args
+frameworks opf model disable inference
+frameworks opf model is inference enabled
+frameworks opf model get proto type
+frameworks opf model get model checkpoint file path checkpointdir
+frameworks opf model write to checkpoint checkpointdir
+frameworks opf model read from checkpoint cls checkpointdir
+frameworks opf model write proto
+frameworks opf model read cls proto
+frameworks opf model save savemodeldir
+frameworks opf model serialize extra data extradatadir
+frameworks opf model load cls savedmodeldir
+frameworks opf model de serialize extra data extradatadir
+frameworks opf model get model pickle file path savemodeldir
+frameworks opf model get model extra data dir savemodeldir
+frameworks opf model make directory from absolute path absdirpath
+frameworks opf description iface init modelconfig control
+frameworks opf description iface get model description
+frameworks opf description iface get model control
+frameworks opf description iface normalize stream sources
+frameworks opf description iface convert nupic env to opf
+frameworks opf experiment description api init modelconfig control
+frameworks opf experiment description api get model control
+frameworks opf experiment description api validate experiment control control
+frameworks opf experiment description api validate nupic control control
+frameworks opf periodic activity mgr init requestedactivities
+frameworks opf periodic activity mgr tick
+frameworks opf periodic activity mgr append activities periodicactivities
+frameworks opf safe interpreter init
+frameworks opf load experiment path
+frameworks opf load experiment description script from dir experimentdir
+frameworks opf get experiment description interface from module module
+frameworks opf load description file descriptionpypath
+frameworks opf prediction metrics logger iface emit periodic metrics metrics
+frameworks opf prediction metrics logger iface emit final metrics metrics
+frameworks opf dataset reader iface get dataset field meta data
+frameworks opf dataset reader iface next
+frameworks opf prediction writer iface close
+frameworks opf prediction writer iface append inputrow predictionrow sequencereset metrics
+frameworks opf prediction writer iface checkpoint checkpointsink maxrows
+frameworks opf basic prediction metrics logger init experimentdir label
+frameworks opf basic prediction metrics logger emit periodic metrics metrics
+frameworks opf basic prediction metrics logger emit final metrics metrics
+frameworks opf basic prediction metrics logger translate metrics to json metrics label
+frameworks opf basic dataset reader init streamdefdict
+frameworks opf basic dataset reader get dataset field meta data
+frameworks opf basic prediction writer open datafile modelresult
+frameworks opf basic prediction writer set logged metrics metricnames
+frameworks opf basic prediction writer close
+frameworks opf basic prediction writer get list meta info inferenceelement
+frameworks opf basic prediction writer get dict meta info inferenceelement inferencedict
+frameworks opf basic prediction writer append modelresult
+frameworks opf basic prediction writer checkpoint checkpointsink maxrows
+frameworks opf non temporal prediction log adapter init writer
+frameworks opf non temporal prediction log adapter update modelresult
+frameworks opf temporal prediction log adapter init writer
+frameworks opf temporal prediction log adapter update modelresult
+frameworks opf basic prediction logger init fields experimentdir label inferencetype
+frameworks opf basic prediction logger close
+frameworks opf basic prediction logger write record modelresult
+frameworks opf basic prediction logger write records modelresults progresscb
+frameworks opf basic prediction logger set logged metrics metricnames
+frameworks opf basic prediction logger checkpoint checkpointsink maxrows
+frameworks opf file utils get experiment inference dir path experimentdir
+frameworks opf file utils create experiment inference dir cls experimentdir
+frameworks opf file utils make directory path
+frameworks opf two gram model init inferencetype encoderparams
+frameworks opf two gram model run inputrecord
+frameworks opf two gram model finish learning
+frameworks opf two gram model set field statistics fieldstats
+frameworks opf two gram model get field info
+frameworks opf two gram model get runtime stats
+frameworks opf two gram model get logger
+frameworks opf two gram model reset sequence states
+frameworks opf run experiment args model
+frameworks opf init experiment prng
+frameworks opf parse command line options args
+frameworks opf reap var args callback option optstr value parser
+frameworks opf report command line usage error and exit parser message
+frameworks opf run experiment impl options model
+frameworks opf get model checkpoint dir experimentdir checkpointlabel
+frameworks opf get checkpoint parent dir experimentdir
+frameworks opf checkpoint label from checkpoint dir checkpointdir
+frameworks opf is checkpoint dir checkpointdir
+frameworks opf print available checkpoints experimentdir
+frameworks opf task runner run
+frameworks opf task runner create periodic activities
+frameworks opf main
+frameworks opf prediction logger iface close
+frameworks opf prediction logger iface write record modelresult
+frameworks opf prediction logger iface write records modelresults progresscb
+frameworks opf prediction logger iface set logged metrics metricnames
+frameworks opf prediction logger iface checkpoint checkpointsink maxrows
+frameworks opf model control finish learning cb model
+frameworks opf metrics manager init metricspecs fieldinfo inferencetype
+frameworks opf metrics manager update results
+frameworks opf metrics manager get metrics
+frameworks opf metrics manager get metric details metriclabel
+frameworks opf metrics manager get metric labels
+frameworks opf metrics manager add results results
+frameworks opf metrics manager get ground truth inferenceelement
+frameworks opf metrics manager get inference inferenceelement
+frameworks opf metrics manager get raw ground truth
+frameworks opf metrics manager construct metrics modules metricspecs
+frameworks opf test temporal shift
+frameworks opf require anomaly model func
+frameworks opf network info init net statscollectors
+frameworks opf htmprediction model reset sequence states
+frameworks opf htmprediction model finish learning
+frameworks opf htmprediction model enable learning
+frameworks opf htmprediction model disable learning
+frameworks opf htmprediction model set anomaly parameter param value
+frameworks opf htmprediction model get anomaly parameter param
+frameworks opf htmprediction model anomaly remove labels start end labelfilter
+frameworks opf htmprediction model anomaly add label start end labelname
+frameworks opf htmprediction model anomaly get labels start end
+frameworks opf htmprediction model run inputrecord
+frameworks opf htmprediction model get sensor input record inputrecord
+frameworks opf htmprediction model get classifier input record inputrecord
+frameworks opf htmprediction model anomaly compute
+frameworks opf htmprediction model handle claclassifier multi step patternnz inputtsrecordidx rawinput
+frameworks opf htmprediction model remove unlikely predictions cls likelihoodsdict minlikelihoodthreshold maxpredictionsperstep
+frameworks opf htmprediction model get runtime stats
+frameworks opf htmprediction model get field info includeclassifieronlyfield
+frameworks opf htmprediction model get logger
+frameworks opf htmprediction model get spregion
+frameworks opf htmprediction model get tpregion
+frameworks opf htmprediction model get sensor region
+frameworks opf htmprediction model get classifier region
+frameworks opf htmprediction model get encoder
+frameworks opf htmprediction model get classifier only encoder
+frameworks opf htmprediction model get data source
+frameworks opf htmprediction model create clanetwork sensorparams spenable spparams tmenable
+frameworks opf htmprediction model getstate
+frameworks opf htmprediction model setstate state
+frameworks opf htmprediction model serialize extra data extradatadir
+frameworks opf htmprediction model de serialize extra data extradatadir
+frameworks opf htmprediction model add anomaly classifier region network params spenable tmenable
+frameworks opf htmprediction model mangle private member name privatemembername skipcheck
+frameworks opf previous value model run inputrecord
+frameworks opf previous value model finish learning
+frameworks opf previous value model set field statistics fieldstats
+frameworks opf previous value model get field info
+frameworks opf previous value model get runtime stats
+frameworks opf previous value model get logger
+frameworks opf previous value model reset sequence states
+frameworks opf inference element get input element inferenceelement
+frameworks opf inference element is temporal inferenceelement
+frameworks opf inference element get temporal delay inferenceelement key
+frameworks opf inference element get max delay inferences
+frameworks opf inference type is temporal inferencetype
+frameworks opf validate opf json value value opfjsonschemafilename
+frameworks opf init logger obj
+frameworks opf match patterns patterns keys
+frameworks opf htmprediction model classifier helper add label start end labelname
+frameworks opf htmprediction model classifier helper remove labels start end labelfilter
+frameworks opf htmprediction model classifier helper add record to knn record
+frameworks opf htmprediction model classifier helper delete records from knn recordstodelete
+frameworks opf htmprediction model classifier helper delete range from knn start end
+frameworks opf htmprediction model classifier helper recompute record from knn record
+frameworks opf htmprediction model classifier helper construct classification record
+frameworks opf htmprediction model classifier helper compute
+frameworks opf htmprediction model classifier helper set auto detect wait records waitrecords
+frameworks opf htmprediction model classifier helper get auto detect wait records
+frameworks opf htmprediction model classifier helper set auto detect threshold threshold
+frameworks opf htmprediction model classifier helper get auto detect threshold
+frameworks opf htmprediction model classifier helper label to category number label
+frameworks opf htmprediction model classifier helper label list to category number labellist
+frameworks opf htmprediction model classifier helper category to label list category
+frameworks opf htmprediction model classifier helper get state anomaly vector state
+frameworks opf iteration phase spec learn only init niters
+frameworks opf iteration phase spec learn only get impl model
+frameworks opf iteration phase spec infer only init niters inferenceargs
+frameworks opf iteration phase spec infer only get impl model
+frameworks opf iteration phase spec learn and infer init niters inferenceargs
+frameworks opf iteration phase spec learn and infer get impl model
+frameworks opf opftask driver init taskcontrol model
+frameworks opf opftask driver replace iteration cycle phasespecs
+frameworks opf opftask driver setup
+frameworks opf opftask driver finalize
+frameworks opf opftask driver handle input record inputrecord
+frameworks opf opftask driver get metrics
+frameworks opf opftask driver get metric labels
+frameworks opf phase manager init model phasespecs
+frameworks opf phase manager advance phase
+frameworks opf phase manager handle input record inputrecord
+frameworks opf iteration phase init niters
+frameworks opf iteration phase enter phase
+frameworks opf iteration phase advance
+frameworks opf iteration phase learn only init model niters
+frameworks opf iteration phase learn only enter phase
+frameworks opf iteration phase infer common init model niters inferenceargs
+frameworks opf iteration phase infer common enter phase
+frameworks opf iteration phase infer only init model niters inferenceargs
+frameworks opf iteration phase infer only enter phase
+frameworks opf iteration phase learn and infer init model niters inferenceargs
+frameworks opf iteration phase learn and infer enter phase
+frameworks opf metric spec init metric inferenceelement field params
+frameworks opf metric spec get label inferencetype
+frameworks opf metric spec get inference type from label cls label
+frameworks opf get module metricspec
+frameworks opf metrics iface init metricspec
+frameworks opf metrics iface add instance groundtruth prediction record result
+frameworks opf metrics iface get metric
+frameworks opf aggregate metric accumulate groundtruth prediction accumulatederror historybuffer
+frameworks opf aggregate metric aggregate accumulatederror historybuffer steps
+frameworks opf aggregate metric init metricspec
+frameworks opf aggregate metric get shifted ground truth groundtruth
+frameworks opf metric pass thru prediction add instance groundtruth prediction record result
+frameworks opf metric pass thru prediction get metric
+frameworks opf custom error metric most likely pred
+frameworks opf custom error metric exp value pred
+frameworks opf metric neg auc accumulate groundtruth prediction accumulatederror historybuffer
+frameworks opf metric multi init metricspec
+frameworks opf common_models get scalar metric with time of day anomaly params metricdata minval maxval minresolution
+frameworks opf common_models range gen data std
+frameworks opf common_models fixup random encoder params params minval maxval minresolution
+frameworks viz network visualizer init network
+frameworks viz network visualizer export
+frameworks viz dot renderer init outp node_attrs
+data r update original updates
+data r apply d f
+data dict diff and report da db
+data dict diff da db
+data category filter init filterdict
+data category filter match record
+data field meta info create from file field element fieldinfotuple
+data field meta info create list from file field list cls fields
+data field meta type is valid cls fielddatatype
+data field meta special is valid cls attr
+data sort filename key outputfile fields
+data sort chunk records key chunkindex fields
+data merge files key chunkcount outputfile fields
+data weather joiner join generateflag
+data generate stats filename statsinfo maxsamples filters
+data function source cache sequence info type
+data delta filter init origfield deltafield
+data inference shifter shift modelresult
+data validate value
+data load json value from file inputfilepath
+data file record stream close
+data file record stream rewind
+data file record stream get next record usecache
+data file record stream append record record inputbookmark
+data file record stream append records records inputref progresscb
+data file record stream get bookmark
+data file record stream records exist after bookmark
+data file record stream seek from end numrecords
+data file record stream set auto rewind autorewind
+data file record stream get stats
+data file record stream clear stats
+data file record stream get error
+data file record stream set error error
+data file record stream is completed
+data file record stream set completed completed
+data file record stream get field names
+data file record stream get fields
+data file record stream update sequence info r
+data file record stream get start row bookmark
+data file record stream get total line count
+data file record stream get next record idx
+data file record stream get data row count
+data file record stream flush
+data file record stream enter
+data file record stream exit yupe value traceback
+data file record stream iter
+data file record stream next
+data get field index by special fields special
+data model record encoder init fields aggregationperiod
+data model record encoder rewind
+data model record encoder encode inputrow
+data model record encoder compute timestamp record idx recordts
+data record stream iface close
+data record stream iface rewind
+data record stream iface get next record usecache
+data record stream iface get next record dict
+data record stream iface get aggregation months and seconds
+data record stream iface get records range bookmark range
+data record stream iface get next record idx
+data record stream iface get last records numrecords
+data record stream iface remove old data
+data record stream iface append record record inputref
+data record stream iface append records records inputref progresscb
+data record stream iface get bookmark
+data record stream iface records exist after bookmark
+data record stream iface seek from end numrecords
+data record stream iface get stats
+data record stream iface get field min fieldname
+data record stream iface get field max fieldname
+data record stream iface clear stats
+data record stream iface get error
+data record stream iface set error error
+data record stream iface is completed
+data record stream iface set completed completed
+data record stream iface get field names
+data record stream iface get fields
+data record stream iface get reset field idx
+data record stream iface get timestamp field idx
+data record stream iface get sequence id field idx
+data record stream iface get category field idx
+data record stream iface get learning field idx
+data record stream iface set timeout timeout
+data record stream iface flush
+data number stats collector get stats stats
+data generate stats filename maxsamples
+data parse timestamp s
+data escape s
+data unescape s
+data parse sdr s
+data serialize sdr sdr
+data parse string list s
+data strip list listobj
+data stream reader init streamdef bookmark saveoutput isblocking
+data stream reader open stream dataurl isblocking maxtimeout bookmark
+data stream reader close
+data stream reader get next record
+data stream reader get data row count
+data stream reader get last records numrecords
+data stream reader get records range bookmark range
+data stream reader get next record idx
+data stream reader records exist after bookmark
+data stream reader get aggregation months and seconds
+data stream reader append record record inputref
+data stream reader append records records inputref progresscb
+data stream reader seek from end numrecords
+data stream reader get field names
+data stream reader get fields
+data stream reader get bookmark
+data stream reader clear stats
+data stream reader get stats
+data stream reader get error
+data stream reader set error error
+data stream reader is completed
+data stream reader set completed completed
+data stream reader set timeout timeout
+data stream reader flush
+data init filter input filterinfo
+data filter record filterlist record
+data aggr first inlist
+data aggr last inlist
+data aggr sum inlist
+data aggr mean inlist
+data aggr mode inlist
+data aggr weighted mean inlist params
+data aggregator init aggregationinfo inputfields timefieldname sequenceidfieldname
+data aggregator get end time t
+data aggregator get func ptr and params funcname
+data aggregator create aggregate record
+data aggregator is null aggregation
+data aggregator next record curinputbookmark
+data generate dataset aggregationinfo inputfilename outputfilename
+data get filename aggregationinfo inputfile
+data generators data generator init name seed verbosity
+data generators data generator get description
+data generators data generator set seed seed
+data generators data generator add field name fieldparams encoderparams
+data generators data generator add multiple fields fieldsinfo
+data generators data generator define field name encoderparams
+data generators data generator set flag index flag
+data generators data generator generate record record
+data generators data generator generate records records
+data generators data generator get record n
+data generators data generator get all records
+data generators data generator encode record record tobeadded
+data generators data generator encode all records records tobeadded
+data generators data generator add value to field i value
+data generators data generator add values to field i numvalues
+data generators data generator get sdrfor value i j
+data generators data generator get zeroed out encoding n
+data generators data generator get totaln
+data generators data generator get totalw
+data generators data generator get encoding n
+data generators data generator get all encodings
+data generators data generator get all field names
+data generators data generator get all flags
+data generators data generator get all data types
+data generators data generator get field descriptions
+data generators data generator save records path
+data generators data generator remove all records
+data generators field init name encoderspec
+data generators field add values values
+data generators field add value value
+data generators field encode value value tobeadded
+data generators field set types encoderspec
+data generators field initialize encoders encoderspec
+data generators add reader writer column start
+data generators scale reader writer column start
+data generators copy reader writer start stop
+data generators sample reader writer n start
+data generators distributions init
+data generators distributions get next
+data generators distributions get data n
+data generators distributions get description
+data generators pattern machine init n w num seed
+data generators pattern machine get number
+data generators pattern machine add noise bits amount
+data generators pattern machine numbers for bit bit
+data generators pattern machine number map for bits bits
+data generators pattern machine pretty print pattern bits verbosity
+data generators pattern machine generate
+data generators pattern machine get w
+data generators consecutive pattern machine generate
+data generators sequence machine init patternmachine seed
+data generators sequence machine generate from numbers numbers
+data generators sequence machine add spatial noise sequence amount
+data generators sequence machine pretty print sequence sequence verbosity
+data generators sequence machine generate numbers numsequences sequencelength sharedrange
+support features has feature feature group addlist removelist
+support features get features group addlist removelist
+support features get features for group group
+support features get all features
+support features get all groups
+support create logger obj
+support log exceptions logger
+support log entry exit getloggercallback entryexitloglevel logargs logtraceback
+support retry timeoutsec initialretrydelaysec maxretrydelaysec retryexceptions
+support retry sql timeoutsec logger
+support configuration get custom dict cls
+support configuration set custom property cls propertyname value
+support configuration set custom properties cls properties
+support configuration clear cls
+support configuration reset custom config cls
+support configuration load custom config cls
+support configuration read std config files cls
+support custom configuration file wrapper clear cls persistent
+support custom configuration file wrapper get custom dict cls
+support custom configuration file wrapper edit cls properties
+support custom configuration file wrapper set path cls
+support custom configuration file wrapper get path cls
+support configuration get string cls prop
+support configuration get bool cls prop
+support configuration get int cls prop
+support configuration get float cls prop
+support configuration get cls prop default
+support configuration set cls prop value
+support configuration dict cls
+support configuration read config file cls filename path
+support configuration find config file cls filename
+support configuration get config paths cls
+support configuration set config paths cls paths
+support nupic job fail exception get worker completion message
+support nupic job fail exception map current exception cls e errorcode msg
+support groupby2
+support get caller info depth
+support title s additional stream frame
+support bring to front title
+support get user documents path
+support get argument descriptions f
+support init logging verbose console consolelevel
+support reinit logging dir
+support gen logging file path
+support enable logging error debugging
+support int to8byte array invalue
+support byte array to int packed_data
+support get special row id
+support float seconds from timedelta td
+support aggregation to months seconds interval
+support aggregation divide dividend divisor
+support process category file f format categorycolumn categorycolumns
+support allow new attributes f
+support simple init
+support console printer mixin init verbosity
+support console printer mixin c print level message
+support make directory from absolute path absdirpath
+support patient loop logger maxwaitexponent finalerrorstring acceptableerror
+support enum
+support unittesthelpers test case base print test header
+support unittesthelpers test case base print banner msg
+support unittesthelpers test case base add extra log item item
+support unittesthelpers test case base wrap msg msg
+support unittesthelpers test case base assert equal first second msg
+support unittesthelpers test case base assert not equal first second msg
+support unittesthelpers test case base assert true expr msg
+support unittesthelpers test case base assert false expr msg
+support unittesthelpers long test testmethod
+support unittesthelpers tag test tag comment
+support unittesthelpers abstract temporal memory test get tmclass
+support unittesthelpers abstract temporal memory test get pattern machine
+support unittesthelpers abstract temporal memory test get default tmparams
+support unittesthelpers abstract temporal memory test init overrides
+support unittesthelpers get numpy random generator seed
+support unittesthelpers convert permanences sourcesp destsp
+support unittesthelpers get seed
+support unittesthelpers convert sp pysp newseed
+support unittesthelpers create sp imp params
+swarming escape s
+swarming engine services running
+swarming run with config swarmconfig options outdir outputlabel
+swarming run with json file expjsonfilepath options outputlabel permworkdir
+swarming run with permutations script permutationsfilepath options outputlabel permworkdir
+swarming run permutations _
+swarming client jobs db
+swarming nupic hyper search has errors hypersearchjob
+swarming hyper search runner run new search
+swarming hyper search runner pickup search
+swarming hyper search runner launch workers cmdline numworkers
+swarming hyper search runner start search
+swarming hyper search runner peek search job
+swarming hyper search runner get discovered metrics keys
+swarming hyper search runner print models cls options
+swarming hyper search runner generate report cls options replacereport hypersearchjob
+swarming hyper search runner load saved hyper search job cls permworkdir outputlabel
+swarming hyper search runner save hyper search job id cls permworkdir outputlabel hypersearchjob
+swarming hyper search runner load hyper search job id cls permworkdir outputlabel
+swarming hyper search runner get hyper search job idfile path cls permworkdir outputlabel
+swarming report csvwriter emit modelinfo
+swarming report csvwriter finalize
+swarming report csvwriter open and init csvfile modelinfo
+swarming nupic job get job id
+swarming nupic job get params
+swarming hyper search job query model ids
+swarming hyper search job get expected num models searchmethod
+swarming client job utils make search job params dict cls options forrunning
+swarming permutation utils get optimization metric info cls searchjobparams
+swarming backup file filepath
+swarming get one model info nupicmodelid
+swarming iter models modelids
+swarming nupic model info unwrap params
+swarming nupic model info get report metrics
+swarming nupic model info get optimization metrics
+swarming nupic model info get all metrics
+swarming nupic model info unwrap results
+swarming nupic model info get completion msg
+swarming nupic model info get start time
+swarming nupic model info get end time
+swarming inference element get input element inferenceelement
+swarming inference element is temporal inferenceelement
+swarming inference element get temporal delay inferenceelement key
+swarming inference element get max delay inferences
+swarming inference type is temporal inferencetype
+swarming hypersearch worker init options cmdlineargs
+swarming hypersearch worker process updated models cjdao
+swarming hypersearch worker run
+swarming main argv
+swarming create and start swarm client clientinfo clientkey params
+swarming get swarm model params modelid
+swarming opfmodel runner run
+swarming opfmodel runner run task main loop numiters learningoffat
+swarming opfmodel runner finalize
+swarming opfmodel runner create model checkpoint
+swarming opfmodel runner delete model checkpoint modelid
+swarming opfmodel runner create prediction logger
+swarming opfmodel runner get optimized metric label
+swarming opfmodel runner get metric labels
+swarming opfmodel runner get field stats
+swarming opfmodel runner get metrics
+swarming opfmodel runner update model dbresults
+swarming opfmodel runner update job results periodic
+swarming opfmodel runner check if best completed model
+swarming opfmodel runner write prediction result
+swarming opfmodel runner write records callback
+swarming opfmodel runner flush prediction cache
+swarming opfmodel runner delete output cache modelid
+swarming opfmodel runner init periodic activities
+swarming opfmodel runner check cancelation
+swarming opfmodel runner check maturity
+swarming opfmodel runner handle warning signal signum frame
+swarming opfmodel runner set as orphaned
+swarming results db init hsobj
+swarming results db update modelid modelparams modelparamshash metricresult
+swarming results db get num err models
+swarming results db get err model ids
+swarming results db get num completed models
+swarming results db get model idfrom params hash paramshash
+swarming results db num models swarmid includehidden
+swarming results db best model id and err score swarmid genidx
+swarming results db get particle info modelid
+swarming results db get particle infos swarmid genidx completed matured
+swarming results db get orphan particle infos swarmid genidx
+swarming results db get matured swarm generations
+swarming results db first non full generation swarmid minnumparticles
+swarming results db highest generation swarmid
+swarming results db get particle best particleid
+swarming results db get results per choice swarmid maxgenidx varname
+swarming hypersearch v2 init searchparams workerid cjdao jobid
+swarming hypersearch v2 get stream def modeldescription
+swarming hypersearch v2 del
+swarming hypersearch v2 close
+swarming hypersearch v2 read permutations file filename modeldescription
+swarming hypersearch v2 get expected num models
+swarming hypersearch v2 get model names
+swarming hypersearch v2 get permutation variables
+swarming hypersearch v2 get complex variable label lookup dict
+swarming hypersearch v2 get optimization metric info
+swarming hypersearch v2 check for orphaned models
+swarming hypersearch v2 hs state periodic update exhaustedswarmid
+swarming hypersearch v2 get candidate particle and swarm exhaustedswarmid
+swarming hypersearch v2 ok to exit
+swarming hypersearch v2 create models nummodels
+swarming hypersearch v2 record model progress modelid modelparams modelparamshash results
+swarming hypersearch v2 run model modelid jobid modelparams modelparamshash
+swarming params file head
+swarming params file tail
+swarming append report keys keys prefix results
+swarming match report keys reportkeyres allreportkeys
+swarming get report item itemname results
+swarming filter results allresults reportkeys optimizekey
+swarming quote and escape string
+swarming handle model runner exception jobid modelid jobsdao experimentdir
+swarming run model given base and params modelid jobid basedescription params
+swarming periodic activity mgr init requestedactivities
+swarming periodic activity mgr tick
+swarming generate persistent job guid
+swarming r copy d f discardnonekeys deepcopy
+swarming r apply d f
+swarming clipped obj obj maxelementsize
+swarming validate value
+swarming load json value from file inputfilepath
+swarming sorted jsondump s obj
+swarming opfdummy model runner load dummy model parameters params
+swarming opfdummy model runner comput model delay
+swarming opfdummy model runner get metrics
+swarming opfdummy model runner run
+swarming opfdummy model runner create prediction logger
+swarming opfdummy model runner should sys exit iteration
+swarming model chooser update results for job forceupdate
+swarming exp_generator create directory exception init dirpath reason
+swarming exp_generator error reporting exception init problem precursor
+swarming exp_generator make usage error str errorstring usagestring
+swarming exp_generator handle show schema option
+swarming exp_generator handle description option cmdargstr outdir usagestr hsversion
+swarming exp_generator handle description from file option filename outdir usagestr hsversion
+swarming exp_generator is int x precision
+swarming exp_generator is string obj
+swarming exp_generator quote and escape string
+swarming exp_generator indent lines str indentlevels indentfirstline
+swarming exp_generator is category fieldtype
+swarming exp_generator generate metric spec string inferenceelement metric params field
+swarming exp_generator generate file from templates templatefilenames outputfilepath replacementdict
+swarming exp_generator generate encoder choices v1 fieldinfo
+swarming exp_generator generate encoder strings v1 includedfields
+swarming exp_generator generate perm encoder str options encoderdict
+swarming exp_generator generate encoder strings v2 includedfields options
+swarming exp_generator handle javaparameters options
+swarming exp_generator get property value schema propertyname options
+swarming exp_generator get experiment description schema
+swarming exp_generator generate experiment options outputdirpath hsversion cladescriptiontemplatefile
+swarming exp_generator generate metrics substitutions options tokenreplacements
+swarming exp_generator generate metric specs options
+swarming exp_generator generate extra metric specs options
+swarming exp_generator get predicted field options
+swarming exp_generator generate inference args options tokenreplacements
+swarming exp_generator exp generator args
+swarming hypersearch enum
+swarming hypersearch make directory from absolute path absdirpath
+swarming hypersearch configuration base get string cls prop
+swarming hypersearch configuration base get bool cls prop
+swarming hypersearch configuration base get int cls prop
+swarming hypersearch configuration base get float cls prop
+swarming hypersearch configuration base get cls prop default
+swarming hypersearch configuration base set cls prop value
+swarming hypersearch configuration base dict cls
+swarming hypersearch configuration base read config file cls filename path
+swarming hypersearch configuration base clear cls
+swarming hypersearch configuration base find config file cls filename
+swarming hypersearch configuration base get config paths cls
+swarming hypersearch configuration base set config paths cls paths
+swarming hypersearch configuration base read std config files cls
+swarming hypersearch configuration get custom dict cls
+swarming hypersearch configuration set custom property cls propertyname value
+swarming hypersearch configuration set custom properties cls properties
+swarming hypersearch configuration clear cls
+swarming hypersearch configuration reset custom config cls
+swarming hypersearch configuration load custom config cls
+swarming hypersearch configuration read std config files cls
+swarming hypersearch custom configuration file wrapper clear cls persistent
+swarming hypersearch custom configuration file wrapper get custom dict cls
+swarming hypersearch custom configuration file wrapper edit cls properties
+swarming hypersearch custom configuration file wrapper set path cls
+swarming hypersearch custom configuration file wrapper get path cls
+swarming hypersearch extended logger debug msg
+swarming hypersearch extended logger info msg
+swarming hypersearch extended logger warning msg
+swarming hypersearch extended logger error msg
+swarming hypersearch extended logger critical msg
+swarming hypersearch extended logger log level msg
+swarming hypersearch model terminator get termination callbacks terminationfunc
+swarming hypersearch clean s
+swarming hypersearch permute variable get state
+swarming hypersearch permute variable set state state
+swarming hypersearch permute variable get position
+swarming hypersearch permute variable agitate
+swarming hypersearch permute variable new position globalbestposition rng
+swarming hypersearch permute variable push away from othervars rng
+swarming hypersearch permute variable reset velocity rng
+swarming hypersearch permute float init min max stepsize inertia
+swarming hypersearch permute float repr
+swarming hypersearch permute float get state
+swarming hypersearch permute float set state state
+swarming hypersearch permute float get position
+swarming hypersearch permute float agitate
+swarming hypersearch permute float new position globalbestposition rng
+swarming hypersearch permute float push away from otherpositions rng
+swarming hypersearch permute float reset velocity rng
+swarming hypersearch permute int repr
+swarming hypersearch permute int get position
+swarming hypersearch permute choices repr
+swarming hypersearch permute choices get state
+swarming hypersearch permute choices set state state
+swarming hypersearch permute choices set results per choice resultsperchoice
+swarming hypersearch permute choices get position
+swarming hypersearch permute choices agitate
+swarming hypersearch permute choices new position globalbestposition rng
+swarming hypersearch permute choices push away from otherpositions rng
+swarming hypersearch permute choices reset velocity rng
+swarming hypersearch permute encoder repr
+swarming hypersearch permute encoder get dict encodername flattenedchosenvalues
+swarming hypersearch tests test valid positions varclass minvalue maxvalue stepsize
+swarming hypersearch tests test convergence varclass minvalue maxvalue targetvalue
+swarming hypersearch tests run
+swarming hypersearch particle init hsobj resultsdb flattenedpermutevars swarmid
+swarming hypersearch particle get state
+swarming hypersearch particle init state from particleid particlestate newbest
+swarming hypersearch particle copy encoder states from particlestate
+swarming hypersearch particle copy var states from particlestate varnames
+swarming hypersearch particle get position
+swarming hypersearch particle get position from state pstate
+swarming hypersearch particle agitate
+swarming hypersearch particle new position whichvars
+swarming hypersearch hs state init hsobj
+swarming hypersearch hs state is dirty
+swarming hypersearch hs state is search over
+swarming hypersearch hs state read state from db
+swarming hypersearch hs state write state to db
+swarming hypersearch hs state get encoder name from key key
+swarming hypersearch hs state get encoder key from name name
+swarming hypersearch hs state get field contributions
+swarming hypersearch hs state get all swarms sprintidx
+swarming hypersearch hs state get active swarms sprintidx
+swarming hypersearch hs state get non killed swarms sprintidx
+swarming hypersearch hs state get completed swarms
+swarming hypersearch hs state get completing swarms
+swarming hypersearch hs state best model in completed swarm swarmid
+swarming hypersearch hs state best model in completed sprint sprintidx
+swarming hypersearch hs state best model in sprint sprintidx
+swarming hypersearch hs state set swarm state swarmid newstatus
+swarming hypersearch hs state any good sprints active
+swarming hypersearch hs state is sprint completed sprintidx
+swarming hypersearch hs state kill useless swarms
+swarming hypersearch hs state is sprint active sprintidx
+swarming hypersearch swarm terminator record data point swarmid generation errscore
+encoders random distributed scalar encoder seed seed
+encoders random distributed scalar encoder get decoder output field types
+encoders random distributed scalar encoder get width
+encoders random distributed scalar encoder get bucket indices x
+encoders random distributed scalar encoder map bucket index to non zero bits index
+encoders random distributed scalar encoder encode into array x output
+encoders random distributed scalar encoder create bucket index
+encoders random distributed scalar encoder new representation index newindex
+encoders random distributed scalar encoder new representation ok newrep newindex
+encoders random distributed scalar encoder count overlap indices i j
+encoders random distributed scalar encoder count overlap rep1 rep2
+encoders random distributed scalar encoder overlap ok i j overlap
+encoders random distributed scalar encoder initialize bucket map maxbuckets offset
+encoders date encoder get scalar names parentfieldname
+encoders date encoder get encoded values input
+encoders date encoder get scalars input
+encoders date encoder get bucket indices input
+encoders date encoder encode into array input output
+encoders coordinate encoder get width
+encoders coordinate encoder get description
+encoders coordinate encoder get scalars inputdata
+encoders coordinate encoder encode into array inputdata output
+encoders coordinate encoder neighbors coordinate radius
+encoders coordinate encoder top wcoordinates cls coordinates w
+encoders coordinate encoder hash coordinate coordinate
+encoders coordinate encoder order for coordinate cls coordinate
+encoders coordinate encoder bit for coordinate cls coordinate n
+encoders geospatial coordinate encoder get description
+encoders geospatial coordinate encoder get scalars inputdata
+encoders geospatial coordinate encoder encode into array inputdata output
+encoders geospatial coordinate encoder coordinate for position longitude latitude altitude
+encoders geospatial coordinate encoder radius for speed speed
+encoders is sequence obj
+encoders encoder get width
+encoders encoder encode into array inputdata output
+encoders encoder set learning learningenabled
+encoders encoder set field stats fieldname fieldstatistics
+encoders encoder encode inputdata
+encoders encoder get scalar names parentfieldname
+encoders encoder get decoder output field types
+encoders encoder set state lock lock
+encoders encoder get input value obj fieldname
+encoders encoder get encoder list
+encoders encoder get scalars inputdata
+encoders encoder get encoded values inputdata
+encoders encoder get bucket indices inputdata
+encoders encoder scalars to str scalarvalues scalarnames
+encoders encoder get description
+encoders encoder get field description fieldname
+encoders encoder encoded bit description bitoffset formatted
+encoders encoder pprint header prefix
+encoders encoder pprint output prefix
+encoders encoder decode encoded parentfieldname
+encoders encoder decoded to str decoderesults
+encoders encoder get bucket values
+encoders encoder get bucket info buckets
+encoders encoder top down compute encoded
+encoders encoder closeness scores expvalues actvalues fractional
+encoders encoder get display width
+encoders sdrcategory encoder seed seed
+encoders sdrcategory encoder get decoder output field types
+encoders sdrcategory encoder new rep
+encoders sdrcategory encoder get scalars input
+encoders sdrcategory encoder get bucket indices input
+encoders sdrcategory encoder decode encoded parentfieldname
+encoders sdrcategory encoder get top down mapping
+encoders sdrcategory encoder get bucket values
+encoders sdrcategory encoder get bucket info buckets
+encoders sdrcategory encoder top down compute encoded
+encoders sdrcategory encoder closeness scores expvalues actvalues fractional
+encoders log encoder get decoder output field types
+encoders log encoder get scaled value inpt
+encoders log encoder get bucket indices inpt
+encoders log encoder encode into array inpt output
+encoders log encoder decode encoded parentfieldname
+encoders log encoder get bucket values
+encoders log encoder get bucket info buckets
+encoders log encoder top down compute encoded
+encoders log encoder closeness scores expvalues actvalues fractional
+encoders delta encoder init w minval maxval periodic
+encoders delta encoder top down compute encoded
+encoders scalar encoder init encoder w minval maxval n
+encoders scalar encoder check reasonable settings
+encoders scalar encoder get decoder output field types
+encoders scalar encoder get first on bit input
+encoders scalar encoder get bucket indices input
+encoders scalar encoder encode into array input output learn
+encoders scalar encoder decode encoded parentfieldname
+encoders scalar encoder generate range description ranges
+encoders scalar encoder get top down mapping
+encoders scalar encoder get bucket values
+encoders scalar encoder get bucket info buckets
+encoders scalar encoder top down compute encoded
+encoders scalar encoder closeness scores expvalues actvalues fractional
+encoders bits to string arr
+encoders sparse pass through encoder init n w name forced
+encoders sparse pass through encoder encode into array value output
+encoders category encoder get decoder output field types
+encoders category encoder get scalars input
+encoders category encoder get bucket indices input
+encoders category encoder decode encoded parentfieldname
+encoders category encoder closeness scores expvalues actvalues fractional
+encoders category encoder get bucket values
+encoders category encoder get bucket info buckets
+encoders category encoder top down compute encoded
+encoders adaptive scalar encoder set encoder params
+encoders adaptive scalar encoder set min and max input learn
+encoders adaptive scalar encoder get bucket indices input learn
+encoders adaptive scalar encoder encode into array input output learn
+encoders adaptive scalar encoder get bucket info buckets
+encoders adaptive scalar encoder top down compute encoded
+encoders multi encoder add encoder name encoder
+encoders multi encoder get width
+encoders multi encoder add multiple encoders fieldencodings
+encoders pass through encoder get decoder output field types
+encoders pass through encoder get scalars input
+encoders pass through encoder get bucket indices input
+encoders pass through encoder encode into array inputval outputval
+encoders pass through encoder decode encoded parentfieldname
+encoders pass through encoder get bucket info buckets
+encoders pass through encoder top down compute encoded
+encoders pass through encoder closeness scores expvalues actvalues
+math pick by distribution distribution r
+math indicator pos size dtype
+math multi arg max x
+math any sequence
+math all sequence
+math product sequence
+math multi indicator pos size dtype
+math distribution pos size counts dtype
+math conditional probability table2d init rowhint ncols
+math conditional probability table2d num rows
+math conditional probability table2d grow rows cols
+math conditional probability table2d update row row distribution
+math conditional probability table2d infer row distribution
+math conditional probability table2d infer row evidence distribution
+math conditional probability table2d infer row compat distribution
+math conditional probability table2d clean outcpd
+math log factorial x
+math discrete distribution sample rgen
+math multinomial distribution log probability distn
+math poisson distribution sample rgen
+math lscsum lx epsilon
+math lscsum0 lx
+math normalize lx
+math nsum0 lx
+math lnsum0 lx
+math log sum exp a b out
+math log diff exp a b out
+math cross list
+math cross
+math dcross
+math discrete proposal propose current r
+math poisson proposal propose current r
+math roccurve y_true y_score
+math area under curve x y
+math test
+math coordinates from index index dimensions
+math index from coordinates coordinates dimensions
+math neighborhood centerindex radius dimensions
+math wrapping neighborhood centerindex radius dimensions

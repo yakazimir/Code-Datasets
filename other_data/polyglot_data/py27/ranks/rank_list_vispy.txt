@@ -1,0 +1,1076 @@
+geometry compact vertices indices tolerance
+geometry normals vertices indices
+geometry create cube
+geometry create plane width height width_segments height_segments
+geometry create box width height depth width_segments
+geometry create sphere rows cols depth radius
+geometry create cylinder rows cols radius length
+geometry create cone cols radius length
+geometry create arrow rows cols radius length
+geometry create grid mesh xs ys zs
+geometry surface func umin umax ucount
+geometry rect padded padding
+geometry rect normalized
+geometry rect flipped x y
+geometry rect add a
+geometry rect contains x y
+geometry rect transform in
+geometry rect transform out coords
+geometry triangulation triangulate
+geometry triangulation edge event i j
+geometry triangulation find cut triangle edge
+geometry triangulation edge in front edge
+geometry triangulation edge opposite point tri i
+geometry triangulation adjacent tri edge i
+geometry triangulation tri from edge edge
+geometry triangulation edges in tri except tri edge
+geometry triangulation edge below front edge front_index
+geometry triangulation intersected edge edges cut_edge
+geometry triangulation find edge intersections
+geometry triangulation projection a b c
+geometry triangulation edges intersect edge1 edge2
+geometry triangulation intersection matrix lines
+geometry triangulation intersect edge arrays lines1 lines2
+geometry triangulation orientation edge point
+geometry triangulate vertices
+geometry curve3 bezier p1 p2 p3
+geometry curve4 bezier p1 p2 p3 p4
+geometry mesh data get faces
+geometry mesh data get edges indexed
+geometry mesh data set faces faces
+geometry mesh data get vertices indexed
+geometry mesh data get bounds
+geometry mesh data set vertices verts indexed reset_normals
+geometry mesh data has face indexed data
+geometry mesh data has vertex color
+geometry mesh data has face color
+geometry mesh data get face normals indexed
+geometry mesh data get vertex normals indexed
+geometry mesh data get vertex colors indexed
+geometry mesh data set vertex colors colors indexed
+geometry mesh data get face colors indexed
+geometry mesh data set face colors colors indexed
+geometry mesh data n faces
+geometry mesh data n vertices
+geometry mesh data get vertex faces
+geometry mesh data save
+geometry mesh data restore state
+geometry torus knot first component
+geometry torus knot components
+geometry torus knot num components
+geometry torus knot q
+geometry torus knot p
+geometry torus knot minor radius
+geometry torus knot major radius
+geometry torus knot num points
+geometry fast cross 3d x y
+geometry calculate normals rr tris
+geometry resize image shape kind
+geometry isosurface data level
+geometry polygon data faces
+geometry polygon data faces f
+geometry polygon data vertices
+geometry polygon data vertices v
+geometry polygon data edges
+geometry polygon data edges e
+geometry polygon data convex hull
+geometry polygon data triangulate
+geometry polygon data add vertex vertex
+geometry isocurve data level connected extend_to_edge
+color get color names
+color get color dict
+color vector or scalar x type
+color vector x type
+color normalize x cmin cmax clip
+color mix simple a b x
+color smoothstep edge0 edge1 x
+color glsl mix controls
+color process glsl template template colors
+color base colormap map item
+color default controls ncolors
+color colormap interpolation
+color colormap map x
+color cube helix colormap init start rot gamma reverse
+color get colormap name
+color get colormaps
+color string to rgb color
+color user to rgba color expand clip
+color array clip val val
+color color array copy
+color color array name cls
+color color array extend colors
+color color array rgba
+color color array rgba val
+color color array rgb
+color color array rgb val
+color color array alpha
+color color array alpha val
+color color array hex
+color color array hex val
+color color array hsv
+color color array hsv val
+color color array value
+color color array value val
+color color array lighter dv copy
+color color array darker dv copy
+color color init color alpha clip
+color color is blank
+color check color dim val
+color hex to rgba hexs
+color rgb to hex rgbs
+color rgb to hsv rgbs
+color hsv to rgb hsvs
+color lab to rgb labs
+visuals mesh visual set data vertices faces vertex_colors face_colors
+visuals mesh visual mode
+visuals mesh visual mesh data
+visuals mesh visual color
+visuals mesh visual shading
+visuals regular polygon visual sides
+visuals frenet frames points closed
+visuals spectrogram visual freqs
+visuals axis visual vec
+visuals ticker tile ticks frac tickvec
+visuals ticker get tick frac labels
+visuals max nlocator init nbins steps trim integer
+visuals sphere visual mesh
+visuals sphere visual border
+visuals iso mesh line vertices tris vertex_data levels
+visuals isoline visual levels
+visuals isoline visual data
+visuals isoline visual set data vertices tris data
+visuals isoline visual set color color
+visuals isoline visual compute iso color
+visuals volume visual set data vol clim
+visuals volume visual clim
+visuals volume visual method
+visuals volume visual threshold
+visuals volume visual relative step size
+visuals volume visual create vertex data
+visuals rectangle visual center
+visuals rectangle visual center center
+visuals rectangle visual height
+visuals rectangle visual width
+visuals rectangle visual radius
+visuals base visual get transform map_from map_to
+visuals base visual view
+visuals base visual attach filt view
+visuals base visual detach filt view
+visuals base visual bounds axis view
+visuals base visual update
+visuals visual set gl state preset
+visuals visual update gl state
+visuals visual compute bounds axis view
+visuals visual prepare draw view
+visuals visual prepare transforms view
+visuals visual get hook shader name
+visuals visual attach filt view
+visuals visual detach filt view
+visuals compound visual add subvisual visual
+visuals compound visual remove subvisual visual
+visuals compound visual draw
+visuals compound visual set gl state preset
+visuals compound visual update gl state
+visuals compound visual attach filt view
+visuals compound visual detach filt view
+visuals linear region visual set data pos color
+visuals linear region visual compute bounds axis view
+visuals linear region visual prepare draw view
+visuals surface plot visual set data x y z colors
+visuals isosurface visual level
+visuals isosurface visual set data data vertex_colors face_colors color
+visuals cube visual mesh
+visuals cube visual border
+visuals polygon visual pos
+visuals polygon visual color
+visuals polygon visual border color
+visuals polygon visual mesh
+visuals polygon visual border
+visuals border visual visual border width
+visuals border visual border width
+visuals border visual border color
+visuals border visual pos
+visuals border visual halfdim
+visuals line plot visual set data data
+visuals markers visual set data pos symbol size edge_width
+visuals core color bar visual update
+visuals core color bar visual cmap
+visuals color bar visual update
+visuals color bar visual update positions
+visuals color bar visual calc positions center halfdim border_width orientation
+visuals color bar visual pos
+visuals color bar visual cmap
+visuals color bar visual clim
+visuals color bar visual label
+visuals color bar visual ticks
+visuals color bar visual border width
+visuals color bar visual border color
+visuals color bar visual orientation
+visuals color bar visual size
+visuals image visual set data image
+visuals image visual build interpolation
+visuals image visual build vertex data
+visuals image visual update method view
+visuals scrolling lines visual set pos offset po
+visuals scrolling lines visual set color color
+visuals scrolling lines visual roll data data
+visuals scrolling lines visual set data index data
+visuals box visual mesh
+visuals box visual border
+visuals infinite line visual set data pos color
+visuals infinite line visual compute bounds axis view
+visuals infinite line visual prepare draw view
+visuals isocurve visual levels
+visuals isocurve visual set data data
+visuals isocurve visual get verts and connect paths
+visuals isocurve visual compute iso line
+visuals isocurve visual compute iso color
+visuals ellipse visual center
+visuals ellipse visual center center
+visuals ellipse visual radius
+visuals ellipse visual start angle
+visuals ellipse visual span angle
+visuals ellipse visual num segments
+visuals grid mesh visual set data xs ys zs colors
+visuals filters picking filter color
+visuals filters clipper bounds
+visuals filters clipper transform
+visuals shaders modular program build if needed
+visuals shaders compiler getitem item
+visuals shaders compiler compile pretty
+visuals shaders compiler rename objects fast
+visuals shaders compiler rename objects pretty
+visuals shaders compiler is global obj
+visuals shaders compiler name available obj name shaders
+visuals shaders compiler assign name obj name shaders
+visuals shaders multi program add program name
+visuals shaders multi program vert
+visuals shaders multi program frag
+visuals shaders multi shader new program p
+visuals shaders shader object create obj ref
+visuals shaders shader object name
+visuals shaders shader object definition obj_names
+visuals shaders shader object expression obj_names
+visuals shaders shader object dependencies sort
+visuals shaders shader object static names
+visuals shaders shader object add dep dep
+visuals shaders shader object remove dep dep
+visuals shaders shader object dep changed dep code_changed value_changed
+visuals shaders shader object changed code_changed value_changed
+visuals shaders shader object compile
+visuals shaders variable name
+visuals shaders variable vtype
+visuals shaders variable dtype
+visuals shaders variable value
+visuals shaders variable state id
+visuals shaders varying value
+visuals shaders varying link var
+visuals shaders parse function signature code
+visuals shaders find functions code
+visuals shaders find prototypes code
+visuals shaders find program variables code
+visuals shaders find template variables code
+visuals shaders function setitem key val
+visuals shaders function getitem key
+visuals shaders function call
+visuals shaders function name
+visuals shaders function args
+visuals shaders function rtype
+visuals shaders function code
+visuals shaders function replace str1 str2
+visuals shaders function parse template vars
+visuals shaders function get replaced code names
+visuals shaders function clean code code
+visuals shaders main function add chain var
+visuals shaders function chain append function update
+visuals shaders function chain insert index function update
+visuals shaders function chain remove function update
+visuals shaders statement list add item position
+visuals shaders statement list remove item
+visuals collections array list init data itemsize dtype sizeable
+visuals collections array list data
+visuals collections array list size
+visuals collections array list itemsize
+visuals collections array list dtype
+visuals collections array list reserve capacity
+visuals collections array list len
+visuals collections array list getitem key
+visuals collections array list setitem key data
+visuals collections array list delitem key
+visuals collections array list insert index data itemsize
+visuals collections array list append data itemsize
+visuals collections agg path collection init user_dtype transform vertex fragment
+visuals collections agg path collection append p closed itemsize
+visuals collections dtype reduce dtype level depth
+visuals collections fetchcode utype prefix
+visuals collections agg segment collection init user_dtype transform vertex fragment
+visuals collections agg segment collection append p0 p1 itemsize
+visuals collections next power of 2 n
+visuals collections item init parent key vertices indices
+visuals collections item getitem key
+visuals collections item setitem key value
+visuals collections base collection len
+visuals collections base collection delitem index
+visuals collections base collection setitem key data
+visuals collections base collection compute texture shape size
+visuals collections base collection update
+visuals collections agg point collection init user_dtype transform vertex fragment
+visuals collections raw triangle collection append points indices
+visuals collections raw path collection init user_dtype transform vertex fragment
+visuals collections raw path collection append p closed itemsize
+visuals collections agg fast path collection init user_dtype transform vertex fragment
+visuals collections agg fast path collection append p closed itemsize
+visuals collections agg fast path collection bake p key closed itemsize
+visuals collections raw polygon collection append points
+visuals collections collection view transform viewport
+visuals collections raw point collection init user_dtype transform vertex fragment
+visuals collections raw point collection append p itemsize
+visuals collections raw segment collection init user_dtype transform vertex fragment
+visuals collections raw segment collection append p0 p1 itemsize
+visuals graphs straight line vertices adjacency_mat node_coords directed
+visuals graphs rescale layout pos scale
+visuals graphs graph visual set data adjacency_mat
+visuals graphs layouts circular adjacency_mat directed
+visuals graphs layouts random adjacency_mat directed random_state
+visuals graphs layouts fruchterman reingold call adjacency_mat directed
+visuals graphs layouts calculate delta pos adjacency_arr pos t optimal
+visuals graphs layouts get layout name
+visuals line line visual method
+visuals line line visual set data pos color width connect
+visuals line line visual compute bounds axis view
+visuals line agg line visual agg bake cls vertices color closed
+visuals line arrow visual set data pos color width connect
+visuals transforms arg to array func
+visuals transforms as vec4 obj default
+visuals transforms arg to vec4 func self_ arg
+visuals transforms transform cache get path
+visuals transforms transform cache roll
+visuals transforms log transform base
+visuals transforms magnify transform center
+visuals transforms magnify transform mag
+visuals transforms magnify transform radii
+visuals transforms null transform map coords
+visuals transforms null transform imap coords
+visuals transforms sttransform map coords
+visuals transforms sttransform imap coords
+visuals transforms sttransform move move
+visuals transforms sttransform zoom zoom center mapped
+visuals transforms sttransform from mapping cls x0 x1
+visuals transforms sttransform set mapping x0 x1 update
+visuals transforms matrix transform map coords
+visuals transforms matrix transform imap coords
+visuals transforms matrix transform translate pos
+visuals transforms matrix transform scale scale center
+visuals transforms matrix transform rotate angle axis
+visuals transforms matrix transform set mapping points1 points2
+visuals transforms matrix transform set ortho l r b t
+visuals transforms matrix transform set perspective fov aspect near far
+visuals transforms matrix transform set frustum l r b t
+visuals transforms chain transform transforms
+visuals transforms chain transform simplified
+visuals transforms chain transform map coords
+visuals transforms chain transform imap coords
+visuals transforms chain transform append tr
+visuals transforms chain transform prepend tr
+visuals transforms chain transform subtr changed ev
+visuals transforms simplified chain transform source changed event
+visuals transforms base transform map obj
+visuals transforms base transform imap obj
+visuals transforms base transform inverse
+visuals transforms base transform dynamic
+visuals transforms base transform shader map
+visuals transforms base transform shader object
+visuals transforms base transform update
+visuals transforms base transform mul tr
+visuals transforms pan zoom transform attach canvas
+visuals transforms pan zoom transform on resize event
+visuals transforms pan zoom transform on mouse move event
+visuals transforms pan zoom transform on mouse wheel event
+visuals transforms transform system configure viewport fbo_size fbo_rect canvas
+visuals transforms transform system canvas
+visuals transforms transform system dpi
+visuals transforms transform system visual transform
+visuals transforms transform system scene transform
+visuals transforms transform system document transform
+visuals transforms transform system canvas transform
+visuals transforms transform system framebuffer transform
+visuals transforms transform system get transform map_from map_to
+visuals text sdfrenderer render to texture data texture offset size
+visuals text sdfrenderer render edf orig_tex
+visuals text texture font ratio
+visuals text texture font slop
+visuals text texture font load char char
+visuals text font manager get font face bold italic
+visuals text text to vbo text font anchor_x anchor_y
+visuals text text visual text
+visuals text text visual font size
+visuals text text visual color
+visuals text text visual rotation
+visuals text text visual pos
+util use app gl
+util run subprocess command return_code
+util gaussian filter data sigma
+util eq a b
+util frozen freeze
+util frozen unfreeze
+util translate offset dtype
+util scale s dtype
+util rotate angle axis dtype
+util ortho left right bottom top
+util frustum left right bottom top
+util perspective fovy aspect znear zfar
+util affine map points1 points2
+util profiler new cls msg disabled delayed
+util profiler call msg
+util profiler finish msg
+util get vispy caller
+util vispy stream handler vispy emit match andor record record
+util set log level verbose match return_old
+util log exception level tb_skip
+util handle exception ignore_callback_errors print_callback_errors obj cb_event
+util serialize buffer buffer array_serialization
+util event source
+util event sources
+util event handled
+util event blocked
+util event str
+util event emitter ignore callback errors
+util event emitter print callback errors
+util event emitter callback refs
+util event emitter callbacks
+util event emitter source
+util event emitter connect callback ref position before
+util event emitter disconnect callback
+util event emitter call
+util event emitter blocked callback
+util event emitter block callback
+util event emitter unblock callback
+util event emitter blocker callback
+util emitter group getitem name
+util emitter group setitem name emitter
+util emitter group add auto_connect
+util emitter group emitters
+util emitter group iter
+util emitter group block all
+util emitter group unblock all
+util emitter group connect callback ref position before
+util emitter group disconnect callback
+util quaternion copy
+util quaternion norm
+util quaternion normalize
+util quaternion conjugate
+util quaternion inverse
+util quaternion exp
+util quaternion log
+util quaternion mul q2
+util quaternion rotate point p
+util quaternion get matrix
+util quaternion get axis angle
+util quaternion create from axis angle cls angle ax ay
+util quaternion create from euler angles cls rx ry rz
+util load data file fname directory force_download
+util progress bar update cur_value mesg
+util progress bar update with increment value increment_value mesg
+util chunk read response local_file chunk_size initial_size
+util chunk write chunk local_file progress
+util fetch file url file_name print_destination
+util sizeof fmt num
+util stft x n_fft step fs
+util fft freqs n_fft fs
+util init
+util parse command line arguments
+util get vispy app dir
+util get config keys
+util get config fname
+util load config
+util save config
+util set data dir directory create save
+util enable profiling
+util sys info fname overwrite
+util fix osmesa gl lib
+util win time
+util unix time
+util key name
+util dpi get dpi raise_error
+util dpi get dpi from cmd pattern func
+util fonts list fonts
+util fonts get k p a font left right
+util fonts load glyph f char glyphs_dict
+util fonts get vispy font filename face bold italic
+testing assert image approved image standard_file message
+testing assert image match im1 im2 min_corr px_threshold
+testing make diff image im1 im2
+testing downsample data n axis
+testing get test data repo
+testing git status path
+testing git commit id path ref
+testing safe rep obj short
+testing safe str obj
+testing format msg msg std_msg
+testing nottest func
+testing has application backend has capable
+testing requires application backend has capable
+testing requires img lib
+testing has ipython version
+testing has matplotlib version
+testing testing canvas bgcolor size dpi decorate
+testing run tests if main
+testing unit mode extra_arg_string coverage
+testing docs
+testing check line endings
+testing examples fnames_str
+testing test label extra_arg_string coverage
+io load iris
+io load crate
+io pack unit value
+io pack ieee value
+io load spatial filters packed
+io read mesh fname
+io write mesh fname vertices faces normals
+io wavefront reader read cls fname
+io wavefront reader read line
+io wavefront reader read tuple line n
+io wavefront reader read face line
+io wavefront reader finish
+io wavefront writer write cls fname vertices faces
+io wavefront writer write line text
+io wavefront writer write tuple val what
+io wavefront writer write face val what
+io wavefront writer write mesh vertices faces normals values
+io make png data level
+io read png filename
+io write png filename data
+io imread filename format
+io imsave filename im format
+io check img lib
+app set interactive enabled app
+app vis py input hook enable app
+app use app backend_name call_reuse
+app create
+app run
+app quit
+app process events
+app timer app
+app timer start interval iterations
+app timer stop
+app timer native
+app timer connect callback
+app timer disconnect callback
+app base canvas backend process backend kwargs kwargs
+app qt canvas update
+app application backend name
+app application backend module
+app application process events
+app application sleep duration_sec
+app application create
+app application is interactive
+app application run allow_interactive
+app application reuse
+app application quit
+app application native
+app application use backend_name
+app canvas create native
+app canvas context
+app canvas app
+app canvas native
+app canvas dpi
+app canvas connect fun
+app canvas size
+app canvas physical size
+app canvas pixel scale
+app canvas position
+app canvas title
+app canvas fps
+app canvas set current event
+app canvas swap buffers event
+app canvas show visible run
+app canvas update event
+app canvas close
+app canvas update fps event
+app canvas measure fps window callback
+app canvas render
+app mouse event is dragging
+app mouse event drag events
+app mouse event trail
+app backends set config config
+app backends set config c
+app backends get qpoint pos pos
+app backends canvas backend egl get window id
+app backends get mods evt
+app backends process key evt
+app backends extract buffers commands
+app backends serialize item item
+app backends serialize command command_modified
+app backends create glir message commands array_serialization
+app backends canvas backend process mod key down
+app backends ipython stop timers canvas
+plot plot widget histogram data bins color orientation
+plot plot widget image data cmap clim fg_color
+plot plot widget mesh vertices faces vertex_colors face_colors
+plot plot widget plot data color symbol line_kind
+plot plot widget spectrogram x n_fft step fs
+plot plot widget volume vol clim method threshold
+plot plot widget surface zdata
+plot plot widget colorbar cmap position label clim
+plot fig plot widgets
+plot fig getitem idxs
+glsl find name
+glsl get name
+glsl spatial filter weight x
+glsl bessel besj x n
+gloo as enum enum
+gloo glir queue share command
+gloo glir queue share set verbose verbose
+gloo glir queue share show filter
+gloo glir queue share clear
+gloo glir queue share flush parser
+gloo glir queue share filter commands parser
+gloo glir queue command
+gloo glir queue set verbose verbose
+gloo glir queue clear
+gloo glir queue associate queue
+gloo glir queue flush parser
+gloo convert shaders convert shaders
+gloo as es2 command command
+gloo base glir parser is remote
+gloo base glir parser convert shaders
+gloo base glir parser parse commands
+gloo glir parser parse command
+gloo glir parser parse commands
+gloo glir parser get object id_
+gloo glir parser gl initialize
+gloo glir program activate
+gloo glir program deactivate
+gloo glir program set shaders vert frag
+gloo glir program get active attributes and uniforms
+gloo glir program parse error error
+gloo glir program get error code errors indentation
+gloo glir program set texture name value
+gloo glir program set uniform name type_ value
+gloo glir program set attribute name type_ value
+gloo glir program draw mode selection
+gloo glir texture get alignment width
+gloo check pyopengl 3d
+gloo program set shaders vert frag
+gloo program shaders
+gloo program variables
+gloo program parse variables from code
+gloo program bind data
+gloo program process pending variables
+gloo program setitem name data
+gloo program getitem name
+gloo program draw mode indices check_error
+gloo get current canvas
+gloo check valid key val valid
+gloo to args x
+gloo check conversion key valid_dict
+gloo base gloo functions set viewport
+gloo base gloo functions set depth range near far
+gloo base gloo functions set front face mode
+gloo base gloo functions set cull face mode
+gloo base gloo functions set line width width
+gloo base gloo functions set polygon offset factor units
+gloo base gloo functions clear color depth stencil
+gloo base gloo functions set clear color color alpha
+gloo base gloo functions set clear depth depth
+gloo base gloo functions set clear stencil index
+gloo base gloo functions set blend func srgb drgb salpha dalpha
+gloo base gloo functions set blend color color
+gloo base gloo functions set blend equation mode_rgb mode_alpha
+gloo base gloo functions set scissor x y w h
+gloo base gloo functions set stencil func func ref mask face
+gloo base gloo functions set stencil mask mask face
+gloo base gloo functions set stencil op sfail dpfail dppass face
+gloo base gloo functions set depth func func
+gloo base gloo functions set depth mask flag
+gloo base gloo functions set color mask red green blue alpha
+gloo base gloo functions set sample coverage value invert
+gloo base gloo functions get state presets
+gloo base gloo functions set state preset
+gloo base gloo functions finish
+gloo base gloo functions flush
+gloo base gloo functions set hint target mode
+gloo gloo functions glir
+gloo read pixels viewport alpha out_type
+gloo get gl configuration
+gloo screenshot viewport alpha
+gloo check variable name
+gloo check enum enum name valid
+gloo draw texture tex
+gloo render buffer resize shape format
+gloo frame buffer activate
+gloo frame buffer deactivate
+gloo frame buffer color buffer
+gloo frame buffer depth buffer
+gloo frame buffer stencil buffer
+gloo frame buffer shape
+gloo frame buffer resize shape
+gloo frame buffer read mode alpha
+gloo buffer nbytes
+gloo buffer set subdata data offset copy
+gloo buffer set data data copy
+gloo buffer resize bytes size
+gloo data buffer set subdata data offset copy
+gloo data buffer set data data copy
+gloo data buffer offset
+gloo data buffer stride
+gloo data buffer size
+gloo data buffer itemsize
+gloo data buffer glsl type
+gloo data buffer resize bytes size
+gloo data buffer getitem key
+gloo data buffer setitem key data
+gloo data buffer view offset
+gloo data buffer view base
+gloo last stack str
+gloo remove comments code
+gloo merge includes code
+gloo preprocess code
+gloo globject init
+gloo globject delete
+gloo globject id
+gloo globject glir
+gloo get default config
+gloo set current canvas canvas
+gloo forget canvas canvas
+gloo glcontext create shared name ref
+gloo glcontext config
+gloo glcontext glir
+gloo glcontext shared
+gloo glcontext capabilities
+gloo glshared parser
+gloo glshared add ref name ref
+gloo glshared name
+gloo glshared ref
+gloo fake canvas flush
+gloo base texture shape
+gloo base texture format
+gloo base texture wrapping
+gloo base texture interpolation
+gloo base texture resize shape format internalformat
+gloo base texture set data data offset copy
+gloo base texture setitem key data
+gloo texture1d glsl type
+gloo texture1d glsl sampler type
+gloo texture1d glsl sample
+gloo texture2d glsl type
+gloo texture2d glsl sampler type
+gloo texture2d glsl sample
+gloo texture3d glsl type
+gloo texture3d glsl sampler type
+gloo texture3d glsl sample
+gloo texture emulated3d set data data offset copy
+gloo texture emulated3d resize shape format internalformat
+gloo texture emulated3d shape
+gloo texture emulated3d glsl sample
+gloo texture atlas get free region width height
+gloo texture atlas fit index width height
+gloo gl gl buffer data target data usage
+gloo gl patch
+gloo gl get function from pyopengl funcname
+gloo gl inject
+gloo gl debug proxy arg repr arg
+gloo gl use gl target
+gloo gl clear namespace
+gloo gl copy gl functions source dest constants
+gloo gl check error when
+gloo gl fix osmesa gl lib if testing
+gloo gl get gl version _lib
+scene visual node set clipper node clipper
+scene visual node picking
+scene visual node update trsys event
+scene visual node interactive
+scene scene mouse event pos
+scene scene mouse event last event
+scene scene mouse event press event
+scene scene mouse event button
+scene scene mouse event buttons
+scene scene mouse event delta
+scene node visible
+scene node set clipper node clipper
+scene node clip children
+scene node clipper
+scene node order
+scene node children
+scene node parent
+scene node on parent change event
+scene node is child node
+scene node canvas
+scene node document node
+scene node scene node
+scene node update
+scene node document
+scene node transform
+scene node set transform type_
+scene node update trsys event
+scene node parent chain
+scene node describe tree with_transform
+scene node describe tree prefix with_transform
+scene node common parent node
+scene node node path to child node
+scene node node path node
+scene node node path transforms node
+scene node node transform node
+scene node picking
+scene scene canvas scene
+scene scene canvas central widget
+scene scene canvas update node
+scene scene canvas on draw event
+scene scene canvas render region size bgcolor
+scene scene canvas draw visual visual event
+scene scene canvas generate draw order node
+scene scene canvas update scenegraph event
+scene scene canvas visual at pos
+scene scene canvas visual bounds at pos node
+scene scene canvas visuals at pos radius
+scene scene canvas render picking
+scene scene canvas on resize event
+scene scene canvas on close event
+scene scene canvas push viewport viewport
+scene scene canvas pop viewport
+scene scene canvas push fbo fbo offset csize
+scene scene canvas pop fbo
+scene scene canvas current framebuffer
+scene scene canvas update transforms
+scene cameras pan zoom camera aspect
+scene cameras pan zoom camera zoom factor center
+scene cameras pan zoom camera pan
+scene cameras pan zoom camera rect
+scene cameras pan zoom camera viewbox resize event event
+scene cameras pan zoom camera viewbox mouse event event
+scene cameras make camera cam_type
+scene cameras fly camera rotation
+scene cameras fly camera auto roll
+scene cameras fly camera keymap
+scene cameras fly camera set range init
+scene cameras fly camera on timer event
+scene cameras fly camera viewbox key event event
+scene cameras fly camera viewbox mouse event event
+scene cameras perspective camera viewbox mouse event event
+scene cameras perspective camera scale factor
+scene cameras perspective camera near clip distance
+scene cameras perspective camera set range init
+scene cameras perspective camera viewbox resize event event
+scene cameras base3drotation camera distance
+scene cameras base3drotation camera viewbox mouse event event
+scene cameras base3drotation camera update camera pos
+scene cameras base3drotation camera update rotation event
+scene cameras base3drotation camera rotate tr
+scene cameras base3drotation camera dist to trans dist
+scene cameras arcball camera update rotation event
+scene cameras arcball camera rotate tr
+scene cameras arcball camera dist to trans dist
+scene cameras arcball xy wh
+scene cameras turntable camera elevation
+scene cameras turntable camera azimuth
+scene cameras turntable camera roll
+scene cameras turntable camera orbit azim elev
+scene cameras turntable camera update rotation event
+scene cameras turntable camera rotate tr
+scene cameras turntable camera dist to trans dist
+scene cameras magnify camera viewbox mouse event event
+scene cameras magnify camera on timer event
+scene cameras magnify camera viewbox resize event event
+scene cameras base camera depth value
+scene cameras base camera depth to z depth
+scene cameras base camera viewbox set viewbox
+scene cameras base camera viewbox unset viewbox
+scene cameras base camera viewbox
+scene cameras base camera interactive
+scene cameras base camera up
+scene cameras base camera center
+scene cameras base camera fov
+scene cameras base camera set range x y z margin
+scene cameras base camera reset
+scene cameras base camera set default state
+scene cameras base camera get state
+scene cameras base camera set state state
+scene cameras base camera link camera
+scene cameras base camera view changed
+scene cameras base camera pre transform
+scene cameras base camera viewbox mouse event event
+scene cameras base camera on canvas change event
+scene cameras base camera viewbox key event event
+scene cameras base camera viewbox resize event event
+scene cameras base camera update transform
+scene cameras base camera set scene transform tr
+scene widgets console on resize event
+scene widgets console clear
+scene widgets console write text wrap
+scene widgets console text color
+scene widgets console font size
+scene widgets console visual text color
+scene widgets console visual font size
+scene widgets console visual resize buffers font_scale
+scene widgets console visual clear
+scene widgets console visual write text wrap
+scene widgets console visual do pending writes
+scene widgets console visual insert text buf line idx
+scene widgets axis widget on resize event
+scene widgets axis widget link view view
+scene widgets axis widget view changed event
+scene widgets label on resize event
+scene widgets widget size
+scene widgets widget width
+scene widgets widget width min
+scene widgets widget width min width_min
+scene widgets widget width max
+scene widgets widget width max width_max
+scene widgets widget height
+scene widgets widget height min
+scene widgets widget height min height_min
+scene widgets widget height max
+scene widgets widget height max height_max
+scene widgets widget inner rect
+scene widgets widget stretch
+scene widgets widget update clipper
+scene widgets widget border color
+scene widgets widget bgcolor
+scene widgets widget update line
+scene widgets widget add widget widget
+scene widgets widget add grid
+scene widgets widget add view
+scene widgets widget remove widget widget
+scene widgets color bar widget on resize event
+scene widgets color bar widget calc size
+scene widgets color bar widget border color
+scene widgets color bar widget border width
+scene widgets grid getitem idxs
+scene widgets grid add widget widget row col row_span
+scene widgets grid remove widget widget
+scene widgets grid resize widget widget row_span col_span
+scene widgets grid add grid row col row_span col_span
+scene widgets grid add view row col row_span col_span
+scene widgets view box camera
+scene widgets view box is in scene node
+scene widgets view box get scene bounds dim
+scene widgets view box scene
+scene widgets view box add node
+scene widgets view box on resize event
+ipython load ipython extension ipython
+ipython load webgl backend ipython
+ipython unload ipython extension ipython
+ext list fonts
+ext stdin ready posix
+ext stdin ready nt
+ext stdin ready other
+ext ignore ctrl c posix
+ext allow ctrl c posix
+ext ignore ctrl c other
+ext allow ctrl c other
+ext input hook manager get pyos inputhook
+ext input hook manager get pyos inputhook as func
+ext input hook manager set inputhook callback
+ext input hook manager clear inputhook app
+ext input hook manager clear app refs gui
+ext input hook manager register toolkitname
+ext input hook manager current gui
+ext input hook manager enable gui gui app
+ext input hook manager disable gui
+ext allocate pixels buffer width height
+ext cubehelix start rot gamma reverse
+ext egl get error
+ext egl get display display
+ext egl initialize display
+ext egl terminate display
+ext egl query string display name
+ext obj cmethod ctype for encoding encoding
+ext obj csubclass classmethod encoding
+ext get nsstring string
+ext cfnumber to number cfnumber
+ext cftype to value cftype
+ext cfset to set cfset
+ext cfarray to list cfarray
+ext find module name path
+ext _bundled function maker update func
+ext _bundled function maker make src_templ evaldict addsource
+ext _bundled function maker create cls obj body evaldict
+ext _bundled decorator caller func
+ext _bundled call func
+ext _bundled get handle
+ext _bundled version
+ext _bundled ordered dict init
+ext _bundled ordered dict setitem key value dict_setitem
+ext _bundled ordered dict delitem key dict_delitem
+ext _bundled ordered dict iter
+ext _bundled ordered dict reversed
+ext _bundled ordered dict clear
+ext _bundled ordered dict popitem last
+ext _bundled ordered dict keys
+ext _bundled ordered dict values
+ext _bundled ordered dict items
+ext _bundled ordered dict iterkeys
+ext _bundled ordered dict itervalues
+ext _bundled ordered dict iteritems
+ext _bundled ordered dict update
+ext _bundled ordered dict pop key default
+ext _bundled ordered dict setdefault key default
+ext _bundled ordered dict repr _repr_running
+ext _bundled ordered dict reduce
+ext _bundled ordered dict copy
+ext _bundled ordered dict fromkeys cls iterable value
+ext _bundled ordered dict eq other
+ext _bundled ordered dict viewkeys
+ext _bundled ordered dict viewvalues
+ext _bundled ordered dict viewitems
+ext _bundled isarray x
+ext _bundled tostring row
+ext _bundled interleave planes ipixels apixels ipsize apsize
+ext _bundled check palette palette
+ext _bundled check sizes size width height
+ext _bundled check color c greyscale which
+ext _bundled writer init width height size greyscale
+ext _bundled writer make palette
+ext _bundled writer write outfile rows
+ext _bundled writer write passes outfile rows packed
+ext _bundled writer write array outfile pixels
+ext _bundled writer write packed outfile rows
+ext _bundled writer convert pnm infile outfile
+ext _bundled writer convert ppm and pgm ppmfile pgmfile outfile
+ext _bundled writer file scanlines infile
+ext _bundled writer array scanlines pixels
+ext _bundled writer array scanlines interlace pixels
+ext _bundled write chunk outfile tag data
+ext _bundled write chunks out chunks
+ext _bundled filter scanline type line fo prev
+ext _bundled from array a mode info
+ext _bundled image save file
+ext _bundled reader init _guess
+ext _bundled reader chunk seek lenient
+ext _bundled reader chunks
+ext _bundled reader undo filter filter_type scanline previous
+ext _bundled reader deinterlace raw
+ext _bundled reader iterboxed rows
+ext _bundled reader serialtoflat bytes width
+ext _bundled reader iterstraight raw
+ext _bundled reader validate signature
+ext _bundled reader preamble lenient
+ext _bundled reader chunklentype
+ext _bundled reader process chunk lenient
+ext _bundled reader read lenient
+ext _bundled reader read flat
+ext _bundled reader palette alpha
+ext _bundled reader as direct
+ext _bundled reader as float maxval
+ext _bundled reader as rescale get targetbitdepth
+ext _bundled reader as rgb8
+ext _bundled reader as rgba8
+ext _bundled reader as rgb
+ext _bundled reader as rgba
+ext _bundled check bitdepth colortype bitdepth colortype
+ext _bundled pngfilters undo filter sub filter_unit scanline previous result
+ext _bundled pngfilters undo filter up filter_unit scanline previous result
+ext _bundled pngfilters undo filter average filter_unit scanline previous result
+ext _bundled pngfilters undo filter paeth filter_unit scanline previous result
+ext _bundled pngfilters convert l to rgba row result
+ext _bundled pngfilters convert rgb to rgba row result
+ext _bundled add doc func doc
+ext _bundled import module name
+ext _bundled six meta path importer is package fullname
+ext _bundled add move move
+ext _bundled remove move name
+ext _bundled with metaclass meta
+ext _bundled add metaclass metaclass
+ext _bundled cassowary constraint init param1 operator param2 strength
+ext _bundled cassowary approx equal a b epsilon
+ext _bundled cassowary repr strength strength
