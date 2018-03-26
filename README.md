@@ -7,6 +7,9 @@ experiments of Richardson and Kuhn ACL 2017, and EMNLP 2017 (see citations below
 What's included 
 --------------------------
 
+UPDATED 26.3.2018 : under /other\_data you will find polyglot\_data,
+which was used for a forthcoming NAACL paper (see references below).  
+
 All of the current ACL data is included in data/. The EMNLP data is
 included in other_data/py27.
 
@@ -67,7 +70,21 @@ here: https://github.com/yakazimir/zubr_public
 References
 ---------------------------
 
-If you use  these resources, please cite the following (the
+If you use the polyglot data, please cite the following:
+
+```
+
+@inproceedings{richardson-berant:2018,
+  author    = {Richardson, Kyle  and Berant, Jonathan and  Kuhn, Jonas},
+  title     = {Polyglot {S}emantic {P}arsing in {API}s},
+  booktitle = {Proceedings of NAACL (to appear)},
+  year      = {2018},
+  url={https://arxiv.org/abs/1803.06966},
+  }
+
+```
+
+If you use other resources, please cite the following (the
 second one if you use the Py27 dataset or our extractor tool): 
 
 ```
