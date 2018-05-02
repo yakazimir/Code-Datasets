@@ -48,6 +48,24 @@ The zipped files in the uppder directory (``acl_emnlp.zip``) includes files used
 previous experiments using the ``Zubr`` toolkit. Please see the
 following to learn more: https://github.com/yakazimir/zubr_public
 
+Alternative Signature Formats
+--------------------------
+
+Recently, we've been thinking about normalizing the function signature
+representations and mapping them into logical representations. Details
+of this can be found in a brief technical report
+here[https://arxiv.org/abs/1804.00987]:
+
+To facillitate the ideas in this note, we have a simple script in
+``bin/`` for converting signatures to alternative representations. For
+example, typing the following
+
+    python bin/formatter.py --data_loc
+    other_data/py27/nltk/rank_list_orig.txt --format lisp
+
+will convert the NLTK target representations (provided in a tabular
+format) to a lisp-like FOL representation. 
+
 Code retrieval and Question Answering, Text Generation
 --------------------------
 
