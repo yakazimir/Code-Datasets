@@ -28,4 +28,6 @@ Please keep track of any changes to the data or to this repository so that such 
   - added the polyglot datasets for recent NAACL experiments
 
 ## 2018-2-5 
-  - added the tabulated/original signature representations for the py27 datasets 
+  - added the tabulated/original signature representations for the py27 datasets
+  - added bin/formatter.py for formatting the signature
+    representations 
