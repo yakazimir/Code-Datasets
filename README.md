@@ -73,7 +73,6 @@ References
 If you use the polyglot data, please cite the following:
 
 ```
-
 @inproceedings{richardson-berant:2018,
   author    = {Richardson, Kyle  and Berant, Jonathan and  Kuhn, Jonas},
   title     = {Polyglot {S}emantic {P}arsing in {API}s},

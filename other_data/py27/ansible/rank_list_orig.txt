@@ -1,0 +1,1900 @@
+ansible	core		UNK	shell_expand	UNK=path UNK=expand_relative_paths
+ansible	core		UNK	_get_config	UNK=p UNK=section UNK=key UNK=env_var
+ansible	core		UNK	load_config_file	void
+ansible	inventory	InventoryScript	UNK	get_host_variables	UNK=host
+ansible	inventory		UNK	detect_range	UNK=line
+ansible	inventory		UNK	expand_hostname_range	UNK=line
+ansible	inventory	InventoryDirectory	UNK	_add_group	UNK=group
+ansible	inventory	InventoryDirectory	UNK	_merge_groups	UNK=group UNK=newgroup
+ansible	inventory	InventoryDirectory	UNK	_merge_hosts	UNK=host UNK=newhost
+ansible	inventory	InventoryDirectory	UNK	get_host_variables	UNK=host
+ansible	inventory	InventoryParser	UNK	_parse	UNK=lines
+ansible	inventory	InventoryParser	UNK	_parse_group_name	UNK=line
+ansible	inventory	InventoryParser	UNK	_parse_variable_definition	UNK=line
+ansible	inventory	InventoryParser	UNK	_parse_host_definition	UNK=line
+ansible	inventory	InventoryParser	UNK	_expand_hostpattern	UNK=hostpattern
+ansible	inventory	InventoryParser	UNK	_Hosts	UNK=hostnames UNK=port
+ansible	inventory	InventoryParser	UNK	_parse_value	UNK=v
+ansible	inventory	InventoryParser	UNK	_compile_patterns	void
+ansible	inventory	InventoryParser	UNK	_parse	UNK=data
+ansible	inventory	InventoryParser	UNK	_parse_host	UNK=host_pattern UNK=host_data
+ansible	inventory	Inventory	UNK	get_hosts	UNK=pattern UNK=ignore_limits UNK=ignore_restrictions UNK=order
+ansible	inventory	Inventory	UNK	split_host_pattern	UNK=cls UNK=pattern
+ansible	inventory	Inventory	UNK	_evaluate_patterns	UNK=patterns
+ansible	inventory	Inventory	UNK	_match_one_pattern	UNK=pattern
+ansible	inventory	Inventory	UNK	_split_subscript	UNK=pattern
+ansible	inventory	Inventory	UNK	_apply_subscript	UNK=hosts UNK=subscript
+ansible	inventory	Inventory	UNK	_enumerate_matches	UNK=pattern
+ansible	inventory	Inventory	UNK	clear_pattern_cache	void
+ansible	inventory	Inventory	UNK	clear_group_dict_cache	void
+ansible	inventory	Inventory	UNK	get_group_dict	void
+ansible	inventory	Inventory	UNK	list_hosts	UNK=pattern
+ansible	inventory	Inventory	UNK	restrict_to_hosts	UNK=restriction
+ansible	inventory	Inventory	UNK	subset	UNK=subset_pattern
+ansible	inventory	Inventory	UNK	remove_restriction	void
+ansible	inventory	Inventory	UNK	is_file	void
+ansible	inventory	Inventory	UNK	is_directory	UNK=path
+ansible	inventory	Inventory	UNK	basedir	void
+ansible	inventory	Inventory	UNK	src	void
+ansible	inventory	Inventory	UNK	playbook_basedir	void
+ansible	inventory	Inventory	UNK	set_playbook_basedir	UNK=dir_name
+ansible	inventory	Inventory	UNK	get_host_vars	UNK=host UNK=new_pb_basedir UNK=return_results
+ansible	inventory	Inventory	UNK	get_group_vars	UNK=group UNK=new_pb_basedir UNK=return_results
+ansible	inventory	Inventory	UNK	_find_group_vars_files	UNK=basedir
+ansible	inventory	Inventory	UNK	_find_host_vars_files	UNK=basedir
+ansible	inventory	Inventory	UNK	_get_hostgroup_vars	UNK=host UNK=group UNK=new_pb_basedir UNK=return_results
+ansible	inventory.vars_plugins	VarsModule	UNK	run	UNK=host UNK=vault_password
+ansible	inventory.vars_plugins	VarsModule	UNK	get_host_vars	UNK=host UNK=vault_password
+ansible	inventory.vars_plugins	VarsModule	UNK	get_group_vars	UNK=group UNK=vault_password
+ansible	cli	ConsoleCLI	UNK	default	UNK=arg UNK=forceshell
+ansible	cli	ConsoleCLI	UNK	do_shell	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_forks	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_verbosity	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_cd	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_list	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_become	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_remote_user	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_become_user	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_become_method	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_check	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_diff	UNK=arg
+ansible	cli	ConsoleCLI	UNK	do_exit	UNK=args
+ansible	cli	VaultCLI	UNK	execute_encrypt	void
+ansible	cli	VaultCLI	UNK	execute_encrypt_string	void
+ansible	cli	VaultCLI	UNK	execute_decrypt	void
+ansible	cli	VaultCLI	UNK	execute_create	void
+ansible	cli	VaultCLI	UNK	execute_edit	void
+ansible	cli	VaultCLI	UNK	execute_view	void
+ansible	cli	VaultCLI	UNK	execute_rekey	void
+ansible	cli	AdHocCLI	UNK	parse	void
+ansible	cli	AdHocCLI	UNK	run	void
+ansible	cli	DocCLI	UNK	print_paths	UNK=finder
+ansible	cli	PullCLI	UNK	parse	void
+ansible	cli	PullCLI	UNK	run	void
+ansible	cli	CLI	UNK	__init__	UNK=args UNK=callback
+ansible	cli	CLI	UNK	set_action	void
+ansible	cli	CLI	UNK	execute	void
+ansible	cli	CLI	UNK	run	void
+ansible	cli	CLI	UNK	ask_vault_passwords	void
+ansible	cli	CLI	UNK	ask_passwords	void
+ansible	cli	CLI	UNK	normalize_become_options	void
+ansible	cli	CLI	UNK	validate_conflicts	UNK=vault_opts UNK=runas_opts UNK=fork_opts
+ansible	cli	CLI	UNK	expand_paths	UNK=option UNK=opt UNK=value UNK=parser
+ansible	cli	CLI	UNK	base_parser	UNK=usage UNK=output_opts UNK=runas_opts UNK=meta_opts
+ansible	cli	CLI	UNK	parse	void
+ansible	cli	CLI	UNK	version	UNK=prog
+ansible	cli	CLI	UNK	version_info	UNK=gitinfo
+ansible	cli	CLI	UNK	_git_repo_info	UNK=repo_path
+ansible	cli	CLI	UNK	pager	UNK=text
+ansible	cli	CLI	UNK	pager_pipe	UNK=text UNK=cmd
+ansible	cli	CLI	UNK	read_vault_password_file	UNK=vault_password_file UNK=loader
+ansible	cli	CLI	UNK	get_opt	UNK=k UNK=defval
+ansible	cli	GalaxyCLI	UNK	parse	void
+ansible	cli	GalaxyCLI	UNK	exit_without_ignore	UNK=rc
+ansible	cli	GalaxyCLI	UNK	execute_init	void
+ansible	cli	GalaxyCLI	UNK	execute_info	void
+ansible	cli	GalaxyCLI	UNK	execute_install	void
+ansible	cli	GalaxyCLI	UNK	execute_remove	void
+ansible	cli	GalaxyCLI	UNK	execute_list	void
+ansible	cli	GalaxyCLI	UNK	execute_search	void
+ansible	cli	GalaxyCLI	UNK	execute_login	void
+ansible	cli	GalaxyCLI	UNK	execute_import	void
+ansible	cli	GalaxyCLI	UNK	execute_setup	void
+ansible	cli	GalaxyCLI	UNK	execute_delete	void
+ansible	plugins	PluginLoader	UNK	format_paths	UNK=paths
+ansible	plugins	PluginLoader	UNK	_get_package_paths	UNK=subdirs
+ansible	plugins	PluginLoader	UNK	_get_paths	UNK=subdirs
+ansible	plugins	PluginLoader	UNK	add_directory	UNK=directory UNK=with_subdir
+ansible	plugins	PluginLoader	UNK	find_plugin	UNK=name UNK=mod_type UNK=ignore_deprecated
+ansible	plugins	PluginLoader	UNK	has_plugin	UNK=name
+ansible	plugins	PluginLoader	UNK	get	UNK=name
+ansible	plugins	PluginLoader	UNK	all	void
+ansible	plugins.strategy	StrategyModule	UNK	run	UNK=iterator UNK=play_context
+ansible	plugins.strategy	StrategyModule	UNK	_get_next_task_lockstep	UNK=hosts UNK=iterator
+ansible	plugins.strategy	StrategyBase	UNK	add_tqm_variables	UNK=vars UNK=play
+ansible	plugins.strategy	StrategyBase	UNK	_queue_task	UNK=host UNK=task UNK=task_vars UNK=play_context
+ansible	plugins.strategy	StrategyBase	UNK	_process_pending_results	UNK=iterator UNK=one_pass UNK=max_passes
+ansible	plugins.strategy	StrategyBase	UNK	_wait_on_pending_results	UNK=iterator
+ansible	plugins.strategy	StrategyBase	UNK	_add_host	UNK=host_info UNK=iterator
+ansible	plugins.strategy	StrategyBase	UNK	_add_group	UNK=host UNK=result_item
+ansible	plugins.strategy	StrategyBase	UNK	_load_included_file	UNK=included_file UNK=iterator UNK=is_handler
+ansible	plugins.strategy	StrategyBase	UNK	run_handlers	UNK=iterator UNK=play_context
+ansible	plugins.strategy	StrategyBase	UNK	get_hosts_left	UNK=iterator
+ansible	plugins.action	ActionModule	UNK	_set_args	void
+ansible	plugins.action	ActionModule	UNK	run	UNK=tmp UNK=task_vars
+ansible	plugins.action	ActionModule	UNK	_traverse_dir_depth	void
+ansible	plugins.action	ActionModule	UNK	_ignore_file	UNK=filename
+ansible	plugins.action	ActionModule	UNK	_is_valid_file_ext	UNK=source_file
+ansible	plugins.action	ActionModule	UNK	_load_files	UNK=filename UNK=validate_extensions
+ansible	plugins.action	ActionModule	UNK	_load_files_in_dir	UNK=root_dir UNK=var_files
+ansible	plugins.action	ActionModule	UNK	_format_rsync_rsh_target	UNK=host UNK=path UNK=user
+ansible	plugins.action	ActionModule	UNK	_process_remote	UNK=task_args UNK=host UNK=path UNK=user
+ansible	plugins.action	ActionModule	UNK	_override_module_replaced_vars	UNK=task_vars
+ansible	plugins.action	ActionModule	UNK	_assemble_from_fragments	UNK=src_path UNK=delimiter UNK=compiled_regexp UNK=ignore_hidden
+ansible	plugins.action	ActionBase	UNK	run	UNK=tmp UNK=task_vars
+ansible	plugins.action	ActionBase	UNK	_configure_module	UNK=module_name UNK=module_args UNK=task_vars
+ansible	plugins.action	ActionBase	UNK	_compute_environment_string	UNK=raw_environment_out
+ansible	plugins.action	ActionBase	UNK	_early_needs_tmp_path	void
+ansible	plugins.action	ActionBase	UNK	_is_pipelining_enabled	UNK=module_style UNK=wrap_async
+ansible	plugins.action	ActionBase	UNK	_make_tmp_path	UNK=remote_user
+ansible	plugins.action	ActionBase	UNK	_should_remove_tmp_path	UNK=tmp_path
+ansible	plugins.action	ActionBase	UNK	_remove_tmp_path	UNK=tmp_path
+ansible	plugins.action	ActionBase	UNK	_transfer_data	UNK=remote_path UNK=data
+ansible	plugins.action	ActionBase	UNK	_fixup_perms	UNK=remote_path UNK=remote_user UNK=execute UNK=recursive
+ansible	plugins.action	ActionBase	UNK	_fixup_perms2	UNK=remote_paths UNK=remote_user UNK=execute
+ansible	plugins.action	ActionBase	UNK	_remote_chmod	UNK=paths UNK=mode UNK=sudoable
+ansible	plugins.action	ActionBase	UNK	_remote_chown	UNK=paths UNK=user UNK=sudoable
+ansible	plugins.action	ActionBase	UNK	_remote_set_user_facl	UNK=paths UNK=user UNK=mode UNK=sudoable
+ansible	plugins.action	ActionBase	UNK	_execute_remote_stat	UNK=path UNK=all_vars UNK=follow UNK=tmp
+ansible	plugins.action	ActionBase	UNK	_remote_checksum	UNK=path UNK=all_vars UNK=follow
+ansible	plugins.action	ActionBase	UNK	_remote_expand_user	UNK=path UNK=sudoable
+ansible	plugins.action	ActionBase	UNK	_strip_success_message	UNK=data
+ansible	plugins.action	ActionBase	UNK	_execute_module	UNK=module_name UNK=module_args UNK=tmp UNK=task_vars
+ansible	plugins.action	ActionBase	UNK	_low_level_execute_command	UNK=cmd UNK=sudoable UNK=in_data UNK=executable
+ansible	plugins.action	ActionBase	UNK	_find_needle	UNK=dirname UNK=needle
+ansible	plugins.action	ActionModule	UNK	_create_content_tempfile	UNK=content
+ansible	plugins.shell	ShellBase	UNK	set_user_facl	UNK=paths UNK=user UNK=mode
+ansible	plugins.shell	ShellBase	UNK	expand_user	UNK=user_home_path
+ansible	plugins.shell	ShellBase	UNK	append_command	UNK=cmd UNK=cmd_to_append
+ansible	plugins.shell	ShellBase	UNK	wrap_for_exec	UNK=cmd
+ansible	plugins.shell	ShellModule	UNK	_unquote	UNK=value
+ansible	plugins.shell	ShellModule	UNK	_escape	UNK=value UNK=include_vars
+ansible	plugins.shell	ShellModule	UNK	_encode_script	UNK=script UNK=as_list UNK=strict_mode UNK=preserve_rc
+ansible	plugins.cache	BaseFileCacheModule	UNK	get	UNK=key
+ansible	plugins.cache	BaseFileCacheModule	UNK	_load	UNK=filepath
+ansible	plugins.cache	BaseFileCacheModule	UNK	_dump	UNK=value UNK=filepath
+ansible	plugins.cache	FactCache	UNK	copy	void
+ansible	plugins.cache	FactCache	UNK	flush	void
+ansible	plugins.lookup		UNK	make_rdata_dict	UNK=rdata
+ansible	plugins.lookup	LookupModule	UNK	run	UNK=terms UNK=variables
+ansible	plugins.lookup	LookupModule	UNK	reset	void
+ansible	plugins.lookup	LookupModule	UNK	parse_kv_args	UNK=args
+ansible	plugins.lookup	LookupModule	UNK	parse_simple_args	UNK=term
+ansible	plugins.lookup		UNK	file_props	UNK=root UNK=path
+ansible	plugins.lookup	LookupModule	UNK	read_shelve	UNK=shelve_filename UNK=key
+ansible	plugins.lookup		UNK	_parse_parameters	UNK=term
+ansible	plugins.lookup		UNK	_read_password_file	UNK=b_path
+ansible	plugins.lookup		UNK	_gen_candidate_chars	UNK=characters
+ansible	plugins.lookup		UNK	_random_password	UNK=length UNK=chars
+ansible	plugins.lookup		UNK	_random_salt	void
+ansible	plugins.lookup		UNK	_parse_content	UNK=content
+ansible	plugins.lookup		UNK	_format_content	UNK=password UNK=salt UNK=encrypt
+ansible	plugins.lookup		UNK	_parse_params	UNK=term
+ansible	plugins.lookup	LookupBase	UNK	run	UNK=terms UNK=variables
+ansible	plugins.lookup	LookupBase	UNK	find_file_in_search_path	UNK=myvars UNK=subdir UNK=needle UNK=ignore_missing
+ansible	plugins.connection	Connection	UNK	exec_command	UNK=request
+ansible	plugins.connection	Connection	UNK	put_file	UNK=in_path UNK=out_path
+ansible	plugins.connection	Connection	UNK	fetch_file	UNK=in_path UNK=out_path
+ansible	plugins.connection	Connection	UNK	_connect	void
+ansible	plugins.connection	Connection	UNK	_buffered_exec_command	UNK=cmd UNK=stdin
+ansible	plugins.connection	Connection	UNK	exec_command	UNK=cmd UNK=in_data UNK=sudoable
+ansible	plugins.connection	Connection	UNK	_prefix_login_path	UNK=remote_path
+ansible	plugins.connection	Connection	UNK	close	void
+ansible	plugins.connection	Connection	UNK	update_play_context	UNK=play_context
+ansible	plugins.connection	Connection	UNK	close_shell	void
+ansible	plugins.connection	Connection	UNK	receive	UNK=obj
+ansible	plugins.connection	Connection	UNK	send	UNK=obj
+ansible	plugins.connection	Connection	UNK	_strip	UNK=data
+ansible	plugins.connection	Connection	UNK	_handle_prompt	UNK=resp UNK=obj
+ansible	plugins.connection	Connection	UNK	_sanitize	UNK=resp UNK=obj
+ansible	plugins.connection	Connection	UNK	_find_prompt	UNK=response
+ansible	plugins.connection	Connection	UNK	alarm_handler	UNK=signum UNK=frame
+ansible	plugins.connection	Connection	UNK	exec_command	UNK=cmd
+ansible	plugins.connection	Connection	UNK	transport_test	UNK=connect_timeout
+ansible	plugins.connection	Connection	UNK	validate_user	void
+ansible	plugins.connection	Connection	UNK	exec_command	UNK=cmd UNK=become_user UNK=sudoable UNK=executable
+ansible	plugins.connection	Connection	UNK	_connect_uncached	void
+ansible	plugins.connection	Connection	UNK	_save_ssh_host_keys	UNK=filename
+ansible	plugins.connection	Connection	UNK	set_host_overrides	UNK=host UNK=hostvars
+ansible	plugins.connection	Connection	UNK	_winrm_connect	void
+ansible	plugins.connection		UNK	_ssh_retry	UNK=func
+ansible	plugins.connection	Connection	UNK	_create_control_path	UNK=host UNK=port UNK=user
+ansible	plugins.connection	Connection	UNK	_persistence_controls	UNK=b_command
+ansible	plugins.connection	Connection	UNK	_add_args	UNK=b_command UNK=b_args UNK=explanation
+ansible	plugins.connection	Connection	UNK	_build_command	UNK=binary
+ansible	plugins.connection	Connection	UNK	_send_initial_data	UNK=fh UNK=in_data
+ansible	plugins.connection	Connection	UNK	_terminate_process	UNK=p
+ansible	plugins.connection	Connection	UNK	_examine_output	UNK=source UNK=state UNK=b_chunk UNK=sudoable
+ansible	plugins.connection	Connection	UNK	_run	UNK=cmd UNK=in_data UNK=sudoable UNK=checkrc
+ansible	plugins.connection	ConnectionBase	UNK	connected	void
+ansible	plugins.connection	ConnectionBase	UNK	_become_method_supported	void
+ansible	plugins.connection	ConnectionBase	UNK	set_host_overrides	UNK=host UNK=hostvars
+ansible	plugins.connection	ConnectionBase	UNK	_split_ssh_args	UNK=argstring
+ansible	plugins.connection	ConnectionBase	UNK	transport	void
+ansible	plugins.connection	ConnectionBase	UNK	_connect	void
+ansible	plugins.connection	ConnectionBase	UNK	exec_command	UNK=cmd UNK=in_data UNK=sudoable
+ansible	plugins.connection	ConnectionBase	UNK	put_file	UNK=in_path UNK=out_path
+ansible	plugins.connection	ConnectionBase	UNK	fetch_file	UNK=in_path UNK=out_path
+ansible	plugins.connection	ConnectionBase	UNK	close	void
+ansible	plugins.connection	Connection	UNK	_get_docker_remote_user	void
+ansible	plugins.connection	Connection	UNK	_build_exec_cmd	UNK=cmd
+ansible	plugins.connection	Connection	UNK	_connect	UNK=port
+ansible	plugins.terminal	TerminalBase	UNK	_exec_cli_command	UNK=cmd UNK=check_rc
+ansible	plugins.terminal	TerminalBase	UNK	_get_prompt	void
+ansible	plugins.terminal	TerminalBase	UNK	on_open_shell	void
+ansible	plugins.terminal	TerminalBase	UNK	on_close_shell	void
+ansible	plugins.terminal	TerminalBase	UNK	on_authorize	UNK=passwd
+ansible	plugins.terminal	TerminalBase	UNK	on_deauthorize	void
+ansible	plugins.filter		UNK	json_query	UNK=data UNK=expr
+ansible	plugins.filter		UNK	to_yaml	UNK=a
+ansible	plugins.filter		UNK	to_nice_yaml	UNK=a UNK=indent
+ansible	plugins.filter		UNK	to_json	UNK=a
+ansible	plugins.filter		UNK	to_nice_json	UNK=a UNK=indent
+ansible	plugins.filter		UNK	to_bool	UNK=a
+ansible	plugins.filter		UNK	strftime	UNK=string_format UNK=second
+ansible	plugins.filter		UNK	quote	UNK=a
+ansible	plugins.filter		UNK	fileglob	UNK=pathname
+ansible	plugins.filter		UNK	regex_replace	UNK=value UNK=pattern UNK=replacement UNK=ignorecase
+ansible	plugins.filter		UNK	regex_findall	UNK=value UNK=regex UNK=multiline UNK=ignorecase
+ansible	plugins.filter		UNK	regex_search	UNK=value UNK=regex
+ansible	plugins.filter		UNK	ternary	UNK=value UNK=true_val UNK=false_val
+ansible	plugins.filter		UNK	regex_escape	UNK=string
+ansible	plugins.filter		UNK	failed	void
+ansible	plugins.filter		UNK	success	void
+ansible	plugins.filter		UNK	changed	void
+ansible	plugins.filter		UNK	skipped	void
+ansible	plugins.filter		UNK	do_groupby	UNK=environment UNK=value UNK=attribute
+ansible	plugins.filter		UNK	ipaddr	UNK=value UNK=query UNK=version UNK=alias
+ansible	plugins.filter		UNK	ipsubnet	UNK=value UNK=query UNK=index
+ansible	plugins.filter		UNK	nthhost	UNK=value UNK=query
+ansible	plugins.filter		UNK	slaac	UNK=value UNK=query
+ansible	plugins.filter		UNK	hwaddr	UNK=value UNK=query UNK=alias
+ansible	plugins.filter		UNK	ip4_hex	UNK=arg
+ansible	plugins.filter		UNK	human_readable	UNK=size UNK=isbits UNK=unit
+ansible	plugins.filter		UNK	human_to_bytes	UNK=size UNK=default_unit UNK=isbits
+ansible	plugins.callback	CallbackModule	UNK	send_facts	UNK=host UNK=data
+ansible	plugins.callback	CallbackModule	UNK	send_reports	UNK=stats
+ansible	plugins.callback		UNK	dict_diff	UNK=prv UNK=nxt
+ansible	plugins.callback		UNK	colorize	UNK=msg UNK=color
+ansible	plugins.callback	CallbackModule	UNK	__init__	UNK=display
+ansible	plugins.callback	CallbackModule	UNK	v2_playbook_on_play_start	UNK=play
+ansible	plugins.callback	CallbackModule	UNK	v2_playbook_on_task_start	UNK=task
+ansible	plugins.callback	CallbackModule	UNK	v2_runner_on_ok	UNK=result
+ansible	plugins.callback	CallbackModule	UNK	v2_playbook_on_stats	UNK=stats
+ansible	plugins.callback	CallbackModule	UNK	v2_runner_on_skipped	UNK=result
+ansible	plugins.callback	CallbackModule	UNK	_dump_results	UNK=result
+ansible	plugins.callback	CallbackModule	UNK	_record_task	UNK=task
+ansible	plugins.callback	CallbackBase	UNK	_handle_warnings	UNK=res
+ansible	plugins.callback	CallbackModule	UNK	_start_task	UNK=task
+ansible	plugins.callback	CallbackModule	UNK	_finish_task	UNK=status UNK=result
+ansible	plugins.callback	CallbackModule	UNK	_build_test_case	UNK=task_data UNK=host_data
+ansible	plugins.callback	CallbackModule	UNK	_cleanse_string	UNK=value
+ansible	plugins.callback	CallbackModule	UNK	_generate_report	void
+ansible	plugins.callback	CallbackModule	UNK	write_tree_file	UNK=hostname UNK=buf
+ansible	plugins.callback	CallbackModule	UNK	send_msg	UNK=msg UNK=msg_format UNK=color UNK=notify
+ansible	plugins.callback	CallbackModule	UNK	playbook_on_stats	UNK=stats
+ansible	plugins.callback	CallbackModule	UNK	_command_generic_msg	UNK=host UNK=result UNK=caption
+ansible	compat.selectors		UNK	_fileobj_to_fd	UNK=fileobj
+ansible	compat.selectors	BaseSelector	UNK	_fileobj_lookup	UNK=fileobj
+ansible	compat.selectors	BaseSelector	UNK	register	UNK=fileobj UNK=events UNK=data
+ansible	compat.selectors	BaseSelector	UNK	unregister	UNK=fileobj
+ansible	compat.selectors	BaseSelector	UNK	modify	UNK=fileobj UNK=events UNK=data
+ansible	compat.selectors	BaseSelector	UNK	select	UNK=timeout
+ansible	compat.selectors	BaseSelector	UNK	close	void
+ansible	compat.selectors	BaseSelector	UNK	get_key	UNK=fileobj
+ansible	compat.selectors	BaseSelector	UNK	get_map	void
+ansible	compat.selectors	BaseSelector	UNK	_key_from_fd	UNK=fd
+ansible	playbook	Block	UNK	get_vars	void
+ansible	playbook	Block	UNK	preprocess_data	UNK=ds
+ansible	playbook	Block	UNK	serialize	void
+ansible	playbook	Block	UNK	deserialize	UNK=data
+ansible	playbook	Block	UNK	_get_parent_attribute	UNK=attr UNK=extend UNK=prepend
+ansible	playbook	Block	UNK	filter_tagged_tasks	UNK=play_context UNK=all_vars
+ansible	playbook	Block	UNK	all_parents_static	void
+ansible	playbook		UNK	load_list_of_blocks	UNK=ds UNK=play UNK=parent_block UNK=role
+ansible	playbook		UNK	load_list_of_tasks	UNK=ds UNK=play UNK=block UNK=role
+ansible	playbook		UNK	load_list_of_roles	UNK=ds UNK=play UNK=current_role_path UNK=variable_manager
+ansible	playbook	Task	UNK	__init__	UNK=block UNK=role UNK=task_include
+ansible	playbook	Task	UNK	get_path	void
+ansible	playbook	Task	UNK	get_name	void
+ansible	playbook	Task	UNK	__repr__	void
+ansible	playbook	Task	UNK	_preprocess_loop	UNK=ds UNK=new_ds UNK=k UNK=v
+ansible	playbook	Task	UNK	preprocess_data	UNK=ds
+ansible	playbook	Task	UNK	post_validate	UNK=templar
+ansible	playbook	Task	UNK	_post_validate_loop_args	UNK=attr UNK=value UNK=templar
+ansible	playbook	Task	UNK	_post_validate_environment	UNK=attr UNK=value UNK=templar
+ansible	playbook	Task	UNK	_post_validate_changed_when	UNK=attr UNK=value UNK=templar
+ansible	playbook	Task	UNK	_post_validate_failed_when	UNK=attr UNK=value UNK=templar
+ansible	playbook	Task	UNK	_post_validate_until	UNK=attr UNK=value UNK=templar
+ansible	playbook	Task	UNK	set_loader	UNK=loader
+ansible	playbook	Task	UNK	_get_parent_attribute	UNK=attr UNK=extend UNK=prepend
+ansible	playbook	Task	UNK	_get_attr_environment	void
+ansible	playbook	Task	UNK	get_search_path	void
+ansible	playbook	Play	UNK	get_name	void
+ansible	playbook	Play	UNK	preprocess_data	UNK=ds
+ansible	playbook	Play	UNK	_load_tasks	UNK=attr UNK=ds
+ansible	playbook	Play	UNK	_load_pre_tasks	UNK=attr UNK=ds
+ansible	playbook	Play	UNK	_load_post_tasks	UNK=attr UNK=ds
+ansible	playbook	Play	UNK	_load_handlers	UNK=attr UNK=ds
+ansible	playbook	Play	UNK	_load_roles	UNK=attr UNK=ds
+ansible	playbook	Play	UNK	_compile_roles	void
+ansible	playbook	Play	UNK	compile_roles_handlers	void
+ansible	playbook	Play	UNK	compile	void
+ansible	playbook	Base	UNK	preprocess_data	UNK=ds
+ansible	playbook	Base	UNK	load_data	UNK=ds UNK=variable_manager UNK=loader
+ansible	playbook	Base	UNK	_validate_attributes	UNK=ds
+ansible	playbook	Base	UNK	validate	UNK=all_vars
+ansible	playbook	Base	UNK	squash	void
+ansible	playbook	Base	UNK	copy	void
+ansible	playbook	Base	UNK	post_validate	UNK=templar
+ansible	playbook	Base	UNK	_load_vars	UNK=attr UNK=ds
+ansible	playbook	Base	UNK	_extend_value	UNK=value UNK=new_value UNK=prepend
+ansible	playbook	Base	UNK	dump_attrs	void
+ansible	playbook	Base	UNK	serialize	void
+ansible	playbook	Base	UNK	deserialize	UNK=data
+ansible	playbook	PlayContext	UNK	set_play	UNK=play
+ansible	playbook	PlayContext	UNK	set_options	UNK=options
+ansible	playbook	PlayContext	UNK	set_task_and_variable_override	UNK=task UNK=variables UNK=templar
+ansible	playbook	PlayContext	UNK	make_become_cmd	UNK=cmd UNK=executable
+ansible	playbook	PlayContext	UNK	update_vars	UNK=variables
+ansible	playbook	Conditional	UNK	_get_attr_when	void
+ansible	playbook	Conditional	UNK	evaluate_conditional	UNK=templar UNK=all_vars
+ansible	playbook	Conditional	UNK	_check_conditional	UNK=conditional UNK=templar UNK=all_vars
+ansible	playbook	Become	UNK	_preprocess_data_become	UNK=ds
+ansible	playbook	Become	UNK	set_become_defaults	UNK=become UNK=become_method UNK=become_user
+ansible	playbook	PlaybookInclude	UNK	load_data	UNK=ds UNK=basedir UNK=variable_manager UNK=loader
+ansible	playbook	PlaybookInclude	UNK	preprocess_data	UNK=ds
+ansible	playbook	PlaybookInclude	UNK	_preprocess_include	UNK=ds UNK=new_ds UNK=k UNK=v
+ansible	playbook	Handler	UNK	__repr__	void
+ansible	playbook	Taggable	UNK	_get_attr_tags	void
+ansible	playbook	Taggable	UNK	evaluate_tags	UNK=only_tags UNK=skip_tags UNK=all_vars
+ansible	playbook	TaskInclude	UNK	get_vars	void
+ansible	playbook	Attribute	UNK	__init__	UNK=isa UNK=private UNK=default UNK=required
+ansible	playbook.role	RoleMetadata	UNK	load	UNK=data UNK=owner UNK=variable_manager UNK=loader
+ansible	playbook.role	RoleMetadata	UNK	_load_dependencies	UNK=attr UNK=ds
+ansible	playbook.role	RoleMetadata	UNK	_load_galaxy_info	UNK=attr UNK=ds
+ansible	playbook.role	RoleDefinition	UNK	_load_role_name	UNK=ds
+ansible	playbook.role	RoleDefinition	UNK	_load_role_path	UNK=role_name
+ansible	playbook.role	RoleDefinition	UNK	_split_role_params	UNK=ds
+ansible	playbook.role		UNK	hash_params	UNK=params
+ansible	playbook.role	Role	UNK	_resolve_main	UNK=basepath UNK=main
+ansible	playbook.role	Role	UNK	_load_dependencies	void
+ansible	playbook.role	Role	UNK	add_parent	UNK=parent_role
+ansible	playbook.role	Role	UNK	get_all_dependencies	void
+ansible	playbook.role	Role	UNK	has_run	UNK=host
+ansible	playbook.role	Role	UNK	compile	UNK=play UNK=dep_chain
+ansible	parsing	ModuleArgsParser	UNK	_split_module_string	UNK=module_string
+ansible	parsing	ModuleArgsParser	UNK	_handle_shell_weirdness	UNK=action UNK=args
+ansible	parsing	ModuleArgsParser	UNK	_normalize_parameters	UNK=thing UNK=action UNK=additional_args
+ansible	parsing	ModuleArgsParser	UNK	_normalize_new_style_args	UNK=thing UNK=action
+ansible	parsing	ModuleArgsParser	UNK	_normalize_old_style_args	UNK=thing
+ansible	parsing	ModuleArgsParser	UNK	parse	void
+ansible	parsing		UNK	unquote	UNK=data
+ansible	parsing		UNK	parse_kv	UNK=args UNK=check_raw
+ansible	parsing		UNK	_get_quote_state	UNK=token UNK=quote_char
+ansible	parsing		UNK	_count_jinja2_blocks	UNK=token UNK=cur_depth UNK=open_token UNK=close_token
+ansible	parsing		UNK	split_args	UNK=args
+ansible	parsing	DataLoader	UNK	load	UNK=data UNK=file_name UNK=show_content
+ansible	parsing	DataLoader	UNK	load_from_file	UNK=file_name
+ansible	parsing	DataLoader	UNK	is_executable	UNK=path
+ansible	parsing	DataLoader	UNK	_safe_load	UNK=stream UNK=file_name
+ansible	parsing	DataLoader	UNK	_get_file_contents	UNK=file_name
+ansible	parsing	DataLoader	UNK	_handle_error	UNK=yaml_exc UNK=file_name UNK=show_content
+ansible	parsing	DataLoader	UNK	get_basedir	void
+ansible	parsing	DataLoader	UNK	set_basedir	UNK=basedir
+ansible	parsing	DataLoader	UNK	path_dwim	UNK=given
+ansible	parsing	DataLoader	UNK	_is_role	UNK=path
+ansible	parsing	DataLoader	UNK	path_dwim_relative	UNK=path UNK=dirname UNK=source UNK=is_role
+ansible	parsing	DataLoader	UNK	path_dwim_relative_stack	UNK=paths UNK=dirname UNK=source UNK=is_role
+ansible	parsing	DataLoader	UNK	_create_content_tempfile	UNK=content
+ansible	parsing	DataLoader	UNK	get_real_file	UNK=file_path UNK=decrypt
+ansible	parsing	DataLoader	UNK	cleanup_tmp_file	UNK=file_path
+ansible	parsing.yaml	AnsibleVaultEncryptedUnicode	UNK	__init__	UNK=ciphertext
+ansible	parsing.utils		UNK	parse_address	UNK=address UNK=allow_ranges
+ansible	parsing.utils		UNK	jsonify	UNK=result UNK=format
+ansible	parsing.vault		UNK	is_encrypted	UNK=data
+ansible	parsing.vault		UNK	is_encrypted_file	UNK=file_obj UNK=start_pos UNK=count
+ansible	parsing.vault	VaultLib	UNK	is_encrypted	UNK=data
+ansible	parsing.vault	VaultLib	UNK	encrypt	UNK=plaintext
+ansible	parsing.vault	VaultLib	UNK	decrypt	UNK=vaulttext UNK=filename
+ansible	parsing.vault	VaultLib	UNK	_format_output	UNK=b_ciphertext
+ansible	parsing.vault	VaultLib	UNK	_split_header	UNK=b_vaulttext
+ansible	parsing.vault	VaultEditor	UNK	_shred_file_custom	UNK=tmp_path
+ansible	parsing.vault	VaultEditor	UNK	_shred_file	UNK=tmp_path
+ansible	parsing.vault	VaultEditor	UNK	create_file	UNK=filename
+ansible	parsing.vault	VaultEditor	UNK	write_data	UNK=data UNK=filename UNK=shred
+ansible	parsing.vault	VaultAES	UNK	_aes_derive_key_and_iv	UNK=b_password UNK=b_salt UNK=key_length UNK=iv_length
+ansible	parsing.vault	VaultAES	UNK	encrypt	UNK=b_plaintext UNK=b_password UNK=key_length
+ansible	parsing.vault	VaultAES	UNK	decrypt	UNK=b_vaulttext UNK=b_password UNK=key_length
+ansible	parsing.vault	VaultAES256	UNK	_is_equal	UNK=b_a UNK=b_b
+ansible	vars	HostVars	UNK	raw_get	UNK=host_name
+ansible	vars		UNK	get_reserved_names	UNK=include_private
+ansible	vars		UNK	warn_if_reserved	UNK=myvars
+ansible	vars		UNK	preprocess_vars	UNK=a
+ansible	vars		UNK	strip_internal_keys	UNK=dirty
+ansible	vars	VariableManager	UNK	extra_vars	void
+ansible	vars	VariableManager	UNK	extra_vars	UNK=value
+ansible	vars	VariableManager	UNK	options_vars	void
+ansible	vars	VariableManager	UNK	options_vars	UNK=value
+ansible	vars	VariableManager	UNK	_preprocess_vars	UNK=a
+ansible	vars	VariableManager	UNK	get_vars	UNK=loader UNK=play UNK=host UNK=task
+ansible	vars	VariableManager	UNK	_get_magic_variables	UNK=loader UNK=play UNK=host UNK=task
+ansible	vars	VariableManager	UNK	_get_inventory_basename	UNK=path
+ansible	vars	VariableManager	UNK	_load_inventory_file	UNK=path UNK=loader UNK=filter_ext
+ansible	vars	VariableManager	UNK	add_host_vars_file	UNK=path UNK=loader
+ansible	vars	VariableManager	UNK	add_group_vars_file	UNK=path UNK=loader
+ansible	vars	VariableManager	UNK	clear_facts	UNK=hostname
+ansible	vars	VariableManager	UNK	set_host_facts	UNK=host UNK=facts
+ansible	vars	VariableManager	UNK	set_nonpersistent_facts	UNK=host UNK=facts
+ansible	vars	VariableManager	UNK	set_host_variable	UNK=host UNK=varname UNK=value
+ansible	template		UNK	safe_eval	UNK=expr UNK=locals UNK=include_exceptions
+ansible	template	AnsibleJ2Vars	UNK	__init__	UNK=templar UNK=globals UNK=locals
+ansible	template	AnsibleJ2Vars	UNK	add_locals	UNK=locals
+ansible	template		UNK	_escape_backslashes	UNK=data UNK=jinja_env
+ansible	template		UNK	_count_newlines_from_end	UNK=in_str
+ansible	template	AnsibleContext	UNK	_is_unsafe	UNK=val
+ansible	template	AnsibleContext	UNK	resolve	UNK=key
+ansible	template	Templar	UNK	_get_filters	void
+ansible	template	Templar	UNK	_get_tests	void
+ansible	template	Templar	UNK	_get_extensions	void
+ansible	template	Templar	UNK	_clean_data	UNK=orig_data
+ansible	template	Templar	UNK	set_available_variables	UNK=variables
+ansible	template	Templar	UNK	template	UNK=variable UNK=convert_bare UNK=preserve_trailing_newlines UNK=escape_backslashes
+ansible	template	Templar	UNK	is_template	UNK=data
+ansible	template	Templar	UNK	templatable	UNK=data
+ansible	template	Templar	UNK	_contains_vars	UNK=data
+ansible	template	Templar	UNK	_convert_bare_variable	UNK=variable UNK=bare_deprecated
+ansible	template	Templar	UNK	_finalize	UNK=thing
+ansible	executor	TaskExecutor	UNK	run	void
+ansible	executor	TaskExecutor	UNK	_get_loop_items	void
+ansible	executor	TaskExecutor	UNK	_run_loop	UNK=items
+ansible	executor	TaskExecutor	UNK	_squash_items	UNK=items UNK=loop_var UNK=variables
+ansible	executor	TaskExecutor	UNK	_execute	UNK=variables
+ansible	executor	TaskExecutor	UNK	_poll_async_result	UNK=result UNK=templar UNK=task_vars
+ansible	executor	TaskExecutor	UNK	_get_connection	UNK=variables UNK=templar
+ansible	executor	TaskExecutor	UNK	_get_action_handler	UNK=connection UNK=templar
+ansible	executor	ModuleDepFinder	UNK	__init__	void
+ansible	executor		UNK	_get_shebang	UNK=interpreter UNK=task_vars UNK=args
+ansible	executor		UNK	recursive_finder	UNK=name UNK=data UNK=py_module_names UNK=py_module_cache
+ansible	executor		UNK	_find_module_utils	UNK=module_name UNK=b_module_data UNK=module_path UNK=module_args
+ansible	executor		UNK	modify_module	UNK=module_name UNK=module_path UNK=module_args UNK=task_vars
+ansible	executor	PlayIterator	UNK	get_original_task	UNK=host UNK=task
+ansible	executor	AggregateStats	UNK	increment	UNK=what UNK=host
+ansible	executor	AggregateStats	UNK	summarize	UNK=host
+ansible	executor	AggregateStats	UNK	set_custom_stats	UNK=which UNK=what UNK=host
+ansible	executor	AggregateStats	UNK	update_custom_stats	UNK=which UNK=what UNK=host
+ansible	executor	TaskResult	UNK	_check_key	UNK=key
+ansible	executor	PlaybookExecutor	UNK	run	void
+ansible	executor	PlaybookExecutor	UNK	_get_serialized_batches	UNK=play
+ansible	executor	PlaybookExecutor	UNK	_generate_retry_inventory	UNK=retry_path UNK=replay_hosts
+ansible	executor	TaskQueueManager	UNK	_initialize_notified_handlers	UNK=play
+ansible	executor	TaskQueueManager	UNK	load_callbacks	void
+ansible	executor	TaskQueueManager	UNK	run	UNK=play
+ansible	executor.process	WorkerProcess	UNK	run	void
+ansible	errors	AnsibleError	UNK	_get_error_lines_from_file	UNK=file_name UNK=line_number
+ansible	errors	AnsibleError	UNK	_get_extended_error	void
+ansible	utils		UNK	unfrackpath	UNK=path UNK=follow
+ansible	utils		UNK	makedirs_safe	UNK=path UNK=mode
+ansible	utils		UNK	get_docstring	UNK=filename UNK=verbose
+ansible	utils		UNK	pct_to_int	UNK=value UNK=num_items UNK=min_value
+ansible	utils		UNK	parsecolor	UNK=color
+ansible	utils		UNK	stringc	UNK=text UNK=color
+ansible	utils		UNK	colorize	UNK=lead UNK=num UNK=color
+ansible	utils		UNK	_validate_mutable_mappings	UNK=a UNK=b
+ansible	utils		UNK	combine_vars	UNK=a UNK=b
+ansible	utils		UNK	merge_hash	UNK=a UNK=b
+ansible	utils		UNK	isidentifier	UNK=ident
+ansible	utils		UNK	unicode_wrap	UNK=func
+ansible	utils		UNK	secure_hash_s	UNK=data UNK=hash_func
+ansible	utils		UNK	secure_hash	UNK=filename UNK=hash_func
+ansible	utils	Display	UNK	display	UNK=msg UNK=color UNK=stderr UNK=screen_only
+ansible	utils	Display	UNK	deprecated	UNK=msg UNK=version UNK=removed
+ansible	utils	Display	UNK	banner	UNK=msg UNK=color UNK=cows
+ansible	module_utils	KubernetesAnsibleModule	UNK	argspec	void
+ansible	module_utils	KubernetesAnsibleModule	UNK	execute_module	void
+ansible	module_utils	KubernetesAnsibleModule	UNK	load_resource_definition	UNK=src
+ansible	module_utils	KubernetesAnsibleModule	UNK	resource_to_parameters	UNK=resource
+ansible	module_utils		UNK	uldap	void
+ansible	module_utils		UNK	ldap_search	UNK=filter UNK=base UNK=attr
+ansible	module_utils		UNK	module_by_name	UNK=module_name_
+ansible	module_utils		UNK	get_umc_admin_objects	void
+ansible	module_utils		UNK	umc_module_for_add	UNK=module UNK=container_dn UNK=superordinate
+ansible	module_utils		UNK	umc_module_for_edit	UNK=module UNK=object_dn UNK=superordinate
+ansible	module_utils		UNK	create_containers_and_parents	UNK=container_dn
+ansible	module_utils		UNK	axapi_call	UNK=module UNK=url UNK=post
+ansible	module_utils		UNK	axapi_call_v3	UNK=module UNK=url UNK=method UNK=body
+ansible	module_utils		UNK	axapi_enabled_disabled	UNK=flag
+ansible	module_utils		UNK	get_platform	void
+ansible	module_utils		UNK	get_distribution	void
+ansible	module_utils		UNK	get_distribution_version	void
+ansible	module_utils		UNK	get_all_subclasses	UNK=cls
+ansible	module_utils		UNK	load_platform_subclass	UNK=cls
+ansible	module_utils		UNK	json_dict_unicode_to_bytes	UNK=d UNK=encoding UNK=errors
+ansible	module_utils		UNK	json_dict_bytes_to_unicode	UNK=d UNK=encoding UNK=errors
+ansible	module_utils		UNK	return_values	UNK=obj
+ansible	module_utils		UNK	remove_values	UNK=value UNK=no_log_strings
+ansible	module_utils		UNK	heuristic_log_sanitize	UNK=data UNK=no_log_values
+ansible	module_utils		UNK	human_to_bytes	UNK=number UNK=default_unit UNK=isbits
+ansible	module_utils		UNK	is_executable	UNK=path
+ansible	module_utils		UNK	_load_params	void
+ansible	module_utils		UNK	env_fallback	void
+ansible	module_utils		UNK	_lenient_lowercase	UNK=lst
+ansible	module_utils	AnsibleModule	UNK	__init__	UNK=argument_spec UNK=bypass_checks UNK=no_log UNK=check_invalid_arguments
+ansible	module_utils	AnsibleModule	UNK	load_file_common_arguments	UNK=params
+ansible	module_utils	AnsibleModule	UNK	is_special_selinux_path	UNK=path
+ansible	module_utils	AnsibleModule	UNK	add_path_info	UNK=kwargs
+ansible	module_utils	AnsibleModule	UNK	_check_locale	void
+ansible	module_utils	AnsibleModule	UNK	_check_required_arguments	UNK=spec UNK=param
+ansible	module_utils	AnsibleModule	UNK	_check_required_if	UNK=spec
+ansible	module_utils	AnsibleModule	UNK	_check_argument_values	UNK=spec UNK=param
+ansible	module_utils	AnsibleModule	UNK	_check_argument_types	UNK=spec UNK=param
+ansible	module_utils	AnsibleModule	UNK	_load_params	void
+ansible	module_utils	AnsibleModule	UNK	_log_invocation	void
+ansible	module_utils	AnsibleModule	UNK	get_bin_path	UNK=arg UNK=required UNK=opt_dirs
+ansible	module_utils	AnsibleModule	UNK	boolean	UNK=arg
+ansible	module_utils	AnsibleModule	UNK	exit_json	void
+ansible	module_utils	AnsibleModule	UNK	fail_json	void
+ansible	module_utils	AnsibleModule	UNK	fail_on_missing_params	UNK=required_params
+ansible	module_utils	AnsibleModule	UNK	digest_from_file	UNK=filename UNK=algorithm
+ansible	module_utils	AnsibleModule	UNK	md5	UNK=filename
+ansible	module_utils	AnsibleModule	UNK	sha1	UNK=filename
+ansible	module_utils	AnsibleModule	UNK	sha256	UNK=filename
+ansible	module_utils	AnsibleModule	UNK	backup_local	UNK=fn
+ansible	module_utils	AnsibleModule	UNK	atomic_move	UNK=src UNK=dest UNK=unsafe_writes
+ansible	module_utils	AnsibleModule	UNK	run_command	UNK=args UNK=check_rc UNK=close_fds UNK=executable
+ansible	module_utils	Cli	UNK	get_config	UNK=flags
+ansible	module_utils	Cli	UNK	run_commands	UNK=commands UNK=check_rc
+ansible	module_utils	Cli	UNK	load_config	UNK=config
+ansible	module_utils	Nxapi	UNK	_request_builder	UNK=commands UNK=output UNK=version UNK=chunk
+ansible	module_utils	Nxapi	UNK	get_config	UNK=flags
+ansible	module_utils	Nxapi	UNK	run_commands	UNK=commands UNK=check_rc
+ansible	module_utils	Nxapi	UNK	load_config	UNK=commands
+ansible	module_utils		UNK	rax_slugify	UNK=value
+ansible	module_utils		UNK	rax_clb_node_to_dict	UNK=obj
+ansible	module_utils		UNK	rax_to_dict	UNK=obj UNK=obj_type
+ansible	module_utils		UNK	rax_find_bootable_volume	UNK=module UNK=rax_module UNK=server UNK=exit
+ansible	module_utils		UNK	rax_find_image	UNK=module UNK=rax_module UNK=image UNK=exit
+ansible	module_utils		UNK	rax_find_volume	UNK=module UNK=rax_module UNK=name
+ansible	module_utils		UNK	rax_find_network	UNK=module UNK=rax_module UNK=network
+ansible	module_utils		UNK	rax_find_server	UNK=module UNK=rax_module UNK=server
+ansible	module_utils		UNK	rax_find_loadbalancer	UNK=module UNK=rax_module UNK=loadbalancer
+ansible	module_utils		UNK	rax_argument_spec	void
+ansible	module_utils		UNK	rax_required_together	void
+ansible	module_utils		UNK	setup_rax_module	UNK=module UNK=rax_module UNK=region_required
+ansible	module_utils	AnsibleCloudStack	UNK	get_vpc	UNK=key
+ansible	module_utils	AnsibleCloudStack	UNK	is_vpc_network	UNK=network_id
+ansible	module_utils	AnsibleCloudStack	UNK	get_network	UNK=key
+ansible	module_utils		UNK	find_vm_by_id	UNK=content UNK=vm_id UNK=vm_id_type UNK=datacenter
+ansible	module_utils		UNK	gather_vm_facts	UNK=content UNK=vm
+ansible	module_utils		UNK	fetch_file_from_guest	UNK=content UNK=vm UNK=username UNK=password
+ansible	module_utils		UNK	push_file_to_guest	UNK=content UNK=vm UNK=username UNK=password
+ansible	module_utils		UNK	add_git_host_key	UNK=module UNK=url UNK=accept_hostkey UNK=create_dir
+ansible	module_utils		UNK	is_ssh_url	UNK=url
+ansible	module_utils		UNK	get_fqdn_and_port	UNK=repo_url
+ansible	module_utils		UNK	add_host_key	UNK=module UNK=fqdn UNK=port UNK=key_type
+ansible	module_utils		UNK	to_bytes	UNK=obj UNK=encoding UNK=errors UNK=nonstring
+ansible	module_utils		UNK	to_text	UNK=obj UNK=encoding UNK=errors UNK=nonstring
+ansible	module_utils	CloudRetry	UNK	status_code_from_exception	UNK=error
+ansible	module_utils	CloudRetry	UNK	found	UNK=response_code
+ansible	module_utils	CloudRetry	UNK	backoff	UNK=cls UNK=tries UNK=delay UNK=backoff
+ansible	module_utils	Rhsm	UNK	_read_config	UNK=rhsm_conf
+ansible	module_utils	Rhsm	UNK	enable	void
+ansible	module_utils	Rhsm	UNK	configure	void
+ansible	module_utils	Rhsm	UNK	is_registered	void
+ansible	module_utils	Rhsm	UNK	register	UNK=username UNK=password UNK=autosubscribe UNK=activationkey
+ansible	module_utils	Rhsm	UNK	unsubscribe	void
+ansible	module_utils	Rhsm	UNK	unregister	void
+ansible	module_utils	Rhsm	UNK	subscribe	UNK=regexp
+ansible	module_utils	RhsmPools	UNK	_load_product_list	void
+ansible	module_utils	RhsmPools	UNK	filter	UNK=regexp
+ansible	module_utils		UNK	get_dict_of_struct	UNK=struct UNK=connection UNK=fetch_nested UNK=attributes
+ansible	module_utils		UNK	engine_version	UNK=connection
+ansible	module_utils		UNK	create_connection	UNK=auth
+ansible	module_utils		UNK	convert_to_bytes	UNK=param
+ansible	module_utils		UNK	follow_link	UNK=connection UNK=link
+ansible	module_utils		UNK	get_link_name	UNK=connection UNK=link
+ansible	module_utils		UNK	equal	UNK=param1 UNK=param2 UNK=ignore_case
+ansible	module_utils		UNK	search_by_attributes	UNK=service
+ansible	module_utils		UNK	search_by_name	UNK=service UNK=name
+ansible	module_utils		UNK	get_entity	UNK=service
+ansible	module_utils		UNK	get_id_by_name	UNK=service UNK=name UNK=raise_error UNK=ignore_case
+ansible	module_utils		UNK	wait	UNK=service UNK=condition UNK=fail_condition UNK=timeout
+ansible	module_utils		UNK	ovirt_facts_full_argument_spec	void
+ansible	module_utils		UNK	ovirt_full_argument_spec	void
+ansible	module_utils		UNK	check_params	UNK=module
+ansible	module_utils		UNK	check_support	UNK=version UNK=connection UNK=module UNK=params
+ansible	module_utils	BaseModule	UNK	build_entity	void
+ansible	module_utils	BaseModule	UNK	param	UNK=name UNK=default
+ansible	module_utils	BaseModule	UNK	update_check	UNK=entity
+ansible	module_utils	BaseModule	UNK	pre_create	UNK=entity
+ansible	module_utils	BaseModule	UNK	post_create	UNK=entity
+ansible	module_utils	BaseModule	UNK	post_update	UNK=entity
+ansible	module_utils	BaseModule	UNK	create	UNK=entity UNK=result_state UNK=fail_condition UNK=search_params
+ansible	module_utils	BaseModule	UNK	pre_remove	UNK=entity
+ansible	module_utils	BaseModule	UNK	remove	UNK=entity UNK=search_params
+ansible	module_utils	BaseModule	UNK	action	UNK=action UNK=entity UNK=action_condition UNK=wait_condition
+ansible	module_utils	BaseModule	UNK	search_entity	UNK=search_params
+ansible	module_utils		UNK	gcdns_connect	UNK=module UNK=provider
+ansible	module_utils		UNK	unexpected_error_msg	UNK=error
+ansible	module_utils		UNK	_filter_non_json_lines	UNK=data
+ansible	module_utils		UNK	_botocore_exception_maybe	void
+ansible	module_utils		UNK	get_ec2_creds	UNK=module
+ansible	module_utils		UNK	boto_fix_security_token_in_profile	UNK=conn UNK=profile_name
+ansible	module_utils		UNK	ec2_connect	UNK=module
+ansible	module_utils		UNK	paging	UNK=pause UNK=marker_property
+ansible	module_utils		UNK	ansible_dict_to_boto3_filter_list	UNK=filters_dict
+ansible	module_utils		UNK	boto3_tag_list_to_ansible_dict	UNK=tags_list
+ansible	module_utils		UNK	ansible_dict_to_boto3_tag_list	UNK=tags_dict
+ansible	module_utils		UNK	get_ec2_security_group_ids_from_names	UNK=sec_group_list UNK=ec2_connection UNK=vpc_id UNK=boto3
+ansible	module_utils		UNK	sort_json_policy_dict	UNK=policy_dict
+ansible	module_utils		UNK	map_complex_type	UNK=complex_type UNK=type_map
+ansible	module_utils	Cli	UNK	configure	UNK=commands
+ansible	module_utils	Cli	UNK	load_config	UNK=commands UNK=commit UNK=replace
+ansible	module_utils	Eapi	UNK	run_commands	UNK=commands
+ansible	module_utils	Eapi	UNK	get_config	UNK=flags
+ansible	module_utils	Eapi	UNK	configure	UNK=commands
+ansible	module_utils	Eapi	UNK	load_config	UNK=config UNK=commit UNK=replace
+ansible	module_utils	NetworkConfig	UNK	difference	UNK=other UNK=match UNK=path UNK=replace
+ansible	module_utils		UNK	generic_urlparse	UNK=parts
+ansible	module_utils		UNK	RedirectHandlerFactory	UNK=follow_redirects UNK=validate_certs
+ansible	module_utils		UNK	build_ssl_validation_error	UNK=hostname UNK=port UNK=paths UNK=exc
+ansible	module_utils	SSLValidationHandler	UNK	validate_proxy_response	UNK=response UNK=valid_codes
+ansible	module_utils	SSLValidationHandler	UNK	detect_no_proxy	UNK=url
+ansible	module_utils		UNK	open_url	UNK=url UNK=data UNK=headers UNK=method
+ansible	module_utils		UNK	basic_auth_header	UNK=username UNK=password
+ansible	module_utils		UNK	url_argument_spec	void
+ansible	module_utils		UNK	fetch_url	UNK=module UNK=url UNK=data UNK=headers
+ansible	module_utils		UNK	avi_common_argument_spec	void
+ansible	module_utils		UNK	ansible_return	UNK=module UNK=rsp UNK=changed UNK=req
+ansible	module_utils	DimensionDataModule	UNK	__init__	UNK=module
+ansible	module_utils	DimensionDataModule	UNK	get_credentials	void
+ansible	module_utils	DimensionDataModule	UNK	get_mcp_version	UNK=location
+ansible	module_utils	DimensionDataModule	UNK	get_network_domain	UNK=locator UNK=location
+ansible	module_utils	DimensionDataModule	UNK	get_vlan	UNK=locator UNK=location UNK=network_domain
+ansible	module_utils	DimensionDataModule	UNK	argument_spec	void
+ansible	module_utils	DimensionDataModule	UNK	argument_spec_with_wait	void
+ansible	module_utils	DimensionDataModule	UNK	required_together	void
+ansible	module_utils		UNK	get_dd_regions	void
+ansible	module_utils		UNK	is_uuid	UNK=u UNK=version
+ansible	module_utils	AnsibleDockerClient	UNK	get_container	UNK=name
+ansible	module_utils	AnsibleDockerClient	UNK	find_image	UNK=name UNK=tag
+ansible	module_utils	AnsibleDockerClient	UNK	_image_lookup	UNK=name UNK=tag
+ansible	module_utils	AnsibleDockerClient	UNK	pull_image	UNK=name UNK=tag
+ansible	module_utils		UNK	_get_gcp_ansible_credentials	UNK=module
+ansible	module_utils		UNK	_get_gcp_environ_var	UNK=var_name UNK=default_value
+ansible	module_utils		UNK	_get_gcp_environment_credentials	UNK=service_account_email UNK=credentials_file UNK=project_id
+ansible	module_utils		UNK	_get_gcp_libcloud_credentials	UNK=service_account_email UNK=credentials_file UNK=project_id
+ansible	module_utils		UNK	_get_gcp_credentials	UNK=module UNK=require_valid_json UNK=check_libcloud
+ansible	module_utils		UNK	_validate_credentials_file	UNK=module UNK=credentials_file UNK=require_valid_json UNK=check_libcloud
+ansible	module_utils		UNK	gcp_connect	UNK=module UNK=provider UNK=get_driver UNK=user_agent_product
+ansible	module_utils		UNK	get_google_cloud_credentials	UNK=module UNK=scopes
+ansible	module_utils		UNK	get_google_api_auth	UNK=module UNK=scopes UNK=user_agent_product UNK=user_agent_version
+ansible	module_utils		UNK	check_min_pkg_version	UNK=pkg_name UNK=minimum_version
+ansible	module_utils		UNK	check_params	UNK=params UNK=field_list
+ansible	module_utils		UNK	api_wrapper	UNK=func
+ansible	module_utils		UNK	get_system	UNK=module
+ansible	module_utils		UNK	infinibox_argument_spec	void
+ansible	module_utils		UNK	infinibox_required_together	void
+ansible	module_utils		UNK	rate_limit_argument_spec	UNK=spec
+ansible	module_utils		UNK	retry_argument_spec	UNK=spec
+ansible	module_utils		UNK	rate_limit	UNK=rate UNK=rate_limit
+ansible	module_utils		UNK	tower_auth_config	UNK=module
+ansible	module_utils		UNK	tower_check_mode	UNK=module
+ansible	module_utils		UNK	eseries_host_argument_spec	void
+ansible	module_utils		UNK	request	UNK=url UNK=data UNK=headers UNK=method
+ansible	module_utils		UNK	sysv_is_enabled	UNK=name
+ansible	module_utils		UNK	get_sysv_script	UNK=name
+ansible	module_utils		UNK	sysv_exists	UNK=name
+ansible	module_utils		UNK	fail_if_missing	UNK=module UNK=found UNK=service UNK=msg
+ansible	module_utils		UNK	daemonize	UNK=module UNK=cmd
+ansible	module_utils		UNK	get_exception	void
+ansible	module_utils	LinuxHardware	UNK	get_dmi_facts	void
+ansible	module_utils	LinuxHardware	UNK	get_lvm_facts	void
+ansible	module_utils	FreeBSDHardware	UNK	get_dmi_facts	void
+ansible	module_utils	AIX	UNK	get_vgs_facts	void
+ansible	module_utils		UNK	get_file_lines	UNK=path
+ansible	module_utils		UNK	ismount	UNK=path
+ansible	module_utils	AzureRMModuleBase	UNK	fail	UNK=msg
+ansible	module_utils	AzureRMModuleBase	UNK	validate_tags	UNK=tags
+ansible	module_utils	AzureRMModuleBase	UNK	update_tags	UNK=tags
+ansible	module_utils	AzureRMModuleBase	UNK	has_tags	UNK=obj_tags UNK=tag_list
+ansible	module_utils	AzureRMModuleBase	UNK	get_resource_group	UNK=resource_group
+ansible	module_utils	AzureRMModuleBase	UNK	serialize_obj	UNK=obj UNK=class_name UNK=enum_modules
+ansible	module_utils	AzureRMModuleBase	UNK	get_poller_result	UNK=poller UNK=wait
+ansible	module_utils	AzureRMModuleBase	UNK	check_provisioning_state	UNK=azure_object UNK=requested_state
+ansible	module_utils	AzureRMModuleBase	UNK	create_default_pip	UNK=resource_group UNK=location UNK=name UNK=allocation_method
+ansible	module_utils	AzureRMModuleBase	UNK	create_default_securitygroup	UNK=resource_group UNK=location UNK=name UNK=os_type
+ansible	module_utils		UNK	check_aos_version	UNK=module UNK=min
+ansible	module_utils		UNK	get_aos_session	UNK=module UNK=auth
+ansible	module_utils		UNK	find_collection_item	UNK=collection UNK=item_name UNK=item_id
+ansible	module_utils		UNK	content_to_dict	UNK=module UNK=content
+ansible	module_utils		UNK	do_load_resource	UNK=module UNK=collection UNK=name
+ansible	module_utils		UNK	gce_connect	UNK=module UNK=provider
+ansible	module_utils		UNK	_get_quote_state	UNK=token UNK=quote_char
+ansible	module_utils		UNK	_count_jinja2_blocks	UNK=token UNK=cur_depth UNK=open_token UNK=close_token
+ansible	module_utils		UNK	split_args	UNK=args
+ansible	module_utils		UNK	unquote	UNK=data
+ansible	module_utils.six		UNK	_add_doc	UNK=func UNK=doc
+ansible	module_utils.six		UNK	_import_module	UNK=name
+ansible	module_utils.six	_SixMetaPathImporter	UNK	is_package	UNK=fullname
+ansible	module_utils.six		UNK	add_move	UNK=move
+ansible	module_utils.six		UNK	remove_move	UNK=name
+ansible	module_utils.six		UNK	with_metaclass	UNK=meta
+ansible	module_utils.six		UNK	add_metaclass	UNK=metaclass
+ansible	module_utils.six		UNK	python_2_unicode_compatible	UNK=klass
+ansible	module_utils.six		UNK	_find_module	UNK=name UNK=path
+ansible	module_utils.six		UNK	_get_six_source	void
+ansible	modules.crypto	CertificateSigningRequest	UNK	generate	UNK=module
+ansible	modules.crypto	CertificateSigningRequest	UNK	remove	void
+ansible	modules.crypto	CertificateSigningRequest	UNK	dump	void
+ansible	modules.crypto	PrivateKey	UNK	generate	UNK=module
+ansible	modules.crypto	PrivateKey	UNK	remove	void
+ansible	modules.crypto	PrivateKey	UNK	dump	void
+ansible	modules.crypto	PublicKey	UNK	generate	UNK=module
+ansible	modules.crypto	PublicKey	UNK	remove	void
+ansible	modules.crypto	PublicKey	UNK	dump	void
+ansible	modules.notification	Pushover	UNK	run	UNK=priority UNK=msg
+ansible	modules.notification		UNK	send_message	UNK=module UNK=client_id UNK=client_secret UNK=topic
+ansible	modules.notification		UNK	escape_quotes	UNK=text
+ansible	modules.notification		UNK	send_msg	UNK=msg UNK=server UNK=port UNK=channel
+ansible	modules.notification		UNK	send_msg_v1	UNK=module UNK=token UNK=room UNK=msg_from
+ansible	modules.notification		UNK	send_msg_v2	UNK=module UNK=token UNK=room UNK=msg_from
+ansible	modules.notification		UNK	spark_message	UNK=module
+ansible	modules.source_control	Hg	UNK	get_revision	void
+ansible	modules.source_control	Hg	UNK	at_revision	void
+ansible	modules.source_control	Subversion	UNK	_exec	UNK=args UNK=check_rc
+ansible	modules.source_control	Subversion	UNK	is_svn_repo	void
+ansible	modules.source_control	Subversion	UNK	checkout	void
+ansible	modules.source_control	Subversion	UNK	export	UNK=force
+ansible	modules.source_control	Subversion	UNK	switch	void
+ansible	modules.source_control	Subversion	UNK	update	void
+ansible	modules.source_control	Subversion	UNK	revert	void
+ansible	modules.source_control	Subversion	UNK	get_revision	void
+ansible	modules.source_control	Subversion	UNK	get_remote_revision	void
+ansible	modules.source_control	Subversion	UNK	has_local_mods	void
+ansible	modules.source_control		UNK	head_splitter	UNK=headfile UNK=remote UNK=module UNK=fail_on_error
+ansible	modules.source_control		UNK	get_version	UNK=module UNK=git_path UNK=dest UNK=ref
+ansible	modules.source_control		UNK	clone	UNK=git_path UNK=module UNK=repo UNK=dest
+ansible	modules.source_control		UNK	reset	UNK=git_path UNK=module UNK=dest
+ansible	modules.source_control		UNK	get_diff	UNK=module UNK=git_path UNK=dest UNK=repo
+ansible	modules.source_control		UNK	get_head_branch	UNK=git_path UNK=module UNK=dest UNK=remote
+ansible	modules.source_control		UNK	get_remote_url	UNK=git_path UNK=module UNK=dest UNK=remote
+ansible	modules.source_control		UNK	set_remote_url	UNK=git_path UNK=module UNK=repo UNK=dest
+ansible	modules.source_control		UNK	fetch	UNK=git_path UNK=module UNK=repo UNK=dest
+ansible	modules.source_control		UNK	submodule_update	UNK=git_path UNK=module UNK=dest UNK=track_submodules
+ansible	modules.source_control		UNK	set_remote_branch	UNK=git_path UNK=module UNK=dest UNK=remote
+ansible	modules.source_control		UNK	git_version	UNK=git_path UNK=module
+ansible	modules.source_control	Bzr	UNK	get_version	void
+ansible	modules.source_control	Bzr	UNK	clone	void
+ansible	modules.source_control	Bzr	UNK	reset	UNK=force
+ansible	modules.source_control	Bzr	UNK	fetch	void
+ansible	modules.source_control	Bzr	UNK	switch_version	void
+ansible	modules.database.postgresql		UNK	partial	UNK=f
+ansible	modules.database.postgresql	Connection	UNK	encoding	void
+ansible	modules.database.postgresql	Connection	UNK	manipulate_privs	UNK=obj_type UNK=privs UNK=objs UNK=roles
+ansible	modules.database.postgresql		UNK	user_add	UNK=cursor UNK=user UNK=password UNK=role_attr_flags
+ansible	modules.database.postgresql		UNK	user_alter	UNK=cursor UNK=module UNK=user UNK=password
+ansible	modules.database.postgresql		UNK	user_delete	UNK=cursor UNK=user
+ansible	modules.database.postgresql		UNK	has_table_privileges	UNK=cursor UNK=user UNK=table UNK=privs
+ansible	modules.database.postgresql		UNK	has_database_privileges	UNK=cursor UNK=user UNK=db UNK=privs
+ansible	modules.database.postgresql		UNK	parse_role_attrs	UNK=role_attr_flags
+ansible	modules.database.postgresql		UNK	parse_privs	UNK=privs UNK=db
+ansible	modules.database.postgresql		UNK	lang_exists	UNK=cursor UNK=lang
+ansible	modules.database.postgresql		UNK	lang_istrusted	UNK=cursor UNK=lang
+ansible	modules.database.postgresql		UNK	lang_altertrust	UNK=cursor UNK=lang UNK=trust
+ansible	modules.database.postgresql		UNK	lang_add	UNK=cursor UNK=lang UNK=trust
+ansible	modules.database.postgresql		UNK	lang_drop	UNK=cursor UNK=lang UNK=cascade
+ansible	modules.database.mongodb		UNK	check_compatibility	UNK=module UNK=client
+ansible	modules.database.mongodb		UNK	user_find	UNK=client UNK=user UNK=db_name
+ansible	modules.database.mysql		UNK	privileges_get	UNK=cursor UNK=user UNK=host
+ansible	modules.database.mysql		UNK	privileges_unpack	UNK=priv UNK=mode
+ansible	modules.database.mysql		UNK	typedvalue	UNK=value
+ansible	modules.database.mysql		UNK	setvariable	UNK=cursor UNK=mysqlvar UNK=value
+ansible	modules.remote_management		UNK	wakeonlan	UNK=module UNK=mac UNK=broadcast UNK=port
+ansible	modules.system		UNK	is_available	UNK=name UNK=ubuntuMode
+ansible	modules.system		UNK	is_present	UNK=name
+ansible	modules.system		UNK	fix_case	UNK=name
+ansible	modules.system		UNK	replace_line	UNK=existing_line UNK=new_line
+ansible	modules.system		UNK	set_locale	UNK=name UNK=enabled
+ansible	modules.system		UNK	apply_change	UNK=targetState UNK=name
+ansible	modules.system		UNK	apply_change_ubuntu	UNK=targetState UNK=name
+ansible	modules.system		UNK	_get_dev_size	UNK=dev UNK=module
+ansible	modules.system		UNK	_get_fs_size	UNK=fssize_cmd UNK=dev UNK=module
+ansible	modules.system	CronVar	UNK	write	UNK=backup_file
+ansible	modules.system	CronVar	UNK	render	void
+ansible	modules.system	CronVar	UNK	_read_user_execute	void
+ansible	modules.system	CronVar	UNK	_write_execute	UNK=path
+ansible	modules.system	Timezone	UNK	__new__	UNK=cls UNK=module
+ansible	modules.system	Timezone	UNK	__init__	UNK=module
+ansible	modules.system	Timezone	UNK	abort	UNK=msg
+ansible	modules.system	Timezone	UNK	execute	void
+ansible	modules.system	Timezone	UNK	diff	UNK=phase1 UNK=phase2
+ansible	modules.system	Timezone	UNK	check	UNK=phase
+ansible	modules.system	Timezone	UNK	change	void
+ansible	modules.system	Timezone	UNK	get	UNK=key UNK=phase
+ansible	modules.system	Timezone	UNK	set	UNK=key UNK=value
+ansible	modules.system	NosystemdTimezone	UNK	_edit_file	UNK=filename UNK=regexp UNK=value
+ansible	modules.system	SmartOSTimezone	UNK	get	UNK=key UNK=phase
+ansible	modules.system	SmartOSTimezone	UNK	set	UNK=key UNK=value
+ansible	modules.system	BSDTimezone	UNK	get	UNK=key UNK=phase
+ansible	modules.system		UNK	_load_dist_subclass	UNK=cls
+ansible	modules.system	CronTab	UNK	write	UNK=backup_file
+ansible	modules.system	CronTab	UNK	render	void
+ansible	modules.system	CronTab	UNK	_read_user_execute	void
+ansible	modules.system	CronTab	UNK	_write_execute	UNK=path
+ansible	modules.system		UNK	enforce_state	UNK=module UNK=params
+ansible	modules.system		UNK	sanity_check	UNK=module UNK=host UNK=key UNK=sshkeygen
+ansible	modules.system		UNK	search_for_host_key	UNK=module UNK=host UNK=key UNK=hash_host
+ansible	modules.system		UNK	normalize_known_hosts_key	UNK=key
+ansible	modules.system		UNK	_escape_fstab	UNK=v
+ansible	modules.system		UNK	set_mount	UNK=module UNK=args
+ansible	modules.system		UNK	unset_mount	UNK=module UNK=args
+ansible	modules.system		UNK	mount	UNK=module UNK=args
+ansible	modules.system		UNK	umount	UNK=module UNK=path
+ansible	modules.system		UNK	remount	UNK=module UNK=args
+ansible	modules.system		UNK	is_bind_mounted	UNK=module UNK=linux_mounts UNK=dest UNK=src
+ansible	modules.system		UNK	get_linux_mounts	UNK=module
+ansible	modules.system		UNK	parse_unit	UNK=size_str UNK=unit
+ansible	modules.system		UNK	parse_partition_info	UNK=parted_output UNK=unit
+ansible	modules.system		UNK	format_disk_size	UNK=size_bytes UNK=unit
+ansible	modules.system		UNK	get_unlabeled_device_info	UNK=device UNK=unit
+ansible	modules.system		UNK	get_device_info	UNK=device UNK=unit
+ansible	modules.system		UNK	check_parted_label	UNK=device
+ansible	modules.system		UNK	parted_version	void
+ansible	modules.system		UNK	parted	UNK=script UNK=device UNK=align
+ansible	modules.system		UNK	read_record	UNK=file_path UNK=default
+ansible	modules.system		UNK	part_exists	UNK=partitions UNK=attribute UNK=number
+ansible	modules.system		UNK	check_size_format	UNK=size_str
+ansible	modules.system		UNK	action_handler	UNK=action_func UNK=action_func_args
+ansible	modules.system		UNK	check_cert_present	UNK=module UNK=executable UNK=keystore_path UNK=keystore_pass
+ansible	modules.system		UNK	import_cert_url	UNK=module UNK=executable UNK=url UNK=port
+ansible	modules.system		UNK	import_cert_path	UNK=module UNK=executable UNK=path UNK=keystore_path
+ansible	modules.system		UNK	delete_cert	UNK=module UNK=executable UNK=keystore_path UNK=keystore_pass
+ansible	modules.system		UNK	test_keytool	UNK=module UNK=executable
+ansible	modules.system		UNK	test_keystore	UNK=module UNK=keystore_path
+ansible	modules.system		UNK	semanage_fcontext_exists	UNK=sefcontext UNK=target UNK=ftype
+ansible	modules.system		UNK	semanage_fcontext_modify	UNK=module UNK=result UNK=target UNK=ftype
+ansible	modules.system		UNK	semanage_fcontext_delete	UNK=module UNK=result UNK=target UNK=ftype
+ansible	modules.system		UNK	semanage_port_get_ports	UNK=seport UNK=setype UNK=proto
+ansible	modules.system		UNK	semanage_port_get_type	UNK=seport UNK=port UNK=proto
+ansible	modules.system		UNK	semanage_port_add	UNK=module UNK=ports UNK=proto UNK=setype
+ansible	modules.system		UNK	semanage_port_del	UNK=module UNK=ports UNK=proto UNK=setype
+ansible	modules.system		UNK	keyfile	UNK=module UNK=user UNK=write UNK=path
+ansible	modules.system		UNK	parseoptions	UNK=module UNK=options
+ansible	modules.system		UNK	parsekey	UNK=module UNK=raw_key UNK=rank
+ansible	modules.system	User	UNK	user_group_membership	UNK=exclude_primary
+ansible	modules.system	DarwinUser	UNK	_get_user_property	UNK=property
+ansible	modules.system	DarwinUser	UNK	_get_next_uid	UNK=system
+ansible	modules.system	DarwinUser	UNK	_change_user_password	void
+ansible	modules.system	DarwinUser	UNK	_make_group_numerical	void
+ansible	modules.system	DarwinUser	UNK	__modify_group	UNK=group UNK=action
+ansible	modules.system	DarwinUser	UNK	_modify_group	void
+ansible	modules.system	DarwinUser	UNK	_update_system_user	void
+ansible	modules.system	DarwinUser	UNK	user_exists	void
+ansible	modules.system	DarwinUser	UNK	remove_user	void
+ansible	modules.system		UNK	run_command	UNK=command UNK=module UNK=check_rc
+ansible	modules.system		UNK	sanitize_output	UNK=output
+ansible	modules.system	SysctlModule	UNK	_values_is_equal	UNK=a UNK=b
+ansible	modules.system	GConf2Preference	UNK	call	UNK=call_type UNK=fail_onerr
+ansible	modules.packaging.os		UNK	get_version	UNK=pacman_output
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=pacman_path UNK=name UNK=state
+ansible	modules.packaging.os		UNK	parse_key_id	UNK=key_id
+ansible	modules.packaging.os		UNK	shorten_key_ids	UNK=key_id_list
+ansible	modules.packaging.os		UNK	update_package_db	UNK=module UNK=opkg_path
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=opkg_path UNK=name UNK=state
+ansible	modules.packaging.os		UNK	remove_packages	UNK=module UNK=opkg_path UNK=packages
+ansible	modules.packaging.os		UNK	install_packages	UNK=module UNK=opkg_path UNK=packages
+ansible	modules.packaging.os		UNK	transaction_exists	UNK=pkglist
+ansible	modules.packaging.os		UNK	local_nvra	UNK=module UNK=path
+ansible	modules.packaging.os		UNK	init_layman	UNK=config
+ansible	modules.packaging.os		UNK	download_url	UNK=module UNK=url UNK=dest
+ansible	modules.packaging.os		UNK	install_overlay	UNK=module UNK=name UNK=list_url
+ansible	modules.packaging.os		UNK	uninstall_overlay	UNK=module UNK=name
+ansible	modules.packaging.os		UNK	sync_overlay	UNK=name
+ansible	modules.packaging.os		UNK	sync_overlays	void
+ansible	modules.packaging.os		UNK	is_installed	UNK=xbps_output
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=xbps_path UNK=name UNK=state
+ansible	modules.packaging.os		UNK	update_package_db	UNK=module UNK=xbps_path
+ansible	modules.packaging.os		UNK	upgrade	UNK=module UNK=xbps_path
+ansible	modules.packaging.os		UNK	remove_packages	UNK=module UNK=xbps_path UNK=packages
+ansible	modules.packaging.os		UNK	install_packages	UNK=module UNK=xbps_path UNK=state UNK=packages
+ansible	modules.packaging.os		UNK	check_packages	UNK=module UNK=xbps_path UNK=packages UNK=state
+ansible	modules.packaging.os		UNK	main	void
+ansible	modules.packaging.os		UNK	get_cache_mtime	void
+ansible	modules.packaging.os		UNK	get_updated_cache_time	void
+ansible	modules.packaging.os		UNK	get_cache	UNK=module
+ansible	modules.packaging.os		UNK	_get_cmd	void
+ansible	modules.packaging.os		UNK	_parse_repos	UNK=module
+ansible	modules.packaging.os		UNK	_repo_changes	UNK=realrepo UNK=repocmp
+ansible	modules.packaging.os		UNK	repo_exists	UNK=module UNK=repodata UNK=overwrite_multiple
+ansible	modules.packaging.os		UNK	addmodify_repo	UNK=module UNK=repodata UNK=old_repos UNK=zypper_version
+ansible	modules.packaging.os		UNK	remove_repo	UNK=module UNK=repo
+ansible	modules.packaging.os		UNK	runrefreshrepo	UNK=module UNK=auto_import_keys UNK=shortname
+ansible	modules.packaging.os		UNK	_configure_base	UNK=module UNK=base UNK=conf_file UNK=disable_gpg_check
+ansible	modules.packaging.os		UNK	_specify_repositories	UNK=base UNK=disablerepo UNK=enablerepo
+ansible	modules.packaging.os		UNK	_base	UNK=module UNK=conf_file UNK=disable_gpg_check UNK=disablerepo
+ansible	modules.packaging.os		UNK	_package_dict	UNK=package
+ansible	modules.packaging.os		UNK	list_items	UNK=module UNK=base UNK=command
+ansible	modules.packaging.os		UNK	_mark_package_install	UNK=module UNK=base UNK=pkg_spec
+ansible	modules.packaging.os	Rhn	UNK	load_config	void
+ansible	modules.packaging.os	Rhn	UNK	hostname	void
+ansible	modules.packaging.os	Rhn	UNK	is_registered	void
+ansible	modules.packaging.os	Rhn	UNK	configure_server_url	UNK=server_url
+ansible	modules.packaging.os	Rhn	UNK	enable	void
+ansible	modules.packaging.os	Rhn	UNK	register	UNK=enable_eus UNK=activationkey UNK=profilename UNK=sslcacert
+ansible	modules.packaging.os	Rhn	UNK	api	UNK=method
+ansible	modules.packaging.os	Rhn	UNK	unregister	void
+ansible	modules.packaging.os	Rhn	UNK	_is_hosted	void
+ansible	modules.packaging.os		UNK	is_pubkey	UNK=string
+ansible	modules.packaging.os	RpmKey	UNK	fetch_key	UNK=url
+ansible	modules.packaging.os	RpmKey	UNK	normalize_keyid	UNK=keyid
+ansible	modules.packaging.os	RpmKey	UNK	is_keyid	UNK=keystr
+ansible	modules.packaging.os	Rhsm	UNK	_read_config	UNK=rhsm_conf
+ansible	modules.packaging.os	Rhsm	UNK	enable	void
+ansible	modules.packaging.os	Rhsm	UNK	configure	void
+ansible	modules.packaging.os	Rhsm	UNK	is_registered	void
+ansible	modules.packaging.os	Rhsm	UNK	register	UNK=username UNK=password UNK=autosubscribe UNK=activationkey
+ansible	modules.packaging.os	Rhsm	UNK	unsubscribe	UNK=serials
+ansible	modules.packaging.os	Rhsm	UNK	unregister	void
+ansible	modules.packaging.os	Rhsm	UNK	subscribe	UNK=regexp
+ansible	modules.packaging.os	Rhsm	UNK	subscribe_pool	UNK=regexp
+ansible	modules.packaging.os	Rhsm	UNK	subscribe_product	UNK=regexp
+ansible	modules.packaging.os	RhsmPools	UNK	_load_product_list	UNK=consumed
+ansible	modules.packaging.os	RhsmPools	UNK	filter_pools	UNK=regexp
+ansible	modules.packaging.os	RhsmPools	UNK	filter_products	UNK=regexp
+ansible	modules.packaging.os		UNK	compare_package	UNK=version1 UNK=version2
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=name UNK=depot
+ansible	modules.packaging.os		UNK	remove_package	UNK=module UNK=name
+ansible	modules.packaging.os		UNK	install_package	UNK=module UNK=depot UNK=name
+ansible	modules.packaging.os		UNK	update_package_db	UNK=module UNK=port_path
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=port_path UNK=name UNK=state
+ansible	modules.packaging.os		UNK	remove_packages	UNK=module UNK=port_path UNK=packages
+ansible	modules.packaging.os		UNK	install_packages	UNK=module UNK=port_path UNK=packages
+ansible	modules.packaging.os		UNK	activate_packages	UNK=module UNK=port_path UNK=packages
+ansible	modules.packaging.os		UNK	deactivate_packages	UNK=module UNK=port_path UNK=packages
+ansible	modules.packaging.os		UNK	get_sorcery_ver	UNK=module
+ansible	modules.packaging.os		UNK	codex_fresh	UNK=codex UNK=module
+ansible	modules.packaging.os		UNK	codex_list	UNK=module
+ansible	modules.packaging.os		UNK	update_sorcery	UNK=module
+ansible	modules.packaging.os		UNK	update_codex	UNK=module
+ansible	modules.packaging.os		UNK	match_depends	UNK=module
+ansible	modules.packaging.os		UNK	manage_spells	UNK=module
+ansible	modules.packaging.os	Swupd	UNK	install_bundle	UNK=bundle
+ansible	modules.packaging.os	Swupd	UNK	remove_bundle	UNK=bundle
+ansible	modules.packaging.os	Swupd	UNK	update_os	void
+ansible	modules.packaging.os	Swupd	UNK	verify_os	void
+ansible	modules.packaging.os		UNK	a_valid_tap	UNK=tap
+ansible	modules.packaging.os		UNK	already_tapped	UNK=module UNK=brew_path UNK=tap
+ansible	modules.packaging.os		UNK	add_tap	UNK=module UNK=brew_path UNK=tap UNK=url
+ansible	modules.packaging.os		UNK	add_taps	UNK=module UNK=brew_path UNK=taps
+ansible	modules.packaging.os		UNK	remove_tap	UNK=module UNK=brew_path UNK=tap
+ansible	modules.packaging.os		UNK	remove_taps	UNK=module UNK=brew_path UNK=taps
+ansible	modules.packaging.os	SourcesList	UNK	__iter__	void
+ansible	modules.packaging.os	SourcesList	UNK	_apt_cfg_file	UNK=filespec
+ansible	modules.packaging.os	SourcesList	UNK	_apt_cfg_dir	UNK=dirspec
+ansible	modules.packaging.os	SourcesList	UNK	modify	UNK=file UNK=n UNK=enabled UNK=source
+ansible	modules.packaging.os		UNK	query_package	UNK=module UNK=name
+ansible	modules.packaging.os		UNK	split_name_version	UNK=name
+ansible	modules.packaging.os		UNK	get_installed_state	UNK=m UNK=packages
+ansible	modules.packaging.os		UNK	get_cmd	UNK=m UNK=subcommand
+ansible	modules.packaging.os		UNK	package_present	UNK=m UNK=name UNK=want_latest
+ansible	modules.packaging.os		UNK	package_update_all	UNK=m
+ansible	modules.packaging.os		UNK	package_absent	UNK=m UNK=name
+ansible	modules.packaging.os		UNK	repo_refresh	UNK=m
+ansible	modules.packaging.os	HomebrewCask	UNK	valid_path	UNK=cls UNK=path
+ansible	modules.packaging.os	HomebrewCask	UNK	valid_brew_path	UNK=cls UNK=brew_path
+ansible	modules.packaging.os	HomebrewCask	UNK	valid_cask	UNK=cls UNK=cask
+ansible	modules.packaging.os	HomebrewCask	UNK	valid_state	UNK=cls UNK=state
+ansible	modules.packaging.os	HomebrewCask	UNK	valid_module	UNK=cls UNK=module
+ansible	modules.packaging.os	Homebrew	UNK	valid_path	UNK=cls UNK=path
+ansible	modules.packaging.os	Homebrew	UNK	valid_brew_path	UNK=cls UNK=brew_path
+ansible	modules.packaging.os	Homebrew	UNK	valid_package	UNK=cls UNK=package
+ansible	modules.packaging.os	Homebrew	UNK	valid_state	UNK=cls UNK=state
+ansible	modules.packaging.os	Homebrew	UNK	valid_module	UNK=cls UNK=module
+ansible	modules.packaging.language		UNK	get_local_version	UNK=pear_output
+ansible	modules.packaging.language		UNK	get_repository_version	UNK=pear_output
+ansible	modules.packaging.language		UNK	query_package	UNK=module UNK=name UNK=state
+ansible	modules.packaging.language		UNK	_get_packages	UNK=module UNK=pip UNK=chdir
+ansible	modules.packaging.language		UNK	_is_present	UNK=name UNK=version UNK=installed_pkgs UNK=pkg_command
+ansible	modules.packaging.language		UNK	_get_package_info	UNK=module UNK=package UNK=env
+ansible	modules.identity.ipa		UNK	get_user_diff	UNK=client UNK=ipa_user UNK=module_user
+ansible	modules.identity.ipa		UNK	get_ssh_key_fingerprint	UNK=ssh_key
+ansible	modules.network.eos		UNK	main	void
+ansible	modules.network.ios		UNK	main	void
+ansible	modules.network.sros		UNK	main	void
+ansible	modules.network.dellos10		UNK	main	void
+ansible	modules.network.netvisor		UNK	pn_cli	UNK=module
+ansible	modules.network.netvisor		UNK	check_cli	UNK=module UNK=cli
+ansible	modules.network.netvisor		UNK	run_cli	UNK=module UNK=cli
+ansible	modules.network.netvisor		UNK	get_command_from_state	UNK=state
+ansible	modules.network.netvisor		UNK	main	void
+ansible	modules.network.netvisor		UNK	get_nic	UNK=module UNK=cli
+ansible	modules.network.f5	BigIpDeviceSshd	UNK	read	void
+ansible	modules.network.f5	BigIpSelfIp	UNK	read	void
+ansible	modules.network.f5	BigIpSelfIp	UNK	verify_services	void
+ansible	modules.network.f5	BigIpSelfIp	UNK	fmt_services	UNK=services
+ansible	modules.network.f5	BigIpSelfIp	UNK	get_vlans	void
+ansible	modules.network.f5	BigIpSnatPoolManager	UNK	format_snat_pool_information	UNK=pool
+ansible	modules.network.f5	BigIpVlan	UNK	read	void
+ansible	modules.network.f5	BigIpGtmDatacenter	UNK	read	void
+ansible	modules.network.f5	BigIpiRule	UNK	read	void
+ansible	modules.network.f5	BigIpRouteDomain	UNK	read	void
+ansible	modules.network.f5	BigIpDeviceNtp	UNK	read	void
+ansible	modules.network.iosxr		UNK	main	void
+ansible	modules.network.ordnance		UNK	main	void
+ansible	modules.network.junos		UNK	main	void
+ansible	modules.network.ovs		UNK	map_obj_to_commands	UNK=want UNK=have UNK=module
+ansible	modules.network.ovs		UNK	main	void
+ansible	modules.network.openswitch		UNK	main	void
+ansible	modules.network.asa		UNK	main	void
+ansible	modules.network.cumulus		UNK	add_glob_to_array	UNK=_bondmems
+ansible	modules.network.cumulus		UNK	build_desired_iface_config	UNK=module
+ansible	modules.network.cumulus		UNK	config_dict_changed	UNK=module
+ansible	modules.network.cumulus		UNK	config_changed	UNK=module
+ansible	modules.network.cumulus		UNK	write_to_ports_conf	UNK=module
+ansible	modules.network.cumulus		UNK	command_helper	UNK=module UNK=command UNK=errmsg
+ansible	modules.network.cumulus		UNK	check_pending	UNK=module
+ansible	modules.network.cumulus		UNK	add_glob_to_array	UNK=_bridgemems
+ansible	modules.network.dellos9		UNK	main	void
+ansible	modules.network.panos		UNK	_commit	UNK=device UNK=device_group
+ansible	modules.network.dellos6		UNK	main	void
+ansible	modules.network.nxos		UNK	validate_feature	UNK=module UNK=mode
+ansible	modules.network.nxos		UNK	get_interface_type	UNK=interface
+ansible	modules.network.nxos		UNK	get_interface_mode	UNK=interface UNK=module
+ansible	modules.network.nxos		UNK	interface_is_portchannel	UNK=interface UNK=module
+ansible	modules.network.nxos		UNK	get_switchport	UNK=port UNK=module
+ansible	modules.network.nxos		UNK	get_switchport_config_commands	UNK=interface UNK=existing UNK=proposed UNK=module
+ansible	modules.network.nxos		UNK	is_switchport_default	UNK=existing
+ansible	modules.network.nxos		UNK	numerical_sort	UNK=string_int_list
+ansible	modules.network.nxos		UNK	main	void
+ansible	modules.network.nxos		UNK	is_default_interface	UNK=interface UNK=module
+ansible	modules.network.nxos		UNK	get_manual_interface_attributes	UNK=interface UNK=module
+ansible	modules.network.nxos		UNK	get_interface	UNK=intf UNK=module
+ansible	modules.network.nxos		UNK	get_interfaces_dict	UNK=module
+ansible	modules.network.nxos		UNK	normalize_interface	UNK=if_name
+ansible	modules.network.nxos		UNK	get_interface_config_commands	UNK=interface UNK=intf UNK=existing
+ansible	modules.network.nxos		UNK	get_boot_options	UNK=module
+ansible	modules.network.nxos		UNK	set_boot_options	UNK=module UNK=image_name UNK=kickstart
+ansible	modules.network.nxos		UNK	numerical_sort	UNK=iterable
+ansible	modules.network.nxos		UNK	get_vlan_config_commands	UNK=vlan UNK=vid
+ansible	modules.network.nxos		UNK	get_vlan	UNK=vlanid UNK=module
+ansible	modules.files		UNK	crc32	UNK=path
+ansible	modules.files		UNK	shell_escape	UNK=string
+ansible	modules.files	ZipArchive	UNK	_permstr_to_octal	UNK=modestr UNK=umask
+ansible	modules.files		UNK	split_entry	UNK=entry
+ansible	modules.files		UNK	build_entry	UNK=etype UNK=entity UNK=permissions UNK=use_nfsv4_acls
+ansible	modules.files		UNK	build_command	UNK=module UNK=mode UNK=path UNK=follow
+ansible	modules.files		UNK	acl_changed	UNK=module UNK=cmd
+ansible	modules.files		UNK	assemble_from_fragments	UNK=src_path UNK=delimiter UNK=compiled_regexp UNK=ignore_hidden
+ansible	modules.files		UNK	split_pre_existing_dir	UNK=dirname
+ansible	modules.files		UNK	adjust_recursive_directory_permissions	UNK=pre_existing_dir UNK=new_directory_list UNK=module UNK=directory_args
+ansible	modules.files		UNK	get_state	UNK=b_path
+ansible	modules.files		UNK	pfilter	UNK=f UNK=patterns UNK=use_regex
+ansible	modules.files		UNK	agefilter	UNK=st UNK=now UNK=age UNK=timestamp
+ansible	modules.files		UNK	sizefilter	UNK=st UNK=size
+ansible	modules.files		UNK	contentfilter	UNK=fsname UNK=pattern
+ansible	modules.net_tools	HAProxy	UNK	execute	UNK=cmd UNK=timeout UNK=capture_output
+ansible	modules.net_tools	HAProxy	UNK	capture_command_output	UNK=cmd UNK=output
+ansible	modules.net_tools	HAProxy	UNK	discover_all_backends	void
+ansible	modules.net_tools	HAProxy	UNK	execute_for_backends	UNK=cmd UNK=pxname UNK=svname UNK=wait_for_status
+ansible	modules.net_tools	HAProxy	UNK	get_state_for	UNK=pxname UNK=svname
+ansible	modules.net_tools	HAProxy	UNK	wait_until_status	UNK=pxname UNK=svname UNK=status
+ansible	modules.net_tools	HAProxy	UNK	enabled	UNK=host UNK=backend UNK=weight
+ansible	modules.net_tools	HAProxy	UNK	disabled	UNK=host UNK=backend UNK=shutdown_sessions
+ansible	modules.net_tools	HAProxy	UNK	act	void
+ansible	modules.net_tools.basics		UNK	absolute_location	UNK=url UNK=location
+ansible	modules.net_tools.basics		UNK	url_get	UNK=module UNK=url UNK=dest UNK=use_proxy
+ansible	modules.net_tools.basics		UNK	extract_filename_from_headers	UNK=headers
+ansible	modules.net_tools.ldap	LdapEntry	UNK	_load_attrs	void
+ansible	modules.net_tools.ldap	LdapEntry	UNK	add	void
+ansible	modules.net_tools.ldap	LdapEntry	UNK	delete	void
+ansible	modules.net_tools.ldap	LdapAttr	UNK	_is_value_present	UNK=value
+ansible	modules.net_tools.ldap	LdapAttr	UNK	_is_value_absent	UNK=value
+ansible	modules.cloud.azure	AzureRMVirtualMachine	UNK	get_vm	void
+ansible	modules.cloud.azure	AzureRMVirtualMachine	UNK	serialize_vm	UNK=vm
+ansible	modules.cloud.azure	AzureRMVirtualMachine	UNK	vm_size_is_valid	void
+ansible	modules.cloud.azure	AzureRMVirtualMachine	UNK	create_default_storage_account	void
+ansible	modules.cloud.azure	AzureRMVirtualMachine	UNK	create_default_nic	void
+ansible	modules.cloud.azure		UNK	virtual_network_to_dict	UNK=vnet
+ansible	modules.cloud.azure	AzureRMStorageAccount	UNK	account_has_blob_containers	void
+ansible	modules.cloud.azure		UNK	validate_rule	UNK=rule UNK=rule_type
+ansible	modules.cloud.azure		UNK	create_rule_instance	UNK=rule
+ansible	modules.cloud.azure		UNK	create_rule_dict_from_obj	UNK=rule
+ansible	modules.cloud.azure	AzureRMDeploymentManager	UNK	deploy_template	void
+ansible	modules.cloud.azure	AzureRMDeploymentManager	UNK	destroy_resource_group	void
+ansible	modules.cloud.azure	AzureRMDeploymentManager	UNK	resource_group_exists	UNK=resource_group
+ansible	modules.cloud.azure		UNK	get_ssh_certificate_tokens	UNK=module UNK=ssh_cert_path
+ansible	modules.cloud.azure		UNK	create_virtual_machine	UNK=module UNK=azure
+ansible	modules.cloud.azure		UNK	terminate_virtual_machine	UNK=module UNK=azure
+ansible	modules.cloud.pubnub		UNK	pubnub_user	UNK=module
+ansible	modules.cloud.pubnub		UNK	pubnub_account	UNK=module UNK=user
+ansible	modules.cloud.pubnub		UNK	pubnub_application	UNK=module UNK=account
+ansible	modules.cloud.pubnub		UNK	pubnub_keyset	UNK=module UNK=account UNK=application
+ansible	modules.cloud.pubnub		UNK	pubnub_block	UNK=module UNK=account UNK=keyset
+ansible	modules.cloud.pubnub		UNK	pubnub_event_handler	UNK=block UNK=data
+ansible	modules.cloud.pubnub		UNK	_failure_title_from_exception	UNK=exception
+ansible	modules.cloud.pubnub		UNK	_content_of_file_at_path	UNK=path
+ansible	modules.cloud.misc	LibvirtConnection	UNK	find_vm	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	shutdown	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	pause	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	unpause	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	create	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	start	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	destroy	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	undefine	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	status	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	get_xml	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	get_maxVcpus	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	get_max_memory	UNK=vmid
+ansible	modules.cloud.misc	Virt	UNK	define	UNK=xml
+ansible	modules.cloud.misc		UNK	change_keys	UNK=recs UNK=key UNK=filter_func
+ansible	modules.cloud.misc		UNK	get_host	UNK=session
+ansible	modules.cloud.ovirt		UNK	_search_by_lun	UNK=disks_service UNK=lun_id
+ansible	modules.cloud.ovirt	AffinityGroupsModule	UNK	update_vms	UNK=affinity_group
+ansible	modules.cloud.ovirt	VmsModule	UNK	__get_template_with_version	void
+ansible	modules.cloud.ovirt	VmsModule	UNK	wait_for_down	UNK=vm
+ansible	modules.cloud.ovirt	VmsModule	UNK	__get_vnic_profile_id	UNK=nic
+ansible	modules.cloud.docker	LoginManager	UNK	login	void
+ansible	modules.cloud.docker	LoginManager	UNK	logout	void
+ansible	modules.cloud.docker	LoginManager	UNK	create_config_file	UNK=path
+ansible	modules.cloud.docker	LoginManager	UNK	update_config_file	void
+ansible	modules.cloud.docker	TaskParameters	UNK	update_parameters	void
+ansible	modules.cloud.docker	TaskParameters	UNK	create_parameters	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_get_mounts	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_host_config	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_parse_publish_ports	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_get_volume_binds	UNK=volumes
+ansible	modules.cloud.docker	TaskParameters	UNK	_parse_exposed_ports	UNK=published_ports
+ansible	modules.cloud.docker	TaskParameters	UNK	_parse_links	UNK=links
+ansible	modules.cloud.docker	TaskParameters	UNK	_parse_ulimits	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_parse_log_config	void
+ansible	modules.cloud.docker	TaskParameters	UNK	_get_environment	void
+ansible	modules.cloud.docker	Container	UNK	has_different_configuration	UNK=image
+ansible	modules.cloud.docker	Container	UNK	_compare_dictionary_lists	UNK=list_a UNK=list_b
+ansible	modules.cloud.docker	Container	UNK	_compare_dicts	UNK=dict_a UNK=dict_b
+ansible	modules.cloud.docker	Container	UNK	has_different_resource_limits	void
+ansible	modules.cloud.docker	Container	UNK	has_network_differences	void
+ansible	modules.cloud.docker	Container	UNK	has_extra_networks	void
+ansible	modules.cloud.docker	Container	UNK	_get_image_binds	UNK=volumes
+ansible	modules.cloud.docker	ContainerManager	UNK	_get_container	UNK=container
+ansible	modules.cloud.docker	ImageManager	UNK	present	void
+ansible	modules.cloud.docker	ImageManager	UNK	absent	void
+ansible	modules.cloud.docker	ImageManager	UNK	archive_image	UNK=name UNK=tag
+ansible	modules.cloud.docker	ImageManager	UNK	push_image	UNK=name UNK=tag
+ansible	modules.cloud.docker	ImageManager	UNK	tag_image	UNK=name UNK=tag UNK=repository UNK=force
+ansible	modules.cloud.docker	ImageManager	UNK	build_image	void
+ansible	modules.cloud.docker	ImageManager	UNK	load_image	void
+ansible	modules.cloud.docker	ImageManager	UNK	get_facts	void
+ansible	modules.cloud.docker	DockerNetworkManager	UNK	has_different_config	UNK=net
+ansible	modules.cloud.docker		UNK	normalize_image	UNK=image
+ansible	modules.cloud.docker		UNK	is_running	UNK=container
+ansible	modules.cloud.docker		UNK	check_dependencies	UNK=module
+ansible	modules.cloud.docker	DockerManager	UNK	_check_capabilities	void
+ansible	modules.cloud.docker	DockerManager	UNK	ensure_capability	UNK=capability UNK=fail
+ansible	modules.cloud.docker	DockerManager	UNK	get_environment	UNK=env UNK=env_file
+ansible	modules.cloud.docker	DockerManager	UNK	get_links	UNK=links
+ansible	modules.cloud.docker	DockerManager	UNK	get_exposed_ports	UNK=expose_list
+ansible	modules.cloud.docker	DockerManager	UNK	get_start_params	void
+ansible	modules.cloud.docker	DockerManager	UNK	create_host_config	void
+ansible	modules.cloud.docker	DockerManager	UNK	get_port_bindings	UNK=ports
+ansible	modules.cloud.docker	DockerManager	UNK	get_summary_message	void
+ansible	modules.cloud.docker	DockerManager	UNK	get_reload_reason_message	void
+ansible	modules.cloud.docker	DockerManager	UNK	get_differing_containers	void
+ansible	modules.cloud.docker	DockerManager	UNK	get_deployed_containers	void
+ansible	modules.cloud.docker	ContainerSet	UNK	refresh	void
+ansible	modules.cloud.docker	ContainerSet	UNK	notice_changed	UNK=containers
+ansible	modules.cloud.docker		UNK	present	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	started	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	reloaded	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	restarted	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	stopped	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	killed	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.docker		UNK	absent	UNK=manager UNK=containers UNK=count UNK=name
+ansible	modules.cloud.vmware		UNK	migrate_vm	UNK=vm_object UNK=host_object
+ansible	modules.cloud.vmware		UNK	get_obj	UNK=content UNK=vimtype UNK=name
+ansible	modules.cloud.vmware	PyVmomiHelper	UNK	set_powerstate	UNK=vm UNK=state UNK=force
+ansible	modules.cloud.vmware		UNK	vmware_path	UNK=datastore UNK=datacenter UNK=path
+ansible	modules.cloud.vmware		UNK	power_state	UNK=vm UNK=state UNK=force
+ansible	modules.cloud.vmware		UNK	gather_facts	UNK=vm
+ansible	modules.cloud.vmware		UNK	config_check	UNK=name UNK=passed UNK=default UNK=module
+ansible	modules.cloud.dimensiondata	DimensionDataNetworkModule	UNK	__init__	void
+ansible	modules.cloud.cloudstack	CloudStackFacts	UNK	_get_dhcp_lease_file	void
+ansible	modules.cloud.cloudstack	CloudStackFacts	UNK	_get_api_ip	void
+ansible	modules.cloud.lxc		UNK	create_script	UNK=command
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	__init__	UNK=module
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_roundup	UNK=num
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_container_exists	UNK=container_name UNK=lxc_path
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_add_variables	UNK=variables_dict UNK=build_command
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_get_vars	UNK=variables
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_run_command	UNK=build_command UNK=unsafe_shell
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_config	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_container_create_clone	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_create	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_container_data	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_unfreeze	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_get_state	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_execute_command	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_container_startup	UNK=timeout
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_check_archive	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_check_clone	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_destroyed	UNK=timeout
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_frozen	UNK=count
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_restarted	UNK=count
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_stopped	UNK=count
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_started	UNK=count
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_get_lxc_vg	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_lvm_lv_list	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_get_vg_free_pe	UNK=vg_name
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_get_lv_size	UNK=lv_name
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_lvm_snapshot_create	UNK=source_lv UNK=snapshot_name UNK=snapshot_size_gb
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_lvm_lv_mount	UNK=lv_name UNK=mount_point
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_create_tar	UNK=source_dir
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_lvm_lv_remove	UNK=lv_name
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_rsync_data	UNK=container_path UNK=temp_dir
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_unmount	UNK=mount_point
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_overlayfs_mount	UNK=lowerdir UNK=upperdir UNK=mount_point
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	_container_create_tar	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	failure	void
+ansible	modules.cloud.lxc	LxcContainerManagement	UNK	run	void
+ansible	modules.cloud.lxc		UNK	main	void
+ansible	modules.cloud.openstack		UNK	_system_state_change	UNK=module UNK=project_quota_output
+ansible	modules.cloud.openstack		UNK	_needs_update	UNK=module UNK=secgroup
+ansible	modules.cloud.openstack		UNK	_needs_update	UNK=module UNK=port UNK=cloud
+ansible	modules.cloud.openstack		UNK	_needs_update	UNK=cloud UNK=module UNK=router UNK=network
+ansible	modules.cloud.openstack		UNK	_system_state_change	UNK=cloud UNK=module UNK=router UNK=network
+ansible	modules.cloud.openstack		UNK	_system_state_change	UNK=state UNK=device
+ansible	modules.cloud.openstack		UNK	_ports_match	UNK=protocol UNK=module_min UNK=module_max UNK=rule_min
+ansible	modules.cloud.openstack		UNK	_find_matching_rule	UNK=module UNK=secgroup UNK=remotegroup
+ansible	modules.cloud.openstack		UNK	_wait	UNK=timeout UNK=cloud UNK=server UNK=action
+ansible	modules.cloud.openstack		UNK	_system_state_change	UNK=action UNK=status
+ansible	modules.cloud.openstack		UNK	_can_update	UNK=subnet UNK=module UNK=cloud
+ansible	modules.cloud.openstack		UNK	_needs_update	UNK=subnet UNK=module UNK=cloud
+ansible	modules.cloud.packet		UNK	serialize_device	UNK=device
+ansible	modules.cloud.univention		UNK	convert_time	UNK=time
+ansible	modules.cloud.google		UNK	create_image	UNK=gce UNK=name UNK=module
+ansible	modules.cloud.google		UNK	delete_image	UNK=gce UNK=name UNK=module
+ansible	modules.cloud.google		UNK	find_snapshot	UNK=volume UNK=name
+ansible	modules.cloud.google		UNK	create_zone	UNK=module UNK=gcdns UNK=zone
+ansible	modules.cloud.google		UNK	remove_zone	UNK=module UNK=gcdns UNK=zone
+ansible	modules.cloud.google		UNK	_get_zone	UNK=gcdns UNK=zone_name
+ansible	modules.cloud.google		UNK	_sanity_check	UNK=module
+ansible	modules.cloud.google		UNK	_check_params	UNK=params UNK=field_list
+ansible	modules.cloud.google		UNK	_validate_autoscaling_params	UNK=params
+ansible	modules.cloud.google		UNK	_validate_named_port_params	UNK=params
+ansible	modules.cloud.google		UNK	_get_instance_list	UNK=mig UNK=field UNK=filter_list
+ansible	modules.cloud.google		UNK	_gen_gce_as_policy	UNK=as_params
+ansible	modules.cloud.google		UNK	create_autoscaler	UNK=gce UNK=mig UNK=params
+ansible	modules.cloud.google		UNK	update_autoscaler	UNK=gce UNK=autoscaler UNK=params
+ansible	modules.cloud.google		UNK	delete_autoscaler	UNK=autoscaler
+ansible	modules.cloud.google		UNK	get_autoscaler	UNK=gce UNK=name UNK=zone
+ansible	modules.cloud.google		UNK	create_mig	UNK=gce UNK=params
+ansible	modules.cloud.google		UNK	delete_mig	UNK=mig
+ansible	modules.cloud.google		UNK	recreate_instances_in_mig	UNK=mig
+ansible	modules.cloud.google		UNK	resize_mig	UNK=mig UNK=size
+ansible	modules.cloud.google		UNK	get_mig	UNK=gce UNK=name UNK=zone
+ansible	modules.cloud.google		UNK	update_named_ports	UNK=mig UNK=named_ports
+ansible	modules.cloud.google		UNK	transform_headers	UNK=headers
+ansible	modules.cloud.google		UNK	list_func	UNK=data UNK=member
+ansible	modules.cloud.google		UNK	create_record	UNK=module UNK=gcdns UNK=zone UNK=record
+ansible	modules.cloud.google		UNK	remove_record	UNK=module UNK=gcdns UNK=record
+ansible	modules.cloud.google		UNK	_get_record	UNK=gcdns UNK=zone UNK=record_type UNK=record_name
+ansible	modules.cloud.google		UNK	_get_zone	UNK=gcdns UNK=zone_name UNK=zone_id
+ansible	modules.cloud.google		UNK	_records_match	UNK=old_ttl UNK=old_record_data UNK=new_ttl UNK=new_record_data
+ansible	modules.cloud.google		UNK	_additional_sanity_checks	UNK=module UNK=zone
+ansible	modules.cloud.google		UNK	_validate_params	UNK=params
+ansible	modules.cloud.google		UNK	_validate_backend_params	UNK=backends
+ansible	modules.cloud.google		UNK	get_backend_service	UNK=gce UNK=name
+ansible	modules.cloud.google		UNK	create_backend_service	UNK=gce UNK=params
+ansible	modules.cloud.google		UNK	delete_backend_service	UNK=bes
+ansible	modules.cloud.google		UNK	pull_messages	UNK=pull_params UNK=sub
+ansible	modules.cloud.google		UNK	_union_items	UNK=baselist UNK=comparelist
+ansible	modules.cloud.google		UNK	_intersect_items	UNK=baselist UNK=comparelist
+ansible	modules.cloud.google		UNK	_get_changed_items	UNK=baselist UNK=comparelist
+ansible	modules.cloud.google		UNK	modify_tags	UNK=gce UNK=module UNK=node UNK=tags
+ansible	modules.cloud.google		UNK	get_address	UNK=gce UNK=name UNK=region
+ansible	modules.cloud.google		UNK	create_address	UNK=gce UNK=params
+ansible	modules.cloud.google		UNK	delete_address	UNK=address
+ansible	modules.cloud.google		UNK	format_allowed_section	UNK=allowed
+ansible	modules.cloud.google		UNK	format_allowed	UNK=allowed
+ansible	modules.cloud.google		UNK	sorted_allowed_list	UNK=allowed_list
+ansible	modules.cloud.google		UNK	get_info	UNK=inst
+ansible	modules.cloud.google		UNK	create_instance_template	UNK=module UNK=gce
+ansible	modules.cloud.google		UNK	delete_instance_template	UNK=module UNK=gce
+ansible	modules.cloud.google		UNK	module_controller	UNK=module UNK=gce
+ansible	modules.cloud.google		UNK	instance_update	UNK=instance
+ansible	modules.cloud.google		UNK	get_instance_info	UNK=inst
+ansible	modules.cloud.google		UNK	create_instances	UNK=module UNK=gce UNK=instance_names UNK=number
+ansible	modules.cloud.google		UNK	change_instance_state	UNK=module UNK=gce UNK=instance_names UNK=number
+ansible	modules.cloud.linode		UNK	randompass	void
+ansible	modules.cloud.linode		UNK	getInstanceDetails	UNK=api UNK=server
+ansible	modules.cloud.profitbricks		UNK	create_volume	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	delete_volume	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	_attach_volume	UNK=module UNK=profitbricks UNK=datacenter UNK=volume
+ansible	modules.cloud.profitbricks		UNK	create_datacenter	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	remove_datacenter	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	create_nic	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	delete_nic	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	attach_volume	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	detach_volume	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	create_virtual_machine	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	remove_virtual_machine	UNK=module UNK=profitbricks
+ansible	modules.cloud.profitbricks		UNK	_remove_boot_volume	UNK=module UNK=profitbricks UNK=datacenter_id UNK=server_id
+ansible	modules.cloud.profitbricks		UNK	startstop_machine	UNK=module UNK=profitbricks UNK=state
+ansible	modules.cloud.profitbricks		UNK	_get_datacenter_id	UNK=datacenters UNK=identity
+ansible	modules.cloud.profitbricks		UNK	_get_server_id	UNK=servers UNK=identity
+ansible	modules.cloud.amazon		UNK	find_subnets	UNK=vpc_conn UNK=vpc_id UNK=identified_subnets
+ansible	modules.cloud.amazon		UNK	find_igw	UNK=vpc_conn UNK=vpc_id
+ansible	modules.cloud.amazon	CloudTrailManager	UNK	enable_logging	UNK=name
+ansible	modules.cloud.amazon	CloudTrailManager	UNK	delete	UNK=name
+ansible	modules.cloud.amazon		UNK	boto_exception	UNK=err
+ansible	modules.cloud.amazon		UNK	build_kwargs	UNK=registry_id
+ansible	modules.cloud.amazon		UNK	get_zone_by_name	UNK=conn UNK=module UNK=zone_name UNK=want_private
+ansible	modules.cloud.amazon		UNK	commit	UNK=changes UNK=retry_interval UNK=wait UNK=wait_timeout
+ansible	modules.cloud.amazon		UNK	find_health_check	UNK=conn UNK=wanted
+ansible	modules.cloud.amazon		UNK	pc	UNK=key
+ansible	modules.cloud.amazon		UNK	ordered_obj	UNK=obj
+ansible	modules.cloud.amazon		UNK	set_api_sub_params	UNK=params
+ansible	modules.cloud.amazon		UNK	validate_params	UNK=module UNK=aws
+ansible	modules.cloud.amazon		UNK	get_qualifier	UNK=module
+ansible	modules.cloud.amazon		UNK	lambda_event_stream	UNK=module UNK=aws
+ansible	modules.cloud.amazon		UNK	main	void
+ansible	modules.cloud.amazon	CloudFrontServiceManager	UNK	paginated_response	UNK=func UNK=result_key
+ansible	modules.cloud.amazon		UNK	enforce_required_arguments	UNK=module
+ansible	modules.cloud.amazon		UNK	get_stack_events	UNK=cfn UNK=stack_name
+ansible	modules.cloud.amazon		UNK	stack_operation	UNK=cfn UNK=stack_name UNK=operation
+ansible	modules.cloud.amazon		UNK	set_api_params	UNK=module UNK=module_params
+ansible	modules.cloud.amazon		UNK	get_lambda_alias	UNK=module UNK=aws
+ansible	modules.cloud.amazon		UNK	lambda_alias	UNK=module UNK=aws
+ansible	modules.cloud.amazon		UNK	get_vpc_info	UNK=vpc
+ansible	modules.cloud.amazon		UNK	find_vpc	UNK=module UNK=vpc_conn UNK=vpc_id UNK=cidr
+ansible	modules.cloud.amazon		UNK	routes_match	UNK=rt_list UNK=rt UNK=igw
+ansible	modules.cloud.amazon		UNK	rtb_changed	UNK=route_tables UNK=vpc_conn UNK=module UNK=vpc
+ansible	modules.cloud.amazon		UNK	create_vpc	UNK=module UNK=vpc_conn
+ansible	modules.cloud.amazon		UNK	terminate_vpc	UNK=module UNK=vpc_conn UNK=vpc_id UNK=cidr
+ansible	modules.cloud.amazon		UNK	get_instance_info	UNK=inst
+ansible	modules.cloud.amazon		UNK	boto_supports_associate_public_ip_address	UNK=ec2
+ansible	modules.cloud.amazon		UNK	boto_supports_profile_name_arg	UNK=ec2
+ansible	modules.cloud.amazon		UNK	boto_supports_volume_encryption	void
+ansible	modules.cloud.amazon		UNK	boto_supports_param_in_spot_request	UNK=ec2 UNK=param
+ansible	modules.cloud.amazon		UNK	await_spot_requests	UNK=module UNK=ec2 UNK=spot_requests UNK=count
+ansible	modules.cloud.amazon		UNK	create_instances	UNK=module UNK=ec2 UNK=vpc UNK=override_count
+ansible	modules.cloud.amazon		UNK	terminate_instances	UNK=module UNK=ec2 UNK=instance_ids
+ansible	modules.cloud.amazon		UNK	startstop_instances	UNK=module UNK=ec2 UNK=instance_ids UNK=state
+ansible	modules.cloud.amazon		UNK	restart_instances	UNK=module UNK=ec2 UNK=instance_ids UNK=state
+ansible	modules.cloud.amazon		UNK	create	UNK=module UNK=conn UNK=name UNK=group_family
+ansible	modules.cloud.amazon		UNK	delete	UNK=module UNK=conn UNK=name
+ansible	modules.cloud.amazon		UNK	make_current_modifiable_param_dict	UNK=module UNK=conn UNK=name
+ansible	modules.cloud.amazon		UNK	check_valid_modification	UNK=module UNK=values UNK=modifiable_params
+ansible	modules.cloud.amazon		UNK	check_changed_parameter_values	UNK=values UNK=old_parameters UNK=new_parameters
+ansible	modules.cloud.amazon		UNK	modify	UNK=module UNK=conn UNK=name UNK=values
+ansible	modules.cloud.amazon		UNK	reset	UNK=module UNK=conn UNK=name UNK=values
+ansible	modules.cloud.amazon		UNK	get_info	UNK=conn UNK=name
+ansible	modules.cloud.amazon		UNK	copy_image	UNK=module UNK=ec2
+ansible	modules.cloud.amazon		UNK	fetch_dhcp_options_for_vpc	UNK=vpc_conn UNK=vpc_id
+ansible	modules.cloud.amazon		UNK	match_dhcp_options	UNK=vpc_conn UNK=tags UNK=options
+ansible	modules.cloud.amazon		UNK	set_parameter	UNK=param UNK=value UNK=immediate
+ansible	modules.cloud.amazon		UNK	modify_group	UNK=group UNK=params UNK=immediate
+ansible	modules.cloud.amazon	ElbManager	UNK	ensure_ok	void
+ansible	modules.cloud.amazon	ElbManager	UNK	ensure_gone	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_create_elb_listeners	UNK=listeners
+ansible	modules.cloud.amazon	ElbManager	UNK	_delete_elb_listeners	UNK=listeners
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_elb_listeners	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_api_listener_as_tuple	UNK=listener
+ansible	modules.cloud.amazon	ElbManager	UNK	_listener_as_tuple	UNK=listener
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_subnets	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_zones	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_health_check	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_backend_policies	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_backend_policies	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_proxy_protocol_policy	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_proxy_protocol_policy	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_diff_list	UNK=a UNK=b
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_instance_ids	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_set_instance_ids	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_health_check_target	void
+ansible	modules.cloud.amazon		UNK	_get_most_recent_snapshot	UNK=snapshots UNK=max_snapshot_age_secs UNK=now
+ansible	modules.cloud.amazon		UNK	_create_with_wait	UNK=snapshot UNK=wait_timeout_secs UNK=sleep_func
+ansible	modules.cloud.amazon		UNK	find_asgs	UNK=conn UNK=module UNK=name UNK=tags
+ansible	modules.cloud.amazon		UNK	convert_to_lower	UNK=data
+ansible	modules.cloud.amazon		UNK	make_tags_in_proper_format	UNK=tags
+ansible	modules.cloud.amazon		UNK	make_tags_in_aws_format	UNK=tags
+ansible	modules.cloud.amazon		UNK	get_tags	UNK=client UNK=stream_name UNK=check_mode
+ansible	modules.cloud.amazon		UNK	find_stream	UNK=client UNK=stream_name UNK=check_mode
+ansible	modules.cloud.amazon		UNK	wait_for_status	UNK=client UNK=stream_name UNK=status UNK=wait_timeout
+ansible	modules.cloud.amazon		UNK	tags_action	UNK=client UNK=stream_name UNK=tags UNK=action
+ansible	modules.cloud.amazon		UNK	recreate_tags_from_list	UNK=list_of_tags
+ansible	modules.cloud.amazon		UNK	update_tags	UNK=client UNK=stream_name UNK=tags UNK=check_mode
+ansible	modules.cloud.amazon		UNK	stream_action	UNK=client UNK=stream_name UNK=shard_count UNK=action
+ansible	modules.cloud.amazon		UNK	retention_action	UNK=client UNK=stream_name UNK=retention_period UNK=action
+ansible	modules.cloud.amazon		UNK	update	UNK=client UNK=current_stream UNK=stream_name UNK=retention_period
+ansible	modules.cloud.amazon		UNK	create_stream	UNK=client UNK=stream_name UNK=number_of_shards UNK=retention_period
+ansible	modules.cloud.amazon		UNK	delete_stream	UNK=client UNK=stream_name UNK=wait UNK=wait_timeout
+ansible	modules.cloud.amazon		UNK	find_address	UNK=ec2 UNK=public_ip UNK=device_id UNK=isinstance
+ansible	modules.cloud.amazon		UNK	address_is_associated_with_device	UNK=ec2 UNK=address UNK=device_id UNK=isinstance
+ansible	modules.cloud.amazon		UNK	allocate_address	UNK=ec2 UNK=domain UNK=reuse_existing_ip_allowed
+ansible	modules.cloud.amazon		UNK	release_address	UNK=ec2 UNK=address UNK=check_mode
+ansible	modules.cloud.amazon		UNK	find_device	UNK=ec2 UNK=module UNK=device_id UNK=isinstance
+ansible	modules.cloud.amazon		UNK	make_rule_key	UNK=prefix UNK=rule UNK=group_id UNK=cidr_ip
+ansible	modules.cloud.amazon		UNK	get_target_from_rule	UNK=module UNK=ec2 UNK=rule UNK=name
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_file_systems	void
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_tags	void
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_mount_targets	void
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_security_groups	void
+ansible	modules.cloud.amazon		UNK	iterate_all	UNK=attr UNK=map_method
+ansible	modules.cloud.amazon		UNK	prefix_to_attr	UNK=attr_id
+ansible	modules.cloud.amazon		UNK	first_or_default	UNK=items UNK=default
+ansible	modules.cloud.amazon		UNK	has_tags	UNK=available UNK=required
+ansible	modules.cloud.amazon		UNK	has_targets	UNK=available UNK=required
+ansible	modules.cloud.amazon		UNK	group_list_of_dict	UNK=array
+ansible	modules.cloud.amazon		UNK	get_nat_gateways	UNK=client UNK=subnet_id UNK=nat_gateway_id UNK=states
+ansible	modules.cloud.amazon		UNK	wait_for_status	UNK=client UNK=wait_timeout UNK=nat_gateway_id UNK=status
+ansible	modules.cloud.amazon		UNK	gateway_in_subnet_exists	UNK=client UNK=subnet_id UNK=allocation_id UNK=check_mode
+ansible	modules.cloud.amazon		UNK	get_eip_allocation_id_by_address	UNK=client UNK=eip_address UNK=check_mode
+ansible	modules.cloud.amazon		UNK	allocate_eip_address	UNK=client UNK=check_mode
+ansible	modules.cloud.amazon		UNK	release_address	UNK=client UNK=allocation_id UNK=check_mode
+ansible	modules.cloud.amazon		UNK	create	UNK=client UNK=subnet_id UNK=allocation_id UNK=client_token
+ansible	modules.cloud.amazon		UNK	pre_create	UNK=client UNK=subnet_id UNK=allocation_id UNK=eip_address
+ansible	modules.cloud.amazon		UNK	remove	UNK=client UNK=nat_gateway_id UNK=wait UNK=wait_timeout
+ansible	modules.cloud.amazon		UNK	get_server_certs	UNK=iam UNK=name
+ansible	modules.cloud.amazon		UNK	create	UNK=module UNK=connection UNK=replication_id UNK=cluster_id
+ansible	modules.cloud.amazon		UNK	copy	UNK=module UNK=connection UNK=name UNK=target
+ansible	modules.cloud.amazon		UNK	delete	UNK=module UNK=connection UNK=name
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_file_system_id	UNK=name
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_file_system_state	UNK=name UNK=file_system_id
+ansible	modules.cloud.amazon	EFSConnection	UNK	get_mount_targets_in_state	UNK=file_system_id UNK=states
+ansible	modules.cloud.amazon	EFSConnection	UNK	create_file_system	UNK=name UNK=performance_mode
+ansible	modules.cloud.amazon	EFSConnection	UNK	converge_file_system	UNK=name UNK=tags UNK=targets
+ansible	modules.cloud.amazon	EFSConnection	UNK	delete_file_system	UNK=name UNK=file_system_id
+ansible	modules.cloud.amazon	EFSConnection	UNK	delete_mount_targets	UNK=file_system_id
+ansible	modules.cloud.amazon		UNK	targets_equal	UNK=keys UNK=a UNK=b
+ansible	modules.cloud.amazon		UNK	dict_diff	UNK=dict1 UNK=dict2 UNK=by_key
+ansible	modules.cloud.amazon		UNK	wait_for	UNK=callback UNK=value UNK=timeout
+ansible	modules.cloud.amazon	Ec2Metadata	UNK	fix_invalid_varnames	UNK=data
+ansible	modules.cloud.amazon	Ec2Metadata	UNK	add_ec2_region	UNK=data
+ansible	modules.cloud.amazon		UNK	vpc_exists	UNK=module UNK=vpc UNK=name UNK=cidr_block
+ansible	modules.cloud.amazon		UNK	is_fakes3	UNK=s3_url
+ansible	modules.cloud.amazon		UNK	is_walrus	UNK=s3_url
+ansible	modules.cloud.amazon		UNK	get_block_device_mapping	UNK=image
+ansible	modules.cloud.amazon		UNK	calculate_multipart_etag	UNK=source_path UNK=chunk_size
+ansible	modules.cloud.amazon		UNK	calculate_local_etag	UNK=filelist UNK=key_prefix
+ansible	modules.cloud.amazon		UNK	_paginate	UNK=func UNK=attr
+ansible	modules.cloud.amazon		UNK	set_users_groups	UNK=module UNK=iam UNK=name UNK=groups
+ansible	modules.cloud.amazon		UNK	_collect_facts	UNK=resource
+ansible	modules.cloud.amazon		UNK	create_cluster	UNK=module UNK=redshift
+ansible	modules.cloud.amazon		UNK	describe_cluster	UNK=module UNK=redshift
+ansible	modules.cloud.amazon		UNK	delete_cluster	UNK=module UNK=redshift
+ansible	modules.cloud.amazon		UNK	modify_cluster	UNK=module UNK=redshift
+ansible	modules.cloud.amazon		UNK	create_instance	UNK=module UNK=client UNK=instance_name
+ansible	modules.cloud.amazon		UNK	delete_instance	UNK=module UNK=client UNK=instance_name
+ansible	modules.cloud.amazon		UNK	restart_instance	UNK=module UNK=client UNK=instance_name
+ansible	modules.cloud.amazon		UNK	startstop_instance	UNK=module UNK=client UNK=instance_name UNK=state
+ansible	modules.cloud.amazon		UNK	_find_instance_info	UNK=client UNK=instance_name
+ansible	modules.cloud.amazon		UNK	get_url	UNK=module UNK=url
+ansible	modules.cloud.amazon		UNK	ubuntu	UNK=module
+ansible	modules.cloud.amazon		UNK	lookup_ubuntu_ami	UNK=table UNK=release UNK=stream UNK=store
+ansible	modules.cloud.amazon		UNK	create_image	UNK=module UNK=ec2
+ansible	modules.cloud.amazon		UNK	boto_supports_kms_key_id	void
+ansible	modules.cloud.amazon		UNK	modify_dot_attribute	UNK=module UNK=ec2 UNK=instance UNK=device_name
+ansible	modules.cloud.amazon		UNK	fix_return	UNK=node
+ansible	modules.cloud.amazon		UNK	alias_details	UNK=client UNK=module
+ansible	modules.cloud.amazon		UNK	all_details	UNK=client UNK=module
+ansible	modules.cloud.amazon		UNK	config_details	UNK=client UNK=module
+ansible	modules.cloud.amazon		UNK	mapping_details	UNK=client UNK=module
+ansible	modules.cloud.amazon		UNK	policy_details	UNK=client UNK=module
+ansible	modules.cloud.amazon		UNK	version_details	UNK=client UNK=module
+ansible	modules.cloud.amazon	ElbManager	UNK	deregister	UNK=wait UNK=timeout
+ansible	modules.cloud.amazon	ElbManager	UNK	register	UNK=wait UNK=enable_availability_zone UNK=timeout
+ansible	modules.cloud.amazon	ElbManager	UNK	exists	UNK=lbtest
+ansible	modules.cloud.amazon	ElbManager	UNK	_enable_availailability_zone	UNK=lb
+ansible	modules.cloud.amazon	ElbManager	UNK	_await_elb_instance_state	UNK=lb UNK=awaited_state UNK=initial_state UNK=timeout
+ansible	modules.cloud.amazon	ElbManager	UNK	_is_instance_state_pending	UNK=instance_state
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_instance_health	UNK=lb
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_instance_lbs	UNK=ec2_elbs
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_auto_scaling_group_lbs	void
+ansible	modules.cloud.amazon	ElbManager	UNK	_get_instance	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	describe	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	put	UNK=enabled
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	delete	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	enable	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	disable	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	list_targets	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	put_targets	UNK=targets
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	remove_targets	UNK=target_ids
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	remove_all_targets	void
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	_targets_request	UNK=targets
+ansible	modules.cloud.amazon	CloudWatchEventRule	UNK	_snakify	UNK=dict
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	ensure_present	UNK=enabled
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	ensure_disabled	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	ensure_absent	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	fetch_aws_state	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_sync_rule	UNK=enabled
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_sync_targets	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_sync_state	UNK=enabled
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_create	UNK=enabled
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_rule_matches_aws	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_targets_to_put	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_remote_target_ids_to_remove	void
+ansible	modules.cloud.amazon	CloudWatchEventRuleManager	UNK	_remote_state	void
+ansible	modules.cloud.amazon		UNK	get_cloudwatchevents_client	UNK=module
+ansible	modules.cloud.amazon	CloudFormationServiceManager	UNK	paginated_response	UNK=func UNK=result_key UNK=next_token
+ansible	modules.cloud.amazon		UNK	to_dict	UNK=items UNK=key UNK=value
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	ensure_present	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	ensure_absent	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	ensure_rebooted	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	exists	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	create	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	delete	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	sync	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	modify	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	reboot	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	get_info	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_wait_for_status	UNK=awaited_status
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_requires_modification	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_requires_destroy_and_create	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_get_elasticache_connection	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_get_port	void
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_refresh_data	UNK=cache_cluster_data
+ansible	modules.cloud.amazon	ElastiCacheManager	UNK	_get_nodes_to_remove	void
+ansible	modules.cloud.amazon		UNK	assert_policy_shape	UNK=policy
+ansible	modules.cloud.lxd	LXDProfileManagement	UNK	__init__	UNK=module
+ansible	modules.cloud.lxd	LXDProfileManagement	UNK	run	void
+ansible	modules.cloud.lxd		UNK	main	void
+ansible	modules.cloud.lxd	LXDContainerManagement	UNK	__init__	UNK=module
+ansible	modules.cloud.lxd	LXDContainerManagement	UNK	run	void
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	ensure_public_ip_present	UNK=server_ids UNK=protocol UNK=ports
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	ensure_public_ip_absent	UNK=server_ids
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	_wait_for_requests_to_complete	UNK=requests_lst
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcPublicIp	UNK	_get_servers_from_clc	UNK=server_ids UNK=message
+ansible	modules.cloud.centurylink		UNK	main	void
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	define_argument_spec	void
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	ensure_package_installed	UNK=server_ids UNK=package_id UNK=package_params
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	clc_install_package	UNK=server UNK=package_id UNK=package_params
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	_wait_for_requests_to_complete	UNK=request_lst
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	_get_servers_from_clc	UNK=server_list UNK=message
+ansible	modules.cloud.centurylink	ClcBlueprintPackage	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcGroup	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_ensure_group_is_absent	UNK=group_name UNK=parent_name
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_delete_group	UNK=group_name
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_ensure_group_is_present	UNK=group_name UNK=parent_name UNK=group_description
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_create_group	UNK=group UNK=parent UNK=description
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_group_exists	UNK=group_name UNK=parent_name
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_get_group_tree_for_datacenter	UNK=datacenter
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_walk_groups_recursive	UNK=parent_group UNK=child_group
+ansible	modules.cloud.centurylink	ClcGroup	UNK	_wait_for_requests_to_complete	UNK=requests_lst
+ansible	modules.cloud.centurylink	ClcServer	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcServer	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcServer	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcServer	UNK	_validate_module_params	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_datacenter	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_alias	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_cpu	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_memory	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_description	UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_validate_types	UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_validate_name	UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_ttl	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_template_id	UNK=module UNK=datacenter
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_network_id	UNK=module UNK=datacenter
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_aa_policy_id	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_alert_policy_id	UNK=clc UNK=module
+ansible	modules.cloud.centurylink	ClcServer	UNK	_create_servers	UNK=module UNK=clc UNK=override_count
+ansible	modules.cloud.centurylink	ClcServer	UNK	_enforce_count	UNK=module UNK=clc
+ansible	modules.cloud.centurylink	ClcServer	UNK	_wait_for_requests	UNK=module UNK=request_list
+ansible	modules.cloud.centurylink	ClcServer	UNK	_refresh_servers	UNK=module UNK=servers
+ansible	modules.cloud.centurylink	ClcServer	UNK	_add_public_ip_to_servers	UNK=module UNK=should_add_public_ip UNK=servers UNK=public_ip_protocol
+ansible	modules.cloud.centurylink	ClcServer	UNK	_add_alert_policy_to_servers	UNK=clc UNK=module UNK=servers
+ansible	modules.cloud.centurylink	ClcServer	UNK	_add_alert_policy_to_server	UNK=clc UNK=alias UNK=server_id UNK=alert_policy_id
+ansible	modules.cloud.centurylink	ClcServer	UNK	_get_alert_policy_id_by_name	UNK=clc UNK=module UNK=alias UNK=alert_policy_name
+ansible	modules.cloud.centurylink	ClcServer	UNK	_delete_servers	UNK=module UNK=clc UNK=server_ids
+ansible	modules.cloud.centurylink	ClcServer	UNK	_start_stop_servers	UNK=module UNK=clc UNK=server_ids
+ansible	modules.cloud.centurylink	ClcServer	UNK	_change_server_power_state	UNK=module UNK=server UNK=state
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_running_servers_by_group	UNK=module UNK=datacenter UNK=count_group
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_group	UNK=module UNK=datacenter UNK=lookup_group
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_group_recursive	UNK=module UNK=group_list UNK=lookup_group
+ansible	modules.cloud.centurylink	ClcServer	UNK	_create_clc_server	UNK=clc UNK=module UNK=server_params
+ansible	modules.cloud.centurylink	ClcServer	UNK	_get_anti_affinity_policy_id	UNK=clc UNK=module UNK=alias UNK=aa_policy_name
+ansible	modules.cloud.centurylink	ClcServer	UNK	_find_server_by_uuid_w_retry	UNK=clc UNK=module UNK=svr_uuid UNK=alias
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_loadbalancer_present	UNK=name UNK=alias UNK=location UNK=description
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_loadbalancerpool_present	UNK=lb_id UNK=alias UNK=location UNK=method
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_loadbalancer_absent	UNK=name UNK=alias UNK=location
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_loadbalancerpool_absent	UNK=alias UNK=location UNK=name UNK=port
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_lbpool_nodes_set	UNK=alias UNK=location UNK=name UNK=port
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_lbpool_nodes_present	UNK=alias UNK=location UNK=name UNK=port
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	ensure_lbpool_nodes_absent	UNK=alias UNK=location UNK=name UNK=port
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	create_loadbalancer	UNK=name UNK=alias UNK=location UNK=description
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	create_loadbalancerpool	UNK=alias UNK=location UNK=lb_id UNK=method
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	delete_loadbalancer	UNK=alias UNK=location UNK=name
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	delete_loadbalancerpool	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_get_loadbalancer_id	UNK=name
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_get_loadbalancer_list	UNK=alias UNK=location
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_loadbalancer_exists	UNK=name
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_loadbalancerpool_exists	UNK=alias UNK=location UNK=port UNK=lb_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_loadbalancerpool_nodes_exists	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	set_loadbalancernodes	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	add_lbpool_nodes	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	remove_lbpool_nodes	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_get_lbpool_nodes	UNK=alias UNK=location UNK=lb_id UNK=pool_id
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	define_argument_spec	void
+ansible	modules.cloud.centurylink	ClcLoadBalancer	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	ensure_server_snapshot_present	UNK=server_ids UNK=expiration_days
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_create_server_snapshot	UNK=server UNK=expiration_days
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	ensure_server_snapshot_absent	UNK=server_ids
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_delete_server_snapshot	UNK=server
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	ensure_server_snapshot_restore	UNK=server_ids
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_restore_server_snapshot	UNK=server
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_wait_for_requests_to_complete	UNK=requests_lst
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	define_argument_spec	void
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_get_servers_from_clc	UNK=server_list UNK=message
+ansible	modules.cloud.centurylink	ClcSnapshot	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_ensure_alert_policy_is_present	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_ensure_alert_policy_is_absent	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_ensure_alert_policy_is_updated	UNK=alert_policy
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_get_alert_policies	UNK=alias
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_create_alert_policy	void
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_update_alert_policy	UNK=alert_policy_id
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_delete_alert_policy	UNK=alias UNK=policy_id
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_alert_policy_exists	UNK=policy_name
+ansible	modules.cloud.centurylink	ClcAlertPolicy	UNK	_get_alert_policy_id	UNK=module UNK=alert_policy_name
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_get_policy_id_from_response	UNK=response
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_ensure_firewall_policy_is_present	UNK=source_account_alias UNK=location UNK=firewall_dict
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_ensure_firewall_policy_is_absent	UNK=source_account_alias UNK=location UNK=firewall_dict
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_create_firewall_policy	UNK=source_account_alias UNK=location UNK=firewall_dict
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_delete_firewall_policy	UNK=source_account_alias UNK=location UNK=firewall_policy_id
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_update_firewall_policy	UNK=source_account_alias UNK=location UNK=firewall_policy_id UNK=firewall_dict
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_compare_get_request_with_dict	UNK=response UNK=firewall_dict
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_get_firewall_policy	UNK=source_account_alias UNK=location UNK=firewall_policy_id
+ansible	modules.cloud.centurylink	ClcFirewallPolicy	UNK	_wait_for_requests_to_complete	UNK=source_account_alias UNK=location UNK=firewall_policy_id UNK=wait_limit
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_get_servers_from_clc	UNK=server_list UNK=message
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_modify_servers	UNK=server_ids
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_ensure_server_config	UNK=server UNK=server_params
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_modify_clc_server	UNK=clc UNK=module UNK=server_id UNK=cpu
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_wait_for_requests	UNK=module UNK=request_list
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_refresh_servers	UNK=module UNK=servers
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_ensure_aa_policy_present	UNK=server UNK=server_params
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_ensure_aa_policy_absent	UNK=server UNK=server_params
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_modify_aa_policy	UNK=clc UNK=module UNK=acct_alias UNK=server_id
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_delete_aa_policy	UNK=clc UNK=module UNK=acct_alias UNK=server_id
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_get_aa_policy_id_by_name	UNK=clc UNK=module UNK=alias UNK=aa_policy_name
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_get_aa_policy_id_of_server	UNK=clc UNK=module UNK=alias UNK=server_id
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_ensure_alert_policy_present	UNK=server UNK=server_params
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_ensure_alert_policy_absent	UNK=server UNK=server_params
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_add_alert_policy_to_server	UNK=clc UNK=module UNK=acct_alias UNK=server_id
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_remove_alert_policy_to_server	UNK=clc UNK=module UNK=acct_alias UNK=server_id
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_get_alert_policy_id_by_name	UNK=clc UNK=module UNK=alias UNK=alert_policy_name
+ansible	modules.cloud.centurylink	ClcModifyServer	UNK	_alert_policy_exists	UNK=server UNK=alert_policy_id
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_define_module_argument_spec	void
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	process_request	void
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_set_clc_credentials_from_env	void
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_get_policies_for_datacenter	UNK=p
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_create_policy	UNK=p
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_delete_policy	UNK=p
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_policy_exists	UNK=policy_name
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_ensure_policy_is_absent	UNK=p
+ansible	modules.cloud.centurylink	ClcAntiAffinityPolicy	UNK	_ensure_policy_is_present	UNK=p
+ansible	modules.cloud.rackspace		UNK	cloudfiles	UNK=module UNK=container_ UNK=state UNK=meta_
+ansible	modules.cloud.rackspace		UNK	rax_dns_record	UNK=module UNK=comment UNK=data UNK=domain
+ansible	modules.cloud.rackspace		UNK	_upload_folder	UNK=cf UNK=folder UNK=container UNK=ttl
+ansible	modules.cloud.rackspace		UNK	upload	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	download	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	delete	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	get_meta	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	put_meta	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	delete_meta	UNK=module UNK=cf UNK=container UNK=src
+ansible	modules.cloud.rackspace		UNK	cloudfiles	UNK=module UNK=container UNK=src UNK=dest
+ansible	modules.cloud.rackspace		UNK	_get_node	UNK=lb UNK=node_id UNK=address UNK=port
+ansible	modules.utilities.logic		UNK	_convert_host_to_ip	UNK=host
+ansible	modules.utilities.logic		UNK	_convert_host_to_hex	UNK=host
+ansible	modules.utilities.logic		UNK	_create_connection	UNK=host UNK=port UNK=connect_timeout
+ansible	modules.utilities.logic		UNK	_filter_non_json_lines	UNK=data
+ansible	modules.utilities.helper		UNK	get_pid_location	UNK=module
+ansible	modules.monitoring	LogicMonitor	UNK	rpc	UNK=action UNK=params
+ansible	modules.monitoring	LogicMonitor	UNK	do	UNK=action UNK=params
+ansible	modules.monitoring	LogicMonitor	UNK	get_collectors	void
+ansible	modules.monitoring	LogicMonitor	UNK	get_host_by_hostname	UNK=hostname UNK=collector
+ansible	modules.monitoring	LogicMonitor	UNK	get_host_by_displayname	UNK=displayname
+ansible	modules.monitoring	LogicMonitor	UNK	get_collector_by_description	UNK=description
+ansible	modules.monitoring	LogicMonitor	UNK	get_group	UNK=fullpath
+ansible	modules.monitoring	LogicMonitor	UNK	create_group	UNK=fullpath
+ansible	modules.monitoring	Collector	UNK	__init__	UNK=params UNK=module
+ansible	modules.monitoring	Collector	UNK	_create	void
+ansible	modules.monitoring	Collector	UNK	remove	void
+ansible	modules.monitoring	Collector	UNK	get_installer_binary	void
+ansible	modules.monitoring	Collector	UNK	install	void
+ansible	modules.monitoring	Collector	UNK	uninstall	void
+ansible	modules.monitoring	Collector	UNK	sdt	void
+ansible	modules.monitoring	Collector	UNK	site_facts	void
+ansible	modules.monitoring	Collector	UNK	_get	void
+ansible	modules.monitoring	Collector	UNK	_unreigster	void
+ansible	modules.monitoring	Host	UNK	__init__	UNK=params UNK=module
+ansible	modules.monitoring	Host	UNK	create	void
+ansible	modules.monitoring	Host	UNK	get_properties	void
+ansible	modules.monitoring	Host	UNK	set_properties	UNK=propertyhash
+ansible	modules.monitoring	Host	UNK	add	void
+ansible	modules.monitoring	Host	UNK	update	void
+ansible	modules.monitoring	Host	UNK	remove	void
+ansible	modules.monitoring	Host	UNK	is_changed	void
+ansible	modules.monitoring	Host	UNK	sdt	void
+ansible	modules.monitoring	Host	UNK	site_facts	void
+ansible	modules.monitoring	Host	UNK	_build_host_hash	UNK=hostname UNK=displayname UNK=collector UNK=description
+ansible	modules.monitoring	Host	UNK	_verify_property	UNK=propname
+ansible	modules.monitoring	Host	UNK	_compare_groups	UNK=hostresp
+ansible	modules.monitoring	Host	UNK	_compare_props	UNK=propresp UNK=ignore
+ansible	modules.monitoring	Host	UNK	_strip_groups	UNK=groups
+ansible	modules.monitoring	Datasource	UNK	__init__	UNK=params UNK=module
+ansible	modules.monitoring	Datasource	UNK	sdt	void
+ansible	modules.monitoring	Hostgroup	UNK	__init__	UNK=params UNK=module
+ansible	modules.monitoring	Hostgroup	UNK	create	void
+ansible	modules.monitoring	Hostgroup	UNK	get_properties	UNK=final
+ansible	modules.monitoring	Hostgroup	UNK	set_properties	UNK=propertyhash
+ansible	modules.monitoring	Hostgroup	UNK	add	void
+ansible	modules.monitoring	Hostgroup	UNK	update	void
+ansible	modules.monitoring	Hostgroup	UNK	remove	void
+ansible	modules.monitoring	Hostgroup	UNK	is_changed	void
+ansible	modules.monitoring	Hostgroup	UNK	sdt	UNK=duration UNK=starttime
+ansible	modules.monitoring	Hostgroup	UNK	site_facts	void
+ansible	modules.monitoring	Hostgroup	UNK	_build_host_group_hash	UNK=fullpath UNK=description UNK=properties UNK=alertenable
+ansible	modules.monitoring	Hostgroup	UNK	_verify_property	UNK=propname
+ansible	modules.monitoring		UNK	selector	UNK=module
+ansible	modules.monitoring		UNK	send_deploy_event	UNK=module UNK=key UNK=revision_id UNK=deployed_by
+ansible	modules.monitoring		UNK	send_annotation_event	UNK=module UNK=key UNK=msg UNK=annotated_by
+ansible	modules.monitoring		UNK	post_annotation	UNK=annotation UNK=api_key
+ansible	modules.monitoring		UNK	create_annotation	UNK=module
+ansible	modules.monitoring		UNK	build_headers	UNK=api_token
+ansible	modules.monitoring		UNK	main	void
+ansible	modules.monitoring	Nagios	UNK	_now	void
+ansible	modules.monitoring	Nagios	UNK	_write_command	UNK=cmd
+ansible	modules.monitoring	Nagios	UNK	_fmt_dt_str	UNK=cmd UNK=host UNK=duration UNK=author
+ansible	modules.monitoring	Nagios	UNK	_fmt_dt_del_str	UNK=cmd UNK=host UNK=svc UNK=start
+ansible	modules.monitoring	Nagios	UNK	_fmt_notif_str	UNK=cmd UNK=host UNK=svc
+ansible	modules.monitoring	Nagios	UNK	schedule_svc_downtime	UNK=host UNK=services UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	schedule_host_downtime	UNK=host UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	schedule_host_svc_downtime	UNK=host UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	delete_host_downtime	UNK=host UNK=services UNK=comment
+ansible	modules.monitoring	Nagios	UNK	schedule_hostgroup_host_downtime	UNK=hostgroup UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	schedule_hostgroup_svc_downtime	UNK=hostgroup UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	schedule_servicegroup_host_downtime	UNK=servicegroup UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	schedule_servicegroup_svc_downtime	UNK=servicegroup UNK=minutes
+ansible	modules.monitoring	Nagios	UNK	disable_host_svc_notifications	UNK=host
+ansible	modules.monitoring	Nagios	UNK	disable_host_notifications	UNK=host
+ansible	modules.monitoring	Nagios	UNK	disable_svc_notifications	UNK=host UNK=services
+ansible	modules.monitoring	Nagios	UNK	disable_servicegroup_host_notifications	UNK=servicegroup
+ansible	modules.monitoring	Nagios	UNK	disable_servicegroup_svc_notifications	UNK=servicegroup
+ansible	modules.monitoring	Nagios	UNK	disable_hostgroup_host_notifications	UNK=hostgroup
+ansible	modules.monitoring	Nagios	UNK	disable_hostgroup_svc_notifications	UNK=hostgroup
+ansible	modules.monitoring	Nagios	UNK	enable_host_notifications	UNK=host
+ansible	modules.monitoring	Nagios	UNK	enable_host_svc_notifications	UNK=host
+ansible	modules.monitoring	Nagios	UNK	enable_svc_notifications	UNK=host UNK=services
+ansible	modules.monitoring	Nagios	UNK	enable_hostgroup_host_notifications	UNK=hostgroup
+ansible	modules.monitoring	Nagios	UNK	enable_hostgroup_svc_notifications	UNK=hostgroup
+ansible	modules.monitoring	Nagios	UNK	enable_servicegroup_host_notifications	UNK=servicegroup
+ansible	modules.monitoring	Nagios	UNK	enable_servicegroup_svc_notifications	UNK=servicegroup
+ansible	modules.monitoring	Nagios	UNK	silence_host	UNK=host
+ansible	modules.monitoring	Nagios	UNK	unsilence_host	UNK=host
+ansible	modules.monitoring	Nagios	UNK	silence_nagios	void
+ansible	modules.monitoring	Nagios	UNK	unsilence_nagios	void
+ansible	modules.monitoring	Nagios	UNK	nagios_cmd	UNK=cmd
+ansible	modules.monitoring	Nagios	UNK	act	void
+ansible	modules.monitoring		UNK	query_log_status	UNK=module UNK=le_path UNK=path UNK=state
+ansible	modules.monitoring		UNK	follow_log	UNK=module UNK=le_path UNK=logs UNK=name
+ansible	modules.monitoring		UNK	unfollow_log	UNK=module UNK=le_path UNK=logs
+ansible	modules.clustering		UNK	remove_value	UNK=module
+ansible	modules.clustering		UNK	add	UNK=module
+ansible	modules.clustering		UNK	remove	UNK=module
+ansible	modules.clustering		UNK	add_check	UNK=module UNK=check
+ansible	modules.clustering		UNK	remove_check	UNK=module UNK=check_id
+ansible	modules.clustering		UNK	add_service	UNK=module UNK=service
+ansible	modules.clustering		UNK	remove_service	UNK=module UNK=service_id
+ansible	modules.clustering		UNK	get_service_by_id_or_name	UNK=consul_api UNK=service_id_or_name
+ansible	modules.storage.infinidat		UNK	get_pool	UNK=module UNK=system
+ansible	modules.storage.infinidat		UNK	get_volume	UNK=module UNK=system
+ansible	modules.storage.infinidat		UNK	get_filesystem	UNK=module UNK=system
+ansible	modules.storage.infinidat		UNK	get_export	UNK=module UNK=system
+ansible	modules.storage.infinidat		UNK	update_client	UNK=module UNK=export
+ansible	modules.storage.infinidat		UNK	delete_client	UNK=module UNK=export
+ansible	modules.storage.infinidat		UNK	get_export	UNK=module UNK=filesystem UNK=system
+ansible	modules.storage.infinidat		UNK	update_export	UNK=module UNK=export UNK=filesystem UNK=system
+ansible	modules.storage.infinidat		UNK	delete_export	UNK=module UNK=export
+ansible	modules.storage.netapp	NetAppCDOTUser	UNK	get_user	void
+ansible	modules.storage.netapp	NetAppCDOTUser	UNK	change_password	void
+ansible	modules.storage.netapp	NetAppCDOTUserRole	UNK	get_role	void
+ansible	modules.storage.netapp	NetAppCDOTAggregate	UNK	get_aggr	void
+ansible	modules.storage.netapp	NetAppCDOTVolume	UNK	get_volume	void
+ansible	modules.storage.netapp	NetAppCDOTVolume	UNK	rename_volume	void
+ansible	modules.storage.netapp	NetAppCDOTVolume	UNK	resize_volume	void
+ansible	modules.storage.netapp	NetAppCDOTVolume	UNK	change_volume_state	void
+ansible	modules.storage.netapp	NetAppCDOTSVM	UNK	get_vserver	void
+ansible	modules.storage.netapp	SolidFireVolume	UNK	get_volume	void
+ansible	modules.storage.netapp	NetAppCDOTQTree	UNK	get_qtree	void
+ansible	modules.storage.netapp	SolidFireAccount	UNK	get_account	void
+ansible	modules.storage.netapp	NetAppCDOTLUN	UNK	get_lun	void
+ansible	modules.storage.netapp	NetAppCDOTLUN	UNK	create_lun	void
+ansible	modules.storage.netapp	NetAppCDOTLUN	UNK	delete_lun	void
+ansible	modules.storage.netapp	NetAppCDOTLUN	UNK	resize_lun	void
+ansible	modules.storage.netapp	SolidFireConnection	UNK	check_mvip_connection	void
+ansible	modules.storage.netapp	SolidFireConnection	UNK	check_svip_connection	void
+ansible	modules.storage.netapp	NetAppCDOTLicense	UNK	get_licensing_status	void
+ansible	modules.storage.netapp	NetAppCDOTLicense	UNK	remove_licenses	UNK=remove_list
+ansible	modules.storage.netapp	NetAppCDOTLicense	UNK	remove_unused_licenses	void
+ansible	modules.storage.netapp	NetAppCDOTLicense	UNK	remove_expired_licenses	void
+ansible	modules.storage.netapp	Host	UNK	port_on_diff_host	UNK=arg_port
+ansible	modules.web_infrastructure		UNK	regexp_extraction	UNK=string UNK=_regexp UNK=groups
+ansible	modules.web_infrastructure	BalancerMember	UNK	get_member_attributes	void
+ansible	modules.web_infrastructure	BalancerMember	UNK	get_member_status	void
+ansible	modules.web_infrastructure	BalancerMember	UNK	set_member_status	UNK=values
+ansible	modules.web_infrastructure	Balancer	UNK	fetch_balancer_page	void
+ansible	modules.web_infrastructure	Balancer	UNK	get_balancer_members	void
+ansible	modules.web_infrastructure		UNK	present	UNK=dest UNK=username UNK=password UNK=crypt_scheme
+ansible	modules.web_infrastructure		UNK	absent	UNK=dest UNK=username UNK=check_mode
+ansible	modules.web_infrastructure	EjabberdUser	UNK	changed	void
+ansible	modules.web_infrastructure	EjabberdUser	UNK	exists	void
+ansible	modules.web_infrastructure	EjabberdUser	UNK	log	UNK=entry
+ansible	modules.web_infrastructure	EjabberdUser	UNK	run_command	UNK=cmd UNK=options
+ansible	modules.web_infrastructure	EjabberdUser	UNK	update	void
+ansible	modules.web_infrastructure	EjabberdUser	UNK	create	void
+ansible	modules.web_infrastructure	EjabberdUser	UNK	delete	void
+ansible	modules.web_infrastructure		UNK	manage_issue	UNK=module UNK=taiga_host UNK=project_name UNK=issue_subject
+ansible	modules.web_infrastructure		UNK	create_apache_identifier	UNK=name
+ansible	modules.web_infrastructure		UNK	get_cert_days	UNK=module UNK=cert_file
+ansible	modules.web_infrastructure		UNK	write_file	UNK=module UNK=dest UNK=content
+ansible	modules.web_infrastructure	ACMEAccount	UNK	get_keyauthorization	UNK=token
+ansible	modules.web_infrastructure	ACMEAccount	UNK	_parse_account_key	UNK=key
+ansible	modules.web_infrastructure	ACMEAccount	UNK	send_signed_request	UNK=url UNK=payload
+ansible	modules.web_infrastructure	ACMEAccount	UNK	_new_reg	UNK=contact
+ansible	modules.web_infrastructure	ACMEAccount	UNK	init_account	void
+ansible	modules.web_infrastructure	ACMEAccount	UNK	get_authorizations	void
+ansible	modules.web_infrastructure	ACMEClient	UNK	_get_csr_domains	void
+ansible	modules.web_infrastructure	ACMEClient	UNK	_get_domain_auth	UNK=domain
+ansible	modules.web_infrastructure	ACMEClient	UNK	_add_or_update_auth	UNK=auth
+ansible	modules.web_infrastructure	ACMEClient	UNK	_new_authz	UNK=domain
+ansible	modules.web_infrastructure	ACMEClient	UNK	_get_challenge_data	UNK=auth
+ansible	modules.web_infrastructure	ACMEClient	UNK	_validate_challenges	UNK=auth
+ansible	modules.web_infrastructure	ACMEClient	UNK	_new_cert	void
+ansible	modules.web_infrastructure	ACMEClient	UNK	_der_to_pem	UNK=der_cert
+ansible	modules.web_infrastructure	ACMEClient	UNK	do_challenges	void
+ansible	modules.web_infrastructure	ACMEClient	UNK	get_certificate	void
+ansible	modules.web_infrastructure.ansible_tower		UNK	update_resources	UNK=module UNK=p
+ansible	modules.web_infrastructure.ansible_tower		UNK	update_fields	UNK=p
+ansible	galaxy	GalaxyLogin	UNK	remove_github_token	void
+ansible	galaxy	GalaxyLogin	UNK	create_github_token	void
+ansible	galaxy		UNK	g_connect	UNK=method
+ansible	galaxy	GalaxyAPI	UNK	_get_server_api_version	void
+ansible	galaxy	GalaxyAPI	UNK	authenticate	UNK=github_token
+ansible	galaxy	GalaxyAPI	UNK	create_import_task	UNK=github_user UNK=github_repo UNK=reference UNK=role_name
+ansible	galaxy	GalaxyAPI	UNK	get_import_task	UNK=task_id UNK=github_user UNK=github_repo
+ansible	galaxy	GalaxyAPI	UNK	lookup_role_by_name	UNK=role_name UNK=notify
+ansible	galaxy	GalaxyAPI	UNK	fetch_role_related	UNK=related UNK=role_id
+ansible	galaxy	GalaxyAPI	UNK	get_list	UNK=what
+ansible	galaxy	GalaxyRole	UNK	__repr__	void
+ansible	galaxy	GalaxyRole	UNK	metadata	void
+ansible	galaxy	GalaxyRole	UNK	install_info	void
+ansible	galaxy	GalaxyRole	UNK	_write_galaxy_install_info	void
+ansible	galaxy	GalaxyRole	UNK	remove	void
+ansible	galaxy	GalaxyRole	UNK	fetch	UNK=role_data
+ansible	galaxy	GalaxyRole	UNK	spec	void

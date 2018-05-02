@@ -1,0 +1,817 @@
+orator	core	BaseDatabaseManager	UNK	__init__	UNK=config UNK=factory
+orator	core	BaseDatabaseManager	UNK	connection	UNK=name
+orator	core	BaseDatabaseManager	UNK	_parse_connection_name	UNK=name
+orator	core	BaseDatabaseManager	UNK	purge	UNK=name
+orator	orm	FactoryBuilder	UNK	__init__	UNK=klass UNK=name UNK=definitions UNK=faker
+orator	orm	FactoryBuilder	UNK	times	UNK=amount
+orator	orm	FactoryBuilder	UNK	create	void
+orator	orm	FactoryBuilder	UNK	make	void
+orator	orm	FactoryBuilder	UNK	_make_instance	void
+orator	orm	Factory	UNK	__init__	UNK=faker UNK=resolver
+orator	orm	Factory	UNK	construct	UNK=cls UNK=faker UNK=path_to_factories
+orator	orm	Factory	UNK	define_as	UNK=klass UNK=name
+orator	orm	Factory	UNK	define	UNK=klass UNK=name
+orator	orm	Factory	UNK	register	UNK=klass UNK=callback UNK=name
+orator	orm	Factory	UNK	register_as	UNK=klass UNK=name UNK=callback
+orator	orm	Factory	UNK	create	UNK=klass
+orator	orm	Factory	UNK	create_as	UNK=klass UNK=name
+orator	orm	Factory	UNK	make	UNK=klass
+orator	orm	Factory	UNK	make_as	UNK=klass UNK=name
+orator	orm	Factory	UNK	raw_of	UNK=klass UNK=name
+orator	orm	Factory	UNK	raw	UNK=klass UNK=_name
+orator	orm	Factory	UNK	of	UNK=klass UNK=name
+orator	orm	Factory	UNK	build	UNK=klass UNK=name UNK=amount
+orator	orm	Factory	UNK	_resolve	UNK=cls UNK=path UNK=factory_file
+orator	orm	Factory	UNK	__call__	UNK=klass UNK=name UNK=amount
+orator	orm	Builder	UNK	with_global_scope	UNK=identifier UNK=scope
+orator	orm	Builder	UNK	without_global_scope	UNK=scope
+orator	orm	Builder	UNK	without_global_scopes	void
+orator	orm	Builder	UNK	find	UNK=id UNK=columns
+orator	orm	Builder	UNK	find_many	UNK=id UNK=columns
+orator	orm	Builder	UNK	find_or_fail	UNK=id UNK=columns
+orator	orm	Builder	UNK	first	UNK=columns
+orator	orm	Builder	UNK	first_or_fail	UNK=columns
+orator	orm	Builder	UNK	get	UNK=columns
+orator	orm	Builder	UNK	pluck	UNK=column
+orator	orm	Builder	UNK	chunk	UNK=count
+orator	orm	Builder	UNK	lists	UNK=column UNK=key
+orator	orm	Builder	UNK	paginate	UNK=per_page UNK=current_page UNK=columns
+orator	orm	Builder	UNK	simple_paginate	UNK=per_page UNK=current_page UNK=columns
+orator	orm	Builder	UNK	update	UNK=_values
+orator	orm	Builder	UNK	increment	UNK=column UNK=amount UNK=extras
+orator	orm	Builder	UNK	decrement	UNK=column UNK=amount UNK=extras
+orator	orm	Builder	UNK	_add_updated_at_column	UNK=values
+orator	orm	Builder	UNK	delete	void
+orator	orm	Builder	UNK	force_delete	void
+orator	orm	Builder	UNK	on_delete	UNK=callback
+orator	orm	Builder	UNK	get_models	UNK=columns
+orator	orm	Builder	UNK	eager_load_relations	UNK=models
+orator	orm	Builder	UNK	_load_relation	UNK=models UNK=name UNK=constraints
+orator	orm	Builder	UNK	get_relation	UNK=relation
+orator	orm	Builder	UNK	_nested_relations	UNK=relation
+orator	orm	Builder	UNK	_is_nested	UNK=name UNK=relation
+orator	orm	Builder	UNK	where	UNK=column UNK=operator UNK=value UNK=boolean
+orator	orm	Builder	UNK	or_where	UNK=column UNK=operator UNK=value
+orator	orm	Builder	UNK	where_exists	UNK=query UNK=boolean UNK=negate
+orator	orm	Builder	UNK	or_where_exists	UNK=query UNK=negate
+orator	orm	Builder	UNK	where_not_exists	UNK=query UNK=boolean
+orator	orm	Builder	UNK	or_where_not_exists	UNK=query
+orator	orm	Builder	UNK	has	UNK=relation UNK=operator UNK=count UNK=boolean
+orator	orm	Builder	UNK	_has_nested	UNK=relations UNK=operator UNK=count UNK=boolean
+orator	orm	Builder	UNK	doesnt_have	UNK=relation UNK=boolean UNK=extra
+orator	orm	Builder	UNK	where_has	UNK=relation UNK=extra UNK=operator UNK=count
+orator	orm	Builder	UNK	where_doesnt_have	UNK=relation UNK=extra
+orator	orm	Builder	UNK	or_has	UNK=relation UNK=operator UNK=count
+orator	orm	Builder	UNK	or_where_has	UNK=relation UNK=extra UNK=operator UNK=count
+orator	orm	Builder	UNK	_add_has_where	UNK=has_query UNK=relation UNK=operator UNK=count
+orator	orm	Builder	UNK	_merge_model_defined_relation_wheres_to_has_query	UNK=has_query UNK=relation
+orator	orm	Builder	UNK	_get_has_relation_query	UNK=relation
+orator	orm	Builder	UNK	with_	void
+orator	orm	Builder	UNK	_parse_with_relations	UNK=relations
+orator	orm	Builder	UNK	_parse_nested_with	UNK=name UNK=results
+orator	orm	Builder	UNK	_call_scope	UNK=scope
+orator	orm	Builder	UNK	apply_scopes	void
+orator	orm	Builder	UNK	_apply_scope	UNK=scope UNK=builder
+orator	orm	Builder	UNK	_should_nest_wheres_for_scope	UNK=query UNK=original_where_count
+orator	orm	Builder	UNK	_nest_wheres_for_scope	UNK=query UNK=where_counts
+orator	orm	Builder	UNK	_slice_where_conditions	UNK=wheres UNK=offset UNK=length
+orator	orm	Builder	UNK	get_query	void
+orator	orm	Builder	UNK	to_base	void
+orator	orm	Builder	UNK	set_query	UNK=query
+orator	orm	Builder	UNK	get_eager_loads	void
+orator	orm	Builder	UNK	set_eager_loads	UNK=eager_load
+orator	orm	Builder	UNK	get_model	void
+orator	orm	Builder	UNK	set_model	UNK=model
+orator	orm	Builder	UNK	macro	UNK=name UNK=callback
+orator	orm	Builder	UNK	get_macro	UNK=name
+orator	orm	Model	UNK	__init__	UNK=_attributes
+orator	orm	Model	UNK	_boot_if_not_booted	void
+orator	orm	Model	UNK	_boot	UNK=cls
+orator	orm	Model	UNK	_boot_mixins	UNK=cls
+orator	orm	Model	UNK	add_global_scope	UNK=cls UNK=scope UNK=implementation
+orator	orm	Model	UNK	has_global_scope	UNK=cls UNK=scope
+orator	orm	Model	UNK	get_global_scope	UNK=cls UNK=scope
+orator	orm	Model	UNK	get_global_scopes	void
+orator	orm	Model	UNK	observe	UNK=cls UNK=observer
+orator	orm	Model	UNK	fill	UNK=_attributes
+orator	orm	Model	UNK	force_fill	UNK=_attributes
+orator	orm	Model	UNK	_fillable_from_dict	UNK=attributes
+orator	orm	Model	UNK	new_instance	UNK=attributes UNK=exists
+orator	orm	Model	UNK	new_from_builder	UNK=attributes UNK=connection
+orator	orm	Model	UNK	hydrate	UNK=cls UNK=items UNK=connection
+orator	orm	Model	UNK	hydrate_raw	UNK=cls UNK=query UNK=bindings UNK=connection
+orator	orm	Model	UNK	create	UNK=cls UNK=_attributes
+orator	orm	Model	UNK	force_create	UNK=cls
+orator	orm	Model	UNK	first_or_create	UNK=cls
+orator	orm	Model	UNK	first_or_new	UNK=cls
+orator	orm	Model	UNK	update_or_create	UNK=cls UNK=attributes UNK=values
+orator	orm	Model	UNK	query	UNK=cls
+orator	orm	Model	UNK	on	UNK=cls UNK=connection
+orator	orm	Model	UNK	on_write_connection	UNK=cls
+orator	orm	Model	UNK	all	UNK=cls UNK=columns
+orator	orm	Model	UNK	find	UNK=cls UNK=id UNK=columns
+orator	orm	Model	UNK	find_or_new	UNK=cls UNK=id UNK=columns
+orator	orm	Model	UNK	fresh	UNK=with_
+orator	orm	Model	UNK	load	void
+orator	orm	Model	UNK	with_	UNK=cls
+orator	orm	Model	UNK	has_one	UNK=related UNK=foreign_key UNK=local_key UNK=relation
+orator	orm	Model	UNK	morph_one	UNK=related UNK=name UNK=type_column UNK=id_column
+orator	orm	Model	UNK	belongs_to	UNK=related UNK=foreign_key UNK=other_key UNK=relation
+orator	orm	Model	UNK	morph_to	UNK=name UNK=type_column UNK=id_column UNK=_wrapped
+orator	orm	Model	UNK	get_actual_class_for_morph	UNK=slug
+orator	orm	Model	UNK	has_many	UNK=related UNK=foreign_key UNK=local_key UNK=relation
+orator	orm	Model	UNK	has_many_through	UNK=related UNK=through UNK=first_key UNK=second_key
+orator	orm	Model	UNK	morph_many	UNK=related UNK=name UNK=type_column UNK=id_column
+orator	orm	Model	UNK	belongs_to_many	UNK=related UNK=table UNK=foreign_key UNK=other_key
+orator	orm	Model	UNK	morph_to_many	UNK=related UNK=name UNK=table UNK=foreign_key
+orator	orm	Model	UNK	morphed_by_many	UNK=related UNK=name UNK=table UNK=foreign_key
+orator	orm	Model	UNK	_get_related	UNK=related UNK=as_instance
+orator	orm	Model	UNK	joining_table	UNK=related
+orator	orm	Model	UNK	destroy	UNK=cls
+orator	orm	Model	UNK	delete	void
+orator	orm	Model	UNK	force_delete	void
+orator	orm	Model	UNK	_perform_delete_on_model	void
+orator	orm	Model	UNK	saving	UNK=cls UNK=callback
+orator	orm	Model	UNK	saved	UNK=cls UNK=callback
+orator	orm	Model	UNK	updating	UNK=cls UNK=callback
+orator	orm	Model	UNK	updated	UNK=cls UNK=callback
+orator	orm	Model	UNK	creating	UNK=cls UNK=callback
+orator	orm	Model	UNK	created	UNK=cls UNK=callback
+orator	orm	Model	UNK	deleting	UNK=cls UNK=callback
+orator	orm	Model	UNK	deleted	UNK=cls UNK=callback
+orator	orm	Model	UNK	flush_event_listeners	UNK=cls
+orator	orm	Model	UNK	_register_model_event	UNK=cls UNK=event UNK=callback
+orator	orm	Model	UNK	get_observable_events	UNK=cls
+orator	orm	Model	UNK	_increment	UNK=column UNK=amount
+orator	orm	Model	UNK	_decrement	UNK=column UNK=amount
+orator	orm	Model	UNK	_increment_or_decrement	UNK=column UNK=amount UNK=method
+orator	orm	Model	UNK	_increment_or_decrement_attribute_value	UNK=column UNK=amount UNK=method
+orator	orm	Model	UNK	update	UNK=_attributes
+orator	orm	Model	UNK	push	void
+orator	orm	Model	UNK	save	UNK=options
+orator	orm	Model	UNK	_finish_save	UNK=options
+orator	orm	Model	UNK	_perform_update	UNK=query UNK=options
+orator	orm	Model	UNK	_perform_insert	UNK=query UNK=options
+orator	orm	Model	UNK	_insert_and_set_id	UNK=query UNK=attributes
+orator	orm	Model	UNK	touch_owners	void
+orator	orm	Model	UNK	touches	UNK=relation
+orator	orm	Model	UNK	_fire_model_event	UNK=event
+orator	orm	Model	UNK	_set_keys_for_save_query	UNK=query
+orator	orm	Model	UNK	_get_key_for_save_query	void
+orator	orm	Model	UNK	touch	void
+orator	orm	Model	UNK	_update_timestamps	void
+orator	orm	Model	UNK	_should_set_timestamp	UNK=timestamp
+orator	orm	Model	UNK	set_created_at	UNK=value
+orator	orm	Model	UNK	set_updated_at	UNK=value
+orator	orm	Model	UNK	get_created_at_column	void
+orator	orm	Model	UNK	get_updated_at_column	void
+orator	orm	Model	UNK	fresh_timestamp	void
+orator	orm	Model	UNK	new_query	void
+orator	orm	Model	UNK	new_query_without_scope	UNK=scope
+orator	orm	Model	UNK	new_query_without_scopes	void
+orator	orm	Model	UNK	new_orm_builder	UNK=query
+orator	orm	Model	UNK	_new_base_query_builder	void
+orator	orm	Model	UNK	new_collection	UNK=models
+orator	orm	Model	UNK	new_pivot	UNK=parent UNK=attributes UNK=table UNK=exists
+orator	orm	Model	UNK	get_table	void
+orator	orm	Model	UNK	set_table	UNK=table
+orator	orm	Model	UNK	get_key	void
+orator	orm	Model	UNK	get_key_name	void
+orator	orm	Model	UNK	set_key_name	UNK=name
+orator	orm	Model	UNK	get_qualified_key_name	void
+orator	orm	Model	UNK	uses_timestamps	void
+orator	orm	Model	UNK	get_morphs	UNK=name UNK=type UNK=id
+orator	orm	Model	UNK	get_morph_name	UNK=cls
+orator	orm	Model	UNK	get_per_page	void
+orator	orm	Model	UNK	get_foreign_key	void
+orator	orm	Model	UNK	get_hidden	void
+orator	orm	Model	UNK	set_hidden	UNK=hidden
+orator	orm	Model	UNK	add_hidden	void
+orator	orm	Model	UNK	get_visible	void
+orator	orm	Model	UNK	set_visible	UNK=visible
+orator	orm	Model	UNK	add_visible	void
+orator	orm	Model	UNK	get_fillable	void
+orator	orm	Model	UNK	fillable	UNK=fillable
+orator	orm	Model	UNK	get_guarded	void
+orator	orm	Model	UNK	guard	UNK=guarded
+orator	orm	Model	UNK	unguard	UNK=cls
+orator	orm	Model	UNK	reguard	UNK=cls
+orator	orm	Model	UNK	is_fillable	UNK=key
+orator	orm	Model	UNK	is_guarded	UNK=key
+orator	orm	Model	UNK	totally_guarded	void
+orator	orm	Model	UNK	_remove_table_from_key	UNK=key
+orator	orm	Model	UNK	to_json	void
+orator	orm	Model	UNK	serialize	void
+orator	orm	Model	UNK	to_dict	void
+orator	orm	Model	UNK	attributes_to_dict	void
+orator	orm	Model	UNK	_get_dictable_attributes	void
+orator	orm	Model	UNK	_get_dictable_appends	void
+orator	orm	Model	UNK	relations_to_dict	void
+orator	orm	Model	UNK	_get_dictable_relations	void
+orator	orm	Model	UNK	_get_dictable_items	UNK=values
+orator	orm	Model	UNK	get_attribute	UNK=key UNK=original
+orator	orm	Model	UNK	get_raw_attribute	UNK=key
+orator	orm	Model	UNK	_get_attribute_value	UNK=key
+orator	orm	Model	UNK	_get_relationship_from_method	UNK=method UNK=relations
+orator	orm	Model	UNK	has_get_mutator	UNK=key
+orator	orm	Model	UNK	_mutate_attribute_for_dict	UNK=key
+orator	orm	Model	UNK	_has_cast	UNK=key
+orator	orm	Model	UNK	_has_set_mutator	UNK=key
+orator	orm	Model	UNK	_is_json_castable	UNK=key
+orator	orm	Model	UNK	_get_cast_type	UNK=key
+orator	orm	Model	UNK	_cast_attribute	UNK=key UNK=value
+orator	orm	Model	UNK	get_dates	void
+orator	orm	Model	UNK	from_datetime	UNK=value
+orator	orm	Model	UNK	as_datetime	UNK=value
+orator	orm	Model	UNK	get_date_format	void
+orator	orm	Model	UNK	_format_date	UNK=date
+orator	orm	Model	UNK	set_attribute	UNK=key UNK=value
+orator	orm	Model	UNK	replicate	UNK=except_
+orator	orm	Model	UNK	get_attributes	void
+orator	orm	Model	UNK	set_raw_attributes	UNK=attributes UNK=sync
+orator	orm	Model	UNK	set_raw_attribute	UNK=key UNK=value UNK=sync
+orator	orm	Model	UNK	get_original	UNK=key UNK=default
+orator	orm	Model	UNK	sync_original	void
+orator	orm	Model	UNK	sync_original_attribute	UNK=attribute
+orator	orm	Model	UNK	is_dirty	void
+orator	orm	Model	UNK	get_dirty	void
+orator	orm	Model	UNK	set_appends	UNK=appends
+orator	orm	Model	UNK	get_relations	void
+orator	orm	Model	UNK	get_relation	UNK=relation
+orator	orm	Model	UNK	set_relation	UNK=relation UNK=value
+orator	orm	Model	UNK	get_connection	void
+orator	orm	Model	UNK	get_connection_name	void
+orator	orm	Model	UNK	set_connection	UNK=name
+orator	orm	Model	UNK	resolve_connection	UNK=cls UNK=connection
+orator	orm	Model	UNK	get_connection_resolver	UNK=cls
+orator	orm	Model	UNK	set_connection_resolver	UNK=cls UNK=resolver
+orator	orm	Model	UNK	unset_connection_resolver	UNK=cls
+orator	orm	Model	UNK	_get_mutated_attributes	void
+orator	orm	Collection	UNK	load	void
+orator	orm	Collection	UNK	lists	UNK=value UNK=key
+orator	orm	Collection	UNK	model_keys	void
+orator	orm.scopes	SoftDeletingScope	UNK	apply	UNK=builder UNK=model
+orator	orm.scopes	SoftDeletingScope	UNK	extend	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_on_delete	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_get_deleted_at_column	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_add_force_delete	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_force_delete	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_add_restore	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_restore	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_add_with_trashed	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_with_trashed	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_add_only_trashed	UNK=builder
+orator	orm.scopes	SoftDeletingScope	UNK	_only_trashed	UNK=builder
+orator	orm.scopes	Scope	UNK	apply	UNK=builder UNK=model
+orator	orm.mixins	SoftDeletes	UNK	boot_soft_deletes	UNK=cls UNK=klass
+orator	orm.mixins	SoftDeletes	UNK	force_delete	void
+orator	orm.mixins	SoftDeletes	UNK	_perform_delete_on_model	void
+orator	orm.mixins	SoftDeletes	UNK	_do_perform_delete_on_model	void
+orator	orm.mixins	SoftDeletes	UNK	_run_soft_delete	void
+orator	orm.mixins	SoftDeletes	UNK	restore	void
+orator	orm.mixins	SoftDeletes	UNK	trashed	void
+orator	orm.mixins	SoftDeletes	UNK	with_trashed	UNK=cls
+orator	orm.mixins	SoftDeletes	UNK	only_trashed	UNK=cls
+orator	orm.mixins	SoftDeletes	UNK	restoring	UNK=cls UNK=callback
+orator	orm.mixins	SoftDeletes	UNK	restored	UNK=cls UNK=callback
+orator	orm.mixins	SoftDeletes	UNK	get_deleted_at_column	void
+orator	orm.mixins	SoftDeletes	UNK	get_qualified_deleted_at_column	void
+orator	orm.relations	Result	UNK	__init__	UNK=result UNK=relation UNK=parent
+orator	orm.relations	Pivot	UNK	__init__	UNK=parent UNK=attributes UNK=table UNK=exists
+orator	orm.relations	Pivot	UNK	_set_keys_for_save_query	UNK=query
+orator	orm.relations	Pivot	UNK	delete	void
+orator	orm.relations	Pivot	UNK	_get_delete_query	void
+orator	orm.relations	Pivot	UNK	has_timestamps_attributes	void
+orator	orm.relations	Pivot	UNK	set_pivot_keys	UNK=foreign_key UNK=other_key
+orator	orm.relations	Pivot	UNK	set_table	UNK=table
+orator	orm.relations	Pivot	UNK	get_table	void
+orator	orm.relations	MorphPivot	UNK	_set_keys_for_save_query	UNK=query
+orator	orm.relations	MorphPivot	UNK	delete	void
+orator	orm.relations	MorphOne	UNK	get_results	void
+orator	orm.relations	MorphOne	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	MorphOne	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	BelongsTo	UNK	__init__	UNK=query UNK=parent UNK=foreign_key UNK=other_key
+orator	orm.relations	BelongsTo	UNK	get_results	void
+orator	orm.relations	BelongsTo	UNK	add_constraints	void
+orator	orm.relations	BelongsTo	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	BelongsTo	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	BelongsTo	UNK	_get_eager_model_keys	UNK=models
+orator	orm.relations	BelongsTo	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	BelongsTo	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	BelongsTo	UNK	associate	UNK=model
+orator	orm.relations	BelongsTo	UNK	dissociate	void
+orator	orm.relations	BelongsTo	UNK	update	UNK=_attributes
+orator	orm.relations	Relation	UNK	__init__	UNK=query UNK=parent
+orator	orm.relations	Relation	UNK	add_constraints	void
+orator	orm.relations	Relation	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	Relation	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	Relation	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	Relation	UNK	get_results	void
+orator	orm.relations	Relation	UNK	get_eager	void
+orator	orm.relations	Relation	UNK	touch	void
+orator	orm.relations	Relation	UNK	raw_update	UNK=attributes
+orator	orm.relations	Relation	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	Relation	UNK	no_constraints	UNK=cls UNK=with_subclasses
+orator	orm.relations	Relation	UNK	get_keys	UNK=models UNK=key
+orator	orm.relations	Relation	UNK	created_at	void
+orator	orm.relations	Relation	UNK	updated_at	void
+orator	orm.relations	Relation	UNK	get_related_updated_at	void
+orator	orm.relations	Relation	UNK	wrap	UNK=value
+orator	orm.relations	HasOne	UNK	get_results	void
+orator	orm.relations	HasOne	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	HasOne	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	HasOneOrMany	UNK	__init__	UNK=query UNK=parent UNK=foreign_key UNK=local_key
+orator	orm.relations	HasOneOrMany	UNK	add_constraints	void
+orator	orm.relations	HasOneOrMany	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	HasOneOrMany	UNK	match_one	UNK=models UNK=results UNK=relation
+orator	orm.relations	HasOneOrMany	UNK	match_many	UNK=models UNK=results UNK=relation
+orator	orm.relations	HasOneOrMany	UNK	_match_one_or_many	UNK=models UNK=results UNK=relation UNK=type_
+orator	orm.relations	HasOneOrMany	UNK	_get_relation_value	UNK=dictionary UNK=key UNK=type
+orator	orm.relations	HasOneOrMany	UNK	_build_dictionary	UNK=results
+orator	orm.relations	HasOneOrMany	UNK	save	UNK=model
+orator	orm.relations	HasOneOrMany	UNK	save_many	UNK=models
+orator	orm.relations	HasOneOrMany	UNK	find_or_new	UNK=id UNK=columns
+orator	orm.relations	HasOneOrMany	UNK	first_or_new	UNK=_attributes
+orator	orm.relations	HasOneOrMany	UNK	first_or_create	UNK=_attributes
+orator	orm.relations	HasOneOrMany	UNK	update_or_create	UNK=attributes UNK=values
+orator	orm.relations	HasOneOrMany	UNK	create	UNK=_attributes
+orator	orm.relations	HasOneOrMany	UNK	create_many	UNK=records
+orator	orm.relations	HasOneOrMany	UNK	update	UNK=_attributes
+orator	orm.relations	MorphMany	UNK	get_results	void
+orator	orm.relations	MorphMany	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	MorphMany	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	HasManyThrough	UNK	__init__	UNK=query UNK=far_parent UNK=parent UNK=first_key
+orator	orm.relations	HasManyThrough	UNK	add_constraints	void
+orator	orm.relations	HasManyThrough	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	HasManyThrough	UNK	_set_join	UNK=query
+orator	orm.relations	HasManyThrough	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	HasManyThrough	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	HasManyThrough	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	HasManyThrough	UNK	_build_dictionary	UNK=results
+orator	orm.relations	HasManyThrough	UNK	get_results	void
+orator	orm.relations	HasManyThrough	UNK	get	UNK=columns
+orator	orm.relations	HasManyThrough	UNK	_get_select_columns	UNK=columns
+orator	orm.relations	MorphToMany	UNK	__init__	UNK=query UNK=parent UNK=name UNK=table
+orator	orm.relations	MorphToMany	UNK	_set_where	void
+orator	orm.relations	MorphToMany	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	MorphToMany	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	MorphToMany	UNK	_create_attach_record	UNK=id UNK=timed
+orator	orm.relations	MorphToMany	UNK	_new_pivot_query	void
+orator	orm.relations	MorphToMany	UNK	new_pivot	UNK=attributes UNK=exists
+orator	orm.relations	MorphOneOrMany	UNK	__init__	UNK=query UNK=parent UNK=morph_type UNK=foreign_key
+orator	orm.relations	MorphOneOrMany	UNK	add_constraints	void
+orator	orm.relations	MorphOneOrMany	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	MorphOneOrMany	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	MorphOneOrMany	UNK	save	UNK=model
+orator	orm.relations	MorphOneOrMany	UNK	find_or_new	UNK=id UNK=columns
+orator	orm.relations	MorphOneOrMany	UNK	first_or_new	UNK=_attributes
+orator	orm.relations	MorphOneOrMany	UNK	first_or_create	UNK=_attributes
+orator	orm.relations	MorphOneOrMany	UNK	update_or_create	UNK=attributes UNK=values
+orator	orm.relations	MorphOneOrMany	UNK	create	UNK=_attributes
+orator	orm.relations	MorphOneOrMany	UNK	_set_foreign_attributes_for_create	UNK=model
+orator	orm.relations	HasMany	UNK	get_results	void
+orator	orm.relations	HasMany	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	HasMany	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	MorphTo	UNK	__init__	UNK=query UNK=parent UNK=foreign_key UNK=other_key
+orator	orm.relations	MorphTo	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	MorphTo	UNK	_build_dictionary	UNK=models
+orator	orm.relations	MorphTo	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	MorphTo	UNK	associate	UNK=model
+orator	orm.relations	MorphTo	UNK	get_eager	void
+orator	orm.relations	MorphTo	UNK	_match_to_morph_parents	UNK=type UNK=results
+orator	orm.relations	MorphTo	UNK	_get_results_by_type	UNK=type
+orator	orm.relations	MorphTo	UNK	_gather_keys_by_type	UNK=type
+orator	orm.relations	MorphTo	UNK	_create_model_by_type	UNK=type
+orator	orm.relations	Wrapper	UNK	__init__	UNK=relation
+orator	orm.relations	BelongsToMany	UNK	__init__	UNK=query UNK=parent UNK=table UNK=foreign_key
+orator	orm.relations	BelongsToMany	UNK	get_results	void
+orator	orm.relations	BelongsToMany	UNK	where_pivot	UNK=column UNK=operator UNK=value UNK=boolean
+orator	orm.relations	BelongsToMany	UNK	or_where_pivot	UNK=column UNK=operator UNK=value
+orator	orm.relations	BelongsToMany	UNK	first	UNK=columns
+orator	orm.relations	BelongsToMany	UNK	first_or_fail	UNK=columns
+orator	orm.relations	BelongsToMany	UNK	get	UNK=columns
+orator	orm.relations	BelongsToMany	UNK	_hydrate_pivot_relation	UNK=models
+orator	orm.relations	BelongsToMany	UNK	_clean_pivot_attributes	UNK=model
+orator	orm.relations	BelongsToMany	UNK	add_constraints	void
+orator	orm.relations	BelongsToMany	UNK	get_relation_count_query	UNK=query UNK=parent
+orator	orm.relations	BelongsToMany	UNK	get_relation_count_query_for_self_join	UNK=query UNK=parent
+orator	orm.relations	BelongsToMany	UNK	get_relation_count_hash	void
+orator	orm.relations	BelongsToMany	UNK	_get_select_columns	UNK=columns
+orator	orm.relations	BelongsToMany	UNK	_get_aliased_pivot_columns	void
+orator	orm.relations	BelongsToMany	UNK	_has_pivot_column	UNK=column
+orator	orm.relations	BelongsToMany	UNK	_set_join	UNK=query
+orator	orm.relations	BelongsToMany	UNK	_set_where	void
+orator	orm.relations	BelongsToMany	UNK	add_eager_constraints	UNK=models
+orator	orm.relations	BelongsToMany	UNK	init_relation	UNK=models UNK=relation
+orator	orm.relations	BelongsToMany	UNK	match	UNK=models UNK=results UNK=relation
+orator	orm.relations	BelongsToMany	UNK	_build_dictionary	UNK=results
+orator	orm.relations	BelongsToMany	UNK	touch	void
+orator	orm.relations	BelongsToMany	UNK	get_related_ids	void
+orator	orm.relations	BelongsToMany	UNK	save	UNK=model UNK=joining UNK=touch
+orator	orm.relations	BelongsToMany	UNK	save_many	UNK=models UNK=joinings
+orator	orm.relations	BelongsToMany	UNK	find_or_new	UNK=id UNK=columns
+orator	orm.relations	BelongsToMany	UNK	first_or_new	UNK=_attributes
+orator	orm.relations	BelongsToMany	UNK	first_or_create	UNK=_attributes UNK=_joining UNK=_touch
+orator	orm.relations	BelongsToMany	UNK	update_or_create	UNK=attributes UNK=values UNK=joining UNK=touch
+orator	orm.relations	BelongsToMany	UNK	create	UNK=_attributes UNK=_joining UNK=_touch
+orator	orm.relations	BelongsToMany	UNK	create_many	UNK=records UNK=joinings
+orator	orm.relations	BelongsToMany	UNK	sync	UNK=ids UNK=detaching
+orator	orm.relations	BelongsToMany	UNK	_format_sync_list	UNK=records
+orator	orm.relations	BelongsToMany	UNK	_attach_new	UNK=records UNK=current UNK=touch
+orator	orm.relations	BelongsToMany	UNK	update_existing_pivot	UNK=id UNK=attributes UNK=touch
+orator	orm.relations	BelongsToMany	UNK	attach	UNK=id UNK=attributes UNK=touch
+orator	orm.relations	BelongsToMany	UNK	_create_attach_records	UNK=ids UNK=attributes
+orator	orm.relations	BelongsToMany	UNK	_attacher	UNK=key UNK=value UNK=attributes UNK=timed
+orator	orm.relations	BelongsToMany	UNK	_get_attach_id	UNK=key UNK=value UNK=attributes
+orator	orm.relations	BelongsToMany	UNK	_create_attach_record	UNK=id UNK=timed
+orator	orm.relations	BelongsToMany	UNK	_set_timestamps_on_attach	UNK=record UNK=exists
+orator	orm.relations	BelongsToMany	UNK	detach	UNK=ids UNK=touch
+orator	orm.relations	BelongsToMany	UNK	touch_if_touching	void
+orator	orm.relations	BelongsToMany	UNK	_touching_parent	void
+orator	orm.relations	BelongsToMany	UNK	_new_pivot_query	void
+orator	orm.relations	BelongsToMany	UNK	new_pivot_statement	void
+orator	orm.relations	BelongsToMany	UNK	new_pivot_statement_for_id	UNK=id
+orator	orm.relations	BelongsToMany	UNK	new_pivot	UNK=attributes UNK=exists
+orator	orm.relations	BelongsToMany	UNK	new_existing_pivot	UNK=attributes
+orator	orm.relations	BelongsToMany	UNK	with_pivot	void
+orator	orm.relations	BelongsToMany	UNK	with_timestamps	UNK=created_at UNK=updated_at
+orator	orm.relations	BelongsToMany	UNK	get_related_fresh_update	void
+orator	orm.relations	BelongsToMany	UNK	get_has_compare_key	void
+orator	connectors	Connector	UNK	_detect_database_platform	void
+orator	connectors	Connector	UNK	_get_database_platform_version	void
+orator	dbal	Comparator	UNK	diff_table	UNK=table1 UNK=table2
+orator	dbal	Comparator	UNK	detect_column_renamings	UNK=table_differences
+orator	dbal	Comparator	UNK	detect_index_renamings	UNK=table_differences
+orator	dbal	Comparator	UNK	diff_foreign_key	UNK=key1 UNK=key2
+orator	dbal	Comparator	UNK	diff_column	UNK=column1 UNK=column2
+orator	dbal	Comparator	UNK	diff_index	UNK=index1 UNK=index2
+orator	dbal	Index	UNK	_add_column	UNK=column
+orator	dbal	Index	UNK	get_quoted_columns	UNK=platform
+orator	dbal	Index	UNK	is_simple_index	void
+orator	dbal	Index	UNK	has_column_at_position	UNK=column_name UNK=pos
+orator	dbal	Index	UNK	spans_columns	UNK=column_names
+orator	dbal	Index	UNK	is_fullfilled_by	UNK=other
+orator	dbal	Index	UNK	same_partial_index	UNK=other
+orator	dbal	Index	UNK	overrules	UNK=other
+orator	dbal	Index	UNK	get_flags	void
+orator	dbal	Index	UNK	add_flag	UNK=flag
+orator	dbal	Index	UNK	has_flag	UNK=flag
+orator	dbal	Index	UNK	remove_flag	UNK=flag
+orator	dbal	AbstractAsset	UNK	_set_name	UNK=name
+orator	dbal	AbstractAsset	UNK	_generate_identifier_name	UNK=columns UNK=prefix UNK=max_size
+orator	dbal	Table	UNK	set_primary_key	UNK=columns UNK=index_name
+orator	dbal	Table	UNK	drop_primary_key	void
+orator	dbal	Table	UNK	drop_index	UNK=name
+orator	dbal	Table	UNK	rename_index	UNK=old_name UNK=new_name
+orator	dbal	Table	UNK	columns_are_indexed	UNK=columns
+orator	dbal	Table	UNK	_create_index	UNK=columns UNK=name UNK=is_unique UNK=is_primary
+orator	dbal	Table	UNK	add_column	UNK=name UNK=type_name UNK=options
+orator	dbal	Table	UNK	change_column	UNK=name UNK=options
+orator	dbal	Table	UNK	drop_column	UNK=name
+orator	dbal	Table	UNK	add_foreign_key_constraint	UNK=foreign_table UNK=local_columns UNK=foreign_columns UNK=options
+orator	dbal	Table	UNK	add_named_foreign_key_constraint	UNK=name UNK=foreign_table UNK=local_columns UNK=foreign_columns
+orator	dbal	Table	UNK	_add_index	UNK=index
+orator	dbal	Table	UNK	_add_foreign_key_constraint	UNK=constraint
+orator	dbal	Table	UNK	has_foreign_key	UNK=name
+orator	dbal	Table	UNK	get_foreign_key	UNK=name
+orator	dbal	Table	UNK	remove_foreign_key	UNK=name
+orator	dbal	Table	UNK	get_primary_key	void
+orator	dbal	Table	UNK	get_primary_key_columns	void
+orator	dbal	Table	UNK	has_primary_key	void
+orator	dbal	Table	UNK	has_index	UNK=name
+orator	dbal	Table	UNK	get_index	UNK=name
+orator	dbal	Table	UNK	_normalize_identifier	UNK=identifier
+orator	dbal	SchemaManager	UNK	__init__	UNK=connection UNK=platform
+orator	dbal	ForeignKeyConstraint	UNK	get_local_table_name	void
+orator	dbal	ForeignKeyConstraint	UNK	set_local_table	UNK=table
+orator	dbal	ForeignKeyConstraint	UNK	get_local_columns	void
+orator	dbal	ForeignKeyConstraint	UNK	get_quoted_local_columns	UNK=platform
+orator	dbal	ForeignKeyConstraint	UNK	get_unquoted_local_columns	void
+orator	dbal	ForeignKeyConstraint	UNK	get_quoted_columns	UNK=platform
+orator	dbal	ForeignKeyConstraint	UNK	get_foreign_table_name	void
+orator	dbal	ForeignKeyConstraint	UNK	get_unqualified_foreign_table_name	void
+orator	dbal	ForeignKeyConstraint	UNK	get_quoted_foreign_table_name	UNK=platform
+orator	dbal	ForeignKeyConstraint	UNK	get_foreign_columns	void
+orator	dbal	ForeignKeyConstraint	UNK	get_quoted_foreign_columns	UNK=platform
+orator	dbal	ForeignKeyConstraint	UNK	get_unquoted_foreign_columns	void
+orator	dbal	ForeignKeyConstraint	UNK	on_update	void
+orator	dbal	ForeignKeyConstraint	UNK	on_delete	void
+orator	dbal	ForeignKeyConstraint	UNK	_on_event	UNK=event
+orator	dbal	ForeignKeyConstraint	UNK	intersects_index_columns	UNK=index
+orator	dbal.platforms	MySQLPlatform	UNK	get_alter_table_sql	UNK=diff
+orator	dbal.platforms	Platform	UNK	get_check_declaration_sql	UNK=definition
+orator	dbal.platforms	Platform	UNK	get_unique_constraint_declaration_sql	UNK=name UNK=index
+orator	dbal.platforms	Platform	UNK	get_index_declaration_sql	UNK=name UNK=index
+orator	dbal.platforms	Platform	UNK	get_foreign_key_declaration_sql	UNK=foreign_key
+orator	dbal.platforms	Platform	UNK	get_advanced_foreign_key_options_sql	UNK=foreign_key
+orator	dbal.platforms	Platform	UNK	get_foreign_key_referential_action_sql	UNK=action
+orator	dbal.platforms	Platform	UNK	get_foreign_key_base_declaration_sql	UNK=foreign_key
+orator	dbal.platforms	Platform	UNK	get_column_declaration_list_sql	UNK=fields
+orator	dbal.platforms	Platform	UNK	get_index_field_declaration_list_sql	UNK=fields
+orator	dbal.platforms	Platform	UNK	get_create_index_sql	UNK=index UNK=table
+orator	dbal.platforms	Platform	UNK	get_partial_index_sql	UNK=index
+orator	dbal.platforms	Platform	UNK	get_create_index_sql_flags	UNK=index
+orator	dbal.platforms	Platform	UNK	get_create_primary_key_sql	UNK=index UNK=table
+orator	dbal.platforms	Platform	UNK	get_create_foreign_key_sql	UNK=foreign_key UNK=table
+orator	dbal.platforms	Platform	UNK	get_drop_table_sql	UNK=table
+orator	dbal.platforms	Platform	UNK	get_drop_index_sql	UNK=index UNK=table
+orator	dbal.platforms	Platform	UNK	get_create_table_sql	UNK=table UNK=create_flags
+orator	dbal.platforms	Platform	UNK	_get_create_table_sql	UNK=table_name UNK=columns UNK=options
+orator	dbal.platforms	Platform	UNK	quote_identifier	UNK=string
+orator	dbal.platforms	Platform	UNK	quote_single_identifier	UNK=string
+orator	dbal.platforms	SQLitePlatform	UNK	get_pre_alter_table_index_foreign_key_sql	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	get_post_alter_table_index_foreign_key_sql	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	get_alter_table_sql	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	_get_indexes_in_altered_table	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	_get_column_names_in_altered_table	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	_get_foreign_keys_in_altered_table	UNK=diff
+orator	dbal.platforms	SQLitePlatform	UNK	_get_primary_index_in_altered_table	UNK=diff
+orator	dbal.platforms	PostgresPlatform	UNK	get_alter_table_sql	UNK=diff
+orator	seeds	Seeder	UNK	run	void
+orator	seeds	Seeder	UNK	call	UNK=klass
+orator	seeds	Seeder	UNK	_resolve	UNK=klass
+orator	seeds	Seeder	UNK	set_command	UNK=command
+orator	query	QueryBuilder	UNK	select	void
+orator	query	QueryBuilder	UNK	select_raw	UNK=expression UNK=bindings
+orator	query	QueryBuilder	UNK	select_sub	UNK=query UNK=as_
+orator	query	QueryBuilder	UNK	add_select	void
+orator	query	QueryBuilder	UNK	distinct	void
+orator	query	QueryBuilder	UNK	from_	UNK=table
+orator	query	QueryBuilder	UNK	join	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	join_where	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	left_join	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	left_join_where	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	right_join	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	right_join_where	UNK=table UNK=one UNK=operator UNK=two
+orator	query	QueryBuilder	UNK	where	UNK=column UNK=operator UNK=value UNK=boolean
+orator	query	QueryBuilder	UNK	for_nested_where	void
+orator	query	QueryBuilder	UNK	where_exists	UNK=query UNK=boolean UNK=negate
+orator	query	QueryBuilder	UNK	or_where_exists	UNK=query UNK=negate
+orator	query	QueryBuilder	UNK	where_not_exists	UNK=query UNK=boolean
+orator	query	QueryBuilder	UNK	or_where_not_exists	UNK=query
+orator	query	QueryBuilder	UNK	_where_in_sub	UNK=column UNK=query UNK=boolean UNK=negate
+orator	query	QueryBuilder	UNK	group_by	void
+orator	query	QueryBuilder	UNK	having	UNK=column UNK=operator UNK=value UNK=boolean
+orator	query	QueryBuilder	UNK	or_having	UNK=column UNK=operator UNK=value
+orator	query	QueryBuilder	UNK	having_raw	UNK=sql UNK=bindings UNK=boolean
+orator	query	QueryBuilder	UNK	or_having_raw	UNK=sql UNK=bindings
+orator	query	QueryBuilder	UNK	order_by	UNK=column UNK=direction
+orator	query	QueryBuilder	UNK	latest	UNK=column
+orator	query	QueryBuilder	UNK	oldest	UNK=column
+orator	query	QueryBuilder	UNK	order_by_raw	UNK=sql UNK=bindings
+orator	query	QueryBuilder	UNK	union	UNK=query UNK=all
+orator	query	QueryBuilder	UNK	union_all	UNK=query
+orator	query	QueryBuilder	UNK	lock	UNK=value
+orator	query	QueryBuilder	UNK	lock_for_update	void
+orator	query	QueryBuilder	UNK	shared_lock	void
+orator	query	QueryBuilder	UNK	to_sql	void
+orator	query	QueryBuilder	UNK	find	UNK=id UNK=columns
+orator	query	QueryBuilder	UNK	pluck	UNK=column
+orator	query	QueryBuilder	UNK	first	UNK=limit UNK=columns
+orator	query	QueryBuilder	UNK	get	UNK=columns
+orator	query	QueryBuilder	UNK	_run_select	void
+orator	query	QueryBuilder	UNK	paginate	UNK=per_page UNK=current_page UNK=columns
+orator	query	QueryBuilder	UNK	simple_paginate	UNK=per_page UNK=current_page UNK=columns
+orator	query	QueryBuilder	UNK	chunk	UNK=count
+orator	query	QueryBuilder	UNK	lists	UNK=column UNK=key
+orator	query	QueryBuilder	UNK	_get_list_select	UNK=column UNK=key
+orator	query	QueryBuilder	UNK	implode	UNK=column UNK=glue
+orator	query	QueryBuilder	UNK	exists	void
+orator	query	QueryBuilder	UNK	count	void
+orator	query	QueryBuilder	UNK	min	UNK=column
+orator	query	QueryBuilder	UNK	max	UNK=column
+orator	query	QueryBuilder	UNK	sum	UNK=column
+orator	query	QueryBuilder	UNK	avg	UNK=column
+orator	query	QueryBuilder	UNK	aggregate	UNK=func
+orator	query	QueryBuilder	UNK	insert	UNK=_values
+orator	query	QueryBuilder	UNK	insert_get_id	UNK=values UNK=sequence
+orator	query	QueryBuilder	UNK	update	UNK=_values
+orator	query	QueryBuilder	UNK	increment	UNK=column UNK=amount UNK=extras
+orator	query	QueryBuilder	UNK	decrement	UNK=column UNK=amount UNK=extras
+orator	query	QueryBuilder	UNK	delete	UNK=id
+orator	query	QueryBuilder	UNK	truncate	void
+orator	query	QueryBuilder	UNK	new_query	void
+orator	query	QueryBuilder	UNK	merge_wheres	UNK=wheres UNK=bindings
+orator	query	QueryBuilder	UNK	_clean_bindings	UNK=bindings
+orator	query	QueryBuilder	UNK	raw	UNK=value
+orator	query	QueryBuilder	UNK	merge	UNK=query
+orator	query	QueryBuilder	UNK	get_connection	void
+orator	query	QueryBuilder	UNK	get_processor	void
+orator	query	QueryBuilder	UNK	get_grammar	void
+orator	query.processors	MySQLQueryProcessor	UNK	process_insert_get_id	UNK=query UNK=sql UNK=values UNK=sequence
+orator	query.processors	MySQLQueryProcessor	UNK	process_column_listing	UNK=results
+orator	query.processors	PostgresQueryProcessor	UNK	process_insert_get_id	UNK=query UNK=sql UNK=values UNK=sequence
+orator	query.processors	PostgresQueryProcessor	UNK	process_column_listing	UNK=results
+orator	query.processors	SQLiteQueryProcessor	UNK	process_column_listing	UNK=results
+orator	query.processors	QueryProcessor	UNK	process_select	UNK=query UNK=results
+orator	query.processors	QueryProcessor	UNK	process_insert_get_id	UNK=query UNK=sql UNK=values UNK=sequence
+orator	query.processors	QueryProcessor	UNK	process_column_listing	UNK=results
+orator	query.grammars	PostgresQueryGrammar	UNK	_compile_lock	UNK=query UNK=value
+orator	query.grammars	PostgresQueryGrammar	UNK	compile_update	UNK=query UNK=values
+orator	query.grammars	PostgresQueryGrammar	UNK	_compile_update_columns	UNK=values
+orator	query.grammars	PostgresQueryGrammar	UNK	_compile_update_from	UNK=query
+orator	query.grammars	PostgresQueryGrammar	UNK	_compile_update_wheres	UNK=query
+orator	query.grammars	PostgresQueryGrammar	UNK	_compile_update_join_wheres	UNK=query
+orator	query.grammars	PostgresQueryGrammar	UNK	compile_insert_get_id	UNK=query UNK=values UNK=sequence
+orator	query.grammars	PostgresQueryGrammar	UNK	compile_truncate	UNK=query
+orator	query.grammars	QueryGrammar	UNK	compile_insert	UNK=query UNK=values
+orator	query.grammars	MySQLQueryGrammar	UNK	compile_select	UNK=query
+orator	query.grammars	MySQLQueryGrammar	UNK	_compile_union	UNK=union
+orator	query.grammars	MySQLQueryGrammar	UNK	_compile_lock	UNK=query UNK=value
+orator	query.grammars	MySQLQueryGrammar	UNK	compile_update	UNK=query UNK=values
+orator	query.grammars	MySQLQueryGrammar	UNK	compile_delete	UNK=query
+orator	query.grammars	MySQLQueryGrammar	UNK	_wrap_value	UNK=value
+orator	query.grammars	SQLiteQueryGrammar	UNK	compile_insert	UNK=query UNK=values
+orator	query.grammars	SQLiteQueryGrammar	UNK	compile_truncate	UNK=query
+orator	query.grammars	SQLiteQueryGrammar	UNK	_where_day	UNK=query UNK=where
+orator	query.grammars	SQLiteQueryGrammar	UNK	_where_month	UNK=query UNK=where
+orator	query.grammars	SQLiteQueryGrammar	UNK	_where_year	UNK=query UNK=where
+orator	query.grammars	SQLiteQueryGrammar	UNK	_date_based_where	UNK=type UNK=query UNK=where
+orator	schema	Schema	UNK	__init__	UNK=manager
+orator	schema	Schema	UNK	connection	UNK=connection
+orator	schema	SchemaBuilder	UNK	__init__	UNK=connection
+orator	schema	SchemaBuilder	UNK	has_table	UNK=table
+orator	schema	SchemaBuilder	UNK	has_column	UNK=table UNK=column
+orator	schema	SchemaBuilder	UNK	get_column_listing	UNK=table
+orator	schema	SchemaBuilder	UNK	table	UNK=table
+orator	schema	SchemaBuilder	UNK	create	UNK=table
+orator	schema	SchemaBuilder	UNK	drop	UNK=table
+orator	schema	SchemaBuilder	UNK	drop_if_exists	UNK=table
+orator	schema	SchemaBuilder	UNK	rename	UNK=from_ UNK=to
+orator	schema	SchemaBuilder	UNK	_build	UNK=blueprint
+orator	schema	Blueprint	UNK	__init__	UNK=table
+orator	schema	Blueprint	UNK	build	UNK=connection UNK=grammar
+orator	schema	Blueprint	UNK	to_sql	UNK=connection UNK=grammar
+orator	schema	Blueprint	UNK	_add_implied_commands	void
+orator	schema	Blueprint	UNK	_add_fluent_indexes	void
+orator	schema	Blueprint	UNK	_creating	void
+orator	schema	Blueprint	UNK	create	void
+orator	schema	Blueprint	UNK	drop	void
+orator	schema	Blueprint	UNK	drop_if_exists	void
+orator	schema	Blueprint	UNK	drop_column	void
+orator	schema	Blueprint	UNK	rename_column	UNK=from_ UNK=to
+orator	schema	Blueprint	UNK	drop_primary	UNK=index
+orator	schema	Blueprint	UNK	drop_unique	UNK=index
+orator	schema	Blueprint	UNK	drop_index	UNK=index
+orator	schema	Blueprint	UNK	drop_foreign	UNK=index
+orator	schema	Blueprint	UNK	drop_timestamps	void
+orator	schema	Blueprint	UNK	drop_soft_deletes	void
+orator	schema	Blueprint	UNK	rename	UNK=to
+orator	schema	Blueprint	UNK	primary	UNK=columns UNK=name
+orator	schema	Blueprint	UNK	unique	UNK=columns UNK=name
+orator	schema	Blueprint	UNK	index	UNK=columns UNK=name
+orator	schema	Blueprint	UNK	foreign	UNK=columns UNK=name
+orator	schema	Blueprint	UNK	increments	UNK=column
+orator	schema	Blueprint	UNK	big_increments	UNK=column
+orator	schema	Blueprint	UNK	char	UNK=column UNK=length
+orator	schema	Blueprint	UNK	string	UNK=column UNK=length
+orator	schema	Blueprint	UNK	text	UNK=column
+orator	schema	Blueprint	UNK	medium_text	UNK=column
+orator	schema	Blueprint	UNK	long_text	UNK=column
+orator	schema	Blueprint	UNK	integer	UNK=column UNK=auto_increment UNK=unsigned
+orator	schema	Blueprint	UNK	big_integer	UNK=column UNK=auto_increment UNK=unsigned
+orator	schema	Blueprint	UNK	medium_integer	UNK=column UNK=auto_increment UNK=unsigned
+orator	schema	Blueprint	UNK	tiny_integer	UNK=column UNK=auto_increment UNK=unsigned
+orator	schema	Blueprint	UNK	small_integer	UNK=column UNK=auto_increment UNK=unsigned
+orator	schema	Blueprint	UNK	unsigned_integer	UNK=column UNK=auto_increment
+orator	schema	Blueprint	UNK	unsigned_big_integer	UNK=column UNK=auto_increment
+orator	schema	Blueprint	UNK	float	UNK=column UNK=total UNK=places
+orator	schema	Blueprint	UNK	double	UNK=column UNK=total UNK=places
+orator	schema	Blueprint	UNK	decimal	UNK=column UNK=total UNK=places
+orator	schema	Blueprint	UNK	boolean	UNK=column
+orator	schema	Blueprint	UNK	enum	UNK=column UNK=allowed
+orator	schema	Blueprint	UNK	json	UNK=column
+orator	schema	Blueprint	UNK	date	UNK=column
+orator	schema	Blueprint	UNK	datetime	UNK=column
+orator	schema	Blueprint	UNK	time	UNK=column
+orator	schema	Blueprint	UNK	timestamp	UNK=column
+orator	schema	Blueprint	UNK	nullable_timestamps	void
+orator	schema	Blueprint	UNK	timestamps	UNK=use_current
+orator	schema	Blueprint	UNK	soft_deletes	void
+orator	schema	Blueprint	UNK	binary	UNK=column
+orator	schema	Blueprint	UNK	morphs	UNK=name UNK=index_name
+orator	schema	Blueprint	UNK	_drop_index_command	UNK=command UNK=type UNK=index
+orator	schema	Blueprint	UNK	_index_command	UNK=type UNK=columns UNK=index
+orator	schema	Blueprint	UNK	_add_column	UNK=type UNK=name
+orator	schema	Blueprint	UNK	_remove_column	UNK=name
+orator	schema	Blueprint	UNK	_add_command	UNK=name
+orator	schema	Blueprint	UNK	_create_command	UNK=name
+orator	schema	MySQLSchemaBuilder	UNK	has_table	UNK=table
+orator	schema	MySQLSchemaBuilder	UNK	get_column_listing	UNK=table
+orator	schema.grammars	PostgresSchemaGrammar	UNK	compile_rename_column	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	PostgresSchemaGrammar	UNK	compile_table_exists	void
+orator	schema.grammars	PostgresSchemaGrammar	UNK	compile_column_exists	UNK=table
+orator	schema.grammars	PostgresSchemaGrammar	UNK	compile_create	UNK=blueprint UNK=command UNK=_
+orator	schema.grammars	PostgresSchemaGrammar	UNK	_get_dbal_column_type	UNK=type_
+orator	schema.grammars	SchemaGrammar	UNK	compile_rename_column	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	SchemaGrammar	UNK	_get_renamed_diff	UNK=blueprint UNK=command UNK=column UNK=schema
+orator	schema.grammars	SchemaGrammar	UNK	_set_renamed_columns	UNK=table_diff UNK=command UNK=column
+orator	schema.grammars	SchemaGrammar	UNK	compile_foreign	UNK=blueprint UNK=command UNK=_
+orator	schema.grammars	SchemaGrammar	UNK	_get_columns	UNK=blueprint
+orator	schema.grammars	SchemaGrammar	UNK	_add_modifiers	UNK=sql UNK=blueprint UNK=column
+orator	schema.grammars	SchemaGrammar	UNK	_get_command_by_name	UNK=blueprint UNK=name
+orator	schema.grammars	SchemaGrammar	UNK	_get_commands_by_name	UNK=blueprint UNK=name
+orator	schema.grammars	SchemaGrammar	UNK	_get_type	UNK=column
+orator	schema.grammars	SchemaGrammar	UNK	prefix_list	UNK=prefix UNK=values
+orator	schema.grammars	SchemaGrammar	UNK	_get_default_value	UNK=value
+orator	schema.grammars	SchemaGrammar	UNK	compile_change	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	SchemaGrammar	UNK	_get_changed_diff	UNK=blueprint UNK=schema
+orator	schema.grammars	SchemaGrammar	UNK	_get_table_with_column_changes	UNK=blueprint UNK=table
+orator	schema.grammars	SchemaGrammar	UNK	_get_column_for_change	UNK=table UNK=fluent
+orator	schema.grammars	SchemaGrammar	UNK	_get_column_change_options	UNK=fluent
+orator	schema.grammars	SchemaGrammar	UNK	_get_dbal_column_type	UNK=type_
+orator	schema.grammars	SchemaGrammar	UNK	platform	void
+orator	schema.grammars	MySQLSchemaGrammar	UNK	compile_table_exists	void
+orator	schema.grammars	MySQLSchemaGrammar	UNK	compile_column_exists	void
+orator	schema.grammars	MySQLSchemaGrammar	UNK	compile_create	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	MySQLSchemaGrammar	UNK	_compile_create_encoding	UNK=sql UNK=connection UNK=blueprint
+orator	schema.grammars	MySQLSchemaGrammar	UNK	_get_column_change_options	UNK=fluent
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	compile_rename_column	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	compile_change	UNK=blueprint UNK=command UNK=connection
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	compile_table_exists	void
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	compile_column_exists	UNK=table
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	compile_create	UNK=blueprint UNK=command UNK=_
+orator	schema.grammars	SQLiteSchemaGrammar	UNK	_get_dbal_column_type	UNK=type_
+orator	utils	Qmarker	UNK	qmark	UNK=cls UNK=query
+orator	utils		UNK	deprecated	UNK=func
+orator	utils	URL	UNK	get_dialect	void
+orator	utils	URL	UNK	translate_connect_args	UNK=names
+orator	utils		UNK	make_url	UNK=name_or_url
+orator	pagination	LengthAwarePaginator	UNK	_set_current_page	UNK=current_page UNK=last_page
+orator	pagination	LengthAwarePaginator	UNK	has_more_pages	void
+orator	pagination	LengthAwarePaginator	UNK	to_dict	void
+orator	pagination	LengthAwarePaginator	UNK	serialize	void
+orator	pagination	BasePaginator	UNK	_is_valid_page_number	UNK=page
+orator	pagination	BasePaginator	UNK	items	void
+orator	pagination	BasePaginator	UNK	first_item	void
+orator	pagination	BasePaginator	UNK	last_item	void
+orator	pagination	BasePaginator	UNK	has_pages	void
+orator	pagination	BasePaginator	UNK	is_empty	void
+orator	pagination	BasePaginator	UNK	count	void
+orator	pagination	Paginator	UNK	_set_current_page	UNK=current_page
+orator	pagination	Paginator	UNK	_check_for_more_pages	void
+orator	pagination	Paginator	UNK	has_more_pages	void
+orator	pagination	Paginator	UNK	to_dict	void
+orator	pagination	Paginator	UNK	serialize	void
+orator	commands	Command	UNK	execute	UNK=i UNK=o
+orator	commands	Command	UNK	_check_config	void
+orator	commands	Command	UNK	_handle_config	UNK=config_file
+orator	commands	Command	UNK	_get_config	UNK=path
+orator	commands.seeds	SeedersMakeCommand	UNK	handle	void
+orator	commands.seeds	SeedersMakeCommand	UNK	_get_path	UNK=name
+orator	commands.seeds	SeedCommand	UNK	handle	void
+orator	commands.seeds	SeedCommand	UNK	_get_path	UNK=name
+orator	commands.models	ModelMakeCommand	UNK	_get_stub	void
+orator	commands.models	ModelMakeCommand	UNK	_populate_stub	UNK=name UNK=stub
+orator	commands.migrations	MigrateMakeCommand	UNK	handle	void
+orator	commands.migrations	MigrateMakeCommand	UNK	_write_migration	UNK=creator UNK=name UNK=table UNK=create
+orator	commands.migrations	RollbackCommand	UNK	handle	void
+orator	commands.migrations	ResetCommand	UNK	handle	void
+orator	commands.migrations	RefreshCommand	UNK	handle	void
+orator	commands.migrations	InstallCommand	UNK	handle	void
+orator	commands.migrations	StatusCommand	UNK	handle	void
+orator	migrations	MigrationCreator	UNK	create	UNK=name UNK=path UNK=table UNK=create
+orator	migrations	MigrationCreator	UNK	_get_stub	UNK=table UNK=create
+orator	migrations	MigrationCreator	UNK	_populate_stub	UNK=name UNK=stub UNK=table
+orator	migrations	Migrator	UNK	__init__	UNK=repository UNK=resolver
+orator	migrations	Migrator	UNK	run	UNK=path UNK=pretend
+orator	migrations	Migrator	UNK	run_migration_list	UNK=path UNK=migrations UNK=pretend
+orator	migrations	Migrator	UNK	_run_up	UNK=path UNK=migration_file UNK=batch UNK=pretend
+orator	migrations	Migrator	UNK	rollback	UNK=path UNK=pretend
+orator	migrations	Migrator	UNK	reset	UNK=path UNK=pretend
+orator	migrations	Migrator	UNK	_run_down	UNK=path UNK=migration UNK=pretend
+orator	migrations	Migrator	UNK	_get_migration_files	UNK=path
+orator	migrations	Migrator	UNK	_pretend_to_run	UNK=migration UNK=method
+orator	migrations	Migrator	UNK	_get_queries	UNK=migration UNK=method
+orator	migrations	Migrator	UNK	_resolve	UNK=path UNK=migration_file
+orator	migrations	Migrator	UNK	_note	UNK=message
+orator	migrations	DatabaseMigrationRepository	UNK	__init__	UNK=resolver UNK=table
+orator	migrations	DatabaseMigrationRepository	UNK	get_ran	void
+orator	migrations	DatabaseMigrationRepository	UNK	get_last	void
+orator	migrations	DatabaseMigrationRepository	UNK	log	UNK=file UNK=batch
+orator	migrations	DatabaseMigrationRepository	UNK	delete	UNK=migration
+orator	migrations	DatabaseMigrationRepository	UNK	get_next_batch_number	void
+orator	migrations	DatabaseMigrationRepository	UNK	get_last_batch_number	void
+orator	migrations	DatabaseMigrationRepository	UNK	create_repository	void
+orator	migrations	DatabaseMigrationRepository	UNK	repository_exists	void
+orator	migrations	DatabaseMigrationRepository	UNK	table	void
+orator	connections	ConnectionInterface	UNK	table	UNK=table
+orator	connections	ConnectionInterface	UNK	query	void
+orator	connections	ConnectionInterface	UNK	raw	UNK=value
+orator	connections	ConnectionInterface	UNK	select_one	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	select	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	insert	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	update	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	delete	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	statement	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	affecting_statement	UNK=query UNK=bindings
+orator	connections	ConnectionInterface	UNK	unprepared	UNK=query
+orator	connections	ConnectionInterface	UNK	prepare_bindings	UNK=bindings
+orator	connections		UNK	run	UNK=wrapped
+orator	connections	Connection	UNK	__init__	UNK=connection UNK=database UNK=table_prefix UNK=config
+orator	connections	Connection	UNK	get_schema_builder	void
+orator	connections	Connection	UNK	table	UNK=table
+orator	connections	Connection	UNK	query	void
+orator	connections	Connection	UNK	get_post_processor	void
+orator	connections	Connection	UNK	set_post_processor	UNK=processor
+orator	connections	MySQLConnection	UNK	get_schema_builder	void

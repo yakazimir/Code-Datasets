@@ -1,0 +1,907 @@
+renpy	core		UNK	collapse_stmts	UNK=stmts
+renpy	core	Script	UNK	__init__	void
+renpy	core	Script	UNK	scan_script_files	void
+renpy	core	Script	UNK	load_string	UNK=filename UNK=filedata UNK=linenumber
+renpy	core	Script	UNK	finish_load	UNK=stmts UNK=initcode UNK=check_names UNK=filename
+renpy	core	Script	UNK	write_rpyc_header	UNK=f
+renpy	core	Script	UNK	write_rpyc_data	UNK=f UNK=slot UNK=data
+renpy	core	Script	UNK	write_rpyc_md5	UNK=f UNK=digest
+renpy	core	Script	UNK	read_rpyc_data	UNK=f UNK=slot
+renpy	core	Script	UNK	static_transforms	UNK=stmts
+renpy	core	Script	UNK	init_bytecode	void
+renpy	core	Script	UNK	update_bytecode	void
+renpy	core	Script	UNK	lookup	UNK=label
+renpy	core	Script	UNK	has_label	UNK=label
+renpy	core	Script	UNK	analyze	void
+renpy	core		UNK	interact	UNK=type UNK=roll_forward
+renpy	core		UNK	child_or_fixed	void
+renpy	core		UNK	at	UNK=transform
+renpy	core		UNK	detached	void
+renpy	core		UNK	layer	UNK=name
+renpy	core		UNK	close	UNK=d
+renpy	core		UNK	combine_style	UNK=style_prefix UNK=style_suffix
+renpy	core		UNK	prefixed_style	UNK=style_suffix
+renpy	core		UNK	_implicit_add	UNK=d
+renpy	core		UNK	screen_id	UNK=id_ UNK=d
+renpy	core	Formatter	UNK	parse	UNK=s
+renpy	core		UNK	substitute	UNK=s UNK=scope UNK=force UNK=translate
+renpy	core		UNK	displayable	UNK=d UNK=scope
+renpy	core		UNK	dynamic_image	UNK=d UNK=scope UNK=prefix
+renpy	core		UNK	split_properties	UNK=properties
+renpy	core		UNK	get_path	UNK=fn
+renpy	core		UNK	index_archives	void
+renpy	core		UNK	cleardirfiles	void
+renpy	core		UNK	scandirfiles	void
+renpy	core		UNK	listdirfiles	UNK=common
+renpy	core		UNK	load_core	UNK=name
+renpy	core		UNK	get_prefixes	void
+renpy	core		UNK	loadable_core	UNK=name
+renpy	core		UNK	transfn	UNK=name
+renpy	core		UNK	get_hash	UNK=name
+renpy	core		UNK	auto_mtime	UNK=fn
+renpy	core		UNK	add_auto	UNK=fn UNK=force
+renpy	core		UNK	auto_thread_function	void
+renpy	core		UNK	auto_init	void
+renpy	core		UNK	auto_quit	void
+renpy	core		UNK	AlphaBlend	UNK=control UNK=old UNK=new UNK=alpha
+renpy	core		UNK	At	UNK=d
+renpy	core		UNK	const	UNK=name
+renpy	core		UNK	not_const	UNK=name
+renpy	core		UNK	pure	UNK=fn
+renpy	core	DeltaSet	UNK	__init__	UNK=base UNK=copy
+renpy	core	Analysis	UNK	imagemap	void
+renpy	core	Analysis	UNK	exit_loop	void
+renpy	core	Analysis	UNK	at_fixed_point	void
+renpy	core	Analysis	UNK	mark_constant	UNK=name
+renpy	core	Analysis	UNK	mark_not_constant	UNK=name
+renpy	core	Analysis	UNK	is_constant	UNK=node
+renpy	core	Analysis	UNK	is_constant_expr	UNK=expr
+renpy	core	Analysis	UNK	python	UNK=code
+renpy	core	Analysis	UNK	parameters	UNK=parameters
+renpy	core	CompilerCache	UNK	ast_eval_literal	UNK=expr
+renpy	core	CompilerCache	UNK	ast_exec	UNK=code
+renpy	core		UNK	run	UNK=restart
+renpy	core		UNK	image_exists_imprecise	UNK=name
+renpy	core		UNK	image_exists_precise	UNK=name
+renpy	core		UNK	image_exists	UNK=name UNK=expression UNK=tag UNK=precise
+renpy	core		UNK	check_filename_encodings	void
+renpy	core		UNK	common	UNK=n
+renpy	core		UNK	lint	void
+renpy	core		UNK	renpy_pure	UNK=fn
+renpy	core		UNK	public_api	void
+renpy	core		UNK	roll_forward_info	void
+renpy	core		UNK	roll_forward_core	UNK=value
+renpy	core		UNK	in_rollback	void
+renpy	core		UNK	can_rollback	void
+renpy	core		UNK	in_fixed_rollback	void
+renpy	core		UNK	checkpoint	UNK=data UNK=keep_rollback
+renpy	core		UNK	block_rollback	void
+renpy	core		UNK	suspend_rollback	UNK=flag
+renpy	core		UNK	fix_rollback	void
+renpy	core		UNK	retain_after_load	void
+renpy	core		UNK	count_displayables_in_layer	UNK=layer
+renpy	core		UNK	image	UNK=name UNK=d
+renpy	core		UNK	copy_images	UNK=old UNK=new
+renpy	core		UNK	default_layer	UNK=layer UNK=tag UNK=expression
+renpy	core		UNK	can_show	UNK=name UNK=layer UNK=tag
+renpy	core		UNK	showing	UNK=name UNK=layer
+renpy	core		UNK	predict_show	UNK=name UNK=layer UNK=what UNK=tag
+renpy	core		UNK	show	UNK=name UNK=at_list UNK=layer UNK=what
+renpy	core		UNK	hide	UNK=name UNK=layer
+renpy	core		UNK	scene	UNK=layer
+renpy	core		UNK	input	UNK=prompt UNK=default UNK=allow UNK=exclude
+renpy	core		UNK	menu	UNK=items UNK=set_expr
+renpy	core		UNK	choice_for_skipping	void
+renpy	core		UNK	predict_menu	void
+renpy	core		UNK	display_menu	UNK=items UNK=window_style UNK=interact UNK=with_none
+renpy	core		UNK	predict_say	UNK=who UNK=what
+renpy	core		UNK	scry_say	UNK=who UNK=scry
+renpy	core		UNK	say	UNK=who UNK=what UNK=interact
+renpy	core		UNK	imagemap	UNK=ground UNK=selected UNK=hotspots UNK=unselected
+renpy	core		UNK	pause	UNK=delay UNK=music UNK=with_none UNK=hard
+renpy	core		UNK	movie_cutscene	UNK=filename UNK=delay UNK=loops UNK=stop_music
+renpy	core		UNK	with_statement	UNK=trans UNK=always UNK=paired UNK=clear
+renpy	core		UNK	rollback	UNK=force UNK=checkpoints UNK=defer UNK=greedy
+renpy	core		UNK	toggle_fullscreen	void
+renpy	core		UNK	toggle_music	void
+renpy	core		UNK	has_label	UNK=name
+renpy	core		UNK	get_all_labels	void
+renpy	core		UNK	take_screenshot	UNK=scale UNK=background
+renpy	core		UNK	full_restart	UNK=transition UNK=label UNK=target
+renpy	core		UNK	utter_restart	void
+renpy	core		UNK	reload_script	void
+renpy	core		UNK	quit	UNK=relaunch UNK=status
+renpy	core		UNK	jump	UNK=label
+renpy	core		UNK	jump_out_of_context	UNK=label
+renpy	core		UNK	call	UNK=label
+renpy	core		UNK	return_statement	void
+renpy	core		UNK	screenshot	UNK=filename
+renpy	core		UNK	version	UNK=tuple
+renpy	core		UNK	transition	UNK=trans UNK=layer UNK=always UNK=force
+renpy	core		UNK	get_transition	UNK=layer
+renpy	core		UNK	clear_game_runtime	void
+renpy	core		UNK	get_game_runtime	void
+renpy	core		UNK	loadable	UNK=filename
+renpy	core		UNK	exists	UNK=filename
+renpy	core		UNK	restart_interaction	void
+renpy	core		UNK	context	void
+renpy	core		UNK	context_nesting_level	void
+renpy	core		UNK	music_start	UNK=filename UNK=loops UNK=fadeout UNK=fadein
+renpy	core		UNK	music_stop	UNK=fadeout
+renpy	core		UNK	get_filename_line	void
+renpy	core		UNK	log	UNK=msg
+renpy	core		UNK	force_full_redraw	void
+renpy	core		UNK	dynamic	void
+renpy	core		UNK	context_dynamic	void
+renpy	core		UNK	seen_label	UNK=label
+renpy	core		UNK	seen_audio	UNK=filename
+renpy	core		UNK	seen_image	UNK=name
+renpy	core		UNK	file	UNK=fn
+renpy	core		UNK	image_size	UNK=im
+renpy	core		UNK	get_at_list	UNK=name UNK=layer
+renpy	core		UNK	show_layer_at	UNK=at_list UNK=layer
+renpy	core		UNK	free_memory	void
+renpy	core		UNK	quit_event	void
+renpy	core		UNK	iconify	void
+renpy	core		UNK	timeout	UNK=seconds
+renpy	core		UNK	end_interaction	UNK=value
+renpy	core		UNK	scry	void
+renpy	core		UNK	load_module	UNK=name
+renpy	core		UNK	load_string	UNK=s UNK=filename
+renpy	core		UNK	pop_call	void
+renpy	core		UNK	call_stack_depth	void
+renpy	core		UNK	game_menu	UNK=screen
+renpy	core		UNK	shown_window	void
+renpy	core		UNK	get_placement	UNK=d
+renpy	core		UNK	get_image_bounds	UNK=tag UNK=width UNK=height UNK=layer
+renpy	core		UNK	cache_pin	void
+renpy	core		UNK	cache_unpin	void
+renpy	core		UNK	start_predict	void
+renpy	core		UNK	stop_predict	void
+renpy	core		UNK	start_predict_screen	UNK=_screen_name
+renpy	core		UNK	stop_predict_screen	UNK=name
+renpy	core		UNK	call_screen	UNK=_screen_name
+renpy	core		UNK	list_files	UNK=common
+renpy	core		UNK	get_renderer_info	void
+renpy	core		UNK	display_reset	void
+renpy	core		UNK	mode	UNK=mode
+renpy	core		UNK	get_mode	void
+renpy	core		UNK	notify	UNK=message
+renpy	core		UNK	variant	UNK=name
+renpy	core		UNK	vibrate	UNK=duration
+renpy	core		UNK	get_say_attributes	void
+renpy	core		UNK	get_side_image	UNK=prefix_tag UNK=image_tag UNK=not_showing UNK=layer
+renpy	core		UNK	get_physical_size	void
+renpy	core		UNK	set_physical_size	UNK=size
+renpy	core		UNK	reset_physical_size	void
+renpy	core		UNK	fsencode	UNK=s
+renpy	core		UNK	fsdecode	UNK=s
+renpy	core		UNK	get_image_load_log	UNK=age
+renpy	core		UNK	end_replay	void
+renpy	core		UNK	save_persistent	void
+renpy	core		UNK	is_seen	UNK=ever
+renpy	core		UNK	get_mouse_pos	void
+renpy	core		UNK	set_mouse_pos	UNK=x UNK=y UNK=duration
+renpy	core		UNK	set_autoreload	UNK=autoreload
+renpy	core		UNK	get_autoreload	void
+renpy	core		UNK	count_dialogue_blocks	void
+renpy	core		UNK	count_seen_dialogue_blocks	void
+renpy	core		UNK	count_newly_seen_dialogue_blocks	void
+renpy	core		UNK	substitute	UNK=s UNK=scope UNK=translate
+renpy	core		UNK	munge	UNK=name UNK=filename
+renpy	core		UNK	get_return_stack	void
+renpy	core		UNK	set_return_stack	UNK=stack
+renpy	core		UNK	invoke_in_thread	UNK=fn
+renpy	core		UNK	cancel_gesture	void
+renpy	core		UNK	execute_default_statement	UNK=start
+renpy	core		UNK	write_log	UNK=s
+renpy	core		UNK	predicting	void
+renpy	core		UNK	get_line_log	void
+renpy	core		UNK	clear_line_log	void
+renpy	core		UNK	add_layer	UNK=layer UNK=above UNK=below UNK=menu_clear
+renpy	core		UNK	maximum_framerate	UNK=t
+renpy	core		UNK	is_start_interact	void
+renpy	core		UNK	play	UNK=filename UNK=channel
+renpy	core		UNK	get_editable_input_value	void
+renpy	core		UNK	set_editable_input_value	UNK=input_value UNK=editable
+renpy	core		UNK	get_refresh_rate	UNK=precision
+renpy	core		UNK	get_identifier_checkpoints	UNK=identifier
+renpy	core		UNK	get_adjustment	UNK=bar_value
+renpy	core		UNK	get_skipping	void
+renpy	core	Color	UNK	normalize	void
+renpy	core	Color	UNK	interpolate	UNK=other UNK=fraction
+renpy	core	Color	UNK	interpolate_hsv	UNK=other UNK=fraction
+renpy	core	Color	UNK	interpolate_hls	UNK=other UNK=fraction
+renpy	core	Color	UNK	tint	UNK=fraction
+renpy	core	Color	UNK	shade	UNK=fraction
+renpy	core	Color	UNK	opacity	UNK=opacity
+renpy	core	Color	UNK	rotate_hue	UNK=rotation
+renpy	core	Color	UNK	replace_hue	UNK=hue
+renpy	core	Color	UNK	multiply_hls_saturation	UNK=saturation
+renpy	core	Color	UNK	multiply_hsv_saturation	UNK=saturation
+renpy	core	Color	UNK	multiply_value	UNK=value
+renpy	core	Color	UNK	replace_hls_saturation	UNK=saturation
+renpy	core	Color	UNK	replace_hsv_saturation	UNK=saturation
+renpy	core	Color	UNK	replace_value	UNK=value
+renpy	core	Color	UNK	replace_lightness	UNK=lightness
+renpy	core	Color	UNK	replace_opacity	UNK=opacity
+renpy	core		UNK	warp	void
+renpy	core	Parser	UNK	add	UNK=i
+renpy	core	Parser	UNK	parse_eval	UNK=expr UNK=lineno
+renpy	core	Parser	UNK	parse_exec	UNK=code UNK=lineno
+renpy	core	Parser	UNK	parse	UNK=l UNK=name
+renpy	core	ScreenLangScreen	UNK	define	UNK=location
+renpy	core		UNK	parse_screen	UNK=l
+renpy	core		UNK	not_infinite_loop	UNK=delay
+renpy	core	Context	UNK	__init__	UNK=rollback UNK=context UNK=clear
+renpy	core	Context	UNK	make_dynamic	UNK=names UNK=context
+renpy	core	Context	UNK	pop_dynamic	void
+renpy	core	Context	UNK	pop_all_dynamic	void
+renpy	core	Context	UNK	goto_label	UNK=node_name
+renpy	core	Context	UNK	check_stacks	void
+renpy	core	Context	UNK	report_coverage	UNK=node
+renpy	core	Context	UNK	run	UNK=node
+renpy	core	Context	UNK	mark_seen	void
+renpy	core	Context	UNK	call	UNK=label UNK=return_site
+renpy	core	Context	UNK	pop_call	void
+renpy	core	Context	UNK	lookup_return	UNK=pop
+renpy	core	Context	UNK	rollback_copy	void
+renpy	core	Context	UNK	predict_call	UNK=label UNK=return_site
+renpy	core	Context	UNK	predict_return	void
+renpy	core	Context	UNK	predict	void
+renpy	core	Context	UNK	seen_current	UNK=ever
+renpy	core	Context	UNK	do_deferred_rollback	void
+renpy	core		UNK	run_context	UNK=top
+renpy	core		UNK	correct_type	UNK=v UNK=b UNK=ty
+renpy	core		UNK	interpolate	UNK=t UNK=a UNK=b UNK=type
+renpy	core		UNK	compile_all	void
+renpy	core	ATLTransformBase	UNK	get_block	void
+renpy	core	ATLTransformBase	UNK	take_execution_state	UNK=t
+renpy	core	ATLTransformBase	UNK	compile	void
+renpy	core	RawStatement	UNK	mark_constant	void
+renpy	core		UNK	_	UNK=s
+renpy	core	FileLocation	UNK	filename	UNK=slotname
+renpy	core	FileLocation	UNK	scan	void
+renpy	core	FileLocation	UNK	save	UNK=slotname UNK=record
+renpy	core	FileLocation	UNK	list	void
+renpy	core	FileLocation	UNK	mtime	UNK=slotname
+renpy	core	FileLocation	UNK	json	UNK=slotname
+renpy	core	FileLocation	UNK	screenshot	UNK=slotname
+renpy	core	FileLocation	UNK	load	UNK=slotname
+renpy	core	FileLocation	UNK	unlink	UNK=slotname
+renpy	core	FileLocation	UNK	rename	UNK=old UNK=new
+renpy	core	FileLocation	UNK	copy	UNK=old UNK=new
+renpy	core	FileLocation	UNK	load_persistent	void
+renpy	core	FileLocation	UNK	save_persistent	UNK=data
+renpy	core	MultiLocation	UNK	newest	UNK=slotname
+renpy	core	MultiLocation	UNK	add	UNK=location
+renpy	core		UNK	context	UNK=index
+renpy	core		UNK	invoke_in_new_context	UNK=callable
+renpy	core		UNK	call_in_new_context	UNK=label
+renpy	core		UNK	call_replay	UNK=label UNK=scope
+renpy	core	StoreDict	UNK	reset	void
+renpy	core	StoreDict	UNK	begin	void
+renpy	core	StoreDict	UNK	get_changes	void
+renpy	core		UNK	create_store	UNK=name
+renpy	core		UNK	make_clean_stores	void
+renpy	core		UNK	clean_stores	void
+renpy	core		UNK	clean_store	UNK=name
+renpy	core		UNK	reached	UNK=obj UNK=reachable UNK=wait
+renpy	core		UNK	reached_vars	UNK=store UNK=reachable UNK=wait
+renpy	core		UNK	set_filename	UNK=filename UNK=offset UNK=tree
+renpy	core		UNK	unicode_sub	UNK=m
+renpy	core		UNK	py_compile	UNK=source UNK=mode UNK=filename UNK=lineno
+renpy	core	RevertableList	UNK	_clean	void
+renpy	core	RevertableList	UNK	_compress	UNK=clean
+renpy	core	RevertableList	UNK	_rollback	UNK=compressed
+renpy	core	DetRandom	UNK	pushback	UNK=l
+renpy	core	DetRandom	UNK	reset	void
+renpy	core	DetRandom	UNK	Random	UNK=seed
+renpy	core	Rollback	UNK	purge_unreachable	UNK=reachable UNK=wait
+renpy	core	Rollback	UNK	rollback	void
+renpy	core	Rollback	UNK	rollback_control	void
+renpy	core	RollbackLog	UNK	begin	void
+renpy	core	RollbackLog	UNK	complete	void
+renpy	core	RollbackLog	UNK	get_roots	void
+renpy	core	RollbackLog	UNK	purge_unreachable	UNK=roots UNK=wait
+renpy	core	RollbackLog	UNK	forward_info	void
+renpy	core	RollbackLog	UNK	checkpoint	UNK=data UNK=keep_rollback UNK=hard
+renpy	core	RollbackLog	UNK	suspend_checkpointing	UNK=flag
+renpy	core	RollbackLog	UNK	block	void
+renpy	core	RollbackLog	UNK	retain_after_load	void
+renpy	core	RollbackLog	UNK	can_rollback	void
+renpy	core	RollbackLog	UNK	rollback	UNK=checkpoints UNK=force UNK=label UNK=greedy
+renpy	core	RollbackLog	UNK	freeze	UNK=wait
+renpy	core	RollbackLog	UNK	discard_freeze	void
+renpy	core	RollbackLog	UNK	unfreeze	UNK=roots UNK=label
+renpy	core		UNK	raise_at_location	UNK=e UNK=loc
+renpy	core		UNK	register	UNK=name UNK=parse UNK=lint UNK=execute
+renpy	core	ArgumentParser	UNK	__init__	UNK=second_pass UNK=description UNK=require_command
+renpy	core		UNK	run	void
+renpy	core		UNK	compile	void
+renpy	core		UNK	quit	void
+renpy	core		UNK	rmpersistent	void
+renpy	core		UNK	register_command	UNK=name UNK=function
+renpy	core		UNK	bootstrap	void
+renpy	core		UNK	pre_init	void
+renpy	core		UNK	post_init	void
+renpy	core		UNK	takes_no_arguments	UNK=description
+renpy	core		UNK	write_utf8_traceback_list	UNK=out UNK=l
+renpy	core		UNK	traceback_list	UNK=tb
+renpy	core		UNK	filter_traceback_list	UNK=tl
+renpy	core		UNK	open_error_file	UNK=fn UNK=mode
+renpy	core		UNK	report_exception	UNK=e UNK=editor
+renpy	core		UNK	get_line_text	UNK=filename UNK=linenumber
+renpy	core		UNK	adjust_line_locations	UNK=filename UNK=linenumber UNK=char_offset UNK=line_offset
+renpy	core		UNK	insert_line_before	UNK=code UNK=filename UNK=linenumber
+renpy	core		UNK	remove_line	UNK=filename UNK=linenumber
+renpy	core		UNK	get_full_text	UNK=filename UNK=linenumber
+renpy	core		UNK	nodes_on_line	UNK=filename UNK=linenumber
+renpy	core		UNK	first_and_last_nodes	UNK=nodes
+renpy	core		UNK	adjust_ast_linenumbers	UNK=filename UNK=linenumber UNK=offset
+renpy	core		UNK	add_to_ast_before	UNK=code UNK=filename UNK=linenumber
+renpy	core		UNK	remove_from_ast	UNK=filename UNK=linenumber
+renpy	core		UNK	curry	UNK=fn
+renpy	core		UNK	partial	UNK=function
+renpy	core	Editor	UNK	begin	UNK=new_window
+renpy	core	Editor	UNK	end	void
+renpy	core	Editor	UNK	open	UNK=filename UNK=line
+renpy	core		UNK	init	void
+renpy	core		UNK	launch_editor	UNK=filenames UNK=line UNK=transient
+renpy	core		UNK	walk_memory	UNK=roots UNK=seen
+renpy	core		UNK	profile_memory_common	UNK=packages
+renpy	core		UNK	profile_memory	UNK=fraction UNK=minimum
+renpy	core		UNK	diff_memory	UNK=update
+renpy	core		UNK	profile_rollback	void
+renpy	core		UNK	find_parents	UNK=cls
+renpy	core		UNK	save_dump	UNK=roots UNK=log
+renpy	core		UNK	safe_rename	UNK=old UNK=new
+renpy	core	SaveRecord	UNK	write_file	UNK=filename
+renpy	core		UNK	save	UNK=slotname UNK=extra_info UNK=mutate_flag
+renpy	core		UNK	force_autosave	UNK=take_screenshot
+renpy	core		UNK	list_saved_games	UNK=regexp UNK=fast
+renpy	core		UNK	list_slots	UNK=regexp
+renpy	core		UNK	newest_slot	UNK=regexp
+renpy	core		UNK	slot_mtime	UNK=slotname
+renpy	core		UNK	slot_json	UNK=slotname
+renpy	core		UNK	slot_screenshot	UNK=slotname
+renpy	core		UNK	can_load	UNK=filename UNK=test
+renpy	core		UNK	load	UNK=filename
+renpy	core		UNK	unlink_save	UNK=filename
+renpy	core		UNK	rename_save	UNK=old UNK=new
+renpy	core		UNK	copy_save	UNK=old UNK=new
+renpy	core		UNK	cycle_saves	UNK=name UNK=count
+renpy	core		UNK	clear_slot	UNK=slotname
+renpy	core		UNK	clear_cache	void
+renpy	core	Persistent	UNK	_clear	UNK=progress
+renpy	core	Persistent	UNK	_update	void
+renpy	core		UNK	safe_deepcopy	UNK=o
+renpy	core		UNK	find_changes	void
+renpy	core		UNK	register_persistent	UNK=field UNK=func
+renpy	core		UNK	merge	UNK=other
+renpy	core		UNK	check_update	void
+renpy	core		UNK	update	UNK=force_save
+renpy	core		UNK	save	void
+renpy	core		UNK	dump	UNK=error
+renpy	core		UNK	report_missing	UNK=target UNK=filename UNK=position
+renpy	core		UNK	generate_label	UNK=target
+renpy	core		UNK	process_file	UNK=fn
+renpy	core		UNK	get_windows_version	void
+renpy	core	Backup	UNK	backup_module	UNK=mod
+renpy	core	Backup	UNK	restore	void
+renpy	core		UNK	update_path	UNK=package
+renpy	core		UNK	post_import	void
+renpy	core		UNK	reload_all	void
+renpy	core		UNK	setup_modulefinder	UNK=modulefinder
+renpy	core		UNK	import_cython	void
+renpy	core	LogFile	UNK	__init__	UNK=name UNK=append UNK=developer UNK=flush
+renpy	core	LogFile	UNK	write	UNK=s
+renpy	core	LogFile	UNK	exception	void
+renpy	core		UNK	statement_name	UNK=name
+renpy	core		UNK	next_node	UNK=n
+renpy	core	ParameterInfo	UNK	apply	UNK=args UNK=kwargs UNK=ignore_errors
+renpy	core	ArgumentInfo	UNK	evaluate	UNK=scope
+renpy	core		UNK	chain_block	UNK=block UNK=next
+renpy	core	Node	UNK	__init__	UNK=loc
+renpy	core	Node	UNK	diff_info	void
+renpy	core	Node	UNK	get_children	UNK=f
+renpy	core	Node	UNK	get_init	void
+renpy	core	Node	UNK	chain	UNK=next
+renpy	core	Node	UNK	replace_next	UNK=old UNK=new
+renpy	core	Node	UNK	execute	void
+renpy	core	Node	UNK	early_execute	void
+renpy	core	Node	UNK	predict	void
+renpy	core	Node	UNK	scry	void
+renpy	core	Node	UNK	restructure	UNK=callback
+renpy	core	Node	UNK	get_code	UNK=dialogue_filter
+renpy	core	Node	UNK	analyze	void
+renpy	core		UNK	say_menu_with	UNK=expression UNK=callback
+renpy	core		UNK	eval_who	UNK=who UNK=fast
+renpy	core	Label	UNK	__init__	UNK=loc UNK=name UNK=block UNK=parameters
+renpy	core	Python	UNK	__init__	UNK=loc UNK=python_code UNK=hide UNK=store
+renpy	core	EarlyPython	UNK	__init__	UNK=loc UNK=python_code UNK=hide UNK=store
+renpy	core	Image	UNK	__init__	UNK=loc UNK=name UNK=expr UNK=atl
+renpy	core		UNK	predict_imspec	UNK=imspec UNK=scene UNK=atl
+renpy	core	Show	UNK	__init__	UNK=loc UNK=imspec UNK=atl
+renpy	core	Scene	UNK	__init__	UNK=loc UNK=imgspec UNK=layer UNK=atl
+renpy	core	Hide	UNK	__init__	UNK=loc UNK=imgspec
+renpy	core	With	UNK	__init__	UNK=loc UNK=expr UNK=paired
+renpy	core	If	UNK	__init__	UNK=loc UNK=entries
+renpy	core		UNK	get_namespace	UNK=store
+renpy	core	Screen	UNK	__init__	UNK=loc UNK=screen
+renpy	core	TranslatePython	UNK	__init__	UNK=loc UNK=language UNK=python_code
+renpy	core	Style	UNK	__init__	UNK=loc UNK=name
+renpy	core		UNK	unicode_filename	UNK=fn
+renpy	core		UNK	elide_filename	UNK=fn
+renpy	core		UNK	list_logical_lines	UNK=filename UNK=filedata UNK=linenumber
+renpy	core		UNK	group_logical_lines	UNK=lines
+renpy	core	Lexer	UNK	advance	void
+renpy	core	Lexer	UNK	match_regexp	UNK=regexp
+renpy	core	Lexer	UNK	skip_whitespace	void
+renpy	core	Lexer	UNK	match	UNK=regexp
+renpy	core	Lexer	UNK	keyword	UNK=word
+renpy	core	Lexer	UNK	error	UNK=msg
+renpy	core	Lexer	UNK	eol	void
+renpy	core	Lexer	UNK	expect_eol	void
+renpy	core	Lexer	UNK	expect_noblock	UNK=stmt
+renpy	core	Lexer	UNK	expect_block	UNK=stmt
+renpy	core	Lexer	UNK	subblock_lexer	UNK=init
+renpy	core	Lexer	UNK	string	void
+renpy	core	Lexer	UNK	integer	void
+renpy	core	Lexer	UNK	float	void
+renpy	core	Lexer	UNK	hash	void
+renpy	core	Lexer	UNK	word	void
+renpy	core	Lexer	UNK	name	void
+renpy	core	Lexer	UNK	set_global_label	UNK=label
+renpy	core	Lexer	UNK	label_name_declare	void
+renpy	core	Lexer	UNK	image_name_component	void
+renpy	core	Lexer	UNK	python_string	void
+renpy	core	Lexer	UNK	dotted_name	void
+renpy	core	Lexer	UNK	delimited_python	UNK=delim
+renpy	core	Lexer	UNK	python_expression	void
+renpy	core	Lexer	UNK	parenthesised_python	void
+renpy	core	Lexer	UNK	simple_expression	UNK=comma
+renpy	core	Lexer	UNK	comma_expression	void
+renpy	core	Lexer	UNK	checkpoint	void
+renpy	core	Lexer	UNK	revert	UNK=state
+renpy	core	Lexer	UNK	get_location	void
+renpy	core	Lexer	UNK	require	UNK=thing UNK=name
+renpy	core	Lexer	UNK	rest	void
+renpy	core	Lexer	UNK	python_block	void
+renpy	core		UNK	parse_image_name	UNK=l UNK=string UNK=nodash
+renpy	core		UNK	parse_simple_expression_list	UNK=l
+renpy	core		UNK	parse_image_specifier	UNK=l
+renpy	core		UNK	parse_with	UNK=l UNK=node
+renpy	core		UNK	parse_arguments	UNK=l
+renpy	core		UNK	statement	UNK=keywords
+renpy	core		UNK	parse_statement	UNK=l
+renpy	core		UNK	parse_block	UNK=l
+renpy	core		UNK	parse	UNK=fn UNK=filedata UNK=linenumber
+renpy	core		UNK	predict_show_display_say	UNK=who UNK=what UNK=who_args UNK=what_args
+renpy	core		UNK	compute_widget_properties	UNK=who_args UNK=what_args UNK=window_args UNK=variant
+renpy	core		UNK	show_display_say	UNK=who UNK=what UNK=who_args UNK=what_args
+renpy	core	ADVCharacter	UNK	resolve_say_attributes	UNK=predict UNK=wanted UNK=remove
+renpy	core	ADVCharacter	UNK	add_history	UNK=kind UNK=who UNK=what
+renpy	core	ADVCharacter	UNK	pop_history	void
+renpy	core		UNK	Character	UNK=name UNK=kind
+renpy	styledata		UNK	expand_anchor	UNK=v
+renpy	sl2		UNK	sl2viewport	UNK=context
+renpy	sl2		UNK	sl2vpgrid	UNK=context
+renpy	sl2	Parser	UNK	add	UNK=i
+renpy	sl2	Parser	UNK	parse	UNK=loc UNK=l UNK=parent
+renpy	sl2	Parser	UNK	parse_contents	UNK=l UNK=target UNK=layout_mode UNK=can_has
+renpy	sl2		UNK	register_sl_displayable	void
+renpy	sl2	DisplayableParser	UNK	__init__	UNK=name UNK=displayable UNK=style UNK=nchildren
+renpy	sl2	IfParser	UNK	__init__	UNK=name UNK=node_type UNK=parent_contents
+renpy	sl2	ForParser	UNK	name_or_tuple_pattern	UNK=l
+renpy	sl2		UNK	parse_screen	UNK=l UNK=loc
+renpy	sl2		UNK	compile_expr	UNK=node
+renpy	sl2	SLNode	UNK	instantiate	UNK=transclude
+renpy	sl2	SLNode	UNK	copy	UNK=transclude
+renpy	sl2	SLNode	UNK	analyze	UNK=analysis
+renpy	sl2	SLNode	UNK	prepare	UNK=analysis
+renpy	sl2	SLNode	UNK	execute	UNK=context
+renpy	sl2	SLNode	UNK	keywords	UNK=context
+renpy	sl2	SLNode	UNK	copy_on_change	UNK=cache
+renpy	sl2	SLNode	UNK	debug_line	void
+renpy	sl2	SLNode	UNK	used_screens	UNK=callback
+renpy	sl2	SLNode	UNK	has_transclude	void
+renpy	sl2	SLDisplayable	UNK	__init__	UNK=loc UNK=displayable UNK=scope UNK=child_or_fixed
+renpy	sl2	SLDisplayable	UNK	wrap_in_showif	UNK=d UNK=context UNK=cache
+renpy	sl2	SLIf	UNK	__init__	UNK=loc
+renpy	sl2	SLShowIf	UNK	__init__	UNK=loc
+renpy	sl2	SLScreen	UNK	define	UNK=location
+renpy	audio	AndroidVideoChannel	UNK	get_context	void
+renpy	audio	AndroidVideoChannel	UNK	start	void
+renpy	audio	AndroidVideoChannel	UNK	dequeue	UNK=even_tight
+renpy	audio	AndroidVideoChannel	UNK	interact	void
+renpy	audio	AndroidVideoChannel	UNK	fadeout	UNK=secs
+renpy	audio		UNK	play	UNK=filenames UNK=channel UNK=loop UNK=fadeout
+renpy	audio		UNK	queue	UNK=filenames UNK=channel UNK=loop UNK=clear_queue
+renpy	audio		UNK	playable	UNK=filename UNK=channel
+renpy	audio		UNK	stop	UNK=channel UNK=fadeout
+renpy	audio		UNK	set_music	UNK=channel UNK=flag UNK=default
+renpy	audio		UNK	is_music	UNK=channel
+renpy	audio		UNK	get_delay	UNK=time UNK=channel
+renpy	audio		UNK	get_pos	UNK=channel
+renpy	audio		UNK	get_duration	UNK=channel
+renpy	audio		UNK	get_playing	UNK=channel
+renpy	audio		UNK	is_playing	UNK=channel
+renpy	audio		UNK	set_volume	UNK=volume UNK=delay UNK=channel
+renpy	audio		UNK	set_pan	UNK=pan UNK=delay UNK=channel
+renpy	audio		UNK	set_queue_empty_callback	UNK=callback UNK=channel
+renpy	audio		UNK	set_pause	UNK=value UNK=channel
+renpy	audio		UNK	get_pause	UNK=channel
+renpy	audio		UNK	set_mixer	UNK=channel UNK=mixer UNK=default
+renpy	audio		UNK	get_all_mixers	void
+renpy	audio		UNK	channel_defined	UNK=channel
+renpy	audio	IOSVideoChannel	UNK	get_context	void
+renpy	audio	IOSVideoChannel	UNK	start	void
+renpy	audio	IOSVideoChannel	UNK	dequeue	UNK=even_tight
+renpy	audio	IOSVideoChannel	UNK	interact	void
+renpy	audio	IOSVideoChannel	UNK	fadeout	UNK=secs
+renpy	audio		UNK	get_serial	void
+renpy	audio		UNK	load	UNK=fn
+renpy	audio	MusicContext	UNK	copy	void
+renpy	audio	Channel	UNK	get_number	void
+renpy	audio	Channel	UNK	get_context	void
+renpy	audio	Channel	UNK	split_filename	UNK=filename UNK=looped
+renpy	audio	Channel	UNK	periodic	void
+renpy	audio	Channel	UNK	dequeue	UNK=even_tight
+renpy	audio	Channel	UNK	interact	void
+renpy	audio	Channel	UNK	fadeout	UNK=secs
+renpy	audio		UNK	register_channel	UNK=name UNK=mixer UNK=loop UNK=stop_on_mute
+renpy	audio		UNK	periodic	void
+renpy	audio		UNK	interact	void
+renpy	audio		UNK	rollback	void
+renpy	audio		UNK	pause_all	void
+renpy	audio		UNK	unpause_all	void
+renpy	translation	DialogueFile	UNK	__init__	UNK=filename UNK=output UNK=tdf UNK=strings
+renpy	translation	DialogueFile	UNK	write_dialogue	void
+renpy	translation	DialogueFile	UNK	get_strings	void
+renpy	translation		UNK	dialogue_command	void
+renpy	translation		UNK	scan_strings	UNK=filename
+renpy	translation		UNK	shorten_filename	UNK=filename
+renpy	translation		UNK	write_strings	UNK=language UNK=filter UNK=min_priority UNK=max_priority
+renpy	translation		UNK	translate_list_files	void
+renpy	translation		UNK	count_missing	UNK=language UNK=min_priority UNK=max_priority UNK=common_only
+renpy	translation		UNK	translate_command	void
+renpy	translation		UNK	extract_strings	void
+renpy	translation	ScriptTranslator	UNK	count_translates	void
+renpy	translation	ScriptTranslator	UNK	take_translates	UNK=nodes
+renpy	translation	ScriptTranslator	UNK	chain_translates	void
+renpy	translation		UNK	encode_say_string	UNK=s
+renpy	translation	Restructurer	UNK	create_translate	UNK=block
+renpy	translation	Restructurer	UNK	callback	UNK=children
+renpy	translation		UNK	translate_string	UNK=s UNK=language
+renpy	translation		UNK	load_rpt	UNK=fn
+renpy	translation		UNK	load_all_rpts	void
+renpy	translation		UNK	init_translation	void
+renpy	translation		UNK	change_language	UNK=language
+renpy	translation		UNK	check_language	void
+renpy	translation		UNK	known_languages	void
+renpy	translation		UNK	merge_strings	void
+renpy	translation		UNK	scan	UNK=min_priority UNK=max_priority UNK=common_only
+renpy	display		UNK	set_rgba_masks	void
+renpy	display		UNK	copy_surface	UNK=surf UNK=alpha
+renpy	display		UNK	edgescroll_proportional	UNK=n
+renpy	display	Viewport	UNK	update_offsets	UNK=cw UNK=ch UNK=st
+renpy	display		UNK	cartesian_to_polar	UNK=x UNK=y UNK=xaround UNK=yaround
+renpy	display		UNK	polar_to_cartesian	UNK=angle UNK=radius UNK=xaround UNK=yaround
+renpy	display		UNK	first_not_none	void
+renpy	display	Transform	UNK	take_state	UNK=t
+renpy	display	Transform	UNK	take_execution_state	UNK=t
+renpy	display	Transform	UNK	copy	void
+renpy	display	Transform	UNK	update_state	void
+renpy	display	Transform	UNK	update	void
+renpy	display		UNK	real_smoothscale	UNK=src UNK=size UNK=dest
+renpy	display	Cache	UNK	init	void
+renpy	display	Cache	UNK	cleanout	void
+renpy	display	Cache	UNK	preload_texture	UNK=im
+renpy	display	Cache	UNK	start_prediction	void
+renpy	display		UNK	free_memory	void
+renpy	display	ImageBase	UNK	load	void
+renpy	display	ImageBase	UNK	predict_files	void
+renpy	display	Image	UNK	__init__	UNK=filename
+renpy	display	Rotozoom	UNK	__init__	UNK=im UNK=angle UNK=zoom
+renpy	display		UNK	ramp	UNK=start UNK=end
+renpy	display	matrix	UNK	identity	void
+renpy	display	matrix	UNK	saturation	UNK=level UNK=desat
+renpy	display	matrix	UNK	desaturate	void
+renpy	display	matrix	UNK	tint	UNK=r UNK=g UNK=b
+renpy	display	matrix	UNK	invert	void
+renpy	display	matrix	UNK	brightness	UNK=b
+renpy	display	matrix	UNK	opacity	UNK=o
+renpy	display	matrix	UNK	contrast	UNK=c
+renpy	display	matrix	UNK	hue	UNK=h
+renpy	display	matrix	UNK	colorize	UNK=black_color UNK=white_color
+renpy	display		UNK	Grayscale	UNK=im UNK=desat
+renpy	display		UNK	Sepia	UNK=im UNK=tint UNK=desat
+renpy	display		UNK	Color	UNK=im UNK=color
+renpy	display		UNK	Alpha	UNK=image UNK=alpha
+renpy	display		UNK	image	UNK=arg UNK=loose
+renpy	display		UNK	load_image	UNK=im
+renpy	display		UNK	load_surface	UNK=im
+renpy	display	Sprite	UNK	set_child	UNK=d
+renpy	display	Sprite	UNK	destroy	void
+renpy	display	SpriteManager	UNK	__init__	UNK=update UNK=event UNK=predict UNK=ignore_time
+renpy	display	SpriteManager	UNK	create	UNK=d
+renpy	display	SpriteManager	UNK	redraw	UNK=delay
+renpy	display	Particles	UNK	__init__	UNK=factory
+renpy	display		UNK	SnowBlossom	UNK=d UNK=count UNK=border UNK=xspeed
+renpy	display		UNK	scale	UNK=num UNK=base
+renpy	display	Container	UNK	add	UNK=d
+renpy	display	Container	UNK	remove	UNK=d
+renpy	display	Container	UNK	update	void
+renpy	display		UNK	LiveComposite	UNK=size
+renpy	display	Position	UNK	__init__	UNK=child UNK=style
+renpy	display	Grid	UNK	__init__	UNK=cols UNK=rows UNK=padding UNK=transpose
+renpy	display		UNK	ConditionSwitch	void
+renpy	display		UNK	ShowingSwitch	void
+renpy	display		UNK	LiveCrop	UNK=rect UNK=child
+renpy	display		UNK	displayable	UNK=d
+renpy	display		UNK	screen	UNK=_screen_name
+renpy	display		UNK	prediction_coroutine	UNK=root_widget
+renpy	display		UNK	default_tts_function	UNK=s
+renpy	display		UNK	tts	UNK=s
+renpy	display		UNK	speak	UNK=s UNK=translate UNK=force
+renpy	display		UNK	displayable_by_tag	UNK=layer UNK=tag
+renpy	display		UNK	place	UNK=width UNK=height UNK=sw UNK=sh
+renpy	display	DisplayableArguments	UNK	copy	void
+renpy	display	Displayable	UNK	_copy	UNK=args
+renpy	display	Displayable	UNK	_duplicate	UNK=args
+renpy	display	Displayable	UNK	_in_current_store	void
+renpy	display	Displayable	UNK	_unique	void
+renpy	display	Displayable	UNK	parameterize	UNK=name UNK=parameters
+renpy	display	Displayable	UNK	_equals	UNK=o
+renpy	display	Displayable	UNK	focus	UNK=default
+renpy	display	Displayable	UNK	unfocus	UNK=default
+renpy	display	Displayable	UNK	set_style_prefix	UNK=prefix UNK=root
+renpy	display	Displayable	UNK	render	UNK=width UNK=height UNK=st UNK=at
+renpy	display	Displayable	UNK	event	UNK=ev UNK=x UNK=y UNK=st
+renpy	display	Displayable	UNK	get_placement	void
+renpy	display	Displayable	UNK	visit_all	UNK=callback
+renpy	display	Displayable	UNK	visit	void
+renpy	display	Displayable	UNK	per_interact	void
+renpy	display	Displayable	UNK	predict_one	void
+renpy	display	Displayable	UNK	predict_one_action	void
+renpy	display	Displayable	UNK	place	UNK=dest UNK=x UNK=y UNK=width
+renpy	display	Displayable	UNK	set_transform_event	UNK=event
+renpy	display	Displayable	UNK	_hide	UNK=st UNK=at UNK=kind
+renpy	display	Displayable	UNK	_show	void
+renpy	display	Displayable	UNK	_target	void
+renpy	display	Displayable	UNK	_change_transform_child	UNK=child
+renpy	display	Displayable	UNK	_clear	void
+renpy	display	Displayable	UNK	_tts	void
+renpy	display	Displayable	UNK	_tts_all	void
+renpy	display	SceneLists	UNK	replace_transient	void
+renpy	display	SceneLists	UNK	transient_is_empty	void
+renpy	display	SceneLists	UNK	transform_state	UNK=old_thing UNK=new_thing
+renpy	display	SceneLists	UNK	find_index	UNK=layer UNK=tag UNK=zorder UNK=behind
+renpy	display	SceneLists	UNK	add	UNK=layer UNK=thing UNK=key UNK=zorder
+renpy	display	SceneLists	UNK	hide_or_replace	UNK=layer UNK=index UNK=prefix
+renpy	display	SceneLists	UNK	get_all_displayables	void
+renpy	display	SceneLists	UNK	remove_above	UNK=layer UNK=thing
+renpy	display	SceneLists	UNK	remove	UNK=layer UNK=thing
+renpy	display	SceneLists	UNK	clear	UNK=layer UNK=hide
+renpy	display	SceneLists	UNK	set_times	UNK=time
+renpy	display	SceneLists	UNK	showing	UNK=layer UNK=name
+renpy	display	SceneLists	UNK	make_layer	UNK=layer UNK=properties
+renpy	display	SceneLists	UNK	remove_hide_replaced	UNK=layer UNK=tag
+renpy	display	SceneLists	UNK	remove_hidden	void
+renpy	display	SceneLists	UNK	remove_all_hidden	void
+renpy	display	SceneLists	UNK	get_displayable_by_tag	UNK=layer UNK=tag
+renpy	display	SceneLists	UNK	get_displayable_by_name	UNK=layer UNK=name
+renpy	display	SceneLists	UNK	get_image_bounds	UNK=layer UNK=tag UNK=width UNK=height
+renpy	display		UNK	scene_lists	UNK=index
+renpy	display	MouseMove	UNK	perform	void
+renpy	display		UNK	get_safe_mode	void
+renpy	display	Interface	UNK	start	void
+renpy	display	Interface	UNK	post_init	void
+renpy	display	Interface	UNK	set_icon	void
+renpy	display	Interface	UNK	get_draw_constructors	void
+renpy	display	Interface	UNK	kill_textures_and_surfaces	void
+renpy	display	Interface	UNK	set_mode	UNK=physical_size
+renpy	display	Interface	UNK	take_screenshot	UNK=scale UNK=background
+renpy	display	Interface	UNK	check_background_screenshot	void
+renpy	display	Interface	UNK	get_screenshot	void
+renpy	display	Interface	UNK	lose_screenshot	void
+renpy	display	Interface	UNK	save_screenshot	UNK=filename
+renpy	display	Interface	UNK	with_none	UNK=overlay
+renpy	display	Interface	UNK	set_transition	UNK=transition UNK=layer UNK=force
+renpy	display	Interface	UNK	event_peek	void
+renpy	display	Interface	UNK	event_poll	void
+renpy	display	Interface	UNK	event_wait	void
+renpy	display	Interface	UNK	compute_scene	UNK=scene_lists
+renpy	display	Interface	UNK	quit_event	void
+renpy	display	Interface	UNK	set_mouse_pos	UNK=x UNK=y UNK=duration
+renpy	display	Interface	UNK	drawn_since	UNK=seconds_ago
+renpy	display	Interface	UNK	check_suspend	UNK=ev
+renpy	display	Interface	UNK	iconified	void
+renpy	display	Interface	UNK	restored	void
+renpy	display	Interface	UNK	enter_context	void
+renpy	display	Interface	UNK	post_time_event	void
+renpy	display	Interface	UNK	after_longpress	void
+renpy	display	Interface	UNK	text_event_in_queue	void
+renpy	display	Interface	UNK	update_text_rect	void
+renpy	display	Interface	UNK	maximum_framerate	UNK=t
+renpy	display	Interface	UNK	interact	UNK=clear UNK=suppress_window UNK=trans_pause
+renpy	display	Interface	UNK	interact_core	UNK=show_mouse UNK=trans_pause UNK=suppress_overlay UNK=suppress_underlay
+renpy	display	Interface	UNK	finish_pending	void
+renpy	display		UNK	OldMoveTransition	UNK=delay UNK=old_widget UNK=new_widget UNK=factory
+renpy	display		UNK	MoveTransition	UNK=delay UNK=old_widget UNK=new_widget UNK=enter
+renpy	display		UNK	dispatch_gesture	UNK=gesture
+renpy	display		UNK	init	void
+renpy	display		UNK	make_event	UNK=name
+renpy	display		UNK	exists	void
+renpy	display		UNK	quit	UNK=index
+renpy	display		UNK	start	UNK=index
+renpy	display		UNK	event	UNK=ev
+renpy	display	Motion	UNK	__init__	UNK=function UNK=period UNK=child UNK=new_widget
+renpy	display		UNK	Pan	UNK=startpos UNK=endpos UNK=time UNK=child
+renpy	display		UNK	Move	UNK=startpos UNK=endpos UNK=time UNK=child
+renpy	display		UNK	zoom_render	UNK=crend UNK=x UNK=y UNK=w
+renpy	display	ZoomCommon	UNK	__init__	UNK=time UNK=child UNK=end_identity UNK=after_child
+renpy	display		UNK	run_event_thread	void
+renpy	display		UNK	start	UNK=basedir UNK=gamedir
+renpy	display		UNK	end	void
+renpy	display		UNK	sleep	void
+renpy	display		UNK	init_display	void
+renpy	display		UNK	error_dump	void
+renpy	display		UNK	report_exception	UNK=short UNK=full UNK=traceback_fn
+renpy	display		UNK	report_parse_errors	UNK=errors UNK=error_fn
+renpy	display	Clipper	UNK	compute	UNK=full_redraw
+renpy	display		UNK	surface	UNK=w UNK=h UNK=alpha
+renpy	display		UNK	draw_special	UNK=what UNK=dest UNK=x UNK=y
+renpy	display		UNK	draw	UNK=dest UNK=clip UNK=what UNK=xo
+renpy	display		UNK	do_draw_screen	UNK=screen_render UNK=full_redraw UNK=swdraw
+renpy	display	SWDraw	UNK	show_mouse	UNK=pos UNK=info
+renpy	display	SWDraw	UNK	hide_mouse	void
+renpy	display	SWDraw	UNK	draw_mouse	UNK=show_mouse
+renpy	display	SWDraw	UNK	update_mouse	void
+renpy	display	SWDraw	UNK	screenshot	UNK=surftree UNK=fullscreen_video
+renpy	display	SWDraw	UNK	should_redraw	UNK=needs_redraw UNK=first_pass
+renpy	display	SWDraw	UNK	draw_screen	UNK=surftree UNK=fullscreen_video
+renpy	display	SWDraw	UNK	mutated_surface	UNK=surf
+renpy	display	SWDraw	UNK	load_texture	UNK=surf UNK=transient
+renpy	display	SWDraw	UNK	solid_texture	UNK=w UNK=h UNK=color
+renpy	display	SWDraw	UNK	free_memory	void
+renpy	display	SWDraw	UNK	deinit	void
+renpy	display	SWDraw	UNK	quit	void
+renpy	display	SWDraw	UNK	event_peek_sleep	void
+renpy	display	SWDraw	UNK	get_physical_size	void
+renpy	display		UNK	convert_and_call	UNK=function UNK=src UNK=dst
+renpy	display		UNK	pixellate	UNK=src UNK=dst UNK=avgwidth UNK=avgheight
+renpy	display		UNK	scale	UNK=s UNK=size
+renpy	display		UNK	byte_offset	UNK=src
+renpy	display		UNK	linmap	UNK=src UNK=dst UNK=rmap UNK=gmap
+renpy	display		UNK	map	UNK=src UNK=dst UNK=rmap UNK=gmap
+renpy	display		UNK	twomap	UNK=src UNK=dst UNK=white UNK=black
+renpy	display		UNK	alpha_munge	UNK=src UNK=dst UNK=amap
+renpy	display		UNK	movie_stop	UNK=clear UNK=only_fullscreen
+renpy	display		UNK	movie_start	UNK=filename UNK=size UNK=loops
+renpy	display		UNK	early_interact	void
+renpy	display		UNK	interact	void
+renpy	display		UNK	update_playing	void
+renpy	display		UNK	frequent	void
+renpy	display	State	UNK	__init__	UNK=name UNK=image
+renpy	display	Edge	UNK	__init__	UNK=old UNK=delay UNK=new UNK=trans
+renpy	display	SMAnimation	UNK	__init__	UNK=initial
+renpy	display	SMAnimation	UNK	pick_edge	UNK=state
+renpy	display	SMAnimation	UNK	update_cache	void
+renpy	display	SMAnimation	UNK	__call__	UNK=child UNK=new_widget UNK=old_widget
+renpy	display	TransitionAnimation	UNK	__init__	void
+renpy	display	Blink	UNK	__init__	UNK=image UNK=on UNK=off UNK=rise
+renpy	display		UNK	Filmstrip	UNK=image UNK=framesize UNK=gridsize UNK=delay
+renpy	display		UNK	Fade	UNK=out_time UNK=hold_time UNK=in_time UNK=old_widget
+renpy	display		UNK	ComposeTransition	UNK=trans UNK=before UNK=after UNK=new_widget
+renpy	display		UNK	SubTransition	UNK=rect UNK=trans UNK=old_widget UNK=new_widget
+renpy	display		UNK	default_drag_group	void
+renpy	display	Drag	UNK	snap	UNK=x UNK=y UNK=delay
+renpy	display	Drag	UNK	set_child	UNK=d
+renpy	display	Drag	UNK	top	void
+renpy	display	DragGroup	UNK	add	UNK=child
+renpy	display	DragGroup	UNK	remove	UNK=child
+renpy	display	DragGroup	UNK	raise_children	UNK=l
+renpy	display	DragGroup	UNK	get_best_drop	UNK=joined
+renpy	display	DragGroup	UNK	get_children	void
+renpy	display	DragGroup	UNK	get_child_by_name	UNK=name
+renpy	display		UNK	rect_overlap_area	UNK=r1 UNK=r2
+renpy	display		UNK	focus_coordinates	void
+renpy	display		UNK	before_interact	UNK=roots
+renpy	display		UNK	clear_focus	void
+renpy	display		UNK	mouse_handler	UNK=ev UNK=x UNK=y UNK=default
+renpy	display	ScreenProfile	UNK	__init__	UNK=name UNK=predict UNK=show UNK=update
+renpy	display		UNK	get_profile	UNK=name
+renpy	display		UNK	cache_get	UNK=screen UNK=args UNK=kwargs
+renpy	display		UNK	get_screen_variant	UNK=name UNK=candidates
+renpy	display		UNK	get_all_screen_variants	UNK=name
+renpy	display		UNK	sort_screens	void
+renpy	display		UNK	sorted_variants	void
+renpy	display		UNK	analyze_screens	void
+renpy	display		UNK	prepare_screens	void
+renpy	display		UNK	define_screen	void
+renpy	display		UNK	get_screen_layer	UNK=name
+renpy	display		UNK	get_screen	UNK=name UNK=layer
+renpy	display		UNK	has_screen	UNK=name
+renpy	display		UNK	show_screen	UNK=_screen_name
+renpy	display		UNK	predict_screen	UNK=_screen_name
+renpy	display		UNK	hide_screen	UNK=tag UNK=layer
+renpy	display		UNK	get_widget	UNK=screen UNK=id UNK=layer
+renpy	display		UNK	get_widget_properties	UNK=id UNK=screen UNK=layer
+renpy	display		UNK	before_restart	void
+renpy	display		UNK	show_overlay_screens	UNK=suppress_overlay
+renpy	display		UNK	get_available_image_tags	void
+renpy	display		UNK	get_available_image_attributes	UNK=tag UNK=attributes
+renpy	display		UNK	get_tag_method	UNK=tag UNK=method
+renpy	display		UNK	check_image_attributes	UNK=tag UNK=attributes
+renpy	display		UNK	get_ordered_image_attributes	UNK=tag UNK=attributes UNK=sort
+renpy	display		UNK	register_image	UNK=name UNK=d
+renpy	display		UNK	image_exists	UNK=name UNK=exact
+renpy	display	ImageReference	UNK	__init__	UNK=name
+renpy	display	ShownImageInfo	UNK	__init__	UNK=old
+renpy	display	ShownImageInfo	UNK	get_attributes	UNK=layer UNK=tag
+renpy	display	ShownImageInfo	UNK	showing	UNK=layer UNK=name UNK=exact
+renpy	display	ShownImageInfo	UNK	get_showing_tags	UNK=layer
+renpy	display	ShownImageInfo	UNK	predict_scene	UNK=layer
+renpy	display	ShownImageInfo	UNK	predict_show	UNK=layer UNK=name UNK=show
+renpy	display	ShownImageInfo	UNK	apply_attributes	UNK=layer UNK=tag UNK=name UNK=wanted
+renpy	display		UNK	compile_event	UNK=key UNK=keydown
+renpy	display		UNK	clear_keymap_cache	void
+renpy	display		UNK	queue_event	UNK=name UNK=up
+renpy	display		UNK	map_event	UNK=ev UNK=keysym
+renpy	display		UNK	map_keyup	UNK=ev UNK=name
+renpy	display		UNK	skipping	UNK=ev
+renpy	display		UNK	predict_action	UNK=var
+renpy	display		UNK	run	UNK=action
+renpy	display		UNK	run_unhovered	UNK=var
+renpy	display		UNK	is_selected	UNK=action
+renpy	display		UNK	is_sensitive	UNK=action
+renpy	display	Adjustment	UNK	__init__	UNK=range UNK=value UNK=step UNK=page
+renpy	display	Adjustment	UNK	update	void
+renpy	display	OnEvent	UNK	__init__	UNK=event UNK=action
+renpy	display		UNK	null_emulator	UNK=ev UNK=x UNK=y
+renpy	display		UNK	touch_emulator	UNK=ev UNK=x UNK=y
+renpy	display		UNK	tv_emulator	UNK=ev UNK=x UNK=y
+renpy	display		UNK	init_emulator	void
+renpy	display	ImageMapCache	UNK	image_file_hash	void
+renpy	text		UNK	register_sfont	UNK=name UNK=size UNK=bold UNK=italics
+renpy	text		UNK	register_mudgefont	UNK=name UNK=size UNK=bold UNK=italics
+renpy	text		UNK	register_bmfont	UNK=name UNK=size UNK=bold UNK=italics
+renpy	text		UNK	free_memory	void
+renpy	text	FontGroup	UNK	add	UNK=font UNK=start UNK=end
+renpy	text	FontGroup	UNK	segment	UNK=s
+renpy	text		UNK	outline_blits	UNK=blits UNK=outline
+renpy	text	TextSegment	UNK	__init__	UNK=source
+renpy	text	TextSegment	UNK	take_style	UNK=style UNK=layout
+renpy	text	TextSegment	UNK	glyphs	UNK=s UNK=layout
+renpy	text	TextSegment	UNK	draw	UNK=glyphs UNK=di UNK=xo UNK=yo
+renpy	text	TextSegment	UNK	assign_times	UNK=gt UNK=glyphs
+renpy	text	TextSegment	UNK	subsegment	UNK=s
+renpy	text	TextSegment	UNK	bounds	UNK=glyphs UNK=bounds UNK=layout
+renpy	text	SpaceSegment	UNK	__init__	UNK=ts UNK=width UNK=height
+renpy	text	DisplayableSegment	UNK	__init__	UNK=ts UNK=d UNK=renders
+renpy	text	Layout	UNK	__init__	UNK=text UNK=width UNK=height UNK=renders
+renpy	text	Layout	UNK	segment	UNK=tokens UNK=style UNK=renders UNK=text_displayable
+renpy	text	Layout	UNK	rtl_paragraph	UNK=p
+renpy	text	Layout	UNK	figure_outlines	UNK=style
+renpy	text	Layout	UNK	blits_typewriter	UNK=st
+renpy	text	Layout	UNK	redraw_typewriter	UNK=st
+renpy	text		UNK	layout_cache_clear	void
+renpy	text		UNK	layout_cache_tick	void
+renpy	text	Text	UNK	_scope	UNK=scope UNK=update
+renpy	text	Text	UNK	update	void
+renpy	text	Text	UNK	kill_layout	void
+renpy	text	Text	UNK	get_layout	void
+renpy	text	Text	UNK	get_virtual_layout	void
+renpy	text	Text	UNK	focus	UNK=default
+renpy	text	Text	UNK	unfocus	UNK=default
+renpy	text	Text	UNK	call_slow_done	UNK=st
+renpy	text	Text	UNK	event	UNK=ev UNK=x UNK=y UNK=st
+renpy	text	Text	UNK	size	UNK=width UNK=height UNK=st UNK=at
+renpy	text	Text	UNK	get_time	void
+renpy	text	Text	UNK	tokenize	UNK=text
+renpy	text	Text	UNK	apply_custom_tags	UNK=tokens
+renpy	text	Text	UNK	get_displayables	UNK=tokens
+renpy	text		UNK	check_text_tags	UNK=s
+renpy	text		UNK	textwrap	UNK=s UNK=width UNK=asian

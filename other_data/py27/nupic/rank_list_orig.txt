@@ -1,0 +1,1653 @@
+nupic	core	MovingAverage	UNK	__init__	UNK=windowSize UNK=existingHistoricalValues
+nupic	core	MovingAverage	UNK	compute	UNK=slidingWindow UNK=total UNK=newVal UNK=windowSize
+nupic	core	MovingAverage	UNK	next	UNK=newValue
+nupic	core	MovingAverage	UNK	getCurrentAvg	void
+nupic	core	MovingAverage	UNK	__setstate__	UNK=state
+nupic	core	Serializable	UNK	getSchema	UNK=cls
+nupic	core	Serializable	UNK	read	UNK=cls UNK=proto
+nupic	core	Serializable	UNK	write	UNK=proto
+nupic	regions	RegionIdentityPolicyBase	UNK	initialize	UNK=testRegionObj
+nupic	regions	RegionIdentityPolicyBase	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	RegionIdentityPolicyBase	UNK	getOutputElementCount	UNK=name
+nupic	regions	RegionIdentityPolicyBase	UNK	getName	void
+nupic	regions	TestRegion	UNK	__constructEphemeralInstanceVars	void
+nupic	regions	TestRegion	UNK	initialize	void
+nupic	regions	TestRegion	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	TestRegion	UNK	getSpec	UNK=cls
+nupic	regions	TestRegion	UNK	getParameter	UNK=parameterName UNK=index
+nupic	regions	TestRegion	UNK	setParameter	UNK=parameterName UNK=index UNK=parameterValue
+nupic	regions	TestRegion	UNK	setIdentityPolicyInstance	UNK=identityPolicyObj
+nupic	regions	TestRegion	UNK	getIdentityPolicyInstance	void
+nupic	regions	TestRegion	UNK	__getstate__	void
+nupic	regions	TestRegion	UNK	__setstate__	UNK=state
+nupic	regions		UNK	whois_callers_caller	void
+nupic	regions	CLAClassifierRegion	UNK	getAlgorithmInstance	void
+nupic	regions	CLAClassifierRegion	UNK	getParameter	UNK=name UNK=index
+nupic	regions	CLAClassifierRegion	UNK	setParameter	UNK=name UNK=index UNK=value
+nupic	regions	CLAClassifierRegion	UNK	getProtoType	void
+nupic	regions	CLAClassifierRegion	UNK	writeToProto	UNK=proto
+nupic	regions	CLAClassifierRegion	UNK	readFromProto	UNK=cls UNK=proto
+nupic	regions	CLAClassifierRegion	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	CLAClassifierRegion	UNK	customCompute	UNK=recordNum UNK=patternNZ UNK=classification
+nupic	regions	CLAClassifierRegion	UNK	getOutputValues	UNK=outputName
+nupic	regions	CLAClassifierRegion	UNK	getOutputElementCount	UNK=outputName
+nupic	regions		UNK	_getTPClass	UNK=temporalImp
+nupic	regions		UNK	_buildArgs	UNK=f UNK=kwargs
+nupic	regions		UNK	_getAdditionalSpecs	UNK=temporalImp UNK=kwargs
+nupic	regions	TMRegion	UNK	_initialize	void
+nupic	regions	TMRegion	UNK	_compute	UNK=inputs UNK=outputs
+nupic	regions	TMRegion	UNK	getBaseSpec	UNK=cls
+nupic	regions	TMRegion	UNK	getSpec	UNK=cls
+nupic	regions	TMRegion	UNK	getAlgorithmInstance	void
+nupic	regions	TMRegion	UNK	getParameter	UNK=parameterName UNK=index
+nupic	regions	TMRegion	UNK	setParameter	UNK=parameterName UNK=index UNK=parameterValue
+nupic	regions	TMRegion	UNK	resetSequenceStates	void
+nupic	regions	TMRegion	UNK	finishLearning	void
+nupic	regions	TMRegion	UNK	__getstate__	void
+nupic	regions	TMRegion	UNK	serializeExtraData	UNK=filePath
+nupic	regions	TMRegion	UNK	deSerializeExtraData	UNK=filePath
+nupic	regions	TMRegion	UNK	__setstate__	UNK=state
+nupic	regions	TMRegion	UNK	_initEphemerals	void
+nupic	regions	TMRegion	UNK	_getEphemeralMembers	void
+nupic	regions	TMRegion	UNK	_getEphemeralMembersBase	void
+nupic	regions	TMRegion	UNK	_getEphemeralMembersAll	void
+nupic	regions	KNNAnomalyClassifierRegion	UNK	getParameter	UNK=name UNK=index
+nupic	regions	KNNAnomalyClassifierRegion	UNK	setParameter	UNK=name UNK=index UNK=value
+nupic	regions	KNNAnomalyClassifierRegion	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	KNNAnomalyClassifierRegion	UNK	getLabelResults	void
+nupic	regions	KNNAnomalyClassifierRegion	UNK	classifyStates	void
+nupic	regions	KNNAnomalyClassifierRegion	UNK	classifyState	UNK=state
+nupic	regions	KNNAnomalyClassifierRegion	UNK	constructClassificationRecord	UNK=inputs
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_addRecordToKNN	UNK=record
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_deleteRecordsFromKNN	UNK=recordsToDelete
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_deleteRangeFromKNN	UNK=start UNK=end
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_recomputeRecordFromKNN	UNK=record
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_labelToCategoryNumber	UNK=label
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_labelListToCategoryNumber	UNK=labelList
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_categoryToLabelList	UNK=category
+nupic	regions	KNNAnomalyClassifierRegion	UNK	_getStateAnomalyVector	UNK=state
+nupic	regions	KNNAnomalyClassifierRegion	UNK	getLabels	UNK=start UNK=end
+nupic	regions	KNNAnomalyClassifierRegion	UNK	addLabel	UNK=start UNK=end UNK=labelName
+nupic	regions	KNNAnomalyClassifierRegion	UNK	removeLabels	UNK=start UNK=end UNK=labelFilter
+nupic	regions	KNNAnomalyClassifierRegion	UNK	__getstate__	void
+nupic	regions	KNNAnomalyClassifierRegion	UNK	__setstate__	UNK=state
+nupic	regions	RecordSensor	UNK	__init__	UNK=verbosity UNK=numCategories
+nupic	regions	RecordSensor	UNK	rewind	void
+nupic	regions	RecordSensor	UNK	getNextRecord	void
+nupic	regions	RecordSensor	UNK	applyFilters	UNK=data
+nupic	regions	RecordSensor	UNK	populateCategoriesOut	UNK=categories UNK=output
+nupic	regions	RecordSensor	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	RecordSensor	UNK	_convertNonNumericData	UNK=spatialOutput UNK=temporalOutput UNK=output
+nupic	regions	RecordSensor	UNK	getOutputValues	UNK=outputName
+nupic	regions	RecordSensor	UNK	getOutputElementCount	UNK=name
+nupic	regions	RecordSensor	UNK	setParameter	UNK=parameterName UNK=index UNK=parameterValue
+nupic	regions	RecordSensor	UNK	getProtoType	void
+nupic	regions	RecordSensor	UNK	writeToProto	UNK=proto
+nupic	regions	RecordSensor	UNK	readFromProto	UNK=cls UNK=proto
+nupic	regions	Spec	UNK	invariant	void
+nupic	regions	Spec	UNK	toDict	void
+nupic	regions		UNK	getDefaultSPImp	void
+nupic	regions		UNK	getSPClass	UNK=spatialImp
+nupic	regions		UNK	_getAdditionalSpecs	UNK=spatialImp UNK=kwargs
+nupic	regions	SPRegion	UNK	_initializeEphemeralMembers	void
+nupic	regions	SPRegion	UNK	_allocateSpatialFDR	UNK=rfInput
+nupic	regions	SPRegion	UNK	_compute	UNK=inputs UNK=outputs
+nupic	regions	SPRegion	UNK	_doBottomUpCompute	UNK=rfInput UNK=resetSignal
+nupic	regions	SPRegion	UNK	_doTopDownInfer	UNK=topDownInput
+nupic	regions	SPRegion	UNK	getBaseSpec	UNK=cls
+nupic	regions	SPRegion	UNK	getSpec	UNK=cls
+nupic	regions	SPRegion	UNK	getAlgorithmInstance	void
+nupic	regions	SPRegion	UNK	getParameter	UNK=parameterName UNK=index
+nupic	regions	SPRegion	UNK	setParameter	UNK=parameterName UNK=index UNK=parameterValue
+nupic	regions	SPRegion	UNK	getProtoType	void
+nupic	regions	SPRegion	UNK	writeToProto	UNK=proto
+nupic	regions	SPRegion	UNK	readFromProto	UNK=cls UNK=proto
+nupic	regions	SPRegion	UNK	__getstate__	void
+nupic	regions	SPRegion	UNK	__setstate__	UNK=state
+nupic	regions	SPRegion	UNK	_initEphemerals	void
+nupic	regions	SPRegion	UNK	_getEphemeralMembers	void
+nupic	regions	SPRegion	UNK	_getEphemeralMembersBase	void
+nupic	regions	SPRegion	UNK	_getEphemeralMembersAll	void
+nupic	regions	SVMClassifierNode	UNK	__init__	UNK=categoriesOut UNK=minC UNK=maxC UNK=minGamma
+nupic	regions	SVMClassifierNode	UNK	clear	void
+nupic	regions	SVMClassifierNode	UNK	_initRandom	void
+nupic	regions	SVMClassifierNode	UNK	compute	UNK=nodeInfo UNK=inputs UNK=outputs
+nupic	regions	SVMClassifierNode	UNK	_scan	UNK=inputs
+nupic	regions	SVMClassifierNode	UNK	getNodeSpec	void
+nupic	regions	SVMClassifierNode	UNK	catIndexToId	UNK=catIndex
+nupic	regions	SVMClassifierNode	UNK	_getHyperplanes	void
+nupic	regions	SVMClassifierNode	UNK	simulateTrainingSample	UNK=inputWidth UNK=category UNK=partitionId
+nupic	regions	SVMClassifierNode	UNK	getParameter	UNK=parameterName UNK=nodeSet
+nupic	regions	SVMClassifierNode	UNK	setParameter	UNK=parameterName UNK=parameterValue UNK=nodeSet
+nupic	regions	SVMClassifierNode	UNK	__setstate__	UNK=state
+nupic	regions	SVMClassifierNode	UNK	__getstate__	void
+nupic	regions	SVMClassifierNode	UNK	_getEphemeralMembers	void
+nupic	regions	SVMClassifierNode	UNK	_initDataStructures	UNK=inputWidth
+nupic	regions	SVMClassifierNode	UNK	_initSvm	UNK=n_dims
+nupic	regions	SVMClassifierNode	UNK	_learn	UNK=inputVector UNK=trueCatIndex UNK=partitionId
+nupic	regions	SVMClassifierNode	UNK	_storeSample	UNK=trueCatIndex UNK=inputVector UNK=partitionId
+nupic	regions	SVMClassifierNode	UNK	_infer	UNK=sample
+nupic	regions	SVMClassifierNode	UNK	_finishSphering	void
+nupic	regions	SVMClassifierNode	UNK	_finishLearning	void
+nupic	regions	SVMClassifierNode	UNK	_doRecursion	UNK=samples UNK=validationSets UNK=paramRange UNK=recursionIndex
+nupic	regions	SVMClassifierNode	UNK	_validateSvm	UNK=C UNK=gamma UNK=progressStart UNK=progressEnd
+nupic	regions	SVMClassifierNode	UNK	_buildSVM	UNK=C UNK=gamma
+nupic	regions	SVMClassifierNode	UNK	getAllDistances	void
+nupic	regions	SVMClassifierNode	UNK	getLatestDistances	void
+nupic	regions	SVMClassifierNode	UNK	getCategoryList	void
+nupic	regions	SVMClassifierNode	UNK	_calculateDistances	UNK=inputVector
+nupic	regions	SVMClassifierNode	UNK	_calculateAndStoreDistances	UNK=inputVector
+nupic	regions	SVMClassifierNode	UNK	setUpcomingPartitionIds	UNK=partitionIds
+nupic	regions	SVMClassifierNode	UNK	remapCategories	UNK=mapping
+nupic	regions	SVMClassifierNode	UNK	changePartitionId	UNK=oldPartitionId UNK=newPartitionId
+nupic	regions	SVMClassifierNode	UNK	changeCategoriesOfPartitionIds	UNK=partitionIds UNK=categoryIndices
+nupic	regions	SVMClassifierNode	UNK	switchToLearning	void
+nupic	regions	KNNClassifierRegion	UNK	_getEphemeralAttributes	void
+nupic	regions	KNNClassifierRegion	UNK	_initEphemerals	void
+nupic	regions	KNNClassifierRegion	UNK	__setstate__	UNK=state
+nupic	regions	KNNClassifierRegion	UNK	__getstate__	void
+nupic	regions	KNNClassifierRegion	UNK	getAlgorithmInstance	void
+nupic	regions	KNNClassifierRegion	UNK	getParameter	UNK=name UNK=index
+nupic	regions	KNNClassifierRegion	UNK	setParameter	UNK=name UNK=index UNK=value
+nupic	regions	KNNClassifierRegion	UNK	doInference	UNK=activeInput
+nupic	regions	KNNClassifierRegion	UNK	enableTap	UNK=tapPath
+nupic	regions	KNNClassifierRegion	UNK	disableTap	void
+nupic	regions	KNNClassifierRegion	UNK	handleLogInput	UNK=inputs
+nupic	regions	KNNClassifierRegion	UNK	handleLogOutput	UNK=output
+nupic	regions	KNNClassifierRegion	UNK	_storeSample	UNK=inputVector UNK=trueCatIndex UNK=partition
+nupic	regions	KNNClassifierRegion	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	KNNClassifierRegion	UNK	getCategoryList	void
+nupic	regions	KNNClassifierRegion	UNK	getLatestDistances	void
+nupic	regions	KNNClassifierRegion	UNK	getAllDistances	void
+nupic	regions	KNNClassifierRegion	UNK	_finishLearning	void
+nupic	regions	KNNClassifierRegion	UNK	_finishSphering	void
+nupic	regions	KNNClassifierRegion	UNK	getOutputElementCount	UNK=name
+nupic	regions	SDRClassifierRegion	UNK	initialize	void
+nupic	regions	SDRClassifierRegion	UNK	getAlgorithmInstance	void
+nupic	regions	SDRClassifierRegion	UNK	getParameter	UNK=name UNK=index
+nupic	regions	SDRClassifierRegion	UNK	setParameter	UNK=name UNK=index UNK=value
+nupic	regions	SDRClassifierRegion	UNK	getProtoType	void
+nupic	regions	SDRClassifierRegion	UNK	writeToProto	UNK=proto
+nupic	regions	SDRClassifierRegion	UNK	readFromProto	UNK=cls UNK=proto
+nupic	regions	SDRClassifierRegion	UNK	compute	UNK=inputs UNK=outputs
+nupic	regions	SDRClassifierRegion	UNK	customCompute	UNK=recordNum UNK=patternNZ UNK=classification
+nupic	regions	SDRClassifierRegion	UNK	getOutputElementCount	UNK=outputName
+nupic	regions	PluggableEncoderSensor	UNK	setSensedValue	UNK=value
+nupic	regions.RecordSensorFilters	AddNoise	UNK	__init__	UNK=noise UNK=seed
+nupic	regions.RecordSensorFilters	AddNoise	UNK	process	UNK=encoder UNK=data
+nupic	regions.RecordSensorFilters	ModifyFields	UNK	__init__	UNK=fields UNK=operation UNK=seed
+nupic	regions.RecordSensorFilters	ModifyFields	UNK	process	UNK=encoder UNK=data
+nupic	algorithms	CLAClassifierFactory	UNK	read	UNK=proto
+nupic	algorithms		UNK	computeRawAnomalyScore	UNK=activeColumns UNK=prevPredictedColumns
+nupic	algorithms	Anomaly	UNK	compute	UNK=activeColumns UNK=predictedColumns UNK=inputValue UNK=timestamp
+nupic	algorithms		UNK	_extractCallingMethodArgs	void
+nupic	algorithms	BacktrackingTMCPP	UNK	__setstate__	UNK=state
+nupic	algorithms	BacktrackingTMCPP	UNK	_getEphemeralMembers	void
+nupic	algorithms	BacktrackingTMCPP	UNK	_initEphemerals	void
+nupic	algorithms	BacktrackingTMCPP	UNK	saveToFile	UNK=filePath
+nupic	algorithms	BacktrackingTMCPP	UNK	loadFromFile	UNK=filePath
+nupic	algorithms	BacktrackingTMCPP	UNK	__getattr__	UNK=name
+nupic	algorithms	BacktrackingTMCPP	UNK	compute	UNK=bottomUpInput UNK=enableLearn UNK=computeInfOutput
+nupic	algorithms	BacktrackingTMCPP	UNK	inferPhase2	void
+nupic	algorithms	BacktrackingTMCPP	UNK	_copyAllocatedStates	void
+nupic	algorithms	BacktrackingTMCPP	UNK	_setStatePointers	void
+nupic	algorithms	BacktrackingTMCPP	UNK	reset	void
+nupic	algorithms	BacktrackingTMCPP	UNK	finishLearning	void
+nupic	algorithms	BacktrackingTMCPP	UNK	trimSegments	UNK=minPermanence UNK=minNumSyns
+nupic	algorithms	BacktrackingTMCPP	UNK	slowIsSegmentActive	UNK=seg UNK=timeStep
+nupic	algorithms	BacktrackingTMCPP	UNK	getAvgLearnedSeqLength	void
+nupic	algorithms	BacktrackingTMCPP	UNK	getColCellIdx	UNK=idx
+nupic	algorithms	BacktrackingTMCPP	UNK	getSegmentOnCell	UNK=c UNK=i UNK=segIdx
+nupic	algorithms	BacktrackingTMCPP	UNK	getNumSegments	void
+nupic	algorithms	BacktrackingTMCPP	UNK	getNumSynapses	void
+nupic	algorithms	BacktrackingTMCPP	UNK	getNumSegmentsInCell	UNK=c UNK=i
+nupic	algorithms	BacktrackingTMCPP	UNK	getSegmentInfo	UNK=collectActiveData
+nupic	algorithms	BacktrackingTMCPP	UNK	getActiveSegment	UNK=c UNK=i UNK=timeStep
+nupic	algorithms	BacktrackingTMCPP	UNK	getBestMatchingCell	UNK=c UNK=timeStep UNK=learnState
+nupic	algorithms	BacktrackingTMCPP	UNK	getLeastAllocatedCell	UNK=c
+nupic	algorithms	BacktrackingTM	UNK	__init__	UNK=numberOfCols UNK=cellsPerColumn UNK=initialPerm UNK=connectedPerm
+nupic	algorithms	BacktrackingTM	UNK	_getEphemeralMembers	void
+nupic	algorithms	BacktrackingTM	UNK	_initEphemerals	void
+nupic	algorithms	BacktrackingTM	UNK	__getstate__	void
+nupic	algorithms	BacktrackingTM	UNK	__setstate__	UNK=state
+nupic	algorithms	BacktrackingTM	UNK	__getattr__	UNK=name
+nupic	algorithms	BacktrackingTM	UNK	saveToFile	UNK=filePath
+nupic	algorithms	BacktrackingTM	UNK	loadFromFile	UNK=filePath
+nupic	algorithms	BacktrackingTM	UNK	setRandomSeed	UNK=seed
+nupic	algorithms	BacktrackingTM	UNK	getRandomState	void
+nupic	algorithms	BacktrackingTM	UNK	setRandomState	UNK=state
+nupic	algorithms	BacktrackingTM	UNK	reset	void
+nupic	algorithms	BacktrackingTM	UNK	resetStats	void
+nupic	algorithms	BacktrackingTM	UNK	getStats	void
+nupic	algorithms	BacktrackingTM	UNK	_updateStatsInferEnd	UNK=stats UNK=bottomUpNZ UNK=predictedState UNK=colConfidence
+nupic	algorithms	BacktrackingTM	UNK	printState	UNK=aState
+nupic	algorithms	BacktrackingTM	UNK	printConfidence	UNK=aState UNK=maxCols
+nupic	algorithms	BacktrackingTM	UNK	printColConfidence	UNK=aState UNK=maxCols
+nupic	algorithms	BacktrackingTM	UNK	printParameters	void
+nupic	algorithms	BacktrackingTM	UNK	printActiveIndices	UNK=state UNK=andValues
+nupic	algorithms	BacktrackingTM	UNK	printComputeEnd	UNK=output UNK=learn
+nupic	algorithms	BacktrackingTM	UNK	getNumSegmentsInCell	UNK=c UNK=i
+nupic	algorithms	BacktrackingTM	UNK	getNumSynapses	void
+nupic	algorithms	BacktrackingTM	UNK	getNumStrongSynapses	void
+nupic	algorithms	BacktrackingTM	UNK	getNumStrongSynapsesPerTimeSlot	void
+nupic	algorithms	BacktrackingTM	UNK	getNumSynapsesPerSegmentMax	void
+nupic	algorithms	BacktrackingTM	UNK	getNumSynapsesPerSegmentAvg	void
+nupic	algorithms	BacktrackingTM	UNK	getNumSegments	void
+nupic	algorithms	BacktrackingTM	UNK	getNumCells	void
+nupic	algorithms	BacktrackingTM	UNK	getSegmentOnCell	UNK=c UNK=i UNK=segIdx
+nupic	algorithms	BacktrackingTM	UNK	addToSegmentUpdates	UNK=c UNK=i UNK=segUpdate
+nupic	algorithms	BacktrackingTM	UNK	removeSegmentUpdate	UNK=updateInfo
+nupic	algorithms	BacktrackingTM	UNK	computeOutput	void
+nupic	algorithms	BacktrackingTM	UNK	getActiveState	void
+nupic	algorithms	BacktrackingTM	UNK	getPredictedState	void
+nupic	algorithms	BacktrackingTM	UNK	predict	UNK=nSteps
+nupic	algorithms	BacktrackingTM	UNK	_getTPDynamicStateVariableNames	void
+nupic	algorithms	BacktrackingTM	UNK	_setTPDynamicState	UNK=tpDynamicState
+nupic	algorithms	BacktrackingTM	UNK	_updateAvgLearnedSeqLength	UNK=prevSeqLength
+nupic	algorithms	BacktrackingTM	UNK	getAvgLearnedSeqLength	void
+nupic	algorithms	BacktrackingTM	UNK	inferBacktrack	UNK=activeColumns
+nupic	algorithms	BacktrackingTM	UNK	inferPhase1	UNK=activeColumns UNK=useStartCells
+nupic	algorithms	BacktrackingTM	UNK	inferPhase2	void
+nupic	algorithms	BacktrackingTM	UNK	updateInferenceState	UNK=activeColumns
+nupic	algorithms	BacktrackingTM	UNK	learnBacktrackFrom	UNK=startOffset UNK=readOnly
+nupic	algorithms	BacktrackingTM	UNK	learnBacktrack	void
+nupic	algorithms	BacktrackingTM	UNK	learnPhase1	UNK=activeColumns UNK=readOnly
+nupic	algorithms	BacktrackingTM	UNK	learnPhase2	UNK=readOnly
+nupic	algorithms	BacktrackingTM	UNK	updateLearningState	UNK=activeColumns
+nupic	algorithms	BacktrackingTM	UNK	compute	UNK=bottomUpInput UNK=enableLearn UNK=computeInfOutput
+nupic	algorithms	BacktrackingTM	UNK	updateSegmentDutyCycles	void
+nupic	algorithms	BacktrackingTM	UNK	columnConfidences	UNK=cellConfidences
+nupic	algorithms	BacktrackingTM	UNK	topDownCompute	UNK=topDownIn
+nupic	algorithms	BacktrackingTM	UNK	trimSegmentsInCell	UNK=colIdx UNK=cellIdx UNK=segList UNK=minPermanence
+nupic	algorithms	BacktrackingTM	UNK	trimSegments	UNK=minPermanence UNK=minNumSyns
+nupic	algorithms	BacktrackingTM	UNK	cleanUpdatesList	UNK=col UNK=cellIdx UNK=seg
+nupic	algorithms	BacktrackingTM	UNK	finishLearning	void
+nupic	algorithms	BacktrackingTM	UNK	checkPrediction2	UNK=patternNZs UNK=output UNK=colConfidence UNK=details
+nupic	algorithms	BacktrackingTM	UNK	isSegmentActive	UNK=seg UNK=activeState
+nupic	algorithms	BacktrackingTM	UNK	getSegmentActivityLevel	UNK=seg UNK=activeState UNK=connectedSynapsesOnly
+nupic	algorithms	BacktrackingTM	UNK	getBestMatchingCell	UNK=c UNK=activeState UNK=minThreshold
+nupic	algorithms	BacktrackingTM	UNK	getBestMatchingSegment	UNK=c UNK=i UNK=activeState
+nupic	algorithms	BacktrackingTM	UNK	getCellForNewSegment	UNK=colIdx
+nupic	algorithms	BacktrackingTM	UNK	getSegmentActiveSynapses	UNK=c UNK=i UNK=s UNK=activeState
+nupic	algorithms	BacktrackingTM	UNK	chooseCellsToLearnFrom	UNK=c UNK=i UNK=s UNK=n
+nupic	algorithms	BacktrackingTM	UNK	processSegmentUpdates	UNK=activeColumns
+nupic	algorithms	BacktrackingTM	UNK	adaptSegment	UNK=segUpdate
+nupic	algorithms	BacktrackingTM	UNK	getSegmentInfo	UNK=collectActiveData
+nupic	algorithms	Segment	UNK	dutyCycle	UNK=active UNK=readOnly
+nupic	algorithms	Segment	UNK	debugPrint	void
+nupic	algorithms	Segment	UNK	freeNSynapses	UNK=numToFree UNK=inactiveSynapseIndices UNK=verbosity
+nupic	algorithms	Segment	UNK	addSynapse	UNK=srcCellCol UNK=srcCellIdx UNK=perm
+nupic	algorithms	Segment	UNK	updateSynapses	UNK=synapses UNK=delta
+nupic	algorithms		UNK	_labeledInput	UNK=activeInputs UNK=cellsPerCol
+nupic	algorithms	KNNClassifier	UNK	clear	void
+nupic	algorithms	KNNClassifier	UNK	prototypeSetCategory	UNK=idToCategorize UNK=newCategory
+nupic	algorithms	KNNClassifier	UNK	removeIds	UNK=idsToRemove
+nupic	algorithms	KNNClassifier	UNK	removeCategory	UNK=categoryToRemove
+nupic	algorithms	KNNClassifier	UNK	_removeRows	UNK=rowsToRemove
+nupic	algorithms	KNNClassifier	UNK	doIteration	void
+nupic	algorithms	KNNClassifier	UNK	learn	UNK=inputPattern UNK=inputCategory UNK=partitionId UNK=isSparse
+nupic	algorithms	KNNClassifier	UNK	getOverlaps	UNK=inputPattern
+nupic	algorithms	KNNClassifier	UNK	getDistances	UNK=inputPattern
+nupic	algorithms	KNNClassifier	UNK	infer	UNK=inputPattern UNK=computeScores UNK=overCategories UNK=partitionId
+nupic	algorithms	KNNClassifier	UNK	getClosest	UNK=inputPattern UNK=topKCategories
+nupic	algorithms	KNNClassifier	UNK	closestTrainingPattern	UNK=inputPattern UNK=cat
+nupic	algorithms	KNNClassifier	UNK	closestOtherTrainingPattern	UNK=inputPattern UNK=cat
+nupic	algorithms	KNNClassifier	UNK	getPattern	UNK=idx UNK=sparseBinaryForm UNK=cat
+nupic	algorithms	KNNClassifier	UNK	getPartitionId	UNK=i
+nupic	algorithms	KNNClassifier	UNK	getPartitionIdList	void
+nupic	algorithms	KNNClassifier	UNK	getNumPartitionIds	void
+nupic	algorithms	KNNClassifier	UNK	getPartitionIdKeys	void
+nupic	algorithms	KNNClassifier	UNK	getPatternIndicesWithPartitionId	UNK=partitionId
+nupic	algorithms	KNNClassifier	UNK	_addPartitionId	UNK=index UNK=partitionId
+nupic	algorithms	KNNClassifier	UNK	_rebuildPartitionIdMap	UNK=partitionIdList
+nupic	algorithms	KNNClassifier	UNK	_calcDistance	UNK=inputPattern UNK=distanceNorm
+nupic	algorithms	KNNClassifier	UNK	_getDistances	UNK=inputPattern UNK=partitionId
+nupic	algorithms	KNNClassifier	UNK	finishLearning	void
+nupic	algorithms	KNNClassifier	UNK	computeSVD	UNK=numSVDSamples UNK=finalize
+nupic	algorithms	KNNClassifier	UNK	getAdaptiveSVDDims	UNK=singularValues UNK=fractionOfMax
+nupic	algorithms	KNNClassifier	UNK	_finalizeSVD	UNK=numSVDDims
+nupic	algorithms	KNNClassifier	UNK	remapCategories	UNK=mapping
+nupic	algorithms	KNNClassifier	UNK	setCategoryOfVectors	UNK=vectorIndices UNK=categoryIndices
+nupic	algorithms	KNNClassifier	UNK	__getstate__	void
+nupic	algorithms	KNNClassifier	UNK	__setstate__	UNK=state
+nupic	algorithms	_SparseMatrixCorticalColumnAdapter	UNK	__getitem__	UNK=columnIndex
+nupic	algorithms	SpatialPooler	UNK	getColumnDimensions	void
+nupic	algorithms	SpatialPooler	UNK	getInputDimensions	void
+nupic	algorithms	SpatialPooler	UNK	getNumColumns	void
+nupic	algorithms	SpatialPooler	UNK	getNumInputs	void
+nupic	algorithms	SpatialPooler	UNK	getPotentialRadius	void
+nupic	algorithms	SpatialPooler	UNK	setPotentialRadius	UNK=potentialRadius
+nupic	algorithms	SpatialPooler	UNK	getPotentialPct	void
+nupic	algorithms	SpatialPooler	UNK	setPotentialPct	UNK=potentialPct
+nupic	algorithms	SpatialPooler	UNK	getGlobalInhibition	void
+nupic	algorithms	SpatialPooler	UNK	setGlobalInhibition	UNK=globalInhibition
+nupic	algorithms	SpatialPooler	UNK	getNumActiveColumnsPerInhArea	void
+nupic	algorithms	SpatialPooler	UNK	setNumActiveColumnsPerInhArea	UNK=numActiveColumnsPerInhArea
+nupic	algorithms	SpatialPooler	UNK	getLocalAreaDensity	void
+nupic	algorithms	SpatialPooler	UNK	setLocalAreaDensity	UNK=localAreaDensity
+nupic	algorithms	SpatialPooler	UNK	getStimulusThreshold	void
+nupic	algorithms	SpatialPooler	UNK	setStimulusThreshold	UNK=stimulusThreshold
+nupic	algorithms	SpatialPooler	UNK	getInhibitionRadius	void
+nupic	algorithms	SpatialPooler	UNK	setInhibitionRadius	UNK=inhibitionRadius
+nupic	algorithms	SpatialPooler	UNK	getDutyCyclePeriod	void
+nupic	algorithms	SpatialPooler	UNK	setDutyCyclePeriod	UNK=dutyCyclePeriod
+nupic	algorithms	SpatialPooler	UNK	getBoostStrength	void
+nupic	algorithms	SpatialPooler	UNK	setBoostStrength	UNK=boostStrength
+nupic	algorithms	SpatialPooler	UNK	getIterationNum	void
+nupic	algorithms	SpatialPooler	UNK	setIterationNum	UNK=iterationNum
+nupic	algorithms	SpatialPooler	UNK	getIterationLearnNum	void
+nupic	algorithms	SpatialPooler	UNK	setIterationLearnNum	UNK=iterationLearnNum
+nupic	algorithms	SpatialPooler	UNK	getSpVerbosity	void
+nupic	algorithms	SpatialPooler	UNK	setSpVerbosity	UNK=spVerbosity
+nupic	algorithms	SpatialPooler	UNK	getUpdatePeriod	void
+nupic	algorithms	SpatialPooler	UNK	setUpdatePeriod	UNK=updatePeriod
+nupic	algorithms	SpatialPooler	UNK	getSynPermTrimThreshold	void
+nupic	algorithms	SpatialPooler	UNK	setSynPermTrimThreshold	UNK=synPermTrimThreshold
+nupic	algorithms	SpatialPooler	UNK	getSynPermActiveInc	void
+nupic	algorithms	SpatialPooler	UNK	setSynPermActiveInc	UNK=synPermActiveInc
+nupic	algorithms	SpatialPooler	UNK	getSynPermInactiveDec	void
+nupic	algorithms	SpatialPooler	UNK	setSynPermInactiveDec	UNK=synPermInactiveDec
+nupic	algorithms	SpatialPooler	UNK	getSynPermBelowStimulusInc	void
+nupic	algorithms	SpatialPooler	UNK	setSynPermBelowStimulusInc	UNK=synPermBelowStimulusInc
+nupic	algorithms	SpatialPooler	UNK	getSynPermConnected	void
+nupic	algorithms	SpatialPooler	UNK	setSynPermConnected	UNK=synPermConnected
+nupic	algorithms	SpatialPooler	UNK	getMinPctOverlapDutyCycles	void
+nupic	algorithms	SpatialPooler	UNK	setMinPctOverlapDutyCycles	UNK=minPctOverlapDutyCycles
+nupic	algorithms	SpatialPooler	UNK	getBoostFactors	UNK=boostFactors
+nupic	algorithms	SpatialPooler	UNK	setBoostFactors	UNK=boostFactors
+nupic	algorithms	SpatialPooler	UNK	getOverlapDutyCycles	UNK=overlapDutyCycles
+nupic	algorithms	SpatialPooler	UNK	setOverlapDutyCycles	UNK=overlapDutyCycles
+nupic	algorithms	SpatialPooler	UNK	getActiveDutyCycles	UNK=activeDutyCycles
+nupic	algorithms	SpatialPooler	UNK	setActiveDutyCycles	UNK=activeDutyCycles
+nupic	algorithms	SpatialPooler	UNK	getMinOverlapDutyCycles	UNK=minOverlapDutyCycles
+nupic	algorithms	SpatialPooler	UNK	setMinOverlapDutyCycles	UNK=minOverlapDutyCycles
+nupic	algorithms	SpatialPooler	UNK	getPotential	UNK=columnIndex UNK=potential
+nupic	algorithms	SpatialPooler	UNK	setPotential	UNK=columnIndex UNK=potential
+nupic	algorithms	SpatialPooler	UNK	getPermanence	UNK=columnIndex UNK=permanence
+nupic	algorithms	SpatialPooler	UNK	setPermanence	UNK=columnIndex UNK=permanence
+nupic	algorithms	SpatialPooler	UNK	getConnectedSynapses	UNK=columnIndex UNK=connectedSynapses
+nupic	algorithms	SpatialPooler	UNK	getConnectedCounts	UNK=connectedCounts
+nupic	algorithms	SpatialPooler	UNK	getOverlaps	void
+nupic	algorithms	SpatialPooler	UNK	getBoostedOverlaps	void
+nupic	algorithms	SpatialPooler	UNK	compute	UNK=inputVector UNK=learn UNK=activeArray
+nupic	algorithms	SpatialPooler	UNK	stripUnlearnedColumns	UNK=activeArray
+nupic	algorithms	SpatialPooler	UNK	_updateMinDutyCycles	void
+nupic	algorithms	SpatialPooler	UNK	_updateMinDutyCyclesGlobal	void
+nupic	algorithms	SpatialPooler	UNK	_updateMinDutyCyclesLocal	void
+nupic	algorithms	SpatialPooler	UNK	_updateDutyCycles	UNK=overlaps UNK=activeColumns
+nupic	algorithms	SpatialPooler	UNK	_updateInhibitionRadius	void
+nupic	algorithms	SpatialPooler	UNK	_avgColumnsPerInput	void
+nupic	algorithms	SpatialPooler	UNK	_avgConnectedSpanForColumn1D	UNK=columnIndex
+nupic	algorithms	SpatialPooler	UNK	_avgConnectedSpanForColumn2D	UNK=columnIndex
+nupic	algorithms	SpatialPooler	UNK	_avgConnectedSpanForColumnND	UNK=columnIndex
+nupic	algorithms	SpatialPooler	UNK	_adaptSynapses	UNK=inputVector UNK=activeColumns
+nupic	algorithms	SpatialPooler	UNK	_bumpUpWeakColumns	void
+nupic	algorithms	SpatialPooler	UNK	_raisePermanenceToThreshold	UNK=perm UNK=mask
+nupic	algorithms	SpatialPooler	UNK	_updatePermanencesForColumn	UNK=perm UNK=columnIndex UNK=raisePerm
+nupic	algorithms	SpatialPooler	UNK	_initPermConnected	void
+nupic	algorithms	SpatialPooler	UNK	_initPermNonConnected	void
+nupic	algorithms	SpatialPooler	UNK	_initPermanence	UNK=potential UNK=connectedPct
+nupic	algorithms	SpatialPooler	UNK	_mapColumn	UNK=index
+nupic	algorithms	SpatialPooler	UNK	_mapPotential	UNK=index
+nupic	algorithms	SpatialPooler	UNK	_updateDutyCyclesHelper	UNK=dutyCycles UNK=newInput UNK=period
+nupic	algorithms	SpatialPooler	UNK	_updateBoostFactors	void
+nupic	algorithms	SpatialPooler	UNK	_updateBoostFactorsGlobal	void
+nupic	algorithms	SpatialPooler	UNK	_updateBoostFactorsLocal	void
+nupic	algorithms	SpatialPooler	UNK	_updateBookeepingVars	UNK=learn
+nupic	algorithms	SpatialPooler	UNK	_calculateOverlap	UNK=inputVector
+nupic	algorithms	SpatialPooler	UNK	_inhibitColumns	UNK=overlaps
+nupic	algorithms	SpatialPooler	UNK	_inhibitColumnsGlobal	UNK=overlaps UNK=density
+nupic	algorithms	SpatialPooler	UNK	_inhibitColumnsLocal	UNK=overlaps UNK=density
+nupic	algorithms	SpatialPooler	UNK	_isUpdateRound	void
+nupic	algorithms	SpatialPooler	UNK	_getColumnNeighborhood	UNK=centerColumn
+nupic	algorithms	SpatialPooler	UNK	_getInputNeighborhood	UNK=centerInput
+nupic	algorithms	SpatialPooler	UNK	_seed	UNK=seed
+nupic	algorithms	SpatialPooler	UNK	__setstate__	UNK=state
+nupic	algorithms	SpatialPooler	UNK	printParameters	void
+nupic	algorithms	TMShimMixin	UNK	__init__	UNK=numberOfCols UNK=cellsPerColumn UNK=initialPerm UNK=connectedPerm
+nupic	algorithms	TMShimMixin	UNK	compute	UNK=bottomUpInput UNK=enableLearn UNK=computeInfOutput
+nupic	algorithms	TMShimMixin	UNK	topDownCompute	UNK=topDownIn
+nupic	algorithms	MonitoredTMShim	UNK	__init__	UNK=numberOfCols UNK=cellsPerColumn UNK=initialPerm UNK=connectedPerm
+nupic	algorithms	MonitoredTMShim	UNK	compute	UNK=bottomUpInput UNK=enableLearn UNK=computeInfOutput
+nupic	algorithms	MonitoredTMShim	UNK	topDownCompute	UNK=topDownIn
+nupic	algorithms		UNK	_pFormatArray	UNK=array_ UNK=fmt
+nupic	algorithms	BitHistory	UNK	__init__	UNK=classifier UNK=bitNum UNK=nSteps
+nupic	algorithms	BitHistory	UNK	store	UNK=iteration UNK=bucketIdx
+nupic	algorithms	BitHistory	UNK	infer	UNK=votes
+nupic	algorithms	CLAClassifier	UNK	__init__	UNK=steps UNK=alpha UNK=actValueAlpha UNK=verbosity
+nupic	algorithms	CLAClassifier	UNK	compute	UNK=recordNum UNK=patternNZ UNK=classification UNK=learn
+nupic	algorithms	CLAClassifier	UNK	infer	UNK=patternNZ UNK=classification
+nupic	algorithms	SDRClassifier	UNK	compute	UNK=recordNum UNK=patternNZ UNK=classification UNK=learn
+nupic	algorithms	SDRClassifier	UNK	infer	UNK=patternNZ UNK=classification
+nupic	algorithms	SDRClassifier	UNK	inferSingleStep	UNK=patternNZ UNK=weightMatrix
+nupic	algorithms	SDRClassifier	UNK	_calculateError	UNK=recordNum UNK=classification
+nupic	algorithms	Segment	UNK	__init__	UNK=cell UNK=flatIdx UNK=lastUsedIteration UNK=ordinal
+nupic	algorithms	Segment	UNK	__eq__	UNK=other
+nupic	algorithms	Synapse	UNK	__init__	UNK=segment UNK=presynapticCell UNK=permanence UNK=ordinal
+nupic	algorithms	Synapse	UNK	__eq__	UNK=other
+nupic	algorithms		UNK	binSearch	UNK=arr UNK=val
+nupic	algorithms	Connections	UNK	__init__	UNK=numCells UNK=maxSegmentsPerCell UNK=maxSynapsesPerSegment
+nupic	algorithms	Connections	UNK	segmentsForCell	UNK=cell
+nupic	algorithms	Connections	UNK	synapsesForSegment	UNK=segment
+nupic	algorithms	Connections	UNK	dataForSynapse	UNK=synapse
+nupic	algorithms	Connections	UNK	dataForSegment	UNK=segment
+nupic	algorithms	Connections	UNK	getSegment	UNK=cell UNK=idx
+nupic	algorithms	Connections	UNK	_leastRecentlyUsedSegment	UNK=cell
+nupic	algorithms	Connections	UNK	_minPermanenceSynapse	UNK=segment
+nupic	algorithms	Connections	UNK	segmentForFlatIdx	UNK=flatIdx
+nupic	algorithms	Connections	UNK	segmentFlatListLength	void
+nupic	algorithms	Connections	UNK	synapsesForPresynapticCell	UNK=presynapticCell
+nupic	algorithms	Connections	UNK	createSegment	UNK=cell
+nupic	algorithms	Connections	UNK	destroySegment	UNK=segment
+nupic	algorithms	Connections	UNK	createSynapse	UNK=segment UNK=presynapticCell UNK=permanence
+nupic	algorithms	Connections	UNK	destroySynapse	UNK=synapse
+nupic	algorithms	Connections	UNK	updateSynapsePermanence	UNK=synapse UNK=permanence
+nupic	algorithms	Connections	UNK	computeActivity	UNK=activePresynapticCells UNK=connectedPermanence
+nupic	algorithms	Connections	UNK	recordSegmentActivity	UNK=segment
+nupic	algorithms	Connections	UNK	startNewIteration	void
+nupic	algorithms	Connections	UNK	numSegments	UNK=cell
+nupic	algorithms	Connections	UNK	numSynapses	UNK=segment
+nupic	algorithms	Connections	UNK	segmentPositionSortKey	UNK=segment
+nupic	algorithms	Connections	UNK	write	UNK=proto
+nupic	algorithms	Connections	UNK	read	UNK=cls UNK=proto
+nupic	algorithms	Connections	UNK	__eq__	UNK=other
+nupic	algorithms	Connections	UNK	__ne__	UNK=other
+nupic	algorithms		UNK	setRandomSeed	UNK=seed
+nupic	algorithms		UNK	addNoise	UNK=input UNK=noise UNK=doForeground UNK=doBackground
+nupic	algorithms		UNK	generateCoincMatrix	UNK=nCoinc UNK=length UNK=activity
+nupic	algorithms		UNK	generateVectors	UNK=numVectors UNK=length UNK=activity
+nupic	algorithms		UNK	generateSimpleSequences	UNK=nCoinc UNK=seqLength UNK=nSeq
+nupic	algorithms		UNK	generateHubSequences	UNK=nCoinc UNK=hubs UNK=seqLength UNK=nSeq
+nupic	algorithms		UNK	genTestSeqsForLookback	UNK=nPatterns UNK=patternLen UNK=patternActivity UNK=seqLength
+nupic	algorithms		UNK	generateSimpleCoincMatrix	UNK=nCoinc UNK=length UNK=activity
+nupic	algorithms		UNK	generateSequences	UNK=nPatterns UNK=patternLen UNK=patternActivity UNK=hubs
+nupic	algorithms		UNK	generateL2Sequences	UNK=nL1Patterns UNK=l1Hubs UNK=l1SeqLength UNK=nL1SimpleSequences
+nupic	algorithms		UNK	vectorsFromSeqList	UNK=seqList UNK=patternMatrix
+nupic	algorithms		UNK	sameTMParams	UNK=tp1 UNK=tp2
+nupic	algorithms		UNK	sameSynapse	UNK=syn UNK=synapses
+nupic	algorithms		UNK	sameSegment	UNK=seg1 UNK=seg2
+nupic	algorithms		UNK	tmDiff	UNK=tm1 UNK=tm2 UNK=verbosity UNK=relaxSegmentTests
+nupic	algorithms		UNK	tmDiff2	UNK=tm1 UNK=tm2 UNK=verbosity UNK=relaxSegmentTests
+nupic	algorithms		UNK	spDiff	UNK=SP1 UNK=SP2
+nupic	algorithms		UNK	removeSeqStarts	UNK=vectors UNK=resets UNK=numSteps
+nupic	algorithms		UNK	_accumulateFrequencyCounts	UNK=values UNK=freqCounts
+nupic	algorithms		UNK	_listOfOnTimesInVec	UNK=vector
+nupic	algorithms		UNK	_fillInOnTimes	UNK=vector UNK=durations
+nupic	algorithms		UNK	averageOnTimePerTimestep	UNK=vectors UNK=numSamples
+nupic	algorithms		UNK	averageOnTime	UNK=vectors UNK=numSamples
+nupic	algorithms		UNK	plotOutputsOverTime	UNK=vectors UNK=buVectors UNK=title
+nupic	algorithms		UNK	plotHistogram	UNK=freqCounts UNK=title UNK=xLabel
+nupic	algorithms		UNK	populationStability	UNK=vectors UNK=numSamples
+nupic	algorithms		UNK	percentOutputsStableOverNTimeSteps	UNK=vectors UNK=numSamples
+nupic	algorithms		UNK	computeSaturationLevels	UNK=outputs UNK=outputsShape UNK=sparseForm
+nupic	algorithms		UNK	checkMatch	UNK=input UNK=prediction UNK=sparse UNK=verbosity
+nupic	algorithms		UNK	predictionExtent	UNK=inputs UNK=resets UNK=outputs UNK=minOverlapPct
+nupic	algorithms		UNK	getCentreAndSpreadOffsets	UNK=spaceShape UNK=spreadShape UNK=stepSize
+nupic	algorithms		UNK	makeCloneMap	UNK=columnsShape UNK=outputCloningWidth UNK=outputCloningHeight
+nupic	algorithms		UNK	numpyStr	UNK=array UNK=format UNK=includeIndices UNK=includeZeros
+nupic	algorithms		UNK	importAndRunFunction	UNK=path UNK=moduleName UNK=funcName
+nupic	algorithms		UNK	getLockedHandle	UNK=runtimeElement UNK=expression
+nupic	algorithms		UNK	transferCoincidences	UNK=network UNK=fromElementName UNK=toElementName
+nupic	algorithms	SDRClassifierFactory	UNK	create	void
+nupic	algorithms	SDRClassifierFactory	UNK	read	UNK=proto
+nupic	algorithms	TemporalMemoryShim	UNK	__init__	UNK=columnDimensions UNK=cellsPerColumn UNK=activationThreshold UNK=initialPermanence
+nupic	algorithms	TemporalMemoryShim	UNK	compute	UNK=activeColumns UNK=learn
+nupic	algorithms	TemporalMemory	UNK	__init__	UNK=columnDimensions UNK=cellsPerColumn UNK=activationThreshold UNK=initialPermanence
+nupic	algorithms	TemporalMemory	UNK	connectionsFactory	void
+nupic	algorithms	TemporalMemory	UNK	compute	UNK=activeColumns UNK=learn
+nupic	algorithms	TemporalMemory	UNK	activateCells	UNK=activeColumns UNK=learn
+nupic	algorithms	TemporalMemory	UNK	activateDendrites	UNK=learn
+nupic	algorithms	TemporalMemory	UNK	reset	void
+nupic	algorithms	TemporalMemory	UNK	activatePredictedColumn	UNK=column UNK=columnActiveSegments UNK=columnMatchingSegments UNK=prevActiveCells
+nupic	algorithms	TemporalMemory	UNK	burstColumn	UNK=column UNK=columnMatchingSegments UNK=prevActiveCells UNK=prevWinnerCells
+nupic	algorithms	TemporalMemory	UNK	punishPredictedColumn	UNK=column UNK=columnActiveSegments UNK=columnMatchingSegments UNK=prevActiveCells
+nupic	algorithms	TemporalMemory	UNK	_activatePredictedColumn	UNK=cls UNK=connections UNK=random UNK=columnActiveSegments
+nupic	algorithms	TemporalMemory	UNK	_burstColumn	UNK=cls UNK=connections UNK=random UNK=column
+nupic	algorithms	TemporalMemory	UNK	_punishPredictedColumn	UNK=cls UNK=connections UNK=columnMatchingSegments UNK=prevActiveCells
+nupic	algorithms	TemporalMemory	UNK	_leastUsedCell	UNK=cls UNK=random UNK=cells UNK=connections
+nupic	algorithms	TemporalMemory	UNK	_growSynapses	UNK=cls UNK=connections UNK=random UNK=segment
+nupic	algorithms	TemporalMemory	UNK	_adaptSegment	UNK=cls UNK=connections UNK=segment UNK=prevActiveCells
+nupic	algorithms	TemporalMemory	UNK	columnForCell	UNK=cell
+nupic	algorithms	TemporalMemory	UNK	cellsForColumn	UNK=column
+nupic	algorithms	TemporalMemory	UNK	numberOfColumns	void
+nupic	algorithms	TemporalMemory	UNK	numberOfCells	void
+nupic	algorithms	TemporalMemory	UNK	mapCellsToColumns	UNK=cells
+nupic	algorithms	TemporalMemory	UNK	getActiveCells	void
+nupic	algorithms	TemporalMemory	UNK	getPredictiveCells	void
+nupic	algorithms	TemporalMemory	UNK	getWinnerCells	void
+nupic	algorithms	TemporalMemory	UNK	getActiveSegments	void
+nupic	algorithms	TemporalMemory	UNK	getMatchingSegments	void
+nupic	algorithms	TemporalMemory	UNK	getCellsPerColumn	void
+nupic	algorithms	TemporalMemory	UNK	getColumnDimensions	void
+nupic	algorithms	TemporalMemory	UNK	getActivationThreshold	void
+nupic	algorithms	TemporalMemory	UNK	setActivationThreshold	UNK=activationThreshold
+nupic	algorithms	TemporalMemory	UNK	getInitialPermanence	void
+nupic	algorithms	TemporalMemory	UNK	setInitialPermanence	UNK=initialPermanence
+nupic	algorithms	TemporalMemory	UNK	getMinThreshold	void
+nupic	algorithms	TemporalMemory	UNK	setMinThreshold	UNK=minThreshold
+nupic	algorithms	TemporalMemory	UNK	getMaxNewSynapseCount	void
+nupic	algorithms	TemporalMemory	UNK	setMaxNewSynapseCount	UNK=maxNewSynapseCount
+nupic	algorithms	TemporalMemory	UNK	getPermanenceIncrement	void
+nupic	algorithms	TemporalMemory	UNK	setPermanenceIncrement	UNK=permanenceIncrement
+nupic	algorithms	TemporalMemory	UNK	getPermanenceDecrement	void
+nupic	algorithms	TemporalMemory	UNK	setPermanenceDecrement	UNK=permanenceDecrement
+nupic	algorithms	TemporalMemory	UNK	getPredictedSegmentDecrement	void
+nupic	algorithms	TemporalMemory	UNK	setPredictedSegmentDecrement	UNK=predictedSegmentDecrement
+nupic	algorithms	TemporalMemory	UNK	getConnectedPermanence	void
+nupic	algorithms	TemporalMemory	UNK	setConnectedPermanence	UNK=connectedPermanence
+nupic	algorithms	TemporalMemory	UNK	getMaxSegmentsPerCell	void
+nupic	algorithms	TemporalMemory	UNK	getMaxSynapsesPerSegment	void
+nupic	algorithms	TemporalMemory	UNK	write	UNK=proto
+nupic	algorithms	TemporalMemory	UNK	read	UNK=cls UNK=proto
+nupic	algorithms	TemporalMemory	UNK	__eq__	UNK=other
+nupic	algorithms	TemporalMemory	UNK	__ne__	UNK=other
+nupic	algorithms	TemporalMemory	UNK	_validateColumn	UNK=column
+nupic	algorithms	TemporalMemory	UNK	_validateCell	UNK=cell
+nupic	algorithms	TemporalMemory	UNK	getCellIndices	UNK=cls UNK=cells
+nupic	algorithms	TemporalMemory	UNK	getCellIndex	UNK=cell
+nupic	algorithms	AnomalyLikelihood	UNK	__init__	UNK=claLearningPeriod UNK=learningPeriod UNK=estimationSamples UNK=historicWindowSize
+nupic	algorithms	AnomalyLikelihood	UNK	computeLogLikelihood	UNK=likelihood
+nupic	algorithms	AnomalyLikelihood	UNK	_calcSkipRecords	UNK=numIngested UNK=windowSize UNK=learningPeriod
+nupic	algorithms	AnomalyLikelihood	UNK	read	UNK=cls UNK=proto
+nupic	algorithms	AnomalyLikelihood	UNK	write	UNK=proto
+nupic	algorithms	AnomalyLikelihood	UNK	anomalyProbability	UNK=value UNK=anomalyScore UNK=timestamp
+nupic	algorithms		UNK	estimateAnomalyLikelihoods	UNK=anomalyScores UNK=averagingWindow UNK=skipRecords UNK=verbosity
+nupic	algorithms		UNK	updateAnomalyLikelihoods	UNK=anomalyScores UNK=params UNK=verbosity
+nupic	algorithms		UNK	_filterLikelihoods	UNK=likelihoods UNK=redThreshold UNK=yellowThreshold
+nupic	algorithms		UNK	_anomalyScoreMovingAverage	UNK=anomalyScores UNK=windowSize UNK=verbosity
+nupic	algorithms		UNK	estimateNormal	UNK=sampleData UNK=performLowerBoundCheck
+nupic	algorithms		UNK	nullDistribution	UNK=verbosity
+nupic	algorithms		UNK	tailProbability	UNK=x UNK=distributionParams
+nupic	algorithms		UNK	isValidEstimatorParams	UNK=p
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	__init__	void
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmClearHistory	void
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmPrettyPrintTraces	UNK=traces UNK=breakOnResets
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmPrettyPrintMetrics	UNK=metrics UNK=sigFigs
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmGetDefaultTraces	UNK=verbosity
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmGetDefaultMetrics	UNK=verbosity
+nupic	algorithms.monitor_mixin	MonitorMixinBase	UNK	mmGetCellTracePlot	UNK=cellTrace UNK=cellCount UNK=activityType UNK=title
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceActiveColumns	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTracePredictiveCells	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceNumSegments	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceNumSynapses	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceSequenceLabels	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceResets	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTracePredictedActiveCells	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTracePredictedInactiveCells	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTracePredictedActiveColumns	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTracePredictedInactiveColumns	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetTraceUnpredictedActiveColumns	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetMetricFromTrace	UNK=trace
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetMetricSequencesPredictedActiveCellsPerColumn	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetMetricSequencesPredictedActiveCellsShared	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmPrettyPrintConnections	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmPrettyPrintSequenceCellRepresentations	UNK=sortby
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	_mmComputeTransitionTraces	void
+nupic	algorithms.monitor_mixin	TemporalMemoryMonitorMixin	UNK	mmGetCellActivityPlot	UNK=title UNK=showReset UNK=resetShading UNK=activityType
+nupic	algorithms.monitor_mixin	Metric	UNK	__init__	UNK=monitor UNK=title UNK=data
+nupic	algorithms.monitor_mixin	Plot	UNK	__init__	UNK=monitor UNK=title UNK=show
+nupic	algorithms.monitor_mixin	Plot	UNK	addGraph	UNK=data UNK=position UNK=xlabel UNK=ylabel
+nupic	algorithms.monitor_mixin	Plot	UNK	addHistogram	UNK=data UNK=position UNK=xlabel UNK=ylabel
+nupic	algorithms.monitor_mixin	Plot	UNK	add2DArray	UNK=data UNK=position UNK=xlabel UNK=ylabel
+nupic	algorithms.monitor_mixin	Plot	UNK	_addBase	UNK=position UNK=xlabel UNK=ylabel
+nupic	algorithms.monitor_mixin	Trace	UNK	__init__	UNK=monitor UNK=title
+nupic	algorithms.monitor_mixin	Trace	UNK	prettyPrintDatum	UNK=datum
+nupic	algorithms.monitor_mixin	IndicesTrace	UNK	makeCountsTrace	void
+nupic	algorithms.monitor_mixin	IndicesTrace	UNK	makeCumCountsTrace	void
+nupic	datafiles.extra.secondOrder		UNK	_generateModel0	UNK=numCategories
+nupic	datafiles.extra.secondOrder		UNK	_generateModel1	UNK=numCategories
+nupic	datafiles.extra.secondOrder		UNK	_generateModel2	UNK=numCategories UNK=alpha
+nupic	datafiles.extra.secondOrder		UNK	_generateFile	UNK=filename UNK=numRecords UNK=categoryList UNK=initProb
+nupic	datafiles.extra.gym.raw		UNK	processClubAttendance	UNK=f UNK=clubs
+nupic	datafiles.extra.gym.raw		UNK	processClubConsumption	UNK=f UNK=clubs
+nupic	datafiles.extra.generated		UNK	writeSimpleTest1	UNK=filePath UNK=numRecords UNK=testNumber
+nupic	engine	Dimensions	UNK	__init__	void
+nupic	engine		UNK	Array	UNK=dtype UNK=size UNK=ref
+nupic	engine	Region	UNK	__init__	UNK=region UNK=network
+nupic	engine	Region	UNK	getSpecFromType	UNK=nodeType
+nupic	engine	Region	UNK	compute	void
+nupic	engine	Region	UNK	getInputData	UNK=inputName
+nupic	engine	Region	UNK	getOutputData	UNK=outputName
+nupic	engine	Region	UNK	getInputNames	void
+nupic	engine	Region	UNK	getOutputNames	void
+nupic	engine	Region	UNK	executeCommand	UNK=args
+nupic	engine	Region	UNK	_getSpec	void
+nupic	engine	Region	UNK	_getDimensions	void
+nupic	engine	Region	UNK	_getNetwork	void
+nupic	engine	Region	UNK	__hash__	void
+nupic	engine	Region	UNK	_getParameterMethods	UNK=paramName
+nupic	engine	Region	UNK	getParameter	UNK=paramName
+nupic	engine	Region	UNK	setParameter	UNK=paramName UNK=value
+nupic	engine	Region	UNK	_get	UNK=method
+nupic	engine	Network	UNK	__init__	void
+nupic	engine	Network	UNK	_getRegions	void
+nupic	engine	Network	UNK	addRegion	UNK=name UNK=nodeType UNK=nodeParams
+nupic	engine	Network	UNK	addRegionFromBundle	UNK=name UNK=nodeType UNK=dimensions UNK=bundlePath
+nupic	engine	Network	UNK	setPhases	UNK=name UNK=phases
+nupic	engine	Network	UNK	run	UNK=n
+nupic	engine	Network	UNK	disableProfiling	void
+nupic	engine	Network	UNK	enableProfiling	void
+nupic	engine	Network	UNK	getCallbacks	void
+nupic	engine	Network	UNK	initialize	void
+nupic	engine	Network	UNK	link	void
+nupic	engine	Network	UNK	removeLink	void
+nupic	engine	Network	UNK	removeRegion	void
+nupic	engine	Network	UNK	resetProfiling	void
+nupic	engine	Network	UNK	save	void
+nupic	engine	Network	UNK	getRegionsByType	UNK=regionClass
+nupic	engine	Network	UNK	registerRegion	UNK=regionClass
+nupic	engine	Network	UNK	unregisterRegion	UNK=regionName
+nupic	database		UNK	enableConcurrencyChecks	UNK=maxConcurrency UNK=raiseException
+nupic	database	ConnectionFactory	UNK	get	UNK=cls
+nupic	database	ConnectionFactory	UNK	close	UNK=cls
+nupic	database	ConnectionFactory	UNK	setConnectionPolicyProvider	UNK=cls UNK=provider
+nupic	database	ConnectionFactory	UNK	_createDefaultPolicy	UNK=cls
+nupic	database	ConnectionWrapper	UNK	__enter__	void
+nupic	database	ConnectionWrapper	UNK	__exit__	UNK=exc_type UNK=exc_val UNK=exc_tb
+nupic	database	ConnectionWrapper	UNK	release	void
+nupic	database	ConnectionWrapper	UNK	_trackInstanceAndCheckForConcurrencyViolation	void
+nupic	database	DatabaseConnectionPolicyIface	UNK	close	void
+nupic	database	DatabaseConnectionPolicyIface	UNK	acquireConnection	void
+nupic	database	SingleSharedConnectionPolicy	UNK	__init__	void
+nupic	database	SingleSharedConnectionPolicy	UNK	close	void
+nupic	database	SingleSharedConnectionPolicy	UNK	acquireConnection	void
+nupic	database	SingleSharedConnectionPolicy	UNK	_releaseConnection	UNK=dbConn UNK=cursor
+nupic	database	PooledConnectionPolicy	UNK	__init__	void
+nupic	database	PooledConnectionPolicy	UNK	close	void
+nupic	database	PooledConnectionPolicy	UNK	acquireConnection	void
+nupic	database	PooledConnectionPolicy	UNK	_releaseConnection	UNK=dbConn UNK=cursor
+nupic	database	PerTransactionConnectionPolicy	UNK	__init__	void
+nupic	database	PerTransactionConnectionPolicy	UNK	close	void
+nupic	database	PerTransactionConnectionPolicy	UNK	acquireConnection	void
+nupic	database	PerTransactionConnectionPolicy	UNK	_releaseConnection	UNK=dbConn UNK=cursor
+nupic	database		UNK	_getCommonSteadyDBArgsDict	void
+nupic	database		UNK	_getLogger	UNK=cls UNK=logLevel
+nupic	database		UNK	_abbreviate	UNK=text UNK=threshold
+nupic	database	ClientJobsDAO	UNK	dbNamePrefix	UNK=cls
+nupic	database	ClientJobsDAO	UNK	__getDBNamePrefixForVersion	UNK=cls UNK=dbVersion
+nupic	database	ClientJobsDAO	UNK	_getDBName	UNK=cls
+nupic	database	ClientJobsDAO	UNK	__getDBNameForVersion	UNK=cls UNK=dbVersion
+nupic	database	ClientJobsDAO	UNK	get	void
+nupic	database	ClientJobsDAO	UNK	__init__	void
+nupic	database	ClientJobsDAO	UNK	_columnNameDBToPublic	UNK=dbName
+nupic	database	ClientJobsDAO	UNK	connect	UNK=deleteOldVersions UNK=recreate
+nupic	database	ClientJobsDAO	UNK	_initTables	UNK=cursor UNK=deleteOldVersions UNK=recreate
+nupic	database	ClientJobsDAO	UNK	_getMatchingRowsNoRetries	UNK=tableInfo UNK=conn UNK=fieldsToMatch UNK=selectFieldNames
+nupic	database	ClientJobsDAO	UNK	_getMatchingRowsWithRetries	UNK=tableInfo UNK=fieldsToMatch UNK=selectFieldNames UNK=maxRows
+nupic	database	ClientJobsDAO	UNK	_getOneMatchingRowNoRetries	UNK=tableInfo UNK=conn UNK=fieldsToMatch UNK=selectFieldNames
+nupic	database	ClientJobsDAO	UNK	_getOneMatchingRowWithRetries	UNK=tableInfo UNK=fieldsToMatch UNK=selectFieldNames
+nupic	database	ClientJobsDAO	UNK	_insertOrGetUniqueJobNoRetries	UNK=conn UNK=client UNK=cmdLine UNK=jobHash
+nupic	database	ClientJobsDAO	UNK	_resumeJobNoRetries	UNK=conn UNK=jobID UNK=alreadyRunning
+nupic	database	ClientJobsDAO	UNK	getConnectionID	void
+nupic	database	ClientJobsDAO	UNK	jobSuspend	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	jobResume	UNK=jobID UNK=alreadyRunning
+nupic	database	ClientJobsDAO	UNK	jobInsert	UNK=client UNK=cmdLine UNK=clientInfo UNK=clientKey
+nupic	database	ClientJobsDAO	UNK	jobInsertUnique	UNK=client UNK=cmdLine UNK=jobHash UNK=clientInfo
+nupic	database	ClientJobsDAO	UNK	_startJobWithRetries	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	jobStartNext	void
+nupic	database	ClientJobsDAO	UNK	jobReactivateRunningJobs	void
+nupic	database	ClientJobsDAO	UNK	jobGetDemand	void
+nupic	database	ClientJobsDAO	UNK	jobCancelAllRunningJobs	void
+nupic	database	ClientJobsDAO	UNK	jobCountCancellingJobs	void
+nupic	database	ClientJobsDAO	UNK	jobGetCancellingJobs	void
+nupic	database	ClientJobsDAO	UNK	partitionAtIntervals	UNK=data UNK=intervals
+nupic	database	ClientJobsDAO	UNK	_combineResults	UNK=result
+nupic	database	ClientJobsDAO	UNK	jobInfoWithModels	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	jobInfo	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	jobSetStatus	UNK=jobID UNK=status UNK=useConnectionID
+nupic	database	ClientJobsDAO	UNK	jobSetCompleted	UNK=jobID UNK=completionReason UNK=completionMsg UNK=useConnectionID
+nupic	database	ClientJobsDAO	UNK	jobCancel	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	jobGetModelIDs	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	getActiveJobCountForClientInfo	UNK=clientInfo
+nupic	database	ClientJobsDAO	UNK	getActiveJobCountForClientKey	UNK=clientKey
+nupic	database	ClientJobsDAO	UNK	getActiveJobsForClientInfo	UNK=clientInfo UNK=fields
+nupic	database	ClientJobsDAO	UNK	getActiveJobsForClientKey	UNK=clientKey UNK=fields
+nupic	database	ClientJobsDAO	UNK	getJobs	UNK=fields
+nupic	database	ClientJobsDAO	UNK	getFieldsForActiveJobsOfType	UNK=jobType UNK=fields
+nupic	database	ClientJobsDAO	UNK	jobGetFields	UNK=jobID UNK=fields
+nupic	database	ClientJobsDAO	UNK	jobsGetFields	UNK=jobIDs UNK=fields UNK=requireAll
+nupic	database	ClientJobsDAO	UNK	jobSetFields	UNK=jobID UNK=fields UNK=useConnectionID UNK=ignoreUnchanged
+nupic	database	ClientJobsDAO	UNK	jobSetFieldIfEqual	UNK=jobID UNK=fieldName UNK=newValue UNK=curValue
+nupic	database	ClientJobsDAO	UNK	jobIncrementIntField	UNK=jobID UNK=fieldName UNK=increment UNK=useConnectionID
+nupic	database	ClientJobsDAO	UNK	jobUpdateResults	UNK=jobID UNK=results
+nupic	database	ClientJobsDAO	UNK	modelsClearAll	void
+nupic	database	ClientJobsDAO	UNK	modelInsertAndStart	UNK=jobID UNK=params UNK=paramsHash UNK=particleHash
+nupic	database	ClientJobsDAO	UNK	modelsInfo	UNK=modelIDs
+nupic	database	ClientJobsDAO	UNK	modelsGetFields	UNK=modelIDs UNK=fields
+nupic	database	ClientJobsDAO	UNK	modelsGetFieldsForJob	UNK=jobID UNK=fields UNK=ignoreKilled
+nupic	database	ClientJobsDAO	UNK	modelsGetFieldsForCheckpointed	UNK=jobID UNK=fields
+nupic	database	ClientJobsDAO	UNK	modelSetFields	UNK=modelID UNK=fields UNK=ignoreUnchanged
+nupic	database	ClientJobsDAO	UNK	modelsGetParams	UNK=modelIDs
+nupic	database	ClientJobsDAO	UNK	modelsGetResultAndStatus	UNK=modelIDs
+nupic	database	ClientJobsDAO	UNK	modelsGetUpdateCounters	UNK=jobID
+nupic	database	ClientJobsDAO	UNK	modelUpdateResults	UNK=modelID UNK=results UNK=metricValue UNK=numRecords
+nupic	database	ClientJobsDAO	UNK	modelSetCompleted	UNK=modelID UNK=completionReason UNK=completionMsg UNK=cpuTime
+nupic	database	ClientJobsDAO	UNK	modelAdoptNextOrphan	UNK=jobId UNK=maxUpdateInterval
+nupic	frameworks.opf	ModelFactory	UNK	__getLogger	UNK=cls
+nupic	frameworks.opf	ModelFactory	UNK	create	UNK=modelConfig UNK=logLevel
+nupic	frameworks.opf	ModelFactory	UNK	loadFromCheckpoint	UNK=savedModelDir UNK=newSerialization
+nupic	frameworks.opf	ValueGetterBase	UNK	__call__	UNK=topContainer
+nupic	frameworks.opf	ValueGetterBase	UNK	handleGetValue	UNK=topContainer
+nupic	frameworks.opf	DictValueGetter	UNK	__init__	UNK=referenceDict
+nupic	frameworks.opf	DictValueGetter	UNK	handleGetValue	UNK=topContainer
+nupic	frameworks.opf	DeferredDictLookup	UNK	__init__	void
+nupic	frameworks.opf		UNK	htmPredictionModelControlEnableSPLearningCb	UNK=htmPredictionModel
+nupic	frameworks.opf		UNK	htmPredictionModelControlDisableSPLearningCb	UNK=htmPredictionModel
+nupic	frameworks.opf		UNK	htmPredictionModelControlEnableTPLearningCb	UNK=htmPredictionModel
+nupic	frameworks.opf		UNK	htmPredictionModelControlDisableTPLearningCb	UNK=htmPredictionModel
+nupic	frameworks.opf	HTMPredictionModelPickleSPInitArgs	UNK	__init__	UNK=filePath
+nupic	frameworks.opf	HTMPredictionModelPickleTPInitArgs	UNK	__init__	UNK=filePath
+nupic	frameworks.opf	Model	UNK	run	UNK=inputRecord
+nupic	frameworks.opf	Model	UNK	finishLearning	void
+nupic	frameworks.opf	Model	UNK	resetSequenceStates	void
+nupic	frameworks.opf	Model	UNK	getFieldInfo	UNK=includeClassifierOnlyField
+nupic	frameworks.opf	Model	UNK	setFieldStatistics	UNK=fieldStats
+nupic	frameworks.opf	Model	UNK	getRuntimeStats	void
+nupic	frameworks.opf	Model	UNK	_getLogger	void
+nupic	frameworks.opf	Model	UNK	getInferenceType	void
+nupic	frameworks.opf	Model	UNK	enableLearning	void
+nupic	frameworks.opf	Model	UNK	disableLearning	void
+nupic	frameworks.opf	Model	UNK	isLearningEnabled	void
+nupic	frameworks.opf	Model	UNK	enableInference	UNK=inferenceArgs
+nupic	frameworks.opf	Model	UNK	getInferenceArgs	void
+nupic	frameworks.opf	Model	UNK	disableInference	void
+nupic	frameworks.opf	Model	UNK	isInferenceEnabled	void
+nupic	frameworks.opf	Model	UNK	getProtoType	void
+nupic	frameworks.opf	Model	UNK	_getModelCheckpointFilePath	UNK=checkpointDir
+nupic	frameworks.opf	Model	UNK	writeToCheckpoint	UNK=checkpointDir
+nupic	frameworks.opf	Model	UNK	readFromCheckpoint	UNK=cls UNK=checkpointDir
+nupic	frameworks.opf	Model	UNK	write	UNK=proto
+nupic	frameworks.opf	Model	UNK	read	UNK=cls UNK=proto
+nupic	frameworks.opf	Model	UNK	save	UNK=saveModelDir
+nupic	frameworks.opf	Model	UNK	_serializeExtraData	UNK=extraDataDir
+nupic	frameworks.opf	Model	UNK	load	UNK=cls UNK=savedModelDir
+nupic	frameworks.opf	Model	UNK	_deSerializeExtraData	UNK=extraDataDir
+nupic	frameworks.opf	Model	UNK	_getModelPickleFilePath	UNK=saveModelDir
+nupic	frameworks.opf	Model	UNK	_getModelExtraDataDir	UNK=saveModelDir
+nupic	frameworks.opf	Model	UNK	__makeDirectoryFromAbsolutePath	UNK=absDirPath
+nupic	frameworks.opf	DescriptionIface	UNK	__init__	UNK=modelConfig UNK=control
+nupic	frameworks.opf	DescriptionIface	UNK	getModelDescription	void
+nupic	frameworks.opf	DescriptionIface	UNK	getModelControl	void
+nupic	frameworks.opf	DescriptionIface	UNK	normalizeStreamSources	void
+nupic	frameworks.opf	DescriptionIface	UNK	convertNupicEnvToOPF	void
+nupic	frameworks.opf	ExperimentDescriptionAPI	UNK	__init__	UNK=modelConfig UNK=control
+nupic	frameworks.opf	ExperimentDescriptionAPI	UNK	getModelControl	void
+nupic	frameworks.opf	ExperimentDescriptionAPI	UNK	__validateExperimentControl	UNK=control
+nupic	frameworks.opf	ExperimentDescriptionAPI	UNK	__validateNupicControl	UNK=control
+nupic	frameworks.opf	PeriodicActivityMgr	UNK	__init__	UNK=requestedActivities
+nupic	frameworks.opf	PeriodicActivityMgr	UNK	tick	void
+nupic	frameworks.opf	PeriodicActivityMgr	UNK	__appendActivities	UNK=periodicActivities
+nupic	frameworks.opf	SafeInterpreter	UNK	__init__	void
+nupic	frameworks.opf		UNK	loadExperiment	UNK=path
+nupic	frameworks.opf		UNK	loadExperimentDescriptionScriptFromDir	UNK=experimentDir
+nupic	frameworks.opf		UNK	getExperimentDescriptionInterfaceFromModule	UNK=module
+nupic	frameworks.opf		UNK	_loadDescriptionFile	UNK=descriptionPyPath
+nupic	frameworks.opf	PredictionMetricsLoggerIface	UNK	emitPeriodicMetrics	UNK=metrics
+nupic	frameworks.opf	PredictionMetricsLoggerIface	UNK	emitFinalMetrics	UNK=metrics
+nupic	frameworks.opf	DatasetReaderIface	UNK	getDatasetFieldMetaData	void
+nupic	frameworks.opf	DatasetReaderIface	UNK	next	void
+nupic	frameworks.opf	PredictionWriterIface	UNK	close	void
+nupic	frameworks.opf	PredictionWriterIface	UNK	append	UNK=inputRow UNK=predictionRow UNK=sequenceReset UNK=metrics
+nupic	frameworks.opf	PredictionWriterIface	UNK	checkpoint	UNK=checkpointSink UNK=maxRows
+nupic	frameworks.opf	BasicPredictionMetricsLogger	UNK	__init__	UNK=experimentDir UNK=label
+nupic	frameworks.opf	BasicPredictionMetricsLogger	UNK	emitPeriodicMetrics	UNK=metrics
+nupic	frameworks.opf	BasicPredictionMetricsLogger	UNK	emitFinalMetrics	UNK=metrics
+nupic	frameworks.opf	BasicPredictionMetricsLogger	UNK	_translateMetricsToJSON	UNK=metrics UNK=label
+nupic	frameworks.opf	BasicDatasetReader	UNK	__init__	UNK=streamDefDict
+nupic	frameworks.opf	BasicDatasetReader	UNK	getDatasetFieldMetaData	void
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	__openDatafile	UNK=modelResult
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	setLoggedMetrics	UNK=metricNames
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	close	void
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	__getListMetaInfo	UNK=inferenceElement
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	__getDictMetaInfo	UNK=inferenceElement UNK=inferenceDict
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	append	UNK=modelResult
+nupic	frameworks.opf	_BasicPredictionWriter	UNK	checkpoint	UNK=checkpointSink UNK=maxRows
+nupic	frameworks.opf	NonTemporalPredictionLogAdapter	UNK	__init__	UNK=writer
+nupic	frameworks.opf	NonTemporalPredictionLogAdapter	UNK	update	UNK=modelResult
+nupic	frameworks.opf	TemporalPredictionLogAdapter	UNK	__init__	UNK=writer
+nupic	frameworks.opf	TemporalPredictionLogAdapter	UNK	update	UNK=modelResult
+nupic	frameworks.opf	BasicPredictionLogger	UNK	__init__	UNK=fields UNK=experimentDir UNK=label UNK=inferenceType
+nupic	frameworks.opf	BasicPredictionLogger	UNK	close	void
+nupic	frameworks.opf	BasicPredictionLogger	UNK	writeRecord	UNK=modelResult
+nupic	frameworks.opf	BasicPredictionLogger	UNK	writeRecords	UNK=modelResults UNK=progressCB
+nupic	frameworks.opf	BasicPredictionLogger	UNK	setLoggedMetrics	UNK=metricNames
+nupic	frameworks.opf	BasicPredictionLogger	UNK	checkpoint	UNK=checkpointSink UNK=maxRows
+nupic	frameworks.opf	_FileUtils	UNK	getExperimentInferenceDirPath	UNK=experimentDir
+nupic	frameworks.opf	_FileUtils	UNK	createExperimentInferenceDir	UNK=cls UNK=experimentDir
+nupic	frameworks.opf	_FileUtils	UNK	makeDirectory	UNK=path
+nupic	frameworks.opf	TwoGramModel	UNK	__init__	UNK=inferenceType UNK=encoderParams
+nupic	frameworks.opf	TwoGramModel	UNK	run	UNK=inputRecord
+nupic	frameworks.opf	TwoGramModel	UNK	finishLearning	void
+nupic	frameworks.opf	TwoGramModel	UNK	setFieldStatistics	UNK=fieldStats
+nupic	frameworks.opf	TwoGramModel	UNK	getFieldInfo	void
+nupic	frameworks.opf	TwoGramModel	UNK	getRuntimeStats	void
+nupic	frameworks.opf	TwoGramModel	UNK	_getLogger	void
+nupic	frameworks.opf	TwoGramModel	UNK	resetSequenceStates	void
+nupic	frameworks.opf		UNK	runExperiment	UNK=args UNK=model
+nupic	frameworks.opf		UNK	initExperimentPrng	void
+nupic	frameworks.opf		UNK	_parseCommandLineOptions	UNK=args
+nupic	frameworks.opf		UNK	reapVarArgsCallback	UNK=option UNK=optStr UNK=value UNK=parser
+nupic	frameworks.opf		UNK	_reportCommandLineUsageErrorAndExit	UNK=parser UNK=message
+nupic	frameworks.opf		UNK	_runExperimentImpl	UNK=options UNK=model
+nupic	frameworks.opf		UNK	_getModelCheckpointDir	UNK=experimentDir UNK=checkpointLabel
+nupic	frameworks.opf		UNK	getCheckpointParentDir	UNK=experimentDir
+nupic	frameworks.opf		UNK	_checkpointLabelFromCheckpointDir	UNK=checkpointDir
+nupic	frameworks.opf		UNK	_isCheckpointDir	UNK=checkpointDir
+nupic	frameworks.opf		UNK	_printAvailableCheckpoints	UNK=experimentDir
+nupic	frameworks.opf	_TaskRunner	UNK	run	void
+nupic	frameworks.opf	_TaskRunner	UNK	_createPeriodicActivities	void
+nupic	frameworks.opf		UNK	main	void
+nupic	frameworks.opf	PredictionLoggerIface	UNK	close	void
+nupic	frameworks.opf	PredictionLoggerIface	UNK	writeRecord	UNK=modelResult
+nupic	frameworks.opf	PredictionLoggerIface	UNK	writeRecords	UNK=modelResults UNK=progressCB
+nupic	frameworks.opf	PredictionLoggerIface	UNK	setLoggedMetrics	UNK=metricNames
+nupic	frameworks.opf	PredictionLoggerIface	UNK	checkpoint	UNK=checkpointSink UNK=maxRows
+nupic	frameworks.opf		UNK	modelControlFinishLearningCb	UNK=model
+nupic	frameworks.opf	MetricsManager	UNK	__init__	UNK=metricSpecs UNK=fieldInfo UNK=inferenceType
+nupic	frameworks.opf	MetricsManager	UNK	update	UNK=results
+nupic	frameworks.opf	MetricsManager	UNK	getMetrics	void
+nupic	frameworks.opf	MetricsManager	UNK	getMetricDetails	UNK=metricLabel
+nupic	frameworks.opf	MetricsManager	UNK	getMetricLabels	void
+nupic	frameworks.opf	MetricsManager	UNK	_addResults	UNK=results
+nupic	frameworks.opf	MetricsManager	UNK	_getGroundTruth	UNK=inferenceElement
+nupic	frameworks.opf	MetricsManager	UNK	_getInference	UNK=inferenceElement
+nupic	frameworks.opf	MetricsManager	UNK	_getRawGroundTruth	void
+nupic	frameworks.opf	MetricsManager	UNK	__constructMetricsModules	UNK=metricSpecs
+nupic	frameworks.opf		UNK	_testTemporalShift	void
+nupic	frameworks.opf		UNK	requireAnomalyModel	UNK=func
+nupic	frameworks.opf	NetworkInfo	UNK	__init__	UNK=net UNK=statsCollectors
+nupic	frameworks.opf	HTMPredictionModel	UNK	resetSequenceStates	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	finishLearning	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	enableLearning	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	disableLearning	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	setAnomalyParameter	UNK=param UNK=value
+nupic	frameworks.opf	HTMPredictionModel	UNK	getAnomalyParameter	UNK=param
+nupic	frameworks.opf	HTMPredictionModel	UNK	anomalyRemoveLabels	UNK=start UNK=end UNK=labelFilter
+nupic	frameworks.opf	HTMPredictionModel	UNK	anomalyAddLabel	UNK=start UNK=end UNK=labelName
+nupic	frameworks.opf	HTMPredictionModel	UNK	anomalyGetLabels	UNK=start UNK=end
+nupic	frameworks.opf	HTMPredictionModel	UNK	run	UNK=inputRecord
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getSensorInputRecord	UNK=inputRecord
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getClassifierInputRecord	UNK=inputRecord
+nupic	frameworks.opf	HTMPredictionModel	UNK	_anomalyCompute	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_handleCLAClassifierMultiStep	UNK=patternNZ UNK=inputTSRecordIdx UNK=rawInput
+nupic	frameworks.opf	HTMPredictionModel	UNK	_removeUnlikelyPredictions	UNK=cls UNK=likelihoodsDict UNK=minLikelihoodThreshold UNK=maxPredictionsPerStep
+nupic	frameworks.opf	HTMPredictionModel	UNK	getRuntimeStats	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	getFieldInfo	UNK=includeClassifierOnlyField
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getLogger	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getSPRegion	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getTPRegion	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getSensorRegion	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getClassifierRegion	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getEncoder	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getClassifierOnlyEncoder	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	_getDataSource	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	__createCLANetwork	UNK=sensorParams UNK=spEnable UNK=spParams UNK=tmEnable
+nupic	frameworks.opf	HTMPredictionModel	UNK	__getstate__	void
+nupic	frameworks.opf	HTMPredictionModel	UNK	__setstate__	UNK=state
+nupic	frameworks.opf	HTMPredictionModel	UNK	_serializeExtraData	UNK=extraDataDir
+nupic	frameworks.opf	HTMPredictionModel	UNK	_deSerializeExtraData	UNK=extraDataDir
+nupic	frameworks.opf	HTMPredictionModel	UNK	_addAnomalyClassifierRegion	UNK=network UNK=params UNK=spEnable UNK=tmEnable
+nupic	frameworks.opf	HTMPredictionModel	UNK	__manglePrivateMemberName	UNK=privateMemberName UNK=skipCheck
+nupic	frameworks.opf	PreviousValueModel	UNK	run	UNK=inputRecord
+nupic	frameworks.opf	PreviousValueModel	UNK	finishLearning	void
+nupic	frameworks.opf	PreviousValueModel	UNK	setFieldStatistics	UNK=fieldStats
+nupic	frameworks.opf	PreviousValueModel	UNK	getFieldInfo	void
+nupic	frameworks.opf	PreviousValueModel	UNK	getRuntimeStats	void
+nupic	frameworks.opf	PreviousValueModel	UNK	_getLogger	void
+nupic	frameworks.opf	PreviousValueModel	UNK	resetSequenceStates	void
+nupic	frameworks.opf	InferenceElement	UNK	getInputElement	UNK=inferenceElement
+nupic	frameworks.opf	InferenceElement	UNK	isTemporal	UNK=inferenceElement
+nupic	frameworks.opf	InferenceElement	UNK	getTemporalDelay	UNK=inferenceElement UNK=key
+nupic	frameworks.opf	InferenceElement	UNK	getMaxDelay	UNK=inferences
+nupic	frameworks.opf	InferenceType	UNK	isTemporal	UNK=inferenceType
+nupic	frameworks.opf		UNK	validateOpfJsonValue	UNK=value UNK=opfJsonSchemaFilename
+nupic	frameworks.opf		UNK	initLogger	UNK=obj
+nupic	frameworks.opf		UNK	matchPatterns	UNK=patterns UNK=keys
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	addLabel	UNK=start UNK=end UNK=labelName
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	removeLabels	UNK=start UNK=end UNK=labelFilter
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_addRecordToKNN	UNK=record
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_deleteRecordsFromKNN	UNK=recordsToDelete
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_deleteRangeFromKNN	UNK=start UNK=end
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_recomputeRecordFromKNN	UNK=record
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_constructClassificationRecord	void
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	compute	void
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	setAutoDetectWaitRecords	UNK=waitRecords
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	getAutoDetectWaitRecords	void
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	setAutoDetectThreshold	UNK=threshold
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	getAutoDetectThreshold	void
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_labelToCategoryNumber	UNK=label
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_labelListToCategoryNumber	UNK=labelList
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_categoryToLabelList	UNK=category
+nupic	frameworks.opf	HTMPredictionModelClassifierHelper	UNK	_getStateAnomalyVector	UNK=state
+nupic	frameworks.opf	IterationPhaseSpecLearnOnly	UNK	__init__	UNK=nIters
+nupic	frameworks.opf	IterationPhaseSpecLearnOnly	UNK	_getImpl	UNK=model
+nupic	frameworks.opf	IterationPhaseSpecInferOnly	UNK	__init__	UNK=nIters UNK=inferenceArgs
+nupic	frameworks.opf	IterationPhaseSpecInferOnly	UNK	_getImpl	UNK=model
+nupic	frameworks.opf	IterationPhaseSpecLearnAndInfer	UNK	__init__	UNK=nIters UNK=inferenceArgs
+nupic	frameworks.opf	IterationPhaseSpecLearnAndInfer	UNK	_getImpl	UNK=model
+nupic	frameworks.opf	OPFTaskDriver	UNK	__init__	UNK=taskControl UNK=model
+nupic	frameworks.opf	OPFTaskDriver	UNK	replaceIterationCycle	UNK=phaseSpecs
+nupic	frameworks.opf	OPFTaskDriver	UNK	setup	void
+nupic	frameworks.opf	OPFTaskDriver	UNK	finalize	void
+nupic	frameworks.opf	OPFTaskDriver	UNK	handleInputRecord	UNK=inputRecord
+nupic	frameworks.opf	OPFTaskDriver	UNK	getMetrics	void
+nupic	frameworks.opf	OPFTaskDriver	UNK	getMetricLabels	void
+nupic	frameworks.opf	_PhaseManager	UNK	__init__	UNK=model UNK=phaseSpecs
+nupic	frameworks.opf	_PhaseManager	UNK	__advancePhase	void
+nupic	frameworks.opf	_PhaseManager	UNK	handleInputRecord	UNK=inputRecord
+nupic	frameworks.opf	_IterationPhase	UNK	__init__	UNK=nIters
+nupic	frameworks.opf	_IterationPhase	UNK	enterPhase	void
+nupic	frameworks.opf	_IterationPhase	UNK	advance	void
+nupic	frameworks.opf	_IterationPhaseLearnOnly	UNK	__init__	UNK=model UNK=nIters
+nupic	frameworks.opf	_IterationPhaseLearnOnly	UNK	enterPhase	void
+nupic	frameworks.opf	_IterationPhaseInferCommon	UNK	__init__	UNK=model UNK=nIters UNK=inferenceArgs
+nupic	frameworks.opf	_IterationPhaseInferCommon	UNK	enterPhase	void
+nupic	frameworks.opf	_IterationPhaseInferOnly	UNK	__init__	UNK=model UNK=nIters UNK=inferenceArgs
+nupic	frameworks.opf	_IterationPhaseInferOnly	UNK	enterPhase	void
+nupic	frameworks.opf	_IterationPhaseLearnAndInfer	UNK	__init__	UNK=model UNK=nIters UNK=inferenceArgs
+nupic	frameworks.opf	_IterationPhaseLearnAndInfer	UNK	enterPhase	void
+nupic	frameworks.opf	MetricSpec	UNK	__init__	UNK=metric UNK=inferenceElement UNK=field UNK=params
+nupic	frameworks.opf	MetricSpec	UNK	getLabel	UNK=inferenceType
+nupic	frameworks.opf	MetricSpec	UNK	getInferenceTypeFromLabel	UNK=cls UNK=label
+nupic	frameworks.opf		UNK	getModule	UNK=metricSpec
+nupic	frameworks.opf	MetricsIface	UNK	__init__	UNK=metricSpec
+nupic	frameworks.opf	MetricsIface	UNK	addInstance	UNK=groundTruth UNK=prediction UNK=record UNK=result
+nupic	frameworks.opf	MetricsIface	UNK	getMetric	void
+nupic	frameworks.opf	AggregateMetric	UNK	accumulate	UNK=groundTruth UNK=prediction UNK=accumulatedError UNK=historyBuffer
+nupic	frameworks.opf	AggregateMetric	UNK	aggregate	UNK=accumulatedError UNK=historyBuffer UNK=steps
+nupic	frameworks.opf	AggregateMetric	UNK	__init__	UNK=metricSpec
+nupic	frameworks.opf	AggregateMetric	UNK	_getShiftedGroundTruth	UNK=groundTruth
+nupic	frameworks.opf	MetricPassThruPrediction	UNK	addInstance	UNK=groundTruth UNK=prediction UNK=record UNK=result
+nupic	frameworks.opf	MetricPassThruPrediction	UNK	getMetric	void
+nupic	frameworks.opf	CustomErrorMetric	UNK	mostLikely	UNK=pred
+nupic	frameworks.opf	CustomErrorMetric	UNK	expValue	UNK=pred
+nupic	frameworks.opf	MetricNegAUC	UNK	accumulate	UNK=groundTruth UNK=prediction UNK=accumulatedError UNK=historyBuffer
+nupic	frameworks.opf	MetricMulti	UNK	__init__	UNK=metricSpec
+nupic	frameworks.opf.common_models		UNK	getScalarMetricWithTimeOfDayAnomalyParams	UNK=metricData UNK=minVal UNK=maxVal UNK=minResolution
+nupic	frameworks.opf.common_models		UNK	_rangeGen	UNK=data UNK=std
+nupic	frameworks.opf.common_models		UNK	_fixupRandomEncoderParams	UNK=params UNK=minVal UNK=maxVal UNK=minResolution
+nupic	frameworks.viz	NetworkVisualizer	UNK	__init__	UNK=network
+nupic	frameworks.viz	NetworkVisualizer	UNK	export	void
+nupic	frameworks.viz	DotRenderer	UNK	__init__	UNK=outp UNK=node_attrs
+nupic	data		UNK	rUpdate	UNK=original UNK=updates
+nupic	data		UNK	rApply	UNK=d UNK=f
+nupic	data		UNK	dictDiffAndReport	UNK=da UNK=db
+nupic	data		UNK	dictDiff	UNK=da UNK=db
+nupic	data	CategoryFilter	UNK	__init__	UNK=filterDict
+nupic	data	CategoryFilter	UNK	match	UNK=record
+nupic	data	FieldMetaInfo	UNK	createFromFileFieldElement	UNK=fieldInfoTuple
+nupic	data	FieldMetaInfo	UNK	createListFromFileFieldList	UNK=cls UNK=fields
+nupic	data	FieldMetaType	UNK	isValid	UNK=cls UNK=fieldDataType
+nupic	data	FieldMetaSpecial	UNK	isValid	UNK=cls UNK=attr
+nupic	data		UNK	sort	UNK=filename UNK=key UNK=outputFile UNK=fields
+nupic	data		UNK	_sortChunk	UNK=records UNK=key UNK=chunkIndex UNK=fields
+nupic	data		UNK	_mergeFiles	UNK=key UNK=chunkCount UNK=outputFile UNK=fields
+nupic	data	WeatherJoiner	UNK	join	UNK=generateFlag
+nupic	data		UNK	generateStats	UNK=filename UNK=statsInfo UNK=maxSamples UNK=filters
+nupic	data	FunctionSource	UNK	_cacheSequenceInfoType	void
+nupic	data	DeltaFilter	UNK	__init__	UNK=origField UNK=deltaField
+nupic	data	InferenceShifter	UNK	shift	UNK=modelResult
+nupic	data		UNK	validate	UNK=value
+nupic	data		UNK	loadJsonValueFromFile	UNK=inputFilePath
+nupic	data	FileRecordStream	UNK	close	void
+nupic	data	FileRecordStream	UNK	rewind	void
+nupic	data	FileRecordStream	UNK	getNextRecord	UNK=useCache
+nupic	data	FileRecordStream	UNK	appendRecord	UNK=record UNK=inputBookmark
+nupic	data	FileRecordStream	UNK	appendRecords	UNK=records UNK=inputRef UNK=progressCB
+nupic	data	FileRecordStream	UNK	getBookmark	void
+nupic	data	FileRecordStream	UNK	recordsExistAfter	UNK=bookmark
+nupic	data	FileRecordStream	UNK	seekFromEnd	UNK=numRecords
+nupic	data	FileRecordStream	UNK	setAutoRewind	UNK=autoRewind
+nupic	data	FileRecordStream	UNK	getStats	void
+nupic	data	FileRecordStream	UNK	clearStats	void
+nupic	data	FileRecordStream	UNK	getError	void
+nupic	data	FileRecordStream	UNK	setError	UNK=error
+nupic	data	FileRecordStream	UNK	isCompleted	void
+nupic	data	FileRecordStream	UNK	setCompleted	UNK=completed
+nupic	data	FileRecordStream	UNK	getFieldNames	void
+nupic	data	FileRecordStream	UNK	getFields	void
+nupic	data	FileRecordStream	UNK	_updateSequenceInfo	UNK=r
+nupic	data	FileRecordStream	UNK	_getStartRow	UNK=bookmark
+nupic	data	FileRecordStream	UNK	_getTotalLineCount	void
+nupic	data	FileRecordStream	UNK	getNextRecordIdx	void
+nupic	data	FileRecordStream	UNK	getDataRowCount	void
+nupic	data	FileRecordStream	UNK	flush	void
+nupic	data	FileRecordStream	UNK	__enter__	void
+nupic	data	FileRecordStream	UNK	__exit__	UNK=yupe UNK=value UNK=traceback
+nupic	data	FileRecordStream	UNK	__iter__	void
+nupic	data	FileRecordStream	UNK	next	void
+nupic	data		UNK	_getFieldIndexBySpecial	UNK=fields UNK=special
+nupic	data	ModelRecordEncoder	UNK	__init__	UNK=fields UNK=aggregationPeriod
+nupic	data	ModelRecordEncoder	UNK	rewind	void
+nupic	data	ModelRecordEncoder	UNK	encode	UNK=inputRow
+nupic	data	ModelRecordEncoder	UNK	_computeTimestampRecordIdx	UNK=recordTS
+nupic	data	RecordStreamIface	UNK	close	void
+nupic	data	RecordStreamIface	UNK	rewind	void
+nupic	data	RecordStreamIface	UNK	getNextRecord	UNK=useCache
+nupic	data	RecordStreamIface	UNK	getNextRecordDict	void
+nupic	data	RecordStreamIface	UNK	getAggregationMonthsAndSeconds	void
+nupic	data	RecordStreamIface	UNK	getRecordsRange	UNK=bookmark UNK=range
+nupic	data	RecordStreamIface	UNK	getNextRecordIdx	void
+nupic	data	RecordStreamIface	UNK	getLastRecords	UNK=numRecords
+nupic	data	RecordStreamIface	UNK	removeOldData	void
+nupic	data	RecordStreamIface	UNK	appendRecord	UNK=record UNK=inputRef
+nupic	data	RecordStreamIface	UNK	appendRecords	UNK=records UNK=inputRef UNK=progressCB
+nupic	data	RecordStreamIface	UNK	getBookmark	void
+nupic	data	RecordStreamIface	UNK	recordsExistAfter	UNK=bookmark
+nupic	data	RecordStreamIface	UNK	seekFromEnd	UNK=numRecords
+nupic	data	RecordStreamIface	UNK	getStats	void
+nupic	data	RecordStreamIface	UNK	getFieldMin	UNK=fieldName
+nupic	data	RecordStreamIface	UNK	getFieldMax	UNK=fieldName
+nupic	data	RecordStreamIface	UNK	clearStats	void
+nupic	data	RecordStreamIface	UNK	getError	void
+nupic	data	RecordStreamIface	UNK	setError	UNK=error
+nupic	data	RecordStreamIface	UNK	isCompleted	void
+nupic	data	RecordStreamIface	UNK	setCompleted	UNK=completed
+nupic	data	RecordStreamIface	UNK	getFieldNames	void
+nupic	data	RecordStreamIface	UNK	getFields	void
+nupic	data	RecordStreamIface	UNK	getResetFieldIdx	void
+nupic	data	RecordStreamIface	UNK	getTimestampFieldIdx	void
+nupic	data	RecordStreamIface	UNK	getSequenceIdFieldIdx	void
+nupic	data	RecordStreamIface	UNK	getCategoryFieldIdx	void
+nupic	data	RecordStreamIface	UNK	getLearningFieldIdx	void
+nupic	data	RecordStreamIface	UNK	setTimeout	UNK=timeout
+nupic	data	RecordStreamIface	UNK	flush	void
+nupic	data	NumberStatsCollector	UNK	getStats	UNK=stats
+nupic	data		UNK	generateStats	UNK=filename UNK=maxSamples
+nupic	data		UNK	parseTimestamp	UNK=s
+nupic	data		UNK	escape	UNK=s
+nupic	data		UNK	unescape	UNK=s
+nupic	data		UNK	parseSdr	UNK=s
+nupic	data		UNK	serializeSdr	UNK=sdr
+nupic	data		UNK	parseStringList	UNK=s
+nupic	data		UNK	stripList	UNK=listObj
+nupic	data	StreamReader	UNK	__init__	UNK=streamDef UNK=bookmark UNK=saveOutput UNK=isBlocking
+nupic	data	StreamReader	UNK	_openStream	UNK=dataUrl UNK=isBlocking UNK=maxTimeout UNK=bookmark
+nupic	data	StreamReader	UNK	close	void
+nupic	data	StreamReader	UNK	getNextRecord	void
+nupic	data	StreamReader	UNK	getDataRowCount	void
+nupic	data	StreamReader	UNK	getLastRecords	UNK=numRecords
+nupic	data	StreamReader	UNK	getRecordsRange	UNK=bookmark UNK=range
+nupic	data	StreamReader	UNK	getNextRecordIdx	void
+nupic	data	StreamReader	UNK	recordsExistAfter	UNK=bookmark
+nupic	data	StreamReader	UNK	getAggregationMonthsAndSeconds	void
+nupic	data	StreamReader	UNK	appendRecord	UNK=record UNK=inputRef
+nupic	data	StreamReader	UNK	appendRecords	UNK=records UNK=inputRef UNK=progressCB
+nupic	data	StreamReader	UNK	seekFromEnd	UNK=numRecords
+nupic	data	StreamReader	UNK	getFieldNames	void
+nupic	data	StreamReader	UNK	getFields	void
+nupic	data	StreamReader	UNK	getBookmark	void
+nupic	data	StreamReader	UNK	clearStats	void
+nupic	data	StreamReader	UNK	getStats	void
+nupic	data	StreamReader	UNK	getError	void
+nupic	data	StreamReader	UNK	setError	UNK=error
+nupic	data	StreamReader	UNK	isCompleted	void
+nupic	data	StreamReader	UNK	setCompleted	UNK=completed
+nupic	data	StreamReader	UNK	setTimeout	UNK=timeout
+nupic	data	StreamReader	UNK	flush	void
+nupic	data		UNK	initFilter	UNK=input UNK=filterInfo
+nupic	data		UNK	_filterRecord	UNK=filterList UNK=record
+nupic	data		UNK	_aggr_first	UNK=inList
+nupic	data		UNK	_aggr_last	UNK=inList
+nupic	data		UNK	_aggr_sum	UNK=inList
+nupic	data		UNK	_aggr_mean	UNK=inList
+nupic	data		UNK	_aggr_mode	UNK=inList
+nupic	data		UNK	_aggr_weighted_mean	UNK=inList UNK=params
+nupic	data	Aggregator	UNK	__init__	UNK=aggregationInfo UNK=inputFields UNK=timeFieldName UNK=sequenceIdFieldName
+nupic	data	Aggregator	UNK	_getEndTime	UNK=t
+nupic	data	Aggregator	UNK	_getFuncPtrAndParams	UNK=funcName
+nupic	data	Aggregator	UNK	_createAggregateRecord	void
+nupic	data	Aggregator	UNK	isNullAggregation	void
+nupic	data	Aggregator	UNK	next	UNK=record UNK=curInputBookmark
+nupic	data		UNK	generateDataset	UNK=aggregationInfo UNK=inputFilename UNK=outputFilename
+nupic	data		UNK	getFilename	UNK=aggregationInfo UNK=inputFile
+nupic	data.generators	DataGenerator	UNK	__init__	UNK=name UNK=seed UNK=verbosity
+nupic	data.generators	DataGenerator	UNK	getDescription	void
+nupic	data.generators	DataGenerator	UNK	setSeed	UNK=seed
+nupic	data.generators	DataGenerator	UNK	addField	UNK=name UNK=fieldParams UNK=encoderParams
+nupic	data.generators	DataGenerator	UNK	addMultipleFields	UNK=fieldsInfo
+nupic	data.generators	DataGenerator	UNK	defineField	UNK=name UNK=encoderParams
+nupic	data.generators	DataGenerator	UNK	setFlag	UNK=index UNK=flag
+nupic	data.generators	DataGenerator	UNK	generateRecord	UNK=record
+nupic	data.generators	DataGenerator	UNK	generateRecords	UNK=records
+nupic	data.generators	DataGenerator	UNK	getRecord	UNK=n
+nupic	data.generators	DataGenerator	UNK	getAllRecords	void
+nupic	data.generators	DataGenerator	UNK	encodeRecord	UNK=record UNK=toBeAdded
+nupic	data.generators	DataGenerator	UNK	encodeAllRecords	UNK=records UNK=toBeAdded
+nupic	data.generators	DataGenerator	UNK	addValueToField	UNK=i UNK=value
+nupic	data.generators	DataGenerator	UNK	addValuesToField	UNK=i UNK=numValues
+nupic	data.generators	DataGenerator	UNK	getSDRforValue	UNK=i UNK=j
+nupic	data.generators	DataGenerator	UNK	getZeroedOutEncoding	UNK=n
+nupic	data.generators	DataGenerator	UNK	getTotaln	void
+nupic	data.generators	DataGenerator	UNK	getTotalw	void
+nupic	data.generators	DataGenerator	UNK	getEncoding	UNK=n
+nupic	data.generators	DataGenerator	UNK	getAllEncodings	void
+nupic	data.generators	DataGenerator	UNK	getAllFieldNames	void
+nupic	data.generators	DataGenerator	UNK	getAllFlags	void
+nupic	data.generators	DataGenerator	UNK	getAllDataTypes	void
+nupic	data.generators	DataGenerator	UNK	getFieldDescriptions	void
+nupic	data.generators	DataGenerator	UNK	saveRecords	UNK=path
+nupic	data.generators	DataGenerator	UNK	removeAllRecords	void
+nupic	data.generators	_field	UNK	__init__	UNK=name UNK=encoderSpec
+nupic	data.generators	_field	UNK	addValues	UNK=values
+nupic	data.generators	_field	UNK	addValue	UNK=value
+nupic	data.generators	_field	UNK	encodeValue	UNK=value UNK=toBeAdded
+nupic	data.generators	_field	UNK	_setTypes	UNK=encoderSpec
+nupic	data.generators	_field	UNK	_initializeEncoders	UNK=encoderSpec
+nupic	data.generators		UNK	add	UNK=reader UNK=writer UNK=column UNK=start
+nupic	data.generators		UNK	scale	UNK=reader UNK=writer UNK=column UNK=start
+nupic	data.generators		UNK	copy	UNK=reader UNK=writer UNK=start UNK=stop
+nupic	data.generators		UNK	sample	UNK=reader UNK=writer UNK=n UNK=start
+nupic	data.generators	Distributions	UNK	__init__	void
+nupic	data.generators	Distributions	UNK	getNext	void
+nupic	data.generators	Distributions	UNK	getData	UNK=n
+nupic	data.generators	Distributions	UNK	getDescription	void
+nupic	data.generators	PatternMachine	UNK	__init__	UNK=n UNK=w UNK=num UNK=seed
+nupic	data.generators	PatternMachine	UNK	get	UNK=number
+nupic	data.generators	PatternMachine	UNK	addNoise	UNK=bits UNK=amount
+nupic	data.generators	PatternMachine	UNK	numbersForBit	UNK=bit
+nupic	data.generators	PatternMachine	UNK	numberMapForBits	UNK=bits
+nupic	data.generators	PatternMachine	UNK	prettyPrintPattern	UNK=bits UNK=verbosity
+nupic	data.generators	PatternMachine	UNK	_generate	void
+nupic	data.generators	PatternMachine	UNK	_getW	void
+nupic	data.generators	ConsecutivePatternMachine	UNK	_generate	void
+nupic	data.generators	SequenceMachine	UNK	__init__	UNK=patternMachine UNK=seed
+nupic	data.generators	SequenceMachine	UNK	generateFromNumbers	UNK=numbers
+nupic	data.generators	SequenceMachine	UNK	addSpatialNoise	UNK=sequence UNK=amount
+nupic	data.generators	SequenceMachine	UNK	prettyPrintSequence	UNK=sequence UNK=verbosity
+nupic	data.generators	SequenceMachine	UNK	generateNumbers	UNK=numSequences UNK=sequenceLength UNK=sharedRange
+nupic	support	Features	UNK	hasFeature	UNK=feature UNK=group UNK=addList UNK=removeList
+nupic	support	Features	UNK	getFeatures	UNK=group UNK=addList UNK=removeList
+nupic	support	Features	UNK	_getFeaturesForGroup	UNK=group
+nupic	support	Features	UNK	getAllFeatures	void
+nupic	support	Features	UNK	getAllGroups	void
+nupic	support		UNK	createLogger	UNK=obj
+nupic	support		UNK	logExceptions	UNK=logger
+nupic	support		UNK	logEntryExit	UNK=getLoggerCallback UNK=entryExitLogLevel UNK=logArgs UNK=logTraceback
+nupic	support		UNK	retry	UNK=timeoutSec UNK=initialRetryDelaySec UNK=maxRetryDelaySec UNK=retryExceptions
+nupic	support		UNK	retrySQL	UNK=timeoutSec UNK=logger
+nupic	support	Configuration	UNK	getCustomDict	UNK=cls
+nupic	support	Configuration	UNK	setCustomProperty	UNK=cls UNK=propertyName UNK=value
+nupic	support	Configuration	UNK	setCustomProperties	UNK=cls UNK=properties
+nupic	support	Configuration	UNK	clear	UNK=cls
+nupic	support	Configuration	UNK	resetCustomConfig	UNK=cls
+nupic	support	Configuration	UNK	loadCustomConfig	UNK=cls
+nupic	support	Configuration	UNK	_readStdConfigFiles	UNK=cls
+nupic	support	_CustomConfigurationFileWrapper	UNK	clear	UNK=cls UNK=persistent
+nupic	support	_CustomConfigurationFileWrapper	UNK	getCustomDict	UNK=cls
+nupic	support	_CustomConfigurationFileWrapper	UNK	edit	UNK=cls UNK=properties
+nupic	support	_CustomConfigurationFileWrapper	UNK	_setPath	UNK=cls
+nupic	support	_CustomConfigurationFileWrapper	UNK	getPath	UNK=cls
+nupic	support	Configuration	UNK	getString	UNK=cls UNK=prop
+nupic	support	Configuration	UNK	getBool	UNK=cls UNK=prop
+nupic	support	Configuration	UNK	getInt	UNK=cls UNK=prop
+nupic	support	Configuration	UNK	getFloat	UNK=cls UNK=prop
+nupic	support	Configuration	UNK	get	UNK=cls UNK=prop UNK=default
+nupic	support	Configuration	UNK	set	UNK=cls UNK=prop UNK=value
+nupic	support	Configuration	UNK	dict	UNK=cls
+nupic	support	Configuration	UNK	_readConfigFile	UNK=cls UNK=filename UNK=path
+nupic	support	Configuration	UNK	findConfigFile	UNK=cls UNK=filename
+nupic	support	Configuration	UNK	getConfigPaths	UNK=cls
+nupic	support	Configuration	UNK	setConfigPaths	UNK=cls UNK=paths
+nupic	support	NupicJobFailException	UNK	getWorkerCompletionMessage	void
+nupic	support	NupicJobFailException	UNK	mapCurrentException	UNK=cls UNK=e UNK=errorCode UNK=msg
+nupic	support		UNK	groupby2	void
+nupic	support		UNK	getCallerInfo	UNK=depth
+nupic	support		UNK	title	UNK=s UNK=additional UNK=stream UNK=frame
+nupic	support		UNK	bringToFront	UNK=title
+nupic	support		UNK	getUserDocumentsPath	void
+nupic	support		UNK	getArgumentDescriptions	UNK=f
+nupic	support		UNK	initLogging	UNK=verbose UNK=console UNK=consoleLevel
+nupic	support		UNK	reinitLoggingDir	void
+nupic	support		UNK	_genLoggingFilePath	void
+nupic	support		UNK	enableLoggingErrorDebugging	void
+nupic	support		UNK	intTo8ByteArray	UNK=inValue
+nupic	support		UNK	byteArrayToInt	UNK=packed_data
+nupic	support		UNK	getSpecialRowID	void
+nupic	support		UNK	floatSecondsFromTimedelta	UNK=td
+nupic	support		UNK	aggregationToMonthsSeconds	UNK=interval
+nupic	support		UNK	aggregationDivide	UNK=dividend UNK=divisor
+nupic	support		UNK	processCategoryFile	UNK=f UNK=format UNK=categoryColumn UNK=categoryColumns
+nupic	support		UNK	_allow_new_attributes	UNK=f
+nupic	support		UNK	_simple_init	void
+nupic	support	ConsolePrinterMixin	UNK	__init__	UNK=verbosity
+nupic	support	ConsolePrinterMixin	UNK	cPrint	UNK=level UNK=message
+nupic	support		UNK	makeDirectoryFromAbsolutePath	UNK=absDirPath
+nupic	support		UNK	patientLoop	UNK=logger UNK=maxWaitExponent UNK=finalErrorString UNK=acceptableError
+nupic	support		UNK	Enum	void
+nupic	support.unittesthelpers	TestCaseBase	UNK	printTestHeader	void
+nupic	support.unittesthelpers	TestCaseBase	UNK	printBanner	UNK=msg
+nupic	support.unittesthelpers	TestCaseBase	UNK	addExtraLogItem	UNK=item
+nupic	support.unittesthelpers	TestCaseBase	UNK	__wrapMsg	UNK=msg
+nupic	support.unittesthelpers	TestCaseBase	UNK	assertEqual	UNK=first UNK=second UNK=msg
+nupic	support.unittesthelpers	TestCaseBase	UNK	assertNotEqual	UNK=first UNK=second UNK=msg
+nupic	support.unittesthelpers	TestCaseBase	UNK	assertTrue	UNK=expr UNK=msg
+nupic	support.unittesthelpers	TestCaseBase	UNK	assertFalse	UNK=expr UNK=msg
+nupic	support.unittesthelpers		UNK	longTest	UNK=testMethod
+nupic	support.unittesthelpers		UNK	tagTest	UNK=tag UNK=comment
+nupic	support.unittesthelpers	AbstractTemporalMemoryTest	UNK	getTMClass	void
+nupic	support.unittesthelpers	AbstractTemporalMemoryTest	UNK	getPatternMachine	void
+nupic	support.unittesthelpers	AbstractTemporalMemoryTest	UNK	getDefaultTMParams	void
+nupic	support.unittesthelpers	AbstractTemporalMemoryTest	UNK	init	UNK=overrides
+nupic	support.unittesthelpers		UNK	getNumpyRandomGenerator	UNK=seed
+nupic	support.unittesthelpers		UNK	convertPermanences	UNK=sourceSP UNK=destSP
+nupic	support.unittesthelpers		UNK	getSeed	void
+nupic	support.unittesthelpers		UNK	convertSP	UNK=pySp UNK=newSeed
+nupic	support.unittesthelpers		UNK	CreateSP	UNK=imp UNK=params
+nupic	swarming		UNK	_escape	UNK=s
+nupic	swarming		UNK	_engineServicesRunning	void
+nupic	swarming		UNK	runWithConfig	UNK=swarmConfig UNK=options UNK=outDir UNK=outputLabel
+nupic	swarming		UNK	runWithJsonFile	UNK=expJsonFilePath UNK=options UNK=outputLabel UNK=permWorkDir
+nupic	swarming		UNK	runWithPermutationsScript	UNK=permutationsFilePath UNK=options UNK=outputLabel UNK=permWorkDir
+nupic	swarming		UNK	runPermutations	UNK=_
+nupic	swarming		UNK	_clientJobsDB	void
+nupic	swarming		UNK	_nupicHyperSearchHasErrors	UNK=hyperSearchJob
+nupic	swarming	_HyperSearchRunner	UNK	runNewSearch	void
+nupic	swarming	_HyperSearchRunner	UNK	pickupSearch	void
+nupic	swarming	_HyperSearchRunner	UNK	_launchWorkers	UNK=cmdLine UNK=numWorkers
+nupic	swarming	_HyperSearchRunner	UNK	__startSearch	void
+nupic	swarming	_HyperSearchRunner	UNK	peekSearchJob	void
+nupic	swarming	_HyperSearchRunner	UNK	getDiscoveredMetricsKeys	void
+nupic	swarming	_HyperSearchRunner	UNK	printModels	UNK=cls UNK=options
+nupic	swarming	_HyperSearchRunner	UNK	generateReport	UNK=cls UNK=options UNK=replaceReport UNK=hyperSearchJob
+nupic	swarming	_HyperSearchRunner	UNK	loadSavedHyperSearchJob	UNK=cls UNK=permWorkDir UNK=outputLabel
+nupic	swarming	_HyperSearchRunner	UNK	__saveHyperSearchJobID	UNK=cls UNK=permWorkDir UNK=outputLabel UNK=hyperSearchJob
+nupic	swarming	_HyperSearchRunner	UNK	__loadHyperSearchJobID	UNK=cls UNK=permWorkDir UNK=outputLabel
+nupic	swarming	_HyperSearchRunner	UNK	__getHyperSearchJobIDFilePath	UNK=cls UNK=permWorkDir UNK=outputLabel
+nupic	swarming	_ReportCSVWriter	UNK	emit	UNK=modelInfo
+nupic	swarming	_ReportCSVWriter	UNK	finalize	void
+nupic	swarming	_ReportCSVWriter	UNK	__openAndInitCSVFile	UNK=modelInfo
+nupic	swarming	_NupicJob	UNK	getJobID	void
+nupic	swarming	_NupicJob	UNK	getParams	void
+nupic	swarming	_HyperSearchJob	UNK	queryModelIDs	void
+nupic	swarming	_HyperSearchJob	UNK	getExpectedNumModels	UNK=searchMethod
+nupic	swarming	_ClientJobUtils	UNK	makeSearchJobParamsDict	UNK=cls UNK=options UNK=forRunning
+nupic	swarming	_PermutationUtils	UNK	getOptimizationMetricInfo	UNK=cls UNK=searchJobParams
+nupic	swarming		UNK	_backupFile	UNK=filePath
+nupic	swarming		UNK	_getOneModelInfo	UNK=nupicModelID
+nupic	swarming		UNK	_iterModels	UNK=modelIDs
+nupic	swarming	_NupicModelInfo	UNK	__unwrapParams	void
+nupic	swarming	_NupicModelInfo	UNK	getReportMetrics	void
+nupic	swarming	_NupicModelInfo	UNK	getOptimizationMetrics	void
+nupic	swarming	_NupicModelInfo	UNK	getAllMetrics	void
+nupic	swarming	_NupicModelInfo	UNK	__unwrapResults	void
+nupic	swarming	_NupicModelInfo	UNK	getCompletionMsg	void
+nupic	swarming	_NupicModelInfo	UNK	getStartTime	void
+nupic	swarming	_NupicModelInfo	UNK	getEndTime	void
+nupic	swarming	InferenceElement	UNK	getInputElement	UNK=inferenceElement
+nupic	swarming	InferenceElement	UNK	isTemporal	UNK=inferenceElement
+nupic	swarming	InferenceElement	UNK	getTemporalDelay	UNK=inferenceElement UNK=key
+nupic	swarming	InferenceElement	UNK	getMaxDelay	UNK=inferences
+nupic	swarming	InferenceType	UNK	isTemporal	UNK=inferenceType
+nupic	swarming	HypersearchWorker	UNK	__init__	UNK=options UNK=cmdLineArgs
+nupic	swarming	HypersearchWorker	UNK	_processUpdatedModels	UNK=cjDAO
+nupic	swarming	HypersearchWorker	UNK	run	void
+nupic	swarming		UNK	main	UNK=argv
+nupic	swarming		UNK	createAndStartSwarm	UNK=client UNK=clientInfo UNK=clientKey UNK=params
+nupic	swarming		UNK	getSwarmModelParams	UNK=modelID
+nupic	swarming	OPFModelRunner	UNK	run	void
+nupic	swarming	OPFModelRunner	UNK	__runTaskMainLoop	UNK=numIters UNK=learningOffAt
+nupic	swarming	OPFModelRunner	UNK	_finalize	void
+nupic	swarming	OPFModelRunner	UNK	__createModelCheckpoint	void
+nupic	swarming	OPFModelRunner	UNK	__deleteModelCheckpoint	UNK=modelID
+nupic	swarming	OPFModelRunner	UNK	_createPredictionLogger	void
+nupic	swarming	OPFModelRunner	UNK	__getOptimizedMetricLabel	void
+nupic	swarming	OPFModelRunner	UNK	_getMetricLabels	void
+nupic	swarming	OPFModelRunner	UNK	_getFieldStats	void
+nupic	swarming	OPFModelRunner	UNK	_getMetrics	void
+nupic	swarming	OPFModelRunner	UNK	_updateModelDBResults	void
+nupic	swarming	OPFModelRunner	UNK	__updateJobResultsPeriodic	void
+nupic	swarming	OPFModelRunner	UNK	__checkIfBestCompletedModel	void
+nupic	swarming	OPFModelRunner	UNK	_writePrediction	UNK=result
+nupic	swarming	OPFModelRunner	UNK	__writeRecordsCallback	void
+nupic	swarming	OPFModelRunner	UNK	__flushPredictionCache	void
+nupic	swarming	OPFModelRunner	UNK	__deleteOutputCache	UNK=modelID
+nupic	swarming	OPFModelRunner	UNK	_initPeriodicActivities	void
+nupic	swarming	OPFModelRunner	UNK	__checkCancelation	void
+nupic	swarming	OPFModelRunner	UNK	__checkMaturity	void
+nupic	swarming	OPFModelRunner	UNK	handleWarningSignal	UNK=signum UNK=frame
+nupic	swarming	OPFModelRunner	UNK	__setAsOrphaned	void
+nupic	swarming	ResultsDB	UNK	__init__	UNK=hsObj
+nupic	swarming	ResultsDB	UNK	update	UNK=modelID UNK=modelParams UNK=modelParamsHash UNK=metricResult
+nupic	swarming	ResultsDB	UNK	getNumErrModels	void
+nupic	swarming	ResultsDB	UNK	getErrModelIds	void
+nupic	swarming	ResultsDB	UNK	getNumCompletedModels	void
+nupic	swarming	ResultsDB	UNK	getModelIDFromParamsHash	UNK=paramsHash
+nupic	swarming	ResultsDB	UNK	numModels	UNK=swarmId UNK=includeHidden
+nupic	swarming	ResultsDB	UNK	bestModelIdAndErrScore	UNK=swarmId UNK=genIdx
+nupic	swarming	ResultsDB	UNK	getParticleInfo	UNK=modelId
+nupic	swarming	ResultsDB	UNK	getParticleInfos	UNK=swarmId UNK=genIdx UNK=completed UNK=matured
+nupic	swarming	ResultsDB	UNK	getOrphanParticleInfos	UNK=swarmId UNK=genIdx
+nupic	swarming	ResultsDB	UNK	getMaturedSwarmGenerations	void
+nupic	swarming	ResultsDB	UNK	firstNonFullGeneration	UNK=swarmId UNK=minNumParticles
+nupic	swarming	ResultsDB	UNK	highestGeneration	UNK=swarmId
+nupic	swarming	ResultsDB	UNK	getParticleBest	UNK=particleId
+nupic	swarming	ResultsDB	UNK	getResultsPerChoice	UNK=swarmId UNK=maxGenIdx UNK=varName
+nupic	swarming	HypersearchV2	UNK	__init__	UNK=searchParams UNK=workerID UNK=cjDAO UNK=jobID
+nupic	swarming	HypersearchV2	UNK	_getStreamDef	UNK=modelDescription
+nupic	swarming	HypersearchV2	UNK	__del__	void
+nupic	swarming	HypersearchV2	UNK	close	void
+nupic	swarming	HypersearchV2	UNK	_readPermutationsFile	UNK=filename UNK=modelDescription
+nupic	swarming	HypersearchV2	UNK	getExpectedNumModels	void
+nupic	swarming	HypersearchV2	UNK	getModelNames	void
+nupic	swarming	HypersearchV2	UNK	getPermutationVariables	void
+nupic	swarming	HypersearchV2	UNK	getComplexVariableLabelLookupDict	void
+nupic	swarming	HypersearchV2	UNK	getOptimizationMetricInfo	void
+nupic	swarming	HypersearchV2	UNK	_checkForOrphanedModels	void
+nupic	swarming	HypersearchV2	UNK	_hsStatePeriodicUpdate	UNK=exhaustedSwarmId
+nupic	swarming	HypersearchV2	UNK	_getCandidateParticleAndSwarm	UNK=exhaustedSwarmId
+nupic	swarming	HypersearchV2	UNK	_okToExit	void
+nupic	swarming	HypersearchV2	UNK	createModels	UNK=numModels
+nupic	swarming	HypersearchV2	UNK	recordModelProgress	UNK=modelID UNK=modelParams UNK=modelParamsHash UNK=results
+nupic	swarming	HypersearchV2	UNK	runModel	UNK=modelID UNK=jobID UNK=modelParams UNK=modelParamsHash
+nupic	swarming		UNK	_paramsFileHead	void
+nupic	swarming		UNK	_paramsFileTail	void
+nupic	swarming		UNK	_appendReportKeys	UNK=keys UNK=prefix UNK=results
+nupic	swarming		UNK	_matchReportKeys	UNK=reportKeyREs UNK=allReportKeys
+nupic	swarming		UNK	_getReportItem	UNK=itemName UNK=results
+nupic	swarming		UNK	filterResults	UNK=allResults UNK=reportKeys UNK=optimizeKey
+nupic	swarming		UNK	_quoteAndEscape	UNK=string
+nupic	swarming		UNK	_handleModelRunnerException	UNK=jobID UNK=modelID UNK=jobsDAO UNK=experimentDir
+nupic	swarming		UNK	runModelGivenBaseAndParams	UNK=modelID UNK=jobID UNK=baseDescription UNK=params
+nupic	swarming	PeriodicActivityMgr	UNK	__init__	UNK=requestedActivities
+nupic	swarming	PeriodicActivityMgr	UNK	tick	void
+nupic	swarming		UNK	generatePersistentJobGUID	void
+nupic	swarming		UNK	rCopy	UNK=d UNK=f UNK=discardNoneKeys UNK=deepCopy
+nupic	swarming		UNK	rApply	UNK=d UNK=f
+nupic	swarming		UNK	clippedObj	UNK=obj UNK=maxElementSize
+nupic	swarming		UNK	validate	UNK=value
+nupic	swarming		UNK	loadJsonValueFromFile	UNK=inputFilePath
+nupic	swarming		UNK	sortedJSONDumpS	UNK=obj
+nupic	swarming	OPFDummyModelRunner	UNK	_loadDummyModelParameters	UNK=params
+nupic	swarming	OPFDummyModelRunner	UNK	_computModelDelay	void
+nupic	swarming	OPFDummyModelRunner	UNK	_getMetrics	void
+nupic	swarming	OPFDummyModelRunner	UNK	run	void
+nupic	swarming	OPFDummyModelRunner	UNK	_createPredictionLogger	void
+nupic	swarming	OPFDummyModelRunner	UNK	__shouldSysExit	UNK=iteration
+nupic	swarming	ModelChooser	UNK	updateResultsForJob	UNK=forceUpdate
+nupic	swarming.exp_generator	_CreateDirectoryException	UNK	__init__	UNK=dirPath UNK=reason
+nupic	swarming.exp_generator	_ErrorReportingException	UNK	__init__	UNK=problem UNK=precursor
+nupic	swarming.exp_generator		UNK	_makeUsageErrorStr	UNK=errorString UNK=usageString
+nupic	swarming.exp_generator		UNK	_handleShowSchemaOption	void
+nupic	swarming.exp_generator		UNK	_handleDescriptionOption	UNK=cmdArgStr UNK=outDir UNK=usageStr UNK=hsVersion
+nupic	swarming.exp_generator		UNK	_handleDescriptionFromFileOption	UNK=filename UNK=outDir UNK=usageStr UNK=hsVersion
+nupic	swarming.exp_generator		UNK	_isInt	UNK=x UNK=precision
+nupic	swarming.exp_generator		UNK	_isString	UNK=obj
+nupic	swarming.exp_generator		UNK	_quoteAndEscape	UNK=string
+nupic	swarming.exp_generator		UNK	_indentLines	UNK=str UNK=indentLevels UNK=indentFirstLine
+nupic	swarming.exp_generator		UNK	_isCategory	UNK=fieldType
+nupic	swarming.exp_generator		UNK	_generateMetricSpecString	UNK=inferenceElement UNK=metric UNK=params UNK=field
+nupic	swarming.exp_generator		UNK	_generateFileFromTemplates	UNK=templateFileNames UNK=outputFilePath UNK=replacementDict
+nupic	swarming.exp_generator		UNK	_generateEncoderChoicesV1	UNK=fieldInfo
+nupic	swarming.exp_generator		UNK	_generateEncoderStringsV1	UNK=includedFields
+nupic	swarming.exp_generator		UNK	_generatePermEncoderStr	UNK=options UNK=encoderDict
+nupic	swarming.exp_generator		UNK	_generateEncoderStringsV2	UNK=includedFields UNK=options
+nupic	swarming.exp_generator		UNK	_handleJAVAParameters	UNK=options
+nupic	swarming.exp_generator		UNK	_getPropertyValue	UNK=schema UNK=propertyName UNK=options
+nupic	swarming.exp_generator		UNK	_getExperimentDescriptionSchema	void
+nupic	swarming.exp_generator		UNK	_generateExperiment	UNK=options UNK=outputDirPath UNK=hsVersion UNK=claDescriptionTemplateFile
+nupic	swarming.exp_generator		UNK	_generateMetricsSubstitutions	UNK=options UNK=tokenReplacements
+nupic	swarming.exp_generator		UNK	_generateMetricSpecs	UNK=options
+nupic	swarming.exp_generator		UNK	_generateExtraMetricSpecs	UNK=options
+nupic	swarming.exp_generator		UNK	_getPredictedField	UNK=options
+nupic	swarming.exp_generator		UNK	_generateInferenceArgs	UNK=options UNK=tokenReplacements
+nupic	swarming.exp_generator		UNK	expGenerator	UNK=args
+nupic	swarming.hypersearch		UNK	Enum	void
+nupic	swarming.hypersearch		UNK	makeDirectoryFromAbsolutePath	UNK=absDirPath
+nupic	swarming.hypersearch	ConfigurationBase	UNK	getString	UNK=cls UNK=prop
+nupic	swarming.hypersearch	ConfigurationBase	UNK	getBool	UNK=cls UNK=prop
+nupic	swarming.hypersearch	ConfigurationBase	UNK	getInt	UNK=cls UNK=prop
+nupic	swarming.hypersearch	ConfigurationBase	UNK	getFloat	UNK=cls UNK=prop
+nupic	swarming.hypersearch	ConfigurationBase	UNK	get	UNK=cls UNK=prop UNK=default
+nupic	swarming.hypersearch	ConfigurationBase	UNK	set	UNK=cls UNK=prop UNK=value
+nupic	swarming.hypersearch	ConfigurationBase	UNK	dict	UNK=cls
+nupic	swarming.hypersearch	ConfigurationBase	UNK	_readConfigFile	UNK=cls UNK=filename UNK=path
+nupic	swarming.hypersearch	ConfigurationBase	UNK	clear	UNK=cls
+nupic	swarming.hypersearch	ConfigurationBase	UNK	findConfigFile	UNK=cls UNK=filename
+nupic	swarming.hypersearch	ConfigurationBase	UNK	getConfigPaths	UNK=cls
+nupic	swarming.hypersearch	ConfigurationBase	UNK	setConfigPaths	UNK=cls UNK=paths
+nupic	swarming.hypersearch	ConfigurationBase	UNK	_readStdConfigFiles	UNK=cls
+nupic	swarming.hypersearch	Configuration	UNK	getCustomDict	UNK=cls
+nupic	swarming.hypersearch	Configuration	UNK	setCustomProperty	UNK=cls UNK=propertyName UNK=value
+nupic	swarming.hypersearch	Configuration	UNK	setCustomProperties	UNK=cls UNK=properties
+nupic	swarming.hypersearch	Configuration	UNK	clear	UNK=cls
+nupic	swarming.hypersearch	Configuration	UNK	resetCustomConfig	UNK=cls
+nupic	swarming.hypersearch	Configuration	UNK	loadCustomConfig	UNK=cls
+nupic	swarming.hypersearch	Configuration	UNK	_readStdConfigFiles	UNK=cls
+nupic	swarming.hypersearch	_CustomConfigurationFileWrapper	UNK	clear	UNK=cls UNK=persistent
+nupic	swarming.hypersearch	_CustomConfigurationFileWrapper	UNK	getCustomDict	UNK=cls
+nupic	swarming.hypersearch	_CustomConfigurationFileWrapper	UNK	edit	UNK=cls UNK=properties
+nupic	swarming.hypersearch	_CustomConfigurationFileWrapper	UNK	_setPath	UNK=cls
+nupic	swarming.hypersearch	_CustomConfigurationFileWrapper	UNK	getPath	UNK=cls
+nupic	swarming.hypersearch	ExtendedLogger	UNK	debug	UNK=msg
+nupic	swarming.hypersearch	ExtendedLogger	UNK	info	UNK=msg
+nupic	swarming.hypersearch	ExtendedLogger	UNK	warning	UNK=msg
+nupic	swarming.hypersearch	ExtendedLogger	UNK	error	UNK=msg
+nupic	swarming.hypersearch	ExtendedLogger	UNK	critical	UNK=msg
+nupic	swarming.hypersearch	ExtendedLogger	UNK	log	UNK=level UNK=msg
+nupic	swarming.hypersearch	ModelTerminator	UNK	getTerminationCallbacks	UNK=terminationFunc
+nupic	swarming.hypersearch		UNK	clean	UNK=s
+nupic	swarming.hypersearch	PermuteVariable	UNK	getState	void
+nupic	swarming.hypersearch	PermuteVariable	UNK	setState	UNK=state
+nupic	swarming.hypersearch	PermuteVariable	UNK	getPosition	void
+nupic	swarming.hypersearch	PermuteVariable	UNK	agitate	void
+nupic	swarming.hypersearch	PermuteVariable	UNK	newPosition	UNK=globalBestPosition UNK=rng
+nupic	swarming.hypersearch	PermuteVariable	UNK	pushAwayFrom	UNK=otherVars UNK=rng
+nupic	swarming.hypersearch	PermuteVariable	UNK	resetVelocity	UNK=rng
+nupic	swarming.hypersearch	PermuteFloat	UNK	__init__	UNK=min UNK=max UNK=stepSize UNK=inertia
+nupic	swarming.hypersearch	PermuteFloat	UNK	__repr__	void
+nupic	swarming.hypersearch	PermuteFloat	UNK	getState	void
+nupic	swarming.hypersearch	PermuteFloat	UNK	setState	UNK=state
+nupic	swarming.hypersearch	PermuteFloat	UNK	getPosition	void
+nupic	swarming.hypersearch	PermuteFloat	UNK	agitate	void
+nupic	swarming.hypersearch	PermuteFloat	UNK	newPosition	UNK=globalBestPosition UNK=rng
+nupic	swarming.hypersearch	PermuteFloat	UNK	pushAwayFrom	UNK=otherPositions UNK=rng
+nupic	swarming.hypersearch	PermuteFloat	UNK	resetVelocity	UNK=rng
+nupic	swarming.hypersearch	PermuteInt	UNK	__repr__	void
+nupic	swarming.hypersearch	PermuteInt	UNK	getPosition	void
+nupic	swarming.hypersearch	PermuteChoices	UNK	__repr__	void
+nupic	swarming.hypersearch	PermuteChoices	UNK	getState	void
+nupic	swarming.hypersearch	PermuteChoices	UNK	setState	UNK=state
+nupic	swarming.hypersearch	PermuteChoices	UNK	setResultsPerChoice	UNK=resultsPerChoice
+nupic	swarming.hypersearch	PermuteChoices	UNK	getPosition	void
+nupic	swarming.hypersearch	PermuteChoices	UNK	agitate	void
+nupic	swarming.hypersearch	PermuteChoices	UNK	newPosition	UNK=globalBestPosition UNK=rng
+nupic	swarming.hypersearch	PermuteChoices	UNK	pushAwayFrom	UNK=otherPositions UNK=rng
+nupic	swarming.hypersearch	PermuteChoices	UNK	resetVelocity	UNK=rng
+nupic	swarming.hypersearch	PermuteEncoder	UNK	__repr__	void
+nupic	swarming.hypersearch	PermuteEncoder	UNK	getDict	UNK=encoderName UNK=flattenedChosenValues
+nupic	swarming.hypersearch	Tests	UNK	_testValidPositions	UNK=varClass UNK=minValue UNK=maxValue UNK=stepSize
+nupic	swarming.hypersearch	Tests	UNK	_testConvergence	UNK=varClass UNK=minValue UNK=maxValue UNK=targetValue
+nupic	swarming.hypersearch	Tests	UNK	run	void
+nupic	swarming.hypersearch	Particle	UNK	__init__	UNK=hsObj UNK=resultsDB UNK=flattenedPermuteVars UNK=swarmId
+nupic	swarming.hypersearch	Particle	UNK	getState	void
+nupic	swarming.hypersearch	Particle	UNK	initStateFrom	UNK=particleId UNK=particleState UNK=newBest
+nupic	swarming.hypersearch	Particle	UNK	copyEncoderStatesFrom	UNK=particleState
+nupic	swarming.hypersearch	Particle	UNK	copyVarStatesFrom	UNK=particleState UNK=varNames
+nupic	swarming.hypersearch	Particle	UNK	getPosition	void
+nupic	swarming.hypersearch	Particle	UNK	getPositionFromState	UNK=pState
+nupic	swarming.hypersearch	Particle	UNK	agitate	void
+nupic	swarming.hypersearch	Particle	UNK	newPosition	UNK=whichVars
+nupic	swarming.hypersearch	HsState	UNK	__init__	UNK=hsObj
+nupic	swarming.hypersearch	HsState	UNK	isDirty	void
+nupic	swarming.hypersearch	HsState	UNK	isSearchOver	void
+nupic	swarming.hypersearch	HsState	UNK	readStateFromDB	void
+nupic	swarming.hypersearch	HsState	UNK	writeStateToDB	void
+nupic	swarming.hypersearch	HsState	UNK	getEncoderNameFromKey	UNK=key
+nupic	swarming.hypersearch	HsState	UNK	getEncoderKeyFromName	UNK=name
+nupic	swarming.hypersearch	HsState	UNK	getFieldContributions	void
+nupic	swarming.hypersearch	HsState	UNK	getAllSwarms	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	getActiveSwarms	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	getNonKilledSwarms	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	getCompletedSwarms	void
+nupic	swarming.hypersearch	HsState	UNK	getCompletingSwarms	void
+nupic	swarming.hypersearch	HsState	UNK	bestModelInCompletedSwarm	UNK=swarmId
+nupic	swarming.hypersearch	HsState	UNK	bestModelInCompletedSprint	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	bestModelInSprint	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	setSwarmState	UNK=swarmId UNK=newStatus
+nupic	swarming.hypersearch	HsState	UNK	anyGoodSprintsActive	void
+nupic	swarming.hypersearch	HsState	UNK	isSprintCompleted	UNK=sprintIdx
+nupic	swarming.hypersearch	HsState	UNK	killUselessSwarms	void
+nupic	swarming.hypersearch	HsState	UNK	isSprintActive	UNK=sprintIdx
+nupic	swarming.hypersearch	SwarmTerminator	UNK	recordDataPoint	UNK=swarmId UNK=generation UNK=errScore
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_seed	UNK=seed
+nupic	encoders	RandomDistributedScalarEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	RandomDistributedScalarEncoder	UNK	getWidth	void
+nupic	encoders	RandomDistributedScalarEncoder	UNK	getBucketIndices	UNK=x
+nupic	encoders	RandomDistributedScalarEncoder	UNK	mapBucketIndexToNonZeroBits	UNK=index
+nupic	encoders	RandomDistributedScalarEncoder	UNK	encodeIntoArray	UNK=x UNK=output
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_createBucket	UNK=index
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_newRepresentation	UNK=index UNK=newIndex
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_newRepresentationOK	UNK=newRep UNK=newIndex
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_countOverlapIndices	UNK=i UNK=j
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_countOverlap	UNK=rep1 UNK=rep2
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_overlapOK	UNK=i UNK=j UNK=overlap
+nupic	encoders	RandomDistributedScalarEncoder	UNK	_initializeBucketMap	UNK=maxBuckets UNK=offset
+nupic	encoders	DateEncoder	UNK	getScalarNames	UNK=parentFieldName
+nupic	encoders	DateEncoder	UNK	getEncodedValues	UNK=input
+nupic	encoders	DateEncoder	UNK	getScalars	UNK=input
+nupic	encoders	DateEncoder	UNK	getBucketIndices	UNK=input
+nupic	encoders	DateEncoder	UNK	encodeIntoArray	UNK=input UNK=output
+nupic	encoders	CoordinateEncoder	UNK	getWidth	void
+nupic	encoders	CoordinateEncoder	UNK	getDescription	void
+nupic	encoders	CoordinateEncoder	UNK	getScalars	UNK=inputData
+nupic	encoders	CoordinateEncoder	UNK	encodeIntoArray	UNK=inputData UNK=output
+nupic	encoders	CoordinateEncoder	UNK	_neighbors	UNK=coordinate UNK=radius
+nupic	encoders	CoordinateEncoder	UNK	_topWCoordinates	UNK=cls UNK=coordinates UNK=w
+nupic	encoders	CoordinateEncoder	UNK	_hashCoordinate	UNK=coordinate
+nupic	encoders	CoordinateEncoder	UNK	_orderForCoordinate	UNK=cls UNK=coordinate
+nupic	encoders	CoordinateEncoder	UNK	_bitForCoordinate	UNK=cls UNK=coordinate UNK=n
+nupic	encoders	GeospatialCoordinateEncoder	UNK	getDescription	void
+nupic	encoders	GeospatialCoordinateEncoder	UNK	getScalars	UNK=inputData
+nupic	encoders	GeospatialCoordinateEncoder	UNK	encodeIntoArray	UNK=inputData UNK=output
+nupic	encoders	GeospatialCoordinateEncoder	UNK	coordinateForPosition	UNK=longitude UNK=latitude UNK=altitude
+nupic	encoders	GeospatialCoordinateEncoder	UNK	radiusForSpeed	UNK=speed
+nupic	encoders		UNK	_isSequence	UNK=obj
+nupic	encoders	Encoder	UNK	getWidth	void
+nupic	encoders	Encoder	UNK	encodeIntoArray	UNK=inputData UNK=output
+nupic	encoders	Encoder	UNK	setLearning	UNK=learningEnabled
+nupic	encoders	Encoder	UNK	setFieldStats	UNK=fieldName UNK=fieldStatistics
+nupic	encoders	Encoder	UNK	encode	UNK=inputData
+nupic	encoders	Encoder	UNK	getScalarNames	UNK=parentFieldName
+nupic	encoders	Encoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	Encoder	UNK	setStateLock	UNK=lock
+nupic	encoders	Encoder	UNK	_getInputValue	UNK=obj UNK=fieldName
+nupic	encoders	Encoder	UNK	getEncoderList	void
+nupic	encoders	Encoder	UNK	getScalars	UNK=inputData
+nupic	encoders	Encoder	UNK	getEncodedValues	UNK=inputData
+nupic	encoders	Encoder	UNK	getBucketIndices	UNK=inputData
+nupic	encoders	Encoder	UNK	scalarsToStr	UNK=scalarValues UNK=scalarNames
+nupic	encoders	Encoder	UNK	getDescription	void
+nupic	encoders	Encoder	UNK	getFieldDescription	UNK=fieldName
+nupic	encoders	Encoder	UNK	encodedBitDescription	UNK=bitOffset UNK=formatted
+nupic	encoders	Encoder	UNK	pprintHeader	UNK=prefix
+nupic	encoders	Encoder	UNK	pprint	UNK=output UNK=prefix
+nupic	encoders	Encoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	Encoder	UNK	decodedToStr	UNK=decodeResults
+nupic	encoders	Encoder	UNK	getBucketValues	void
+nupic	encoders	Encoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	Encoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	Encoder	UNK	closenessScores	UNK=expValues UNK=actValues UNK=fractional
+nupic	encoders	Encoder	UNK	getDisplayWidth	void
+nupic	encoders	SDRCategoryEncoder	UNK	_seed	UNK=seed
+nupic	encoders	SDRCategoryEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	SDRCategoryEncoder	UNK	_newRep	void
+nupic	encoders	SDRCategoryEncoder	UNK	getScalars	UNK=input
+nupic	encoders	SDRCategoryEncoder	UNK	getBucketIndices	UNK=input
+nupic	encoders	SDRCategoryEncoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	SDRCategoryEncoder	UNK	_getTopDownMapping	void
+nupic	encoders	SDRCategoryEncoder	UNK	getBucketValues	void
+nupic	encoders	SDRCategoryEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	SDRCategoryEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	SDRCategoryEncoder	UNK	closenessScores	UNK=expValues UNK=actValues UNK=fractional
+nupic	encoders	LogEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	LogEncoder	UNK	_getScaledValue	UNK=inpt
+nupic	encoders	LogEncoder	UNK	getBucketIndices	UNK=inpt
+nupic	encoders	LogEncoder	UNK	encodeIntoArray	UNK=inpt UNK=output
+nupic	encoders	LogEncoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	LogEncoder	UNK	getBucketValues	void
+nupic	encoders	LogEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	LogEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	LogEncoder	UNK	closenessScores	UNK=expValues UNK=actValues UNK=fractional
+nupic	encoders	DeltaEncoder	UNK	__init__	UNK=w UNK=minval UNK=maxval UNK=periodic
+nupic	encoders	DeltaEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	ScalarEncoder	UNK	_initEncoder	UNK=w UNK=minval UNK=maxval UNK=n
+nupic	encoders	ScalarEncoder	UNK	_checkReasonableSettings	void
+nupic	encoders	ScalarEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	ScalarEncoder	UNK	_getFirstOnBit	UNK=input
+nupic	encoders	ScalarEncoder	UNK	getBucketIndices	UNK=input
+nupic	encoders	ScalarEncoder	UNK	encodeIntoArray	UNK=input UNK=output UNK=learn
+nupic	encoders	ScalarEncoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	ScalarEncoder	UNK	_generateRangeDescription	UNK=ranges
+nupic	encoders	ScalarEncoder	UNK	_getTopDownMapping	void
+nupic	encoders	ScalarEncoder	UNK	getBucketValues	void
+nupic	encoders	ScalarEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	ScalarEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	ScalarEncoder	UNK	closenessScores	UNK=expValues UNK=actValues UNK=fractional
+nupic	encoders		UNK	bitsToString	UNK=arr
+nupic	encoders	SparsePassThroughEncoder	UNK	__init__	UNK=n UNK=w UNK=name UNK=forced
+nupic	encoders	SparsePassThroughEncoder	UNK	encodeIntoArray	UNK=value UNK=output
+nupic	encoders	CategoryEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	CategoryEncoder	UNK	getScalars	UNK=input
+nupic	encoders	CategoryEncoder	UNK	getBucketIndices	UNK=input
+nupic	encoders	CategoryEncoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	CategoryEncoder	UNK	closenessScores	UNK=expValues UNK=actValues UNK=fractional
+nupic	encoders	CategoryEncoder	UNK	getBucketValues	void
+nupic	encoders	CategoryEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	CategoryEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	AdaptiveScalarEncoder	UNK	_setEncoderParams	void
+nupic	encoders	AdaptiveScalarEncoder	UNK	_setMinAndMax	UNK=input UNK=learn
+nupic	encoders	AdaptiveScalarEncoder	UNK	getBucketIndices	UNK=input UNK=learn
+nupic	encoders	AdaptiveScalarEncoder	UNK	encodeIntoArray	UNK=input UNK=output UNK=learn
+nupic	encoders	AdaptiveScalarEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	AdaptiveScalarEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	MultiEncoder	UNK	addEncoder	UNK=name UNK=encoder
+nupic	encoders	MultiEncoder	UNK	getWidth	void
+nupic	encoders	MultiEncoder	UNK	addMultipleEncoders	UNK=fieldEncodings
+nupic	encoders	PassThroughEncoder	UNK	getDecoderOutputFieldTypes	void
+nupic	encoders	PassThroughEncoder	UNK	getScalars	UNK=input
+nupic	encoders	PassThroughEncoder	UNK	getBucketIndices	UNK=input
+nupic	encoders	PassThroughEncoder	UNK	encodeIntoArray	UNK=inputVal UNK=outputVal
+nupic	encoders	PassThroughEncoder	UNK	decode	UNK=encoded UNK=parentFieldName
+nupic	encoders	PassThroughEncoder	UNK	getBucketInfo	UNK=buckets
+nupic	encoders	PassThroughEncoder	UNK	topDownCompute	UNK=encoded
+nupic	encoders	PassThroughEncoder	UNK	closenessScores	UNK=expValues UNK=actValues
+nupic	math		UNK	pickByDistribution	UNK=distribution UNK=r
+nupic	math		UNK	Indicator	UNK=pos UNK=size UNK=dtype
+nupic	math		UNK	MultiArgMax	UNK=x
+nupic	math		UNK	Any	UNK=sequence
+nupic	math		UNK	All	UNK=sequence
+nupic	math		UNK	Product	UNK=sequence
+nupic	math		UNK	MultiIndicator	UNK=pos UNK=size UNK=dtype
+nupic	math		UNK	Distribution	UNK=pos UNK=size UNK=counts UNK=dtype
+nupic	math	ConditionalProbabilityTable2D	UNK	__init__	UNK=rowHint UNK=ncols
+nupic	math	ConditionalProbabilityTable2D	UNK	numRows	void
+nupic	math	ConditionalProbabilityTable2D	UNK	grow	UNK=rows UNK=cols
+nupic	math	ConditionalProbabilityTable2D	UNK	updateRow	UNK=row UNK=distribution
+nupic	math	ConditionalProbabilityTable2D	UNK	inferRow	UNK=distribution
+nupic	math	ConditionalProbabilityTable2D	UNK	inferRowEvidence	UNK=distribution
+nupic	math	ConditionalProbabilityTable2D	UNK	inferRowCompat	UNK=distribution
+nupic	math	ConditionalProbabilityTable2D	UNK	clean_outcpd	void
+nupic	math		UNK	logFactorial	UNK=x
+nupic	math	DiscreteDistribution	UNK	sample	UNK=rgen
+nupic	math	MultinomialDistribution	UNK	logProbability	UNK=distn
+nupic	math	PoissonDistribution	UNK	sample	UNK=rgen
+nupic	math		UNK	lscsum	UNK=lx UNK=epsilon
+nupic	math		UNK	lscsum0	UNK=lx
+nupic	math		UNK	normalize	UNK=lx
+nupic	math		UNK	nsum0	UNK=lx
+nupic	math		UNK	lnsum0	UNK=lx
+nupic	math		UNK	logSumExp	UNK=A UNK=B UNK=out
+nupic	math		UNK	logDiffExp	UNK=A UNK=B UNK=out
+nupic	math		UNK	cross_list	void
+nupic	math		UNK	cross	void
+nupic	math		UNK	dcross	void
+nupic	math	DiscreteProposal	UNK	propose	UNK=current UNK=r
+nupic	math	PoissonProposal	UNK	propose	UNK=current UNK=r
+nupic	math		UNK	ROCCurve	UNK=y_true UNK=y_score
+nupic	math		UNK	AreaUnderCurve	UNK=x UNK=y
+nupic	math		UNK	_test	void
+nupic	math		UNK	coordinatesFromIndex	UNK=index UNK=dimensions
+nupic	math		UNK	indexFromCoordinates	UNK=coordinates UNK=dimensions
+nupic	math		UNK	neighborhood	UNK=centerIndex UNK=radius UNK=dimensions
+nupic	math		UNK	wrappingNeighborhood	UNK=centerIndex UNK=radius UNK=dimensions

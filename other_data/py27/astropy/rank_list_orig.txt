@@ -1,0 +1,2309 @@
+astropy	core		UNK	_init_log	void
+astropy	core		UNK	_teardown_log	void
+astropy	core	AstropyLogger	UNK	enable_warnings_logging	void
+astropy	core	AstropyLogger	UNK	disable_warnings_logging	void
+astropy	core	AstropyLogger	UNK	exception_logging_enabled	void
+astropy	core	AstropyLogger	UNK	enable_exception_logging	void
+astropy	core	AstropyLogger	UNK	disable_exception_logging	void
+astropy	core	AstropyLogger	UNK	enable_color	void
+astropy	core	AstropyLogger	UNK	disable_color	void
+astropy	core	AstropyLogger	UNK	log_to_file	UNK=filename UNK=filter_level UNK=filter_origin
+astropy	core	AstropyLogger	UNK	log_to_list	UNK=filter_level UNK=filter_origin
+astropy	core	AstropyLogger	UNK	_set_defaults	void
+astropy	core	StreamHandler	UNK	emit	UNK=record
+astropy	core		UNK	_is_astropy_source	UNK=path
+astropy	core		UNK	_is_astropy_setup	void
+astropy	core		UNK	_check_numpy	void
+astropy	core		UNK	online_help	UNK=query
+astropy	convolution	Kernel	UNK	truncation	void
+astropy	convolution	Kernel	UNK	is_bool	void
+astropy	convolution	Kernel	UNK	model	void
+astropy	convolution	Kernel	UNK	center	void
+astropy	convolution	Kernel	UNK	normalize	UNK=mode
+astropy	convolution	Kernel	UNK	shape	void
+astropy	convolution	Kernel	UNK	separable	void
+astropy	convolution	Kernel	UNK	__array__	void
+astropy	convolution	Kernel	UNK	__add__	UNK=kernel
+astropy	convolution	Kernel	UNK	__sub__	UNK=kernel
+astropy	convolution	Kernel	UNK	__mul__	UNK=value
+astropy	convolution	Kernel	UNK	__rmul__	UNK=value
+astropy	convolution	Kernel	UNK	__array_wrap__	UNK=array UNK=context
+astropy	convolution		UNK	kernel_arithmetics	UNK=kernel UNK=value UNK=operation
+astropy	convolution	CustomKernel	UNK	array	void
+astropy	convolution	CustomKernel	UNK	array	UNK=array
+astropy	convolution		UNK	convolve	UNK=array UNK=kernel UNK=boundary UNK=fill_value
+astropy	convolution		UNK	convolve_fft	UNK=array UNK=kernel UNK=boundary UNK=fill_value
+astropy	convolution		UNK	add_kernel_arrays_1D	UNK=array_1 UNK=array_2
+astropy	convolution		UNK	add_kernel_arrays_2D	UNK=array_1 UNK=array_2
+astropy	convolution		UNK	discretize_model	UNK=model UNK=x_range UNK=y_range UNK=mode
+astropy	convolution		UNK	discretize_center_1D	UNK=model UNK=x_range
+astropy	convolution		UNK	discretize_center_2D	UNK=model UNK=x_range UNK=y_range
+astropy	convolution		UNK	discretize_linear_1D	UNK=model UNK=x_range
+astropy	convolution		UNK	discretize_bilinear_2D	UNK=model UNK=x_range UNK=y_range
+astropy	convolution		UNK	discretize_oversample_1D	UNK=model UNK=x_range UNK=factor
+astropy	convolution		UNK	discretize_oversample_2D	UNK=model UNK=x_range UNK=y_range UNK=factor
+astropy	convolution		UNK	discretize_integrate_1D	UNK=model UNK=x_range
+astropy	convolution		UNK	discretize_integrate_2D	UNK=model UNK=x_range UNK=y_range
+astropy	nddata		UNK	support_nddata	UNK=_func UNK=accepts UNK=repack UNK=returns
+astropy	nddata	NDUncertainty	UNK	uncertainty_type	void
+astropy	nddata	NDUncertainty	UNK	supports_correlated	void
+astropy	nddata	NDUncertainty	UNK	array	void
+astropy	nddata	NDUncertainty	UNK	unit	void
+astropy	nddata	NDUncertainty	UNK	parent_nddata	void
+astropy	nddata	NDUncertainty	UNK	__getitem__	UNK=item
+astropy	nddata	NDUncertainty	UNK	propagate	UNK=operation UNK=other_nddata UNK=result_data UNK=correlation
+astropy	nddata	NDUncertainty	UNK	_convert_uncertainty	UNK=other_uncert
+astropy	nddata	UnknownUncertainty	UNK	supports_correlated	void
+astropy	nddata	UnknownUncertainty	UNK	uncertainty_type	void
+astropy	nddata	UnknownUncertainty	UNK	_convert_uncertainty	UNK=other_uncert
+astropy	nddata	UnknownUncertainty	UNK	_propagate_add	UNK=other_uncert UNK=result_data UNK=correlation
+astropy	nddata	StdDevUncertainty	UNK	supports_correlated	void
+astropy	nddata	StdDevUncertainty	UNK	uncertainty_type	void
+astropy	nddata	NDDataBase	UNK	data	void
+astropy	nddata	NDDataBase	UNK	mask	void
+astropy	nddata	NDDataBase	UNK	unit	void
+astropy	nddata	NDDataBase	UNK	wcs	void
+astropy	nddata	NDDataBase	UNK	meta	void
+astropy	nddata	NDDataBase	UNK	uncertainty	void
+astropy	nddata	NDDataArray	UNK	shape	void
+astropy	nddata	NDDataArray	UNK	size	void
+astropy	nddata	NDDataArray	UNK	dtype	void
+astropy	nddata	NDDataArray	UNK	ndim	void
+astropy	nddata	NDDataArray	UNK	__array__	void
+astropy	nddata	NDDataArray	UNK	__array_prepare__	UNK=array UNK=context
+astropy	nddata	NDDataArray	UNK	convert_unit_to	UNK=unit UNK=equivalencies
+astropy	nddata		UNK	_round	UNK=a
+astropy	nddata		UNK	_offset	UNK=a
+astropy	nddata		UNK	overlap_slices	UNK=large_array_shape UNK=small_array_shape UNK=position UNK=mode
+astropy	nddata		UNK	extract_array	UNK=array_large UNK=shape UNK=position UNK=mode
+astropy	nddata		UNK	add_array	UNK=array_large UNK=array_small UNK=position
+astropy	nddata		UNK	subpixel_indices	UNK=position UNK=subsampling
+astropy	nddata		UNK	block_reduce	UNK=data UNK=block_size UNK=func
+astropy	nddata		UNK	block_replicate	UNK=data UNK=block_size UNK=conserve_sum
+astropy	nddata	Cutout2D	UNK	to_original_position	UNK=cutout_position
+astropy	nddata	Cutout2D	UNK	to_cutout_position	UNK=original_position
+astropy	nddata	Cutout2D	UNK	plot_on_original	UNK=ax UNK=fill
+astropy	nddata	Cutout2D	UNK	_calc_center	UNK=slices
+astropy	nddata	Cutout2D	UNK	_calc_bbox	UNK=slices
+astropy	nddata	Cutout2D	UNK	origin_original	void
+astropy	nddata	Cutout2D	UNK	origin_cutout	void
+astropy	nddata	Cutout2D	UNK	position_original	void
+astropy	nddata	Cutout2D	UNK	position_cutout	void
+astropy	nddata	Cutout2D	UNK	center_original	void
+astropy	nddata	Cutout2D	UNK	center_cutout	void
+astropy	nddata	Cutout2D	UNK	bbox_original	void
+astropy	nddata	Cutout2D	UNK	bbox_cutout	void
+astropy	nddata	NDData	UNK	data	void
+astropy	nddata	NDData	UNK	mask	void
+astropy	nddata	NDData	UNK	unit	void
+astropy	nddata	NDData	UNK	wcs	void
+astropy	nddata	NDData	UNK	uncertainty	void
+astropy	nddata.mixins	NDSlicingMixin	UNK	_slice	UNK=item
+astropy	nddata.mixins	NDIOMixin	UNK	read	UNK=cls
+astropy	nddata.mixins	NDIOMixin	UNK	write	void
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic	UNK=operation UNK=operand UNK=propagate_uncertainties UNK=handle_mask
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic_data	UNK=operation UNK=operand
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic_uncertainty	UNK=operation UNK=operand UNK=result UNK=correlation
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic_mask	UNK=operation UNK=operand UNK=handle_mask
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic_wcs	UNK=operation UNK=operand UNK=compare_wcs
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_arithmetic_meta	UNK=operation UNK=operand UNK=handle_meta
+astropy	nddata.mixins	NDArithmeticMixin	UNK	_prepare_then_do_arithmetic	UNK=self_or_cls UNK=operation UNK=operand UNK=operand2
+astropy	io		UNK	delay_doc_updates	UNK=cls
+astropy	io		UNK	get_formats	UNK=data_class UNK=readwrite
+astropy	io		UNK	_update__doc__	UNK=data_class UNK=readwrite
+astropy	io		UNK	register_reader	UNK=data_format UNK=data_class UNK=function UNK=force
+astropy	io		UNK	register_writer	UNK=data_format UNK=data_class UNK=function UNK=force
+astropy	io		UNK	register_identifier	UNK=data_format UNK=data_class UNK=identifier UNK=force
+astropy	io		UNK	identify_format	UNK=origin UNK=data_class_required UNK=path UNK=fileobj
+astropy	io		UNK	get_reader	UNK=data_format UNK=data_class
+astropy	io		UNK	get_writer	UNK=data_format UNK=data_class
+astropy	io		UNK	read	UNK=cls
+astropy	io		UNK	write	UNK=data
+astropy	io		UNK	_is_best_match	UNK=class1 UNK=class2 UNK=format_classes
+astropy	io		UNK	_get_valid_format	UNK=mode UNK=cls UNK=path UNK=fileobj
+astropy	io.ascii	CommentedHeaderHeader	UNK	process_lines	UNK=lines
+astropy	io.ascii	CommentedHeader	UNK	read	UNK=table
+astropy	io.ascii	CommentedHeader	UNK	write_header	UNK=lines UNK=meta
+astropy	io.ascii	Csv	UNK	inconsistent_handler	UNK=str_vals UNK=ncols
+astropy	io.ascii	RdbHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii		UNK	_probably_html	UNK=table UNK=maxchars
+astropy	io.ascii		UNK	set_guess	UNK=guess
+astropy	io.ascii		UNK	_get_reader	UNK=Reader UNK=Inputter UNK=Outputter
+astropy	io.ascii		UNK	read	UNK=table UNK=guess
+astropy	io.ascii		UNK	_guess	UNK=table UNK=read_kwargs UNK=format UNK=fast_reader
+astropy	io.ascii		UNK	_get_guess_kwargs_list	UNK=read_kwargs
+astropy	io.ascii		UNK	_get_writer	UNK=Writer UNK=fast_writer
+astropy	io.ascii		UNK	write	UNK=table UNK=output UNK=format UNK=Writer
+astropy	io.ascii		UNK	get_read_trace	void
+astropy	io.ascii	FixedWidthHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	FixedWidthHeader	UNK	get_fixedwidth_params	UNK=line
+astropy	io.ascii		UNK	add_dictval_to_list	UNK=adict UNK=key UNK=alist
+astropy	io.ascii		UNK	find_latex_line	UNK=lines UNK=latex
+astropy	io.ascii	LatexSplitter	UNK	process_line	UNK=line
+astropy	io.ascii	LatexSplitter	UNK	process_val	UNK=val
+astropy	io.ascii	LatexSplitter	UNK	join	UNK=vals
+astropy	io.ascii	AASTexHeaderSplitter	UNK	process_line	UNK=line
+astropy	io.ascii	CdsHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	CdsData	UNK	process_lines	UNK=lines
+astropy	io.ascii	Cds	UNK	write	UNK=table
+astropy	io.ascii	CsvWriter	UNK	writerow	UNK=values
+astropy	io.ascii	CsvWriter	UNK	writerows	UNK=values_list
+astropy	io.ascii	CsvWriter	UNK	_writerow	UNK=writerow_func UNK=values UNK=has_empty
+astropy	io.ascii	MaskedConstant	UNK	__hash__	void
+astropy	io.ascii	BaseInputter	UNK	get_lines	UNK=table
+astropy	io.ascii	BaseInputter	UNK	process_lines	UNK=lines
+astropy	io.ascii	BaseSplitter	UNK	process_line	UNK=line
+astropy	io.ascii	BaseSplitter	UNK	process_val	UNK=val
+astropy	io.ascii	DefaultSplitter	UNK	process_line	UNK=line
+astropy	io.ascii	DefaultSplitter	UNK	__call__	UNK=lines
+astropy	io.ascii		UNK	_replace_tab_with_space	UNK=line UNK=escapechar UNK=quotechar
+astropy	io.ascii		UNK	_get_line_index	UNK=line_or_func UNK=lines
+astropy	io.ascii	BaseHeader	UNK	update_meta	UNK=lines UNK=meta
+astropy	io.ascii	BaseHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	BaseHeader	UNK	process_lines	UNK=lines
+astropy	io.ascii	BaseHeader	UNK	colnames	void
+astropy	io.ascii	BaseHeader	UNK	check_column_names	UNK=names UNK=strict_names UNK=guessing
+astropy	io.ascii	BaseData	UNK	process_lines	UNK=lines
+astropy	io.ascii	BaseData	UNK	get_data_lines	UNK=lines
+astropy	io.ascii	BaseData	UNK	get_str_vals	void
+astropy	io.ascii	BaseData	UNK	masks	UNK=cols
+astropy	io.ascii	BaseData	UNK	_set_fill_values	UNK=cols
+astropy	io.ascii	BaseData	UNK	_set_masks	UNK=cols
+astropy	io.ascii	BaseData	UNK	_replace_vals	UNK=cols
+astropy	io.ascii	BaseData	UNK	str_vals	void
+astropy	io.ascii		UNK	convert_numpy	UNK=numpy_type
+astropy	io.ascii	BaseOutputter	UNK	_validate_and_copy	UNK=col UNK=converters
+astropy	io.ascii		UNK	_apply_include_exclude_names	UNK=table UNK=names UNK=include_names UNK=exclude_names
+astropy	io.ascii	BaseReader	UNK	read	UNK=table
+astropy	io.ascii	BaseReader	UNK	inconsistent_handler	UNK=str_vals UNK=ncols
+astropy	io.ascii	BaseReader	UNK	comment_lines	void
+astropy	io.ascii	BaseReader	UNK	write	UNK=table
+astropy	io.ascii	WhitespaceSplitter	UNK	process_line	UNK=line
+astropy	io.ascii		UNK	identify_table	UNK=soup UNK=htmldict UNK=numtable
+astropy	io.ascii	HTMLInputter	UNK	process_lines	UNK=lines
+astropy	io.ascii	HTMLSplitter	UNK	__call__	UNK=lines
+astropy	io.ascii	HTMLOutputter	UNK	__call__	UNK=cols UNK=meta
+astropy	io.ascii	HTMLHeader	UNK	start_line	UNK=lines
+astropy	io.ascii	HTMLHeader	UNK	_set_cols_from_names	void
+astropy	io.ascii	HTMLData	UNK	start_line	UNK=lines
+astropy	io.ascii	HTMLData	UNK	end_line	UNK=lines
+astropy	io.ascii	HTML	UNK	__init__	UNK=htmldict
+astropy	io.ascii	HTML	UNK	read	UNK=table
+astropy	io.ascii	HTML	UNK	write	UNK=table
+astropy	io.ascii	HTML	UNK	fill_values	UNK=col UNK=col_str_iters
+astropy	io.ascii	FastBasic	UNK	read	UNK=table
+astropy	io.ascii	FastBasic	UNK	write	UNK=table UNK=output
+astropy	io.ascii	FastCsv	UNK	write	UNK=table UNK=output
+astropy	io.ascii	FastNoHeader	UNK	write	UNK=table UNK=output
+astropy	io.ascii	FastCommentedHeader	UNK	read	UNK=table
+astropy	io.ascii	FastCommentedHeader	UNK	write	UNK=table UNK=output
+astropy	io.ascii	FastRdb	UNK	write	UNK=table UNK=output
+astropy	io.ascii		UNK	first_true_index	UNK=iterable UNK=pred UNK=default
+astropy	io.ascii		UNK	first_false_index	UNK=iterable UNK=pred UNK=default
+astropy	io.ascii		UNK	sortmore	void
+astropy	io.ascii		UNK	groupmore	UNK=func
+astropy	io.ascii	EcsvHeader	UNK	process_lines	UNK=lines
+astropy	io.ascii	EcsvHeader	UNK	write	UNK=lines
+astropy	io.ascii	EcsvHeader	UNK	write_comments	UNK=lines UNK=meta
+astropy	io.ascii	EcsvHeader	UNK	update_meta	UNK=lines UNK=meta
+astropy	io.ascii	EcsvHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	SExtractorHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	SExtractor	UNK	read	UNK=table
+astropy	io.ascii	DaophotHeader	UNK	parse_col_defs	UNK=grouped_lines_dict
+astropy	io.ascii	DaophotHeader	UNK	update_meta	UNK=lines UNK=meta
+astropy	io.ascii	DaophotHeader	UNK	extract_keyword_line	UNK=line
+astropy	io.ascii	DaophotHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	DaophotInputter	UNK	search_multiline	UNK=lines UNK=depth
+astropy	io.ascii	IpacHeader	UNK	process_lines	UNK=lines
+astropy	io.ascii	IpacHeader	UNK	update_meta	UNK=lines UNK=meta
+astropy	io.ascii	IpacHeader	UNK	get_cols	UNK=lines
+astropy	io.ascii	IpacData	UNK	write	UNK=lines UNK=widths UNK=vals_list
+astropy	io.ascii	Ipac	UNK	write	UNK=table
+astropy	io.misc		UNK	fnunpickle	UNK=fileorname UNK=number UNK=usecPickle
+astropy	io.misc		UNK	fnpickle	UNK=object UNK=fileorname UNK=usecPickle UNK=protocol
+astropy	io.misc		UNK	_find_all_structured_arrays	UNK=handle
+astropy	io.misc		UNK	read_table_hdf5	UNK=input UNK=path
+astropy	io.misc		UNK	write_table_hdf5	UNK=table UNK=output UNK=path UNK=compression
+astropy	io.misc		UNK	load	UNK=stream
+astropy	io.misc		UNK	load_all	UNK=stream
+astropy	io.misc		UNK	dump	UNK=data UNK=stream
+astropy	io.fits		UNK	realign_dtype	UNK=dtype UNK=offsets
+astropy	io.fits	FITS_record	UNK	__repr__	void
+astropy	io.fits	FITS_record	UNK	field	UNK=field
+astropy	io.fits	FITS_record	UNK	setfield	UNK=field UNK=value
+astropy	io.fits	FITS_rec	UNK	__new__	UNK=subtype UNK=input
+astropy	io.fits	FITS_rec	UNK	__reduce__	void
+astropy	io.fits	FITS_rec	UNK	_init	void
+astropy	io.fits	FITS_rec	UNK	from_columns	UNK=cls UNK=columns UNK=nrows UNK=fill
+astropy	io.fits	FITS_rec	UNK	copy	UNK=order
+astropy	io.fits	FITS_rec	UNK	columns	void
+astropy	io.fits	FITS_rec	UNK	names	void
+astropy	io.fits	FITS_rec	UNK	formats	void
+astropy	io.fits	FITS_rec	UNK	_raw_itemsize	void
+astropy	io.fits	FITS_rec	UNK	field	UNK=key
+astropy	io.fits	FITS_rec	UNK	_cache_field	UNK=name UNK=field
+astropy	io.fits	FITS_rec	UNK	_update_column_attribute_changed	UNK=column UNK=idx UNK=attr UNK=old_value
+astropy	io.fits	FITS_rec	UNK	_update_column_name	UNK=column UNK=idx UNK=old_name UNK=name
+astropy	io.fits	FITS_rec	UNK	_convert_x	UNK=field UNK=recformat
+astropy	io.fits	FITS_rec	UNK	_convert_p	UNK=column UNK=field UNK=recformat
+astropy	io.fits	FITS_rec	UNK	_convert_ascii	UNK=column UNK=field
+astropy	io.fits	FITS_rec	UNK	_convert_other	UNK=column UNK=field UNK=recformat
+astropy	io.fits	FITS_rec	UNK	_get_heap_data	void
+astropy	io.fits	FITS_rec	UNK	_get_raw_data	void
+astropy	io.fits	FITS_rec	UNK	_get_scale_factors	UNK=column
+astropy	io.fits	FITS_rec	UNK	_scale_back	UNK=update_heap_pointers
+astropy	io.fits	FITS_rec	UNK	_scale_back_ascii	UNK=col_idx UNK=input_field UNK=output_field
+astropy	io.fits		UNK	_get_recarray_field	UNK=array UNK=key
+astropy	io.fits		UNK	_rstrip_inplace	UNK=array UNK=chars
+astropy	io.fits		UNK	_ascii_encode	UNK=inarray UNK=out
+astropy	io.fits		UNK	_has_unicode_fields	UNK=array
+astropy	io.fits	NotifierMixin	UNK	_add_listener	UNK=listener
+astropy	io.fits	NotifierMixin	UNK	_remove_listener	UNK=listener
+astropy	io.fits	NotifierMixin	UNK	_notify	UNK=notification
+astropy	io.fits	NotifierMixin	UNK	__getstate__	void
+astropy	io.fits		UNK	first	UNK=iterable
+astropy	io.fits		UNK	itersubclasses	UNK=cls UNK=_seen
+astropy	io.fits		UNK	ignore_sigint	UNK=func
+astropy	io.fits		UNK	pairwise	UNK=iterable
+astropy	io.fits		UNK	encode_ascii	UNK=s
+astropy	io.fits		UNK	decode_ascii	UNK=s
+astropy	io.fits		UNK	isreadable	UNK=f
+astropy	io.fits		UNK	iswritable	UNK=f
+astropy	io.fits		UNK	fileobj_name	UNK=f
+astropy	io.fits		UNK	fileobj_closed	UNK=f
+astropy	io.fits		UNK	fileobj_mode	UNK=f
+astropy	io.fits		UNK	_fileobj_normalize_mode	UNK=f
+astropy	io.fits		UNK	fileobj_is_binary	UNK=f
+astropy	io.fits		UNK	fill	UNK=text UNK=width
+astropy	io.fits		UNK	_array_from_file	UNK=infile UNK=dtype UNK=count UNK=sep
+astropy	io.fits		UNK	_array_to_file	UNK=arr UNK=outfile
+astropy	io.fits		UNK	_array_to_file_like	UNK=arr UNK=fileobj
+astropy	io.fits		UNK	_write_string	UNK=f UNK=s
+astropy	io.fits		UNK	_convert_array	UNK=array UNK=dtype
+astropy	io.fits		UNK	_unsigned_zero	UNK=dtype
+astropy	io.fits		UNK	_str_to_num	UNK=val
+astropy	io.fits		UNK	_words_group	UNK=input UNK=strlen
+astropy	io.fits		UNK	_tmp_name	UNK=input
+astropy	io.fits		UNK	_get_array_mmap	UNK=array
+astropy	io.fits		UNK	getheader	UNK=filename
+astropy	io.fits		UNK	getdata	UNK=filename
+astropy	io.fits		UNK	getval	UNK=filename UNK=keyword
+astropy	io.fits		UNK	setval	UNK=filename UNK=keyword
+astropy	io.fits		UNK	delval	UNK=filename UNK=keyword
+astropy	io.fits		UNK	writeto	UNK=filename UNK=data UNK=header UNK=output_verify
+astropy	io.fits		UNK	table_to_hdu	UNK=table
+astropy	io.fits		UNK	append	UNK=filename UNK=data UNK=header UNK=checksum
+astropy	io.fits		UNK	update	UNK=filename UNK=data
+astropy	io.fits		UNK	info	UNK=filename UNK=output
+astropy	io.fits		UNK	printdiff	UNK=inputa UNK=inputb
+astropy	io.fits		UNK	tabledump	UNK=filename UNK=datafile UNK=cdfile UNK=hfile
+astropy	io.fits		UNK	tableload	UNK=datafile UNK=cdfile UNK=hfile
+astropy	io.fits		UNK	_getext	UNK=filename UNK=mode
+astropy	io.fits		UNK	_get_file_mode	UNK=filename UNK=default
+astropy	io.fits	_BaseColumnFormat	UNK	dtype	void
+astropy	io.fits	_BaseColumnFormat	UNK	from_column_format	UNK=cls UNK=format
+astropy	io.fits	_ColumnFormat	UNK	from_recformat	UNK=cls UNK=recformat
+astropy	io.fits	_ColumnFormat	UNK	recformat	void
+astropy	io.fits	_ColumnFormat	UNK	canonical	void
+astropy	io.fits	_AsciiColumnFormat	UNK	from_recformat	UNK=cls UNK=recformat
+astropy	io.fits	_AsciiColumnFormat	UNK	recformat	void
+astropy	io.fits	_AsciiColumnFormat	UNK	canonical	void
+astropy	io.fits	ColumnAttribute	UNK	__call__	UNK=func
+astropy	io.fits	Column	UNK	__init__	UNK=name UNK=format UNK=unit UNK=null
+astropy	io.fits	Column	UNK	__eq__	UNK=other
+astropy	io.fits	Column	UNK	__hash__	void
+astropy	io.fits	Column	UNK	array	void
+astropy	io.fits	Column	UNK	ascii	void
+astropy	io.fits	Column	UNK	copy	void
+astropy	io.fits	Column	UNK	_convert_format	UNK=format UNK=cls
+astropy	io.fits	Column	UNK	_verify_keywords	UNK=cls UNK=name UNK=format UNK=unit
+astropy	io.fits	Column	UNK	_determine_formats	UNK=cls UNK=format UNK=start UNK=dim
+astropy	io.fits	ColDefs	UNK	_init_from_coldefs	UNK=coldefs
+astropy	io.fits	ColDefs	UNK	_copy_column	UNK=column
+astropy	io.fits	ColDefs	UNK	__getattr__	UNK=name
+astropy	io.fits	ColDefs	UNK	_dims	void
+astropy	io.fits	ColDefs	UNK	_update_column_attribute_changed	UNK=column UNK=attr UNK=old_value UNK=new_value
+astropy	io.fits	ColDefs	UNK	add_col	UNK=column
+astropy	io.fits	ColDefs	UNK	del_col	UNK=col_name
+astropy	io.fits	ColDefs	UNK	change_attrib	UNK=col_name UNK=attrib UNK=new_value
+astropy	io.fits	ColDefs	UNK	change_name	UNK=col_name UNK=new_name
+astropy	io.fits	ColDefs	UNK	change_unit	UNK=col_name UNK=new_unit
+astropy	io.fits	ColDefs	UNK	info	UNK=attrib UNK=output
+astropy	io.fits	_AsciiColDefs	UNK	spans	void
+astropy	io.fits	_AsciiColDefs	UNK	_update_field_metrics	void
+astropy	io.fits	_VLF	UNK	__setitem__	UNK=key UNK=value
+astropy	io.fits		UNK	_get_index	UNK=names UNK=key
+astropy	io.fits		UNK	_unwrapx	UNK=input UNK=output UNK=repeat
+astropy	io.fits		UNK	_wrapx	UNK=input UNK=output UNK=repeat
+astropy	io.fits		UNK	_makep	UNK=array UNK=descr_output UNK=format UNK=nrows
+astropy	io.fits		UNK	_parse_tformat	UNK=tform
+astropy	io.fits		UNK	_parse_ascii_tformat	UNK=tform UNK=strict
+astropy	io.fits		UNK	_parse_tdim	UNK=tdim
+astropy	io.fits		UNK	_scalar_to_format	UNK=value
+astropy	io.fits		UNK	_cmp_recformats	UNK=f1 UNK=f2
+astropy	io.fits		UNK	_convert_fits2record	UNK=format
+astropy	io.fits		UNK	_convert_record2fits	UNK=format
+astropy	io.fits		UNK	_dtype_to_recformat	UNK=dtype
+astropy	io.fits		UNK	_convert_format	UNK=format UNK=reverse
+astropy	io.fits		UNK	_convert_ascii_format	UNK=format UNK=reverse
+astropy	io.fits		UNK	is_fits	UNK=origin UNK=filepath UNK=fileobj
+astropy	io.fits		UNK	read_table_fits	UNK=input UNK=hdu
+astropy	io.fits		UNK	write_table_fits	UNK=input UNK=output UNK=overwrite
+astropy	io.fits	Card	UNK	keyword	void
+astropy	io.fits	Card	UNK	keyword	UNK=keyword
+astropy	io.fits	Card	UNK	value	void
+astropy	io.fits	Card	UNK	rawkeyword	void
+astropy	io.fits	Card	UNK	rawvalue	void
+astropy	io.fits	Card	UNK	comment	void
+astropy	io.fits	Card	UNK	field_specifier	void
+astropy	io.fits	Card	UNK	image	void
+astropy	io.fits	Card	UNK	is_blank	void
+astropy	io.fits	Card	UNK	fromstring	UNK=cls UNK=image
+astropy	io.fits	Card	UNK	normalize_keyword	UNK=cls UNK=keyword
+astropy	io.fits	Card	UNK	_check_if_rvkc	void
+astropy	io.fits	Card	UNK	_check_if_rvkc_image	void
+astropy	io.fits	Card	UNK	_init_rvkc	UNK=keyword UNK=field_specifier UNK=field UNK=value
+astropy	io.fits	Card	UNK	_parse_value	void
+astropy	io.fits	Card	UNK	_parse_comment	void
+astropy	io.fits	Card	UNK	_split	void
+astropy	io.fits	Card	UNK	_fix_value	void
+astropy	io.fits	Card	UNK	_format_long_image	void
+astropy	io.fits	Card	UNK	_format_long_commentary_image	void
+astropy	io.fits	Card	UNK	_itersubcards	void
+astropy	io.fits		UNK	_int_or_float	UNK=s
+astropy	io.fits		UNK	_format_value	UNK=value
+astropy	io.fits		UNK	_format_float	UNK=value
+astropy	io.fits		UNK	_pad	UNK=input
+astropy	io.fits	_BaseDiff	UNK	__init__	UNK=a UNK=b
+astropy	io.fits	_BaseDiff	UNK	__nonzero__	void
+astropy	io.fits	_BaseDiff	UNK	fromdiff	UNK=cls UNK=other UNK=a UNK=b
+astropy	io.fits	_BaseDiff	UNK	identical	void
+astropy	io.fits	_BaseDiff	UNK	report	UNK=fileobj UNK=indent UNK=overwrite
+astropy	io.fits	HDUDiff	UNK	__init__	UNK=a UNK=b UNK=ignore_keywords UNK=ignore_comments
+astropy	io.fits	HeaderDiff	UNK	__init__	UNK=a UNK=b UNK=ignore_keywords UNK=ignore_comments
+astropy	io.fits	ImageDataDiff	UNK	__init__	UNK=a UNK=b UNK=numdiffs UNK=rtol
+astropy	io.fits	RawDataDiff	UNK	__init__	UNK=a UNK=b UNK=numdiffs
+astropy	io.fits	TableDataDiff	UNK	__init__	UNK=a UNK=b UNK=ignore_fields UNK=numdiffs
+astropy	io.fits		UNK	diff_values	UNK=a UNK=b UNK=rtol UNK=atol
+astropy	io.fits		UNK	report_diff_values	UNK=fileobj UNK=a UNK=b UNK=ind
+astropy	io.fits		UNK	report_diff_keyword_attr	UNK=fileobj UNK=attr UNK=diffs UNK=keyword
+astropy	io.fits		UNK	where_not_allclose	UNK=a UNK=b UNK=rtol UNK=atol
+astropy	io.fits	Header	UNK	__init__	UNK=cards UNK=copy
+astropy	io.fits	Header	UNK	__eq__	UNK=other
+astropy	io.fits	Header	UNK	cards	void
+astropy	io.fits	Header	UNK	comments	void
+astropy	io.fits	Header	UNK	_modified	void
+astropy	io.fits	Header	UNK	fromstring	UNK=cls UNK=data UNK=sep
+astropy	io.fits	Header	UNK	fromfile	UNK=cls UNK=fileobj UNK=sep UNK=endcard
+astropy	io.fits	Header	UNK	_from_blocks	UNK=cls UNK=block_iter UNK=is_binary UNK=sep
+astropy	io.fits	Header	UNK	_find_end_card	UNK=cls UNK=block UNK=card_len
+astropy	io.fits	Header	UNK	tostring	UNK=sep UNK=endcard UNK=padding
+astropy	io.fits	Header	UNK	tofile	UNK=fileobj UNK=sep UNK=endcard UNK=padding
+astropy	io.fits	Header	UNK	fromtextfile	UNK=cls UNK=fileobj UNK=endcard
+astropy	io.fits	Header	UNK	totextfile	UNK=fileobj UNK=endcard UNK=overwrite
+astropy	io.fits	Header	UNK	clear	void
+astropy	io.fits	Header	UNK	copy	UNK=strip
+astropy	io.fits	Header	UNK	fromkeys	UNK=cls UNK=iterable UNK=value
+astropy	io.fits	Header	UNK	get	UNK=key UNK=default
+astropy	io.fits	Header	UNK	set	UNK=keyword UNK=value UNK=comment UNK=before
+astropy	io.fits	Header	UNK	items	void
+astropy	io.fits	Header	UNK	iteritems	void
+astropy	io.fits	Header	UNK	iterkeys	void
+astropy	io.fits	Header	UNK	itervalues	void
+astropy	io.fits	Header	UNK	keys	void
+astropy	io.fits	Header	UNK	pop	void
+astropy	io.fits	Header	UNK	popitem	void
+astropy	io.fits	Header	UNK	setdefault	UNK=key UNK=default
+astropy	io.fits	Header	UNK	update	void
+astropy	io.fits	Header	UNK	values	void
+astropy	io.fits	Header	UNK	append	UNK=card UNK=useblanks UNK=bottom UNK=end
+astropy	io.fits	Header	UNK	extend	UNK=cards UNK=strip UNK=unique UNK=update
+astropy	io.fits	Header	UNK	count	UNK=keyword
+astropy	io.fits	Header	UNK	index	UNK=keyword UNK=start UNK=stop
+astropy	io.fits	Header	UNK	insert	UNK=key UNK=card UNK=useblanks UNK=after
+astropy	io.fits	Header	UNK	remove	UNK=keyword UNK=ignore_missing UNK=remove_all
+astropy	io.fits	Header	UNK	rename_keyword	UNK=oldkeyword UNK=newkeyword UNK=force
+astropy	io.fits	Header	UNK	add_history	UNK=value UNK=before UNK=after
+astropy	io.fits	Header	UNK	add_comment	UNK=value UNK=before UNK=after
+astropy	io.fits	Header	UNK	add_blank	UNK=value UNK=before UNK=after
+astropy	io.fits	Header	UNK	_update	UNK=card
+astropy	io.fits	Header	UNK	_cardindex	UNK=key
+astropy	io.fits	Header	UNK	_keyword_from_index	UNK=idx
+astropy	io.fits	Header	UNK	_relativeinsert	UNK=card UNK=before UNK=after UNK=replace
+astropy	io.fits	Header	UNK	_updateindices	UNK=idx UNK=increment
+astropy	io.fits	Header	UNK	_countblanks	void
+astropy	io.fits	Header	UNK	_haswildcard	UNK=keyword
+astropy	io.fits	Header	UNK	_wildcardmatch	UNK=pattern
+astropy	io.fits	Header	UNK	_set_slice	UNK=key UNK=value UNK=target
+astropy	io.fits	Header	UNK	_splitcommentary	UNK=keyword UNK=value
+astropy	io.fits	Header	UNK	_strip	void
+astropy	io.fits	Header	UNK	_add_commentary	UNK=key UNK=value UNK=before UNK=after
+astropy	io.fits	_CardAccessor	UNK	_setslice	UNK=item UNK=value
+astropy	io.fits	_HeaderComments	UNK	__repr__	void
+astropy	io.fits	_HeaderComments	UNK	__getitem__	UNK=item
+astropy	io.fits	_HeaderComments	UNK	__setitem__	UNK=item UNK=comment
+astropy	io.fits	_HeaderCommentaryCards	UNK	__setitem__	UNK=item UNK=value
+astropy	io.fits		UNK	_block_size	UNK=sep
+astropy	io.fits		UNK	_pad_length	UNK=stringlen
+astropy	io.fits	_Verify	UNK	run_option	UNK=option UNK=err_text UNK=fix_text UNK=fix
+astropy	io.fits	_Verify	UNK	verify	UNK=option
+astropy	io.fits	_ErrList	UNK	iter_lines	UNK=filter UNK=shift
+astropy	io.fits	_File	UNK	readarray	UNK=size UNK=offset UNK=dtype UNK=shape
+astropy	io.fits	_File	UNK	writearray	UNK=array
+astropy	io.fits	_File	UNK	close	void
+astropy	io.fits	_File	UNK	_maybe_close_mmap	UNK=refcount_delta
+astropy	io.fits	_File	UNK	_overwrite_existing	UNK=overwrite UNK=fileobj UNK=closed
+astropy	io.fits	_File	UNK	_open_fileobj	UNK=fileobj UNK=mode UNK=overwrite
+astropy	io.fits	_File	UNK	_open_filelike	UNK=fileobj UNK=mode UNK=overwrite
+astropy	io.fits	_File	UNK	_open_filename	UNK=filename UNK=mode UNK=overwrite
+astropy	io.fits	_File	UNK	_mmap_available	UNK=cls
+astropy	io.fits	_File	UNK	_open_zipfile	UNK=fileobj UNK=mode
+astropy	io.fits		UNK	_is_random_access_file_backed	UNK=fileobj
+astropy	io.fits.scripts		UNK	fitsinfo	UNK=filename
+astropy	io.fits.scripts		UNK	main	UNK=args
+astropy	io.fits.scripts		UNK	verify_checksums	UNK=filename
+astropy	io.fits.scripts		UNK	verify_compliance	UNK=filename
+astropy	io.fits.scripts		UNK	update	UNK=filename
+astropy	io.fits.scripts		UNK	process_file	UNK=filename
+astropy	io.fits.scripts		UNK	main	void
+astropy	io.fits.scripts	HeaderFormatter	UNK	parse	UNK=extensions UNK=keywords UNK=compressed
+astropy	io.fits.scripts	HeaderFormatter	UNK	_parse_internal	UNK=hdukeys UNK=keywords UNK=compressed
+astropy	io.fits.scripts	HeaderFormatter	UNK	_get_cards	UNK=hdukey UNK=keywords UNK=compressed
+astropy	io.fits.scripts	TableHeaderFormatter	UNK	_parse_internal	UNK=hdukeys UNK=keywords UNK=compressed
+astropy	io.fits.scripts		UNK	print_headers_traditional	UNK=args
+astropy	io.fits.scripts		UNK	print_headers_as_table	UNK=args
+astropy	io.fits.hdu	_TableLikeHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_TableLikeHDU	UNK	from_columns	UNK=cls UNK=columns UNK=header UNK=nrows
+astropy	io.fits.hdu	_TableLikeHDU	UNK	columns	void
+astropy	io.fits.hdu	_TableLikeHDU	UNK	_nrows	void
+astropy	io.fits.hdu	_TableLikeHDU	UNK	_get_tbdata	void
+astropy	io.fits.hdu	_TableLikeHDU	UNK	_update_column_added	UNK=columns UNK=column
+astropy	io.fits.hdu	_TableLikeHDU	UNK	_update_column_removed	UNK=columns UNK=col_idx
+astropy	io.fits.hdu	_TableBaseHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_TableBaseHDU	UNK	columns	void
+astropy	io.fits.hdu	_TableBaseHDU	UNK	update	void
+astropy	io.fits.hdu	_TableBaseHDU	UNK	copy	void
+astropy	io.fits.hdu	_TableBaseHDU	UNK	_verify	UNK=option
+astropy	io.fits.hdu	_TableBaseHDU	UNK	_summary	void
+astropy	io.fits.hdu	_TableBaseHDU	UNK	_update_column_attribute_changed	UNK=column UNK=col_idx UNK=attr UNK=old_value
+astropy	io.fits.hdu	_TableBaseHDU	UNK	_clear_table_keywords	UNK=index
+astropy	io.fits.hdu	_TableBaseHDU	UNK	_populate_table_keywords	void
+astropy	io.fits.hdu	TableHDU	UNK	_calculate_datasum	UNK=blocking
+astropy	io.fits.hdu	TableHDU	UNK	_verify	UNK=option
+astropy	io.fits.hdu	BinTableHDU	UNK	_calculate_datasum_with_heap	UNK=blocking
+astropy	io.fits.hdu	BinTableHDU	UNK	_calculate_datasum	UNK=blocking
+astropy	io.fits.hdu	BinTableHDU	UNK	dump	UNK=datafile UNK=cdfile UNK=hfile UNK=overwrite
+astropy	io.fits.hdu	BinTableHDU	UNK	load	UNK=cls UNK=datafile UNK=cdfile UNK=hfile
+astropy	io.fits.hdu	BinTableHDU	UNK	_dump_data	UNK=fileobj
+astropy	io.fits.hdu	BinTableHDU	UNK	_dump_coldefs	UNK=fileobj
+astropy	io.fits.hdu	BinTableHDU	UNK	_load_data	UNK=cls UNK=fileobj UNK=coldefs
+astropy	io.fits.hdu	BinTableHDU	UNK	_load_coldefs	UNK=cls UNK=fileobj
+astropy	io.fits.hdu		UNK	_binary_table_byte_swap	UNK=data
+astropy	io.fits.hdu	Group	UNK	par	UNK=parname
+astropy	io.fits.hdu	Group	UNK	setpar	UNK=parname UNK=value
+astropy	io.fits.hdu	GroupData	UNK	data	void
+astropy	io.fits.hdu	GroupData	UNK	par	UNK=parname
+astropy	io.fits.hdu	GroupsHDU	UNK	data	void
+astropy	io.fits.hdu	GroupsHDU	UNK	parnames	void
+astropy	io.fits.hdu	GroupsHDU	UNK	size	void
+astropy	io.fits.hdu	GroupsHDU	UNK	_writedata_internal	UNK=fileobj
+astropy	io.fits.hdu	GroupsHDU	UNK	_calculate_datasum	UNK=blocking
+astropy	io.fits.hdu		UNK	_par_indices	UNK=names
+astropy	io.fits.hdu		UNK	_unique_parnames	UNK=names
+astropy	io.fits.hdu	CompImageHDU	UNK	_update_header_data	UNK=image_header UNK=name UNK=compression_type UNK=tile_size
+astropy	io.fits.hdu	CompImageHDU	UNK	shape	void
+astropy	io.fits.hdu	CompImageHDU	UNK	_summary	void
+astropy	io.fits.hdu	CompImageHDU	UNK	_update_compressed_data	void
+astropy	io.fits.hdu	CompImageHDU	UNK	scale	UNK=type UNK=option UNK=bscale UNK=bzero
+astropy	io.fits.hdu	CompImageHDU	UNK	_writeheader	UNK=fileobj
+astropy	io.fits.hdu	CompImageHDU	UNK	_writedata	UNK=fileobj
+astropy	io.fits.hdu	CompImageHDU	UNK	_dtype_for_bitpix	void
+astropy	io.fits.hdu		UNK	fitsopen	UNK=name UNK=mode UNK=memmap UNK=save_backup
+astropy	io.fits.hdu	HDUList	UNK	__init__	UNK=hdus UNK=file
+astropy	io.fits.hdu	HDUList	UNK	__getitem__	UNK=key
+astropy	io.fits.hdu	HDUList	UNK	__contains__	UNK=item
+astropy	io.fits.hdu	HDUList	UNK	__setitem__	UNK=key UNK=hdu
+astropy	io.fits.hdu	HDUList	UNK	__delitem__	UNK=key
+astropy	io.fits.hdu	HDUList	UNK	fromfile	UNK=cls UNK=fileobj UNK=mode UNK=memmap
+astropy	io.fits.hdu	HDUList	UNK	fromstring	UNK=cls UNK=data
+astropy	io.fits.hdu	HDUList	UNK	fileinfo	UNK=index
+astropy	io.fits.hdu	HDUList	UNK	insert	UNK=index UNK=hdu
+astropy	io.fits.hdu	HDUList	UNK	append	UNK=hdu
+astropy	io.fits.hdu	HDUList	UNK	index_of	UNK=key
+astropy	io.fits.hdu	HDUList	UNK	_positive_index_of	UNK=key
+astropy	io.fits.hdu	HDUList	UNK	readall	void
+astropy	io.fits.hdu	HDUList	UNK	flush	UNK=output_verify UNK=verbose
+astropy	io.fits.hdu	HDUList	UNK	update_extend	void
+astropy	io.fits.hdu	HDUList	UNK	writeto	UNK=fileobj UNK=output_verify UNK=overwrite UNK=checksum
+astropy	io.fits.hdu	HDUList	UNK	_close	UNK=output_verify UNK=verbose UNK=closed
+astropy	io.fits.hdu	HDUList	UNK	info	UNK=output
+astropy	io.fits.hdu	HDUList	UNK	filename	void
+astropy	io.fits.hdu	HDUList	UNK	_readfrom	UNK=cls UNK=fileobj UNK=data UNK=mode
+astropy	io.fits.hdu	HDUList	UNK	_try_while_unread_hdus	UNK=func UNK=index
+astropy	io.fits.hdu	HDUList	UNK	_read_next_hdu	void
+astropy	io.fits.hdu	HDUList	UNK	_flush_update	void
+astropy	io.fits.hdu	HDUList	UNK	_flush_resize	void
+astropy	io.fits.hdu	HDUList	UNK	_wasresized	UNK=verbose
+astropy	io.fits.hdu		UNK	_hdu_class_from_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_BaseHDU	UNK	__new__	UNK=cls UNK=data UNK=header
+astropy	io.fits.hdu	_BaseHDU	UNK	fromstring	UNK=cls UNK=data UNK=checksum UNK=ignore_missing_end
+astropy	io.fits.hdu	_BaseHDU	UNK	readfrom	UNK=cls UNK=fileobj UNK=checksum UNK=ignore_missing_end
+astropy	io.fits.hdu	_BaseHDU	UNK	writeto	UNK=name UNK=output_verify UNK=overwrite UNK=checksum
+astropy	io.fits.hdu	_BaseHDU	UNK	_readfrom_internal	UNK=cls UNK=data UNK=header UNK=checksum
+astropy	io.fits.hdu	_BaseHDU	UNK	_get_raw_data	UNK=shape UNK=code UNK=offset
+astropy	io.fits.hdu	_BaseHDU	UNK	_update_uint_scale_keywords	void
+astropy	io.fits.hdu	_BaseHDU	UNK	_update_checksum	UNK=checksum UNK=checksum_keyword UNK=datasum_keyword
+astropy	io.fits.hdu	_BaseHDU	UNK	_writedata_internal	UNK=fileobj
+astropy	io.fits.hdu	_BaseHDU	UNK	_writedata_direct_copy	UNK=fileobj
+astropy	io.fits.hdu	_CorruptedHDU	UNK	size	void
+astropy	io.fits.hdu	_NonstandardHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_NonstandardHDU	UNK	size	void
+astropy	io.fits.hdu	_NonstandardHDU	UNK	_writedata	UNK=fileobj
+astropy	io.fits.hdu	_NonstandardHDU	UNK	data	void
+astropy	io.fits.hdu	_ValidHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_ValidHDU	UNK	size	void
+astropy	io.fits.hdu	_ValidHDU	UNK	filebytes	void
+astropy	io.fits.hdu	_ValidHDU	UNK	fileinfo	void
+astropy	io.fits.hdu	_ValidHDU	UNK	copy	void
+astropy	io.fits.hdu	_ValidHDU	UNK	req_cards	UNK=keyword UNK=pos UNK=test UNK=fix_value
+astropy	io.fits.hdu	_ValidHDU	UNK	add_datasum	UNK=when UNK=blocking UNK=datasum_keyword
+astropy	io.fits.hdu	_ValidHDU	UNK	add_checksum	UNK=when UNK=override_datasum UNK=blocking UNK=checksum_keyword
+astropy	io.fits.hdu	_ValidHDU	UNK	verify_datasum	UNK=blocking
+astropy	io.fits.hdu	_ValidHDU	UNK	verify_checksum	UNK=blocking
+astropy	io.fits.hdu	_ValidHDU	UNK	_verify_checksum_datasum	UNK=blocking
+astropy	io.fits.hdu	_ValidHDU	UNK	_get_timestamp	void
+astropy	io.fits.hdu	_ValidHDU	UNK	_calculate_datasum	UNK=blocking
+astropy	io.fits.hdu	_ValidHDU	UNK	_calculate_checksum	UNK=datasum UNK=blocking UNK=checksum_keyword
+astropy	io.fits.hdu	_ValidHDU	UNK	_compute_checksum	UNK=data UNK=sum32 UNK=blocking
+astropy	io.fits.hdu	_ValidHDU	UNK	_compute_hdu_checksum	UNK=data UNK=sum32
+astropy	io.fits.hdu	_ValidHDU	UNK	_encode_byte	UNK=byte
+astropy	io.fits.hdu	_ValidHDU	UNK	_char_encode	UNK=value
+astropy	io.fits.hdu	ExtensionHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	ExtensionHDU	UNK	writeto	UNK=name UNK=output_verify UNK=overwrite UNK=checksum
+astropy	io.fits.hdu	NonstandardExtHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	NonstandardExtHDU	UNK	data	void
+astropy	io.fits.hdu	StreamingHDU	UNK	__init__	UNK=name UNK=header
+astropy	io.fits.hdu	StreamingHDU	UNK	write	UNK=data
+astropy	io.fits.hdu	StreamingHDU	UNK	size	void
+astropy	io.fits.hdu	StreamingHDU	UNK	close	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	match_header	UNK=cls UNK=header
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	section	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	shape	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	data	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	update_header	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_update_header_scale_info	UNK=dtype
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	scale	UNK=type UNK=option UNK=bscale UNK=bzero
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_scale_internal	UNK=type UNK=option UNK=bscale UNK=bzero
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_dtype_for_bitpix	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_convert_pseudo_unsigned	UNK=data
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_get_scaled_image_data	UNK=offset UNK=shape
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_summary	void
+astropy	io.fits.hdu	_ImageBaseHDU	UNK	_calculate_datasum	UNK=blocking
+astropy	io.fits.hdu	PrimaryHDU	UNK	__init__	UNK=data UNK=header UNK=do_not_scale_image_data UNK=ignore_blank
+astropy	io.fits.hdu	ImageHDU	UNK	__init__	UNK=data UNK=header UNK=name UNK=do_not_scale_image_data
+astropy	io.fits.hdu	ImageHDU	UNK	_verify	UNK=option
+astropy	io.fits.hdu	FitsHDU	UNK	fromfile	UNK=cls UNK=filename UNK=compress
+astropy	io.fits.hdu	FitsHDU	UNK	fromhdulist	UNK=cls UNK=hdulist UNK=compress
+astropy	io.votable	UCDWords	UNK	is_primary	UNK=name
+astropy	io.votable	UCDWords	UNK	is_secondary	UNK=name
+astropy	io.votable	UCDWords	UNK	get_description	UNK=name
+astropy	io.votable	UCDWords	UNK	normalize_capitalization	UNK=name
+astropy	io.votable		UNK	parse_ucd	UNK=ucd UNK=check_controlled_vocabulary UNK=has_colon
+astropy	io.votable		UNK	check_ucd	UNK=ucd UNK=check_controlled_vocabulary UNK=has_colon
+astropy	io.votable		UNK	convert_to_writable_filelike	UNK=fd UNK=compressed
+astropy	io.votable		UNK	coerce_range_list_param	UNK=p UNK=frames UNK=numeric
+astropy	io.votable		UNK	version_compare	UNK=a UNK=b
+astropy	io.votable		UNK	parse	UNK=source UNK=columns UNK=invalid UNK=pedantic
+astropy	io.votable		UNK	parse_single_table	UNK=source
+astropy	io.votable		UNK	writeto	UNK=table UNK=file UNK=tabledata_format
+astropy	io.votable		UNK	validate	UNK=source UNK=output UNK=xmllint UNK=filename
+astropy	io.votable		UNK	from_table	UNK=table UNK=table_id
+astropy	io.votable		UNK	is_votable	UNK=source
+astropy	io.votable		UNK	reset_vo_warnings	void
+astropy	io.votable		UNK	is_votable	UNK=origin UNK=filepath UNK=fileobj
+astropy	io.votable		UNK	read_table_votable	UNK=input UNK=table_id UNK=use_names_over_ids
+astropy	io.votable		UNK	write_table_votable	UNK=input UNK=output UNK=table_id UNK=overwrite
+astropy	io.votable		UNK	check_id	UNK=ID UNK=name UNK=config UNK=pos
+astropy	io.votable		UNK	fix_id	UNK=ID UNK=config UNK=pos
+astropy	io.votable		UNK	check_token	UNK=token UNK=attr_name UNK=config UNK=pos
+astropy	io.votable		UNK	check_mime_content_type	UNK=content_type UNK=config UNK=pos
+astropy	io.votable		UNK	check_anyuri	UNK=uri UNK=config UNK=pos
+astropy	io.votable		UNK	validate_schema	UNK=filename UNK=version
+astropy	io.votable		UNK	warn_or_raise	UNK=warning_class UNK=exception_class UNK=args UNK=config
+astropy	io.votable		UNK	vo_raise	UNK=exception_class UNK=args UNK=config UNK=pos
+astropy	io.votable		UNK	vo_reraise	UNK=exc UNK=config UNK=pos UNK=additional
+astropy	io.votable		UNK	vo_warn	UNK=warning_class UNK=args UNK=config UNK=pos
+astropy	io.votable		UNK	parse_vowarning	UNK=line
+astropy	io.votable		UNK	_make_masked_array	UNK=data UNK=mask
+astropy	io.votable		UNK	bitarray_to_bool	UNK=data UNK=length
+astropy	io.votable		UNK	bool_to_bitarray	UNK=value
+astropy	io.votable	Converter	UNK	supports_empty_values	UNK=config
+astropy	io.votable	Converter	UNK	parse	UNK=value UNK=config UNK=pos
+astropy	io.votable	Converter	UNK	parse_scalar	UNK=value UNK=config UNK=pos
+astropy	io.votable	Converter	UNK	output	UNK=value UNK=mask
+astropy	io.votable	Converter	UNK	binparse	UNK=read
+astropy	io.votable	Converter	UNK	binoutput	UNK=value UNK=mask
+astropy	io.votable		UNK	get_converter	UNK=field UNK=config UNK=pos
+astropy	io.votable		UNK	numpy_to_votable_dtype	UNK=dtype UNK=shape
+astropy	io.votable		UNK	table_column_to_votable_datatype	UNK=column
+astropy	io.votable		UNK	_resize	UNK=masked UNK=new_size
+astropy	io.votable		UNK	_lookup_by_attr_factory	UNK=attr UNK=unique UNK=iterator UNK=element_name
+astropy	io.votable		UNK	_lookup_by_id_or_name_factory	UNK=iterator UNK=element_name UNK=doc
+astropy	io.votable		UNK	_get_default_unit_format	UNK=config
+astropy	io.votable		UNK	_get_unit_format	UNK=config
+astropy	io.votable		UNK	check_astroyear	UNK=year UNK=field UNK=config UNK=pos
+astropy	io.votable		UNK	check_string	UNK=string UNK=attr_name UNK=config UNK=pos
+astropy	io.votable		UNK	check_ucd	UNK=ucd UNK=config UNK=pos
+astropy	io.votable	_IDProperty	UNK	ID	void
+astropy	io.votable	_NameProperty	UNK	name	void
+astropy	io.votable	_XtypeProperty	UNK	xtype	void
+astropy	io.votable	_UtypeProperty	UNK	utype	void
+astropy	io.votable	_UcdProperty	UNK	ucd	void
+astropy	io.votable	_DescriptionProperty	UNK	description	void
+astropy	io.votable	Element	UNK	parse	UNK=iterator UNK=config
+astropy	io.votable	Element	UNK	to_xml	UNK=w
+astropy	io.votable	SimpleElementWithContent	UNK	content	void
+astropy	io.votable	Link	UNK	content_role	void
+astropy	io.votable	Link	UNK	content_type	void
+astropy	io.votable	Link	UNK	href	void
+astropy	io.votable	Info	UNK	name	void
+astropy	io.votable	Info	UNK	value	void
+astropy	io.votable	Info	UNK	content	void
+astropy	io.votable	Info	UNK	ref	void
+astropy	io.votable	Info	UNK	unit	void
+astropy	io.votable	Values	UNK	null	void
+astropy	io.votable	Values	UNK	type	void
+astropy	io.votable	Values	UNK	ref	void
+astropy	io.votable	Values	UNK	min	void
+astropy	io.votable	Values	UNK	min_inclusive	void
+astropy	io.votable	Values	UNK	max	void
+astropy	io.votable	Values	UNK	max_inclusive	void
+astropy	io.votable	Values	UNK	options	void
+astropy	io.votable	Values	UNK	is_defaults	void
+astropy	io.votable	Field	UNK	uniqify_names	UNK=cls UNK=fields
+astropy	io.votable	Field	UNK	datatype	void
+astropy	io.votable	Field	UNK	precision	void
+astropy	io.votable	Field	UNK	width	void
+astropy	io.votable	Field	UNK	ref	void
+astropy	io.votable	Field	UNK	unit	void
+astropy	io.votable	Field	UNK	arraysize	void
+astropy	io.votable	Field	UNK	type	void
+astropy	io.votable	Field	UNK	values	void
+astropy	io.votable	Field	UNK	links	void
+astropy	io.votable	Field	UNK	to_table_column	UNK=column
+astropy	io.votable	Field	UNK	from_table_column	UNK=cls UNK=votable UNK=column
+astropy	io.votable	Param	UNK	value	void
+astropy	io.votable	CooSys	UNK	ID	void
+astropy	io.votable	CooSys	UNK	system	void
+astropy	io.votable	CooSys	UNK	equinox	void
+astropy	io.votable	CooSys	UNK	epoch	void
+astropy	io.votable	FieldRef	UNK	__init__	UNK=table UNK=ref UNK=ucd UNK=utype
+astropy	io.votable	FieldRef	UNK	ref	void
+astropy	io.votable	FieldRef	UNK	get_ref	void
+astropy	io.votable	ParamRef	UNK	ref	void
+astropy	io.votable	ParamRef	UNK	get_ref	void
+astropy	io.votable	Group	UNK	ref	void
+astropy	io.votable	Group	UNK	entries	void
+astropy	io.votable	Group	UNK	iter_fields_and_params	void
+astropy	io.votable	Group	UNK	iter_groups	void
+astropy	io.votable	Table	UNK	ref	UNK=ref
+astropy	io.votable	Table	UNK	format	void
+astropy	io.votable	Table	UNK	nrows	void
+astropy	io.votable	Table	UNK	fields	void
+astropy	io.votable	Table	UNK	params	void
+astropy	io.votable	Table	UNK	groups	void
+astropy	io.votable	Table	UNK	links	void
+astropy	io.votable	Table	UNK	infos	void
+astropy	io.votable	Table	UNK	is_empty	void
+astropy	io.votable	Table	UNK	create_arrays	UNK=nrows UNK=config
+astropy	io.votable	Table	UNK	_resize_strategy	UNK=size
+astropy	io.votable	Table	UNK	to_table	UNK=use_names_over_ids
+astropy	io.votable	Table	UNK	from_table	UNK=cls UNK=votable UNK=table
+astropy	io.votable	Table	UNK	iter_fields_and_params	void
+astropy	io.votable	Table	UNK	iter_groups	void
+astropy	io.votable	Resource	UNK	type	void
+astropy	io.votable	Resource	UNK	extra_attributes	void
+astropy	io.votable	Resource	UNK	coordinate_systems	void
+astropy	io.votable	Resource	UNK	infos	void
+astropy	io.votable	Resource	UNK	params	void
+astropy	io.votable	Resource	UNK	links	void
+astropy	io.votable	Resource	UNK	tables	void
+astropy	io.votable	Resource	UNK	resources	void
+astropy	io.votable	Resource	UNK	iter_tables	void
+astropy	io.votable	Resource	UNK	iter_fields_and_params	void
+astropy	io.votable	Resource	UNK	iter_coosys	void
+astropy	io.votable	Resource	UNK	iter_info	void
+astropy	io.votable	VOTableFile	UNK	version	void
+astropy	io.votable	VOTableFile	UNK	coordinate_systems	void
+astropy	io.votable	VOTableFile	UNK	params	void
+astropy	io.votable	VOTableFile	UNK	infos	void
+astropy	io.votable	VOTableFile	UNK	resources	void
+astropy	io.votable	VOTableFile	UNK	groups	void
+astropy	io.votable	VOTableFile	UNK	to_xml	UNK=fd UNK=write_null_values UNK=compressed UNK=tabledata_format
+astropy	io.votable	VOTableFile	UNK	iter_tables	void
+astropy	io.votable	VOTableFile	UNK	get_first_table	void
+astropy	io.votable	VOTableFile	UNK	get_table_by_index	UNK=idx
+astropy	io.votable	VOTableFile	UNK	iter_fields_and_params	void
+astropy	io.votable	VOTableFile	UNK	iter_values	void
+astropy	io.votable	VOTableFile	UNK	iter_groups	void
+astropy	io.votable	VOTableFile	UNK	iter_coosys	void
+astropy	io.votable	VOTableFile	UNK	iter_info	void
+astropy	io.votable	VOTableFile	UNK	set_all_tables_format	UNK=format
+astropy	io.votable	VOTableFile	UNK	from_table	UNK=cls UNK=table UNK=table_id
+astropy	io.votable.validator		UNK	make_validation_report	UNK=urls UNK=destdir UNK=multiprocess UNK=stilts
+astropy	table	Index	UNK	__len__	void
+astropy	table	Index	UNK	replace_col	UNK=prev_col UNK=new_col
+astropy	table	Index	UNK	reload	void
+astropy	table	Index	UNK	col_position	UNK=col_name
+astropy	table	Index	UNK	insert_row	UNK=pos UNK=vals UNK=columns
+astropy	table	Index	UNK	get_row_specifier	UNK=row_specifier
+astropy	table	Index	UNK	remove_rows	UNK=row_specifier
+astropy	table	Index	UNK	remove_row	UNK=row UNK=reorder
+astropy	table	Index	UNK	find	UNK=key
+astropy	table	Index	UNK	same_prefix	UNK=key
+astropy	table	Index	UNK	same_prefix_range	UNK=lower UNK=upper UNK=bounds
+astropy	table	Index	UNK	range	UNK=lower UNK=upper UNK=bounds
+astropy	table	Index	UNK	replace	UNK=row UNK=col_name UNK=val
+astropy	table	Index	UNK	replace_rows	UNK=col_slice
+astropy	table	Index	UNK	sort	void
+astropy	table	Index	UNK	sorted_data	void
+astropy	table	Index	UNK	__getitem__	UNK=item
+astropy	table	Index	UNK	__deepcopy__	UNK=memo
+astropy	table	SlicedIndex	UNK	stop	void
+astropy	table	SlicedIndex	UNK	__getitem__	UNK=item
+astropy	table	SlicedIndex	UNK	sliced_coords	UNK=rows
+astropy	table	SlicedIndex	UNK	orig_coords	UNK=row
+astropy	table	SlicedIndex	UNK	get_slice	UNK=col_slice UNK=item
+astropy	table		UNK	get_index	UNK=table UNK=table_copy
+astropy	table	_IndexModeContext	UNK	_get_copy_on_getitem_shim	UNK=cls
+astropy	table	TableIndices	UNK	__getitem__	UNK=item
+astropy	table	TableLoc	UNK	__getitem__	UNK=item
+astropy	table		UNK	descr	UNK=col
+astropy	table	TableColumns	UNK	__getitem__	UNK=item
+astropy	table	TableColumns	UNK	isinstance	UNK=cls
+astropy	table	TableColumns	UNK	not_isinstance	UNK=cls
+astropy	table	Table	UNK	as_array	UNK=keep_byteorder
+astropy	table	Table	UNK	_mask	void
+astropy	table	Table	UNK	filled	UNK=fill_value
+astropy	table	Table	UNK	indices	void
+astropy	table	Table	UNK	loc	void
+astropy	table	Table	UNK	iloc	void
+astropy	table	Table	UNK	add_index	UNK=colnames UNK=engine UNK=unique
+astropy	table	Table	UNK	remove_indices	UNK=colname
+astropy	table	Table	UNK	index_mode	UNK=mode
+astropy	table	Table	UNK	__array__	UNK=dtype
+astropy	table	Table	UNK	_check_names_dtype	UNK=names UNK=dtype UNK=n_cols
+astropy	table	Table	UNK	_init_from_list	UNK=data UNK=names UNK=dtype UNK=n_cols
+astropy	table	Table	UNK	_init_from_ndarray	UNK=data UNK=names UNK=dtype UNK=n_cols
+astropy	table	Table	UNK	_init_from_dict	UNK=data UNK=names UNK=dtype UNK=n_cols
+astropy	table	Table	UNK	_init_from_table	UNK=data UNK=names UNK=dtype UNK=n_cols
+astropy	table	Table	UNK	_convert_col_for_table	UNK=col
+astropy	table	Table	UNK	_init_from_cols	UNK=cols
+astropy	table	Table	UNK	_new_from_slice	UNK=slice_
+astropy	table	Table	UNK	_make_table_from_cols	UNK=table UNK=cols
+astropy	table	Table	UNK	itercols	void
+astropy	table	Table	UNK	has_mixin_columns	void
+astropy	table	Table	UNK	_add_as_mixin_column	UNK=col
+astropy	table	Table	UNK	pprint	UNK=max_lines UNK=max_width UNK=show_name UNK=show_unit
+astropy	table	Table	UNK	show_in_notebook	UNK=tableid UNK=css UNK=display_length UNK=table_class
+astropy	table	Table	UNK	show_in_browser	UNK=max_lines UNK=jsviewer UNK=browser UNK=jskwargs
+astropy	table	Table	UNK	pformat	UNK=max_lines UNK=max_width UNK=show_name UNK=show_unit
+astropy	table	Table	UNK	more	UNK=max_lines UNK=max_width UNK=show_name UNK=show_unit
+astropy	table	Table	UNK	field	UNK=item
+astropy	table	Table	UNK	_set_masked	UNK=masked
+astropy	table	Table	UNK	index_column	UNK=name
+astropy	table	Table	UNK	add_column	UNK=col UNK=index UNK=name UNK=rename_duplicate
+astropy	table	Table	UNK	add_columns	UNK=cols UNK=indexes UNK=names UNK=copy
+astropy	table	Table	UNK	_replace_column_warnings	UNK=name UNK=col
+astropy	table	Table	UNK	replace_column	UNK=name UNK=col
+astropy	table	Table	UNK	remove_row	UNK=index
+astropy	table	Table	UNK	remove_rows	UNK=row_specifier
+astropy	table	Table	UNK	remove_column	UNK=name
+astropy	table	Table	UNK	remove_columns	UNK=names
+astropy	table	Table	UNK	_convert_string_dtype	UNK=in_kind UNK=out_kind UNK=python3_only
+astropy	table	Table	UNK	convert_bytestring_to_unicode	UNK=python3_only
+astropy	table	Table	UNK	convert_unicode_to_bytestring	UNK=python3_only
+astropy	table	Table	UNK	keep_columns	UNK=names
+astropy	table	Table	UNK	rename_column	UNK=name UNK=new_name
+astropy	table	Table	UNK	add_row	UNK=vals UNK=mask
+astropy	table	Table	UNK	insert_row	UNK=index UNK=vals UNK=mask
+astropy	table	Table	UNK	argsort	UNK=keys UNK=kind
+astropy	table	Table	UNK	sort	UNK=keys
+astropy	table	Table	UNK	reverse	void
+astropy	table	Table	UNK	read	UNK=cls
+astropy	table	Table	UNK	write	void
+astropy	table	Table	UNK	copy	UNK=copy_data
+astropy	table	Table	UNK	group_by	UNK=keys
+astropy	table	Table	UNK	to_pandas	void
+astropy	table	Table	UNK	from_pandas	UNK=cls UNK=dataframe
+astropy	table	QTable	UNK	_add_as_mixin_column	UNK=col
+astropy	table		UNK	_searchsorted	UNK=array UNK=val UNK=side
+astropy	table	SortedArray	UNK	add	UNK=key UNK=row
+astropy	table	SortedArray	UNK	_get_key_slice	UNK=i UNK=begin UNK=end
+astropy	table	SortedArray	UNK	find_pos	UNK=key UNK=data UNK=exact
+astropy	table	SortedArray	UNK	find	UNK=key
+astropy	table	SortedArray	UNK	range	UNK=lower UNK=upper UNK=bounds
+astropy	table	SortedArray	UNK	remove	UNK=key UNK=data
+astropy	table	SortedArray	UNK	shift_left	UNK=row
+astropy	table	SortedArray	UNK	shift_right	UNK=row
+astropy	table	SortedArray	UNK	replace_rows	UNK=row_map
+astropy	table	SortedArray	UNK	items	void
+astropy	table	SortedArray	UNK	sort	void
+astropy	table	SortedArray	UNK	sorted_data	void
+astropy	table	SortedArray	UNK	__getitem__	UNK=item
+astropy	table		UNK	simple_table	UNK=size UNK=cols UNK=kinds UNK=masked
+astropy	table		UNK	complex_table	void
+astropy	table		UNK	_merge_col_meta	UNK=out UNK=tables UNK=col_name_map UNK=idx_left
+astropy	table		UNK	_get_list_of_tables	UNK=tables
+astropy	table		UNK	_get_out_class	UNK=tables
+astropy	table		UNK	_join	UNK=left UNK=right UNK=keys UNK=join_type
+astropy	table		UNK	vstack	UNK=tables UNK=join_type UNK=metadata_conflicts
+astropy	table		UNK	hstack	UNK=tables UNK=join_type UNK=uniq_col_name UNK=table_names
+astropy	table		UNK	unique	UNK=input_table UNK=keys UNK=silent UNK=keep
+astropy	table		UNK	get_col_name_map	UNK=arrays UNK=common_names UNK=uniq_col_name UNK=table_names
+astropy	table		UNK	get_descrs	UNK=arrays UNK=col_name_map
+astropy	table		UNK	common_dtype	UNK=cols
+astropy	table		UNK	_vstack	UNK=arrays UNK=join_type UNK=col_name_map
+astropy	table		UNK	_hstack	UNK=arrays UNK=join_type UNK=uniq_col_name UNK=table_names
+astropy	table		UNK	_table_group_by	UNK=table UNK=keys
+astropy	table		UNK	column_group_by	UNK=column UNK=keys
+astropy	table	ColumnGroups	UNK	filter	UNK=func
+astropy	table	TableGroups	UNK	key_colnames	void
+astropy	table	TableGroups	UNK	aggregate	UNK=func
+astropy	table	TableGroups	UNK	filter	UNK=func
+astropy	table		UNK	col_copy	UNK=col UNK=copy_indices
+astropy	table	BaseColumn	UNK	copy	UNK=order UNK=data UNK=copy_data
+astropy	table	BaseColumn	UNK	__setstate__	UNK=state
+astropy	table	BaseColumn	UNK	__reduce__	void
+astropy	table	BaseColumn	UNK	__array_wrap__	UNK=out_arr UNK=context
+astropy	table	BaseColumn	UNK	name	void
+astropy	table	BaseColumn	UNK	descr	void
+astropy	table	BaseColumn	UNK	iter_str_vals	void
+astropy	table	BaseColumn	UNK	attrs_equal	UNK=col
+astropy	table	BaseColumn	UNK	pformat	UNK=max_lines UNK=show_name UNK=show_unit UNK=show_dtype
+astropy	table	BaseColumn	UNK	pprint	UNK=max_lines UNK=show_name UNK=show_unit UNK=show_dtype
+astropy	table	BaseColumn	UNK	more	UNK=max_lines UNK=show_name UNK=show_unit
+astropy	table	BaseColumn	UNK	unit	void
+astropy	table	BaseColumn	UNK	convert_unit_to	UNK=new_unit UNK=equivalencies
+astropy	table	BaseColumn	UNK	group_by	UNK=keys
+astropy	table	BaseColumn	UNK	_copy_groups	UNK=out
+astropy	table	BaseColumn	UNK	quantity	void
+astropy	table	BaseColumn	UNK	to	UNK=unit UNK=equivalencies
+astropy	table	BaseColumn	UNK	_copy_attrs	UNK=obj
+astropy	table	Column	UNK	insert	UNK=obj UNK=values
+astropy	table	MaskedColumn	UNK	_fix_fill_value	UNK=val
+astropy	table	MaskedColumn	UNK	fill_value	UNK=val
+astropy	table	MaskedColumn	UNK	filled	UNK=fill_value
+astropy	table	MaskedColumn	UNK	insert	UNK=obj UNK=values UNK=mask
+astropy	table	ColumnDict	UNK	items	void
+astropy	table		UNK	_construct_odict	UNK=load UNK=node
+astropy	table		UNK	_repr_pairs	UNK=dump UNK=tag UNK=sequence UNK=flow_style
+astropy	table		UNK	_repr_odict	UNK=dumper UNK=data
+astropy	table		UNK	_repr_column_dict	UNK=dumper UNK=data
+astropy	table		UNK	_get_col_attributes	UNK=col
+astropy	table		UNK	get_yaml_from_table	UNK=table
+astropy	table		UNK	get_yaml_from_header	UNK=header
+astropy	table		UNK	get_header_from_yaml	UNK=lines
+astropy	table		UNK	fix_column_name	UNK=val
+astropy	table		UNK	recarray_fromrecords	UNK=rec_list
+astropy	table		UNK	_use_str_for_masked_values	UNK=format_func
+astropy	table		UNK	_possible_string_format_functions	UNK=format_
+astropy	table		UNK	get_auto_format_func	UNK=col_name UNK=possible_string_format_functions
+astropy	table	TableFormatter	UNK	_get_pprint_size	UNK=max_lines UNK=max_width
+astropy	table	TableFormatter	UNK	_pformat_col	UNK=col UNK=max_lines UNK=show_name UNK=show_unit
+astropy	table	TableFormatter	UNK	_pformat_col_iter	UNK=col UNK=max_lines UNK=show_name UNK=show_unit
+astropy	table	TableFormatter	UNK	_pformat_table	UNK=table UNK=max_lines UNK=max_width UNK=show_name
+astropy	table	TableFormatter	UNK	_more_tabcol	UNK=tabcol UNK=max_lines UNK=max_width UNK=show_name
+astropy	table	Node	UNK	replace	UNK=child UNK=new_child
+astropy	table	Node	UNK	remove	UNK=child
+astropy	table	Node	UNK	set	UNK=other
+astropy	table	BST	UNK	add	UNK=key UNK=data
+astropy	table	BST	UNK	find	UNK=key
+astropy	table	BST	UNK	find_node	UNK=key
+astropy	table	BST	UNK	shift_left	UNK=row
+astropy	table	BST	UNK	shift_right	UNK=row
+astropy	table	BST	UNK	traverse	UNK=order
+astropy	table	BST	UNK	items	void
+astropy	table	BST	UNK	sort	void
+astropy	table	BST	UNK	sorted_data	void
+astropy	table	BST	UNK	remove	UNK=key UNK=data
+astropy	table	BST	UNK	is_valid	void
+astropy	table	BST	UNK	range	UNK=lower UNK=upper UNK=bounds
+astropy	table	BST	UNK	range_nodes	UNK=lower UNK=upper UNK=bounds
+astropy	table	BST	UNK	same_prefix	UNK=val
+astropy	table	BST	UNK	height	void
+astropy	table	BST	UNK	replace_rows	UNK=row_map
+astropy	table	FastBase	UNK	add	UNK=key UNK=val
+astropy	table	FastBase	UNK	find	UNK=key
+astropy	table	FastBase	UNK	remove	UNK=key UNK=data
+astropy	table	FastBase	UNK	shift_left	UNK=row
+astropy	table	FastBase	UNK	shift_right	UNK=row
+astropy	table	FastBase	UNK	traverse	void
+astropy	table	FastBase	UNK	items	void
+astropy	table	FastBase	UNK	sort	void
+astropy	table	FastBase	UNK	sorted_data	void
+astropy	table	FastBase	UNK	range	UNK=lower UNK=upper UNK=bounds
+astropy	table	FastBase	UNK	replace_rows	UNK=row_map
+astropy	table	Row	UNK	__array__	UNK=dtype
+astropy	table	Row	UNK	as_void	void
+astropy	table	Row	UNK	_base_repr_	UNK=html
+astropy	table		UNK	table_info	UNK=tbl UNK=option UNK=out
+astropy	units		UNK	get_converter	UNK=from_unit UNK=to_unit
+astropy	units		UNK	enable	void
+astropy	units		UNK	_flatten_units_collection	UNK=items
+astropy	units		UNK	_normalize_equivalencies	UNK=equivalencies
+astropy	units	_UnitRegistry	UNK	set_enabled_units	UNK=units
+astropy	units	_UnitRegistry	UNK	add_enabled_units	UNK=units
+astropy	units	_UnitRegistry	UNK	get_units_with_physical_type	UNK=unit
+astropy	units	_UnitRegistry	UNK	set_enabled_equivalencies	UNK=equivalencies
+astropy	units	_UnitRegistry	UNK	add_enabled_equivalencies	UNK=equivalencies
+astropy	units		UNK	set_enabled_units	UNK=units
+astropy	units		UNK	add_enabled_units	UNK=units
+astropy	units		UNK	set_enabled_equivalencies	UNK=equivalencies
+astropy	units		UNK	add_enabled_equivalencies	UNK=equivalencies
+astropy	units	UnitBase	UNK	_repr_latex_	void
+astropy	units	UnitBase	UNK	__bytes__	void
+astropy	units	UnitBase	UNK	__unicode__	void
+astropy	units	UnitBase	UNK	_get_physical_type_id	void
+astropy	units	UnitBase	UNK	names	void
+astropy	units	UnitBase	UNK	name	void
+astropy	units	UnitBase	UNK	aliases	void
+astropy	units	UnitBase	UNK	scale	void
+astropy	units	UnitBase	UNK	bases	void
+astropy	units	UnitBase	UNK	powers	void
+astropy	units	UnitBase	UNK	to_string	UNK=format
+astropy	units	UnitBase	UNK	__format__	UNK=format_spec
+astropy	units	UnitBase	UNK	_normalize_equivalencies	UNK=equivalencies
+astropy	units	UnitBase	UNK	_is_equivalent	UNK=other UNK=equivalencies
+astropy	units	UnitBase	UNK	_apply_equivalencies	UNK=unit UNK=other UNK=equivalencies
+astropy	units	UnitBase	UNK	get_converter	UNK=other UNK=equivalencies
+astropy	units	UnitBase	UNK	_to	UNK=other
+astropy	units	UnitBase	UNK	to	UNK=other UNK=value UNK=equivalencies
+astropy	units	UnitBase	UNK	in_units	UNK=other UNK=value UNK=equivalencies
+astropy	units	UnitBase	UNK	decompose	UNK=bases
+astropy	units	UnitBase	UNK	compose	UNK=equivalencies UNK=units UNK=max_depth UNK=include_prefix_units
+astropy	units	UnitBase	UNK	to_system	UNK=system
+astropy	units	UnitBase	UNK	si	void
+astropy	units	UnitBase	UNK	cgs	void
+astropy	units	UnitBase	UNK	physical_type	void
+astropy	units	UnitBase	UNK	_get_units_with_same_physical_type	UNK=equivalencies
+astropy	units	UnitBase	UNK	find_equivalent_units	UNK=equivalencies UNK=units UNK=include_prefix_units
+astropy	units	UnitBase	UNK	is_unity	void
+astropy	units	NamedUnit	UNK	_generate_doc	void
+astropy	units	NamedUnit	UNK	get_format_name	UNK=format
+astropy	units	NamedUnit	UNK	names	void
+astropy	units	NamedUnit	UNK	name	void
+astropy	units	NamedUnit	UNK	aliases	void
+astropy	units	NamedUnit	UNK	short_names	void
+astropy	units	NamedUnit	UNK	long_names	void
+astropy	units	NamedUnit	UNK	_inject	UNK=namespace
+astropy	units		UNK	_recreate_irreducible_unit	UNK=cls UNK=names UNK=registered
+astropy	units	IrreducibleUnit	UNK	represents	void
+astropy	units	Unit	UNK	represents	void
+astropy	units	CompositeUnit	UNK	scale	void
+astropy	units	CompositeUnit	UNK	bases	void
+astropy	units	CompositeUnit	UNK	powers	void
+astropy	units	CompositeUnit	UNK	__copy__	void
+astropy	units		UNK	_add_prefixes	UNK=u UNK=excludes UNK=namespace UNK=prefixes
+astropy	units		UNK	def_unit	UNK=s UNK=represents UNK=doc UNK=format
+astropy	units		UNK	_condition_arg	UNK=value
+astropy	units		UNK	_can_have_arbitrary_unit	UNK=value
+astropy	units	QuantityIterator	UNK	__next__	void
+astropy	units	QuantityInfo	UNK	possible_string_format_functions	UNK=format_
+astropy	units	Quantity	UNK	__quantity_subclass__	UNK=unit
+astropy	units	Quantity	UNK	_new_view	UNK=obj UNK=unit
+astropy	units	Quantity	UNK	_set_unit	UNK=unit
+astropy	units	Quantity	UNK	to	UNK=unit UNK=equivalencies
+astropy	units	Quantity	UNK	value	void
+astropy	units	Quantity	UNK	unit	void
+astropy	units	Quantity	UNK	equivalencies	void
+astropy	units	Quantity	UNK	si	void
+astropy	units	Quantity	UNK	cgs	void
+astropy	units	Quantity	UNK	isscalar	void
+astropy	units	Quantity	UNK	__dir__	void
+astropy	units	Quantity	UNK	__getattr__	UNK=attr
+astropy	units	Quantity	UNK	__mul__	UNK=other
+astropy	units	Quantity	UNK	__imul__	UNK=other
+astropy	units	Quantity	UNK	__rmul__	UNK=other
+astropy	units	Quantity	UNK	__truediv__	UNK=other
+astropy	units	Quantity	UNK	__itruediv__	UNK=other
+astropy	units	Quantity	UNK	__rtruediv__	UNK=other
+astropy	units	Quantity	UNK	__div__	UNK=other
+astropy	units	Quantity	UNK	__idiv__	UNK=other
+astropy	units	Quantity	UNK	__rdiv__	UNK=other
+astropy	units	Quantity	UNK	__pos__	void
+astropy	units	Quantity	UNK	__nonzero__	void
+astropy	units	Quantity	UNK	_repr_latex_	void
+astropy	units	Quantity	UNK	__format__	UNK=format_spec
+astropy	units	Quantity	UNK	decompose	UNK=bases
+astropy	units	Quantity	UNK	_decompose	UNK=allowscaledunits UNK=bases
+astropy	units	Quantity	UNK	flat	void
+astropy	units	Quantity	UNK	_wrap_function	UNK=function
+astropy	units	Quantity	UNK	insert	UNK=obj UNK=values UNK=axis
+astropy	units	QuantityInput	UNK	as_decorator	UNK=cls UNK=func
+astropy	units		UNK	dimensionless_angles	void
+astropy	units		UNK	logarithmic	void
+astropy	units		UNK	parallax	void
+astropy	units		UNK	spectral	void
+astropy	units		UNK	spectral_density	UNK=wav UNK=factor
+astropy	units		UNK	doppler_radio	UNK=rest
+astropy	units		UNK	doppler_optical	UNK=rest
+astropy	units		UNK	doppler_relativistic	UNK=rest
+astropy	units		UNK	mass_energy	void
+astropy	units		UNK	brightness_temperature	UNK=beam_area UNK=disp
+astropy	units		UNK	temperature	void
+astropy	units		UNK	temperature_energy	void
+astropy	units		UNK	pixel_scale	UNK=pixscale
+astropy	units		UNK	plate_scale	UNK=platescale
+astropy	units		UNK	_get_first_sentence	UNK=s
+astropy	units		UNK	_iter_unit_summary	UNK=namespace
+astropy	units		UNK	generate_unit_summary	UNK=namespace
+astropy	units		UNK	validate_power	UNK=p UNK=support_tuples
+astropy	units		UNK	resolve_fractions	UNK=a UNK=b
+astropy	units		UNK	def_physical_type	UNK=unit UNK=name
+astropy	units		UNK	get_physical_type	UNK=unit
+astropy	units.function		UNK	enable	void
+astropy	units.function	FunctionUnitBase	UNK	_default_function_unit	void
+astropy	units.function	FunctionUnitBase	UNK	_quantity_class	void
+astropy	units.function	FunctionUnitBase	UNK	from_physical	UNK=x
+astropy	units.function	FunctionUnitBase	UNK	to_physical	UNK=x
+astropy	units.function	FunctionUnitBase	UNK	_copy	UNK=physical_unit
+astropy	units.function	FunctionUnitBase	UNK	equivalencies	void
+astropy	units.function	FunctionUnitBase	UNK	decompose	UNK=bases
+astropy	units.function	FunctionUnitBase	UNK	si	void
+astropy	units.function	FunctionUnitBase	UNK	cgs	void
+astropy	units.function	FunctionUnitBase	UNK	_get_physical_type_id	void
+astropy	units.function	FunctionUnitBase	UNK	physical_type	void
+astropy	units.function	FunctionUnitBase	UNK	is_equivalent	UNK=other UNK=equivalencies
+astropy	units.function	FunctionUnitBase	UNK	to	UNK=other UNK=value UNK=equivalencies
+astropy	units.function	FunctionUnitBase	UNK	to_string	UNK=format
+astropy	units.function	FunctionUnitBase	UNK	__str__	void
+astropy	units.function	FunctionUnitBase	UNK	_repr_latex_	void
+astropy	units.function	FunctionQuantity	UNK	physical	void
+astropy	units.function	FunctionQuantity	UNK	_function_view	void
+astropy	units.function	FunctionQuantity	UNK	si	void
+astropy	units.function	FunctionQuantity	UNK	cgs	void
+astropy	units.function	FunctionQuantity	UNK	decompose	UNK=bases
+astropy	units.function	FunctionQuantity	UNK	__array_prepare__	UNK=obj UNK=context
+astropy	units.function	FunctionQuantity	UNK	_comparison	UNK=other UNK=comparison_func
+astropy	units.function	LogUnit	UNK	from_physical	UNK=x
+astropy	units.function	LogUnit	UNK	to_physical	UNK=x
+astropy	units.function	LogUnit	UNK	_add_and_adjust_physical_unit	UNK=other UNK=sign_self UNK=sign_other
+astropy	units.format	Generic	UNK	_make_parser	UNK=cls
+astropy	units.format	Latex	UNK	format_exponential_notation	UNK=cls UNK=val
+astropy	units.format	CDS	UNK	_make_parser	UNK=cls
+astropy	units.format	Base	UNK	parse	UNK=cls UNK=s
+astropy	units.format	Base	UNK	to_string	UNK=cls UNK=u
+astropy	units.format		UNK	get_format	UNK=format
+astropy	units.format	OGIP	UNK	_make_parser	UNK=cls
+astropy	units.format		UNK	get_grouped_by_powers	UNK=bases UNK=powers
+astropy	units.format		UNK	split_mantissa_exponent	UNK=v
+astropy	units.format		UNK	decompose_to_known_units	UNK=unit UNK=func
+astropy	units.format		UNK	format_power	UNK=power
+astropy	units.format		UNK	did_you_mean_units	UNK=s UNK=all_units UNK=deprecated_units UNK=format_decomposed
+astropy	units.format		UNK	unit_deprecation_warning	UNK=s UNK=unit UNK=standard_name UNK=format_decomposed
+astropy	extern		UNK	_find_module	UNK=name UNK=path
+astropy	extern.configobj	InterpolationEngine	UNK	_fetch	UNK=key
+astropy	extern.configobj	InterpolationEngine	UNK	_parse_match	UNK=match
+astropy	extern.configobj	Section	UNK	__init__	UNK=parent UNK=depth UNK=main UNK=indict
+astropy	extern.configobj	Section	UNK	__getitem__	UNK=key
+astropy	extern.configobj	Section	UNK	__setitem__	UNK=key UNK=value UNK=unrepr
+astropy	extern.configobj	Section	UNK	__delitem__	UNK=key
+astropy	extern.configobj	Section	UNK	get	UNK=key UNK=default
+astropy	extern.configobj	Section	UNK	update	UNK=indict
+astropy	extern.configobj	Section	UNK	pop	UNK=key UNK=default
+astropy	extern.configobj	Section	UNK	popitem	void
+astropy	extern.configobj	Section	UNK	clear	void
+astropy	extern.configobj	Section	UNK	setdefault	UNK=key UNK=default
+astropy	extern.configobj	Section	UNK	items	void
+astropy	extern.configobj	Section	UNK	keys	void
+astropy	extern.configobj	Section	UNK	values	void
+astropy	extern.configobj	Section	UNK	iteritems	void
+astropy	extern.configobj	Section	UNK	iterkeys	void
+astropy	extern.configobj	Section	UNK	itervalues	void
+astropy	extern.configobj	Section	UNK	__repr__	void
+astropy	extern.configobj	Section	UNK	dict	void
+astropy	extern.configobj	Section	UNK	merge	UNK=indict
+astropy	extern.configobj	Section	UNK	rename	UNK=oldkey UNK=newkey
+astropy	extern.configobj	Section	UNK	walk	UNK=function UNK=raise_errors UNK=call_on_sections
+astropy	extern.configobj	Section	UNK	as_bool	UNK=key
+astropy	extern.configobj	Section	UNK	as_int	UNK=key
+astropy	extern.configobj	Section	UNK	as_float	UNK=key
+astropy	extern.configobj	Section	UNK	as_list	UNK=key
+astropy	extern.configobj	Section	UNK	restore_default	UNK=key
+astropy	extern.configobj	Section	UNK	restore_defaults	void
+astropy	extern.configobj	ConfigObj	UNK	__init__	UNK=infile UNK=options UNK=configspec UNK=encoding
+astropy	extern.configobj	ConfigObj	UNK	_handle_bom	UNK=infile
+astropy	extern.configobj	ConfigObj	UNK	_a_to_u	UNK=aString
+astropy	extern.configobj	ConfigObj	UNK	_decode	UNK=infile UNK=encoding
+astropy	extern.configobj	ConfigObj	UNK	_decode_element	UNK=line
+astropy	extern.configobj	ConfigObj	UNK	_str	UNK=value
+astropy	extern.configobj	ConfigObj	UNK	_parse	UNK=infile
+astropy	extern.configobj	ConfigObj	UNK	_match_depth	UNK=sect UNK=depth
+astropy	extern.configobj	ConfigObj	UNK	_handle_error	UNK=text UNK=ErrorClass UNK=infile UNK=cur_index
+astropy	extern.configobj	ConfigObj	UNK	_unquote	UNK=value
+astropy	extern.configobj	ConfigObj	UNK	_quote	UNK=value UNK=multiline
+astropy	extern.configobj	ConfigObj	UNK	_handle_value	UNK=value
+astropy	extern.configobj	ConfigObj	UNK	_multiline	UNK=value UNK=infile UNK=cur_index UNK=maxline
+astropy	extern.configobj	ConfigObj	UNK	_handle_configspec	UNK=configspec
+astropy	extern.configobj	ConfigObj	UNK	_set_configspec	UNK=section UNK=copy
+astropy	extern.configobj	ConfigObj	UNK	_write_line	UNK=indent_string UNK=entry UNK=this_entry UNK=comment
+astropy	extern.configobj	ConfigObj	UNK	_write_marker	UNK=indent_string UNK=depth UNK=entry UNK=comment
+astropy	extern.configobj	ConfigObj	UNK	_handle_comment	UNK=comment
+astropy	extern.configobj	ConfigObj	UNK	write	UNK=outfile UNK=section
+astropy	extern.configobj	ConfigObj	UNK	validate	UNK=validator UNK=preserve_errors UNK=copy UNK=section
+astropy	extern.configobj	ConfigObj	UNK	reset	void
+astropy	extern.configobj	ConfigObj	UNK	reload	void
+astropy	extern.configobj	SimpleVal	UNK	check	UNK=check UNK=member UNK=missing
+astropy	extern.configobj		UNK	flatten_errors	UNK=cfg UNK=res UNK=levels UNK=results
+astropy	extern.configobj		UNK	get_extra_values	UNK=conf UNK=_prepend
+astropy	extern.configobj		UNK	dottedQuadToNum	UNK=ip
+astropy	extern.configobj		UNK	numToDottedQuad	UNK=num
+astropy	extern.configobj	VdtUnknownCheckError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtParamError	UNK	__init__	UNK=name UNK=value
+astropy	extern.configobj	VdtTypeError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtValueError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtValueTooSmallError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtValueTooBigError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtValueTooShortError	UNK	__init__	UNK=value
+astropy	extern.configobj	VdtValueTooLongError	UNK	__init__	UNK=value
+astropy	extern.configobj	Validator	UNK	__init__	UNK=functions
+astropy	extern.configobj	Validator	UNK	check	UNK=check UNK=value UNK=missing
+astropy	extern.configobj	Validator	UNK	_unquote	UNK=val
+astropy	extern.configobj	Validator	UNK	_list_handle	UNK=listmatch
+astropy	extern.configobj	Validator	UNK	_pass	UNK=value
+astropy	extern.configobj	Validator	UNK	get_default_value	UNK=check
+astropy	extern.configobj		UNK	_is_num_param	UNK=names UNK=values UNK=to_float
+astropy	extern.configobj		UNK	is_integer	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_float	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_boolean	UNK=value
+astropy	extern.configobj		UNK	is_ip_addr	UNK=value
+astropy	extern.configobj		UNK	is_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_tuple	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_string	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_int_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_bool_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_float_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_string_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_ip_addr_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	force_list	UNK=value UNK=min UNK=max
+astropy	extern.configobj		UNK	is_mixed_list	UNK=value
+astropy	extern.configobj		UNK	is_option	UNK=value
+astropy	extern.configobj		UNK	_test	UNK=value
+astropy	extern.configobj		UNK	_test2	void
+astropy	extern.configobj		UNK	_test3	void
+astropy	extern.ply		UNK	CPP_INTEGER	UNK=t
+astropy	extern.ply		UNK	t_CPP_CHAR	UNK=t
+astropy	extern.bundled		UNK	_add_doc	UNK=func UNK=doc
+astropy	extern.bundled		UNK	_import_module	UNK=name
+astropy	extern.bundled	_SixMetaPathImporter	UNK	is_package	UNK=fullname
+astropy	extern.bundled		UNK	add_move	UNK=move
+astropy	extern.bundled		UNK	remove_move	UNK=name
+astropy	extern.bundled		UNK	with_metaclass	UNK=meta
+astropy	extern.bundled		UNK	add_metaclass	UNK=metaclass
+astropy	extern.bundled		UNK	python_2_unicode_compatible	UNK=klass
+astropy	analytic_functions		UNK	blackbody_nu	UNK=in_x UNK=temperature
+astropy	analytic_functions		UNK	blackbody_lambda	UNK=in_x UNK=temperature
+astropy	_erfa	Return	UNK	nd_dtype	void
+astropy	_erfa	Function	UNK	args_by_inout	UNK=inout_filter UNK=prop UNK=join
+astropy	modeling	Mapping	UNK	inputs	void
+astropy	modeling	Mapping	UNK	outputs	void
+astropy	modeling	Mapping	UNK	mapping	void
+astropy	modeling	Mapping	UNK	inverse	void
+astropy	modeling	Identity	UNK	inverse	void
+astropy	modeling	PolynomialBase	UNK	param_names	void
+astropy	modeling	PolynomialModel	UNK	degree	void
+astropy	modeling	PolynomialModel	UNK	get_num_coeff	UNK=ndim
+astropy	modeling	OrthoPolynomialBase	UNK	get_num_coeff	void
+astropy	modeling	OrthoPolynomialBase	UNK	_fcache	UNK=x UNK=y
+astropy	modeling	Chebyshev1D	UNK	fit_deriv	UNK=x
+astropy	modeling	Chebyshev1D	UNK	clenshaw	UNK=x UNK=coeffs
+astropy	modeling	Hermite1D	UNK	fit_deriv	UNK=x
+astropy	modeling	Hermite2D	UNK	_fcache	UNK=x UNK=y
+astropy	modeling	Hermite2D	UNK	fit_deriv	UNK=x UNK=y
+astropy	modeling	Hermite2D	UNK	_hermderiv1d	UNK=x UNK=deg
+astropy	modeling	Legendre1D	UNK	fit_deriv	UNK=x
+astropy	modeling	Polynomial1D	UNK	fit_deriv	UNK=x
+astropy	modeling	Polynomial2D	UNK	fit_deriv	UNK=x UNK=y
+astropy	modeling	Polynomial2D	UNK	multivariate_horner	UNK=x UNK=y UNK=coeffs
+astropy	modeling	Chebyshev2D	UNK	_fcache	UNK=x UNK=y
+astropy	modeling	Chebyshev2D	UNK	fit_deriv	UNK=x UNK=y
+astropy	modeling	Chebyshev2D	UNK	_chebderiv1d	UNK=x UNK=deg
+astropy	modeling	Legendre2D	UNK	_fcache	UNK=x UNK=y
+astropy	modeling	Legendre2D	UNK	fit_deriv	UNK=x UNK=y
+astropy	modeling	Legendre2D	UNK	_legendderiv1d	UNK=x UNK=deg
+astropy	modeling	_SIP1D	UNK	get_num_coeff	UNK=ndim
+astropy	modeling		UNK	_model_oper	UNK=oper
+astropy	modeling	_ModelMeta	UNK	__repr__	UNK=cls
+astropy	modeling	_ModelMeta	UNK	_repr_pretty_	UNK=cls UNK=p UNK=cycle
+astropy	modeling	_ModelMeta	UNK	name	UNK=cls
+astropy	modeling	_ModelMeta	UNK	_is_concrete	UNK=cls
+astropy	modeling	_ModelMeta	UNK	rename	UNK=cls UNK=name
+astropy	modeling	_ModelMeta	UNK	_create_bounding_box_property	UNK=cls UNK=members
+astropy	modeling	_ModelMeta	UNK	_create_bounding_box_subclass	UNK=cls UNK=func UNK=sig
+astropy	modeling	_ModelMeta	UNK	_format_cls_repr	UNK=cls UNK=keywords
+astropy	modeling	Model	UNK	__call__	void
+astropy	modeling	Model	UNK	name	void
+astropy	modeling	Model	UNK	name	UNK=val
+astropy	modeling	Model	UNK	n_inputs	void
+astropy	modeling	Model	UNK	n_outputs	void
+astropy	modeling	Model	UNK	model_set_axis	void
+astropy	modeling	Model	UNK	param_sets	void
+astropy	modeling	Model	UNK	parameters	void
+astropy	modeling	Model	UNK	parameters	UNK=value
+astropy	modeling	Model	UNK	fixed	void
+astropy	modeling	Model	UNK	tied	void
+astropy	modeling	Model	UNK	bounds	void
+astropy	modeling	Model	UNK	eqcons	void
+astropy	modeling	Model	UNK	ineqcons	void
+astropy	modeling	Model	UNK	inverse	void
+astropy	modeling	Model	UNK	has_user_inverse	void
+astropy	modeling	Model	UNK	bounding_box	void
+astropy	modeling	Model	UNK	bounding_box	UNK=bounding_box
+astropy	modeling	Model	UNK	has_user_bounding_box	void
+astropy	modeling	Model	UNK	evaluate	void
+astropy	modeling	Model	UNK	render	UNK=out UNK=coords
+astropy	modeling	Model	UNK	prepare_inputs	void
+astropy	modeling	Model	UNK	copy	void
+astropy	modeling	Model	UNK	rename	UNK=name
+astropy	modeling	Model	UNK	n_submodels	void
+astropy	modeling	Model	UNK	_from_existing	UNK=existing UNK=param_names
+astropy	modeling	Model	UNK	_initialize_constraints	UNK=kwargs
+astropy	modeling	Model	UNK	_initialize_parameters	UNK=args UNK=kwargs
+astropy	modeling	Model	UNK	_check_param_broadcast	UNK=params UNK=max_ndim
+astropy	modeling	Model	UNK	_param_sets	UNK=raw
+astropy	modeling	Model	UNK	_format_repr	UNK=args UNK=kwargs UNK=defaults
+astropy	modeling	Model	UNK	_format_str	UNK=keywords
+astropy	modeling	_CompoundModelMeta	UNK	__dir__	UNK=cls
+astropy	modeling	_CompoundModelMeta	UNK	_from_operator	UNK=mcls UNK=operator UNK=left UNK=right
+astropy	modeling	_CompoundModelMeta	UNK	_make_user_inverse	UNK=mcls UNK=operator UNK=left UNK=right
+astropy	modeling	_CompoundModelMeta	UNK	_init_param_descriptors	UNK=cls
+astropy	modeling	_CompoundModelMeta	UNK	_init_param_names	UNK=cls
+astropy	modeling	_CompoundModelMeta	UNK	_normalize_index	UNK=cls UNK=index
+astropy	modeling	_CompoundModelMeta	UNK	_get_slice	UNK=cls UNK=start UNK=stop
+astropy	modeling		UNK	custom_model	void
+astropy	modeling		UNK	_custom_model_wrapper	UNK=func UNK=fit_deriv
+astropy	modeling		UNK	render_model	UNK=model UNK=arr UNK=coords
+astropy	modeling		UNK	_validate_input_shapes	UNK=inputs UNK=argnames UNK=n_models UNK=model_set_axis
+astropy	modeling	Fitter	UNK	objective_function	UNK=fps
+astropy	modeling	Fitter	UNK	__call__	void
+astropy	modeling	LinearLSQFitter	UNK	_map_domain_window	UNK=model UNK=x UNK=y
+astropy	modeling	LinearLSQFitter	UNK	__call__	UNK=model UNK=x UNK=y UNK=z
+astropy	modeling	LevMarLSQFitter	UNK	objective_function	UNK=fps
+astropy	modeling	LevMarLSQFitter	UNK	__call__	UNK=model UNK=x UNK=y UNK=z
+astropy	modeling	LevMarLSQFitter	UNK	_wrap_deriv	UNK=params UNK=model UNK=weights UNK=x
+astropy	modeling	SLSQPLSQFitter	UNK	__call__	UNK=model UNK=x UNK=y UNK=z
+astropy	modeling	SimplexLSQFitter	UNK	__call__	UNK=model UNK=x UNK=y UNK=z
+astropy	modeling	JointFitter	UNK	objective_function	UNK=fps
+astropy	modeling	JointFitter	UNK	__call__	void
+astropy	modeling		UNK	_convert_input	UNK=x UNK=y UNK=z UNK=n_models
+astropy	modeling		UNK	_fitter_to_model_params	UNK=model UNK=fps
+astropy	modeling		UNK	_model_to_fit_params	UNK=model
+astropy	modeling		UNK	_validate_constraints	UNK=supported_constraints UNK=model
+astropy	modeling		UNK	_validate_model	UNK=model UNK=supported_constraints
+astropy	modeling		UNK	populate_entry_points	UNK=entry_points
+astropy	modeling	Projection	UNK	inverse	void
+astropy	modeling	AffineTransformation2D	UNK	matrix	UNK=value
+astropy	modeling	AffineTransformation2D	UNK	translation	UNK=value
+astropy	modeling	AffineTransformation2D	UNK	evaluate	UNK=cls UNK=x UNK=y UNK=matrix
+astropy	modeling	_Tabular	UNK	bounding_box	void
+astropy	modeling	_Tabular	UNK	evaluate	void
+astropy	modeling		UNK	tabular_model	UNK=dim UNK=name
+astropy	modeling		UNK	leastsquare	UNK=measured_vals UNK=updated_model UNK=weights UNK=x
+astropy	modeling	PowerLaw1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	PowerLaw1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	BrokenPowerLaw1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_break UNK=alpha_1
+astropy	modeling	BrokenPowerLaw1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_break UNK=alpha_1
+astropy	modeling	SmoothlyBrokenPowerLaw1D	UNK	evaluate	UNK=x UNK=amplitude UNK=log_break UNK=alpha_1
+astropy	modeling	SmoothlyBrokenPowerLaw1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=log_break UNK=alpha_1
+astropy	modeling	ExponentialCutoffPowerLaw1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	ExponentialCutoffPowerLaw1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	LogParabola1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	LogParabola1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_0 UNK=alpha
+astropy	modeling	Optimization	UNK	maxiter	void
+astropy	modeling	Optimization	UNK	eps	void
+astropy	modeling	Optimization	UNK	eps	UNK=val
+astropy	modeling	SLSQP	UNK	__call__	UNK=objfunc UNK=initval UNK=fargs
+astropy	modeling	Simplex	UNK	__call__	UNK=objfunc UNK=initval UNK=fargs
+astropy	modeling	ExpressionTree	UNK	evaluate	UNK=operators UNK=getter UNK=start UNK=stop
+astropy	modeling	AliasDict	UNK	__iter__	void
+astropy	modeling	_BoundingBox	UNK	validate	UNK=cls UNK=model UNK=bounding_box
+astropy	modeling		UNK	make_binary_operator_eval	UNK=oper UNK=f UNK=g
+astropy	modeling		UNK	poly_map_domain	UNK=oldx UNK=domain UNK=window
+astropy	modeling		UNK	comb	UNK=N UNK=k
+astropy	modeling		UNK	array_repr_oneline	UNK=array
+astropy	modeling		UNK	combine_labels	UNK=left UNK=right
+astropy	modeling		UNK	ellipse_extent	UNK=a UNK=b UNK=theta
+astropy	modeling		UNK	get_inputs_and_params	UNK=func
+astropy	modeling	_EulerRotation	UNK	rotation_matrix_from_angle	UNK=angle
+astropy	modeling	Rotation2D	UNK	evaluate	UNK=cls UNK=x UNK=y UNK=angle
+astropy	modeling		UNK	_tofloat	UNK=value
+astropy	modeling	Parameter	UNK	default	void
+astropy	modeling	Parameter	UNK	value	void
+astropy	modeling	Parameter	UNK	shape	void
+astropy	modeling	Parameter	UNK	size	void
+astropy	modeling	Parameter	UNK	fixed	void
+astropy	modeling	Parameter	UNK	fixed	UNK=value
+astropy	modeling	Parameter	UNK	tied	void
+astropy	modeling	Parameter	UNK	tied	UNK=value
+astropy	modeling	Parameter	UNK	bounds	void
+astropy	modeling	Parameter	UNK	bounds	UNK=value
+astropy	modeling	Parameter	UNK	min	void
+astropy	modeling	Parameter	UNK	min	UNK=value
+astropy	modeling	Parameter	UNK	max	void
+astropy	modeling	Parameter	UNK	max	UNK=value
+astropy	modeling	Parameter	UNK	validator	void
+astropy	modeling	Parameter	UNK	copy	UNK=name UNK=description UNK=default UNK=getter
+astropy	modeling	Parameter	UNK	_raw_value	void
+astropy	modeling	Parameter	UNK	_bind	UNK=model
+astropy	modeling	Parameter	UNK	_get_model_value	UNK=model
+astropy	modeling	Parameter	UNK	_set_model_value	UNK=model UNK=value
+astropy	modeling	Parameter	UNK	_create_value_wrapper	UNK=wrapper UNK=model
+astropy	modeling	BaseGaussian1D	UNK	bounding_box	UNK=factor
+astropy	modeling	Gaussian1D	UNK	evaluate	UNK=x UNK=amplitude UNK=mean UNK=stddev
+astropy	modeling	Gaussian1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=mean UNK=stddev
+astropy	modeling	GaussianAbsorption1D	UNK	evaluate	UNK=x UNK=amplitude UNK=mean UNK=stddev
+astropy	modeling	GaussianAbsorption1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=mean UNK=stddev
+astropy	modeling	Gaussian2D	UNK	bounding_box	UNK=factor
+astropy	modeling	Gaussian2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_mean
+astropy	modeling	Gaussian2D	UNK	fit_deriv	UNK=x UNK=y UNK=amplitude UNK=x_mean
+astropy	modeling	RedshiftScaleFactor	UNK	evaluate	UNK=x UNK=z
+astropy	modeling	RedshiftScaleFactor	UNK	fit_deriv	UNK=x UNK=z
+astropy	modeling	RedshiftScaleFactor	UNK	inverse	void
+astropy	modeling	Sersic1D	UNK	evaluate	UNK=cls UNK=r UNK=amplitude UNK=r_eff
+astropy	modeling	Sine1D	UNK	evaluate	UNK=x UNK=amplitude UNK=frequency UNK=phase
+astropy	modeling	Sine1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=frequency UNK=phase
+astropy	modeling	Linear1D	UNK	evaluate	UNK=x UNK=slope UNK=intercept
+astropy	modeling	Linear1D	UNK	fit_deriv	UNK=x UNK=slope UNK=intercept
+astropy	modeling	Planar2D	UNK	evaluate	UNK=x UNK=y UNK=slope_x UNK=slope_y
+astropy	modeling	Planar2D	UNK	fit_deriv	UNK=x UNK=y UNK=slope_x UNK=slope_y
+astropy	modeling	Lorentz1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=fwhm
+astropy	modeling	Lorentz1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_0 UNK=fwhm
+astropy	modeling	Lorentz1D	UNK	bounding_box	UNK=factor
+astropy	modeling	Const1D	UNK	evaluate	UNK=x UNK=amplitude
+astropy	modeling	Const1D	UNK	fit_deriv	UNK=x UNK=amplitude
+astropy	modeling	Const2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude
+astropy	modeling	Ellipse2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Ellipse2D	UNK	bounding_box	void
+astropy	modeling	Disk2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Disk2D	UNK	bounding_box	void
+astropy	modeling	Ring2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Ring2D	UNK	bounding_box	void
+astropy	modeling	Box1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=width
+astropy	modeling	Box1D	UNK	fit_deriv	UNK=cls UNK=x UNK=amplitude UNK=x_0
+astropy	modeling	Box1D	UNK	bounding_box	void
+astropy	modeling	Box2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Box2D	UNK	bounding_box	void
+astropy	modeling	Trapezoid1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=width
+astropy	modeling	Trapezoid1D	UNK	bounding_box	void
+astropy	modeling	TrapezoidDisk2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	TrapezoidDisk2D	UNK	bounding_box	void
+astropy	modeling	MexicanHat1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=sigma
+astropy	modeling	MexicanHat1D	UNK	bounding_box	UNK=factor
+astropy	modeling	MexicanHat2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	AiryDisk2D	UNK	evaluate	UNK=cls UNK=x UNK=y UNK=amplitude
+astropy	modeling	Moffat1D	UNK	evaluate	UNK=x UNK=amplitude UNK=x_0 UNK=gamma
+astropy	modeling	Moffat1D	UNK	fit_deriv	UNK=x UNK=amplitude UNK=x_0 UNK=gamma
+astropy	modeling	Moffat2D	UNK	evaluate	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Moffat2D	UNK	fit_deriv	UNK=x UNK=y UNK=amplitude UNK=x_0
+astropy	modeling	Sersic2D	UNK	evaluate	UNK=cls UNK=x UNK=y UNK=amplitude
+astropy	coordinates		UNK	_get_repr_cls	UNK=value
+astropy	coordinates	FrameAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	TimeFrameAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	CartesianRepresentationFrameAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	QuantityFrameAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	EarthLocationAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	CoordinateAttribute	UNK	convert_input	UNK=value
+astropy	coordinates	BaseCoordinateFrame	UNK	cache	void
+astropy	coordinates	BaseCoordinateFrame	UNK	data	void
+astropy	coordinates	BaseCoordinateFrame	UNK	has_data	void
+astropy	coordinates	BaseCoordinateFrame	UNK	representation	void
+astropy	coordinates	BaseCoordinateFrame	UNK	representation_info	void
+astropy	coordinates	BaseCoordinateFrame	UNK	realize_frame	UNK=representation
+astropy	coordinates	BaseCoordinateFrame	UNK	represent_as	UNK=new_representation UNK=in_frame_units
+astropy	coordinates	BaseCoordinateFrame	UNK	transform_to	UNK=new_frame
+astropy	coordinates	BaseCoordinateFrame	UNK	is_transformable_to	UNK=new_frame
+astropy	coordinates	BaseCoordinateFrame	UNK	is_frame_attr_default	UNK=attrnm
+astropy	coordinates	BaseCoordinateFrame	UNK	is_equivalent_frame	UNK=other
+astropy	coordinates	BaseCoordinateFrame	UNK	_data_repr	void
+astropy	coordinates	BaseCoordinateFrame	UNK	_frame_attrs_repr	void
+astropy	coordinates	BaseCoordinateFrame	UNK	_apply	UNK=method
+astropy	coordinates	BaseCoordinateFrame	UNK	__dir__	void
+astropy	coordinates	BaseCoordinateFrame	UNK	__getattr__	UNK=attr
+astropy	coordinates	BaseCoordinateFrame	UNK	separation	UNK=other
+astropy	coordinates	BaseCoordinateFrame	UNK	separation_3d	UNK=other
+astropy	coordinates	BaseCoordinateFrame	UNK	cartesian	void
+astropy	coordinates	BaseCoordinateFrame	UNK	spherical	void
+astropy	coordinates		UNK	calc_moon	UNK=t
+astropy	coordinates	TransformGraph	UNK	frame_set	void
+astropy	coordinates	TransformGraph	UNK	frame_attributes	void
+astropy	coordinates	TransformGraph	UNK	invalidate_cache	void
+astropy	coordinates	TransformGraph	UNK	add_transform	UNK=fromsys UNK=tosys UNK=transform
+astropy	coordinates	TransformGraph	UNK	remove_transform	UNK=fromsys UNK=tosys UNK=transform
+astropy	coordinates	TransformGraph	UNK	find_shortest_path	UNK=fromsys UNK=tosys
+astropy	coordinates	TransformGraph	UNK	get_transform	UNK=fromsys UNK=tosys
+astropy	coordinates	TransformGraph	UNK	lookup_name	UNK=name
+astropy	coordinates	TransformGraph	UNK	get_names	void
+astropy	coordinates	TransformGraph	UNK	to_dot_graph	UNK=priorities UNK=addnodes UNK=savefn UNK=savelayout
+astropy	coordinates	TransformGraph	UNK	to_networkx_graph	void
+astropy	coordinates	TransformGraph	UNK	transform	UNK=transcls UNK=fromsys UNK=tosys UNK=priority
+astropy	coordinates	CoordinateTransform	UNK	register	UNK=graph
+astropy	coordinates	CoordinateTransform	UNK	unregister	UNK=graph
+astropy	coordinates	CoordinateTransform	UNK	__call__	UNK=fromcoord UNK=toframe
+astropy	coordinates	CompositeTransform	UNK	_combine_statics	UNK=transforms
+astropy	coordinates	Angle	UNK	_tuple_to_float	UNK=angle UNK=unit
+astropy	coordinates	Angle	UNK	hour	void
+astropy	coordinates	Angle	UNK	hms	void
+astropy	coordinates	Angle	UNK	dms	void
+astropy	coordinates	Angle	UNK	signed_dms	void
+astropy	coordinates	Angle	UNK	to_string	UNK=unit UNK=decimal UNK=sep UNK=precision
+astropy	coordinates	Angle	UNK	wrap_at	UNK=wrap_angle UNK=inplace
+astropy	coordinates	Angle	UNK	is_within_bounds	UNK=lower UNK=upper
+astropy	coordinates	Latitude	UNK	_validate_angles	UNK=angles
+astropy	coordinates	Longitude	UNK	_wrap_internal	void
+astropy	coordinates		UNK	rotation_matrix	UNK=angle UNK=axis UNK=unit
+astropy	coordinates		UNK	angle_axis	UNK=matrix
+astropy	coordinates		UNK	matrix_product	void
+astropy	coordinates		UNK	matrix_transpose	UNK=matrix
+astropy	coordinates		UNK	match_coordinates_3d	UNK=matchcoord UNK=catalogcoord UNK=nthneighbor UNK=storekdtree
+astropy	coordinates		UNK	match_coordinates_sky	UNK=matchcoord UNK=catalogcoord UNK=nthneighbor UNK=storekdtree
+astropy	coordinates		UNK	search_around_3d	UNK=coords1 UNK=coords2 UNK=distlimit UNK=storekdtree
+astropy	coordinates		UNK	search_around_sky	UNK=coords1 UNK=coords2 UNK=seplimit UNK=storekdtree
+astropy	coordinates		UNK	_get_cartesian_kdtree	UNK=coord UNK=attrname_or_kdt UNK=forceunit
+astropy	coordinates		UNK	horoscope	UNK=birthday UNK=corrected
+astropy	coordinates	SiteRegistry	UNK	__getitem__	UNK=site_name
+astropy	coordinates	SiteRegistry	UNK	names	void
+astropy	coordinates	SiteRegistry	UNK	add_site	UNK=names UNK=locationobj
+astropy	coordinates		UNK	get_builtin_sites	void
+astropy	coordinates		UNK	get_downloaded_sites	UNK=jsonurl
+astropy	coordinates		UNK	_check_hour_range	UNK=hrs
+astropy	coordinates		UNK	_check_minute_range	UNK=m
+astropy	coordinates		UNK	_check_second_range	UNK=sec
+astropy	coordinates		UNK	check_hms_ranges	UNK=h UNK=m UNK=s
+astropy	coordinates		UNK	parse_angle	UNK=angle UNK=unit UNK=debug
+astropy	coordinates		UNK	degrees_to_dms	UNK=d
+astropy	coordinates		UNK	dms_to_degrees	UNK=d UNK=m UNK=s
+astropy	coordinates		UNK	hms_to_hours	UNK=h UNK=m UNK=s
+astropy	coordinates		UNK	hms_to_degrees	UNK=h UNK=m UNK=s
+astropy	coordinates		UNK	hms_to_radians	UNK=h UNK=m UNK=s
+astropy	coordinates		UNK	hms_to_dms	UNK=h UNK=m UNK=s
+astropy	coordinates		UNK	hours_to_decimal	UNK=h
+astropy	coordinates		UNK	hours_to_radians	UNK=h
+astropy	coordinates		UNK	hours_to_hms	UNK=h
+astropy	coordinates		UNK	radians_to_degrees	UNK=r
+astropy	coordinates		UNK	radians_to_hours	UNK=r
+astropy	coordinates		UNK	radians_to_hms	UNK=r
+astropy	coordinates		UNK	radians_to_dms	UNK=r
+astropy	coordinates		UNK	sexagesimal_to_string	UNK=values UNK=precision UNK=pad UNK=sep
+astropy	coordinates		UNK	hours_to_string	UNK=h UNK=precision UNK=pad UNK=sep
+astropy	coordinates		UNK	degrees_to_string	UNK=d UNK=precision UNK=pad UNK=sep
+astropy	coordinates		UNK	angular_separation	UNK=lon1 UNK=lat1 UNK=lon2 UNK=lat2
+astropy	coordinates		UNK	position_angle	UNK=lon1 UNK=lat1 UNK=lon2 UNK=lat2
+astropy	coordinates		UNK	eccentricity	UNK=jd
+astropy	coordinates		UNK	mean_lon_of_perigee	UNK=jd
+astropy	coordinates		UNK	obliquity	UNK=jd UNK=algorithm
+astropy	coordinates		UNK	precession_matrix_Capitaine	UNK=fromepoch UNK=toepoch
+astropy	coordinates		UNK	_precess_from_J2000_Capitaine	UNK=epoch
+astropy	coordinates		UNK	_precession_matrix_besselian	UNK=epoch1 UNK=epoch2
+astropy	coordinates		UNK	_load_nutation_data	UNK=datastr UNK=seriestype
+astropy	coordinates		UNK	nutation_components2000B	UNK=jd
+astropy	coordinates		UNK	nutation_matrix	UNK=epoch
+astropy	coordinates	EarthLocation	UNK	from_geocentric	UNK=cls UNK=x UNK=y UNK=z
+astropy	coordinates	EarthLocation	UNK	from_geodetic	UNK=cls UNK=lon UNK=lat UNK=height
+astropy	coordinates	EarthLocation	UNK	of_site	UNK=cls UNK=site_name
+astropy	coordinates	EarthLocation	UNK	of_address	UNK=cls UNK=address UNK=get_height
+astropy	coordinates	EarthLocation	UNK	get_site_names	UNK=cls
+astropy	coordinates	EarthLocation	UNK	_get_site_registry	UNK=cls UNK=force_download UNK=force_builtin
+astropy	coordinates	EarthLocation	UNK	ellipsoid	void
+astropy	coordinates	EarthLocation	UNK	geodetic	void
+astropy	coordinates	EarthLocation	UNK	to_geodetic	UNK=ellipsoid
+astropy	coordinates	EarthLocation	UNK	longitude	void
+astropy	coordinates	EarthLocation	UNK	latitude	void
+astropy	coordinates	EarthLocation	UNK	height	void
+astropy	coordinates	EarthLocation	UNK	geocentric	void
+astropy	coordinates	EarthLocation	UNK	to_geocentric	void
+astropy	coordinates	EarthLocation	UNK	get_itrs	UNK=obstime
+astropy	coordinates	EarthLocation	UNK	get_gcrs_posvel	UNK=obstime
+astropy	coordinates	EarthLocation	UNK	x	void
+astropy	coordinates	EarthLocation	UNK	y	void
+astropy	coordinates	EarthLocation	UNK	z	void
+astropy	coordinates		UNK	_parse_response	UNK=resp_data
+astropy	coordinates		UNK	get_icrs_coordinates	UNK=name
+astropy	coordinates		UNK	_get_kernel	UNK=value
+astropy	coordinates		UNK	_get_body_barycentric_posvel	UNK=body UNK=time UNK=ephemeris UNK=get_velocity
+astropy	coordinates		UNK	get_body_barycentric_posvel	UNK=body UNK=time UNK=ephemeris
+astropy	coordinates		UNK	get_body_barycentric	UNK=body UNK=time UNK=ephemeris
+astropy	coordinates		UNK	_get_apparent_body_position	UNK=body UNK=time UNK=ephemeris
+astropy	coordinates		UNK	get_body	UNK=body UNK=time UNK=location UNK=ephemeris
+astropy	coordinates		UNK	get_moon	UNK=time UNK=location UNK=ephemeris
+astropy	coordinates		UNK	_apparent_position_in_true_coordinates	UNK=skycoord
+astropy	coordinates		UNK	cartesian_to_spherical	UNK=x UNK=y UNK=z
+astropy	coordinates		UNK	spherical_to_cartesian	UNK=r UNK=lat UNK=lon
+astropy	coordinates		UNK	get_sun	UNK=time
+astropy	coordinates		UNK	concatenate	UNK=coords
+astropy	coordinates		UNK	get_constellation	UNK=coord UNK=short_name UNK=constellation_list
+astropy	coordinates	Distance	UNK	z	void
+astropy	coordinates	Distance	UNK	compute_z	UNK=cosmology
+astropy	coordinates	Distance	UNK	distmod	void
+astropy	coordinates		UNK	_convert_to_and_validate_length_unit	UNK=unit UNK=allow_dimensionless
+astropy	coordinates	SkyCoord	UNK	_apply	UNK=method
+astropy	coordinates	SkyCoord	UNK	_parse_inputs	UNK=args UNK=kwargs
+astropy	coordinates	SkyCoord	UNK	transform_to	UNK=frame UNK=merge_attributes
+astropy	coordinates	SkyCoord	UNK	__getattr__	UNK=attr
+astropy	coordinates	SkyCoord	UNK	__dir__	void
+astropy	coordinates	SkyCoord	UNK	to_string	UNK=style
+astropy	coordinates	SkyCoord	UNK	is_equivalent_frame	UNK=other
+astropy	coordinates	SkyCoord	UNK	separation	UNK=other
+astropy	coordinates	SkyCoord	UNK	separation_3d	UNK=other
+astropy	coordinates	SkyCoord	UNK	spherical_offsets_to	UNK=tocoord
+astropy	coordinates	SkyCoord	UNK	match_to_catalog_sky	UNK=catalogcoord UNK=nthneighbor
+astropy	coordinates	SkyCoord	UNK	match_to_catalog_3d	UNK=catalogcoord UNK=nthneighbor
+astropy	coordinates	SkyCoord	UNK	search_around_sky	UNK=searcharoundcoords UNK=seplimit
+astropy	coordinates	SkyCoord	UNK	search_around_3d	UNK=searcharoundcoords UNK=distlimit
+astropy	coordinates	SkyCoord	UNK	position_angle	UNK=other
+astropy	coordinates	SkyCoord	UNK	skyoffset_frame	UNK=rotation
+astropy	coordinates	SkyCoord	UNK	get_constellation	UNK=short_name UNK=constellation_list
+astropy	coordinates	SkyCoord	UNK	to_pixel	UNK=wcs UNK=origin UNK=mode
+astropy	coordinates	SkyCoord	UNK	from_pixel	UNK=cls UNK=xp UNK=yp UNK=wcs
+astropy	coordinates	SkyCoord	UNK	guess_from_table	UNK=cls UNK=table
+astropy	coordinates	SkyCoord	UNK	from_name	UNK=cls UNK=name UNK=frame
+astropy	coordinates		UNK	_get_frame_class	UNK=frame
+astropy	coordinates		UNK	_get_frame	UNK=args UNK=kwargs
+astropy	coordinates		UNK	_get_units	UNK=args UNK=kwargs
+astropy	coordinates		UNK	_parse_coordinate_arg	UNK=coords UNK=frame UNK=units UNK=init_kwargs
+astropy	coordinates		UNK	_get_representation_attrs	UNK=frame UNK=units UNK=kwargs
+astropy	coordinates		UNK	_parse_ra_dec	UNK=coord_str
+astropy	coordinates	BaseRepresentation	UNK	components	void
+astropy	coordinates	BaseRepresentation	UNK	_apply	UNK=method
+astropy	coordinates	BaseRepresentation	UNK	shape	void
+astropy	coordinates	BaseRepresentation	UNK	_values	void
+astropy	coordinates	BaseRepresentation	UNK	_units	void
+astropy	coordinates	BaseRepresentation	UNK	dot	UNK=other
+astropy	coordinates	BaseRepresentation	UNK	cross	UNK=other
+astropy	coordinates	CartesianRepresentation	UNK	x	void
+astropy	coordinates	CartesianRepresentation	UNK	y	void
+astropy	coordinates	CartesianRepresentation	UNK	z	void
+astropy	coordinates	CartesianRepresentation	UNK	get_xyz	UNK=xyz_axis
+astropy	coordinates	CartesianRepresentation	UNK	transform	UNK=matrix
+astropy	coordinates	CartesianRepresentation	UNK	dot	UNK=other
+astropy	coordinates	CartesianRepresentation	UNK	cross	UNK=other
+astropy	coordinates	UnitSphericalRepresentation	UNK	lon	void
+astropy	coordinates	UnitSphericalRepresentation	UNK	lat	void
+astropy	coordinates	UnitSphericalRepresentation	UNK	to_cartesian	void
+astropy	coordinates	UnitSphericalRepresentation	UNK	from_cartesian	UNK=cls UNK=cart
+astropy	coordinates	UnitSphericalRepresentation	UNK	cross	UNK=other
+astropy	coordinates	SphericalRepresentation	UNK	lon	void
+astropy	coordinates	SphericalRepresentation	UNK	lat	void
+astropy	coordinates	SphericalRepresentation	UNK	distance	void
+astropy	coordinates	SphericalRepresentation	UNK	to_cartesian	void
+astropy	coordinates	SphericalRepresentation	UNK	from_cartesian	UNK=cls UNK=cart
+astropy	coordinates	PhysicsSphericalRepresentation	UNK	phi	void
+astropy	coordinates	PhysicsSphericalRepresentation	UNK	theta	void
+astropy	coordinates	PhysicsSphericalRepresentation	UNK	r	void
+astropy	coordinates	PhysicsSphericalRepresentation	UNK	to_cartesian	void
+astropy	coordinates	PhysicsSphericalRepresentation	UNK	from_cartesian	UNK=cls UNK=cart
+astropy	coordinates	CylindricalRepresentation	UNK	rho	void
+astropy	coordinates	CylindricalRepresentation	UNK	phi	void
+astropy	coordinates	CylindricalRepresentation	UNK	z	void
+astropy	coordinates	CylindricalRepresentation	UNK	from_cartesian	UNK=cls UNK=cart
+astropy	coordinates	CylindricalRepresentation	UNK	to_cartesian	void
+astropy	coordinates.builtin_frames	ITRS	UNK	earth_location	void
+astropy	coordinates.builtin_frames	AltAz	UNK	secz	void
+astropy	coordinates.builtin_frames	AltAz	UNK	zen	void
+astropy	coordinates.builtin_frames		UNK	make_skyoffset_cls	UNK=framecls
+astropy	coordinates.builtin_frames	Galactocentric	UNK	get_roll0	UNK=cls
+astropy	coordinates.builtin_frames	FK4NoETerms	UNK	_precession_matrix	UNK=oldequinox UNK=newequinox
+astropy	coordinates.builtin_frames		UNK	fk4_e_terms	UNK=equinox
+astropy	coordinates.builtin_frames		UNK	_make_transform_graph_docs	void
+astropy	coordinates.builtin_frames		UNK	_fk4_B_matrix	UNK=obstime
+astropy	coordinates.builtin_frames		UNK	_icrs_to_fk5_matrix	void
+astropy	coordinates.builtin_frames		UNK	get_polar_motion	UNK=time
+astropy	coordinates.builtin_frames		UNK	_warn_iers	UNK=ierserr
+astropy	coordinates.builtin_frames		UNK	get_dut1utc	UNK=time
+astropy	coordinates.builtin_frames		UNK	get_jd12	UNK=time UNK=scale
+astropy	coordinates.builtin_frames		UNK	norm	UNK=p
+astropy	coordinates.builtin_frames		UNK	get_cip	UNK=jd1 UNK=jd2
+astropy	coordinates.builtin_frames		UNK	aticq	UNK=ri UNK=di UNK=astrom
+astropy	coordinates.builtin_frames		UNK	atciqz	UNK=rc UNK=dc UNK=astrom
+astropy	coordinates.builtin_frames		UNK	prepare_earth_position_vel	UNK=time
+astropy	coordinates.builtin_frames	FK5	UNK	_precession_matrix	UNK=oldequinox UNK=newequinox
+astropy	constants	Constant	UNK	copy	void
+astropy	constants	Constant	UNK	abbrev	void
+astropy	constants	Constant	UNK	name	void
+astropy	constants	Constant	UNK	_unit	void
+astropy	constants	Constant	UNK	uncertainty	void
+astropy	constants	Constant	UNK	reference	void
+astropy	constants	Constant	UNK	system	void
+astropy	constants	Constant	UNK	si	void
+astropy	constants	Constant	UNK	cgs	void
+astropy	constants	EMConstant	UNK	cgs	void
+astropy	config		UNK	_find_home	void
+astropy	config		UNK	get_config_dir	UNK=create
+astropy	config		UNK	get_cache_dir	void
+astropy	config	_SetTempPath	UNK	__call__	UNK=func
+astropy	config	ConfigNamespace	UNK	set_temp	UNK=attr UNK=value
+astropy	config	ConfigNamespace	UNK	reload	UNK=attr
+astropy	config	ConfigNamespace	UNK	reset	UNK=attr
+astropy	config	ConfigItem	UNK	set	UNK=value
+astropy	config	ConfigItem	UNK	set_temp	UNK=value
+astropy	config	ConfigItem	UNK	reload	void
+astropy	config	ConfigItem	UNK	__call__	void
+astropy	config	ConfigItem	UNK	_validate_val	UNK=val
+astropy	config		UNK	get_config_filename	UNK=packageormod
+astropy	config		UNK	get_config	UNK=packageormod UNK=reload
+astropy	config		UNK	reload_config	UNK=packageormod
+astropy	config		UNK	is_unedited_config_file	UNK=content UNK=template_content
+astropy	config		UNK	update_default_config	UNK=pkg UNK=default_cfg_dir_or_fn UNK=version
+astropy	stats		UNK	bayesian_info_criterion	UNK=log_likelihood UNK=n_params UNK=n_samples
+astropy	stats		UNK	bayesian_info_criterion_lsq	UNK=ssr UNK=n_params UNK=n_samples
+astropy	stats		UNK	akaike_info_criterion	UNK=log_likelihood UNK=n_params UNK=n_samples
+astropy	stats		UNK	akaike_info_criterion_lsq	UNK=ssr UNK=n_params UNK=n_samples
+astropy	stats		UNK	bayesian_blocks	UNK=t UNK=x UNK=sigma UNK=fitness
+astropy	stats	FitnessFunc	UNK	validate_input	UNK=t UNK=x UNK=sigma
+astropy	stats	FitnessFunc	UNK	p0_prior	UNK=N
+astropy	stats	FitnessFunc	UNK	compute_ncp_prior	UNK=N
+astropy	stats	FitnessFunc	UNK	fit	UNK=t UNK=x UNK=sigma
+astropy	stats		UNK	histogram	UNK=a UNK=bins UNK=range UNK=weights
+astropy	stats		UNK	scott_bin_width	UNK=data UNK=return_bins
+astropy	stats		UNK	freedman_bin_width	UNK=data UNK=return_bins
+astropy	stats		UNK	knuth_bin_width	UNK=data UNK=return_bins UNK=quiet
+astropy	stats	_KnuthF	UNK	bins	UNK=M
+astropy	stats	_KnuthF	UNK	eval	UNK=M
+astropy	stats		UNK	circmean	UNK=data UNK=axis UNK=weights
+astropy	stats		UNK	circvar	UNK=data UNK=axis UNK=weights
+astropy	stats		UNK	circmoment	UNK=data UNK=p UNK=centered UNK=axis
+astropy	stats		UNK	circcorrcoef	UNK=alpha UNK=beta UNK=axis UNK=weights_alpha
+astropy	stats		UNK	rayleightest	UNK=data UNK=axis UNK=weights
+astropy	stats		UNK	vtest	UNK=data UNK=mu UNK=axis UNK=weights
+astropy	stats		UNK	vonmisesmle	UNK=data UNK=axis
+astropy	stats		UNK	sigma_clip	UNK=data UNK=sigma UNK=sigma_lower UNK=sigma_upper
+astropy	stats		UNK	sigma_clipped_stats	UNK=data UNK=mask UNK=mask_value UNK=sigma
+astropy	stats		UNK	binom_conf_interval	UNK=k UNK=n UNK=conf UNK=interval
+astropy	stats		UNK	binned_binom_proportion	UNK=x UNK=success UNK=bins UNK=range
+astropy	stats		UNK	poisson_conf_interval	UNK=n UNK=interval UNK=sigma UNK=background
+astropy	stats		UNK	median_absolute_deviation	UNK=a UNK=axis UNK=func
+astropy	stats		UNK	mad_std	UNK=data UNK=axis UNK=func
+astropy	stats		UNK	biweight_location	UNK=a UNK=c UNK=M UNK=axis
+astropy	stats		UNK	biweight_midvariance	UNK=a UNK=c UNK=M UNK=axis
+astropy	stats		UNK	biweight_midcovariance	UNK=a UNK=c UNK=M UNK=transpose
+astropy	stats		UNK	signal_to_noise_oir_ccd	UNK=t UNK=source_eps UNK=sky_eps UNK=dark_eps
+astropy	stats		UNK	bootstrap	UNK=data UNK=bootnum UNK=samples UNK=bootfunc
+astropy	stats		UNK	_scipy_kraft_burrows_nousek	UNK=N UNK=B UNK=CL
+astropy	stats		UNK	_mpmath_kraft_burrows_nousek	UNK=N UNK=B UNK=CL
+astropy	stats		UNK	_kraft_burrows_nousek	UNK=N UNK=B UNK=CL
+astropy	stats		UNK	jackknife_resampling	UNK=data
+astropy	stats		UNK	jackknife_stats	UNK=data UNK=statistic UNK=conf_lvl
+astropy	stats.lombscargle	LombScargle	UNK	autofrequency	UNK=samples_per_peak UNK=nyquist_factor UNK=minimum_frequency UNK=maximum_frequency
+astropy	stats.lombscargle	LombScargle	UNK	autopower	UNK=method UNK=method_kwds UNK=normalization UNK=samples_per_peak
+astropy	stats.lombscargle	LombScargle	UNK	power	UNK=frequency UNK=normalization UNK=method UNK=assume_regular_frequency
+astropy	stats.lombscargle	LombScargle	UNK	model	UNK=t UNK=frequency
+astropy	stats.lombscargle.implementations		UNK	lombscargle_slow	UNK=t UNK=y UNK=dy UNK=frequency
+astropy	stats.lombscargle.implementations		UNK	lombscargle_fastchi2	UNK=t UNK=y UNK=dy UNK=f0
+astropy	stats.lombscargle.implementations		UNK	_get_frequency_grid	UNK=frequency UNK=assume_regular_frequency
+astropy	stats.lombscargle.implementations		UNK	validate_method	UNK=method UNK=dy UNK=fit_mean UNK=nterms
+astropy	stats.lombscargle.implementations		UNK	lombscargle	UNK=t UNK=y UNK=dy UNK=frequency
+astropy	stats.lombscargle.implementations		UNK	lombscargle_chi2	UNK=t UNK=y UNK=dy UNK=frequency
+astropy	stats.lombscargle.implementations		UNK	lombscargle_fast	UNK=t UNK=y UNK=dy UNK=f0
+astropy	stats.lombscargle.implementations		UNK	design_matrix	UNK=t UNK=frequency UNK=dy UNK=bias
+astropy	stats.lombscargle.implementations		UNK	periodic_fit	UNK=t UNK=y UNK=dy UNK=frequency
+astropy	stats.lombscargle.implementations		UNK	lombscargle_scipy	UNK=t UNK=y UNK=frequency UNK=normalization
+astropy	stats.lombscargle.implementations		UNK	add_at	UNK=arr UNK=ind UNK=vals
+astropy	stats.lombscargle.implementations		UNK	bitceil	UNK=N
+astropy	stats.lombscargle.implementations		UNK	extirpolate	UNK=x UNK=y UNK=N UNK=M
+astropy	stats.lombscargle.implementations		UNK	trig_sum	UNK=t UNK=h UNK=df UNK=N
+astropy	cosmology	FLRW	UNK	_namelead	void
+astropy	cosmology	FLRW	UNK	H0	void
+astropy	cosmology	FLRW	UNK	Om0	void
+astropy	cosmology	FLRW	UNK	Ode0	void
+astropy	cosmology	FLRW	UNK	Ob0	void
+astropy	cosmology	FLRW	UNK	Odm0	void
+astropy	cosmology	FLRW	UNK	Ok0	void
+astropy	cosmology	FLRW	UNK	Tcmb0	void
+astropy	cosmology	FLRW	UNK	Tnu0	void
+astropy	cosmology	FLRW	UNK	Neff	void
+astropy	cosmology	FLRW	UNK	has_massive_nu	void
+astropy	cosmology	FLRW	UNK	m_nu	void
+astropy	cosmology	FLRW	UNK	h	void
+astropy	cosmology	FLRW	UNK	hubble_time	void
+astropy	cosmology	FLRW	UNK	hubble_distance	void
+astropy	cosmology	FLRW	UNK	critical_density0	void
+astropy	cosmology	FLRW	UNK	Ogamma0	void
+astropy	cosmology	FLRW	UNK	Onu0	void
+astropy	cosmology	FLRW	UNK	clone	void
+astropy	cosmology	FLRW	UNK	w	UNK=z
+astropy	cosmology	FLRW	UNK	Om	UNK=z
+astropy	cosmology	FLRW	UNK	Ob	UNK=z
+astropy	cosmology	FLRW	UNK	Odm	UNK=z
+astropy	cosmology	FLRW	UNK	Ok	UNK=z
+astropy	cosmology	FLRW	UNK	Ode	UNK=z
+astropy	cosmology	FLRW	UNK	Ogamma	UNK=z
+astropy	cosmology	FLRW	UNK	Onu	UNK=z
+astropy	cosmology	FLRW	UNK	Tcmb	UNK=z
+astropy	cosmology	FLRW	UNK	Tnu	UNK=z
+astropy	cosmology	FLRW	UNK	nu_relative_density	UNK=z
+astropy	cosmology	FLRW	UNK	_w_integrand	UNK=ln1pz
+astropy	cosmology	FLRW	UNK	de_density_scale	UNK=z
+astropy	cosmology	FLRW	UNK	efunc	UNK=z
+astropy	cosmology	FLRW	UNK	inv_efunc	UNK=z
+astropy	cosmology	FLRW	UNK	_lookback_time_integrand_scalar	UNK=z
+astropy	cosmology	FLRW	UNK	_tfunc	UNK=z
+astropy	cosmology	FLRW	UNK	lookback_time_integrand	UNK=z
+astropy	cosmology	FLRW	UNK	_abs_distance_integrand_scalar	UNK=z
+astropy	cosmology	FLRW	UNK	_xfunc	UNK=z
+astropy	cosmology	FLRW	UNK	abs_distance_integrand	UNK=z
+astropy	cosmology	FLRW	UNK	H	UNK=z
+astropy	cosmology	FLRW	UNK	scale_factor	UNK=z
+astropy	cosmology	FLRW	UNK	lookback_time	UNK=z
+astropy	cosmology	FLRW	UNK	lookback_distance	UNK=z
+astropy	cosmology	FLRW	UNK	age	UNK=z
+astropy	cosmology	FLRW	UNK	critical_density	UNK=z
+astropy	cosmology	FLRW	UNK	comoving_distance	UNK=z
+astropy	cosmology	FLRW	UNK	_comoving_distance_z1z2	UNK=z1 UNK=z2
+astropy	cosmology	FLRW	UNK	comoving_transverse_distance	UNK=z
+astropy	cosmology	FLRW	UNK	_comoving_transverse_distance_z1z2	UNK=z1 UNK=z2
+astropy	cosmology	FLRW	UNK	angular_diameter_distance	UNK=z
+astropy	cosmology	FLRW	UNK	luminosity_distance	UNK=z
+astropy	cosmology	FLRW	UNK	angular_diameter_distance_z1z2	UNK=z1 UNK=z2
+astropy	cosmology	FLRW	UNK	absorption_distance	UNK=z
+astropy	cosmology	FLRW	UNK	distmod	UNK=z
+astropy	cosmology	FLRW	UNK	comoving_volume	UNK=z
+astropy	cosmology	FLRW	UNK	differential_comoving_volume	UNK=z
+astropy	cosmology	FLRW	UNK	kpc_comoving_per_arcmin	UNK=z
+astropy	cosmology	FLRW	UNK	kpc_proper_per_arcmin	UNK=z
+astropy	cosmology	FLRW	UNK	arcsec_per_kpc_comoving	UNK=z
+astropy	cosmology	FLRW	UNK	arcsec_per_kpc_proper	UNK=z
+astropy	cosmology	LambdaCDM	UNK	w	UNK=z
+astropy	cosmology	LambdaCDM	UNK	de_density_scale	UNK=z
+astropy	cosmology	LambdaCDM	UNK	efunc	UNK=z
+astropy	cosmology	LambdaCDM	UNK	inv_efunc	UNK=z
+astropy	cosmology	FlatLambdaCDM	UNK	efunc	UNK=z
+astropy	cosmology	FlatLambdaCDM	UNK	inv_efunc	UNK=z
+astropy	cosmology	wCDM	UNK	w0	void
+astropy	cosmology	wCDM	UNK	w	UNK=z
+astropy	cosmology	wCDM	UNK	de_density_scale	UNK=z
+astropy	cosmology	wCDM	UNK	efunc	UNK=z
+astropy	cosmology	wCDM	UNK	inv_efunc	UNK=z
+astropy	cosmology	FlatwCDM	UNK	efunc	UNK=z
+astropy	cosmology	FlatwCDM	UNK	inv_efunc	UNK=z
+astropy	cosmology	w0waCDM	UNK	w0	void
+astropy	cosmology	w0waCDM	UNK	wa	void
+astropy	cosmology	w0waCDM	UNK	w	UNK=z
+astropy	cosmology	w0waCDM	UNK	de_density_scale	UNK=z
+astropy	cosmology	wpwaCDM	UNK	wp	void
+astropy	cosmology	wpwaCDM	UNK	wa	void
+astropy	cosmology	wpwaCDM	UNK	zp	void
+astropy	cosmology	wpwaCDM	UNK	w	UNK=z
+astropy	cosmology	wpwaCDM	UNK	de_density_scale	UNK=z
+astropy	cosmology	w0wzCDM	UNK	w0	void
+astropy	cosmology	w0wzCDM	UNK	wz	void
+astropy	cosmology	w0wzCDM	UNK	w	UNK=z
+astropy	cosmology	w0wzCDM	UNK	de_density_scale	UNK=z
+astropy	cosmology		UNK	_float_or_none	UNK=x UNK=digits
+astropy	cosmology		UNK	vectorize_if_needed	UNK=func
+astropy	cosmology	default_cosmology	UNK	get_cosmology_from_string	UNK=arg
+astropy	cosmology		UNK	z_at_value	UNK=func UNK=fval UNK=zmin UNK=zmax
+astropy	wcs		UNK	determine_64_bit_int	void
+astropy	wcs		UNK	write_wcsconfig_h	UNK=paths
+astropy	wcs		UNK	get_include	void
+astropy	wcs		UNK	add_stokes_axis_to_wcs	UNK=wcs UNK=add_before_ind
+astropy	wcs		UNK	wcs_to_celestial_frame	UNK=wcs
+astropy	wcs		UNK	proj_plane_pixel_scales	UNK=wcs
+astropy	wcs		UNK	proj_plane_pixel_area	UNK=wcs
+astropy	wcs		UNK	is_proj_plane_distorted	UNK=wcs UNK=maxerr
+astropy	wcs		UNK	non_celestial_pixel_scales	UNK=inwcs
+astropy	wcs		UNK	_has_distortion	UNK=wcs
+astropy	wcs		UNK	skycoord_to_pixel	UNK=coords UNK=wcs UNK=origin UNK=mode
+astropy	wcs		UNK	pixel_to_skycoord	UNK=xp UNK=yp UNK=wcs UNK=origin
+astropy	wcs	WCS	UNK	copy	void
+astropy	wcs	WCS	UNK	deepcopy	void
+astropy	wcs	WCS	UNK	_fix_scamp	void
+astropy	wcs	WCS	UNK	fix	UNK=translate_units UNK=naxis
+astropy	wcs	WCS	UNK	calc_footprint	UNK=header UNK=undistort UNK=axes UNK=center
+astropy	wcs	WCS	UNK	_read_det2im_kw	UNK=header UNK=fobj UNK=err
+astropy	wcs	WCS	UNK	_write_det2im	UNK=hdulist
+astropy	wcs	WCS	UNK	_read_distortion_kw	UNK=header UNK=fobj UNK=dist UNK=err
+astropy	wcs	WCS	UNK	_write_distortion_kw	UNK=hdulist UNK=dist
+astropy	wcs	WCS	UNK	_remove_sip_kw	UNK=header
+astropy	wcs	WCS	UNK	_read_sip_kw	UNK=header UNK=wcskey
+astropy	wcs	WCS	UNK	_write_sip_kw	void
+astropy	wcs	WCS	UNK	_array_converter	UNK=func UNK=sky
+astropy	wcs	WCS	UNK	to_fits	UNK=relax UNK=key
+astropy	wcs	WCS	UNK	to_header	UNK=relax UNK=key
+astropy	wcs	WCS	UNK	to_header_string	UNK=relax
+astropy	wcs	WCS	UNK	footprint_to_file	UNK=filename UNK=color UNK=width UNK=coordsys
+astropy	wcs	WCS	UNK	__repr__	void
+astropy	wcs	WCS	UNK	get_axis_types	void
+astropy	wcs	WCS	UNK	__reduce__	void
+astropy	wcs	WCS	UNK	dropaxis	UNK=dropax
+astropy	wcs	WCS	UNK	swapaxes	UNK=ax0 UNK=ax1
+astropy	wcs	WCS	UNK	reorient_celestial_first	void
+astropy	wcs	WCS	UNK	slice	UNK=view UNK=numpy_order
+astropy	wcs	WCS	UNK	axis_type_names	void
+astropy	wcs	WCS	UNK	celestial	void
+astropy	wcs	WCS	UNK	_as_mpl_axes	void
+astropy	wcs		UNK	__WCS_unpickle__	UNK=cls UNK=dct UNK=fits_data
+astropy	wcs		UNK	find_all_wcs	UNK=header UNK=relax UNK=keysel UNK=fix
+astropy	wcs		UNK	validate	UNK=source
+astropy	utils		UNK	_get_stdout	UNK=stderr
+astropy	utils		UNK	isatty	UNK=file
+astropy	utils		UNK	terminal_size	UNK=file
+astropy	utils		UNK	_color_text	UNK=text UNK=color
+astropy	utils		UNK	_decode_preferred_encoding	UNK=s
+astropy	utils		UNK	_write_with_fallback	UNK=s UNK=write UNK=fileobj
+astropy	utils		UNK	color_print	void
+astropy	utils		UNK	strip_ansi_codes	UNK=s
+astropy	utils		UNK	human_time	UNK=seconds
+astropy	utils		UNK	human_file_size	UNK=size
+astropy	utils	ProgressBar	UNK	update	UNK=value
+astropy	utils	ProgressBar	UNK	_update_console	UNK=value
+astropy	utils	ProgressBar	UNK	_update_ipython_widget	UNK=value
+astropy	utils	ProgressBar	UNK	map	UNK=cls UNK=function UNK=items UNK=multiprocess
+astropy	utils	ProgressBarOrSpinner	UNK	update	UNK=value
+astropy	utils		UNK	print_code_line	UNK=line UNK=col UNK=file UNK=tabwidth
+astropy	utils		UNK	prereleaser_middle	UNK=data
+astropy	utils		UNK	releaser_middle	UNK=data
+astropy	utils		UNK	postreleaser_before	UNK=data
+astropy	utils		UNK	postreleaser_middle	UNK=data
+astropy	utils	ScienceState	UNK	get	UNK=cls
+astropy	utils	ScienceState	UNK	set	UNK=cls UNK=value
+astropy	utils	ScienceState	UNK	validate	UNK=cls UNK=value
+astropy	utils		UNK	_is_url	UNK=string
+astropy	utils		UNK	get_readable_fileobj	UNK=name_or_obj UNK=encoding UNK=cache UNK=show_progress
+astropy	utils		UNK	get_file_contents	void
+astropy	utils		UNK	get_pkg_data_fileobj	UNK=data_name UNK=package UNK=encoding UNK=cache
+astropy	utils		UNK	get_pkg_data_filename	UNK=data_name UNK=package UNK=show_progress UNK=remote_timeout
+astropy	utils		UNK	get_pkg_data_contents	UNK=data_name UNK=package UNK=encoding UNK=cache
+astropy	utils		UNK	get_pkg_data_filenames	UNK=datadir UNK=package UNK=pattern
+astropy	utils		UNK	get_pkg_data_fileobjs	UNK=datadir UNK=package UNK=pattern UNK=encoding
+astropy	utils		UNK	compute_hash	UNK=localfn
+astropy	utils		UNK	_find_pkg_data_path	UNK=data_name UNK=package
+astropy	utils		UNK	_find_hash_fn	UNK=hash
+astropy	utils		UNK	get_free_space_in_dir	UNK=path
+astropy	utils		UNK	check_free_space_in_dir	UNK=path UNK=size
+astropy	utils		UNK	download_file	UNK=remote_url UNK=cache UNK=show_progress UNK=timeout
+astropy	utils		UNK	is_url_in_cache	UNK=url_key
+astropy	utils		UNK	download_files_in_parallel	UNK=urls UNK=cache UNK=show_progress UNK=timeout
+astropy	utils		UNK	clear_download_cache	UNK=hashorurl
+astropy	utils		UNK	_get_download_cache_locs	void
+astropy	utils		UNK	_open_shelve	UNK=shelffn UNK=withclosing
+astropy	utils		UNK	_acquire_download_cache_lock	void
+astropy	utils		UNK	timefunc	UNK=num_tries UNK=verbose
+astropy	utils	RunTimePredictor	UNK	results	void
+astropy	utils	RunTimePredictor	UNK	_timed_pfunc	UNK=arg
+astropy	utils	RunTimePredictor	UNK	_cache_time	UNK=arg
+astropy	utils	RunTimePredictor	UNK	time_func	UNK=arglist
+astropy	utils	RunTimePredictor	UNK	do_fit	UNK=model UNK=fitter UNK=power UNK=min_datapoints
+astropy	utils	RunTimePredictor	UNK	predict_time	UNK=arg
+astropy	utils		UNK	resolve_name	UNK=name
+astropy	utils		UNK	minversion	UNK=module UNK=version UNK=inclusive UNK=version_path
+astropy	utils		UNK	find_current_module	UNK=depth UNK=finddiff
+astropy	utils		UNK	find_mod_objs	UNK=modname UNK=onlylocals
+astropy	utils		UNK	isinstancemethod	UNK=cls UNK=obj
+astropy	utils		UNK	deprecated	UNK=since UNK=message UNK=name UNK=alternative
+astropy	utils		UNK	deprecated_attribute	UNK=name UNK=since UNK=message UNK=alternative
+astropy	utils		UNK	deprecated_renamed_argument	UNK=old_name UNK=new_name UNK=since UNK=arg_in_kwargs
+astropy	utils		UNK	wraps	UNK=wrapped UNK=assigned UNK=updated UNK=exclude_args
+astropy	utils		UNK	format_doc	UNK=docstring
+astropy	utils		UNK	isiterable	UNK=obj
+astropy	utils		UNK	indent	UNK=s UNK=shift UNK=width
+astropy	utils		UNK	silence	void
+astropy	utils		UNK	format_exception	UNK=msg
+astropy	utils		UNK	find_api_page	UNK=obj UNK=version UNK=openinbrowser UNK=timeout
+astropy	utils		UNK	signal_number_to_name	UNK=signum
+astropy	utils		UNK	is_path_hidden	UNK=filepath
+astropy	utils		UNK	walk_skip_hidden	UNK=top UNK=onerror UNK=followlinks
+astropy	utils		UNK	strip_accents	UNK=s
+astropy	utils		UNK	did_you_mean	UNK=s UNK=candidates UNK=n UNK=cutoff
+astropy	utils	OrderedDescriptor	UNK	__lt__	UNK=other
+astropy	utils		UNK	set_locale	UNK=name
+astropy	utils	ShapedLikeNDArray	UNK	shape	void
+astropy	utils	ShapedLikeNDArray	UNK	_apply	UNK=method
+astropy	utils	ShapedLikeNDArray	UNK	ndim	void
+astropy	utils	ShapedLikeNDArray	UNK	size	void
+astropy	utils	ShapedLikeNDArray	UNK	__bool__	void
+astropy	utils	ShapedLikeNDArray	UNK	__nonzero__	void
+astropy	utils	ShapedLikeNDArray	UNK	copy	void
+astropy	utils	ShapedLikeNDArray	UNK	reshape	void
+astropy	utils	ShapedLikeNDArray	UNK	ravel	void
+astropy	utils	ShapedLikeNDArray	UNK	flatten	void
+astropy	utils	ShapedLikeNDArray	UNK	transpose	void
+astropy	utils	ShapedLikeNDArray	UNK	T	void
+astropy	utils	ShapedLikeNDArray	UNK	swapaxes	void
+astropy	utils	ShapedLikeNDArray	UNK	diagonal	void
+astropy	utils	ShapedLikeNDArray	UNK	squeeze	void
+astropy	utils	ShapedLikeNDArray	UNK	take	UNK=indices UNK=axis UNK=mode
+astropy	utils		UNK	check_broadcast	void
+astropy	utils		UNK	common_dtype	UNK=arrs
+astropy	utils		UNK	enable_merge_strategies	void
+astropy	utils		UNK	merge	UNK=left UNK=right UNK=merge_func UNK=metadata_conflicts
+astropy	utils		UNK	make_function_with_signature	UNK=func UNK=args UNK=kwargs UNK=varargs
+astropy	utils		UNK	dtype_info_name	UNK=dtype
+astropy	utils		UNK	data_info_factory	UNK=names UNK=funcs
+astropy	utils		UNK	_get_obj_attrs_map	UNK=obj UNK=attrs
+astropy	utils		UNK	_get_data_attribute	UNK=dat UNK=attr
+astropy	utils	DataInfo	UNK	_represent_as_dict	void
+astropy	utils	DataInfo	UNK	__call__	UNK=option UNK=out
+astropy	utils	BaseColumnInfo	UNK	iter_str_vals	void
+astropy	utils	BaseColumnInfo	UNK	adjust_indices	UNK=index UNK=value UNK=col_len
+astropy	utils	BaseColumnInfo	UNK	slice_indices	UNK=col_slice UNK=item UNK=col_len
+astropy	utils		UNK	directory	UNK=arg
+astropy	utils		UNK	readable_directory	UNK=arg
+astropy	utils		UNK	writeable_directory	UNK=arg
+astropy	utils.xml		UNK	check_id	UNK=ID
+astropy	utils.xml		UNK	fix_id	UNK=ID
+astropy	utils.xml		UNK	check_token	UNK=token
+astropy	utils.xml		UNK	check_mime_content_type	UNK=content_type
+astropy	utils.xml		UNK	check_anyuri	UNK=uri
+astropy	utils.xml		UNK	validate_schema	UNK=filename UNK=schema_file
+astropy	utils.xml		UNK	_convert_to_fd_or_read_function	UNK=fd
+astropy	utils.xml		UNK	get_xml_iterator	UNK=source UNK=_debug_python_based_parser
+astropy	utils.xml		UNK	get_xml_encoding	UNK=source
+astropy	utils.xml		UNK	xml_readlines	UNK=source
+astropy	utils.xml	XMLWriter	UNK	_flush	UNK=indent UNK=wrap
+astropy	utils.xml	XMLWriter	UNK	start	UNK=tag UNK=attrib
+astropy	utils.xml	XMLWriter	UNK	xml_cleaning_method	UNK=method
+astropy	utils.xml	XMLWriter	UNK	tag	UNK=tag UNK=attrib
+astropy	utils.xml	XMLWriter	UNK	comment	UNK=comment
+astropy	utils.xml	XMLWriter	UNK	data	UNK=text
+astropy	utils.xml	XMLWriter	UNK	end	UNK=tag UNK=indent UNK=wrap
+astropy	utils.xml	XMLWriter	UNK	close	UNK=id
+astropy	utils.xml	XMLWriter	UNK	element	UNK=tag UNK=text UNK=wrap UNK=attrib
+astropy	utils.xml	XMLWriter	UNK	get_indentation	void
+astropy	utils.xml	XMLWriter	UNK	get_indentation_spaces	UNK=offset
+astropy	utils.xml	XMLWriter	UNK	object_attrs	UNK=obj UNK=attrs
+astropy	utils.xml		UNK	unescape_all	UNK=url
+astropy	utils.compat		UNK	_monkeypatch_unicode_mask_fill_values	void
+astropy	utils.compat		UNK	possible_filename	UNK=filename
+astropy	utils.compat		UNK	override__dir__	UNK=f
+astropy	utils.compat		UNK	signature	UNK=obj
+astropy	utils.compat	Parameter	UNK	replace	UNK=name UNK=kind UNK=annotation UNK=default
+astropy	utils.compat	Signature	UNK	__init__	UNK=parameters UNK=return_annotation UNK=__validate_parameters__
+astropy	utils.compat	Signature	UNK	from_function	UNK=cls UNK=func
+astropy	utils.compat	Signature	UNK	replace	UNK=parameters UNK=return_annotation
+astropy	utils.compat	Signature	UNK	_bind	UNK=args UNK=kwargs UNK=partial
+astropy	utils.compat	Signature	UNK	bind	void
+astropy	utils.compat	Signature	UNK	bind_partial	void
+astropy	utils.compat.futures		UNK	as_completed	UNK=fs UNK=timeout
+astropy	utils.compat.futures		UNK	wait	UNK=fs UNK=timeout UNK=return_when
+astropy	utils.compat.futures	Future	UNK	__init__	void
+astropy	utils.compat.futures	Future	UNK	cancel	void
+astropy	utils.compat.futures	Future	UNK	cancelled	void
+astropy	utils.compat.futures	Future	UNK	running	void
+astropy	utils.compat.futures	Future	UNK	done	void
+astropy	utils.compat.futures	Future	UNK	add_done_callback	UNK=fn
+astropy	utils.compat.futures	Future	UNK	result	UNK=timeout
+astropy	utils.compat.futures	Future	UNK	exception	UNK=timeout
+astropy	utils.compat.futures	Future	UNK	set_running_or_notify_cancel	void
+astropy	utils.compat.futures	Future	UNK	set_result	UNK=result
+astropy	utils.compat.futures	Future	UNK	set_exception	UNK=exception
+astropy	utils.compat.futures	Executor	UNK	submit	UNK=fn
+astropy	utils.compat.futures	Executor	UNK	map	UNK=fn
+astropy	utils.compat.futures	Executor	UNK	shutdown	UNK=wait
+astropy	utils.compat.futures		UNK	_remove_dead_thread_references	void
+astropy	utils.compat.futures	ThreadPoolExecutor	UNK	__init__	UNK=max_workers
+astropy	utils.compat.futures		UNK	_process_worker	UNK=call_queue UNK=result_queue UNK=shutdown
+astropy	utils.compat.futures		UNK	_add_call_item_to_queue	UNK=pending_work_items UNK=work_ids UNK=call_queue
+astropy	utils.compat.futures		UNK	_queue_manangement_worker	UNK=executor_reference UNK=processes UNK=pending_work_items UNK=work_ids_queue
+astropy	utils.compat.futures	ProcessPoolExecutor	UNK	__init__	UNK=max_workers
+astropy	utils.iers		UNK	download_file	void
+astropy	utils.iers	IERS	UNK	open	UNK=cls UNK=file UNK=cache
+astropy	utils.iers	IERS	UNK	close	UNK=cls
+astropy	utils.iers	IERS	UNK	mjd_utc	UNK=jd1 UNK=jd2
+astropy	utils.iers	IERS	UNK	ut1_utc	UNK=jd1 UNK=jd2 UNK=return_status
+astropy	utils.iers	IERS	UNK	pm_xy	UNK=jd1 UNK=jd2 UNK=return_status
+astropy	utils.iers	IERS	UNK	_check_interpolate_indices	UNK=indices_orig UNK=indices_clipped UNK=max_input_mjd
+astropy	utils.iers	IERS	UNK	_refresh_table_as_needed	UNK=mjd
+astropy	utils.iers	IERS	UNK	ut1_utc_source	UNK=i
+astropy	utils.iers	IERS	UNK	pm_source	UNK=i
+astropy	utils.iers	IERS	UNK	time_now	void
+astropy	utils.iers	IERS_A	UNK	_combine_a_b_columns	UNK=cls UNK=iers_a
+astropy	utils.iers	IERS_A	UNK	read	UNK=cls UNK=file UNK=readme
+astropy	utils.iers	IERS_A	UNK	ut1_utc_source	UNK=i
+astropy	utils.iers	IERS_A	UNK	pm_source	UNK=i
+astropy	utils.iers	IERS_B	UNK	read	UNK=cls UNK=file UNK=readme UNK=data_start
+astropy	utils.iers	IERS_B	UNK	ut1_utc_source	UNK=i
+astropy	utils.iers	IERS_B	UNK	pm_source	UNK=i
+astropy	utils.iers	IERS_Auto	UNK	open	UNK=cls
+astropy	utils.iers	IERS_Auto	UNK	_check_interpolate_indices	UNK=indices_orig UNK=indices_clipped UNK=max_input_mjd
+astropy	utils.iers	IERS_Auto	UNK	_refresh_table_as_needed	UNK=mjd
+astropy	utils.iers	IERS_Auto	UNK	_substitute_iers_b	UNK=cls UNK=table
+astropy	time	Time	UNK	_init_from_vals	UNK=val UNK=val2 UNK=format UNK=scale
+astropy	time	Time	UNK	_get_time_fmt	UNK=val UNK=val2 UNK=format UNK=scale
+astropy	time	Time	UNK	now	UNK=cls
+astropy	time	Time	UNK	format	void
+astropy	time	Time	UNK	format	UNK=format
+astropy	time	Time	UNK	_set_scale	UNK=scale
+astropy	time	Time	UNK	precision	void
+astropy	time	Time	UNK	in_subfmt	void
+astropy	time	Time	UNK	out_subfmt	void
+astropy	time	Time	UNK	shape	void
+astropy	time	Time	UNK	jd1	void
+astropy	time	Time	UNK	jd2	void
+astropy	time	Time	UNK	value	void
+astropy	time	Time	UNK	light_travel_time	UNK=skycoord UNK=kind UNK=location UNK=ephemeris
+astropy	time	Time	UNK	sidereal_time	UNK=kind UNK=longitude UNK=model
+astropy	time	Time	UNK	_erfa_sidereal_time	UNK=model
+astropy	time	Time	UNK	copy	UNK=format
+astropy	time	Time	UNK	replicate	UNK=format UNK=copy
+astropy	time	Time	UNK	_apply	UNK=method
+astropy	time	Time	UNK	__copy__	void
+astropy	time	Time	UNK	__deepcopy__	UNK=memo
+astropy	time	Time	UNK	_advanced_index	UNK=indices UNK=axis UNK=keepdims
+astropy	time	Time	UNK	argmin	UNK=axis UNK=out
+astropy	time	Time	UNK	argmax	UNK=axis UNK=out
+astropy	time	Time	UNK	argsort	UNK=axis
+astropy	time	Time	UNK	min	UNK=axis UNK=out UNK=keepdims
+astropy	time	Time	UNK	max	UNK=axis UNK=out UNK=keepdims
+astropy	time	Time	UNK	ptp	UNK=axis UNK=out UNK=keepdims
+astropy	time	Time	UNK	sort	UNK=axis
+astropy	time	Time	UNK	cache	void
+astropy	time	Time	UNK	__getattr__	UNK=attr
+astropy	time	Time	UNK	_match_shape	UNK=val
+astropy	time	Time	UNK	get_delta_ut1_utc	UNK=iers_table UNK=return_status
+astropy	time	Time	UNK	_get_delta_ut1_utc	UNK=jd1 UNK=jd2
+astropy	time	Time	UNK	_time_difference	UNK=other UNK=op
+astropy	time	Time	UNK	__eq__	UNK=other
+astropy	time	Time	UNK	__ne__	UNK=other
+astropy	time	TimeDelta	UNK	_set_scale	UNK=scale
+astropy	time	TimeDelta	UNK	__neg__	void
+astropy	time	TimeDelta	UNK	__abs__	void
+astropy	time	TimeDelta	UNK	__mul__	UNK=other
+astropy	time	TimeDelta	UNK	__rmul__	UNK=other
+astropy	time	TimeDelta	UNK	__div__	UNK=other
+astropy	time	TimeDelta	UNK	__rdiv__	UNK=other
+astropy	time	TimeDelta	UNK	__truediv__	UNK=other
+astropy	time	TimeDelta	UNK	__rtruediv__	UNK=other
+astropy	time		UNK	_make_array	UNK=val UNK=copy
+astropy	time		UNK	_regexify_subfmts	UNK=subfmts
+astropy	time	TimeFormat	UNK	_check_val_type	UNK=val1 UNK=val2
+astropy	time	TimeFormat	UNK	_check_scale	UNK=scale
+astropy	time	TimeFormat	UNK	set_jds	UNK=val1 UNK=val2
+astropy	time	TimeFormat	UNK	to_value	UNK=parent
+astropy	time	TimeFromEpoch	UNK	set_jds	UNK=val1 UNK=val2
+astropy	time	TimeAstropyTime	UNK	__new__	UNK=cls UNK=val1 UNK=val2 UNK=scale
+astropy	time	TimeDatetime	UNK	set_jds	UNK=val1 UNK=val2
+astropy	time	TimeDatetime	UNK	to_value	UNK=timezone UNK=parent
+astropy	time	TimeString	UNK	parse_string	UNK=timestr UNK=subfmts
+astropy	time	TimeString	UNK	set_jds	UNK=val1 UNK=val2
+astropy	time	TimeString	UNK	str_kwargs	void
+astropy	time	TimeString	UNK	format_string	UNK=str_fmt
+astropy	time	TimeString	UNK	_select_subfmts	UNK=pattern
+astropy	time	TimeFITS	UNK	parse_string	UNK=timestr UNK=subfmts
+astropy	time	TimeFITS	UNK	format_string	UNK=str_fmt
+astropy	time	TimeFITS	UNK	value	void
+astropy	time	TimeBesselianEpoch	UNK	_check_val_type	UNK=val1 UNK=val2
+astropy	time	TimeDeltaFormat	UNK	_check_scale	UNK=scale
+astropy	time		UNK	day_frac	UNK=val1 UNK=val2 UNK=factor UNK=divisor
+astropy	time		UNK	two_sum	UNK=a UNK=b
+astropy	time		UNK	two_product	UNK=a UNK=b
+astropy	time		UNK	split	UNK=a
+astropy	vo.samp	SAMPSimpleXMLRPCRequestHandler	UNK	do_POST	void
+astropy	vo.samp	HTTPSConnection	UNK	connect	void
+astropy	vo.samp	SecureXMLRPCServer	UNK	__init__	UNK=addr UNK=key_file UNK=cert_file UNK=cert_reqs
+astropy	vo.samp	SAMPHubServer	UNK	id	void
+astropy	vo.samp	SAMPHubServer	UNK	start	UNK=wait
+astropy	vo.samp	SAMPHubServer	UNK	params	void
+astropy	vo.samp	SAMPHubServer	UNK	stop	void
+astropy	vo.samp	SAMPHubServer	UNK	is_running	void
+astropy	vo.samp	SAMPHubServer	UNK	get_mtype_subtypes	UNK=mtype
+astropy	vo.samp	SAMPHubServer	UNK	_reply	UNK=private_key UNK=msg_id UNK=response
+astropy	vo.samp	SAMPHubServer	UNK	_retry_method	UNK=recipient_private_key UNK=recipient_public_id UNK=samp_method_name UNK=arg_params
+astropy	vo.samp		UNK	hub_script	UNK=timeout
+astropy	vo.samp	SAMPClient	UNK	start	void
+astropy	vo.samp	SAMPClient	UNK	stop	UNK=timeout
+astropy	vo.samp	SAMPClient	UNK	is_running	void
+astropy	vo.samp	SAMPClient	UNK	is_registered	void
+astropy	vo.samp	SAMPClient	UNK	receive_notification	UNK=private_key UNK=sender_id UNK=message
+astropy	vo.samp	SAMPClient	UNK	receive_call	UNK=private_key UNK=sender_id UNK=msg_id UNK=message
+astropy	vo.samp	SAMPClient	UNK	receive_response	UNK=private_key UNK=responder_id UNK=msg_tag UNK=response
+astropy	vo.samp	SAMPClient	UNK	bind_receive_message	UNK=mtype UNK=function UNK=declare UNK=metadata
+astropy	vo.samp	SAMPClient	UNK	bind_receive_notification	UNK=mtype UNK=function UNK=declare UNK=metadata
+astropy	vo.samp	SAMPClient	UNK	bind_receive_call	UNK=mtype UNK=function UNK=declare UNK=metadata
+astropy	vo.samp	SAMPClient	UNK	bind_receive_response	UNK=msg_tag UNK=function
+astropy	vo.samp	SAMPClient	UNK	unbind_receive_notification	UNK=mtype UNK=declare
+astropy	vo.samp	SAMPClient	UNK	unbind_receive_call	UNK=mtype UNK=declare
+astropy	vo.samp	SAMPClient	UNK	unbind_receive_response	UNK=msg_tag
+astropy	vo.samp	SAMPClient	UNK	declare_subscriptions	UNK=subscriptions
+astropy	vo.samp	SAMPClient	UNK	register	void
+astropy	vo.samp	SAMPClient	UNK	unregister	void
+astropy	vo.samp	SAMPClient	UNK	declare_metadata	UNK=metadata
+astropy	vo.samp	SAMPClient	UNK	get_private_key	void
+astropy	vo.samp	SAMPClient	UNK	get_public_id	void
+astropy	vo.samp	SAMPHubProxy	UNK	is_connected	void
+astropy	vo.samp	SAMPHubProxy	UNK	connect	UNK=hub UNK=hub_params UNK=key_file UNK=cert_file
+astropy	vo.samp	SAMPHubProxy	UNK	disconnect	void
+astropy	vo.samp	SAMPHubProxy	UNK	_samp_hub	void
+astropy	vo.samp	SAMPHubProxy	UNK	ping	void
+astropy	vo.samp	SAMPHubProxy	UNK	set_xmlrpc_callback	UNK=private_key UNK=xmlrpc_addr
+astropy	vo.samp	SAMPHubProxy	UNK	register	UNK=secret
+astropy	vo.samp	SAMPHubProxy	UNK	unregister	UNK=private_key
+astropy	vo.samp	SAMPHubProxy	UNK	declare_metadata	UNK=private_key UNK=metadata
+astropy	vo.samp	SAMPHubProxy	UNK	get_metadata	UNK=private_key UNK=client_id
+astropy	vo.samp	SAMPHubProxy	UNK	declare_subscriptions	UNK=private_key UNK=subscriptions
+astropy	vo.samp	SAMPHubProxy	UNK	get_subscriptions	UNK=private_key UNK=client_id
+astropy	vo.samp	SAMPHubProxy	UNK	get_registered_clients	UNK=private_key
+astropy	vo.samp	SAMPHubProxy	UNK	get_subscribed_clients	UNK=private_key UNK=mtype
+astropy	vo.samp	SAMPHubProxy	UNK	notify	UNK=private_key UNK=recipient_id UNK=message
+astropy	vo.samp	SAMPHubProxy	UNK	notify_all	UNK=private_key UNK=message
+astropy	vo.samp	SAMPHubProxy	UNK	call	UNK=private_key UNK=recipient_id UNK=msg_tag UNK=message
+astropy	vo.samp	SAMPHubProxy	UNK	call_all	UNK=private_key UNK=msg_tag UNK=message
+astropy	vo.samp	SAMPHubProxy	UNK	call_and_wait	UNK=private_key UNK=recipient_id UNK=message UNK=timeout
+astropy	vo.samp	SAMPHubProxy	UNK	reply	UNK=private_key UNK=msg_id UNK=response
+astropy	vo.samp		UNK	getattr_recursive	UNK=variable UNK=attribute
+astropy	vo.samp		UNK	get_num_args	UNK=f
+astropy	vo.samp		UNK	read_lockfile	UNK=lockfilename
+astropy	vo.samp		UNK	get_main_running_hub	void
+astropy	vo.samp		UNK	get_running_hubs	void
+astropy	vo.samp		UNK	check_running_hub	UNK=lockfilename
+astropy	vo.samp	SAMPIntegratedClient	UNK	is_connected	void
+astropy	vo.samp	SAMPIntegratedClient	UNK	connect	UNK=hub UNK=hub_params UNK=key_file UNK=cert_file
+astropy	vo.samp	SAMPIntegratedClient	UNK	disconnect	void
+astropy	vo.samp	SAMPIntegratedClient	UNK	ping	void
+astropy	vo.samp	SAMPIntegratedClient	UNK	declare_metadata	UNK=metadata
+astropy	vo.samp	SAMPIntegratedClient	UNK	get_metadata	UNK=client_id
+astropy	vo.samp	SAMPIntegratedClient	UNK	get_subscriptions	UNK=client_id
+astropy	vo.samp	SAMPIntegratedClient	UNK	get_registered_clients	void
+astropy	vo.samp	SAMPIntegratedClient	UNK	get_subscribed_clients	UNK=mtype
+astropy	vo.samp	SAMPIntegratedClient	UNK	notify	UNK=recipient_id UNK=message
+astropy	vo.samp	SAMPIntegratedClient	UNK	enotify	UNK=recipient_id UNK=mtype
+astropy	vo.samp	SAMPIntegratedClient	UNK	notify_all	UNK=message
+astropy	vo.samp	SAMPIntegratedClient	UNK	enotify_all	UNK=mtype
+astropy	vo.samp	SAMPIntegratedClient	UNK	call	UNK=recipient_id UNK=msg_tag UNK=message
+astropy	vo.samp	SAMPIntegratedClient	UNK	ecall	UNK=recipient_id UNK=msg_tag UNK=mtype
+astropy	vo.samp	SAMPIntegratedClient	UNK	call_all	UNK=msg_tag UNK=message
+astropy	vo.samp	SAMPIntegratedClient	UNK	ecall_all	UNK=msg_tag UNK=mtype
+astropy	vo.samp	SAMPIntegratedClient	UNK	call_and_wait	UNK=recipient_id UNK=message UNK=timeout
+astropy	vo.samp	SAMPIntegratedClient	UNK	ecall_and_wait	UNK=recipient_id UNK=mtype UNK=timeout
+astropy	vo.samp	SAMPIntegratedClient	UNK	reply	UNK=msg_id UNK=response
+astropy	vo.samp	SAMPIntegratedClient	UNK	ereply	UNK=msg_id UNK=status UNK=result UNK=error
+astropy	vo.validator	ConeSearchResults	UNK	list_cats	UNK=typ UNK=fout UNK=ignore_noncrit
+astropy	vo.validator	ConeSearchResults	UNK	print_cat	UNK=key UNK=fout
+astropy	vo.validator		UNK	_exclude_noncrit	UNK=in_list
+astropy	vo.validator		UNK	check_conesearch_sites	UNK=destdir UNK=verbose UNK=parallel UNK=url_list
+astropy	vo.validator		UNK	_do_validation	UNK=args
+astropy	vo.validator		UNK	_categorize_result	UNK=r
+astropy	vo.validator		UNK	_html_subindex	UNK=args
+astropy	vo.validator		UNK	_copy_r_to_cat	UNK=r UNK=cat
+astropy	vo.validator		UNK	parse_cs	UNK=id
+astropy	vo.client	AsyncBase	UNK	__getattr__	UNK=what
+astropy	vo.client	AsyncBase	UNK	get	UNK=timeout
+astropy	vo.client	VOSBase	UNK	__getattr__	UNK=what
+astropy	vo.client	VOSBase	UNK	__getitem__	UNK=what
+astropy	vo.client	VOSBase	UNK	__setitem__	UNK=what UNK=value
+astropy	vo.client	VOSBase	UNK	__iter__	void
+astropy	vo.client	VOSBase	UNK	dumps	void
+astropy	vo.client	VOSCatalog	UNK	__str__	void
+astropy	vo.client	VOSCatalog	UNK	delete_attribute	UNK=key
+astropy	vo.client	VOSCatalog	UNK	create	UNK=cls UNK=title UNK=url
+astropy	vo.client	VOSDatabase	UNK	__str__	void
+astropy	vo.client	VOSDatabase	UNK	__len__	void
+astropy	vo.client	VOSDatabase	UNK	version	void
+astropy	vo.client	VOSDatabase	UNK	get_catalogs	void
+astropy	vo.client	VOSDatabase	UNK	get_catalogs_by_url	UNK=url
+astropy	vo.client	VOSDatabase	UNK	get_catalog	UNK=name
+astropy	vo.client	VOSDatabase	UNK	get_catalog_by_url	UNK=url
+astropy	vo.client	VOSDatabase	UNK	_match_pattern	UNK=all_keys UNK=pattern UNK=sort
+astropy	vo.client	VOSDatabase	UNK	list_catalogs	UNK=pattern UNK=sort
+astropy	vo.client	VOSDatabase	UNK	list_catalogs_by_url	UNK=pattern UNK=sort
+astropy	vo.client	VOSDatabase	UNK	add_catalog	UNK=name UNK=cat UNK=allow_duplicate_url
+astropy	vo.client	VOSDatabase	UNK	add_catalog_by_url	UNK=name UNK=url
+astropy	vo.client	VOSDatabase	UNK	delete_catalog	UNK=name
+astropy	vo.client	VOSDatabase	UNK	delete_catalog_by_url	UNK=url
+astropy	vo.client	VOSDatabase	UNK	merge	UNK=other
+astropy	vo.client	VOSDatabase	UNK	to_json	UNK=filename UNK=overwrite
+astropy	vo.client	VOSDatabase	UNK	create_empty	UNK=cls
+astropy	vo.client	VOSDatabase	UNK	from_json	UNK=cls UNK=filename
+astropy	vo.client	VOSDatabase	UNK	from_registry	UNK=cls UNK=registry_url UNK=timeout
+astropy	vo.client		UNK	get_remote_catalog_db	UNK=dbname UNK=cache UNK=verbose
+astropy	vo.client		UNK	_get_catalogs	UNK=service_type UNK=catalog_db
+astropy	vo.client		UNK	_vo_service_request	UNK=url UNK=pedantic UNK=kwargs UNK=cache
+astropy	vo.client		UNK	vo_tab_parse	UNK=tab UNK=url UNK=kwargs
+astropy	vo.client		UNK	call_vo_service	UNK=service_type UNK=catalog_db UNK=pedantic UNK=verbose
+astropy	vo.client		UNK	list_catalogs	UNK=service_type UNK=cache UNK=verbose
+astropy	vo.client		UNK	conesearch	UNK=center UNK=radius UNK=verb
+astropy	vo.client		UNK	search_all	void
+astropy	vo.client		UNK	list_catalogs	void
+astropy	vo.client		UNK	predict_search	UNK=url
+astropy	vo.client		UNK	conesearch_timer	void
+astropy	vo.client		UNK	_local_conversion	UNK=func UNK=x
+astropy	vo.client		UNK	_validate_sr	UNK=radius
+astropy	visualization		UNK	scale_image	UNK=image UNK=scale UNK=power UNK=asinh_a
+astropy	visualization		UNK	hist	UNK=x UNK=bins UNK=ax
+astropy	visualization		UNK	simple_norm	UNK=data UNK=stretch UNK=power UNK=asinh_a
+astropy	visualization		UNK	_logn	UNK=n UNK=x UNK=out
+astropy	visualization		UNK	_prepare	UNK=values UNK=clip UNK=out
+astropy	visualization	BaseStretch	UNK	__call__	UNK=values UNK=clip UNK=out
+astropy	visualization	BaseStretch	UNK	inverse	void
+astropy	visualization	LinearStretch	UNK	inverse	void
+astropy	visualization	SqrtStretch	UNK	inverse	void
+astropy	visualization	PowerStretch	UNK	inverse	void
+astropy	visualization	PowerDistStretch	UNK	inverse	void
+astropy	visualization	InvertedPowerDistStretch	UNK	inverse	void
+astropy	visualization	SquaredStretch	UNK	inverse	void
+astropy	visualization	LogStretch	UNK	inverse	void
+astropy	visualization	InvertedLogStretch	UNK	inverse	void
+astropy	visualization	AsinhStretch	UNK	inverse	void
+astropy	visualization	SinhStretch	UNK	inverse	void
+astropy	visualization	HistEqStretch	UNK	inverse	void
+astropy	visualization	InvertedHistEqStretch	UNK	inverse	void
+astropy	visualization	ContrastBiasStretch	UNK	inverse	void
+astropy	visualization	InvertedContrastBiasStretch	UNK	inverse	void
+astropy	visualization	BaseInterval	UNK	get_limits	UNK=values
+astropy	visualization	BaseInterval	UNK	__call__	UNK=values UNK=clip UNK=out
+astropy	visualization		UNK	quantity_support	UNK=format
+astropy	visualization		UNK	compute_intensity	UNK=image_r UNK=image_g UNK=image_b
+astropy	visualization	Mapping	UNK	make_rgb_image	UNK=image_r UNK=image_g UNK=image_b
+astropy	visualization	Mapping	UNK	intensity	UNK=image_r UNK=image_g UNK=image_b
+astropy	visualization	Mapping	UNK	map_intensity_to_uint8	UNK=I
+astropy	visualization	Mapping	UNK	_convert_images_to_uint8	UNK=image_r UNK=image_g UNK=image_b
+astropy	visualization		UNK	make_lupton_rgb	UNK=image_r UNK=image_g UNK=image_b UNK=minimum
+astropy	visualization.wcsaxes		UNK	_rotate_polygon	UNK=lon UNK=lat UNK=lon0 UNK=lat0
+astropy	visualization.wcsaxes	WCSAxes	UNK	imshow	UNK=X
+astropy	visualization.wcsaxes	WCSAxes	UNK	plot_coord	void
+astropy	visualization.wcsaxes	WCSAxes	UNK	reset_wcs	UNK=wcs UNK=slices UNK=transform UNK=coord_meta
+astropy	visualization.wcsaxes	WCSAxes	UNK	get_transform	UNK=frame
+astropy	visualization.wcsaxes	WCSAxes	UNK	_get_transform_no_transdata	UNK=frame
+astropy	visualization.wcsaxes	WCSAxes	UNK	grid	UNK=b UNK=axis
+astropy	visualization.wcsaxes	TickLabels	UNK	sort	void
+astropy	visualization.wcsaxes	TickLabels	UNK	simplify_labels	void
+astropy	visualization.wcsaxes	CurvedTransform	UNK	transform_path	UNK=path
+astropy	visualization.wcsaxes	WCSWorld2PixelTransform	UNK	transform	UNK=world
+astropy	visualization.wcsaxes	WCSWorld2PixelTransform	UNK	inverted	void
+astropy	visualization.wcsaxes	WCSPixel2WorldTransform	UNK	get_coord_slices	UNK=xmin UNK=xmax UNK=ymin UNK=ymax
+astropy	visualization.wcsaxes	WCSPixel2WorldTransform	UNK	transform	UNK=pixel
+astropy	visualization.wcsaxes	WCSPixel2WorldTransform	UNK	inverted	void
+astropy	visualization.wcsaxes	CoordinateTransform	UNK	transform	UNK=input_coords
+astropy	visualization.wcsaxes	CoordinateTransform	UNK	inverted	void
+astropy	visualization.wcsaxes	Ticks	UNK	set_tick_out	UNK=tick_out
+astropy	visualization.wcsaxes	Ticks	UNK	get_tick_out	void
+astropy	visualization.wcsaxes	Ticks	UNK	set_ticksize	UNK=ticksize
+astropy	visualization.wcsaxes	Ticks	UNK	get_ticksize	void
+astropy	visualization.wcsaxes	Ticks	UNK	draw	UNK=renderer
+astropy	visualization.wcsaxes	Ticks	UNK	_draw_ticks	UNK=renderer UNK=pixel_array UNK=angle_array UNK=offset
+astropy	visualization.wcsaxes	CoordinatesMap	UNK	grid	UNK=draw_grid UNK=grid_type
+astropy	visualization.wcsaxes	BaseFrame	UNK	set_color	UNK=color
+astropy	visualization.wcsaxes	BaseFrame	UNK	set_linewidth	UNK=linewidth
+astropy	visualization.wcsaxes	EllipticalFrame	UNK	_update_patch_path	void
+astropy	visualization.wcsaxes	EllipticalFrame	UNK	draw	UNK=renderer
+astropy	visualization.wcsaxes		UNK	coord_type_from_ctype	UNK=ctype
+astropy	visualization.wcsaxes		UNK	get_lon_lat_path	UNK=lon_lat UNK=pixel UNK=lon_lat_check
+astropy	visualization.wcsaxes		UNK	get_gridline_path	UNK=world UNK=pixel
+astropy	visualization.wcsaxes		UNK	find_coordinate_range	UNK=transform UNK=extent UNK=coord_types UNK=coord_units
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	grid	UNK=draw_grid UNK=grid_type
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_coord_type	UNK=coord_type UNK=coord_wrap
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_major_formatter	UNK=formatter
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	format_coord	UNK=value
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_separator	UNK=separator
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_format_unit	UNK=unit
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticks	UNK=values UNK=spacing UNK=number UNK=size
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticks_position	UNK=position
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticks_visible	UNK=visible
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticklabel	void
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticklabel_position	UNK=position
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_ticklabel_visible	UNK=visible
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_axislabel	UNK=text UNK=minpad
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	get_axislabel	void
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_axislabel_position	UNK=position
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	display_minor_ticks	UNK=display_minor_ticks
+astropy	visualization.wcsaxes	CoordinateHelper	UNK	set_minor_frequency	UNK=frequency
+astropy	visualization.scripts		UNK	fits2bitmap	UNK=filename UNK=ext UNK=out_fn UNK=stretch

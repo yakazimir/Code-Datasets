@@ -1,0 +1,817 @@
+kivy	core		UNK	resource_find	UNK=filename
+kivy	core		UNK	resource_add_path	UNK=path
+kivy	core		UNK	resource_remove_path	UNK=path
+kivy	core	LoaderBase	UNK	start	void
+kivy	core	LoaderBase	UNK	run	void
+kivy	core	LoaderBase	UNK	stop	void
+kivy	core	LoaderBase	UNK	pause	void
+kivy	core	LoaderBase	UNK	resume	void
+kivy	core	LoaderBase	UNK	_load	UNK=kwargs
+kivy	core	LoaderBase	UNK	_load_local	UNK=filename UNK=kwargs
+kivy	core	LoaderBase	UNK	_load_urllib	UNK=filename UNK=kwargs
+kivy	core	LoaderBase	UNK	_update	void
+kivy	core	LoaderBase	UNK	image	UNK=filename UNK=load_callback UNK=post_callback
+kivy	core		UNK	install_gobject_iteration	void
+kivy	core		UNK	install_android	void
+kivy	core		UNK	install_twisted_reactor	void
+kivy	core		UNK	uninstall_twisted_reactor	void
+kivy	core	FactoryBase	UNK	is_template	UNK=classname
+kivy	core	FactoryBase	UNK	register	UNK=classname UNK=cls UNK=module UNK=is_template
+kivy	core	FactoryBase	UNK	unregister	void
+kivy	core	FactoryBase	UNK	unregister_from_filename	UNK=filename
+kivy	core	GestureDatabase	UNK	add_gesture	UNK=gesture
+kivy	core	GestureDatabase	UNK	find	UNK=gesture UNK=minscore UNK=rotation_invariant
+kivy	core	GestureDatabase	UNK	gesture_to_str	UNK=gesture
+kivy	core	GestureDatabase	UNK	str_to_gesture	UNK=data
+kivy	core	GesturePoint	UNK	__init__	UNK=x UNK=y
+kivy	core	GesturePoint	UNK	scale	UNK=factor
+kivy	core	GestureStroke	UNK	__init__	void
+kivy	core	GestureStroke	UNK	add_point	UNK=x UNK=y
+kivy	core	GestureStroke	UNK	scale_stroke	UNK=scale_factor
+kivy	core	GestureStroke	UNK	points_distance	UNK=point1 UNK=point2
+kivy	core	GestureStroke	UNK	stroke_length	UNK=point_list
+kivy	core	GestureStroke	UNK	normalize_stroke	UNK=sample_points
+kivy	core	GestureStroke	UNK	center_stroke	UNK=offset_x UNK=offset_y
+kivy	core	Gesture	UNK	__init__	UNK=tolerance
+kivy	core	Gesture	UNK	_scale_gesture	void
+kivy	core	Gesture	UNK	_center_gesture	void
+kivy	core	Gesture	UNK	add_stroke	UNK=point_list
+kivy	core	Gesture	UNK	normalize	UNK=stroke_samples
+kivy	core	Gesture	UNK	get_rigid_rotation	UNK=dstpts
+kivy	core	Gesture	UNK	dot_product	UNK=comparison_gesture
+kivy	core	Gesture	UNK	get_score	UNK=comparison_gesture UNK=rotation_invariant
+kivy	core	Gesture	UNK	__eq__	UNK=comparison_gesture
+kivy	core	Animation	UNK	duration	void
+kivy	core	Animation	UNK	transition	void
+kivy	core	Animation	UNK	animated_properties	void
+kivy	core	Animation	UNK	stop_all	UNK=widget
+kivy	core	Animation	UNK	cancel_all	UNK=widget
+kivy	core	Animation	UNK	start	UNK=widget
+kivy	core	Animation	UNK	stop	UNK=widget
+kivy	core	Animation	UNK	cancel	UNK=widget
+kivy	core	Animation	UNK	stop_property	UNK=widget UNK=prop
+kivy	core	Animation	UNK	cancel_property	UNK=widget UNK=prop
+kivy	core	Animation	UNK	have_properties_to_animate	UNK=widget
+kivy	core	Sequence	UNK	cancel_property	UNK=widget UNK=prop
+kivy	core	Sequence	UNK	on_anim2_complete	UNK=instance UNK=widget
+kivy	core	AnimationTransition	UNK	linear	UNK=progress
+kivy	core	AnimationTransition	UNK	in_quad	UNK=progress
+kivy	core	AnimationTransition	UNK	out_quad	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_quad	UNK=progress
+kivy	core	AnimationTransition	UNK	in_cubic	UNK=progress
+kivy	core	AnimationTransition	UNK	out_cubic	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_cubic	UNK=progress
+kivy	core	AnimationTransition	UNK	in_quart	UNK=progress
+kivy	core	AnimationTransition	UNK	out_quart	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_quart	UNK=progress
+kivy	core	AnimationTransition	UNK	in_quint	UNK=progress
+kivy	core	AnimationTransition	UNK	out_quint	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_quint	UNK=progress
+kivy	core	AnimationTransition	UNK	in_sine	UNK=progress
+kivy	core	AnimationTransition	UNK	out_sine	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_sine	UNK=progress
+kivy	core	AnimationTransition	UNK	in_expo	UNK=progress
+kivy	core	AnimationTransition	UNK	out_expo	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_expo	UNK=progress
+kivy	core	AnimationTransition	UNK	in_circ	UNK=progress
+kivy	core	AnimationTransition	UNK	out_circ	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_circ	UNK=progress
+kivy	core	AnimationTransition	UNK	in_elastic	UNK=progress
+kivy	core	AnimationTransition	UNK	out_elastic	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_elastic	UNK=progress
+kivy	core	AnimationTransition	UNK	in_back	UNK=progress
+kivy	core	AnimationTransition	UNK	out_back	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_back	UNK=progress
+kivy	core	AnimationTransition	UNK	in_bounce	UNK=progress
+kivy	core	AnimationTransition	UNK	out_bounce	UNK=progress
+kivy	core	AnimationTransition	UNK	in_out_bounce	UNK=progress
+kivy	core	App	UNK	build	void
+kivy	core	App	UNK	build_config	UNK=config
+kivy	core	App	UNK	build_settings	UNK=settings
+kivy	core	App	UNK	load_kv	UNK=filename
+kivy	core	App	UNK	get_application_name	void
+kivy	core	App	UNK	get_application_icon	void
+kivy	core	App	UNK	get_application_config	UNK=defaultpath
+kivy	core	App	UNK	root_window	void
+kivy	core	App	UNK	load_config	void
+kivy	core	App	UNK	directory	void
+kivy	core	App	UNK	user_data_dir	void
+kivy	core	App	UNK	name	void
+kivy	core	App	UNK	run	void
+kivy	core	App	UNK	stop	void
+kivy	core	App	UNK	on_start	void
+kivy	core	App	UNK	on_stop	void
+kivy	core	App	UNK	on_pause	void
+kivy	core	App	UNK	on_resume	void
+kivy	core	App	UNK	get_running_app	void
+kivy	core	App	UNK	on_config_change	UNK=config UNK=section UNK=key UNK=value
+kivy	core	App	UNK	open_settings	void
+kivy	core	App	UNK	display_settings	UNK=settings
+kivy	core	App	UNK	close_settings	void
+kivy	core	App	UNK	create_settings	void
+kivy	core	App	UNK	destroy_settings	void
+kivy	core	Vector	UNK	length	void
+kivy	core	Vector	UNK	length2	void
+kivy	core	Vector	UNK	distance	UNK=to
+kivy	core	Vector	UNK	distance2	UNK=to
+kivy	core	Vector	UNK	normalize	void
+kivy	core	Vector	UNK	dot	UNK=a
+kivy	core	Vector	UNK	angle	UNK=a
+kivy	core	Vector	UNK	rotate	UNK=angle
+kivy	core	Vector	UNK	line_intersection	UNK=v1 UNK=v2 UNK=v3 UNK=v4
+kivy	core	Vector	UNK	segment_intersection	UNK=v1 UNK=v2 UNK=v3 UNK=v4
+kivy	core	Vector	UNK	in_bbox	UNK=point UNK=a UNK=b
+kivy	core	ExceptionHandler	UNK	handle_exception	UNK=exception
+kivy	core	ExceptionManagerBase	UNK	add_handler	UNK=cls
+kivy	core	ExceptionManagerBase	UNK	remove_handler	UNK=cls
+kivy	core	ExceptionManagerBase	UNK	handle_exception	UNK=inst
+kivy	core	EventLoopBase	UNK	touches	void
+kivy	core	EventLoopBase	UNK	ensure_window	void
+kivy	core	EventLoopBase	UNK	set_window	UNK=window
+kivy	core	EventLoopBase	UNK	add_input_provider	UNK=provider UNK=auto_remove
+kivy	core	EventLoopBase	UNK	remove_input_provider	UNK=provider
+kivy	core	EventLoopBase	UNK	add_event_listener	UNK=listener
+kivy	core	EventLoopBase	UNK	remove_event_listener	UNK=listener
+kivy	core	EventLoopBase	UNK	start	void
+kivy	core	EventLoopBase	UNK	close	void
+kivy	core	EventLoopBase	UNK	stop	void
+kivy	core	EventLoopBase	UNK	add_postproc_module	UNK=mod
+kivy	core	EventLoopBase	UNK	remove_postproc_module	UNK=mod
+kivy	core	EventLoopBase	UNK	remove_android_splash	void
+kivy	core	EventLoopBase	UNK	post_dispatch_input	UNK=etype UNK=me
+kivy	core	EventLoopBase	UNK	dispatch_input	void
+kivy	core	EventLoopBase	UNK	idle	void
+kivy	core	EventLoopBase	UNK	exit	void
+kivy	core	EventLoopBase	UNK	on_stop	void
+kivy	core	EventLoopBase	UNK	on_pause	void
+kivy	core	EventLoopBase	UNK	on_start	void
+kivy	core		UNK	_run_mainloop	void
+kivy	core		UNK	runTouchApp	UNK=widget UNK=slave
+kivy	core		UNK	stopTouchApp	void
+kivy	core	Recognizer	UNK	filter	void
+kivy	core	Recognizer	UNK	add_gesture	UNK=name UNK=strokes
+kivy	core	Recognizer	UNK	parse_gesture	UNK=data
+kivy	core	Recognizer	UNK	export_gesture	UNK=filename
+kivy	core	Recognizer	UNK	import_gesture	UNK=data UNK=filename
+kivy	core	Recognizer	UNK	transfer_gesture	UNK=tgt
+kivy	core	Recognizer	UNK	prepare_templates	void
+kivy	core	Recognizer	UNK	recognize	UNK=strokes UNK=goodscore UNK=timeout UNK=delay
+kivy	core	ProgressTracker	UNK	progress	void
+kivy	core	ProgressTracker	UNK	best	void
+kivy	core	ProgressTracker	UNK	stop	void
+kivy	core	MultistrokeGesture	UNK	add_stroke	UNK=stroke UNK=permute
+kivy	core	MultistrokeGesture	UNK	get_distance	UNK=cand UNK=tpl UNK=numpoints
+kivy	core	MultistrokeGesture	UNK	match_candidate	UNK=cand
+kivy	core	MultistrokeGesture	UNK	permute	void
+kivy	core	UnistrokeTemplate	UNK	add_point	UNK=p
+kivy	core	UnistrokeTemplate	UNK	prepare	UNK=numpoints
+kivy	core	Candidate	UNK	add_stroke	UNK=stroke
+kivy	core	Candidate	UNK	get_start_unit_vector	UNK=numpoints UNK=orientation_sens
+kivy	core	Candidate	UNK	get_protractor_vector	UNK=numpoints UNK=orientation_sens
+kivy	core	Candidate	UNK	get_angle_similarity	UNK=tpl
+kivy	core	Candidate	UNK	prepare	UNK=numpoints
+kivy	core	FileHandler	UNK	purge_logs	UNK=directory
+kivy	core		UNK	require	UNK=version
+kivy	core		UNK	kivy_configure	void
+kivy	core		UNK	get_includes	void
+kivy	core		UNK	kivy_register_post_configuration	UNK=callback
+kivy	core		UNK	kivy_usage	void
+kivy	core	ConfigParser	UNK	add_callback	UNK=callback UNK=section UNK=key
+kivy	core	ConfigParser	UNK	remove_callback	UNK=callback UNK=section UNK=key
+kivy	core	ConfigParser	UNK	read	UNK=filename
+kivy	core	ConfigParser	UNK	set	UNK=section UNK=option UNK=value
+kivy	core	ConfigParser	UNK	setall	UNK=section UNK=keyvalues
+kivy	core	ConfigParser	UNK	setdefaults	UNK=section UNK=keyvalues
+kivy	core	ConfigParser	UNK	setdefault	UNK=section UNK=option UNK=value
+kivy	core	ConfigParser	UNK	getdefault	UNK=section UNK=option UNK=defaultvalue
+kivy	core	ConfigParser	UNK	getdefaultint	UNK=section UNK=option UNK=defaultvalue
+kivy	core	ConfigParser	UNK	adddefaultsection	UNK=section
+kivy	core	ConfigParser	UNK	write	void
+kivy	core	ConfigParser	UNK	update_config	UNK=filename UNK=overwrite
+kivy	core	ConfigParser	UNK	_register_named_property	UNK=name UNK=widget_ref
+kivy	core	ConfigParser	UNK	get_configparser	UNK=name
+kivy	core	ConfigParser	UNK	name	void
+kivy	core		UNK	_isclose	UNK=a UNK=b UNK=rel_tol UNK=abs_tol
+kivy	core		UNK	boundary	UNK=value UNK=minvalue UNK=maxvalue
+kivy	core		UNK	intersection	UNK=set1 UNK=set2
+kivy	core		UNK	difference	UNK=set1 UNK=set2
+kivy	core		UNK	interpolate	UNK=value_from UNK=value_to UNK=step
+kivy	core		UNK	strtotuple	UNK=s
+kivy	core		UNK	rgba	UNK=s
+kivy	core		UNK	get_color_from_hex	UNK=s
+kivy	core		UNK	get_hex_from_color	UNK=color
+kivy	core		UNK	get_random_color	UNK=alpha
+kivy	core		UNK	is_color_transparent	UNK=c
+kivy	core		UNK	deprecated	UNK=func
+kivy	core		UNK	format_bytes_to_human	UNK=size UNK=precision
+kivy	core		UNK	escape_markup	UNK=text
+kivy	core	Cache	UNK	register	UNK=category UNK=limit UNK=timeout
+kivy	core	Cache	UNK	append	UNK=category UNK=key UNK=obj UNK=timeout
+kivy	core	Cache	UNK	get	UNK=category UNK=key UNK=default
+kivy	core	Cache	UNK	get_timestamp	UNK=category UNK=key UNK=default
+kivy	core	Cache	UNK	get_lastaccess	UNK=category UNK=key UNK=default
+kivy	core	Cache	UNK	remove	UNK=category UNK=key
+kivy	core	Cache	UNK	print_usage	void
+kivy	core	ClockBaseBehavior	UNK	frametime	void
+kivy	core	ClockBaseBehavior	UNK	frames	void
+kivy	core	ClockBaseBehavior	UNK	frames_displayed	void
+kivy	core	ClockBaseBehavior	UNK	usleep	UNK=microseconds
+kivy	core	ClockBaseBehavior	UNK	idle	void
+kivy	core	ClockBaseBehavior	UNK	tick	void
+kivy	core	ClockBaseBehavior	UNK	tick_draw	void
+kivy	core	ClockBaseBehavior	UNK	get_fps	void
+kivy	core	ClockBaseBehavior	UNK	get_rfps	void
+kivy	core	ClockBaseBehavior	UNK	get_time	void
+kivy	core	ClockBaseBehavior	UNK	get_boottime	void
+kivy	core		UNK	mainthread	UNK=func
+kivy	core	Atlas	UNK	create	UNK=outname UNK=filenames UNK=size UNK=padding
+kivy	core		UNK	parse_filename	UNK=filename
+kivy	core		UNK	parse_color	UNK=text
+kivy	core		UNK	parse_bool	UNK=text
+kivy	core		UNK	parse_string	UNK=text
+kivy	core		UNK	parse_int2	UNK=text
+kivy	core		UNK	parse_float4	UNK=text
+kivy	core		UNK	circumcircle	UNK=a UNK=b UNK=c
+kivy	core		UNK	minimum_bounding_circle	UNK=points
+kivy	core	SafeMembrane	UNK	safeIn	void
+kivy	core	SafeMembrane	UNK	safeOut	void
+kivy	core		UNK	pt	UNK=value
+kivy	core		UNK	inch	UNK=value
+kivy	core		UNK	cm	UNK=value
+kivy	core		UNK	mm	UNK=value
+kivy	core		UNK	dp	UNK=value
+kivy	core		UNK	sp	UNK=value
+kivy	core	MetricsBase	UNK	dpi	void
+kivy	core	MetricsBase	UNK	dpi_rounded	void
+kivy	core	MetricsBase	UNK	density	void
+kivy	core	MetricsBase	UNK	fontscale	void
+kivy	core		UNK	register_context	UNK=name UNK=cls
+kivy	core		UNK	get_current_context	void
+kivy	core.spelling	SpellingBase	UNK	__init__	UNK=language
+kivy	core.spelling	SpellingBase	UNK	select_language	UNK=language
+kivy	core.spelling	SpellingBase	UNK	list_languages	void
+kivy	core.spelling	SpellingBase	UNK	check	UNK=word
+kivy	core.spelling	SpellingBase	UNK	suggest	UNK=fragment
+kivy	core.clipboard	ClipboardBase	UNK	get	UNK=mimetype
+kivy	core.clipboard	ClipboardBase	UNK	put	UNK=data UNK=mimetype
+kivy	core.clipboard	ClipboardBase	UNK	get_types	void
+kivy	core.clipboard	ClipboardBase	UNK	_ensure_clipboard	void
+kivy	core.clipboard	ClipboardBase	UNK	copy	UNK=data
+kivy	core.clipboard	ClipboardBase	UNK	paste	void
+kivy	core.video	VideoBase	UNK	_do_eos	void
+kivy	core.video	VideoBase	UNK	_update	UNK=dt
+kivy	core.video	VideoBase	UNK	seek	UNK=percent
+kivy	core.video	VideoBase	UNK	stop	void
+kivy	core.video	VideoBase	UNK	pause	void
+kivy	core.video	VideoBase	UNK	play	void
+kivy	core.video	VideoBase	UNK	load	void
+kivy	core.video	VideoBase	UNK	unload	void
+kivy	core.audio	SoundLoader	UNK	register	UNK=classobj
+kivy	core.audio	SoundLoader	UNK	load	UNK=filename
+kivy	core.audio	Sound	UNK	get_pos	void
+kivy	core.audio	Sound	UNK	load	void
+kivy	core.audio	Sound	UNK	unload	void
+kivy	core.audio	Sound	UNK	play	void
+kivy	core.audio	Sound	UNK	seek	UNK=position
+kivy	core.image	ImageLoaderSDL2	UNK	extensions	void
+kivy	core.image	ImageLoaderPygame	UNK	extensions	void
+kivy	core.image	ImageLoaderFFPy	UNK	extensions	void
+kivy	core.image	ImageLoaderPIL	UNK	extensions	void
+kivy	core.image	ImageLoaderPIL	UNK	_img_correct	UNK=_img_tmp
+kivy	core.image	ImageLoaderPIL	UNK	_img_read	UNK=im
+kivy	core.image	ImageData	UNK	width	void
+kivy	core.image	ImageData	UNK	height	void
+kivy	core.image	ImageData	UNK	size	void
+kivy	core.image	ImageData	UNK	add_mipmap	UNK=level UNK=width UNK=height UNK=data
+kivy	core.image	ImageData	UNK	get_mipmap	UNK=level
+kivy	core.image	ImageData	UNK	iterate_mipmaps	void
+kivy	core.image	ImageLoaderBase	UNK	load	UNK=filename
+kivy	core.image	ImageLoaderBase	UNK	can_save	void
+kivy	core.image	ImageLoaderBase	UNK	can_load_memory	void
+kivy	core.image	ImageLoaderBase	UNK	size	void
+kivy	core.image	ImageLoaderBase	UNK	texture	void
+kivy	core.image	ImageLoaderBase	UNK	textures	void
+kivy	core.image	ImageLoaderBase	UNK	nocache	void
+kivy	core.image	ImageLoader	UNK	zip_loader	UNK=filename
+kivy	core.image	Image	UNK	remove_from_cache	void
+kivy	core.image	Image	UNK	anim_reset	UNK=allow_anim
+kivy	core.image	Image	UNK	anim_available	void
+kivy	core.image	Image	UNK	anim_index	void
+kivy	core.image	Image	UNK	on_texture	void
+kivy	core.image	Image	UNK	load	UNK=filename
+kivy	core.image	Image	UNK	load_memory	UNK=data UNK=ext UNK=filename
+kivy	core.image	Image	UNK	size	void
+kivy	core.image	Image	UNK	texture	void
+kivy	core.image	Image	UNK	nocache	void
+kivy	core.image	Image	UNK	save	UNK=filename UNK=flipped
+kivy	core.image	Image	UNK	read_pixel	UNK=x UNK=y
+kivy	core.image		UNK	load	UNK=filename
+kivy	core.image	ImageLoaderGIF	UNK	extensions	void
+kivy	core.image	Gif	UNK	pop	UNK=data UNK=length
+kivy	core.image	Gif	UNK	pops	UNK=format UNK=data
+kivy	core.image	Gif	UNK	print_info	void
+kivy	core.image	Gif	UNK	new_image	UNK=header
+kivy	core.image	ImageDescriptor	UNK	setup_header	UNK=header
+kivy	core.image	ImageDescriptor	UNK	get_header	void
+kivy	core.image	GifDecoder	UNK	fill	void
+kivy	core.image	GifDecoder	UNK	string_to_bits	UNK=string
+kivy	core.image	GifDecoder	UNK	readable	UNK=bool_list
+kivy	core.image	GifDecoder	UNK	bits_to_int	UNK=bits
+kivy	core.image	GifDecoder	UNK	get_color_table	UNK=size
+kivy	core.image	GifDecoder	UNK	lzw_decode	UNK=input UNK=initial_codesize UNK=color_table_size
+kivy	core.image		UNK	get_bits	UNK=flags UNK=reverse UNK=bits
+kivy	core.image		UNK	pack_bits	UNK=bits
+kivy	core.window	Keyboard	UNK	release	void
+kivy	core.window	Keyboard	UNK	string_to_keycode	UNK=value
+kivy	core.window	Keyboard	UNK	keycode_to_string	UNK=value
+kivy	core.window	WindowBase	UNK	_get_height	void
+kivy	core.window	WindowBase	UNK	_animate_content	void
+kivy	core.window	WindowBase	UNK	_get_effective_size	void
+kivy	core.window	WindowBase	UNK	toggle_fullscreen	void
+kivy	core.window	WindowBase	UNK	maximize	void
+kivy	core.window	WindowBase	UNK	minimize	void
+kivy	core.window	WindowBase	UNK	restore	void
+kivy	core.window	WindowBase	UNK	hide	void
+kivy	core.window	WindowBase	UNK	show	void
+kivy	core.window	WindowBase	UNK	raise_window	void
+kivy	core.window	WindowBase	UNK	close	void
+kivy	core.window	WindowBase	UNK	create_window	void
+kivy	core.window	WindowBase	UNK	on_flip	void
+kivy	core.window	WindowBase	UNK	flip	void
+kivy	core.window	WindowBase	UNK	add_widget	UNK=widget UNK=canvas
+kivy	core.window	WindowBase	UNK	remove_widget	UNK=widget
+kivy	core.window	WindowBase	UNK	clear	void
+kivy	core.window	WindowBase	UNK	set_title	UNK=title
+kivy	core.window	WindowBase	UNK	set_icon	UNK=filename
+kivy	core.window	WindowBase	UNK	on_motion	UNK=etype UNK=me
+kivy	core.window	WindowBase	UNK	on_touch_down	UNK=touch
+kivy	core.window	WindowBase	UNK	on_touch_move	UNK=touch
+kivy	core.window	WindowBase	UNK	on_touch_up	UNK=touch
+kivy	core.window	WindowBase	UNK	on_resize	UNK=width UNK=height
+kivy	core.window	WindowBase	UNK	screenshot	UNK=name
+kivy	core.window	WindowBase	UNK	on_rotate	UNK=rotation
+kivy	core.window	WindowBase	UNK	on_close	void
+kivy	core.window	WindowBase	UNK	on_minimize	void
+kivy	core.window	WindowBase	UNK	on_maximize	void
+kivy	core.window	WindowBase	UNK	on_restore	void
+kivy	core.window	WindowBase	UNK	on_hide	void
+kivy	core.window	WindowBase	UNK	on_show	void
+kivy	core.window	WindowBase	UNK	on_request_close	void
+kivy	core.window	WindowBase	UNK	on_cursor_enter	void
+kivy	core.window	WindowBase	UNK	on_cursor_leave	void
+kivy	core.window	WindowBase	UNK	on_mouse_down	UNK=x UNK=y UNK=button UNK=modifiers
+kivy	core.window	WindowBase	UNK	on_mouse_move	UNK=x UNK=y UNK=modifiers
+kivy	core.window	WindowBase	UNK	on_mouse_up	UNK=x UNK=y UNK=button UNK=modifiers
+kivy	core.window	WindowBase	UNK	on_joy_axis	UNK=stickid UNK=axisid UNK=value
+kivy	core.window	WindowBase	UNK	on_joy_hat	UNK=stickid UNK=hatid UNK=value
+kivy	core.window	WindowBase	UNK	on_joy_ball	UNK=stickid UNK=ballid UNK=value
+kivy	core.window	WindowBase	UNK	on_joy_button_down	UNK=stickid UNK=buttonid
+kivy	core.window	WindowBase	UNK	on_joy_button_up	UNK=stickid UNK=buttonid
+kivy	core.window	WindowBase	UNK	on_keyboard	UNK=key UNK=scancode UNK=codepoint UNK=modifier
+kivy	core.window	WindowBase	UNK	on_key_down	UNK=key UNK=scancode UNK=codepoint UNK=modifier
+kivy	core.window	WindowBase	UNK	on_key_up	UNK=key UNK=scancode UNK=codepoint UNK=modifier
+kivy	core.window	WindowBase	UNK	on_textinput	UNK=text
+kivy	core.window	WindowBase	UNK	on_dropfile	UNK=filename
+kivy	core.window	WindowBase	UNK	on_memorywarning	void
+kivy	core.window	WindowBase	UNK	dpi	void
+kivy	core.window	WindowBase	UNK	set_vkeyboard_class	UNK=cls
+kivy	core.window	WindowBase	UNK	release_all_keyboards	void
+kivy	core.window	WindowBase	UNK	request_keyboard	UNK=callback UNK=target UNK=input_type
+kivy	core.window	WindowBase	UNK	release_keyboard	UNK=target
+kivy	core.window	WindowBase	UNK	grab_mouse	void
+kivy	core.camera	CameraAndroid	UNK	_copy_to_gpu	void
+kivy	core.camera	CameraAndroid	UNK	grab_frame	void
+kivy	core.camera	CameraAndroid	UNK	decode_frame	UNK=buf
+kivy	core.camera	CameraAndroid	UNK	read_frame	void
+kivy	core.camera	CameraAndroid	UNK	get_camera_count	void
+kivy	core.camera	CameraBase	UNK	init_camera	void
+kivy	core.camera	CameraBase	UNK	start	void
+kivy	core.camera	CameraBase	UNK	stop	void
+kivy	core.camera	CameraBase	UNK	_update	UNK=dt
+kivy	core.camera	CameraBase	UNK	_copy_to_gpu	void
+kivy	core.text	LabelBase	UNK	register	UNK=name UNK=fn_regular UNK=fn_italic UNK=fn_bold
+kivy	core.text	LabelBase	UNK	get_system_fonts_dir	void
+kivy	core.text	LabelBase	UNK	get_extents	UNK=text
+kivy	core.text	LabelBase	UNK	get_cached_extents	void
+kivy	core.text	LabelBase	UNK	shorten	UNK=text UNK=margin
+kivy	core.text	LabelBase	UNK	render	UNK=real
+kivy	core.text	LabelBase	UNK	refresh	void
+kivy	core.text	LabelBase	UNK	content_width	void
+kivy	core.text	LabelBase	UNK	content_height	void
+kivy	core.text	LabelBase	UNK	content_size	void
+kivy	core.text	LabelBase	UNK	fontid	void
+kivy	core.text	MarkupLabel	UNK	refs	void
+kivy	core.text	MarkupLabel	UNK	anchors	void
+kivy	core.text	MarkupLabel	UNK	markup	void
+kivy	core.text	MarkupLabel	UNK	shorten_post	UNK=lines UNK=w UNK=h UNK=margin
+kivy	tools.pep8checker		UNK	tabs_or_spaces	UNK=physical_line UNK=indent_char
+kivy	tools.pep8checker		UNK	tabs_obsolete	UNK=physical_line
+kivy	tools.pep8checker		UNK	trailing_whitespace	UNK=physical_line
+kivy	tools.pep8checker		UNK	trailing_blank_lines	UNK=physical_line UNK=lines UNK=line_number UNK=total_lines
+kivy	tools.pep8checker		UNK	maximum_line_length	UNK=physical_line UNK=max_line_length UNK=multiline UNK=noqa
+kivy	tools.pep8checker		UNK	blank_lines	UNK=logical_line UNK=blank_lines UNK=indent_level UNK=line_number
+kivy	tools.pep8checker		UNK	extraneous_whitespace	UNK=logical_line
+kivy	tools.pep8checker		UNK	whitespace_around_keywords	UNK=logical_line
+kivy	tools.pep8checker		UNK	missing_whitespace_after_import_keyword	UNK=logical_line
+kivy	tools.pep8checker		UNK	missing_whitespace	UNK=logical_line
+kivy	tools.pep8checker		UNK	indentation	UNK=logical_line UNK=previous_logical UNK=indent_char UNK=indent_level
+kivy	tools.pep8checker		UNK	continued_indentation	UNK=logical_line UNK=tokens UNK=indent_level UNK=hang_closing
+kivy	tools.pep8checker		UNK	whitespace_before_parameters	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	whitespace_around_operator	UNK=logical_line
+kivy	tools.pep8checker		UNK	missing_whitespace_around_operator	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	whitespace_around_comma	UNK=logical_line
+kivy	tools.pep8checker		UNK	whitespace_around_named_parameter_equals	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	whitespace_before_comment	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	imports_on_separate_lines	UNK=logical_line
+kivy	tools.pep8checker		UNK	module_imports_on_top_of_file	UNK=logical_line UNK=indent_level UNK=checker_state UNK=noqa
+kivy	tools.pep8checker		UNK	compound_statements	UNK=logical_line
+kivy	tools.pep8checker		UNK	explicit_line_join	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	break_around_binary_operator	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	comparison_to_singleton	UNK=logical_line UNK=noqa
+kivy	tools.pep8checker		UNK	comparison_negative	UNK=logical_line
+kivy	tools.pep8checker		UNK	comparison_type	UNK=logical_line UNK=noqa
+kivy	tools.pep8checker		UNK	ambiguous_identifier	UNK=logical_line UNK=tokens
+kivy	tools.pep8checker		UNK	python_3000_has_key	UNK=logical_line UNK=noqa
+kivy	tools.pep8checker		UNK	python_3000_raise_comma	UNK=logical_line
+kivy	tools.pep8checker		UNK	python_3000_not_equal	UNK=logical_line
+kivy	tools.pep8checker		UNK	python_3000_backticks	UNK=logical_line
+kivy	tools.pep8checker		UNK	expand_indent	UNK=line
+kivy	tools.pep8checker		UNK	mute_string	UNK=text
+kivy	tools.pep8checker		UNK	parse_udiff	UNK=diff UNK=patterns UNK=parent
+kivy	tools.pep8checker		UNK	normalize_paths	UNK=value UNK=parent
+kivy	tools.pep8checker		UNK	filename_match	UNK=filename UNK=patterns UNK=default
+kivy	tools.pep8checker		UNK	update_counts	UNK=s UNK=counts
+kivy	tools.pep8checker		UNK	register_check	UNK=check UNK=codes
+kivy	tools.pep8checker		UNK	init_checks_registry	void
+kivy	tools.pep8checker	Checker	UNK	report_invalid_syntax	void
+kivy	tools.pep8checker	Checker	UNK	readline	void
+kivy	tools.pep8checker	Checker	UNK	run_check	UNK=check UNK=argument_names
+kivy	tools.pep8checker	Checker	UNK	init_checker_state	UNK=name UNK=argument_names
+kivy	tools.pep8checker	Checker	UNK	check_physical	UNK=line
+kivy	tools.pep8checker	Checker	UNK	build_tokens_line	void
+kivy	tools.pep8checker	Checker	UNK	check_logical	void
+kivy	tools.pep8checker	Checker	UNK	check_ast	void
+kivy	tools.pep8checker	Checker	UNK	generate_tokens	void
+kivy	tools.pep8checker	Checker	UNK	maybe_check_physical	UNK=token
+kivy	tools.pep8checker	Checker	UNK	check_all	UNK=expected UNK=line_offset
+kivy	tools.pep8checker	BaseReport	UNK	start	void
+kivy	tools.pep8checker	BaseReport	UNK	stop	void
+kivy	tools.pep8checker	BaseReport	UNK	init_file	UNK=filename UNK=lines UNK=expected UNK=line_offset
+kivy	tools.pep8checker	BaseReport	UNK	increment_logical_line	void
+kivy	tools.pep8checker	BaseReport	UNK	error	UNK=line_number UNK=offset UNK=text UNK=check
+kivy	tools.pep8checker	BaseReport	UNK	get_file_results	void
+kivy	tools.pep8checker	BaseReport	UNK	get_count	UNK=prefix
+kivy	tools.pep8checker	BaseReport	UNK	get_statistics	UNK=prefix
+kivy	tools.pep8checker	BaseReport	UNK	print_statistics	UNK=prefix
+kivy	tools.pep8checker	BaseReport	UNK	print_benchmark	void
+kivy	tools.pep8checker	StandardReport	UNK	init_file	UNK=filename UNK=lines UNK=expected UNK=line_offset
+kivy	tools.pep8checker	StandardReport	UNK	error	UNK=line_number UNK=offset UNK=text UNK=check
+kivy	tools.pep8checker	StandardReport	UNK	get_file_results	void
+kivy	tools.pep8checker	StyleGuide	UNK	init_report	UNK=reporter
+kivy	tools.pep8checker	StyleGuide	UNK	check_files	UNK=paths
+kivy	tools.pep8checker	StyleGuide	UNK	input_file	UNK=filename UNK=lines UNK=expected UNK=line_offset
+kivy	tools.pep8checker	StyleGuide	UNK	input_dir	UNK=dirname
+kivy	tools.pep8checker	StyleGuide	UNK	excluded	UNK=filename UNK=parent
+kivy	tools.pep8checker	StyleGuide	UNK	ignore_code	UNK=code
+kivy	tools.pep8checker	StyleGuide	UNK	get_checks	UNK=argument_name
+kivy	tools.pep8checker		UNK	get_parser	UNK=prog UNK=version
+kivy	tools.pep8checker		UNK	read_config	UNK=options UNK=args UNK=arglist UNK=parser
+kivy	tools.pep8checker		UNK	process_options	UNK=arglist UNK=parse_argv UNK=config_file UNK=parser
+kivy	tools.pep8checker		UNK	_parse_multi_options	UNK=options UNK=split_token
+kivy	tools.pep8checker		UNK	_main	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	runtime_hooks	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	hookspath	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	get_hooks	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	get_deps_minimal	UNK=exclude_ignored
+kivy	tools.packaging.pyinstaller_hooks		UNK	get_deps_all	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	get_factory_modules	void
+kivy	tools.packaging.pyinstaller_hooks		UNK	add_dep_paths	void
+kivy	network	UrlRequest	UNK	get_connection_for_scheme	UNK=scheme
+kivy	network	UrlRequest	UNK	decode_result	UNK=result UNK=resp
+kivy	network	UrlRequest	UNK	is_finished	void
+kivy	network	UrlRequest	UNK	result	void
+kivy	network	UrlRequest	UNK	resp_headers	void
+kivy	network	UrlRequest	UNK	resp_status	void
+kivy	network	UrlRequest	UNK	error	void
+kivy	network	UrlRequest	UNK	chunk_size	void
+kivy	network	UrlRequest	UNK	wait	UNK=delay
+kivy	adapters	ListAdapter	UNK	create_view	UNK=index
+kivy	adapters	ListAdapter	UNK	on_selection_change	void
+kivy	adapters	ListAdapter	UNK	select_list	UNK=view_list UNK=extend
+kivy	adapters	ListAdapter	UNK	trim_left_of_sel	void
+kivy	adapters	ListAdapter	UNK	trim_right_of_sel	void
+kivy	adapters	ListAdapter	UNK	trim_to_sel	void
+kivy	adapters	ListAdapter	UNK	cut_to_sel	void
+kivy	adapters	Adapter	UNK	get_cls	void
+kivy	adapters	SelectableDataItem	UNK	is_selected	void
+kivy	adapters	DictAdapter	UNK	trim_left_of_sel	void
+kivy	adapters	DictAdapter	UNK	trim_right_of_sel	void
+kivy	adapters	DictAdapter	UNK	trim_to_sel	void
+kivy	adapters	DictAdapter	UNK	cut_to_sel	void
+kivy	input	MotionEventProvider	UNK	start	void
+kivy	input	MotionEventProvider	UNK	stop	void
+kivy	input	MotionEventProvider	UNK	update	UNK=dispatch_fn
+kivy	input	MotionEventFactory	UNK	register	UNK=name UNK=classname
+kivy	input	MotionEventFactory	UNK	list	void
+kivy	input	MotionEventFactory	UNK	get	UNK=name
+kivy	input	MotionEvent	UNK	depack	UNK=args
+kivy	input	MotionEvent	UNK	grab	UNK=class_instance UNK=exclusive
+kivy	input	MotionEvent	UNK	ungrab	UNK=class_instance
+kivy	input	MotionEvent	UNK	move	UNK=args
+kivy	input	MotionEvent	UNK	scale_for_screen	UNK=w UNK=h UNK=p UNK=rotation
+kivy	input	MotionEvent	UNK	push	UNK=attrs
+kivy	input	MotionEvent	UNK	pop	void
+kivy	input	MotionEvent	UNK	apply_transform_2d	UNK=transform
+kivy	input	MotionEvent	UNK	copy_to	UNK=to
+kivy	input	MotionEvent	UNK	distance	UNK=other_touch
+kivy	input	MotionEvent	UNK	dpos	void
+kivy	input	MotionEvent	UNK	opos	void
+kivy	input	MotionEvent	UNK	ppos	void
+kivy	input	MotionEvent	UNK	spos	void
+kivy	input	MotionEvent	UNK	is_mouse_scrolling	void
+kivy	input.providers	TuioMotionEventProvider	UNK	register	UNK=oscpath UNK=classname
+kivy	input.providers	TuioMotionEventProvider	UNK	unregister	UNK=oscpath UNK=classname
+kivy	input.providers	TuioMotionEventProvider	UNK	create	UNK=oscpath
+kivy	input.providers	TuioMotionEventProvider	UNK	start	void
+kivy	input.providers	TuioMotionEventProvider	UNK	stop	void
+kivy	input.providers	TuioMotionEventProvider	UNK	update	UNK=dispatch_fn
+kivy	input.providers	MouseMotionEventProvider	UNK	start	void
+kivy	input.providers	MouseMotionEventProvider	UNK	stop	void
+kivy	input.providers	MouseMotionEventProvider	UNK	update	UNK=dispatch_fn
+kivy	input.postproc	InputPostprocDoubleTap	UNK	find_double_tap	UNK=ref
+kivy	input.postproc	InputPostprocTripleTap	UNK	find_triple_tap	UNK=ref
+kivy	lang		UNK	update_intermediates	UNK=base UNK=keys UNK=bound UNK=s
+kivy	lang	BuilderBase	UNK	load_file	UNK=filename
+kivy	lang	BuilderBase	UNK	unload_file	UNK=filename
+kivy	lang	BuilderBase	UNK	load_string	UNK=string
+kivy	lang	BuilderBase	UNK	template	void
+kivy	lang	BuilderBase	UNK	apply_rules	UNK=widget UNK=rule_name UNK=ignored_consts
+kivy	lang	BuilderBase	UNK	apply	UNK=widget UNK=ignored_consts
+kivy	lang	BuilderBase	UNK	match	UNK=widget
+kivy	lang	BuilderBase	UNK	match_rule_name	UNK=rule_name
+kivy	lang	BuilderBase	UNK	sync	void
+kivy	lang	BuilderBase	UNK	unbind_widget	UNK=uid
+kivy	lang	BuilderBase	UNK	unbind_property	UNK=widget UNK=name
+kivy	lang	Parser	UNK	parse	UNK=content
+kivy	lang	Parser	UNK	strip_comments	UNK=lines
+kivy	lang	Parser	UNK	parse_level	UNK=level UNK=lines UNK=spaces
+kivy	uix	ScrollView	UNK	scroll_to	UNK=widget UNK=padding UNK=animate
+kivy	uix	ScrollView	UNK	convert_distance_to_scroll	UNK=dx UNK=dy
+kivy	uix	ScrollView	UNK	update_from_scroll	void
+kivy	uix	SettingsPanel	UNK	get_value	UNK=section UNK=key
+kivy	uix	InterfaceWithSidebar	UNK	add_panel	UNK=panel UNK=name UNK=uid
+kivy	uix	InterfaceWithSpinner	UNK	add_panel	UNK=panel UNK=name UNK=uid
+kivy	uix	ContentPanel	UNK	add_panel	UNK=panel UNK=name UNK=uid
+kivy	uix	ContentPanel	UNK	on_current_uid	void
+kivy	uix	Settings	UNK	register_type	UNK=tp UNK=cls
+kivy	uix	Settings	UNK	add_interface	void
+kivy	uix	Settings	UNK	add_json_panel	UNK=title UNK=config UNK=filename UNK=data
+kivy	uix	Settings	UNK	create_json_panel	UNK=title UNK=config UNK=filename UNK=data
+kivy	uix	Settings	UNK	add_kivy_panel	void
+kivy	uix	MenuSidebar	UNK	add_item	UNK=name UNK=uid
+kivy	uix	MenuSidebar	UNK	on_selected_uid	void
+kivy	uix	VKeyboard	UNK	setup_mode	void
+kivy	uix	VKeyboard	UNK	setup_mode_dock	void
+kivy	uix	VKeyboard	UNK	setup_mode_free	void
+kivy	uix	VKeyboard	UNK	refresh	UNK=force
+kivy	uix	VKeyboard	UNK	collide_margin	UNK=x UNK=y
+kivy	uix	ActionBar	UNK	_pop_contextual_action_view	void
+kivy	uix	Layout	UNK	do_layout	void
+kivy	uix	Layout	UNK	layout_hint_with_bounds	UNK=sh_sum UNK=available_space UNK=min_bounded_size UNK=sh_min_vals
+kivy	uix	FileSystemAbstract	UNK	listdir	UNK=fn
+kivy	uix	FileSystemAbstract	UNK	getsize	UNK=fn
+kivy	uix	FileSystemAbstract	UNK	is_hidden	UNK=fn
+kivy	uix	FileSystemAbstract	UNK	is_dir	UNK=fn
+kivy	uix	FileChooserProgressBase	UNK	cancel	void
+kivy	uix	FileChooserController	UNK	entry_touched	UNK=entry UNK=touch
+kivy	uix	FileChooserController	UNK	entry_released	UNK=entry UNK=touch
+kivy	uix	FileChooserController	UNK	get_nice_size	UNK=fn
+kivy	uix	FileChooserController	UNK	cancel	void
+kivy	uix	SelectableView	UNK	select	void
+kivy	uix	SelectableView	UNK	deselect	void
+kivy	uix	TabbedPanel	UNK	switch_to	UNK=header UNK=do_scroll
+kivy	uix	RstDocument	UNK	render	void
+kivy	uix	RstDocument	UNK	resolve_path	UNK=filename
+kivy	uix	RstDocument	UNK	preload	UNK=filename UNK=encoding UNK=errors
+kivy	uix	RstDocument	UNK	goto	UNK=ref
+kivy	uix	Label	UNK	texture_update	void
+kivy	uix	Carousel	UNK	load_slide	UNK=slide
+kivy	uix	Carousel	UNK	load_previous	void
+kivy	uix	Carousel	UNK	load_next	UNK=mode
+kivy	uix	TextInput	UNK	cursor_index	UNK=cursor
+kivy	uix	TextInput	UNK	cursor_offset	void
+kivy	uix	TextInput	UNK	get_cursor_from_index	UNK=index
+kivy	uix	TextInput	UNK	select_text	UNK=start UNK=end
+kivy	uix	TextInput	UNK	select_all	void
+kivy	uix	TextInput	UNK	insert_text	UNK=substring UNK=from_undo
+kivy	uix	TextInput	UNK	reset_undo	void
+kivy	uix	TextInput	UNK	do_redo	void
+kivy	uix	TextInput	UNK	do_undo	void
+kivy	uix	TextInput	UNK	do_backspace	UNK=from_undo UNK=mode
+kivy	uix	TextInput	UNK	do_cursor_movement	UNK=action UNK=control UNK=alt
+kivy	uix	TextInput	UNK	get_cursor_from_xy	UNK=x UNK=y
+kivy	uix	TextInput	UNK	cancel_selection	void
+kivy	uix	TextInput	UNK	delete_selection	UNK=from_undo
+kivy	uix	TextInput	UNK	_update_selection	UNK=finished
+kivy	uix	TextInput	UNK	on_double_tap	void
+kivy	uix	TextInput	UNK	on_triple_tap	void
+kivy	uix	TextInput	UNK	on_quad_touch	void
+kivy	uix	TextInput	UNK	cut	void
+kivy	uix	TextInput	UNK	copy	UNK=data
+kivy	uix	TextInput	UNK	paste	void
+kivy	uix	EffectBase	UNK	set_fbo_shader	void
+kivy	uix	EffectBase	UNK	_load_from_source	void
+kivy	uix	EffectFbo	UNK	set_fs	UNK=value
+kivy	uix	EffectWidget	UNK	_update_glsl	void
+kivy	uix	EffectWidget	UNK	refresh_fbo_setup	void
+kivy	uix	Video	UNK	seek	UNK=percent
+kivy	uix	Video	UNK	unload	void
+kivy	uix	ModalView	UNK	open	void
+kivy	uix	ModalView	UNK	dismiss	void
+kivy	uix	CodeInput	UNK	_cursor_offset	void
+kivy	uix	Widget	UNK	proxy_ref	void
+kivy	uix	Widget	UNK	collide_point	UNK=x UNK=y
+kivy	uix	Widget	UNK	collide_widget	UNK=wid
+kivy	uix	Widget	UNK	on_touch_down	UNK=touch
+kivy	uix	Widget	UNK	on_touch_move	UNK=touch
+kivy	uix	Widget	UNK	on_touch_up	UNK=touch
+kivy	uix	Widget	UNK	add_widget	UNK=widget UNK=index UNK=canvas
+kivy	uix	Widget	UNK	remove_widget	UNK=widget
+kivy	uix	Widget	UNK	clear_widgets	UNK=children
+kivy	uix	Widget	UNK	export_to_png	UNK=filename
+kivy	uix	Widget	UNK	get_root_window	void
+kivy	uix	Widget	UNK	get_parent_window	void
+kivy	uix	Widget	UNK	walk	UNK=restrict UNK=loopback
+kivy	uix	Widget	UNK	walk_reverse	UNK=loopback
+kivy	uix	Widget	UNK	to_widget	UNK=x UNK=y UNK=relative
+kivy	uix	Widget	UNK	to_window	UNK=x UNK=y UNK=initial UNK=relative
+kivy	uix	Widget	UNK	to_parent	UNK=x UNK=y UNK=relative
+kivy	uix	Widget	UNK	to_local	UNK=x UNK=y UNK=relative
+kivy	uix	Widget	UNK	get_window_matrix	UNK=x UNK=y
+kivy	uix	Sandbox	UNK	on_context_created	void
+kivy	uix	Sandbox	UNK	on_exception	UNK=exception UNK=_traceback
+kivy	uix	Scatter	UNK	apply_transform	UNK=trans UNK=post_multiply UNK=anchor
+kivy	uix	Scatter	UNK	on_transform_with_touch	UNK=touch
+kivy	uix	Scatter	UNK	on_bring_to_front	UNK=touch
+kivy	uix	TreeView	UNK	add_node	UNK=node UNK=parent
+kivy	uix	TreeView	UNK	remove_node	UNK=node
+kivy	uix	TreeView	UNK	select_node	UNK=node
+kivy	uix	TreeView	UNK	deselect_node	void
+kivy	uix	TreeView	UNK	toggle_node	UNK=node
+kivy	uix	TreeView	UNK	get_node_at_pos	UNK=pos
+kivy	uix	TreeView	UNK	iterate_open_nodes	UNK=node
+kivy	uix	TreeView	UNK	iterate_all_nodes	UNK=node
+kivy	uix	TransitionBase	UNK	start	UNK=manager
+kivy	uix	TransitionBase	UNK	stop	void
+kivy	uix	TransitionBase	UNK	add_screen	UNK=screen
+kivy	uix	TransitionBase	UNK	remove_screen	UNK=screen
+kivy	uix	CardTransition	UNK	start	UNK=manager
+kivy	uix	ScreenManager	UNK	get_screen	UNK=name
+kivy	uix	ScreenManager	UNK	has_screen	UNK=name
+kivy	uix	ScreenManager	UNK	next	void
+kivy	uix	ScreenManager	UNK	previous	void
+kivy	uix	ScreenManager	UNK	switch_to	UNK=screen
+kivy	uix	Image	UNK	reload	void
+kivy	uix	DropDown	UNK	open	UNK=widget
+kivy	uix	DropDown	UNK	dismiss	void
+kivy	uix	DropDown	UNK	select	UNK=data
+kivy	uix	GestureContainer	UNK	get_vectors	void
+kivy	uix	GestureContainer	UNK	handles	UNK=touch
+kivy	uix	GestureContainer	UNK	accept_stroke	UNK=count
+kivy	uix	GestureContainer	UNK	update_bbox	UNK=touch
+kivy	uix	GestureContainer	UNK	add_stroke	UNK=touch UNK=line
+kivy	uix	GestureContainer	UNK	complete_stroke	void
+kivy	uix	GestureContainer	UNK	single_points_test	void
+kivy	uix	GestureSurface	UNK	on_touch_down	UNK=touch
+kivy	uix	GestureSurface	UNK	on_touch_move	UNK=touch
+kivy	uix	GestureSurface	UNK	init_gesture	UNK=touch
+kivy	uix	GestureSurface	UNK	get_gesture	UNK=touch
+kivy	uix	GestureSurface	UNK	find_colliding_gesture	UNK=touch
+kivy	uix	GestureSurface	UNK	merge_gestures	UNK=g UNK=other
+kivy	uix	GestureSurface	UNK	_complete_dispatcher	UNK=dt
+kivy	uix	GestureSurface	UNK	_cleanup	UNK=dt
+kivy	uix	VideoPlayerPlayPause	UNK	on_touch_down	UNK=touch
+kivy	uix	VideoPlayer	UNK	seek	UNK=percent
+kivy	uix.behaviors	KNSpace	UNK	fork	void
+kivy	uix.behaviors	EmacsBehavior	UNK	delete_word_right	void
+kivy	uix.behaviors	EmacsBehavior	UNK	delete_word_left	void
+kivy	uix.behaviors	ToggleButtonBehavior	UNK	get_widgets	UNK=groupname
+kivy	uix.behaviors	ButtonBehavior	UNK	trigger_action	UNK=duration
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	select_with_touch	UNK=node UNK=touch
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	select_with_key_down	UNK=keyboard UNK=scancode UNK=codepoint UNK=modifiers
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	select_with_key_up	UNK=keyboard UNK=scancode
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	_select_range	UNK=multiselect UNK=keep_anchor UNK=node UNK=idx
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	clear_selection	void
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	get_selectable_nodes	void
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	get_index_of_node	UNK=node UNK=selectable_nodes
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	goto_node	UNK=key UNK=last_node UNK=last_node_idx
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	select_node	UNK=node
+kivy	uix.behaviors	CompoundSelectionBehavior	UNK	deselect_node	UNK=node
+kivy	uix.behaviors	FocusBehavior	UNK	_set_on_focus_next	UNK=instance UNK=value
+kivy	uix.behaviors	FocusBehavior	UNK	_handle_post_on_touch_up	UNK=touch
+kivy	uix.behaviors	FocusBehavior	UNK	get_focus_next	void
+kivy	uix.behaviors	FocusBehavior	UNK	get_focus_previous	void
+kivy	uix.behaviors	FocusBehavior	UNK	keyboard_on_key_down	UNK=window UNK=keycode UNK=text UNK=modifiers
+kivy	uix.behaviors	FocusBehavior	UNK	keyboard_on_key_up	UNK=window UNK=keycode
+kivy	uix.behaviors	FocusBehavior	UNK	show_keyboard	void
+kivy	uix.behaviors	FocusBehavior	UNK	hide_keyboard	void
+kivy	uix.recycleview	LayoutSelectionBehavior	UNK	apply_selection	UNK=index UNK=view UNK=is_selected
+kivy	uix.recycleview	RecycleLayoutManagerBehavior	UNK	compute_visible_views	UNK=data UNK=viewport
+kivy	uix.recycleview	RecycleLayoutManagerBehavior	UNK	set_visible_views	UNK=indices UNK=data UNK=viewport
+kivy	uix.recycleview	RecycleLayoutManagerBehavior	UNK	refresh_view_layout	UNK=index UNK=layout UNK=view UNK=viewport
+kivy	uix.recycleview	RecycleLayoutManagerBehavior	UNK	get_view_index_at	UNK=pos
+kivy	uix.recycleview	RecycleLayoutManagerBehavior	UNK	goto_view	UNK=index
+kivy	uix.recycleview		UNK	_clean_cache	void
+kivy	uix.recycleview	RecycleDataViewBehavior	UNK	refresh_view_attrs	UNK=rv UNK=index UNK=data
+kivy	uix.recycleview	RecycleDataViewBehavior	UNK	refresh_view_layout	UNK=rv UNK=index UNK=layout UNK=viewport
+kivy	uix.recycleview	RecycleDataAdapter	UNK	attach_recycleview	UNK=rv
+kivy	uix.recycleview	RecycleDataAdapter	UNK	detach_recycleview	void
+kivy	uix.recycleview	RecycleDataAdapter	UNK	create_view	UNK=index UNK=data_item UNK=viewclass
+kivy	uix.recycleview	RecycleDataAdapter	UNK	get_view	UNK=index UNK=data_item UNK=viewclass
+kivy	uix.recycleview	RecycleDataAdapter	UNK	refresh_view_attrs	UNK=index UNK=data_item UNK=view
+kivy	uix.recycleview	RecycleDataAdapter	UNK	refresh_view_layout	UNK=index UNK=layout UNK=view UNK=viewport
+kivy	uix.recycleview	RecycleDataAdapter	UNK	make_view_dirty	UNK=view UNK=index
+kivy	uix.recycleview	RecycleDataAdapter	UNK	make_views_dirty	void
+kivy	uix.recycleview	RecycleDataAdapter	UNK	invalidate	void
+kivy	uix.recycleview	RecycleDataAdapter	UNK	set_visible_views	UNK=indices UNK=data UNK=viewclasses
+kivy	uix.recycleview	RecycleDataAdapter	UNK	get_visible_view	UNK=index
+kivy	uix.recycleview	RecycleViewBehavior	UNK	refresh_from_data	void
+kivy	uix.recycleview	RecycleViewBehavior	UNK	refresh_from_layout	void
+kivy	uix.recycleview	RecycleViewBehavior	UNK	refresh_from_viewport	void
+kivy	uix.recycleview	RecycleDataModelBehavior	UNK	attach_recycleview	UNK=rv
+kivy	uix.recycleview	RecycleDataModelBehavior	UNK	detach_recycleview	void
+kivy	uix.recycleview	RecycleDataModel	UNK	observable_dict	void
+kivy	effects	KineticEffect	UNK	start	UNK=val UNK=t
+kivy	effects	KineticEffect	UNK	update	UNK=val UNK=t
+kivy	effects	KineticEffect	UNK	stop	UNK=val UNK=t
+kivy	effects	KineticEffect	UNK	cancel	void
+kivy	effects	KineticEffect	UNK	update_velocity	UNK=dt
+kivy	effects	ScrollEffect	UNK	reset	UNK=pos
+kivy	modules		UNK	create_joycursor	UNK=win UNK=ctx
+kivy	modules		UNK	stop	UNK=win UNK=ctx
+kivy	modules	ConsoleAddon	UNK	init	void
+kivy	modules	ConsoleAddon	UNK	activate	void
+kivy	modules	ConsoleAddon	UNK	deactivate	void
+kivy	modules	Console	UNK	add_toolbar_widget	UNK=widget UNK=right
+kivy	modules	Console	UNK	remove_toolbar_widget	UNK=widget
+kivy	modules	Console	UNK	add_panel	UNK=name UNK=cb_activate UNK=cb_deactivate UNK=cb_refresh
+kivy	modules	Console	UNK	set_content	UNK=content
+kivy	modules	Console	UNK	highlight_at	UNK=x UNK=y
+kivy	modules	Console	UNK	pick	UNK=widget UNK=x UNK=y
+kivy	modules		UNK	start	UNK=win UNK=ctx
+kivy	modules		UNK	create_inspector	UNK=win UNK=ctx
+kivy	modules	ModuleBase	UNK	add_path	UNK=path
+kivy	modules	ModuleBase	UNK	list	void
+kivy	modules	ModuleBase	UNK	activate_module	UNK=name UNK=win
+kivy	modules	ModuleBase	UNK	deactivate_module	UNK=name UNK=win
+kivy	modules	ModuleBase	UNK	register_window	UNK=win
+kivy	modules	ModuleBase	UNK	unregister_window	UNK=win
+kivy	modules	ModuleBase	UNK	update	void
+kivy	modules	ModuleBase	UNK	configure	void
+kivy	lib	Device	UNK	close	void
+kivy	lib	Device	UNK	idle	UNK=ms
+kivy	lib	Device	UNK	has_mtdata	void
+kivy	lib	Device	UNK	has_slot	void
+kivy	lib	Device	UNK	has_abs	UNK=index
+kivy	lib	Device	UNK	get_max_abs	void
+kivy	lib	Device	UNK	get_slot	void
+kivy	lib	Device	UNK	get_abs	UNK=index
+kivy	lib.osc		UNK	init	void
+kivy	lib.osc		UNK	bind	UNK=oscid UNK=func UNK=oscaddress
+kivy	lib.osc		UNK	sendMsg	UNK=oscAddress UNK=dataArray UNK=ipAddr UNK=port
+kivy	lib.osc		UNK	createBundle	void
+kivy	lib.osc		UNK	appendToBundle	UNK=bundle UNK=oscAddress UNK=dataArray
+kivy	lib.osc		UNK	sendBundle	UNK=bundle UNK=ipAddr UNK=port
+kivy	lib.osc		UNK	createBinaryMsg	UNK=oscAddress UNK=dataArray UNK=typehint
+kivy	lib.osc		UNK	readQueue	UNK=thread_id
+kivy	lib.osc		UNK	listen	UNK=ipAddr UNK=port
+kivy	lib.osc		UNK	dontListen	UNK=thread_id
+kivy	lib.osc		UNK	hexDump	UNK=data
+kivy	lib.osc	OSCMessage	UNK	append	UNK=argument UNK=typehint
+kivy	lib.osc	OSCMessage	UNK	rawAppend	UNK=data
+kivy	lib.osc	OSCMessage	UNK	getBinary	void
+kivy	lib.osc		UNK	readLong	UNK=data
+kivy	lib.osc		UNK	readDouble	UNK=data
+kivy	lib.osc		UNK	OSCBlob	UNK=next
+kivy	lib.osc		UNK	OSCArgument	UNK=data
+kivy	lib.osc		UNK	parseArgs	UNK=args
+kivy	lib.osc	CallbackManager	UNK	handle	UNK=data UNK=source
+kivy	lib.osc	CallbackManager	UNK	dispatch	UNK=message UNK=source
+kivy	lib.osc	CallbackManager	UNK	add	UNK=callback UNK=name
+kivy	lib.osc	CallbackManager	UNK	unbundler	UNK=messages
+kivy	storage	AbstractStore	UNK	exists	UNK=key
+kivy	storage	AbstractStore	UNK	async_exists	UNK=callback UNK=key
+kivy	storage	AbstractStore	UNK	get	UNK=key
+kivy	storage	AbstractStore	UNK	async_get	UNK=callback UNK=key
+kivy	storage	AbstractStore	UNK	put	UNK=key
+kivy	storage	AbstractStore	UNK	async_put	UNK=callback UNK=key
+kivy	storage	AbstractStore	UNK	delete	UNK=key
+kivy	storage	AbstractStore	UNK	async_delete	UNK=callback UNK=key
+kivy	storage	AbstractStore	UNK	find	void
+kivy	storage	AbstractStore	UNK	async_find	UNK=callback
+kivy	storage	AbstractStore	UNK	keys	void
+kivy	storage	AbstractStore	UNK	async_keys	UNK=callback
+kivy	storage	AbstractStore	UNK	count	void
+kivy	storage	AbstractStore	UNK	async_count	UNK=callback
+kivy	storage	AbstractStore	UNK	clear	void
+kivy	storage	AbstractStore	UNK	async_clear	UNK=callback
