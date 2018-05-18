@@ -36,4 +36,4 @@ Please keep track of any changes to the data or to this repository so that such 
  - Working on getting new data and resources up for 2018 NAACL paper,
    created a release (v1.0) to preserve all previous data and
    auxiliary resources. 
-
+ - restructured the data so that the polyglot materials are in the position consistent with the experiment scripts
