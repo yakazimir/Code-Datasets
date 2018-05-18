@@ -31,3 +31,9 @@ Please keep track of any changes to the data or to this repository so that such 
   - added the tabulated/original signature representations for the py27 datasets
   - added bin/formatter.py for formatting the signature
     representations 
+
+## 2018-18-6
+ - Working on getting new data and resources up for 2018 NAACL paper,
+   created a release (v1.0) to preserve all previous data and
+   auxiliary resources. 
+
