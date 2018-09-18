@@ -44,5 +44,5 @@ Please keep track of any changes to the data or to this repository so that such 
 
 ## 2018-18-9
 ## Added
-   - bin/moses_baseline.sh script for experiment with moses and these datasets
+   - bin/moses_baseline.sh script to experiment with moses baselines on code data
 
