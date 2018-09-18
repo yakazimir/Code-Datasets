@@ -38,4 +38,11 @@ Please keep track of any changes to the data or to this repository so that such 
    auxiliary resources. 
  - restructured the data so that the polyglot materials are in the position consistent with the experiment scripts
  - removed and replaced acl_emlp.zip (see v1.0 if you need this) with acl_emnl_naacl.zip (which includes all of the previous stuff)
- - added other_data/geoquery (auxiliary files for the geoquery experiments) and other_data/SP.zip (zipped up filed for other semantic parsing experiments) 
+ - added other_data/geoquery (auxiliary files for the geoquery
+ experiments) and other_data/SP.zip (zipped up filed for other
+ semantic parsing experiments)
+
+## 2018-18-9
+## Added
+   - bin/moses_baseline.sh script for experiment with moses and these datasets
+
